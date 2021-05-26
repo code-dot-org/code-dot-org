@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2020-02-25T15:47:16.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "display_as_unplugged": "true",
+    "use_large_video_player": "true",
+    "hide_reference_area": "true",
+    "markdown": "# The Right App\n\n* Everyone uses computers these days, especially smartphones. \n* Smartphone apps help people do things like talk to friends, listen to music, shop, or just browse the web.\n* It is important for programmers to understand others' needs and design apps with them in mind!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+  },
+  "published": false
+}]]></config>
+</External>

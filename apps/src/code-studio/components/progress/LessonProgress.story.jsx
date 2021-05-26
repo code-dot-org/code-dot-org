@@ -2,11 +2,11 @@ import React from 'react';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import LessonProgress from './LessonProgress';
-import stageLock from '../../stageLockRedux';
+import lessonLock from '../../lessonLockRedux';
 import progress, {
   initProgress,
   mergeResults,
-  setStageExtrasEnabled
+  setLessonExtrasEnabled
 } from '../../progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 
@@ -96,7 +96,7 @@ export default storybook => {
     onStageExtras,
     bonusCompleted
   ) => {
-    const store = createStore(combineReducers({progress, stageLock}));
+    const store = createStore(combineReducers({progress, lessonLock}));
     store.dispatch(
       initProgress({
         currentLevelId: currentLevelIndex
@@ -119,7 +119,7 @@ export default storybook => {
       results[100] = TestResults.ALL_PASS;
     }
     store.dispatch(mergeResults(results));
-    store.dispatch(setStageExtrasEnabled(showStageExtras));
+    store.dispatch(setLessonExtrasEnabled(showStageExtras));
     return store;
   };
 

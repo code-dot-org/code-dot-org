@@ -2,7 +2,7 @@
   "script": {
     "name": "csd6-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-05-18 15:36:02 UTC",
+    "serialized_at": "2021-05-25 17:10:41 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -506,7 +506,7 @@
       "key": "2fff60de-5366-470f-ad77-577397a87071",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -758,7 +758,7 @@
       "key": "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -800,7 +800,7 @@
       "key": "fe4547e7-73f8-4c7b-a67f-a61b4a10332c",
       "position": 2,
       "properties": {
-        "duration": 215,
+        "duration": 125,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1010,7 +1010,7 @@
       "key": "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1066,7 +1066,7 @@
       "key": "ca01af5b-36a3-461d-b6b0-9802dc211193",
       "position": 3,
       "properties": {
-        "duration": 30,
+        "duration": 75,
         "name": "Activity 2"
       },
       "seeding_key": {
@@ -3206,8 +3206,14 @@
       "key": "0516be14-10b2-4124-af7c-3d76c5177d95",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students into groups of 2-4 for this project. At your discretion you may choose to have students form larger groups or work independently.\r\n\r\n**Distribute:** Provide a copy of the project guide to each group. As a class, review the different steps of the project and where they appear in the project guide. Direct students towards the the rubric so that they know from the beginning what components of the project you will be looking for.",
-        "name": "Review Project Guide\r"
+        "description": "**Group:** Place students into groups of 2-4 for this project. At your discretion you may choose to have students form larger groups or work independently.\n\n**Distribute:** Provide a copy of the project guide to each group. As a class, review the different steps of the project and where they appear in the project guide. \n\nDistribute the rubric or student checklist to each student. Have them look over this resource so that they know from the beginning what components of the project you will be looking for.",
+        "name": "Review Project Guide\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0516be14-10b2-4124-af7c-3d76c5177d95",
@@ -10009,6 +10015,18 @@
   ],
   "resources": [
     {
+      "name": "Accelerometer Events",
+      "url": "https://drive.google.com/file/d/1nxKyWBb_zuIrAJ9hSFc6t3vsa1tJkeKF/view?usp=sharing",
+      "key": "accelerometer_events",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "accelerometer_events"
+      }
+    },
+    {
       "name": "All Code",
       "url": "/s/csd6-2021/code",
       "key": "all_code_4",
@@ -10065,6 +10083,78 @@
       }
     },
     {
+      "name": "Analog Sensors",
+      "url": "https://drive.google.com/file/d/11XwNv2922DAvixhreVXgfxnTS9SHa8ds/view?usp=sharing",
+      "key": "analog_sensors",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "analog_sensors"
+      }
+    },
+    {
+      "name": "Arrays",
+      "url": "https://drive.google.com/file/d/1X8tTj4O9_XVn1LNPhs9LZGIXJVxB6yFX/view?usp=sharing",
+      "key": "arrays",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "arrays"
+      }
+    },
+    {
+      "name": "Board Events",
+      "url": "https://drive.google.com/file/d/1XvRUPOeqLcQonhk1Sq9FYkIv_DAwx6aR/view?usp=sharing",
+      "key": "board_events",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "board_events"
+      }
+    },
+    {
+      "name": "Booleans and Comparison Operators",
+      "url": "https://drive.google.com/file/d/1HUDl6xDoxNWJUptqMA1B9DXE0XFTeD3a/view?usp=sharing",
+      "key": "booleans_and_comparison_operators_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "booleans_and_comparison_operators_1"
+      }
+    },
+    {
+      "name": "Changing Sensor Scale",
+      "url": "https://drive.google.com/file/d/1jGo7RH3_BiZwBBXNaOCVco-okqRRkSdC/view?usp=sharing",
+      "key": "changing_sensor_scale",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "changing_sensor_scale"
+      }
+    },
+    {
+      "name": "Circuit Playground",
+      "url": "https://drive.google.com/file/d/1OpB8lF3MQJIpiRm7hFo9ARx346-NpfNf/view?usp=sharing",
+      "key": "circuit_playground",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "circuit_playground"
+      }
+    },
+    {
       "name": "How Computers Work: Circuits & Logic",
       "url": "https://youtu.be/ZoqMiFKspAA",
       "key": "circuits-logic-video",
@@ -10075,6 +10165,42 @@
       },
       "seeding_key": {
         "resource.key": "circuits-logic-video"
+      }
+    },
+    {
+      "name": "Circuits and Buttons",
+      "url": "https://drive.google.com/file/d/12z50tIYpRJ2LFUlpYJYcKQ6I_qMk6g5p/view?usp=sharing",
+      "key": "circuits_and_buttons",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "circuits_and_buttons"
+      }
+    },
+    {
+      "name": "Circuits and LEDs",
+      "url": "https://drive.google.com/file/d/1uRQsBQna07gfhhqlIz6mgX56fki8n_-d/view?usp=sharing",
+      "key": "circuits_and_leds",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "circuits_and_leds"
+      }
+    },
+    {
+      "name": "Color Lights",
+      "url": "https://drive.google.com/file/d/1EEZhq_8Ljs77kLQoriJj24frEkFfHIKZ/view?usp=sharing",
+      "key": "color_lights",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "color_lights"
       }
     },
     {
@@ -10148,6 +10274,30 @@
       }
     },
     {
+      "name": "Date and Change Events",
+      "url": "https://drive.google.com/file/d/1t7EKjtcgISbHz_REmaCrcgPb_lArGkUJ/view?usp=sharing",
+      "key": "date_and_change_events",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "date_and_change_events"
+      }
+    },
+    {
+      "name": "Designing Screens with Code",
+      "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
+      "key": "designing_screens_with_code",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
       "name": "Emoji Race",
       "url": "https://docs.google.com/document/d/1dn4FIRKYaVb1o7TNiyeKqoT1fBL9FPoqOmJV-nvJYUM/",
       "key": "emoji-race-guide",
@@ -10161,6 +10311,30 @@
       }
     },
     {
+      "name": "For Loops",
+      "url": "https://drive.google.com/file/d/1m96-bXSMQwkgpJ0MBgagEBRhJ8NYvDcN/view?usp=sharing",
+      "key": "for_loops",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "for_loops"
+      }
+    },
+    {
+      "name": "Functions",
+      "url": "https://drive.google.com/file/d/1Zw7G76us_ENyDtrVOWsA5RMQzjDbrJcg/view?usp=sharing",
+      "key": "functions_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "functions_2"
+      }
+    },
+    {
       "name": "How Computers Word: Hardware & Software",
       "url": "https://www.youtube.com/watch?v=xnyFYiK2rSY",
       "key": "how_computers_word_hardware_software",
@@ -10171,6 +10345,18 @@
       },
       "seeding_key": {
         "resource.key": "how_computers_word_hardware_software"
+      }
+    },
+    {
+      "name": "If Statements",
+      "url": "https://drive.google.com/file/d/1dCxskfbG66EVJfdzp0cNaNxw9MxX79KF/view?usp=sharing",
+      "key": "if_statements_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "if_statements_1"
       }
     },
     {
@@ -10225,7 +10411,7 @@
       }
     },
     {
-      "name": "Loops in App Lab",
+      "name": "For Loops",
       "url": "https://youtu.be/WqmyVZnMWHY",
       "key": "loops_in_app_lab",
       "properties": {
@@ -10255,10 +10441,36 @@
       "key": "make-game-guide",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "make-game-guide"
+      }
+    },
+    {
+      "name": "Make a Game",
+      "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY/edit",
+      "key": "make_a_game",
+      "properties": {
+        "type": "Rubric",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_a_game"
+      }
+    },
+    {
+      "name": "Modifying Arrays",
+      "url": "https://drive.google.com/file/d/1OkCLdXlEIVm62RoucKyw8JhOpWtQENgH/view?usp=sharing",
+      "key": "modifying_arrays",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "modifying_arrays"
       }
     },
     {
@@ -10299,6 +10511,30 @@
       }
     },
     {
+      "name": "Physical Input",
+      "url": "https://drive.google.com/file/d/1TNz91ENBLt-SG1L0459YR9X5yLjQNuSc/view?usp=sharing",
+      "key": "physical_input",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "physical_input"
+      }
+    },
+    {
+      "name": "Physical Output",
+      "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
+      "key": "physical_output",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "physical_output"
+      }
+    },
+    {
       "name": "Prototype an Innovation",
       "url": "https://docs.google.com/document/d/14fdmAmOJpOJw6KXielJAws1wf2AWEnSqQnZueUC6GvM/edit",
       "key": "planning-your-innovation",
@@ -10312,8 +10548,32 @@
       }
     },
     {
+      "name": "Playing Notes",
+      "url": "https://drive.google.com/file/d/1drBef9298Ijm4uir9Iyt0m-NNYowRH38/view?usp=sharing",
+      "key": "playing_notes",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "playing_notes"
+      }
+    },
+    {
+      "name": "Producing Output",
+      "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
+      "key": "producing_output",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "producing_output"
+      }
+    },
+    {
       "name": "Prototype an Innovation",
-      "url": "https://docs.google.com/document/d/1iCIp2USouJwLmQcc-VhoBPKMyvnEXDBq28ojLVbTJ90/edit",
+      "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
       "key": "prototype-an-innovation-1",
       "properties": {
         "type": "Rubric",
@@ -10325,15 +10585,39 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 1",
-      "url": "https://docs.google.com/document/d/1S-R6ks2fKTlKChpWWFpufdu5W50I6NHM1J1QmQEES90",
-      "key": "sample_marked_rubrics_1_2",
+      "name": "Prototype an Innovation - Student Checklist",
+      "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
+      "key": "prototype_an_innovation_-_student_checklist",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubrics_1_2"
+        "resource.key": "prototype_an_innovation_-_student_checklist"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
+      "key": "random_numbers_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "name": "Responding to User Input",
+      "url": "https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view?usp=sharing",
+      "key": "responding_to_user_input_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "responding_to_user_input_1"
       }
     },
     {
@@ -10349,15 +10633,27 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 2",
-      "url": "https://docs.google.com/document/d/1gGSlo9tq3KywGsbbfWQLLBq_ImejliLD6mvw7ICHklc",
-      "key": "sample_marked_rubrics_2_3",
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit",
+      "key": "sample_marked_rubrics_4",
       "properties": {
         "type": "Exemplar",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubrics_2_3"
+        "resource.key": "sample_marked_rubrics_4"
+      }
+    },
+    {
+      "name": "Taking Input with getProperty",
+      "url": "https://drive.google.com/file/d/14JROXSF8nsce64Y1EjrbmzuANtCln1md/view?usp=sharing",
+      "key": "taking_input_with_getproperty",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "taking_input_with_getproperty"
       }
     },
     {
@@ -10369,6 +10665,18 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "The Accelerometer",
+      "url": "https://drive.google.com/file/d/1L7NhIsMI70GpuA5_gsF-M8VfJPY6Ld3Q/view?usp=sharing",
+      "key": "the_accelerometer",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "the_accelerometer"
       }
     }
   ],
@@ -10393,8 +10701,32 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "responding_to_user_input_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "The Circuit Playground",
         "resource.key": "how_computers_word_hardware_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "resource.key": "circuit_playground"
       }
     },
     {
@@ -10405,14 +10737,74 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "board_events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "physical_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "physical_output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "resource.key": "taking_input_with_getproperty"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Analog Input",
         "resource.key": "analog-digital-video"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Analog Input",
+        "resource.key": "analog_sensors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "resource.key": "date_and_change_events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "resource.key": "changing_sensor_scale"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "The Program Design Process",
         "resource.key": "emoji-race-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "functions_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "if_statements_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "booleans_and_comparison_operators_1"
       }
     },
     {
@@ -10441,14 +10833,74 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "make_a_game"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
         "resource.key": "introduction_to_arrays"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "circuits_and_leds"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "color_lights"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "producing_output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "playing_notes"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Arrays and For Loops",
         "resource.key": "loops_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "modifying_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "resource.key": "the_accelerometer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "resource.key": "accelerometer_events"
       }
     },
     {
@@ -10461,6 +10913,12 @@
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
         "resource.key": "physical-prototyping-project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "resource.key": "circuits_and_buttons"
       }
     },
     {
@@ -10484,25 +10942,25 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "sample_marked_rubrics_1_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "peer_review_1_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "sample_marked_rubrics_2_3"
+        "resource.key": "peer_review_2_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "peer_review_2_1"
+        "resource.key": "sample_marked_rubrics_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "prototype_an_innovation_-_student_checklist"
       }
     }
   ],
