@@ -75,8 +75,8 @@ const styles = {
 };
 
 /**
- * A button that drops down to a set of clickable links, and closes itself if
- * you click on the button, or outside of the dropdown.
+ * A button that drops down to a set of importable files, and closes itself if
+ * you click on the import button, or outside of the dropdown.
  */
 export const Backpack = class Backpack extends Component {
   state = {
