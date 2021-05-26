@@ -20,7 +20,6 @@ import {SmallAssessmentIcon} from './SmallAssessmentIcon';
  * or a diamond (or a pill in the case of unplugged levels), and it can be big
  * or small. The fill and outline change depending on the level status.
  */
-
 export default class ProgressBubble extends React.Component {
   static propTypes = {
     level: levelWithProgressType.isRequired,
@@ -38,7 +37,7 @@ export default class ProgressBubble extends React.Component {
     onClick: PropTypes.func
   };
 
-  isEnabled() {
+  isClickable() {
     const {disabled, level, onClick} = this.props;
     return !disabled && (!!level.url || !!onClick);
   }
@@ -82,7 +81,7 @@ export default class ProgressBubble extends React.Component {
         shape={shape}
         size={bubbleSize}
         progressStyle={levelProgressStyle(level.status, level.kind)}
-        classNames={getBubbleClassNames(this.isEnabled())}
+        classNames={getBubbleClassNames(this.isClickable())}
       >
         {content}
         {isLevelAssessment(level) && !smallBubble && (
@@ -98,7 +97,7 @@ export default class ProgressBubble extends React.Component {
   }
 
   render() {
-    if (this.isEnabled()) {
+    if (this.isClickable()) {
       return (
         <BubbleLink url={this.getUrl()} onClick={this.onClickLevel}>
           {this.createBubbleElement()}

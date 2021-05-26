@@ -7,10 +7,6 @@ import {
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 
 const styles = {
-  container: {
-    ...progressStyles.flex,
-    ...progressStyles.cellContent
-  },
   node: {
     ...progressStyles.inlineBlock,
     minWidth: bubbleContainerWidths[BubbleSize.full],
@@ -48,7 +44,7 @@ SublevelSpacer.propTypes = {
  */
 export default function ProgressTableLevelSpacer({items}) {
   return (
-    <span style={styles.container}>
+    <span className="cell-content" style={progressStyles.flex}>
       {items.map((item, i) => (
         <span key={`spacer-${i}`} style={progressStyles.flexBetween}>
           <span style={{...styles.node, ...item.nodeStyle}}>{item.node}</span>
