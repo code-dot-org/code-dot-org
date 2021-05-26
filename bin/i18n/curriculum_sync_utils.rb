@@ -9,13 +9,28 @@ module CurriculumSyncUtils
   def self.sync_in
     puts "Sync in curriculum content"
     sync_in_serialize
-    # TODO: redaction
+    redact
   end
 
   def self.sync_out
     puts "Sync out curriculum content"
-    # TODO: restoration
+    restore
     sync_out_reorganize
+  end
+
+  def self.redact
+    plugins = %w(resourceLink vocabularyDefinition)
+    originals_dir = I18N_SOURCE_DIR.sub("source", "original")
+    Dir.glob(File.join(I18N_SOURCE_DIR, 'curriculum_content', '**/*.json')).each do |file|
+      original_file = file.sub(I18N_SOURCE_DIR, originals_dir)
+      FileUtils.mkdir_p(File.dirname(original_file))
+      FileUtils.cp(file, original_file)
+      redacted = RedactRestoreUtils.redact_file(file, plugins)
+      File.write(file, JSON.pretty_generate(redacted))
+    end
+  end
+
+  def self.restore
   end
 
   # Helper method to get the desired destination subdirectory of the given
