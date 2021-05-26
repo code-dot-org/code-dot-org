@@ -9,6 +9,7 @@ import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
+import javalabMsg from '@cdo/javalab/locale';
 
 const style = {
   darkMode: {
@@ -144,9 +145,9 @@ class JavalabConsole extends React.Component {
             id="javalab-console-clear"
             headerHasFocus={true}
             isRtl={false}
-            label="Clear Console"
+            label={javalabMsg.clearConsole()}
           />
-          <PaneSection>Console</PaneSection>
+          <PaneSection>{javalabMsg.console()}</PaneSection>
         </PaneHeader>
         <div
           style={{
