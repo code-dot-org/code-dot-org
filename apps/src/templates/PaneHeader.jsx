@@ -157,11 +157,27 @@ export const PaneButton = Radium(function(props) {
     iconStyle = {...iconStyle, ...styles.headerButtonNoLabel};
   }
 
+  function renderIcon() {
+    const {iconClass, icon} = props;
+
+    if (iconClass) {
+      return <i className={iconClass} style={iconStyle} />;
+    }
+
+    if (icon) {
+      return (
+        <icon.type {...icon.props} style={{...iconStyle, ...icon.props.style}}>
+          {icon.children}
+        </icon.type>
+      );
+    }
+  }
+
   return (
     <div id={props.id} style={divStyle} onClick={props.onClick}>
       <span style={styles.headerButtonSpan}>
         {props.hiddenImage}
-        <i className={props.iconClass} style={iconStyle} />
+        {renderIcon()}
         <span style={styles.noPadding}>{label}</span>
       </span>
     </div>
@@ -169,7 +185,8 @@ export const PaneButton = Radium(function(props) {
 });
 PaneButton.propTypes = {
   headerHasFocus: PropTypes.bool.isRequired,
-  iconClass: PropTypes.string.isRequired,
+  iconClass: PropTypes.string,
+  icon: PropTypes.node,
   label: PropTypes.string.isRequired,
   isRtl: PropTypes.bool.isRequired,
   leftJustified: PropTypes.bool,
