@@ -24,6 +24,7 @@ import NameFileDialog from './NameFileDialog';
 import DeleteConfirmationDialog from './DeleteConfirmationDialog';
 import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
+import Backpack from './Backpack';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
@@ -60,6 +61,13 @@ const style = {
     marginBottom: 0,
     display: 'flex',
     alignItems: 'center'
+  },
+  backpackSection: {
+    textAlign: 'left',
+    display: 'inline-block',
+    float: 'left',
+    overflow: 'visible',
+    marginLeft: 3
   }
 };
 
@@ -458,14 +466,9 @@ class JavalabEditor extends React.Component {
             label="New File"
             leftJustified
           />
-          <PaneButton
-            id="javalab-editor-backpack"
-            iconClass="fa fa-briefcase"
-            headerHasFocus
-            isRtl={false}
-            label="Backpack"
-            leftJustified
-          />
+          <PaneSection style={style.backpackSection}>
+            <Backpack />
+          </PaneSection>
           <PaneButton
             id="data-mode-versions-header"
             iconClass="fa fa-clock-o"
