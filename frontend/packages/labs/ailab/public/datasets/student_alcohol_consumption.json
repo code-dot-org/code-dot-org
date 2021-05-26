@@ -5,7 +5,7 @@
     "lastUpdated": "2016",
     "context": {
       "createdBy": "P. Cortez and A. Silva",
-      "potentialUses": "Predicting how various factors affect a students grades or perception of their health.",
+      "potentialUses": "Predicting how various factors affect a students grades.",
       "potentialMisuses": ""
     }
   },
@@ -146,5 +146,5 @@
       "description": "Grade for the third semester."
     }
   ],
-  "defaultLabelColumn": "Health"
+  "defaultLabelColumn": "Third semester grade"
 }
