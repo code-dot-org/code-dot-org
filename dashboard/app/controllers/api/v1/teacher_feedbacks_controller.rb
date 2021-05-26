@@ -5,11 +5,11 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   # Use student_id, level_id, and teacher_id to lookup the feedback for a student on a particular level and provide the
   # most recent feedback left by that teacher
   def get_feedback_from_teacher
-    @feedback = TeacherFeedback.get_student_level_feedback(
+    @feedback = TeacherFeedback.get_student_level_feedback_by_teacher(
       params.require(:student_id),
       params.require(:level_id),
-      params.require(:teacher_id),
-      params.require(:script_id)
+      params.require(:script_id),
+      params.require(:teacher_id)
     )
 
     # Setting custom header here allows us to access the csrf-token and manually use for create
@@ -28,11 +28,11 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
     headers['csrf-token'] = form_authenticity_token
 
-    @level_feedbacks = TeacherFeedback.where(
-      student_id: params.require(:student_id),
+    @level_feedbacks = TeacherFeedback.get_all_student_level_feedback(
+      params.require(:student_id),
       level_id: params.require(:level_id),
       script_id: params.require(:script_id)
-    ).latest_per_teacher
+    )
 
     render json: @level_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
   end
@@ -42,16 +42,8 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   def count
     # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
     headers['csrf-token'] = form_authenticity_token
-
-    @all_unseen_feedbacks = TeacherFeedback.where(
-      student_id: current_user.id,
-      seen_on_feedback_page_at: nil,
-      student_first_visited_at: nil
-    ).select do |feedback|
-      User.find(feedback.teacher_id).authorized_teacher?
-    end
-
-    render json: @all_unseen_feedbacks.count
+    count = TeacherFeedback.get_student_unseen_feedback_count(current_user.id)
+    render json: count
   end
 
   # POST /teacher_feedbacks
