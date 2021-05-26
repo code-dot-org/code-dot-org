@@ -127,7 +127,7 @@
         {
           "type": "radiogroup",
           "name": "who_decides_mandatory",
-          "visibleIf": "{exam_mandatory} = 'mandatory'",
+          "visibleIf": "{exam_mandatory} = 'mandatory' and {students_took_exam} = 'yes'",
           "title": "Who decides whether or not the AP CSP exam is mandatory for your students?",
           "isRequired": true,
           "choices": [

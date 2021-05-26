@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-25 18:20:00 UTC",
+    "serialized_at": "2021-05-26 14:46:47 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -141,6 +141,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "In this lesson, students implement conditionals and local variables to make decisions about object initialization and verify values passed to the constructor. Students explore the scope of local variables and parameters within a constructor and use the keyword `this` to refer to the current object. These concepts are used to add another constructor to the `Dessert` class.",
+        "preparation": "* Gather colored pencils or markers so that each student has access to red, green, and blue colors\n* Print copies of the Diagramming Scope Activity Guide (one copy for each student)\n* Gather several sticky notes",
+        "student_overview": "How can you make sure that the values given to a `Dessert` are correct? Remembering what you learned about edge cases, you add code to check for logic errors in the constructor. In this lesson, you explore where different types of variables are accessible and use these concepts to add another constructor to the `Dessert` class."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -491,6 +494,48 @@
       "seeding_key": {
         "lesson_activity.key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611",
         "lesson.key": "lesson-5",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "a0c36374-0902-489c-8911-a094885e41bd",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a0c36374-0902-489c-8911-a094885e41bd",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "b4dad128-5666-4eef-b005-66fd6a49a7b7",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "35b3858a-a1f9-4eab-b8b7-7fe06bb2b196",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "35b3858a-a1f9-4eab-b8b7-7fe06bb2b196",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot"
       }
@@ -1422,6 +1467,378 @@
         "activity_section.key": "ad085f55-9443-4332-aca4-66c95fd4c6cd",
         "lesson_activity.key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611"
       }
+    },
+    {
+      "key": "1f1caad6-302f-43c8-9a36-f5ae95c076b0",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students evaluate the four expressions to create a 4-digit code. All of these expressions evaluate to an `int`.  Give students enough time to solve these independently then quietly share with a neighbor when they are done. Ask students to share with the class before clicking through the animated slide to review the solution. Discuss any questions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students evaluate another expression that evaluates to a `double`. Give students enough time to solve these independently then quietly share with a neighbor when they are done. Ask students to share with the class before clicking through the slide animation to review the solution. Discuss any questions they may have.",
+        "name": "Crack the Code",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This warm up is a review of the previous lesson on evaluating expressions. Encourage students to reference resources, including previous handouts, to help them recall rules of evaluation."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1f1caad6-302f-43c8-9a36-f5ae95c076b0",
+        "lesson_activity.key": "a0c36374-0902-489c-8911-a094885e41bd"
+      }
+    },
+    {
+      "key": "678f0d8b-11e3-4cce-8f4e-3ca2ebe2102d",
+      "position": 1,
+      "properties": {
+        "description": "In Unit 1, we learned that an edge case is a situation in a program that produces a different outcome and requires special error handling. Today, we are going to explore edge cases for creating `Dessert` objects.",
+        "duration": "5",
+        "name": "Error Checking Constructors",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "678f0d8b-11e3-4cce-8f4e-3ca2ebe2102d",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "48cc5b2d-3e64-4401-b98e-43dde606f986",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What arguments would not make sense to pass to this `Dessert` constructor? Why would these arguments not make sense?*\n\n**Discussion Goal:** Students realize that they could pass in values that don’t make sense but still compile. For example, they could pass in a negative `int` for the `newQty` parameter. Even though Java will compile and run this code, it doesn’t make sense to have a negative quantity.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may suggest arguments that will cause the program to not compile. For example, they may try to pass in a `String` for the `newQty` parameter. Guide students toward examples that would compile but don't make sense in this scenario. For example, you could ask:\n* *Can you think of arguments that Java would compile but we know don’t make sense?*\n* *Think about desserts in the real world. What are values that don't make sense?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "48cc5b2d-3e64-4401-b98e-43dde606f986",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "c1cc758a-4e72-46e5-8dfa-96340d7c951f",
+      "position": 3,
+      "properties": {
+        "description": "Remember that the `Dessert` class is modeling something in the real world. As software engineers, we need to translate real-world rules into code. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c1cc758a-4e72-46e5-8dfa-96340d7c951f",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "f220e8ba-ade4-43e7-8f8d-978072999f94",
+      "position": 4,
+      "properties": {
+        "description": "**Discuss:** Click through the animated slide to discuss the following prompts.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *How could we check for values that don't make sense, like a negative value for `newQty`?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What could we do to prevent the negative value from being used for `newQty`?*\n\n**Discussion Goal:** Students remember that they can use an `if` statement to check if something is true. They can set the instance variable `quantity` to a different value that makes sense within the `if` statement.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Guide students towards thinking of default values for the instance variables that make sense for the scenario. For example, you could ask: *If someone tried to use a negative value for quantity, what default value would make sense to use instead?*\n\nStudents may confuse writing code for default values with the Java default values from previous lessons. When we specify default values, we make choices based on our knowledge of the object we are modeling. The default values Java are generic values for all scenarios."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f220e8ba-ade4-43e7-8f8d-978072999f94",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "3c614fef-f3a7-4af6-9ddc-3cdc57eb3a3c",
+      "position": 5,
+      "properties": {
+        "description": "As software engineers, we write code that other software engineers will use. We need to make sure that our code can handle these cases.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3c614fef-f3a7-4af6-9ddc-3cdc57eb3a3c",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "e4aa75b6-3f1f-4a48-a930-9483cd865ba3",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students a possible solution to handle negative values for quantity. Connect the code to student responses from the previous discussion by pointing out how the instance variable `quantity` is set to 1 within the `if` statement when `newQty` is negative.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Although students have not yet been formally introduced to relational operators, they likely have seen the `>=` operator in other classes. Focus on explaining that the expression evaluates to `true` or `false` rather than spending time discussing the `>=` operator."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e4aa75b6-3f1f-4a48-a930-9483cd865ba3",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "57fe166b-24db-4c11-a913-bdfc9d3c0637",
+      "position": 7,
+      "properties": {
+        "description": "Let's look at some more broken code so we can learn how to fix them!",
+        "duration": "10",
+        "name": "Scope",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "57fe166b-24db-4c11-a913-bdfc9d3c0637",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "4b71ad62-38d6-4405-9195-f0a72bb44029",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students run the code to identify the error resulting from using `newQty`, then correct the code to use `quantity`."
+      },
+      "seeding_key": {
+        "activity_section.key": "4b71ad62-38d6-4405-9195-f0a72bb44029",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "b3f129e7-89fb-4ab9-b3b4-6d0fda440aa9",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did this change fix the error?*\n\n**Discussion Goal:** Students note that changing the variables fixed the error. Using `newQty` caused the error while using `quantity` did not cause an error.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Guide students to notice that `newQty` is a local variable declared within the constructor, while `quantity` is an instance variable. Although students have not learned the term scope yet, they may share ideas about where a variable can be used."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b3f129e7-89fb-4ab9-b3b4-6d0fda440aa9",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "46cc8c29-8174-46d1-b5fc-e5b729d331a0",
+      "position": 10,
+      "properties": {
+        "description": "**Discuss:** Click through the animated slide to introduce scope and discuss the prompt.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What do you think scope means?*\n\n**Discussion Goal:** Students guess that scope refers to where a variable can be used. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that a parameter can only be used within the constructor or method that is defined.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Will this code compile? Why or why not?*\n\n**Discussion Goal:** Students have not seen this type of scope error. Students make predictions and justify their answers.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Not all of the code fits on the slide. An option is to have students open the code in the corresponding level while discussing. However, ensure that students do *not* run the code before the discussion. Level 2 has compiler errors that may be obvious once Code Studio is open."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "46cc8c29-8174-46d1-b5fc-e5b729d331a0",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "da1d2967-ca73-4f44-8270-6c2332828243",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students run the previous code to check their prediction."
+      },
+      "seeding_key": {
+        "activity_section.key": "da1d2967-ca73-4f44-8270-6c2332828243",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "c489cbcf-de28-4c6f-8438-c044765f266b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Did the code compile? Why do you think this happened?*\n\n**Discussion Goal:** Students discover that the code doesn’t compile and share ideas about the cause.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to make connections to the errors encountered so far. The compiler error message will also give them hints. Guide students towards thinking about the scope of the local variable `isValid`."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c489cbcf-de28-4c6f-8438-c044765f266b",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "f47dec05-1655-402c-a5c5-3637443d1611",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Click through the animated slide to explain that a local variable can only be used in the constructor or method after it was defined.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall that describes the bugs encountered with scope and strategies to debug them. "
+      },
+      "seeding_key": {
+        "activity_section.key": "f47dec05-1655-402c-a5c5-3637443d1611",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "09c423c6-506b-4650-a11e-a0e3b3e6d95d",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Diagramming Scope handout and red, green, and blue colored pencils or markers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work on the Diagramming Scope handout with a partner. After they are finished, they find another pair to compare.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Any questions? Did any groups disagree on scope?*\n\n**Discussion Goal:** Students clarify any misconceptions they may have about scope.",
+        "duration": "5",
+        "name": "Diagramming Scope"
+      },
+      "seeding_key": {
+        "activity_section.key": "09c423c6-506b-4650-a11e-a0e3b3e6d95d",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "ddee7d78-6398-4966-9850-ed2e77672bca",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think `printInfo()` does?*\n\n**Discussion Goal:** Students share that it looks like the values of the `Dessert` object's instance variables are printed.\n\n**Do This:** Click through the animated slide to show the answer.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the output of this code segment?*\n\n**Discussion Goal:** Students have not seen variables with the same name before. Students make predictions rather about the output of the code segment.",
+        "duration": "15",
+        "name": "this Keyword",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Guide students towards noticing that there are two variables with the same name – one is an instance variable and the other is a local variable. Possible questions to ask include:\n* *What do you think happens when there are two variables of the same name?*\n* *Which one is being referenced?*\n* *Do you think this will compile?*\n* *Do you think this will run?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ddee7d78-6398-4966-9850-ed2e77672bca",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "38cd0432-31c5-4c92-b107-e23e835fbb9f",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students run the previous code to check their prediction."
+      },
+      "seeding_key": {
+        "activity_section.key": "38cd0432-31c5-4c92-b107-e23e835fbb9f",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "55922e61-76aa-4994-a246-0a55a504032e",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the code? Why do you think this happened?*\n\n**Discussion Goal:** Students share the output of the code segment and provide their best guesses as to why. Note that `quantity = 0` even though the intent was for it to be set to 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain to students why `quantity = 0`.\n\n**Discuss:** Use Think-Pair-Share to discuss the prompts.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *The updated code sets the instance variable to the parameter. What changed?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Why did this change fix the code?*\n\n**Discussion Goal:** Students notice that line 11 changed. The code on the right uses the `this` keyword to refer to instance variables. Students predict that `this` keyword fixes the error.\n\n**Discuss:** Click through the animated slide after discussing the prompt to show the definition.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What do you think `this` means?*\n\n**Discussion Goal:** Students guess that `this` is used to reference instance variables.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain that to refer to the instance variable when there is a local variable with the same name, use the `this` keyword.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the open-source example of the `this` keyword. Explain that some software engineers use the `this` keyword so they don’t have to rename variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Given the `Dessert` class, predict the output of the code segment.*\n\n**Do This:** Click through the animated slide to show the code side by side.\n\n**Discussion Goal:** Students have just been introduced to the `this` keyword but have not had as much experience running code using it. Students make predictions rather than determine the correct answer.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Guide students towards noticing that the code now uses the `this` keyword on the right-hand side of the assignment expression instead of the left. Possible questions to ask include:\n* *What is the difference between this code and the last?*\n* *What difference do you think that will make when we run the code if any?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "55922e61-76aa-4994-a246-0a55a504032e",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "e9b89bbc-c727-431b-9ac9-93aa9c9b24c8",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students run the previous code to check their prediction."
+      },
+      "seeding_key": {
+        "activity_section.key": "e9b89bbc-c727-431b-9ac9-93aa9c9b24c8",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "7b3d0b23-1e1e-4c42-af58-840418f0926c",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the code? Why do you think this happened?*\n\n**Discussion Goal:** Students share out the output and provide their best guesses as to why. Note that `quantity = 0` even though the intent was for it to be set to 1."
+      },
+      "seeding_key": {
+        "activity_section.key": "7b3d0b23-1e1e-4c42-af58-840418f0926c",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "616ece61-9681-4c8d-96e8-39daf7675ca3",
+      "position": 20,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students now debug the code."
+      },
+      "seeding_key": {
+        "activity_section.key": "616ece61-9681-4c8d-96e8-39daf7675ca3",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "a0a34d76-52ba-4426-a0cd-f9068699bdd9",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Before, `quantity = this.quantity;` was incorrect because it assigned the value of the instance variable to the parameter, which meant the instance variable was never updated. The instance variable `quantity` was never set, and remained the default value of 0.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a0a34d76-52ba-4426-a0cd-f9068699bdd9",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "ae41a93a-6af5-4723-957e-d5d70327c955",
+      "position": 22,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall describing bugs encountered and strategies to debug."
+      },
+      "seeding_key": {
+        "activity_section.key": "ae41a93a-6af5-4723-957e-d5d70327c955",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "21383e98-526c-4ba2-bf1f-861c3d92f2a2",
+      "position": 23,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students update the constructor then complete a vocabulary matching level."
+      },
+      "seeding_key": {
+        "activity_section.key": "21383e98-526c-4ba2-bf1f-861c3d92f2a2",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "9407896a-db1b-4e7a-aeb6-17a4b8175c93",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Scope video.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This video provides a summary of the concepts covered in this lesson. This helps students recap and process the concepts and terminology discussed before actively reflecting on the lesson in the Closing the Loop discussion."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9407896a-db1b-4e7a-aeb6-17a4b8175c93",
+        "lesson_activity.key": "35b3858a-a1f9-4eab-b8b7-7fe06bb2b196"
+      }
+    },
+    {
+      "key": "0abf4008-3e2b-411c-accc-a4eba5864a67",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "0abf4008-3e2b-411c-accc-a4eba5864a67",
+        "lesson_activity.key": "35b3858a-a1f9-4eab-b8b7-7fe06bb2b196"
+      }
+    },
+    {
+      "key": "7d212dff-8b9b-433c-afd7-78add4021cd1",
+      "position": 3,
+      "properties": {
+        "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket. ",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d212dff-8b9b-433c-afd7-78add4021cd1",
+        "lesson_activity.key": "35b3858a-a1f9-4eab-b8b7-7fe06bb2b196"
+      }
     }
   ],
   "script_levels": [
@@ -1453,6 +1870,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_defining_attributes"
+      }
+    },
+    {
+      "name": "[KEY] Diagramming Scope",
+      "url": "https://docs.google.com/document/d/1DUZaRcBzsr1EgUwfMW0H9HCufKR40o8RMTz0zIe-qCg/edit",
+      "key": "_key_diagramming_scope",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_diagramming_scope"
       }
     },
     {
@@ -1540,6 +1969,18 @@
       }
     },
     {
+      "name": "[KEY] U2L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Z3AaEnAEN_0Aop_U51i-kr1qNVjKEcwk99G8W6yhbAE/edit",
+      "key": "_key_u2l6_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l6_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] Vocabulary Crossword",
       "url": "https://docs.google.com/presentation/d/1Op_DvPrHFjFi-0h1mrTnontH9WgBOBxO48_TJ0uwVG0/edit#slide=id.p",
       "key": "_key_vocabulary_crossword",
@@ -1597,6 +2038,18 @@
       },
       "seeding_key": {
         "resource.key": "defining_attributes_-_main_method"
+      }
+    },
+    {
+      "name": "Diagramming Scope",
+      "url": "https://docs.google.com/document/d/1l1O-YQ00HoqcJaZpyyCrXAhZ3wFrfoFHT4Jj43QVTAs/edit",
+      "key": "diagramming_scope",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "diagramming_scope"
       }
     },
     {
@@ -1693,6 +2146,18 @@
       },
       "seeding_key": {
         "resource.key": "u2l5_extra_practice"
+      }
+    },
+    {
+      "name": "U2L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1fzeOD9y0KpGqCYgmTfO3ZQgk7nlnGvKSYg4NMzTiAGM/edit",
+      "key": "u2l6_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l6_extra_practice"
       }
     },
     {
@@ -1905,6 +2370,36 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "u2l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u2l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_diagramming_scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "diagramming_scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u2l6_extra_practice"
       }
     }
   ],
@@ -2274,6 +2769,26 @@
       "seeding_key": {
         "vocabulary.key": "operand"
       }
+    },
+    {
+      "key": "scope",
+      "word": "Scope",
+      "definition": "Where a variable can be used",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "scope"
+      }
+    },
+    {
+      "key": "this_keyword",
+      "word": "this keyword",
+      "definition": "Used to refer to the current object in a method or constructor",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "this_keyword"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -2492,6 +3007,18 @@
         "lesson.key": "lesson-5",
         "vocabulary.key": "operand"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "this_keyword"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -2666,6 +3193,26 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "d71ed25c-e0df-47e8-afb6-170e9546eda3"
+      }
+    },
+    {
+      "key": "f3a2fa61-101c-4789-8ffb-826a48bb4da4",
+      "properties": {
+        "description": "Identify the scope of variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "f3a2fa61-101c-4789-8ffb-826a48bb4da4"
+      }
+    },
+    {
+      "key": "ae390a72-5e11-4591-9309-cfc0748cdfd4",
+      "properties": {
+        "description": "Determine when to use the this keyword to refer to instance variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "ae390a72-5e11-4591-9309-cfc0748cdfd4"
       }
     }
   ],
@@ -2990,6 +3537,34 @@
         "lesson.key": "lesson-5",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.E.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.G.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.H.1"
       }
     }
   ],
