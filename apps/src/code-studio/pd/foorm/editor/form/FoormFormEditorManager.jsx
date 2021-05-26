@@ -213,6 +213,7 @@ class FoormFormEditorManager extends React.Component {
           onSelect={formMetadata => this.loadFormData(formMetadata)}
           foormEntities={this.getFetchableForms()}
           foormEntityName="Form"
+          showVersionFilterToggle={true}
         />
         {this.state.hasLoadError && (
           <div style={styles.loadError}>Could not load the selected form.</div>

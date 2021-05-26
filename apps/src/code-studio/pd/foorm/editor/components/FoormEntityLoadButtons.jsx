@@ -20,6 +20,7 @@ class FoormEntityLoadButtons extends React.Component {
     foormEntityName: PropTypes.string,
     showCodeMirror: PropTypes.func,
     isDisabled: PropTypes.bool,
+    showVersionFilterToggle: PropTypes.bool,
 
     // populated by redux
     setLastSaved: PropTypes.func,
@@ -29,14 +30,19 @@ class FoormEntityLoadButtons extends React.Component {
     setLastSavedQuestions: PropTypes.func
   };
 
-  constructor(props) {
-    super(props);
+  state = {
+    latestVersionsOnly: true
+  };
 
-    this.state = {
-      latestVersionsOnly: false
-    };
+  shouldShowLatestVersionsOnly() {
+    return this.props.showVersionFilterToggle && this.state.latestVersionsOnly;
   }
 
+  /**
+   * Takes props.foormEntities in the form of {metatadata: {name: string, version: number}, text: string}
+   * and optionally sorts and filters (based on version filter toggle) and renders them as MenuItems.
+   * @returns Array<MenuItem>
+   */
   getDropdownOptions() {
     return (
       this.props.foormEntities
@@ -44,7 +50,7 @@ class FoormEntityLoadButtons extends React.Component {
         .sort((a, b) => a['text'].localeCompare(b['text']))
         // optionally filter out entities so that only the last unique version of a name remains
         .filter((entity, i, array) =>
-          this.state.latestVersionsOnly && array[i + 1]
+          this.shouldShowLatestVersionsOnly() && array[i + 1]
             ? array[i + 1]['metadata']['name'] !== entity['metadata']['name']
             : true
         )
@@ -97,16 +103,18 @@ class FoormEntityLoadButtons extends React.Component {
         >
           {`New ${this.props.foormEntityName}`}
         </Button>
-        <SingleCheckbox
-          name="latestVersionsOnly"
-          label="Only show latest version"
-          onChange={() =>
-            this.setState({
-              latestVersionsOnly: !this.state.latestVersionsOnly
-            })
-          }
-          value={this.state.latestVersionsOnly}
-        />
+        {this.props.showVersionFilterToggle && (
+          <SingleCheckbox
+            name="latestVersionsOnly"
+            label="Only show latest version"
+            onChange={() =>
+              this.setState({
+                latestVersionsOnly: !this.state.latestVersionsOnly
+              })
+            }
+            value={this.state.latestVersionsOnly}
+          />
+        )}
       </div>
     );
   }
