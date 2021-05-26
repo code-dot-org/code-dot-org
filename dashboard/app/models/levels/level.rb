@@ -732,10 +732,12 @@ class Level < ApplicationRecord
       end
     end
 
-    # Copy the level_concept_difficulty of the parent level to the new level
-    update_params[:level_concept_difficulty] = level_concept_difficulty.dup
-    
     level.update!(update_params)
+
+    # Copy the level_concept_difficulty of the parent level to the new level
+    new_lcd = level_concept_difficulty.dup
+    level.level_concept_difficulty = new_lcd
+    level.save! if level.changed?
 
     level
   end
