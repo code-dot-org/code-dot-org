@@ -71,12 +71,6 @@ const styles = {
   },
   centerIcon: {
     color: color.white
-  },
-  assessmentIconBackground: {
-    color: color.purple
-  },
-  keepWorkingBackground: {
-    color: color.red
   }
 };
 
