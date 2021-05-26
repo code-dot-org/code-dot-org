@@ -2,7 +2,7 @@
   "script": {
     "name": "csp7-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-18 03:04:21 UTC",
+    "serialized_at": "2021-05-25 17:11:31 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -592,18 +592,6 @@
       }
     },
     {
-      "key": "40bbff70-0eda-4299-b227-465f97c4f0b0",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "40bbff70-0eda-4299-b227-465f97c4f0b0",
-        "lesson.key": "Libraries Investigate",
-        "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2021"
-      }
-    },
-    {
       "key": "09748854-e6fd-48dd-8a18-bc95a2f0a72a",
       "position": 1,
       "properties": {
@@ -980,48 +968,8 @@
       }
     },
     {
-      "key": "6ed20688-69da-427b-936d-37244bae495f",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Now look together at lines 30-36. Students discuss with a partner how they think the MOD operator works.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students need to know how the MOD operator works for the AP CSP exam. The explanations here are enough to help them answer those questions. \r\n\r\nThere are many wonderful and interesting uses of MOD in apps, but students are not expected or required to use the operator themselves when programming apps for this course. \r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6ed20688-69da-427b-936d-37244bae495f",
-        "lesson_activity.key": "f9b86f60-f067-483c-84f0-4b954e71c58a"
-      }
-    },
-    {
-      "key": "99dea69f-df64-4782-8c16-50ae7bc56cbe",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** The MOD operator is just like any other operator - it takes two numbers, processes them, and then returns a value. Click through the animations one by one as students give answers to each arithmetic statement.  \r\n    \r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students a few minutes to practice using the MOD operator with a partner, solving the problem on the screen. Then click through to see the answer."
-      },
-      "seeding_key": {
-        "activity_section.key": "99dea69f-df64-4782-8c16-50ae7bc56cbe",
-        "lesson_activity.key": "f9b86f60-f067-483c-84f0-4b954e71c58a"
-      }
-    },
-    {
-      "key": "f041d05e-7a8a-40aa-befa-ad805d4613b7",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> MOD can be a little tricky, but here's what you need to remember: it's the reaminder that is left after a number is divided by another number.\r\n\r\nWhy is this useful? A common usage is to determine if a number is even or odd. If you divide any number by two and there is no remainder, the number is even! You can also use MOD to determine if a number is divisible by another number.\r\n\r\nNow let's get back to another app investigation with functions with parameters and return values.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "f041d05e-7a8a-40aa-befa-ad805d4613b7",
-        "lesson_activity.key": "f9b86f60-f067-483c-84f0-4b954e71c58a"
-      }
-    },
-    {
       "key": "f7719909-f1dd-48e5-ac25-e979636ba00f",
-      "position": 7,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 2, read likes 1-14 and discuss with their partner what's happening in these lines.\n\n**Discuss:** *Read through the lines together as a class, and clear up any misconceptions.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students carefully read the function on lines 15-34 before explaining to their partners how it works. If students have extra time, they can try the modify activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Talk through the app together as a class. Make sure students understand all the parts of the function and understand where to look in the comments for information."
       },
@@ -1032,7 +980,7 @@
     },
     {
       "key": "e09ae6e9-707c-4478-b050-e13cbb282c61",
-      "position": 8,
+      "position": 5,
       "properties": {
         "progression_name": "App Investigation"
       },
@@ -1199,7 +1147,7 @@
       "key": "4c3ff3cd-15f7-464a-85c3-fccb85805abc",
       "position": 7,
       "properties": {
-        "description": "\n**Level 8:** Students do a quick practice with the MOD operator.\n\n**Extension Opportunities:**\n\n* Level 8: Add more greeting and compliment options to the lists",
+        "description": "\n\n**Extension Opportunities:**\n\n* Level 7: Add more greeting and compliment options to the lists",
         "progression_name": "MOD Practice"
       },
       "seeding_key": {
@@ -1478,7 +1426,8 @@
       "key": "8e798253-94ef-4e1e-9999-4e7b44f07624",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Libraries video."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Libraries video.",
+        "progression_name": "Libraries in App Lab"
       },
       "seeding_key": {
         "activity_section.key": "8e798253-94ef-4e1e-9999-4e7b44f07624",
@@ -1580,7 +1529,7 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 1 where they should run the app and try several different inputs.",
-        "name": "Level 1",
+        "name": "States App",
         "progression_name": "States App"
       },
       "seeding_key": {
@@ -1626,7 +1575,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 2 where they run the Pigify app and try several inputs. \n",
-        "name": "Level 2",
+        "name": "Pigify App",
         "progression_name": "Pigify App"
       },
       "seeding_key": {
@@ -1763,44 +1712,12 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Why is it important to use meaningful names for the functions in your library?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9dba81d9-5e34-42b3-88c3-c898268cf6d1",
         "lesson_activity.key": "b5ea1d97-8f60-440e-ba35-d9bf0f1d882e"
-      }
-    },
-    {
-      "key": "0822fa4e-83d6-45a7-99ec-06369789e031",
-      "position": 1,
-      "properties": {
-        "progression_name": "States App"
-      },
-      "seeding_key": {
-        "activity_section.key": "0822fa4e-83d6-45a7-99ec-06369789e031",
-        "lesson_activity.key": "40bbff70-0eda-4299-b227-465f97c4f0b0"
-      }
-    },
-    {
-      "key": "ef138a0c-5fc1-4cf6-a149-20adf0075afc",
-      "position": 2,
-      "properties": {
-        "progression_name": "Pigify App"
-      },
-      "seeding_key": {
-        "activity_section.key": "ef138a0c-5fc1-4cf6-a149-20adf0075afc",
-        "lesson_activity.key": "40bbff70-0eda-4299-b227-465f97c4f0b0"
-      }
-    },
-    {
-      "key": "130a98f1-9bfa-4cd2-bce9-a54e12238e3e",
-      "position": 3,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "130a98f1-9bfa-4cd2-bce9-a54e12238e3e",
-        "lesson_activity.key": "40bbff70-0eda-4299-b227-465f97c4f0b0"
       }
     },
     {
@@ -2557,27 +2474,27 @@
     {
       "chapter": 12,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U7 Param Return Practice MOD_2021"
+          "U7 Param Practice App 3_2021"
         ],
-        "progression": "MOD Practice"
+        "progression": "App Practice"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U7 Param Return Practice MOD_2021"
+          "U7 Param Practice App 3_2021"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "4c3ff3cd-15f7-464a-85c3-fccb85805abc"
+        "activity_section.key": "16ade91e-eae6-4d89-a536-fdc733b65730"
       },
       "level_keys": [
-        "U7 Param Return Practice MOD_2021"
+        "U7 Param Practice App 3_2021"
       ]
     },
     {
@@ -2662,6 +2579,32 @@
       "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Libraries in App Lab_2021"
+        ],
+        "progression": "Libraries in App Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Libraries in App Lab_2021"
+        ],
+        "lesson.key": "Libraries Explore",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2021",
+        "activity_section.key": "8e798253-94ef-4e1e-9999-4e7b44f07624"
+      },
+      "level_keys": [
+        "Libraries in App Lab_2021"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -2685,7 +2628,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2711,7 +2654,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2737,7 +2680,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -2756,14 +2699,14 @@
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "130a98f1-9bfa-4cd2-bce9-a54e12238e3e"
+        "activity_section.key": "9dba81d9-5e34-42b3-88c3-c898268cf6d1"
       },
       "level_keys": [
         "U7L6 CSP CFU Libraries_2021"
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2789,7 +2732,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2815,7 +2758,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2841,7 +2784,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2867,7 +2810,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2893,7 +2836,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -2919,7 +2862,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2945,7 +2888,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2971,7 +2914,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2997,7 +2940,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3023,7 +2966,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3184,14 +3127,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "U7 Param Return Practice MOD_2021",
+        "level.key": "U7 Param Practice App 3_2021",
         "script_level.level_keys": [
-          "U7 Param Return Practice MOD_2021"
+          "U7 Param Practice App 3_2021"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "4c3ff3cd-15f7-464a-85c3-fccb85805abc"
+        "activity_section.key": "16ade91e-eae6-4d89-a536-fdc733b65730"
       }
     },
     {
@@ -3228,6 +3171,18 @@
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
         "activity_section.key": "c6b30149-a1a1-4c69-b302-70ba089b312e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Libraries in App Lab_2021",
+        "script_level.level_keys": [
+          "Libraries in App Lab_2021"
+        ],
+        "lesson.key": "Libraries Explore",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2021",
+        "activity_section.key": "8e798253-94ef-4e1e-9999-4e7b44f07624"
       }
     },
     {
@@ -3275,7 +3230,7 @@
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "130a98f1-9bfa-4cd2-bce9-a54e12238e3e"
+        "activity_section.key": "9dba81d9-5e34-42b3-88c3-c898268cf6d1"
       }
     },
     {

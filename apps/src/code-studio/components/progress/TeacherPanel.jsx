@@ -5,9 +5,9 @@ import TeacherPanelContainer from '../TeacherPanelContainer';
 import SectionSelector from './SectionSelector';
 import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {fullyLockedStageMapping} from '../../stageLockRedux';
+import {fullyLockedLessonMapping} from '../../lessonLockRedux';
 import {ViewType} from '../../viewAsRedux';
-import {hasLockableStages} from '../../progressRedux';
+import {hasLockableLessons} from '../../progressRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentTable, {studentShape} from './StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -245,16 +245,16 @@ const styles = {
 
 export const UnconnectedTeacherPanel = TeacherPanel;
 export default connect(state => {
-  const {stagesBySectionId, lockableAuthorized} = state.stageLock;
+  const {lessonsBySectionId, lockableAuthorized} = state.lessonLock;
   const {
     selectedSectionId,
     sectionsAreLoaded,
     sectionIds
   } = state.teacherSections;
-  const currentSection = stagesBySectionId[selectedSectionId];
+  const currentSection = lessonsBySectionId[selectedSectionId];
 
-  const fullyLocked = fullyLockedStageMapping(
-    state.stageLock.stagesBySectionId[selectedSectionId]
+  const fullyLocked = fullyLockedLessonMapping(
+    state.lessonLock.lessonsBySectionId[selectedSectionId]
   );
   const unlockedStageIds = Object.keys(currentSection || {}).filter(
     stageId => !fullyLocked[stageId]
@@ -267,7 +267,7 @@ export default connect(state => {
 
   // Pretend we don't have lockable lessons if we're not authorized to see them
   const scriptHasLockableStages =
-    lockableAuthorized && hasLockableStages(state.progress);
+    lockableAuthorized && hasLockableLessons(state.progress);
 
   return {
     viewAs: state.viewAs,

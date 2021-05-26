@@ -205,27 +205,12 @@ class ManageStudentsTable extends Component {
   }
 
   // Cell formatters.
-
   passwordHeaderFormatter() {
     const {loginType} = this.props;
-    const passwordLabels = {};
-    passwordLabels[SectionLoginType.picture] = i18n.picturePassword();
-    passwordLabels[SectionLoginType.word] = i18n.secretWords();
-    passwordLabels[SectionLoginType.email] = i18n.password();
-    const passwordTooltips = {};
-    passwordTooltips[
-      SectionLoginType.picture
-    ] = i18n.editSectionLoginTypePicDesc();
-    passwordTooltips[
-      SectionLoginType.word
-    ] = i18n.editSectionLoginTypeWordDesc();
-    passwordTooltips[
-      SectionLoginType.email
-    ] = i18n.editSectionLoginTypeEmailDesc();
     return (
       <span style={styles.verticalAlign}>
         <div data-for="password" data-tip="" id="password-header">
-          {passwordLabels[loginType]}
+          {this.getPasswordLabel(loginType)}
         </div>
         <ReactTooltip
           id="password"
@@ -235,10 +220,30 @@ class ManageStudentsTable extends Component {
           place="top"
           delayHide={1000}
         >
-          <div>{passwordTooltips[loginType]}</div>
+          <div>{this.getPasswordTooltip(loginType)}</div>
         </ReactTooltip>
       </span>
     );
+  }
+
+  getPasswordLabel(loginType) {
+    const labels = {
+      [SectionLoginType.picture]: i18n.picturePassword(),
+      [SectionLoginType.word]: i18n.secretWords(),
+      [SectionLoginType.email]: i18n.password()
+    };
+
+    return labels[loginType];
+  }
+
+  getPasswordTooltip(loginType) {
+    const tooltipContent = {
+      [SectionLoginType.picture]: i18n.editSectionLoginTypePicDesc(),
+      [SectionLoginType.word]: i18n.editSectionLoginTypeWordDesc(),
+      [SectionLoginType.email]: i18n.editSectionLoginTypeEmailDesc()
+    };
+
+    return tooltipContent[loginType];
   }
 
   passwordFormatter(loginType, {rowData}) {
@@ -426,156 +431,173 @@ class ManageStudentsTable extends Component {
 
   getColumns(sortable) {
     const {loginType} = this.props;
-    let dataColumns = [
-      {
-        property: 'name',
-        header: {
-          label: i18n.name(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell
-            }
-          },
-          transforms: [sortable]
-        },
-        cell: {
-          formatters: [this.nameFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
-      },
-      {
-        property: 'age',
-        header: {
-          label: i18n.age(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              width: 90
-            }
-          },
-          transforms: [sortable]
-        },
-        cell: {
-          formatters: [this.ageFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              width: 90
-            }
-          }
-        }
-      },
-      {
-        property: 'gender',
-        header: {
-          label: i18n.gender(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              width: 120
-            }
-          },
-          transforms: [sortable]
-        },
-        cell: {
-          formatters: [this.genderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              width: 120
-            }
-          }
-        }
-      }
-    ];
-    const passwordColumn = [
-      {
-        property: 'password',
-        header: {
-          formatters: [this.passwordHeaderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
-              width: 180
-            }
-          }
-        },
-        cell: {
-          formatters: [this.passwordFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              width: 180
-            }
-          }
-        }
-      }
-    ];
-    const projectSharingColumn = [
-      {
-        property: 'projectSharing',
-        header: {
-          label: i18n.projectSharingColumnHeader(),
-          formatters: [this.projectSharingHeaderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
-              width: 130
-            }
-          }
-        },
-        cell: {
-          formatters: [this.projectSharingFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...{textAlign: 'center', width: 130}
-            }
-          }
-        }
-      }
-    ];
-    const controlsColumn = [
-      {
-        property: 'actions',
-        header: {
-          label: i18n.actions(),
-          formatters: [this.actionsHeaderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader
-            }
-          }
-        },
-        cell: {
-          formatters: [this.actionsFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
-      }
+
+    const columns = [
+      this.nameColumn(sortable),
+      this.ageColumn(sortable),
+      this.genderColumn(sortable)
     ];
 
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
-      dataColumns = dataColumns.concat(passwordColumn);
+      columns.push(this.passwordColumn());
     }
     if (this.props.showSharingColumn) {
-      dataColumns = dataColumns.concat(projectSharingColumn);
-    }
-    if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
-      dataColumns = dataColumns.concat(controlsColumn);
+      columns.push(this.projectSharingColumn());
     }
 
-    return dataColumns;
+    if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
+      columns.push(this.controlsColumn());
+    }
+
+    return columns;
+  }
+
+  nameColumn(sortable) {
+    return {
+      property: 'name',
+      header: {
+        label: i18n.name(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell
+          }
+        },
+        transforms: [sortable]
+      },
+      cell: {
+        formatters: [this.nameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell
+          }
+        }
+      }
+    };
+  }
+
+  ageColumn(sortable) {
+    return {
+      property: 'age',
+      header: {
+        label: i18n.age(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            width: 90
+          }
+        },
+        transforms: [sortable]
+      },
+      cell: {
+        formatters: [this.ageFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            width: 90
+          }
+        }
+      }
+    };
+  }
+
+  genderColumn(sortable) {
+    return {
+      property: 'gender',
+      header: {
+        label: i18n.gender(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            width: 120
+          }
+        },
+        transforms: [sortable]
+      },
+      cell: {
+        formatters: [this.genderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            width: 120
+          }
+        }
+      }
+    };
+  }
+
+  passwordColumn() {
+    return {
+      property: 'password',
+      header: {
+        formatters: [this.passwordHeaderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.unsortableHeader,
+            width: 180
+          }
+        }
+      },
+      cell: {
+        formatters: [this.passwordFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            width: 180
+          }
+        }
+      }
+    };
+  }
+
+  projectSharingColumn() {
+    return {
+      property: 'projectSharing',
+      header: {
+        label: i18n.projectSharingColumnHeader(),
+        formatters: [this.projectSharingHeaderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.unsortableHeader,
+            width: 130
+          }
+        }
+      },
+      cell: {
+        formatters: [this.projectSharingFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...{textAlign: 'center', width: 130}
+          }
+        }
+      }
+    };
+  }
+
+  controlsColumn() {
+    return {
+      property: 'actions',
+      header: {
+        label: i18n.actions(),
+        formatters: [this.actionsHeaderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.unsortableHeader
+          }
+        }
+      },
+      cell: {
+        formatters: [this.actionsFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell
+          }
+        }
+      }
+    };
   }
 
   copySectionCode() {

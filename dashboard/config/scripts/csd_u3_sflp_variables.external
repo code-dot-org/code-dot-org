@@ -24,5 +24,5 @@ A variable is a way of connecting a label that you use in your program with a va
 |var x = _ |Creates a variable label and sets the value of it |`var shapeSize = 10;`| link |
 
 <br />
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

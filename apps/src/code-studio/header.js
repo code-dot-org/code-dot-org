@@ -58,7 +58,7 @@ var header = {};
  *   page level.
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
- * @param {boolean} stageExtrasEnabled Whether this user is in a section with
+ * @param {boolean} lessonExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
  * @param {boolean} isLessonExtras Boolean indicating we are not on a script
  *   level and therefore are on lesson extras
@@ -71,7 +71,7 @@ header.build = function(
   currentLevelId,
   currentPageNumber,
   signedIn,
-  stageExtrasEnabled,
+  lessonExtrasEnabled,
   scriptNameData,
   isLessonExtras
 ) {
@@ -85,7 +85,7 @@ header.build = function(
 
   // Set up the store immediately. Note that some progress values are populated
   // asynchronously.
-  progress.generateStageProgress(
+  progress.generateLessonProgress(
     scriptData,
     lessonGroupData,
     lessonData,
@@ -93,7 +93,7 @@ header.build = function(
     currentLevelId,
     saveAnswersBeforeNavigation,
     signedIn,
-    stageExtrasEnabled,
+    lessonExtrasEnabled,
     isLessonExtras,
     currentPageNumber
   );

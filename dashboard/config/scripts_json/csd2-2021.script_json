@@ -2,7 +2,7 @@
   "script": {
     "name": "csd2-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-18 14:15:50 UTC",
+    "serialized_at": "2021-05-25 17:10:37 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -1055,7 +1055,7 @@
       "key": "50301e64-0051-4071-ab27-c0f0eb834ca5",
       "position": 2,
       "properties": {
-        "duration": 165,
+        "duration": 210,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1278,7 +1278,7 @@
       "key": "71440e94-c031-42dd-a79d-3f8cb5056b9f",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1320,7 +1320,7 @@
       "key": "12d9a87a-588e-43d1-b12d-ad4b83414276",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1362,7 +1362,7 @@
       "key": "9c7bec47-be70-4024-a4f2-21f687434008",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -4005,7 +4005,7 @@
       "key": "710ee97e-1fb7-429d-a724-cb0a92f72425",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** What are the top **3** bugs you have seen so far when making web pages? What are **2** things you can do while coding to make bugs easier to find and fix? What is the **1** piece of advice you'd give someone who has a bug?",
+        "description": "**Prompt:** \n- What are the top **3** bugs you have seen so far when making web pages? \n- What are **2** things you can do while coding to make bugs easier to find and fix? \n- What is the **1** piece of advice you'd give someone who has a bug?",
         "tips": [
           {
             "type": "discussionGoal",
@@ -4033,8 +4033,14 @@
       "key": "793b6091-27f6-48c5-9b0c-b02534f8bc79",
       "position": 1,
       "properties": {
-        "description": "**Distribute** Return the \"Define\" and \"Prepare\" portions of the Project Guide to the students. \r\n\r\n\r\n**Transition:**  Send students to Code Studio.",
-        "name": "Personal Websites\r"
+        "description": "**Distribute** Return the \"Define\" and \"Prepare\" portions of the Project Guide to the students. Also distribute either a copy of the rubric or the student checklist to students. Have them read over the requirements for this project so they can self-assess and reflect while working.\n\n\n**Transition:**  Send students to Code Studio.",
+        "name": "Personal Websites\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more nuanced and specific feedback to students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "793b6091-27f6-48c5-9b0c-b02534f8bc79",
@@ -4099,19 +4105,8 @@
       }
     },
     {
-      "key": "bc36f38c-700e-493f-9d15-ab0b7be43b8d",
-      "position": 6,
-      "properties": {
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "bc36f38c-700e-493f-9d15-ab0b7be43b8d",
-        "lesson_activity.key": "50301e64-0051-4071-ab27-c0f0eb834ca5"
-      }
-    },
-    {
       "key": "ff09ae02-5fc8-4ac3-9e08-18a25ffd0d76",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "**Distribute:**  The 'Personal Web Page' Reflect and Peer Review Guides.\r\n\r\n\r\n**Support:** Help students as they complete the Personal Web Page - Reflect guide.  This guide asks students to reflect on whether the web page met the criteria students came up with in the \"Define\" phase, and whether they followed through on the plan they made in the \"Prepare\" phase. It then prompts them for what they like the most and what they would want to improve on their site, as well as what kind of feedback would be helpful to them.\r\n\r\n**Group:** Place students in pairs.",
         "name": "Peer Review\r"
@@ -4123,7 +4118,7 @@
     },
     {
       "key": "6b3cfe52-1dd0-4a4c-8de2-360db4cd636d",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "Before students review each other's work, each student should fill out the top of the guide with what they are most interested in feedback on.",
         "name": "Pre-Review\r"
@@ -4135,7 +4130,7 @@
     },
     {
       "key": "4c77683d-f5ce-4793-a6b2-7b99901aaa77",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "After switching guides, the students evaluate how well the projects met the criteria of the rubric.  Encourage students to find evidence for learning in their peer's projects, but also to suggest how the projects could be taken further. You may need to support students in providing constructive feedback.",
         "name": "Reviewer Section\r"
@@ -4147,7 +4142,7 @@
     },
     {
       "key": "0792fa5e-646b-4a0f-b83d-19d7683ecaed",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "Students then use the \"I like, I wish, What if\" structure to provide more open-ended feedback to each other. Again, some classes may need specific support in providing constructive feedback.",
         "name": "Free Response Feedback\r"
@@ -4159,13 +4154,24 @@
     },
     {
       "key": "de945d97-6003-41a8-aa24-26bc06841303",
-      "position": 11,
+      "position": 10,
       "properties": {
-        "description": "Next, students should switch back and creators reflect on how the feedback can help them make their project better. Students may then go back to Code Studio to make the revisions that they have decided on.\r\n\r\n\r\n\r\n\r\n**Collect:** Project Guides and Peer Review Guides.",
+        "description": "Next, students should switch back and creators reflect on how the feedback can help them make their project better. Students may then go back to Code Studio to make the revisions that they have decided on.\n\nStudents should revisit the rubric for this project to see how their project aligns. You may also decide to distribute the Personal Webpage - Student Checklist so students can self-assess how well their project meets the requirements for this project.\n\n",
         "name": "Creator Response\r"
       },
       "seeding_key": {
         "activity_section.key": "de945d97-6003-41a8-aa24-26bc06841303",
+        "lesson_activity.key": "50301e64-0051-4071-ab27-c0f0eb834ca5"
+      }
+    },
+    {
+      "key": "83101615-6d17-4c95-b86d-8275cdf19921",
+      "position": 11,
+      "properties": {
+        "description": "**Collect:** Project Guides and Peer Review Guides."
+      },
+      "seeding_key": {
+        "activity_section.key": "83101615-6d17-4c95-b86d-8275cdf19921",
         "lesson_activity.key": "50301e64-0051-4071-ab27-c0f0eb834ca5"
       }
     },
@@ -4202,7 +4208,8 @@
       "key": "bb76c259-62ef-49ef-9b8c-d0ca91a380a7",
       "position": 3,
       "properties": {
-        "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
+        "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "bb76c259-62ef-49ef-9b8c-d0ca91a380a7",
@@ -5067,7 +5074,7 @@
       "key": "5d28ad11-7626-46cc-8848-1aaab17dbbd5",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students into project groups.\r\n\r\n**Distribute:** Hand out the project guides, one for each group."
+        "description": "**Group:** Place students into project groups.\n\n**Distribute:** Hand out the project guides, one for each group. Also hand out a rubric or student checklist for each group so they can self-assess and reflect throughout the project."
       },
       "seeding_key": {
         "activity_section.key": "5d28ad11-7626-46cc-8848-1aaab17dbbd5",
@@ -5558,9 +5565,15 @@
       "key": "aca795d4-18ad-434c-91f8-cc29e3d5a96c",
       "position": 2,
       "properties": {
-        "description": "**Transition:** Teams return to Code Studio and make any improvements that were identified in the peer review session. If they did not get any suggestions from the peer review, you may want to give them some suggestions. \n\nTeams should also review the rubric as a final way to check their work.",
+        "description": "**Transition:** Teams return to Code Studio and make any improvements that were identified in the peer review session. If they did not get any suggestions from the peer review, you may want to give them some suggestions. \n\nTeams should also review the rubric and student checklist as a final way to check their work.",
         "name": "Prepare and Try: Final Touches\r",
-        "progression_name": "Incorporate Feedback"
+        "progression_name": "Incorporate Feedback",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "aca795d4-18ad-434c-91f8-cc29e3d5a96c",
@@ -7295,7 +7308,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "bc36f38c-700e-493f-9d15-ab0b7be43b8d"
+        "activity_section.key": "bb76c259-62ef-49ef-9b8c-d0ca91a380a7"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021"
@@ -8819,7 +8832,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "bc36f38c-700e-493f-9d15-ab0b7be43b8d"
+        "activity_section.key": "bb76c259-62ef-49ef-9b8c-d0ca91a380a7"
       }
     },
     {
@@ -9229,6 +9242,30 @@
       }
     },
     {
+      "name": "Body Styling",
+      "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view",
+      "key": "body_styling",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "body_styling"
+      }
+    },
+    {
+      "name": "Classes",
+      "url": "https://drive.google.com/file/d/14bipDHAQUc7Ni6jjx9_rooNVg-QmextP/view",
+      "key": "classes",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "classes"
+      }
+    },
+    {
       "name": "Computer Science Practices",
       "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
       "key": "computer-science-practices",
@@ -9251,6 +9288,18 @@
       },
       "seeding_key": {
         "resource.key": "creative-commons-video"
+      }
+    },
+    {
+      "name": "Creative Commons Search",
+      "url": "https://drive.google.com/file/d/1ddtt6waueN_MlBs4SdlZvARfYHEr7H44/view?usp=sharing",
+      "key": "creative_commons_search",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "creative_commons_search"
       }
     },
     {
@@ -9384,7 +9433,31 @@
       }
     },
     {
-      "name": "How Search Works",
+      "name": "Formatting HTML",
+      "url": "https://drive.google.com/file/d/1LHg1qYSF9pA22M7grp0DKgXmSh_yBgoF/view",
+      "key": "formatting_html",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "formatting_html"
+      }
+    },
+    {
+      "name": "Headings and Paragraphs",
+      "url": "https://drive.google.com/file/d/1ei99hpoE35ohPQKQPsQHUF-W3pdpeoQ3/view",
+      "key": "headings_and_paragraphs",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "headings_and_paragraphs"
+      }
+    },
+    {
+      "name": "Video: How Search Works",
       "url": "https://youtu.be/LVV_93mBfSU",
       "key": "how-search-works-video",
       "properties": {
@@ -9397,12 +9470,12 @@
       }
     },
     {
-      "name": "How Teamwork Works",
+      "name": "Video: Teamwork",
       "url": "https://youtu.be/qkw4pDV5Lec",
       "key": "how-teamwork-works",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/teamwork_sm-mp4.mp4"
       },
       "seeding_key": {
@@ -9458,6 +9531,30 @@
       },
       "seeding_key": {
         "resource.key": "html_tags"
+      }
+    },
+    {
+      "name": "Hyperlinks",
+      "url": "https://drive.google.com/file/d/1x8rGBJ8EDZ07TasatQlu5wRM8Z7-M5e8/view",
+      "key": "hyperlinks",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "hyperlinks"
+      }
+    },
+    {
+      "name": "Images in HTML",
+      "url": "https://drive.google.com/file/d/1ewtjXeiPIp8fk8joUkCTQdP2iaLnUa3u/view",
+      "key": "images_in_html",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "images_in_html"
       }
     },
     {
@@ -9525,6 +9622,18 @@
       }
     },
     {
+      "name": "Layout Properties",
+      "url": "https://drive.google.com/file/d/1M26yx_lXwBwoH4uln6nQuBQ5SdIedVWu/view",
+      "key": "layout_properties",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "layout_properties"
+      }
+    },
+    {
       "name": "Licensing Your Work",
       "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/",
       "key": "licensing-your-work-2020",
@@ -9572,6 +9681,18 @@
       },
       "seeding_key": {
         "resource.key": "links-and-research-1"
+      }
+    },
+    {
+      "name": "Lists",
+      "url": "https://drive.google.com/file/d/16QGQA0SxY0R5HzaOnuiId2ER-OGAl9Al/view",
+      "key": "lists",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lists"
       }
     },
     {
@@ -9662,7 +9783,7 @@
     },
     {
       "name": "Personal Web Page",
-      "url": "https://docs.google.com/document/d/1HFE9CVOwlOMvmDTCh9OGyIlgj3kVDAsnzjEzylW4sV8/",
+      "url": "https://docs.google.com/document/d/1xDnK38-eItsz7ccg4OctJjBuy7svd3yBXF9tTvDpGo0/view",
       "key": "personal-web-page",
       "properties": {
         "type": "Rubric",
@@ -9684,6 +9805,19 @@
       },
       "seeding_key": {
         "resource.key": "personal-web-page-1"
+      }
+    },
+    {
+      "name": "Personal Web Page - Student Checklist",
+      "url": "https://docs.google.com/document/d/1pL93fCFPGSxOo9nCmU3bfAw2m2MhY7B9nG-k-IT28Lo/view",
+      "key": "personal_web_page_-_student_checklist",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "personal_web_page_-_student_checklist"
       }
     },
     {
@@ -9834,6 +9968,18 @@
       }
     },
     {
+      "name": "Style Sheets",
+      "url": "https://drive.google.com/file/d/1va-Va15QP2jyuRnmBRYUQg0ZkQk8PETj/view",
+      "key": "style_sheets",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "style_sheets"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csd",
       "key": "teacher_forum",
@@ -9845,16 +9991,41 @@
       }
     },
     {
-      "name": "Teamwork - Dealing with Disagreement",
+      "name": "Video: Managing Disagreement",
       "url": "https://youtu.be/6GgrUeVT-xs",
       "key": "teamwork-dealing-with-disagreement",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/disagreements_sm-mp4.mp4"
       },
       "seeding_key": {
         "resource.key": "teamwork-dealing-with-disagreement"
+      }
+    },
+    {
+      "name": "Text Properties",
+      "url": "https://drive.google.com/file/d/1NoseEakxt9yOSuPbpnLgUu9-_Yso3EOB/view?usp=sharing",
+      "key": "text_properties",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "text_properties"
+      }
+    },
+    {
+      "name": "Video: Debugging",
+      "url": "https://youtu.be/auv10y-dN4s",
+      "key": "video_debugging",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "video_debugging"
       }
     },
     {
@@ -9898,7 +10069,7 @@
     },
     {
       "name": "Website for a Purpose",
-      "url": "https://docs.google.com/document/d/1hOQsOiL7FyAXXWFZ0xnuOsKP3xRiPyYihHWau5PAj04",
+      "url": "https://docs.google.com/document/d/19ObCznDrFTz93q15fq3SMUkURiVgTuchLbFninlj3ww/edit",
       "key": "website-for-a-purpose-1",
       "properties": {
         "type": "Rubric",
@@ -9945,6 +10116,18 @@
       },
       "seeding_key": {
         "resource.key": "website-team-plan-2020"
+      }
+    },
+    {
+      "name": "Website for a Purpose - Student Checklist",
+      "url": "https://docs.google.com/document/d/1HA8nG3-qIb57id98VJfpYgVTx83vsri9C5ACLtvk8wA/edit",
+      "key": "website_for_a_purpose_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "website_for_a_purpose_-_student_checklist"
       }
     },
     {
@@ -10075,6 +10258,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "video_debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "headings_and_paragraphs"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "project-guide-html-project-2020"
       }
@@ -10111,6 +10306,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "formatting_html"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "lists"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Digital Footprint",
         "resource.key": "digital-footprint"
       }
@@ -10143,6 +10350,18 @@
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
         "resource.key": "intro_to_css_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "resource.key": "style_sheets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "resource.key": "text_properties"
       }
     },
     {
@@ -10213,6 +10432,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Using Images",
+        "resource.key": "images_in_html"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "resource.key": "creative_commons_search"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Websites for Expression ",
         "resource.key": "define-your-webpage-2020"
       }
@@ -10245,6 +10476,18 @@
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "layout_properties"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "body_styling"
       }
     },
     {
@@ -10317,6 +10560,12 @@
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
         "resource.key": "publishing_your_website"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "personal_web_page_-_student_checklist"
       }
     },
     {
@@ -10405,6 +10654,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "resource.key": "classes"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Planning a Multi-page Website",
         "resource.key": "project-guide-website-for-a-purpose-prepare-exemplar-2020"
       }
@@ -10429,8 +10684,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "resource.key": "website_for_a_purpose_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Linking Pages",
         "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "resource.key": "hyperlinks"
       }
     },
     {
@@ -10443,6 +10710,12 @@
       "seeding_key": {
         "lesson.key": "Project - Website for a Purpose",
         "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "website_for_a_purpose_-_student_checklist"
       }
     },
     {
@@ -10491,6 +10764,12 @@
       "seeding_key": {
         "lesson.key": "Peer Review and Final Touches",
         "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "website_for_a_purpose_-_student_checklist"
       }
     }
   ],
