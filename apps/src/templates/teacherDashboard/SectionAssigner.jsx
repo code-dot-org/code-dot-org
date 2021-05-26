@@ -40,7 +40,7 @@ class SectionAssigner extends Component {
     );
 
     return (
-      <div>
+      <div style={styles.section}>
         <div style={styles.label}>{i18n.currentSection()}</div>
         <div style={styles.content}>
           <TeacherSectionSelector
@@ -72,8 +72,12 @@ class SectionAssigner extends Component {
 }
 
 const styles = {
+  section: {
+    marginBottom: 10
+  },
   content: {
-    display: 'flex'
+    display: 'flex',
+    alignItems: 'center'
   },
   label: {
     width: '100%',
