@@ -6,13 +6,15 @@ const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SOURCE_VALIDATION_UPDATED = 'javalab/SOURCE_VALIDATION_UPDATED';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
+const SET_ALL_VALIDATION = 'javalab/SET_ALL_VALIDATION';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 
 const initialState = {
   consoleLogs: [],
   sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
-  isDarkMode: false
+  isDarkMode: false,
+  validation: {}
 };
 
 // Action Creators
@@ -24,6 +26,11 @@ export const appendInputLog = input => ({
 export const appendOutputLog = output => ({
   type: APPEND_CONSOLE_LOG,
   log: {type: 'output', text: output}
+});
+
+export const setAllValidation = validation => ({
+  type: SET_ALL_VALIDATION,
+  validation
 });
 
 export const setAllSources = sources => ({
@@ -78,7 +85,26 @@ export const removeFile = filename => ({
 
 // Selectors
 export const getSources = state => {
-  return state.javalab.sources;
+  let sources = {};
+  for (let key in state.javalab.sources) {
+    if (!state.javalab.sources[key].isValidation) {
+      sources[key] = {
+        text: state.javalab.sources[key].text,
+        isVisible: state.javalab.sources[key].isVisible
+      };
+    }
+  }
+  return sources;
+};
+
+export const getValidation = state => {
+  let validation = {};
+  for (let key in state.javalab.sources) {
+    if (state.javalab.sources[key].isValidation) {
+      validation[key] = {text: state.javalab.sources[key].text};
+    }
+  }
+  return validation;
 };
 
 // Reducer
@@ -144,6 +170,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       sources: action.sources
+    };
+  }
+  if (action.type === SET_ALL_VALIDATION) {
+    return {
+      ...state,
+      validation: action.validation
     };
   }
   if (action.type === COLOR_PREFERENCE_UPDATED) {

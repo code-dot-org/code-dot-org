@@ -2,7 +2,7 @@
   "script": {
     "name": "csd7-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "student_detail_progress_view": true,
@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-17 20:47:23 UTC",
+    "serialized_at": "2021-05-25 17:10:42 UTC",
     "seeding_key": {
       "script.name": "csd7-2021"
     }
