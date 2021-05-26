@@ -468,7 +468,7 @@ class JavalabEditor extends React.Component {
             onClick={() => this.setState({openDialog: CREATE_FILE})}
             headerHasFocus
             isRtl={false}
-            label="New File"
+            label={javalabMsg.newFile()}
             leftJustified
           />
           <PaneButton
@@ -476,7 +476,7 @@ class JavalabEditor extends React.Component {
             iconClass="fa fa-briefcase"
             headerHasFocus
             isRtl={false}
-            label="Backpack"
+            label={javalabMsg.backpackLabel()}
             leftJustified
           />
           <PaneButton
@@ -493,9 +493,9 @@ class JavalabEditor extends React.Component {
             onClick={onCommitCode}
             headerHasFocus
             isRtl={false}
-            label="Commit Code"
+            label={javalabMsg.commitCode()}
           />
-          <PaneSection>Editor</PaneSection>
+          <PaneSection>{javalabMsg.editor()}</PaneSection>
         </PaneHeader>
         <Tab.Container
           activeKey={activeTabKey}
