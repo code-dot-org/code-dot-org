@@ -338,7 +338,7 @@ Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No
 Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,South Atlantic
 Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
 Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,West South Central
-,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
 Other,Fried,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,South Atlantic
 Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,East South Central
 Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
@@ -561,7 +561,7 @@ Turkey,Baked,None,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No
 Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
 Turducken,Roasted,None,None,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
 Turkey,Fried,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,Yes,Yes,South Atlantic
-,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Ham/Pork,Baked,Rice-based,None,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
 Tofurkey,Baked,Bread-based,None,Yes,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Middle Atlantic
 Ham/Pork,I don't know,Bread-based,Canned,No,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Pacific
 Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
@@ -740,7 +740,7 @@ Chicken,Fried,Rice-based,Canned,Yes,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No
 Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,Yes,No,No,Yes,Pacific
 Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,East South Central
 Turkey,Other,Bread-based,Canned,Yes,Yes,No,No,No,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
-,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Chicken,Baked,Other,None,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
 Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
 Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,East North Central
 Turkey,Roasted,Other,Homemade,Yes,No,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,East South Central
@@ -831,7 +831,7 @@ I don't know,I don't know,None,Homemade,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No
 Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
 Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
 Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
-,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Tofurkey,Fried,Rice-based,Homemade,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
 Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Mountain
 Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
 Turkey,Roasted,Bread-based,Canned,Yes,No,No,Yes,No,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Middle Atlantic
@@ -849,12 +849,12 @@ Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,Yes,N
 Turkey,Roasted,Bread-based,Other,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
 Turkey,Fried,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,Yes,South Atlantic
 Turkey,Baked,None,Homemade,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
-,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Other,Fried,Bread-based,Canned,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
 Turkey,Baked,Bread-based,Canned,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,Yes,Yes,Middle Atlantic
 Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
 Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,
 Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
-,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Roast beef,Roasted,Riced-based,Homemade,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
 Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
 Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Pacific
 Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,
