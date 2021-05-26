@@ -221,12 +221,17 @@ Javalab.prototype.beforeUnload = function(event) {
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
   this.miniApp?.reset?.();
+  const options = {};
+  if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
+    options.useNeighborhood = true;
+  }
   this.javabuilderConnection = new JavabuilderConnection(
     this.channelId,
     this.level.javabuilderUrl,
     message => getStore().dispatch(appendOutputLog(message)),
     this.miniApp,
-    getStore().getState().pageConstants.serverLevelId
+    getStore().getState().pageConstants.serverLevelId,
+    options
   );
   this.javabuilderConnection.connectJavabuilder();
 };
