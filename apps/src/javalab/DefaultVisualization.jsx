@@ -8,7 +8,12 @@ import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizatio
 
 export default class DefaultVisualization extends React.Component {
   state = {
-    isCollapsed: false
+    isCollapsed: false,
+    isFullscreen: false
+  };
+
+  fullscreenIcon = () => {
+    return this.state.isFullscreen ? 'fa fa-compress' : 'fa fa-arrows-alt';
   };
 
   render() {
@@ -16,7 +21,7 @@ export default class DefaultVisualization extends React.Component {
       <PaneHeader hasFocus>
         <PaneButton
           headerHasFocus
-          icon={<CollapserIcon isCollapsed={false} />}
+          icon={<CollapserIcon isCollapsed={this.state.isCollapsed} />}
           onClick={() => {}}
           label=""
           isRtl={false}
@@ -25,7 +30,7 @@ export default class DefaultVisualization extends React.Component {
         />
         <PaneButton
           headerHasFocus
-          iconClass="fa fa-expand" // TODO: figure out correct icon
+          iconClass={this.fullscreenIcon()}
           onClick={() => {}}
           label=""
           isRtl={false}
