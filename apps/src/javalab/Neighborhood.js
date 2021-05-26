@@ -90,7 +90,7 @@ export default class Neighborhood {
         return this.controller.subtype.addPaint(id, color);
       }
       case NeighborhoodSignalType.REMOVE_PAINT: {
-        const id = signal.detail;
+        const {id} = signal.detail;
         return this.controller.subtype.removePaint(id);
       }
       default:
