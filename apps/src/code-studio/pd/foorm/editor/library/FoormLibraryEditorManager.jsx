@@ -249,7 +249,6 @@ class FoormLibraryEditorManager extends React.Component {
           }
           foormEntities={this.getLibraryChoices()}
           foormEntityName="Library"
-          showVersionFilterToggle={true}
         />
         <FoormEntityLoadButtons
           resetCodeMirror={this.props.resetCodeMirror}
