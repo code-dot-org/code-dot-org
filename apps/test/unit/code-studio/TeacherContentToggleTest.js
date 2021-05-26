@@ -18,8 +18,8 @@ describe('TeacherContentToggle', () => {
     // over
     div = $(`
       <div style="display: none">
-        <div id="locked-stage" style="display: none">FakeLockedStage</div>
-        <div id="hidden-stage" style="display: none">FakeHiddenStage</div>
+        <div id="locked-lesson" style="display: none">FakeLockedLesson</div>
+        <div id="hidden-lesson" style="display: none">FakeHiddenLesson</div>
         <div id="level-body" style="visibility: hidden">FakeLevelBody</div>
       </div>
     `).appendTo(document.body);
@@ -34,7 +34,7 @@ describe('TeacherContentToggle', () => {
     renderElement = null;
   });
 
-  it('takes ownership of locked-stage, hidden-stage, and level-body elements', () => {
+  it('takes ownership of locked-lesson, hidden-lesson, and level-body elements', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
@@ -63,13 +63,13 @@ describe('TeacherContentToggle', () => {
 
     assert.equal(
       lockedStageElement.childNodes[0].getAttribute('id'),
-      'locked-stage'
+      'locked-lesson'
     );
     assert.equal(lockedStageElement.childNodes[0].style.display, '');
 
     assert.equal(
       hiddenStageElement.childNodes[0].getAttribute('id'),
-      'hidden-stage'
+      'hidden-lesson'
     );
     assert.equal(hiddenStageElement.childNodes[0].style.display, '');
   });
@@ -397,7 +397,7 @@ describe('TeacherContentToggle', () => {
         viewAs: ViewType.Teacher,
         selectedSectionId: {},
         progress: {
-          currentStageId: 123,
+          currentLessonId: 123,
           stages: [
             {
               id: 123,

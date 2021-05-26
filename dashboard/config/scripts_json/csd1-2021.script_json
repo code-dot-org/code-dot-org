@@ -2,7 +2,7 @@
   "script": {
     "name": "csd1-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-21 16:22:37 UTC",
+    "serialized_at": "2021-05-25 22:11:08 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -538,7 +538,7 @@
       "key": "c8d05b47-5ef6-429d-8162-74d7c1198428",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1059,7 +1059,7 @@
       "key": "0e95e394-2a11-4fab-908d-ed712cd9f6b0",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1101,7 +1101,7 @@
       "key": "f7eebe16-f2a3-4e47-b558-a584b1bb2d0c",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -5079,6 +5079,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U1Ch2_2021"
+        ],
         "progression": "Reflection"
       },
       "named_level": false,

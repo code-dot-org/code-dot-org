@@ -63,6 +63,7 @@ class XhrProxyController < ApplicationController
     data.gv.at
     data.nasa.gov
     dataservice.accuweather.com
+    distanza.org
     dweet.io
     enclout.com
     herokuapp.com
