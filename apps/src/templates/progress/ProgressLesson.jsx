@@ -294,7 +294,7 @@ const styles = {
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
-  currentLessonId: state.progress.currentStageId,
+  currentLessonId: state.progress.currentLessonId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
   lockableAuthorized: state.lessonLock.lockableAuthorized,

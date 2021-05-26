@@ -330,7 +330,7 @@ reporting.sendReport = function(report) {
           response.redirect = fallback.redirect;
         }
         if (appOptions.isBonusLevel) {
-          // Bonus levels might have to take students back to a different stage,
+          // Bonus levels might have to take students back to a different lesson,
           // ignore the redirect in response and use the url from appOptions
           // instead
           response.redirect = appOptions.nextLevelUrl;
