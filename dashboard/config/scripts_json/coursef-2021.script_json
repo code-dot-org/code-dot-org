@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-05-26 18:45:23 UTC",
+    "serialized_at": "2021-05-26 19:07:25 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -326,7 +326,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
-        "purpose": "This lesson will illustrate how code with changing values can be helpful and prepare students to understand how \"for loops\" work in upcoming lessons.",
+        "purpose": "This lesson will illustrate how code with changing values can be helpful and prepare students to understand how \"for\" loops work in upcoming lessons.",
         "student_overview": "This bee loves variables!"
       },
       "seeding_key": {
@@ -346,8 +346,8 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will use loops with a powerful, new structure.",
         "preparation": "- Watch the ***video**.\n- Print one ***worksheet** per group.\n- Print one ***assessment** for each student.\n- Make sure every student has a reflection journal.",
-        "purpose": "At this point, students have become masters of loops. Today, they will learn about another loop commonly used in programming. The \"for loop\" repeats commands a certain number of times, but also keeps track of the values it is iterating over. For example, a \"for loop\" that begins at 4, ends with 8, and has a step value of 1 will repeat 4 times, but the values 4, 5, 6, and 7 will also be captured for use elsewhere. Using this structure with variables can create some pretty fantastic programs. Today, students will simply be learning the basics of a \"for loop\" before diving into programming with them next time!",
-        "student_overview": "You're going to have loads of fun learning about \"for loops\"!",
+        "purpose": "At this point, students have become masters of loops. Today, they will learn about another loop commonly used in programming. The \"for\" loop repeats commands a certain number of times, but also keeps track of the values it is iterating over. For example, a \"for\" loop that begins at 4, ends with 8, and has a step value of 1 will repeat 4 times, but the values 4, 5, 6, and 7 will also be captured for use elsewhere. Using this structure with variables can create some pretty fantastic programs. Today, students will simply be learning the basics of a \"for\" loop before diving into programming with them next time!",
+        "student_overview": "You're going to have loads of fun learning about \"for\" loops!",
         "unplugged": true
       },
       "seeding_key": {
@@ -2853,7 +2853,7 @@
       "key": "95417529-72b3-4c15-95d1-7bd479743269",
       "position": 1,
       "properties": {
-        "description": "Sometimes we want to repeat things a certain number of times, but we want to keep track of values as we do. This is where a \"for loop\" comes in handy. When you use a \"for loop\", you know right from the start what your beginning value is, what your ending value is, and how much the value changes each time through the loop.\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)"
+        "description": "Sometimes we want to repeat things a certain number of times, but we want to keep track of values as we do. This is where a \"for\" loop comes in handy. When you use a \"for\" loop, you know right from the start what your beginning value is, what your ending value is, and how much the value changes each time through the loop.\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)"
       },
       "seeding_key": {
         "activity_section.key": "95417529-72b3-4c15-95d1-7bd479743269",
@@ -2880,7 +2880,7 @@
       "key": "ee31c01d-2e03-4267-bbd4-6179df138e90",
       "position": 3,
       "properties": {
-        "description": "###**Directions:**\n\nIt may be difficult for young students to understand this written in pseudocode, but it may be helpful to have you explain out loud (and perhaps with a diagram) what they will be using as the content of a \"for loop\".\n\n- Divide students into pairs\n- To start the round, each student rolls three times:\n\t- One die to determine the starting value of X\n\t- Three dice to determine the stopping value for X\n\t- One die to determine the stepping value of X each time through\n- Use one of the provided number lines to trace the \"for loop\" that they’ve made\n\t- Start at the starting value of X\n\t- Count down the number line, circling the numbers at the rolled interval\n\t- Stop when you get to the predetermined stopping value\n- Add all of the circled values to your score, then let the other player take a turn\n- Best 2 out of 3 wins",
+        "description": "###**Directions:**\n\nIt may be difficult for young students to understand this written in pseudocode, but it may be helpful to have you explain out loud (and perhaps with a diagram) what they will be using as the content of a \"for\" loop\".\n\n- Divide students into pairs\n- To start the round, each student rolls three times:\n\t- One die to determine the starting value of X\n\t- Three dice to determine the stopping value for X\n\t- One die to determine the stepping value of X each time through\n- Use one of the provided number lines to trace the \"for\" loop that they’ve made\n\t- Start at the starting value of X\n\t- Count down the number line, circling the numbers at the rolled interval\n\t- Stop when you get to the predetermined stopping value\n- Add all of the circled values to your score, then let the other player take a turn\n- Best 2 out of 3 wins",
         "tips": [
           {
             "type": "teachingTip",
@@ -2914,7 +2914,7 @@
       "key": "6e2f6427-e48e-4a85-bf0a-d218df0381c0",
       "position": 2,
       "properties": {
-        "description": "\n####Flash Chat: What did we learn?\n\n- What would your interval need to be if you wanted to count from 4 to 13 by threes?\n- What kinds of things do you think you could do with a \"for loop\"?\n- Can you reproduce a normal loop using a \"for loop\"?\n- What would you need to do?"
+        "description": "\n####Flash Chat: What did we learn?\n\n- What would your interval need to be if you wanted to count from 4 to 13 by threes?\n- What kinds of things do you think you could do with a \"for\" loop?\n- Can you reproduce a normal loop using a \"for\" loop?\n- What would you need to do?"
       },
       "seeding_key": {
         "activity_section.key": "6e2f6427-e48e-4a85-bf0a-d218df0381c0",
@@ -2925,7 +2925,7 @@
       "key": "e4880f32-ec01-4be0-a4c3-3b8762d73daa",
       "position": 3,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is a \"for loop\"?\n - Why would you use a \"for loop\" instead of a \"repeat\" loop or a \"while\" loop?"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is a \"for\" loop?\n - Why would you use a \"for\" loop instead of a \"repeat\" loop or a \"while\" loop?"
       },
       "seeding_key": {
         "activity_section.key": "e4880f32-ec01-4be0-a4c3-3b8762d73daa",
