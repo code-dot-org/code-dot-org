@@ -3,7 +3,7 @@
 # Regenerates an animation library manifest by reading the contents of S3 bucket
 # cdo-animation-library.
 #
-# For usage, run ./rebuild_animation_library_manifest.rb --help
+# For usage, run ./rebuildAnimationLibraryManifest.rb --help
 #
 # The manifest has three important jobs:
 # 1. Provide the metadata used to render spritesheets as animations.
@@ -13,7 +13,7 @@
 # The expected output of this file is a new animationLibrary.json which is
 # consumed by the apps build.  You'll need to manually check this file into git.
 
-require_relative './manifest_builder'
+require_relative './ManifestBuilder'
 require_relative '../../lib/cdo/cdo_cli'
 include CdoCli
 

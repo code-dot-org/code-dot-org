@@ -788,7 +788,7 @@ module Services
       def seeding_key
         # Just in case the data stored in the level_keys property is out of sync somehow,
         # don't use that data during serialization.
-        object.seeding_key(@scope[:seed_context], use_existing_level_keys: false)
+        object.seeding_key(@scope[:seed_context], false)
       end
 
       def level_keys
@@ -796,7 +796,7 @@ module Services
         # when seeding LevelsScriptLevels.
         # Just in case the data stored in the level_keys property is out of sync somehow,
         # don't use that data during serialization.
-        object.get_level_keys(@scope[:seed_context], use_existing_level_keys: false)
+        object.get_level_keys(@scope[:seed_context], false)
       end
     end
 
@@ -804,7 +804,7 @@ module Services
       attributes :seeding_key
 
       def seeding_key
-        object.seeding_key(@scope[:seed_context])
+        object.seeding_key(@scope[:seed_context], false)
       end
     end
 

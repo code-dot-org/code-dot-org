@@ -7,7 +7,8 @@
     "skip_sound": true,
     "parent_level_id": 26150,
     "name_suffix": "_2021",
-    "encrypted": "false"
+    "encrypted": "false",
+    "long_instructions": "This video will be replaced by July."
   },
   "game_id": 54,
   "published": true,
@@ -15,6 +16,6 @@
   "level_num": "custom",
   "user_id": 566,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-05-19 00:07:03 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-05-19 00:07:03 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-05-25 16:44:59 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </StandaloneVideo>

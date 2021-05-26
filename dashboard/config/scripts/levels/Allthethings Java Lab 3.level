@@ -1,0 +1,308 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "teacher_markdown": "Teachers should see this extra info.",
+    "long_instructions": "This is a sample Java Lab Neighborhood level.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "neighborhood",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 53,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 54,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 12,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 13,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 14,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 15,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 16,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 17,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 18,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 19,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        }
+      ]
+    ],
+    "parent_level_id": 26702,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-05-20T05:05:57.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-05-05 00:41:48 +0000\",\"changed\":[],\"changed_by_id\":22,\"changed_by_email\":\"jessica+localtest@code.org\"},{\"changed_at\":\"2021-05-19 15:06:08 -0700\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+}]]></config>
+</Javalab>
