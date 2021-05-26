@@ -88,7 +88,7 @@ progress.showDisabledBubblesAlert = function() {
  *   page level.
  * @returns {Promise<void>}
  */
-progress.generateStageProgress = function(
+progress.generateLessonProgress = function(
   scriptData,
   lessonGroupData,
   lessonData,

@@ -85,7 +85,7 @@ header.build = function(
 
   // Set up the store immediately. Note that some progress values are populated
   // asynchronously.
-  progress.generateStageProgress(
+  progress.generateLessonProgress(
     scriptData,
     lessonGroupData,
     lessonData,

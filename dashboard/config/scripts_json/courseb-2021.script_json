@@ -2,7 +2,7 @@
   "script": {
     "name": "courseb-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-05-11 20:00:59 UTC",
+    "serialized_at": "2021-05-25 17:13:19 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -2772,7 +2772,7 @@
       "key": "dd9fba95-8daa-47d3-8c05-3429f3f25b77",
       "position": 2,
       "properties": {
-        "progression_name": "Video: Create a Story"
+        "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
         "activity_section.key": "dd9fba95-8daa-47d3-8c05-3429f3f25b77",
@@ -5067,7 +5067,7 @@
         "level_keys": [
           "courseA_video_events_2021"
         ],
-        "progression": "Video: Create a Story"
+        "progression": "Video: Introduction to Play Lab"
       },
       "named_level": false,
       "bonus": false,

@@ -175,7 +175,8 @@ const styles = {
     marginRight: 0
   },
   flex: {
-    display: 'flex'
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 export const UnconnectedCourseScript = CourseScript;

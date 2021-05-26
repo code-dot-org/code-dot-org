@@ -10,7 +10,7 @@ include CdoCli
 # Usage:
 # 1. Download the Sprite Lab animation library from S3 and put it in this directory
 # 2. Make any desired changes to the aliases in cdo/apps/srce/p5lab/spritelab/spriteCostumeLibrary
-# 3. Run ./update_animation_aliases
+# 3. Run ./updateAnimationAliases
 # Options:
 #   -s or --spritelab : Update aliases for Sprite Lab (default is Game Lab)
 # 4. Upload the new animation metadata files to S3

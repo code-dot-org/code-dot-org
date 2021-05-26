@@ -255,6 +255,7 @@ Dashboard::Application.routes.draw do
       get 'get_rubric'
       get 'embed_level'
       get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+      get 'get_serialized_maze'
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
@@ -368,7 +369,7 @@ Dashboard::Application.routes.draw do
     end
 
     # /s/xxx/lockable/yyy/levels/zzz
-    resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
+    resources :lockable_lessons, only: [], path: "/lockable", param: 'position', format: false do
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/levels", format: false do
         member do
