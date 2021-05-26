@@ -37,14 +37,14 @@
 
 module Pd::Application
   class PrincipalApprovalApplication < PrincipalApprovalApplicationBase
-    include Pd::PrincipalApproval2122ApplicationConstants
+    include Pd::PrincipalApprovalApplicationConstants
 
     belongs_to :teacher_application, class_name: 'Pd::Application::TeacherApplication',
                primary_key: :application_guid, foreign_key: :application_guid
 
     validates_presence_of :teacher_application
 
-    # @override
+    # @return a valid year (see ApplicationConstants.APPLICATION_YEARS)
     def year
       self.class.year
     end
@@ -55,6 +55,27 @@ module Pd::Application
 
     def self.next_year
       YEAR_22_23
+    end
+
+    # @override
+    def set_type_and_year
+      self.application_type = PRINCIPAL_APPROVAL_APPLICATION
+      self.application_year = year
+    end
+
+    def underrepresented_minority_percent
+      sanitize_form_data_hash.select do |k, _|
+        [
+          :black,
+          :hispanic,
+          :pacific_islander,
+          :american_indian
+        ].include? k
+      end.values.map(&:to_f).reduce(:+)
+    end
+
+    def placeholder?
+      JSON.parse(form_data).empty?
     end
 
     def self.create_placeholder_and_send_mail(teacher_application)
