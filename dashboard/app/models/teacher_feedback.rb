@@ -93,7 +93,7 @@ class TeacherFeedback < ApplicationRecord
     authorized_unseen_feedbacks.count
   end
 
-  def self.get_student_feedbacks_for_script_by_teacher(script_id, student_ids, teacher_id = nil)
+  def self.get_student_feedbacks_for_script(script_id, student_ids, teacher_id = nil)
     where(
       script_id: script_id,
       student_id: student_ids,
