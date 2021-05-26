@@ -30,7 +30,7 @@ function CollapserIcon({
 
 CollapserIcon.propTypes = {
   id: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   isCollapsed: PropTypes.bool.isRequired,
   collapsedIconClass: PropTypes.string,
   expandedIconClass: PropTypes.string,
