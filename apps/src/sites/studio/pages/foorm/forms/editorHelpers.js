@@ -2,7 +2,8 @@ import {getStore} from '@cdo/apps/redux';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {
   setQuestions,
-  setHasJSONError
+  setHasJSONError,
+  setHasLintError
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 import _ from 'lodash';
 
@@ -21,10 +22,12 @@ const nameKeyValidator = new RegExp(/^[a-z0-9_]+$/i);
 export const lintFoormKeys = (text, options, cm) => {
   const annotations = [];
 
+  let hasLintErrors = false;
   let match;
   while ((match = nameKeyRegex.exec(text)) !== null) {
     const nameValue = match[1];
     if (!nameKeyValidator.test(nameValue)) {
+      hasLintErrors = true;
       annotations.push({
         message: 'Question names should only contain letters and underscores.',
         severity: 'error',
@@ -33,6 +36,8 @@ export const lintFoormKeys = (text, options, cm) => {
       });
     }
   }
+
+  getStore().dispatch(setHasLintError(hasLintErrors));
 
   return annotations;
 };
@@ -65,6 +70,7 @@ export function populateCodeMirror() {
 export function resetCodeMirror(json) {
   if (codeMirror) {
     codeMirror.setValue(JSON.stringify(json, null, 2));
+    getStore().dispatch(setHasLintError(false));
     getStore().dispatch(setHasJSONError(false));
   }
 }
@@ -73,6 +79,7 @@ export function confirmNoUnsavedChanges(evt) {
   let storeState = getStore().getState().foorm;
   if (
     storeState.hasJSONError ||
+    storeState.hasLintError ||
     !_.isEqual(storeState.lastSavedQuestions, storeState.questions)
   ) {
     return 'Are you sure you want to exit? You may have unsaved changes.';

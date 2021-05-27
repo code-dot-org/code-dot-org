@@ -1,5 +1,6 @@
 const SET_QUESTIONS = 'foormEditor/SET_QUESTIONS';
 const SET_HAS_JSON_ERROR = 'foormEditor/SET_HAS_JSON_ERROR';
+const SET_HAS_LINT_ERROR = 'foormEditor/SET_HAS_LINT_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
 const SET_LIBRARY_QUESTION_DATA = 'foormEditor/SET_LIBRARY_QUESTION_DATA';
 const SET_LIBRARY_DATA = 'foormEditor/SET_LIBRARY_DATA';
@@ -45,6 +46,11 @@ export const setLibraryData = libraryData => ({
 export const setHasJSONError = hasJSONError => ({
   type: SET_HAS_JSON_ERROR,
   hasJSONError
+});
+
+export const setHasLintError = hasLintError => ({
+  type: SET_HAS_LINT_ERROR,
+  hasLintError
 });
 
 // "Entities" represent metadata (ID, name, etc.) about the forms or libraries
@@ -93,6 +99,7 @@ const initialState = {
   // State relevant for both Form and Library editors
   questions: '',
   hasJSONError: false,
+  hasLintError: false,
   fetchableEntities: [],
   saveError: null,
   lastSaved: null,
@@ -122,6 +129,12 @@ export default function foormEditorRedux(state = initialState, action) {
     return {
       ...state,
       hasJSONError: action.hasJSONError
+    };
+  }
+  if (action.type === SET_HAS_LINT_ERROR) {
+    return {
+      ...state,
+      hasLintError: action.hasLintError
     };
   }
   if (action.type === SET_FORM_DATA) {
