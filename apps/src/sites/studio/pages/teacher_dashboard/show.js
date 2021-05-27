@@ -16,7 +16,8 @@ import teacherSections, {
   setValidGrades,
   setTextToSpeechScriptIds,
   setPreReaderScriptIds,
-  setLessonExtrasScriptIds
+  setLessonExtrasScriptIds,
+  setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
@@ -88,6 +89,9 @@ $(document).ready(function() {
   store.dispatch(setTextToSpeechScriptIds(textToSpeechScriptIds));
   store.dispatch(setPreReaderScriptIds(preReaderScriptIds));
   store.dispatch(setShowSectionProgressDetails(showSectionProgressDetails));
+
+  // DCDO Flag - show/hide Lock Section field
+  store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
 
   if (!section.sharing_disabled && section.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));

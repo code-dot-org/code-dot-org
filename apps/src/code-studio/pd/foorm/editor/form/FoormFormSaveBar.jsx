@@ -33,6 +33,7 @@ class FoormFormSaveBar extends Component {
     // Populated by Redux
     formQuestions: PropTypes.object,
     hasJSONError: PropTypes.bool,
+    hasLintError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
     formId: PropTypes.number,
     lastSaved: PropTypes.number,
@@ -55,6 +56,8 @@ class FoormFormSaveBar extends Component {
       formCategory: null
     };
   }
+
+  hasCodeMirrorError = () => this.props.hasLintError || this.props.hasJSONError;
 
   updateQuestionsUrl = () =>
     `/foorm/forms/${this.props.formId}/update_questions`;
@@ -260,19 +263,19 @@ class FoormFormSaveBar extends Component {
         <div style={styles.saveButtonBackground} className="saveBar">
           {this.props.lastSaved &&
             !this.props.saveError &&
-            !this.props.hasJSONError && (
+            !this.hasCodeMirrorError() && (
               <div style={styles.lastSaved} className="lastSavedMessage">
                 {`Last saved at: ${new Date(
                   this.props.lastSaved
                 ).toLocaleString()}`}
               </div>
             )}
-          {this.props.hasJSONError && (
+          {this.hasCodeMirrorError() && (
             <div style={styles.error}>
               {`Please fix parsing error before saving. See the errors noted on the left side of the editor.`}
             </div>
           )}
-          {this.props.saveError && !this.props.hasJSONError && (
+          {this.props.saveError && !this.hasCodeMirrorError() && (
             <div
               style={styles.error}
               className="saveErrorMessage"
@@ -289,7 +292,7 @@ class FoormFormSaveBar extends Component {
               type="button"
               style={styles.button}
               onClick={this.handlePublish}
-              disabled={this.state.isSaving || this.props.hasJSONError}
+              disabled={this.state.isSaving || this.hasCodeMirrorError()}
             >
               Publish
             </button>
@@ -299,7 +302,7 @@ class FoormFormSaveBar extends Component {
             type="button"
             style={styles.button}
             onClick={this.handleSave}
-            disabled={this.state.isSaving || this.props.hasJSONError}
+            disabled={this.state.isSaving || this.hasCodeMirrorError()}
           >
             Save
           </button>
@@ -415,6 +418,7 @@ export default connect(
   state => ({
     formQuestions: state.foorm.questions || {},
     isFormPublished: state.foorm.isFormPublished,
+    hasLintError: state.foorm.hasLintError,
     hasJSONError: state.foorm.hasJSONError,
     formId: state.foorm.formId,
     lastSaved: state.foorm.lastSaved,

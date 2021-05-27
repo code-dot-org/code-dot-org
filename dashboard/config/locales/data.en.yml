@@ -620,6 +620,7 @@ en:
         csd_ml_import_model: Importing an AI Model
         csf_lots_of_sprites: 'Sprite Lab: Lots of Sprites'
         playlab_2021: Introduction to Play Lab
+        playlab_2021_reader: Introduction to Play Lab
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
