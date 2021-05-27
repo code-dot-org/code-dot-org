@@ -2,7 +2,6 @@
 
 var api = require('./apiJavascript.js');
 import color from '@cdo/apps/util/color';
-var consoleApi = require('@cdo/apps/consoleApi');
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
@@ -1914,13 +1913,6 @@ draw() - USEFUL?
   },
 
   // Variables
-  {
-    func: 'console.log',
-    parent: consoleApi,
-    category: 'Variables',
-    paletteParams: ['message'],
-    params: ['"message"']
-  },
   {
     func: 'comment_Variables',
     block: '// Comment',

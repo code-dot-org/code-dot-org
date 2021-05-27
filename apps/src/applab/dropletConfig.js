@@ -1,8 +1,7 @@
 /* global dashboard */
 import $ from 'jquery';
 import * as api from './api';
-import dontMarshalApi from './dontMarshalApi';
-import consoleApi from '../consoleApi';
+import dontMarshalApi from '../dontMarshalApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
@@ -31,12 +30,6 @@ function chooseAsset(typeFilter, callback) {
     showUnderageWarning: !getStore().getState().pageConstants.is13Plus
   });
 }
-
-var stringMethodPrefix = '[string].';
-var arrayMethodPrefix = '[list].';
-
-var stringBlockPrefix = 'str.';
-var arrayBlockPrefix = 'list.';
 
 // Configure shared APIs for App Lab
 // We wrap this because it runs before window.Applab exists
@@ -849,134 +842,6 @@ export var blocks = [
   {...timeoutApi.dropletConfig.clearInterval},
   {...timeoutApi.dropletConfig.timedLoop},
   {...timeoutApi.dropletConfig.stopTimedLoop},
-
-  {
-    func: 'console.log',
-    parent: consoleApi,
-    category: 'Variables',
-    paletteParams: ['message'],
-    params: ['"message"']
-  },
-  {
-    func: 'declareAssign_str_hello_world',
-    block: 'var str = "Hello World";',
-    category: 'Variables',
-    noAutocomplete: true
-  },
-  {
-    func: 'substring',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    paletteParams: ['start', 'end'],
-    params: ['6', '11'],
-    modeOptionName: '*.substring',
-    tipPrefix: stringMethodPrefix,
-    type: 'value'
-  },
-  {
-    func: 'indexOf',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    paletteParams: ['searchValue'],
-    params: ['"World"'],
-    modeOptionName: '*.indexOf',
-    tipPrefix: stringMethodPrefix,
-    type: 'value'
-  },
-  {
-    func: 'includes',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    paletteParams: ['searchValue'],
-    params: ['"World"'],
-    modeOptionName: '*.includes',
-    tipPrefix: stringMethodPrefix,
-    type: 'value'
-  },
-  {
-    func: 'length',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    modeOptionName: '*.length',
-    tipPrefix: stringMethodPrefix,
-    type: 'property'
-  },
-  {
-    func: 'toUpperCase',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    modeOptionName: '*.toUpperCase',
-    tipPrefix: stringMethodPrefix,
-    type: 'value'
-  },
-  {
-    func: 'toLowerCase',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    modeOptionName: '*.toLowerCase',
-    tipPrefix: stringMethodPrefix,
-    type: 'value'
-  },
-  {
-    func: 'declareAssign_list_123',
-    block: 'var list = [1, 2, 3];',
-    category: 'Variables',
-    noAutocomplete: true
-  },
-  {
-    func: 'declareAssign_list_abd',
-    block: 'var list = ["a", "b", "d"];',
-    category: 'Variables',
-    noAutocomplete: true
-  },
-  {
-    func: 'accessListItem',
-    block: 'list[0]',
-    category: 'Variables',
-    noAutocomplete: true
-  },
-  {
-    func: 'listLength',
-    block: 'list.length',
-    category: 'Variables',
-    noAutocomplete: true,
-    tipPrefix: arrayMethodPrefix,
-    type: 'property'
-  },
-  {
-    func: 'join',
-    blockPrefix: arrayBlockPrefix,
-    category: 'Variables',
-    modeOptionName: '*.join',
-    tipPrefix: arrayBlockPrefix,
-    paletteParams: ['separator'],
-    params: ['"-"'],
-    type: 'value'
-  },
-  {
-    func: 'insertItem',
-    parent: dontMarshalApi,
-    category: 'Variables',
-    paletteParams: ['list', 'index', 'item'],
-    params: ['list', '2', '"c"'],
-    dontMarshal: true
-  },
-  {
-    func: 'appendItem',
-    parent: dontMarshalApi,
-    category: 'Variables',
-    paletteParams: ['list', 'item'],
-    params: ['list', '"f"'],
-    dontMarshal: true
-  },
-  {
-    func: 'removeItem',
-    parent: dontMarshalApi,
-    category: 'Variables',
-    paletteParams: ['list', 'index'],
-    params: ['list', '0'],
-    dontMarshal: true
-  },
 
   {
     func: 'imageUploadButton',
