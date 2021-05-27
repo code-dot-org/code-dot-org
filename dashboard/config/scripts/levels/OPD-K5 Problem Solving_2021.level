@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2021-05-27T00:06:10.000Z",
+  "level_num": "custom",
+  "user_id": 177,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "CSF-Teaching-Problem-Solving",
+    "instructions_important": "false",
+    "long_instructions": "# Best Practices > Meta-Cognitive Problem Solving\r\n\r\nExplicitly teaching meta-cognitive problem solving strategies before, during and after coding is extremely important in helping students process their learning. Mega-cognitive problem solving involves thinking about your thought process itself, and reflecting on _how_ you solve problems. Watch the video below to learn about Code.org's \"Puzzle Solving Recipe\" that can help students have success with difficult problems:\r\n\r\n[This worksheet](http://code.org/curriculum/docs/k-5/PuzzleSolvingStudent.png) details the different steps of the Puzzle Solving Recipe.\r\n\r\n<img src=\"https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png\" width=\"650px\" style=\"margin-right:45px; border-radius:10px;\">\r\n\r\n> ## Reflect: \r\n> How might you explicitly teach problem solving in your CS classroom?\r\n>\r\n> [Tweet your thoughts](https://twitter.com/teachcode) and be sure to tag @teachcode in your tweet so we can respond.\r\n>\r\n> <a href=\"http://ctt.ec/ic2bx\" target=\"blank\"><h4><i class=\"fa fa-external-link-square\" ></i> Share on Twitter</h4></a>",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 8500,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-21 19:08:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"},{\"changed_at\":\"2019-10-21 19:11:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"},{\"changed_at\":\"2020-05-19 23:32:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10,\"changed_by_email\":\"bethany+levelbuilder@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

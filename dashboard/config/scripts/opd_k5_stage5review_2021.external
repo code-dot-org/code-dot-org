@@ -1,0 +1,15 @@
+name 'OPD-K5 Stage5Review_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Conditionals > Reflect
+
+In this stage, we explored how conditionals help programmers add logic to their code. In the next stage, we'll look at how functions can help you take your coding to the next level.  
+
+**Take a moment now to review how conditionals are introduced in the CS Fundamnetals curriculum, and how you might implement the suggested activities in your classroom.**
+
+![](https://images.code.org/6335e7aa128d84c96ac402005cd9a3bb-image-1549053033052.jpg)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

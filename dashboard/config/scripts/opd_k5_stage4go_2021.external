@@ -1,0 +1,51 @@
+name 'OPD-K5 Stage4Go_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Loops > Unplugged Lessons
+
+In this stage, we saw how adding loops to a program is more efficient when coding repetitive actions. In the next stage, we'll look at coding **if-statements** and other conditionals.  
+<br/>
+
+**1. Review "[Getting Loopy](https://levelbuilder.code.org/curriculum/coursec/7/Teacher)" Lesson Plan from Course C:**
+<br/>Course C is meant for Grade 2 students. Loops comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
+
+<br/>
+
+**2. Watch the student video: Getting Loopy**
+<br/>
+This is a video that you would show your students to help introduce the concept of loops and kick off the unplugged lesson.
+
+[![](https://images.code.org/eb585fcc71f5f1d2fa4d3bcddcf74b8b-image-1571253274522.14.26 PM.png)](https://www.youtube.com/watch?v=JoKTqHCni0M)
+
+[Can't see the video? Click here](http://videos.code.org/2014/C1-getting-loopy.mp4)
+
+<br/>
+
+**3. Watch the teacher video: How to facilitate "Getting Loopy"**
+<br/>
+This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson. 
+[![](https://images.code.org/fc594434f8b6869b1db1872fc85ca309-image-1571253220717.13.14 PM.png)](https://www.youtube.com/watch?v=Vo2woYRRogA)
+
+
+<br/>
+
+**4. Review other unplugged lessons that introduce loops:**
+
+- Course A (Kindergarten): [Happy Loops](https://curriculum.code.org/csf-18/coursea/9/)
+- Course B (Grade 1): [My Loopy Robotic Friends Jr.](https://curriculum.code.org/csf-18/courseb/8/)
+- Course E, F (Grade 4, 5): [My Loopy Robotic Friends](https://curriculum.code.org/csf-18/coursee/6/)
+
+***
+
+> ## Reflect
+> How would you explain the concept of loops to your students?<br><br> [Share your thoughts in our forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)
+
+> <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuss in the forums >></button></a>
+
+After commenting in the forum, return here and click below to move on to the next stage.
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

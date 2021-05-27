@@ -1,0 +1,26 @@
+name 'OPD-K5 Stage8Go_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Best Practices > Reflection
+
+Stage 8 introduced you to a number of best practices for teaching computer science. Take a moment to consider which strategies covered in this stage you might use in your practice. In the next stage, you'll create a simple plan and reflect on the course as a whole.
+
+## What strategies will you use when facilitating computer science learning in your classroom?
+
+Here are some examples from our teacher community:
+
+- **Facilitate "unplugged" activities** to teach core concepts (click [here for a full list of unplugged activities](https://code.org/curriculum/unplugged.)
+- Implement the **"ask 3 and then me"** rule in your classroom, which is when students have to ask 3 classmates for help before they can ask the teacher that same question. This reduces the number of students that you have to answer individually and promotes peer learning.
+- **Be calm yet persistent** when problems arise (which they will.) Your reaction sets the tone for students. If at the first sign of an issue, you proclaim "I'm terrible at technology. I give up," your students will think it's okay to do that too.
+- **Take pride** in their programs. Show them off, put them to work, post them online. This is a big accomplishment for you and your students that should be celebrated.
+- **Ask probing questions** to a student (even if you don't know the answer to the questions.) Ask your class if anyone has the answer. Get comfortable saying "I don't know; let's figure this out together!"
+
+---
+
+> ## Reflect
+Review more strategies or add your own <a href ="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4">in our forums.</a>:
+
+> <a href="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4" target="blank" rel="noopener noreferrer"><button class="plc">Share your strategies >></button></a>
+
+After exploring the forum thread and adding your thoughts, click below to move on to Stage 9.
+MARKDOWN

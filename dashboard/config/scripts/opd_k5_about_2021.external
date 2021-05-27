@@ -1,0 +1,29 @@
+name 'OPD-K5 About_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Getting Started: About this Course
+
+## Course Overview
+
+This course is intended as an introduction to Code.org's Computer Science Fundamentals curriculum and resources for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding while preparing to teach computer science in your classroom.
+
+## Learning Objectives
+
+By completing this online course, participants will:
+
+- Learn the basics of computer science 
+- Review best practices for teaching these basics to your students 
+- Access free curriculum and resources for teachers 
+- Plan for how you might get started teaching Computer Science Fundamentals
+- Connect with a community of fellow educators who are making positive change in their classrooms through coding 
+
+## Pre-requisites
+
+No previous experience with coding or computer science education is assumed. This is a beginner's course.
+
+> **A Note About Audience:** This course focuses on Code.org’s free Computer Science Fundamentals curriculum in the context of  K-5 learners. Although many of the same concepts can be applied to any computer science course, if you wish to teach a more in-depth computer science curriculum than Computer Science Fundamentals (for example, one of our [Middle](https://code.org/educate/csd) or [High school](https://code.org/educate/csp) courses), we recommend you pursue more [in-depth or ongoing professional development opportunities](https://code.org/educate/professional-learning/middle-high).
+
+## Course Duration
+
+Completing this online course should take between 3-7 hours, depending on your prior knowledge and how deeply you want to dive into the Code.org resources.
+MARKDOWN

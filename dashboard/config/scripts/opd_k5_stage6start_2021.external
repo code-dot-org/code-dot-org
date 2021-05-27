@@ -1,0 +1,19 @@
+name 'OPD-K5 Stage6Start_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Functions > Stage Overview
+
+<img src="https://images.code.org/6ac5cc9f26b87a62b0558947d4cfd457-image-1501267730981.jpg" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+In the first few stages, you’ve learned how to write a program, add loops, and use conditionals. In this stage, we’ll introduce the concept of **functions**.
+
+By completing Stage 7, you will:
+
+- Practice coding simple functions
+- Reflect on classroom application
+
+> **What to Expect in this Stage:** First, you will look at an unplugged lesson from Course E (meant for Grade 4) that introduces functions. Then you’ll learn about functions through video, and practice using functions in a variety of puzzles. You'll then reflect on your practice. You should spend between 20-45 minutes on this stage.
+
+Ready? Let's go!
+
+MARKDOWN

@@ -1,0 +1,32 @@
+name 'OPD-K5 Culture_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Best Practices > Classroom Culture
+
+How can we promote a healthy classroom culture for our computer science classes? First, we can make sure that everyone in the classroom, including ourselves, understands ways in which we can act like computer scientists and what to keep in mind. This keeps everyone on the same page and makes your work in the classroom easier.
+
+<img src="https://images.code.org/b5d9ae18a882a4359f096b9c6ade135e-image-1434398703448.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+## Ways to act like a computer scientist:
+
+- **Be curious:** When you're curious, you do things like poke around in different menus, run pieces of code to see what happens, or check the effects of different settings. Curiosity often leads to being able to answer your own questions.
+- **Ask questions:** Collaborate with others once you've tried figuring out a problem yourself.
+- **Be persistent:** Have confidence tackling open-ended complex problems and stick with them. This becomes easier once you've written some successful programs and know how good it feels to overcome a difficult programming problem.
+- **Break big problems down into smaller, more manageable problems:** This is called **decomposing**.
+- **Read through your code:** The computer is following your instructions exactly. Tracing through code step-by-step (as if you were the computer processing the instructions) will help you find errors in your logic or missing steps.
+- **Don't feel bad about making mistakes:** Mistakes are not failure; they just bring you one step closer to creating the right solution or end product.
+- **Step away from your screen:** This can give you a much needed break and often you can come back to a problem with a new perspective.
+
+## Things to keep in mind while learning computer science:
+
+- The world of computer programming moves so fast that there really are no masters. **We're all learners** at different stages but we are still always learners.
+- Programming becomes more comfortable every time you come back to it. **You're not going to be an expert your first time.**
+- There's no way around it, the act of programming and **learning to program takes time, but anyone can do it!**
+- You can share **your own authentic experience learning to code** with your students!
+
+> ## Reflect:
+> How do you plan to create positive classroom culture when teaching computer science? [Tweet your thoughts](https://twitter.com/codeorg) and be sure to tag @codeorg in your tweet so we can respond.
+
+> <a href="http://ctt.ec/pdL3a" target="blank" rel="noopener noreferrer"><button class="default">Share on Twitter >></button></a>
+
+MARKDOWN

@@ -1,0 +1,22 @@
+name 'OPD-K5 Assessment_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Planning > Other resources
+
+When you're logged into Code.org as a teacher, you have access to many features that your students do not. You've already seen how to find a course, create a section, and assign your class to that section. However, you can also: 
+
+- **Track Student Progress**: [Assess the learning](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) of all of your students.
+- **Your Course Progress**: View your own personal progress on Code.org lessons, as a learner. Your students will also be able to see their progress in their accounts. However, as a teacher, you are also able to view lesson plans and see the solutions for every puzzle.
+- **Help and Community**: Access [support.code.org](https://support.code.org/), where you can post questions, respond to other teacher's posts, and read FAQs by Code.org staff. On this page, you'll also be able to directly contact Code.org with any questions you may have.
+- **Professional Development**: Access [in-person training](https://code.org/professional-development-workshops) for teachers.
+- **Computer Science Guest Speakers**: [Find smart, passionate and engaging tech industry professionals](https://code.org/volunteer/local) who would love to talk to your class about their jobs. 
+
+<br/>
+---
+> ## Visit support.code.org
+> If you get stuck or have questions, make sure to check our support articles on support.code.org! You can also reach out to us directly through that page, as well.  [our forum](http://forum.code.org/t/teaching-conditionals/406/1).
+
+> <a href="http://support.code.org" target="blank" rel="noopener noreferrer"><button class="plc">Get help >></button></a>
+
+After commenting in the forum, return here and click below to move on to the next stage.
+MARKDOWN

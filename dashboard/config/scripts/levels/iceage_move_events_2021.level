@@ -1,0 +1,96 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2021-05-27T00:05:58.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "iceage",
+    "ideal": "8",
+    "scale": "{\"snapRadius\":2}",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "first_sprite_index": "2",
+    "background": "icy5",
+    "default_emotion": 2,
+    "short_instructions": "Write the code to help Scrat get all of the acorns!",
+    "callout_json": "[{\"localization_key\":\"arrows_move_actor\",\"callout_text\":null,\"element_id\":\"#rightButton\",\"qtip_config\":{\"position\":{\"my\":\"bottom left\",\"at\":\"top middle\",\"adjust\":{\"x\":0,\"y\":4}}},\"on\":null}]",
+    "maze": "[[{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "long_instructions": "Scrat is still looking for acorns! \r\nHelp him scamper around by attaching a `move actor 1` block to each of the events and changing the direction to work for each arrow key. \r\nWhen you’re done, click \"Run\" and try to collect all of the acorns.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Each of the `when ___ arrow` events will need to have a different `move actor 1` command connected to it to solve this puzzle. \",\"hint_id\":\"iceage_move_events_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0812dcc23696511f5d843dfc5d5c53dc/iceage_move_events.mp3\"}]",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "disable_sharing": "false",
+    "coordinate_grid_background": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "timeout_after_when_run": "false",
+    "hint_prompt_attempts_threshold": 2,
+    "parent_level_id": 15630,
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 20:00:06 +0000\",\"changed\":[\"notes\",\"ideal\",\"required_blocks\",\"first_sprite_index\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-07 18:11:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-08 21:00:46 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="studio_whenLeft" deletable="false" x="20" y="20"/>
+        <block type="studio_whenRight" deletable="false" x="180" y="20"/>
+        <block type="studio_whenUp" deletable="false" x="20" y="120"/>
+        <block type="studio_whenDown" deletable="false" x="180" y="120"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="studio_move">
+          <title name="DIR">8</title>
+        </block>
+        <block type="studio_move">
+          <title name="DIR">2</title>
+        </block>
+        <block type="studio_move">
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_move">
+          <title name="DIR">4</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">???</title>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Studio>

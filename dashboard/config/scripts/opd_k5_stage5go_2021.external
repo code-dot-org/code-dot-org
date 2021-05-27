@@ -1,0 +1,43 @@
+name 'OPD-K5 Stage5Go_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Conditionals > Unplugged Lessons
+
+
+**1. Review "[Conditionals with Cards](https://curriculum.code.org/csf-18/coursed/13/)" Lesson Plan from Course D:** 
+<br/>
+Course D is meant for Grade 3 students. This same lesson also appears in Course E and Course F. Conditionals are not covered in Courses A, B, or C.
+<br/><br/>
+
+**2. Watch the student video: Conditionals with Cards**
+<br/>
+This is a video that you would show your students to help introduce the concept of conditionals and kick off the unplugged lesson.
+[![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41 PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)
+<br/>
+[Can't see the video? Click here](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
+
+<br/><br/>
+**3. Watch a teacher model this lesson: "Conditionals with Cards"**
+<br/>
+This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson. 
+
+
+[![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37 PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)
+
+[Can't see the video? Click here](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)
+
+<br/><br/>
+
+---
+
+> ## Reflect
+> How would you explain the concept of conditionals to your students? Share your thoughts in [our forum](http://forum.code.org/t/teaching-conditionals/406/1).
+
+> <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuss in the forums >></button></a>
+
+After commenting in the forum, return here and click below to move on to the next stage.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

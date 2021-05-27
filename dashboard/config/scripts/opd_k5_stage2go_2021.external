@@ -1,0 +1,18 @@
+name 'OPD-K5 Stage2Go_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# CS Fundamentals > Looking Ahead
+
+We hope this stage gave you a good introduction to computer science.
+
+By completing this stage, you should be able to:
+
+- Define "computer science" and reviewed key vocabulary
+- Identify the benefits of teaching and learning computer science
+- Differentiate between "coding" and "computer science"
+- Explain the benefits of beginning to code using visual programming
+
+> **Teaching Tip:** While computer science can be a rich and complex discipline, at Code.org we recognize that teachers and students need to master the basics before diving in to higher-level projects. This online course teaches you, the teacher, those basics so that you can support your students in doing so as well.
+
+In the next stage, we'll briefly introduce you to some frameworks for thinking about the rest of the content in this course. Then, we'll dive right in and start learning computer science.
+MARKDOWN

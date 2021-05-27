@@ -1,0 +1,15 @@
+name 'OPD-K5 Why teach CS_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# CS Fundamentals > Why teach computer science?
+
+<img src="//code.org/images/edquote1.png" width="250px" style="margin-right:45px; float:left">
+
+Research shows that computer science promotes critical thinking, creativity, problem-solving, and engagement in real-world skills. In fact, a [recent research study](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching CS Fundamentals lessons.
+
+Why would you want to teach computer science if you're not a STEM teacher? If you're taking this course, you likely have a number of your own answers to that question, but if you need further inspiration, take some time now and review [this video collection](http://code.org/educate/inspire) to get a sense of the "why". These videos are great to share with your students, your administration, parents, and your community if you need help making a case for CS in the classroom. You might also be interested in some of the statistics and evidence around CS education.
+
+<a href="http://code.org/educate/inspire" target="blank" rel="noopener noreferrer"><button class="default">Explore inspirational videos >></button></a><a href="http://code.org/promote" target="blank" rel="noopener noreferrer"><button class="default">Explore research >></button></a>
+
+Spend a few moments exploring our research and make note of any relevant or interesting facts or insights you discover.
+MARKDOWN

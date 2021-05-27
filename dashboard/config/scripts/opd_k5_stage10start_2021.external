@@ -1,0 +1,17 @@
+name 'OPD-K5 Stage10Start_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Next Steps > Let's Review
+
+<img src="https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG" width="450px">
+
+## You’re almost there!
+
+So far you have learned the basics of coding, explored how you might teach computer science, and created a simple plan of next steps.
+
+By completing Stage 11, you will:
+
+ - Reflect on your learning
+ - Plan for next steps you can take to continue your learning
+ - Connect with a global community of fellow educators interested in computer science education
+MARKDOWN

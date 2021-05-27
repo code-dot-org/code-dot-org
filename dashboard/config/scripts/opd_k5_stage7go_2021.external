@@ -1,0 +1,43 @@
+name 'OPD-K5 Stage7Go_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Events > Unplugged Lessons
+
+<br/>
+
+**1. Review "[The Big Event](https://curriculum.code.org/csf-18/coursec/11/)" Lesson Plan from Course C.**
+<br/>
+Course C is meant for students in Grade 2. Events come up in every CS Fundamentals Course, from A-F. Not every course has an unplugged lesson to cover events, but you can see the unplugged lesson for Course A and Course B at the bottom of this page.
+<br/><br/>
+
+**2. Watch the student video: The Big Event**
+<br/>
+This is a video that you would show your students to help introduce the concept of events and kick off the unplugged lesson.
+
+[![](https://images.code.org/e5d8d5fc84416e34232f3e00142e5b2a-image-1571254248844.30.31 PM.png)](https://youtube.com/watch?v=u0WV9shCoak)
+
+[Can't see the video? Click here](http://videos.code.org/2014/C1-bigevent-unplugged.mp4)
+<br/><br/>
+
+**3. Watch the teacher video: How to facilitate "The Big Event"**
+<br/>
+This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson.
+
+[![](https://images.code.org/666ace3e1b7de917e112733112d358e4-image-1571254314712.31.50 PM.png)](https://youtube.com/watchv=aYECW6V8nQA)
+<br/><br/>
+
+**4. Review other unplugged lessons that introduce events:**
+
+- Course A, Course B (Kindergarten, Grade 1): [The Big Event Jr.](https://curriculum.code.org/csf-18/courseb/12/)
+
+---
+
+> ## Reflect
+> How would you explain the concept of events to your students? Share your thoughts in <a href="http://forum.code.org/t/teaching-events/409/1">our forum</a>.
+
+> <a href="http://forum.code.org/t/teaching-events/409/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuss in the forums >></button></a>
+
+After commenting in the forum, return here and click below to move on.
+
+
+MARKDOWN

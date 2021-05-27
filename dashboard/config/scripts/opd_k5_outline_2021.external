@@ -1,0 +1,94 @@
+name 'OPD-K5 Outline_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Getting Started > Course Outline
+
+The course is divided into eleven stages, and each stage is made up of "levels" or "puzzles." Here's an overview of what you'll learn if you complete the entire course:
+
+## Stage 1: Getting Started (10-30 minutes)
+
+By completing Stage 1, you will:
+
+- Review the course details
+- Practice using Code.org as a learning platform
+- Plan your participation in this course
+
+## Stage 2: Computer Science Fundamentals (10-30 minutes)
+
+By completing Stage 2, you will:
+
+- Define computer science and review key vocabulary
+- Identify the benefits of teaching and learning computer science
+- Differentiate between "coding" and "computer science"
+- Explain the benefits of beginning to code using visual programming
+
+## Stage 3: Looking Ahead (10 minutes)
+
+By completing Stage 3, you will:
+
+- Prepare to "master the basics" of computer science by reviewing what's next in the course
+
+## Stage 4: Mastering the Basics: Sequencing (10-30 minutes)
+
+By completing Stage 4, you will:
+
+- Define "program" and "algorithm"
+- Use the Code.org visual programming engine to write simple programs
+- Reflect on classroom application
+
+## Stage 5: Mastering the Basics: Loops (20-45 minutes)
+
+By completing Stage 5, you will:
+
+- Define "loops" and explain their importance
+- Practice coding simple loops
+- Reflect on classroom application
+
+## Stage 6: Mastering the Basics: Conditionals (20-45 minutes)
+
+By completing Stage 6, you will:
+
+- Define "conditionals" and explain their importance
+- Practice coding simple conditionals
+- Reflect on classroom application
+
+## Stage 7: Mastering the Basics: Functions (20-45 minutes)
+
+By completing Stage 7, you will:
+
+- Define "functions" and explain their importance
+- Practice coding simple functions
+- Reflect on classroom application
+
+## Stage 8: Mastering the Basics: Events (30-60 minutes)
+
+By completing Stage 8, you will:
+
+- Define "events" and explain their importance
+- Practice coding simple events
+- Reflect on classroom application
+
+## Stage 9: Best Practices for Teaching Computer Science (30-60 minutes)
+
+By completing Stage 9, you will:
+
+- Review best practices for teaching computer science
+
+## Stage 10: Planning (30-60 minutes)
+
+By completing Stage 10, you will:
+
+- Explore Code.org resources, including the teacher dashboard
+- Plan for how you might integrate computer science into your practice
+
+## Stage 11: Next Steps (10-30 minutes)
+
+By completing Stage 11, you will
+
+- Reflect on your learning
+- Plan for next steps you can take to continue your learning
+- Connect with a global community of fellow educators interested in computer science education
+- Share your takeaways and feedback on this course
+
+> **Note**: Suggested times are provided above to help you plan your learning. Please note that you may want to spend more or less time on a given stage, depending on your prior knowledge, interest and capacity. Keep in mind that this course is entirely self-paced; you can always leave the course and come back or revisit any stage or level at any time.
+MARKDOWN

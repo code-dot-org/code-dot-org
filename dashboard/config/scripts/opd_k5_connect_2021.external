@@ -1,0 +1,19 @@
+name 'OPD-K5 Connect_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Next Steps > Get Connected
+
+Beyond further formal training, you might consider accessing the code.org community to continue learning informally from your others, or just to find support and a network of peers. Here's how:  
+
+<br/><br/>
+
+> **Continue participating in the code.org teacher Professional Learning Community:** The forum that you’ve been using throughout this course will be a great resource for you moving forward. You can use it not only to refer back to your learning from this course, but to find support as you continue your journey, or even to offer support to others who need your expertise. Be sure to bookmark it now and visit often: [http://forum.code.org/c/csf](http://forum.code.org/c/csf)  
+
+<br/>
+
+> **Connect with [@teachcode](http://twitter.com/teachcode) on Twitter.**  
+
+<br/>
+
+> **Join the computer science Teachers Association (CSTA):** [The CSTA](http://csta.acm.org/index.html) is an engaged community of educators across the nation that is committed to bringing computer science education to their students while raising awareness of the subject to the general public. They host an annual conference and also have chapters that hold local meetings.
+MARKDOWN

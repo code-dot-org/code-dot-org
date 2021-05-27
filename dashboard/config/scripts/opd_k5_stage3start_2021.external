@@ -1,0 +1,17 @@
+name 'OPD-K5 Stage3Start_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Sequencing > Stage Overview
+
+<img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+By completing Stage 4, you will:
+
+- Define "algorithm" and "program"
+- Write programs using blocks of code
+- Reflect on classroom application
+
+> **What to Expect in this Stage:** In the levels that follow, we'll start with an unplugged lesson plan to introduce you to a concept, to model how you would introduce ideas to students in your classroom. Then, we will provide you with video instruction and introduce you to a series of puzzles and ask you to apply your learning. In order to complete a puzzle, you'll need to write code using Blockly code blocks. These lessons are from Course A, which is meant for Kindergarten students. We'll close with an opportunity to reflect on how you might teach this concept to your students. You should spend between 10-30 minutes on this stage.
+
+Ready? Let's go!
+MARKDOWN

@@ -1,0 +1,20 @@
+name 'OPD-K5 Stage1Go_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Getting Started > Ready? Set? Go!
+
+<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+By completing this stage, you should have:
+
+- Reviewed the course details
+- Learned how to navigate through the learning platform
+- Planned your participation in this course
+
+In the next stage, we will:
+
+- Define "computer science" and review key vocabulary
+- Identify the benefits of teaching and learning computer science
+- Differentiate between "coding" and "computer science"
+- Explain the benefits of beginning to code using visual programming
+MARKDOWN
