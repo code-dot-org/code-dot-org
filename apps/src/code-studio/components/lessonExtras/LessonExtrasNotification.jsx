@@ -7,7 +7,7 @@ export default class LessonExtrasNotification extends Component {
     return (
       <Notification
         type={NotificationType.information}
-        notice={i18n.stageExtras()}
+        notice={i18n.lessonExtras()}
         details={i18n.lessonExtrasDetails()}
         buttonText={i18n.lessonExtrasButton()}
         buttonLink="/home#classroom-sections"
