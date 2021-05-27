@@ -37,7 +37,7 @@ const sortedFakeSectionData = {
     id: 300,
     name: 'csp2'
   },
-  stageExtras: false,
+  lessonExtras: false,
   ttsAutoplayEnabled: false
 };
 
