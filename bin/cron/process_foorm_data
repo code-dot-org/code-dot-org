@@ -47,11 +47,11 @@ def write_forms_to_redshift(client, arn)
       form_id                 int,
       form_name               varchar,
       form_version            int,
-      question_type           varchar,
-      question_name           varchar,
-      question_text           varchar(max),
+      item_type               varchar,
+      item_name               varchar,
+      item_text               varchar(max),
       matrix_item_name        varchar,
-      matrix_item_text        varchar(max),
+      matrix_item_header      varchar(max),
       is_facilitator_specific int,
       response_options        varchar(max),
       num_response_options    int
@@ -73,7 +73,7 @@ def write_submissions_to_redshift(client, arn)
     CREATE TABLE IF NOT EXISTS #{SUBMISSIONS_REDSHIFT_TABLE_NAME}
     (
       submission_id    int,
-      question_name    varchar,
+      item_name        varchar,
       matrix_item_name varchar,
       response_value   varchar,
       response_text    varchar(max)
