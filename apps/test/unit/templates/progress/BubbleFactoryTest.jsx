@@ -254,7 +254,7 @@ describe('BubbleFactory', () => {
       expect(bubbleStyle).to.include(unitTestExports.bubbleStyles.diamond);
     });
 
-    it('when shape is a diamond and size is dot has expected border radius, min/max widths and font size', () => {
+    it('when shape is a diamond and size is dot has expected border radius, widths, and font size', () => {
       const bubbleStyle = unitTestExports.mainBubbleStyle(
         BubbleShape.diamond,
         BubbleSize.dot,
@@ -262,11 +262,11 @@ describe('BubbleFactory', () => {
       );
 
       expect(bubbleStyle.borderRadius).to.equal(2);
-      expect(bubbleStyle.minWidth).to.equal(10);
+      expect(bubbleStyle.width).to.equal(10);
       expect(bubbleStyle.maxWidth).to.equal(10);
     });
 
-    it('when shape is a diamond and size is full has expected border radius, min/max widths and font size', () => {
+    it('when shape is a diamond and size is full has expected border radius, widths, and font size', () => {
       const bubbleStyle = unitTestExports.mainBubbleStyle(
         BubbleShape.diamond,
         BubbleSize.full,
@@ -275,11 +275,11 @@ describe('BubbleFactory', () => {
 
       expect(bubbleStyle.borderRadius).to.equal(4);
       expect(bubbleStyle.fontSize).to.equal(16);
-      expect(bubbleStyle.minWidth).to.equal(26);
+      expect(bubbleStyle.width).to.equal(26);
       expect(bubbleStyle.maxWidth).to.equal(26);
     });
 
-    it('when shape is a circle and size is dot has expected border radius, min/max widths and font size', () => {
+    it('when shape is a circle and size is dot has expected border radius, widths, and font size', () => {
       const bubbleStyle = unitTestExports.mainBubbleStyle(
         BubbleShape.circle,
         BubbleSize.dot,
@@ -287,11 +287,11 @@ describe('BubbleFactory', () => {
       );
 
       expect(bubbleStyle.borderRadius).to.equal(13);
-      expect(bubbleStyle.minWidth).to.equal(13);
+      expect(bubbleStyle.width).to.equal(13);
       expect(bubbleStyle.maxWidth).to.equal(13);
     });
 
-    it('when shape is a circle and size is letter has expected border radius, min/max widths and font size', () => {
+    it('when shape is a circle and size is letter has expected border radius, widths, and font size', () => {
       const bubbleStyle = unitTestExports.mainBubbleStyle(
         BubbleShape.circle,
         BubbleSize.letter,
@@ -300,11 +300,11 @@ describe('BubbleFactory', () => {
 
       expect(bubbleStyle.borderRadius).to.equal(20);
       expect(bubbleStyle.fontSize).to.equal(12);
-      expect(bubbleStyle.minWidth).to.equal(20);
+      expect(bubbleStyle.width).to.equal(20);
       expect(bubbleStyle.maxWidth).to.equal(20);
     });
 
-    it('when shape is a circle and size is full has expected border radius, min/max widths and font size', () => {
+    it('when shape is a circle and size is full has expected border radius, widths, and font size', () => {
       const bubbleStyle = unitTestExports.mainBubbleStyle(
         BubbleShape.circle,
         BubbleSize.full,
@@ -313,7 +313,7 @@ describe('BubbleFactory', () => {
 
       expect(bubbleStyle.borderRadius).to.equal(34);
       expect(bubbleStyle.fontSize).to.equal(16);
-      expect(bubbleStyle.minWidth).to.equal(34);
+      expect(bubbleStyle.width).to.equal(34);
       expect(bubbleStyle.maxWidth).to.equal(34);
     });
 

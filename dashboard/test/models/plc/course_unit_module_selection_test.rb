@@ -29,40 +29,40 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
     q1_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 1'
       question 'What is your name?'
-      answer 'Sir Lancelot', weight: 1, stage_name: '#{@lesson_honesty.name}'
-      answer 'Sir Robin', weight: 1, stage_name: '#{@lesson_no_nickname.name}'
-      answer 'Sir Galahad', weight: 1, stage_name: '#{@lesson_honesty.name}'
-      answer 'King Arthur', weight: 1, stage_name: '#{@lesson_honesty.name}'
+      answer 'Sir Lancelot', weight: 1, lesson_name: '#{@lesson_honesty.name}'
+      answer 'Sir Robin', weight: 1, lesson_name: '#{@lesson_no_nickname.name}'
+      answer 'Sir Galahad', weight: 1, lesson_name: '#{@lesson_honesty.name}'
+      answer 'King Arthur', weight: 1, lesson_name: '#{@lesson_honesty.name}'
       answer 'Mr Edgecase'
     DSL
 
     q2_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 2'
       question 'What is your quest?'
-      answer 'I seek the grail', weight: 1, stage_name: '#{@lesson_honesty.name}'
-      answer 'Yes, yes, I seek the Grail', weight: 1, stage_name: '#{@lesson_no_nickname.name}'
+      answer 'I seek the grail', weight: 1, lesson_name: '#{@lesson_honesty.name}'
+      answer 'Yes, yes, I seek the Grail', weight: 1, lesson_name: '#{@lesson_no_nickname.name}'
       answer 'I seek something else'
     DSL
 
     q3_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 3'
       question 'What is your favorite color?'
-      answer 'Blue', weight: 1, stage_name: '#{@lesson_blue.name}'
-      answer 'Yellow - no, blue', weight: 1, stage_name: '#{@lesson_cliffs.name}'
+      answer 'Blue', weight: 1, lesson_name: '#{@lesson_blue.name}'
+      answer 'Yellow - no, blue', weight: 1, lesson_name: '#{@lesson_cliffs.name}'
       answer 'No preference'
     DSL
 
     q4_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 4'
       question 'What is the capital of Assyria?'
-      answer 'I dont know that!', weight: 1, stage_name: '#{@lesson_ignorance.name}'
+      answer 'I dont know that!', weight: 1, lesson_name: '#{@lesson_ignorance.name}'
       answer 'Nineveh'
     DSL
 
     q5_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 5'
       question 'What is the airspeed velocity of an unladen swallow?'
-      answer 'What do you mean, an African or European Swallow?', weight: 1, stage_name: '#{@lesson_ornithology.name}'
+      answer 'What do you mean, an African or European Swallow?', weight: 1, lesson_name: '#{@lesson_ornithology.name}'
       answer '15 m/s'
     DSL
 

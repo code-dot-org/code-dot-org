@@ -72,8 +72,8 @@ class LevelDslTest < ActiveSupport::TestCase
       display_name 'Test override question'
       question 'Question text'
       answer 'answer 1'
-      answer 'answer 2', weight: 2, stage_name: '#{lesson1.name}'
-      answer 'answer 3', stage_name: '#{lesson2.name}'
+      answer 'answer 2', weight: 2, lesson_name: '#{lesson1.name}'
+      answer 'answer 3', lesson_name: '#{lesson2.name}'
     DSL
 
     output, _ = EvaluationMulti.parse(input_dsl, 'test')

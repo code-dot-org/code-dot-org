@@ -9,6 +9,7 @@ import {
   setSaveError,
   setLibraryQuestionData,
   setHasJSONError,
+  setHasLintError,
   setLastSavedQuestions,
   setLibraryData
 } from '../foormEditorRedux';
@@ -46,6 +47,7 @@ class FoormLibraryEditorManager extends React.Component {
     setSaveError: PropTypes.func,
     setLibraryQuestionData: PropTypes.func,
     setHasJSONError: PropTypes.func,
+    setHasLintError: PropTypes.func,
     setLastSavedQuestions: PropTypes.func,
     setLibraryData: PropTypes.func
   };
@@ -183,6 +185,7 @@ class FoormLibraryEditorManager extends React.Component {
   updateLibraryQuestionData(libraryQuestionData) {
     this.props.setLibraryQuestionData(libraryQuestionData);
     this.props.setHasJSONError(false);
+    this.props.setHasLintError(false);
     this.props.setLastSavedQuestions(libraryQuestionData['question']);
     this.props.resetCodeMirror(libraryQuestionData['question']);
   }
@@ -316,6 +319,7 @@ export default connect(
     setLibraryQuestionData: libraryQuestionData =>
       dispatch(setLibraryQuestionData(libraryQuestionData)),
     setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
+    setHasLintError: hasLintError => dispatch(setHasLintError(hasLintError)),
     setLastSavedQuestions: libraryQuestion =>
       dispatch(setLastSavedQuestions(libraryQuestion)),
     setLibraryData: libraryData => dispatch(setLibraryData(libraryData))

@@ -5,7 +5,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import {ViewType} from '../viewAsRedux';
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
-import {isStageHiddenForSection} from '../hiddenStageRedux';
+import {isLessonHiddenForSection} from '../hiddenLessonRedux';
 
 /**
  * When viewing a puzzle, we want teachers to be able to toggle between what the
@@ -22,7 +22,7 @@ class TeacherContentToggle extends React.Component {
     isBlocklyOrDroplet: PropTypes.bool.isRequired,
     // redux provided
     viewAs: PropTypes.string.isRequired,
-    hiddenStagesInitialized: PropTypes.bool.isRequired,
+    hiddenLessonsInitialized: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
     isHiddenStage: PropTypes.bool.isRequired,
     isLockedStage: PropTypes.bool.isRequired
@@ -51,7 +51,7 @@ class TeacherContentToggle extends React.Component {
   render() {
     const {
       viewAs,
-      hiddenStagesInitialized,
+      hiddenLessonsInitialized,
       sectionsAreLoaded,
       isLockedStage,
       isHiddenStage,
@@ -73,7 +73,7 @@ class TeacherContentToggle extends React.Component {
     if (viewAs === ViewType.Student) {
       // Keep this hidden until we've made our async calls for hidden_stages and
       // locked stages, so that we don't flash content before hiding it
-      if (!hiddenStagesInitialized || !sectionsAreLoaded || hasOverlayFrame) {
+      if (!hiddenLessonsInitialized || !sectionsAreLoaded || hasOverlayFrame) {
         contentStyle.visibility = 'hidden';
       }
     }
@@ -131,8 +131,8 @@ export const mapStateToProps = state => {
     const {selectedSectionId} = state.teacherSections;
 
     isLockedStage = lessonIsLockedForAllStudents(currentLessonId, state);
-    isHiddenStage = isStageHiddenForSection(
-      state.hiddenStage,
+    isHiddenStage = isLessonHiddenForSection(
+      state.hiddenLesson,
       selectedSectionId,
       currentLessonId
     );
@@ -146,7 +146,7 @@ export const mapStateToProps = state => {
   return {
     viewAs,
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
-    hiddenStagesInitialized: state.hiddenStage.hiddenStagesInitialized,
+    hiddenLessonsInitialized: state.hiddenLesson.hiddenLessonsInitialized,
     isHiddenStage,
     isLockedStage
   };
