@@ -4,7 +4,7 @@ module ScriptLevelsHelper
 
     if script_level.has_another_level_to_go_to?
       if script_level == script_level.lesson.last_progression_script_level
-        response[:stage_changing] = {previous: {name: script_level.name, position: script_level.lesson.absolute_position}}
+        response[:lesson_changing] = {previous: {name: script_level.name, position: script_level.lesson.absolute_position}}
 
         # End-of-Stage Experience is only enabled for:
         # scripts with the lesson_extras_available property
