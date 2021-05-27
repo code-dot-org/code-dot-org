@@ -17,7 +17,7 @@ module ScriptLevelsHelper
         enabled_for_teacher = current_user.try(:teacher?) &&
             current_user.sections.where(
               script_id: script_level.script_id,
-              stage_extras: true
+              lesson_extras: true
             ).any?
         if enabled_for_stage && (enabled_for_user || enabled_for_teacher)
           response[:redirect] = script_lesson_extras_path(
