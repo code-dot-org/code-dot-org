@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
@@ -19,13 +19,13 @@ describe('SaveBar', () => {
   });
 
   it('renders default props', () => {
-    const wrapper = mount(<SaveBar {...defaultProps} />);
+    const wrapper = shallow(<SaveBar {...defaultProps} />);
     expect(wrapper.find('button').length).to.equal(3);
     expect(wrapper.find('FontAwesome').length).to.equal(0); //spinner isn't showing
   });
 
   it('can save and keep editing', () => {
-    const wrapper = mount(<SaveBar {...defaultProps} />);
+    const wrapper = shallow(<SaveBar {...defaultProps} />);
 
     const saveAndKeepEditingButton = wrapper.find('button').at(1);
     expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
@@ -36,14 +36,16 @@ describe('SaveBar', () => {
   });
 
   it('shows spinner when isSaving is true', () => {
-    const wrapper = mount(<SaveBar {...defaultProps} isSaving={true} />);
+    const wrapper = shallow(<SaveBar {...defaultProps} isSaving={true} />);
 
     // check the the spinner is showing
     expect(wrapper.find('FontAwesome').length).to.equal(1);
   });
 
   it('shows lastSaved when there is no error', () => {
-    const wrapper = mount(<SaveBar {...defaultProps} lastSaved={Date.now()} />);
+    const wrapper = shallow(
+      <SaveBar {...defaultProps} lastSaved={Date.now()} />
+    );
 
     expect(wrapper.find('.lastSavedMessage').text()).to.include(
       'Last saved at:'
@@ -51,7 +53,7 @@ describe('SaveBar', () => {
   });
 
   it('shows error when props error is set', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <SaveBar {...defaultProps} error={'There was an error'} />
     );
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
@@ -61,7 +63,7 @@ describe('SaveBar', () => {
   });
 
   it('can save and close', () => {
-    const wrapper = mount(<SaveBar {...defaultProps} />);
+    const wrapper = shallow(<SaveBar {...defaultProps} />);
 
     const saveAndCloseButton = wrapper.find('button').at(2);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
@@ -71,7 +73,7 @@ describe('SaveBar', () => {
   });
 
   it('can go to item with show', () => {
-    const wrapper = mount(<SaveBar {...defaultProps} />);
+    const wrapper = shallow(<SaveBar {...defaultProps} />);
 
     const saveAndCloseButton = wrapper.find('button').at(0);
     expect(saveAndCloseButton.contains('Show')).to.be.true;
