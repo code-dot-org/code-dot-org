@@ -163,7 +163,7 @@ describe('TeacherFeedback', () => {
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().disabledMode).to.equal(false);
+      expect(confirmCommentArea.props().isReadonly).to.equal(false);
       expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
       expect(confirmCommentArea.props().comment).to.equal('');
 
@@ -200,7 +200,7 @@ describe('TeacherFeedback', () => {
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().disabledMode).to.equal(false);
+      expect(confirmCommentArea.props().isReadonly).to.equal(false);
       expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
       expect(confirmCommentArea.props().comment).to.equal('Good work!');
 
@@ -251,7 +251,7 @@ describe('TeacherFeedback', () => {
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().disabledMode).to.equal(false);
+      expect(confirmCommentArea.props().isReadonly).to.equal(false);
       expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
       expect(confirmCommentArea.props().comment).to.equal('');
 
@@ -345,7 +345,7 @@ describe('TeacherFeedback', () => {
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().disabledMode).to.equal(true);
+      expect(confirmCommentArea.props().isReadonly).to.equal(true);
       expect(confirmCommentArea.props().studentHasFeedback).to.equal(true);
       expect(confirmCommentArea.props().comment).to.equal('Good work!');
 
@@ -386,7 +386,7 @@ describe('TeacherFeedback', () => {
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().disabledMode).to.equal(true);
+      expect(confirmCommentArea.props().isReadonly).to.equal(true);
       expect(confirmCommentArea.props().studentHasFeedback).to.equal(true);
       expect(confirmCommentArea.props().comment).to.equal('Good work!');
 
@@ -428,7 +428,7 @@ describe('TeacherFeedback', () => {
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().disabledMode).to.equal(true);
+      expect(confirmCommentArea.props().isReadonly).to.equal(true);
       expect(confirmCommentArea.props().studentHasFeedback).to.equal(true);
       expect(confirmCommentArea.props().comment).to.equal('Good work!');
 
