@@ -758,6 +758,11 @@ export const styles = {
     position: "relative"
   },
 
+  resultsBot: {
+    position: "relative",
+    width: "100%"
+  },
+
   saveInputsWidth: {
     width: "95%"
   },

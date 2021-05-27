@@ -13,6 +13,7 @@ import {
   getExtremaByColumn
 } from "../redux";
 import { styles } from "../constants";
+import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
 
 class Predict extends Component {
   static propTypes = {
@@ -59,7 +60,6 @@ class Predict extends Component {
                         value={this.props.testData[feature] || ""}
                       />
                     </label>
-
                   </div>
                 );
               })}
@@ -69,8 +69,8 @@ class Predict extends Component {
               {this.props.selectedCategoricalFeatures.map((feature, index) => {
                 return (
                   <div style={styles.cardRow} key={index}>
-                    <label>
-                      {feature}: &nbsp;
+                    <div>{feature}: &nbsp;</div>
+                    <div>
                       <select
                         onChange={event => this.handleChange(event, feature)}
                         value={this.props.testData[feature]}
@@ -86,7 +86,7 @@ class Predict extends Component {
                             );
                           })}
                       </select>
-                    </label>
+                    </div>
                   </div>
                 );
               })}
@@ -109,10 +109,12 @@ class Predict extends Component {
           </button>
         </div>
         {this.props.predictedLabel && (
-          <div>
-            <p />
-            <div>A.I. predicts:</div>
-            <div style={styles.contents}>
+          <div style={{ ...styles.contents, marginTop: 20 }}>
+            <div style={{ float: "left", width: "20%" }}>
+              <img style={{ width: "100%" }} src={aiBotBorder} />
+            </div>
+            <div style={{ float: "right", width: "75%" }}>
+              <div style={styles.statement}>A.I. predicts</div>
               {this.props.labelColumn}: {this.props.predictedLabel}
             </div>
           </div>
