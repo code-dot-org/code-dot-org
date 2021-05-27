@@ -265,6 +265,7 @@ es-MX:
     added_teacher: '%{name} añadido como tu docente'
     registered: "Te has registrado en %{section_name}."
     captcha_required: 'Por favor, rellene el CAPTCHA para entrar en esta sección.'
+    already_exists: 'Ya te has unido a la sección %{section_name}.'
     error:
       signed_in: 'Cierra la sesión antes de proceder'
       username_not_found: 'No se encontró el usuario %{username}'
@@ -274,6 +275,8 @@ es-MX:
       blank_code: "Ingresa un código de sección"
       cant_join_own_section: "Lo sentimos, no te puedes unir a tu propia sección."
       provider_managed_section: "No puedes unirte a esta sección, porque está a cargo de otro proveedor. Consulta con tu docente para que te agregue a través de %{provider} y vuelve a sincronizar la sección."
+      restricted_section: "No hemos podido añadirte a la sección %{section_code} porque está bloqueada. Por favor, póngase en contacto con su profesor para obtener ayuda."
+      full_section: "No hemos podido añadirte a la sección %{section_code} porque ya existen %{section_capacity} alumnos en ella. Ponte en contacto con tu profesor para que te ayude."
     mail:
       student_disassociated:
         subject: "Aviso de Code.org: %{student_name} ya no está asociado como tu estudiante."
