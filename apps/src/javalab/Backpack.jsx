@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
@@ -16,6 +17,10 @@ const placeholderFiles = [
  * you click on the import button, or outside of the dropdown.
  */
 export class Backpack extends Component {
+  static propTypes = {
+    isDarkMode: PropTypes.bool.isRequired
+  };
+
   state = {
     dropdownOpen: false
   };
@@ -43,6 +48,7 @@ export class Backpack extends Component {
   };
 
   render() {
+    const {isDarkMode} = this.props;
     const {dropdownOpen} = this.state;
 
     return (
@@ -64,9 +70,18 @@ export class Backpack extends Component {
           onClick={this.toggleDropdown}
         />
         {dropdownOpen && (
-          <div style={styles.dropdown} ref={ref => (this.dropdownList = ref)}>
+          <div
+            style={{...styles.dropdown, ...(isDarkMode && styles.dropdownDark)}}
+            ref={ref => (this.dropdownList = ref)}
+          >
             {placeholderFiles.map((filename, index) => (
-              <div style={styles.fileListItem} key={`backpack-file-${index}`}>
+              <div
+                style={{
+                  ...styles.fileListItem,
+                  ...(isDarkMode && styles.fileListItemDark)
+                }}
+                key={`backpack-file-${index}`}
+              >
                 <input
                   type="checkbox"
                   id={`backpack-file-${index}`}
@@ -98,8 +113,8 @@ const styles = {
   dropdown: {
     position: 'absolute',
     top: 30,
-    backgroundColor: color.darkest_gray,
-    color: color.light_gray,
+    backgroundColor: color.lightest_gray,
+    color: color.darkest_gray,
     zIndex: 20,
     paddingTop: 5,
     paddingBottom: 5,
@@ -107,6 +122,10 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center'
+  },
+  dropdownDark: {
+    backgroundColor: color.darkest_gray,
+    color: color.light_gray
   },
   buttonStyles: {
     cursor: 'pointer',
@@ -136,6 +155,11 @@ const styles = {
     flexDirection: 'row',
     padding: '5px 10px 5px 10px',
     width: '90%',
+    ':hover': {
+      backgroundColor: color.lighter_gray
+    }
+  },
+  fileListItemDark: {
     ':hover': {
       backgroundColor: color.black
     }
