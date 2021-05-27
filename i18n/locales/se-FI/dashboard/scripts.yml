@@ -6816,6 +6816,8 @@ se:
           lesson_groups:
             csf_sprites:
               display_name: Sprite:at
+            lessonGroup-9:
+              display_name: Dáhpáhusaid
         pre-express-2021:
           lesson_groups:
             csf_events:
@@ -6859,6 +6861,8 @@ se:
             Prototype Testing:
               key: Prototyhpa Teasten
               name: Prototyhpa Teasten
+            Designing With Empathy:
+              name: Analyseret Designa
             Build a Paper Prototype:
               name: BáberPrototyhpat
           lesson_groups:
@@ -6912,3 +6916,7 @@ se:
               display_name: Iskkadeapmi
           description_audience: CSP Oahppit
           description_short: CSP Oahppi Maŋŋil kurssa Iskkadeapmi
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lekšuvdna 15
