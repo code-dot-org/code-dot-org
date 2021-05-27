@@ -18,7 +18,7 @@ export const ResultsGrades = {
   INCORRECT: "incorrect"
 };
 
-export const PERCENT_OF_DATASET_FOR_TESTING = 0.10;
+export const PERCENT_OF_DATASET_FOR_TESTING = 0.1;
 
 export const TestDataLocations = {
   END: "end",
@@ -195,6 +195,15 @@ export const styles = {
     padding: 15
   },
 
+  contentsCsvButton: {
+    borderRadius: 0,
+    backgroundColor: "#f2f2f2",
+    padding: 15,
+    marginTop: 20,
+    paddingTop: 25,
+    paddingBottom: 25
+  },
+
   panelContentLeft: {
     float: "left",
     width: "80%"
@@ -258,16 +267,21 @@ export const styles = {
     marginTop: 5
   },
 
-  csvInput: {
-    cursor: "pointer"
-  },
-
-  uploadButton: {
-    fontSize: 13.33,
-    padding: "2px 6px",
+  uploadCsvButton: {
+    fontSize: 14,
+    padding: "4px 12px",
     margin: 0,
     border: "none",
-    border: "solid 1px black"
+    cursor: "pointer",
+    borderRadius: 5,
+    backgroundColor: "#61d2eb",
+    color: "white",
+    padding: "10px 20px"
+  },
+
+  csvInput: {
+    display: "none",
+    cursor: "pointer"
   },
 
   specifyColumnsItem: {
@@ -515,7 +529,7 @@ export const styles = {
     paddingBottom: 10
   },
 
-  statementWithBackground:  {
+  statementWithBackground: {
     lineHeight: "38px",
     fontSize: 24,
     marginBottom: 20,
@@ -636,7 +650,7 @@ export const styles = {
     top: "0%",
     position: "absolute",
     direction: "ltr",
-    transformOrigin: "bottom right",
+    transformOrigin: "bottom right"
   },
   trainBotOpen: {
     transform: "rotate(90deg)",
