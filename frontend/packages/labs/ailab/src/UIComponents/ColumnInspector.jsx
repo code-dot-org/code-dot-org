@@ -199,7 +199,7 @@ class ColumnInspector extends Component {
               </form>
             </div>
           </div>
-          
+
             {currentPanel === "dataDisplayLabel" &&
               currentColumnData.isSelectable && (
                 <button

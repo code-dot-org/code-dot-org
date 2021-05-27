@@ -638,7 +638,7 @@ function isColumnCategorical(state, column) {
 }
 
 function isValidCategoricalData(state, column) {
-  return !hasTooManyUniqueOptions(state, state.column)
+  return !hasTooManyUniqueOptions(state, column);
 }
 
 function isColumnNumerical(state, column) {
@@ -646,14 +646,14 @@ function isColumnNumerical(state, column) {
 }
 
 function isValidNumericalData(state, column) {
-  return isNaN(getMaximumValue(state, column))
+  return !isNaN(getMaximumValue(state, column));
 }
 
 function isColumnDataValid(state, column) {
-  return
-    (isColumnCategorical(state, column) && isValidCategoricalData(state,column)) ||
-    (isColumnNumerical(state, column) && isValidNumericalData(state,column));
-  )
+  return (
+    isColumnCategorical(state, column) && isValidCategoricalData(state,column)
+  ) ||
+  (isColumnNumerical(state, column) && isValidNumericalData(state,column));
 }
 
 function isLabel(state, column) {
@@ -669,7 +669,7 @@ function isSelected(state, column) {
 }
 
 function isSelectable(state, column) {
-  return columnDataIsValid(state, column) && !isSelected(state, column);
+  return isColumnDataValid(state, column) && !isSelected(state, column);
 }
 
 export function getCurrentColumnData(state) {
@@ -1417,7 +1417,8 @@ export function getScatterPlotData(state) {
   }
 
   if (
-    !isColumnNumerical(state, state.labelColumn) || !isColumnNumerical(state.currentColumn)
+    !isColumnNumerical(state, state.labelColumn)
+    || !isColumnNumerical(state, state.currentColumn)
   ) {
     return null;
   }
