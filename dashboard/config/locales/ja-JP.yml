@@ -238,7 +238,7 @@ ja:
   follower:
     invite_sent: 招待状を送信しました
     added_teacher: "%{name} あなたの先生として追加"
-    registered: " %{section_name}を登録"
+    registered: "%{section_name} に登録しました"
     error:
       signed_in: 続行する前にサインアウトしてください
       username_not_found: ユーザー名 %{username} が見つかりません

@@ -16123,7 +16123,7 @@ ja:
               key: ビッグデータ、クラウドソーシング、機械学習
             Machine Learning and Bias:
               key: 機械学習とバイアス
-              name: 機械学習とバイアス
+              name: 機械学習
             Project - Tell a Data Story - Part 1:
               key: プロジェクト - データストーリーを伝える - パート1
             Project - Tell a Data Story - Part 2:
@@ -16874,7 +16874,7 @@ ja:
               description_teacher: ここまで、生徒は実行するたびにまったく同じ操作を実行するプログラムを作成してきました。これは信頼性は高くても、柔軟性があまりありません。このレッスンでは、クラスで条件文を使ったプログラミングを開始し、プログラムが遭遇した特定の条件に応じて対応を異にするプログラムを作成します。
             While Loops with the Farmer:
               key: 農夫と学ぶWhileループ
-              name: 農夫と学ぶWhileループ
+              name: 農夫と学ぶwhileループ
               description_student: ループはプログラミングで非常に役立ちます。このレッスンでは、新しい種類のループ、whileループについて説明します！
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'マインクラフトの条件文: ボヤージュ アクアティック'
@@ -16909,7 +16909,7 @@ ja:
             Variables with Artist:
               key: アーティストと学ぶ変数
               name: アーティストと学ぶ変数
-              description_student: クラスに創造性の風を吹き込むことを忘れないでください！ここで取り組むパズルでは、変数を使って素晴らしい絵を作成します。
+              description_student: このレッスンでは、プログラムを実行する際に変化する変数を使って絵を描きます。
               description_teacher: このレッスンでは、アーティスト環境の変数を使って、反復的なデザインを行う方法ついて学びます。生徒は、変数をどう使うと、プログラムをど簡単に記述し、読みやすくできるかを学びます。ガイド付きパズルを行った後、生徒はフリープレイレベルで終了します。そこで学んだことを示し、独自のデザインを作成します。
             Changing Variables with Bee:
               key: みつばちと学ぶ変数の変更
@@ -16959,6 +16959,8 @@ ja:
               name: ダンスパーティー
               description_student: お祝いの時間です！このレッスンでは、独自のインタラクティブなダンスパーティーをプログラムします。
               description_teacher: このレッスンでは、生徒が自分のインタラクティブなダンスパーティーをプログラムします。ツールは音楽に応答するように構築されているため、このアクティビティにはサウンドが必要です。
+            lesson-3:
+              name: 実行中のスプライト
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -16974,6 +16976,8 @@ ja:
               display_name: ループ用
             end_of_course_project:
               display_name: コース最後のプロジェクト
+            lessonGroup-9:
+              display_name: イベント
           student_description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
         pre-express-2021:
           title: 就学前エクスプレス (2020)
@@ -17147,6 +17151,8 @@ ja:
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
               name: CS発見 コース後アンケート
+            Designing With Empathy:
+              name: デザインの分析
             Build a Paper Prototype:
               name: 紙のプロトタイプ
             Digital Mode in App Lab:
@@ -17354,3 +17360,7 @@ ja:
           description_short: CSP生徒向けコース後の調査
           description: Code.org CS原則コース後アンケートへようこそ。このアンケートの所要時間は約15分です。いただいた回答は匿名形式で保存され、公開されることはありません - 先生はクラス全体の匿名の集計結果を見ることができます。結果は、先生とCode.orgがコースを維持および改善するために不可欠です。よろしくお願いします。
           student_description: Code.org CS原則コース後アンケートへようこそ。このアンケートの所要時間は約15分です。いただいた回答は匿名形式で保存され、公開されることはありません - 先生はクラス全体の匿名の集計結果を見ることができます。結果は、先生とCode.orgがコースを維持および改善するために不可欠です。よろしくお願いします。
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: レッスン15
