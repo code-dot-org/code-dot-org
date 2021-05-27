@@ -1827,7 +1827,7 @@ class Script < ApplicationRecord
     feedback = {}
 
     student_ids = section.students.map(&:id)
-    all_feedback = TeacherFeedback.get_student_feedbacks_for_script(id, student_ids, section.user_id)
+    all_feedback = TeacherFeedback.get_feedbacks_given(student_ids, nil, id, section.user_id)
 
     feedback_hash = {}
     all_feedback.each do |feedback_element|

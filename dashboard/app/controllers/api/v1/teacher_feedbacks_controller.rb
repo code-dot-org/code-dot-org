@@ -5,7 +5,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   # Use student_id, level_id, and teacher_id to lookup the feedback for a student on a particular level and provide the
   # most recent feedback left by that teacher
   def get_feedback_from_teacher
-    @feedback = TeacherFeedback.get_student_level_feedback_by_teacher(
+    @feedback = TeacherFeedback.get_feedback_given(
       params.require(:student_id),
       params.require(:level_id),
       params.require(:script_id),
@@ -22,19 +22,18 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     end
   end
 
-  # Use student_id and level_id to lookup the most recent feedback from each teacher who has provided feedback to that
-  # student on that level
-  def get_feedbacks
+  # Use student_id and level_id to lookup the most recent feedback
+  def get_feedback
     # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
     headers['csrf-token'] = form_authenticity_token
 
-    @level_feedbacks = TeacherFeedback.get_all_student_level_feedback(
+    @feedback = TeacherFeedback.get_feedback_received(
       params.require(:student_id),
-      level_id: params.require(:level_id),
-      script_id: params.require(:script_id)
+      params.require(:level_id),
+      params.require(:script_id)
     )
 
-    render json: @level_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
+    render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
   end
 
   # Determine how many not yet seen feedback entries from any verified teacher

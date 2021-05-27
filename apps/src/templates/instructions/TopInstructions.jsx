@@ -168,9 +168,12 @@ class TopInstructions extends Component {
           .getTeacherFeedbackForStudent(user, serverLevelId, serverScriptId)
           .done((data, _, request) => {
             // If student has feedback make their default tab the feedback tab instead of instructions
-            if (data[0] && (data[0].comment || data[0].performance)) {
+            if (
+              data &&
+              (data.comment || data.performance || data.review_state) // Maureen - let's do a different check here
+            ) {
               this.setState({
-                feedbacks: data,
+                feedbacks: [data], // Maureen update this not to be an array
                 tabSelected: TabType.COMMENTS,
                 token: request.getResponseHeader('csrf-token')
               });
