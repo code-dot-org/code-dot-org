@@ -2427,6 +2427,8 @@ ne:
               display_name: Variables
             csf_for_loops:
               display_name: For Loops
+            lessonGroup-9:
+              display_name: कार्य
         pre-express-2021:
           lesson_groups:
             csf_loops:
