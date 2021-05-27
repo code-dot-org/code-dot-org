@@ -73,7 +73,7 @@ module Pd::Foorm
         when ANSWER_MATRIX
           choices = question_details[:columns]
 
-          answer.each do |matrix_question_name, matrix_question_answer|
+          answer.each do |matrix_item_name, matrix_item_answer|
             # Need a new object for each matrix item.
             reshaped_matrix_item_submission = reshaped_submission_answer.clone
 
@@ -82,9 +82,9 @@ module Pd::Foorm
             reshaped_matrix_item_submission[:matrix_item_name] = reshaped_matrix_item_submission.delete :item_name
 
             additional_attributes = {
-              item_name: matrix_question_name,
-              response_value: matrix_question_answer,
-              response_text: choices[matrix_question_answer]
+              item_name: matrix_item_name,
+              response_value: matrix_item_answer,
+              response_text: choices[matrix_item_answer]
             }
 
             reshaped_matrix_item_submission.merge! additional_attributes

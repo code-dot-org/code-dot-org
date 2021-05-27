@@ -94,7 +94,7 @@ module Pd::Foorm
           when ANSWER_MATRIX
             readable_response_options = question_details[:columns].values
 
-            question_details[:rows].each do |matrix_question_name, matrix_question_text|
+            question_details[:rows].each do |matrix_item_name, matrix_item_text|
               reshaped_matrix_item = reshaped_form_question.clone
 
               # For matrix questions, put the question name and text (generally a preamble) in their own attributes.
@@ -103,8 +103,8 @@ module Pd::Foorm
               reshaped_matrix_item[:matrix_item_header] = reshaped_matrix_item.delete :item_text
 
               additional_attributes = {
-                item_name: matrix_question_name,
-                item_text: matrix_question_text,
+                item_name: matrix_item_name,
+                item_text: matrix_item_text,
                 response_options: readable_response_options,
                 num_response_options: readable_response_options.length
               }
