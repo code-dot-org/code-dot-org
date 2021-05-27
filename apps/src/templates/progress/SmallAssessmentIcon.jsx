@@ -10,17 +10,15 @@ import FontAwesome from '../FontAwesome';
 const styles = {
   iconContainer: {
     position: 'absolute',
-    top: -6,
-    right: -6,
+    top: -7,
+    right: -7,
     fontSize: 10
   },
   iconContainerDiamond: {
     position: 'absolute',
-    top: -14,
-    right: 2,
-    fontSize: 10,
-    // undo the rotation from the parent
-    transform: 'rotate(-45deg)'
+    top: -13,
+    right: -17,
+    fontSize: 10
   },
   assessmentIconBackground: {
     color: color.purple

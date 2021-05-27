@@ -2,7 +2,7 @@ import React from 'react';
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
-import {BubbleSize} from '@cdo/apps/templates/progress/progressStyles';
+import {BubbleSize} from '@cdo/apps/templates/progress/BubbleFactory';
 
 const statuses = [
   LevelStatus.not_tried,

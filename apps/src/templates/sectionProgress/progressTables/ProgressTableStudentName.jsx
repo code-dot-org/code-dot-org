@@ -5,7 +5,6 @@ import moment from 'moment';
 import firehoseClient from '../../../lib/util/firehose';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 
 export default class ProgressTableStudentName extends React.PureComponent {
@@ -79,7 +78,7 @@ export default class ProgressTableStudentName extends React.PureComponent {
 
     return (
       <div
-        style={progressStyles.studentListContent}
+        className="content"
         data-tip
         data-for={tooltipId}
         aria-describedby={tooltipId}
