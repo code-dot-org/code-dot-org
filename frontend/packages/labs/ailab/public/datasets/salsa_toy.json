@@ -1,4 +1,5 @@
 {
+  "name": "salsa_toy",
   "card": {
     "description": "Survey of customers in a taco shop on whether or not they like certain salsa combinations",
     "source": "Code.org",

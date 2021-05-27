@@ -1,4 +1,5 @@
 {
+  "name": "workout_toy",
   "card": {
     "description": "Survey results from a quiz that determines your ideal workout based on several questions",
     "source": "Code.org",

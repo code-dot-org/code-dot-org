@@ -228,7 +228,7 @@ const initialState = {
   csvfile: undefined,
   jsonfile: undefined,
   data: [],
-  metadata: undefined,
+  metadata: {},
   highlightDataset: undefined,
   highlightColumn: undefined,
   columnsByDataType: {},
@@ -400,7 +400,8 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...initialState,
       instructionsKeyCallback: state.instructionsKeyCallback,
-      mode: state.mode
+      mode: state.mode,
+      reserveLocation: state.reserveLocation
     };
   }
   if (action.type === SET_MODEL_SIZE) {
@@ -998,8 +999,10 @@ export function getDataDescription(state) {
 
 export function getDatasetDetails(state) {
   const datasetDetails = {};
+  datasetDetails.name = state.metadata.name;
   datasetDetails.description = getDataDescription(state);
   datasetDetails.numRows = state.data.length;
+  datasetDetails.isUserUploaded = isUserUploadedDataset(state);
   return datasetDetails;
 }
 
@@ -1026,13 +1029,10 @@ export function getFeaturesToSave(state) {
 
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
-
   dataToSave.name = state.trainedModelDetails.name;
-
   dataToSave.datasetDetails = getDatasetDetails(state);
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
-
   dataToSave.selectedTrainer = isRegression(state)
     ? RegressionTrainer
     : ClassificationTrainer;

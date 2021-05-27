@@ -1,4 +1,5 @@
 {
+  "name": "nutrition",
   "card": {
     "description": "A dataset compiled by the USDA of various food items and their nutritional content: calories, minerals, vitamins, and a whole lot more.",
     "source": "CORGIS Datasets Project (https://corgis-edu.github.io/corgis/csv/food/)",

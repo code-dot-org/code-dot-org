@@ -1,4 +1,5 @@
 {
+  "name": "global_happines_raw",
   "card": {
     "description": "2019 Global Happiness report rankings, where countries are rated on different attributes that contribute to a total happiness score then ranked. The features in this dataset are taken from the years 2008 to 2018, which were averaged together for the report to create scores. This 'raw' data contains more rows than the 'Global Happiness 2019' dataset, but may give different results.",
     "source": "United Nations (https://worldhappiness.report/ed/2019/)",

@@ -1,4 +1,5 @@
 {
+  "name": "poutine_toy",
   "card": {
     "description": "Survey of customers in a diner on whether or not they like certain poutine combinations",
     "source": "Code.org",

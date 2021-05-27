@@ -1,4 +1,5 @@
 {
+  "name": "car_evaluation",
   "card": {
     "description": "A dataset of cars ranked on 'acceptability', based on features like price, safety, and number of passengers. The rankings come from a decision model designed by Marko Bohanec.",
     "source": "UCI (http://archive.ics.uci.edu/ml/datasets/Car+Evaluation)",
