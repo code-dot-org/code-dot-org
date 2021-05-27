@@ -25,7 +25,7 @@ class ResourceLink extends React.Component {
     }
     e.preventDefault();
     if (!!this.props.openReferenceInNewTab) {
-      window.open(this.props.reference, 'noopener', 'noreferrer');
+      window.open(this.props.reference, '_blank', 'noopener,noreferrer');
       return;
     }
     // Don't open link, just open modal.

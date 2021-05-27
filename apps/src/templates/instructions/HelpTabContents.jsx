@@ -16,7 +16,10 @@ export default class HelpTabContents extends Component {
     return (
       <div style={styles.referenceArea}>
         {this.props.videoData && (
-          <VideoThumbnail video={this.props.videoData} />
+          <VideoThumbnail
+            video={this.props.videoData}
+            openInNewTab={this.props.openReferenceLinksInNewTab}
+          />
         )}
         {this.props.mapReference && (
           <NetworkResourceLink
