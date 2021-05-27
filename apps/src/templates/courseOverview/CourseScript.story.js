@@ -7,12 +7,12 @@ const sectionId = 11;
 const courseId = 123;
 const unhiddenState = Immutable.fromJS({
   initialized: false,
-  hideableStagesAllowed: false,
-  stagesBySection: {},
+  hideableLessonsAllowed: false,
+  lessonsBySection: {},
   scriptsBySection: {}
 });
 const hiddenState = unhiddenState.setIn(
-  ['stagesBySection', sectionId.toString(), courseId.toString()],
+  ['lessonsBySection', sectionId.toString(), courseId.toString()],
   true
 );
 

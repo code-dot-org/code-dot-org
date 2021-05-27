@@ -1,5 +1,5 @@
 name 'TeacherCon Eval Q3'
 question 'Which of the following scenarios is most similar to the types of activities you commonly run in your classes?'
-answer 'Students working on projects of their own interest that have clear rubrics and guidelines', weight: -1, stage_name: 'Discovery Learning'
-answer 'The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups', weight: 1, stage_name: 'Discovery Learning'
-answer 'Students working in small groups to build knowledge', weight: -1, stage_name: 'Group Work and Peer Learning'
+answer 'Students working on projects of their own interest that have clear rubrics and guidelines', weight: -1, lesson_name: 'Discovery Learning'
+answer 'The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups', weight: 1, lesson_name: 'Discovery Learning'
+answer 'Students working in small groups to build knowledge', weight: -1, lesson_name: 'Group Work and Peer Learning'

@@ -18,16 +18,34 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   test 'can decode jwt token' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: "url"}
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: "url", levelId: 261}
 
     response = JSON.parse(@response.body)
     token = response['token']
     decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
 
-    # token[0] is the JWT payload. Spot check some params
+    # decoded_token[0] is the JWT payload. Spot check some params
     assert_not_nil decoded_token[0]['iat']
     assert_not_nil decoded_token[0]['exp']
     assert_not_nil decoded_token[0]['uid']
+  end
+
+  test 'sends options as stringified json' do
+    levelbuilder = create :levelbuilder
+    sign_in(levelbuilder)
+    get :get_access_token, params: {
+      channelId: @fake_channel_id,
+      projectVersion: 123,
+      projectUrl: "url",
+      options: {'useNeighborhood': true}
+    }
+
+    response = JSON.parse(@response.body)
+    token = response['token']
+    decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
+
+    # decoded_token[0] is the JWT payload. Check that options are sent as stringified json
+    assert_equal "{\"useNeighborhood\":\"true\"}", decoded_token[0]['options']
   end
 
   test 'csa pilot participant can get access token' do

@@ -2,7 +2,7 @@
   "script": {
     "name": "csp4-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-21 21:42:57 UTC",
+    "serialized_at": "2021-05-25 22:56:50 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -2412,8 +2412,20 @@
       }
     },
     {
-      "key": "762801f0-e7bb-4f82-8dc0-62212048a567",
+      "key": "5c092414-da93-4408-856d-956c98f82bde",
       "position": 9,
+      "properties": {
+        "description": "* Level 11 Students do a quick practice with the MOD operator.",
+        "progression_name": "MOD Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c092414-da93-4408-856d-956c98f82bde",
+        "lesson_activity.key": "6b744b8c-502a-4fc0-ace6-aa6f2bcc4033"
+      }
+    },
+    {
+      "key": "762801f0-e7bb-4f82-8dc0-62212048a567",
+      "position": 10,
       "properties": {
         "description": "**Extension Opportunities:**\n\n* Level 3: Students can add more variables and create complex Boolean expressions. One challenge might be to assign a String to a variable and compare that string to another. \n* Level 9: There are multiple solutions. If students build their if-statement using only `&&` encourage them to figure out how to build it using only `||`. They may need to switch the content of the if and else branches. \n* Level 10: Create another input (i.e. How many cats do you already own?). Students use this information to craft more complex if-statements."
       },
@@ -4173,6 +4185,32 @@
     },
     {
       "chapter": 27,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L5 CSP CFU terms_2021"
+        ],
+        "progression": "Assessment: Check For Understanding\r"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L5 CSP CFU terms_2021"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021",
+        "activity_section.key": "e5fed8da-b44f-4082-8162-d59762fced56"
+      },
+      "level_keys": [
+        "U4L5 CSP CFU terms_2021"
+      ]
+    },
+    {
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4198,7 +4236,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4224,11 +4262,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: if-else Statements_2021"
+        ],
         "progression": "If-Else Statements"
       },
       "named_level": false,
@@ -4247,11 +4288,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v1.5 Code_2021"
+        ],
         "progression": "If-Else Statements"
       },
       "named_level": false,
@@ -4270,7 +4314,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4296,7 +4340,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4322,7 +4366,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4348,7 +4392,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -4374,7 +4418,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -4400,7 +4444,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4426,7 +4470,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4452,7 +4496,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4478,7 +4522,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4504,7 +4548,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4530,7 +4574,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4556,7 +4600,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4582,7 +4626,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -4608,7 +4652,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -4634,7 +4678,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4660,7 +4704,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -4686,8 +4730,34 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U7 Param Return Practice MOD_2021"
+        ],
+        "progression": "MOD Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Practice MOD_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021",
+        "activity_section.key": "5c092414-da93-4408-856d-956c98f82bde"
+      },
+      "level_keys": [
+        "U7 Param Return Practice MOD_2021"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4712,8 +4782,8 @@
       ]
     },
     {
-      "chapter": 48,
-      "position": 12,
+      "chapter": 50,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -4738,7 +4808,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4764,7 +4834,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4790,7 +4860,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4816,7 +4886,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4842,9 +4912,35 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L09 Defining and Calling Functions Video_2021"
+        ],
+        "progression": "Declaring and Calling Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L09 Defining and Calling Functions Video_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021",
+        "activity_section.key": "1aabdef6-1131-4f25-9984-d8bb4aef796d"
+      },
+      "level_keys": [
+        "U4L09 Defining and Calling Functions Video_2021"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4868,9 +4964,9 @@
       ]
     },
     {
-      "chapter": 54,
-      "position": 4,
-      "activity_section_position": 3,
+      "chapter": 57,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4894,8 +4990,8 @@
       ]
     },
     {
-      "chapter": 55,
-      "position": 5,
+      "chapter": 58,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4920,8 +5016,8 @@
       ]
     },
     {
-      "chapter": 56,
-      "position": 6,
+      "chapter": 59,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4946,7 +5042,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4972,7 +5068,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4998,7 +5094,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5024,7 +5120,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5050,7 +5146,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5076,7 +5172,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 65,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5102,7 +5198,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 66,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5128,7 +5224,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 67,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5154,7 +5250,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 68,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -5180,7 +5276,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 69,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -5206,7 +5302,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5232,7 +5328,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5258,7 +5354,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5284,7 +5380,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5310,7 +5406,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5336,7 +5432,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5362,7 +5458,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5388,7 +5484,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5414,7 +5510,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5440,7 +5536,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5466,7 +5562,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5807,6 +5903,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "U4L5 CSP CFU terms_2021",
+        "script_level.level_keys": [
+          "U4L5 CSP CFU terms_2021"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021",
+        "activity_section.key": "e5fed8da-b44f-4082-8162-d59762fced56"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U4L06 Introduction to Conditionals: if Statements_2021",
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if Statements_2021"
@@ -6047,6 +6155,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "U7 Param Return Practice MOD_2021",
+        "script_level.level_keys": [
+          "U7 Param Return Practice MOD_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021",
+        "activity_section.key": "5c092414-da93-4408-856d-956c98f82bde"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U4L10 CFU Conditionals Psuedocode_2021",
         "script_level.level_keys": [
           "U4L10 CFU Conditionals Psuedocode_2021"
@@ -6110,6 +6230,18 @@
         "level.key": "U4L09 Intro to Functions Video_2021",
         "script_level.level_keys": [
           "U4L09 Intro to Functions Video_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021",
+        "activity_section.key": "1aabdef6-1131-4f25-9984-d8bb4aef796d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L09 Defining and Calling Functions Video_2021",
+        "script_level.level_keys": [
+          "U4L09 Defining and Calling Functions Video_2021"
         ],
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",

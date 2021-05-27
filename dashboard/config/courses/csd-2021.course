@@ -13,7 +13,8 @@
     "has_numbered_units": true,
     "version_year": "2021",
     "family_name": "csd",
-    "has_verified_resources": true
+    "has_verified_resources": true,
+    "visible": true
   },
   "resources": [
     {
@@ -136,42 +137,6 @@
     }
   ],
   "student_resources": [
-    {
-      "name": "Bug Report",
-      "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
-      "key": "bug_report",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "bug_report"
-      }
-    },
-    {
-      "name": "Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
-      "key": "guide_to_using_resources",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_using_resources"
-      }
-    },
-    {
-      "name": "How To Debug",
-      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
-      "key": "how_to_debug",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "how_to_debug"
-      }
-    }
+
   ]
 }

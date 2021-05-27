@@ -2,7 +2,7 @@
   "script": {
     "name": "csp9-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-21 18:05:34 UTC",
+    "serialized_at": "2021-05-25 22:56:51 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -169,6 +169,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.",
+        "student_overview": "In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -535,18 +537,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "4b3ca207-6a48-4b65-85af-cf4fecbc9af9",
-        "lesson.key": "Machine Learning and Bias",
-        "lesson_group.key": "csp_unit9_2020",
-        "script.name": "csp9-2021"
-      }
-    },
-    {
-      "key": "4a3a3a9c-a651-4c5c-bd6a-f3c2a8ee5a41",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4a3a3a9c-a651-4c5c-bd6a-f3c2a8ee5a41",
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021"
@@ -1552,7 +1542,8 @@
       "key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slides\r\n\r\n---\r\n\r\n## Assessment\r\n    \r\n**Assess:** You can collect and evaluate students' activity guides"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slides\r\n\r\n---\r\n\r\n## Assessment\r\n    \r\n**Assess:** You can collect and evaluate students' activity guides",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7",
@@ -1788,22 +1779,12 @@
       "key": "aac56f17-a865-49d1-b23b-68e766ef2de4",
       "position": 4,
       "properties": {
-        "description": "---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Think about examples of Machine Learning you may have encountered in the past such as a website that recommends what video you may be interested in watching next. Are the recommendations ever wrong or unfair? Give an example and explain how this could be addressed."
+        "description": "---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Think about examples of Machine Learning you may have encountered in the past such as a website that recommends what video you may be interested in watching next. Are the recommendations ever wrong or unfair? Give an example and explain how this could be addressed.",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "aac56f17-a865-49d1-b23b-68e766ef2de4",
         "lesson_activity.key": "4b3ca207-6a48-4b65-85af-cf4fecbc9af9"
-      }
-    },
-    {
-      "key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7",
-        "lesson_activity.key": "4a3a3a9c-a651-4c5c-bd6a-f3c2a8ee5a41"
       }
     },
     {
@@ -1821,6 +1802,7 @@
       "key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb",
       "position": 1,
       "properties": {
+        "progression_name": "Cropping Widget"
       },
       "seeding_key": {
         "activity_section.key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb",
@@ -1831,6 +1813,7 @@
       "key": "afe0db45-8027-437b-96d7-fb438dd6c70b",
       "position": 1,
       "properties": {
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b",
@@ -2272,6 +2255,32 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "U9L5 CSP CFU Terms_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L5 CSP CFU Terms_2021"
+        ],
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7"
+      },
+      "level_keys": [
+        "U9L5 CSP CFU Terms_2021"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "Oceans_Video_Machine_Learning_2021"
         ],
         "progression": "AI for Oceans - Machine Learning"
@@ -2292,7 +2301,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2318,7 +2327,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2344,7 +2353,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2370,7 +2379,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2396,7 +2405,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2422,7 +2431,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -2448,7 +2457,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -2467,14 +2476,66 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7"
+        "activity_section.key": "aac56f17-a865-49d1-b23b-68e766ef2de4"
       },
       "level_keys": [
         "U9L6 CFU ML Bias_2021"
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U9L5 Cropping Widget"
+        ],
+        "progression": "Cropping Widget"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L5 Cropping Widget"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb"
+      },
+      "level_keys": [
+        "U9L5 Cropping Widget"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U9L7 Free Response"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L7 Free Response"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b"
+      },
+      "level_keys": [
+        "U9L7 Free Response"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2500,7 +2561,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2526,7 +2587,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2698,6 +2759,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "U9L5 CSP CFU Terms_2021",
+        "script_level.level_keys": [
+          "U9L5 CSP CFU Terms_2021"
+        ],
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Oceans_Video_Machine_Learning_2021",
         "script_level.level_keys": [
           "Oceans_Video_Machine_Learning_2021"
@@ -2789,7 +2862,31 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7"
+        "activity_section.key": "aac56f17-a865-49d1-b23b-68e766ef2de4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L5 Cropping Widget",
+        "script_level.level_keys": [
+          "U9L5 Cropping Widget"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L7 Free Response",
+        "script_level.level_keys": [
+          "U9L7 Free Response"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b"
       }
     },
     {
@@ -3255,6 +3352,16 @@
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
         "objective.key": "c4a5c79f-cfb6-4824-98f9-7f88df009c68"
+      }
+    },
+    {
+      "key": "8531ab58-eb6e-4041-923c-8fa9eddcb13a",
+      "properties": {
+        "description": "Reason about which types of tasks are should not be completed by an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "8531ab58-eb6e-4041-923c-8fa9eddcb13a"
       }
     },
     {

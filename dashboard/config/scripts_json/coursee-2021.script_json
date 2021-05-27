@@ -2,7 +2,7 @@
   "script": {
     "name": "coursee-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-05-24 15:07:47 UTC",
+    "serialized_at": "2021-05-26 18:27:03 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -408,7 +408,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson focuses on a new type of programming puzzle, featuring a farmer who needs to prepare her fields for planting crops. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
-        "purpose": "This lesson introduces students to while loops and `if / else` statements.",
+        "purpose": "This lesson introduces students to while loops and \"if / else\" statements.",
         "student_overview": "Help the farmer prepare her fields for planting crops and learn more about conditionals!"
       },
       "seeding_key": {
@@ -2081,7 +2081,7 @@
       "key": "c2bf01fe-542b-45c4-b887-4f83404e93e2",
       "position": 2,
       "properties": {
-        "description": "**Model:** Show students the first two or three levels from today's online activity. Demonstrate how the new `print` block works, along with how they can use the Costumes tab to create and edit costumes. If you have already gone through the entire lesson yourself, you can show them your own finished poster for inspiration! \n\n**Distribute:** (Optional) pass out copies of the ***planning guide**. Students can use this sheet to brainstorm ideas to include in their projects, but the planning can also be completed on scratch paper.\n\n**Transition:** Move students to their computers. Encourage students to follow the instructions for each level. \n\n**Reminder:** Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** - Video."
+        "description": "**Model:** Show students the first two or three levels from today's online activity. Demonstrate how the new \"print\" block works, along with how they can use the Costumes tab to create and edit costumes. If you have already gone through the entire lesson yourself, you can show them your own finished poster for inspiration! \n\n**Distribute:** (Optional) pass out copies of the ***planning guide**. Students can use this sheet to brainstorm ideas to include in their projects, but the planning can also be completed on scratch paper.\n\n**Transition:** Move students to their computers. Encourage students to follow the instructions for each level. \n\n**Reminder:** Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** - Video."
       },
       "seeding_key": {
         "activity_section.key": "c2bf01fe-542b-45c4-b887-4f83404e93e2",
@@ -2297,7 +2297,7 @@
       "key": "c0191294-55c5-47ec-a80d-76f9023bd84e",
       "position": 1,
       "properties": {
-        "description": "Some students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper before they program it online.",
+        "description": "Some students may discover where to add \"repeat\" loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper before they program it online.",
         "name": "Drawing with Loops",
         "progression_name": "Video: Artist Intro with JR Hildebrande"
       },
@@ -3408,7 +3408,7 @@
       "key": "23dd0ba7-6d05-4611-bfa7-3b8eca5102b1",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What makes you realize a function could help your program?\n - How do `while` loops and `if / else` statements help your program?",
+        "description": "**Prompts:**\n\n - What makes you realize a function could help your program?\n - How do \"while\" loops and \"if / else\" statements help your program?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -9563,17 +9563,6 @@
       }
     },
     {
-      "name": "Sprite Lab Documentation",
-      "url": "https://studio.code.org/docs/spritelab/",
-      "key": "sprite_lab_documentation_2",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_lab_documentation_2"
-      }
-    },
-    {
       "name": "Swimming Fish Teacher Sandbox",
       "url": "https://studio.code.org/levels/18623",
       "key": "swimming-fish-teacher-sandbox",
@@ -9892,12 +9881,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "sprite_lab_documentation_2",
-        "script.name": "coursee-2021"
-      }
-    }
+
   ],
   "vocabularies": [
     {

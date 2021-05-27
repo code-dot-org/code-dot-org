@@ -10,7 +10,7 @@ const initialState = {
         levels: []
       }
     ],
-    focusAreaStageIds: [],
+    focusAreaLessonIds: [],
     isSummaryView: false,
     professionalLearningCourse: false
   }
