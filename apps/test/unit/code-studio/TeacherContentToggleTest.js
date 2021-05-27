@@ -8,7 +8,7 @@ import {
   mapStateToProps
 } from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
-import * as hiddenStageRedux from '@cdo/apps/code-studio/hiddenStageRedux';
+import * as hiddenLessonRedux from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 describe('TeacherContentToggle', () => {
@@ -353,8 +353,8 @@ describe('TeacherContentToggle', () => {
     afterEach(() => {
       progressHelpers.lessonIsLockedForAllStudents.restore &&
         progressHelpers.lessonIsLockedForAllStudents.restore();
-      hiddenStageRedux.isStageHiddenForSection.restore &&
-        hiddenStageRedux.isStageHiddenForSection.restore();
+      hiddenLessonRedux.isStageHiddenForSection.restore &&
+        hiddenLessonRedux.isStageHiddenForSection.restore();
     });
 
     describe('when viewing as student', () => {
@@ -371,7 +371,7 @@ describe('TeacherContentToggle', () => {
         sinon
           .stub(progressHelpers, 'lessonIsLockedForAllStudents')
           .returns(true);
-        sinon.stub(hiddenStageRedux, 'isStageHiddenForSection').returns(true);
+        sinon.stub(hiddenLessonRedux, 'isStageHiddenForSection').returns(true);
 
         const props = mapStateToProps(state);
 
@@ -383,7 +383,7 @@ describe('TeacherContentToggle', () => {
         sinon
           .stub(progressHelpers, 'lessonIsLockedForAllStudents')
           .returns(false);
-        sinon.stub(hiddenStageRedux, 'isStageHiddenForSection').returns(false);
+        sinon.stub(hiddenLessonRedux, 'isStageHiddenForSection').returns(false);
 
         const props = mapStateToProps(state);
 
@@ -421,7 +421,7 @@ describe('TeacherContentToggle', () => {
 
       it('sets locked/hidden to false', () => {
         sinon.spy(progressHelpers, 'lessonIsLockedForAllStudents');
-        sinon.spy(hiddenStageRedux, 'isStageHiddenForSection');
+        sinon.spy(hiddenLessonRedux, 'isStageHiddenForSection');
 
         const props = mapStateToProps(state);
 
@@ -432,7 +432,7 @@ describe('TeacherContentToggle', () => {
           false
         );
         assert.strictEqual(
-          hiddenStageRedux.isStageHiddenForSection.called,
+          hiddenLessonRedux.isStageHiddenForSection.called,
           false
         );
       });

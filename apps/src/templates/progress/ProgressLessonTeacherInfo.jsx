@@ -13,7 +13,7 @@ import LessonLock from './LessonLock';
 import {
   toggleHiddenStage,
   isStageHiddenForSection
-} from '@cdo/apps/code-studio/hiddenStageRedux';
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';

@@ -13,7 +13,7 @@ import {
   setSectionLockStatus
 } from '@cdo/apps/code-studio/lessonLockRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {setHiddenStages} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {setHiddenStages} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import teacherSections, {
   setSections,
   selectSection

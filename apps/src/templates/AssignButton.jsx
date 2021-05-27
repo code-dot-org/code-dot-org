@@ -8,7 +8,7 @@ import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmH
 import {
   isScriptHiddenForSection,
   updateHiddenScript
-} from '@cdo/apps/code-studio/hiddenStageRedux';
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
 
 class AssignButton extends React.Component {
   static propTypes = {

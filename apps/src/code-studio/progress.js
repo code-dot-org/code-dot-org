@@ -12,7 +12,7 @@ import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {setViewType, ViewType} from './viewAsRedux';
-import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
+import {getHiddenStages, initializeHiddenScripts} from './hiddenLessonRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
