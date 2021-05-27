@@ -18,7 +18,7 @@ module Pd::Foorm
         question_name: 'more_prepared',
         question_text: 'I feel more prepared to teach the material covered in this workshop than before I came.',
         matrix_item_name: 'overall_success',
-        matrix_item_text: 'How much do you agree or disagree with the following statements about the workshop overall?',
+        matrix_item_header: 'How much do you agree or disagree with the following statements about the workshop overall?',
         is_facilitator_specific: 0,
         response_options: ['Strongly Disagree', 'Disagree', 'Slightly Disagree', 'Neutral', 'Slightly Agree', 'Agree', 'Strongly Agree'],
         num_response_options: 7
@@ -34,7 +34,7 @@ module Pd::Foorm
         question_name: 'on_track',
         question_text: 'Kept the workshop and participants on track.',
         matrix_item_name: 'facilitator_effectiveness',
-        matrix_item_text: 'During my workshop, my facilitator did the following:',
+        matrix_item_header: 'During my workshop, my facilitator did the following:',
         is_facilitator_specific: 1,
         response_options: ['Strongly Disagree', 'Disagree', 'Slightly Disagree', 'Neutral', 'Slightly Agree', 'Agree', 'Strongly Agree'],
         num_response_options: 7

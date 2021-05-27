@@ -51,7 +51,7 @@ def write_forms_to_redshift(client, arn)
       question_name           varchar,
       question_text           varchar(max),
       matrix_item_name        varchar,
-      matrix_item_text        varchar(max),
+      matrix_item_header      varchar(max),
       is_facilitator_specific int,
       response_options        varchar(max),
       num_response_options    int
