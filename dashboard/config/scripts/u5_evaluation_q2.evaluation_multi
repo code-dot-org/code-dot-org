@@ -1,8 +1,8 @@
 name 'U5 evaluation q2'
 question 'Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?'
-answer 'Variables and Strings', weight: 1, stage_name: 'Variables and Strings’
-answer 'Conditionals and Boolean Logic’, weight: 1, stage_name: 'Conditionals and Boolean Logic'
-answer 'While Loops', weight: 1, stage_name: 'While Loops and Introduction to Arrays'
-answer 'Simple Arrays', weight: 1, stage_name: 'While Loops and Introduction to Arrays'
-answer 'Processing Arrays', weight: 1, stage_name: 'Processing Arrays and Functions with Return Values'
-answer 'Creating Functions that Return Values', weight: 1, stage_name: 'Processing Arrays and Functions with Return Values'
+answer 'Variables and Strings', weight: 1, lesson_name: 'Variables and Strings’
+answer 'Conditionals and Boolean Logic’, weight: 1, lesson_name: 'Conditionals and Boolean Logic'
+answer 'While Loops', weight: 1, lesson_name: 'While Loops and Introduction to Arrays'
+answer 'Simple Arrays', weight: 1, lesson_name: 'While Loops and Introduction to Arrays'
+answer 'Processing Arrays', weight: 1, lesson_name: 'Processing Arrays and Functions with Return Values'
+answer 'Creating Functions that Return Values', weight: 1, lesson_name: 'Processing Arrays and Functions with Return Values'
