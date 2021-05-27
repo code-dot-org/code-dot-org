@@ -1,4 +1,4 @@
 name 'U2 evaluation q4'
 question ‘How much do you know about different types of compression?’ 
-answer ‘I know a decent amount’, weight: -1, stage_name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
-answer ‘Not much at all’, weight: 1, stage_name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme' 
+answer ‘I know a decent amount’, weight: -1, lesson_name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+answer ‘Not much at all’, weight: 1, lesson_name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'

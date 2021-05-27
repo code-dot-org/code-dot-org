@@ -390,7 +390,7 @@ class Level < ApplicationRecord
   end
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the
-  # stage extras page
+  # lesson extras page
   def summarize_as_bonus
     {}
   end
@@ -733,6 +733,12 @@ class Level < ApplicationRecord
     end
 
     level.update!(update_params)
+
+    # Copy the level_concept_difficulty of the parent level to the new level
+    new_lcd = level_concept_difficulty.dup
+    level.level_concept_difficulty = new_lcd
+    level.save! if level.changed?
+
     level
   end
 

@@ -72,6 +72,12 @@ class LessonEditor extends Component {
     };
   }
 
+  handleView = () => {
+    navigateToHref(
+      linkWithQueryParams(this.state.originalLessonData.lessonPath)
+    );
+  };
+
   handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
 
@@ -456,6 +462,7 @@ class LessonEditor extends Component {
 
         <SaveBar
           handleSave={this.handleSave}
+          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}

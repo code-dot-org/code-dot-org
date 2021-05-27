@@ -12,7 +12,7 @@ import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {setViewType, ViewType} from './viewAsRedux';
-import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
+import {getHiddenLessons, initializeHiddenScripts} from './hiddenLessonRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
@@ -435,7 +435,7 @@ function initializeStoreWithProgress(
 
   if (scriptData.hideable_lessons) {
     // Note: This call is async
-    store.dispatch(getHiddenStages(scriptData.name, true));
+    store.dispatch(getHiddenLessons(scriptData.name, true));
   }
 
   store.dispatch(setIsAge13Required(scriptData.age_13_required));
