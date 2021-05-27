@@ -899,7 +899,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           lessonCompleted = options.response.stage_changing.previous.name;
         }
         var msgParams = {
-          stageNumber: 0, // TODO: remove once localized strings have been fixed
+          lessonNumber: 0, // TODO: remove once localized strings have been fixed
           stageName: lessonCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
