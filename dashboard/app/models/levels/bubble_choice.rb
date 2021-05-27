@@ -55,7 +55,7 @@ class BubbleChoice < DSLDefined
   end
 
   # Returns a sublevel's position in the parent level. Can be used for generating
-  # a sublevel URL (/s/:script_name/lessons/:stage_pos/levels/:puzzle_pos/sublevel/:sublevel_pos).
+  # a sublevel URL (/s/:script_name/lessons/:lesson_pos/levels/:puzzle_pos/sublevel/:sublevel_pos).
   # @param [Level] sublevel
   # @return [Integer] The sublevel's position (i.e., its index + 1) under the parent level.
   def sublevel_position(sublevel)

@@ -17,7 +17,6 @@
 .cm-scroller { overflow: auto; }
 
 .cm-wrap { 
-  border: 1px solid silver;
   max-height: 100%;
 }
 
@@ -29,40 +28,46 @@
   margin-bottom: 0px;
 }
 
-// The selected tab
-.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
-  border-color: darkgrey;
-  border-bottom-color: transparent;
+.nav-tabs {
+  border-bottom: 0px;
+}
+.nav-tabs > li {
+  border: 0px;
+  border-radius: 0px;
 }
 
-  // Unselected tabs
-  ul > li > a {
-    color: $charcoal;
-  }
+// Selected tab
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+  margin-right: 0px;
+  color: black;
+}
 
-  // On hover over a tab
-  ul > li > a:hover {
-    color: $charcoal;
-    background-color: black;
-  }
+// Unselected tabs
+.nav-tabs > li > a {
+  color: $charcoal;
+  border: 0px;
+  border-radius: 0px;
+  margin-right: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
 
 // This class is used in the editor tabs when we're in dark mode
 .darkmode {
   // The selected tab
   .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
-    border-color: darkgrey;
+    border-width: 0px;
     background-color: rgb(40, 44, 52);
     color: white;
+    margin-right: 0px;
   }
 
   // Tabs
   ul > li > a {
-    color: darkgrey;
-  }
-
-  // On hover over a tab
-  ul > li > a:hover {
-    background-color: black;
+    color: $dark_charcoal;
+    border: 0px;
+    border-radius: 0px;
+    margin-right: 0px;
   }
 }
 
