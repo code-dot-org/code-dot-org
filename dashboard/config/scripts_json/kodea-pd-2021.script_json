@@ -1,0 +1,3108 @@
+{
+  "script": {
+    "name": "kodea-pd-2021",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "professional_learning_course": "K5 Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-27 17:40:06 UTC",
+    "seeding_key": {
+      "script.name": "kodea-pd-2021"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Getting Started",
+      "name": "Getting Started",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "key": "Computer Science Fundamentals",
+      "name": "Computer Science Fundamentals",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "key": "Looking Ahead",
+      "name": "Looking Ahead",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Looking Ahead",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "key": "Mastering the Basics: Sequencing",
+      "name": "Mastering the Basics: Sequencing",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "key": "Mastering the Basics: Loops",
+      "name": "Mastering the Basics: Loops",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "key": "Mastering the Basics: Conditionals",
+      "name": "Mastering the Basics: Conditionals",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "key": "Mastering the Basics: Functions",
+      "name": "Mastering the Basics: Functions",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "key": "Mastering the Basics: Events",
+      "name": "Mastering the Basics: Events",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "key": "Best Practices for Teaching Computer Science",
+      "name": "Best Practices for Teaching Computer Science",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "key": "Planning",
+      "name": "Planning",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "key": "Next Steps",
+      "name": "Next Steps",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Intro_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Intro_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Intro_dani"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 PreSurvey_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 PreSurvey_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 PreSurvey_dani"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Welcome 2_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Welcome 2_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Welcome 2_dani"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 About_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 About_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 About_dani"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Outline_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Outline_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Outline_dani"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Participation_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Participation_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Participation_dani"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 CS Video_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 CS Video_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 CS Video_dani"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 CS Tips_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 CS Tips_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 CS Tips_dani"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage1Go_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage1Go_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage1Go_dani"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage2Overview_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage2Overview_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage2Overview_dani"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 WhatIsCS_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 WhatIsCS_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 WhatIsCS_dani"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Why teach CS_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Why teach CS_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Why teach CS_dani"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Younger Grades_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Younger Grades_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Younger Grades_dani"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Vocabulary_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Vocabulary_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Vocabulary_dani"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage2Go_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage2Go_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage2Go_dani"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-Stage3Start_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-Stage3Start_dani"
+        ],
+        "lesson.key": "Looking Ahead",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-Stage3Start_dani"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Puzzles_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Puzzles_dani"
+        ],
+        "lesson.key": "Looking Ahead",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Puzzles_dani"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Unplugged Video_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Unplugged Video_dani"
+        ],
+        "lesson.key": "Looking Ahead",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Unplugged Video_dani"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 What is Mastery_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 What is Mastery_dani"
+        ],
+        "lesson.key": "Looking Ahead",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 What is Mastery_dani"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage3Start_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage3Start_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage3Start_dani"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage3aGo_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage3aGo_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage3aGo_dani"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 FirstProgram_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 FirstProgram_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 FirstProgram_dani"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_maze_seq5_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq5_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseA_maze_seq5_dani"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_maze_seq6_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq6_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseA_maze_seq6_dani"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_maze_seq7_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq7_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseA_maze_seq7_dani"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_maze_seq8_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq8_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseA_maze_seq8_dani"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseA_maze_seq10_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq10_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseA_maze_seq10_dani"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage3Go_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage3Go_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage3Go_dani"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage4Start_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage4Start_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage4Start_dani"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage4Go_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage4Go_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage4Go_dani"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 RepeatBlock_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 RepeatBlock_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 RepeatBlock_dani"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_starWars_loops2_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_starWars_loops2_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseC_starWars_loops2_dani"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_starWars_loops4_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_starWars_loops4_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseC_starWars_loops4_dani"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_starWars_loops5_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_starWars_loops5_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseC_starWars_loops5_dani"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_starWars_loops6_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_starWars_loops6_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseC_starWars_loops6_dani"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_starWars_loops7_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_starWars_loops7_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseC_starWars_loops7_dani"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_starWars_loops8_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_starWars_loops8_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseC_starWars_loops8_dani"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage4Review_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage4Review_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage4Review_dani"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage5Start_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage5Start_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage5Start_dani"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage5Go_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage5Go_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage5Go_dani"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseD_bee_conditionalsVid1_dani"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals1_predict1_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals1_predict1_dani"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals2_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals2_dani"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals3_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals3_dani"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals4_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals4_dani"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals5_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals5_dani"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage5Review_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage5Review_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage5Review_dani"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage6Start_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage6Start_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage6Start_dani"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage6Go_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage6Go_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage6Go_dani"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_functionsArtist_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_functionsArtist_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseE_video_functionsArtist_dani"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions1_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions1_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseE_artist_functions1_dani"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions_predict1_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict1_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseE_artist_functions_predict1_dani"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions2_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions2_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseE_artist_functions2_dani"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions3_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions3_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseE_artist_functions3_dani"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions4_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions4_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseE_artist_functions4_dani"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions5_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions5_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "courseE_artist_functions5_dani"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage6Review_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage6Review_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage6Review_dani"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage7Start_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage7Start_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage7Start_dani"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage7Go_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage7Go_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage7Go_dani"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 EventsVid_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 EventsVid_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 EventsVid_dani"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_move_events_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_move_events_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "iceage_move_events_dani"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_sound_and_points_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_sound_and_points_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "iceage_sound_and_points_dani"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_warn_ice_age_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_warn_ice_age_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "iceage_warn_ice_age_dani"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Congrats_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Congrats_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Congrats_dani"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 CongratsFinal_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 CongratsFinal_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 CongratsFinal_dani"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage8Start_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage8Start_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage8Start_dani"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Culture_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Culture_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Culture_dani"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 LessonPlanning_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 LessonPlanning_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 LessonPlanning_dani"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Pair_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Pair_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Pair_dani"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Problem Solving_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Problem Solving_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Problem Solving_dani"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage8Go_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage8Go_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage8Go_dani"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage9Start_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage9Start_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage9Start_dani"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 CS Courses_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 CS Courses_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 CS Courses_dani"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Using CS_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Using CS_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Using CS_dani"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Assessment_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Assessment_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Assessment_dani"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Your Plan_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Your Plan_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Your Plan_dani"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage9Go_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage9Go_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage9Go_dani"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Stage10Start_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Stage10Start_dani"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Stage10Start_dani"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 PostSurvey_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 PostSurvey_dani"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 PostSurvey_dani"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Closing_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Closing_dani"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Closing_dani"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Connect_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Connect_dani"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Connect_dani"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Celebrate_dani"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Celebrate_dani"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Celebrate_dani"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Intro_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Intro_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 PreSurvey_dani",
+        "script_level.level_keys": [
+          "OPD-K5 PreSurvey_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Welcome 2_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Welcome 2_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 About_dani",
+        "script_level.level_keys": [
+          "OPD-K5 About_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Outline_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Outline_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Participation_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Participation_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 CS Video_dani",
+        "script_level.level_keys": [
+          "OPD-K5 CS Video_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 CS Tips_dani",
+        "script_level.level_keys": [
+          "OPD-K5 CS Tips_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage1Go_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage1Go_dani"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage2Overview_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage2Overview_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 WhatIsCS_dani",
+        "script_level.level_keys": [
+          "OPD-K5 WhatIsCS_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Why teach CS_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Why teach CS_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Younger Grades_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Younger Grades_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Vocabulary_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Vocabulary_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage2Go_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage2Go_dani"
+        ],
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-Stage3Start_dani",
+        "script_level.level_keys": [
+          "OPD-Stage3Start_dani"
+        ],
+        "lesson.key": "Looking Ahead",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Puzzles_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Puzzles_dani"
+        ],
+        "lesson.key": "Looking Ahead",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Unplugged Video_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Unplugged Video_dani"
+        ],
+        "lesson.key": "Looking Ahead",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 What is Mastery_dani",
+        "script_level.level_keys": [
+          "OPD-K5 What is Mastery_dani"
+        ],
+        "lesson.key": "Looking Ahead",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage3Start_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage3Start_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage3aGo_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage3aGo_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 FirstProgram_dani",
+        "script_level.level_keys": [
+          "OPD-K5 FirstProgram_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq5_dani",
+        "script_level.level_keys": [
+          "courseA_maze_seq5_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq6_dani",
+        "script_level.level_keys": [
+          "courseA_maze_seq6_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq7_dani",
+        "script_level.level_keys": [
+          "courseA_maze_seq7_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq8_dani",
+        "script_level.level_keys": [
+          "courseA_maze_seq8_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq10_dani",
+        "script_level.level_keys": [
+          "courseA_maze_seq10_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage3Go_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage3Go_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage4Start_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage4Start_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage4Go_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage4Go_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 RepeatBlock_dani",
+        "script_level.level_keys": [
+          "OPD-K5 RepeatBlock_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_starWars_loops2_dani",
+        "script_level.level_keys": [
+          "courseC_starWars_loops2_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_starWars_loops4_dani",
+        "script_level.level_keys": [
+          "courseC_starWars_loops4_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_starWars_loops5_dani",
+        "script_level.level_keys": [
+          "courseC_starWars_loops5_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_starWars_loops6_dani",
+        "script_level.level_keys": [
+          "courseC_starWars_loops6_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_starWars_loops7_dani",
+        "script_level.level_keys": [
+          "courseC_starWars_loops7_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_starWars_loops8_dani",
+        "script_level.level_keys": [
+          "courseC_starWars_loops8_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage4Review_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage4Review_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage5Start_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage5Start_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage5Go_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage5Go_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionalsVid1_dani",
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals1_predict1_dani",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals1_predict1_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals2_dani",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals2_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals3_dani",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals3_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals4_dani",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals4_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals5_dani",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals5_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage5Review_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage5Review_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage6Start_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage6Start_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage6Go_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage6Go_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_functionsArtist_dani",
+        "script_level.level_keys": [
+          "courseE_video_functionsArtist_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions1_dani",
+        "script_level.level_keys": [
+          "courseE_artist_functions1_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions_predict1_dani",
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict1_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions2_dani",
+        "script_level.level_keys": [
+          "courseE_artist_functions2_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions3_dani",
+        "script_level.level_keys": [
+          "courseE_artist_functions3_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions4_dani",
+        "script_level.level_keys": [
+          "courseE_artist_functions4_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions5_dani",
+        "script_level.level_keys": [
+          "courseE_artist_functions5_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage6Review_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage6Review_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage7Start_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage7Start_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage7Go_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage7Go_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 EventsVid_dani",
+        "script_level.level_keys": [
+          "OPD-K5 EventsVid_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_move_events_dani",
+        "script_level.level_keys": [
+          "iceage_move_events_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_sound_and_points_dani",
+        "script_level.level_keys": [
+          "iceage_sound_and_points_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_warn_ice_age_dani",
+        "script_level.level_keys": [
+          "iceage_warn_ice_age_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Congrats_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Congrats_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 CongratsFinal_dani",
+        "script_level.level_keys": [
+          "OPD-K5 CongratsFinal_dani"
+        ],
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage8Start_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage8Start_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Culture_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Culture_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 LessonPlanning_dani",
+        "script_level.level_keys": [
+          "OPD-K5 LessonPlanning_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Pair_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Pair_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Problem Solving_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Problem Solving_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage8Go_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage8Go_dani"
+        ],
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage9Start_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage9Start_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 CS Courses_dani",
+        "script_level.level_keys": [
+          "OPD-K5 CS Courses_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Using CS_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Using CS_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Assessment_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Assessment_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Your Plan_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Your Plan_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage9Go_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage9Go_dani"
+        ],
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Stage10Start_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Stage10Start_dani"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 PostSurvey_dani",
+        "script_level.level_keys": [
+          "OPD-K5 PostSurvey_dani"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Closing_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Closing_dani"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Connect_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Connect_dani"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Celebrate_dani",
+        "script_level.level_keys": [
+          "OPD-K5 Celebrate_dani"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "kodea-pd-2021"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

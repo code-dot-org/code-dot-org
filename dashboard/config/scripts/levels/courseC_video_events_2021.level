@@ -1,8 +1,7 @@
 <StandaloneVideo>
   <config><![CDATA[{
   "properties": {
-    "video_key": "playlab_2021",
-    "short_instructions": "Need a better playlab/events combo",
+    "video_key": "playlab_2021_reader",
     "skip_dialog": true,
     "skip_sound": true,
     "instructions_important": "false",
@@ -16,6 +15,6 @@
   "level_num": "custom",
   "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-05-25 12:18:01 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-05-25 12:22:16 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-05-25 12:18:01 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-05-25 12:22:16 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-05-27 18:55:10 +0000\",\"changed\":[\"video_key\",\"short_instructions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
 </StandaloneVideo>
