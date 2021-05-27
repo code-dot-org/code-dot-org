@@ -147,7 +147,7 @@ class ColumnInspector extends Component {
                   {currentPanel === "dataDisplayLabel" &&
                     currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
                       <div>
-                        <div style={styles.bold}>Graph:</div>
+                        <div style={styles.bold}>Column information:</div>
 
                         {barData.labels.length <= maxLabelsInHistogram && (
                           <Bar
@@ -178,7 +178,7 @@ class ColumnInspector extends Component {
                     <div>
                       {currentColumnData.extrema && (
                         <div>
-                          <div style={styles.bold}>Extrema:</div>
+                          <div style={styles.bold}>Column information:</div>
                           {isNaN(currentColumnData.extrema.min) && (
                             <p style={styles.error}>
                               Numerical columns should contain only numbers.
