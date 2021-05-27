@@ -5347,7 +5347,7 @@ ru:
               name: Big Data, краудсорсинг и машинное обучение
             Machine Learning and Bias:
               key: Машинное обучение и предвзятость
-              name: Машинное обучение и предвзятость
+              name: Машинное обучение
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
@@ -5610,6 +5610,8 @@ ru:
               name: Цикл for в Художнике
             lesson-1:
               name: Танцевальная вечеринка
+            lesson-3:
+              name: Спрайты в действии
           lesson_groups:
             csf_sequencing:
               display_name: Последовательность действий
@@ -5625,6 +5627,8 @@ ru:
               display_name: Циклы с параметром
             csf_sprites:
               display_name: Спрайты
+            lessonGroup-9:
+              display_name: События
         pre-express-2021:
           description_audience: 'Возраст: 4-8'
           lessons:
@@ -5728,6 +5732,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -5779,3 +5785,7 @@ ru:
           lesson_groups:
             cspSurvey2020:
               display_name: Опрос
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Урок 15

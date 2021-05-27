@@ -1601,13 +1601,6 @@ ru:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': сетка
-            '"border"': граница
-            '"row"': шеренга
-            '"random"': случайный
       RyanLab_moveForward:
         text: двигаться вперед
       RyanLab_turnLeft:
