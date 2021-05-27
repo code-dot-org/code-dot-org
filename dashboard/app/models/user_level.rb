@@ -42,7 +42,7 @@ class UserLevel < ApplicationRecord
   scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
   scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
 
-  def self.by_stage(lesson)
+  def self.by_lesson(lesson)
     levels = lesson.script_levels.map(&:level_ids).flatten
     where(script: lesson.script, level: levels)
   end
