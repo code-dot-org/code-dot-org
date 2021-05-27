@@ -1,4 +1,5 @@
 {
+  "name": "drink_toy",
   "card": {
     "description": "Results of a quiz to determine your favorite drink from several questions",
     "source": "Code.org",

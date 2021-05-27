@@ -1,4 +1,5 @@
 {
+  "name": "thanksgiving",
   "card": {
     "description": "A survey from FiveThrityEight, asking people across the United States what foods they have for Thanksgiving dinner.",
     "source": "FiveThirtyEight (https://github.com/fivethirtyeight/data/tree/master/thanksgiving-2015) ",
@@ -28,7 +29,7 @@
     },
     {
       "type": "categorical",
-      "id": "Craberry sauce",
+      "id": "Cranberry sauce",
       "description": "The kind of cranberry sauce served."
     },
     {
@@ -173,7 +174,7 @@
     },
     {
       "type": "categorical",
-      "id": "Cheese cake",
+      "id": "Cheesecake",
       "description": "Whether or not cheese cake was served as a dessert."
     },
     {

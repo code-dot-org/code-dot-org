@@ -1,4 +1,5 @@
 {
+  "name": "salad_toy",
   "card": {
     "description": "Survey of customers in a restaurant on whether or not they like certain salad combinations",
     "source": "Code.org",

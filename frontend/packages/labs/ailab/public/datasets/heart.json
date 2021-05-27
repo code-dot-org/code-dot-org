@@ -1,4 +1,5 @@
 {
+  "name": "heart",
   "card": {
     "description": "A dataset of test results for heart disease patients, used to predict whether or not someone may have heart disease.",
     "source": "UCI (http://archive.ics.uci.edu/ml/datasets/Heart+Disease)",

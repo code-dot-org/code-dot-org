@@ -10,7 +10,8 @@ import rootReducer, {
   setSelectedJSON,
   setInstructionsKeyCallback,
   setSaveStatus,
-  setReserveLocation
+  setReserveLocation,
+  setInstructionsDismissed
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
@@ -22,7 +23,7 @@ export const store = createStore(rootReducer);
 let saveTrainedModel = null;
 let onContinue = null;
 
-export const initAll = function(options) {
+export const initAll = function (options) {
   // Handle an optional mode.
   const mode = options && options.mode;
   onContinue = options && options.onContinue;
@@ -44,6 +45,10 @@ export const initAll = function(options) {
     document.getElementById("root")
   );
 };
+
+export const instructionsDismissed = function() {
+  store.dispatch(setInstructionsDismissed());
+}
 
 // Process an optional mode.
 const processMode = mode => {
@@ -86,6 +91,10 @@ const startSaveTrainedModel = dataToSave => {
   store.dispatch(setSaveStatus("started"));
   saveTrainedModel(dataToSave, response => {
     store.dispatch(setSaveStatus(response.status));
-    onContinue();
+    if (response.status === "success") {
+      store.dispatch(setCurrentPanel("modelSummary"));
+    } else {
+      store.dispatch(setCurrentPanel("saveModel"));
+    }
   });
 };

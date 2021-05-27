@@ -1,4 +1,5 @@
 {
+  "name": "movies",
   "card": {
     "description": "A dataset of movies released from 1986-2016, with box office numbers, ratings, IMDB scores, and more.",
     "source": "Kaggle (https://www.kaggle.com/danielgrijalvas/movies)",

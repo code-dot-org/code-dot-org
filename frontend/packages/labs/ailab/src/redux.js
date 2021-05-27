@@ -18,7 +18,8 @@ import {
   ClassificationTrainer,
   TestDataLocations,
   ResultsGrades,
-  REGRESSION_ERROR_TOLERANCE
+  REGRESSION_ERROR_TOLERANCE,
+  UNIQUE_OPTIONS_MAX
 } from "./constants.js";
 
 // Action types
@@ -34,7 +35,6 @@ const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
 const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
-const SET_PERCENT_DATA_TO_RESERVE = "SET_PERCENT_DATA_TO_RESERVE";
 const SET_RESERVE_LOCATION = "SET_RESERVE_LOCATION";
 const SET_ACCURACY_CHECK_EXAMPLES = "SET_ACCURACY_CHECK_EXAMPLES";
 const SET_ACCURACY_CHECK_LABELS = "SET_ACCURACY_CHECK_LABELS";
@@ -52,9 +52,14 @@ const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 const SET_HIGHLIGHT_COLUMN = "SET_HIGHLIGHT_COLUMN";
 const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
+const SET_RESULTS_HIGHLIGHT_ROW = "SET_RESULTS_HIGHLIGHT_ROW";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
+const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
+const SET_SHOW_RESULTS_DETAILS = "SET_SHOW_RESULTS_DETAILS";
 const SET_K_VALUE = "SET_K_VALUE";
+const SET_INSTRUCTIONS_DISMISSED = "SET_INSTRUCTIONS_DISMISSED";
+const SET_RESULTS_TAB = "SET_RESULTS_TAB";
 
 // Action creators
 export function setMode(mode) {
@@ -116,10 +121,6 @@ export function setLabelColumn(labelColumn) {
 */
 export function setFeatureNumberKey(featureNumberKey) {
   return { type: SET_FEATURE_NUMBER_KEY, featureNumberKey };
-}
-
-export function setPercentDataToReserve(percentDataToReserve) {
-  return { type: SET_PERCENT_DATA_TO_RESERVE, percentDataToReserve };
 }
 
 export function setReserveLocation(reserveLocation) {
@@ -194,12 +195,32 @@ export function setResultsPhase(phase) {
   return { type: SET_RESULTS_PHASE, phase };
 }
 
+export function setResultsHighlightRow(highlightRow) {
+  return { type: SET_RESULTS_HIGHLIGHT_ROW, highlightRow };
+}
+
 export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
 }
 
+export function setHistoricResult(label, features, accuracy) {
+  return { type: SET_HISTORIC_RESULT, label, features, accuracy };
+}
+
+export function setShowResultsDetails(show) {
+  return { type: SET_SHOW_RESULTS_DETAILS, show };
+}
+
 export function setKValue(kValue) {
   return { type: SET_K_VALUE, kValue };
+}
+
+export function setInstructionsDismissed() {
+  return { type: SET_INSTRUCTIONS_DISMISSED };
+}
+
+export function setResultsTab(key) {
+  return { type: SET_RESULTS_TAB, key };
 }
 
 const initialState = {
@@ -207,7 +228,7 @@ const initialState = {
   csvfile: undefined,
   jsonfile: undefined,
   data: [],
-  metadata: undefined,
+  metadata: {},
   highlightDataset: undefined,
   highlightColumn: undefined,
   columnsByDataType: {},
@@ -215,14 +236,12 @@ const initialState = {
   labelColumn: undefined,
   featureNumberKey: {},
   trainingExamples: [],
-  trainingLabels: [],
-  percentDataToReserve: 10,
   reserveLocation: TestDataLocations.END,
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
   testData: {},
-  prediction: {},
+  prediction: undefined,
   modelSize: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
@@ -230,9 +249,16 @@ const initialState = {
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
-  saveStatus: undefined,
+  // Possible values for saveStatus: notStarted, started, success, and failure.
+  saveStatus: "notStarted",
   columnRefs: {},
-  kValue: null
+  historicResults: [],
+  showResultsDetails: false,
+  resultsHighlightRow: undefined,
+  kValue: null,
+  viewedPanels: [],
+  instructionsOverlayActive: false,
+  resultsTab: ResultsGrades.CORRECT
 };
 
 // Reducer
@@ -297,8 +323,7 @@ export default function rootReducer(state = initialState, action) {
     if (!state.selectedFeatures.includes(action.selectedFeature)) {
       return {
         ...state,
-        selectedFeatures: [...state.selectedFeatures, action.selectedFeature],
-        currentColumn: undefined
+        selectedFeatures: [...state.selectedFeatures, action.selectedFeature]
       };
     }
   }
@@ -313,8 +338,7 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_LABEL_COLUMN) {
     return {
       ...state,
-      labelColumn: action.labelColumn,
-      currentColumn: undefined
+      labelColumn: action.labelColumn
     };
   }
   if (action.type === SET_FEATURE_NUMBER_KEY) {
@@ -335,18 +359,12 @@ export default function rootReducer(state = initialState, action) {
       trainingLabels: action.trainingLabels
     };
   }
-  if (action.type === SET_PERCENT_DATA_TO_RESERVE) {
+  if (action.type === SET_RESERVE_LOCATION) {
     return {
       ...state,
-      percentDataToReserve: action.percentDataToReserve
+      reserveLocation: action.reserveLocation
     };
   }
-  if (action.type === SET_RESERVE_LOCATION) {
-   return {
-     ...state,
-     reserveLocation: action.reserveLocation
-   };
- }
   if (action.type === SET_ACCURACY_CHECK_EXAMPLES) {
     return {
       ...state,
@@ -369,7 +387,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       testData: action.testData,
-      prediction: {}
+      prediction: undefined
     };
   }
   if (action.type === SET_PREDICTION) {
@@ -382,7 +400,8 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...initialState,
       instructionsKeyCallback: state.instructionsKeyCallback,
-      mode: state.mode
+      mode: state.mode,
+      reserveLocation: state.reserveLocation
     };
   }
   if (action.type === SET_MODEL_SIZE) {
@@ -433,14 +452,25 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_CURRENT_PANEL) {
+    let showedOverlay = false;
     if (state.instructionsKeyCallback) {
-      state.instructionsKeyCallback(action.currentPanel);
+      const options = {};
+      if (
+        !(state.mode && state.mode.hideInstructionsOverlay) &&
+        !state.viewedPanels.includes(action.currentPanel)
+      ) {
+        options.showOverlay = true;
+        state.viewedPanels.push(action.currentPanel);
+        showedOverlay = true;
+      }
+      state.instructionsKeyCallback(action.currentPanel, options);
     }
 
     if (action.currentPanel === "dataDisplayLabel") {
       return {
         ...state,
         currentPanel: action.currentPanel,
+        instructionsOverlayActive: showedOverlay,
         currentColumn: undefined,
         selectedFeatures: []
       };
@@ -450,14 +480,17 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         currentPanel: action.currentPanel,
+        instructionsOverlayActive: showedOverlay,
         testData: {},
-        prediction: {}
+        prediction: undefined,
+        resultsTab: ResultsGrades.CORRECT
       };
     }
 
     return {
       ...state,
       currentPanel: action.currentPanel,
+      instructionsOverlayActive: showedOverlay,
       currentColumn: undefined
     };
   }
@@ -515,10 +548,35 @@ export default function rootReducer(state = initialState, action) {
       resultsPhase: action.phase
     };
   }
+  if (action.type === SET_RESULTS_HIGHLIGHT_ROW) {
+    return {
+      ...state,
+      resultsHighlightRow: action.highlightRow
+    }
+  }
   if (action.type === SET_SAVE_STATUS) {
     return {
       ...state,
       saveStatus: action.status
+    };
+  }
+  if (action.type === SET_HISTORIC_RESULT) {
+    return {
+      ...state,
+      historicResults: [
+        {
+          label: action.label,
+          features: action.features,
+          accuracy: action.accuracy
+        },
+        ...state.historicResults
+      ]
+    };
+  }
+  if (action.type === SET_SHOW_RESULTS_DETAILS) {
+    return {
+      ...state,
+      showResultsDetails: action.show
     };
   }
   if (action.type === SET_K_VALUE) {
@@ -526,6 +584,18 @@ export default function rootReducer(state = initialState, action) {
       ...state,
       kValue: action.kValue
     };
+  }
+  if (action.type === SET_INSTRUCTIONS_DISMISSED) {
+    return {
+      ...state,
+      instructionsOverlayActive: false
+    }
+  }
+  if (action.type === SET_RESULTS_TAB) {
+    return {
+      ...state,
+      resultsTab: action.key
+    }
   }
   return state;
 }
@@ -551,7 +621,7 @@ function isColumnReadOnly(state, column) {
     state.metadata.fields.find(field => {
       return field.id === column;
     }).type;
-  return metadataColumnType && state.mode && state.mode.hideSpecifyColumns;
+  return !!metadataColumnType;
 }
 
 export function getSelectedColumns(state) {
@@ -573,9 +643,10 @@ export function getCurrentColumnData(state) {
     readOnly: isColumnReadOnly(state, state.currentColumn),
     dataType: state.columnsByDataType[state.currentColumn],
     uniqueOptions: getUniqueOptions(state, state.currentColumn),
-    range: getRange(state, state.currentColumn),
+    extrema: getExtrema(state, state.currentColumn),
     frequencies: getOptionFrequencies(state, state.currentColumn),
-    description: getColumnDescription(state, state.currentColumn)
+    description: getColumnDescription(state, state.currentColumn),
+    hasTooManyUniqueOptions: hasTooManyUniqueOptions(state, state.currentColumn)
   };
 }
 
@@ -609,6 +680,20 @@ export function getSelectedNumericalFeatures(state) {
 
 export function getNumericalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.NUMERICAL);
+}
+
+/*
+  Categorical columns with too many unique values are unlikley to make
+  accurate models, and we don't want to overflow the metadata column for saved
+  models.
+*/
+function hasTooManyUniqueOptions(state, column) {
+  if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
+    const uniqueOptionsCount =
+      getUniqueOptions(state, state.currentColumn).length;
+    return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
+  }
+  return false;
 }
 
 export function getSelectableFeatures(state) {
@@ -648,24 +733,33 @@ export function getUniqueOptionsByColumn(state) {
   return uniqueOptionsByColumn;
 }
 
-export function getRangesByColumn(state) {
-  let rangesByColumn = {};
+export function getExtremaByColumn(state) {
+  let extremaByColumn = {};
   getNumericalColumns(state).map(
-    column => (rangesByColumn[column] = getRange(state, column))
+    column => (extremaByColumn[column] = getExtrema(state, column))
   );
-  return rangesByColumn;
+  return extremaByColumn;
 }
 
-export function getRange(state, column, shouldReturnRange = true) {
-  let range = {};
-  range.max = Math.max(...state.data.map(row => parseFloat(row[column])));
-  range.min = Math.min(...state.data.map(row => parseFloat(row[column])));
+function getMaximumValue(state, column) {
+  return Math.max(...state.data.map(row => parseFloat(row[column])));
+}
 
-  if (shouldReturnRange) {
-    range.range = range.max - range.min;
-  }
+function getMinimumValue(state, column) {
+  return Math.min(...state.data.map(row => parseFloat(row[column])));
+}
 
-  return range;
+function getRange(maximumValue, minimumValue) {
+  return Math.abs(maximumValue - minimumValue);
+}
+
+export function getExtrema(state, column) {
+  let extrema = {};
+  extrema.max = getMaximumValue(state, column);
+  extrema.min = getMinimumValue(state, column)
+  extrema.range = getRange(extrema.max, extrema.min);
+
+  return extrema;
 }
 
 export function getSelectedColumnDescriptions(state) {
@@ -677,15 +771,32 @@ export function getSelectedColumnDescriptions(state) {
   });
 }
 
-export function getColumnDescription(state, column) {
-  if (!state.metadata || !state.metadata.fields || !column) {
+export function getColumnDescription(state, columnId) {
+  if (!state || !columnId) {
     return null;
   }
 
-  const field = state.metadata.fields.find(field => {
-    return field.id === column;
+  // Use metadata if available.
+  if (state.metadata && state.metadata.fields) {
+    const field = state.metadata.fields.find(field => {
+      return field.id === columnId;
+    });
+    return field.description;
+  }
+
+  // Try using a user-entered column description if available.
+  if (!state.columns) {
+    return;
+  }
+  const matchedColumn = state.columns.find(column => {
+    return column.id === columnId;
   });
-  return field.description;
+  if (matchedColumn) {
+    return matchedColumn.description;
+  }
+
+  // No column description available.
+  return null;
 }
 
 function getKeyByValue(object, value) {
@@ -727,7 +838,7 @@ export function getConvertedLabel(state, rawLabel) {
 }
 
 export function getConvertedPredictedLabel(state) {
-  return getConvertedLabel(state, state.prediction.predictedLabel);
+  return getConvertedLabel(state, state.prediction);
 }
 
 export function getConvertedLabels(state, rawLabels = []) {
@@ -749,7 +860,9 @@ export function getAccuracyClassification(state) {
   let accuracy = {};
   let numCorrect = 0;
   let grades = [];
-  const numPredictedLabels = state.accuracyCheckPredictedLabels ?  state.accuracyCheckPredictedLabels.length : 0;
+  const numPredictedLabels = state.accuracyCheckPredictedLabels
+    ? state.accuracyCheckPredictedLabels.length
+    : 0;
   for (let i = 0; i < numPredictedLabels; i++) {
     if (
       state.accuracyCheckLabels[i].toString() ===
@@ -772,9 +885,8 @@ export function getAccuracyRegression(state) {
   let accuracy = {};
   let numCorrect = 0;
   let grades = [];
-  const maxMin = getRange(state, state.labelColumn);
-  const range = Math.abs(maxMin.max - maxMin.min);
-  const errorTolerance = range * REGRESSION_ERROR_TOLERANCE/100;
+  const range = getExtrema(state, state.labelColumn).range;
+  const errorTolerance = (range * REGRESSION_ERROR_TOLERANCE) / 100;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
     const diff = Math.abs(
@@ -887,13 +999,14 @@ export function getEmptyCellDetails(state) {
 export function getDataDescription(state) {
   // If this a dataset from the internal collection that already has a description, use that.
   if (
-    state.metadata
-    && state.metadata.card
-    && state.metadata.card.description
+    state.metadata &&
+    state.metadata.card &&
+    state.metadata.card.description
   ) {
     return state.metadata.card.description;
   } else if (
-    state.trainedModelDetails && state.trainedModelDetails.datasetDescription
+    state.trainedModelDetails &&
+    state.trainedModelDetails.datasetDescription
   ) {
     return state.trainedModelDetails.datasetDescription;
   } else {
@@ -901,52 +1014,52 @@ export function getDataDescription(state) {
   }
 }
 
-function getDatasetDetails(state) {
-  const datasetDetails = {}
+export function getDatasetDetails(state) {
+  const datasetDetails = {};
+  datasetDetails.name = state.metadata.name;
   datasetDetails.description = getDataDescription(state);
   datasetDetails.numRows = state.data.length;
+  datasetDetails.isUserUploaded = isUserUploadedDataset(state);
   return datasetDetails;
 }
 
-function getColumnDataToSave(state, column) {
+export function getColumnDataToSave(state, column) {
   const columnData = {};
   columnData.id = column;
   columnData.description = getColumnDescription(state, column);
   if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
-    columnData.values = getUniqueOptions(state, column)
+    columnData.values = getUniqueOptions(state, column);
   } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
-    const maxMin = getRange(state, column, false);
-    columnData.max = maxMin.max;
-    columnData.min = maxMin.min;
+    const {max, min} = getExtrema(state, column);
+    columnData.max = max;
+    columnData.min = min;
   }
   return columnData;
 }
 
-function getFeaturesToSave(state) {
+export function getFeaturesToSave(state) {
   const features = state.selectedFeatures.map(feature =>
     getColumnDataToSave(state, feature)
-  )
+  );
   return features;
 }
 
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
-
   dataToSave.name = state.trainedModelDetails.name;
-
   dataToSave.datasetDetails = getDatasetDetails(state);
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
-
-  dataToSave.selectedTrainer =
-    isRegression(state)
-      ? RegressionTrainer
-      : ClassificationTrainer;
+  dataToSave.selectedTrainer = isRegression(state)
+    ? RegressionTrainer
+    : ClassificationTrainer;
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.label = getColumnDataToSave(state, state.labelColumn);
   dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
-  dataToSave.trainedModel = state.trainedModel;
+  dataToSave.trainedModel = state.trainedModel
+    ? state.trainedModel.toJSON()
+    : null;
   dataToSave.kValue = state.kValue;
 
   return dataToSave;
@@ -958,10 +1071,6 @@ export function getSpecifiedDatasets(state) {
 
 export function getShowColumnClicking(state) {
   return !(state.mode && state.mode.hideColumnClicking);
-}
-
-export function getShowChooseReserve(state) {
-  return !(state.mode && state.mode.hideChooseReserve);
 }
 
 export function getPredictAvailable(state) {
@@ -978,11 +1087,11 @@ const panelList = [
   { id: "specifyColumns", label: "Columns" },
   { id: "dataDisplayLabel", label: "Label" },
   { id: "dataDisplayFeatures", label: "Features" },
-  { id: "trainingSettings", label: "Trainer" },
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
-  { id: "saveModel", label: "Save" }
+  { id: "saveModel", label: "Save" },
+  { id: "modelSummary", label: "Finish" }
 ];
 */
 
@@ -1019,12 +1128,6 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
-  if (panelId === "trainingSettings") {
-    if (!uniqLabelFeaturesSelected(state)) {
-      return false;
-    }
-  }
-
   if (panelId === "trainModel") {
     if (!readyToTrain(state)) {
       return false;
@@ -1033,15 +1136,15 @@ function isPanelEnabled(state, panelId) {
 
   if (panelId === "results") {
     if (
-      state.percentDataToReserve === 0 ||
-      state.accuracyCheckExamples.length === 0
+      state.accuracyCheckExamples.length === 0 ||
+      ["success", "started"].includes(state.saveStatus)
     ) {
       return false;
     }
   }
 
-  if (panelId === "save") {
-    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
+  if (panelId === "modelSummary") {
+    if (state.saveStatus === "started") {
       return false;
     }
   }
@@ -1066,16 +1169,30 @@ function isPanelAvailable(state, panelId) {
     }
   }
 
-  if (panelId === "trainingSettings") {
-    if (mode && mode.hideSpecifyColumns && mode.hideChooseReserve) {
+  if (panelId === "saveModel") {
+    if ((mode && mode.hideSave) || state.saveStatus === "success") {
       return false;
     }
   }
 
-  if (panelId === "saveModel") {
-    if (mode && mode.hideSave) {
+  if (panelId === "modelSummary") {
+    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
       return false;
     }
+  }
+
+  return true;
+}
+
+function isAccuracyAcceptable(state) {
+  const mode = state.mode;
+
+  if (
+    mode &&
+    mode.requireAccuracy &&
+    mode.requireAccuracy > state.historicResults[0].accuracy
+  ) {
+    return false;
   }
 
   return true;
@@ -1103,32 +1220,39 @@ export function getPanelButtons(state) {
     prev = isPanelAvailable(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Back" }
       : null;
-    next = isPanelAvailable(state, "trainingSettings")
-      ? { panel: "trainingSettings", text: "Continue" }
-      : isPanelAvailable(state, "trainModel")
-      ? { panel: "trainModel", text: "Train" }
-      : null;
-  } else if (state.currentPanel === "trainingSettings") {
-    prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelAvailable(state, "trainModel")
       ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "trainModel") {
     if (state.modelSize) {
       prev = null;
+      next = { panel: "generateResults", text: "Continue" };
+    }
+  } else if (state.currentPanel === "generateResults") {
+    if (state.modelSize) {
+      prev = null;
       next = { panel: "results", text: "Continue" };
     }
   } else if (state.currentPanel === "results") {
     prev = isPanelAvailable(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Back" }
+      ? { panel: "dataDisplayFeatures", text: "Try again" }
       : null;
-    next = isPanelAvailable(state, "saveModel")
+    next = !isAccuracyAcceptable(state)
+      ? null
+      : isPanelAvailable(state, "saveModel")
       ? { panel: "saveModel", text: "Continue" }
       : { panel: "continue", text: "Finish" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
-    next = isPanelAvailable(state, "save")
-      ? { panel: "save", text: "Finish" }
+    next = isPanelAvailable(state, "modelSummary")
+      ? { panel: "modelSummary", text: "Save" }
+      : null;
+  } else if (state.currentPanel === "modelSummary") {
+    prev = isPanelAvailable(state, "saveModel")
+      ? { panel: "saveModel", text: "Back" }
+      : null;
+    next = isPanelAvailable(state, "finish")
+      ? { panel: "finish", text: "Finish" }
       : null;
   }
 
@@ -1291,5 +1415,39 @@ function areArraysEqual(array1, array2) {
 export function isUserUploadedDataset(state) {
   // The csvfile for internally curated datasets are strings; those uploaded by
   // users are objects. Use data type as a proxy to know which case we're in.
-  return typeof state.csvfile === 'object' && state.csvfile !== null;
+  return typeof state.csvfile === "object" && state.csvfile !== null;
+}
+
+export function getCorrectResults(state) {
+  return getResultsByGrade(state, ResultsGrades.CORRECT);
+}
+
+export function getIncorrectResults(state) {
+  return getResultsByGrade(state, ResultsGrades.INCORRECT);
+}
+
+function getResultsByGrade(state, grade) {
+  const results = {};
+  const accuracyGrades = getAccuracyGrades(state);
+  const examples = getConvertedAccuracyCheckExamples(state).filter((example, index) => {
+    return grade === accuracyGrades[index];
+  });
+  const labels = getConvertedLabels(state, state.accuracyCheckLabels).filter((example, index) => {
+    return grade === accuracyGrades[index];
+  });
+  const predictedLabels = getConvertedLabels(state, state.accuracyCheckPredictedLabels).filter((example, index) => {
+    return grade === accuracyGrades[index];
+  });
+  results.examples = examples;
+  results.labels = labels;
+  results.predictedLabels = predictedLabels;
+  return results;
+}
+
+export function isSaveComplete(saveStatus) {
+  return ["success", "failure"].includes(saveStatus);
+}
+
+export function shouldDisplaySaveStatus(saveStatus) {
+  return ["success", "failure", "started"].includes(saveStatus);
 }

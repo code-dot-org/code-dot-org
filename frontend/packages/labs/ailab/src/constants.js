@@ -18,28 +18,38 @@ export const ResultsGrades = {
   INCORRECT: "incorrect"
 };
 
-export const TEST_DATA_PERCENTS = [0, 5, 10, 15, 20];
+export const PERCENT_OF_DATASET_FOR_TESTING = 0.1;
 
 export const TestDataLocations = {
-  BEGINNING: "beginning",
   END: "end",
   RANDOM: "random"
 };
 
 export const ModelNameMaxLength = 150;
 
+export const UNIQUE_OPTIONS_MAX = 50;
+
 export const saveMessages = {
   success: "Your model was saved!",
-  failure: "There was an error. Your model did not save.",
-  name: "Please name your model."
+  failure: "There was an error. Your model did not save. Please try again."
 };
+
+export function getFadeOpacity(animationProgress) {
+  return animationProgress > 0.95
+    ? 1 - (animationProgress - 0.95) / 0.05
+    : animationProgress < 0.05
+    ? animationProgress / 0.05
+    : 1;
+}
 
 const labelColor = "rgb(254, 96, 3)";
 const featureColor = "rgb(75, 155, 213)";
+const backgroundColor = "#f2f2f2";
 
 export const colors = {
   feature: featureColor,
-  label: labelColor
+  label: labelColor,
+  background: backgroundColor
 };
 
 export const styles = {
@@ -57,6 +67,9 @@ export const styles = {
     fontFamily: '"Gotham 4i", sans-serif'
   },
 
+  correct: {
+    color: "#73be73"
+  },
   error: {
     color: "#e51f68"
   },
@@ -96,13 +109,20 @@ export const styles = {
   },
 
   largeText: {
+    lineHeight: "38px",
     fontSize: 24,
-    marginBottom: 10
+    marginBottom: 20,
+    borderBottom: "solid 1px black",
+    paddingBottom: 10
   },
 
   mediumText: {
-    fontSize: 13,
+    fontSize: 14,
     marginBottom: 8
+  },
+
+  regularText: {
+    fontSize: 14
   },
 
   smallText: {
@@ -110,8 +130,9 @@ export const styles = {
     marginBottom: 8
   },
 
-  smallTextNoMargin: {
-    fontSize: 12
+  smallTextRight: {
+    fontSize: 12,
+    textAlign: "right"
   },
 
   footerText: {
@@ -127,15 +148,29 @@ export const styles = {
     boxSizing: "border-box",
     display: "flex",
     flexDirection: "column",
-    position: "relative"
+    position: "relative",
+    fontSize: 14
   },
 
-  popupPanel: {
+  panelPopupContainer: {
     position: "absolute",
-    border: "1px solid",
-    top: 90,
-    height: "initial",
-    zIndex: 1
+    left: 20,
+    top: 20,
+    width: "calc(100% - 40px)",
+    height: "calc(100% - 40px)",
+    zIndex: 10
+  },
+
+  panelPopup: {
+    padding: 10,
+    backgroundColor: "white",
+    overflow: "hidden",
+    height: "100%",
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
+    border: "solid 1px black",
+    boxShadow: "-5px 5px 10px rgba(0, 0, 0, 0.5)"
   },
 
   scrollableContents: {
@@ -145,20 +180,37 @@ export const styles = {
   scrollableContentsTinted: {
     overflow: "hidden",
     borderRadius: 0,
-    backgroundColor: "rgb(206, 206, 206)",
+    backgroundColor: colors.background,
     padding: 10
   },
 
   scrollingContents: {
     overflow: "auto",
     height: "100%",
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    overflowWrap: "break-word"
   },
 
   contents: {
     borderRadius: 0,
-    backgroundColor: "rgb(206, 206, 206)",
+    backgroundColor: colors.background,
     padding: 15
+  },
+
+  contentsCsvButton: {
+    borderRadius: 0,
+    backgroundColor: colors.background,
+    padding: 15,
+    marginTop: 20,
+    paddingTop: 25,
+    paddingBottom: 25
+  },
+
+  contentsPredictBot: {
+    borderRadius: 0,
+    backgroundColor: colors.background,
+    padding: 15,
+    marginTop: 20
   },
 
   panelContentLeft: {
@@ -192,26 +244,27 @@ export const styles = {
   },
 
   rightPanel: {
-    fontSize: 13
+    fontSize: 14
   },
 
   selectDatasetItem: {
-    width: "30%",
+    width: "calc(33.33% - 8px)",
     padding: 20,
     float: "left",
     boxSizing: "border-box",
-    border: "solid 4px rgba(0,0,0,0)",
+    border: "solid 4px #f2f2f2",
     borderRadius: 0,
-    height: 220,
-    cursor: "pointer"
+    cursor: "pointer",
+    backgroundColor: "white",
+    margin: 4
   },
 
   selectDatasetItemHighlighted: {
-    backgroundColor: "#d6f2fa"
+    border: "solid 4px rgba(85, 217, 255, 0.6)"
   },
 
   selectDatasetItemSelected: {
-    backgroundColor: "#94e3fa"
+    border: "solid 4px rgb(85, 217, 255)"
   },
 
   selectDatasetImage: {
@@ -220,14 +273,24 @@ export const styles = {
 
   selectDatasetText: {
     fontSize: 14,
-    marginTop: 10
+    marginTop: 5
   },
 
-  uploadButton: {
-    fontSize: 13.33,
-    padding: "2px 6px",
+  uploadCsvButton: {
+    fontSize: 14,
     margin: 0,
     border: "none",
+    cursor: "pointer",
+    borderRadius: 5,
+    backgroundColor: "#61d2eb",
+    color: "white",
+    padding: "10px 20px",
+    display: "inline-block"
+  },
+
+  csvInput: {
+    display: "none",
+    cursor: "pointer"
   },
 
   specifyColumnsItem: {
@@ -270,7 +333,12 @@ export const styles = {
     borderWidth: 1,
     borderColor: "white",
     padding: 7,
-    fontSize: 14
+    fontSize: 14,
+    cursor: "pointer"
+  },
+
+  dataDisplayHeaderLabelHidden: {
+    opacity: 0
   },
 
   dataDisplayHeaderLabel: {
@@ -282,13 +350,17 @@ export const styles = {
     color: "white"
   },
 
+  dataDisplayCellHidden: {
+    opacity: 0
+  },
+
   dataDisplayCell: {
     padding: 3,
     paddingLeft: 20,
     textAlign: "right",
     fontSize: 12,
     color: "#4d575f",
-    backgroundColor: "#f2f2f2",
+    backgroundColor: colors.background,
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: "white"
@@ -300,11 +372,24 @@ export const styles = {
     borderColor: "#d6f2fa",
     cursor: "pointer"
   },
+  dataDisplayCellHighlightedLabel: {
+    backgroundColor: "#f1caca",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#f1caca",
+    cursor: "pointer"
+  },
   dataDisplayCellSelected: {
     backgroundColor: "#94e3fa",
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: "#94e3fa"
+  },
+  dataDisplayCellSelectedLabel: {
+    backgroundColor: "#f39f9f",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#f39f9f"
   },
 
   tableCell: {
@@ -312,6 +397,7 @@ export const styles = {
     textAlign: "right",
     fontSize: 12
   },
+
   dataDisplayCellLabelSelected: {},
   dataDisplayCellFeatureSelected: {},
 
@@ -338,18 +424,101 @@ export const styles = {
     backgroundColor: "rgba(255,100,100, 1)"
   },
 
+  resultsPanelContainer: {
+    width: "100%",
+    height: "100%",
+    position: "relative"
+  },
+
+  resultsStatement: {
+    float: "left",
+    width: "75%"
+  },
+
+  resultsAccuracy: {
+    float: "left",
+    fontSize: 14,
+    width: "10%",
+    paddingTop: 1,
+    lineHeight: 1.3
+  },
+
+  resultsDetailsButtonContainer: {
+    float: "left",
+    textAlign: "center",
+    width: "15%"
+  },
+
+  resultsDetailsButton: {
+    fontSize: 14,
+    padding: "8px 12px",
+    margin: 0,
+    border: "none",
+    cursor: "pointer",
+    borderRadius: 5,
+    backgroundColor: "#61d2eb",
+    color: "white",
+    lineHeight: 1.3,
+    position: "relative",
+    top: -7
+  },
+
+  resultsToggle: {
+    marginTop: 20,
+    backgroundColor: colors.background,
+    borderRadius: 5,
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "white",
+    padding: 10,
+    height: 42
+  },
+  pill: {
+    border: "none",
+    borderRadius: 5,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 20,
+    backgroundColor: colors.background,
+    margin: "0 0 0 20px",
+    boxShadow: "none",
+    outline: "none",
+    padding: "8px 18px",
+    float: "left",
+    cursor: "pointer"
+  },
+  selectedPill: {
+    backgroundColor: "#61d2eb",
+    color: "white",
+    border: "none"
+  },
+
+  resultsPreviousHeading: { clear: "both", paddingTop: 18, paddingBottom: 6 },
+
   resultsTableFirstHeader: {
     top: 0,
     backgroundColor: "white",
     color: "rgb(30, 30, 30)",
     verticalAlign: "top",
-    height: 45
+    fontSize: 24
   },
 
   resultsTableSecondHeader: {
-    top: "47px",
+    top: "42px",
     color: "white"
   },
+
+  resultsCellHighlight: {
+    backgroundColor: colors.background
+  },
+
+  predictBotLeft: {
+    float: "left",
+    width: "20%"
+  },
+
+  predictBot: { width: "100%" },
+
+  predictBotRight: { float: "right", width: "75%" },
 
   previousButton: {
     position: "fixed",
@@ -380,20 +549,73 @@ export const styles = {
   },
 
   statement: {
-    fontSize: 32,
-    paddingBottom: 15
+    lineHeight: "38px",
+    fontSize: 24,
+    marginBottom: 20,
+    borderBottom: "solid 1px black",
+    paddingBottom: 10
+  },
+
+  statementWithBackground: {
+    lineHeight: "38px",
+    fontSize: 24,
+    marginBottom: 20,
+    paddingBottom: 10
+  },
+
+  statementSmall: {
+    fontSize: 14,
+    paddingBottom: 6
   },
 
   statementLabel: {
-    color: labelColor,
+    backgroundColor: labelColor,
+    color: "white",
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
+    paddingTop: 1,
+    paddingBottom: 1,
+    display: "inline-block",
+    position: "relative",
+    lineHeight: 1.3
   },
 
   statementFeature: {
-    color: featureColor,
+    backgroundColor: featureColor,
+    color: "white",
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
+    paddingTop: 1,
+    paddingBottom: 1,
+    display: "inline-block",
+    position: "relative",
+    lineHeight: 1.3
+  },
+
+  statementDeleteIcon: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    transform: "translateX(50%) translateY(-50%)",
+    color: "black",
+    cursor: "pointer"
+  },
+
+  statementDeleteCircle: {
+    backgroundColor: "white",
+    borderRadius: "50%",
+    height: 20,
+    width: 20,
+    top: 0,
+    left: 0
+  },
+
+  statementDeleteX: {
+    fontSize: 20,
+    position: "absolute",
+    top: 0,
+    right: 0,
+    lineHeight: "20px"
   },
 
   selectLabelText: {
@@ -402,6 +624,26 @@ export const styles = {
 
   selectFeaturesText: {
     color: featureColor
+  },
+
+  selectLabelButton: {
+    backgroundColor: labelColor,
+    color: "white",
+    padding: 10,
+    cursor: "pointer",
+    border: "none",
+    fontSize: 14,
+    marginTop: 10
+  },
+
+  selectFeaturesButton: {
+    backgroundColor: featureColor,
+    color: "white",
+    padding: 10,
+    cursor: "pointer",
+    border: "none",
+    fontSize: 14,
+    marginTop: 10
   },
 
   trainModelContainer: {
@@ -415,15 +657,15 @@ export const styles = {
   trainModelDataTable: {
     width: "30%",
     overflow: "hidden",
-    opacity: 0.3,
+    opacity: 1,
     paddingTop: 20
   },
   trainModelBotContainer: {
     position: "absolute",
     left: "50%",
-    transform: "translateX(-25%)"
+    top: "50%",
+    transform: "translateX(-25%) translateY(-50%)"
   },
-
   trainBot: {
     position: "relative",
     width: 300
@@ -434,16 +676,34 @@ export const styles = {
     width: "43%",
     top: "0%",
     position: "absolute",
-    direction: "ltr"
+    direction: "ltr",
+    transformOrigin: "bottom right"
   },
   trainBotOpen: {
     transform: "rotate(90deg)",
-    transformOrigin: "bottom right",
     direction: "ltr"
   },
   trainBotBody: {
     width: "49%",
     marginTop: "30%",
+    direction: "ltr"
+  },
+
+  generateResultsContainer: { overflow: "hidden", paddingTop: 20 },
+  generateResultsDataTable: {
+    width: "30%",
+    overflow: "hidden",
+    opacity: 1,
+    paddingTop: 20
+  },
+  generateResultsBotContainer: {
+    position: "absolute",
+    left: "50%",
+    top: "50%"
+  },
+
+  generateResultsBotBody: {
+    width: "49%",
     direction: "ltr"
   },
 
@@ -525,7 +785,82 @@ export const styles = {
     position: "relative"
   },
 
+  resultsBot: {
+    position: "relative",
+    width: "100%"
+  },
+
   saveInputsWidth: {
     width: "95%"
+  },
+
+  saveModelToggle: {
+    cursor: "pointer"
+  },
+
+  saveModelToggleContents: {
+    marginLeft: 20
+  },
+
+  modelCardContainer: {
+    backgroundColor: "rgb(198, 202, 205)",
+    borderRadius: 5,
+    padding: 20,
+    whiteSpace: "normal",
+    overflowY: "auto",
+    width: "30%",
+    margin: "0 auto"
+  },
+
+  modelCardHeader: {
+    marginBottom: 10,
+    marginTop: 0,
+    fontSize: 24,
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+
+  modelCardHeading: {
+    fontSize: 14,
+    marginTop: 0,
+    marginBottom: 5,
+    textAlign: "center",
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+
+  modelCardContent: {
+    fontSize: 14,
+    marginBottom: 0,
+    marginTop: 0
+  },
+
+  modelCardSubpanel: {
+    backgroundColor: "rgb(231, 232, 234)",
+    borderRadius: 5,
+    marginBottom: 10,
+    padding: 10
+  },
+
+  modelCardDetails: {
+    marginBottom: 0
+  },
+
+  summaryScreenBot: {
+    margin: 0,
+    position: "absolute",
+    top: "50%",
+    transform: "translateY(-50%)",
+    left: "calc(35% - 185px)",
+    width: "150px"
+  },
+
+  modelSaveMessage: {
+    bottom: 40,
+    zIndex: 1001,
+    right: "calc(50% - 250px)",
+    textAlign: "center",
+    position: "fixed",
+    width: 500,
+    height: 30,
+    lineHeight: "20px"
   }
 };

@@ -2,35 +2,39 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  getConvertedAccuracyCheckExamples,
-  getConvertedLabels,
-  getAccuracyGrades,
-  isRegression
-} from "../redux";
-import {
-  styles,
-  colors,
-  ResultsGrades,
-  REGRESSION_ERROR_TOLERANCE
-} from "../constants";
+import { isRegression, setResultsHighlightRow } from "../redux";
+import { styles, colors, REGRESSION_ERROR_TOLERANCE } from "../constants";
 
 class ResultsTable extends Component {
   static propTypes = {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
-    accuracyCheckExamples: PropTypes.array,
-    accuracyCheckLabels: PropTypes.array,
-    accuracyCheckPredictedLabels: PropTypes.array,
-    accuracyGrades: PropTypes.array,
-    isRegression: PropTypes.bool
+    results: PropTypes.object,
+    isRegression: PropTypes.bool,
+    setResultsHighlightRow: PropTypes.func,
+    resultsHighlightRow: PropTypes.number
+  };
+
+  getRowCellStyle = index => {
+    return {
+      ...styles.tableCell,
+      ...(index === this.props.resultsHighlightRow &&
+        styles.resultsCellHighlight)
+    };
   };
 
   render() {
+    const { setResultsHighlightRow } = this.props;
     const featureCount = this.props.selectedFeatures.length;
 
     return (
       <div style={styles.panel}>
+        {this.props.isRegression && (
+          <div style={styles.smallTextRight}>
+            {`Predictions are +/- ${REGRESSION_ERROR_TOLERANCE}% of range`}
+          </div>
+        )}
+
         <div style={styles.tableParent}>
           <table style={styles.displayTable}>
             <thead>
@@ -42,9 +46,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  <span style={styles.largeText}>
-                    Features
-                  </span>
+                  Features
                 </th>
                 <th
                   style={{
@@ -52,12 +54,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  <span style={styles.largeText}>{"Actual"}</span>
-                  {this.props.isRegression && (
-                    <div style={styles.smallTextNoMargin}>
-                      {`+/- ${REGRESSION_ERROR_TOLERANCE}% of range`}
-                    </div>
-                  )}
+                  Actual
                 </th>
                 <th
                   style={{
@@ -65,16 +62,8 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  <span style={styles.largeText}>{"A.I. Prediction"}</span>
+                  A.I. Prediction
                 </th>
-                <th
-                  colSpan={featureCount}
-                  style={{
-                    ...styles.largeText,
-                    ...styles.tableHeader,
-                    ...styles.resultsTableFirstHeader
-                  }}
-                />
               </tr>
               <tr>
                 {this.props.selectedFeatures.map((feature, index) => {
@@ -109,44 +98,29 @@ class ResultsTable extends Component {
                 >
                   {this.props.labelColumn}
                 </th>
-                <th
-                  style={{
-                    ...styles.tableHeader,
-                    backgroundColor: colors.label,
-                    ...styles.resultsTableSecondHeader
-                  }}
-                />
               </tr>
             </thead>
             <tbody>
-              {this.props.accuracyCheckExamples.map((examples, index) => {
+              {this.props.results.examples.map((examples, index) => {
                 return (
-                  <tr key={index}>
+                  <tr
+                    key={index}
+                    onMouseEnter={() => setResultsHighlightRow(index)}
+                    onMouseLeave={() => setResultsHighlightRow(undefined)}
+                  >
                     {examples.map((example, i) => {
                       return (
-                        <td style={styles.tableCell} key={i}>
+                        <td style={this.getRowCellStyle(index)} key={i}>
                           {example}
                         </td>
                       );
                     })}
-                    <td style={styles.tableCell}>
-                      {this.props.accuracyCheckLabels[index]}
+                    <td style={this.getRowCellStyle(index)}>
+                      {this.props.results.labels[index]}
                     </td>
-                    <td style={styles.tableCell}>
-                      {this.props.accuracyCheckPredictedLabels[index]}
+                    <td style={this.getRowCellStyle(index)}>
+                      {this.props.results.predictedLabels[index]}
                     </td>
-                    {this.props.accuracyGrades[index] ===
-                      ResultsGrades.CORRECT && (
-                      <td style={{ ...styles.ready, ...styles.tableCell }}>
-                        &#x2713;
-                      </td>
-                    )}
-                    {this.props.accuracyGrades[index] ===
-                      ResultsGrades.INCORRECT && (
-                      <td style={{ ...styles.error, ...styles.tableCell }}>
-                        &#10006;
-                      </td>
-                    )}
                   </tr>
                 );
               })}
@@ -158,15 +132,16 @@ class ResultsTable extends Component {
   }
 }
 
-export default connect(state => ({
-  selectedFeatures: state.selectedFeatures,
-  labelColumn: state.labelColumn,
-  accuracyCheckExamples: getConvertedAccuracyCheckExamples(state),
-  accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
-  accuracyCheckPredictedLabels: getConvertedLabels(
-    state,
-    state.accuracyCheckPredictedLabels
-  ),
-  accuracyGrades: getAccuracyGrades(state),
-  isRegression: isRegression(state)
-}))(ResultsTable);
+export default connect(
+  state => ({
+    selectedFeatures: state.selectedFeatures,
+    labelColumn: state.labelColumn,
+    isRegression: isRegression(state),
+    resultsHighlightRow: state.resultsHighlightRow
+  }),
+  dispatch => ({
+    setResultsHighlightRow(column) {
+      dispatch(setResultsHighlightRow(column));
+    }
+  })
+)(ResultsTable);

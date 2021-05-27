@@ -8,7 +8,7 @@ import {
   getDataDescription,
   isUserUploadedDataset
 } from "../redux";
-import { styles, saveMessages, ModelNameMaxLength } from "../constants";
+import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
 
 class SaveModel extends Component {
@@ -32,7 +32,9 @@ class SaveModel extends Component {
   }
 
   toggleColumnDescriptions = () => {
-    this.setState({showColumnDescriptions: !this.state.showColumnDescriptions});
+    this.setState({
+      showColumnDescriptions: !this.state.showColumnDescriptions
+    });
   };
 
   handleChange = (event, field, isColumn) => {
@@ -43,12 +45,12 @@ class SaveModel extends Component {
     var fields = [];
 
     for (const columnDescription of this.props.columnDescriptions) {
-      const columnType = columnDescription.id === this.props.labelColumn
-        ? "label" : "feature";
+      const columnType =
+        columnDescription.id === this.props.labelColumn ? "label" : "feature";
       fields.push({
         id: columnDescription.id,
         isColumn: true,
-        text: `Description for: ${columnDescription.id} (${columnType})`,
+        columnType,
         answer: columnDescription.description
       });
     }
@@ -59,7 +61,7 @@ class SaveModel extends Component {
     var fields = [];
     fields.push({
       id: "potentialUses",
-      text: "Intended Use",
+      text: "Intended Use:",
       description:
         "Describe the problem you think this model could help solve, or one \
         potential app someone could make with this model.",
@@ -67,13 +69,15 @@ class SaveModel extends Component {
     });
     fields.push({
       id: "potentialMisuses",
-      text: "Warnings",
+      text: "Warnings:",
       description:
         "Describe any situations where this model could potentially \
         be misused, or any places where bias could potentially show up in the \
         model. Important questions to consider are:",
-      descriptionDetailOne: "Is there enough data to create an accurate model?",
-      descriptionDetailTwo: "Does the data represent all possible users and scenarios?",
+      descriptionDetails: [
+        "Is there enough data to create an accurate model?",
+        "Does the data represent all possible users and scenarios?"
+      ],
       placeholder: "Write a brief description."
     });
 
@@ -83,18 +87,20 @@ class SaveModel extends Component {
   render() {
     const nameField = {
       id: "name",
-      text: "What will you name the model? (required)"
+      text: "Model name:"
     };
 
     const dataDescriptionField = {
       id: "datasetDescription",
-      text: "Describe the dataset.",
-      placeholder: "How was the data collected? Who collected it? When was it collected?",
+      text: "Description:",
+      placeholder:
+        "How was the data collected? Who collected it? When was it collected?",
       answer: this.props.dataDescription
     };
 
     const arrowIcon = this.state.showColumnDescriptions
-      ? 'fa fa-caret-up' : 'fa fa-caret-down';
+      ? "fa fa-caret-up"
+      : "fa fa-caret-down";
 
     const columnCount = this.getColumnFields().length;
 
@@ -104,7 +110,8 @@ class SaveModel extends Component {
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             <div key={nameField.id} style={styles.cardRow}>
-              <label style={styles.bold}>{nameField.text}</label>
+              <span style={styles.bold}>{nameField.text}</span>{" "}
+              <span style={styles.italic}>(required)</span>
               <div>
                 <input
                   onChange={event =>
@@ -133,30 +140,41 @@ class SaveModel extends Component {
               )}
             </div>
             <div>
-              <span onClick={this.toggleColumnDescriptions}>
+              <span
+                onClick={this.toggleColumnDescriptions}
+                style={styles.saveModelToggle}
+              >
                 <i className={arrowIcon} />
-                <span style={styles.bold}>
-                  Column Descriptions ({columnCount})
-                </span>
+                &nbsp;
+                <span style={styles.bold}>Column Descriptions</span> (
+                {columnCount})
               </span>
               {this.state.showColumnDescriptions && (
-                <div>
+                <div style={styles.saveModelToggleContents}>
                   {this.getColumnFields().map(field => {
                     return (
                       <div key={field.id} style={styles.cardRow}>
-                        <label>{field.text}</label>
-                        {!field.answer && (
+                        <div>
+                          <span style={styles.bold}>{field.id}</span> (
+                          {field.columnType})
+                        </div>
+                        {this.props.isUserUploadedDataset && (
                           <div>
                             <textarea
                               rows="1"
                               onChange={event =>
-                                this.handleChange(event, field.id, field.isColumn)
+                                this.handleChange(
+                                  event,
+                                  field.id,
+                                  field.isColumn
+                                )
                               }
                               placeholder={field.placeholder}
+                              value={field.answer || ""}
                             />
                           </div>
                         )}
-                        {field.answer && (
+                        {!this.props.isUserUploadedDataset && (
                           <div>{field.answer}</div>
                         )}
                       </div>
@@ -171,12 +189,16 @@ class SaveModel extends Component {
                   <div key={field.id} style={styles.cardRow}>
                     <label style={styles.bold}>{field.text}</label>
                     <div>{field.description}</div>
-                    {field.descriptionDetailOne && (
-                      <div>{field.descriptionDetailOne}</div>
-                    )}
-                    {field.descriptionDetailTwo && (
-                      <div>{field.descriptionDetailTwo}</div>
-                    )}
+                    <ul>
+                      {field.descriptionDetails &&
+                        field.descriptionDetails.map((detail, index) => {
+                          return (
+                            <li style={styles.regularText} key={index}>
+                              {detail}
+                            </li>
+                          );
+                        })}
+                    </ul>
                     {!field.answer && (
                       <div>
                         <textarea
@@ -189,21 +211,12 @@ class SaveModel extends Component {
                         />
                       </div>
                     )}
-                    {field.answer && (
-                      <div>{field.answer}</div>
-                    )}
+                    {field.answer && <div>{field.answer}</div>}
                   </div>
                 );
               })}
             </div>
           </div>
-        </div>
-        <div>
-          {this.props.saveStatus && (
-            <div style={{ position: "absolute", bottom: 0 }}>
-              {saveMessages[this.props.saveStatus]}
-            </div>
-          )}
         </div>
       </div>
     );

@@ -1,71 +1,71 @@
 {
-    "card": {
-      "description": "This dataset is a list of exoplanets, which are planets orbiting other stars. With this data, it's possible to estimate the size of an exoplanet as well as other characteristics.",
-      "source": "https://exoplanetarchive.ipac.caltech.edu/",
-      "lastUpdated": "2021",
-      "context": {
-        "createdBy": "California Institute of Technology",
-        "potentialUses": "Estimate the size or mass of an exoplanet based on the size, age or other aspects of the star it orbits.",
-        "potentialMisuses": "Trying to make guesses as to whether a planet could support life."
-      }
+  "name": "exoplanets",
+  "card": {
+    "description": "This dataset is a list of exoplanets, which are planets orbiting other stars. With this data, it's possible to estimate the size of an exoplanet as well as other characteristics.",
+    "source": "https://exoplanetarchive.ipac.caltech.edu/",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "California Institute of Technology",
+      "potentialUses": "Estimate the size or mass of an exoplanet based on the size, age or other aspects of the star it orbits.",
+      "potentialMisuses": "Trying to make guesses as to whether a planet could support life."
+    }
+  },
+  "defaultLabelColumn": "Mass in earths",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Star host name",
+      "description": "The name of the start this exoplanet is orbiting."
     },
-    "defaultLabelColumn": "Mass in earths",
-    "fields": [
-      {
-        "type": "categorical",
-        "id": "Star host name",
-        "description": "The name of the start this exoplanet is orbiting."
-      },
-      {
-        "type": "numerical",
-        "id": "Number of stars",
-        "description": "Number of stars in the exoplanet's system."
-      },
-      {
-        "type": "numerical",
-        "id": "Number of planets",
-        "description": "Number of planets in the exoplanet's system."
-      },
-      {
-        "type": "numerical",
-        "id": "Discovery year",
-        "description": "The year this exoplanet was discovered."
-      },
-      {
-        "type": "numerical",
-        "id": "Orbit length in earth days",
-        "description": "How long it takes for this planet to make a complete orbit around its host star, measured in earth days."
-      },
-      {
-        "type": "numerical",
-        "id": "Size in earths",
-        "description": "The relative size of this exoplanet in comparison to earth."
-      },
-      {
-        "type": "numerical",
-        "id": "Mass in earths",
-        "description": "The relative mass of this exoplanet in comparison to earth."
-      },
-      {
-        "type": "numerical",
-        "id": "Star temperature in kelvin",
-        "description": "The temperature of the host star in kelvin."
-      },
-      {
-        "type": "numerical",
-        "id": "Star size in suns",
-        "description": "The relative size of the host star in comparison to the sun."
-      },
-      {
-        "type": "numerical",
-        "id": "Star mass in suns",
-        "description": "The relative mass of the host star in comparison to the sun."
-      },
-      {
-        "type": "numerical",
-        "id": "Star age in billions of years",
-        "description": "The age of the host star."
-      }
-    ]
-  }
-  
+    {
+      "type": "numerical",
+      "id": "Number of stars",
+      "description": "Number of stars in the exoplanet's system."
+    },
+    {
+      "type": "numerical",
+      "id": "Number of planets",
+      "description": "Number of planets in the exoplanet's system."
+    },
+    {
+      "type": "numerical",
+      "id": "Discovery year",
+      "description": "The year this exoplanet was discovered."
+    },
+    {
+      "type": "numerical",
+      "id": "Orbit length in earth days",
+      "description": "How long it takes for this planet to make a complete orbit around its host star, measured in earth days."
+    },
+    {
+      "type": "numerical",
+      "id": "Size in earths",
+      "description": "The relative size of this exoplanet in comparison to earth."
+    },
+    {
+      "type": "numerical",
+      "id": "Mass in earths",
+      "description": "The relative mass of this exoplanet in comparison to earth."
+    },
+    {
+      "type": "numerical",
+      "id": "Star temperature in kelvin",
+      "description": "The temperature of the host star in kelvin."
+    },
+    {
+      "type": "numerical",
+      "id": "Star size in suns",
+      "description": "The relative size of the host star in comparison to the sun."
+    },
+    {
+      "type": "numerical",
+      "id": "Star mass in suns",
+      "description": "The relative mass of the host star in comparison to the sun."
+    },
+    {
+      "type": "numerical",
+      "id": "Star age in billions of years",
+      "description": "The age of the host star."
+    }
+  ]
+}

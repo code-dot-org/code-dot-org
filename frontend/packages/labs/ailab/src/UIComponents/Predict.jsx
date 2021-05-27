@@ -10,9 +10,10 @@ import {
   getUniqueOptionsByColumn,
   getConvertedPredictedLabel,
   getPredictAvailable,
-  getRangesByColumn
+  getExtremaByColumn
 } from "../redux";
 import { styles } from "../constants";
+import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
 
 class Predict extends Component {
   static propTypes = {
@@ -23,9 +24,8 @@ class Predict extends Component {
     testData: PropTypes.object,
     setTestData: PropTypes.func.isRequired,
     predictedLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    confidence: PropTypes.number,
     getPredictAvailable: PropTypes.bool,
-    rangesByColumn: PropTypes.object
+    extremaByColumn: PropTypes.object
   };
 
   handleChange = (event, feature) => {
@@ -41,13 +41,13 @@ class Predict extends Component {
   render() {
     return (
       <div id="predict" style={{ ...styles.panel, ...styles.rightPanel }}>
-        <div style={styles.largeText}>Test The Model</div>
+        <div style={styles.largeText}>Try it out!</div>
         <div style={styles.scrollableContents}>
           <div style={styles.scrollingContents}>
             <form>
               {this.props.selectedNumericalFeatures.map((feature, index) => {
-                let min = this.props.rangesByColumn[feature].min.toFixed(2);
-                let max = this.props.rangesByColumn[feature].max.toFixed(2);
+                let min = this.props.extremaByColumn[feature].min.toFixed(2);
+                let max = this.props.extremaByColumn[feature].max.toFixed(2);
 
                 return (
                   <div style={styles.cardRow} key={index}>
@@ -57,21 +57,19 @@ class Predict extends Component {
                       <input
                         type="number"
                         onChange={event => this.handleChange(event, feature)}
-                        value={this.props.testData[feature]}
+                        value={this.props.testData[feature] || ""}
                       />
                     </label>
-
                   </div>
                 );
               })}
             </form>
-            <br />
             <form>
               {this.props.selectedCategoricalFeatures.map((feature, index) => {
                 return (
                   <div style={styles.cardRow} key={index}>
-                    <label>
-                      {feature}: &nbsp;
+                    <div>{feature}: &nbsp;</div>
+                    <div>
                       <select
                         onChange={event => this.handleChange(event, feature)}
                         value={this.props.testData[feature]}
@@ -87,7 +85,7 @@ class Predict extends Component {
                             );
                           })}
                       </select>
-                    </label>
+                    </div>
                   </div>
                 );
               })}
@@ -110,14 +108,13 @@ class Predict extends Component {
           </button>
         </div>
         {this.props.predictedLabel && (
-          <div>
-            <p />
-            <div>A.I. predicts:</div>
-            <div style={styles.contents}>
+          <div style={styles.contentsPredictBot}>
+            <div style={styles.predictBotLeft}>
+              <img style={styles.predictBot} src={aiBotBorder} />
+            </div>
+            <div style={styles.predictBotRight}>
+              <div style={styles.statement}>A.I. predicts</div>
               {this.props.labelColumn}: {this.props.predictedLabel}
-              {this.props.confidence && (
-                <p>Confidence: {this.props.confidence}</p>
-              )}
             </div>
           </div>
         )}
@@ -130,13 +127,12 @@ export default connect(
   state => ({
     testData: state.testData,
     predictedLabel: getConvertedPredictedLabel(state),
-    confidence: state.prediction.confidence,
     labelColumn: state.labelColumn,
     selectedNumericalFeatures: getSelectedNumericalFeatures(state),
     selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
     uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
     getPredictAvailable: getPredictAvailable(state),
-    rangesByColumn: getRangesByColumn(state)
+    extremaByColumn: getExtremaByColumn(state)
   }),
   dispatch => ({
     setTestData(testData) {
