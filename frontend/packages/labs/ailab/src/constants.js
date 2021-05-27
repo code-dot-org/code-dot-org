@@ -586,7 +586,8 @@ export const styles = {
     padding: 10,
     cursor: "pointer",
     border: "none",
-    fontSize: 14
+    fontSize: 14,
+    marginTop: 10
   },
 
   selectFeaturesButton: {
@@ -595,7 +596,8 @@ export const styles = {
     padding: 10,
     cursor: "pointer",
     border: "none",
-    fontSize: 14
+    fontSize: 14,
+    marginTop: 10
   },
 
   trainModelContainer: {
