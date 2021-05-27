@@ -44,8 +44,8 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_STAGE_EXTRAS_SCRIPT_IDS =
-  'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
+const SET_LESSON_EXTRAS_SCRIPT_IDS =
+  'teacherDashboard/SET_LESSON_EXTRAS_SCRIPT_IDS';
 const SET_TEXT_TO_SPEECH_SCRIPT_IDS =
   'teacherDashboard/SET_TEXT_TO_SPEECH_SCRIPT_IDS';
 const SET_PREREADER_SCRIPT_IDS = 'teacherDashboard/SET_PREREADER_SCRIPT_IDS';
@@ -109,8 +109,8 @@ export const __testInterface__ = {
 // Action Creators
 //
 export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
-export const setStageExtrasScriptIds = ids => ({
-  type: SET_STAGE_EXTRAS_SCRIPT_IDS,
+export const setLessonExtrasScriptIds = ids => ({
+  type: SET_LESSON_EXTRAS_SCRIPT_IDS,
   ids
 });
 export const setTextToSpeechScriptIds = ids => ({
@@ -523,7 +523,7 @@ const initialState = {
   sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
-  stageExtrasScriptIds: [],
+  lessonExtrasScriptIds: [],
   textToSpeechScriptIds: [],
   preReaderScriptIds: [],
   // Track whether we've async-loaded our section and assignment data
@@ -574,7 +574,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
 }
 
 const defaultVersionYear = '2017';
-const defaultStageExtras = false;
+const defaultLessonExtras = false;
 
 // Fields to copy from the assignmentInfo when creating an assignmentFamily.
 export const assignmentFamilyFields = [
@@ -606,10 +606,10 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
-  if (action.type === SET_STAGE_EXTRAS_SCRIPT_IDS) {
+  if (action.type === SET_LESSON_EXTRAS_SCRIPT_IDS) {
     return {
       ...state,
-      stageExtrasScriptIds: action.ids
+      lessonExtrasScriptIds: action.ids
     };
   }
 
@@ -851,7 +851,7 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
-    const stageExtraSettings = {};
+    const lessonExtraSettings = {};
     const ttsAutoplayEnabledSettings = {};
     if (action.props.scriptId) {
       // TODO: enable autoplay by default if script is a pre-reader script
@@ -861,8 +861,8 @@ export default function teacherSections(state = initialState, action) {
       const script =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
-        stageExtraSettings.stageExtras =
-          script.lesson_extras_available || defaultStageExtras;
+        lessonExtraSettings.stageExtras =
+          script.lesson_extras_available || defaultLessonExtras;
       }
     }
 
@@ -870,7 +870,7 @@ export default function teacherSections(state = initialState, action) {
       ...state,
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
-        ...stageExtraSettings,
+        ...lessonExtraSettings,
         ...ttsAutoplayEnabledSettings,
         ...action.props
       }
@@ -1252,8 +1252,8 @@ export const assignmentPaths = (validAssignments, section) => {
  * @param state
  * @param id
  */
-export const stageExtrasAvailable = (state, id) =>
-  state.teacherSections.stageExtrasScriptIds.indexOf(id) > -1;
+export const lessonExtrasAvailable = (state, id) =>
+  state.teacherSections.lessonExtrasScriptIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using
