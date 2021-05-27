@@ -77,6 +77,7 @@ describe('ScriptEditor', () => {
       initialIsStable: false,
       initialHidden: true,
       hasCourse: false,
+      scriptPath: '/s/test-script',
       initialLessonLevelData:
         "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n"
     };
@@ -309,7 +310,7 @@ describe('ScriptEditor', () => {
 
       const saveBar = wrapper.find('SaveBar');
 
-      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
       saveAndKeepEditingButton.simulate('click');
@@ -346,7 +347,7 @@ describe('ScriptEditor', () => {
 
       const saveBar = wrapper.find('SaveBar');
 
-      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
       saveAndKeepEditingButton.simulate('click');
@@ -375,7 +376,7 @@ describe('ScriptEditor', () => {
 
       const saveBar = wrapper.find('SaveBar');
 
-      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
       saveAndKeepEditingButton.simulate('click');
@@ -407,7 +408,7 @@ describe('ScriptEditor', () => {
 
       const saveBar = wrapper.find('SaveBar');
 
-      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
       saveAndKeepEditingButton.simulate('click');
@@ -438,7 +439,7 @@ describe('ScriptEditor', () => {
 
       const saveBar = wrapper.find('SaveBar');
 
-      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
       saveAndKeepEditingButton.simulate('click');
@@ -477,7 +478,7 @@ describe('ScriptEditor', () => {
 
       const saveBar = wrapper.find('SaveBar');
 
-      const saveAndCloseButton = saveBar.find('button').at(1);
+      const saveAndCloseButton = saveBar.find('button').at(2);
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
@@ -508,7 +509,7 @@ describe('ScriptEditor', () => {
 
       const saveBar = wrapper.find('SaveBar');
 
-      const saveAndCloseButton = saveBar.find('button').at(1);
+      const saveAndCloseButton = saveBar.find('button').at(2);
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
