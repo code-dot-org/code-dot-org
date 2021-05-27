@@ -60,8 +60,7 @@ Feature: Using the teacher homepage sections feature
 
     And the href of selector ".uitest-script-next-banner" contains the section id
     And I wait for 3 seconds
-    And the href of selector ".uitest-ProgressPill:first" contains the section id
-    And the href of selector ".uitest-ProgressBubble:first" contains the section id
+    And the href of selector ".progress-bubble-link:first" contains the section id
     And the href of selector "a:contains(Computer Science Principles)" contains the section id
 
     # navigate to a script level
@@ -74,8 +73,8 @@ Feature: Using the teacher homepage sections feature
     And I click selector ".header_popup_link"
     And I wait until element "a:contains(View Unit Overview)" is visible
     And the href of selector "a:contains(View Unit Overview)" contains the section id
-    And I wait until element ".header_popup_body .uitest-ProgressBubble:first" is visible
-    And the href of selector ".header_popup_body .uitest-ProgressBubble:first" contains the section id
+    And I wait until element ".header_popup_body .progress-bubble-link:first" is visible
+    And the href of selector ".header_popup_body .progress-bubble-link:first" contains the section id
 
     # Save the newer section id
     Given I am on "http://studio.code.org/home"
