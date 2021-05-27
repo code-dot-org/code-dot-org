@@ -8,13 +8,7 @@ import i18n from '@cdo/locale';
 import {currentLocation, makeEnum} from '@cdo/apps/utils';
 import TooltipWithIcon from './TooltipWithIcon';
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
-import {
-  flex,
-  font,
-  marginLeftRight,
-  marginTopBottom,
-  tightlyConstrainedSizeStyle
-} from './progressStyles';
+import {flex, font, marginLeftRight, marginTopBottom} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
 import './bubbleStyles.scss';
 
@@ -229,7 +223,7 @@ const bubbleSizes = {
 };
 
 const circleMargins = {
-  [BubbleSize.dot]: 3,
+  [BubbleSize.dot]: 2,
   [BubbleSize.letter]: 3,
   [BubbleSize.full]: 2
 };
@@ -324,7 +318,10 @@ function shapeSizeStyle(shape, size) {
   const bubbleSize = bubbleSizes[shape][size];
   const fontSize = fontSizes[size];
   return {
-    ...tightlyConstrainedSizeStyle(bubbleSize),
+    width: bubbleSize,
+    height: bubbleSize,
+    maxWidth: bubbleSize,
+    maxHeight: bubbleSize,
     borderRadius: bubbleBorderRadii[shape][size],
     fontSize: fontSize,
     lineHeight: `${fontSize}px`,
