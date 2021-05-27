@@ -11,8 +11,8 @@ module Pd::Foorm
 
       assert_includes reshaped_submission, {
         submission_id: submission.id,
-        question_name: 'overall_success',
-        matrix_item_name: 'more_prepared',
+        question_name: 'more_prepared',
+        matrix_item_name: 'overall_success',
         response_value: '1',
         response_text: 'Strongly Disagree'
       }
@@ -24,8 +24,8 @@ module Pd::Foorm
 
       assert_includes reshaped_submission, {
         submission_id: submission.id,
-        question_name: 'facilitator_effectiveness',
-        matrix_item_name: 'on_track',
+        question_name: 'on_track',
+        matrix_item_name: 'facilitator_effectiveness',
         response_value: '7',
         response_text: 'Strongly Agree'
       }
