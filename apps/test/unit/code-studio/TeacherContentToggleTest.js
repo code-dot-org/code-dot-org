@@ -39,7 +39,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Teacher"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -79,7 +79,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Teacher"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -105,7 +105,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={false}
         viewAs="Teacher"
-        hiddenStagesInitialized={true}
+        hiddenLessonsInitialized={true}
         sectionsAreLoaded={true}
         isHiddenStage={false}
         isLockedStage={false}
@@ -131,7 +131,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={false}
         viewAs="Teacher"
-        hiddenStagesInitialized={true}
+        hiddenLessonsInitialized={true}
         sectionsAreLoaded={true}
         isHiddenStage={false}
         isLockedStage={true}
@@ -157,7 +157,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Student"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -184,7 +184,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Student"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -193,7 +193,7 @@ describe('TeacherContentToggle', () => {
     );
 
     component.setProps({
-      hiddenStagesInitialized: true,
+      hiddenLessonsInitialized: true,
       isHiddenStage: true
     });
 
@@ -231,7 +231,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Student"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -278,7 +278,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Student"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -289,7 +289,7 @@ describe('TeacherContentToggle', () => {
     component.setProps({
       sectionsAreLoaded: true,
       isLockedStage: true,
-      hiddenStagesInitialized: true,
+      hiddenLessonsInitialized: true,
       isHiddenStage: true
     });
 
@@ -316,7 +316,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Student"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -327,7 +327,7 @@ describe('TeacherContentToggle', () => {
     component.setProps({
       sectionsAreLoaded: true,
       isLockedStage: false,
-      hiddenStagesInitialized: true,
+      hiddenLessonsInitialized: true,
       isHiddenStage: false
     });
 

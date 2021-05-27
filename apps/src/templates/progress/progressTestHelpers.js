@@ -89,7 +89,7 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       selectedSectionId: '11'
     },
     hiddenLesson: Immutable.fromJS({
-      stagesBySection: {
+      lessonsBySection: {
         '11': {[lessonId]: true}
       }
     }),
@@ -123,7 +123,7 @@ export const createStoreWithLockedLesson = (
       selectedSectionId: '11'
     },
     hiddenLesson: Immutable.fromJS({
-      stagesBySection: {
+      lessonsBySection: {
         '11': {[lessonId]: true}
       }
     }),

@@ -29,7 +29,7 @@ describe('progressHelpers', () => {
         selectedSectionId: '11'
       },
       hiddenLesson: Immutable.fromJS({
-        stagesBySection: {
+        lessonsBySection: {
           '11': {'3': true}
         }
       })
