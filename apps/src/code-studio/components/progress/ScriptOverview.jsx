@@ -16,7 +16,7 @@ import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
-import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
   onDismissRedirectDialog,
   dismissedRedirectDialog

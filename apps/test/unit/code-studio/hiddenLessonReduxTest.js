@@ -11,7 +11,7 @@ import reducer, {
   isScriptHiddenForSection,
   initializeHiddenScripts,
   STUDENT_SECTION_ID
-} from '@cdo/apps/code-studio/hiddenStageRedux';
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
   stubRedux,
   restoreRedux,
@@ -25,7 +25,7 @@ function fakeStageLockReducer(state, action) {
   };
 }
 
-describe('hiddenStageRedux', () => {
+describe('hiddenLessonRedux', () => {
   const initialState = reducer(undefined, {});
 
   describe('reducer tests', () => {

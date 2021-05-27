@@ -7,7 +7,7 @@ import lessonLock from './lessonLockRedux';
 import viewAs from './viewAsRedux';
 import shareDialog from './components/shareDialogRedux';
 import exportDialog from './components/exportDialogRedux';
-import hiddenStage from './hiddenStageRedux';
+import hiddenStage from './hiddenLessonRedux';
 import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
