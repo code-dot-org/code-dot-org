@@ -105,7 +105,7 @@ export default function reducer(state = new HiddenState(), action) {
  *   that are hidden for that section.
  * @param {bool} hideableLessonsAllowed - True if we're able to toggle hidden lessons
  */
-export function setHiddenStages(
+export function setHiddenLessons(
   hiddenLessonsPerSection,
   hideableLessonsAllowed
 ) {
@@ -115,7 +115,7 @@ export function setHiddenStages(
     hideableLessonsAllowed
   };
 }
-export function updateHiddenStage(sectionId, lessonId, hidden) {
+export function updateHiddenLesson(sectionId, lessonId, hidden) {
   return {
     type: UPDATE_HIDDEN_LESSON,
     sectionId,
@@ -137,10 +137,10 @@ export function updateHiddenScript(sectionId, scriptId, hidden) {
  * Toggle the hidden state of a particular lesson in a section, updating our local
  * state to reflect the change, and posting to the server.
  */
-export function toggleHiddenStage(scriptName, sectionId, lessonId, hidden) {
+export function toggleHiddenLesson(scriptName, sectionId, lessonId, hidden) {
   return dispatch => {
     // update local state
-    dispatch(updateHiddenStage(sectionId, lessonId, hidden));
+    dispatch(updateHiddenLesson(sectionId, lessonId, hidden));
     postToggleHidden(scriptName, sectionId, lessonId, hidden);
   };
 }
@@ -188,10 +188,10 @@ function postToggleHidden(scriptName, sectionId, lessonId, hidden) {
  * Query server for hidden lesson ids, and (potentially) toggle whether or not we
  * are able to mark lessons as hideable.
  * @param {string} scriptName
- * @param {boolean} canHideStages If true, inform redux that we're able to toggle
+ * @param {boolean} canHideLessons If true, inform redux that we're able to toggle
  *   whether or not lessons are hidden.
  */
-export function getHiddenStages(scriptName, canHideStages) {
+export function getHiddenLessons(scriptName, canHideLessons) {
   return dispatch => {
     $.ajax({
       type: 'GET',
@@ -200,7 +200,7 @@ export function getHiddenStages(scriptName, canHideStages) {
       contentType: 'application/json'
     })
       .done(response =>
-        dispatch(initializeHiddenStages(response, canHideStages))
+        dispatch(initializeHiddenLessons(response, canHideLessons))
       )
       .fail(err => console.error(err));
   };
@@ -211,9 +211,9 @@ export function getHiddenStages(scriptName, canHideStages) {
  * will be a list of hidden lesson ids. In the case of a teacher, it will be
  * a mapping from section id to a list of hidden lesson ids for that section
  * @param {string[]|Object<string, string[]>} data
- * @param {boolean} canHideStages - True if we're able to toggle hidden lessons
+ * @param {boolean} canHideLessons - True if we're able to toggle hidden lessons
  */
-function initializeHiddenStages(data, canHideStages) {
+function initializeHiddenLessons(data, canHideLessons) {
   return dispatch => {
     // For a teacher, we get back a map of section id to hidden lesson ids
     // For a student, we just get back a list of hidden lesson ids. Turn that
@@ -222,7 +222,7 @@ function initializeHiddenStages(data, canHideStages) {
       data = {[STUDENT_SECTION_ID]: data};
     }
 
-    dispatch(setHiddenStages(data, !!canHideStages));
+    dispatch(setHiddenLessons(data, !!canHideLessons));
   };
 }
 
@@ -259,7 +259,7 @@ export function initializeHiddenScripts(data) {
  * Helper to determine whether a lesson is hidden for a given section. If no
  * section is given, we assume this is a student and use STUDENT_SECTION_ID
  */
-export function isStageHiddenForSection(state, sectionId, lessonId) {
+export function isLessonHiddenForSection(state, sectionId, lessonId) {
   return isHiddenForSection(state, sectionId, lessonId, 'lessonsBySection');
 }
 
