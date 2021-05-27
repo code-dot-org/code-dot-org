@@ -100,7 +100,7 @@ class GenerateResults extends Component {
         : 1;
 
     const headMoveAmount = tableOpacity <= 1 / 4 ? tableOpacity * 4 : 1;
-    const botTransformY = -50 - headMoveAmount * 30;
+    const botTransformY = -50 - headMoveAmount * 50;
     const botContainerTransform = `translateX(-25%) translateY(${botTransformY}%)`;
 
     // Let's still show the starting row on our very first frame, because we might

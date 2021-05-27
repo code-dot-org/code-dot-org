@@ -423,26 +423,35 @@ export const styles = {
 
   resultsStatement: {
     float: "left",
-    width: "80%"
+    width: "75%"
   },
 
-  resultsAccuracy: { float: "left", fontSize: 14, width: "10%" },
+  resultsAccuracy: {
+    float: "left",
+    fontSize: 14,
+    width: "10%",
+    paddingTop: 1,
+    lineHeight: 1.3
+  },
 
   resultsDetailsButtonContainer: {
     float: "left",
     textAlign: "center",
-    width: "10%"
+    width: "15%"
   },
 
   resultsDetailsButton: {
     fontSize: 14,
-    padding: "4px 12px",
+    padding: "8px 12px",
     margin: 0,
     border: "none",
     cursor: "pointer",
     borderRadius: 5,
     backgroundColor: "#61d2eb",
-    color: "white"
+    color: "white",
+    lineHeight: 1.3,
+    position: "relative",
+    top: -7
   },
 
   resultsToggle: {
