@@ -99,7 +99,10 @@ class GenerateResults extends Component {
         ? 0
         : 1;
 
-    const headMoveAmount = tableOpacity <= 1 / 4 ? tableOpacity * 4 : 1;
+    const headMoveAmount =
+      this.state.frame < framesPerCycle / 4
+        ? this.state.frame / (framesPerCycle / 4)
+        : 1;
     const botTransformY = -50 - headMoveAmount * 50;
     const botContainerTransform = `translateX(-25%) translateY(${botTransformY}%)`;
 
