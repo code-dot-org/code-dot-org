@@ -28,15 +28,17 @@ export default class DefaultVisualization extends React.Component {
           style={styles.transparent}
           leftJustified
         />
-        {/* TODO: Add the fullscreen icon back when we are ready to implement it. */}
-        {/* <PaneButton
+        {/* TODO: Uncomment iconClass and remove icon prop when we are ready to implement fullscreen. */}
+        {/* The empty icon element keeps everything centered in the header pane. */}
+        <PaneButton
           headerHasFocus
-          iconClass={this.fullscreenIcon()}
+          // iconClass={this.fullscreenIcon()}
+          icon={<span style={{width: 13}} />}
           onClick={() => {}}
           label=""
           isRtl={false}
           style={styles.transparent}
-        /> */}
+        />
         <PaneSection>Preview</PaneSection>
         <ProtectedVisualizationDiv />
       </PaneHeader>
