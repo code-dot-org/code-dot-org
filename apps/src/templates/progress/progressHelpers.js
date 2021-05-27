@@ -1,6 +1,6 @@
 import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {isLessonHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {PUZZLE_PAGE_NONE} from './progressTypes';
 import {
@@ -24,10 +24,10 @@ export function lessonIsVisible(lesson, state, viewAs) {
     throw new Error('missing param viewAs in lessonIsVisible');
   }
 
-  const hiddenStageState = state.hiddenStage;
+  const hiddenStageState = state.hiddenLesson;
   const sectionId = state.teacherSections.selectedSectionId;
 
-  const isHidden = isStageHiddenForSection(
+  const isHidden = isLessonHiddenForSection(
     hiddenStageState,
     sectionId,
     lesson.id

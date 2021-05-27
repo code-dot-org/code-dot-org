@@ -8,7 +8,7 @@ import {
   mapStateToProps
 } from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
-import * as hiddenStageRedux from '@cdo/apps/code-studio/hiddenStageRedux';
+import * as hiddenLessonRedux from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 describe('TeacherContentToggle', () => {
@@ -39,7 +39,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Teacher"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -79,7 +79,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Teacher"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -105,7 +105,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={false}
         viewAs="Teacher"
-        hiddenStagesInitialized={true}
+        hiddenLessonsInitialized={true}
         sectionsAreLoaded={true}
         isHiddenStage={false}
         isLockedStage={false}
@@ -131,7 +131,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={false}
         viewAs="Teacher"
-        hiddenStagesInitialized={true}
+        hiddenLessonsInitialized={true}
         sectionsAreLoaded={true}
         isHiddenStage={false}
         isLockedStage={true}
@@ -157,7 +157,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Student"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -184,7 +184,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Student"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -193,7 +193,7 @@ describe('TeacherContentToggle', () => {
     );
 
     component.setProps({
-      hiddenStagesInitialized: true,
+      hiddenLessonsInitialized: true,
       isHiddenStage: true
     });
 
@@ -204,7 +204,7 @@ describe('TeacherContentToggle', () => {
       hiddenStageElement
     ] = root.children().toArray();
 
-    // content is hidden, hiddenStage is visible
+    // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, 'hidden');
     assert.equal(lockedStageElement.style.display, 'none');
@@ -231,7 +231,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Student"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -251,7 +251,7 @@ describe('TeacherContentToggle', () => {
       hiddenStageElement
     ] = root.children().toArray();
 
-    // content is hidden, hiddenStage is visible
+    // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, 'hidden');
     assert.equal(lockedStageElement.style.display, '');
@@ -278,7 +278,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Student"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -289,7 +289,7 @@ describe('TeacherContentToggle', () => {
     component.setProps({
       sectionsAreLoaded: true,
       isLockedStage: true,
-      hiddenStagesInitialized: true,
+      hiddenLessonsInitialized: true,
       isHiddenStage: true
     });
 
@@ -300,7 +300,7 @@ describe('TeacherContentToggle', () => {
       hiddenStageElement
     ] = root.children().toArray();
 
-    // content is hidden, hiddenStage is visible
+    // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, 'hidden');
     assert.equal(lockedStageElement.style.display, 'none');
@@ -316,7 +316,7 @@ describe('TeacherContentToggle', () => {
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
         viewAs="Student"
-        hiddenStagesInitialized={false}
+        hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenStage={false}
         isLockedStage={false}
@@ -327,7 +327,7 @@ describe('TeacherContentToggle', () => {
     component.setProps({
       sectionsAreLoaded: true,
       isLockedStage: false,
-      hiddenStagesInitialized: true,
+      hiddenLessonsInitialized: true,
       isHiddenStage: false
     });
 
@@ -338,7 +338,7 @@ describe('TeacherContentToggle', () => {
       hiddenStageElement
     ] = root.children().toArray();
 
-    // content is hidden, hiddenStage is visible
+    // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, '');
     assert.equal(lockedStageElement.style.display, 'none');
@@ -353,8 +353,8 @@ describe('TeacherContentToggle', () => {
     afterEach(() => {
       progressHelpers.lessonIsLockedForAllStudents.restore &&
         progressHelpers.lessonIsLockedForAllStudents.restore();
-      hiddenStageRedux.isStageHiddenForSection.restore &&
-        hiddenStageRedux.isStageHiddenForSection.restore();
+      hiddenLessonRedux.isLessonHiddenForSection.restore &&
+        hiddenLessonRedux.isLessonHiddenForSection.restore();
     });
 
     describe('when viewing as student', () => {
@@ -363,7 +363,7 @@ describe('TeacherContentToggle', () => {
         selectedSectionId: {},
         progress: {},
         teacherSections: {},
-        hiddenStage: {},
+        hiddenLesson: {},
         verifiedTeacher: {}
       };
 
@@ -371,7 +371,7 @@ describe('TeacherContentToggle', () => {
         sinon
           .stub(progressHelpers, 'lessonIsLockedForAllStudents')
           .returns(true);
-        sinon.stub(hiddenStageRedux, 'isStageHiddenForSection').returns(true);
+        sinon.stub(hiddenLessonRedux, 'isLessonHiddenForSection').returns(true);
 
         const props = mapStateToProps(state);
 
@@ -383,7 +383,9 @@ describe('TeacherContentToggle', () => {
         sinon
           .stub(progressHelpers, 'lessonIsLockedForAllStudents')
           .returns(false);
-        sinon.stub(hiddenStageRedux, 'isStageHiddenForSection').returns(false);
+        sinon
+          .stub(hiddenLessonRedux, 'isLessonHiddenForSection')
+          .returns(false);
 
         const props = mapStateToProps(state);
 
@@ -406,7 +408,7 @@ describe('TeacherContentToggle', () => {
           ]
         },
         teacherSections: {},
-        hiddenStage: {},
+        hiddenLesson: {},
         verifiedTeacher: {
           isVerified: true
         }
@@ -421,7 +423,7 @@ describe('TeacherContentToggle', () => {
 
       it('sets locked/hidden to false', () => {
         sinon.spy(progressHelpers, 'lessonIsLockedForAllStudents');
-        sinon.spy(hiddenStageRedux, 'isStageHiddenForSection');
+        sinon.spy(hiddenLessonRedux, 'isLessonHiddenForSection');
 
         const props = mapStateToProps(state);
 
@@ -432,7 +434,7 @@ describe('TeacherContentToggle', () => {
           false
         );
         assert.strictEqual(
-          hiddenStageRedux.isStageHiddenForSection.called,
+          hiddenLessonRedux.isLessonHiddenForSection.called,
           false
         );
       });

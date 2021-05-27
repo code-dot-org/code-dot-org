@@ -2331,14 +2331,14 @@ class User < ApplicationRecord
 
   # This method will extract a list of hidden ids by section. The type of ids depends
   # on the input. If hidden_lessons is true, id is expected to be a script id and
-  # we look for stages that are hidden. If hidden_lessons is false, id is expected
+  # we look for lessons that are hidden. If hidden_lessons is false, id is expected
   # to be a course_id, and we look for hidden scripts.
-  # @param {boolean} hidden_lessons - True if we're looking for hidden stages, false
+  # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden scripts.
   # @return {Hash<string,number[]>
   def get_teacher_hidden_ids(hidden_lessons)
     # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden stages/scripts in that section
+    # a mapping from section id to hidden lessons/scripts in that section
     hidden_by_section = {}
     sections.each do |section|
       hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_script_ids([section])
@@ -2347,10 +2347,10 @@ class User < ApplicationRecord
   end
 
   # This method method will go through each of the sections in which we're a member
-  # and determine which stages/scripts should be hidden
-  # @param {boolean} hidden_lessons - True if we're looking for hidden stages, false
+  # and determine which lessons/scripts should be hidden
+  # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden scripts.
-  # @return {number[]} Set of stage/script ids that should be hidden
+  # @return {number[]} Set of lesson/script ids that should be hidden
   def get_student_hidden_ids(assign_id, hidden_lessons)
     sections = sections_as_student
     return [] if sections.empty?
@@ -2361,11 +2361,11 @@ class User < ApplicationRecord
     end
 
     if assigned_sections.empty?
-      # if we have no sections matching this assignment, we consider a stage/script
+      # if we have no sections matching this assignment, we consider a lesson/script
       # hidden if any of our sections hides it
       return (hidden_lessons ? hidden_lesson_ids(sections) : hidden_script_ids(sections)).uniq
     else
-      # if we do have sections matching this assignment, we consider a stage/script
+      # if we do have sections matching this assignment, we consider a lesson/script
       # hidden only if it is hidden in every one of the sections the student belongs
       # to that match this assignment
       all_ids = hidden_lessons ? hidden_lesson_ids(assigned_sections) : hidden_script_ids(assigned_sections)

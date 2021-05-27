@@ -1,15 +1,24 @@
 /* globals dashboard */
 import {WebSocketMessageType} from './constants';
 import {handleException} from './javabuilderExceptionHandler';
+const queryString = require('query-string');
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
-  constructor(channelId, javabuilderUrl, onMessage, miniApp, serverLevelId) {
+  constructor(
+    channelId,
+    javabuilderUrl,
+    onMessage,
+    miniApp,
+    serverLevelId,
+    options
+  ) {
     this.channelId = channelId;
     this.javabuilderUrl = javabuilderUrl;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;
+    this.options = options;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -22,7 +31,8 @@ export default class JavabuilderConnection {
         projectUrl: dashboard.project.getProjectSourcesUrl(),
         channelId: this.channelId,
         projectVersion: dashboard.project.getCurrentSourceVersionId(),
-        levelId: this.levelId
+        levelId: this.levelId,
+        options: this.options
       }
     })
       .done(result => this.establishWebsocketConnection(result.token))
@@ -36,12 +46,16 @@ export default class JavabuilderConnection {
 
   establishWebsocketConnection(token) {
     let url = this.javabuilderUrl;
+    const optionsStr = queryString.stringify(this.options);
     if (window.location.hostname.includes('localhost')) {
       // We're hitting the local javabuilder server. Just pass the projectUrl and levelId.
       // TODO: Enable token decryption on local javabuilder server.
-      url += `?projectUrl=${dashboard.project.getProjectSourcesUrl()}?levelId=${
+      url += `?projectUrl=${dashboard.project.getProjectSourcesUrl()}&levelId=${
         this.levelId
       }`;
+      if (optionsStr) {
+        url += `&${optionsStr}`;
+      }
     } else {
       url += `?Authorization=${token}`;
     }

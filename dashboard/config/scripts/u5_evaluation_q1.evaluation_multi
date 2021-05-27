@@ -1,4 +1,4 @@
 name 'U5 evaluation q1’
 question ‘Are you new to event-driven programming?’ 
-answer ‘Yes’, weight: 2, stage_name:'Event Driven Programming'
+answer ‘Yes’, weight: 2, lesson_name:'Event Driven Programming'
 answer ‘No’

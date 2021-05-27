@@ -49,7 +49,7 @@ def verify_bubble_type(selector, type)
 end
 
 def header_bubble_selector(level_num)
-  ".header_level .react_stage a:nth(#{level_num - 1}) .uitest-bubble"
+  ".header_level .react_stage a:nth(#{level_num - 1}) .progress-bubble"
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
@@ -72,12 +72,12 @@ Then /^I open the progress drop down of the current page$/ do
 end
 
 Then /^I verify progress in the drop down of the current page is "([^"]*)" for lesson (\d+) level (\d+)/ do |test_result, lesson, level|
-  selector = "tbody tr:nth(#{lesson.to_i - 1}) a:contains(#{level.to_i}) .uitest-bubble"
+  selector = "tbody tr:nth(#{lesson.to_i - 1}) a:contains(#{level.to_i}) .progress-bubble"
   verify_progress(selector, test_result)
 end
 
 Then /^I verify progress for lesson (\d+) level (\d+) is "([^"]*)"/ do |lesson, level, test_result|
-  selector = "tbody tr:nth(#{lesson.to_i - 1}) a:contains(#{level.to_i}) .uitest-bubble"
+  selector = "tbody tr:nth(#{lesson.to_i - 1}) a:contains(#{level.to_i}) .progress-bubble"
   verify_progress(selector, test_result)
 end
 

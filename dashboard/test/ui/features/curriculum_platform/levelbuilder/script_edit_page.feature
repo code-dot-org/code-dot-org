@@ -28,8 +28,8 @@ Scenario: Save changes to a script
   Given I create a levelbuilder named "Levi"
   And I create a temp script and lesson
   And I view the temp script overview page
-  And element ".uitest-bubble" contains text "1"
-  And element ".uitest-bubble" does not contain text "2"
+  And element ".progress-bubble" contains text "1"
+  And element ".progress-bubble" does not contain text "2"
 
   When I view the temp script edit page
   And element "#script_text" contains text "lesson 'temp-lesson', display_name: 'Temp Lesson'"
@@ -40,8 +40,8 @@ Scenario: Save changes to a script
   And I click selector ".btn-primary" to load a new page
   And I wait until element "#script-title" is visible
 
-  Then element ".uitest-bubble" contains text "1"
-  And element ".uitest-bubble" contains text "2"
+  Then element ".progress-bubble" contains text "1"
+  And element ".progress-bubble" contains text "2"
 
   And I delete the temp script with lessons
 
