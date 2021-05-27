@@ -3,6 +3,7 @@ import JavalabConsole from './JavalabConsole';
 import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
 import JavalabSettings from './JavalabSettings';
+import JavalabButton from './JavalabButton';
 import {appendOutputLog, setIsDarkMode} from './javalabRedux';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -53,15 +54,11 @@ class JavalabView extends React.Component {
     ];
   };
 
-  getButtonStyles = isSettingsButton => {
-    const {isDarkMode} = this.props;
-    if (isDarkMode) {
-      return styles.singleButton;
-    } else if (isSettingsButton) {
-      return {...styles.singleButton, backgroundColor: color.orange};
-    } else {
-      return {...styles.singleButton, backgroundColor: color.cyan};
-    }
+  getButtonStyles = () => {
+    return {
+      ...styles.button.all,
+      ...(this.props.isDarkMode ? styles.button.dark : styles.button.light)
+    };
   };
 
   render() {
@@ -74,11 +71,13 @@ class JavalabView extends React.Component {
       handleVersionHistory,
       visualization
     } = this.props;
+
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
     } else {
       document.body.style.backgroundColor = color.background_gray;
     }
+
     return (
       <StudioAppWrapper>
         <div style={styles.javalab}>
@@ -87,7 +86,13 @@ class JavalabView extends React.Component {
             className="responsive"
             style={styles.instructionsAndPreview}
           >
-            <TopInstructions mainStyle={styles.instructions} standalone />
+            <JavalabSettings>{this.renderSettings()}</JavalabSettings>
+            <TopInstructions
+              mainStyle={styles.instructions}
+              standalone
+              displayDocumentationTab
+              displayReviewTab
+            />
             <div style={styles.preview}>{visualization}</div>
           </div>
           <VisualizationResizeBar />
@@ -104,40 +109,26 @@ class JavalabView extends React.Component {
             />
             <div style={styles.consoleAndButtons}>
               <div style={styles.buttons}>
-                <button
-                  type="button"
-                  style={this.getButtonStyles(false)}
+                <JavalabButton
+                  icon={<FontAwesome icon="stop" className="fa-2x" />}
+                  text="Stop"
+                  style={this.getButtonStyles()}
                   onClick={() => {}}
-                >
-                  <FontAwesome icon="stop" className="fa-2x" />
-                  <br />
-                  Stop
-                </button>
-                <button
-                  type="button"
-                  style={this.getButtonStyles(false)}
+                />
+                <JavalabButton
+                  icon={<FontAwesome icon="check" className="fa-2x" />}
+                  text="Continue"
+                  style={this.getButtonStyles()}
                   onClick={onContinue}
-                >
-                  <FontAwesome icon="check" className="fa-2x" />
-                  <br />
-                  Continue
-                </button>
+                />
               </div>
               <div style={styles.buttons}>
-                <JavalabSettings
-                  style={this.getButtonStyles(true /* isSettingsButton */)}
-                >
-                  {this.renderSettings()}
-                </JavalabSettings>
-                <button
-                  type="button"
-                  style={this.getButtonStyles(false)}
+                <JavalabButton
+                  icon={<FontAwesome icon="play" className="fa-2x" />}
+                  text="Run"
+                  style={this.getButtonStyles()}
                   onClick={onRun}
-                >
-                  <FontAwesome icon="play" className="fa-2x" />
-                  <br />
-                  Run
-                </button>
+                />
               </div>
               <div style={styles.consoleStyle}>
                 <JavalabConsole onInputMessage={onInputMessage} />
@@ -193,14 +184,10 @@ const styles = {
     display: 'flex',
     flexDirection: 'column'
   },
-  singleButton: {
-    // this matches the current code mirror theme we are using
-    // TODO: either add to color.scss or use a color from there depending
-    // on final theme choice.
-    backgroundColor: color.darkest_gray,
-    color: color.white,
-    width: 95,
-    textAlign: 'center'
+  button: {
+    all: {width: 95},
+    light: {backgroundColor: color.cyan},
+    dark: {backgroundColor: color.darkest_gray}
   },
   clear: {
     clear: 'both'

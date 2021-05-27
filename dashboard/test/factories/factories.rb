@@ -642,6 +642,10 @@ FactoryGirl.define do
     game {Game.curriculum_reference}
   end
 
+  factory :javalab, parent: :level, class: Javalab do
+    game {Game.javalab}
+  end
+
   factory :block do
     transient do
       sequence(:index)

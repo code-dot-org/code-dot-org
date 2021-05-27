@@ -2,7 +2,7 @@
   "script": {
     "name": "coursea-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-05-12 20:08:51 UTC",
+    "serialized_at": "2021-05-26 19:35:47 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -1721,7 +1721,7 @@
       "key": "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329",
       "position": 7,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329",
@@ -2278,7 +2278,7 @@
       "key": "5580045e-132a-4c17-8c3f-522b7f01f442",
       "position": 10,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "5580045e-132a-4c17-8c3f-522b7f01f442",
@@ -2413,7 +2413,13 @@
       "key": "1e2c8e78-0b20-48a4-aeba-08cad3060e42",
       "position": 9,
       "properties": {
-        "progression_name": "Free Play"
+        "progression_name": "Free Play",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online - Video**"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1e2c8e78-0b20-48a4-aeba-08cad3060e42",
@@ -2424,27 +2430,10 @@
       "key": "cfcb405b-99fc-4686-bd02-4e37b3f5c337",
       "position": 10,
       "properties": {
-        "name": "Lesson Extras",
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "cfcb405b-99fc-4686-bd02-4e37b3f5c337",
-        "lesson_activity.key": "dc4d4171-f55a-4ed3-a799-469b6932d7d7"
-      }
-    },
-    {
-      "key": "90f0cdae-7f33-4b8f-a7da-4346a5913620",
-      "position": 11,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online - Video**"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "90f0cdae-7f33-4b8f-a7da-4346a5913620",
         "lesson_activity.key": "dc4d4171-f55a-4ed3-a799-469b6932d7d7"
       }
     },
@@ -2656,7 +2645,7 @@
       "key": "c37ca368-ea56-4b4d-a06c-1d2b94516bf8",
       "position": 2,
       "properties": {
-        "progression_name": "Video: Create a Story"
+        "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
         "activity_section.key": "c37ca368-ea56-4b4d-a06c-1d2b94516bf8",
@@ -2700,7 +2689,7 @@
       "key": "40ddc694-3a85-4874-b3ad-71810e6a0474",
       "position": 6,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "40ddc694-3a85-4874-b3ad-71810e6a0474",
@@ -3699,7 +3688,7 @@
         "level_keys": [
           "courseB_maze_seq_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -3725,7 +3714,7 @@
         "level_keys": [
           "courseB_maze_seq_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4742,7 +4731,7 @@
         "level_keys": [
           "courseA_collector_loops_challenge2kp_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4768,7 +4757,7 @@
         "level_keys": [
           "courseA_collector_loops_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5159,7 +5148,7 @@
         "level_keys": [
           "courseA_artist_loops_challenge2a_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5185,7 +5174,7 @@
         "level_keys": [
           "courseA_artist_loops_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5237,7 +5226,7 @@
         "level_keys": [
           "courseA_video_events_2021"
         ],
-        "progression": "Video: Create a Story"
+        "progression": "Video: Introduction to Play Lab"
       },
       "named_level": false,
       "bonus": false,
@@ -5445,7 +5434,7 @@
         "level_keys": [
           "courseA_playlab_events_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5471,7 +5460,7 @@
         "level_keys": [
           "courseA_playlab_events_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
