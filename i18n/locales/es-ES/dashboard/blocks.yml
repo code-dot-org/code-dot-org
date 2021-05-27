@@ -1283,8 +1283,12 @@ es:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
+      gamelab_startAvoiding:
+        text: "{SPRITE} empieza a evitar {TARGET}"
       gamelab_startFollowing:
         text: "{SPRITE} empieza seguimiento {TARGET}"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} deja de evitar a otros sprites"
       gamelab_stopCollectingData:
         text: parar recopilación de datos
       gamelab_stopFollowing:
@@ -1606,6 +1610,11 @@ es:
           {A5}{A6}{A7}{A8}
           {B1}{B2}{B3}{B4}
           {B5}{B6}{B7}{B8}
+      Mikelab_setupOutbreak:
+        text: |-
+          configuración del brote
+          de la población:{SPRITE2N}
+          {TOGGLE}virus
       Mikelab_setupSim:
         text: |-
           simulación de la configuración con
@@ -1685,14 +1694,14 @@ es:
         text: los monstruos empiezan a deambular
       Outbreak_beginWearingMasks:
         text: los monstruos empiezan a llevar mascarilla
-      Outbreak_layoutSprites:
-        text: diseñar monstruos como un {FORMAT}
-        options:
-          FORMAT:
-            '"grid"': cuadrícula
-            '"border"': frontera
-            '"row"': fila
-            '"random"': aleatorio
+      Outbreak_layoutBorder:
+        text: ordenar monstruos en un borde
+      Outbreak_layoutClusters:
+        text: ordenar los monstruos en grupos de {NUM}
+      Outbreak_layoutGrid:
+        text: ordenar monstruos como una cuadrícula
+      Outbreak_layoutRandom:
+        text: ordenar los monstruos al azar
       Outbreak_setSpeed:
         text: ajustar velocidad monstruo a {VAL}
       Outbreak_setupOutbreak:
