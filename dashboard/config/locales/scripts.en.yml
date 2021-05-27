@@ -22929,7 +22929,7 @@ en:
 
             **Coming Soon! This unit will be available in July 2021!**
         kodea-pd-2021:
-          title: Teaching Computer Science Fundamentals
+          title: CSF Online PD - Kodea
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
@@ -22990,3 +22990,5 @@ en:
               name: Next Steps
               description_student: ''
               description_teacher: ''
+          lesson_groups: {}
+          name: kodea-pd-2021
