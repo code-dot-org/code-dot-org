@@ -177,5 +177,9 @@ export default connect(
       state.teacherSections.sectionsAreLoaded &&
       state.teacherSections.sectionIds.length === 0
   }),
-  {toggleHiddenLesson}
+  dispatch => ({
+    toggleHiddenLesson(scriptName, sectionId, lessonId, hidden) {
+      dispatch(toggleHiddenLesson(scriptName, sectionId, lessonId, hidden));
+    }
+  })
 )(ProgressLessonTeacherInfo);

@@ -76,6 +76,7 @@ const unplugged = {
   activeId: '2093',
   is_concept_level: false,
   kind: 'unplugged',
+  isUnplugged: true,
   position: 1,
   title: 1,
   url: 'http://studio.code.org/s/course1/lessons/1/levels/1'

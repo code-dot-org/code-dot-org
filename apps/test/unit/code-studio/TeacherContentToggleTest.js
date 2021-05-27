@@ -194,7 +194,7 @@ describe('TeacherContentToggle', () => {
 
     component.setProps({
       hiddenLessonsInitialized: true,
-      isHiddenLesson: true
+      isHiddenStage: true
     });
 
     let root = $(component.html());
@@ -288,9 +288,9 @@ describe('TeacherContentToggle', () => {
 
     component.setProps({
       sectionsAreLoaded: true,
-      isLockedLesson: true,
+      isLockedStage: true,
       hiddenLessonsInitialized: true,
-      isHiddenLesson: true
+      isHiddenStage: true
     });
 
     const root = $(component.html());
@@ -326,9 +326,9 @@ describe('TeacherContentToggle', () => {
 
     component.setProps({
       sectionsAreLoaded: true,
-      isLockedLesson: false,
+      isLockedStage: false,
       hiddenLessonsInitialized: true,
-      isHiddenLesson: false
+      isHiddenStage: false
     });
 
     const root = $(component.html());
@@ -337,7 +337,6 @@ describe('TeacherContentToggle', () => {
       lockedLessonElement,
       hiddenLessonElement
     ] = root.children().toArray();
-
     // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, '');

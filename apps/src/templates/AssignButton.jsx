@@ -119,7 +119,7 @@ export const UnconnectedAssignButton = AssignButton;
 
 export default connect(
   state => ({
-    hiddenLessonState: state.hiddenLesson,
+    hiddenStageState: state.hiddenLesson,
     isRtl: state.isRtl
   }),
   {

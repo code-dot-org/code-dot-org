@@ -72,7 +72,7 @@ class TeacherContentToggle extends React.Component {
 
     if (viewAs === ViewType.Student) {
       // Keep this hidden until we've made our async calls for hidden_stages and
-      // locked lessons, so that we don't flash content before hiding it
+      // locked stages, so that we don't flash content before hiding it
       if (!hiddenLessonsInitialized || !sectionsAreLoaded || hasOverlayFrame) {
         contentStyle.visibility = 'hidden';
       }
@@ -147,8 +147,8 @@ export const mapStateToProps = state => {
     viewAs,
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
     hiddenLessonsInitialized: state.hiddenLesson.hiddenLessonsInitialized,
-    isHiddenLesson,
-    isLockedLesson
+    isHiddenStage: isHiddenLesson,
+    isLockedStage: isLockedLesson
   };
 };
 

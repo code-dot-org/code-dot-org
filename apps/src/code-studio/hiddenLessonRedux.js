@@ -103,7 +103,7 @@ export default function reducer(state = new HiddenState(), action) {
 /**
  * @param {object} hiddenLessonsPerSection - Mapping from sectionId to a list of lessonIds
  *   that are hidden for that section.
- * @param {bool} hideableLessonsAllowed - True if we're able to toggle hidden lessonss
+ * @param {bool} hideableLessonsAllowed - True if we're able to toggle hidden lessons
  */
 export function setHiddenLessons(
   hiddenLessonsPerSection,
@@ -169,7 +169,7 @@ function postToggleHidden(scriptName, sectionId, lessonId, hidden) {
     hidden
   };
   if (lessonId) {
-    data.lesson_id = lessonId;
+    data.stage_id = lessonId;
   }
 
   $.ajax({

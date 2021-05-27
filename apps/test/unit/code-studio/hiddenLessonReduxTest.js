@@ -44,7 +44,7 @@ describe('hiddenLessonRedux', () => {
       stubRedux();
       registerReducers({
         hiddenLesson: reducerSpy,
-        stageLock: fakeLessonLockReducer
+        lessonLock: fakeLessonLockReducer
       });
       store = getStore();
     });
