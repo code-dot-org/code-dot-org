@@ -244,7 +244,7 @@ class EditSectionForm extends Component {
           />
           {lessonExtrasAvailable(section.scriptId) && (
             <LessonExtrasField
-              value={section.stageExtras}
+              value={section.lessonExtras}
               onChange={lessonExtras => editSectionProperties({lessonExtras})}
               disabled={isSaveInProgress}
             />

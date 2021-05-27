@@ -12,7 +12,7 @@ const MOCK_SECTIONS = [
   {
     id: 3,
     name: 'intro to computer science III',
-    stageExtras: true,
+    lessonExtras: true,
     pairingAllowed: true,
     ttsAutoplayEnabled: false,
     studentCount: 5,
@@ -22,7 +22,7 @@ const MOCK_SECTIONS = [
   {
     id: 2,
     name: 'intro to computer science II',
-    stageExtras: true,
+    lessonExtras: true,
     pairingAllowed: true,
     ttsAutoplayEnabled: false,
     studentCount: 4,
@@ -32,7 +32,7 @@ const MOCK_SECTIONS = [
   {
     id: 1,
     name: 'intro to computer science I',
-    stageExtras: true,
+    lessonExtras: true,
     pairingAllowed: true,
     ttsAutoplayEnabled: false,
     studentCount: 6,
