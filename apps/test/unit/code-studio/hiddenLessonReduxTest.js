@@ -2,12 +2,12 @@ import {assert} from 'chai';
 import sinon from 'sinon';
 
 import reducer, {
-  toggleHiddenStage,
+  toggleHiddenLesson,
   toggleHiddenScript,
-  updateHiddenStage,
+  updateHiddenLesson,
   updateHiddenScript,
-  getHiddenStages,
-  isStageHiddenForSection,
+  getHiddenLessons,
+  isLessonHiddenForSection,
   isScriptHiddenForSection,
   initializeHiddenScripts,
   STUDENT_SECTION_ID
@@ -55,7 +55,7 @@ describe('hiddenLessonRedux', () => {
       restoreRedux();
     });
 
-    it('initializes with server results for student after calling getHiddenStages', () => {
+    it('initializes with server results for student after calling getHiddenLessons', () => {
       const state = store.getState().hiddenLesson;
       assert.deepEqual(state.toJS(), {
         hiddenLessonsInitialized: false,
@@ -64,7 +64,7 @@ describe('hiddenLessonRedux', () => {
         scriptsBySection: {}
       });
 
-      const action = getHiddenStages('scriptName', true);
+      const action = getHiddenLessons('scriptName', true);
       store.dispatch(action);
 
       lastRequest.respond(
@@ -87,7 +87,7 @@ describe('hiddenLessonRedux', () => {
       });
     });
 
-    it('initializes with server results for teacher after calling getHiddenStages', () => {
+    it('initializes with server results for teacher after calling getHiddenLessons', () => {
       const state = store.getState().hiddenLesson;
       assert.deepEqual(state.toJS(), {
         hiddenLessonsInitialized: false,
@@ -96,7 +96,7 @@ describe('hiddenLessonRedux', () => {
         scriptsBySection: {}
       });
 
-      const action = getHiddenStages('scriptName', true);
+      const action = getHiddenLessons('scriptName', true);
       store.dispatch(action);
 
       lastRequest.respond(
@@ -134,7 +134,7 @@ describe('hiddenLessonRedux', () => {
         scriptsBySection: {}
       });
 
-      const action = getHiddenStages('scriptName', true);
+      const action = getHiddenLessons('scriptName', true);
       store.dispatch(action);
 
       lastRequest.respond(
@@ -164,7 +164,7 @@ describe('hiddenLessonRedux', () => {
       let action, nextState;
 
       // hide a lesson
-      action = toggleHiddenStage('scriptName', 10, 123, true);
+      action = toggleHiddenLesson('scriptName', 10, 123, true);
       store.dispatch(action);
       nextState = store.getState().hiddenLesson;
       assert.deepEqual(nextState.toJS(), {
@@ -179,7 +179,7 @@ describe('hiddenLessonRedux', () => {
       });
 
       // hide the same lesson in a different section
-      action = toggleHiddenStage('scriptName', 11, 123, true);
+      action = toggleHiddenLesson('scriptName', 11, 123, true);
       store.dispatch(action);
       nextState = store.getState().hiddenLesson;
       assert.deepEqual(nextState.toJS(), {
@@ -197,7 +197,7 @@ describe('hiddenLessonRedux', () => {
       });
 
       // unhide the lesson in one section
-      action = toggleHiddenStage('scriptName', 10, 123, false);
+      action = toggleHiddenLesson('scriptName', 10, 123, false);
       store.dispatch(action);
       nextState = store.getState().hiddenLesson;
       assert.deepEqual(nextState.toJS(), {
@@ -215,7 +215,7 @@ describe('hiddenLessonRedux', () => {
       });
 
       // hide another lesson
-      action = toggleHiddenStage('scriptName', 10, 345, true);
+      action = toggleHiddenLesson('scriptName', 10, 345, true);
       store.dispatch(action);
       nextState = store.getState().hiddenLesson;
       assert.deepEqual(nextState.toJS(), {
@@ -253,13 +253,13 @@ describe('hiddenLessonRedux', () => {
       });
     });
 
-    it('updateHiddenStage', () => {
+    it('updateHiddenLesson', () => {
       const sectionId = '123';
       const lessonId = '45';
 
       const state = reducer(
         initialState,
-        updateHiddenStage(sectionId, lessonId, true)
+        updateHiddenLesson(sectionId, lessonId, true)
       );
       assert.strictEqual(
         state.getIn(['lessonsBySection', sectionId, lessonId]),
@@ -268,7 +268,7 @@ describe('hiddenLessonRedux', () => {
 
       const nexstate = reducer(
         state,
-        updateHiddenStage(sectionId, lessonId, false)
+        updateHiddenLesson(sectionId, lessonId, false)
       );
       assert.strictEqual(
         nexstate.getIn(['lessonsBySection', sectionId, lessonId]),
@@ -346,48 +346,48 @@ describe('hiddenLessonRedux', () => {
     });
   });
 
-  describe('isStageHiddenForSection', () => {
+  describe('isLessonHiddenForSection', () => {
     const sectionId = '123';
     const hiddenLessonId = '45';
     const unhiddenLessonId = '67';
     const state = reducer(
       initialState,
-      updateHiddenStage(sectionId, hiddenLessonId, true)
+      updateHiddenLesson(sectionId, hiddenLessonId, true)
     );
 
     it('returns false if not given a lessonId', () => {
       assert.strictEqual(
-        isStageHiddenForSection(state, sectionId, null),
+        isLessonHiddenForSection(state, sectionId, null),
         false
       );
     });
 
     it('returns false if given an lessonId not hidden for the given sectionId', () => {
       assert.strictEqual(
-        isStageHiddenForSection(state, sectionId, unhiddenLessonId),
+        isLessonHiddenForSection(state, sectionId, unhiddenLessonId),
         false
       );
     });
 
     it('returns true if given an lessonId that is hidden for the given sectionId', () => {
       assert.strictEqual(
-        isStageHiddenForSection(state, sectionId, hiddenLessonId),
+        isLessonHiddenForSection(state, sectionId, hiddenLessonId),
         true
       );
     });
 
     it('uses STUDENT_SECTION_ID if none is provided', () => {
-      const studentHiddenStage = '35';
+      const studentHiddenLesson = '35';
       const state = reducer(
         initialState,
-        updateHiddenStage(STUDENT_SECTION_ID, studentHiddenStage, true)
+        updateHiddenLesson(STUDENT_SECTION_ID, studentHiddenLesson, true)
       );
       assert.strictEqual(
-        isStageHiddenForSection(state, null, studentHiddenStage),
+        isLessonHiddenForSection(state, null, studentHiddenLesson),
         true
       );
       assert.strictEqual(
-        isStageHiddenForSection(state, null, unhiddenLessonId),
+        isLessonHiddenForSection(state, null, unhiddenLessonId),
         false
       );
     });
