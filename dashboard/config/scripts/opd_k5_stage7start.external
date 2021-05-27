@@ -1,7 +1,7 @@
 name 'OPD-K5 Stage7Start'
 skip_dialog true
 markdown <<MARKDOWN
-# Events > Stage Overview
+# Events > Lesson Overview
 
 <img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
@@ -9,12 +9,12 @@ Thus far, you’ve learned how to sequence a program, add loops, and use conditi
 
 In this stage, we’re going to look at *events*, another core concept in computer science. As we explore events, you will synthesize what you’ve learned so far and write some more complex programs.
 
-By completing Stage 8, you will:
+By completing Lesson 8, you will:
 
 - Practice coding simple events
 - Reflect on classroom application
 
->**What to Expect in this Stage:** You'll start with an unplugged lesson from Course C (meant for Grade 2) introducing events. Then, you'll explore some puzzles from Course F (meant for Grade 5) that allow you to experiment with event blocks. We’ll close with an opportunity to reflect. You should spend between 20-45 minutes on this stage.
+>**What to Expect in this Lesson:** You'll start with an unplugged lesson from Course C (meant for Grade 2) introducing events. Then, you'll explore some puzzles from Course F (meant for Grade 5) that allow you to experiment with event blocks. We’ll close with an opportunity to reflect. You should spend between 20-45 minutes on this stage.
 
 Ready? Let's go!
 MARKDOWN
