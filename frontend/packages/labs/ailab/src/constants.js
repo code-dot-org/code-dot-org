@@ -374,6 +374,7 @@ export const styles = {
     textAlign: "right",
     fontSize: 12
   },
+
   dataDisplayCellLabelSelected: {},
   dataDisplayCellFeatureSelected: {},
 
@@ -472,6 +473,10 @@ export const styles = {
   resultsTableSecondHeader: {
     top: "42px",
     color: "white"
+  },
+
+  resultsCellHighlight: {
+    backgroundColor: "#f2f2f2"
   },
 
   previousButton: {
