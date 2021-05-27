@@ -15,7 +15,7 @@ module Pd::Foorm
       question_name
       question_text
       matrix_item_name
-      matrix_item_text
+      matrix_item_header
       is_facilitator_specific
       response_options
       num_response_options
@@ -100,7 +100,7 @@ module Pd::Foorm
               # For matrix questions, put the question name and text (generally a preamble) in their own attributes.
               # question_name and question_text values are re-added from the sub-questions below.
               reshaped_matrix_item[:matrix_item_name] = reshaped_matrix_item.delete :question_name
-              reshaped_matrix_item[:matrix_item_text] = reshaped_matrix_item.delete :question_text
+              reshaped_matrix_item[:matrix_item_header] = reshaped_matrix_item.delete :question_text
 
               additional_attributes = {
                 question_name: matrix_question_name,
