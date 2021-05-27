@@ -15,13 +15,13 @@ const HiddenState = Immutable.Record({
   hiddenLessonsInitialized: false,
   hideableLessonsAllowed: false,
   // A mapping, where the key is the sectionId, and the value is a mapping from
-  // stageId to a bool indicating whether that lesson is hidden (true) or not (false)
+  // lessonId to a bool indicating whether that lesson is hidden (true) or not (false)
   // Teachers will potentially have a number of section ids. For students we
   // use a sectionId of STUDENT_SECTION_ID, which represents the hidden state
   // for the student based on the sections they are in.
   lessonsBySection: Immutable.Map({
     // [sectionId]: {
-    //   [stageId]: true
+    //   [lessonId]: true
     // }
   }),
   // Same as above but for hiding scripts in a section instead of lessons
@@ -52,17 +52,17 @@ function validateSectionIds(state) {
  */
 export default function reducer(state = new HiddenState(), action) {
   if (action.type === SET_HIDDEN_LESSONS) {
-    const {hiddenStagesPerSection, hideableLessonsAllowed} = action;
+    const {hiddenLessonsPerSection, hideableLessonsAllowed} = action;
 
     // Iterate through each section
-    const sectionIds = Object.keys(hiddenStagesPerSection);
+    const sectionIds = Object.keys(hiddenLessonsPerSection);
     let nextState = state;
     sectionIds.forEach(sectionId => {
       // And iterate through each hidden lesson within that section
-      const hiddenStageIds = hiddenStagesPerSection[sectionId];
-      hiddenStageIds.forEach(stageId => {
+      const hiddenLessonIds = hiddenLessonsPerSection[sectionId];
+      hiddenLessonIds.forEach(lessonId => {
         nextState = nextState.setIn(
-          ['lessonsBySection', sectionId, stageId.toString()],
+          ['lessonsBySection', sectionId, lessonId.toString()],
           true
         );
       });
@@ -76,9 +76,9 @@ export default function reducer(state = new HiddenState(), action) {
   }
 
   if (action.type === UPDATE_HIDDEN_LESSON) {
-    const {sectionId, stageId, hidden} = action;
+    const {sectionId, lessonId, hidden} = action;
     const nextState = state.setIn(
-      ['lessonsBySection', sectionId, stageId.toString()],
+      ['lessonsBySection', sectionId, lessonId.toString()],
       hidden
     );
     validateSectionIds(nextState);
@@ -101,25 +101,25 @@ export default function reducer(state = new HiddenState(), action) {
 // action creators
 
 /**
- * @param {object} hiddenStagesPerSection - Mapping from sectionId to a list of stageIds
+ * @param {object} hiddenLessonsPerSection - Mapping from sectionId to a list of lessonIds
  *   that are hidden for that section.
  * @param {bool} hideableLessonsAllowed - True if we're able to toggle hidden lessons
  */
 export function setHiddenStages(
-  hiddenStagesPerSection,
+  hiddenLessonsPerSection,
   hideableLessonsAllowed
 ) {
   return {
     type: SET_HIDDEN_LESSONS,
-    hiddenStagesPerSection,
+    hiddenLessonsPerSection,
     hideableLessonsAllowed
   };
 }
-export function updateHiddenStage(sectionId, stageId, hidden) {
+export function updateHiddenStage(sectionId, lessonId, hidden) {
   return {
     type: UPDATE_HIDDEN_LESSON,
     sectionId,
-    stageId,
+    lessonId,
     hidden
   };
 }
@@ -137,11 +137,11 @@ export function updateHiddenScript(sectionId, scriptId, hidden) {
  * Toggle the hidden state of a particular lesson in a section, updating our local
  * state to reflect the change, and posting to the server.
  */
-export function toggleHiddenStage(scriptName, sectionId, stageId, hidden) {
+export function toggleHiddenStage(scriptName, sectionId, lessonId, hidden) {
   return dispatch => {
     // update local state
-    dispatch(updateHiddenStage(sectionId, stageId, hidden));
-    postToggleHidden(scriptName, sectionId, stageId, hidden);
+    dispatch(updateHiddenStage(sectionId, lessonId, hidden));
+    postToggleHidden(scriptName, sectionId, lessonId, hidden);
   };
 }
 
@@ -156,20 +156,20 @@ export function toggleHiddenScript(scriptName, sectionId, scriptId, hidden) {
 }
 
 /**
- * Post to the server to toggle the hidden state of a lesson or script. stageId
+ * Post to the server to toggle the hidden state of a lesson or script. lessonId
  * should be null if we're hiding the script rather than a particular lesson
  * @param {string} scriptName
  * @param {string} sectionId
- * @param {string} stageId
+ * @param {string} lessonId
  * @param {boolean} hidden
  */
-function postToggleHidden(scriptName, sectionId, stageId, hidden) {
+function postToggleHidden(scriptName, sectionId, lessonId, hidden) {
   const data = {
     section_id: sectionId,
     hidden
   };
-  if (stageId) {
-    data.stage_id = stageId;
+  if (lessonId) {
+    data.stage_id = lessonId;
   }
 
   $.ajax({
@@ -259,8 +259,8 @@ export function initializeHiddenScripts(data) {
  * Helper to determine whether a lesson is hidden for a given section. If no
  * section is given, we assume this is a student and use STUDENT_SECTION_ID
  */
-export function isStageHiddenForSection(state, sectionId, stageId) {
-  return isHiddenForSection(state, sectionId, stageId, 'lessonsBySection');
+export function isStageHiddenForSection(state, sectionId, lessonId) {
+  return isHiddenForSection(state, sectionId, lessonId, 'lessonsBySection');
 }
 
 /**
