@@ -22928,3 +22928,65 @@ en:
             Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
 
             **Coming Soon! This unit will be available in July 2021!**
+        kodea-pd-2021:
+          title: Teaching Computer Science Fundamentals
+          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description_audience: ''
+          lessons:
+            Getting Started:
+              key: Getting Started
+              name: Getting Started
+              description_student: ''
+              description_teacher: ''
+            Computer Science Fundamentals:
+              key: Computer Science Fundamentals
+              name: Computer Science Fundamentals
+              description_student: ''
+              description_teacher: ''
+            Looking Ahead:
+              key: Looking Ahead
+              name: Looking Ahead
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Sequencing':
+              key: 'Mastering the Basics: Sequencing'
+              name: 'Mastering the Basics: Sequencing'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Loops':
+              key: 'Mastering the Basics: Loops'
+              name: 'Mastering the Basics: Loops'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Conditionals':
+              key: 'Mastering the Basics: Conditionals'
+              name: 'Mastering the Basics: Conditionals'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Functions':
+              key: 'Mastering the Basics: Functions'
+              name: 'Mastering the Basics: Functions'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Events':
+              key: 'Mastering the Basics: Events'
+              name: 'Mastering the Basics: Events'
+              description_student: ''
+              description_teacher: ''
+            Best Practices for Teaching Computer Science:
+              key: Best Practices for Teaching Computer Science
+              name: Best Practices for Teaching Computer Science
+              description_student: ''
+              description_teacher: ''
+            Planning:
+              key: Planning
+              name: Planning
+              description_student: ''
+              description_teacher: ''
+            Next Steps:
+              key: Next Steps
+              name: Next Steps
+              description_student: ''
+              description_teacher: ''
