@@ -14,7 +14,7 @@ import {
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  stageExtrasAvailable
+  lessonExtrasAvailable
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
@@ -569,7 +569,7 @@ let defaultPropsFromState = state => ({
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
-  lessonExtrasAvailable: id => stageExtrasAvailable(state, id),
+  lessonExtrasAvailable: id => lessonExtrasAvailable(state, id),
   hiddenLessonState: state.hiddenLesson,
   assignedScriptName: assignedScriptName(state),
   localeEnglishName: state.locales.localeEnglishName,
