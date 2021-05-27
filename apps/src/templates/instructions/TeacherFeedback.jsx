@@ -28,35 +28,30 @@ export class TeacherFeedback extends Component {
     disabledMode: PropTypes.bool.isRequired,
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
-    //Provided by Redux
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     serverScriptId: PropTypes.number,
     serverLevelId: PropTypes.number,
     teacher: PropTypes.number,
-    verifiedTeacher: PropTypes.bool,
     displayReadonlyRubric: PropTypes.bool,
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
+    //Provided by Redux
+    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
+    verifiedTeacher: PropTypes.bool,
     selectedSectionId: PropTypes.string
   };
 
   constructor(props) {
     super(props);
     //Pull the student id from the url
-    const studentId = queryString.parse(window.location.search).user_id;
-
+    this.studentId = queryString.parse(window.location.search).user_id;
     this.onRubricChange = this.onRubricChange.bind(this);
 
     const {latestFeedback} = this.props;
     this.state = {
       comment: latestFeedback?.comment || '',
-      performance: latestFeedback?.performance,
-      studentId: studentId,
+      performance: latestFeedback?.performance || null,
       latestFeedback: latestFeedback,
-      reviewState:
-        latestFeedback && latestFeedback.review_state
-          ? latestFeedback.review_state
-          : null,
+      reviewState: latestFeedback?.review_state || null,
       reviewStateUpdated: false,
       submitting: false,
       errorState: ErrorType.NoError
@@ -72,7 +67,7 @@ export class TeacherFeedback extends Component {
   }
 
   onUnload = event => {
-    if (this.feedbackChanged()) {
+    if (this.didFeedbackChange()) {
       event.preventDefault();
       event.returnValue = i18n.feedbackNotSavedWarning();
     }
@@ -108,7 +103,7 @@ export class TeacherFeedback extends Component {
     const payload = {
       comment: this.state.comment,
       review_state: this.state.reviewState,
-      student_id: this.state.studentId,
+      student_id: this.studentId,
       script_id: this.props.serverScriptId,
       level_id: this.props.serverLevelId,
       teacher_id: this.props.teacher,
@@ -140,7 +135,7 @@ export class TeacherFeedback extends Component {
       });
   };
 
-  feedbackChanged = () => {
+  didFeedbackChange = () => {
     const {
       latestFeedback,
       comment,
@@ -185,7 +180,7 @@ export class TeacherFeedback extends Component {
     } = this.state;
 
     const buttonDisabled =
-      !this.feedbackChanged() ||
+      !this.didFeedbackChange() ||
       submitting ||
       errorState === ErrorType.Load ||
       !verifiedTeacher;
@@ -239,7 +234,7 @@ export class TeacherFeedback extends Component {
               )}
             </div>
             <CommentArea
-              disabledMode={disabledMode}
+              isReadonly={disabledMode}
               comment={comment}
               placeholderText={placeholderText}
               studentHasFeedback={

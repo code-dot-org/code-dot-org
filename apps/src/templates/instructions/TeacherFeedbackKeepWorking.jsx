@@ -3,33 +3,27 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import ReactTooltip from 'react-tooltip';
+import {makeEnum} from '@cdo/apps/utils';
 
-const reviewStates = {
-  completed: 'completed',
-  keepWorking: 'keepWorking'
-};
+const ReviewStates = makeEnum('completed', 'keepWorking');
 
 class TeacherFeedbackKeepWorking extends Component {
   static propTypes = {
     latestFeedback: PropTypes.object,
-    reviewState: PropTypes.string,
+    reviewState: PropTypes.oneOf(ReviewStates),
     setReviewState: PropTypes.func,
     setReviewStateChanged: PropTypes.func
   };
 
-  constructor(props) {
-    super(props);
-
-    this.checkbox = null;
-  }
+  checkbox = null;
 
   componentDidMount() {
-    if (this.awaitingTeacherReview()) {
+    if (this.isAwaitingTeacherReview()) {
       this.checkbox.indeterminate = true;
     }
   }
 
-  awaitingTeacherReview() {
+  isAwaitingTeacherReview() {
     const {
       student_last_updated,
       created_at,
@@ -37,7 +31,7 @@ class TeacherFeedbackKeepWorking extends Component {
     } = this.props.latestFeedback;
 
     const previouslyMarkedKeepWorking =
-      review_state === reviewStates.keepWorking;
+      review_state === ReviewStates.keepWorking;
 
     const studentHasUpdated =
       student_last_updated && student_last_updated > created_at;
@@ -45,7 +39,7 @@ class TeacherFeedbackKeepWorking extends Component {
     return previouslyMarkedKeepWorking && studentHasUpdated;
   }
 
-  handleCheckboxChange = () => {
+  onCheckboxChange = () => {
     const newReviewState = this.getNewReviewState();
     this.props.setReviewState(newReviewState);
 
@@ -57,9 +51,9 @@ class TeacherFeedbackKeepWorking extends Component {
     let newReviewState = null;
 
     if (this.checkbox.checked) {
-      newReviewState = reviewStates.keepWorking;
-    } else if (this.awaitingTeacherReview()) {
-      newReviewState = reviewStates.completed;
+      newReviewState = ReviewStates.keepWorking;
+    } else if (this.isAwaitingTeacherReview()) {
+      newReviewState = ReviewStates.completed;
     }
 
     return newReviewState;
@@ -67,7 +61,7 @@ class TeacherFeedbackKeepWorking extends Component {
 
   isDifferentFromInitial(newReviewState) {
     const removedIndeterminateState =
-      this.awaitingTeacherReview() && !this.checkbox.indeterminate;
+      this.isAwaitingTeacherReview() && !this.checkbox.indeterminate;
     const reviewStateChanged =
       newReviewState !== this.props.latestFeedback.review_state;
 
@@ -75,7 +69,7 @@ class TeacherFeedbackKeepWorking extends Component {
   }
 
   getTooltipText() {
-    if (this.awaitingTeacherReview()) {
+    if (this.isAwaitingTeacherReview()) {
       return i18n.teacherFeedbackAwaitingReviewTooltip();
     }
     return i18n.teacherFeedbackKeepWorkingTooltip();
@@ -89,13 +83,13 @@ class TeacherFeedbackKeepWorking extends Component {
           ref={ref => (this.checkbox = ref)}
           type="checkbox"
           style={styles.checkbox}
-          checked={this.props.reviewState === reviewStates.keepWorking}
-          onChange={this.handleCheckboxChange}
+          checked={this.props.reviewState === ReviewStates.keepWorking}
+          onChange={this.onCheckboxChange}
         />
         <div data-tip data-place="bottom" data-for="keep-working-tooltip">
           <label htmlFor="keep-working" style={styles.label}>
             <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
-            {this.awaitingTeacherReview() && (
+            {this.isAwaitingTeacherReview() && (
               <span style={styles.awaitingReviewText}>
                 <span style={styles.awaitingReviewSpacer}>-</span>
                 {i18n.awaitingTeacherReview()}

@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
-export class CommentArea extends Component {
+export class CommentArea extends React.Component {
   static propTypes = {
-    disabledMode: PropTypes.bool,
+    isReadonly: PropTypes.bool,
     comment: PropTypes.string,
     placeholderText: PropTypes.string,
     onCommentChange: PropTypes.func.isRequired
@@ -15,18 +15,16 @@ export class CommentArea extends Component {
   };
 
   render() {
-    const textInputStyle = this.props.disabledMode
-      ? styles.textInputStudent
-      : styles.textInput;
+    const readOnlyStyle = this.props.isReadonly && styles.readOnly;
 
     return (
       <textarea
         id="ui-test-feedback-input"
-        style={textInputStyle}
+        style={{...styles.textInput, ...readOnlyStyle}}
         onChange={this.commentChanged}
         placeholder={this.props.placeholderText}
         value={this.props.comment}
-        readOnly={this.props.disabledMode}
+        readOnly={this.props.isReadonly}
       />
     );
   }
@@ -40,13 +38,8 @@ const styles = {
     width: '90%',
     fontSize: 12
   },
-  textInputStudent: {
-    marginTop: 0,
-    marginBottom: 8,
-    display: 'block',
-    width: '90%',
-    backgroundColor: color.lightest_cyan,
-    fontSize: 12
+  readOnly: {
+    backgroundColor: color.lightest_cyan
   },
   h1: {
     color: color.charcoal,
