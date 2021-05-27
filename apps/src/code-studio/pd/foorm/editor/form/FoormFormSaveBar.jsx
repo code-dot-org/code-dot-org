@@ -54,7 +54,7 @@ class FoormFormSaveBar extends Component {
       confirmationDialogBeingShownName: null,
       isSaving: false,
       showNewFormSave: false,
-      formName: null,
+      formShortName: null, // just the second part of the name without the category
       formCategory: null
     };
   }
@@ -132,12 +132,16 @@ class FoormFormSaveBar extends Component {
       });
   };
 
-  isFormNameValid = () => {
-    return this.state.formName && this.state.formName.match('^[a-z0-9_]+$');
+  isFormShortNameValid = () => {
+    return (
+      this.state.formShortName && this.state.formShortName.match('^[a-z0-9_]+$')
+    );
   };
 
   saveNewForm = (saveAsNewVersion = false) => {
-    const newFormName = `${this.state.formCategory}/${this.state.formName}`;
+    const newFormName = `${this.state.formCategory}/${
+      this.state.formShortName
+    }`;
     $.ajax({
       url: `/foorm/forms`,
       type: 'post',
@@ -203,7 +207,8 @@ class FoormFormSaveBar extends Component {
   }
 
   renderNewFormSaveModal = () => {
-    const showFormNameError = this.state.formName && !this.isFormNameValid();
+    const showFormNameError =
+      this.state.formShortName && !this.isFormShortNameValid();
     return (
       <Modal
         show={this.state.showNewFormSave}
@@ -244,7 +249,7 @@ class FoormFormSaveBar extends Component {
               id="formName"
               type="text"
               required={true}
-              onChange={e => this.setState({formName: e.target.value})}
+              onChange={e => this.setState({formShortName: e.target.value})}
             />
           </FormGroup>
           {showFormNameError && (
@@ -260,7 +265,7 @@ class FoormFormSaveBar extends Component {
             bsStyle="primary"
             onClick={() => this.saveNewForm(false)}
             disabled={
-              !(this.state.formName && this.state.formCategory) ||
+              !(this.state.formShortName && this.state.formCategory) ||
               showFormNameError
             }
           >
