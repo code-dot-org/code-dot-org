@@ -1,6 +1,7 @@
 /* global dashboard */
 import $ from 'jquery';
 import * as api from './api';
+import {dropletGlobalConfigBlocks} from '../dropletUtils';
 import dontMarshalApi from '../dontMarshalApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
@@ -1038,6 +1039,8 @@ export var blocks = [
     noAutocomplete: true
   }
 ];
+
+blocks.push(...dropletGlobalConfigBlocks);
 
 if (experiments.isEnabled(experiments.APPLAB_ML)) {
   blocks.push(
