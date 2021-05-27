@@ -1,14 +1,14 @@
-﻿age,sex,Chest Pain Type,Resting Blood Pressure,Cholesterol,Fasting Blood Sugar > 120mg/dl,Resting ECG Results,Maximum Heart Rate Achieved,Exercise Induced Angina,ST Depression Induced By Exercise Relative To Rest,Slope of Peak Exercise ST Segment,Number of Major Vessels Colored by Flourosopy,Diagnosis of Heart Disease
+﻿age,sex,Chest Test Type,Resting Blood Pressure,Cholesterol,Fasting Blood Sugar > 120mg/dl,Resting ECG Results,Maximum Heart Rate Achieved,Exercise Induced Angina,ST Depression Induced By Exercise Relative To Rest,Slope of Peak Exercise ST Segment,Number of Major Vessels Colored by Flourosopy,Diagnosis of Heart Disease
 63,male,None,145,233,TRUE,Normal,150,No,2.3,0,0,Yes
 37,male,Non-Anginal,130,250,FALSE,Some abnormality,187,No,3.5,0,0,Yes
 41,female,Atypical Angina,130,204,FALSE,Normal,172,No,1.4,2,0,Yes
 56,male,Atypical Angina,120,236,FALSE,Some abnormality,178,No,0.8,2,0,Yes
-57,female,Typical Angina,120,354,FALSE,Some abnormality,163,Yes,0.6,2,0,Yes
-57,male,Typical Angina,140,192,FALSE,Some abnormality,148,No,0.4,1,0,Yes
+57,,Typical Angina,120,354,FALSE,Some abnormality,163,Yes,0.6,2,0,Yes
+57,,Typical Angina,140,192,FALSE,Some abnormality,148,No,0.4,1,0,Yes
 56,female,Atypical Angina,140,294,FALSE,Normal,153,No,1.3,1,0,Yes
 44,male,Atypical Angina,120,263,FALSE,Some abnormality,173,No,0,2,0,Yes
-52,male,Non-Anginal,172,199,TRUE,Some abnormality,162,No,0.5,2,0,Yes
-57,male,Non-Anginal,150,168,FALSE,Some abnormality,174,No,1.6,2,0,Yes
+52,male,,172,199,TRUE,Some abnormality,162,No,0.5,2,0,Yes
+57,,Non-Anginal,150,168,FALSE,Some abnormality,174,No,1.6,2,0,Yes
 54,male,Typical Angina,140,239,FALSE,Some abnormality,160,No,1.2,2,0,Yes
 48,female,Non-Anginal,130,275,FALSE,Some abnormality,139,No,0.2,2,0,Yes
 49,male,Atypical Angina,130,266,FALSE,Some abnormality,171,No,0.6,2,0,Yes
