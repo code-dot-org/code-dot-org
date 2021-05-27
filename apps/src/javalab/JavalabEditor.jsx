@@ -480,7 +480,7 @@ class JavalabEditor extends React.Component {
             leftJustified
           />
           <PaneSection style={style.backpackSection}>
-            <Backpack />
+            <Backpack isDarkMode={isDarkMode} />
           </PaneSection>
           <PaneButton
             id="data-mode-versions-header"
