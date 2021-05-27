@@ -615,7 +615,8 @@ export const styles = {
   trainModelBotContainer: {
     position: "absolute",
     left: "50%",
-    transform: "translateX(-25%)"
+    top: "50%",
+    transform: "translateX(-25%) translateY(-50%)"
   },
   trainBot: {
     position: "relative",
@@ -650,7 +651,12 @@ export const styles = {
   generateResultsBotContainer: {
     position: "absolute",
     left: "50%",
-    transform: "translateX(-25%)"
+    top: "50%"
+  },
+
+  generateResultsBotBody: {
+    width: "49%",
+    direction: "ltr"
   },
 
   cardRow: {

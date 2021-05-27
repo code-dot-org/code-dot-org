@@ -5,7 +5,8 @@ import { connect } from "react-redux";
 import train from "../train";
 import { readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
-import aiBotClosed from "@public/images/ai-bot/ai-bot-closed.png";
+import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
+import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import blueScanner from "@public/images/ai-bot/blue-scanner.png";
 import background from "@public/images/results-background-light.png";
 import DataTable from "./DataTable";
@@ -88,7 +89,6 @@ class GenerateResults extends Component {
     const opacity = getFadeOpacity(animationProgress);
     const hideLabel = this.getAnimationSubstep() < framesPerCycle / 2;
     const showAnimation = this.getAnimationStep() < numItems;
-    const botImage = aiBotClosed;
     const maxFrames = framesPerCycle * (numItems - 1.5);
     const tableOpacity =
       this.state.frame < framesPerCycle
@@ -99,6 +99,10 @@ class GenerateResults extends Component {
         : this.state.frame >= maxFrames + framesPerCycle
         ? 0
         : 1;
+
+    const headMoveAmount = tableOpacity <= 1 / 4 ? tableOpacity * 4 : 1;
+    const botTransformY = -50 - headMoveAmount * 30;
+    const botContainerTransform = `translateX(-25%) translateY(${botTransformY}%)`;
 
     // Let's still show the starting row on our very first frame, because we might
     // be paused waiting for the overlay to be dismissed.
@@ -152,21 +156,25 @@ class GenerateResults extends Component {
           )}
         </div>
 
-        {this.props.readyToTrain && (
-          <div style={styles.generateResultsBotContainer}>
-            <div style={{ ...styles.trainBot, margin: "0 auto" }}>
-              <div>
-                <img src={botImage} style={styles.trainBotBody} />
-              </div>
-              <div style={{ width: 150 }}>
-                <img
-                  src={blueScanner}
-                  style={{ width: "100%", opacity: tableOpacity }}
-                />
-              </div>
+        <div
+          style={{
+            ...styles.generateResultsBotContainer,
+            transform: botContainerTransform
+          }}
+        >
+          <div style={{ ...styles.trainBot, margin: "0 auto" }}>
+            <img src={aiBotHead} style={styles.trainBotHead} />
+            <img src={aiBotBody} style={styles.trainBotBody} />
+            <div
+              style={{ width: 150, position: "absolute", top: 140, zIndex: -1 }}
+            >
+              <img
+                src={blueScanner}
+                style={{ width: "100%", opacity: tableOpacity }}
+              />
             </div>
           </div>
-        )}
+        </div>
       </div>
     );
   }

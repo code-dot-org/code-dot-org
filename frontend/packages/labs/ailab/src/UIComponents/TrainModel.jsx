@@ -44,7 +44,7 @@ class TrainModel extends Component {
     );
 
     this.setState({ animationTimer });
-  };
+  }
 
   updateAnimation = () => {
     if (this.state.frame === 15) {
@@ -143,20 +143,19 @@ class TrainModel extends Component {
           )}
         </div>
 
-        {this.props.readyToTrain && (
-          <div style={styles.trainModelBotContainer}>
-            <div style={{ ...styles.trainBot, margin: "0 auto" }}>
-              <img
-                src={aiBotHead}
-                style={{
-                  ...styles.trainBotHead,
-                  ...(this.state.headOpen && styles.trainBotOpen)
-                }}
-              />
-              <img src={aiBotBody} style={styles.trainBotBody} />
-            </div>
+        <div style={styles.trainModelBotContainer}>
+          <div style={{ ...styles.trainBot, margin: "0 auto" }}>
+            <img
+              src={aiBotHead}
+              style={{
+                ...styles.trainBotHead,
+                ...(this.state.headOpen && styles.trainBotOpen)
+              }}
+            />
+            <img src={aiBotBody} style={styles.trainBotBody} />
           </div>
-        )}
+        </div>
+
       </div>
     );
   }
