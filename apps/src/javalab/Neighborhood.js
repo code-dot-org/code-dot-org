@@ -16,7 +16,10 @@ const ANIMATED_STEPS = [
 export default class Neighborhood {
   constructor() {
     this.controller = null;
+    // TODO: set this based on level once we have variable sizes
+    this.numRows = 8;
   }
+
   afterInject(level, skin, config, studioApp) {
     this.controller = new MazeController(level, skin, config, {
       methods: {
@@ -81,7 +84,7 @@ export default class Neighborhood {
         return this.controller.addPegman(
           id,
           parseInt(x),
-          parseInt(y),
+          this.convertYCoordinate(parseInt(y)),
           Direction[direction.toUpperCase()]
         );
       }
@@ -110,5 +113,13 @@ export default class Neighborhood {
     // The slider goes from 0 to 1. We scale the speed slider value to be between -1 and 1 and
     // return 2 to the power of that scaled value to get a multiplier between 0.5 and 2.
     return Math.pow(2, -2 * this.speedSlider.getValue() + 1);
+  }
+
+  // Convert y-coordinate from Neighborhood format to Maze format.
+  // In neighborhood (0,0) is the bottom-left grid square, in Maze
+  // it is the top left.
+  convertYCoordinate(y) {
+    // if we have 8 rows, y = 0 -> y = 7, y = 1 -> y = 6, and so on
+    return this.numRows - 1 - y;
   }
 }

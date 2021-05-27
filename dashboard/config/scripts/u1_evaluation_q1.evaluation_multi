@@ -2,4 +2,4 @@ name 'U1 evaluation q1'
 question 'How experienced would you say you are with computer science?'
 answer 'Very Experienced’
 answer ‘Somewhat Experienced’
-answer ‘Brand new!’, weight: 6, stage_name: 'Lessons 2 - 3: Binary Messages'
+answer ‘Brand new!’, weight: 6, lesson_name: 'Lessons 2 - 3: Binary Messages'

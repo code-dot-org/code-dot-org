@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2021-05-27T17:26:04.000Z",
+  "level_num": "custom",
+  "user_id": 898,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "why-should-teach-unplugged-activities",
+    "instructions_important": "false",
+    "long_instructions": "## Looking Ahead > Getting \"Unplugged\"\r\n\r\n<img src=\"https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG\" class=\"level-image\">\r\n\r\nIn teaching computer science, you might think it would be best to have access to top tier technology -- new computers, fast Internet, the latest apps. But at Code.org, we've found that some of the most impactful computer science lessons are actually \"unplugged,\" or conducted with little to no technology at all. In these lessons, students learn computer concepts without a computer.\r\n\r\nThat's why all of our CS Fundamentals courses use unplugged activities to introduce computer science concepts with physical manipulatives before students write computer programs using those concepts. An example of this would be doing a dance of repeated movements with the class to understand the concept of how loops repeat commands in a computer program. This way when the students go on to writing programs using loops, the unplugged activity has set them up with something they are already familiar with and they can relate this new concept back to that activity.\r\n\r\nWatch the video below to understand the benefits of using unplugged activities to teach computer science.\r\n\r\n**As you work your way through Stages 4-8**, you'll have a chance to review some of our unplugged activities for each of the core concepts covered in this course.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19455,
+    "name_suffix": "_dani"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-21 18:43:12 +0000\",\"changed\":[],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"},{\"changed_at\":\"2019-10-21 18:43:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

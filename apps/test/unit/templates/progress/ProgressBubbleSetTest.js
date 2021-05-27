@@ -57,16 +57,4 @@ describe('ProgressBubbleSet', () => {
     const progressBubble = wrapper.find('ProgressBubble').at(0);
     assert.equal(progressBubble.prop('disabled'), true);
   });
-  it('render ProgressBubble that have hideAssessmentIcon true if hideAssessmentIcon prop is true', () => {
-    const wrapper = shallow(
-      <ProgressBubbleSet {...defaultProps} hideAssessmentIcon={true} />
-    );
-    assert.equal(
-      wrapper
-        .find('ProgressBubble')
-        .first()
-        .props().hideAssessmentIcon,
-      true
-    );
-  });
 });

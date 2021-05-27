@@ -14,7 +14,7 @@ class UserLevelTest < ActiveSupport::TestCase
     @driver_user_level.navigator_user_levels << @navigator_user_level
   end
 
-  test "by_stage" do
+  test "by_lesson" do
     script = create :script
     stage = create :lesson, script: script
     script_level = create :script_level, script: script, lesson: stage
@@ -23,11 +23,11 @@ class UserLevelTest < ActiveSupport::TestCase
     stage_user_level = create :user_level, script: script, level: level
     other_user_level = create :user_level
 
-    assert_includes UserLevel.by_stage(stage), stage_user_level
-    refute_includes UserLevel.by_stage(stage), other_user_level
+    assert_includes UserLevel.by_lesson(stage), stage_user_level
+    refute_includes UserLevel.by_lesson(stage), other_user_level
   end
 
-  test "by_stage will find all levels for each script_level" do
+  test "by_lesson will find all levels for each script_level" do
     script = create :script
     stage = create :lesson, script: script
     first_level = create :level
@@ -40,15 +40,15 @@ class UserLevelTest < ActiveSupport::TestCase
         second_level
       ]
 
-    assert_equal UserLevel.by_stage(stage), []
+    assert_equal UserLevel.by_lesson(stage), []
 
     first_user_level = create :user_level, script: script, level: first_level
 
-    assert_equal UserLevel.by_stage(stage), [first_user_level]
+    assert_equal UserLevel.by_lesson(stage), [first_user_level]
 
     second_user_level = create :user_level, script: script, level: second_level
 
-    assert_equal UserLevel.by_stage(stage), [first_user_level, second_user_level]
+    assert_equal UserLevel.by_lesson(stage), [first_user_level, second_user_level]
   end
 
   test "perfect? finished? and passing? should be able to handle ScriptLevels that have nil as best_result" do
