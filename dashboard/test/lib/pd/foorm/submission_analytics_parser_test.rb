@@ -11,8 +11,8 @@ module Pd::Foorm
 
       assert_includes reshaped_submission, {
         submission_id: submission.id,
-        question_name: 'overall_success',
-        matrix_item_name: 'more_prepared',
+        item_name: 'more_prepared',
+        matrix_item_name: 'overall_success',
         response_value: '1',
         response_text: 'Strongly Disagree'
       }
@@ -24,8 +24,8 @@ module Pd::Foorm
 
       assert_includes reshaped_submission, {
         submission_id: submission.id,
-        question_name: 'facilitator_effectiveness',
-        matrix_item_name: 'on_track',
+        item_name: 'on_track',
+        matrix_item_name: 'facilitator_effectiveness',
         response_value: '7',
         response_text: 'Strongly Agree'
       }
@@ -37,7 +37,7 @@ module Pd::Foorm
 
       assert_includes reshaped_submission, {
         submission_id: submission.id,
-        question_name: 'supported',
+        item_name: 'supported',
         response_text: 'lots'
       }
     end
@@ -48,7 +48,7 @@ module Pd::Foorm
 
       assert_includes reshaped_submission, {
         submission_id: submission.id,
-        question_name: 'permission',
+        item_name: 'permission',
         response_value: 'no',
         response_text: 'No, I do not give the workshop organizer my permission.'
       }
@@ -64,7 +64,7 @@ module Pd::Foorm
 
       assert_includes reshaped_submission, {
         submission_id: submission.id,
-        question_name: 'not_members_spice_girls',
+        item_name: 'not_members_spice_girls',
         response_value: %w(radical spicy),
         response_text: 'Radical, Spicy'
       }
