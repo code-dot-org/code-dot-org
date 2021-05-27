@@ -8,7 +8,7 @@ module Pd::Foorm
 
     HEADERS = %w(
       submission_id
-      question_name
+      item_name
       matrix_item_name
       response_value
       response_text
@@ -57,7 +57,7 @@ module Pd::Foorm
       reshaped_submission_answers = []
 
       parsed_answers.each do |question_name, answer|
-        reshaped_submission_answer = {question_name: question_name}
+        reshaped_submission_answer = {item_name: question_name}
         question_details = form&.get_question_details(question_name)
 
         # If question isn't in the Form, return as-is.
@@ -78,11 +78,11 @@ module Pd::Foorm
             reshaped_matrix_item_submission = reshaped_submission_answer.clone
 
             # For matrix questions, put the question name in its own attributes.
-            # question_name is re-added from the sub-questions below.
-            reshaped_matrix_item_submission[:matrix_item_name] = reshaped_matrix_item_submission.delete :question_name
+            # item_name is re-added from the sub-questions below.
+            reshaped_matrix_item_submission[:matrix_item_name] = reshaped_matrix_item_submission.delete :item_name
 
             additional_attributes = {
-              question_name: matrix_question_name,
+              item_name: matrix_question_name,
               response_value: matrix_question_answer,
               response_text: choices[matrix_question_answer]
             }
