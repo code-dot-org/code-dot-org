@@ -279,7 +279,7 @@ class ScriptLevelsController < ApplicationController
       &:level_ids
     ).flatten
 
-    render 'scripts/stage_extras'
+    render 'scripts/lesson_extras'
   end
 
   # Provides a JSON summary of a particular lesson, that is consumed by tools used to
