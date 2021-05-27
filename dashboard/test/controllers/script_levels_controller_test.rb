@@ -1832,7 +1832,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level = create :script_level, lesson: lesson, script: script
     script_level.bonus = true
     script_level.save!
-    get :stage_extras, params: {
+    get :lesson_extras, params: {
       script_id: script,
       lesson_position: 1,
       level_name: script_level.level.name
@@ -1851,7 +1851,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level_by_name.bonus = true
     script_level_by_id.save!
     script_level_by_name.save!
-    get :stage_extras, params: {
+    get :lesson_extras, params: {
       script_id: script_level_by_id.script,
       lesson_position: 1,
       id: script_level_by_id.id,
@@ -1871,7 +1871,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level_by_name.bonus = true
     script_level_by_id.save!
     script_level_by_name.save!
-    get :stage_extras, params: {
+    get :lesson_extras, params: {
       script_id: script_level_by_id.script,
       lesson_position: 1,
       id: script_level_by_id.id,
@@ -1889,7 +1889,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level.bonus = true
     script_level.save!
     create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
-    get :stage_extras, params: {
+    get :lesson_extras, params: {
       script_id: script_level.script,
       lesson_position: 1
     }
@@ -1910,7 +1910,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level.bonus = true
     script_level.save!
     create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
-    get :stage_extras, params: {
+    get :lesson_extras, params: {
       script_id: script_level.script,
       lesson_position: 1
     }
@@ -1931,7 +1931,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level.bonus = true
     script_level.save!
     create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
-    get :stage_extras, params: {
+    get :lesson_extras, params: {
       script_id: script_level.script,
       lesson_position: 1,
       section_id: @section.id,
@@ -1953,7 +1953,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level.bonus = true
     script_level.save!
     create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
-    get :stage_extras, params: {
+    get :lesson_extras, params: {
       script_id: script_level.script,
       lesson_position: 1,
       section_id: @section.id,
