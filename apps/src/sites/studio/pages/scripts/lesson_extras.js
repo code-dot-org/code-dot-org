@@ -30,7 +30,7 @@ ReactDOM.render(
       projectTypes={projectTypes}
       sectionId={viewer.section_id}
       userId={viewer.user_id}
-      showLessonExtrasWarning={viewer.show_stage_extras_warning}
+      showLessonExtrasWarning={viewer.show_lesson_extras_warning}
     />
   </Provider>,
   document.querySelector('#lesson-extras')

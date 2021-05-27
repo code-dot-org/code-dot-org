@@ -43,7 +43,7 @@
   header_contents_options[:loc_prefix] = "nav.header."
   header_contents_options[:page_mode] = request.cookies['pm']
 
-  should_show_progress = script_level || @stage_extras
+  should_show_progress = script_level || @lesson_extras
 
   sign_in_user = current_user || user_type && OpenStruct.new(
     id: nil,
@@ -112,7 +112,7 @@
     signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
 
     # Pass script name through to header
-    if @stage_extras
+    if @lesson_extras
       text = @stage.localized_title
     else
       stage = @stage || @script_level.lesson
