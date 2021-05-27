@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-19 23:46:52 UTC",
+    "serialized_at": "2021-05-27 18:46:19 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -52,7 +52,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this unplugged lesson, students create objects and represent relevant attributes using instance variables. Students learn the difference between `public` and `private` and the purpose of encapsulation to hide the internal implementation of an object.",
-        "preparation": "* Print copies of Defining Attributes - Classes Foldables for each student. These foldables should be printed two-sided, flip on short-edge.\n* Print copies of Defining Attributes - Main Method. Cut in half so each student receives a half sheet.\n* Print copies of the Defining Attributes handout for each student\n* Print and cut out a class set of Quiz, Quiz, Trade cards\n* Prepare 20-25 sticky notes per student\n* Designate an area in the classroom (on the board or a wall) for students to place their warm-up sticky notes\n",
+        "preparation": "* Print copies of Defining Attributes - Classes Foldables for each student. These foldables should be printed two-sided, flip on short-edge.\n* Print copies of Defining Attributes - Main Method. Cut in half so each student receives a half sheet.\n* Print copies of the Defining Attributes handout for each student\n* Print and cut out a class set of Quiz, Quiz, Trade cards\n* Prepare 20-25 sticky notes per student\n* Designate an area in the classroom (on the board or a wall) for students to place their sticky notes during the warm up activity\n",
         "student_overview": "Through our experiences in The Neighborhood, we know that classes and objects are key components of the Java programming language. But just how exactly do classes create objects? In this lesson, you explore how an object is created and learn about a process called data encapsulation. \n"
       },
       "seeding_key": {
@@ -69,9 +69,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this lesson, students define variables to represent attributes for an object and use these variables to store values. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.",
-        "preparation": "* Print copies of the Trace Table activity guide (one copy per student)",
-        "student_overview": "One way that software engineers can store information in a computer’s memory is by using variables. In this lesson, you use variables to store information used to create `Painter` objects and also to store information input by a user. "
+        "overview": "In this lesson, students explore the functionality of variables and differentiate between primitive and reference variables. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.",
+        "preparation": "* Print copies of the Variables Manipulatives (one set per student)\n* Gather 3 paper clips, 3 sticky notes, and some scrap paper per student\n* (Optional) Cut out the Variables Manipulatives and place the cutouts, paper clips, sticky notes, and scrap paper in baggies",
+        "student_overview": "Variables provide a way for software engineers to store information. The type of information we need to store determines what kind of variable we need to use, its data type, and how we can use it. In this lesson, you use variables to store information used to create `Painter` objects and store information input by a user."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -105,6 +105,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "Students continue to work on the Project Mercury Pastries food truck program. Students write overloaded constructors for the `Dessert` class to provide multiple ways to instantiate `Dessert` objects. Students determine when it is appropriate to establish default values for one or more instance variables and use no-argument constructors. ",
+        "preparation": "* Print copies of the Construct an Object Cards (one set of cards for each pair of students)\n* (Optional) Cut out the pieces of the object for each group of students",
+        "student_overview": "The Project Mercury Pastries food truck has grown in popularity! To help the owner fill orders, you improve the `Dessert` class to create `Dessert` objects more efficiently. To solve this problem, you implement overloaded constructors to simplify your code and add flexibility for creating `Dessert` objects. To fill standard orders, you create a default constructor to use default values for `Dessert`s."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -120,6 +123,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "In this lesson, students write and evaluate expressions using variables and object data. Students use arithmetic operators (+, -, *, /, %) and compound assignment (+=, -=, *=, /=, %=) operators to perform calculations involving variables and object data.",
+        "preparation": "* Print copies of the Vocabulary Crossword warmup (one per student)\n* Print copies of the Exploring Expressions handouts (one version per pair of students)\n* Gather sticky notes (one per student)",
+        "student_overview": "You explore the rules that a computer uses to determine the resulting value and type of an expression, similar to the ones you see in math class. You create expressions to get the computer to do the math for you."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -135,6 +141,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "In this lesson, students implement conditionals and local variables to make decisions about object initialization and verify values passed to the constructor. Students explore the scope of local variables and parameters within a constructor and use the keyword `this` to refer to the current object. These concepts are used to add another constructor to the `Dessert` class.",
+        "preparation": "* Gather colored pencils or markers so that each student has access to red, green, and blue colors\n* Print copies of the Diagramming Scope Activity Guide (one copy for each student)\n* Gather several sticky notes",
+        "student_overview": "How can you make sure that the values given to a `Dessert` are correct? Remembering what you learned about edge cases, you add code to check for logic errors in the constructor. In this lesson, you explore where different types of variables are accessible and use these concepts to add another constructor to the `Dessert` class."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -150,6 +159,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "In this lesson, students write constructors for superclasses and subclasses. Students use the `super` keyword to call the superclass constructor and pass any necessary parameters to the superclass constructor to initialize instance variables. The lesson introduces the D.R.Y. (Don’t Repeat Yourself) software development principle to highlight the benefits of using inheritance in object-oriented programming design.",
+        "preparation": "* Print copies of the Class Hierarchy Cards (one set of cards for each pair of students)\n* (Optional) Cut out the Class Hierarchy Cards for each group of students",
+        "student_overview": "The owner of the Project Mercury food truck is expanding the menu to include different desserts. In this lesson, you use software development techniques to create classes and constructors for Dessert subclasses efficiently. To initialize inherited private instance variables, you use the `super` keyword to call the superclass constructor.  "
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -336,14 +348,14 @@
       }
     },
     {
-      "key": "dbfb0987-e7d7-441b-94dc-cb37896b671a",
+      "key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48",
       "position": 2,
       "properties": {
         "duration": 37,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48",
         "lesson.key": "lesson-2",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot"
@@ -401,6 +413,174 @@
       "seeding_key": {
         "lesson_activity.key": "66e2687b-ec16-4a09-8e01-cad520c2a537",
         "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "e87051a0-17fd-469d-bfc8-af1f09db394d",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e87051a0-17fd-469d-bfc8-af1f09db394d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "289e6b67-1bbd-431d-b025-59aba8027919",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "289e6b67-1bbd-431d-b025-59aba8027919",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "c53cc0be-8a11-4944-96b3-354d7b70a397",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c53cc0be-8a11-4944-96b3-354d7b70a397",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "34b62241-cdc8-49c1-8f76-2e9816094034",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "a0c36374-0902-489c-8911-a094885e41bd",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a0c36374-0902-489c-8911-a094885e41bd",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "b4dad128-5666-4eef-b005-66fd6a49a7b7",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "35b3858a-a1f9-4eab-b8b7-7fe06bb2b196",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "35b3858a-a1f9-4eab-b8b7-7fe06bb2b196",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "f449548a-111b-436d-a373-71c5e2c0b8f5",
+      "position": 1,
+      "properties": {
+        "duration": 4,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f449548a-111b-436d-a373-71c5e2c0b8f5",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc",
+      "position": 2,
+      "properties": {
+        "duration": 37,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "4a3675eb-5202-4072-8fd0-d3ed659d6c6b",
+      "position": 3,
+      "properties": {
+        "duration": 4,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4a3675eb-5202-4072-8fd0-d3ed659d6c6b",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot"
       }
@@ -579,7 +759,7 @@
       "key": "6bdad9ad-1da0-4536-9e7d-73245244dd18",
       "position": 1,
       "properties": {
-        "description": "In the previous lesson, we learned that we could represent the attributes of an object by defining instance variables in its class. The relationship between an object and its instance variables is called a “has-a” relationship.",
+        "description": "In the previous lesson, we learned that we could represent the attributes of an object by defining instance variables in its class. The relationship between an object and its instance variables is referred to as a \"has-a\" relationship.",
         "remarks": true
       },
       "seeding_key": {
@@ -591,7 +771,7 @@
       "key": "370eadde-d06b-49c4-b48b-dd56da84cc2a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *For example, an attribute for a cake could be flavor. Every cake \"has-a\" flavor. What are some attributes that you can use to describe a cake?*\n\n**Discussion Goal:** Students share characteristics of a cake to fill in the blank that can be used as an attribute.\n\n**Do This:** Click through the animated slide to show the three examples. Highlight how the various attributes are represented with values of different types."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *For example, one attribute for a cake could be its flavor. Every cake \"has-a\" flavor. What are some attributes of a cake?*\n\n**Discussion Goal:** Students share characteristics of a cake that can be used as attributes to fill in the blanks.\n\n**Do This:** Click through the animated slide to show three examples. Point out that these attributes have values of different types of information, such as text or numbers."
       },
       "seeding_key": {
         "activity_section.key": "370eadde-d06b-49c4-b48b-dd56da84cc2a",
@@ -599,123 +779,227 @@
       }
     },
     {
-      "key": "1ce4639a-de47-4ffc-9b9d-e71fd5f5011f",
+      "key": "50088196-c133-446c-b1a2-37d2c50c256f",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Introduce the purpose and functionality of variables:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define a variable using the analogy of a box.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A variable is stored in memory so that it can be accessed and updated later.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the What is a Variable? video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask students where a line should be drawn to match each value to its corresponding type. Click through the animated slide to reveal the answer for each value.",
-        "duration": "5",
-        "name": "Introduction to Variables"
+        "description": "Variables are containers that can store a single piece of data.",
+        "duration": "10",
+        "name": "Introduction to Variables",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "1ce4639a-de47-4ffc-9b9d-e71fd5f5011f",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "50088196-c133-446c-b1a2-37d2c50c256f",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "aba90bff-d230-49c5-9298-91dbc5872a4a",
+      "key": "5b45d2ad-5cca-4826-9af9-683fefa05d21",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps for creating a variable:\n* Step 1: Declaration. All variables are declared by creating a name and stating the type.\n* Step 2: Initialization. Variables can be assigned an initial value using the assignment operator, `=`.\n* Declaration and initialization can be written in one line of code.",
-        "duration": "8",
-        "name": "Creating Variables"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce primitive and reference types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the What is a Variable video."
       },
       "seeding_key": {
-        "activity_section.key": "aba90bff-d230-49c5-9298-91dbc5872a4a",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "5b45d2ad-5cca-4826-9af9-683fefa05d21",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "79aa7d74-5c56-4c2b-a894-1d6c08e2c3d4",
+      "key": "e8bfb176-5198-4e74-be82-a2fa92bbfba9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work in pairs on Level 1 on Code Studio. Students declare variables and use them to create a new `Painter` object."
+        "description": "Let's look at primitive variables first. Primitive variables can hold literal values like whole numbers, decimal numbers, and `boolean` values.",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "79aa7d74-5c56-4c2b-a894-1d6c08e2c3d4",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "e8bfb176-5198-4e74-be82-a2fa92bbfba9",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "ddaa482e-076c-4c2d-92b6-0fb662cea2ae",
+      "key": "fdb70148-d2bf-412f-b750-1ff731f5ed7a",
       "position": 4,
       "properties": {
-        "description": "Variables hold an initial value and that value can change later in our program. We can use a trace table to keep track of the values of the variables as they change in each step of our program.",
-        "duration": "14",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a set of Variables Manipulatives.\n\n**Do This:** Have students cut out the manipulatives and fold the `double`, `int`, and `boolean` boxes into cups as directed."
+      },
+      "seeding_key": {
+        "activity_section.key": "fdb70148-d2bf-412f-b750-1ff731f5ed7a",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "9d695fcd-9249-4e99-9181-a6b7976522eb",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Variables are containers that allow us to hold something, like the cups you now have.\n\nWhen you order a drink at a restaurant, you typically say something like, \"I want a medium orange soda.\" Medium is the type of cup we want, and orange soda is the value we want in our cup.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9d695fcd-9249-4e99-9181-a6b7976522eb",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "fa817cf1-f70a-4fe4-8cba-b5eab36d5db6",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate specifying a type for a value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate primitive variables.\n* The type specified on the outside of the cup specifies the types of values that the variable can store.\n* Demonstrate that the `double` cup can hold decimal and integer values, but the `int` cup can only hold integer values. Explain that the `boolean` cup can only contain either a `true` or `false` value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask students where lines should be drawn to match each value to its corresponding type. Click through the animated slide to reveal the answer for each value."
+      },
+      "seeding_key": {
+        "activity_section.key": "fa817cf1-f70a-4fe4-8cba-b5eab36d5db6",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "cb004d08-bb46-48b4-9f53-284586b4400e",
+      "position": 7,
+      "properties": {
+        "description": "Not only do we need to tell Java what kind of data we want to store in our variable, but we also need to give our cup a name so that we have a way to refer to it in our program. For example, when I said, \"I want a `double` variable with the value 1.99\", I also need to give a name for this value so that I can use it by saying something like, \"I want a `double` variable named `price` with the value 1.99\".",
+        "duration": "10",
+        "name": "Creating Variables",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cb004d08-bb46-48b4-9f53-284586b4400e",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "f70ea0ea-7e3b-4b70-bddd-4acbe60fc136",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps for creating a variable.\n* Have students write `cakePrice` on a sticky note and place it on a `double` cup. Explain that variables are declared by creating a name and stating the type.\n* Have students write a decimal value on a slip of paper and place it inside the `cakePrice` cup. Explain that variables can be assigned an initial value using the assignment operator `=`. Since `cakePrice` is a primitive variable, the literal value can be placed inside the container.\n* Explain that declaration and initialization can be written in one line of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students connect three paper clips to form a chain. Click through the animated slide to introduce reference variables:\n* Explain that reference variables do not contain an object but instead contain a pointer to the location of an object in memory.\n* Have students write a name for a `Painter` object on a sticky note and put it on their reference variable. Explain that since the reference variable is not currently pointing to an object, its value is `null`.\n* When a `Painter` object is created, it is stored in memory and accessed using a reference variable.\n* Have students use their paper clip chain to connect the `Painter` object to the variable. Now the reference variable contains a pointer to the location of the object in memory.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `String`s are also objects, which means they are accessed using reference variables. `String`s can be created using string literals or by calling the `String` class constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "f70ea0ea-7e3b-4b70-bddd-4acbe60fc136",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "2cc9bc68-9b8d-4211-837c-0783ac7dfb77",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner on Level 1 on Code Studio. Students declare variables and use them to create a new `Painter` object."
+      },
+      "seeding_key": {
+        "activity_section.key": "2cc9bc68-9b8d-4211-837c-0783ac7dfb77",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "f8354012-e4dc-4f38-9be8-1046d06117e9",
+      "position": 10,
+      "properties": {
+        "description": "Variables hold an initial value, and that value can change later in our program. We can use a trace table to keep track of the values of the variables as they change in each step of our program.",
+        "duration": "10",
         "name": "Updating Variables",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "ddaa482e-076c-4c2d-92b6-0fb662cea2ae",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "f8354012-e4dc-4f38-9be8-1046d06117e9",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "6947f4df-e9a6-449d-aa59-31a9e2c382f5",
-      "position": 5,
+      "key": "07d79cfa-eb3a-4d7e-8be8-845f6937d209",
+      "position": 11,
       "properties": {
-        "description": "**Do This:** Click through the animated slide to demonstrate stepping through an algorithm and tracking the value of variables using a trace table.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate tracing an algorithm and tracking the value of variables using a trace table.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "As you move through the animation, have students:\n* Explain what is happening on the line of code that is about to be executed.\n* Ask students for the values to add to the new row of the trace table."
+            "markdown": "As you move through the animation, have students explain what is happening on the line of code that is about to be executed. Ask students for the values to add to the new row of the trace table."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6947f4df-e9a6-449d-aa59-31a9e2c382f5",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "07d79cfa-eb3a-4d7e-8be8-845f6937d209",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "d978bce9-21b2-4fd9-90b4-a05d7937eaa9",
-      "position": 6,
+      "key": "6d2e4d48-7d75-4182-99f2-f19adfd2738f",
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Trace Tables activity guide.\n\n**Do This:** Review the Trace Tables activity guide as a class. Draw the trace table on the whiteboard. Step through each line of the algorithm and ask different pairs of students for the values that should be added to the new row of the trace table.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 2-3 minutes to create a trace table for the code segment with a partner. Review the trace table and final values stored in each variable as a class."
+      },
+      "seeding_key": {
+        "activity_section.key": "6d2e4d48-7d75-4182-99f2-f19adfd2738f",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "0a0c2ecc-cbe3-486c-a5b0-10228ec3577c",
+      "position": 13,
+      "properties": {
+        "description": "I mentioned earlier that variables can only store a single piece of data. This means that the container can only hold one value at a time. If I take a value out of the container and place it down on the table, it is lost in memory forever because I have no way to tell Java how to find that value again.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0a0c2ecc-cbe3-486c-a5b0-10228ec3577c",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "3717aa17-e4c2-4854-a824-ede49142c5a3",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write `drinkPrice` on a sticky note and place it on a `double` cup and write a decimal value on a slip of paper and place it inside the `drinkPrice` cup.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *We placed the wrong values inside our `cakePrice` and `drinkPrice` containers, and we need to swap them. How could we solve this problem?*\n\n**Discussion Goal:** Students share potential solutions to swap the values, including taking the values out of both cups to swap them or copying the values down to store in temporary cups.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If a whiteboard is not available in your classroom, you can digitally simulate drawing a trace table by creating a table on a slide and typing the values into the table cells."
+            "markdown": "Reinforce to students that the value is lost if it is not stored in another container. Students might share ideas to take the values out of the containers and physically swap them but point out that once the values are removed from the container, they are lost."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "d978bce9-21b2-4fd9-90b4-a05d7937eaa9",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "3717aa17-e4c2-4854-a824-ede49142c5a3",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "aa692158-1e91-4dc8-ad21-28915134b101",
-      "position": 7,
+      "key": "d5000a84-6fa7-463e-938d-d4a7a2f9a6a4",
+      "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 2 and 3 on Code Studio. Students independently complete the Check for Understanding on Level 2 then complete Level 3 in pairs, where they assign new values to existing variables and create another `Painter` object."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate one solution that results in losing one of the values and the solution that uses a temporary variable to store one of the values."
       },
       "seeding_key": {
-        "activity_section.key": "aa692158-1e91-4dc8-ad21-28915134b101",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "d5000a84-6fa7-463e-938d-d4a7a2f9a6a4",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "c3228e4f-e8b5-4fe5-9656-3310d6101c57",
-      "position": 8,
+      "key": "6aee9c96-125c-41c8-9285-de7cf3c0fc99",
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the How to Accept User Input video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are three takeaways you have from this video?*\n\n**Discussion Goal:** Students share concepts from the video, such as:\n* The `Scanner` class accepts input of type `int`, `double`, `boolean`, and `String` from a user.\n* The `Scanner` class contains methods to retrieve input of each data type.\n* `System.out.print()` displays messages and prompts to the user to enter a response in the console.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to demonstrate the `System.out.print()` Call and Response for the students by saying the words in caps and clapping as indicated: **SYSTEM** (clap while saying **DOT**) **OUT** (clap while saying **DOT**) **PRINT** (clap while saying **DOT**). Have students repeat it as a class.",
-        "duration": "10",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 2 and 3 on Code Studio. Students independently complete the Check for Understanding on Level 2, then complete Level 3 with a partner, where they assign new values to existing variables and create another `Painter` object."
+      },
+      "seeding_key": {
+        "activity_section.key": "6aee9c96-125c-41c8-9285-de7cf3c0fc99",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "03f9864c-16e9-4c04-9b42-49f016832e87",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the How to Accept User Input video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are three takeaways you have from this video?*\n\n**Discussion Goal:** Students share concepts from the video, such as:\n* The `Scanner` class accepts input of type `int`, `double`, `boolean`, and `String` from a user.\n* The `Scanner` class contains methods to retrieve input for each data type.\n* `System.out.print()` displays messages and prompts the user to enter a response in the console.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to demonstrate the `System.out.print()` Call and Response for the students by saying the words in caps and clapping as indicated: **SYSTEM** (clap while saying **DOT**) **OUT** (clap while saying **DOT**) **PRINT** (clap while saying **DOT**). Have students repeat it as a class.",
+        "duration": "7",
         "name": "Storing User Input"
       },
       "seeding_key": {
-        "activity_section.key": "c3228e4f-e8b5-4fe5-9656-3310d6101c57",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "03f9864c-16e9-4c04-9b42-49f016832e87",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "60591181-7948-43c6-8f96-342d5014b173",
-      "position": 9,
+      "key": "e258d58e-4619-4740-96ea-68384f567987",
+      "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 4 and 5 on Code Studio. Students independently complete the Check for Understanding on Level 4 then complete Level 5 in pairs, where they use the `Scanner` class to accept user input."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 4 and 5 on Code Studio. Students independently complete the Check for Understanding on Level 4, then complete Level 5 with a partner, where they use the `Scanner` class to accept user input."
       },
       "seeding_key": {
-        "activity_section.key": "60591181-7948-43c6-8f96-342d5014b173",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "e258d58e-4619-4740-96ea-68384f567987",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
@@ -977,6 +1261,955 @@
         "activity_section.key": "c209709f-7efc-438c-98ac-9c2c00ffc00f",
         "lesson_activity.key": "66e2687b-ec16-4a09-8e01-cad520c2a537"
       }
+    },
+    {
+      "key": "985dc512-441a-498c-bd57-da798160b022",
+      "position": 1,
+      "properties": {
+        "description": "In the previous lesson, we created a constructor for the `Dessert` class and used it to initialize the instance variables of a `Dessert` object. Let’s review how to call the constructor for the `Dessert` class. Arrange the given cards in the correct order to create the Java statement needed to initialize a `Dessert` object. ",
+        "name": "Construct an Object",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "985dc512-441a-498c-bd57-da798160b022",
+        "lesson_activity.key": "e87051a0-17fd-469d-bfc8-af1f09db394d"
+      }
+    },
+    {
+      "key": "bb571ca2-27c1-448c-92d4-9170e499f4fe",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a stack of the Construct an Object cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With their partner, students look at the constructor on the slide and construct an object with their cards.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Alternative ways to prepare the Construct an Object Cards:\n1. Pass out the card sheets and scissors to each group and have the students cut their own set of cards.\n2. Make several laminated sets of cards that to share between different sections."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb571ca2-27c1-448c-92d4-9170e499f4fe",
+        "lesson_activity.key": "e87051a0-17fd-469d-bfc8-af1f09db394d"
+      }
+    },
+    {
+      "key": "ca146b4e-f55a-48b8-bcda-5c91f68bc7c3",
+      "position": 3,
+      "properties": {
+        "description": "**Discuss:** Instruct students to discuss the following prompt with their partner.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What would happen if we called the constructor without passing arguments? What could you do to solve this problem?*\n\n**Discussion Goal:** Students reflect on the parameters in a constructor and the purpose of the values for constructing an object. Students may recall from Unit 1, Lesson 5 that parameterized constructors allow you to specify unique starting values to set the initial values for an object."
+      },
+      "seeding_key": {
+        "activity_section.key": "ca146b4e-f55a-48b8-bcda-5c91f68bc7c3",
+        "lesson_activity.key": "e87051a0-17fd-469d-bfc8-af1f09db394d"
+      }
+    },
+    {
+      "key": "c0314280-f2d1-4d16-bf80-47f34c2e0b6a",
+      "position": 1,
+      "properties": {
+        "description": "The Project Mercury Pastries food truck has grown in popularity! Now, orders can vary. Some customers want to order just a standard dessert, while other customers want to customize their dessert. \n\nTo help the owner fill orders more quickly, we need to improve the `Dessert` class to create `Dessert` objects more efficiently. To solve this problem, we will add additional constructors to the `Dessert` class.",
+        "duration": "10",
+        "name": "Introduction to Constructor Overloading",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c0314280-f2d1-4d16-bf80-47f34c2e0b6a",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "bbaee682-fd1c-421f-a680-fb218cbad5ce",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce constructor overloading:\n* For example, donuts can have frosting and sprinkles, or donuts can be plain. The challenge is to improve the `Dessert` class to create these different donuts more efficiently.\n* Constructor overloading can be used to solve this problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the definition of overloading and constructor overloading.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we identify if a class contains an overloaded constructor?*\n\n**Discussion Goal:** Based on the example, students identify that a class with more than one constructor has overloaded constructors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce no-argument constructors for default values and constructors that take parameters to initialize the instance variables to specified values.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a no-argument constructor in the `Dessert` class."
+      },
+      "seeding_key": {
+        "activity_section.key": "bbaee682-fd1c-421f-a680-fb218cbad5ce",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "078d659f-4ee0-49a1-9873-35bc89672999",
+      "position": 3,
+      "properties": {
+        "description": "We are going to continue to develop the `Dessert` class that we wrote in the previous lesson.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "078d659f-4ee0-49a1-9873-35bc89672999",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "ca67fc3a-e5d6-433f-b225-01a71362a754",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Level 1 on Code Studio. Students expand the `Dessert class` by adding a no-argument constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "ca67fc3a-e5d6-433f-b225-01a71362a754",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "5581959f-1764-42af-961a-0eea419b6681",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think would happen if we did not include any constructors in the `Dessert` class and tried to execute the following code?*\n\n**Discussion Goal:** Students think about how Java executes code without a constructor and uses default values in a program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the solution to the discussion prompt, which explains that Java provides a no-argument constructor that sets the instance variables to default values and the default values that Java uses for each data type.",
+        "duration": "2",
+        "name": "Default Constructor"
+      },
+      "seeding_key": {
+        "activity_section.key": "5581959f-1764-42af-961a-0eea419b6681",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "696d27fa-5320-494e-ba19-4dfda3eec9a1",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the importance of default values in the user experience and software design?*\n\n**Discussion Goal:** Students identify various uses and purposes for default values in a program, such as reducing the amount of work users have to do, saving the user from having to select all choices, and reducing errors.",
+        "duration": "8",
+        "name": "Multiple Constructors",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students also consider potential negative effects of using default values. Prompt students to share ideas and examples of when default values might not be ideal."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "696d27fa-5320-494e-ba19-4dfda3eec9a1",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "2c96e560-af9c-4491-8592-1f128e6975dd",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a constructor with parameters and a default value. You should identify:\n*  The `Dessert` constructor has two parameters, `newFlavor` and `newPrice`.\n* The `quantity` is set to a default value of 2."
+      },
+      "seeding_key": {
+        "activity_section.key": "2c96e560-af9c-4491-8592-1f128e6975dd",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "0caac888-0ba7-4323-b10b-da6a7cd4e402",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Levels 2 and 3 on Code Studio. "
+      },
+      "seeding_key": {
+        "activity_section.key": "0caac888-0ba7-4323-b10b-da6a7cd4e402",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "36920bde-5226-4195-bb5f-b9c302f4bf16",
+      "position": 9,
+      "properties": {
+        "description": "The owner just called and has decided to add cupcakes to the inventory. The owner wants the cupcakes to cost $1.50, but she wants to let customers choose their flavor and quantity.",
+        "duration": "10",
+        "name": "Constructor Overloading with Scanner",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "36920bde-5226-4195-bb5f-b9c302f4bf16",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "370435a1-8e5b-42ad-a2d3-a090bc4aa9a1",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What type of constructor would you create?*\n\n**Discussion Goal:** Based on the scenario, students talk about using a constructor with a default value and parameters. Students might state the need for a `Scanner` object to create an object with user input."
+      },
+      "seeding_key": {
+        "activity_section.key": "370435a1-8e5b-42ad-a2d3-a090bc4aa9a1",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "dff9e28d-4d6d-4f89-83d4-b83dbb200a55",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Levels 4 and 5 on Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "dff9e28d-4d6d-4f89-83d4-b83dbb200a55",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "12244609-18cc-49f1-91db-e24861d3504c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Guide students through the process of Closing the Loop:\n* *Which parts of this lesson built off of previous lesson content?*\n* *What is completely new?*\n* *What is the purpose of overloading a constructor?*\n\n**Discussion Goal:** The main goal of this discussion is to normalize the confusion that students are experiencing. Overloading allows the user to choose instance variables that are custom when creating the object. Consider asking students to share strategies they used from previous lessons that they implemented in this lesson. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Closing the Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "12244609-18cc-49f1-91db-e24861d3504c",
+        "lesson_activity.key": "289e6b67-1bbd-431d-b025-59aba8027919"
+      }
+    },
+    {
+      "key": "c580dab3-5180-44d3-b8bb-6867e30d2ba1",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c580dab3-5180-44d3-b8bb-6867e30d2ba1",
+        "lesson_activity.key": "289e6b67-1bbd-431d-b025-59aba8027919"
+      }
+    },
+    {
+      "key": "b9e47abb-a65f-4f68-8064-00e1472d3d8b",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a Vocabulary Crossword as they enter the classroom. Encourage students to begin working on the crossword.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n* Give students 5-6 minutes to complete the crossword.\n* Discuss the answers for the sections highlighted in green as a class. If necessary, review the order of operations using PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Vocabulary Crossword helps students review vocabulary they have learned so far, but it can take some time to complete. Some scaffolding options include:\n* Keeping or removing the word bank\n* Focusing on the sections highlighted in green first\n\nIt is not necessary for students to complete the entire crossword during the warm up. If students move quickly through the lesson activity, they can continue to work on the crossword as they wait for their peers."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b9e47abb-a65f-4f68-8064-00e1472d3d8b",
+        "lesson_activity.key": "c53cc0be-8a11-4944-96b3-354d7b70a397"
+      }
+    },
+    {
+      "key": "b95ab8f8-048e-439b-ad63-ca0f67e1232e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What theme do you notice about the words that are highlighted in green?*\n\n**Discussion Goal:** Students identify themes related to evaluating expressions, such as doing math, values, or types associated with values."
+      },
+      "seeding_key": {
+        "activity_section.key": "b95ab8f8-048e-439b-ad63-ca0f67e1232e",
+        "lesson_activity.key": "c53cc0be-8a11-4944-96b3-354d7b70a397"
+      }
+    },
+    {
+      "key": "7150ad58-3683-4227-977a-94a6700e0147",
+      "position": 1,
+      "properties": {
+        "description": "So far, we have developed a `Dessert` class to create `Dessert` objects to represent the Project Mercury Pastries inventory. We would also like to process some of that information for the bakery. Today we are going to explore how we can perform operations on the data we store in Java.",
+        "duration": "15",
+        "name": "Arithmetic Operations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7150ad58-3683-4227-977a-94a6700e0147",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "f3ac0d01-2f17-447a-a11e-db09bb0fee61",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to introduce expressions:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> An expression is a combination of operands and operators that evaluates to a single value.\n* When evaluating an expression, it is important to pay attention to both the value of the operand and the type. This will determine the type of the resulting value.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair an Exploring Expressions handout. One student in the pair should receive Version A and the other student in the pair should receive Version B.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The two versions of the worksheet address the same skills. Each version gives students different examples of expressions so they can identify patterns and rules of operators."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f3ac0d01-2f17-447a-a11e-db09bb0fee61",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "3aea3fd8-5e6c-42d7-8450-ddaf5b0580c3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 10 minutes to complete the Arithmetic Operations section of the Exploring Expressions handout (pages 1-3). As students are working, use Catch and Release as appropriate to maintain engagement. You may choose to catch to:\n* Ask a student to demonstrate how to use the expressions widget when they have started the plugged section of the activity.\n* Answer the fill-in-the-blank questions for the + operator to identify the first blank as addition and the second blank as concatenation. Explain that this means the operator is overloaded (similar to the constructors they wrote earlier in this unit).\n* Answer the free-response questions for the / operator.\n* Clarify how to use the % operator. You may choose to walk through the process of dividing two numbers and identifying the remainder.\n* Support students with misconceptions involving mathematical concepts.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Catch and Release is a technique to allow students to explore a concept with intermittent support while preventing students from struggling for too long or disengaging. Give students about two minutes to work on each arithmetic operator. As students work, circulate and make note of any misconceptions. After the two minutes, briefly clarify issues or pose a question to the class that students have been struggling with, then send them back to their work.\n\nIt is not necessary to bring the class back together after every operator. If questions have been addressed individually or students do not need the answer to continue working you may choose to address these questions after the Arithmetic Operators video.\n\nOptional differentiation: Use a public timer to differentiate between independent work and discussion, addressing all student questions after a given amount of time has elapsed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3aea3fd8-5e6c-42d7-8450-ddaf5b0580c3",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "a71cbaa4-d364-49c0-8e14-ace4e8bdb5a3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arithmetic Operators video.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the self check question. Give students one minute to think to themselves before asking students to respond out loud.\n* Click through the animated slide to review the correct answer. Give students two minutes to go back and complete the Modulus section of the activity guide if needed.\n\n**Discussion Goal:** Students demonstrate confidence working with all arithmetic operators before moving on. Students might feel a little uncomfortable with the modulus (mod) operator, but they will practice using it more in later lessons.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time and feel students could use a movement break, ask students to move to a different corner of the room corresponding to their answer, where corner one corresponds to answer A, corner two corresponds to answer B, etc. Other options for polling for answers include asking students to raise one finger for answer A, two fingers for answer B, etc."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a71cbaa4-d364-49c0-8e14-ace4e8bdb5a3",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "4106dcf1-554d-4496-816a-015d638acaa5",
+      "position": 5,
+      "properties": {
+        "description": "The food truck owner can use expressions to calculate information, such as the total number of desserts in the truck. We need to be able to store that information somewhere in our program so we can use it again later. To do this, we are going to assign the value of our evaluated expression to a variable.",
+        "duration": "15",
+        "name": "Expressions with Variables",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4106dcf1-554d-4496-816a-015d638acaa5",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "f7990e9f-e076-400b-95f4-9047b1caa1e1",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to demonstrate evaluating expressions and storing the value in a variable.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When processing assignment expressions, evaluate the statement on the right then store the value in the variable on the left.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When evaluating multiple expression statements in a row, the updated value that has been stored in the variable is the value that is used in future expression."
+      },
+      "seeding_key": {
+        "activity_section.key": "f7990e9f-e076-400b-95f4-9047b1caa1e1",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "32ca1625-681d-4f90-9b49-0034c0a08437",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the Expressions with Variables section of the Exploring Expressions handout (pages 4-5). As students are working, use Catch and Release as appropriate to maintain engagement. When students have finished this section, direct them to Code Studio to practice writing expressions for the Project Mercury Food Truck."
+      },
+      "seeding_key": {
+        "activity_section.key": "32ca1625-681d-4f90-9b49-0034c0a08437",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "32afd1a1-380b-48eb-a721-1feca830a1b4",
+      "position": 1,
+      "properties": {
+        "description": "**Display:** Show the Evaluating Expressions video.\n\n**Do This:** Lead a Quiz-Quiz-Trade activity.\n* Give each student a sticky note.\n* Students each write a short code segment including at least one variable, three arithmetic operators, and one compound assignment operator. They evaluate the code segment and write the answer on the back.\n* Use a pairing technique to get students to find a partner.\n* Students evaluate their partner’s expression and check their answer by turning over the sticky note.\n* Repeat with 2-3 partner pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "32afd1a1-380b-48eb-a721-1feca830a1b4",
+        "lesson_activity.key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611"
+      }
+    },
+    {
+      "key": "ad085f55-9443-4332-aca4-66c95fd4c6cd",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad085f55-9443-4332-aca4-66c95fd4c6cd",
+        "lesson_activity.key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611"
+      }
+    },
+    {
+      "key": "1f1caad6-302f-43c8-9a36-f5ae95c076b0",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students evaluate the four expressions to create a 4-digit code. All of these expressions evaluate to an `int`.  Give students enough time to solve these independently then quietly share with a neighbor when they are done. Ask students to share with the class before clicking through the animated slide to review the solution. Discuss any questions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students evaluate another expression that evaluates to a `double`. Give students enough time to solve these independently then quietly share with a neighbor when they are done. Ask students to share with the class before clicking through the slide animation to review the solution. Discuss any questions they may have.",
+        "name": "Crack the Code",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This warm up is a review of the previous lesson on evaluating expressions. Encourage students to reference resources, including previous handouts, to help them recall rules of evaluation."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1f1caad6-302f-43c8-9a36-f5ae95c076b0",
+        "lesson_activity.key": "a0c36374-0902-489c-8911-a094885e41bd"
+      }
+    },
+    {
+      "key": "678f0d8b-11e3-4cce-8f4e-3ca2ebe2102d",
+      "position": 1,
+      "properties": {
+        "description": "In Unit 1, we learned that an edge case is a situation in a program that produces a different outcome and requires special error handling. Today, we are going to explore edge cases for creating `Dessert` objects.",
+        "duration": "5",
+        "name": "Error Checking Constructors",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "678f0d8b-11e3-4cce-8f4e-3ca2ebe2102d",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "48cc5b2d-3e64-4401-b98e-43dde606f986",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What arguments would not make sense to pass to this `Dessert` constructor? Why would these arguments not make sense?*\n\n**Discussion Goal:** Students realize that they could pass in values that don’t make sense but still compile. For example, they could pass in a negative `int` for the `newQty` parameter. Even though Java will compile and run this code, it doesn’t make sense to have a negative quantity.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may suggest arguments that will cause the program to not compile. For example, they may try to pass in a `String` for the `newQty` parameter. Guide students toward examples that would compile but don't make sense in this scenario. For example, you could ask:\n* *Can you think of arguments that Java would compile but we know don’t make sense?*\n* *Think about desserts in the real world. What are values that don't make sense?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "48cc5b2d-3e64-4401-b98e-43dde606f986",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "c1cc758a-4e72-46e5-8dfa-96340d7c951f",
+      "position": 3,
+      "properties": {
+        "description": "Remember that the `Dessert` class is modeling something in the real world. As software engineers, we need to translate real-world rules into code. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c1cc758a-4e72-46e5-8dfa-96340d7c951f",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "f220e8ba-ade4-43e7-8f8d-978072999f94",
+      "position": 4,
+      "properties": {
+        "description": "**Discuss:** Click through the animated slide to discuss the following prompts.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *How could we check for values that don't make sense, like a negative value for `newQty`?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What could we do to prevent the negative value from being used for `newQty`?*\n\n**Discussion Goal:** Students remember that they can use an `if` statement to check if something is true. They can set the instance variable `quantity` to a different value that makes sense within the `if` statement.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Guide students towards thinking of default values for the instance variables that make sense for the scenario. For example, you could ask: *If someone tried to use a negative value for quantity, what default value would make sense to use instead?*\n\nStudents may confuse writing code for default values with the Java default values from previous lessons. When we specify default values, we make choices based on our knowledge of the object we are modeling. The default values Java are generic values for all scenarios."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f220e8ba-ade4-43e7-8f8d-978072999f94",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "3c614fef-f3a7-4af6-9ddc-3cdc57eb3a3c",
+      "position": 5,
+      "properties": {
+        "description": "As software engineers, we write code that other software engineers will use. We need to make sure that our code can handle these cases.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3c614fef-f3a7-4af6-9ddc-3cdc57eb3a3c",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "e4aa75b6-3f1f-4a48-a930-9483cd865ba3",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students a possible solution to handle negative values for quantity. Connect the code to student responses from the previous discussion by pointing out how the instance variable `quantity` is set to 1 within the `if` statement when `newQty` is negative.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Although students have not yet been formally introduced to relational operators, they likely have seen the `>=` operator in other classes. Focus on explaining that the expression evaluates to `true` or `false` rather than spending time discussing the `>=` operator."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e4aa75b6-3f1f-4a48-a930-9483cd865ba3",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "57fe166b-24db-4c11-a913-bdfc9d3c0637",
+      "position": 7,
+      "properties": {
+        "description": "Let's look at some more broken code so we can learn how to fix them!",
+        "duration": "10",
+        "name": "Scope",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "57fe166b-24db-4c11-a913-bdfc9d3c0637",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "4b71ad62-38d6-4405-9195-f0a72bb44029",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students run the code to identify the error resulting from using `newQty`, then correct the code to use `quantity`."
+      },
+      "seeding_key": {
+        "activity_section.key": "4b71ad62-38d6-4405-9195-f0a72bb44029",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "b3f129e7-89fb-4ab9-b3b4-6d0fda440aa9",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did this change fix the error?*\n\n**Discussion Goal:** Students note that changing the variables fixed the error. Using `newQty` caused the error while using `quantity` did not cause an error.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Guide students to notice that `newQty` is a local variable declared within the constructor, while `quantity` is an instance variable. Although students have not learned the term scope yet, they may share ideas about where a variable can be used."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b3f129e7-89fb-4ab9-b3b4-6d0fda440aa9",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "46cc8c29-8174-46d1-b5fc-e5b729d331a0",
+      "position": 10,
+      "properties": {
+        "description": "**Discuss:** Click through the animated slide to introduce scope and discuss the prompt.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What do you think scope means?*\n\n**Discussion Goal:** Students guess that scope refers to where a variable can be used. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that a parameter can only be used within the constructor or method that is defined.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Will this code compile? Why or why not?*\n\n**Discussion Goal:** Students have not seen this type of scope error. Students make predictions and justify their answers.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Not all of the code fits on the slide. An option is to have students open the code in the corresponding level while discussing. However, ensure that students do *not* run the code before the discussion. Level 2 has compiler errors that may be obvious once Code Studio is open."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "46cc8c29-8174-46d1-b5fc-e5b729d331a0",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "da1d2967-ca73-4f44-8270-6c2332828243",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students run the previous code to check their prediction."
+      },
+      "seeding_key": {
+        "activity_section.key": "da1d2967-ca73-4f44-8270-6c2332828243",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "c489cbcf-de28-4c6f-8438-c044765f266b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Did the code compile? Why do you think this happened?*\n\n**Discussion Goal:** Students discover that the code doesn’t compile and share ideas about the cause.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to make connections to the errors encountered so far. The compiler error message will also give them hints. Guide students towards thinking about the scope of the local variable `isValid`."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c489cbcf-de28-4c6f-8438-c044765f266b",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "f47dec05-1655-402c-a5c5-3637443d1611",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Click through the animated slide to explain that a local variable can only be used in the constructor or method after it was defined.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall that describes the bugs encountered with scope and strategies to debug them. "
+      },
+      "seeding_key": {
+        "activity_section.key": "f47dec05-1655-402c-a5c5-3637443d1611",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "09c423c6-506b-4650-a11e-a0e3b3e6d95d",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Diagramming Scope handout and red, green, and blue colored pencils or markers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work on the Diagramming Scope handout with a partner. After they are finished, they find another pair to compare.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Any questions? Did any groups disagree on scope?*\n\n**Discussion Goal:** Students clarify any misconceptions they may have about scope.",
+        "duration": "5",
+        "name": "Diagramming Scope"
+      },
+      "seeding_key": {
+        "activity_section.key": "09c423c6-506b-4650-a11e-a0e3b3e6d95d",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "ddee7d78-6398-4966-9850-ed2e77672bca",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think `printInfo()` does?*\n\n**Discussion Goal:** Students share that it looks like the values of the `Dessert` object's instance variables are printed.\n\n**Do This:** Click through the animated slide to show the answer.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the output of this code segment?*\n\n**Discussion Goal:** Students have not seen variables with the same name before. Students make predictions rather about the output of the code segment.",
+        "duration": "15",
+        "name": "this Keyword",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Guide students towards noticing that there are two variables with the same name – one is an instance variable and the other is a local variable. Possible questions to ask include:\n* *What do you think happens when there are two variables of the same name?*\n* *Which one is being referenced?*\n* *Do you think this will compile?*\n* *Do you think this will run?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ddee7d78-6398-4966-9850-ed2e77672bca",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "38cd0432-31c5-4c92-b107-e23e835fbb9f",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students run the previous code to check their prediction."
+      },
+      "seeding_key": {
+        "activity_section.key": "38cd0432-31c5-4c92-b107-e23e835fbb9f",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "55922e61-76aa-4994-a246-0a55a504032e",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the code? Why do you think this happened?*\n\n**Discussion Goal:** Students share the output of the code segment and provide their best guesses as to why. Note that `quantity = 0` even though the intent was for it to be set to 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain to students why `quantity = 0`.\n\n**Discuss:** Use Think-Pair-Share to discuss the prompts.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *The updated code sets the instance variable to the parameter. What changed?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Why did this change fix the code?*\n\n**Discussion Goal:** Students notice that line 11 changed. The code on the right uses the `this` keyword to refer to instance variables. Students predict that `this` keyword fixes the error.\n\n**Discuss:** Click through the animated slide after discussing the prompt to show the definition.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What do you think `this` means?*\n\n**Discussion Goal:** Students guess that `this` is used to reference instance variables.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain that to refer to the instance variable when there is a local variable with the same name, use the `this` keyword.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the open-source example of the `this` keyword. Explain that some software engineers use the `this` keyword so they don’t have to rename variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Given the `Dessert` class, predict the output of the code segment.*\n\n**Do This:** Click through the animated slide to show the code side by side.\n\n**Discussion Goal:** Students have just been introduced to the `this` keyword but have not had as much experience running code using it. Students make predictions rather than determine the correct answer.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Guide students towards noticing that the code now uses the `this` keyword on the right-hand side of the assignment expression instead of the left. Possible questions to ask include:\n* *What is the difference between this code and the last?*\n* *What difference do you think that will make when we run the code if any?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "55922e61-76aa-4994-a246-0a55a504032e",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "e9b89bbc-c727-431b-9ac9-93aa9c9b24c8",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students run the previous code to check their prediction."
+      },
+      "seeding_key": {
+        "activity_section.key": "e9b89bbc-c727-431b-9ac9-93aa9c9b24c8",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "7b3d0b23-1e1e-4c42-af58-840418f0926c",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the code? Why do you think this happened?*\n\n**Discussion Goal:** Students share out the output and provide their best guesses as to why. Note that `quantity = 0` even though the intent was for it to be set to 1."
+      },
+      "seeding_key": {
+        "activity_section.key": "7b3d0b23-1e1e-4c42-af58-840418f0926c",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "616ece61-9681-4c8d-96e8-39daf7675ca3",
+      "position": 20,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students now debug the code."
+      },
+      "seeding_key": {
+        "activity_section.key": "616ece61-9681-4c8d-96e8-39daf7675ca3",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "a0a34d76-52ba-4426-a0cd-f9068699bdd9",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Before, `quantity = this.quantity;` was incorrect because it assigned the value of the instance variable to the parameter, which meant the instance variable was never updated. The instance variable `quantity` was never set, and remained the default value of 0.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a0a34d76-52ba-4426-a0cd-f9068699bdd9",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "ae41a93a-6af5-4723-957e-d5d70327c955",
+      "position": 22,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall describing bugs encountered and strategies to debug."
+      },
+      "seeding_key": {
+        "activity_section.key": "ae41a93a-6af5-4723-957e-d5d70327c955",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "21383e98-526c-4ba2-bf1f-861c3d92f2a2",
+      "position": 23,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students update the constructor then complete a vocabulary matching level."
+      },
+      "seeding_key": {
+        "activity_section.key": "21383e98-526c-4ba2-bf1f-861c3d92f2a2",
+        "lesson_activity.key": "b4dad128-5666-4eef-b005-66fd6a49a7b7"
+      }
+    },
+    {
+      "key": "9407896a-db1b-4e7a-aeb6-17a4b8175c93",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Scope video.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This video provides a summary of the concepts covered in this lesson. This helps students recap and process the concepts and terminology discussed before actively reflecting on the lesson in the Closing the Loop discussion."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9407896a-db1b-4e7a-aeb6-17a4b8175c93",
+        "lesson_activity.key": "35b3858a-a1f9-4eab-b8b7-7fe06bb2b196"
+      }
+    },
+    {
+      "key": "0abf4008-3e2b-411c-accc-a4eba5864a67",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "0abf4008-3e2b-411c-accc-a4eba5864a67",
+        "lesson_activity.key": "35b3858a-a1f9-4eab-b8b7-7fe06bb2b196"
+      }
+    },
+    {
+      "key": "7d212dff-8b9b-433c-afd7-78add4021cd1",
+      "position": 3,
+      "properties": {
+        "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket. ",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d212dff-8b9b-433c-afd7-78add4021cd1",
+        "lesson_activity.key": "35b3858a-a1f9-4eab-b8b7-7fe06bb2b196"
+      }
+    },
+    {
+      "key": "38afb102-e14e-43c3-bb46-de39a268def3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce class hierarchies.\n* Each class in a class hierarchy inherits from the class above it.\n* All classes implicitly inherit from a universal subclass called `Object`.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Class Hierarchy cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With their partner, students arrange the cards to create a class hierarchy of the `Painter`.",
+        "name": "Constructing a Class Hierarchy",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Alternatives to prepare the Class Hierarchy Cards:\n* Pass out the card sheets and scissors to each group and have students cut their own set of cards.\n* Make several laminated sets of cards that to share between different sections."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "38afb102-e14e-43c3-bb46-de39a268def3",
+        "lesson_activity.key": "f449548a-111b-436d-a373-71c5e2c0b8f5"
+      }
+    },
+    {
+      "key": "3b92bb2f-774b-42c4-a508-0916799b7351",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the solution."
+      },
+      "seeding_key": {
+        "activity_section.key": "3b92bb2f-774b-42c4-a508-0916799b7351",
+        "lesson_activity.key": "f449548a-111b-436d-a373-71c5e2c0b8f5"
+      }
+    },
+    {
+      "key": "277d4886-99a9-4b39-88bf-f54246a1ca6c",
+      "position": 1,
+      "properties": {
+        "description": "Let’s review how to create a constructor by completing the `FoodTruck` class. Every food truck has an owner and a specialized dish. ",
+        "duration": "5",
+        "name": "Writing a FoodTruck Constructor",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "277d4886-99a9-4b39-88bf-f54246a1ca6c",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "7f8b816f-79c9-43e6-a9d3-ba2bd61a5121",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work in pairs on Level 1 on Code Studio. Students write a constructor for the `FoodTruck` class.  "
+      },
+      "seeding_key": {
+        "activity_section.key": "7f8b816f-79c9-43e6-a9d3-ba2bd61a5121",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "6b432813-8b3c-4c9b-ae1d-d5747a99b85d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review inheritance by prompting students to recall the definition.\n* **Discuss:** *What is inheritance?*\n* **Do This:** Click through the animated slide to reveal the definition.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk through an example of inheritance using the `StampPainter`, `SprayPainter`, and `PainterPlus` classes. \n\n**Do This:** Talk through how to use `super()` to initialize inherited instance variables:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Subclasses cannot initialize inherited private instance variables.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize inherited private instance variables using `super()`, which calls the superclass constructor. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to explain that Java automatically calls `super()` if the subclass does not include it as the first line of the subclass constructor.",
+        "duration": "7",
+        "name": "Using super() for Initialization",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When discussing `super()`, reinforce that the first line of the subclass constructor must call `super()` on its first line."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6b432813-8b3c-4c9b-ae1d-d5747a99b85d",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "ac7e8413-7e30-4f58-bfa4-84fde1492c09",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce and explain the DRY principle.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Does the code on the next slide follow the DRY principle? Where are there redundancies?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** `Car` and `Truck` classes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** `Vehicle`, `Car`, and `Truck` classes\n\n**Discussion Goal:** Students discuss how to refactor the code using inheritance, where the superclass contains the repeated attributes and methods from which Car and Truck can inherit.",
+        "duration": "10",
+        "name": "The DRY Principle"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac7e8413-7e30-4f58-bfa4-84fde1492c09",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "707ddc36-06b6-484d-8422-7eb3e15f3a39",
+      "position": 5,
+      "properties": {
+        "description": "To reduce repetition in our program, we can create a superclass called `Vehicle` from which `Car` and `Truck` can inherit.\n\nThe superclass called `Vehicle` contains the shared instance variables and methods between `Car` and `Truck`. \n\nIn the `Vehicle` class, we store shared instance attributes, like `wheels` and `seats`, and methods, like `move()`, that all objects of type `Vehicle` have. \n\nA `Car` “is-a” `Vehicle`. A `Truck` “is-a” `Vehicle`.\n\nIn the `Car` class, we left behind the instance variable `sunRoof` because it was not an attribute all vehicles have. The same applies to the `capacity` in the `Truck` class.\n\nWe also made our constructors more DRY by using `super()` to initialize the shared inherited instance variables. We only need to initialize the instance variables within the class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "707ddc36-06b6-484d-8422-7eb3e15f3a39",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "6b728a58-9b2f-40b6-aa93-1b3b9c628802",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show The Importance of Code Refactoring video."
+      },
+      "seeding_key": {
+        "activity_section.key": "6b728a58-9b2f-40b6-aa93-1b3b9c628802",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "edc16ebb-cb7b-4759-8166-34c43996370d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 2 and 3 on Code Studio. Students independently complete the Check for Understanding on Level 2, then complete Level 3 in pairs, where they apply the DRY principle by refactoring the `Cake` class into a subclass of `Dessert`."
+      },
+      "seeding_key": {
+        "activity_section.key": "edc16ebb-cb7b-4759-8166-34c43996370d",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "d8129098-5fc6-4c83-a17e-aee167c792c9",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Class hierarchy of the `Dessert` class. ",
+        "duration": "7",
+        "name": "Create Dessert Subclasses"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8129098-5fc6-4c83-a17e-aee167c792c9",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "e4a49d81-833a-429d-8f57-6f11425f08ad",
+      "position": 9,
+      "properties": {
+        "description": "While desserts have unique attributes, such as crusts, fillings, and toppings, they share many attributes. When implementing different desserts into our program, we can extend the `Dessert` class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e4a49d81-833a-429d-8f57-6f11425f08ad",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "52bdd300-2805-40e6-aa2f-b9a230d6aa3d",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 4 and 5 on Code Studio. Students complete the Check for Understanding on Level 4 then complete Level 5, where they choose a `Dessert` subclass to implement. Level 5 is a choice level. There are four options from which to choose. If students finish early, encourage them to complete an additional level."
+      },
+      "seeding_key": {
+        "activity_section.key": "52bdd300-2805-40e6-aa2f-b9a230d6aa3d",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "a5603252-0e98-4107-a3ba-a44d6a5f6d1c",
+      "position": 11,
+      "properties": {
+        "description": "Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code! Also, consider the questions on the next slide.",
+        "duration": "8",
+        "name": "Code Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a5603252-0e98-4107-a3ba-a44d6a5f6d1c",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "3a3e3516-e430-46a5-9fbc-cd8f2fbc1f59",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's projects in Code Studio. Students request, receive and review feedback on Level 5. Students should reference the Code Review Guide to review the steps of the code review process as needed."
+      },
+      "seeding_key": {
+        "activity_section.key": "3a3e3516-e430-46a5-9fbc-cd8f2fbc1f59",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "dc1b866d-484a-4e9c-880e-ce4b91bf5444",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students write responses to the Three W’s in their notes.",
+        "name": "Three W's",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Three W’s is a closure strategy where students reflect on their learning by answer the following:\n* *What? (What did we learn today?)*\n* *So what? (What is the relevancy, importance, or usefulness?)*\n* *Now what? (How does it fit into what we are learning?  Does it affect our thinking?  Can we predict where we are going?)*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc1b866d-484a-4e9c-880e-ce4b91bf5444",
+        "lesson_activity.key": "4a3675eb-5202-4072-8fd0-d3ed659d6c6b"
+      }
+    },
+    {
+      "key": "0c1b37ab-1e04-4f6b-a019-c8c4a558149a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c1b37ab-1e04-4f6b-a019-c8c4a558149a",
+        "lesson_activity.key": "4a3675eb-5202-4072-8fd0-d3ed659d6c6b"
+      }
+    },
+    {
+      "key": "3819a3b7-a6bb-42d7-819a-3551e87f6b43",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3819a3b7-a6bb-42d7-819a-3551e87f6b43",
+        "lesson_activity.key": "4a3675eb-5202-4072-8fd0-d3ed659d6c6b"
+      }
     }
   ],
   "script_levels": [
@@ -987,15 +2220,375 @@
   ],
   "resources": [
     {
+      "name": "[KEY] Construct an Object Cards",
+      "url": "https://docs.google.com/document/d/1kMfDP6rlD1NB_T8MaF33Iq_bkfba0Uo55eGzpzMqtpM/edit?usp=sharing",
+      "key": "_key_construct_an_object_cards",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_construct_an_object_cards"
+      }
+    },
+    {
+      "name": "[KEY] Defining Attributes",
+      "url": "https://docs.google.com/document/d/11kEvOxuygD9By8YSP9kezKkaDbUXuJ7PnIrBE0vLo4I/edit?usp=sharing",
+      "key": "_key_defining_attributes",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_defining_attributes"
+      }
+    },
+    {
+      "name": "[KEY] Diagramming Scope",
+      "url": "https://docs.google.com/document/d/1DUZaRcBzsr1EgUwfMW0H9HCufKR40o8RMTz0zIe-qCg/edit",
+      "key": "_key_diagramming_scope",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_diagramming_scope"
+      }
+    },
+    {
+      "name": "[KEY] Exploring Expressions Version A",
+      "url": "https://docs.google.com/document/d/1aBxSZLeaH3r60ceyj7yFkj4skVi6hDAAeP8wYMhrnSI/edit?usp=sharing",
+      "key": "_key_exploring_expressions_version_a",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_exploring_expressions_version_a"
+      }
+    },
+    {
+      "name": "[KEY] Exploring Expressions Version B",
+      "url": "https://docs.google.com/document/d/19ymYGh-7Q6SdpKf1T1HAPdA7FqtapSPNoI5q0tKMhTc/edit",
+      "key": "_key_exploring_expressions_version_b",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_exploring_expressions_version_b"
+      }
+    },
+    {
+      "name": "[KEY] U2L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1uS6LHb6YUgAPII0wW8PWjT7fRkd1LrgHVG5YunSPqMs/edit?usp=sharing",
+      "key": "_key_u2l1_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l1_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L2 Extra Practice",
+      "url": "https://docs.google.com/document/u/2/d/1hfTBO8HGWv25LCdXUp8KGVP6sV_yASXg3j69STJHkZ4/edit",
+      "key": "_key_u2l2_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l2_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1_T4D2W3Erk80Az9auTymxzlUPEU863ARrH9fqthXbfs/edit?usp=sharing",
+      "key": "_key_u2l3_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1y7s4q-hAw37m155j7AZAhU0_M7_RE4EZx-yxcKLYW0Q/edit#",
+      "key": "_key_u2l5_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l5_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Z3AaEnAEN_0Aop_U51i-kr1qNVjKEcwk99G8W6yhbAE/edit",
+      "key": "_key_u2l6_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l6_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1tiqjMPq1RWhgNVz43RjY2vPz17OtlyELQL4wjEPuOOQ/edit",
+      "key": "_key_u2l7_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l7_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] Vocabulary Crossword",
+      "url": "https://docs.google.com/presentation/d/1Op_DvPrHFjFi-0h1mrTnontH9WgBOBxO48_TJ0uwVG0/edit#slide=id.p",
+      "key": "_key_vocabulary_crossword",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_vocabulary_crossword"
+      }
+    },
+    {
+      "name": "[KEY] Writing Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/15a8LPjxmhUUFkSrHb89ZEzRV2UI5WP9ZF9Z4MSaxuTs/edit?usp=sharing",
+      "key": "_key_writing_constructors_guided_notes",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_writing_constructors_guided_notes"
+      }
+    },
+    {
+      "name": "Class Hierarchy Cards",
+      "url": "https://docs.google.com/presentation/d/1Ihkko5zmxClfxaRxdplFwywh7siGl_jfCsP1f9Ui-fk/edit?usp=sharing",
+      "key": "class_hierarchy_cards",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "class_hierarchy_cards"
+      }
+    },
+    {
+      "name": "Defining Attributes",
+      "url": "https://docs.google.com/document/d/1O6ScN52Cdi70Hz4vifCAcIcySoB2Wpw0z3DivFOi9ug/edit?usp=sharing",
+      "key": "defining_attributes",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "defining_attributes"
+      }
+    },
+    {
+      "name": "Defining Attributes - Classes Foldables",
+      "url": "https://drive.google.com/file/d/1DjctdSw-oAtpSKFKj9uz4oyqEduORhIk/view?usp=sharing",
+      "key": "defining_attributes_-_classes_foldables",
+      "properties": {
+        "type": "Handout",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "defining_attributes_-_classes_foldables"
+      }
+    },
+    {
+      "name": "Defining Attributes - Main Method",
+      "url": "https://drive.google.com/file/d/1aD0rS9pTNyxJ_ymN4fNboZsAuus5PQ_c/view?usp=sharing",
+      "key": "defining_attributes_-_main_method",
+      "properties": {
+        "type": "Handout",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "defining_attributes_-_main_method"
+      }
+    },
+    {
+      "name": "Diagramming Scope",
+      "url": "https://docs.google.com/document/d/1l1O-YQ00HoqcJaZpyyCrXAhZ3wFrfoFHT4Jj43QVTAs/edit",
+      "key": "diagramming_scope",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "diagramming_scope"
+      }
+    },
+    {
+      "name": "Exploring Expressions Version A",
+      "url": "https://docs.google.com/document/d/10AmwHOT2NA5JujTKj41EvzbmRfrKJbkSFyC8Veic274/view",
+      "key": "exploring_expressions_version_a",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_expressions_version_a"
+      }
+    },
+    {
+      "name": "Exploring Expressions Version B",
+      "url": "https://docs.google.com/document/d/1VvJKwMk2L-QQcdDskj9eSpw9mIKvZNJk946FBfoD5Rc/edit?usp=sharing",
+      "key": "exploring_expressions_version_b",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_expressions_version_b"
+      }
+    },
+    {
+      "name": "Quiz, Quiz, Trade",
+      "url": "https://docs.google.com/document/d/1OZltNkaoYF7gkHsaEUnYovjg6MceYGFan__UMCjOJeM/edit?usp=sharing",
+      "key": "quiz_quiz_trade",
+      "properties": {
+        "type": "Handout",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "quiz_quiz_trade"
+      }
+    },
+    {
+      "name": "U2L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1tDn_h4BVavcFY-_YFUsxV6W4OUHk0OgRZKTNrHRI8NA/edit?usp=sharing",
+      "key": "u2l1_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "name": "U2L2 Extra Practice",
+      "url": "https://docs.google.com/document/u/2/d/1kQFOmOfKMGpbBp68XCRgsFmG_h_tWxJaLGONpKADdwQ/edit",
+      "key": "u2l2_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l2_extra_practice"
+      }
+    },
+    {
+      "name": "U2L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1b8J0XpAotSxPPK2AvnBPOZIA1GhKgwaio5Hswj6GRuY/edit?usp=sharing",
+      "key": "u2l3_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "U2L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Sng7ML-9DYoPyqF64de2aI1wCii5Tai0mtaEn4bidZA/edit#",
+      "key": "u2l5_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l5_extra_practice"
+      }
+    },
+    {
+      "name": "U2L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1fzeOD9y0KpGqCYgmTfO3ZQgk7nlnGvKSYg4NMzTiAGM/edit",
+      "key": "u2l6_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l6_extra_practice"
+      }
+    },
+    {
+      "name": "U2L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1ABYjTxmUhmPDUOqmQ-LXtVvDcGZgeONHtPh-RFxQk7c/edit",
+      "key": "u2l7_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l7_extra_practice"
+      }
+    },
+    {
       "name": "Unit 2 Presentation Slides",
       "url": "https://docs.google.com/presentation/d/1kfzkThzPNV9xM1IJca8ySP7T2spBvzw03kze9k46H4I/edit?usp=sharing",
       "key": "unit_2_presentation_slides",
       "properties": {
         "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "name": "Variables Manipulatives",
+      "url": "https://docs.google.com/presentation/d/1GgW8Cj9mjcym6DmUw5Rd83yIR4-9EtaSZIr7hOPa0QM/edit?usp=sharing",
+      "key": "variables_manipulatives",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "variables_manipulatives"
+      }
+    },
+    {
+      "name": "Vocabulary Crossword",
+      "url": "https://docs.google.com/presentation/d/1ZJceJ7K_tj-Yszt81_uM1gY3oD0XprkTtdG5r5hDql8/edit#slide=id.p",
+      "key": "vocabulary_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_practice"
+      }
+    },
+    {
+      "name": "Writing Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/1Ffi0kn764VV99v_6jFKOdh_anzc8wmLIJnL59EN_KZQ/edit?usp=sharing",
+      "key": "writing_constructors_guided_notes",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "writing_constructors_guided_notes"
       }
     }
   ],
@@ -1008,14 +2601,218 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "defining_attributes_-_classes_foldables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "defining_attributes_-_main_method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "_key_defining_attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "quiz_quiz_trade"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "_key_u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "defining_attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "unit_2_presentation_slides"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_u2l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u2l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "variables_manipulatives"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_writing_constructors_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "writing_constructors_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_construct_an_object_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_vocabulary_crossword"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_exploring_expressions_version_a"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_exploring_expressions_version_b"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_u2l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "vocabulary_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "exploring_expressions_version_a"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "exploring_expressions_version_b"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "u2l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u2l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_diagramming_scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "diagramming_scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u2l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_u2l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "class_hierarchy_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u2l7_extra_practice"
       }
     }
   ],
@@ -1026,10 +2823,696 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "public",
+      "word": "public",
+      "definition": "Indicates that an instance variable or method is accessible from outside of the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "public"
+      }
+    },
+    {
+      "key": "private",
+      "word": "private",
+      "definition": "Indicates that an instance variable or method is accessible only from within the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "private"
+      }
+    },
+    {
+      "key": "instance_variable",
+      "word": "Instance Variable",
+      "definition": "A variable defined in a class which represents an attribute of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "instance_variable"
+      }
+    },
+    {
+      "key": "attribute",
+      "word": "Attribute",
+      "definition": "A characteristic of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "key": "has_a_relationship",
+      "word": "Has-A Relationship",
+      "definition": "The relationship between an object and its instance variables",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "has_a_relationship"
+      }
+    },
+    {
+      "key": "data_encapsulation",
+      "word": "Data Encapsulation",
+      "definition": "An object-oriented programming concept where the details of a class are hidden from the user; also referred to as information hiding",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_encapsulation"
+      }
+    },
+    {
+      "key": "boolean",
+      "word": "Boolean",
+      "definition": "A data type that can either be true or false",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A container that stores a value in memory",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "key": "declaration",
+      "word": "Declaration",
+      "definition": "Giving a name and data type to a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "declaration"
+      }
+    },
+    {
+      "key": "initialization",
+      "word": "Initialization",
+      "definition": "Giving a starting value to a variable using the assignment operator (=)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initialization"
+      }
+    },
+    {
+      "key": "data_type",
+      "word": "Data Type",
+      "definition": "The format of the data that can be stored in a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "key": "primitive_type",
+      "word": "Primitive Type",
+      "definition": "A basic data type that is predefined by Java",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "primitive_type"
+      }
+    },
+    {
+      "key": "reference_type",
+      "word": "Reference Type",
+      "definition": "A data type that contains a pointer to the memory location of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "reference_type"
+      }
+    },
+    {
+      "key": "assignment",
+      "word": "Assignment",
+      "definition": "Using the assignment operator (=) to initialize or change the value stored in a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "assignment"
+      }
+    },
+    {
+      "key": "literal",
+      "word": "Literal",
+      "definition": "A source code representation of a value, such as a number or text",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "literal"
+      }
+    },
+    {
+      "key": "int",
+      "word": "int",
+      "definition": "A data type that can store integers, or whole numbers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "int"
+      }
+    },
+    {
+      "key": "double",
+      "word": "double",
+      "definition": "A data type that can store a decimal number",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "double"
+      }
+    },
+    {
+      "key": "string",
+      "word": "String",
+      "definition": "A data type that contains a sequence of characters enclosed in double quotations (\" \")",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "string"
+      }
+    },
+    {
+      "key": "null",
+      "word": "null",
+      "definition": "Indicates that the variable does not refer to any object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "null"
+      }
+    },
+    {
+      "key": "constructor",
+      "word": "Constructor",
+      "definition": "A block of code in the class that tells the computer how to create a new object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "key": "initialize",
+      "word": "Initialize",
+      "definition": "Create a new object with a specific name and set of starting characteristics",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initialize"
+      }
+    },
+    {
+      "key": "constructor_signature",
+      "word": "Constructor Signature",
+      "definition": "The first line of the constructor which includes the constructor name and lists the object's characteristics that can be specified when it is initialized",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "key": "formal_parameter",
+      "word": "Formal Parameter",
+      "definition": "The name of the characteristics in the constructor signature",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "key": "actual_parameter",
+      "word": "Actual Parameter",
+      "definition": "The value given to a characteristic when initializing an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
+      "key": "call_by_value",
+      "word": "Call By Value",
+      "definition": "Copying the value of the actual parameter to the constructor's formal parameter",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "call_by_value"
+      }
+    },
+    {
+      "key": "instantiate",
+      "word": "Instantiate",
+      "definition": "Calling the constructor to create an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "instantiate"
+      }
+    },
+    {
+      "key": "local_variable",
+      "word": "Local Variable",
+      "definition": "A variable declared and accessible within a specific block of code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "local_variable"
+      }
+    },
+    {
+      "key": "default_value",
+      "word": "Default Value",
+      "definition": "A predefined value that is used by a program when the user does not provide a value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "default_value"
+      }
+    },
+    {
+      "key": "overloading",
+      "word": "Overloading",
+      "definition": "Defining two or more methods with the same name but different signatures",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overloading"
+      }
+    },
+    {
+      "key": "constructor_overloading",
+      "word": "Constructor Overloading",
+      "definition": "Defining more than one constructor in a class with different signatures",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor_overloading"
+      }
+    },
+    {
+      "key": "no_argument_constructor",
+      "word": "No-Argument Constructor",
+      "definition": "A constructor with no parameters",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "no_argument_constructor"
+      }
+    },
+    {
+      "key": "evaluate",
+      "word": "Evaluate",
+      "definition": "Determining the value of an expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "evaluate"
+      }
+    },
+    {
+      "key": "expression",
+      "word": "Expression",
+      "definition": "A combination of data and operators that evaluates to a single value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "expression"
+      }
+    },
+    {
+      "key": "concatenation",
+      "word": "Concatenation",
+      "definition": "Merging two strings into one",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "concatenation"
+      }
+    },
+    {
+      "key": "compound_assignment_operator",
+      "word": "Compound Assignment Operator",
+      "definition": "Shortcut syntax (+=, -=, *=, /=, %=) to perform an operation (+, -, *, /, or %) on both operands and store the result into the operand on the left",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "compound_assignment_operator"
+      }
+    },
+    {
+      "key": "arithmeticexception",
+      "word": "ArithmeticException",
+      "definition": "An error caused by dividing by zero",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "arithmeticexception"
+      }
+    },
+    {
+      "key": "operand",
+      "word": "Operand",
+      "definition": "The data that is operated on",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "operand"
+      }
+    },
+    {
+      "key": "scope",
+      "word": "Scope",
+      "definition": "Where a variable can be used",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "scope"
+      }
+    },
+    {
+      "key": "this_keyword",
+      "word": "this keyword",
+      "definition": "Used to refer to the current object in a method or constructor",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "this_keyword"
+      }
+    },
+    {
+      "key": "inheritance",
+      "word": "Inheritance",
+      "definition": "A object-oriented programming principle where a subclass inherits the instance variables and methods of a superclass",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "inheritance"
+      }
+    },
+    {
+      "key": "super",
+      "word": "super",
+      "definition": "A keyword used to refer to the superclass",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "super"
+      }
+    },
+    {
+      "key": "dry_principle",
+      "word": "DRY Principle",
+      "definition": "Stands for \"Don't Repeat Yourself\"; A software development principle to reduce repetition in code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dry_principle"
+      }
+    },
+    {
+      "key": "refactoring",
+      "word": "Refactoring",
+      "definition": "Improving the readability, reusability, or structure of program code without altering its functionality",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "refactoring"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "public"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "private"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "instance_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "has_a_relationship"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "data_encapsulation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "declaration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "initialization"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "primitive_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "reference_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "assignment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "literal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "int"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "double"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "string"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "null"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "initialize"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "call_by_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "instantiate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "local_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "default_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "overloading"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "constructor_overloading"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "no_argument_constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "evaluate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "concatenation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "compound_assignment_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "arithmeticexception"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "operand"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "this_keyword"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "inheritance"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "super"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "dry_principle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "refactoring"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -1133,6 +3616,126 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "objective.key": "92ab3fd9-0b7e-484e-bd1c-34387987d6a4"
+      }
+    },
+    {
+      "key": "108ff9ae-99ba-43ef-97ea-a91860ff4152",
+      "properties": {
+        "description": "Identify, using its signature, the correct constructor being called"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "108ff9ae-99ba-43ef-97ea-a91860ff4152"
+      }
+    },
+    {
+      "key": "a8aa0775-57c1-4f14-b817-27d401574b47",
+      "properties": {
+        "description": "Create overloaded constructors"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "a8aa0775-57c1-4f14-b817-27d401574b47"
+      }
+    },
+    {
+      "key": "bec1c0d6-fc2c-4d59-9216-47a6edef4cdb",
+      "properties": {
+        "description": "Construct a no-argument constructor to assign default values to the instance variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "bec1c0d6-fc2c-4d59-9216-47a6edef4cdb"
+      }
+    },
+    {
+      "key": "0543139d-057a-490c-8a29-3ce2fc7fbb7b",
+      "properties": {
+        "description": "Analyze an expression to determine the resulting value and type"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "0543139d-057a-490c-8a29-3ce2fc7fbb7b"
+      }
+    },
+    {
+      "key": "e362a4a6-3a67-456a-b8df-9409d3a12d2f",
+      "properties": {
+        "description": "Describe and apply Java’s operator precedence"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "e362a4a6-3a67-456a-b8df-9409d3a12d2f"
+      }
+    },
+    {
+      "key": "3e1ea340-5cd5-4d44-9de7-2e6df90f1ede",
+      "properties": {
+        "description": "Use arithmetic operators to write and evaluate Java expressions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "3e1ea340-5cd5-4d44-9de7-2e6df90f1ede"
+      }
+    },
+    {
+      "key": "d71ed25c-e0df-47e8-afb6-170e9546eda3",
+      "properties": {
+        "description": "Identify cases that result in an ArithmeticException"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "d71ed25c-e0df-47e8-afb6-170e9546eda3"
+      }
+    },
+    {
+      "key": "f3a2fa61-101c-4789-8ffb-826a48bb4da4",
+      "properties": {
+        "description": "Identify the scope of variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "f3a2fa61-101c-4789-8ffb-826a48bb4da4"
+      }
+    },
+    {
+      "key": "ae390a72-5e11-4591-9309-cfc0748cdfd4",
+      "properties": {
+        "description": "Determine when to use the this keyword to refer to instance variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "ae390a72-5e11-4591-9309-cfc0748cdfd4"
+      }
+    },
+    {
+      "key": "697a0416-dd5b-4527-8f02-dd3a6259d449",
+      "properties": {
+        "description": "Construct class hierarchies"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "697a0416-dd5b-4527-8f02-dd3a6259d449"
+      }
+    },
+    {
+      "key": "133781cb-d7d5-42b4-a6a0-68feb304fab5",
+      "properties": {
+        "description": "Write constructors for subclasses to initialize local and inherited instance variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "133781cb-d7d5-42b4-a6a0-68feb304fab5"
+      }
+    },
+    {
+      "key": "ac9e3c85-9446-4c89-b00b-856543ff1541",
+      "properties": {
+        "description": "Refactor code to improve its readability and reusability"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "ac9e3c85-9446-4c89-b00b-856543ff1541"
       }
     }
   ],
@@ -1282,6 +3885,286 @@
         "lesson.key": "lesson-2",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.G.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.H.2"
       }
     }
   ],

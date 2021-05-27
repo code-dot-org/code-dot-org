@@ -1,4 +1,4 @@
 name 'U5 evaluation q7’
 question 'How comfortable would you say you are with gauging when to re-teach material with your students?'
 answer 'Very comfortable'
-answer 'Not comfortable', weight: 2, stage_name: 'Measuring Student Learning'
+answer 'Not comfortable', weight: 2, lesson_name: 'Measuring Student Learning'

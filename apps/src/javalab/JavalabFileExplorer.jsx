@@ -94,8 +94,8 @@ class JavalabFileExplorerComponent extends Component {
 const styles = {
   main: {
     float: 'left',
-    height: 33,
-    width: 33,
+    height: 29,
+    width: 29,
     margin: 2
   },
   dropdown: {
@@ -125,12 +125,13 @@ const styles = {
   button: {
     height: '100%',
     width: '100%',
-    padding: 5,
-    margin: 0
+    padding: 3,
+    margin: 0,
+    borderRadius: 2,
+    backgroundColor: color.background_gray
   },
   darkButton: {
-    backgroundColor: color.darkest_gray,
-    color: color.white
+    color: color.dark_charcoal
   }
 };
 

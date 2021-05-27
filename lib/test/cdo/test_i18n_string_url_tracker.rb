@@ -261,7 +261,7 @@ class BenchI18nStringUrlTracker < Minitest::Benchmark
   end
 
   def bench_linear_performance
-    assert_performance_linear do |n|
+    assert_performance_linear(0.95) do |n|
       n.times {|m| I18nStringUrlTracker.instance.log(m.to_s, n.to_s, m.to_s)}
     end
   end

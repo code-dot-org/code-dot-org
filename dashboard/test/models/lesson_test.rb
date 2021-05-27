@@ -1116,5 +1116,16 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal 4, copied_lesson.absolute_position
       assert_equal 2, copied_lesson.relative_position
     end
+
+    test "creates lesson group if script has none" do
+      @destination_script.lesson_groups = []
+
+      @destination_script.expects(:write_script_json).once
+      Script.expects(:merge_and_write_i18n).twice
+      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      assert_equal 1, @destination_script.lesson_groups.count
+      assert_equal 1, @destination_script.lessons.count
+      assert_equal @destination_script.lesson_groups.first, copied_lesson.lesson_group
+    end
   end
 end

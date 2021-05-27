@@ -2,7 +2,7 @@
   "script": {
     "name": "csd5-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-21 15:35:55 UTC",
+    "serialized_at": "2021-05-25 22:11:12 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -4440,8 +4440,14 @@
       "key": "24a8f1ab-d8eb-4738-b114-0534be713085",
       "position": 1,
       "properties": {
-        "description": "**Group:** Group students into pairs. If there is an odd number of students, a group of 3 can be made or a student can complete this project individually.\n\n**Distribute:** Give students copies of the project guide",
-        "name": "Day 1 Activity (40 mins)"
+        "description": "**Group:** Group students into pairs. If there is an odd number of students, a group of 3 can be made or a student can complete this project individually.\n\n**Distribute:** Give students copies of the project guide. Also give students either a copy of the rubric or the student checklist.",
+        "name": "Day 1 Activity (40 mins)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "24a8f1ab-d8eb-4738-b114-0534be713085",
@@ -6014,7 +6020,7 @@
     },
     {
       "name": "Make a Recommendation",
-      "url": "https://docs.google.com/document/d/1yih9WqI-kXSZTf-1NNZY6X6LJv7aFHITId742OrjPik/edit",
+      "url": "https://docs.google.com/document/d/1cx4byvEDUduu9iPdtpRLzrPAvMBwPVRdgKxVeptvJCs/edit",
       "key": "make-a-recommendation-1",
       "properties": {
         "type": "Rubric",
@@ -6036,6 +6042,18 @@
       },
       "seeding_key": {
         "resource.key": "make-a-recommendation-peer-review-2019"
+      }
+    },
+    {
+      "name": "Make a Recommendation - Student Checklist",
+      "url": "https://docs.google.com/document/d/1E_k-oOdK8c7CuN1TcR5GWomeAGXvXfafgzLHda1w6J4/edit",
+      "key": "make_a_recommendation_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_a_recommendation_-_student_checklist"
       }
     },
     {
@@ -6311,27 +6329,16 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 1",
-      "url": "https://docs.google.com/document/d/1MSb8Ue9fccQO674JoEkLTvDpqantz1BBBpdEy1zTrgo/edit",
-      "key": "sample_marked_rubrics_1",
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
+      "key": "sample_marked_rubrics_3",
       "properties": {
         "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubrics_1"
-      }
-    },
-    {
-      "name": "Sample Marked Rubrics 2",
-      "url": "https://docs.google.com/document/d/1eDjhOW0uL8W8bRokTkfbw5R43ficUTZjhZYx_GTUxsY/edit",
-      "key": "sample_marked_rubrics_2",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics_2"
+        "resource.key": "sample_marked_rubrics_3"
       }
     },
     {
@@ -6909,19 +6916,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "sample_marked_rubrics_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Make a Recommendation",
         "resource.key": "peer_review_exemplar_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "sample_marked_rubrics_2"
       }
     },
     {
@@ -6934,6 +6929,18 @@
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
         "resource.key": "unit_5_data_society_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "sample_marked_rubrics_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "make_a_recommendation_-_student_checklist"
       }
     }
   ],

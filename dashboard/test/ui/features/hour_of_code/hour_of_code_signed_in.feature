@@ -19,6 +19,7 @@ Scenario:
   And I verify progress for lesson 1 level 1 is "perfect"
   # Course overview in a different script shouldn't show progress
   Then I am on "http://studio.code.org/s/20-hour/lessons/2/levels/2?noautoplay=true"
+  And I wait until jQuery Ajax requests are finished
   And I verify progress in the header of the current page is "not_tried" for level 1
   # Level source is saved
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
