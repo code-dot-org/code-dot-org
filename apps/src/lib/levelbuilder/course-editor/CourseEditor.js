@@ -41,6 +41,7 @@ class CourseEditor extends Component {
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
     useMigratedResources: PropTypes.bool.isRequired,
     courseVersionId: PropTypes.number,
+    coursePath: PropTypes.string,
 
     // Provided by redux
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
@@ -146,7 +147,7 @@ class CourseEditor extends Component {
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(linkWithQueryParams(data.coursePath));
+          navigateToHref(linkWithQueryParams(this.props.coursePath));
         } else {
           this.setState({
             lastSaved: Date.now(),
