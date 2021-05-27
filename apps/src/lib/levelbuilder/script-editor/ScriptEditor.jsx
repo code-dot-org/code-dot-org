@@ -78,6 +78,7 @@ class ScriptEditor extends React.Component {
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
+    scriptPath: PropTypes.string.isRequired,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -193,6 +194,10 @@ class ScriptEditor extends React.Component {
     } else {
       this.setState({showCalendar: !this.state.showCalendar});
     }
+  };
+
+  handleView = () => {
+    navigateToHref(linkWithQueryParams(this.props.scriptPath));
   };
 
   handleSave = (event, shouldCloseAfterSave) => {
@@ -948,6 +953,7 @@ class ScriptEditor extends React.Component {
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
+          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}
