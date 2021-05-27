@@ -6,6 +6,7 @@ import {
   setLastSaved,
   setSaveError,
   setHasJSONError,
+  setHasLintError,
   setLastSavedQuestions
 } from '../foormEditorRedux';
 
@@ -23,6 +24,7 @@ class FoormEntityLoadButtons extends React.Component {
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setHasJSONError: PropTypes.func,
+    setHasLintError: PropTypes.func,
     setLastSavedQuestions: PropTypes.func
   };
 
@@ -53,6 +55,7 @@ class FoormEntityLoadButtons extends React.Component {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     this.props.setHasJSONError(false);
+    this.props.setHasLintError(false);
     this.props.setLastSavedQuestions({});
   }
 
@@ -87,6 +90,7 @@ export default connect(
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
+    setHasLintError: hasLintError => dispatch(setHasLintError(hasLintError)),
     setLastSavedQuestions: questions =>
       dispatch(setLastSavedQuestions(questions))
   })

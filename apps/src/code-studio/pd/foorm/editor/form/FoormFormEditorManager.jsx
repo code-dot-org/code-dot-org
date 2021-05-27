@@ -8,6 +8,7 @@ import {
   setSaveError,
   setFormData,
   setHasJSONError,
+  setHasLintError,
   setLastSavedQuestions
 } from '../foormEditorRedux';
 import FoormFormSaveBar from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
@@ -34,6 +35,7 @@ class FoormFormEditorManager extends React.Component {
     setSaveError: PropTypes.func,
     setFormData: PropTypes.func,
     setHasJSONError: PropTypes.func,
+    setHasLintError: PropTypes.func,
     setLastSavedFormQuestions: PropTypes.func
   };
 
@@ -108,6 +110,7 @@ class FoormFormEditorManager extends React.Component {
   updateFormData(formData) {
     this.props.setFormData(formData);
     this.props.setHasJSONError(false);
+    this.props.setHasLintError(false);
     this.props.setLastSavedFormQuestions(formData['questions']);
     this.props.resetCodeMirror(formData['questions']);
   }
@@ -261,6 +264,7 @@ export default connect(
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setFormData: formData => dispatch(setFormData(formData)),
     setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
+    setHasLintError: hasLintError => dispatch(setHasLintError(hasLintError)),
     setLastSavedFormQuestions: formQuestions =>
       dispatch(setLastSavedQuestions(formQuestions))
   })

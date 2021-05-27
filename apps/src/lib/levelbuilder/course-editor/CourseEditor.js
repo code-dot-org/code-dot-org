@@ -151,7 +151,7 @@ class CourseEditor extends Component {
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(linkWithQueryParams(data.coursePath));
+          navigateToHref(linkWithQueryParams(this.props.coursePath));
         } else {
           this.setState({
             lastSaved: Date.now(),
