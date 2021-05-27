@@ -11,7 +11,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 const USER_EDITABLE_SECTION_PROPS = [
   'name',
   'loginType',
-  'stageExtras',
+  'lessonExtras',
   'pairingAllowed',
   'ttsAutoplayEnabled',
   'courseId',
@@ -155,7 +155,7 @@ export const pageTypes = {
   level: 'level',
   scriptOverview: 'script_overview',
   courseOverview: 'course_overview',
-  stageExtras: 'stage_extras',
+  lessonExtras: 'stage_extras',
   homepage: 'homepage'
 };
 
@@ -559,7 +559,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     loginType: loginType,
     grade: '',
     providerManaged: false,
-    stageExtras: true,
+    lessonExtras: true,
     pairingAllowed: true,
     ttsAutoplayEnabled: false,
     sharingDisabled: false,
@@ -861,7 +861,7 @@ export default function teacherSections(state = initialState, action) {
       const script =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
-        lessonExtraSettings.stageExtras =
+        lessonExtraSettings.lessonExtras =
           script.lesson_extras_available || defaultLessonExtras;
       }
     }
@@ -1163,7 +1163,7 @@ export const sectionFromServerSection = serverSection => ({
   loginType: serverSection.login_type,
   grade: serverSection.grade,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
-  stageExtras: serverSection.lesson_extras,
+  lessonExtras: serverSection.lesson_extras,
   pairingAllowed: serverSection.pairing_allowed,
   ttsAutoplayEnabled: serverSection.tts_autoplay_enabled,
   sharingDisabled: serverSection.sharing_disabled,
@@ -1200,7 +1200,7 @@ export function serverSectionFromSection(section) {
   return {
     ...section,
     login_type: section.loginType,
-    lesson_extras: section.stageExtras,
+    lesson_extras: section.lessonExtras,
     pairing_allowed: section.pairingAllowed,
     tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
