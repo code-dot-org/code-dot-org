@@ -35,7 +35,6 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :teacher, class_name: 'User'
   scope :latest, -> {find_by(id: maximum(:id))}
   scope :latest_per_level, -> {find(group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)'))}
-  scope :by_teacher, ->(teacher_id) {where(teacher_id: teacher_id) if teacher_id.present?}
 
   REVIEW_STATES = [
     "keepWorking",
@@ -60,7 +59,7 @@ class TeacherFeedback < ApplicationRecord
     script_level
   end
 
-  def self.get_student_level_feedback_by_teacher(student_id, level_id, script_id, teacher_id)
+  def self.get_feedback_given(student_id, level_id, script_id, teacher_id)
     where(
       student_id: student_id,
       level_id: level_id,
@@ -69,12 +68,26 @@ class TeacherFeedback < ApplicationRecord
     ).latest
   end
 
-  def self.get_all_student_level_feedback(student_id, level_id, script_id)
+  def self.get_feedback_received(student_id, level_id, script_id)
     where(
-      student_id: params.require(:student_id),
-      level_id: params.require(:level_id),
-      script_id: params.require(:script_id)
-    ).latest_per_teacher
+      student_id: student_id,
+      level_id: level_id,
+      script_id: script_id,
+    ).for_enrolled_sections.latest
+  end
+
+  def self.get_feedbacks_given(student_ids, level_ids, script_id, teacher_id)
+    query = where(
+      student_id: student_ids,
+      script_id: script_id,
+      teacher_id: teacher_id
+    )
+
+    if level_ids.present?
+      query = query.where(level_id: level_ids)
+    end
+
+    query.latest_per_level
   end
 
   def self.student_has_feedback(student_id)
@@ -93,22 +106,9 @@ class TeacherFeedback < ApplicationRecord
     authorized_unseen_feedbacks.count
   end
 
-  def self.get_student_feedbacks_for_script(script_id, student_ids, teacher_id = nil)
-    where(
-      script_id: script_id,
-      student_id: student_ids,
-      teacher_id: teacher_id
-    ).by_teacher(teacher_id).latest_per_level
-  end
-
-  def self.latest_per_teacher
+  def self.for_enrolled_sections
     #Only select feedback from teachers who lead sections in which the student is still enrolled
-    find(
-      joins(:student_sections).
-        where('sections.user_id = teacher_id').
-        group([:teacher_id, :student_id]).
-        pluck('MAX(teacher_feedbacks.id)')
-    )
+    joins(:student_sections).where('sections.user_id = teacher_id')
   end
 
   # Increments student_visit_count and related metrics timestamps for a TeacherFeedback.

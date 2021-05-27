@@ -789,7 +789,7 @@ Dashboard::Application.routes.draw do
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
           get 'get_feedback_from_teacher'
-          get 'get_feedbacks'
+          get 'get_feedback'
           get 'count'
         end
         member do
