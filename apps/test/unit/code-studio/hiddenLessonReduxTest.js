@@ -255,23 +255,23 @@ describe('hiddenLessonRedux', () => {
 
     it('updateHiddenStage', () => {
       const sectionId = '123';
-      const stageId = '45';
+      const lessonId = '45';
 
       const state = reducer(
         initialState,
-        updateHiddenStage(sectionId, stageId, true)
+        updateHiddenStage(sectionId, lessonId, true)
       );
       assert.strictEqual(
-        state.getIn(['lessonsBySection', sectionId, stageId]),
+        state.getIn(['lessonsBySection', sectionId, lessonId]),
         true
       );
 
       const nexstate = reducer(
         state,
-        updateHiddenStage(sectionId, stageId, false)
+        updateHiddenStage(sectionId, lessonId, false)
       );
       assert.strictEqual(
-        nexstate.getIn(['lessonsBySection', sectionId, stageId]),
+        nexstate.getIn(['lessonsBySection', sectionId, lessonId]),
         false
       );
     });
@@ -348,30 +348,30 @@ describe('hiddenLessonRedux', () => {
 
   describe('isStageHiddenForSection', () => {
     const sectionId = '123';
-    const hiddenStageId = '45';
-    const unhiddenStageId = '67';
+    const hiddenLessonId = '45';
+    const unhiddenLessonId = '67';
     const state = reducer(
       initialState,
-      updateHiddenStage(sectionId, hiddenStageId, true)
+      updateHiddenStage(sectionId, hiddenLessonId, true)
     );
 
-    it('returns false if not given a stageId', () => {
+    it('returns false if not given a lessonId', () => {
       assert.strictEqual(
         isStageHiddenForSection(state, sectionId, null),
         false
       );
     });
 
-    it('returns false if given an stageId not hidden for the given sectionId', () => {
+    it('returns false if given an lessonId not hidden for the given sectionId', () => {
       assert.strictEqual(
-        isStageHiddenForSection(state, sectionId, unhiddenStageId),
+        isStageHiddenForSection(state, sectionId, unhiddenLessonId),
         false
       );
     });
 
-    it('returns true if given an stageId that is hidden for the given sectionId', () => {
+    it('returns true if given an lessonId that is hidden for the given sectionId', () => {
       assert.strictEqual(
-        isStageHiddenForSection(state, sectionId, hiddenStageId),
+        isStageHiddenForSection(state, sectionId, hiddenLessonId),
         true
       );
     });
@@ -387,7 +387,7 @@ describe('hiddenLessonRedux', () => {
         true
       );
       assert.strictEqual(
-        isStageHiddenForSection(state, null, unhiddenStageId),
+        isStageHiddenForSection(state, null, unhiddenLessonId),
         false
       );
     });
@@ -403,21 +403,21 @@ describe('hiddenLessonRedux', () => {
       updateHiddenScript(sectionId, hiddenScriptId, true)
     );
 
-    it('returns false if not given a stageId', () => {
+    it('returns false if not given a lessonId', () => {
       assert.strictEqual(
         isScriptHiddenForSection(state, sectionId, null),
         false
       );
     });
 
-    it('returns false if given an stageId not hidden for the given sectionId', () => {
+    it('returns false if given an lessonId not hidden for the given sectionId', () => {
       assert.strictEqual(
         isScriptHiddenForSection(state, sectionId, unhiddenScriptId),
         false
       );
     });
 
-    it('returns true if given an stageId that is hidden for the given sectionId', () => {
+    it('returns true if given an lessonId that is hidden for the given sectionId', () => {
       assert.strictEqual(
         isScriptHiddenForSection(state, sectionId, hiddenScriptId),
         true
