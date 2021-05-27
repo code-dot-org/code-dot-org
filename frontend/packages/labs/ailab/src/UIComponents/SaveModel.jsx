@@ -158,7 +158,7 @@ class SaveModel extends Component {
                           <span style={styles.bold}>{field.id}</span> (
                           {field.columnType})
                         </div>
-                        {!field.answer && (
+                        {this.props.isUserUploadedDataset && (
                           <div>
                             <textarea
                               rows="1"
@@ -170,6 +170,7 @@ class SaveModel extends Component {
                                 )
                               }
                               placeholder={field.placeholder}
+                              value={field.answer || ""}
                             />
                           </div>
                         )}

@@ -771,15 +771,32 @@ export function getSelectedColumnDescriptions(state) {
   });
 }
 
-export function getColumnDescription(state, column) {
-  if (!state.metadata || !state.metadata.fields || !column) {
+export function getColumnDescription(state, columnId) {
+  if (!state || !columnId) {
     return null;
   }
 
-  const field = state.metadata.fields.find(field => {
-    return field.id === column;
+  // Use metadata if available.
+  if (state.metadata && state.metadata.fields) {
+    const field = state.metadata.fields.find(field => {
+      return field.id === columnId;
+    });
+    return field.description;
+  }
+
+  // Try using a user-entered column description if available.
+  if (!state.columns) {
+    return;
+  }
+  const matchedColumn = state.columns.find(column => {
+    return column.id === columnId;
   });
-  return field.description;
+  if (matchedColumn) {
+    return matchedColumn.description;
+  }
+
+  // No column description available.
+  return null;
 }
 
 function getKeyByValue(object, value) {
