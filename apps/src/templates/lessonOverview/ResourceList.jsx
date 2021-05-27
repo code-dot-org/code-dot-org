@@ -23,7 +23,8 @@ export default class ResourceList extends Component {
     }
   };
 
-  downloadResource = resource => {
+  downloadResource = (e, resource) => {
+    e.preventDefault();
     firehoseClient.putRecord(
       {
         study:
@@ -50,7 +51,8 @@ export default class ResourceList extends Component {
     );
   };
 
-  openResource = resource => {
+  openResource = (e, resource) => {
+    e.preventDefault();
     firehoseClient.putRecord(
       {
         study:
@@ -76,10 +78,10 @@ export default class ResourceList extends Component {
   createResourceListItem = resource => (
     <li key={resource.key}>
       <a
-        onClick={() => {
-          this.openResource(resource);
+        onClick={e => {
+          this.openResource(e, resource);
         }}
-        rel="noopener noreferrer"
+        href={resource.url}
       >
         {resource.name}
       </a>
@@ -88,10 +90,10 @@ export default class ResourceList extends Component {
         <span>
           {' ('}
           <a
-            onClick={() => {
-              this.downloadResource(resource);
+            onClick={e => {
+              this.downloadResource(e, resource);
             }}
-            rel="noopener noreferrer"
+            href={resource.download_url}
           >{`${i18n.download()}`}</a>
           {')'}
         </span>

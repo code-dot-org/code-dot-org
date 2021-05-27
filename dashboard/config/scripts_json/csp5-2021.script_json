@@ -2,7 +2,7 @@
   "script": {
     "name": "csp5-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-19 00:10:40 UTC",
+    "serialized_at": "2021-05-25 22:56:50 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -4652,6 +4652,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Tab in App Lab_2021"
+        ],
         "progression": "Data Tab Investigation"
       },
       "named_level": false,
@@ -4961,6 +4964,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 8_2021"
+        ],
         "progression": "App Practice"
       },
       "named_level": false,

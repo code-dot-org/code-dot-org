@@ -1338,12 +1338,12 @@ class Script < ApplicationRecord
       metadata_i18n['lessons'] = {}
       unless lesson_descriptions.nil?
         JSON.parse(lesson_descriptions).each do |lesson|
-          stage_name = lesson['name']
-          stage_data = {
+          lesson_name = lesson['name']
+          lesson_data = {
             'description_student' => lesson['descriptionStudent'],
             'description_teacher' => lesson['descriptionTeacher']
           }
-          metadata_i18n['lessons'][stage_name] = stage_data
+          metadata_i18n['lessons'][lesson_name] = lesson_data
         end
       end
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
@@ -1510,7 +1510,7 @@ class Script < ApplicationRecord
   #   script ids for that section, filtered so that the only script id which appears
   #   is the current script id. This mirrors the output format of
   #   User#get_hidden_script_ids, and satisfies the input format of
-  #   initializeHiddenScripts in hiddenStageRedux.js.
+  #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
     return {} unless user&.teacher?
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)

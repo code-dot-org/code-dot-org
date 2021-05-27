@@ -11,9 +11,9 @@ import {lessonType} from './progressTypes';
 import HiddenForSectionToggle from './HiddenForSectionToggle';
 import LessonLock from './LessonLock';
 import {
-  toggleHiddenStage,
-  isStageHiddenForSection
-} from '@cdo/apps/code-studio/hiddenStageRedux';
+  toggleHiddenLesson,
+  isLessonHiddenForSection
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
@@ -83,7 +83,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       section && scriptAllowsHiddenLessons && !hasNoSections;
     const isHidden =
       scriptAllowsHiddenLessons &&
-      isStageHiddenForSection(hiddenLessonState, sectionId, lesson.id);
+      isLessonHiddenForSection(hiddenLessonState, sectionId, lesson.id);
     const courseId =
       (section && section.code && parseInt(section.code.substring(2))) || null;
     const loginRequiredLessonUrl = lessonUrl + '?login_required=true';
@@ -169,8 +169,8 @@ export default connect(
   state => ({
     section:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    scriptAllowsHiddenLessons: state.hiddenStage.hideableStagesAllowed,
-    hiddenLessonState: state.hiddenStage,
+    scriptAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed,
+    hiddenLessonState: state.hiddenLesson,
     scriptName: state.progress.scriptName,
     lockableAuthorized: state.lessonLock.lockableAuthorized,
     hasNoSections:
@@ -179,7 +179,7 @@ export default connect(
   }),
   dispatch => ({
     toggleHiddenLesson(scriptName, sectionId, lessonId, hidden) {
-      dispatch(toggleHiddenStage(scriptName, sectionId, lessonId, hidden));
+      dispatch(toggleHiddenLesson(scriptName, sectionId, lessonId, hidden));
     }
   })
 )(ProgressLessonTeacherInfo);

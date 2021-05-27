@@ -27,6 +27,7 @@ import JavalabFileExplorer from './JavalabFileExplorer';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
+import javalabMsg from '@cdo/javalab/locale';
 
 const style = {
   editor: {
@@ -54,6 +55,12 @@ const style = {
   },
   fileTypeIcon: {
     margin: 5
+  },
+  tabs: {
+    backgroundColor: color.background_gray,
+    marginBottom: 0,
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 
@@ -72,6 +79,7 @@ class JavalabEditor extends React.Component {
     renameFile: PropTypes.func,
     removeFile: PropTypes.func,
     sources: PropTypes.object,
+    validation: PropTypes.object,
     isDarkMode: PropTypes.bool,
     isEditingStartSources: PropTypes.bool,
     handleVersionHistory: PropTypes.func.isRequired
@@ -295,7 +303,14 @@ class JavalabEditor extends React.Component {
     // check for duplicate filename
     if (Object.keys(this.props.sources).includes(newFilename)) {
       this.setState({
-        renameFileError: this.duplicateFileError(newFilename)
+        renameFileError: this.props.sources[newFilename].isVisible
+          ? this.duplicateFileError(newFilename)
+          : this.duplicateSupportFileError(newFilename)
+      });
+      return;
+    } else if (Object.keys(this.props.validation).includes(newFilename)) {
+      this.setState({
+        renameFileError: this.duplicateSupportFileError(newFilename)
       });
       return;
     }
@@ -396,7 +411,11 @@ class JavalabEditor extends React.Component {
   }
 
   duplicateFileError(filename) {
-    return `Filename ${filename} is already in use in this project. Please choose a different name`;
+    return javalabMsg.duplicateProjectFilenameError({filename: filename});
+  }
+
+  duplicateSupportFileError(filename) {
+    return javalabMsg.duplicateSupportFilenameError({filename: filename});
   }
 
   // This is called from the file explorer when we want to jump to a file
@@ -442,43 +461,50 @@ class JavalabEditor extends React.Component {
     };
     return (
       <div style={this.props.style}>
-        <PaneHeader hasFocus={true}>
+        <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
             iconClass="fa fa-plus-circle"
             onClick={() => this.setState({openDialog: CREATE_FILE})}
-            headerHasFocus={true}
+            headerHasFocus
             isRtl={false}
-            label="Create File"
-            leftJustified={true}
+            label={javalabMsg.newFile()}
+            leftJustified
           />
           <PaneButton
-            id="javalab-editor-save"
-            iconClass="fa fa-check-circle"
-            onClick={onCommitCode}
-            headerHasFocus={true}
+            id="javalab-editor-backpack"
+            iconClass="fa fa-briefcase"
+            headerHasFocus
             isRtl={false}
-            label="Commit Code"
+            label={javalabMsg.backpackLabel()}
+            leftJustified
           />
           <PaneButton
             id="data-mode-versions-header"
             iconClass="fa fa-clock-o"
             label={msg.showVersionsHeader()}
-            headerHasFocus={true}
+            headerHasFocus
             isRtl={false}
             onClick={this.props.handleVersionHistory}
           />
-          <PaneSection>Editor</PaneSection>
+          <PaneButton
+            id="javalab-editor-save"
+            iconClass="fa fa-check-circle"
+            onClick={onCommitCode}
+            headerHasFocus
+            isRtl={false}
+            label={javalabMsg.commitCode()}
+          />
+          <PaneSection>{javalabMsg.editor()}</PaneSection>
         </PaneHeader>
         <Tab.Container
           activeKey={activeTabKey}
           onSelect={key => this.onChangeTabs(key)}
-          style={{marginTop: 10}}
           id="javalab-editor-tabs"
           className={isDarkMode ? 'darkmode' : ''}
         >
           <div>
-            <Nav bsStyle="tabs" style={{marginBottom: 0}}>
+            <Nav bsStyle="tabs" style={style.tabs}>
               <JavalabFileExplorer
                 fileMetadata={fileMetadata}
                 onSelectFile={this.onOpenFile}
@@ -499,25 +525,33 @@ class JavalabEditor extends React.Component {
                         }
                       />
                     )}
-                    <span>{fileMetadata[tabKey]}</span>
-                    {activeTabKey === tabKey && (
-                      <button
-                        type="button"
-                        style={{
-                          ...style.fileMenuToggleButton,
-                          ...(this.props.isDarkMode &&
-                            style.darkFileMenuToggleButton)
-                        }}
-                        onClick={e => this.toggleTabMenu(tabKey, e)}
-                        className="no-focus-outline"
-                      >
-                        <FontAwesome
-                          icon={
-                            contextTarget === tabKey ? 'caret-up' : 'caret-down'
-                          }
-                        />
-                      </button>
+                    {!isEditingStartSources && (
+                      <FontAwesome
+                        style={style.fileTypeIcon}
+                        icon={'file-text'}
+                      />
                     )}
+                    <span>{fileMetadata[tabKey]}</span>
+
+                    <button
+                      ref={`${tabKey}-file-toggle`}
+                      type="button"
+                      style={{
+                        ...style.fileMenuToggleButton,
+                        ...(this.props.isDarkMode &&
+                          style.darkFileMenuToggleButton),
+                        ...(activeTabKey !== tabKey && {visibility: 'hidden'})
+                      }}
+                      onClick={e => this.toggleTabMenu(tabKey, e)}
+                      className="no-focus-outline"
+                      disabled={activeTabKey === tabKey}
+                    >
+                      <FontAwesome
+                        icon={
+                          contextTarget === tabKey ? 'caret-up' : 'caret-down'
+                        }
+                      />
+                    </button>
                   </NavItem>
                 );
               })}
@@ -596,6 +630,7 @@ class JavalabEditor extends React.Component {
 export default connect(
   state => ({
     sources: state.javalab.sources,
+    validation: state.javalab.validation,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources
   }),

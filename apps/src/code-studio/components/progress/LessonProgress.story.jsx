@@ -6,7 +6,7 @@ import lessonLock from '../../lessonLockRedux';
 import progress, {
   initProgress,
   mergeResults,
-  setStageExtrasEnabled
+  setLessonExtrasEnabled
 } from '../../progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 
@@ -76,6 +76,7 @@ const unplugged = {
   activeId: '2093',
   is_concept_level: false,
   kind: 'unplugged',
+  isUnplugged: true,
   position: 1,
   title: 1,
   url: 'http://studio.code.org/s/course1/lessons/1/levels/1'
@@ -119,7 +120,7 @@ export default storybook => {
       results[100] = TestResults.ALL_PASS;
     }
     store.dispatch(mergeResults(results));
-    store.dispatch(setStageExtrasEnabled(showStageExtras));
+    store.dispatch(setLessonExtrasEnabled(showStageExtras));
     return store;
   };
 
