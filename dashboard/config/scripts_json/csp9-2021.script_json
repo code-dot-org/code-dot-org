@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-25 22:56:51 UTC",
+    "serialized_at": "2021-05-27 17:32:03 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -1554,7 +1554,7 @@
       "key": "f2e93754-964e-4305-bc2c-85fa0acb1253",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How can machines \"learn\"?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** Based on yesterdays conversations, answers may vary. Stear the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How can machines \"learn\"?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** Based on yesterdays conversations, answers may vary. Steer the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \n"
       },
       "seeding_key": {
         "activity_section.key": "f2e93754-964e-4305-bc2c-85fa0acb1253",
