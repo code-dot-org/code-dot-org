@@ -438,6 +438,7 @@ module ScriptConstants
       ScriptConstants.script_in_category?(:csf_2018, script) ||
       ScriptConstants.script_in_category?(:csf_2019, script) ||
       ScriptConstants.script_in_category?(:csf_2020, script) ||
+      ScriptConstants.script_in_category?(:csf_2021, script) ||
       ScriptConstants.script_in_category?(:csd, script) ||
       ScriptConstants.script_in_category?(:csd_2018, script) ||
       ScriptConstants.script_in_category?(:csd_2019, script) ||

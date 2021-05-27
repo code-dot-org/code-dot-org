@@ -194,7 +194,12 @@ var CONFIGS = {
       'buildings.png': 18,
       'sidewalk.png': 2,
       'wall.png': 3
-    }
+    },
+    pegmanHeight: 32,
+    pegmanWidth: 32,
+    pegmanYOffset: 0,
+    pegmanXOffset: 0,
+    pegmanSheetWidth: 512
   }
 };
 

@@ -58,7 +58,7 @@ class ProgressPill extends React.Component {
       ...styles.levelPill,
       ...((url || onClick) && hoverStyle),
       ...(!multiLevelStep &&
-        levelProgressStyle(levels[0].status, levels[0].kind, false))
+        levelProgressStyle(levels[0].status, levels[0].kind))
     };
 
     // Adjust icon margins if locale is RTL

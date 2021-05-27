@@ -5,7 +5,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import {ViewType} from '../viewAsRedux';
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
-import {isStageHiddenForSection} from '../hiddenStageRedux';
+import {isLessonHiddenForSection} from '../hiddenLessonRedux';
 
 /**
  * When viewing a puzzle, we want teachers to be able to toggle between what the
@@ -13,7 +13,7 @@ import {isStageHiddenForSection} from '../hiddenStageRedux';
  * locked stages and hidden stages) this means hiding the main content, and
  * replacing it with something else.
  * We accomplish this by having the server render that other content to a known
- * dom element (#locked-stage, #hidden-stage). This component then creates
+ * dom element (#locked-lesson, #hidden-lesson). This component then creates
  * container elements for the main content and any other content, and toggles
  * which of those containers is visible as appropriate.
  */
@@ -22,7 +22,7 @@ class TeacherContentToggle extends React.Component {
     isBlocklyOrDroplet: PropTypes.bool.isRequired,
     // redux provided
     viewAs: PropTypes.string.isRequired,
-    hiddenStagesInitialized: PropTypes.bool.isRequired,
+    hiddenLessonsInitialized: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
     isHiddenStage: PropTypes.bool.isRequired,
     isLockedStage: PropTypes.bool.isRequired
@@ -33,10 +33,10 @@ class TeacherContentToggle extends React.Component {
       throw new Error('Expected level-body');
     }
     // Show this element, as parent div (refs.lockMessage) now owns visibility
-    $('#locked-stage')
+    $('#locked-lesson')
       .appendTo(this.refs.lockMessage)
       .show();
-    $('#hidden-stage')
+    $('#hidden-lesson')
       .appendTo(this.refs.hiddenMessage)
       .show();
     // Server initially sets level-body visibility to hidden when viewAs=Student
@@ -51,7 +51,7 @@ class TeacherContentToggle extends React.Component {
   render() {
     const {
       viewAs,
-      hiddenStagesInitialized,
+      hiddenLessonsInitialized,
       sectionsAreLoaded,
       isLockedStage,
       isHiddenStage,
@@ -73,7 +73,7 @@ class TeacherContentToggle extends React.Component {
     if (viewAs === ViewType.Student) {
       // Keep this hidden until we've made our async calls for hidden_stages and
       // locked stages, so that we don't flash content before hiding it
-      if (!hiddenStagesInitialized || !sectionsAreLoaded || hasOverlayFrame) {
+      if (!hiddenLessonsInitialized || !sectionsAreLoaded || hasOverlayFrame) {
         contentStyle.visibility = 'hidden';
       }
     }
@@ -126,27 +126,27 @@ export const mapStateToProps = state => {
 
   let isLockedStage = false;
   let isHiddenStage = false;
-  const {currentStageId} = state.progress;
+  const {currentLessonId} = state.progress;
   if (viewAs === ViewType.Student) {
     const {selectedSectionId} = state.teacherSections;
 
-    isLockedStage = lessonIsLockedForAllStudents(currentStageId, state);
-    isHiddenStage = isStageHiddenForSection(
-      state.hiddenStage,
+    isLockedStage = lessonIsLockedForAllStudents(currentLessonId, state);
+    isHiddenStage = isLessonHiddenForSection(
+      state.hiddenLesson,
       selectedSectionId,
-      currentStageId
+      currentLessonId
     );
   } else if (!state.verifiedTeacher.isVerified) {
     // if not-authorized teacher
     isLockedStage = state.progress.stages.some(
-      stage => stage.id === currentStageId && stage.lockable
+      stage => stage.id === currentLessonId && stage.lockable
     );
   }
 
   return {
     viewAs,
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
-    hiddenStagesInitialized: state.hiddenStage.hiddenStagesInitialized,
+    hiddenLessonsInitialized: state.hiddenLesson.hiddenLessonsInitialized,
     isHiddenStage,
     isLockedStage
   };

@@ -28,6 +28,7 @@ import Backpack from './Backpack';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
+import javalabMsg from '@cdo/javalab/locale';
 
 const style = {
   editor: {
@@ -86,6 +87,7 @@ class JavalabEditor extends React.Component {
     renameFile: PropTypes.func,
     removeFile: PropTypes.func,
     sources: PropTypes.object,
+    validation: PropTypes.object,
     isDarkMode: PropTypes.bool,
     isEditingStartSources: PropTypes.bool,
     handleVersionHistory: PropTypes.func.isRequired
@@ -309,7 +311,14 @@ class JavalabEditor extends React.Component {
     // check for duplicate filename
     if (Object.keys(this.props.sources).includes(newFilename)) {
       this.setState({
-        renameFileError: this.duplicateFileError(newFilename)
+        renameFileError: this.props.sources[newFilename].isVisible
+          ? this.duplicateFileError(newFilename)
+          : this.duplicateSupportFileError(newFilename)
+      });
+      return;
+    } else if (Object.keys(this.props.validation).includes(newFilename)) {
+      this.setState({
+        renameFileError: this.duplicateSupportFileError(newFilename)
       });
       return;
     }
@@ -410,7 +419,11 @@ class JavalabEditor extends React.Component {
   }
 
   duplicateFileError(filename) {
-    return `Filename ${filename} is already in use in this project. Please choose a different name`;
+    return javalabMsg.duplicateProjectFilenameError({filename: filename});
+  }
+
+  duplicateSupportFileError(filename) {
+    return javalabMsg.duplicateSupportFilenameError({filename: filename});
   }
 
   // This is called from the file explorer when we want to jump to a file
@@ -463,7 +476,7 @@ class JavalabEditor extends React.Component {
             onClick={() => this.setState({openDialog: CREATE_FILE})}
             headerHasFocus
             isRtl={false}
-            label="New File"
+            label={javalabMsg.newFile()}
             leftJustified
           />
           <PaneSection style={style.backpackSection}>
@@ -483,9 +496,9 @@ class JavalabEditor extends React.Component {
             onClick={onCommitCode}
             headerHasFocus
             isRtl={false}
-            label="Commit Code"
+            label={javalabMsg.commitCode()}
           />
-          <PaneSection>Editor</PaneSection>
+          <PaneSection>{javalabMsg.editor()}</PaneSection>
         </PaneHeader>
         <Tab.Container
           activeKey={activeTabKey}
@@ -620,6 +633,7 @@ class JavalabEditor extends React.Component {
 export default connect(
   state => ({
     sources: state.javalab.sources,
+    validation: state.javalab.validation,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources
   }),

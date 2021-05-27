@@ -613,9 +613,9 @@ FeedbackUtils.saveThumbnail = function(image) {
 };
 
 FeedbackUtils.isLastLevel = function() {
-  const stage = getStore().getState().progress.stages[0];
+  const lesson = getStore().getState().progress.stages[0];
   return (
-    stage.levels[stage.levels.length - 1].ids.indexOf(
+    lesson.levels[lesson.levels.length - 1].ids.indexOf(
       window.appOptions.serverLevelId
     ) !== -1
   );
@@ -894,13 +894,13 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
         var finalLevel =
           options.response && options.response.message === 'no more levels';
-        var stageCompleted = null;
+        var lessonCompleted = null;
         if (options.response && options.response.stage_changing) {
-          stageCompleted = options.response.stage_changing.previous.name;
+          lessonCompleted = options.response.stage_changing.previous.name;
         }
         var msgParams = {
           stageNumber: 0, // TODO: remove once localized strings have been fixed
-          stageName: stageCompleted,
+          stageName: lessonCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (
@@ -910,7 +910,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           var reinfFeedbackMsg =
             (options.appStrings && options.appStrings.reinfFeedbackMsg) || '';
 
-          if (options.level.disableFinalStageMessage) {
+          if (options.level.disableFinalLessonMessage) {
             message = reinfFeedbackMsg;
           } else {
             message = finalLevel ? msg.finalStage(msgParams) + ' ' : '';
@@ -922,7 +922,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
             msg.nextLevel(msgParams);
           message = finalLevel
             ? msg.finalStage(msgParams)
-            : stageCompleted
+            : lessonCompleted
             ? msg.nextStage(msgParams)
             : nextLevelMsg;
         }
