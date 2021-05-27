@@ -56,15 +56,13 @@ const styles = {
   },
   bubblePosition: {
     position: 'absolute',
-    top: -6,
-    right: -6
+    top: -7,
+    right: -7
   },
   diamondBubblePosition: {
     position: 'absolute',
-    top: -14,
-    right: 2,
-    // undo the rotation from the parent
-    transform: 'rotate(-45deg)'
+    top: -13,
+    right: -17
   },
   border: {
     color: color.white
