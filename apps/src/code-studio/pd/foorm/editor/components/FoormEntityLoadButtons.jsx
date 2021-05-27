@@ -10,6 +10,7 @@ import {
   setHasLintError,
   setLastSavedQuestions
 } from '../foormEditorRedux';
+import {getLatestVersionMap} from '../../foormHelpers';
 
 class FoormEntityLoadButtons extends React.Component {
   static propTypes = {
@@ -44,15 +45,22 @@ class FoormEntityLoadButtons extends React.Component {
    * @returns Array<MenuItem>
    */
   getDropdownOptions() {
+    const latestVersionMap = getLatestVersionMap(this.props.foormEntities);
+
     return (
       this.props.foormEntities
-        // sort entities alphabetically by name and version
-        .sort((a, b) => a['text'].localeCompare(b['text']))
-        // optionally filter out entities so that only the last unique version of a name remains
-        .filter((entity, i, array) =>
-          this.shouldShowLatestVersionsOnly() && array[i + 1]
-            ? array[i + 1]['metadata']['name'] !== entity['metadata']['name']
+        // optionally filter out entities without the latest version of a name
+        .filter(entity =>
+          this.shouldShowLatestVersionsOnly()
+            ? latestVersionMap[entity['metadata']['name']] ===
+              entity['metadata']['version']
             : true
+        )
+        // sort entities alphabetically by name and version (sort numerically when names are the same)
+        .sort(
+          (a, b) =>
+            a['text'].localeCompare(b['text']) ||
+            a['metadata']['version'] - b['metadata']['version']
         )
         .map((entity, i) => {
           return this.renderMenuItem(

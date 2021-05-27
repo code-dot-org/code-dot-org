@@ -35,6 +35,7 @@ class FoormFormSaveBar extends Component {
     hasJSONError: PropTypes.bool,
     hasLintError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
+    isLatestVersion: PropTypes.bool,
     formId: PropTypes.number,
     formName: PropTypes.string,
     formVersion: PropTypes.number,
@@ -317,7 +318,7 @@ class FoormFormSaveBar extends Component {
               Publish
             </button>
           )}
-          {this.props.isFormPublished && (
+          {this.props.isFormPublished && this.props.isLatestVersion && (
             <button
               className="btn btn-primary"
               type="button"
