@@ -20,9 +20,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
     @custom_lesson_group = create(:lesson_group, script: @custom_script)
-    @custom_lesson_1 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 1', name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
-    @custom_lesson_2 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 2', name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
-    @custom_lesson_3 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 3', name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3')
+    @custom_lesson_1 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Lesson 1', name: 'Laurel Lesson 1', absolute_position: 1, relative_position: '1')
+    @custom_lesson_2 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Lesson 2', name: 'Laurel Lesson 2', absolute_position: 2, relative_position: '2')
+    @custom_lesson_3 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Lesson 3', name: 'Laurel Lesson 3', absolute_position: 3, relative_position: '3')
     @custom_s1_l1 = create(
       :script_level,
       script: @custom_script,
@@ -587,7 +587,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
-    courseg_2017_lesson_1 = create :lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
+    courseg_2017_lesson_1 = create :lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1'
     courseg_2017_lesson_1_script_level = create :script_level, script: courseg_2017, lesson: courseg_2017_lesson_1, position: 1
 
     get :show, params: {
@@ -607,7 +607,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
-    courseg_2017_lesson_1 = create :lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
+    courseg_2017_lesson_1 = create :lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1'
     courseg_2017_lesson_1_script_level = create :script_level, script: courseg_2017, lesson: courseg_2017_lesson_1, position: 1
 
     get :show, params: {
@@ -1880,7 +1880,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "stage extras shows progress for current user if no section and user id" do
+  test "lesson extras shows progress for current user if no section and user id" do
     sign_in @student
     script = create :script
     lesson_group = create(:lesson_group, script: script)
@@ -1901,7 +1901,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 
-  test "stage extras shows teacher no progress if no section and user id" do
+  test "lesson extras shows teacher no progress if no section and user id" do
     sign_in @teacher
     script = create :script
     lesson_group = create(:lesson_group, script: script)
@@ -1922,7 +1922,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     refute extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 
-  test "stage extras shows teacher progress for student if section and user id" do
+  test "lesson extras shows teacher progress for student if section and user id" do
     sign_in @teacher
     script = create :script
     lesson_group = create(:lesson_group, script: script)
@@ -1945,7 +1945,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 
-  test "stage extras shows no progress if no current user" do
+  test "lesson extras shows no progress if no current user" do
     script = create :script
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
