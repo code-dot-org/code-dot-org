@@ -54,9 +54,7 @@ class ColumnInspector extends Component {
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
     setCurrentColumn: PropTypes.func,
-    currentPanel: PropTypes.string,
-    labelColumn: PropTypes.string,
-    selectedFeatures: PropTypes.array
+    currentPanel: PropTypes.string
   };
 
   handleChangeDataType = (event, feature) => {
@@ -87,17 +85,17 @@ class ColumnInspector extends Component {
   };
 
   render() {
-    const {
-      currentColumnData,
-      currentPanel,
-      labelColumn,
-      selectedFeatures
-    } = this.props;
+    const { currentColumnData, currentPanel } = this.props;
 
-    if (
-      currentColumnData &&
-      currentColumnData.dataType === ColumnTypes.CATEGORICAL
-    ) {
+    const isCategorical =
+      currentColumnData
+      && currentColumnData.dataType === ColumnTypes.CATEGORICAL;
+
+    const isNumerical =
+      currentColumnData
+      && currentColumnData.dataType === ColumnTypes.NUMERICAL;
+
+    if (isCategorical) {
       barData.labels = Object.values(currentColumnData.uniqueOptions);
       barData.datasets[0].data = barData.labels.map(option => {
         return currentColumnData.frequencies[option];
@@ -154,8 +152,7 @@ class ColumnInspector extends Component {
                     )}
                   </label>
 
-                  {currentPanel === "dataDisplayLabel" &&
-                    currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+                  {currentPanel === "dataDisplayLabel" && isCategorical && (
                       <div>
                         {barData.labels.length <= maxLabelsInHistogram && (
                           <Bar
@@ -182,16 +179,16 @@ class ColumnInspector extends Component {
                     </div>
                   )}
 
-                  {currentColumnData.dataType === ColumnTypes.NUMERICAL && (
+                  {isNumerical && (
                     <div>
                       {currentColumnData.extrema && (
                         <div>
-                          {isNaN(currentColumnData.extrema.min) && (
+                          {!currentColumnData.isColumnDataValid && (
                             <p style={styles.error}>
                               Numerical columns should contain only numbers.
                             </p>
                           )}
-                          {!isNaN(currentColumnData.extrema.min) && (
+                          {currentColumnData.isColumnDataValid && (
                             <div style={styles.contents}>
                               min: {currentColumnData.extrema.min}
                               <br />
@@ -211,9 +208,7 @@ class ColumnInspector extends Component {
               </form>
 
               {currentPanel === "dataDisplayLabel" &&
-                currentColumnData.id !== labelColumn &&
-                !currentColumnData.hasTooManyUniqueOptions &&
-                !isNaN(currentColumnData.extrema.min) && (
+                currentColumnData.isSelectable && (
                   <button
                     type="button"
                     onClick={e =>
@@ -226,8 +221,7 @@ class ColumnInspector extends Component {
                 )}
 
               {currentPanel === "dataDisplayFeatures" &&
-                !selectedFeatures.includes(currentColumnData.id) &&
-                !currentColumnData.hasTooManyUniqueOptions && (
+                currentColumnData.isSelectable && (
                   <button
                     type="button"
                     onClick={e => this.addFeature(e, currentColumnData.id)}
@@ -255,9 +249,7 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
-    currentPanel: state.currentPanel,
-    labelColumn: state.labelColumn,
-    selectedFeatures: state.selectedFeatures
+    currentPanel: state.currentPanel
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {
