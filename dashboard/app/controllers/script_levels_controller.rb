@@ -209,7 +209,7 @@ class ScriptLevelsController < ApplicationController
     render json: []
   end
 
-  def stage_extras
+  def lesson_extras
     authorize! :read, ScriptLevel
 
     if current_user&.teacher?

@@ -14,4 +14,5 @@ Scenario: Hidden Stages
   And I see no difference for "student overview with hidden stage"
   Then I am on "http://studio.code.org/s/allthethings/lessons/2/levels/2"
   And I see no difference for "student lesson on hidden stage"
+
   And I close my eyes
