@@ -155,6 +155,33 @@ describe('scriptEditorRedux reducer tests', () => {
           "lesson 'f', display_name: 'F', has_lesson_plan: false\n\n"
       );
     });
+
+    it('serializes lessons containing level variants', () => {
+      const scriptLevel = initialState.lessonGroups[0].lessons[0].levels[1];
+      scriptLevel.ids = ['2002', '2003'];
+      scriptLevel.activeId = '2003';
+      let serializedLessonGroups = getSerializedLessonGroups(
+        initialState.lessonGroups,
+        initialState.levelKeyList
+      );
+
+      expect(serializedLessonGroups).to.equal(
+        "lesson_group 'lg-key', display_name: 'Display Name'\n" +
+          "lesson_group_description 'My Description'\n" +
+          "lesson 'a', display_name: 'A', has_lesson_plan: true, unplugged: true\n" +
+          "level 'Level One'\n" +
+          'variants\n' +
+          "  level 'Level Two', active: false\n" +
+          "  level 'Level Three'\n" +
+          'endvariants\n\n' +
+          "lesson 'b', display_name: 'B', has_lesson_plan: false\n\n" +
+          "lesson 'c', display_name: 'C', has_lesson_plan: true\n\n" +
+          "lesson_group 'lg-key-2', display_name: 'Display Name 2'\n" +
+          "lesson 'd', display_name: 'D', has_lesson_plan: true\n\n" +
+          "lesson 'e', display_name: 'E', has_lesson_plan: true\n\n" +
+          "lesson 'f', display_name: 'F', has_lesson_plan: false\n\n"
+      );
+    });
   });
 
   it('mapLessonGroupDataForEditor', () => {
