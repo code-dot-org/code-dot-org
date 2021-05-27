@@ -102,6 +102,11 @@ class GenerateResults extends Component {
     const headMoveAmount =
       this.state.frame < framesPerCycle / 4
         ? this.state.frame / (framesPerCycle / 4)
+        : this.state.frame >= maxFrames + framesPerCycle &&
+          this.state.frame <= maxFrames + 2 * framesPerCycle
+        ? 1 - (this.state.frame - (maxFrames + framesPerCycle)) / framesPerCycle
+        : this.state.frame >= maxFrames + 2 * framesPerCycle
+        ? 0
         : 1;
     const botTransformY = -50 - headMoveAmount * 50;
     const botContainerTransform = `translateX(-25%) translateY(${botTransformY}%)`;
