@@ -109,8 +109,8 @@ class SummaryProgressRow extends React.Component {
     const showAsLocked = isLockedForUser || isLockedForSection;
 
     let lessonTitle = lesson.name;
-    if (lesson.stageNumber) {
-      lessonTitle = lesson.stageNumber + '. ' + lessonTitle;
+    if (lesson.lessonNumber) {
+      lessonTitle = lesson.lessonNumber + '. ' + lessonTitle;
     }
 
     const titleTooltipId = _.uniqueId();
