@@ -64,7 +64,6 @@ class Predict extends Component {
                 );
               })}
             </form>
-            <br />
             <form>
               {this.props.selectedCategoricalFeatures.map((feature, index) => {
                 return (
