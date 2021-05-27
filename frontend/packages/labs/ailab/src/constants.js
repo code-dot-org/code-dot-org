@@ -206,6 +206,13 @@ export const styles = {
     paddingBottom: 25
   },
 
+  contentsPredictBot: {
+    borderRadius: 0,
+    backgroundColor: colors.background,
+    padding: 15,
+    marginTop: 20
+  },
+
   panelContentLeft: {
     float: "left",
     width: "80%"
@@ -503,6 +510,15 @@ export const styles = {
   resultsCellHighlight: {
     backgroundColor: colors.background
   },
+
+  predictBotLeft: {
+    float: "left",
+    width: "20%"
+  },
+
+  predictBot: { width: "100%" },
+
+  predictBotRight: { float: "right", width: "75%" },
 
   previousButton: {
     position: "fixed",

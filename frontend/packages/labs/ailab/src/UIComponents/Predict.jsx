@@ -108,11 +108,11 @@ class Predict extends Component {
           </button>
         </div>
         {this.props.predictedLabel && (
-          <div style={{ ...styles.contents, marginTop: 20 }}>
-            <div style={{ float: "left", width: "20%" }}>
-              <img style={{ width: "100%" }} src={aiBotBorder} />
+          <div style={styles.contentsPredictBot}>
+            <div style={styles.predictBotLeft}>
+              <img style={styles.predictBot} src={aiBotBorder} />
             </div>
-            <div style={{ float: "right", width: "75%" }}>
+            <div style={styles.predictBotRight}>
               <div style={styles.statement}>A.I. predicts</div>
               {this.props.labelColumn}: {this.props.predictedLabel}
             </div>
