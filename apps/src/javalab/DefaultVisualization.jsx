@@ -28,14 +28,15 @@ export default class DefaultVisualization extends React.Component {
           style={styles.transparent}
           leftJustified
         />
-        <PaneButton
+        {/* TODO: Add the fullscreen icon back when we are ready to implement it. */}
+        {/* <PaneButton
           headerHasFocus
           iconClass={this.fullscreenIcon()}
           onClick={() => {}}
           label=""
           isRtl={false}
           style={styles.transparent}
-        />
+        /> */}
         <PaneSection>Preview</PaneSection>
         <ProtectedVisualizationDiv />
       </PaneHeader>
