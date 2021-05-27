@@ -29,8 +29,9 @@ describe('BubbleBadge', () => {
     expect(wrapper.find({icon: 'exclamation'})).to.have.length(1);
   });
 
-  it('rotates the icon if isDiamond is true', () => {
+  it('positions the icon correctly if isDiamond is true', () => {
     const wrapper = shallow(<BubbleBadge type="assessment" isDiamond={true} />);
-    expect(wrapper.props().style.transform).to.equal('rotate(-45deg)');
+    expect(wrapper.props().style.top).to.equal(-13);
+    expect(wrapper.props().style.right).to.equal(-17);
   });
 });
