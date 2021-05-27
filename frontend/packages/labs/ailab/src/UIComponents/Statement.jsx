@@ -2,10 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  setLabelColumn,
-  removeSelectedFeature
-} from "../redux";
+import { setLabelColumn, removeSelectedFeature } from "../redux";
 import { styles } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
@@ -26,12 +23,18 @@ class Statement extends Component {
     this.props.setLabelColumn(null);
   };
 
-  removeFeature = (id) => {
+  removeFeature = id => {
     this.props.removeSelectedFeature(id);
   };
 
   render() {
-    const { shouldShow, smallFont, labelColumn, selectedFeatures, currentPanel } = this.props;
+    const {
+      shouldShow,
+      smallFont,
+      labelColumn,
+      selectedFeatures,
+      currentPanel
+    } = this.props;
 
     if (!shouldShow) {
       return null;
@@ -44,7 +47,7 @@ class Statement extends Component {
       >
         Predict{" "}
         <div style={styles.statementLabel}>
-          {labelColumn || "..."}
+          {labelColumn || "____"}
           {currentPanel === "dataDisplayLabel" && labelColumn && (
             <div
               onClick={() => this.removeLabel()}
@@ -57,35 +60,37 @@ class Statement extends Component {
             </div>
           )}
         </div>
-        <span>
-          {" "}
-          based on{" "}
-          {selectedFeatures.map((selectedFeature, index) => {
-            return (
-              <span key={index}>
-                <div style={styles.statementFeature}>
-                  {selectedFeature}
-                  {currentPanel === "dataDisplayFeatures" && (
-                    <div
-                      onClick={() => this.removeFeature(selectedFeature)}
-                      style={styles.statementDeleteIcon}
-                    >
-                      <div style={styles.statementDeleteCircle} />
-                      <div style={styles.statementDeleteX}>
-                        <FontAwesomeIcon icon={faTimesCircle} />
+        {currentPanel !== "dataDisplayLabel" && (
+          <span>
+            {" "}
+            based on{" "}
+            {selectedFeatures.map((selectedFeature, index) => {
+              return (
+                <span key={index}>
+                  <div style={styles.statementFeature}>
+                    {selectedFeature}
+                    {currentPanel === "dataDisplayFeatures" && (
+                      <div
+                        onClick={() => this.removeFeature(selectedFeature)}
+                        style={styles.statementDeleteIcon}
+                      >
+                        <div style={styles.statementDeleteCircle} />
+                        <div style={styles.statementDeleteX}>
+                          <FontAwesomeIcon icon={faTimesCircle} />
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-                {index < selectedFeatures.length - 1 && ", "}
-              </span>
-            );
-          })}
-          {selectedFeatures.length === 0 && (
-            <span style={styles.statementFeature}>...</span>
-          )}
-          {selectedFeatures.length !== 0 && "."}
-        </span>
+                    )}
+                  </div>
+                  {index < selectedFeatures.length - 1 && ", "}
+                </span>
+              );
+            })}
+            {selectedFeatures.length === 0 && (
+              <span style={styles.statementFeature}>____</span>
+            )}
+            .
+          </span>
+        )}
       </div>
     );
   }

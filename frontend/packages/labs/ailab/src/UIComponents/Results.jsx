@@ -36,7 +36,7 @@ class Results extends Component {
         <div id="results" style={styles.panel}>
           <div style={styles.scrollableContents}>
             <div style={styles.scrollingContents}>
-              <div style={styles.largeText}>Results</div>
+              <div style={styles.largeText}>Result</div>
               {historicResults.map((historicResult, index) => {
                 return (
                   <div key={index}>
@@ -48,7 +48,7 @@ class Results extends Component {
                         selectedFeatures={historicResult.features}
                       />
                     </div>
-                    <div style={styles.resultsAccuracy}>
+                    <div style={{ ...styles.resultsAccuracy, ...styles.bold }}>
                       {historicResult.accuracy}%
                     </div>
                     {index === 0 && (
@@ -65,8 +65,9 @@ class Results extends Component {
                     {index === 0 && historicResults.length > 1 && (
                       <div
                         style={{
-                          ...styles.resultsPreviousHeading,
-                          ...styles.italic
+                          ...styles.largeText,
+                          clear: "both",
+                          paddingTop: 40
                         }}
                       >
                         Previous results

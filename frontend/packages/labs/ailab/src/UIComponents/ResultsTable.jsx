@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { isRegression } from "../redux";
+import { isRegression, setResultsHighlightRow } from "../redux";
 import { styles, colors, REGRESSION_ERROR_TOLERANCE } from "../constants";
 
 class ResultsTable extends Component {
@@ -10,14 +10,31 @@ class ResultsTable extends Component {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
     results: PropTypes.object,
-    isRegression: PropTypes.bool
+    isRegression: PropTypes.bool,
+    setResultsHighlightRow: PropTypes.func,
+    resultsHighlightRow: PropTypes.number
+  };
+
+  getRowCellStyle = index => {
+    return {
+      ...styles.tableCell,
+      ...(index === this.props.resultsHighlightRow &&
+        styles.resultsCellHighlight)
+    };
   };
 
   render() {
+    const { setResultsHighlightRow } = this.props;
     const featureCount = this.props.selectedFeatures.length;
 
     return (
       <div style={styles.panel}>
+        {this.props.isRegression && (
+          <div style={styles.smallTextRight}>
+            {`Predictions are +/- ${REGRESSION_ERROR_TOLERANCE}% of range`}
+          </div>
+        )}
+
         <div style={styles.tableParent}>
           <table style={styles.displayTable}>
             <thead>
@@ -29,7 +46,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  <span style={styles.largeText}>Features</span>
+                  Features
                 </th>
                 <th
                   style={{
@@ -37,12 +54,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  <span style={styles.largeText}>{"Actual"}</span>
-                  {this.props.isRegression && (
-                    <div style={styles.smallTextNoMargin}>
-                      {`+/- ${REGRESSION_ERROR_TOLERANCE}% of range`}
-                    </div>
-                  )}
+                  Actual
                 </th>
                 <th
                   style={{
@@ -50,16 +62,8 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  <span style={styles.largeText}>{"A.I. Prediction"}</span>
+                  A.I. Prediction
                 </th>
-                <th
-                  colSpan={featureCount}
-                  style={{
-                    ...styles.largeText,
-                    ...styles.tableHeader,
-                    ...styles.resultsTableFirstHeader
-                  }}
-                />
               </tr>
               <tr>
                 {this.props.selectedFeatures.map((feature, index) => {
@@ -94,30 +98,27 @@ class ResultsTable extends Component {
                 >
                   {this.props.labelColumn}
                 </th>
-                <th
-                  style={{
-                    ...styles.tableHeader,
-                    backgroundColor: colors.label,
-                    ...styles.resultsTableSecondHeader
-                  }}
-                />
               </tr>
             </thead>
             <tbody>
               {this.props.results.examples.map((examples, index) => {
                 return (
-                  <tr key={index}>
+                  <tr
+                    key={index}
+                    onMouseEnter={() => setResultsHighlightRow(index)}
+                    onMouseLeave={() => setResultsHighlightRow(undefined)}
+                  >
                     {examples.map((example, i) => {
                       return (
-                        <td style={styles.tableCell} key={i}>
+                        <td style={this.getRowCellStyle(index)} key={i}>
                           {example}
                         </td>
                       );
                     })}
-                    <td style={styles.tableCell}>
+                    <td style={this.getRowCellStyle(index)}>
                       {this.props.results.labels[index]}
                     </td>
-                    <td style={styles.tableCell}>
+                    <td style={this.getRowCellStyle(index)}>
                       {this.props.results.predictedLabels[index]}
                     </td>
                   </tr>
@@ -131,8 +132,16 @@ class ResultsTable extends Component {
   }
 }
 
-export default connect(state => ({
-  selectedFeatures: state.selectedFeatures,
-  labelColumn: state.labelColumn,
-  isRegression: isRegression(state)
-}))(ResultsTable);
+export default connect(
+  state => ({
+    selectedFeatures: state.selectedFeatures,
+    labelColumn: state.labelColumn,
+    isRegression: isRegression(state),
+    resultsHighlightRow: state.resultsHighlightRow
+  }),
+  dispatch => ({
+    setResultsHighlightRow(column) {
+      dispatch(setResultsHighlightRow(column));
+    }
+  })
+)(ResultsTable);

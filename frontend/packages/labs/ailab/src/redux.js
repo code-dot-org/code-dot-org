@@ -52,6 +52,7 @@ const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 const SET_HIGHLIGHT_COLUMN = "SET_HIGHLIGHT_COLUMN";
 const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
+const SET_RESULTS_HIGHLIGHT_ROW = "SET_RESULTS_HIGHLIGHT_ROW";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
 const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
@@ -194,6 +195,10 @@ export function setResultsPhase(phase) {
   return { type: SET_RESULTS_PHASE, phase };
 }
 
+export function setResultsHighlightRow(highlightRow) {
+  return { type: SET_RESULTS_HIGHLIGHT_ROW, highlightRow };
+}
+
 export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
 }
@@ -249,6 +254,7 @@ const initialState = {
   columnRefs: {},
   historicResults: [],
   showResultsDetails: false,
+  resultsHighlightRow: undefined,
   kValue: null,
   viewedPanels: [],
   instructionsOverlayActive: false,
@@ -542,6 +548,12 @@ export default function rootReducer(state = initialState, action) {
       resultsPhase: action.phase
     };
   }
+  if (action.type === SET_RESULTS_HIGHLIGHT_ROW) {
+    return {
+      ...state,
+      resultsHighlightRow: action.highlightRow
+    }
+  }
   if (action.type === SET_SAVE_STATUS) {
     return {
       ...state,
@@ -800,15 +812,32 @@ export function getSelectedColumnDescriptions(state) {
   });
 }
 
-export function getColumnDescription(state, column) {
-  if (!state.metadata || !state.metadata.fields || !column) {
+export function getColumnDescription(state, columnId) {
+  if (!state || !columnId) {
     return null;
   }
 
-  const field = state.metadata.fields.find(field => {
-    return field.id === column;
+  // Use metadata if available.
+  if (state.metadata && state.metadata.fields) {
+    const field = state.metadata.fields.find(field => {
+      return field.id === columnId;
+    });
+    return field.description;
+  }
+
+  // Try using a user-entered column description if available.
+  if (!state.columns) {
+    return;
+  }
+  const matchedColumn = state.columns.find(column => {
+    return column.id === columnId;
   });
-  return field.description;
+  if (matchedColumn) {
+    return matchedColumn.description;
+  }
+
+  // No column description available.
+  return null;
 }
 
 function getKeyByValue(object, value) {
