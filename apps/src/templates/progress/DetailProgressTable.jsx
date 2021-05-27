@@ -18,7 +18,7 @@ export default class DetailProgressTable extends React.Component {
     }
 
     return (
-      <div>
+      <div className="uitest-detail-progress-table">
         {lessons.map((lesson, index) => (
           <ProgressLesson
             key={index}
