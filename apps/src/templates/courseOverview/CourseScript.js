@@ -191,7 +191,7 @@ export default connect(
       ownProps.courseId,
       true
     ),
-    hiddenStageState: state.hiddenStage,
+    hiddenStageState: state.hiddenLesson,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
       state.teacherSections.sectionIds.length === 0

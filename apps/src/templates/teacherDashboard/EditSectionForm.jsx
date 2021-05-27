@@ -570,7 +570,7 @@ let defaultPropsFromState = state => ({
   isSaveInProgress: state.teacherSections.saveInProgress,
   textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
   lessonExtrasAvailable: id => stageExtrasAvailable(state, id),
-  hiddenLessonState: state.hiddenStage,
+  hiddenLessonState: state.hiddenLesson,
   assignedScriptName: assignedScriptName(state),
   localeEnglishName: state.locales.localeEnglishName,
   localeCode: state.locales.localeCode,

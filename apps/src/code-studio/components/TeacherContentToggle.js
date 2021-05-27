@@ -132,7 +132,7 @@ export const mapStateToProps = state => {
 
     isLockedStage = lessonIsLockedForAllStudents(currentLessonId, state);
     isHiddenStage = isStageHiddenForSection(
-      state.hiddenStage,
+      state.hiddenLesson,
       selectedSectionId,
       currentLessonId
     );
@@ -146,7 +146,7 @@ export const mapStateToProps = state => {
   return {
     viewAs,
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
-    hiddenStagesInitialized: state.hiddenStage.hiddenStagesInitialized,
+    hiddenStagesInitialized: state.hiddenLesson.hiddenStagesInitialized,
     isHiddenStage,
     isLockedStage
   };
