@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
+import JavalabButton from './JavalabButton';
+import javalabMsg from '@cdo/javalab/locale';
 
 const placeholderFiles = [
   'MyClass.java',
@@ -45,22 +47,22 @@ export class Backpack extends Component {
 
     return (
       <div>
-        <button
-          type="button"
-          onClick={this.toggleDropdown}
+        <JavalabButton
+          icon={
+            <img
+              src="/blockly/media/javalab/backpack.png"
+              alt="backpack icon"
+              style={styles.backpackIcon}
+            />
+          }
+          text={javalabMsg.backpackLabel()}
           style={{
             ...styles.buttonStyles,
             ...(dropdownOpen && styles.dropdownOpenButton)
           }}
-        >
-          <img
-            src="/blockly/media/javalab/backpack.png"
-            alt="backpack icon"
-            style={styles.backpackIcon}
-          />
-          <span>Backpack</span>
-        </button>
-
+          isHorizontal
+          onClick={this.toggleDropdown}
+        />
         {dropdownOpen && (
           <div style={styles.dropdown} ref={ref => (this.dropdownList = ref)}>
             {placeholderFiles.map((filename, index) => (
@@ -78,13 +80,11 @@ export class Backpack extends Component {
                 </label>
               </div>
             ))}
-            <button
-              type="button"
+            <JavalabButton
+              text="Import"
               style={styles.importButton}
               onClick={this.collapseDropdown}
-            >
-              Import
-            </button>
+            />
           </div>
         )}
       </div>
@@ -121,6 +121,9 @@ const styles = {
     padding: '0px 12px',
     fontFamily: '"Gotham 5r", sans-serif',
     lineHeight: '18px',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
     ':hover': {
       backgroundColor: color.cyan
     }
