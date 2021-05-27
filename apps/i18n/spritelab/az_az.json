@@ -1,3 +1,17 @@
 {
-  "shareGame": "Oyununuzu bölüşün:"
+  "clicked": "klikləndi",
+  "clickedSprite": "Sprite klikləndi\n\n",
+  "new": "yeni",
+  "newSprite": "yeniSprite",
+  "subject": "mövzu",
+  "subjectSprite": "mövzu Sprite",
+  "object": "obyekt",
+  "objectSprite": "obyektSprite",
+  "errorLoadingAnimation": "\"{AnimationName}\" animasiyanızı yükləməkdə çətinlik çəkirik. Yaxşı bir internet bağlantınız olduğundan əmin olun və səhifəni yenidən yükləməyə çalışın. Bu problem davam edərsə, bu animasiyanın pozulması mümkündür. Bu vəziyyətdə animasiyanı silməklə davam etməyiniz lazım ola bilər.",
+  "reinfFeedbackMsg": "Bitirdin! Növbəti səviyyəyə keçmək üçün \"Continue\" düyməsini basın.",
+  "shareGame": "Oyununuzu bölüşün:",
+  "spritelabFeedbackChangeBackgroundColor": "Arxa fonu ağdan başqa bir rəngə dəyişməisiniz.",
+  "spritelabFeedbackUseCostume": "Ən azı bir kostyum istifadə etməlisiniz.",
+  "genericSuccess": "Bu level-i başa vurdunuz. Davam etmək üçün basın.",
+  "genericBonusSuccess": "Afərin! Əlavə problem də daxil olmaqla səviyəni başa vurdunuz! "
 }
