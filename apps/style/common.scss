@@ -413,6 +413,17 @@ html[dir='rtl'] div#visualizationResizeBar {
   }
 }
 
+.paint-counter-text {
+  text-anchor: middle;
+  font-size: 16px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  fill: $purple;
+  // stroke: black;
+  // stroke-width: 1;
+  cursor: default;
+}
+
 /* Shrink the visualization area on small displays. */
 
 #visualization.responsive > * {
