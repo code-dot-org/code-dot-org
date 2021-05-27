@@ -36,6 +36,28 @@ export default storybook => {
             cancellationButtonText="No, thank you"
           />
         )
+      },
+      {
+        name: 'Custom footer with default buttons',
+        story: () => (
+          <StylizedBaseDialog
+            {...DEFAULT_PROPS}
+            footerJustification="space-between"
+            renderFooter={buttons => [
+              <div key="text">You can do it!</div>,
+              <div key="buttons">{buttons}</div>
+            ]}
+          />
+        )
+      },
+      {
+        name: 'Custom footer without default buttons',
+        story: () => (
+          <StylizedBaseDialog
+            {...DEFAULT_PROPS}
+            renderFooter={() => "I don't need your buttons!"}
+          />
+        )
       }
     ]);
 };

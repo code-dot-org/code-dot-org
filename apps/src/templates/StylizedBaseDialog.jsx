@@ -19,6 +19,23 @@ export default function StylizedBaseDialog(props) {
     return passThrough;
   }
 
+  const defaultButtons = [
+    <Button
+      key="cancel"
+      text={props.cancellationButtonText}
+      onClick={props.handleClose}
+      color="gray"
+      style={styles.buttons.all}
+    />,
+    <Button
+      key="confirm"
+      text={props.confirmationButtonText}
+      onClick={props.handleConfirmation}
+      color="orange"
+      style={{...styles.buttons.all, ...styles.buttons.confirmation}}
+    />
+  ];
+
   return (
     <BaseDialog {...passThroughProps()} useUpdatedStyles>
       <div style={styles.container}>
@@ -34,18 +51,7 @@ export default function StylizedBaseDialog(props) {
           justifyContent: props.footerJustification
         }}
       >
-        <Button
-          text={props.cancellationButtonText}
-          onClick={props.handleClose}
-          color="gray"
-          style={styles.buttons.all}
-        />
-        <Button
-          text={props.confirmationButtonText}
-          onClick={props.handleConfirmation}
-          color="orange"
-          style={{...styles.buttons.all, ...styles.buttons.confirmation}}
-        />
+        {props.renderFooter(defaultButtons)}
       </div>
     </BaseDialog>
   );
@@ -54,7 +60,12 @@ export default function StylizedBaseDialog(props) {
 StylizedBaseDialog.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.element.isRequired,
-  footerJustification: PropTypes.oneOf(['flex-start', 'flex-end']),
+  footerJustification: PropTypes.oneOf([
+    'flex-start',
+    'flex-end',
+    'space-between'
+  ]),
+  renderFooter: PropTypes.func.isRequired,
   confirmationButtonText: PropTypes.string.isRequired,
   cancellationButtonText: PropTypes.string.isRequired,
   handleConfirmation: PropTypes.func.isRequired,
@@ -63,6 +74,7 @@ StylizedBaseDialog.propTypes = {
 
 StylizedBaseDialog.defaultProps = {
   footerJustification: 'flex-end',
+  renderFooter: buttons => buttons,
   confirmationButtonText: i18n.dialogOK(),
   cancellationButtonText: i18n.dialogCancel()
 };
@@ -84,6 +96,7 @@ const styles = {
   },
   footer: {
     display: 'flex',
+    alignItems: 'center',
     padding: `${GUTTER / 2}px ${GUTTER - 3}px` // -3 to account for 3px-margin around <Button/>
   },
   buttons: {
