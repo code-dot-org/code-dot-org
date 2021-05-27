@@ -110,7 +110,8 @@ class SaveModel extends Component {
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             <div key={nameField.id} style={styles.cardRow}>
-              <label style={styles.bold}>{nameField.text}</label>
+              <span style={styles.bold}>{nameField.text}</span>{" "}
+              <span style={styles.italic}>(required)</span>
               <div>
                 <input
                   onChange={event =>
@@ -172,7 +173,9 @@ class SaveModel extends Component {
                             />
                           </div>
                         )}
-                        {field.answer && <div>{field.answer}</div>}
+                        {!this.props.isUserUploadedDataset && (
+                          <div>{field.answer}</div>
+                        )}
                       </div>
                     );
                   })}
