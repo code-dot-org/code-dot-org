@@ -275,7 +275,8 @@ export const styles = {
     borderRadius: 5,
     backgroundColor: "#61d2eb",
     color: "white",
-    padding: "10px 20px"
+    padding: "10px 20px",
+    display: "inline-block"
   },
 
   csvInput: {
