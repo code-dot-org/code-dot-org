@@ -204,7 +204,7 @@ describe('TeacherContentToggle', () => {
       hiddenStageElement
     ] = root.children().toArray();
 
-    // content is hidden, hiddenStage is visible
+    // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, 'hidden');
     assert.equal(lockedStageElement.style.display, 'none');
@@ -251,7 +251,7 @@ describe('TeacherContentToggle', () => {
       hiddenStageElement
     ] = root.children().toArray();
 
-    // content is hidden, hiddenStage is visible
+    // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, 'hidden');
     assert.equal(lockedStageElement.style.display, '');
@@ -300,7 +300,7 @@ describe('TeacherContentToggle', () => {
       hiddenStageElement
     ] = root.children().toArray();
 
-    // content is hidden, hiddenStage is visible
+    // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, 'hidden');
     assert.equal(lockedStageElement.style.display, 'none');
@@ -338,7 +338,7 @@ describe('TeacherContentToggle', () => {
       hiddenStageElement
     ] = root.children().toArray();
 
-    // content is hidden, hiddenStage is visible
+    // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, '');
     assert.equal(lockedStageElement.style.display, 'none');
@@ -363,7 +363,7 @@ describe('TeacherContentToggle', () => {
         selectedSectionId: {},
         progress: {},
         teacherSections: {},
-        hiddenStage: {},
+        hiddenLesson: {},
         verifiedTeacher: {}
       };
 
@@ -406,7 +406,7 @@ describe('TeacherContentToggle', () => {
           ]
         },
         teacherSections: {},
-        hiddenStage: {},
+        hiddenLesson: {},
         verifiedTeacher: {
           isVerified: true
         }

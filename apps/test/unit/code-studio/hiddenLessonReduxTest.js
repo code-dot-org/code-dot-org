@@ -43,7 +43,7 @@ describe('hiddenLessonRedux', () => {
       reducerSpy = sinon.spy(reducer);
       stubRedux();
       registerReducers({
-        hiddenStage: reducerSpy,
+        hiddenLesson: reducerSpy,
         lessonLock: fakeLessonLockReducer
       });
       store = getStore();
@@ -56,7 +56,7 @@ describe('hiddenLessonRedux', () => {
     });
 
     it('initializes with server results for student after calling getHiddenStages', () => {
-      const state = store.getState().hiddenStage;
+      const state = store.getState().hiddenLesson;
       assert.deepEqual(state.toJS(), {
         hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
@@ -73,7 +73,7 @@ describe('hiddenLessonRedux', () => {
         JSON.stringify([123, 456])
       );
 
-      const nextState = store.getState().hiddenStage;
+      const nextState = store.getState().hiddenLesson;
       assert.deepEqual(nextState.toJS(), {
         hiddenStagesInitialized: true,
         hideableStagesAllowed: true,
@@ -88,7 +88,7 @@ describe('hiddenLessonRedux', () => {
     });
 
     it('initializes with server results for teacher after calling getHiddenStages', () => {
-      const state = store.getState().hiddenStage;
+      const state = store.getState().hiddenLesson;
       assert.deepEqual(state.toJS(), {
         hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
@@ -108,7 +108,7 @@ describe('hiddenLessonRedux', () => {
         })
       );
 
-      const nextState = store.getState().hiddenStage;
+      const nextState = store.getState().hiddenLesson;
       assert.deepEqual(nextState.toJS(), {
         hiddenStagesInitialized: true,
         hideableStagesAllowed: true,
@@ -126,7 +126,7 @@ describe('hiddenLessonRedux', () => {
     });
 
     it('sets hiddenStagesInitialized to true if even we have no hidden lessons', () => {
-      const state = store.getState().hiddenStage;
+      const state = store.getState().hiddenLesson;
       assert.deepEqual(state.toJS(), {
         hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
@@ -143,7 +143,7 @@ describe('hiddenLessonRedux', () => {
         JSON.stringify({})
       );
 
-      const nextState = store.getState().hiddenStage;
+      const nextState = store.getState().hiddenLesson;
       assert.deepEqual(nextState.toJS(), {
         hiddenStagesInitialized: true,
         hideableStagesAllowed: true,
@@ -153,7 +153,7 @@ describe('hiddenLessonRedux', () => {
     });
 
     it('can toggle hidden state', () => {
-      const state = store.getState().hiddenStage;
+      const state = store.getState().hiddenLesson;
       assert.deepEqual(state.toJS(), {
         hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
@@ -166,7 +166,7 @@ describe('hiddenLessonRedux', () => {
       // hide a lesson
       action = toggleHiddenStage('scriptName', 10, 123, true);
       store.dispatch(action);
-      nextState = store.getState().hiddenStage;
+      nextState = store.getState().hiddenLesson;
       assert.deepEqual(nextState.toJS(), {
         hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
@@ -181,7 +181,7 @@ describe('hiddenLessonRedux', () => {
       // hide the same lesson in a different section
       action = toggleHiddenStage('scriptName', 11, 123, true);
       store.dispatch(action);
-      nextState = store.getState().hiddenStage;
+      nextState = store.getState().hiddenLesson;
       assert.deepEqual(nextState.toJS(), {
         hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
@@ -199,7 +199,7 @@ describe('hiddenLessonRedux', () => {
       // unhide the lesson in one section
       action = toggleHiddenStage('scriptName', 10, 123, false);
       store.dispatch(action);
-      nextState = store.getState().hiddenStage;
+      nextState = store.getState().hiddenLesson;
       assert.deepEqual(nextState.toJS(), {
         hiddenStagesInitialized: false,
         hideableStagesAllowed: false,
@@ -217,7 +217,7 @@ describe('hiddenLessonRedux', () => {
       // hide another lesson
       action = toggleHiddenStage('scriptName', 10, 345, true);
       store.dispatch(action);
-      nextState = store.getState().hiddenStage;
+      nextState = store.getState().hiddenLesson;
       assert.deepEqual(nextState.toJS(), {
         hiddenStagesInitialized: false,
         hideableStagesAllowed: false,

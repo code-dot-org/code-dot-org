@@ -218,7 +218,7 @@ export default connect((state, ownProps) => ({
   viewAs: state.viewAs,
   isRtl: state.isRtl,
   currentCourseId: state.progress.courseId,
-  hiddenLessonState: state.hiddenStage,
+  hiddenLessonState: state.hiddenLesson,
   selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,

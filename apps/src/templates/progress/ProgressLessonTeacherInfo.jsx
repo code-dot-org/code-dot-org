@@ -169,8 +169,8 @@ export default connect(
   state => ({
     section:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    scriptAllowsHiddenLessons: state.hiddenStage.hideableStagesAllowed,
-    hiddenLessonState: state.hiddenStage,
+    scriptAllowsHiddenLessons: state.hiddenLesson.hideableStagesAllowed,
+    hiddenLessonState: state.hiddenLesson,
     scriptName: state.progress.scriptName,
     lockableAuthorized: state.lessonLock.lockableAuthorized,
     hasNoSections:
