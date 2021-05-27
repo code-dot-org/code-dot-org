@@ -710,7 +710,7 @@ export function currentLocation() {
  * Helper that wraps window.open, for stubbing in unit tests.
  */
 export function windowOpen(...args) {
-  return window.open(...args);
+  return window.open(...args, 'noopener', 'noreferrer');
 }
 
 /**

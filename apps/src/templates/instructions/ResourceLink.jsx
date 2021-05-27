@@ -10,7 +10,8 @@ class ResourceLink extends React.Component {
     highlight: PropTypes.bool,
     icon: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    reference: PropTypes.string.isRequired
+    reference: PropTypes.string.isRequired,
+    openReferenceInNewTab: PropTypes.bool
   };
 
   state = {
@@ -22,8 +23,12 @@ class ResourceLink extends React.Component {
       // Don't open modal, just open link in new tab/window
       return;
     }
-    // Don't open link, just open modal.
     e.preventDefault();
+    if (this.props.openReferenceInNewTab) {
+      window.open(this.props.reference, 'noopener', 'noreferrer');
+      return;
+    }
+    // Don't open link, just open modal.
     var dialog = new LegacyDialog({
       body: $('<iframe>')
         .addClass('instructions-container')
@@ -59,7 +64,7 @@ class ResourceLink extends React.Component {
 
     return (
       <div>
-        <div style={styles.resourceStyle} onClick={this.selectResource}>
+        <div style={styles.resourceStyle}>
           <span style={thumbnailStyle}>
             <FontAwesome icon={icon} style={iconStyle} title={text} />
           </span>
