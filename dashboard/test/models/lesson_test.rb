@@ -126,7 +126,7 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal last_script_level, lesson.last_progression_script_level
   end
 
-  test "next_level_path_for_stage_extras" do
+  test "next_level_path_for_lesson_extras" do
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, script: script, lesson_group: lesson_group

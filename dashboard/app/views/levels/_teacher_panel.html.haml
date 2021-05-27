@@ -2,12 +2,12 @@
 - data[:script_name] = @script.name
 - data[:script_id] = @script.id
 - data[:section] = @section&.summarize
-- data[:stage_extra] = @lesson_extras
+- data[:lesson_extra] = @lesson_extras
 - data[:is_verified_teacher] = @current_user.authorized_teacher?
 
 - if @lesson_extras
   - data[:teacher_level] = ScriptLevel.summarize_as_bonus_for_teacher_panel(@stage.script, @bonus_level_ids, @current_user)
-  - data[:page_type] = 'stage_extras'
+  - data[:page_type] = 'lesson_extras'
 - else
   - data[:teacher_level] = @script_level&.summarize_for_teacher_panel(@current_user)
   - data[:page_type] = 'level' if @level.present?

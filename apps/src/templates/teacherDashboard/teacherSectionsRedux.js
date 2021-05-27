@@ -155,7 +155,7 @@ export const pageTypes = {
   level: 'level',
   scriptOverview: 'script_overview',
   courseOverview: 'course_overview',
-  lessonExtras: 'stage_extras',
+  lessonExtras: 'lesson_extras',
   homepage: 'homepage'
 };
 
