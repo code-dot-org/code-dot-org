@@ -26,15 +26,6 @@ export const flexBetween = {...flex, justifyContent: 'space-between'};
 
 export const inlineBlock = {display: 'inline-block'};
 
-export const tightlyConstrainedSizeStyle = size => {
-  return {
-    minWidth: size,
-    maxWidth: size,
-    minHeight: size,
-    maxHeight: size
-  };
-};
-
 export const marginLeftRight = margin => {
   return {
     marginLeft: margin,
