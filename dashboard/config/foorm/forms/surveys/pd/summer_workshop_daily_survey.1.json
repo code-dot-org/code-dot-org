@@ -1,0 +1,90 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "name": "page_1",
+      "elements": [
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "summer_workshop_daily_preamble"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "feel_prepared"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "teacher_comfort"
+        },
+
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "teacher_community"
+        },
+
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "excited_about_tomorrow"
+        },
+
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "what_supported"
+        },
+
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "what_detracted"
+        },
+
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "discuss_tomorrow"
+        },
+
+        {
+          "type": "html",
+          "name": "question2",
+          "html": "<h2>Facilitator Feedback</h2>\n<p>Please be thoughtful in your responses for each individual.</p>"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "facilitators",
+          "title": "Facilitators",
+          "templateElements": [
+            {
+              "type": "comment",
+              "name": "facilitator_feedback_FR",
+              "title": "Do you have any feedback about today for {panel.facilitator_name}?",
+              "rows": 2
+            }
+          ],
+          "templateTitle": "Facilitator {panel.facilitator_position} - {panel.facilitator_name}",
+          "allowAddPanel": false,
+          "allowRemovePanel": false
+        },
+        {
+          "type": "html",
+          "name": "question1",
+          "html": "<p> Thank you for the feedback and for participating today!</p>"
+        }
+      ]
+    }
+  ]
+}
