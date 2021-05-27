@@ -390,7 +390,7 @@ class Level < ApplicationRecord
   end
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the
-  # stage extras page
+  # lesson extras page
   def summarize_as_bonus
     {}
   end
