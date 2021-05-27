@@ -291,8 +291,8 @@
         "Dance_Party_extras_battle_2019": "Dance Crews (A részletekért kattintson a „Tovább” gombra)",
         "Dance_Party_extras_every_beat": "Negyed jegyzetek (a részletekért kattintson a „Tovább” gombra)",
         "Dance_Party_extras_every_beat_2019": "Negyed jegyzetek (a részletekért kattintson a „Tovább” gombra)",
-        "Dance_Party_extras_layout": "Befelé az alakzatba! (A részletekért kattintson a „Tovább” gombra)",
-        "Dance_Party_extras_layout_2019": "Befelé az alakzatba! (A részletekért kattintson a „Tovább” gombra)",
+        "Dance_Party_extras_layout": "Álljunk alakzatba! (A részletekért kattints a „Tovább” gombra)",
+        "Dance_Party_extras_layout_2019": "Álljunk alakzatba! (A részletekért kattints a „Tovább” gombra)",
         "Dance_Party_extras_mixed_2019": "Több gomb (Kattints a \"Több\" gombra a részletekért)",
         "Dance_Party_extras_on_beat": "Basszus, középső és háromdimenziós (a részletekért kattintson a „Tovább” gombra)",
         "Dance_Party_extras_on_beat_2019": "Basszus, középső és háromdimenziós (a részletekért kattintson a „Tovább” gombra)",
@@ -1286,7 +1286,8 @@
         "courseC_maze_programming_challenge2": "Néha egynél több megoldása is lehet ugyanannak a feladatnak. Néha gyorsabb, ha hátrafelé mész, mintha előre mennél!",
         "courseC_maze_programming_challenge2_2018": "Néha egynél több megoldása is lehet ugyanannak a feladatnak. Néha gyorsabb, ha hátrafelé mész, mintha előre mennél!",
         "courseC_maze_programming_challenge2_2019": "Néha egynél több megoldása is lehet ugyanannak a feladatnak. Néha gyorsabb, ha hátrafelé mész, mintha előre mennél!",
-        "courseC_maze_programming_challenge2_2020": "Néha egynél több megoldása is lehet ugyanannak a feladatnak. Néha gyorsabb, ha hátrafelé mész, mintha előre mennél!"
+        "courseC_maze_programming_challenge2_2020": "Néha egynél több megoldása is lehet ugyanannak a feladatnak. Néha gyorsabb, ha hátrafelé mész, mintha előre mennél!",
+        "courseD_maze_ramp6": "\"Nyugodj meg, és segíts nekm megkeresni mocsok malacot! Különben dühbe jövök!\""
       }
     }
   }
