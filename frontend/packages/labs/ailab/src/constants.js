@@ -269,7 +269,6 @@ export const styles = {
 
   uploadCsvButton: {
     fontSize: 14,
-    padding: "4px 12px",
     margin: 0,
     border: "none",
     cursor: "pointer",
