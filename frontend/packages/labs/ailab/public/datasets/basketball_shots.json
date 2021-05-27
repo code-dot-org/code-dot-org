@@ -10,7 +10,7 @@
       "potentialMisuses": ""
     }
   },
-  "defaultLabelColumn": "Made or miss?",
+  "defaultLabelColumn": "Made or miss",
   "fields": [
     {
       "type": "categorical",
@@ -44,7 +44,7 @@
     },
     {
       "type": "categorical",
-      "id": "Made or miss?",
+      "id": "Made or miss",
       "description": "Whether the 3-point shot was made or missed."
     }
   ]
