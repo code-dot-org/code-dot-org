@@ -1,4 +1,5 @@
 {
+  "name": "student_survey",
   "card": {
     "description": "A dataset of survey responses gathered by Slovakian students at FSEV UK. Questions were asked about music, culture, their own phobias, and their demographic information. Most responses are rankings on a scale from 1 to 5. For example, the question 'Do you enjoy listening to music?' offered a scale from 1 (Strongly disagree) to 5 (Strongly agree). This dataset has a huge amount of questions to explore.",
     "source": "Kaggle (https://www.kaggle.com/miroslavsabo/young-people-survey)",

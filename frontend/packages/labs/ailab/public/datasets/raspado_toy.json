@@ -1,4 +1,5 @@
 {
+  "name": "raspado_toy",
   "card": {
     "description": "Survey of customers in a raspado shop on whether or not they like certain raspado combinations",
     "source": "Code.org",

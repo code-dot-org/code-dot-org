@@ -1,4 +1,5 @@
 {
+  "name": "poke_toy",
   "card": {
     "description": "Survey of customers in a poke shop on whether or not they like certain poke combinations",
     "source": "Code.org",

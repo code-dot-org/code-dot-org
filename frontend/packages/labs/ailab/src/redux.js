@@ -223,7 +223,7 @@ const initialState = {
   csvfile: undefined,
   jsonfile: undefined,
   data: [],
-  metadata: undefined,
+  metadata: {},
   highlightDataset: undefined,
   highlightColumn: undefined,
   columnsByDataType: {},
@@ -987,6 +987,7 @@ export function getDataDescription(state) {
 
 export function getDatasetDetails(state) {
   const datasetDetails = {};
+  datasetDetails.name = state.metadata.name;
   datasetDetails.description = getDataDescription(state);
   datasetDetails.numRows = state.data.length;
   datasetDetails.isUserUploaded = isUserUploadedDataset(state);

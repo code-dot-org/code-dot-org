@@ -1,4 +1,5 @@
 {
+  "name": "billionaires",
   "card": {
     "description": "Multi-decade data on individual billionaires, ranked for each year, with features like age, industry, family wealth, and wealth type (e.g. company founder in the finance industry).",
     "source": "CORGIS Dataset Project https://corgis-edu.github.io/corgis/csv/billionaires/()",

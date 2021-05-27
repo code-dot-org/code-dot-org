@@ -1,4 +1,5 @@
 {
+  "name": "cookies_toy",
   "card": {
     "description": "Survey of customers in a cookie store on whether or not they like certain cookie combinations",
     "source": "Code.org",

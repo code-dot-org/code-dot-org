@@ -1,4 +1,5 @@
 {
+  "name": "naan_toy",
   "card": {
     "description": "Survey of customers in an Indian restaurant on whether or not they like certain naan combinations",
     "source": "Code.org",

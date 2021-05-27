@@ -1,4 +1,5 @@
 {
+  "name": "boba_toy",
   "card": {
     "description": "Survey of customers in a bubble tea cafe on whether or not they like certain bubble tea combinations",
     "source": "Code.org",
