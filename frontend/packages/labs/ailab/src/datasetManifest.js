@@ -14,13 +14,6 @@ export const allDatasets = [
     imagePath: "datasets/basketball_shots.jpg"
   },
   {
-    id: "foods",
-    name: "Foods",
-    path: "datasets/foods.csv",
-    metadataPath: "datasets/foods.json",
-    imagePath: "datasets/foods.jpg"
-  },
-  {
     id: "exoplanets",
     name: "Exoplanets",
     path: "datasets/exoplanets.csv",
@@ -64,7 +57,7 @@ export const allDatasets = [
   },
   {
     id: "happiness_raw",
-    name: "Global Happiness (raw)",
+    name: "Global Happiness",
     path: "datasets/global_happiness_raw.csv",
     metadataPath: "datasets/global_happiness_raw.json",
     imagePath: "datasets/global_happiness.jpg"
@@ -82,13 +75,6 @@ export const allDatasets = [
     path: "datasets/insurance_cost.csv",
     metadataPath: "datasets/insurance_cost.json",
     imagePath: "datasets/insurance_cost.jpg"
-  },
-  {
-    id: "student_alcohol_consumption",
-    name: "Student Health Survey",
-    path: "datasets/student_alcohol_consumption.csv",
-    metadataPath: "datasets/student_alcohol_consumption.json",
-    imagePath: "datasets/student_alcohol_consumption.jpg"
   },
   {
     id: "heart",
@@ -252,13 +238,6 @@ export const allDatasets = [
     path: "datasets/abalone.csv",
     metadataPath: "datasets/abalone.json",
     imagePath: "datasets/abalone.jpg"
-  },
-  {
-    id: "auto-mpg",
-    name: "Car MPG",
-    path: "datasets/auto_mpg.csv",
-    metadataPath: "datasets/auto_mpg.json",
-    imagePath: "datasets/auto_mpg.jpg"
   },
   {
     id: "movies",
