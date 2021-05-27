@@ -2,10 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  setLabelColumn,
-  removeSelectedFeature
-} from "../redux";
+import { setLabelColumn, removeSelectedFeature } from "../redux";
 import { styles } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
@@ -26,12 +23,18 @@ class Statement extends Component {
     this.props.setLabelColumn(null);
   };
 
-  removeFeature = (id) => {
+  removeFeature = id => {
     this.props.removeSelectedFeature(id);
   };
 
   render() {
-    const { shouldShow, smallFont, labelColumn, selectedFeatures, currentPanel } = this.props;
+    const {
+      shouldShow,
+      smallFont,
+      labelColumn,
+      selectedFeatures,
+      currentPanel
+    } = this.props;
 
     if (!shouldShow) {
       return null;
@@ -85,7 +88,7 @@ class Statement extends Component {
             {selectedFeatures.length === 0 && (
               <span style={styles.statementFeature}>____</span>
             )}
-            {selectedFeatures.length !== 0 && "."}
+            .
           </span>
         )}
       </div>
