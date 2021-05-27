@@ -3049,20 +3049,20 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'can copy a standalone script as another standalone script' do
-      cloned_script = Script.clone_migrated_script(@standalone_script, 'standalone-2022', version_year: '2022', family_name: 'csf')
+      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', version_year: '2022', family_name: 'csf')
       assert_equal 'standalone-2022', cloned_script.name
       assert_equal '2022', cloned_script.version_year
     end
 
     test 'can copy a standalone script into a unit group' do
-      cloned_script = Script.clone_migrated_script(@standalone_script, 'coursename2-2021', destination_unit_group_name: @unit_group.name)
+      cloned_script = @standalone_script.clone_migrated_script('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_scripts.count
       assert_equal 'coursename2-2021', @unit_group.default_scripts[1].name
       assert_equal cloned_script.unit_group, @unit_group
     end
 
     test 'can copy a script in a unit group to a standalone script' do
-      cloned_script = Script.clone_migrated_script(@script_in_course, 'standalone-coursename-2021', version_year: '2021', family_name: 'csf')
+      cloned_script = @script_in_course.clone_migrated_script('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
       assert_nil cloned_script.unit_group
       assert_equal 'standalone-coursename-2021', cloned_script.name
     end
@@ -3078,7 +3078,7 @@ class ScriptTest < ActiveSupport::TestCase
       create :script_level, levels: [level1], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 
-      cloned_script = Script.clone_migrated_script(@standalone_script, 'standalone-2022', version_year: '2022', family_name: 'csf')
+      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', version_year: '2022', family_name: 'csf')
       assert_equal [level1, level2], cloned_script.levels
     end
 
@@ -3093,7 +3093,7 @@ class ScriptTest < ActiveSupport::TestCase
       create :script_level, levels: [level1], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 
-      cloned_script = Script.clone_migrated_script(@standalone_script, 'standalone-2022', new_level_suffix: '2022', version_year: '2022', family_name: 'csf')
+      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', new_level_suffix: '2022', version_year: '2022', family_name: 'csf')
       refute_equal [level1, level2], cloned_script.levels
     end
 
@@ -3101,7 +3101,7 @@ class ScriptTest < ActiveSupport::TestCase
       @standalone_script.resources = [create(:resource)]
       @standalone_script.student_resources = [create(:resource)]
 
-      cloned_script = Script.clone_migrated_script(@standalone_script, 'standalone-2022', version_year: '2022', family_name: 'csf')
+      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', version_year: '2022', family_name: 'csf')
       assert_equal 1, cloned_script.resources.count
       assert_equal 1, cloned_script.student_resources.count
       refute_equal @standalone_script.resources[0], cloned_script.resources[0]
@@ -3114,7 +3114,7 @@ class ScriptTest < ActiveSupport::TestCase
       @script_in_course.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @script_in_course.get_course_version.id)]
       @script_in_course.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @script_in_course.get_course_version.id)]
 
-      cloned_script = Script.clone_migrated_script(@standalone_script, 'coursename2-2021', destination_unit_group_name: @unit_group.name)
+      cloned_script = @standalone_script.clone_migrated_script('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 1, cloned_script.resources.count
       assert_equal 1, cloned_script.student_resources.count
       refute_equal @standalone_script.resources[0], cloned_script.resources[0]

@@ -730,10 +730,10 @@ class Lesson < ApplicationRecord
   # - be migrated
   # - be in a course version
   # - be in course versions from the same version year
-  def copy_to_script(destination_script)
+  def copy_to_script(destination_script, new_level_suffix = nil)
     return if script == destination_script
-    raise 'Both lesson and script must be migrated' unless original_lesson.script.is_migrated? && destination_script.is_migrated?
-    raise 'Destination script and lesson must be in a course version' if destination_script.get_course_version.nil? || original_lesson.script.get_course_version.nil?
+    raise 'Both lesson and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
+    raise 'Destination script and lesson must be in a course version' if destination_script.get_course_version.nil? || script.get_course_version.nil?
 
     ActiveRecord::Base.transaction(requires_new: true, joinable: false) do
       copied_lesson = dup

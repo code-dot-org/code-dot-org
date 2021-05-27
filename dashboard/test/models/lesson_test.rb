@@ -997,7 +997,7 @@ class LessonTest < ActiveSupport::TestCase
       sl.add_variant(level2)
 
       @destination_script.expects(:write_script_json).once
-      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      copied_lesson = @original_lesson.copy_to_script(@destination_script)
       assert_equal 1, copied_lesson.script_levels.length
       assert_equal level2, copied_lesson.script_levels[0].oldest_active_level
     end
@@ -1010,7 +1010,7 @@ class LessonTest < ActiveSupport::TestCase
         activity_section: activity_section, activity_section_position: 1
 
       @destination_script.expects(:write_script_json).once
-      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script, '_2000')
+      copied_lesson = @original_lesson.copy_to_script(@destination_script, '_2000')
       assert_equal 1, copied_lesson.script_levels.length
       refute_equal level1, copied_lesson.script_levels[0].oldest_active_level
     end
