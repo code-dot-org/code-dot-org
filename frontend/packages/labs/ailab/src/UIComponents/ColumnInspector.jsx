@@ -212,7 +212,8 @@ class ColumnInspector extends Component {
 
               {currentPanel === "dataDisplayLabel" &&
                 currentColumnData.id !== labelColumn &&
-                !currentColumnData.hasTooManyUniqueOptions && (
+                !currentColumnData.hasTooManyUniqueOptions &&
+                !isNaN(currentColumnData.extrema.min) && (
                   <button
                     type="button"
                     onClick={e =>
