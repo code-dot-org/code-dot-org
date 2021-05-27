@@ -19,7 +19,7 @@ import {
   getStore
 } from '@cdo/apps/redux';
 
-function fakeStageLockReducer(state, action) {
+function fakeLessonLockReducer(state, action) {
   return {
     selectedSection: 1
   };
@@ -44,7 +44,7 @@ describe('hiddenLessonRedux', () => {
       stubRedux();
       registerReducers({
         hiddenStage: reducerSpy,
-        lessonLock: fakeStageLockReducer
+        lessonLock: fakeLessonLockReducer
       });
       store = getStore();
     });
@@ -125,7 +125,7 @@ describe('hiddenLessonRedux', () => {
       });
     });
 
-    it('sets hiddenStagesInitialized to true if even we have no hidden stages', () => {
+    it('sets hiddenStagesInitialized to true if even we have no hidden lessons', () => {
       const state = store.getState().hiddenStage;
       assert.deepEqual(state.toJS(), {
         hiddenStagesInitialized: false,
@@ -163,7 +163,7 @@ describe('hiddenLessonRedux', () => {
 
       let action, nextState;
 
-      // hide a stage
+      // hide a lesson
       action = toggleHiddenStage('scriptName', 10, 123, true);
       store.dispatch(action);
       nextState = store.getState().hiddenStage;
@@ -178,7 +178,7 @@ describe('hiddenLessonRedux', () => {
         scriptsBySection: {}
       });
 
-      // hide the same stage in a different section
+      // hide the same lesson in a different section
       action = toggleHiddenStage('scriptName', 11, 123, true);
       store.dispatch(action);
       nextState = store.getState().hiddenStage;
@@ -196,7 +196,7 @@ describe('hiddenLessonRedux', () => {
         scriptsBySection: {}
       });
 
-      // unhide the stage in one section
+      // unhide the lesson in one section
       action = toggleHiddenStage('scriptName', 10, 123, false);
       store.dispatch(action);
       nextState = store.getState().hiddenStage;
@@ -214,7 +214,7 @@ describe('hiddenLessonRedux', () => {
         scriptsBySection: {}
       });
 
-      // hide another stage
+      // hide another lesson
       action = toggleHiddenStage('scriptName', 10, 345, true);
       store.dispatch(action);
       nextState = store.getState().hiddenStage;

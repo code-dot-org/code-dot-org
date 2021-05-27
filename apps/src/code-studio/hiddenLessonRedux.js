@@ -18,7 +18,7 @@ const HiddenState = Immutable.Record({
   hiddenStagesInitialized: false,
   hideableStagesAllowed: false,
   // A mapping, where the key is the sectionId, and the value is a mapping from
-  // stageId to a bool indicating whether that stage is hidden (true) or not (false)
+  // stageId to a bool indicating whether that lesson is hidden (true) or not (false)
   // Teachers will potentially have a number of section ids. For students we
   // use a sectionId of STUDENT_SECTION_ID, which represents the hidden state
   // for the student based on the sections they are in.
@@ -27,7 +27,7 @@ const HiddenState = Immutable.Record({
     //   [stageId]: true
     // }
   }),
-  // Same as above but for hiding scripts in a section instead of stages
+  // Same as above but for hiding scripts in a section instead of lessons
   scriptsBySection: Immutable.Map({
     // [sectionId]: {
     //   [scriptId]: true
@@ -51,7 +51,7 @@ function validateSectionIds(state) {
 }
 
 /**
- * Hidden stage reducer
+ * Hidden lesson reducer
  */
 export default function reducer(state = new HiddenState(), action) {
   if (action.type === SET_HIDDEN_STAGES) {
@@ -61,7 +61,7 @@ export default function reducer(state = new HiddenState(), action) {
     const sectionIds = Object.keys(hiddenStagesPerSection);
     let nextState = state;
     sectionIds.forEach(sectionId => {
-      // And iterate through each hidden stage within that section
+      // And iterate through each hidden lesson within that section
       const hiddenStageIds = hiddenStagesPerSection[sectionId];
       hiddenStageIds.forEach(stageId => {
         nextState = nextState.setIn(
@@ -106,7 +106,7 @@ export default function reducer(state = new HiddenState(), action) {
 /**
  * @param {object} hiddenStagesPerSection - Mapping from sectionId to a list of stageIds
  *   that are hidden for that section.
- * @param {bool} hideableStagesAllowed - True if we're able to toggle hidden stages
+ * @param {bool} hideableStagesAllowed - True if we're able to toggle hidden lessons
  */
 export function setHiddenStages(hiddenStagesPerSection, hideableStagesAllowed) {
   return {
@@ -134,7 +134,7 @@ export function updateHiddenScript(sectionId, scriptId, hidden) {
 }
 
 /**
- * Toggle the hidden state of a particular stage in a section, updating our local
+ * Toggle the hidden state of a particular lesson in a section, updating our local
  * state to reflect the change, and posting to the server.
  */
 export function toggleHiddenStage(scriptName, sectionId, stageId, hidden) {
@@ -156,8 +156,8 @@ export function toggleHiddenScript(scriptName, sectionId, scriptId, hidden) {
 }
 
 /**
- * Post to the server to toggle the hidden state of a stage or script. stageId
- * should be null if we're hiding the script rather than a particular stage
+ * Post to the server to toggle the hidden state of a lesson or script. stageId
+ * should be null if we're hiding the script rather than a particular lesson
  * @param {string} scriptName
  * @param {string} sectionId
  * @param {string} stageId
@@ -185,11 +185,11 @@ function postToggleHidden(scriptName, sectionId, stageId, hidden) {
 }
 
 /**
- * Query server for hidden stage ids, and (potentially) toggle whether or not we
- * are able to mark stages as hideable.
+ * Query server for hidden lesson ids, and (potentially) toggle whether or not we
+ * are able to mark lessons as hideable.
  * @param {string} scriptName
  * @param {boolean} canHideStages If true, inform redux that we're able to toggle
- *   whether or not stages are hidden.
+ *   whether or not lessons are hidden.
  */
 export function getHiddenStages(scriptName, canHideStages) {
   return dispatch => {
@@ -207,16 +207,16 @@ export function getHiddenStages(scriptName, canHideStages) {
 }
 
 /**
- * Initialize hidden stages based on server data. In the case of a student, this
- * will be a list of hidden stage ids. In the case of a teacher, it will be
- * a mapping from section id to a list of hidden stage ids for that section
+ * Initialize hidden lessons based on server data. In the case of a student, this
+ * will be a list of hidden lesson ids. In the case of a teacher, it will be
+ * a mapping from section id to a list of hidden lesson ids for that section
  * @param {string[]|Object<string, string[]>} data
- * @param {boolean} canHideStages - True if we're able to toggle hidden stages
+ * @param {boolean} canHideStages - True if we're able to toggle hidden lessons
  */
 function initializeHiddenStages(data, canHideStages) {
   return dispatch => {
-    // For a teacher, we get back a map of section id to hidden stage ids
-    // For a student, we just get back a list of hidden stage ids. Turn that
+    // For a teacher, we get back a map of section id to hidden lesson ids
+    // For a student, we just get back a list of hidden lesson ids. Turn that
     // into an object, under the 'sectionId' of STUDENT_SECTION_ID
     if (Array.isArray(data)) {
       data = {[STUDENT_SECTION_ID]: data};
@@ -256,7 +256,7 @@ export function initializeHiddenScripts(data) {
 // utils
 
 /**
- * Helper to determine whether a stage is hidden for a given section. If no
+ * Helper to determine whether a lesson is hidden for a given section. If no
  * section is given, we assume this is a student and use STUDENT_SECTION_ID
  */
 export function isStageHiddenForSection(state, sectionId, stageId) {
@@ -273,7 +273,7 @@ export function isScriptHiddenForSection(state, sectionId, scriptId) {
 
 /**
  * Helper used by the above two methods so that we behave the same when looking
- * for hidden stages/scripts
+ * for hidden lessons/scripts
  */
 function isHiddenForSection(state, sectionId, itemId, bySectionKey) {
   if (!itemId) {
