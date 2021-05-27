@@ -14,7 +14,11 @@ import reducers, {
 import _ from 'lodash';
 
 const getInitialState = () => ({
-  levelKeyList: {},
+  levelKeyList: {
+    2001: 'Level One',
+    2002: 'Level Two',
+    2003: 'Level Three'
+  },
   lessonGroups: [
     {
       id: 1,
@@ -30,7 +34,20 @@ const getInitialState = () => ({
           name: 'A',
           position: 1,
           unplugged: true,
-          levels: [],
+          levels: [
+            {
+              activeId: '2001',
+              ids: ['2001'],
+              kind: 'puzzle',
+              position: 1
+            },
+            {
+              activeId: '2002',
+              ids: ['2002'],
+              kind: 'puzzle',
+              position: 2
+            }
+          ],
           hasLessonPlan: true
         },
         {
@@ -104,7 +121,9 @@ describe('scriptEditorRedux reducer tests', () => {
       expect(serializedLessonGroups).to.equal(
         "lesson_group 'lg-key', display_name: 'Display Name'\n" +
           "lesson_group_description 'My Description'\n" +
-          "lesson 'a', display_name: 'A', has_lesson_plan: true, unplugged: true\n\n" +
+          "lesson 'a', display_name: 'A', has_lesson_plan: true, unplugged: true\n" +
+          "level 'Level One'\n" +
+          "level 'Level Two'\n\n" +
           "lesson 'b', display_name: 'B', has_lesson_plan: false\n\n" +
           "lesson 'c', display_name: 'C', has_lesson_plan: true\n\n" +
           "lesson_group 'lg-key-2', display_name: 'Display Name 2'\n" +
@@ -125,7 +144,9 @@ describe('scriptEditorRedux reducer tests', () => {
       expect(serializedLessonGroups).to.equal(
         "lesson_group 'lg-key', display_name: 'Display Name'\n" +
           "lesson_group_description 'a\\'b\\'c\\'d'\n" +
-          "lesson 'a', display_name: 'A', has_lesson_plan: true, unplugged: true\n\n" +
+          "lesson 'a', display_name: 'A', has_lesson_plan: true, unplugged: true\n" +
+          "level 'Level One'\n" +
+          "level 'Level Two'\n\n" +
           "lesson 'b', display_name: 'B', has_lesson_plan: false\n\n" +
           "lesson 'c', display_name: 'C', has_lesson_plan: true\n\n" +
           "lesson_group 'lg-key-2', display_name: 'Display Name 2'\n" +
@@ -143,7 +164,7 @@ describe('scriptEditorRedux reducer tests', () => {
 
     expect(mappedLessonGroups.length).to.equal(2);
     expect(mappedLessonGroups[0].lessons.length).to.equal(3);
-    expect(mappedLessonGroups[0].lessons[0].levels.length).to.equal(0);
+    expect(mappedLessonGroups[0].lessons[0].levels.length).to.equal(2);
   });
 
   it('add group', () => {
