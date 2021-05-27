@@ -1152,14 +1152,14 @@ class Script < ApplicationRecord
     end
   end
 
-  def self.clone_migrated_script(original_script, new_name, new_level_suffix: nil, destination_unit_group_name: nil, version_year: nil, family_name:  nil)
+  def clone_migrated_script(new_name, new_level_suffix: nil, destination_unit_group_name: nil, version_year: nil, family_name:  nil)
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name(destination_unit_group_name) :
       nil
     raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_unit_group.course_version
 
     ActiveRecord::Base.transaction do
-      copied_script = original_script.dup
+      copied_script = dup
       copied_script.is_stable = false
       copied_script.tts = false
       copied_script.announcements = nil
@@ -1185,13 +1185,13 @@ class Script < ApplicationRecord
         CourseOffering.add_course_offering(copied_script)
       end
 
-      original_script.lesson_groups.each do |original_lesson_group|
-        LessonGroup.copy_to_script(original_lesson_group, copied_script, new_level_suffix)
+      lesson_groups.each do |original_lesson_group|
+        original_lesson_group.copy_to_script(copied_script, new_level_suffix)
       end
 
       course_version = copied_script.get_course_version
-      copied_script.resources = original_script.resources.map {|r| r.copy_to_course_version(course_version)}
-      copied_script.student_resources = original_script.student_resources.map {|r| r.copy_to_course_version(course_version)}
+      copied_script.resources = resources.map {|r| r.copy_to_course_version(course_version)}
+      copied_script.student_resources = student_resources.map {|r| r.copy_to_course_version(course_version)}
 
       # Make sure we don't modify any files in unit tests.
       if Rails.application.config.levelbuilder_mode

@@ -60,7 +60,7 @@ class LessonGroupTest < ActiveSupport::TestCase
     lesson_group = create :lesson_group, script: original_script
     create :lesson, lesson_group: lesson_group, script: original_script
 
-    copied_lesson_group = LessonGroup.copy_to_script(lesson_group, destination_script)
+    copied_lesson_group = lesson_group.copy_to_script(destination_script)
     destination_script.reload
     original_script.reload
 
