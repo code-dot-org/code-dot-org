@@ -25,12 +25,12 @@ module LevelsHelper
       if script_level.lesson.numbered_lesson?
         puzzle_page_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       else
-        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
+        puzzle_page_script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       end
     elsif params[:sublevel_position]
       sublevel_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
     elsif !script_level.lesson.numbered_lesson?
-      script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
+      script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
       query_params = params.merge(level_name: script_level.level.name)
       script_lesson_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
