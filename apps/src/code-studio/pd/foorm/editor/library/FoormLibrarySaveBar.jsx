@@ -41,6 +41,7 @@ class FoormLibrarySaveBar extends Component {
     libraryId: PropTypes.number,
     libraryQuestionId: PropTypes.number,
     questions: PropTypes.object,
+    hasLintError: PropTypes.bool,
     hasJSONError: PropTypes.bool,
     lastSaved: PropTypes.number,
     saveError: PropTypes.string,
@@ -62,6 +63,8 @@ class FoormLibrarySaveBar extends Component {
     formsAppearedIn: [],
     libraryCategory: null
   };
+
+  hasCodeMirrorError = () => this.props.hasLintError || this.props.hasJSONError;
 
   updateQuestionUrl = () =>
     `/foorm/library_questions/${this.props.libraryQuestionId}`;
@@ -369,19 +372,19 @@ class FoormLibrarySaveBar extends Component {
         <div style={styles.saveButtonBackground} className="saveBar">
           {this.props.lastSaved &&
             !this.props.saveError &&
-            !this.props.hasJSONError && (
+            !this.hasCodeMirrorError() && (
               <div style={styles.lastSaved} className="lastSavedMessage">
                 {`Last saved at: ${new Date(
                   this.props.lastSaved
                 ).toLocaleString()}`}
               </div>
             )}
-          {this.props.hasJSONError && (
+          {this.hasCodeMirrorError() && (
             <div style={styles.error}>
               {`Please fix parsing error before saving. See the errors noted on the left side of the editor.`}
             </div>
           )}
-          {this.props.saveError && !this.props.hasJSONError && (
+          {this.props.saveError && !this.hasCodeMirrorError() && (
             <div
               style={styles.error}
               className="saveErrorMessage"
@@ -397,7 +400,7 @@ class FoormLibrarySaveBar extends Component {
             type="button"
             style={styles.button}
             onClick={this.handleSave}
-            disabled={this.state.isSaving || this.props.hasJSONError}
+            disabled={this.state.isSaving || this.hasCodeMirrorError()}
           >
             Save
           </button>
@@ -463,6 +466,7 @@ export const UnconnectedFoormLibrarySaveBar = FoormLibrarySaveBar;
 export default connect(
   state => ({
     questions: state.foorm.questions || {},
+    hasLintError: state.foorm.hasLintError,
     hasJSONError: state.foorm.hasJSONError,
     libraryId: state.foorm.libraryId,
     libraryQuestionId: state.foorm.libraryQuestionId,
