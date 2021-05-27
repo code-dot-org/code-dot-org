@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-26 14:46:47 UTC",
+    "serialized_at": "2021-05-27 18:46:19 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -69,9 +69,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this lesson, students define variables to represent attributes for an object and use these variables to store values. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.",
-        "preparation": "* Print copies of the Trace Table activity guide (one copy per student)",
-        "student_overview": "One way that software engineers can store information in a computer’s memory is by using variables. In this lesson, you use variables to store information used to create `Painter` objects and also to store information input by a user. "
+        "overview": "In this lesson, students explore the functionality of variables and differentiate between primitive and reference variables. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.",
+        "preparation": "* Print copies of the Variables Manipulatives (one set per student)\n* Gather 3 paper clips, 3 sticky notes, and some scrap paper per student\n* (Optional) Cut out the Variables Manipulatives and place the cutouts, paper clips, sticky notes, and scrap paper in baggies",
+        "student_overview": "Variables provide a way for software engineers to store information. The type of information we need to store determines what kind of variable we need to use, its data type, and how we can use it. In this lesson, you use variables to store information used to create `Painter` objects and store information input by a user."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -159,6 +159,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "In this lesson, students write constructors for superclasses and subclasses. Students use the `super` keyword to call the superclass constructor and pass any necessary parameters to the superclass constructor to initialize instance variables. The lesson introduces the D.R.Y. (Don’t Repeat Yourself) software development principle to highlight the benefits of using inheritance in object-oriented programming design.",
+        "preparation": "* Print copies of the Class Hierarchy Cards (one set of cards for each pair of students)\n* (Optional) Cut out the Class Hierarchy Cards for each group of students",
+        "student_overview": "The owner of the Project Mercury food truck is expanding the menu to include different desserts. In this lesson, you use software development techniques to create classes and constructors for Dessert subclasses efficiently. To initialize inherited private instance variables, you use the `super` keyword to call the superclass constructor.  "
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -345,14 +348,14 @@
       }
     },
     {
-      "key": "dbfb0987-e7d7-441b-94dc-cb37896b671a",
+      "key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48",
       "position": 2,
       "properties": {
         "duration": 37,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48",
         "lesson.key": "lesson-2",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot"
@@ -539,6 +542,48 @@
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot"
       }
+    },
+    {
+      "key": "f449548a-111b-436d-a373-71c5e2c0b8f5",
+      "position": 1,
+      "properties": {
+        "duration": 4,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f449548a-111b-436d-a373-71c5e2c0b8f5",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc",
+      "position": 2,
+      "properties": {
+        "duration": 37,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "4a3675eb-5202-4072-8fd0-d3ed659d6c6b",
+      "position": 3,
+      "properties": {
+        "duration": 4,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4a3675eb-5202-4072-8fd0-d3ed659d6c6b",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
     }
   ],
   "activity_sections": [
@@ -714,7 +759,7 @@
       "key": "6bdad9ad-1da0-4536-9e7d-73245244dd18",
       "position": 1,
       "properties": {
-        "description": "In the previous lesson, we learned that we could represent the attributes of an object by defining instance variables in its class. The relationship between an object and its instance variables is called a “has-a” relationship.",
+        "description": "In the previous lesson, we learned that we could represent the attributes of an object by defining instance variables in its class. The relationship between an object and its instance variables is referred to as a \"has-a\" relationship.",
         "remarks": true
       },
       "seeding_key": {
@@ -726,7 +771,7 @@
       "key": "370eadde-d06b-49c4-b48b-dd56da84cc2a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *For example, an attribute for a cake could be flavor. Every cake \"has-a\" flavor. What are some attributes that you can use to describe a cake?*\n\n**Discussion Goal:** Students share characteristics of a cake to fill in the blank that can be used as an attribute.\n\n**Do This:** Click through the animated slide to show the three examples. Highlight how the various attributes are represented with values of different types."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *For example, one attribute for a cake could be its flavor. Every cake \"has-a\" flavor. What are some attributes of a cake?*\n\n**Discussion Goal:** Students share characteristics of a cake that can be used as attributes to fill in the blanks.\n\n**Do This:** Click through the animated slide to show three examples. Point out that these attributes have values of different types of information, such as text or numbers."
       },
       "seeding_key": {
         "activity_section.key": "370eadde-d06b-49c4-b48b-dd56da84cc2a",
@@ -734,123 +779,227 @@
       }
     },
     {
-      "key": "1ce4639a-de47-4ffc-9b9d-e71fd5f5011f",
+      "key": "50088196-c133-446c-b1a2-37d2c50c256f",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Introduce the purpose and functionality of variables:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define a variable using the analogy of a box.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A variable is stored in memory so that it can be accessed and updated later.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the What is a Variable? video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask students where a line should be drawn to match each value to its corresponding type. Click through the animated slide to reveal the answer for each value.",
-        "duration": "5",
-        "name": "Introduction to Variables"
+        "description": "Variables are containers that can store a single piece of data.",
+        "duration": "10",
+        "name": "Introduction to Variables",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "1ce4639a-de47-4ffc-9b9d-e71fd5f5011f",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "50088196-c133-446c-b1a2-37d2c50c256f",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "aba90bff-d230-49c5-9298-91dbc5872a4a",
+      "key": "5b45d2ad-5cca-4826-9af9-683fefa05d21",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps for creating a variable:\n* Step 1: Declaration. All variables are declared by creating a name and stating the type.\n* Step 2: Initialization. Variables can be assigned an initial value using the assignment operator, `=`.\n* Declaration and initialization can be written in one line of code.",
-        "duration": "8",
-        "name": "Creating Variables"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce primitive and reference types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the What is a Variable video."
       },
       "seeding_key": {
-        "activity_section.key": "aba90bff-d230-49c5-9298-91dbc5872a4a",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "5b45d2ad-5cca-4826-9af9-683fefa05d21",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "79aa7d74-5c56-4c2b-a894-1d6c08e2c3d4",
+      "key": "e8bfb176-5198-4e74-be82-a2fa92bbfba9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work in pairs on Level 1 on Code Studio. Students declare variables and use them to create a new `Painter` object."
+        "description": "Let's look at primitive variables first. Primitive variables can hold literal values like whole numbers, decimal numbers, and `boolean` values.",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "79aa7d74-5c56-4c2b-a894-1d6c08e2c3d4",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "e8bfb176-5198-4e74-be82-a2fa92bbfba9",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "ddaa482e-076c-4c2d-92b6-0fb662cea2ae",
+      "key": "fdb70148-d2bf-412f-b750-1ff731f5ed7a",
       "position": 4,
       "properties": {
-        "description": "Variables hold an initial value and that value can change later in our program. We can use a trace table to keep track of the values of the variables as they change in each step of our program.",
-        "duration": "14",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a set of Variables Manipulatives.\n\n**Do This:** Have students cut out the manipulatives and fold the `double`, `int`, and `boolean` boxes into cups as directed."
+      },
+      "seeding_key": {
+        "activity_section.key": "fdb70148-d2bf-412f-b750-1ff731f5ed7a",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "9d695fcd-9249-4e99-9181-a6b7976522eb",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Variables are containers that allow us to hold something, like the cups you now have.\n\nWhen you order a drink at a restaurant, you typically say something like, \"I want a medium orange soda.\" Medium is the type of cup we want, and orange soda is the value we want in our cup.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9d695fcd-9249-4e99-9181-a6b7976522eb",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "fa817cf1-f70a-4fe4-8cba-b5eab36d5db6",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate specifying a type for a value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate primitive variables.\n* The type specified on the outside of the cup specifies the types of values that the variable can store.\n* Demonstrate that the `double` cup can hold decimal and integer values, but the `int` cup can only hold integer values. Explain that the `boolean` cup can only contain either a `true` or `false` value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask students where lines should be drawn to match each value to its corresponding type. Click through the animated slide to reveal the answer for each value."
+      },
+      "seeding_key": {
+        "activity_section.key": "fa817cf1-f70a-4fe4-8cba-b5eab36d5db6",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "cb004d08-bb46-48b4-9f53-284586b4400e",
+      "position": 7,
+      "properties": {
+        "description": "Not only do we need to tell Java what kind of data we want to store in our variable, but we also need to give our cup a name so that we have a way to refer to it in our program. For example, when I said, \"I want a `double` variable with the value 1.99\", I also need to give a name for this value so that I can use it by saying something like, \"I want a `double` variable named `price` with the value 1.99\".",
+        "duration": "10",
+        "name": "Creating Variables",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cb004d08-bb46-48b4-9f53-284586b4400e",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "f70ea0ea-7e3b-4b70-bddd-4acbe60fc136",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps for creating a variable.\n* Have students write `cakePrice` on a sticky note and place it on a `double` cup. Explain that variables are declared by creating a name and stating the type.\n* Have students write a decimal value on a slip of paper and place it inside the `cakePrice` cup. Explain that variables can be assigned an initial value using the assignment operator `=`. Since `cakePrice` is a primitive variable, the literal value can be placed inside the container.\n* Explain that declaration and initialization can be written in one line of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students connect three paper clips to form a chain. Click through the animated slide to introduce reference variables:\n* Explain that reference variables do not contain an object but instead contain a pointer to the location of an object in memory.\n* Have students write a name for a `Painter` object on a sticky note and put it on their reference variable. Explain that since the reference variable is not currently pointing to an object, its value is `null`.\n* When a `Painter` object is created, it is stored in memory and accessed using a reference variable.\n* Have students use their paper clip chain to connect the `Painter` object to the variable. Now the reference variable contains a pointer to the location of the object in memory.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `String`s are also objects, which means they are accessed using reference variables. `String`s can be created using string literals or by calling the `String` class constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "f70ea0ea-7e3b-4b70-bddd-4acbe60fc136",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "2cc9bc68-9b8d-4211-837c-0783ac7dfb77",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner on Level 1 on Code Studio. Students declare variables and use them to create a new `Painter` object."
+      },
+      "seeding_key": {
+        "activity_section.key": "2cc9bc68-9b8d-4211-837c-0783ac7dfb77",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "f8354012-e4dc-4f38-9be8-1046d06117e9",
+      "position": 10,
+      "properties": {
+        "description": "Variables hold an initial value, and that value can change later in our program. We can use a trace table to keep track of the values of the variables as they change in each step of our program.",
+        "duration": "10",
         "name": "Updating Variables",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "ddaa482e-076c-4c2d-92b6-0fb662cea2ae",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "f8354012-e4dc-4f38-9be8-1046d06117e9",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "6947f4df-e9a6-449d-aa59-31a9e2c382f5",
-      "position": 5,
+      "key": "07d79cfa-eb3a-4d7e-8be8-845f6937d209",
+      "position": 11,
       "properties": {
-        "description": "**Do This:** Click through the animated slide to demonstrate stepping through an algorithm and tracking the value of variables using a trace table.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate tracing an algorithm and tracking the value of variables using a trace table.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "As you move through the animation, have students:\n* Explain what is happening on the line of code that is about to be executed.\n* Ask students for the values to add to the new row of the trace table."
+            "markdown": "As you move through the animation, have students explain what is happening on the line of code that is about to be executed. Ask students for the values to add to the new row of the trace table."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6947f4df-e9a6-449d-aa59-31a9e2c382f5",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "07d79cfa-eb3a-4d7e-8be8-845f6937d209",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "d978bce9-21b2-4fd9-90b4-a05d7937eaa9",
-      "position": 6,
+      "key": "6d2e4d48-7d75-4182-99f2-f19adfd2738f",
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Trace Tables activity guide.\n\n**Do This:** Review the Trace Tables activity guide as a class. Draw the trace table on the whiteboard. Step through each line of the algorithm and ask different pairs of students for the values that should be added to the new row of the trace table.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 2-3 minutes to create a trace table for the code segment with a partner. Review the trace table and final values stored in each variable as a class."
+      },
+      "seeding_key": {
+        "activity_section.key": "6d2e4d48-7d75-4182-99f2-f19adfd2738f",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "0a0c2ecc-cbe3-486c-a5b0-10228ec3577c",
+      "position": 13,
+      "properties": {
+        "description": "I mentioned earlier that variables can only store a single piece of data. This means that the container can only hold one value at a time. If I take a value out of the container and place it down on the table, it is lost in memory forever because I have no way to tell Java how to find that value again.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0a0c2ecc-cbe3-486c-a5b0-10228ec3577c",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "3717aa17-e4c2-4854-a824-ede49142c5a3",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write `drinkPrice` on a sticky note and place it on a `double` cup and write a decimal value on a slip of paper and place it inside the `drinkPrice` cup.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *We placed the wrong values inside our `cakePrice` and `drinkPrice` containers, and we need to swap them. How could we solve this problem?*\n\n**Discussion Goal:** Students share potential solutions to swap the values, including taking the values out of both cups to swap them or copying the values down to store in temporary cups.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If a whiteboard is not available in your classroom, you can digitally simulate drawing a trace table by creating a table on a slide and typing the values into the table cells."
+            "markdown": "Reinforce to students that the value is lost if it is not stored in another container. Students might share ideas to take the values out of the containers and physically swap them but point out that once the values are removed from the container, they are lost."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "d978bce9-21b2-4fd9-90b4-a05d7937eaa9",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "3717aa17-e4c2-4854-a824-ede49142c5a3",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "aa692158-1e91-4dc8-ad21-28915134b101",
-      "position": 7,
+      "key": "d5000a84-6fa7-463e-938d-d4a7a2f9a6a4",
+      "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 2 and 3 on Code Studio. Students independently complete the Check for Understanding on Level 2 then complete Level 3 in pairs, where they assign new values to existing variables and create another `Painter` object."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate one solution that results in losing one of the values and the solution that uses a temporary variable to store one of the values."
       },
       "seeding_key": {
-        "activity_section.key": "aa692158-1e91-4dc8-ad21-28915134b101",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "d5000a84-6fa7-463e-938d-d4a7a2f9a6a4",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "c3228e4f-e8b5-4fe5-9656-3310d6101c57",
-      "position": 8,
+      "key": "6aee9c96-125c-41c8-9285-de7cf3c0fc99",
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the How to Accept User Input video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are three takeaways you have from this video?*\n\n**Discussion Goal:** Students share concepts from the video, such as:\n* The `Scanner` class accepts input of type `int`, `double`, `boolean`, and `String` from a user.\n* The `Scanner` class contains methods to retrieve input of each data type.\n* `System.out.print()` displays messages and prompts to the user to enter a response in the console.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to demonstrate the `System.out.print()` Call and Response for the students by saying the words in caps and clapping as indicated: **SYSTEM** (clap while saying **DOT**) **OUT** (clap while saying **DOT**) **PRINT** (clap while saying **DOT**). Have students repeat it as a class.",
-        "duration": "10",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 2 and 3 on Code Studio. Students independently complete the Check for Understanding on Level 2, then complete Level 3 with a partner, where they assign new values to existing variables and create another `Painter` object."
+      },
+      "seeding_key": {
+        "activity_section.key": "6aee9c96-125c-41c8-9285-de7cf3c0fc99",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
+      }
+    },
+    {
+      "key": "03f9864c-16e9-4c04-9b42-49f016832e87",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the How to Accept User Input video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are three takeaways you have from this video?*\n\n**Discussion Goal:** Students share concepts from the video, such as:\n* The `Scanner` class accepts input of type `int`, `double`, `boolean`, and `String` from a user.\n* The `Scanner` class contains methods to retrieve input for each data type.\n* `System.out.print()` displays messages and prompts the user to enter a response in the console.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to demonstrate the `System.out.print()` Call and Response for the students by saying the words in caps and clapping as indicated: **SYSTEM** (clap while saying **DOT**) **OUT** (clap while saying **DOT**) **PRINT** (clap while saying **DOT**). Have students repeat it as a class.",
+        "duration": "7",
         "name": "Storing User Input"
       },
       "seeding_key": {
-        "activity_section.key": "c3228e4f-e8b5-4fe5-9656-3310d6101c57",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "03f9864c-16e9-4c04-9b42-49f016832e87",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
-      "key": "60591181-7948-43c6-8f96-342d5014b173",
-      "position": 9,
+      "key": "e258d58e-4619-4740-96ea-68384f567987",
+      "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 4 and 5 on Code Studio. Students independently complete the Check for Understanding on Level 4 then complete Level 5 in pairs, where they use the `Scanner` class to accept user input."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 4 and 5 on Code Studio. Students independently complete the Check for Understanding on Level 4, then complete Level 5 with a partner, where they use the `Scanner` class to accept user input."
       },
       "seeding_key": {
-        "activity_section.key": "60591181-7948-43c6-8f96-342d5014b173",
-        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+        "activity_section.key": "e258d58e-4619-4740-96ea-68384f567987",
+        "lesson_activity.key": "8fca4c7d-2ade-4c2c-9dba-ab142b62af48"
       }
     },
     {
@@ -1839,6 +1988,228 @@
         "activity_section.key": "7d212dff-8b9b-433c-afd7-78add4021cd1",
         "lesson_activity.key": "35b3858a-a1f9-4eab-b8b7-7fe06bb2b196"
       }
+    },
+    {
+      "key": "38afb102-e14e-43c3-bb46-de39a268def3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce class hierarchies.\n* Each class in a class hierarchy inherits from the class above it.\n* All classes implicitly inherit from a universal subclass called `Object`.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Class Hierarchy cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With their partner, students arrange the cards to create a class hierarchy of the `Painter`.",
+        "name": "Constructing a Class Hierarchy",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Alternatives to prepare the Class Hierarchy Cards:\n* Pass out the card sheets and scissors to each group and have students cut their own set of cards.\n* Make several laminated sets of cards that to share between different sections."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "38afb102-e14e-43c3-bb46-de39a268def3",
+        "lesson_activity.key": "f449548a-111b-436d-a373-71c5e2c0b8f5"
+      }
+    },
+    {
+      "key": "3b92bb2f-774b-42c4-a508-0916799b7351",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the solution."
+      },
+      "seeding_key": {
+        "activity_section.key": "3b92bb2f-774b-42c4-a508-0916799b7351",
+        "lesson_activity.key": "f449548a-111b-436d-a373-71c5e2c0b8f5"
+      }
+    },
+    {
+      "key": "277d4886-99a9-4b39-88bf-f54246a1ca6c",
+      "position": 1,
+      "properties": {
+        "description": "Let’s review how to create a constructor by completing the `FoodTruck` class. Every food truck has an owner and a specialized dish. ",
+        "duration": "5",
+        "name": "Writing a FoodTruck Constructor",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "277d4886-99a9-4b39-88bf-f54246a1ca6c",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "7f8b816f-79c9-43e6-a9d3-ba2bd61a5121",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work in pairs on Level 1 on Code Studio. Students write a constructor for the `FoodTruck` class.  "
+      },
+      "seeding_key": {
+        "activity_section.key": "7f8b816f-79c9-43e6-a9d3-ba2bd61a5121",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "6b432813-8b3c-4c9b-ae1d-d5747a99b85d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review inheritance by prompting students to recall the definition.\n* **Discuss:** *What is inheritance?*\n* **Do This:** Click through the animated slide to reveal the definition.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk through an example of inheritance using the `StampPainter`, `SprayPainter`, and `PainterPlus` classes. \n\n**Do This:** Talk through how to use `super()` to initialize inherited instance variables:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Subclasses cannot initialize inherited private instance variables.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize inherited private instance variables using `super()`, which calls the superclass constructor. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to explain that Java automatically calls `super()` if the subclass does not include it as the first line of the subclass constructor.",
+        "duration": "7",
+        "name": "Using super() for Initialization",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When discussing `super()`, reinforce that the first line of the subclass constructor must call `super()` on its first line."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6b432813-8b3c-4c9b-ae1d-d5747a99b85d",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "ac7e8413-7e30-4f58-bfa4-84fde1492c09",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce and explain the DRY principle.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Does the code on the next slide follow the DRY principle? Where are there redundancies?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** `Car` and `Truck` classes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** `Vehicle`, `Car`, and `Truck` classes\n\n**Discussion Goal:** Students discuss how to refactor the code using inheritance, where the superclass contains the repeated attributes and methods from which Car and Truck can inherit.",
+        "duration": "10",
+        "name": "The DRY Principle"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac7e8413-7e30-4f58-bfa4-84fde1492c09",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "707ddc36-06b6-484d-8422-7eb3e15f3a39",
+      "position": 5,
+      "properties": {
+        "description": "To reduce repetition in our program, we can create a superclass called `Vehicle` from which `Car` and `Truck` can inherit.\n\nThe superclass called `Vehicle` contains the shared instance variables and methods between `Car` and `Truck`. \n\nIn the `Vehicle` class, we store shared instance attributes, like `wheels` and `seats`, and methods, like `move()`, that all objects of type `Vehicle` have. \n\nA `Car` “is-a” `Vehicle`. A `Truck` “is-a” `Vehicle`.\n\nIn the `Car` class, we left behind the instance variable `sunRoof` because it was not an attribute all vehicles have. The same applies to the `capacity` in the `Truck` class.\n\nWe also made our constructors more DRY by using `super()` to initialize the shared inherited instance variables. We only need to initialize the instance variables within the class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "707ddc36-06b6-484d-8422-7eb3e15f3a39",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "6b728a58-9b2f-40b6-aa93-1b3b9c628802",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show The Importance of Code Refactoring video."
+      },
+      "seeding_key": {
+        "activity_section.key": "6b728a58-9b2f-40b6-aa93-1b3b9c628802",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "edc16ebb-cb7b-4759-8166-34c43996370d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 2 and 3 on Code Studio. Students independently complete the Check for Understanding on Level 2, then complete Level 3 in pairs, where they apply the DRY principle by refactoring the `Cake` class into a subclass of `Dessert`."
+      },
+      "seeding_key": {
+        "activity_section.key": "edc16ebb-cb7b-4759-8166-34c43996370d",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "d8129098-5fc6-4c83-a17e-aee167c792c9",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Class hierarchy of the `Dessert` class. ",
+        "duration": "7",
+        "name": "Create Dessert Subclasses"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8129098-5fc6-4c83-a17e-aee167c792c9",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "e4a49d81-833a-429d-8f57-6f11425f08ad",
+      "position": 9,
+      "properties": {
+        "description": "While desserts have unique attributes, such as crusts, fillings, and toppings, they share many attributes. When implementing different desserts into our program, we can extend the `Dessert` class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e4a49d81-833a-429d-8f57-6f11425f08ad",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "52bdd300-2805-40e6-aa2f-b9a230d6aa3d",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 4 and 5 on Code Studio. Students complete the Check for Understanding on Level 4 then complete Level 5, where they choose a `Dessert` subclass to implement. Level 5 is a choice level. There are four options from which to choose. If students finish early, encourage them to complete an additional level."
+      },
+      "seeding_key": {
+        "activity_section.key": "52bdd300-2805-40e6-aa2f-b9a230d6aa3d",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "a5603252-0e98-4107-a3ba-a44d6a5f6d1c",
+      "position": 11,
+      "properties": {
+        "description": "Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code! Also, consider the questions on the next slide.",
+        "duration": "8",
+        "name": "Code Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a5603252-0e98-4107-a3ba-a44d6a5f6d1c",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "3a3e3516-e430-46a5-9fbc-cd8f2fbc1f59",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's projects in Code Studio. Students request, receive and review feedback on Level 5. Students should reference the Code Review Guide to review the steps of the code review process as needed."
+      },
+      "seeding_key": {
+        "activity_section.key": "3a3e3516-e430-46a5-9fbc-cd8f2fbc1f59",
+        "lesson_activity.key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc"
+      }
+    },
+    {
+      "key": "dc1b866d-484a-4e9c-880e-ce4b91bf5444",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students write responses to the Three W’s in their notes.",
+        "name": "Three W's",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Three W’s is a closure strategy where students reflect on their learning by answer the following:\n* *What? (What did we learn today?)*\n* *So what? (What is the relevancy, importance, or usefulness?)*\n* *Now what? (How does it fit into what we are learning?  Does it affect our thinking?  Can we predict where we are going?)*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc1b866d-484a-4e9c-880e-ce4b91bf5444",
+        "lesson_activity.key": "4a3675eb-5202-4072-8fd0-d3ed659d6c6b"
+      }
+    },
+    {
+      "key": "0c1b37ab-1e04-4f6b-a019-c8c4a558149a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c1b37ab-1e04-4f6b-a019-c8c4a558149a",
+        "lesson_activity.key": "4a3675eb-5202-4072-8fd0-d3ed659d6c6b"
+      }
+    },
+    {
+      "key": "3819a3b7-a6bb-42d7-819a-3551e87f6b43",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3819a3b7-a6bb-42d7-819a-3551e87f6b43",
+        "lesson_activity.key": "4a3675eb-5202-4072-8fd0-d3ed659d6c6b"
+      }
     }
   ],
   "script_levels": [
@@ -1909,18 +2280,6 @@
       }
     },
     {
-      "name": "[KEY] Trace Tables",
-      "url": "https://docs.google.com/document/d/1C_8bkgUokmSHg4uQ6jT4zN0UVH60_Zk6t8DqooxlbPQ/edit?usp=sharing",
-      "key": "_key_trace_tables",
-      "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "_key_trace_tables"
-      }
-    },
-    {
       "name": "[KEY] U2L1 Extra Practice",
       "url": "https://docs.google.com/document/d/1uS6LHb6YUgAPII0wW8PWjT7fRkd1LrgHVG5YunSPqMs/edit?usp=sharing",
       "key": "_key_u2l1_extra_practice",
@@ -1981,6 +2340,18 @@
       }
     },
     {
+      "name": "[KEY] U2L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1tiqjMPq1RWhgNVz43RjY2vPz17OtlyELQL4wjEPuOOQ/edit",
+      "key": "_key_u2l7_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l7_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] Vocabulary Crossword",
       "url": "https://docs.google.com/presentation/d/1Op_DvPrHFjFi-0h1mrTnontH9WgBOBxO48_TJ0uwVG0/edit#slide=id.p",
       "key": "_key_vocabulary_crossword",
@@ -2002,6 +2373,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_writing_constructors_guided_notes"
+      }
+    },
+    {
+      "name": "Class Hierarchy Cards",
+      "url": "https://docs.google.com/presentation/d/1Ihkko5zmxClfxaRxdplFwywh7siGl_jfCsP1f9Ui-fk/edit?usp=sharing",
+      "key": "class_hierarchy_cards",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "class_hierarchy_cards"
       }
     },
     {
@@ -2089,18 +2472,6 @@
       }
     },
     {
-      "name": "Trace Tables",
-      "url": "https://docs.google.com/document/d/1qgrWNxTL_Sxrvp4YMNBsQOjNyjgQ_9ww988OK8DRUbs/edit?usp=sharing",
-      "key": "trace_tables",
-      "properties": {
-        "type": "Handout",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "trace_tables"
-      }
-    },
-    {
       "name": "U2L1 Extra Practice",
       "url": "https://docs.google.com/document/d/1tDn_h4BVavcFY-_YFUsxV6W4OUHk0OgRZKTNrHRI8NA/edit?usp=sharing",
       "key": "u2l1_extra_practice",
@@ -2161,6 +2532,18 @@
       }
     },
     {
+      "name": "U2L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1ABYjTxmUhmPDUOqmQ-LXtVvDcGZgeONHtPh-RFxQk7c/edit",
+      "key": "u2l7_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l7_extra_practice"
+      }
+    },
+    {
       "name": "Unit 2 Presentation Slides",
       "url": "https://docs.google.com/presentation/d/1kfzkThzPNV9xM1IJca8ySP7T2spBvzw03kze9k46H4I/edit?usp=sharing",
       "key": "unit_2_presentation_slides",
@@ -2170,6 +2553,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "name": "Variables Manipulatives",
+      "url": "https://docs.google.com/presentation/d/1GgW8Cj9mjcym6DmUw5Rd83yIR4-9EtaSZIr7hOPa0QM/edit?usp=sharing",
+      "key": "variables_manipulatives",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "variables_manipulatives"
       }
     },
     {
@@ -2255,25 +2650,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "_key_trace_tables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
         "resource.key": "_key_u2l2_extra_practice"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "trace_tables"
+        "resource.key": "u2l2_extra_practice"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "u2l2_extra_practice"
+        "resource.key": "variables_manipulatives"
       }
     },
     {
@@ -2400,6 +2789,30 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "u2l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_u2l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "class_hierarchy_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u2l7_extra_practice"
       }
     }
   ],
@@ -2588,6 +3001,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "string"
+      }
+    },
+    {
+      "key": "null",
+      "word": "null",
+      "definition": "Indicates that the variable does not refer to any object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "null"
       }
     },
     {
@@ -2789,6 +3212,46 @@
       "seeding_key": {
         "vocabulary.key": "this_keyword"
       }
+    },
+    {
+      "key": "inheritance",
+      "word": "Inheritance",
+      "definition": "A object-oriented programming principle where a subclass inherits the instance variables and methods of a superclass",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "inheritance"
+      }
+    },
+    {
+      "key": "super",
+      "word": "super",
+      "definition": "A keyword used to refer to the superclass",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "super"
+      }
+    },
+    {
+      "key": "dry_principle",
+      "word": "DRY Principle",
+      "definition": "Stands for \"Don't Repeat Yourself\"; A software development principle to reduce repetition in code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dry_principle"
+      }
+    },
+    {
+      "key": "refactoring",
+      "word": "Refactoring",
+      "definition": "Improving the readability, reusability, or structure of program code without altering its functionality",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "refactoring"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -2898,6 +3361,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "vocabulary.key": "string"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "null"
       }
     },
     {
@@ -3018,6 +3487,30 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "vocabulary.key": "this_keyword"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "inheritance"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "super"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "dry_principle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "refactoring"
       }
     }
   ],
@@ -3213,6 +3706,36 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "objective.key": "ae390a72-5e11-4591-9309-cfc0748cdfd4"
+      }
+    },
+    {
+      "key": "697a0416-dd5b-4527-8f02-dd3a6259d449",
+      "properties": {
+        "description": "Construct class hierarchies"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "697a0416-dd5b-4527-8f02-dd3a6259d449"
+      }
+    },
+    {
+      "key": "133781cb-d7d5-42b4-a6a0-68feb304fab5",
+      "properties": {
+        "description": "Write constructors for subclasses to initialize local and inherited instance variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "133781cb-d7d5-42b4-a6a0-68feb304fab5"
+      }
+    },
+    {
+      "key": "ac9e3c85-9446-4c89-b00b-856543ff1541",
+      "properties": {
+        "description": "Refactor code to improve its readability and reusability"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "ac9e3c85-9446-4c89-b00b-856543ff1541"
       }
     }
   ],
@@ -3565,6 +4088,83 @@
         "lesson.key": "lesson-6",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.H.2"
       }
     }
   ],

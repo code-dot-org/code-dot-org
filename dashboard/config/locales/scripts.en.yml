@@ -22424,8 +22424,8 @@ en:
               description_teacher: In this unplugged lesson, students create objects and represent relevant attributes using instance variables. Students learn the difference between `public` and `private` and the purpose of encapsulation to hide the internal implementation of an object.
             lesson-2:
               name: Using Variables
-              description_student: 'One way that software engineers can store information in a computer’s memory is by using variables. In this lesson, you use variables to store information used to create `Painter` objects and also to store information input by a user. '
-              description_teacher: In this lesson, students define variables to represent attributes for an object and use these variables to store values. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.
+              description_student: Variables provide a way for software engineers to store information. The type of information we need to store determines what kind of variable we need to use, its data type, and how we can use it. In this lesson, you use variables to store information used to create `Painter` objects and store information input by a user.
+              description_teacher: In this lesson, students explore the functionality of variables and differentiate between primitive and reference variables. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.
             lesson-3:
               name: Writing Constructors
               description_student: The Project Mercury Pastries food truck needs your help! The owner wants to sell desserts in The Neighborhood but needs to be able to input and store their desserts in a program. You have been asked to use your software engineering skills to create a program that can create dessert objects so the owner can keep track of their inventory. You start by creating a `Dessert` class so the owner can enter the flavor, available quantity, and price of each dessert they sell.
@@ -22444,6 +22444,8 @@ en:
               description_teacher: In this lesson, students implement conditionals and local variables to make decisions about object initialization and verify values passed to the constructor. Students explore the scope of local variables and parameters within a constructor and use the keyword `this` to refer to the current object. These concepts are used to add another constructor to the `Dessert` class.
             lesson-7:
               name: Writing Constructors for Hierarchies
+              description_student: 'The owner of the Project Mercury food truck is expanding the menu to include different desserts. In this lesson, you use software development techniques to create classes and constructors for Dessert subclasses efficiently. To initialize inherited private instance variables, you use the `super` keyword to call the superclass constructor.  '
+              description_teacher: In this lesson, students write constructors for superclasses and subclasses. Students use the `super` keyword to call the superclass constructor and pass any necessary parameters to the superclass constructor to initialize instance variables. The lesson introduces the D.R.Y. (Don’t Repeat Yourself) software development principle to highlight the benefits of using inheritance in object-oriented programming design.
             lesson-8:
               name: Accessing Object Data
             lesson-9:
@@ -22926,3 +22928,67 @@ en:
             Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
 
             **Coming Soon! This unit will be available in July 2021!**
+        kodea-pd-2021:
+          title: CSF Online PD - Kodea
+          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description_audience: ''
+          lessons:
+            Getting Started:
+              key: Getting Started
+              name: Getting Started
+              description_student: ''
+              description_teacher: ''
+            Computer Science Fundamentals:
+              key: Computer Science Fundamentals
+              name: Computer Science Fundamentals
+              description_student: ''
+              description_teacher: ''
+            Looking Ahead:
+              key: Looking Ahead
+              name: Looking Ahead
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Sequencing':
+              key: 'Mastering the Basics: Sequencing'
+              name: 'Mastering the Basics: Sequencing'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Loops':
+              key: 'Mastering the Basics: Loops'
+              name: 'Mastering the Basics: Loops'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Conditionals':
+              key: 'Mastering the Basics: Conditionals'
+              name: 'Mastering the Basics: Conditionals'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Functions':
+              key: 'Mastering the Basics: Functions'
+              name: 'Mastering the Basics: Functions'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Events':
+              key: 'Mastering the Basics: Events'
+              name: 'Mastering the Basics: Events'
+              description_student: ''
+              description_teacher: ''
+            Best Practices for Teaching Computer Science:
+              key: Best Practices for Teaching Computer Science
+              name: Best Practices for Teaching Computer Science
+              description_student: ''
+              description_teacher: ''
+            Planning:
+              key: Planning
+              name: Planning
+              description_student: ''
+              description_teacher: ''
+            Next Steps:
+              key: Next Steps
+              name: Next Steps
+              description_student: ''
+              description_teacher: ''
+          lesson_groups: {}
+          name: kodea-pd-2021
