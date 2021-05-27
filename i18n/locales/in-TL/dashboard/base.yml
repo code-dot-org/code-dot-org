@@ -277,6 +277,7 @@ in:
       cant_join_own_section: "crwdns5589:0crwdne5589:0"
       provider_managed_section: "crwdns88682:0%{provider}crwdne88682:0"
       restricted_section: "crwdns2546984:0%{section_code}crwdne2546984:0"
+      full_section: "crwdns2547480:0%{section_code}crwdnd2547480:0%{section_capacity}crwdne2547480:0"
     mail:
       student_disassociated:
         subject: "crwdns4337:0%{student_name}crwdne4337:0"
