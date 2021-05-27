@@ -1690,13 +1690,6 @@ zh-TW:
         text: x 座標 {SPRITE}
       Mikelab_yLocationOf:
         text: y 座標 {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': 格狀
-            '"border"': 邊框
-            '"row"': 橫列
-            '"random"': 隨機
       RyanLab_moveForward:
         text: 移動-向前
       RyanLab_turnLeft:
