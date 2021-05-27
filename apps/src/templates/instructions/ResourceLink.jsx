@@ -24,7 +24,7 @@ class ResourceLink extends React.Component {
       return;
     }
     e.preventDefault();
-    if (this.props.openReferenceInNewTab) {
+    if (!!this.props.openReferenceInNewTab) {
       window.open(this.props.reference, 'noopener', 'noreferrer');
       return;
     }
@@ -64,7 +64,7 @@ class ResourceLink extends React.Component {
 
     return (
       <div>
-        <div style={styles.resourceStyle}>
+        <div style={styles.resourceStyle} onClick={this.selectResource}>
           <span style={thumbnailStyle}>
             <FontAwesome icon={icon} style={iconStyle} title={text} />
           </span>
