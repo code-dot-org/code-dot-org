@@ -2,7 +2,7 @@
   "script": {
     "name": "pre-express-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-05-18 18:04:53 UTC",
+    "serialized_at": "2021-05-26 19:49:46 UTC",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -1238,7 +1238,7 @@
       "key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3",
       "position": 4,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3",
@@ -1777,7 +1777,7 @@
       "key": "62dfefbf-589b-46c7-a6ae-2b80bb18b021",
       "position": 9,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "62dfefbf-589b-46c7-a6ae-2b80bb18b021",
@@ -1928,7 +1928,7 @@
       "key": "71d66635-8ac0-46fa-94d5-1f574f1c7996",
       "position": 11,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "71d66635-8ac0-46fa-94d5-1f574f1c7996",
@@ -2035,7 +2035,7 @@
       "key": "b1227c60-2106-47a0-a2a0-d7fb4a460d44",
       "position": 6,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "b1227c60-2106-47a0-a2a0-d7fb4a460d44",
@@ -2111,7 +2111,7 @@
       "key": "dbb4fe5e-fe4d-40d4-8509-c11f826128ae",
       "position": 2,
       "properties": {
-        "progression_name": "Video:  Create a Story"
+        "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
         "activity_section.key": "dbb4fe5e-fe4d-40d4-8509-c11f826128ae",
@@ -2155,7 +2155,7 @@
       "key": "0a6abf88-92c8-455d-8d64-e8f61ae227ad",
       "position": 6,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "0a6abf88-92c8-455d-8d64-e8f61ae227ad",
@@ -2235,7 +2235,7 @@
       "key": "85076d8d-1ddf-45cc-b510-0eeddffaff85",
       "position": 4,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "85076d8d-1ddf-45cc-b510-0eeddffaff85",
@@ -3005,7 +3005,7 @@
         "level_keys": [
           "courseA_maze_seq_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -3031,7 +3031,7 @@
         "level_keys": [
           "courseA_maze_seq_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4407,39 +4407,13 @@
     {
       "chapter": 83,
       "position": 14,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseB_collector_loops_challenge1_2021"
-        ],
-        "progression": "Practice"
-      },
-      "named_level": false,
-      "bonus": true,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseB_collector_loops_challenge1_2021"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "csf_loops",
-        "script.name": "pre-express-2021",
-        "activity_section.key": "c08bd0ec-993c-4554-b855-96bdf024e9ef"
-      },
-      "level_keys": [
-        "courseB_collector_loops_challenge1_2021"
-      ]
-    },
-    {
-      "chapter": 84,
-      "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_collector_loops_challenge2a_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4454,6 +4428,29 @@
       },
       "level_keys": [
         "courseB_collector_loops_challenge2a_2021"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Extras"
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops_challenge1_2021"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "csf_loops",
+        "script.name": "pre-express-2021",
+        "activity_section.key": "62dfefbf-589b-46c7-a6ae-2b80bb18b021"
+      },
+      "level_keys": [
+        "courseB_collector_loops_challenge1_2021"
       ]
     },
     {
@@ -4830,7 +4827,7 @@
         "level_keys": [
           "courseA_artist_loops_challenge2a_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4856,7 +4853,7 @@
         "level_keys": [
           "courseA_artist_loops_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5117,7 +5114,7 @@
         "level_keys": [
           "courseB_artist_loops_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5143,7 +5140,7 @@
         "level_keys": [
           "courseB_artist_loops_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5169,7 +5166,7 @@
         "level_keys": [
           "courseA_video_events_2021"
         ],
-        "progression": "Video:  Create a Story"
+        "progression": "Video: Introduction to Play Lab"
       },
       "named_level": false,
       "bonus": false,
@@ -5377,7 +5374,7 @@
         "level_keys": [
           "courseA_playlab_events_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5403,7 +5400,7 @@
         "level_keys": [
           "courseA_playlab_events_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5611,7 +5608,7 @@
         "level_keys": [
           "courseB_playlab_events_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5637,7 +5634,7 @@
         "level_keys": [
           "courseB_playlab_events_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -6642,21 +6639,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseB_collector_loops_challenge1_2021",
+        "level.key": "courseB_collector_loops_challenge2a_2021",
         "script_level.level_keys": [
-          "courseB_collector_loops_challenge1_2021"
+          "courseB_collector_loops_challenge2a_2021"
         ],
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c08bd0ec-993c-4554-b855-96bdf024e9ef"
+        "activity_section.key": "62dfefbf-589b-46c7-a6ae-2b80bb18b021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseB_collector_loops_challenge2a_2021",
+        "level.key": "courseB_collector_loops_challenge1_2021",
         "script_level.level_keys": [
-          "courseB_collector_loops_challenge2a_2021"
+          "courseB_collector_loops_challenge1_2021"
         ],
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",

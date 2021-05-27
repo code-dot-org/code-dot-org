@@ -48,8 +48,8 @@ class SchoolDistrict < ApplicationRecord
       SchoolDistrict.transaction do
         merge_from_csv(school_districts_tsv)
       end
-      # else
-      # SchoolDistrict.seed_from_s3
+    else
+      SchoolDistrict.seed_from_s3
     end
   end
 
@@ -105,7 +105,7 @@ class SchoolDistrict < ApplicationRecord
       # Used table generator here to get columns of interest:
       # https://nces.ed.gov/ccd/elsi/tableGenerator.aspx
       AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/ELSI_csv_export_6374544705259568713496.csv") do |filename|
-        SchoolDistrict.merge_from_csv(filename, import_options_1819, true, new_attributes: ['last_known_school_year_open']) do |row|
+        SchoolDistrict.merge_from_csv(filename, import_options_1819, true, ignore_attributes: ['last_known_school_year_open']) do |row|
           {
             id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
             name:                         row['Agency Name'].upcase,
@@ -120,7 +120,7 @@ class SchoolDistrict < ApplicationRecord
       CDO.log.info "Seeding 2019-2020 school district data"
       import_options_1920 = {col_sep: ",", headers: true, quote_char: "\x00"}
       AWS::S3.seed_from_file('cdo-nces', "2019-2020/ccd/districts.csv") do |filename|
-        SchoolDistrict.merge_from_csv(filename, import_options_1920, true, is_dry_run: false) do |row|
+        SchoolDistrict.merge_from_csv(filename, import_options_1920, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
           {
             id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
             name:                         row['Agency Name'].upcase,
@@ -142,16 +142,16 @@ class SchoolDistrict < ApplicationRecord
   # @param filepath [String] Filepath for S3 object.
   # @param import_options [Hash] The CSV file parsing options.
   # @param is_dry_run [Boolean] Allows a "dry run" of seeding a CSV without making database writes.
-  # @param new_attributes  [Array] List of attributes included in a given import that are new to the model, and thus should not be used to determine whether a record is being "updated" or "unchanged"
+  # @param ignore_attributes [Array] List of attributes included in a given import that should not be used to determine whether a record is being "updated" or "unchanged". Allows us to more clearly identify which schools have real changes to existing data.
   # @param parse_row [Block] A block to parse a row of new data -- see School.seed_from_s3 for examples.
-  def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, new_attributes: [], &parse_row)
+  def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, ignore_attributes: [], &parse_row)
     AWS::S3.seed_from_file(bucket, filepath, is_dry_run) do |filename|
       merge_from_csv(
         filename,
         import_options,
         true,
         is_dry_run: is_dry_run,
-        new_attributes: new_attributes,
+        ignore_attributes: ignore_attributes,
         &parse_row
       )
     end
@@ -163,8 +163,8 @@ class SchoolDistrict < ApplicationRecord
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT school districts.
   # @param is_dry_run [Boolean] Specify that this is a dry run, and no writes to the database should be conducted. Gives more detailed output of expected changes from importing the given CSV.
-  # @param new_attributes  [Array] List of attributes included in a given import that are new to the model, and thus should not be used to determine whether a record is being "updated" or "unchanged"
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, new_attributes: [])
+  # @param ignore_attributes [Array] List of attributes included in a given import that should not be used to determine whether a record is being "updated" or "unchanged". Allows us to more clearly identify which schools have real changes to existing data.
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, ignore_attributes: [])
     districts = nil
     new_districts = []
     updated_districts = 0
@@ -180,7 +180,7 @@ class SchoolDistrict < ApplicationRecord
         elsif write_updates
           loaded.assign_attributes(parsed)
           if loaded.changed?
-            loaded.changed.sort == new_attributes.sort ?
+            loaded.changed.sort == ignore_attributes.sort ?
               unchanged_districts += 1 :
               updated_districts += 1
 

@@ -102,7 +102,7 @@ export default class Craft {
       config.level.customSlowMotion = 0.1;
     }
 
-    config.level.disableFinalStageMessage = true;
+    config.level.disableFinalLessonMessage = true;
     config.showInstructionsInTopPane = true;
 
     // Return the version of Internet Explorer (8+) or undefined if not IE.

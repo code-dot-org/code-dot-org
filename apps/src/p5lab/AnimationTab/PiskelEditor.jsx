@@ -63,7 +63,7 @@ class PiskelEditor extends React.Component {
     this.piskel.onStateSaved(this.onAnimationSaved);
     this.piskel.onAddFrame(this.onAddFrame);
 
-    this.iframe.contentWindow.locale = this.props.localeCode;
+    this.iframe.contentWindow.piskel_locale = this.props.localeCode;
   }
 
   componentWillUnmount() {

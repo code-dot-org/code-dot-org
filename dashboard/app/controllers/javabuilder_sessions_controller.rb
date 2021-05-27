@@ -13,6 +13,9 @@ class JavabuilderSessionsController < ApplicationController
     channel_id = params[:channelId]
     project_version = params[:projectVersion]
     project_url = params[:projectUrl]
+    level_id = params[:levelId]
+    options = params[:options]
+    options = options ? options.to_json : '{}'
     if !channel_id || !project_version || !project_url
       return render status: :bad_request, json: {}
     end
@@ -37,7 +40,9 @@ class JavabuilderSessionsController < ApplicationController
       storage_app_id: storage_app_id,
       channel_id: channel_id,
       project_version: project_version,
-      project_url: project_url
+      project_url: project_url,
+      level_id: level_id,
+      options: options
     }
 
     # log payload to firehose

@@ -1031,6 +1031,34 @@ DSL
     assert_equal 'platformization-partners', level.editor_experiment
   end
 
+  test "should get serialized_maze" do
+    level = create_level_with_serialized_maze
+    get :get_serialized_maze, params: {id: level.id}
+    expected_maze = [[{"tileType" => 1, "value" => 0}], [{"tileType" => 0, "assetId" => 5, "value" => 0}]]
+    assert_equal expected_maze, JSON.parse(@response.body)
+  end
+
+  test "anonymous user can get_serialized_maze" do
+    sign_out @levelbuilder
+    level = create_level_with_serialized_maze
+    get :get_serialized_maze, params: {id: level.id}
+    expected_maze = [[{"tileType" => 1, "value" => 0}], [{"tileType" => 0, "assetId" => 5, "value" => 0}]]
+    assert_equal expected_maze, JSON.parse(@response.body)
+  end
+
+  test "empty success response for get_serialized_maze on level without maze" do
+    level = create :level
+    get :get_serialized_maze, params: {id: level.id}
+    assert_response :no_content
+    assert_equal '', @response.body
+  end
+
+  def create_level_with_serialized_maze
+    create(:javalab,
+      serialized_maze: [[{tileType: 1, value: 0}], [{tileType: 0, assetId: 5, value: 0}]]
+    )
+  end
+
   test_user_gets_response_for(
     :edit,
     response: :forbidden,
