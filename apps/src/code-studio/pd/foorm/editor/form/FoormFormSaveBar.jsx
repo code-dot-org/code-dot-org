@@ -57,6 +57,8 @@ class FoormFormSaveBar extends Component {
     };
   }
 
+  hasCodeMirrorError = () => this.props.hasLintError || this.props.hasJSONError;
+
   updateQuestionsUrl = () =>
     `/foorm/forms/${this.props.formId}/update_questions`;
 
@@ -261,27 +263,24 @@ class FoormFormSaveBar extends Component {
         <div style={styles.saveButtonBackground} className="saveBar">
           {this.props.lastSaved &&
             !this.props.saveError &&
-            !this.props.hasJSONError &&
-            !this.props.hasLintError && (
+            !this.hasCodeMirrorError() && (
               <div style={styles.lastSaved} className="lastSavedMessage">
                 {`Last saved at: ${new Date(
                   this.props.lastSaved
                 ).toLocaleString()}`}
               </div>
             )}
-          {(this.props.hasJSONError || this.props.hasLintError) && (
+          {this.hasCodeMirrorError() && (
             <div style={styles.error}>
               {`Please fix parsing error before saving. See the errors noted on the left side of the editor.`}
             </div>
           )}
-          {this.props.saveError &&
-            !this.props.hasJSONError &&
-            !this.props.hasLintError && (
-              <div
-                style={styles.error}
-                className="saveErrorMessage"
-              >{`Error Saving: ${this.props.saveError}`}</div>
-            )}
+          {this.props.saveError && !this.hasCodeMirrorError() && (
+            <div
+              style={styles.error}
+              className="saveErrorMessage"
+            >{`Error Saving: ${this.props.saveError}`}</div>
+          )}
           {this.state.isSaving && (
             <div style={styles.spinner}>
               <FontAwesome icon="spinner" className="fa-spin" />
@@ -293,11 +292,7 @@ class FoormFormSaveBar extends Component {
               type="button"
               style={styles.button}
               onClick={this.handlePublish}
-              disabled={
-                this.state.isSaving ||
-                this.props.hasJSONError ||
-                this.props.hasLintError
-              }
+              disabled={this.state.isSaving || this.hasCodeMirrorError()}
             >
               Publish
             </button>
@@ -307,11 +302,7 @@ class FoormFormSaveBar extends Component {
             type="button"
             style={styles.button}
             onClick={this.handleSave}
-            disabled={
-              this.state.isSaving ||
-              this.props.hasJSONError ||
-              this.props.hasLintError
-            }
+            disabled={this.state.isSaving || this.hasCodeMirrorError()}
           >
             Save
           </button>
