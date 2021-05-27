@@ -44,10 +44,12 @@ export function getFadeOpacity(animationProgress) {
 
 const labelColor = "rgb(254, 96, 3)";
 const featureColor = "rgb(75, 155, 213)";
+const backgroundColor = "#f2f2f2";
 
 export const colors = {
   feature: featureColor,
-  label: labelColor
+  label: labelColor,
+  background: backgroundColor
 };
 
 export const styles = {
@@ -178,7 +180,7 @@ export const styles = {
   scrollableContentsTinted: {
     overflow: "hidden",
     borderRadius: 0,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: colors.background,
     padding: 10
   },
 
@@ -191,13 +193,13 @@ export const styles = {
 
   contents: {
     borderRadius: 0,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: colors.background,
     padding: 15
   },
 
   contentsCsvButton: {
     borderRadius: 0,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: colors.background,
     padding: 15,
     marginTop: 20,
     paddingTop: 25,
@@ -351,7 +353,7 @@ export const styles = {
     textAlign: "right",
     fontSize: 12,
     color: "#4d575f",
-    backgroundColor: "#f2f2f2",
+    backgroundColor: colors.background,
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: "white"
@@ -456,7 +458,7 @@ export const styles = {
 
   resultsToggle: {
     marginTop: 20,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: colors.background,
     borderRadius: 5,
     borderStyle: "solid",
     borderWidth: 1,
@@ -469,7 +471,7 @@ export const styles = {
     borderRadius: 5,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 20,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: colors.background,
     margin: "0 0 0 20px",
     boxShadow: "none",
     outline: "none",
@@ -499,7 +501,7 @@ export const styles = {
   },
 
   resultsCellHighlight: {
-    backgroundColor: "#f2f2f2"
+    backgroundColor: colors.background
   },
 
   previousButton: {
