@@ -12,6 +12,7 @@ import {
   setLastSavedQuestions
 } from '../foormEditorRedux';
 import FoormFormSaveBar from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
+import {getLatestVersionMap} from '../../foormHelpers';
 
 /*
 Parent component for editing Foorm forms. Will initially show a choice
@@ -182,10 +183,14 @@ class FoormFormEditorManager extends React.Component {
   }
 
   renderSaveBar() {
+    const latestVersionMap = getLatestVersionMap(this.getFetchableForms());
     return (
       <FoormFormSaveBar
         formCategories={this.props.categories}
         resetCodeMirror={this.props.resetCodeMirror}
+        isLatestVersion={
+          latestVersionMap[this.props.formName] === this.props.formVersion
+        }
       />
     );
   }
