@@ -67,10 +67,7 @@ class SelectDataset extends Component {
     this.setState({
       download: false
     });
-  };
-
-  handleUpload = () => {
-    parseCSV(this.props.csvfile, this.state.download, true);
+    parseCSV(event.target.files[0], false, true);
   };
 
   render() {
@@ -83,7 +80,7 @@ class SelectDataset extends Component {
       <div id="select-dataset" style={styles.panel}>
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
-            {datasets.map(dataset => {
+            {datasets.map((dataset, index) => {
               return (
                 <div
                   style={{
@@ -91,7 +88,8 @@ class SelectDataset extends Component {
                     ...(this.props.highlightDataset === dataset.name &&
                       styles.selectDatasetItemHighlighted),
                     ...(this.props.name === dataset.name &&
-                      styles.selectDatasetItemSelected)
+                      styles.selectDatasetItemSelected),
+                    ...(index % 3 === 0 && { clear: "both" })
                   }}
                   key={dataset.id}
                   onClick={() => this.handleDatasetClick(dataset.id)}
@@ -112,36 +110,24 @@ class SelectDataset extends Component {
           </div>
         </div>
         {!specifiedDatasets && (
-          <div style={{ ...styles.contents, marginTop: 20 }}>
-            <div style={{ float: "left", width: "33.33%" }}>
-              <div style={{ fontSize: 13.33, paddingTop: 4 }}>
-                Or import a CSV file
-              </div>
-            </div>
-            <div
-              style={{ float: "left", width: "33.33%", textAlign: "center" }}
-            >
+          <div style={styles.contentsCsvButton}>
+            <label style={styles.uploadCsvButton}>
+              Upload CSV
+              {/* Setting value to empty here allows us to receive an
+                  onChange event for the same file as previously selected,
+                  which allows the user to upload a file, then choose an
+                  existing dataset, and then reupload the same file. */}
               <input
                 className="csv-input"
                 type="file"
                 accept=".csv,.xls,.xlsx"
-                ref={input => {
-                  this.filesInput = input;
-                }}
                 name="file"
                 placeholder={null}
                 onChange={this.handleUploadSelect}
+                style={styles.csvInput}
+                value=""
               />
-            </div>
-            <div style={{ float: "left", width: "33.33%", textAlign: "right" }}>
-              <button
-                type="button"
-                onClick={this.handleUpload}
-                style={styles.uploadButton}
-              >
-                Upload
-              </button>
-            </div>
+            </label>
           </div>
         )}
       </div>

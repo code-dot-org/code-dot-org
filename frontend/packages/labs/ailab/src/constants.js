@@ -18,7 +18,7 @@ export const ResultsGrades = {
   INCORRECT: "incorrect"
 };
 
-export const PERCENT_OF_DATASET_FOR_TESTING = 0.10;
+export const PERCENT_OF_DATASET_FOR_TESTING = 0.1;
 
 export const TestDataLocations = {
   END: "end",
@@ -44,10 +44,12 @@ export function getFadeOpacity(animationProgress) {
 
 const labelColor = "rgb(254, 96, 3)";
 const featureColor = "rgb(75, 155, 213)";
+const backgroundColor = "#f2f2f2";
 
 export const colors = {
   feature: featureColor,
-  label: labelColor
+  label: labelColor,
+  background: backgroundColor
 };
 
 export const styles = {
@@ -107,13 +109,20 @@ export const styles = {
   },
 
   largeText: {
+    lineHeight: "38px",
     fontSize: 24,
-    marginBottom: 10
+    marginBottom: 20,
+    borderBottom: "solid 1px black",
+    paddingBottom: 10
   },
 
   mediumText: {
-    fontSize: 13,
+    fontSize: 14,
     marginBottom: 8
+  },
+
+  regularText: {
+    fontSize: 14
   },
 
   smallText: {
@@ -121,8 +130,9 @@ export const styles = {
     marginBottom: 8
   },
 
-  smallTextNoMargin: {
-    fontSize: 12
+  smallTextRight: {
+    fontSize: 12,
+    textAlign: "right"
   },
 
   footerText: {
@@ -138,7 +148,8 @@ export const styles = {
     boxSizing: "border-box",
     display: "flex",
     flexDirection: "column",
-    position: "relative"
+    position: "relative",
+    fontSize: 14
   },
 
   panelPopupContainer: {
@@ -159,7 +170,7 @@ export const styles = {
     display: "flex",
     flexDirection: "column",
     border: "solid 1px black",
-    boxShadow: "-5px 5px 10px black"
+    boxShadow: "-5px 5px 10px rgba(0, 0, 0, 0.5)"
   },
 
   scrollableContents: {
@@ -169,20 +180,37 @@ export const styles = {
   scrollableContentsTinted: {
     overflow: "hidden",
     borderRadius: 0,
-    backgroundColor: "rgb(206, 206, 206)",
+    backgroundColor: colors.background,
     padding: 10
   },
 
   scrollingContents: {
     overflow: "auto",
     height: "100%",
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    overflowWrap: "break-word"
   },
 
   contents: {
     borderRadius: 0,
-    backgroundColor: "rgb(206, 206, 206)",
+    backgroundColor: colors.background,
     padding: 15
+  },
+
+  contentsCsvButton: {
+    borderRadius: 0,
+    backgroundColor: colors.background,
+    padding: 15,
+    marginTop: 20,
+    paddingTop: 25,
+    paddingBottom: 25
+  },
+
+  contentsPredictBot: {
+    borderRadius: 0,
+    backgroundColor: colors.background,
+    padding: 15,
+    marginTop: 20
   },
 
   panelContentLeft: {
@@ -216,26 +244,27 @@ export const styles = {
   },
 
   rightPanel: {
-    fontSize: 13
+    fontSize: 14
   },
 
   selectDatasetItem: {
-    width: "30%",
+    width: "calc(33.33% - 8px)",
     padding: 20,
     float: "left",
     boxSizing: "border-box",
-    border: "solid 4px rgba(0,0,0,0)",
+    border: "solid 4px #f2f2f2",
     borderRadius: 0,
-    height: 220,
-    cursor: "pointer"
+    cursor: "pointer",
+    backgroundColor: "white",
+    margin: 4
   },
 
   selectDatasetItemHighlighted: {
-    backgroundColor: "#d6f2fa"
+    border: "solid 4px rgba(85, 217, 255, 0.6)"
   },
 
   selectDatasetItemSelected: {
-    backgroundColor: "#94e3fa"
+    border: "solid 4px rgb(85, 217, 255)"
   },
 
   selectDatasetImage: {
@@ -244,14 +273,24 @@ export const styles = {
 
   selectDatasetText: {
     fontSize: 14,
-    marginTop: 10
+    marginTop: 5
   },
 
-  uploadButton: {
-    fontSize: 13.33,
-    padding: "2px 6px",
+  uploadCsvButton: {
+    fontSize: 14,
     margin: 0,
-    border: "none"
+    border: "none",
+    cursor: "pointer",
+    borderRadius: 5,
+    backgroundColor: "#61d2eb",
+    color: "white",
+    padding: "10px 20px",
+    display: "inline-block"
+  },
+
+  csvInput: {
+    display: "none",
+    cursor: "pointer"
   },
 
   specifyColumnsItem: {
@@ -294,7 +333,8 @@ export const styles = {
     borderWidth: 1,
     borderColor: "white",
     padding: 7,
-    fontSize: 14
+    fontSize: 14,
+    cursor: "pointer"
   },
 
   dataDisplayHeaderLabelHidden: {
@@ -320,7 +360,7 @@ export const styles = {
     textAlign: "right",
     fontSize: 12,
     color: "#4d575f",
-    backgroundColor: "#f2f2f2",
+    backgroundColor: colors.background,
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: "white"
@@ -357,6 +397,7 @@ export const styles = {
     textAlign: "right",
     fontSize: 12
   },
+
   dataDisplayCellLabelSelected: {},
   dataDisplayCellFeatureSelected: {},
 
@@ -391,45 +432,53 @@ export const styles = {
 
   resultsStatement: {
     float: "left",
-    width: "80%"
+    width: "75%"
   },
 
-  resultsAccuracy: { float: "left", fontSize: 18, width: "10%" },
+  resultsAccuracy: {
+    float: "left",
+    fontSize: 14,
+    width: "10%",
+    paddingTop: 1,
+    lineHeight: 1.3
+  },
 
   resultsDetailsButtonContainer: {
     float: "left",
     textAlign: "center",
-    width: "10%"
+    width: "15%"
   },
 
   resultsDetailsButton: {
     fontSize: 14,
-    padding: "4px 12px",
+    padding: "8px 12px",
     margin: 0,
     border: "none",
     cursor: "pointer",
     borderRadius: 5,
     backgroundColor: "#61d2eb",
-    color: "white"
+    color: "white",
+    lineHeight: 1.3,
+    position: "relative",
+    top: -7
   },
 
   resultsToggle: {
     marginTop: 20,
-    marginBottom: 20,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: colors.background,
     borderRadius: 5,
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: "white",
     padding: 10,
-    height: 36
+    height: 42
   },
   pill: {
     border: "none",
-    borderRadius: 50,
+    borderRadius: 5,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 20,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: colors.background,
     margin: "0 0 0 20px",
     boxShadow: "none",
     outline: "none",
@@ -450,13 +499,26 @@ export const styles = {
     backgroundColor: "white",
     color: "rgb(30, 30, 30)",
     verticalAlign: "top",
-    height: 45
+    fontSize: 24
   },
 
   resultsTableSecondHeader: {
-    top: "47px",
+    top: "42px",
     color: "white"
   },
+
+  resultsCellHighlight: {
+    backgroundColor: colors.background
+  },
+
+  predictBotLeft: {
+    float: "left",
+    width: "20%"
+  },
+
+  predictBot: { width: "100%" },
+
+  predictBotRight: { float: "right", width: "75%" },
 
   previousButton: {
     position: "fixed",
@@ -487,13 +549,22 @@ export const styles = {
   },
 
   statement: {
-    fontSize: 32,
-    paddingBottom: 15,
-    lineHeight: "50px"
+    lineHeight: "38px",
+    fontSize: 24,
+    marginBottom: 20,
+    borderBottom: "solid 1px black",
+    paddingBottom: 10
+  },
+
+  statementWithBackground: {
+    lineHeight: "38px",
+    fontSize: 24,
+    marginBottom: 20,
+    paddingBottom: 10
   },
 
   statementSmall: {
-    fontSize: 18,
+    fontSize: 14,
     paddingBottom: 6
   },
 
@@ -561,7 +632,8 @@ export const styles = {
     padding: 10,
     cursor: "pointer",
     border: "none",
-    fontSize: 18
+    fontSize: 14,
+    marginTop: 10
   },
 
   selectFeaturesButton: {
@@ -570,7 +642,8 @@ export const styles = {
     padding: 10,
     cursor: "pointer",
     border: "none",
-    fontSize: 18
+    fontSize: 14,
+    marginTop: 10
   },
 
   trainModelContainer: {
@@ -590,7 +663,8 @@ export const styles = {
   trainModelBotContainer: {
     position: "absolute",
     left: "50%",
-    transform: "translateX(-25%)"
+    top: "50%",
+    transform: "translateX(-25%) translateY(-50%)"
   },
   trainBot: {
     position: "relative",
@@ -603,7 +677,7 @@ export const styles = {
     top: "0%",
     position: "absolute",
     direction: "ltr",
-    transformOrigin: "bottom right",
+    transformOrigin: "bottom right"
   },
   trainBotOpen: {
     transform: "rotate(90deg)",
@@ -625,7 +699,12 @@ export const styles = {
   generateResultsBotContainer: {
     position: "absolute",
     left: "50%",
-    transform: "translateX(-25%)"
+    top: "50%"
+  },
+
+  generateResultsBotBody: {
+    width: "49%",
+    direction: "ltr"
   },
 
   cardRow: {
@@ -706,8 +785,21 @@ export const styles = {
     position: "relative"
   },
 
+  resultsBot: {
+    position: "relative",
+    width: "100%"
+  },
+
   saveInputsWidth: {
     width: "95%"
+  },
+
+  saveModelToggle: {
+    cursor: "pointer"
+  },
+
+  saveModelToggleContents: {
+    marginLeft: 20
   },
 
   modelCardContainer: {
@@ -723,7 +815,7 @@ export const styles = {
   modelCardHeader: {
     marginBottom: 10,
     marginTop: 0,
-    fontSize: 18,
+    fontSize: 24,
     fontFamily: '"Gotham 7r", sans-serif'
   },
 
@@ -736,7 +828,7 @@ export const styles = {
   },
 
   modelCardContent: {
-    fontSize: 13,
+    fontSize: 14,
     marginBottom: 0,
     marginTop: 0
   },

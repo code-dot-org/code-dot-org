@@ -7,15 +7,12 @@ import {
   setColumnsByDataType,
   getCurrentColumnData,
   addSelectedFeature,
-  removeSelectedFeature,
-  setCurrentColumn
+  removeSelectedFeature
 } from "../redux";
 import { ColumnTypes, styles, UNIQUE_OPTIONS_MAX } from "../constants.js";
 import { Bar } from "react-chartjs-2";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const barData = {
   labels: [],
@@ -53,7 +50,6 @@ class ColumnInspector extends Component {
     setLabelColumn: PropTypes.func.isRequired,
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
-    setCurrentColumn: PropTypes.func,
     currentPanel: PropTypes.string,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array
@@ -80,10 +76,6 @@ class ColumnInspector extends Component {
 
   removeFeature = () => {
     this.props.removeSelectedFeature(this.props.currentColumnData.id);
-  };
-
-  onClose = () => {
-    this.props.setCurrentColumn(undefined);
   };
 
   render() {
@@ -116,19 +108,15 @@ class ColumnInspector extends Component {
             ...styles.rightPanel
           }}
         >
+          <div style={styles.largeText}>{currentColumnData.id}</div>
           <div style={styles.scrollableContents}>
             <div style={styles.scrollingContents}>
-              <div onClick={this.onClose} style={styles.popupClose}>
-                <FontAwesomeIcon icon={faTimes} />
-              </div>
-              <div style={styles.largeText}>{currentColumnData.id}</div>
               <form>
                 <div>
                   <label>
-                    <div>Data Type:</div>
-                    {currentColumnData.readOnly && (
-                      <div> {currentColumnData.dataType} </div>
-                    )}
+                    <span style={styles.bold}>Data Type:</span>
+                    &nbsp;
+                    {currentColumnData.readOnly && currentColumnData.dataType}
                     {!currentColumnData.readOnly && (
                       <select
                         onChange={event =>
@@ -148,6 +136,8 @@ class ColumnInspector extends Component {
                     {currentColumnData.description && (
                       <div>
                         <br />
+                        <span style={styles.bold}>Description:</span>
+                        &nbsp;
                         <div>{currentColumnData.description}</div>
                         <br />
                       </div>
@@ -157,6 +147,8 @@ class ColumnInspector extends Component {
                   {currentPanel === "dataDisplayLabel" &&
                     currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
                       <div>
+                        <div style={styles.bold}>Column information:</div>
+
                         {barData.labels.length <= maxLabelsInHistogram && (
                           <Bar
                             data={barData}
@@ -186,6 +178,7 @@ class ColumnInspector extends Component {
                     <div>
                       {currentColumnData.extrema && (
                         <div>
+                          <div style={styles.bold}>Column information:</div>
                           {isNaN(currentColumnData.extrema.min) && (
                             <p style={styles.error}>
                               Numerical columns should contain only numbers.
@@ -197,54 +190,51 @@ class ColumnInspector extends Component {
                               <br />
                               max: {currentColumnData.extrema.max}
                               <br />
-                              range:{" "}
-                              {currentColumnData.extrema.range}
+                              range: {currentColumnData.extrema.range}
                             </div>
                           )}
                         </div>
                       )}
                     </div>
                   )}
-                  <br />
-                  <br />
                 </div>
               </form>
-
-              {currentPanel === "dataDisplayLabel" &&
-                currentColumnData.id !== labelColumn &&
-                !currentColumnData.hasTooManyUniqueOptions && (
-                  <button
-                    type="button"
-                    onClick={e =>
-                      this.setPredictColumn(e, currentColumnData.id)
-                    }
-                    style={styles.selectLabelButton}
-                  >
-                    Select label
-                  </button>
-                )}
-
-              {currentPanel === "dataDisplayFeatures" &&
-                !selectedFeatures.includes(currentColumnData.id) &&
-                !currentColumnData.hasTooManyUniqueOptions && (
-                  <button
-                    type="button"
-                    onClick={e => this.addFeature(e, currentColumnData.id)}
-                    style={styles.selectFeaturesButton}
-                  >
-                    Add feature
-                  </button>
-                )}
-
-                {currentColumnData.hasTooManyUniqueOptions && (
-                  <span>
-                    Categorical columns with more than {UNIQUE_OPTIONS_MAX}
-                    {" "} unique values can not be selected as the label or a
-                    {" "} feature.
-                  </span>
-                )}
             </div>
           </div>
+
+          {currentPanel === "dataDisplayLabel" &&
+            currentColumnData.id !== labelColumn &&
+            !currentColumnData.hasTooManyUniqueOptions && (
+              <button
+                type="button"
+                onClick={e => this.setPredictColumn(e, currentColumnData.id)}
+                style={styles.selectLabelButton}
+              >
+                Select label
+              </button>
+            )}
+
+          {currentPanel === "dataDisplayFeatures" &&
+            !selectedFeatures.includes(currentColumnData.id) &&
+            !currentColumnData.hasTooManyUniqueOptions && (
+              <button
+                type="button"
+                onClick={e => this.addFeature(e, currentColumnData.id)}
+                style={styles.selectFeaturesButton}
+              >
+                Add feature
+              </button>
+            )}
+
+          {currentColumnData.hasTooManyUniqueOptions && (
+            <div>
+              <span style={styles.bold}>Note:</span>
+              &nbsp; Categorical columns with more than {
+                UNIQUE_OPTIONS_MAX
+              }{" "}
+              unique values can not be selected as the label or a feature.
+            </div>
+          )}
         </div>
       )
     );
@@ -270,9 +260,6 @@ export default connect(
     },
     removeSelectedFeature(labelColumn) {
       dispatch(removeSelectedFeature(labelColumn));
-    },
-    setCurrentColumn(column) {
-      dispatch(setCurrentColumn(column));
     }
   })
 )(ColumnInspector);

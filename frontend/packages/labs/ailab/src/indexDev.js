@@ -76,8 +76,14 @@ function setInstructionsKeyStub(instructionsKey, options) {
   const element = document.getElementById("instructions");
 
   element.innerText =
-    instructionsKey + (!options.showOverlay ? " (no overlay)" : "");
-  element.onclick = instructionsDismissed;
+    instructionsKey + (options.showOverlay ? " (click to dismiss overlay)" : " (no overlay)");
+
+  element.onclick = () => {
+    if (options.showOverlay) {
+      element.innerText = instructionsKey + " (overlay dismissed)";
+    }
+    instructionsDismissed();
+  };
 }
 
 // Initialize the app.
