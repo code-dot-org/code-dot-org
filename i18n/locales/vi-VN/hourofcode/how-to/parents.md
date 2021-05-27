@@ -29,7 +29,7 @@ Có vô số [hoạt động Giờ lập trình](https://hourofcode.com/us/learn
 Tất cả các hoạt động của chúng tôi đều tích hợp kỹ năng giải quyết vấn đề và tư duy phản biện cùng sự vui vẻ và sáng tạo, nhưng đây là một số hoạt động yêu thích của học sinh:
 
 - Dành cho trẻ thích vui chơi: [Minecraft](https://code.org/minecraft) hoặc [Bữa tiệc khiêu vũ](https://code.org/dance)
-- Dành cho trẻ yêu thích Disney: [Chiến tranh giữa các vì sao](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1) hoặc [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - Dành cho trẻ thích khám phá: [Trí tuệ nhân tạo cho đại dương](https://code.org/oceans) or [Sáng tác nhạc với Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>Thiết bị yếu hoặc không có thiết bị?</h3>
