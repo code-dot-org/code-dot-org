@@ -940,6 +940,23 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
   end
 
+  test 'clone with suffix copies level concept difficulty' do
+    level_1 = create :level, name: 'level 1'
+    level_1.assign_attributes(
+      'level_concept_difficulty' => {'sequencing' => 3, 'debugging' => 5}
+    )
+
+    refute_nil level_1.level_concept_difficulty
+    assert_equal 3, level_1.level_concept_difficulty.sequencing
+    assert_equal 5, level_1.level_concept_difficulty.debugging
+
+    level_1_copy = level_1.clone_with_suffix(' copy')
+
+    refute_nil level_1_copy.level_concept_difficulty
+    assert_equal 3, level_1_copy.level_concept_difficulty.sequencing
+    assert_equal 5, level_1_copy.level_concept_difficulty.debugging
+  end
+
   test 'clone with suffix sets editor experiment' do
     old_level = create :level, name: 'old level'
     new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')

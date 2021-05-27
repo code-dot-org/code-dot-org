@@ -41,8 +41,7 @@ class CourseEditor extends Component {
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
     useMigratedResources: PropTypes.bool.isRequired,
     courseVersionId: PropTypes.number,
-    coursePath: PropTypes.string,
-
+    coursePath: PropTypes.string.isRequired,
     // Provided by redux
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape)
@@ -91,6 +90,10 @@ class CourseEditor extends Component {
 
   handleUpdateAnnouncements = newAnnouncements => {
     this.setState({announcements: newAnnouncements});
+  };
+
+  handleView = () => {
+    navigateToHref(linkWithQueryParams(this.props.coursePath));
   };
 
   handleSave = (event, shouldCloseAfterSave) => {
@@ -363,6 +366,7 @@ class CourseEditor extends Component {
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
+          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}
