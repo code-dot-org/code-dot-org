@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-19 17:29:54 UTC",
+    "serialized_at": "2021-05-27 13:03:00 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -6361,7 +6361,7 @@
     {
       "key": "inheritance",
       "word": "Inheritance",
-      "definition": "Relationship between classes to share and reuse code",
+      "definition": "A object-oriented programming principle where a subclass inherits the instance variables and methods of a superclass",
       "properties": {
       },
       "seeding_key": {
