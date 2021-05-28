@@ -8,6 +8,7 @@ export const CsaViewMode = {
 
 export const WebSocketMessageType = {
   NEIGHBORHOOD: 'NEIGHBORHOOD',
+  THEATER: 'THEATER',
   SYSTEM_OUT: 'SYSTEM_OUT',
   EXCEPTION: 'EXCEPTION',
   DEBUBG: 'DEBUG'
