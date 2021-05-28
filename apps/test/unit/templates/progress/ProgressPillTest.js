@@ -90,14 +90,15 @@ describe('ProgressPill', () => {
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[assessmentLevel]} />
     );
-    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(1);
+    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(1);
+    expect(wrapper.find('BubbleBadge').props().type).to.equal('assessment');
   });
 
   it('does not have an assessment icon when single level is not assessment', () => {
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[unpluggedLevel]} />
     );
-    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
+    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(0);
   });
 
   it('does not have an assessment icon when multiple assessment levels', () => {
@@ -107,6 +108,6 @@ describe('ProgressPill', () => {
         levels={[assessmentLevel, assessmentLevel]}
       />
     );
-    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
+    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(0);
   });
 });
