@@ -38,7 +38,8 @@ describe('FoormEntityEditor in Form editing mode', () => {
     const HeaderTitle = React.createElement('h1', null, 'A title');
     const SaveBar = React.createElement(FoormFormSaveBar, {
       resetCodeMirror: () => {},
-      formCategories: ['surveys/pd', 'surveys/teacher']
+      formCategories: ['surveys/pd', 'surveys/teacher'],
+      isLatestVersion: true
     });
 
     defaultProps = {
