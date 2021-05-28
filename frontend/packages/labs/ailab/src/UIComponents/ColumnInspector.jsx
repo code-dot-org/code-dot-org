@@ -111,94 +111,87 @@ class ColumnInspector extends Component {
           <div style={styles.largeText}>{currentColumnData.id}</div>
           <div style={styles.scrollableContents}>
             <div style={styles.scrollingContents}>
-              <form>
-                <div>
-                  <label>
-                    <span style={styles.bold}>Data Type:</span>
+              <div>
+                <span style={styles.bold}>Data Type:</span>
+                &nbsp;
+                {currentColumnData.readOnly && currentColumnData.dataType}
+                {!currentColumnData.readOnly && (
+                  <select
+                    onChange={event =>
+                      this.handleChangeDataType(event, currentColumnData.id)
+                    }
+                    value={currentColumnData.dataType}
+                  >
+                    {Object.values(ColumnTypes).map((option, index) => {
+                      return (
+                        <option key={index} value={option}>
+                          {option}
+                        </option>
+                      );
+                    })}
+                  </select>
+                )}
+                {currentColumnData.description && (
+                  <div>
+                    <br />
+                    <span style={styles.bold}>Description:</span>
                     &nbsp;
-                    {currentColumnData.readOnly && currentColumnData.dataType}
-                    {!currentColumnData.readOnly && (
-                      <select
-                        onChange={event =>
-                          this.handleChangeDataType(event, currentColumnData.id)
-                        }
-                        value={currentColumnData.dataType}
-                      >
-                        {Object.values(ColumnTypes).map((option, index) => {
-                          return (
-                            <option key={index} value={option}>
-                              {option}
-                            </option>
-                          );
-                        })}
-                      </select>
-                    )}
-                    {currentColumnData.description && (
-                      <div>
-                        <br />
-                        <span style={styles.bold}>Description:</span>
-                        &nbsp;
-                        <div>{currentColumnData.description}</div>
-                        <br />
-                      </div>
-                    )}
-                  </label>
-
-                  {currentPanel === "dataDisplayLabel" &&
-                    currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
-                      <div>
-                        <div style={styles.bold}>Column information:</div>
-
-                        {barData.labels.length <= maxLabelsInHistogram && (
-                          <Bar
-                            data={barData}
-                            width={100}
-                            height={150}
-                            options={chartOptions}
-                          />
-                        )}
-                        {barData.labels.length > maxLabelsInHistogram && (
-                          <div>
-                            {barData.labels.length} values were found in this
-                            column. A graph is only shown when there are{" "}
-                            {maxLabelsInHistogram} or fewer.
-                          </div>
-                        )}
-                      </div>
-                    )}
-
-                  {currentPanel === "dataDisplayFeatures" && (
+                    <div>{currentColumnData.description}</div>
+                    <br />
+                  </div>
+                )}
+                {currentPanel === "dataDisplayLabel" &&
+                  currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
                     <div>
-                      <ScatterPlot />
-                      <CrossTab />
-                    </div>
-                  )}
+                      <div style={styles.bold}>Column information:</div>
 
-                  {currentColumnData.dataType === ColumnTypes.NUMERICAL && (
-                    <div>
-                      {currentColumnData.extrema && (
+                      {barData.labels.length <= maxLabelsInHistogram && (
+                        <Bar
+                          data={barData}
+                          width={100}
+                          height={150}
+                          options={chartOptions}
+                        />
+                      )}
+                      {barData.labels.length > maxLabelsInHistogram && (
                         <div>
-                          <div style={styles.bold}>Column information:</div>
-                          {isNaN(currentColumnData.extrema.min) && (
-                            <p style={styles.error}>
-                              Numerical columns should contain only numbers.
-                            </p>
-                          )}
-                          {!isNaN(currentColumnData.extrema.min) && (
-                            <div style={styles.contents}>
-                              min: {currentColumnData.extrema.min}
-                              <br />
-                              max: {currentColumnData.extrema.max}
-                              <br />
-                              range: {currentColumnData.extrema.range}
-                            </div>
-                          )}
+                          {barData.labels.length} values were found in this
+                          column. A graph is only shown when there are{" "}
+                          {maxLabelsInHistogram} or fewer.
                         </div>
                       )}
                     </div>
                   )}
-                </div>
-              </form>
+                {currentPanel === "dataDisplayFeatures" && (
+                  <div>
+                    <ScatterPlot />
+                    <CrossTab />
+                  </div>
+                )}
+                {currentColumnData.dataType === ColumnTypes.NUMERICAL && (
+                  <div>
+                    {currentColumnData.extrema && (
+                      <div>
+                        <div style={styles.bold}>Column information:</div>
+                        {isNaN(currentColumnData.extrema.min) && (
+                          <p style={styles.error}>
+                            Numerical columns should contain only numbers.
+                          </p>
+                        )}
+                        {!isNaN(currentColumnData.extrema.min) && (
+                          <div style={styles.contents}>
+                            min: {currentColumnData.extrema.min}
+                            <br />
+                            max: {currentColumnData.extrema.max}
+                            <br />
+                            range: {currentColumnData.extrema.range}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
