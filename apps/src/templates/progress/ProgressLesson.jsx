@@ -127,6 +127,7 @@ class ProgressLesson extends React.Component {
     const lessonUrl = levels[0] && levels[0].url;
     return (
       <div
+        className="uitest-progress-lesson"
         style={{
           ...styles.outer,
           ...((hiddenForStudents || showAsLocked) && styles.hiddenOrLocked)

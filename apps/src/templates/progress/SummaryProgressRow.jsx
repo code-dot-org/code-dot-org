@@ -117,6 +117,7 @@ class SummaryProgressRow extends React.Component {
     const lockedTooltipId = _.uniqueId();
     return (
       <tr
+        className="uitest-summary-progress-row"
         style={{
           ...(!dark && styles.lightRow),
           ...(dark && styles.darkRow),

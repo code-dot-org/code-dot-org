@@ -153,7 +153,7 @@ export const PaneButton = Radium(function(props) {
   let iconStyle = {
     ...styles.headerButtonIcon,
     ...(props.isRtl && styles.headerButtonIconRtl),
-    ...(!props.iconClass && styles.headerButtonIconHidden)
+    ...(!props.iconClass && !props.hiddenImage && styles.headerButtonIconHidden)
   };
 
   const label = props.isPressed ? props.pressedLabel : props.label;
