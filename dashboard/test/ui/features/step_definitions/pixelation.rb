@@ -1,7 +1,7 @@
 When /^I am on the (\d+)(?:st|nd|rd|th) pixelation test level$/ do |level_num|
-  pixelation_stage = 17
+  pixelation_lesson = 17
   steps %{
-    Given I am on "http://studio.code.org/s/allthethings/lessons/#{pixelation_stage}/levels/#{level_num}?noautoplay=true"
+    Given I am on "http://studio.code.org/s/allthethings/lessons/#{pixelation_lesson}/levels/#{level_num}?noautoplay=true"
     And I wait to see a visible dialog with title containing "Puzzle #{level_num}"
     And I close the dialog
     And I wait until pixelation data loads
