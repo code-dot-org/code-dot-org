@@ -556,7 +556,7 @@ describe('teacherSectionsRedux', () => {
         loginType: undefined,
         grade: '',
         providerManaged: false,
-        stageExtras: true,
+        lessonExtras: true,
         ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
@@ -583,7 +583,7 @@ describe('teacherSectionsRedux', () => {
         grade: '11',
         providerManaged: false,
         code: 'DWGMFX',
-        stageExtras: false,
+        lessonExtras: false,
         ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
@@ -667,13 +667,13 @@ describe('teacherSectionsRedux', () => {
         setValidAssignments(validCourses, validScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 1}));
-      expect(state.sectionBeingEdited.stageExtras).to.equal(false);
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(false);
 
       state = reducer(state, editSectionProperties({scriptId: 36}));
-      expect(state.sectionBeingEdited.stageExtras).to.equal(true);
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
 
       state = reducer(state, editSectionProperties({scriptId: 37}));
-      expect(state.sectionBeingEdited.stageExtras).to.equal(true);
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
     });
 
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
@@ -873,7 +873,7 @@ describe('teacherSectionsRedux', () => {
           loginType: 'picture',
           grade: '3',
           providerManaged: false,
-          stageExtras: false,
+          lessonExtras: false,
           ttsAutoplayEnabled: false,
           pairingAllowed: true,
           sharingDisabled: undefined,
@@ -1181,7 +1181,7 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.login_type, serverSection.loginType);
       assert.strictEqual(section.grade, serverSection.grade);
       assert.strictEqual(section.code, serverSection.code);
-      assert.strictEqual(section.lesson_extras, serverSection.stageExtras);
+      assert.strictEqual(section.lesson_extras, serverSection.lessonExtras);
       assert.strictEqual(
         section.tts_autoplay_enabled,
         serverSection.ttsAutoplayEnabled

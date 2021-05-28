@@ -24871,7 +24871,7 @@ pt:
               name: Big Data, Crowdsourcing, e aprendizado de máquina
             Machine Learning and Bias:
               key: Aprendizado de máquina e tendencia
-              name: Aprendizado de máquina e tendencia
+              name: Máquina de aprendizado
             Project - Tell a Data Story - Part 1:
               key: Projeto - Conte uma História de Dados - Parte 1
               name: Projeto - Conte uma História de Dados - Parte 1
@@ -26136,7 +26136,7 @@ pt:
                 que o programa encontra.
             While Loops with the Farmer:
               key: While Loops com o agricultor
-              name: While Loops com o agricultor
+              name: Laços Enquanto no Fazendeiro
               description_student: 'Laços são muito úteis na codificação. Esta lição
                 ensinará sobre um novo tipo de laço: laços enquanto!'
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -26192,8 +26192,8 @@ pt:
             Variables with Artist:
               key: Variáveis com Artist
               name: Variáveis com Artist
-              description_student: Não se esqueça de trazer criatividade para a aula!
-                Nestes quebra-cabeças, você fará desenhos fantásticos usando variáveis.
+              description_student: Nesta lição, você fará desenhos usando variáveis
+                ​​que mudam à medida que o programa é executado.
               description_teacher: Nesta lição, os alunos explorarão a criação de
                 designs repetitivos usando variáveis ​​no ambiente do Artist. Os alunos
                 aprenderão como as variáveis ​​podem ser usadas para tornar o código
@@ -26286,6 +26286,8 @@ pt:
               description_teacher: Nesta lição, os alunos irão programar sua própria
                 festa de dança interativa. Esta atividade requer som, pois a ferramenta
                 foi criada para responder à música.
+            lesson-3:
+              name: Sprites em Ação
           lesson_groups:
             csf_warmup:
               display_name: Aquecimento
@@ -26304,7 +26306,7 @@ pt:
             csf_sprites:
               display_name: Sprite
             lessonGroup-9:
-              display_name: Aquecimento
+              display_name: Eventos
           student_description: Aprenda o básixo de Ciências da Computação e segurança
             na internet. No final deste curso, você irá irá seu próprio jogo ou história,
             que poderá ser compartilhada.
@@ -26727,6 +26729,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            Designing With Empathy:
+              name: Análise de Design
             Build a Paper Prototype:
               name: Protótipos de papel
             Digital Mode in App Lab:
@@ -27100,6 +27104,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Teste
         csa2-pilot:
           lessons:
             lesson-15:
@@ -27204,3 +27210,7 @@ pt:
             agregados anônimos para toda a turma. Os resultados são vitais para o
             seu professor e para o Code.org sustentar e melhorar o curso. Obrigado
             pelo seu tempo e consideração.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lição 15

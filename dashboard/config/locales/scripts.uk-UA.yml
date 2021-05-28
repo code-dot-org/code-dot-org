@@ -5366,6 +5366,10 @@ uk:
               display_name: Параметри і значення, які повертаються
             csp_libraries:
               display_name: Бібліотеки
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: Машинне навчання
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
@@ -5553,6 +5557,8 @@ uk:
               name: Танцювальна вечірка
             lesson-1:
               name: Танцювальна вечірка
+            lesson-3:
+              name: Спрайт в Дії
           lesson_groups:
             csf_warmup:
               display_name: Розминка
@@ -5571,7 +5577,7 @@ uk:
             csf_sprites:
               display_name: Спрайти
             lessonGroup-9:
-              display_name: Розминка
+              display_name: Події
         pre-express-2021:
           description_audience: 'Вік: 4-8'
           lesson_groups:
@@ -5713,3 +5719,7 @@ uk:
           lesson_groups:
             cspSurvey2020:
               display_name: Опитування
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Урок 15

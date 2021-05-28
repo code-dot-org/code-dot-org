@@ -16332,7 +16332,7 @@ pt:
               name: Big Data, Crowdsourcing, e aprendizado de máquina
             Machine Learning and Bias:
               key: Aprendizado de máquina e tendencia
-              name: Aprendizado de máquina e tendencia
+              name: Máquina de aprendizado
             Project - Tell a Data Story - Part 1:
               key: Projeto - Conte uma História de Dados - Parte 1
               name: Projeto - Conte uma História de Dados - Parte 1
@@ -17069,7 +17069,7 @@ pt:
               description_teacher: Até esse momento, os alunos escreviam um código que é executado exatamente da mesma maneira cada vez que é executado - confiável, mas não muito flexível. Nesta lição, sua classe começará a codificar com condicionais, permitindo que eles escrevam códigos que funcionem de maneira diferente, dependendo das condições específicas que o programa encontra.
             While Loops with the Farmer:
               key: While Loops com o agricultor
-              name: While Loops com o agricultor
+              name: Laços Enquanto no Fazendeiro
               description_student: 'Laços são muito úteis na codificação. Esta lição ensinará sobre um novo tipo de laço: laços enquanto!'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Condicionais no Minecraft: Viagem Aquática'
@@ -17104,7 +17104,7 @@ pt:
             Variables with Artist:
               key: Variáveis com Artist
               name: Variáveis com Artist
-              description_student: Não se esqueça de trazer criatividade para a aula! Nestes quebra-cabeças, você fará desenhos fantásticos usando variáveis.
+              description_student: Nesta lição, você fará desenhos usando variáveis ​​que mudam à medida que o programa é executado.
               description_teacher: Nesta lição, os alunos explorarão a criação de designs repetitivos usando variáveis ​​no ambiente do Artist. Os alunos aprenderão como as variáveis ​​podem ser usadas para tornar o código mais fácil de escrever e mais fácil de ler. Após quebra-cabeças guiados, os alunos terminam em um nível de freeplay para mostrar o que aprenderam e criar seus próprios designs.
             Changing Variables with Bee:
               key: Alterando variáveis ​​com abelha
@@ -17152,6 +17152,8 @@ pt:
               name: Festa dançante
               description_student: Hora de celebrar! Nesta lição, você programa sua própria festa de dança interativa.
               description_teacher: Nesta lição, os alunos irão programar sua própria festa de dança interativa. Esta atividade requer som, pois a ferramenta foi criada para responder à música.
+            lesson-3:
+              name: Sprites em Ação
           lesson_groups:
             csf_warmup:
               display_name: Aquecimento
@@ -17170,7 +17172,7 @@ pt:
             csf_sprites:
               display_name: Sprite
             lessonGroup-9:
-              display_name: Aquecimento
+              display_name: Eventos
           student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         pre-express-2021:
           title: Pré-leitor Express (2019)
@@ -17349,6 +17351,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            Designing With Empathy:
+              name: Análise de Design
             Build a Paper Prototype:
               name: Protótipos de papel
             Digital Mode in App Lab:
@@ -17474,6 +17478,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Teste
         csa2-pilot:
           lessons:
             lesson-15:
@@ -17560,3 +17566,7 @@ pt:
           description_short: Pesquisa pós-curso do estudante
           description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da CC do Code.org. Esta pesquisa leva cerca de 15 minutos para ser concluída. Suas respostas são privadas e anônimas - seu professor pode ver resultados agregados anônimos para toda a turma. Os resultados são vitais para o seu professor e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo e consideração.
           student_description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da CC do Code.org. Esta pesquisa leva cerca de 15 minutos para ser concluída. Suas respostas são privadas e anônimas - seu professor pode ver resultados agregados anônimos para toda a turma. Os resultados são vitais para o seu professor e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo e consideração.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lição 15

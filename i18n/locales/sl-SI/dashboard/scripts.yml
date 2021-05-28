@@ -2133,6 +2133,8 @@ sl:
               display_name: Funkcije
             csf_variables:
               display_name: Spremenljivke
+            lessonGroup-9:
+              display_name: Dogodki
         pre-express-2021:
           lesson_groups:
             csf_loops:

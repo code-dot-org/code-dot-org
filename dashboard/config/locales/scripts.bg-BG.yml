@@ -3900,6 +3900,8 @@ bg:
               display_name: Променливи
             csf_for_loops:
               display_name: За циклите
+            lessonGroup-9:
+              display_name: Събития
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -3973,3 +3975,7 @@ bg:
           lesson_groups:
             cspSurvey2020:
               display_name: Проучване
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Урок 15

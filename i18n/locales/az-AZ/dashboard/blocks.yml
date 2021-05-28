@@ -364,6 +364,8 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
             '"speed"': sürət
       gamelab_checkTouching:
         options:
@@ -374,6 +376,8 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
             '"speed"': sürət
       gamelab_getThisSprite:
         options:
@@ -476,6 +480,8 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
             '"speed"': sürət
       gamelab_setProp_dropdown:
         options:
@@ -524,6 +530,8 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -539,6 +547,8 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_groupChangeAnim:
         options:
           SELECT:
@@ -549,6 +559,8 @@ az:
             '"all"': bütün
           PROPERTY:
             '"scale"': ölçü
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -568,6 +580,8 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_groupRemoveAllBehaviors:
         options:
           SELECT:
@@ -586,6 +600,8 @@ az:
             '"all"': bütün
           PROPERTY:
             '"scale"': ölçü
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_groupSetTint:
         options:
           SELECT:
@@ -607,6 +623,8 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"x"': x mövqeyi
+            '"y"': y mövqeyi
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -652,11 +670,6 @@ az:
             '"down"': aşağıya ox
             '"left"': sola ox
             '"right"': sağa ox
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': kənar
-            '"random"': təsadüfi
       RyanLab_moveForward:
         text: irəli get
       RyanLab_turnLeft:

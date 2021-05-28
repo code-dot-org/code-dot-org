@@ -2162,6 +2162,8 @@ sr:
               display_name: Променљиве
             csf_for_loops:
               display_name: Бројачке петље
+            lessonGroup-9:
+              display_name: Догађаји
         pre-express-2021:
           lesson_groups:
             csf_loops:

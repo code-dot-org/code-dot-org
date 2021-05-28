@@ -1110,13 +1110,6 @@ et:
             '"down"': nool alla
             '"left"': nool vasakule
             '"right"': nool paremale
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': ruudustikus
-            '"border"': piir
-            '"row"': rida
-            '"random"': juhuslik
       RyanLab_moveForward:
         text: liigu edasi
       RyanLab_turnLeft:

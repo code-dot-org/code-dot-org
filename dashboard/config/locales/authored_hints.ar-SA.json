@@ -1301,12 +1301,12 @@
           "courseA_artist_loops2_b": "استخدم هذه القطع البرمجية <xml><block type=\"simple_move_right\"/></xml> لفك هذا اللغز."
         },
         "courseA_artist_loops2_2019": {
-          "courseA_artist_loops2_a": "لا يمكنك معرفة كيفية سحب خط؟ ابدأ بإلحاق قطع برمجية بالقطعة البرمجي [blockly block][0] لترى ماذا يحدث.\n",
-          "courseA_artist_loops2_b": "استخدم هذه القطع البرمجية [blockly block][0] لفك هذا اللغز.\n"
+          "courseA_artist_loops2_a": "لا يمكنك معرفة كيفية سحب خط؟ ابدأ بإلحاق قطع برمجية بالقطعة البرمجي <xml><block type=\"when_run\"/></xml> لترى ماذا يحدث.",
+          "courseA_artist_loops2_b": "استخدم هذه القطع البرمجية <xml><block type=\"simple_move_right\"/></xml> لفك هذا اللغز."
         },
         "courseA_artist_loops2_2020": {
-          "courseA_artist_loops2_a": "لا يمكنك معرفة كيفية سحب خط؟ ابدأ بإلحاق قطع برمجية بالقطعة البرمجي [blockly block][0] لترى ماذا يحدث.\n",
-          "courseA_artist_loops2_b": "استخدم هذه القطع البرمجية [blockly block][0] لفك هذا اللغز.\n"
+          "courseA_artist_loops2_a": "لا يمكنك معرفة كيفية سحب خط؟ ابدأ بإلحاق قطع برمجية بالقطعة البرمجي <xml><block type=\"when_run\"/></xml> لترى ماذا يحدث.",
+          "courseA_artist_loops2_b": "استخدم هذه القطع البرمجية <xml><block type=\"simple_move_right\"/></xml> لفك هذا اللغز."
         },
         "courseA_artist_loops3": {
           "courseA_artist_loops3_a": "تتبَّع ببطء من خلال البرنامج باصبعك لترى أين حصل الخطأ.",
@@ -1317,12 +1317,12 @@
           "courseA_artist_loops3_b": "\"يجب أن ترغب في استعمال قطعة برمجية كهذه لحلّ هذا اللغز.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)\""
         },
         "courseA_artist_loops3_2019": {
-          "courseA_artist_loops3_a": "تتبَّع ببطء من خلال البرنامج باصبعك لترى أين حصل الخطأ.\n",
-          "courseA_artist_loops3_b": "\"يجب أن ترغب في استعمال قطعة برمجية كهذه لحلّ هذا اللغز.\n\n[][0]\"\n"
+          "courseA_artist_loops3_a": "تتبَّع ببطء من خلال البرنامج باصبعك لترى أين حصل الخطأ.",
+          "courseA_artist_loops3_b": "\"يجب أن ترغب في استعمال قطعة برمجية كهذه لحلّ هذا اللغز.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)\""
         },
         "courseA_artist_loops3_2020": {
-          "courseA_artist_loops3_a": "تتبَّع ببطء من خلال البرنامج باصبعك لترى أين حصل الخطأ.\n",
-          "courseA_artist_loops3_b": "\"يجب أن ترغب في استعمال قطعة برمجية كهذه لحلّ هذا اللغز.\n\n[][0]\"\n"
+          "courseA_artist_loops3_a": "تتبَّع ببطء من خلال البرنامج باصبعك لترى أين حصل الخطأ.",
+          "courseA_artist_loops3_b": "\"يجب أن ترغب في استعمال قطعة برمجية كهذه لحلّ هذا اللغز.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)\""
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "إذا أردت الحلقة أن تتكرر أكثر من 4 مرات، يمكنك تغيير الرقم في أعلى حلقة التكرار.",
@@ -1334,11 +1334,11 @@
         },
         "courseA_artist_loops4_2019": {
           "courseA_artist_loops4_a": "إذا أردت الحلقة أن تتكرر أكثر من 4 مرات، يمكنك تغيير الرقم في أعلى حلقة التكرار.",
-          "courseA_artist_loops4_b": "\"طالما أنه يمكنك استخدام القطعة [blockly block][0] مرّة واحد فقط\n\nحاول وضعها داخل حلقة [blockly block][1].\"\n"
+          "courseA_artist_loops4_b": "\"طالما أنه يمكنك استخدام القطعة <xml><block type=\"simple_move_right\"/></xml> مرّة واحد فقط\n\nحاول وضعها داخل حلقة <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>.\""
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "إذا أردت الحلقة أن تتكرر أكثر من 4 مرات، يمكنك تغيير الرقم في أعلى حلقة التكرار.",
-          "courseA_artist_loops4_b": "\"طالما أنه يمكنك استخدام القطعة [blockly block][0] مرّة واحد فقط\n\nحاول وضعها داخل حلقة [blockly block][1].\"\n"
+          "courseA_artist_loops4_b": "\"طالما أنه يمكنك استخدام القطعة <xml><block type=\"simple_move_right\"/></xml> مرّة واحد فقط\n\nحاول وضعها داخل حلقة <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>.\""
         },
         "courseA_artist_loops5": {
           "courseA_artist_loops5_a": "استخدم ما تعلمته عن القطع البرمجية <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> لتكملة هذا اللغز!",
@@ -1351,14 +1351,14 @@
           "courseA_artist_loops5_c": "\"طالما أنه يمكنك استخدام القطعة البرمجية <xml><block type=\"simple_move_right\"/></xml> مرة واحد فقط،\n\nحاول وضعها داخل حلقة\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>.\""
         },
         "courseA_artist_loops5_2019": {
-          "courseA_artist_loops5_a": "استخدم ما تعلمته عن القطع البرمجية [blockly block][0] لتكملة هذا اللغز!\n",
+          "courseA_artist_loops5_a": "استخدم ما تعلمته عن القطع البرمجية <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> لتكملة هذا اللغز!",
           "courseA_artist_loops5_b": "إذا أردت الحلقة أن تتكرر أكثر من 4 مرات، يمكنك تغيير الرقم في أعلى حلقة التكرار.",
-          "courseA_artist_loops5_c": "\"طالما أنه يمكنك استخدام القطعة البرمجية [blockly block][0] مرة واحد فقط،\n\nحاول وضعها داخل حلقة\n\n[blockly block][1].\"\n"
+          "courseA_artist_loops5_c": "\"طالما أنه يمكنك استخدام القطعة البرمجية <xml><block type=\"simple_move_right\"/></xml> مرة واحد فقط،\n\nحاول وضعها داخل حلقة\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>.\""
         },
         "courseA_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "استخدم ما تعلمته عن القطع البرمجية [blockly block][0] لتكملة هذا اللغز!\n",
+          "courseA_artist_loops5_a": "استخدم ما تعلمته عن القطع البرمجية <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> لتكملة هذا اللغز!",
           "courseA_artist_loops5_b": "إذا أردت الحلقة أن تتكرر أكثر من 4 مرات، يمكنك تغيير الرقم في أعلى حلقة التكرار.",
-          "courseA_artist_loops5_c": "\"طالما أنه يمكنك استخدام القطعة البرمجية [blockly block][0] مرة واحد فقط،\n\nحاول وضعها داخل حلقة\n\n[blockly block][1].\"\n"
+          "courseA_artist_loops5_c": "\"طالما أنه يمكنك استخدام القطعة البرمجية <xml><block type=\"simple_move_right\"/></xml> مرة واحد فقط،\n\nحاول وضعها داخل حلقة\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>.\""
         },
         "courseA_artist_loops6": {
           "courseA_artist_loops6_a": "لا يمكنك معرفة كيفية عمل التلة؟ حاول اللعب بالقطع البرمجية قليلاً لترى ما الذي يرسمه كل منها.",
@@ -1370,11 +1370,11 @@
         },
         "courseA_artist_loops6_2019": {
           "courseA_artist_loops6_a": "لا يمكنك معرفة كيفية عمل التلة؟ حاول اللعب بالقطع البرمجية قليلاً لترى ما الذي يرسمه كل منها.",
-          "courseA_artist_loops6_b": "ستحتاج إلى قطعتين برمجيتين، تشيران إلى اتجاهين لفك هذا اللغز.\n"
+          "courseA_artist_loops6_b": "ستحتاج إلى قطعتين برمجيتين، تشيران إلى اتجاهين لفك هذا اللغز."
         },
         "courseA_artist_loops6_2020": {
           "courseA_artist_loops6_a": "لا يمكنك معرفة كيفية عمل التلة؟ حاول اللعب بالقطع البرمجية قليلاً لترى ما الذي يرسمه كل منها.",
-          "courseA_artist_loops6_b": "ستحتاج إلى قطعتين برمجيتين، تشيران إلى اتجاهين لفك هذا اللغز.\n"
+          "courseA_artist_loops6_b": "ستحتاج إلى قطعتين برمجيتين، تشيران إلى اتجاهين لفك هذا اللغز."
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "لا يمكن معرفة مكان وضع الحلقة؟ \nحاول كتابة الكود خطوة بخطوة وابحث عن نمط.",
@@ -1388,13 +1388,13 @@
         },
         "courseA_artist_loops7_2019": {
           "courseA_artist_loops7_a": "لا يمكن معرفة مكان وضع الحلقة؟ \nحاول كتابة الكود خطوة بخطوة وابحث عن نمط.",
-          "courseA_artist_loops7_b": "اكتب الكود لموجة واحدة فقط، ثم كرر ذلك لرسم الموجتين الأخريين.\n",
-          "courseA_artist_loops7_c": "تذكر أنك تستطيع وضع أكثر من قطعة برمجية واحدة في حلقة [blockly block][0] .\n"
+          "courseA_artist_loops7_b": "اكتب الكود لموجة واحدة فقط، ثم كرر ذلك لرسم الموجتين الأخريين.",
+          "courseA_artist_loops7_c": "تذكر أنك تستطيع وضع أكثر من قطعة برمجية واحدة في حلقة <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> ."
         },
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "لا يمكن معرفة مكان وضع الحلقة؟ \nحاول كتابة الكود خطوة بخطوة وابحث عن نمط.",
-          "courseA_artist_loops7_b": "اكتب الكود لموجة واحدة فقط، ثم كرر ذلك لرسم الموجتين الأخريين.\n",
-          "courseA_artist_loops7_c": "تذكر أنك تستطيع وضع أكثر من قطعة برمجية واحدة في حلقة [blockly block][0] .\n"
+          "courseA_artist_loops7_b": "اكتب الكود لموجة واحدة فقط، ثم كرر ذلك لرسم الموجتين الأخريين.",
+          "courseA_artist_loops7_c": "تذكر أنك تستطيع وضع أكثر من قطعة برمجية واحدة في حلقة <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> ."
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "جرّب تشغيل الكود لترى ماذا كُتب لك.",
@@ -1407,14 +1407,14 @@
           "courseA_artist_loops8_c": "\"ما الذي تفعله الأوامر البرمجية؟\\\nما الذي يفترض فيها أن تعمل؟\\\nما الذي يقول لك ذلك؟\""
         },
         "courseA_artist_loops8_2019": {
-          "courseA_artist_loops8_a": "جرّب تشغيل الكود لترى ماذا كُتب لك.\n",
+          "courseA_artist_loops8_a": "جرّب تشغيل الكود لترى ماذا كُتب لك.",
           "courseA_artist_loops8_b": "كيف يمكنك تكرار الكود الذي تم إعطاؤه لك؟",
-          "courseA_artist_loops8_c": "\"ما الذي تفعله الأوامر البرمجية؟\\\nما الذي يفترض فيها أن تعمل؟\\\nما الذي يقول لك ذلك؟\"\n"
+          "courseA_artist_loops8_c": "\"ما الذي تفعله الأوامر البرمجية؟\\\nما الذي يفترض فيها أن تعمل؟\\\nما الذي يقول لك ذلك؟\""
         },
         "courseA_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "جرّب تشغيل الكود لترى ماذا كُتب لك.\n",
+          "courseA_artist_loops8_a": "جرّب تشغيل الكود لترى ماذا كُتب لك.",
           "courseA_artist_loops8_b": "كيف يمكنك تكرار الكود الذي تم إعطاؤه لك؟",
-          "courseA_artist_loops8_c": "\"ما الذي تفعله الأوامر البرمجية؟\\\nما الذي يفترض فيها أن تعمل؟\\\nما الذي يقول لك ذلك؟\"\n"
+          "courseA_artist_loops8_c": "\"ما الذي تفعله الأوامر البرمجية؟\\\nما الذي يفترض فيها أن تعمل؟\\\nما الذي يقول لك ذلك؟\""
         },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_a": "أضف قطعة برمجية واحدة إلى الكود التي أُعطيتَه لرسم بقية السلالم.",
@@ -1427,13 +1427,13 @@
           "courseA_artist_loops9_c": "إذا تعذر عليك معرفة أين تضع الحلقة؟، حاول كتابة الأوامر البرمجية خطوة بعد خطوة وابحث عن النمط."
         },
         "courseA_artist_loops9_2019": {
-          "courseA_artist_loops9_a": "أضف قطعة برمجية واحدة إلى الكود التي أُعطيتَه لرسم بقية السلالم.\n",
-          "courseA_artist_loops9_b": "\"يجب أن تضع القطعة البرمجية داخل حلقة \n\n[blockly block][0]\"\n",
+          "courseA_artist_loops9_a": "أضف قطعة برمجية واحدة إلى الكود التي أُعطيتَه لرسم بقية السلالم.",
+          "courseA_artist_loops9_b": "\"يجب أن تضع القطعة البرمجية داخل حلقة \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\"",
           "courseA_artist_loops9_c": "إذا تعذر عليك معرفة أين تضع الحلقة؟، حاول كتابة الأوامر البرمجية خطوة بعد خطوة وابحث عن النمط."
         },
         "courseA_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "أضف قطعة برمجية واحدة إلى الكود التي أُعطيتَه لرسم بقية السلالم.\n",
-          "courseA_artist_loops9_b": "\"يجب أن تضع القطعة البرمجية داخل حلقة \n\n[blockly block][0]\"\n",
+          "courseA_artist_loops9_a": "أضف قطعة برمجية واحدة إلى الكود التي أُعطيتَه لرسم بقية السلالم.",
+          "courseA_artist_loops9_b": "\"يجب أن تضع القطعة البرمجية داخل حلقة \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\"",
           "courseA_artist_loops9_c": "إذا تعذر عليك معرفة أين تضع الحلقة؟، حاول كتابة الأوامر البرمجية خطوة بعد خطوة وابحث عن النمط."
         },
         "courseA_artist_loops_challenge2a": {
@@ -1447,14 +1447,14 @@
           "courseA_artist_loops_challenge2_c": "جميع القطع البرمجية يجب أن تكون داخل حلقة لإنهاء هذا اللغز."
         },
         "courseA_artist_loops_challenge2a_2019": {
-          "courseA_artist_loops_challenge2_a": "قطع برمجية كهذه [blockly block][0] ستجعل الفنان يتحرك بصورة مائلة!\n",
-          "courseA_artist_loops_challenge2_b": "عندما تنتهي من خيمة واحدة، \"اقفز\" مرتين للحصول على الخيمة التالية!\n",
-          "courseA_artist_loops_challenge2_c": "جميع القطع البرمجية يجب أن تكون داخل حلقة لإنهاء هذا اللغز.\n"
+          "courseA_artist_loops_challenge2_a": "قطع برمجية كهذه <xml>  <block type=\"simple_move_up_left\"/></xml> ستجعل الفنان يتحرك بصورة مائلة!",
+          "courseA_artist_loops_challenge2_b": "عندما تنتهي من خيمة واحدة، \"اقفز\" مرتين للحصول على الخيمة التالية!",
+          "courseA_artist_loops_challenge2_c": "جميع القطع البرمجية يجب أن تكون داخل حلقة لإنهاء هذا اللغز."
         },
         "courseA_artist_loops_challenge2a_2020": {
-          "courseA_artist_loops_challenge2_a": "قطع برمجية كهذه [blockly block][0] ستجعل الفنان يتحرك بصورة مائلة!\n",
-          "courseA_artist_loops_challenge2_b": "عندما تنتهي من خيمة واحدة، \"اقفز\" مرتين للحصول على الخيمة التالية!\n",
-          "courseA_artist_loops_challenge2_c": "جميع القطع البرمجية يجب أن تكون داخل حلقة لإنهاء هذا اللغز.\n"
+          "courseA_artist_loops_challenge2_a": "قطع برمجية كهذه <xml>  <block type=\"simple_move_up_left\"/></xml> ستجعل الفنان يتحرك بصورة مائلة!",
+          "courseA_artist_loops_challenge2_b": "عندما تنتهي من خيمة واحدة، \"اقفز\" مرتين للحصول على الخيمة التالية!",
+          "courseA_artist_loops_challenge2_c": "جميع القطع البرمجية يجب أن تكون داخل حلقة لإنهاء هذا اللغز."
         },
         "courseA_collector_loops1": {
           "courseA_collector_loops1_a": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n<xml>  <block type=\"collector_collect\"/></xml>\"",
@@ -1465,12 +1465,12 @@
           "courseA_collector_loops1_b": "الحل البسيط يكمن التحرك نحو الشرق مرتين، ثم خذ الكنز."
         },
         "courseA_collector_loops1_2019": {
-          "courseA_collector_loops1_a": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n[blockly block][0]\"\n",
-          "courseA_collector_loops1_b": "الحل البسيط يكمن التحرك نحو الشرق مرتين، ثم خذ الكنز.\n"
+          "courseA_collector_loops1_a": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n<xml>  <block type=\"collector_collect\"/></xml>\"",
+          "courseA_collector_loops1_b": "الحل البسيط يكمن التحرك نحو الشرق مرتين، ثم خذ الكنز."
         },
         "courseA_collector_loops1_2020": {
-          "courseA_collector_loops1_a": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n[blockly block][0]\"\n",
-          "courseA_collector_loops1_b": "الحل البسيط يكمن التحرك نحو الشرق مرتين، ثم خذ الكنز.\n"
+          "courseA_collector_loops1_a": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n<xml>  <block type=\"collector_collect\"/></xml>\"",
+          "courseA_collector_loops1_b": "الحل البسيط يكمن التحرك نحو الشرق مرتين، ثم خذ الكنز."
         },
         "courseA_collector_loops2": {
           "courseA_collector_loops2_a": "يجب أن تتحرك قبل أن تتمكن من جمع أي كنز.",
@@ -1481,12 +1481,12 @@
           "courseA_collector_loops2_b": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n<xml>  <block type=\"collector_collect\"/></xml>\""
         },
         "courseA_collector_loops2_2019": {
-          "courseA_collector_loops2_a": "يجب أن تتحرك قبل أن تتمكن من جمع أي كنز.\n",
-          "courseA_collector_loops2_b": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n[blockly block][0]\"\n"
+          "courseA_collector_loops2_a": "يجب أن تتحرك قبل أن تتمكن من جمع أي كنز.",
+          "courseA_collector_loops2_b": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n<xml>  <block type=\"collector_collect\"/></xml>\""
         },
         "courseA_collector_loops2_2020": {
-          "courseA_collector_loops2_a": "يجب أن تتحرك قبل أن تتمكن من جمع أي كنز.\n",
-          "courseA_collector_loops2_b": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n[blockly block][0]\"\n"
+          "courseA_collector_loops2_a": "يجب أن تتحرك قبل أن تتمكن من جمع أي كنز.",
+          "courseA_collector_loops2_b": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n<xml>  <block type=\"collector_collect\"/></xml>\""
         },
         "courseA_collector_loops3": {
           "courseA_collector_loops3_a": "حاول استخدام حلقة <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
@@ -1497,12 +1497,12 @@
           "courseA_collector_loops3_b": "تذكر أنك تستطيع وضع أكثر من قطعة برمجية واحدة داخل حلقة <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_collector_loops3_2019": {
-          "courseA_collector_loops3_a": "حاول استخدام\n\n[blockly block][0]\n\n قطعة التكرار البرمجية!",
-          "courseA_collector_loops3_b": "تذكر أنك تستطيع وضع أكثر من قطعة برمجية واحدة داخل حلقة [blockly block][0].\n"
+          "courseA_collector_loops3_a": "حاول استخدام\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n قطعة التكرار البرمجية!",
+          "courseA_collector_loops3_b": "تذكر أنك تستطيع وضع أكثر من قطعة برمجية واحدة داخل حلقة <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_collector_loops3_2020": {
-          "courseA_collector_loops3_a": "حاول استخدام\n\n[blockly block][0]\n\n قطعة التكرار البرمجية!",
-          "courseA_collector_loops3_b": "تذكر أنك تستطيع وضع أكثر من قطعة برمجية واحدة داخل حلقة [blockly block][0].\n"
+          "courseA_collector_loops3_a": "حاول استخدام\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n قطعة التكرار البرمجية!",
+          "courseA_collector_loops3_b": "تذكر أنك تستطيع وضع أكثر من قطعة برمجية واحدة داخل حلقة <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_collector_loops4": {
           "courseA_collector_loops4_a": "لتغيير مسافة تحرك لوريل، قم بتغيير عدد مرات تشغيل تلك الحلقة.",
@@ -1513,12 +1513,12 @@
           "courseA_collector_loops4_b": "لا تنسى أن على لوريل السّير وجَمع الكنز بعد انتهائها من حلقة <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_collector_loops4_2019": {
-          "courseA_collector_loops4_a": "لتغيير مسافة تحرك لوريل، قم بتغيير عدد مرات تشغيل تلك الحلقة.\n",
-          "courseA_collector_loops4_b": "لا تنسى أن على لوريل السّير وجَمع الكنز بعد انتهائها من حلقة [blockly block][0]\n"
+          "courseA_collector_loops4_a": "لتغيير مسافة تحرك لوريل، قم بتغيير عدد مرات تشغيل تلك الحلقة.",
+          "courseA_collector_loops4_b": "لا تنسى أن على لوريل السّير وجَمع الكنز بعد انتهائها من حلقة <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_collector_loops4_2020": {
-          "courseA_collector_loops4_a": "لتغيير مسافة تحرك لوريل، قم بتغيير عدد مرات تشغيل تلك الحلقة.\n",
-          "courseA_collector_loops4_b": "لا تنسى أن على لوريل السّير وجَمع الكنز بعد انتهائها من حلقة [blockly block][0]\n"
+          "courseA_collector_loops4_a": "لتغيير مسافة تحرك لوريل، قم بتغيير عدد مرات تشغيل تلك الحلقة.",
+          "courseA_collector_loops4_b": "لا تنسى أن على لوريل السّير وجَمع الكنز بعد انتهائها من حلقة <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_collector_loops5": {
           "courseA_collector_loops5_a": "إذا لا يمكنك معرفة الجواب في الحال، حاول استخدام قصاصة ورق لمعرفة الأسهم التي تحتاجها وابحث عن نمط.",
@@ -1531,14 +1531,14 @@
           "courseA_collector_loops5_c": "قد ترغب في البدء بحلقة a <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> التي تحرك لوريل غربًا وتلتقط الكنز."
         },
         "courseA_collector_loops5_2019": {
-          "courseA_collector_loops5_a": "إذا لا يمكنك معرفة الجواب في الحال، حاول استخدام قصاصة ورق لمعرفة الأسهم التي تحتاجها وابحث عن نمط.\n",
-          "courseA_collector_loops5_b": "حاول تجزئة المشكلة إلى قسمين، التحرك جانبًا ثم إلى الأسفل.\n",
-          "courseA_collector_loops5_c": "قد ترغب في البدء بحلقة a [blockly block][0] التي تحرك لوريل غربًا وتلتقط الكنز.\n"
+          "courseA_collector_loops5_a": "إذا لا يمكنك معرفة الجواب في الحال، حاول استخدام قصاصة ورق لمعرفة الأسهم التي تحتاجها وابحث عن نمط.",
+          "courseA_collector_loops5_b": "حاول تجزئة المشكلة إلى قسمين، التحرك جانبًا ثم إلى الأسفل.",
+          "courseA_collector_loops5_c": "قد ترغب في البدء بحلقة a <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> التي تحرك لوريل غربًا وتلتقط الكنز."
         },
         "courseA_collector_loops5_2020": {
-          "courseA_collector_loops5_a": "إذا لا يمكنك معرفة الجواب في الحال، حاول استخدام قصاصة ورق لمعرفة الأسهم التي تحتاجها وابحث عن نمط.\n",
-          "courseA_collector_loops5_b": "حاول تجزئة المشكلة إلى قسمين، التحرك جانبًا ثم إلى الأسفل.\n",
-          "courseA_collector_loops5_c": "قد ترغب في البدء بحلقة a [blockly block][0] التي تحرك لوريل غربًا وتلتقط الكنز.\n"
+          "courseA_collector_loops5_a": "إذا لا يمكنك معرفة الجواب في الحال، حاول استخدام قصاصة ورق لمعرفة الأسهم التي تحتاجها وابحث عن نمط.",
+          "courseA_collector_loops5_b": "حاول تجزئة المشكلة إلى قسمين، التحرك جانبًا ثم إلى الأسفل.",
+          "courseA_collector_loops5_c": "قد ترغب في البدء بحلقة a <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> التي تحرك لوريل غربًا وتلتقط الكنز."
         },
         "courseA_collector_loops6": {
           "courseA_collector_loops6_a": "لا يمكنك معرفة ما الخطأ؟ حاول تشغيل الكود لبضع مرات لترى ما الذي يحدث.",
@@ -1549,11 +1549,11 @@
           "courseA_collector_loops6_b": "يحتوي الحل الأقصر على حلقتين [كتلة كتلة] [0] واحدة تلو الأخرى."
         },
         "courseA_collector_loops6_2019": {
-          "courseA_collector_loops6_a": "لا يمكنك معرفة ما الخطأ؟ حاول تشغيل الكود لبضع مرات لترى ما الذي يحدث.\n",
+          "courseA_collector_loops6_a": "لا يمكنك معرفة ما الخطأ؟ حاول تشغيل الكود لبضع مرات لترى ما الذي يحدث.",
           "courseA_collector_loops6_b": "يحتوي الحل الأقصر على حلقتين [كتلة كتلة] [0] واحدة تلو الأخرى."
         },
         "courseA_collector_loops6_2020": {
-          "courseA_collector_loops6_a": "لا يمكنك معرفة ما الخطأ؟ حاول تشغيل الكود لبضع مرات لترى ما الذي يحدث.\n",
+          "courseA_collector_loops6_a": "لا يمكنك معرفة ما الخطأ؟ حاول تشغيل الكود لبضع مرات لترى ما الذي يحدث.",
           "courseA_collector_loops6_b": "يحتوي الحل الأقصر على حلقتين [كتلة كتلة] [0] واحدة تلو الأخرى."
         },
         "courseA_collector_loops7": {
@@ -1563,10 +1563,10 @@
           "courseA_collector_loops7_a": "إذا لم تتمكن من معرفة ما الذي يأتي لاحقًا، حاول تشغيل الكود لتعرف أين انتهى المطاف بلوريل."
         },
         "courseA_collector_loops7_2019": {
-          "courseA_collector_loops7_a": "إذا لم تتمكن من معرفة ما الذي يأتي لاحقًا، حاول تشغيل الكود لتعرف أين انتهى المطاف بلوريل.\n"
+          "courseA_collector_loops7_a": "إذا لم تتمكن من معرفة ما الذي يأتي لاحقًا، حاول تشغيل الكود لتعرف أين انتهى المطاف بلوريل."
         },
         "courseA_collector_loops7_2020": {
-          "courseA_collector_loops7_a": "إذا لم تتمكن من معرفة ما الذي يأتي لاحقًا، حاول تشغيل الكود لتعرف أين انتهى المطاف بلوريل.\n"
+          "courseA_collector_loops7_a": "إذا لم تتمكن من معرفة ما الذي يأتي لاحقًا، حاول تشغيل الكود لتعرف أين انتهى المطاف بلوريل."
         },
         "courseA_collector_loops8": {
           "courseA_collector_loops8_a": "إذا واجهتك صعوبة في حل اللغز، حاول كتابة الحركات على قُصاصة ورق وأنظر إلى النمط.",
@@ -1579,14 +1579,14 @@
           "courseA_collector_loops8_c": "تذكر أن بإمكانك كتابة قطعة واحدة من الكود في كل مرة، ثم الضغط على \"تشغيل\" لمعرفة المكان الذي تريد الذهاب إليه من هناك."
         },
         "courseA_collector_loops8_2019": {
-          "courseA_collector_loops8_a": "إذا واجهتك صعوبة في حل اللغز، حاول كتابة الحركات على قُصاصة ورق وأنظر إلى النمط.\n",
-          "courseA_collector_loops8_b": "حاول تجزئة هذا اللغز إلى 3 مشكلات مستقلة، واكتب الحلقات لكل منها.\n",
-          "courseA_collector_loops8_c": "تذكر أن بإمكانك كتابة قطعة واحدة من الكود في كل مرة، ثم الضغط على \"تشغيل\" لمعرفة المكان الذي تريد الذهاب إليه من هناك.\n"
+          "courseA_collector_loops8_a": "إذا واجهتك صعوبة في حل اللغز، حاول كتابة الحركات على قُصاصة ورق وأنظر إلى النمط.",
+          "courseA_collector_loops8_b": "حاول تجزئة هذا اللغز إلى 3 مشكلات مستقلة، واكتب الحلقات لكل منها.",
+          "courseA_collector_loops8_c": "تذكر أن بإمكانك كتابة قطعة واحدة من الكود في كل مرة، ثم الضغط على \"تشغيل\" لمعرفة المكان الذي تريد الذهاب إليه من هناك."
         },
         "courseA_collector_loops8_2020": {
-          "courseA_collector_loops8_a": "إذا واجهتك صعوبة في حل اللغز، حاول كتابة الحركات على قُصاصة ورق وأنظر إلى النمط.\n",
-          "courseA_collector_loops8_b": "حاول تجزئة هذا اللغز إلى 3 مشكلات مستقلة، واكتب الحلقات لكل منها.\n",
-          "courseA_collector_loops8_c": "تذكر أن بإمكانك كتابة قطعة واحدة من الكود في كل مرة، ثم الضغط على \"تشغيل\" لمعرفة المكان الذي تريد الذهاب إليه من هناك.\n"
+          "courseA_collector_loops8_a": "إذا واجهتك صعوبة في حل اللغز، حاول كتابة الحركات على قُصاصة ورق وأنظر إلى النمط.",
+          "courseA_collector_loops8_b": "حاول تجزئة هذا اللغز إلى 3 مشكلات مستقلة، واكتب الحلقات لكل منها.",
+          "courseA_collector_loops8_c": "تذكر أن بإمكانك كتابة قطعة واحدة من الكود في كل مرة، ثم الضغط على \"تشغيل\" لمعرفة المكان الذي تريد الذهاب إليه من هناك."
         },
         "courseA_collector_loops9": {
           "courseA_collector_loops9_a": "إذا تعذر عليك رؤية افضل الأماكن لاستخدام الحلقات، حاول برمجتها خطوة بخطوة وابحث عن النمط.",
@@ -1597,12 +1597,12 @@
           "courseA_collector_loops9_b": "حاول وضع عدد 2 من حلقات <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> داخل حلقة أخرى لجعل الكود أقصر."
         },
         "courseA_collector_loops9_2019": {
-          "courseA_collector_loops9_a": "إذا تعذر عليك رؤية افضل الأماكن لاستخدام الحلقات، حاول برمجتها خطوة بخطوة وابحث عن النمط.\n",
-          "courseA_collector_loops9_b": "حاول وضع عدد 2 من حلقات [blockly block][0] داخل حلقة أخرى لجعل الكود أقصر.\n"
+          "courseA_collector_loops9_a": "إذا تعذر عليك رؤية افضل الأماكن لاستخدام الحلقات، حاول برمجتها خطوة بخطوة وابحث عن النمط.",
+          "courseA_collector_loops9_b": "حاول وضع عدد 2 من حلقات <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> داخل حلقة أخرى لجعل الكود أقصر."
         },
         "courseA_collector_loops9_2020": {
-          "courseA_collector_loops9_a": "إذا تعذر عليك رؤية افضل الأماكن لاستخدام الحلقات، حاول برمجتها خطوة بخطوة وابحث عن النمط.\n",
-          "courseA_collector_loops9_b": "حاول وضع عدد 2 من حلقات [blockly block][0] داخل حلقة أخرى لجعل الكود أقصر.\n"
+          "courseA_collector_loops9_a": "إذا تعذر عليك رؤية افضل الأماكن لاستخدام الحلقات، حاول برمجتها خطوة بخطوة وابحث عن النمط.",
+          "courseA_collector_loops9_b": "حاول وضع عدد 2 من حلقات <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> داخل حلقة أخرى لجعل الكود أقصر."
         },
         "courseA_collector_loops_challenge1": {
           "courseA_collector_loops_challenge1_a": "حاول تغيير العدد في كل حلقة إذا كان هناك شيء يبدو خطأ.",
@@ -1617,16 +1617,16 @@
           "courseA_collector_loops_challenge1_d": "\"برنامج البدء لا يلتقط آخِر جوهرتين. حاول إضافة هذه الأوامر البرمجية في النهاية القصوى:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>\""
         },
         "courseA_collector_loops_challenge1_2019": {
-          "courseA_collector_loops_challenge1_a": "حاول تغيير العدد في كل حلقة إذا كان هناك شيء يبدو خطأ.\n",
-          "courseA_collector_loops_challenge1_b": "لا تحتاج لاستخدام حلقة إذا كنت تقوم بشيء ما مرة واحدة فقط.\n",
-          "courseA_collector_loops_challenge1_c": "توجد 6 جواهر في الجانب الأيمن من الكهف عندما تبدأ، لكنك تحتاج التحرك 5 مرات نحو الجنوب للحصول على الكنز. هل تعرف لماذا؟\n",
-          "courseA_collector_loops_challenge1_d": "\"برنامج البدء لا يلتقط آخِر جوهرتين. حاول إضافة هذه الأوامر البرمجية في النهاية القصوى:\n\n[blockly block][0]\"\n"
+          "courseA_collector_loops_challenge1_a": "حاول تغيير العدد في كل حلقة إذا كان هناك شيء يبدو خطأ.",
+          "courseA_collector_loops_challenge1_b": "لا تحتاج لاستخدام حلقة إذا كنت تقوم بشيء ما مرة واحدة فقط.",
+          "courseA_collector_loops_challenge1_c": "توجد 6 جواهر في الجانب الأيمن من الكهف عندما تبدأ، لكنك تحتاج التحرك 5 مرات نحو الجنوب للحصول على الكنز. هل تعرف لماذا؟",
+          "courseA_collector_loops_challenge1_d": "\"برنامج البدء لا يلتقط آخِر جوهرتين. حاول إضافة هذه الأوامر البرمجية في النهاية القصوى:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>\""
         },
         "courseA_collector_loops_challenge1_2020": {
-          "courseA_collector_loops_challenge1_a": "حاول تغيير العدد في كل حلقة إذا كان هناك شيء يبدو خطأ.\n",
-          "courseA_collector_loops_challenge1_b": "لا تحتاج لاستخدام حلقة إذا كنت تقوم بشيء ما مرة واحدة فقط.\n",
-          "courseA_collector_loops_challenge1_c": "توجد 6 جواهر في الجانب الأيمن من الكهف عندما تبدأ، لكنك تحتاج التحرك 5 مرات نحو الجنوب للحصول على الكنز. هل تعرف لماذا؟\n",
-          "courseA_collector_loops_challenge1_d": "\"برنامج البدء لا يلتقط آخِر جوهرتين. حاول إضافة هذه الأوامر البرمجية في النهاية القصوى:\n\n[blockly block][0]\"\n"
+          "courseA_collector_loops_challenge1_a": "حاول تغيير العدد في كل حلقة إذا كان هناك شيء يبدو خطأ.",
+          "courseA_collector_loops_challenge1_b": "لا تحتاج لاستخدام حلقة إذا كنت تقوم بشيء ما مرة واحدة فقط.",
+          "courseA_collector_loops_challenge1_c": "توجد 6 جواهر في الجانب الأيمن من الكهف عندما تبدأ، لكنك تحتاج التحرك 5 مرات نحو الجنوب للحصول على الكنز. هل تعرف لماذا؟",
+          "courseA_collector_loops_challenge1_d": "\"برنامج البدء لا يلتقط آخِر جوهرتين. حاول إضافة هذه الأوامر البرمجية في النهاية القصوى:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>\""
         },
         "courseA_collector_loops_challenge2kp": {
           "courseA_collector_loops_challenge2kp_b": "جرّب هذا المسار للحصول على حل.",
@@ -1637,12 +1637,12 @@
           "courseA_collector_loops_challenge2kp_a": "هل يمكنك استخدام حلقات لفك هذا اللغز؟"
         },
         "courseA_collector_loops_challenge2kp_2019": {
-          "courseA_collector_loops_challenge2kp_b": "جرّب هذا المسار للحصول على حل.\n",
-          "courseA_collector_loops_challenge2kp_a": "هل يمكنك استخدام حلقات لفك هذا اللغز؟\n"
+          "courseA_collector_loops_challenge2kp_b": "جرّب هذا المسار للحصول على حل.",
+          "courseA_collector_loops_challenge2kp_a": "هل يمكنك استخدام حلقات لفك هذا اللغز؟"
         },
         "courseA_collector_loops_challenge2kp_2020": {
-          "courseA_collector_loops_challenge2kp_b": "جرّب هذا المسار للحصول على حل.\n",
-          "courseA_collector_loops_challenge2kp_a": "هل يمكنك استخدام حلقات لفك هذا اللغز؟\n"
+          "courseA_collector_loops_challenge2kp_b": "جرّب هذا المسار للحصول على حل.",
+          "courseA_collector_loops_challenge2kp_a": "هل يمكنك استخدام حلقات لفك هذا اللغز؟"
         },
         "courseA_collector_preLoops7": {
           "courseA_collector_loops2_b": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n<xml>  <block type=\"collector_collect\"/></xml>\""
@@ -1651,7 +1651,7 @@
           "courseA_harvester_loops1_a": "بمجرد أن تتحرَّك إلى بعض الذرة، استخدِم هذه القطعة البرمجية لالتقاطه!\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops1_2019": {
-          "courseA_harvester_loops1_a": "بمجرد أن تتحرَّك إلى بعض الذرة، استخدِم هذه القطعة البرمجي لالتقاطه!\n\n[blockly block][0]"
+          "courseA_harvester_loops1_a": "بمجرد أن تتحرَّك إلى بعض الذرة، استخدِم هذه القطعة البرمجية لالتقاطه!\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops1_2020": {
           "courseA_harvester_loops1_a": "بمجرد أن تتحرَّك إلى بعض الذرة، استخدِم هذه القطعة البرمجية لالتقاطه!\n\n<xml><block type=\"harvester_corn\"/></xml>"
@@ -1661,7 +1661,7 @@
           "courseA_harvester_loops2_b": "إذا ما زلت تواجه مشكلة، فحاول أن تقول الخطوات بصوتٍ مرتفع."
         },
         "courseA_harvester_loops2_2019": {
-          "courseA_harvester_loops2_a": "سيحتوي الكود البرمجي الخاص بك على **أربع** قطع برمجية من \"تحرَّك للغرب\"\n\n[blockly block][0]\n\nو**أربع** قطع برمجية من [blockly block][1].",
+          "courseA_harvester_loops2_a": "سيحتوي الكود البرمجي الخاص بك على **أربعة** قطع برمجية من \"تحرَّك للغرب\"\n<xml><block type=\"maze_moveWest\"/></xml>\nو**أربعة** قطع برمجية من <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>.",
           "courseA_harvester_loops2_b": "إذا ما زلت تواجه مشكلة، فحاول أن تقول الخطوات بصوتٍ مرتفع."
         },
         "courseA_harvester_loops2_2020": {
@@ -1673,8 +1673,8 @@
           "courseA_harvester_loops3_b": "لتكرار الكود البرمجي، اسحب حلقة التكرار [0]، ثم ضع القطعة البرمجية التي تريدها بداخله."
         },
         "courseA_harvester_loops3_2019": {
-          "courseA_harvester_loops3_a": "استخدِم حلقة \"تكرار\" مثل هذه لمساعدتك!\n\n[blockly block][0]",
-          "courseA_harvester_loops3_b": "لتكرار الكود البرمجي، اسحب حلقة \"التكرار\" ([blockly block][0] )، ثم ضع القطعة البرمجية التي تريد بداخلها."
+          "courseA_harvester_loops3_a": "استخدِم حلقة التكرار مثل ذلك لمساعدتك!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
+          "courseA_harvester_loops3_b": "لتكرار الكود البرمجي، اسحب حلقة التكرار [0]، ثم ضع القطعة البرمجية التي تريدها بداخله."
         },
         "courseA_harvester_loops3_2020": {
           "courseA_harvester_loops3_a": "استخدِم حلقة التكرار مثل ذلك لمساعدتك!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
@@ -1685,8 +1685,8 @@
           "courseA_harvester_loops4_b": "كم عدد قطع الذرة الموجودة هناك؟ وكم عدد المرات التي يتكرر فيها الكود البرمجي؟"
         },
         "courseA_harvester_loops4_2019": {
-          "courseA_harvester_loops4_a": "لا تخف من الضغط على `تشغيل` لترى ما سيحدث!",
-          "courseA_harvester_loops4_b": "كم عدد قطع الذرة الموجودة هناك؟ وكم عدد المرات التي يتكرر فيها الكود البرمجي الخاص بك؟"
+          "courseA_harvester_loops4_a": "لا تخف من الضغط على \"تشغيل\" لترى ما سيحدث!",
+          "courseA_harvester_loops4_b": "كم عدد قطع الذرة الموجودة هناك؟ وكم عدد المرات التي يتكرر فيها الكود البرمجي؟"
         },
         "courseA_harvester_loops4_2020": {
           "courseA_harvester_loops4_a": "لا تخف من الضغط على \"تشغيل\" لترى ما سيحدث!",
@@ -1698,8 +1698,8 @@
           "courseA_harvester_loops5_c": "استخدِم هذا المسار لالتقاط الذرة كله!"
         },
         "courseA_harvester_loops5_2019": {
-          "courseA_harvester_loops5_a": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.\n",
-          "courseA_harvester_loops5_b": "سيحتوي الكود البرمجي النهائي على حلقة تكرار **واحدة** من [blockly block][0]، وقطعة برمجية **واحدة** من \"تحرَّك للجنوب\" [blockly block][1]، وقطعة برمجية **واحدة** من \"تحرَّك للشرق\" [blockly block][2].",
+          "courseA_harvester_loops5_a": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.",
+          "courseA_harvester_loops5_b": "سيحتوي الكود البرمجي في النهاية على حلقة تكرار **واحدة** من <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>، وقطعة برمجية **واحدة** من \"تحرَّك للجنوب\" <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>، وقطعة برمجية **واحدة** من \"تحرَّك للشرق\" <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
           "courseA_harvester_loops5_c": "استخدِم هذا المسار لالتقاط الذرة كله!"
         },
         "courseA_harvester_loops5_2020": {
@@ -1713,8 +1713,8 @@
           "courseA_harvester_loops5a_c": "استخدِم هذا المسار للتحرُّك في اتجاه واحد، ثم في الاتجاه الآخر."
         },
         "courseA_harvester_loops5a_2019": {
-          "courseA_harvester_loops5a_a": "ستحتاج إلى حلقة تكرار واحدة من [blockly block][0]، واحدة تلو الأخرى.",
-          "courseA_harvester_loops5a_b": "إحدى حلقات التكرار سوف تكرِّر القطعة البرمجية \"تحرَّك للجنوب\" [blockly block][0]، وستكرر حلقة التكرار الأخرى القطعة البرمجية \"تحرَّك للشرق\" [blockly block][1]",
+          "courseA_harvester_loops5a_a": "ستحتاج إلى حلقة تكرار واحدة <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>، واحدة تلو الأخرى.",
+          "courseA_harvester_loops5a_b": "سوف تكرِّر إحدى حلقات التكرار القطعة البرمجية \"تحرَّك للجنوب\" <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>، وستكرر حلقة التكرار الأخرى القطعة \"تحرَّك للشرق\" <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "استخدِم هذا المسار للتحرُّك في اتجاه واحد، ثم في الاتجاه الآخر."
         },
         "courseA_harvester_loops5a_2020": {
@@ -1729,7 +1729,7 @@
         },
         "courseA_harvester_loops5b_2019": {
           "courseA_harvester_loops5b_a": "اضغط على `تشغيل` واكتشف ما سيحدث!",
-          "courseA_harvester_loops5b_b": "هل تتكرَّر الحلقات البرمجية الخاصة بك العدد المناسب من المرات؟",
+          "courseA_harvester_loops5b_b": "هل تتكرّر الحلقات العدد المناسب من المرات؟",
           "courseA_harvester_loops5b_c": "تحرَّك في اتجاه واحد، ثم في الاتجاه الآخر مع هذا المسار."
         },
         "courseA_harvester_loops5b_2020": {
@@ -1754,7 +1754,7 @@
           "courseA_harvester_loops7_b": "استخدِم حلقتي تكرار لمتابعة هذا المسار."
         },
         "courseA_harvester_loops7_2019": {
-          "courseA_harvester_loops7_a": "ستحتاج إلى حلقتي تكرار [blockly block][0]، واحدة تلو الأخرى!",
+          "courseA_harvester_loops7_a": "ستحتاج إلى حلقتي تكرار من <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>، واحدة تلو الأخرى!",
           "courseA_harvester_loops7_b": "استخدِم حلقتي تكرار لمتابعة هذا المسار."
         },
         "courseA_harvester_loops7_2020": {
@@ -1787,53 +1787,53 @@
         },
         "courseA_harvester_seq10_2019": {
           "courseA_harvester_seq10_a": "هل تعثَّرت؟ حاوِل تدوين الخطوات في ورقة أولاً.",
-          "courseA_harvester_seq10_b": "تحتاج إلى القطعة البرمجية \"تحرَّك للشرق\" ثم \"تحرَّك للشمال\". افعل ذلك مرتين. ولا تنسَ أن تحصل على الذرة كله أيضًا!",
+          "courseA_harvester_seq10_b": "تحتاج إلى القطعة البرمجي \"تحرَّك للشرق\" ثم \"تحرَّك للشمال\". وافعل ذلك مرتين. ولا تنسَ أن تحصل على الذرة كله أيضًا!",
           "courseA_harvester_seq10_c": "حاوِل أن تسلك هذا المسار لالتقاط الذرة كله."
         },
         "courseA_harvester_seq10_2020": {
           "courseA_harvester_seq10_a": "هل تعثَّرت؟ حاوِل تدوين الخطوات في ورقة أولاً.",
-          "courseA_harvester_seq10_b": "تحتاج إلى القطعة البرمجية \"تحرَّك للشرق\" ثم \"تحرَّك للشمال\". افعل ذلك مرتين. ولا تنسَ أن تحصل على الذرة كله أيضًا!",
+          "courseA_harvester_seq10_b": "تحتاج إلى القطعة البرمجي \"تحرَّك للشرق\" ثم \"تحرَّك للشمال\". وافعل ذلك مرتين. ولا تنسَ أن تحصل على الذرة كله أيضًا!",
           "courseA_harvester_seq10_c": "حاوِل أن تسلك هذا المسار لالتقاط الذرة كله."
         },
         "courseA_harvester_seq13": {
           "courseA_bee_seq1_a": "استخدِم هذه القطعة البرمجية لالتقاط الذرة بمجرد أن تصِل الحصّادة  إليه!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq13_2019": {
-          "courseA_bee_seq1_a": "استخدِم هذا القطعة البرمجية لالتقاط الذرة بمجرد أن تصِل الحصّادة إليه!\n\n[blockly block][0]"
+          "courseA_bee_seq1_a": "استخدِم هذه القطعة البرمجية لالتقاط الذرة بمجرد أن تصِل الحصّادة  إليه!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq13_2020": {
-          "courseA_bee_seq1_a": "استخدِم هذا القطعة البرمجية لالتقاط الذرة بمجرد أن تصِل الحصّادة إليه!\n\n[blockly block][0]"
+          "courseA_bee_seq1_a": "استخدِم هذه القطعة البرمجية لالتقاط الذرة بمجرد أن تصِل الحصّادة  إليه!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2019": {
-          "courseA_harvester_seq1_a": "استخدِم هذه القطعة البرمجية لالتقاط الذرة عندما تجدها الحصّادة !\n\n[blockly block][0]",
-          "courseA_harvester_seq1_b": "ستحتاج الحصّادة إلى التحرَّك في اتجاه \"الشرق\" ثلاث مرات لتصل إلى الذرة. استخدِم هذه القطعة البرمجية:\n\n[blockly block][0]"
+          "courseA_harvester_seq1_a": "استخدِم هذه القطعة البرمجية لالتقاط الذرة عندما تجدها الحصّادة!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "سيتعيَّن على الحصّادة أن تتحرَّك نحو \"الشرق\" ثلاث مرات لتصل إلى الذرة. استخدِم هذه القطعة البرمجية:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2020": {
-          "courseA_harvester_seq1_a": "استخدِم هذه القطعة البرمجية لالتقاط الذرة عندما تجدها الحصّادة !\n\n[blockly block][0]",
-          "courseA_harvester_seq1_b": "ستحتاج الحصّادة إلى التحرَّك في اتجاه \"الشرق\" ثلاث مرات لتصل إلى الذرة. استخدِم هذه القطعة البرمجية:\n\n[blockly block][0]"
+          "courseA_harvester_seq1_a": "استخدِم هذه القطعة البرمجية لالتقاط الذرة عندما تجدها الحصّادة!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "سيتعيَّن على الحصّادة أن تتحرَّك نحو \"الشرق\" ثلاث مرات لتصل إلى الذرة. استخدِم هذه القطعة البرمجية:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2": {
           "courseA_harvester_seq2_a": "لا تنسَ استخدام <xml><block type=\"harvester_corn\"/></xml> لالتقاط الذرة!",
           "courseA_harvester_seq2_b": "حاول كتابة الخطوات على ورقة للعثور على حل!"
         },
         "courseA_harvester_seq2_2019": {
-          "courseA_harvester_seq2_a": "لا تنسَ استخدام [blockly block][0] لالتقاط الذرة!",
-          "courseA_harvester_seq2_b": "حاول كتابة الخطوات على ورقة للعثور على حل!\n"
+          "courseA_harvester_seq2_a": "لا تنسَ استخدام <xml><block type=\"harvester_corn\"/></xml> لالتقاط الذرة!",
+          "courseA_harvester_seq2_b": "حاول كتابة الخطوات على ورقة للعثور على حل!"
         },
         "courseA_harvester_seq2_2020": {
-          "courseA_harvester_seq2_a": "لا تنسَ استخدام [blockly block][0] لالتقاط الذرة!",
-          "courseA_harvester_seq2_b": "حاول كتابة الخطوات على ورقة للعثور على حل!\n"
+          "courseA_harvester_seq2_a": "لا تنسَ استخدام <xml><block type=\"harvester_corn\"/></xml> لالتقاط الذرة!",
+          "courseA_harvester_seq2_b": "حاول كتابة الخطوات على ورقة للعثور على حل!"
         },
         "courseA_harvester_seq3": {
           "courseA_harvester_seq3_a": "هل تذكَّرت استخدام هذه القطعة البرمجية؟\n\n<xml><block type=\"harvester_corn\"/></xml>",
           "courseA_harvester_seq3_b": "قل الخطوات بصوت مرتفع، واكتشف ما إذا كان ذلك سيساعدك في معرفة الإجابة أم لا."
         },
         "courseA_harvester_seq3_2019": {
-          "courseA_harvester_seq3_a": "هل تذكَّرت استخدام هذه القطعة البرمجية؟\n\n[blockly block][0]",
+          "courseA_harvester_seq3_a": "هل تذكَّرت استخدام هذه القطعة البرمجية؟\n\n<xml><block type=\"harvester_corn\"/></xml>",
           "courseA_harvester_seq3_b": "قل الخطوات بصوت مرتفع، واكتشف ما إذا كان ذلك سيساعدك في معرفة الإجابة أم لا."
         },
         "courseA_harvester_seq3_2020": {
-          "courseA_harvester_seq3_a": "هل تذكَّرت استخدام هذه القطعة البرمجية؟\n\n[blockly block][0]",
+          "courseA_harvester_seq3_a": "هل تذكَّرت استخدام هذه القطعة البرمجية؟\n\n<xml><block type=\"harvester_corn\"/></xml>",
           "courseA_harvester_seq3_b": "قل الخطوات بصوت مرتفع، واكتشف ما إذا كان ذلك سيساعدك في معرفة الإجابة أم لا."
         },
         "courseA_harvester_seq4": {
@@ -1842,11 +1842,11 @@
         },
         "courseA_harvester_seq4_2019": {
           "courseA_harvester_seq4_a": "كم عدد الفراغات بين الحصّادة والذرة؟ وكم عدد القطع البرمجية الموجودة في مساحة عملك بالفعل؟",
-          "courseA_harvester_seq4_b": "ستحتاج إلى خمس قطع برمجية من \"تحرَّك للشرق\" وقطعة برمجية واحدة من \"التقط الذرة\":\n\n[blockly block][0]"
+          "courseA_harvester_seq4_b": "ستحتاج إلى خمس قطع برمجية من \"تحرَّك للشرق\" وقطعةً واحدة من \"التقط الذرة\":\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq4_2020": {
           "courseA_harvester_seq4_a": "كم عدد الفراغات بين الحصّادة والذرة؟ وكم عدد القطع البرمجية الموجودة في مساحة عملك بالفعل؟",
-          "courseA_harvester_seq4_b": "ستحتاج إلى خمس قطع برمجية من \"تحرَّك للشرق\" وقطعة برمجية واحدة من \"التقط الذرة\":\n\n[blockly block][0]"
+          "courseA_harvester_seq4_b": "ستحتاج إلى خمس قطع برمجية من \"تحرَّك للشرق\" وقطعةً واحدة من \"التقط الذرة\":\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5": {
           "courseA_harvester_seq5_a": "أيّة قطعة برمجية تحرِّك الحصّادة في الاتجاه الخاطئ؟",
@@ -1854,14 +1854,14 @@
           "courseA_harvester_seq5_c": "تخلَّص من هذه القطعة البرمجية في سلة المهملات!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq5_2019": {
-          "courseA_harvester_seq5_a": "أي قطعة برمجية تُحرِّك الحصّادة في الاتجاه الخاطئ؟",
+          "courseA_harvester_seq5_a": "أيّة قطعة برمجية تحرِّك الحصّادة في الاتجاه الخاطئ؟",
           "courseA_harvester_seq5_b": "نحتاج إلى إزالة قطعة برمجية واحدة.",
-          "courseA_harvester_seq5_c": "تخلَّص من هذه القطعة البرمجية في سلة المهملات!\n\n[blockly block][0]"
+          "courseA_harvester_seq5_c": "تخلَّص من هذه القطعة البرمجية في سلة المهملات!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq5_2020": {
-          "courseA_harvester_seq5_a": "أي قطعة برمجية تُحرِّك الحصّادة في الاتجاه الخاطئ؟",
+          "courseA_harvester_seq5_a": "أيّة قطعة برمجية تحرِّك الحصّادة في الاتجاه الخاطئ؟",
           "courseA_harvester_seq5_b": "نحتاج إلى إزالة قطعة برمجية واحدة.",
-          "courseA_harvester_seq5_c": "تخلَّص من هذه القطعة البرمجية في سلة المهملات!\n\n[blockly block][0]"
+          "courseA_harvester_seq5_c": "تخلَّص من هذه القطعة البرمجية في سلة المهملات!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq6": {
           "courseA_harvester_seq6_a": "إذا تعثَّرت، فحاول أن تقول الخطوات بصوتٍ مرتفع. فقد يساعدك ذلك في معرفة المسار الصحيح."
@@ -1888,10 +1888,10 @@
           "courseA_harvester_seq8_a": "ينبغي أن يحتوي الكود البرمجي النهائي الخاص بك على **4** قطع برمجية للحركة و**2** للالتقاط."
         },
         "courseA_harvester_seq8_2019": {
-          "courseA_harvester_seq8_a": "ينبغي أن يحتوي الكود البرمجي النهائي على **4** قطع برمجية للحركة و**2** للالتقاط."
+          "courseA_harvester_seq8_a": "ينبغي أن يحتوي الكود البرمجي النهائي الخاص بك على **4** قطع برمجية للحركة و**2** للالتقاط."
         },
         "courseA_harvester_seq8_2020": {
-          "courseA_harvester_seq8_a": "ينبغي أن يحتوي الكود البرمجي النهائي على **4** قطع برمجية للحركة و**2** للالتقاط."
+          "courseA_harvester_seq8_a": "ينبغي أن يحتوي الكود البرمجي النهائي الخاص بك على **4** قطع برمجية للحركة و**2** للالتقاط."
         },
         "courseA_harvester_seq9": {
           "courseA_harvester_seq9_a": "شغِّل الكود عدّة مرات لترى ما سيحدث. وأين تتوقَّف الحصّادة ؟",
@@ -1899,12 +1899,12 @@
           "courseA_harvester_seq9_c": "ينبغي أن تسلك هذا المسار لالتقاط الذرة كله."
         },
         "courseA_harvester_seq9_2019": {
-          "courseA_harvester_seq9_a": "شغِّل الكود عدّة مرات لترى ما سيحدث. وأين تتوقَّف عامِلة الحصاد؟",
+          "courseA_harvester_seq9_a": "شغِّل الكود عدّة مرات لترى ما سيحدث. وأين تتوقَّف الحصّادة ؟",
           "courseA_harvester_seq9_b": "لا تنسَ التقاط الذرة كله! وستحتاج إلى **3** قطع برمجية لالتقاط الذرة.",
           "courseA_harvester_seq9_c": "ينبغي أن تسلك هذا المسار لالتقاط الذرة كله."
         },
         "courseA_harvester_seq9_2020": {
-          "courseA_harvester_seq9_a": "شغِّل الكود عدّة مرات لترى ما سيحدث. وأين تتوقَّف عامِلة الحصاد؟",
+          "courseA_harvester_seq9_a": "شغِّل الكود عدّة مرات لترى ما سيحدث. وأين تتوقَّف الحصّادة ؟",
           "courseA_harvester_seq9_b": "لا تنسَ التقاط الذرة كله! وستحتاج إلى **3** قطع برمجية لالتقاط الذرة.",
           "courseA_harvester_seq9_c": "ينبغي أن تسلك هذا المسار لالتقاط الذرة كله."
         },
@@ -1912,7 +1912,7 @@
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp2_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp2_2020": {
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1921,7 +1921,7 @@
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3a_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3a_2020": {
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1930,7 +1930,7 @@
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3b_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3b_2020": {
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1939,7 +1939,7 @@
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp4a_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp4a_2020": {
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1948,7 +1948,7 @@
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp5a_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp5a_2020": {
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1966,11 +1966,11 @@
           "courseA_maze_seq10_b": "ستحتاج إلى التحرُّك في 3 اتجاهات مختلفة لحل هذا اللغز."
         },
         "courseA_maze_seq10_2019": {
-          "courseA_maze_seq10_a": "إذا واجهتك مشكلة، حاول كتابة الخطوات على قُصاصة ورق أولأً\n",
+          "courseA_maze_seq10_a": "إذا واجهتك مشكلة، حاول كتابة الخطوات على قُصاصة ورق أولأً",
           "courseA_maze_seq10_b": "ستحتاج إلى التحرُّك في 3 اتجاهات مختلفة لحل هذا اللغز."
         },
         "courseA_maze_seq10_2020": {
-          "courseA_maze_seq10_a": "إذا واجهتك مشكلة، حاول كتابة الخطوات على قُصاصة ورق أولأً\n",
+          "courseA_maze_seq10_a": "إذا واجهتك مشكلة، حاول كتابة الخطوات على قُصاصة ورق أولأً",
           "courseA_maze_seq10_b": "ستحتاج إلى التحرُّك في 3 اتجاهات مختلفة لحل هذا اللغز."
         },
         "courseA_maze_seq10_copy": {
@@ -1988,26 +1988,26 @@
           "courseA_maze_seq13_c": "هذه القطع البرمجية <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml> سوف تساعدك على التحرك بالقرب من الخنزير."
         },
         "courseA_maze_seq13_2019": {
-          "courseA_maze_seq13_a": "إذا كان المسار الذي تحتاج إليه غير واضح، استخدم أصبعك لتعقُّب طريقك من الطير إلى الخنزير.\n",
-          "courseA_maze_seq13_b": "لا تخشى من ارتكاب خطأ! حاول إضافة قطع برمجية وتشغيل التعليمات البرمجية لترى ما الذي يحدث.\n",
-          "courseA_maze_seq13_c": "هاتين القطعتين\n\n[blockly block][0]\n[blockly block][1]\n\nستساعدك في الاقتراب من الخنزير."
+          "courseA_maze_seq13_a": "إذا كان المسار الذي تحتاج إليه غير واضح، استخدم أصبعك لتعقُّب طريقك من الطير إلى الخنزير.",
+          "courseA_maze_seq13_b": "لا تخشى من ارتكاب خطأ! حاول إضافة قطع برمجية وتشغيل التعليمات البرمجية لترى ما الذي يحدث.",
+          "courseA_maze_seq13_c": "هاتين القطعتين\n\n<xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>\n\nستساعدك في الاقتراب من الخنزير."
         },
         "courseA_maze_seq13_2020": {
-          "courseA_maze_seq13_a": "إذا كان المسار الذي تحتاج إليه غير واضح، استخدم أصبعك لتعقُّب طريقك من الطير إلى الخنزير.\n",
-          "courseA_maze_seq13_b": "لا تخشى من ارتكاب خطأ! حاول إضافة قطع برمجية وتشغيل التعليمات البرمجية لترى ما الذي يحدث.\n",
-          "courseA_maze_seq13_c": "هاتين القطعتين\n\n[blockly block][0]\n[blockly block][1]\n\nستساعدك في الاقتراب من الخنزير."
+          "courseA_maze_seq13_a": "إذا كان المسار الذي تحتاج إليه غير واضح، استخدم أصبعك لتعقُّب طريقك من الطير إلى الخنزير.",
+          "courseA_maze_seq13_b": "لا تخشى من ارتكاب خطأ! حاول إضافة قطع برمجية وتشغيل التعليمات البرمجية لترى ما الذي يحدث.",
+          "courseA_maze_seq13_c": "هاتين القطعتين\n\n<xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>\n\nستساعدك في الاقتراب من الخنزير."
         },
         "courseA_maze_seq1_2018": {
           "courseA_maze_seq1_a": "إذا واجهتك صعوبة في تحريك الطير، تأكد من أن المربعات البرمجية مستقرة في أماكنها تحت <xml>\n  <block type=\"when_run\"/>\n</xml>",
           "courseA_maze_seq1_b": "سيتعيَّن على عامِلة الحصاد أن تتحرَّك في اتجاه \"الشرق\" ثلاث مرات لتصل إلى الذرة. استخدِم هذا المربع البرمجي:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_a": "إذا واجهتك صعوبة في تحريك الطير، تأكد من أن المربعات البرمجية مستقرة في أماكنها تحت [blockly block][0]\n",
-          "courseA_maze_seq1_b": "سيتعيَّن على عامِلة الحصاد أن تتحرَّك في اتجاه \"الشرق\" ثلاث مرات لتصل إلى الذرة. استخدِم هذا المربع البرمجي:\n\n[blockly block][0]"
+          "courseA_maze_seq1_a": "إذا واجهتك صعوبة في تحريك الطير، تأكد من أن المربعات البرمجية مستقرة في أماكنها تحت <xml>\n  <block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "سيتعيَّن على عامِلة الحصاد أن تتحرَّك في اتجاه \"الشرق\" ثلاث مرات لتصل إلى الذرة. استخدِم هذا المربع البرمجي:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_a": "إذا واجهتك صعوبة في تحريك الطير، تأكد من أن المربعات البرمجية مستقرة في أماكنها تحت [blockly block][0]\n",
-          "courseA_maze_seq1_b": "سيتعيَّن على عامِلة الحصاد أن تتحرَّك في اتجاه \"الشرق\" ثلاث مرات لتصل إلى الذرة. استخدِم هذا المربع البرمجي:\n\n[blockly block][0]"
+          "courseA_maze_seq1_a": "إذا واجهتك صعوبة في تحريك الطير، تأكد من أن المربعات البرمجية مستقرة في أماكنها تحت <xml>\n  <block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "سيتعيَّن على عامِلة الحصاد أن تتحرَّك في اتجاه \"الشرق\" ثلاث مرات لتصل إلى الذرة. استخدِم هذا المربع البرمجي:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq2": {
           "courseA_maze_seq2_a": "هذا البرنامج يفتقد إلى مربع برمجي واحد. هل يمكن معرفة أين هو؟",
@@ -2031,12 +2031,12 @@
           "2": "ستحتاج إلى استخدام هذه القطعة البرمجية:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_2019": {
-          "1": "حاول كتابة الخطوات على ورقة للعثور على حل!\n",
-          "2": "ستحتاج إلى استخدام هذه القطعة البرمجية:\n\n[blockly block][0]"
+          "1": "حاول كتابة الخطوات على ورقة للعثور على حل!",
+          "2": "ستحتاج إلى استخدام هذه القطعة البرمجية:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_2020": {
-          "1": "حاول كتابة الخطوات على ورقة للعثور على حل!\n",
-          "2": "ستحتاج إلى استخدام هذه القطعة البرمجية:\n\n[blockly block][0]"
+          "1": "حاول كتابة الخطوات على ورقة للعثور على حل!",
+          "2": "ستحتاج إلى استخدام هذه القطعة البرمجية:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_copy": {
           "courseA_maze_seq5_a": "حاول كتابة الخطوات على ورقة للعثور على حل!",
@@ -2060,12 +2060,12 @@
           "courseA_maze_seq6_b": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية."
         },
         "courseA_maze_seq6_2019": {
-          "courseA_maze_seq6_a": "تعليماتك البرمجية النهائية يجب أن يحتوي على 3 قطع برمجية للتحريك.\n",
-          "courseA_maze_seq6_b": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.\n"
+          "courseA_maze_seq6_a": "تعليماتك البرمجية النهائية يجب أن يحتوي على 3 قطع برمجية للتحريك.",
+          "courseA_maze_seq6_b": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية."
         },
         "courseA_maze_seq6_2020": {
-          "courseA_maze_seq6_a": "تعليماتك البرمجية النهائية يجب أن يحتوي على 3 قطع برمجية للتحريك.\n",
-          "courseA_maze_seq6_b": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.\n"
+          "courseA_maze_seq6_a": "تعليماتك البرمجية النهائية يجب أن يحتوي على 3 قطع برمجية للتحريك.",
+          "courseA_maze_seq6_b": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية."
         },
         "courseA_maze_seq6_copy": {
           "courseA_maze_seq6_a": "تعليماتك البرمجية النهائية يجب أن يحتوي على 3 قطع برمجية للتحريك.",
@@ -2086,10 +2086,10 @@
           "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير."
         },
         "courseA_maze_seq8_2019": {
-          "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير.\n"
+          "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير."
         },
         "courseA_maze_seq8_2020": {
-          "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير.\n"
+          "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير."
         },
         "courseA_maze_seq8_copy": {
           "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير."
@@ -2106,10 +2106,10 @@
           "courseA_maze_seq_challenge1_a": "يوجد حلان لهذا اللغز."
         },
         "courseA_maze_seq_challenge1_2019": {
-          "courseA_maze_seq_challenge1_a": "يوجد حلان لهذا اللغز.\n"
+          "courseA_maze_seq_challenge1_a": "يوجد حلان لهذا اللغز."
         },
         "courseA_maze_seq_challenge1_2020": {
-          "courseA_maze_seq_challenge1_a": "يوجد حلان لهذا اللغز.\n"
+          "courseA_maze_seq_challenge1_a": "يوجد حلان لهذا اللغز."
         },
         "courseA_maze_seq_challenge2": {
           "courseA_maze_seq_challenge2_a": "حاول عَدّ الفراغات بأصبعك. تذكر ألّا تحسب الفراغ الذي بدأت منه!"
@@ -2118,10 +2118,10 @@
           "courseA_maze_seq_challenge2_a": "حاول عَدّ الفراغات بأصبعك. تذكر ألّا تحسب الفراغ الذي بدأت منه!"
         },
         "courseA_maze_seq_challenge2_2019": {
-          "courseA_maze_seq_challenge2_a": "حاول عَدّ الفراغات بأصبعك. تذكر ألّا تحسب الفراغ الذي بدأت منه!\n"
+          "courseA_maze_seq_challenge2_a": "حاول عَدّ الفراغات بأصبعك. تذكر ألّا تحسب الفراغ الذي بدأت منه!"
         },
         "courseA_maze_seq_challenge2_2020": {
-          "courseA_maze_seq_challenge2_a": "حاول عَدّ الفراغات بأصبعك. تذكر ألّا تحسب الفراغ الذي بدأت منه!\n"
+          "courseA_maze_seq_challenge2_a": "حاول عَدّ الفراغات بأصبعك. تذكر ألّا تحسب الفراغ الذي بدأت منه!"
         },
         "courseA_playLab_events2": {
           "courseA_playLab_events2_a": "ابحث عن قطعة برمجية تجعل الكلب يقول شيئًا ما.",
@@ -2132,12 +2132,12 @@
           "courseA_playLab_events2_b": "\"هذه هي الأوامر البرمجية التي تحتاج إليها لتكملة هذا اللغز:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>\""
         },
         "courseA_playLab_events2_2019": {
-          "courseA_playLab_events2_a": "ابحث عن قطعة برمجية تجعل الكلب يقول شيئًا ما.\n",
-          "courseA_playLab_events2_b": "\"هذه هي الأوامر البرمجية التي تحتاج إليها لتكملة هذا اللغز:\n\n[blockly block][0]\"\n"
+          "courseA_playLab_events2_a": "ابحث عن قطعة برمجية تجعل الكلب يقول شيئًا ما.",
+          "courseA_playLab_events2_b": "\"هذه هي الأوامر البرمجية التي تحتاج إليها لتكملة هذا اللغز:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>\""
         },
         "courseA_playLab_events2_2020": {
-          "courseA_playLab_events2_a": "ابحث عن قطعة برمجية تجعل الكلب يقول شيئًا ما.\n",
-          "courseA_playLab_events2_b": "\"هذه هي الأوامر البرمجية التي تحتاج إليها لتكملة هذا اللغز:\n\n[blockly block][0]\"\n"
+          "courseA_playLab_events2_a": "ابحث عن قطعة برمجية تجعل الكلب يقول شيئًا ما.",
+          "courseA_playLab_events2_b": "\"هذه هي الأوامر البرمجية التي تحتاج إليها لتكملة هذا اللغز:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>\""
         },
         "courseA_playLab_events3": {
           "courseA_playLab_events3_a": "اسحب هذه القطعة البرمجية <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> للخارج وأدمجها في أسفل <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>",
@@ -2148,12 +2148,12 @@
           "courseA_playLab_events3_b": "تذكر باستعمال مفتاح السهم الأيسر لتحريك جورج إلى الراية بمجرد أن تكتب برنامجك. عندما تتحول الراية إلى اللون الأخضر، لقد انتهيت!"
         },
         "courseA_playLab_events3_2019": {
-          "courseA_playLab_events3_a": "اسحب هذه القطعة البرمجية [blockly block][0] للخارج وأدمجها في أسفل [blockly block][1]\n",
-          "courseA_playLab_events3_b": "تذكر باستعمال مفتاح السهم الأيسر لتحريك جورج إلى الراية بمجرد أن تكتب برنامجك. عندما تتحول الراية إلى اللون الأخضر، لقد انتهيت!\n"
+          "courseA_playLab_events3_a": "اسحب هذه القطعة البرمجية <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> للخارج وأدمجها في أسفل <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>",
+          "courseA_playLab_events3_b": "تذكر باستعمال مفتاح السهم الأيسر لتحريك جورج إلى الراية بمجرد أن تكتب برنامجك. عندما تتحول الراية إلى اللون الأخضر، لقد انتهيت!"
         },
         "courseA_playLab_events3_2020": {
-          "courseA_playLab_events3_a": "اسحب هذه القطعة البرمجية [blockly block][0] للخارج وأدمجها في أسفل [blockly block][1]\n",
-          "courseA_playLab_events3_b": "تذكر باستعمال مفتاح السهم الأيسر لتحريك جورج إلى الراية بمجرد أن تكتب برنامجك. عندما تتحول الراية إلى اللون الأخضر، لقد انتهيت!\n"
+          "courseA_playLab_events3_a": "اسحب هذه القطعة البرمجية <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> للخارج وأدمجها في أسفل <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>",
+          "courseA_playLab_events3_b": "تذكر باستعمال مفتاح السهم الأيسر لتحريك جورج إلى الراية بمجرد أن تكتب برنامجك. عندما تتحول الراية إلى اللون الأخضر، لقد انتهيت!"
         },
         "courseA_playLab_events4": {
           "courseA_playLab_events4_a": "\"هذه هي القطعة البرمجية التي تحتاجها لتحريك الكلب جورج إلى اليمين:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>\"",
@@ -2164,12 +2164,12 @@
           "courseA_playLab_events4_b": "\"هذه هي الأوامر البرمجية التي تحتاج إليها لتكملة هذا اللغز:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>\""
         },
         "courseA_playLab_events4_2019": {
-          "courseA_playLab_events4_a": "\"هذه هي القطعة البرمجية التي تحتاجها لتحريك الكلب جورج إلى اليمين:\n\n[blockly block][0]\"\n",
-          "courseA_playLab_events4_b": "\"هذه هي الأوامر البرمجية التي تحتاج إليها لتكملة هذا اللغز:\n\n[blockly block][0]\"\n"
+          "courseA_playLab_events4_a": "\"هذه هي القطعة البرمجية التي تحتاجها لتحريك الكلب جورج إلى اليمين:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>\"",
+          "courseA_playLab_events4_b": "\"هذه هي الأوامر البرمجية التي تحتاج إليها لتكملة هذا اللغز:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>\""
         },
         "courseA_playLab_events4_2020": {
-          "courseA_playLab_events4_a": "\"هذه هي القطعة البرمجية التي تحتاجها لتحريك الكلب جورج إلى اليمين:\n\n[blockly block][0]\"\n",
-          "courseA_playLab_events4_b": "\"هذه هي الأوامر البرمجية التي تحتاج إليها لتكملة هذا اللغز:\n\n[blockly block][0]\"\n"
+          "courseA_playLab_events4_a": "\"هذه هي القطعة البرمجية التي تحتاجها لتحريك الكلب جورج إلى اليمين:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>\"",
+          "courseA_playLab_events4_b": "\"هذه هي الأوامر البرمجية التي تحتاج إليها لتكملة هذا اللغز:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>\""
         },
         "courseA_playLab_events5": {
           "courseA_playLab_events5_a": "\"هذه هي القطع البرمجية للحدث التي تحتاج لاستعمالها لتحريك الكلب جورج للأعلى وللأسفل:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nو \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>\"",
@@ -2180,12 +2180,12 @@
           "courseA_playLab_events5_b": "\"هل كنت تعلم أنه باستطاعتك تغيير مفتاح سهم الحدث عن طريق النقر على الصورة في القطعة البرمجية واختيار مفتاح جديد؟\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)\""
         },
         "courseA_playLab_events5_2019": {
-          "courseA_playLab_events5_a": "\"هذه هي القطع البرمجية للحدث التي تحتاج لاستعمالها لتحريك الكلب جورج للأعلى وللأسفل:\n\n[blockly block][0]\n\nو \n\n[blockly block][1]\"\n",
-          "courseA_playLab_events5_b": "\"هل كنت تعلم أنه باستطاعتك تغيير مفتاح سهم الحدث عن طريق النقر على الصورة في القطعة البرمجية واختيار مفتاح جديد؟\n\n[][0]\"\n"
+          "courseA_playLab_events5_a": "\"هذه هي القطع البرمجية للحدث التي تحتاج لاستعمالها لتحريك الكلب جورج للأعلى وللأسفل:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nو \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>\"",
+          "courseA_playLab_events5_b": "\"هل كنت تعلم أنه باستطاعتك تغيير مفتاح سهم الحدث عن طريق النقر على الصورة في القطعة البرمجية واختيار مفتاح جديد؟\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)\""
         },
         "courseA_playLab_events5_2020": {
-          "courseA_playLab_events5_a": "\"هذه هي القطع البرمجية للحدث التي تحتاج لاستعمالها لتحريك الكلب جورج للأعلى وللأسفل:\n\n[blockly block][0]\n\nو \n\n[blockly block][1]\"\n",
-          "courseA_playLab_events5_b": "\"هل كنت تعلم أنه باستطاعتك تغيير مفتاح سهم الحدث عن طريق النقر على الصورة في القطعة البرمجية واختيار مفتاح جديد؟\n\n[][0]\"\n"
+          "courseA_playLab_events5_a": "\"هذه هي القطع البرمجية للحدث التي تحتاج لاستعمالها لتحريك الكلب جورج للأعلى وللأسفل:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nو \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>\"",
+          "courseA_playLab_events5_b": "\"هل كنت تعلم أنه باستطاعتك تغيير مفتاح سهم الحدث عن طريق النقر على الصورة في القطعة البرمجية واختيار مفتاح جديد؟\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)\""
         },
         "courseA_playLab_events6": {
           "courseA_playLab_events6_a": "\"هذه هي القطعة البرمجية للحدث التي تحتاجها لجعل الكلب جورج يعمل شيئًا عند النقر عليه:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>\"",
@@ -2198,14 +2198,14 @@
           "courseA_playLab_events6_c": "\"هذه هي القطعة البرمجية التي تحتاجها لإصدار صوت عشوائي:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>\""
         },
         "courseA_playLab_events6_2019": {
-          "courseA_playLab_events6_a": "\"هذه هي القطعة البرمجية للحدث التي تحتاجها لجعل الكلب جورج يعمل شيئًا عند النقر عليه:\n\n[blockly block][0]\"\n",
-          "courseA_playLab_events6_b": "\"هذه هي القطعة البرمجية التي تحتاجها لتغيير الخلفية:\n\n[blockly block][0]\"\n",
-          "courseA_playLab_events6_c": "\"هذه هي القطعة البرمجية التي تحتاجها لإصدار صوت عشوائي:\n\n[blockly block][0]\"\n"
+          "courseA_playLab_events6_a": "\"هذه هي القطعة البرمجية للحدث التي تحتاجها لجعل الكلب جورج يعمل شيئًا عند النقر عليه:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>\"",
+          "courseA_playLab_events6_b": "\"هذه هي القطعة البرمجية التي تحتاجها لتغيير الخلفية:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>\"",
+          "courseA_playLab_events6_c": "\"هذه هي القطعة البرمجية التي تحتاجها لإصدار صوت عشوائي:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>\""
         },
         "courseA_playLab_events6_2020": {
-          "courseA_playLab_events6_a": "\"هذه هي القطعة البرمجية للحدث التي تحتاجها لجعل الكلب جورج يعمل شيئًا عند النقر عليه:\n\n[blockly block][0]\"\n",
-          "courseA_playLab_events6_b": "\"هذه هي القطعة البرمجية التي تحتاجها لتغيير الخلفية:\n\n[blockly block][0]\"\n",
-          "courseA_playLab_events6_c": "\"هذه هي القطعة البرمجية التي تحتاجها لإصدار صوت عشوائي:\n\n[blockly block][0]\"\n"
+          "courseA_playLab_events6_a": "\"هذه هي القطعة البرمجية للحدث التي تحتاجها لجعل الكلب جورج يعمل شيئًا عند النقر عليه:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>\"",
+          "courseA_playLab_events6_b": "\"هذه هي القطعة البرمجية التي تحتاجها لتغيير الخلفية:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>\"",
+          "courseA_playLab_events6_c": "\"هذه هي القطعة البرمجية التي تحتاجها لإصدار صوت عشوائي:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>\""
         },
         "courseA_playLab_events7": {
           "courseA_playLab_events7_a": "\"استخدم هذه القطعة البرمجية للتحكم في ما يحدث عندما يتصادم الممثلان.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>\""
@@ -2214,10 +2214,10 @@
           "courseA_playLab_events7_a": "\"استخدم هذه القطعة البرمجية للتحكم في ما يحدث عندما يتصادم الممثلان.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>\""
         },
         "courseA_playLab_events7_2019": {
-          "courseA_playLab_events7_a": "\"استخدم هذه القطعة البرمجية للتحكم في ما يحدث عندما يتصادم الممثلان.\n\n[blockly block][0]\"\n\n"
+          "courseA_playLab_events7_a": "\"استخدم هذه القطعة البرمجية للتحكم في ما يحدث عندما يتصادم الممثلان.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>\""
         },
         "courseA_playLab_events7_2020": {
-          "courseA_playLab_events7_a": "\"استخدم هذه القطعة البرمجية للتحكم في ما يحدث عندما يتصادم الممثلان.\n\n[blockly block][0]\"\n\n"
+          "courseA_playLab_events7_a": "\"استخدم هذه القطعة البرمجية للتحكم في ما يحدث عندما يتصادم الممثلان.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>\""
         },
         "courseA_playlab_events_challenge1": {
           "courseA_playlab_events_challenge1_a": "\"إجعل البطريق وادلز يظهر عندما تنقر على روبن!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>\"",
@@ -2234,18 +2234,18 @@
           "courseA_playlab_events_challenge1_e": "\"إجعل وندل الساحر يظهر عندما تنقر على سبيف!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>\""
         },
         "courseA_playlab_events_challenge1_2019": {
-          "courseA_playlab_events_challenge1_a": "\"إجعل البطريق وادلز يظهر عندما تنقر على روبن!\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge1_b": "\"إجعل بوو الشبح يظهر عندما تنقر على وادلز!\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge1_c": "\"إجعل جايدن الوحش المبهم يظهر عندما تنقر على بوو!\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge1_d": "\"إجعل سبيف الرجل الآلي يظهر عندما تنقر على الوحش!\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge1_e": "\"إجعل وندل الساحر يظهر عندما تنقر على سبيف!\n\n[blockly block][0]\"\n"
+          "courseA_playlab_events_challenge1_a": "\"إجعل البطريق وادلز يظهر عندما تنقر على روبن!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge1_b": "\"إجعل بوو الشبح يظهر عندما تنقر على وادلز!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge1_c": "\"إجعل جايدن الوحش المبهم يظهر عندما تنقر على بوو!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge1_d": "\"إجعل سبيف الرجل الآلي يظهر عندما تنقر على الوحش!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge1_e": "\"إجعل وندل الساحر يظهر عندما تنقر على سبيف!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>\""
         },
         "courseA_playlab_events_challenge1_2020": {
-          "courseA_playlab_events_challenge1_a": "\"إجعل البطريق وادلز يظهر عندما تنقر على روبن!\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge1_b": "\"إجعل بوو الشبح يظهر عندما تنقر على وادلز!\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge1_c": "\"إجعل جايدن الوحش المبهم يظهر عندما تنقر على بوو!\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge1_d": "\"إجعل سبيف الرجل الآلي يظهر عندما تنقر على الوحش!\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge1_e": "\"إجعل وندل الساحر يظهر عندما تنقر على سبيف!\n\n[blockly block][0]\"\n"
+          "courseA_playlab_events_challenge1_a": "\"إجعل البطريق وادلز يظهر عندما تنقر على روبن!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge1_b": "\"إجعل بوو الشبح يظهر عندما تنقر على وادلز!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge1_c": "\"إجعل جايدن الوحش المبهم يظهر عندما تنقر على بوو!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge1_d": "\"إجعل سبيف الرجل الآلي يظهر عندما تنقر على الوحش!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge1_e": "\"إجعل وندل الساحر يظهر عندما تنقر على سبيف!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>\""
         },
         "courseA_playlab_events_challenge2": {
           "courseA_playlab_events_challenge2_a": "\"يمكنك أن تجعل الطائر يغني.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>\"",
@@ -2258,14 +2258,14 @@
           "courseA_playlab_events_challenge2_c": "\"يمكنك أن تجعل الوحش الغضبان يزمجر.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>\""
         },
         "courseA_playlab_events_challenge2_2019": {
-          "courseA_playlab_events_challenge2_a": "\"يمكنك أن تجعل الطائر يغني.\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge2_b": "\"يمكنك أن تجعل الرجل الآلي يصدر صوت الصفير.\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge2_c": "\"يمكنك أن تجعل الوحش الغضبان يزمجر.\n\n[blockly block][0]\"\n"
+          "courseA_playlab_events_challenge2_a": "\"يمكنك أن تجعل الطائر يغني.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge2_b": "\"يمكنك أن تجعل الرجل الآلي يصدر صوت الصفير.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge2_c": "\"يمكنك أن تجعل الوحش الغضبان يزمجر.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>\""
         },
         "courseA_playlab_events_challenge2_2020": {
-          "courseA_playlab_events_challenge2_a": "\"يمكنك أن تجعل الطائر يغني.\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge2_b": "\"يمكنك أن تجعل الرجل الآلي يصدر صوت الصفير.\n\n[blockly block][0]\"\n",
-          "courseA_playlab_events_challenge2_c": "\"يمكنك أن تجعل الوحش الغضبان يزمجر.\n\n[blockly block][0]\"\n"
+          "courseA_playlab_events_challenge2_a": "\"يمكنك أن تجعل الطائر يغني.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge2_b": "\"يمكنك أن تجعل الرجل الآلي يصدر صوت الصفير.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>\"",
+          "courseA_playlab_events_challenge2_c": "\"يمكنك أن تجعل الوحش الغضبان يزمجر.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>\""
         },
         "courseB_Scrat_ramp1_2018": {
           "1": "إذا لم يفعل \"سكرات\" ما تريده، تأكَّد أنه قد تم النقر على القطعتين البرمجيتين معاً، ثم انقر فوق \"تشغيل\" مرة ثانية.",
@@ -2273,56 +2273,56 @@
         },
         "courseB_Scrat_ramp1_2019": {
           "1": "إذا لم يفعل \"سكرات\" ما تريده، تأكَّد أنه قد تم النقر على القطعتين البرمجيتين معاً، ثم انقر فوق \"تشغيل\" مرة ثانية.",
-          "2": "لا تخشَ ارتكاب خطأ! حاول مرة أخرى، وإذا لم تنجح، جرِّب شيئًا آخر!"
+          "2": "لا تخشَ ارتكاب الأخطاء! حاول مرة أخرى، وإذا لم تنجح، جرِّب شيئًا آخر!"
         },
         "courseB_Scrat_ramp1_2020": {
           "1": "إذا لم يفعل \"سكرات\" ما تريده، تأكَّد أنه قد تم النقر على القطعتين البرمجيتين معاً، ثم انقر فوق \"تشغيل\" مرة ثانية.",
-          "2": "لا تخشَ ارتكاب خطأ! حاول مرة أخرى، وإذا لم تنجح، جرِّب شيئًا آخر!"
+          "2": "لا تخشَ ارتكاب الأخطاء! حاول مرة أخرى، وإذا لم تنجح، جرِّب شيئًا آخر!"
         },
         "courseB_Scrat_ramp2_2018": {
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp2_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp2_2020": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2018": {
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2020": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2018": {
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2020": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2018": {
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2020": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2018": {
           "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2020": {
-          "1": "من المفترض أن يبدو الكود البرمجي على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_artist_loops2": {
           "courseB_artist_loops2_a": "إذا أردت الحلقة أن تتكرر أكثر من 4 مرات، يمكنك تغيير الرقم في أعلى حلقة التكرار.",
@@ -2349,11 +2349,11 @@
           "courseB_artist_loops3_b": "يريد الفنان التحرك ناحية الشَّمال لرسم هذا السطر."
         },
         "courseB_artist_loops3_2019": {
-          "courseB_artist_loops3_a": "تذكَّر استخدام حلقة التكرار [blockly block][0] لكود برمجي أفضل!",
+          "courseB_artist_loops3_a": "تذكَّر استخدام حلقة تكرار من <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> لتحصل على كود برمجي أفضل!",
           "courseB_artist_loops3_b": "يريد الفنان التحرك ناحية الشَّمال لرسم هذا السطر."
         },
         "courseB_artist_loops3_2020": {
-          "courseB_artist_loops3_a": "تذكَّر استخدام حلقة التكرار [blockly block][0] لكود برمجي أفضل!",
+          "courseB_artist_loops3_a": "تذكَّر استخدام حلقة تكرار من <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> لتحصل على كود برمجي أفضل!",
           "courseB_artist_loops3_b": "يريد الفنان التحرك ناحية الشَّمال لرسم هذا السطر."
         },
         "courseB_artist_loops4": {
@@ -2383,10 +2383,10 @@
           "courseB_artist_loops5_a": "اسحب حلقة تكرار <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>، ثم ضع القطع البرمجية الأخرى بداخلها. كم عدد المرات التي تحتاجها للتكرار؟"
         },
         "courseB_artist_loops5_2019": {
-          "courseB_artist_loops5_a": "اسحب حلقة التكرار [blockly block][0]، ثم ضع القطع البرمجية الأخرى بداخلها. كم عدد المرات التي تحتاجها للتكرار؟"
+          "courseB_artist_loops5_a": "اسحب حلقة تكرار <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>، ثم ضع القطع البرمجية الأخرى بداخلها. كم عدد المرات التي تحتاجها للتكرار؟"
         },
         "courseB_artist_loops5_2020": {
-          "courseB_artist_loops5_a": "اسحب حلقة التكرار [blockly block][0]، ثم ضع القطع البرمجية الأخرى بداخلها. كم عدد المرات التي تحتاجها للتكرار؟"
+          "courseB_artist_loops5_a": "اسحب حلقة تكرار <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>، ثم ضع القطع البرمجية الأخرى بداخلها. كم عدد المرات التي تحتاجها للتكرار؟"
         },
         "courseB_artist_loops6": {
           "courseB_artist_loops6_b": "جرب كتابة الحركات على قطعة من الورق والبحث عن النمط."
@@ -2412,13 +2412,13 @@
         },
         "courseB_artist_loops7_2019": {
           "courseB_artist_loops7_a": "هذا التحدي يستخدم **4** حلقات، واحدة على تلو الواحدة!",
-          "courseB_artist_loops7_b": "لاحظ بأن كل حلقة تعمل نمط سلم يتنقل في اتجاه مختلف.[][0]",
-          "courseB_artist_loops7_c": "يجب على هذه الحلقة القيام بالتالي:\n\n-   حلقة 1    \n-   يمين    \n-   أسفل\n\n-   حلقة  2    \n-   يمين    \n-   أعلى\n\n-   حلقة  3    \n-   يسار    \n-   أعلى\n\n-   حلقة 4    \n-   يسار    \n-   أسفل"
+          "courseB_artist_loops7_b": "لاحظ بأن كل حلقة تعمل نمط سلم يتنقل في اتجاه مختلف.![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "يجب على هذه الحلقة القيام بالتالي:\n\n-   حلقة 1    \n\n-   يمين    \n\n-   أسفل\n\n-   حلقة  2    \n\n-   يمين    \n\n-   أعلى\n\n-   حلقة  3    \n\n-   يسار    \n\n-   أعلى\n\n-   حلقة 4    \n\n-   يسار    \n\n-   أسفل"
         },
         "courseB_artist_loops7_2020": {
           "courseB_artist_loops7_a": "هذا التحدي يستخدم **4** حلقات، واحدة على تلو الواحدة!",
-          "courseB_artist_loops7_b": "لاحظ بأن كل حلقة تعمل نمط سلم يتنقل في اتجاه مختلف.[][0]",
-          "courseB_artist_loops7_c": "يجب على هذه الحلقة القيام بالتالي:\n\n-   حلقة 1    \n-   يمين    \n-   أسفل\n\n-   حلقة  2    \n-   يمين    \n-   أعلى\n\n-   حلقة  3    \n-   يسار    \n-   أعلى\n\n-   حلقة 4    \n-   يسار    \n-   أسفل"
+          "courseB_artist_loops7_b": "لاحظ بأن كل حلقة تعمل نمط سلم يتنقل في اتجاه مختلف.![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "يجب على هذه الحلقة القيام بالتالي:\n\n-   حلقة 1    \n\n-   يمين    \n\n-   أسفل\n\n-   حلقة  2    \n\n-   يمين    \n\n-   أعلى\n\n-   حلقة  3    \n\n-   يسار    \n\n-   أعلى\n\n-   حلقة 4    \n\n-   يسار    \n\n-   أسفل"
         },
         "courseB_artist_loops8": {
           "courseB_artist_loops8_a": "كم عدد المرات التي يجب عليك خلالها تكرار النمط لصنع هذا السلم؟",
@@ -2467,12 +2467,12 @@
           "courseB_artist_loops_challenge1_c": "أنت سوف تحتاج إلى \"التحرك\" أو القفز\" فوق بعض السطور مرتين."
         },
         "courseB_artist_loops_challenge1_2019": {
-          "courseB_artist_loops_challenge1_a": "القطعة البرمجية مثل هذه:  [blockly block][0] سوف تتيح للفنان التحرك بشكل مائل!",
+          "courseB_artist_loops_challenge1_a": "القطعة البرمجية مثل هذه:  <xml>  <block type=\"simple_move_up_right\"/></xml> سوف تتيح للفنان التحرك بشكل مائل!",
           "courseB_artist_loops_challenge1_b": "عند انتهائك من هذا النرد، \"انتقل\" إلى التالي!",
           "courseB_artist_loops_challenge1_c": "أنت سوف تحتاج إلى \"التحرك\" أو القفز\" فوق بعض السطور مرتين."
         },
         "courseB_artist_loops_challenge1_2020": {
-          "courseB_artist_loops_challenge1_a": "القطعة البرمجية مثل هذه:  [blockly block][0] سوف تتيح للفنان التحرك بشكل مائل!",
+          "courseB_artist_loops_challenge1_a": "القطعة البرمجية مثل هذه:  <xml>  <block type=\"simple_move_up_right\"/></xml> سوف تتيح للفنان التحرك بشكل مائل!",
           "courseB_artist_loops_challenge1_b": "عند انتهائك من هذا النرد، \"انتقل\" إلى التالي!",
           "courseB_artist_loops_challenge1_c": "أنت سوف تحتاج إلى \"التحرك\" أو القفز\" فوق بعض السطور مرتين."
         },
@@ -2515,10 +2515,10 @@
           "courseB_collector_loops1_a": "من الممكن استخدام القطعة البرمجية <xml><block type=\"collector_collect_simplified\"/></xml> لالتقاط الكنز عندما تكون واقفة على الجزء العلوي منه."
         },
         "courseB_collector_loops1_2019": {
-          "courseB_collector_loops1_a": "من الممكن استخدام القطعة البرمجية [blockly block][0] لالتقاط الكنز عندما تكون واقفة على الجزء العلوي منه."
+          "courseB_collector_loops1_a": "من الممكن استخدام القطعة البرمجية <xml><block type=\"collector_collect_simplified\"/></xml> لالتقاط الكنز عندما تكون واقفة على الجزء العلوي منه."
         },
         "courseB_collector_loops1_2020": {
-          "courseB_collector_loops1_a": "من الممكن استخدام القطعة البرمجية [blockly block][0] لالتقاط الكنز عندما تكون واقفة على الجزء العلوي منه."
+          "courseB_collector_loops1_a": "من الممكن استخدام القطعة البرمجية <xml><block type=\"collector_collect_simplified\"/></xml> لالتقاط الكنز عندما تكون واقفة على الجزء العلوي منه."
         },
         "courseB_collector_loops2": {
           "courseB_collector_loops2_a": "يجب أن تتحرك قبل أن تتمكن من جمع أي كنز.",
@@ -2529,12 +2529,12 @@
           "courseB_collector_loops2_b": "متى وصلت إلى المكان مع الكنز، استخدم القطعة البرمجية  <xml><block type=\"collector_collect\"/></xml>  لالتقاطه."
         },
         "courseB_collector_loops2_2019": {
-          "courseB_collector_loops2_a": "يجب أن تتحرك قبل أن تتمكن من جمع أي كنز.\n",
-          "courseB_collector_loops2_b": "متى وصلت إلى المكان مع الكنز، استخدم القطعة البرمجية  [blockly block][0]  لالتقاطه."
+          "courseB_collector_loops2_a": "يجب أن تتحرك قبل أن تتمكن من جمع أي كنز.",
+          "courseB_collector_loops2_b": "متى وصلت إلى المكان مع الكنز، استخدم القطعة البرمجية  <xml><block type=\"collector_collect\"/></xml>  لالتقاطه."
         },
         "courseB_collector_loops2_2020": {
-          "courseB_collector_loops2_a": "يجب أن تتحرك قبل أن تتمكن من جمع أي كنز.\n",
-          "courseB_collector_loops2_b": "متى وصلت إلى المكان مع الكنز، استخدم القطعة البرمجية  [blockly block][0]  لالتقاطه."
+          "courseB_collector_loops2_a": "يجب أن تتحرك قبل أن تتمكن من جمع أي كنز.",
+          "courseB_collector_loops2_b": "متى وصلت إلى المكان مع الكنز، استخدم القطعة البرمجية  <xml><block type=\"collector_collect\"/></xml>  لالتقاطه."
         },
         "courseB_collector_loops3": {
           "courseB_collector_prog3_a": "جرب استخدام القطعة البرمجية <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> لتجميع الكنز الخاص بك.",
@@ -2545,11 +2545,11 @@
           "courseB_collector_prog3_b": "تذكر أنه يمكنك وضع أكثر من قطعة برمجية واحدة داخل حلقة التكرار."
         },
         "courseB_collector_loops3_2019": {
-          "courseB_collector_prog3_a": "جرب استخدام القطعة البرمجية [blockly block][0] لتجميع الكنز الخاص بك.",
+          "courseB_collector_prog3_a": "جرب استخدام القطعة البرمجية <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> لتجميع الكنز الخاص بك.",
           "courseB_collector_prog3_b": "تذكر أنه يمكنك وضع أكثر من قطعة برمجية واحدة داخل حلقة التكرار."
         },
         "courseB_collector_loops3_2020": {
-          "courseB_collector_prog3_a": "جرب استخدام القطعة البرمجية [blockly block][0] لتجميع الكنز الخاص بك.",
+          "courseB_collector_prog3_a": "جرب استخدام القطعة البرمجية <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> لتجميع الكنز الخاص بك.",
           "courseB_collector_prog3_b": "تذكر أنه يمكنك وضع أكثر من قطعة برمجية واحدة داخل حلقة التكرار."
         },
         "courseB_collector_loops4": {
@@ -2564,13 +2564,13 @@
         },
         "courseB_collector_loops4_2019": {
           "courseB_collector_loops4_a": "جرب استخدام الزر \"خطوة\" لمعرفة أين يمكن الخطأ.",
-          "courseB_collector_loops4_b": "لتغيير مسافة تحرك لوريل، قم بتغيير عدد مرات تشغيل تلك الحلقة.\n",
-          "courseB_collector_loops4_c": "تحتاج \"لوريل\" إلى السيْر وجمع الكنز بعد أن تنهي حلقة التكرار [blockly block][0]!"
+          "courseB_collector_loops4_b": "لتغيير مسافة تحرك لوريل، قم بتغيير عدد مرات تشغيل تلك الحلقة.",
+          "courseB_collector_loops4_c": "تحتاج \"لوريل المغامِرة\" إلى السيْر وجمع الكنز بعد أن تنهي حلقة التكرار <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops4_2020": {
           "courseB_collector_loops4_a": "جرب استخدام الزر \"خطوة\" لمعرفة أين يمكن الخطأ.",
-          "courseB_collector_loops4_b": "لتغيير مسافة تحرك لوريل، قم بتغيير عدد مرات تشغيل تلك الحلقة.\n",
-          "courseB_collector_loops4_c": "تحتاج \"لوريل\" إلى السيْر وجمع الكنز بعد أن تنهي حلقة التكرار [blockly block][0]!"
+          "courseB_collector_loops4_b": "لتغيير مسافة تحرك لوريل، قم بتغيير عدد مرات تشغيل تلك الحلقة.",
+          "courseB_collector_loops4_c": "تحتاج \"لوريل المغامِرة\" إلى السيْر وجمع الكنز بعد أن تنهي حلقة التكرار <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops5": {
           "courseB_collector_loops5_a": "استخدم أكثر من حلقة تكرار واحدة لإتمام المهمة.",
@@ -2603,13 +2603,13 @@
         "courseB_collector_loops6_2019": {
           "courseB_collector_loops6_a": "أليس بمقدورك أن تتعرف على بداية الخطأ؟ استخدم الزر \"خطوة\" لكي يشغل برنامجك خطوة خطوة.",
           "courseB_collector_loops6_b": "يمكنك تغير عدد المرات الخاصة بتشغيل حلقة التكرار عن طريق النقر على \"3\" واختيار رقم مختلف.",
-          "courseB_collector_loops6_c": "ستحتاج إلى استخدام 3 حلقات تكرار [blockly block] لحل هذا اللغز.",
+          "courseB_collector_loops6_c": "ستحتاج إلى استخدام ثلاث حلقات تكرار من [0] [blockly block] لحل هذا اللغز.",
           "courseB_collector_loops6_d": "إذا كنت مرتبكاً، فجرب تقسيم هذا اللغز إلى 3 قطع."
         },
         "courseB_collector_loops6_2020": {
           "courseB_collector_loops6_a": "أليس بمقدورك أن تتعرف على بداية الخطأ؟ استخدم الزر \"خطوة\" لكي يشغل برنامجك خطوة خطوة.",
           "courseB_collector_loops6_b": "يمكنك تغير عدد المرات الخاصة بتشغيل حلقة التكرار عن طريق النقر على \"3\" واختيار رقم مختلف.",
-          "courseB_collector_loops6_c": "ستحتاج إلى استخدام 3 حلقات تكرار [blockly block] لحل هذا اللغز.",
+          "courseB_collector_loops6_c": "ستحتاج إلى استخدام ثلاث حلقات تكرار من [0] [blockly block] لحل هذا اللغز.",
           "courseB_collector_loops6_d": "إذا كنت مرتبكاً، فجرب تقسيم هذا اللغز إلى 3 قطع."
         },
         "courseB_collector_loops7": {
@@ -2667,14 +2667,14 @@
           "courseB_collector_loops_challenge1_d": "جرب هذا!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2019": {
-          "courseB_collector_loops_challenge1_b": "ابدأ بتكرار الأوامر التالية:\n\n[blockly block][0]",
-          "courseB_collector_loops_challenge1_c": "تحرك ناحية الشرق مرتين ما بين كل مسار\n\n[blockly block][0]\n\nيمكنك فعل هذا بواسطة 14 قطعة برمجية. انقر على تلميح واحد إضافي لرؤية الحل.",
-          "courseB_collector_loops_challenge1_d": "جرب هذا!\n\n[blockly block][0]"
+          "courseB_collector_loops_challenge1_b": "ابدأ بتكرار الأوامر التالية:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "تحرك ناحية الشرق مرتين ما بين كل مسار\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nيمكنك فعل هذا بواسطة 14 قطعة برمجية. انقر على تلميح واحد إضافي لرؤية الحل.",
+          "courseB_collector_loops_challenge1_d": "جرب هذا!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2020": {
-          "courseB_collector_loops_challenge1_b": "ابدأ بتكرار الأوامر التالية:\n\n[blockly block][0]",
-          "courseB_collector_loops_challenge1_c": "تحرك ناحية الشرق مرتين ما بين كل مسار\n\n[blockly block][0]\n\nيمكنك فعل هذا بواسطة 14 قطعة برمجية. انقر على تلميح واحد إضافي لرؤية الحل.",
-          "courseB_collector_loops_challenge1_d": "جرب هذا!\n\n[blockly block][0]"
+          "courseB_collector_loops_challenge1_b": "ابدأ بتكرار الأوامر التالية:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "تحرك ناحية الشرق مرتين ما بين كل مسار\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nيمكنك فعل هذا بواسطة 14 قطعة برمجية. انقر على تلميح واحد إضافي لرؤية الحل.",
+          "courseB_collector_loops_challenge1_d": "جرب هذا!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_collector_loops_challenge2": {
           "courseB_collector_loops_challenge2_a": "في حالة حدوث شيء ما خطأ، فلا تخشي البدء من جديد. لا تستسلم!",
@@ -2695,12 +2695,12 @@
         "courseB_collector_loops_challenge2a_2019": {
           "courseB_collector_loops_challenge2a_a": "إذا حدث خطأ، حاول تصحيحه. لا تستسلم! ",
           "courseB_collector_loops_challenge2a_b": "أنظر في هذا الخيار لاجتياز هذه المتاهة. هل ترى نمطًا يمكنك تكراره؟",
-          "courseB_collector_loops_challenge2a_c": "لجمع كل الكنز، ستحتاج أن تظيف قطعتين برمجيتين [blockly block][0] داخل حلقتك، أو أن تضع القطعة البرمجية داخل حلقة \"التكرار\"."
+          "courseB_collector_loops_challenge2a_c": "لجمع كل الكنز، ستحتاج أن تظيف قطعتين برمجيتين <xml> <block type=\"collector_collect\"/></xml> داخل حلقتك، أو أن تضع القطعة البرمجية داخل حلقة \"التكرار\"."
         },
         "courseB_collector_loops_challenge2a_2020": {
           "courseB_collector_loops_challenge2a_a": "إذا حدث خطأ، حاول تصحيحه. لا تستسلم! ",
           "courseB_collector_loops_challenge2a_b": "أنظر في هذا الخيار لاجتياز هذه المتاهة. هل ترى نمطًا يمكنك تكراره؟",
-          "courseB_collector_loops_challenge2a_c": "لجمع كل الكنز، ستحتاج أن تظيف قطعتين برمجيتين [blockly block][0] داخل حلقتك، أو أن تضع القطعة البرمجية داخل حلقة \"التكرار\"."
+          "courseB_collector_loops_challenge2a_c": "لجمع كل الكنز، ستحتاج أن تظيف قطعتين برمجيتين <xml> <block type=\"collector_collect\"/></xml> داخل حلقتك، أو أن تضع القطعة البرمجية داخل حلقة \"التكرار\"."
         },
         "courseB_iceage_loops1": {
           "courseB_iceage_loops1_a": "انتبه للجليد المكسور! وإلا سيتعثَّر \"سكرات\" على الفور!",
@@ -2723,11 +2723,11 @@
         },
         "courseB_iceage_loops1_2019": {
           "courseB_iceage_loops1_a": "انتبه للجليد المكسور! وإلا سيتعثَّر \"سكرات\" على الفور!",
-          "courseB_iceage_loops1_b": "ستضطر إلى استخدام هذه القطعة البرمجية:\n\n[blockly block][0]"
+          "courseB_iceage_loops1_b": "ستضطر إلى استخدام هذه القطعة البرمجية:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops1_2020": {
           "courseB_iceage_loops1_a": "انتبه للجليد المكسور! وإلا سيتعثَّر \"سكرات\" على الفور!",
-          "courseB_iceage_loops1_b": "ستضطر إلى استخدام هذه القطعة البرمجية:\n\n[blockly block][0]"
+          "courseB_iceage_loops1_b": "ستضطر إلى استخدام هذه القطعة البرمجية:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops2": {
           "courseB_iceage_loops2_a": "قسِّم هذا اللغز إلى جزأين، أحدهما قبل الركن، والجزء الآخر بعد الركن.",
@@ -2749,11 +2749,11 @@
           "courseB_iceage_loops3_b": "لتكرار الكود البرمجي، اسحب حلقة التكرار\n\n<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>\n\nثم ضع القطعة البرمجية التي تريد بداخلها."
         },
         "courseB_iceage_loops3_2019": {
-          "courseB_iceage_loops3_a": "استخدِم هذه القطعة البرمجية الجديدة!\n [blockly block][0]",
-          "courseB_iceage_loops3_b": "لتكرير الكود البرمجي، اسحب دالة 'كرر'[0]، ومن ثم استخدم ضع القطعة البرمجية التي تريدها في الداخل."
+          "courseB_iceage_loops3_a": "استخدِم هذه القطعة البرمجي الجديد!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "لتكرير الكود البرمجي، اسحب حلقة\"التكرار\"[0]، ومن ثم استخدم ضع القطعة البرمجية التي تريدها في الداخل."
         },
         "courseB_iceage_loops3_2020": {
-          "courseB_iceage_loops3_a": "استخدِم هذه القطعة البرمجي الجديد!\n [blockly block][0]",
+          "courseB_iceage_loops3_a": "استخدِم هذه القطعة البرمجي الجديد!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
           "courseB_iceage_loops3_b": "لتكرير الكود البرمجي، اسحب حلقة\"التكرار\"[0]، ومن ثم استخدم ضع القطعة البرمجية التي تريدها في الداخل."
         },
         "courseB_iceage_loops4": {
@@ -2845,12 +2845,12 @@
           "courseB_maze_seq1_b": "اسحب ثلاثة من أسهم <xml><block type=\"maze_moveSouth\"/></xml> إلى الخارج، وأوصِلها بالقطعة البرمجية <xml><block type=\"when_run\"/></xml> ليصل \"سكرات\" إلى حبة البلوط."
         },
         "courseB_maze_seq1_2019": {
-          "courseB_maze_seq1_a": "أوصِل القطع البرمجية بالقطعة [blockly block][0] لتحريك \"سكرات\"!",
-          "courseB_maze_seq1_b": "اسحب ثلاثة من أسهم [blockly block][0] إلى الخارج، وأوصِلها بالقطعة البرمجية [blockly block][1] ليصل \"سكرات\" إلى حبة البلوط."
+          "courseB_maze_seq1_a": "أوصِل القطع البرمجية بالقطعة <xml><block type=\"when_run\"/></xml> لتحريك \"سكرات\"!",
+          "courseB_maze_seq1_b": "اسحب ثلاثة من أسهم <xml><block type=\"maze_moveSouth\"/></xml> إلى الخارج، وأوصِلها بالقطعة البرمجية <xml><block type=\"when_run\"/></xml> ليصل \"سكرات\" إلى حبة البلوط."
         },
         "courseB_maze_seq1_2020": {
-          "courseB_maze_seq1_a": "أوصِل القطع البرمجية بالقطعة [blockly block][0] لتحريك \"سكرات\"!",
-          "courseB_maze_seq1_b": "اسحب ثلاثة من أسهم [blockly block][0] إلى الخارج، وأوصِلها بالقطعة البرمجية [blockly block][1] ليصل \"سكرات\" إلى حبة البلوط."
+          "courseB_maze_seq1_a": "أوصِل القطع البرمجية بالقطعة <xml><block type=\"when_run\"/></xml> لتحريك \"سكرات\"!",
+          "courseB_maze_seq1_b": "اسحب ثلاثة من أسهم <xml><block type=\"maze_moveSouth\"/></xml> إلى الخارج، وأوصِلها بالقطعة البرمجية <xml><block type=\"when_run\"/></xml> ليصل \"سكرات\" إلى حبة البلوط."
         },
         "courseB_maze_seq2": {
           "courseB_maze_seq2_a": "هذا البرنامج ينقصه قطعة برمجية واحدة. هل يمكنك معرفتها؟",
@@ -2871,11 +2871,11 @@
         },
         "courseB_maze_seq4_2019": {
           "courseB_maze_seq4_a": "جرِّب إضافة أمر برمجي واحد في كل مرَّة حتى تصِل إلى حبّة البلوط.",
-          "courseB_maze_seq4_b": "أنت سترغب في استخدام القطعة البرمجية [blockly block][0] لحل هذا اللغز."
+          "courseB_maze_seq4_b": "ستحتاج إلى استخدام القطعة البرمجية <xml><block type=\"maze_moveEast\"/></xml> لحل هذا اللغز."
         },
         "courseB_maze_seq4_2020": {
           "courseB_maze_seq4_a": "جرِّب إضافة أمر برمجي واحد في كل مرَّة حتى تصِل إلى حبّة البلوط.",
-          "courseB_maze_seq4_b": "أنت سترغب في استخدام القطعة البرمجية [blockly block][0] لحل هذا اللغز."
+          "courseB_maze_seq4_b": "ستحتاج إلى استخدام القطعة البرمجية <xml><block type=\"maze_moveEast\"/></xml> لحل هذا اللغز."
         },
         "courseB_maze_seq5": {
           "courseB_maze_seq5_a": "إذا علقت ولم تجد الحل، فجرب رسم المسار على الورق.",
@@ -2889,12 +2889,12 @@
         },
         "courseB_maze_seq5_2019": {
           "courseB_maze_seq5_a": "إذا علقت ولم تجد الحل، فجرب رسم المسار على الورق.",
-          "courseB_maze_seq5_b": "هناك طريقان لحل هذا اللغز!",
+          "courseB_maze_seq5_b": "يوجد طريقتين لحل هذا اللغز!",
           "courseB_maze_seq5_c": "غير متأكِّد من كيفية الوصول إلى حبّة البلوط؟ جرِّب هذا المسار."
         },
         "courseB_maze_seq5_2020": {
           "courseB_maze_seq5_a": "إذا علقت ولم تجد الحل، فجرب رسم المسار على الورق.",
-          "courseB_maze_seq5_b": "هناك طريقان لحل هذا اللغز!",
+          "courseB_maze_seq5_b": "يوجد طريقتين لحل هذا اللغز!",
           "courseB_maze_seq5_c": "غير متأكِّد من كيفية الوصول إلى حبّة البلوط؟ جرِّب هذا المسار."
         },
         "courseB_maze_seq6": {
@@ -2910,15 +2910,15 @@
           "courseB_maze_seq5_d": "غير متأكِّد من كيفية الوصول إلى حبّة البلوط؟ جرِّب هذا المسار!"
         },
         "courseB_maze_seq6_2019": {
-          "courseB_maze_seq6_a": "يجب يحتوي الكود بالنهاية على ثلاثة قطع برمجية \"تحريك\".",
-          "courseB_maze_seq6_b": "إذا واجهتك مشكلة، جرب حل اللغز على جزأين، جزء بشكل جانبي، وجزء رأساً على عقب.",
-          "courseB_maze_seq5_c": "هناك وسيلتان لحل هذا اللغز!",
+          "courseB_maze_seq6_a": "يجب أن يحتوي الكود على ثلاث قطع برمجية خاصة بالحركة.",
+          "courseB_maze_seq6_b": "إذا واجهتك مشكلة، جرب حل اللغز على مرحلتين، إحداهما بشكل جانبي، والأخرى للأعلى والأسفل.",
+          "courseB_maze_seq5_c": "هناك طريقتان لِحل هذا اللغز!",
           "courseB_maze_seq5_d": "غير متأكِّد من كيفية الوصول إلى حبّة البلوط؟ جرِّب هذا المسار!"
         },
         "courseB_maze_seq6_2020": {
-          "courseB_maze_seq6_a": "يجب يحتوي الكود بالنهاية على ثلاثة قطع برمجية \"تحريك\".",
-          "courseB_maze_seq6_b": "إذا واجهتك مشكلة، جرب حل اللغز على جزأين، جزء بشكل جانبي، وجزء رأساً على عقب.",
-          "courseB_maze_seq5_c": "هناك وسيلتان لحل هذا اللغز!",
+          "courseB_maze_seq6_a": "يجب أن يحتوي الكود على ثلاث قطع برمجية خاصة بالحركة.",
+          "courseB_maze_seq6_b": "إذا واجهتك مشكلة، جرب حل اللغز على مرحلتين، إحداهما بشكل جانبي، والأخرى للأعلى والأسفل.",
+          "courseB_maze_seq5_c": "هناك طريقتان لِحل هذا اللغز!",
           "courseB_maze_seq5_d": "غير متأكِّد من كيفية الوصول إلى حبّة البلوط؟ جرِّب هذا المسار!"
         },
         "courseB_maze_seq7": {
@@ -2933,12 +2933,12 @@
         },
         "courseB_maze_seq7_2019": {
           "courseB_maze_seq7_a": "أضِف قطعة برمجية واحدة ليَصل\"سكرات\" إلى حبة البلوط.",
-          "courseB_maze_seq7_b": "جرب تشغيل الأوامر البرمجية المقدمة إليك، وشاهد إلى أين سينتهي المطاف.",
+          "courseB_maze_seq7_b": "جرب تشغيل الكود، وانظر أين سينتهي المطاف.",
           "courseB_maze_seq7_c": "لا يمكنك الوصول إلى حبة البلوط؟ جرِّب هذا المسار!"
         },
         "courseB_maze_seq7_2020": {
           "courseB_maze_seq7_a": "أضِف قطعة برمجية واحدة ليَصل\"سكرات\" إلى حبة البلوط.",
-          "courseB_maze_seq7_b": "جرب تشغيل الأوامر البرمجية المقدمة إليك، وشاهد إلى أين سينتهي المطاف.",
+          "courseB_maze_seq7_b": "جرب تشغيل الكود، وانظر أين سينتهي المطاف.",
           "courseB_maze_seq7_c": "لا يمكنك الوصول إلى حبة البلوط؟ جرِّب هذا المسار!"
         },
         "courseB_maze_seq8": {
@@ -2952,12 +2952,12 @@
           "courseB_maze_seq8_c": "لا تعلم أي طريق يجب الذهاب فيه؟ جرب هذا المسار!"
         },
         "courseB_maze_seq8_2019": {
-          "courseB_maze_seq8_a": "جرب إضافة قطعة برمجية واحدة في الوقت المناسب حتى تحل اللغز.",
+          "courseB_maze_seq8_a": "جرب إضافة قطعة برمجية واحدة في كل مرّة حتى تحل اللغز.",
           "courseB_maze_seq8_b": "هناك أكثر من طريقة لحل هذا اللغز!",
           "courseB_maze_seq8_c": "لا تعلم أي طريق يجب الذهاب فيه؟ جرب هذا المسار!"
         },
         "courseB_maze_seq8_2020": {
-          "courseB_maze_seq8_a": "جرب إضافة قطعة برمجية واحدة في الوقت المناسب حتى تحل اللغز.",
+          "courseB_maze_seq8_a": "جرب إضافة قطعة برمجية واحدة في كل مرّة حتى تحل اللغز.",
           "courseB_maze_seq8_b": "هناك أكثر من طريقة لحل هذا اللغز!",
           "courseB_maze_seq8_c": "لا تعلم أي طريق يجب الذهاب فيه؟ جرب هذا المسار!"
         },
@@ -2974,15 +2974,15 @@
           "courseB_maze_seq9_d": "هل علقت ولم تصل؟ جرب هذا المسار!"
         },
         "courseB_maze_seq9_2019": {
-          "courseB_maze_seq9_a": "جرب كتابة كل الخطوات على قطعة من الورق أولاً.",
+          "courseB_maze_seq9_a": "جرب كتابة كل الخطوات على قصاصة ورق أولاً.",
           "courseB_maze_seq9_b": "قم بإنشاء القطعة البرمجية لبرنامجك في الوقت المناسب واختبار ما تقوم بإنشائه.",
-          "courseB_maze_seq9_c": "هناك وسيلتان لحل هذا اللغز!",
+          "courseB_maze_seq9_c": "هناك طريقتان لِحل هذا اللغز!",
           "courseB_maze_seq9_d": "هل علقت ولم تصل؟ جرب هذا المسار!"
         },
         "courseB_maze_seq9_2020": {
-          "courseB_maze_seq9_a": "جرب كتابة كل الخطوات على قطعة من الورق أولاً.",
+          "courseB_maze_seq9_a": "جرب كتابة كل الخطوات على قصاصة ورق أولاً.",
           "courseB_maze_seq9_b": "قم بإنشاء القطعة البرمجية لبرنامجك في الوقت المناسب واختبار ما تقوم بإنشائه.",
-          "courseB_maze_seq9_c": "هناك وسيلتان لحل هذا اللغز!",
+          "courseB_maze_seq9_c": "هناك طريقتان لِحل هذا اللغز!",
           "courseB_maze_seq9_d": "هل علقت ولم تصل؟ جرب هذا المسار!"
         },
         "courseB_maze_seq_challenge1": {
@@ -2994,12 +2994,12 @@
           "courseB_maze_seq_challenge1_b": "جرب استخدام القطعة البرمجية <xml><block type=\"maze_moveWest\"/></xml> للبدء."
         },
         "courseB_maze_seq_challenge1_2019": {
-          "courseB_maze_seq_challenge1_a": "قد لا يعمل هذا المسار الأقصر هذه المرة.",
-          "courseB_maze_seq_challenge1_b": "جرب استخدام القطعة البرمجية [blockly block][0] للبدء."
+          "courseB_maze_seq_challenge1_a": "المسار الأقصر قد لا يعمل هذه المرة.",
+          "courseB_maze_seq_challenge1_b": "جرب استخدام القطعة البرمجية <xml><block type=\"maze_moveWest\"/></xml> للبدء."
         },
         "courseB_maze_seq_challenge1_2020": {
-          "courseB_maze_seq_challenge1_a": "قد لا يعمل هذا المسار الأقصر هذه المرة.",
-          "courseB_maze_seq_challenge1_b": "جرب استخدام القطعة البرمجية [blockly block][0] للبدء."
+          "courseB_maze_seq_challenge1_a": "المسار الأقصر قد لا يعمل هذه المرة.",
+          "courseB_maze_seq_challenge1_b": "جرب استخدام القطعة البرمجية <xml><block type=\"maze_moveWest\"/></xml> للبدء."
         },
         "courseB_maze_seq_challenge2": {
           "courseB_maze_seq_challenge2_a": "لستَ بحاجة إلى إضافة قطع برمجية أو  إزالتها لحل هذا اللغز.",
@@ -3010,12 +3010,12 @@
           "courseB_maze_seq_challenge2_b": "أعد ترتيب القطع البرمجية، واتخذ مسار نمط الدرج."
         },
         "courseB_maze_seq_challenge2_2019": {
-          "courseB_maze_seq_challenge2_a": "أنت لست بحاجة إلى إضافة القطع البرمجية أو  إزالتها لحل هذا اللغز.",
-          "courseB_maze_seq_challenge2_b": "أعد ترتيب القطع البرمجية، واتخذ مسار نمط تدرج السلم."
+          "courseB_maze_seq_challenge2_a": "لستَ بحاجة إلى إضافة قطع برمجية أو  إزالتها لحل هذا اللغز.",
+          "courseB_maze_seq_challenge2_b": "أعد ترتيب القطع البرمجية، واتخذ مسار نمط الدرج."
         },
         "courseB_maze_seq_challenge2_2020": {
-          "courseB_maze_seq_challenge2_a": "أنت لست بحاجة إلى إضافة القطع البرمجية أو  إزالتها لحل هذا اللغز.",
-          "courseB_maze_seq_challenge2_b": "أعد ترتيب القطع البرمجية، واتخذ مسار نمط تدرج السلم."
+          "courseB_maze_seq_challenge2_a": "لستَ بحاجة إلى إضافة قطع برمجية أو  إزالتها لحل هذا اللغز.",
+          "courseB_maze_seq_challenge2_b": "أعد ترتيب القطع البرمجية، واتخذ مسار نمط الدرج."
         },
         "courseB_playlab_events2": {
           "courseB_playlab_events2_a": "هذه هي القطعة البرمجية التي ستجعل ديزي يقول شيء ما:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
@@ -3024,10 +3024,10 @@
           "courseB_playlab_events2_a": "هذه هي القطعة البرمجية التي ستجعل ديزي يقول شيء ما:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events2_2019": {
-          "courseB_playlab_events2_a": "هذه هي القطعة البرمجية التي ستجعل ديزي يقول شيء ما:\n\n[blockly block][0]"
+          "courseB_playlab_events2_a": "هذه هي القطعة البرمجية التي ستجعل ديزي يقول شيء ما:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events2_2020": {
-          "courseB_playlab_events2_a": "هذه هي القطعة البرمجية التي ستجعل ديزي يقول شيء ما:\n\n[blockly block][0]"
+          "courseB_playlab_events2_a": "هذه هي القطعة البرمجية التي ستجعل ديزي يقول شيء ما:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3": {
           "courseB_playlab_events3_a": "هذه هي القطعة البرمجية التي يجب عليك استخدامها لإضافة الحدث:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
@@ -3038,12 +3038,12 @@
           "courseB_playlab_events3_b": "هذه هي القطعة البرمجية التي تحتاجها لتبديل وضع ديزي:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3_2019": {
-          "courseB_playlab_events3_a": "هذه هي القطعة البرمجية التي يجب عليك استخدامها لإضافة الحدث:\n\n[blockly block][0]",
-          "courseB_playlab_events3_b": "هذه هي القطعة البرمجية التي تحتاجها لتبديل وضع ديزي:\n\n[blockly block][0]"
+          "courseB_playlab_events3_a": "هذه هي القطعة البرمجية التي يجب عليك استخدامها لإضافة الحدث:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "هذه هي القطعة البرمجية التي تحتاجها لتبديل وضع ديزي:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3_2020": {
-          "courseB_playlab_events3_a": "هذه هي القطعة البرمجية التي يجب عليك استخدامها لإضافة الحدث:\n\n[blockly block][0]",
-          "courseB_playlab_events3_b": "هذه هي القطعة البرمجية التي تحتاجها لتبديل وضع ديزي:\n\n[blockly block][0]"
+          "courseB_playlab_events3_a": "هذه هي القطعة البرمجية التي يجب عليك استخدامها لإضافة الحدث:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "هذه هي القطعة البرمجية التي تحتاجها لتبديل وضع ديزي:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4": {
           "courseB_playlab_events4_a": "هذا هو الحدث الذي يتحكم في السهم الأيسر:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
@@ -3054,12 +3054,12 @@
           "courseB_playlab_events4_b": "هذه هي القطعة البرمجية التي يجعل الفارس يتحرك لليسار.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4_2019": {
-          "courseB_playlab_events4_a": "هذا هو الحدث الذي يتحكم في السهم الأيسر:\n\n[blockly block][0]",
-          "courseB_playlab_events4_b": "هذه هي القطعة البرمجية التي يجعل الفارس يتحرك لليسار.\n\n[blockly block][0]"
+          "courseB_playlab_events4_a": "هذا هو الحدث الذي يتحكم في السهم الأيسر:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_b": "هذه هي القطعة البرمجية التي يجعل الفارس يتحرك لليسار.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4_2020": {
-          "courseB_playlab_events4_a": "هذا هو الحدث الذي يتحكم في السهم الأيسر:\n\n[blockly block][0]",
-          "courseB_playlab_events4_b": "هذه هي القطعة البرمجية التي يجعل الفارس يتحرك لليسار.\n\n[blockly block][0]"
+          "courseB_playlab_events4_a": "هذا هو الحدث الذي يتحكم في السهم الأيسر:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_b": "هذه هي القطعة البرمجية التي يجعل الفارس يتحرك لليسار.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events5": {
           "courseB_playlab_events5_a": "هذه هي القطعة البرمجية الخاصة بالحدث الذي يتحكم في السهم الأيمن:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
@@ -3070,12 +3070,12 @@
           "courseB_playlab_events5_b": "هذه هي القطعة البرمجية التي تجعل الفارس يركض.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events5_2019": {
-          "courseB_playlab_events5_a": "هذه هي القطعة البرمجية الخاصة بالحدث الذي يتحكم في السهم الأيمن:\n\n[blockly block][0]",
-          "courseB_playlab_events5_b": "هذه هي القطعة البرمجية التي تجعل الفارس يركض.\n\n[blockly block][0]"
+          "courseB_playlab_events5_a": "هذه هي القطعة البرمجية الخاصة بالحدث الذي يتحكم في السهم الأيمن:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "هذه هي القطعة البرمجية التي تجعل الفارس يركض.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events5_2020": {
-          "courseB_playlab_events5_a": "هذه هي القطعة البرمجية الخاصة بالحدث الذي يتحكم في السهم الأيمن:\n\n[blockly block][0]",
-          "courseB_playlab_events5_b": "هذه هي القطعة البرمجية التي تجعل الفارس يركض.\n\n[blockly block][0]"
+          "courseB_playlab_events5_a": "هذه هي القطعة البرمجية الخاصة بالحدث الذي يتحكم في السهم الأيمن:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "هذه هي القطعة البرمجية التي تجعل الفارس يركض.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events6": {
           "courseB_playlab_events6_a": "سوف تحتاج إلى القطع البرمجية للحدث هذه:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
@@ -3088,13 +3088,13 @@
           "courseB_playlab_events6_c": "احصل على كل الرايات من أجل الاجتياز!"
         },
         "courseB_playlab_events6_2019": {
-          "courseB_playlab_events6_a": "سوف تحتاج إلى القطع البرمجية للحدث هذه:\n\n[blockly block][0]",
-          "courseB_playlab_events6_b": "استخدم الأسهم لأسفل المسندلة في الجزء الأخضر \"عند ___الضغط على السهم\" من القطع البرمجية الخاصة بالحدث لاختيار الاتجاهات المختلفة.\n\n[][0]",
+          "courseB_playlab_events6_a": "سوف تحتاج إلى القطع البرمجية للحدث هذه:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_b": "استخدم الأسهم لأسفل المسندلة في الجزء الأخضر \"عند \\_\\_\\_الضغط على السهم\" من القطع البرمجية الخاصة بالحدث لاختيار الاتجاهات المختلفة.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "احصل على كل الرايات من أجل الاجتياز!"
         },
         "courseB_playlab_events6_2020": {
-          "courseB_playlab_events6_a": "سوف تحتاج إلى القطع البرمجية للحدث هذه:\n\n[blockly block][0]",
-          "courseB_playlab_events6_b": "استخدم الأسهم لأسفل المسندلة في الجزء الأخضر \"عند ___الضغط على السهم\" من القطع البرمجية الخاصة بالحدث لاختيار الاتجاهات المختلفة.\n\n[][0]",
+          "courseB_playlab_events6_a": "سوف تحتاج إلى القطع البرمجية للحدث هذه:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_b": "استخدم الأسهم لأسفل المسندلة في الجزء الأخضر \"عند \\_\\_\\_الضغط على السهم\" من القطع البرمجية الخاصة بالحدث لاختيار الاتجاهات المختلفة.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "احصل على كل الرايات من أجل الاجتياز!"
         },
         "courseB_playlab_events7": {
@@ -3108,14 +3108,14 @@
           "courseB_playlab_events7_c": "هذه هي القطعة البرمجية التي تحتاجها لجعل الفارس يتخفى:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events7_2019": {
-          "courseB_playlab_events7_a": "هذه هي القطعة البرمجية الخاصة بالحدث الذي ستحتاجه:\n\n[blockly block][0]",
-          "courseB_playlab_events7_b": "هذه هي القطعة البرمجية التي تحتاجها لتشغيل الصوت:\n\n[blockly block][0]",
-          "courseB_playlab_events7_c": "هذه هي القطعة البرمجية التي تحتاجها لجعل الفارس يتخفى:\n\n[blockly block][0]"
+          "courseB_playlab_events7_a": "هذه هي القطعة البرمجية الخاصة بالحدث الذي ستحتاجه:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "هذه هي القطعة البرمجية التي تحتاجها لتشغيل الصوت:\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "هذه هي القطعة البرمجية التي تحتاجها لجعل الفارس يتخفى:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events7_2020": {
-          "courseB_playlab_events7_a": "هذه هي القطعة البرمجية الخاصة بالحدث الذي ستحتاجه:\n\n[blockly block][0]",
-          "courseB_playlab_events7_b": "هذه هي القطعة البرمجية التي تحتاجها لتشغيل الصوت:\n\n[blockly block][0]",
-          "courseB_playlab_events7_c": "هذه هي القطعة البرمجية التي تحتاجها لجعل الفارس يتخفى:\n\n[blockly block][0]"
+          "courseB_playlab_events7_a": "هذه هي القطعة البرمجية الخاصة بالحدث الذي ستحتاجه:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "هذه هي القطعة البرمجية التي تحتاجها لتشغيل الصوت:\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "هذه هي القطعة البرمجية التي تحتاجها لجعل الفارس يتخفى:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1": {
           "courseB_playlab_events_challenge1_a": "اجعل الحيوانات تتحرك لأسفل عند ضغط على  ▼.<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
@@ -3128,14 +3128,14 @@
           "courseB_playlab_events_challenge1_c": "ما الذي سيقوله الجميع عند انتهاء السباق؟ اجعلهم يتحدثون حول هذا الحدث:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2019": {
-          "courseB_playlab_events_challenge1_a": "اجعل الحيوانات تتحرك لأسفل عند ضغط على  ▼.[blockly block][0]",
-          "courseB_playlab_events_challenge1_b": "قم بتغيير سرعة الحيوانات من خلال استخدام هذه القطعة البرمجية:\n\n[blockly block][0]",
-          "courseB_playlab_events_challenge1_c": "ما الذي سيقوله الجميع عند انتهاء السباق؟ اجعلهم يتحدثون حول هذا الحدث:\n\n[blockly block][0]"
+          "courseB_playlab_events_challenge1_a": "اجعل الحيوانات تتحرك لأسفل عند ضغط على  ▼.<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "قم بتغيير سرعة الحيوانات من خلال استخدام هذه القطعة البرمجية:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
+          "courseB_playlab_events_challenge1_c": "ما الذي سيقوله الجميع عند انتهاء السباق؟ اجعلهم يتحدثون حول هذا الحدث:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2020": {
-          "courseB_playlab_events_challenge1_a": "اجعل الحيوانات تتحرك لأسفل عند ضغط على  ▼.[blockly block][0]",
-          "courseB_playlab_events_challenge1_b": "قم بتغيير سرعة الحيوانات من خلال استخدام هذه القطعة البرمجية:\n\n[blockly block][0]",
-          "courseB_playlab_events_challenge1_c": "ما الذي سيقوله الجميع عند انتهاء السباق؟ اجعلهم يتحدثون حول هذا الحدث:\n\n[blockly block][0]"
+          "courseB_playlab_events_challenge1_a": "اجعل الحيوانات تتحرك لأسفل عند ضغط على  ▼.<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "قم بتغيير سرعة الحيوانات من خلال استخدام هذه القطعة البرمجية:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
+          "courseB_playlab_events_challenge1_c": "ما الذي سيقوله الجميع عند انتهاء السباق؟ اجعلهم يتحدثون حول هذا الحدث:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge2": {
           "courseB_playlab_events_challenge2_a": "يجب أن يحتفي كل حيوان في هذا اللعبة عند النقر عليه. ويجب أن يرجع بعد ثانية أو ثانيتن!",
@@ -3151,14 +3151,14 @@
         },
         "courseB_playlab_events_challenge2_2019": {
           "courseB_playlab_events_challenge2_a": "يجب أن يحتفي كل حيوان في هذا اللعبة عند النقر عليه. ويجب أن يرجع بعد ثانية أو ثانيتن!",
-          "courseB_playlab_events_challenge2_b": "استخدم القطع البرمجية الخاصة بالحدث الأخرى لجعل الحيوانات الأخرى تختفي!\n\n[blockly block][0]",
-          "courseB_playlab_events_challenge2_c": "استخدم الأوامر الإضافية لتشغيل الأصوات، أو تسجيل نقاط عند النقر على الحيوانات!\n\n[blockly block][0]",
+          "courseB_playlab_events_challenge2_b": "استخدم القطع البرمجية الخاصة بالحدث الأخرى لجعل الحيوانات الأخرى تختفي!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "استخدم الأوامر الإضافية لتشغيل الأصوات، أو تسجيل نقاط عند النقر على الحيوانات!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "قم بالخلط! \n\nاجعل بعض الحيوانات تمنح نقاط أكثر عن غيرها. استخدم أصواتاً مختلفة.\nقم بتغيير الحالات المزاجية للحيوانات!"
         },
         "courseB_playlab_events_challenge2_2020": {
           "courseB_playlab_events_challenge2_a": "يجب أن يحتفي كل حيوان في هذا اللعبة عند النقر عليه. ويجب أن يرجع بعد ثانية أو ثانيتن!",
-          "courseB_playlab_events_challenge2_b": "استخدم القطع البرمجية الخاصة بالحدث الأخرى لجعل الحيوانات الأخرى تختفي!\n\n[blockly block][0]",
-          "courseB_playlab_events_challenge2_c": "استخدم الأوامر الإضافية لتشغيل الأصوات، أو تسجيل نقاط عند النقر على الحيوانات!\n\n[blockly block][0]",
+          "courseB_playlab_events_challenge2_b": "استخدم القطع البرمجية الخاصة بالحدث الأخرى لجعل الحيوانات الأخرى تختفي!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "استخدم الأوامر الإضافية لتشغيل الأصوات، أو تسجيل نقاط عند النقر على الحيوانات!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "قم بالخلط! \n\nاجعل بعض الحيوانات تمنح نقاط أكثر عن غيرها. استخدم أصواتاً مختلفة.\nقم بتغيير الحالات المزاجية للحيوانات!"
         },
         "courseB_starWars_prog1": {
@@ -3171,11 +3171,11 @@
         },
         "courseB_starWars_prog1_2019": {
           "courseB_starWars_prog1_a": "جرب إضافة القطع البرمجية في الوقت المناسب، ثم انقر \"تشغيل\" لمشاهدة ما يحدث.",
-          "courseB_starWars_prog1_b": "أنت لن تتحرك إلى الشرق لحل هذا اللغز. ما المسافة التي تحتاج لقطعها من أجل التحرك؟[blockly block][0]"
+          "courseB_starWars_prog1_b": "أنت لن تتحرك إلى الشرق لحل هذا اللغز. ما المسافة التي تحتاج لقطعها من أجل التحرك؟<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2020": {
           "courseB_starWars_prog1_a": "جرب إضافة القطع البرمجية في الوقت المناسب، ثم انقر \"تشغيل\" لمشاهدة ما يحدث.",
-          "courseB_starWars_prog1_b": "أنت لن تتحرك إلى الشرق لحل هذا اللغز. ما المسافة التي تحتاج لقطعها من أجل التحرك؟[blockly block][0]"
+          "courseB_starWars_prog1_b": "أنت لن تتحرك إلى الشرق لحل هذا اللغز. ما المسافة التي تحتاج لقطعها من أجل التحرك؟<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2": {
           "courseB_starWars_prog2_a": "قم بتقسيم هذه المشكلة إلى جزأين. احصل على كومة واحدة من قطع الحديد، ثم تعرف على طريقة الحصول على الأخرى."
@@ -3215,11 +3215,11 @@
         },
         "courseB_starWars_prog4_2019": {
           "courseB_starWars_prog4_a": "قم ببناء قطعة واحدة من الأوامر البرمجية في المرة الواحدة. قم بتشغيلها من أجل معرفة مكان الانتقال من هناك.",
-          "courseB_starWars_prog4_b": "جرب استخدام حلقة \"التكرار\" للحصول على اوامر برمجية أكثر قصراً [blockly block][0]"
+          "courseB_starWars_prog4_b": "جرب استخدام حلقة \"التكرار\" للحصول على اوامر برمجية أكثر قصراً <xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2020": {
           "courseB_starWars_prog4_a": "قم ببناء قطعة واحدة من الأوامر البرمجية في المرة الواحدة. قم بتشغيلها من أجل معرفة مكان الانتقال من هناك.",
-          "courseB_starWars_prog4_b": "جرب استخدام حلقة \"التكرار\" للحصول على اوامر برمجية أكثر قصراً [blockly block][0]"
+          "courseB_starWars_prog4_b": "جرب استخدام حلقة \"التكرار\" للحصول على اوامر برمجية أكثر قصراً <xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5": {
           "courseB_starWars_prog5_a": "ألا يبدو أن هذا النمط متماثلاً مع اللغز السابق؟",
@@ -3237,13 +3237,13 @@
           "courseB_starWars_prog5_a": "ألا يبدو أن هذا النمط متماثلاً مع اللغز السابق؟",
           "courseB_starWars_prog5_b": "سوف يلتقط BB-8 على قطعة الحديد أثناء التدحرج.",
           "courseB_starWars_prog5_c": "قم بتتبع هذا النمط بإصبعط. قم بعد القطع المعدنية أثناء تحركك.",
-          "courseB_starWars_prog5_da": "شاهد ما يحدث إذا كنت تستخدم نفس الحل بالنسبة للغز تدرج السلم:[][0]"
+          "courseB_starWars_prog5_da": "شاهد ما يحدث إذا كنت تستخدم نفس الحل بالنسبة للغز تدرج السلم:![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2020": {
           "courseB_starWars_prog5_a": "ألا يبدو أن هذا النمط متماثلاً مع اللغز السابق؟",
           "courseB_starWars_prog5_b": "سوف يلتقط BB-8 على قطعة الحديد أثناء التدحرج.",
           "courseB_starWars_prog5_c": "قم بتتبع هذا النمط بإصبعط. قم بعد القطع المعدنية أثناء تحركك.",
-          "courseB_starWars_prog5_da": "شاهد ما يحدث إذا كنت تستخدم نفس الحل بالنسبة للغز تدرج السلم:[][0]"
+          "courseB_starWars_prog5_da": "شاهد ما يحدث إذا كنت تستخدم نفس الحل بالنسبة للغز تدرج السلم:![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6": {
           "courseB_starWars_prog6_a": "هذا النمط هو مجرد تدرج سلم مع حركتين لكل اتجاه!",
@@ -3255,11 +3255,11 @@
         },
         "courseB_starWars_prog6_2019": {
           "courseB_starWars_prog6_a": "هذا النمط هو مجرد تدرج سلم مع حركتين لكل اتجاه!",
-          "courseB_starWars_prog6_b": "جرب استخدام حلقة \"التكرار\" للحصول على اوامر برمجية أكثر قصراً [blockly block][0]"
+          "courseB_starWars_prog6_b": "جرب استخدام حلقة \"التكرار\" للحصول على اوامر برمجية أكثر قصراً <xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2020": {
           "courseB_starWars_prog6_a": "هذا النمط هو مجرد تدرج سلم مع حركتين لكل اتجاه!",
-          "courseB_starWars_prog6_b": "جرب استخدام حلقة \"التكرار\" للحصول على اوامر برمجية أكثر قصراً [blockly block][0]"
+          "courseB_starWars_prog6_b": "جرب استخدام حلقة \"التكرار\" للحصول على اوامر برمجية أكثر قصراً <xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7": {
           "courseB_starWars_prog7_a": "ألا يبدو أن هذا النمط متماثلاً مع اللغز السابق؟",
@@ -3291,11 +3291,11 @@
         },
         "courseB_starWars_prog8_2019": {
           "courseB_starWars_prog8_a": "لا ضرر من العودة للخلف عبر مجموعة من المساحات التي سافرت إليها بالفعل.",
-          "courseB_starWars_prog8_b": "جرب استخدام حلقة \"التكرار\" لمشاهدة ما يحدث بالأوامر البرمجية التي وضعتها بالداخل.\n\n[blockly block][0]"
+          "courseB_starWars_prog8_b": "جرب استخدام حلقة \"التكرار\" لمشاهدة ما يحدث بالأوامر البرمجية التي وضعتها بالداخل.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2020": {
           "courseB_starWars_prog8_a": "لا ضرر من العودة للخلف عبر مجموعة من المساحات التي سافرت إليها بالفعل.",
-          "courseB_starWars_prog8_b": "جرب استخدام حلقة \"التكرار\" لمشاهدة ما يحدث بالأوامر البرمجية التي وضعتها بالداخل.\n\n[blockly block][0]"
+          "courseB_starWars_prog8_b": "جرب استخدام حلقة \"التكرار\" لمشاهدة ما يحدث بالأوامر البرمجية التي وضعتها بالداخل.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "لا تخشَ ارتكاب الأخطاء! قم بتشغيل الاوامر البرمجية لرؤية ماذا سيحدث، حتى لو لم تحل اللغز بعد!",
@@ -3310,12 +3310,12 @@
         "courseB_starWars_prog9_2019": {
           "courseB_starWars_prog9_a": "لا تخشَ ارتكاب الأخطاء! قم بتشغيل الاوامر البرمجية لرؤية ماذا سيحدث، حتى لو لم تحل اللغز بعد!",
           "courseB_starWars_prog9_b": "هناك  العديد من الوسائل من أجل حل هذا اللغز.",
-          "courseB_starWars_prog9_c": "هل يمكن لحلقة التكرار [blockly block][0] أن تساعدك هنا؟"
+          "courseB_starWars_prog9_c": "هل يمكن لحلقة التكرار <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> أن تساعدك هنا؟"
         },
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "لا تخشَ ارتكاب الأخطاء! قم بتشغيل الاوامر البرمجية لرؤية ماذا سيحدث، حتى لو لم تحل اللغز بعد!",
           "courseB_starWars_prog9_b": "هناك  العديد من الوسائل من أجل حل هذا اللغز.",
-          "courseB_starWars_prog9_c": "هل يمكن لحلقة التكرار [blockly block][0] أن تساعدك هنا؟"
+          "courseB_starWars_prog9_c": "هل يمكن لحلقة التكرار <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> أن تساعدك هنا؟"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "مربع \"الممثل المعد 1 إلى ؟؟؟ صورة\" يمكن استخدامه لإضافة ممثل على المسرح.",
@@ -8540,8 +8540,8 @@
           "courseC_maze_programming1_b": "لا تخشَ ارتكاب الأخطاء! حاول مرة أخرى، وإذا لم تنجح، جرِّب شيئًا آخر!"
         },
         "coursea_maze_ramp1_2019": {
-          "courseC_maze_programming1_a": "إذا لم يصل الطائر إلى الخنزير، فتأكَّد من أنه قد تم النقر على القطعتين البرمجيتين معاً، ثم انقر فوق \"تشغيل\" مرة ثانية.",
-          "courseC_maze_programming1_b": "لا تخشَ ارتكاب خطأ! حاول مرة أخرى، وإذا لم تنجح، جرِّب شيئًا آخر!"
+          "courseC_maze_programming1_a": "إذا لم يصل الطائر إلى الخنزير، فتأكَّد من أنه قد تم النقر على كلا القطعتين البرمجيتين تمامًا، ثم انقر فوق \"تشغيل\" مرة ثانية.",
+          "courseC_maze_programming1_b": "لا تخشَ ارتكاب الأخطاء! حاول مرة أخرى، وإذا لم تنجح، جرِّب شيئًا آخر!"
         },
         "coursea_maze_ramp1_2020": {
           "courseC_maze_programming1_a": "إذا لم يصل الطائر إلى الخنزير، فتأكَّد من أنه قد تم النقر على كلا القطعتين البرمجيتين تمامًا، ثم انقر فوق \"تشغيل\" مرة ثانية.",
