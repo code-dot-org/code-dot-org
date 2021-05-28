@@ -413,15 +413,9 @@ html[dir='rtl'] div#visualizationResizeBar {
   }
 }
 
-.paint-counter-text {
-  text-anchor: middle;
-  font-size: 16px;
-  font-family: Verdana, Geneva, sans-serif;
-  font-weight: bold;
-  fill: $purple;
-  // stroke: black;
-  // stroke-width: 1;
-  cursor: default;
+.karel-counter-text.paint {
+  font-size: 13px;
+  stroke-width: 0.8;
 }
 
 /* Shrink the visualization area on small displays. */
