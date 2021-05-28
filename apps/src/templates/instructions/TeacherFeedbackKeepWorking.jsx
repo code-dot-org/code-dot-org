@@ -10,7 +10,7 @@ const ReviewStates = makeEnum('completed', 'keepWorking');
 class TeacherFeedbackKeepWorking extends Component {
   static propTypes = {
     latestFeedback: PropTypes.object,
-    reviewState: PropTypes.oneOf(ReviewStates),
+    reviewState: PropTypes.oneOf(Object.values(ReviewStates)),
     setReviewState: PropTypes.func,
     setReviewStateChanged: PropTypes.func
   };
