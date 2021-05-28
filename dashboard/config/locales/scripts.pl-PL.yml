@@ -7971,6 +7971,7 @@ pl:
             realizującego materiał działu 1 programu CSP Code.org. W dolnej części
             tej strony dostępne są pozycje do weryfikacji przez rówieśników po przedłożeniu
             przez Ciebie Twoich własnych przemyśleń dotyczących tego działu. '
+          name: csp1-dlp
         csp2-dlp:
           title: CSP Jednostka 2 Pogłębiona nauka
           description_audience: Zasady informatyki Prowadzcy na szkoleniu
@@ -20929,6 +20930,7 @@ pl:
             swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności
             w zakresie programowania takie jak debugowanie, korzystanie  z zasobów
             i praca zespołowa.
+          name: csd2-2020
         csd1-2020:
           title: Część 1 CSD - Rozwiązywanie problemów i informatyka ('20- '21)
           description: "\"Rozwiązywanie problemów i informatyka\" stanowi niezwykle
@@ -27529,7 +27531,7 @@ pl:
               name: Giga dane, crowdsourcing i uczenie maszynowe
             Machine Learning and Bias:
               key: Uczenie maszynowe i uprzedzenia
-              name: Uczenie maszynowe i uprzedzenia
+              name: Uczenie maszynowe
             Project - Tell a Data Story - Part 1:
               key: Projekt - Opowiedz historię o danych - Część 1
               name: Projekt - Opowiedz historię o danych - Część 1
@@ -27543,6 +27545,8 @@ pl:
                 który obejmuje zagadnienia jednostki. '
               description_teacher: 'Uczniowie przystępują do testu wielokrotnego wyboru,
                 który obejmuje zagadnienia jednostki. '
+            lesson-10:
+              name: Błąd algorytmiczny
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Jednostka 9: Dane'
@@ -28978,7 +28982,7 @@ pl:
                 inaczej, w zależności od konkretnych warunków, na które napotyka program.
             While Loops with the Farmer:
               key: Pętle "dopóki" przy pomocy interfejsu Farmer
-              name: Pętle "dopóki" przy pomocy interfejsu Farmer
+              name: Pętle "dopóki" z Rolnikiem
               description_student: 'Pętle są przydatne do kodowania. Na tej lekcji
                 nauczysz się o nowym rodzaju pętli: pętle "dopóki"!'
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -29039,9 +29043,8 @@ pl:
             Variables with Artist:
               key: Zmienne z Artystą
               name: Zmienne z Artystą
-              description_student: Nie zapomnij o wnoszeniu kreatywności do zajęć!
-                W ramach tych łamigłówek będziesz tworzyć fantastyczne rysunki używając
-                zmiennych.
+              description_student: Na tej lekcji będziesz wykonywać rysunki z użyciem
+                zmiennych, które zmieniają się w trakcie uruchomienia kodu.
               description_teacher: Na tej lekcji uczniowie będą zgłębiać tworzenie
                 powtarzalnych projektów z użyciem zmiennych w środowisku Artist. Uczniowie
                 dowiedzą się, jak można używać zmiennych, aby ułatwić pisanie kodu
@@ -29142,6 +29145,31 @@ pl:
               description_teacher: Na tej lekcji uczniowie będą programować swoją
                 własną interaktywną potańcówkę. Na tych zajęciach potrzebny jest dźwięk,
                 gdyż narzędzie zbudowano tak, aby reagowało na muzykę.
+            lesson-2:
+              name: Tworzenie duszków
+              description_student: Na tej lekcji będziesz pisał programy i dowiesz
+                się o duszkach i zachowaniach.
+              description_teacher: 'Podczas tej lekcji uczniowie będą pracować nad
+                serią poziomów programowania na komputerze, kończąc na otwartym zadaniu
+                „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Uczniowie
+                napiszą **programy** i poznają dwa pojęcia leżące u podstaw Sprite
+                Lab: **duszki** i **zachowania**. '
+            lesson-3:
+              name: Duszki w akcji
+              description_student: Będziesz pracować przez poziomy programowania i
+                zakończyć otwartym zadaniem „swobodnej gry”, w którym możesz zbudować,
+                co tylko zechcesz.
+              description_teacher: 'Podczas tej lekcji uczniowie będą pracować nad
+                serią poziomów programowania na komputerze, kończąc na otwartym zadaniu
+                „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Będą
+                pisać programy reagujące na czasowe **zdarzenia** i działania użytkownika. '
+            lesson-4:
+              name: Przechowywanie i przetwarzanie tekstu
+              description_student: Na tej lekcji będziesz ćwiczyć zmienne w Sprite
+                Lab.
+              description_teacher: 'Uczniowie poćwiczą **zmienne** w Sprite Lab. Będą
+                pracować z danymi wejściowymi użytkownika, aby swoim **zmienny** nadać
+                wartości, a następnie wydrukują te wartości wraz z innym tekstem. '
           lesson_groups:
             csf_warmup:
               display_name: Rozgrzewka
@@ -29162,7 +29190,7 @@ pl:
             end_of_course_project:
               display_name: Koniec projektu kursu
             lessonGroup-9:
-              display_name: Rozgrzewka
+              display_name: Zdarzenia
           name: express-2021
           student_description: Ucz się informatyki wypróbowując poniższe lekcje w
             swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności
@@ -30316,6 +30344,8 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Test
           name: csa1-pilotaż
         csa2-pilot:
           lessons:
@@ -30331,8 +30361,34 @@ pl:
                 aby ukryć wewnętrzną implementację obiektu.
             lesson-2:
               name: Stosowanie zmiennych
+              description_student: Jednym ze sposobów, w jaki inżynierowie oprogramowania
+                mogą przechowywać informacje w pamięci komputera, jest użycie zmiennych.
+                Na tej lekcji będziesz używać zmiennych do przechowywania informacji
+                używanych do tworzenia obiektów `Malarz`, a także do przechowywania
+                informacji wprowadzonych przez użytkownika.
+              description_teacher: Na tej lekcji uczniowie definiują zmienne reprezentujące
+                atrybuty obiektu i używają tych zmiennych do przechowywania wartości.
+                Uczniowie używają klasy `Skaner` do uzyskiwania danych wejściowych
+                od użytkownika i definiowania zmiennych do przechowywania wartości
+                podawanych przez użytkownika. Te wartości są używane do konstruowania
+                obiektów 'Malarz' w Sąsiedztwie.
             lesson-3:
               name: Pisząc konstruktory
+              description_student: Projekt Mercury Pastries food truck potrzebuje
+                Twojej pomocy! Właściciel chce sprzedawać desery w w Sąsiedztwie,
+                ale musi mieć możliwość wprowadzania i przechowywania deserów w programie.
+                Poproszono Cię o wykorzystanie umiejętności inżynierii oprogramowania
+                do stworzenia programu, który może tworzyć obiekty deserowe, aby właściciel
+                mógł śledzić swoje zapasy. Zaczynasz od utworzenia klasy „Deser”,
+                aby właściciel mógł wprowadzić smak, dostępną ilość i cenę każdego
+                sprzedawanego przez siebie deseru.
+              description_teacher: Uczniowie zapoznają się z projektem Mercury Pastries
+                food truckem i potrzebą właściciela programu do wprowadzania i przechowywania
+                deserów. Jako inżynierowie oprogramowania uczniowie  wykorzystują
+                strategie projektowania zorientowanego obiektowo, aby zidentyfikować
+                niezbędne atrybuty i odpowiednie typy danych dla klasy „Deser”. Uczniowie
+                piszą konstruktor i używają obiektu `Skaner` w celu uzyskania wartości
+                zmiennych instancji w celu zainicjowania obiektu` Deser`.
             lesson-4:
               name: Dodawanie wielu konstruktorów
             lesson-5:
@@ -30642,3 +30698,32 @@ pl:
             wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org,
             umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i
             zaangażowanie.
+        aiml-2021:
+          lessons:
+            lesson1:
+              name: Wprowadzenie do uczenia maszynowego
+            lesson2:
+              name: Lekcja 2
+            lesson3:
+              name: Lekcja 3
+            lesson4:
+              name: Lekcja 4
+            lesson5:
+              name: Lekcja 5
+            lesson6:
+              name: Lekcja 6
+            lesson7:
+              name: Lekcja 7
+            lesson8:
+              name: Lekcja 8
+            lesson10:
+              name: Lekcja 10
+            lesson11:
+              name: Lekcja 11
+            lesson12:
+              name: Lekcja 12
+            lesson15:
+              name: Lekcja 15
+        csd7-2021:
+          description: Już wkrótce!
+          student_description: Już wkrótce!

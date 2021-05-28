@@ -1493,13 +1493,6 @@ ur:
         text: ایکس {SPRITE} کے مربوط
       Mikelab_yLocationOf:
         text: Y کے ہم آہنگ {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': گرڈ
-            '"border"': بارڈر
-            '"row"': قطار
-            '"random"': بےترتیب
       RyanLab_moveForward:
         text: آگے چلیں
       RyanLab_turnLeft:

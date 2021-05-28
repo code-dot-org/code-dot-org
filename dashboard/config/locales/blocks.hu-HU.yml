@@ -1638,13 +1638,6 @@ hu:
         text: "{SPRITE} x koordinátája"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinátája"
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': rács
-            '"border"': határ
-            '"row"': sor
-            '"random"': véletlen
       RyanLab_moveForward:
         text: előrelépni
       RyanLab_turnLeft:

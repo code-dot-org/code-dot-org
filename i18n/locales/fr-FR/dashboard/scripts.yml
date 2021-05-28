@@ -15866,6 +15866,8 @@ fr:
               name: Créer PT Préparation - Accomplir la Tâche
         csp9-2021:
           lessons:
+            Machine Learning and Bias:
+              name: Apprentissage Automatique
             'Lesson 9: Assessment Day':
               key: 'Leçon 9 : Journée d''Évaluation'
               name: 'Lesson 15 : Journée d''Évaluation'
@@ -16565,7 +16567,7 @@ fr:
               description_teacher: Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.
             While Loops with the Farmer:
               key: Les Boucles Tant Que avec la Fermière
-              name: Les Boucles Tant Que avec la Fermière
+              name: Les Boucles Tant Que dans la Fermière
               description_student: 'Les boucles sont si utiles dans le codage. Cette leçon t''apprendra un nouveau type de boucle : les boucles tant que !'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Les Conditions dans Minecraft : Voyage Aquatique'
@@ -16600,7 +16602,7 @@ fr:
             Variables with Artist:
               key: Les Variables avec L'Artiste
               name: Les Variables avec L'Artiste
-              description_student: N'oublie pas d'apporter de la créativité en classe ! Dans ces énigmes, tu vas faire des dessins fantastiques en utilisant des variables.
+              description_student: Dans cette leçon, tu vas faire des dessins en utilisant des variables qui changent au fur et à mesure que le programme s'exécute.
               description_teacher: Dans cette leçon, les élèves exploreront la création de dessins répétitifs à l'aide de variables dans l'environnement de L'Artiste. Les élèves apprendront comment les variables peuvent être utilisées pour rendre le code plus facile à écrire et à lire. Après des énigmes guidées, les élèves termineront dans un niveau de jeu libre pour montrer ce qu'ils ont appris et créer leurs propres conceptions.
             Changing Variables with Bee:
               key: Modifier des Variables avec l'Abeille
@@ -16648,6 +16650,8 @@ fr:
               name: Soirée Dansante
               description_student: Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive.
               description_teacher: Dans cette leçon, les élèves programmeront leur propre soirée dansante interactive. Cette activité nécessite du son car l'outil a été conçu pour répondre à la musique.
+            lesson-3:
+              name: Les Lutins en Action
           lesson_groups:
             csf_sequencing:
               display_name: Séquençage
@@ -16663,6 +16667,8 @@ fr:
               display_name: Boucles « Pour »
             csf_sprites:
               display_name: Les Lutins
+            lessonGroup-9:
+              display_name: Événements
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
         pre-express-2021:
           description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
@@ -16842,6 +16848,8 @@ fr:
             CS Discoveries Post Course survey:
               key: CS Discoveries Enquête Post Cours
               name: CS Discoveries Enquête Post Cours
+            Designing With Empathy:
+              name: L'Analyse de la Conception
             Build a Paper Prototype:
               name: Prototypes Papier
             Digital Mode in App Lab:
@@ -17053,3 +17061,7 @@ fr:
           description_short: Enquête Post-Cours CSP auprès des Étudiants
           description: Bienvenue dans l'Enquête Post-Cours CS Principles de Code.org. Cette enquête prend environ 15 minutes. Tes réponses sont privées et anonymes -- ton professeur peut voir des résultats agrégés anonymes pour toute la classe. Les résultats sont essentiels pour ton professeur et Code.org afin de maintenir et d'améliorer le cours.  Merci pour ton temps et ta considération.
           student_description: Bienvenue dans l'Enquête Post-Cours CS Principles de Code.org. Cette enquête prend environ 15 minutes. Tes réponses sont privées et anonymes -- ton professeur peut voir des résultats agrégés anonymes pour toute la classe. Les résultats sont essentiels pour ton professeur et Code.org afin de maintenir et d'améliorer le cours.  Merci pour ton temps et ta considération.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Leçon 15

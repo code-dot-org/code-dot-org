@@ -92,6 +92,12 @@
         },
         "outbreak2": {
           "pointerlocation": "Mövzu blokunu bura çəkin."
+        },
+        "courseA_maze_seq2": {
+          "courseA_maze_seqA_callout1": "Proqramı addım-addım keçmək üçün addım düyməsini istifadə edin. Bu, səhvi tapmaqda kömək edəcək!"
+        },
+        "courseB_maze_seq2": {
+          "courseB_maze_seq2_callout1": "Proqramı addım-addım keçmək üçün addım düyməsini istifadə edin. Bu, səhvi tapmaqda kömək edəcək!"
         }
       }
     }

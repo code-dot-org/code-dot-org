@@ -1581,13 +1581,6 @@ ro:
         text: coordonatele x ale {SPRITE}
       Mikelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': rețea
-            '"border"': margine
-            '"row"': rând
-            '"random"': aleator
       RyanLab_moveForward:
         text: mută înainte
       RyanLab_turnLeft:

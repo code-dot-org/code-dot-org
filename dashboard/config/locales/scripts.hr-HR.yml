@@ -2324,6 +2324,10 @@ hr:
               display_name: Liste
             csp_loops:
               display_name: Petlje
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: Strojno učenje
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2447,6 +2451,8 @@ hr:
               display_name: Petlja brojača
             csf_sprites:
               display_name: Likovi
+            lessonGroup-9:
+              display_name: Događaji
         pre-express-2021:
           lesson_groups:
             csf_loops:
