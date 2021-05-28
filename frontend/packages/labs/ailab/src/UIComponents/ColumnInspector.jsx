@@ -179,7 +179,7 @@ class ColumnInspector extends Component {
                           <div style={styles.bold}>Column information:</div>
                           {!currentColumnData.isColumnDataValid && (
                             <p style={styles.error}>
-                              Numerical columns cannot contain strings or empty cells.
+                              Numerical columns cannot contain strings.
                             </p>
                           )}
                           {currentColumnData.isColumnDataValid && (

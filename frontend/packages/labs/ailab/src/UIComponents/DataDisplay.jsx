@@ -25,7 +25,7 @@ class DataDisplay extends Component {
           <DataTable />
         </div>
         <div style={styles.footerText}>
-          There are {this.props.data.length} rows of data.
+          There are {this.props.data.length} rows of data. If rows contained empty cells, they were removed.
           {this.props.data.length > 100 &&
             <span>
               &nbsp;
