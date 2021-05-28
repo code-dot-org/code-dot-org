@@ -23,7 +23,7 @@ ReactDOM.render(
   <Provider store={store}>
     <LessonExtras
       lessonNumber={config.lessonNumber}
-      nextLessonNumber={config.nextStageNumber}
+      nextLessonNumber={config.nextLessonNumber}
       nextLevelPath={config.nextLevelPath}
       bonusLevels={config.bonusLevels}
       showProjectWidget={showProjectWidget}
