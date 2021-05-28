@@ -776,9 +776,6 @@ Dashboard::Application.routes.draw do
           get 'names'
           post 'save'
         end
-        member do
-          get 'metadata'
-        end
       end
 
       resources :teacher_feedbacks, only: [:index, :create] do
