@@ -1,0 +1,7 @@
+lesson_group 'about me_ip', display_name: 'Interactive Poster: Self-Expression'
+lesson_group_description 'Version 1 of Interactive Poster: Self-Expression'
+lesson 'HoC Tutorial 1', display_name: 'Self-Expression', has_lesson_plan: false
+level 'CourseEF_video_MakeSprite_2020', progression: 'Video: How to Make a Sprite'
+level 'self-expression_make1', progression: 'Skill Building'
+level 'self-expression_positioning', progression: 'Skill Building'
+
