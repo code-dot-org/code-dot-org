@@ -918,7 +918,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       params: @milestone_params.merge(script_level_id: last_level_in_stage.id)
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal({'previous' => {'name' => 'The Artist', 'position' => 5}}, response['stage_changing'])
+    assert_equal({'previous' => {'name' => 'The Artist', 'position' => 5}}, response['lesson_changing'])
   end
 
   test 'milestone changes to next stage in custom script' do
@@ -940,8 +940,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     # find localized test strings for custom stage names in script
-    assert response.key?('stage_changing'), "No key 'stage_changing' in response #{response.inspect}"
-    assert_equal('milestone-stage-1', response['stage_changing']['previous']['name'])
+    assert response.key?('lesson_changing'), "No key 'lesson_changing' in response #{response.inspect}"
+    assert_equal('milestone-stage-1', response['lesson_changing']['previous']['name'])
   end
 
   test 'milestone post respects level_id for active level' do

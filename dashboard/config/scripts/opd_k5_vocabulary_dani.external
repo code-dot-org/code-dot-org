@@ -1,0 +1,13 @@
+name 'OPD-K5 Vocabulary_dani'
+skip_dialog true
+markdown <<MARKDOWN
+# CS Fundamentals > Key Vocabulary
+
+As you begin to learn computer science, one of the most important tasks is to become familiar with the language of coding. In this course and throughout the CS Fundamentals resources, we use the same vocabulary used in the computer science industry. Encouraging young students to learn and use professional terms enables them to communicate with others and build their knowledge in computer science without having to relearn terms and concepts later. The terms and concepts used in these courses are defined using words that most young students should be able to understand.
+
+Here is a [list of vocabulary terms](http://code.org/curriculum/docs/k-5/glossary) used throughout the CS Fundamentals resources; many of these terms are introduced in this course as well. You don't have to learn all these words right now. Use that list as a reference during this online professional development course and when you use our courses with your students.
+
+<a href="http://code.org/curriculum/docs/k-5/glossary" target="blank" rel="noopener noreferrer"><button class="default">View the Glossary >></button></a>
+
+> **Teaching Tip:** Best practice is to introduce the terms with easy-to-understand language, relate the terms to previous experiences, use the terms repeatedly beyond the lesson itself throughout the entire course (and in other situations) when appropriate, and reinforce students' use in oral and written communication.
+MARKDOWN

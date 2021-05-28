@@ -45,7 +45,6 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
 
   Then I reload the page
   And I wait to see ".react_stage"
-  And I wait until jQuery Ajax requests are finished
 
   # Verify the three dots in the header are 1. all, 2. none, 3. some questions answered.
   And I verify progress in the header of the current page is "perfect_assessment" for level 2
@@ -60,7 +59,6 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
 
   # Go to the course page and verify the same three dots.
   Then I navigate to the course page for "allthethings"
-  And I wait until jQuery Ajax requests are finished
   And I verify progress for lesson 23 level 2 is "perfect_assessment"
   And I verify progress for lesson 23 level 3 is "not_tried"
   And I verify progress for lesson 23 level 4 is "attempted_assessment"
@@ -72,7 +70,6 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
   And I press "#ok-button" using jQuery to load a new page
   And I am on "http://studio.code.org/s/allthethings/lessons/23/levels/1?noautoplay=true"
   And I wait to see ".react_stage"
-  And I wait until jQuery Ajax requests are finished
 
   # Verify the three dots in the header all reflect the submission.
   And I verify progress in the header of the current page is "perfect_assessment" for level 2
@@ -87,7 +84,6 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
 
   # Go to the course page and verify the same three dots.
   Then I navigate to the course page for "allthethings"
-  And I wait until jQuery Ajax requests are finished
   And I verify progress for lesson 23 level 2 is "perfect_assessment"
   And I verify progress for lesson 23 level 3 is "not_tried"
   And I verify progress for lesson 23 level 4 is "attempted_assessment"

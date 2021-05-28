@@ -14,7 +14,7 @@ import {
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  stageExtrasAvailable
+  lessonExtrasAvailable
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
@@ -244,7 +244,7 @@ class EditSectionForm extends Component {
           />
           {lessonExtrasAvailable(section.scriptId) && (
             <LessonExtrasField
-              value={section.stageExtras}
+              value={section.lessonExtras}
               onChange={lessonExtras => editSectionProperties({lessonExtras})}
               disabled={isSaveInProgress}
             />
@@ -373,6 +373,7 @@ const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
     [SectionLoginType.google_classroom]: i18n.editSectionLoginTypeGoogleDesc(),
     [SectionLoginType.clever]: i18n.editSectionLoginTypeCleverDesc()
   };
+
   return (
     <div>
       <FieldName>{i18n.loginType()}</FieldName>
@@ -475,28 +476,35 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
 );
 PairProgrammingField.propTypes = FieldProps;
 
-const RestrictAccessField = ({value, onChange, disabled, loginType}) => (
-  <div>
-    <FieldName>{i18n.restrictSectionAccess()}</FieldName>
-    <FieldDescription>
-      {loginType === 'email'
-        ? i18n.explainRestrictedSectionEmail()
-        : i18n.explainRestrictedSectionWordAndPicture()}{' '}
-      <a
-        href="https://support.code.org/hc/en-us/articles/360060056611"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {i18n.learnMore()}
-      </a>
-    </FieldDescription>
-    <YesNoDropdown
-      value={value}
-      onChange={restrictSection => onChange(restrictSection)}
-      disabled={disabled}
-    />
-  </div>
-);
+const RestrictAccessField = ({value, onChange, disabled, loginType}) => {
+  const {clever, google_classroom} = SectionLoginType;
+  if (loginType !== (clever && google_classroom)) {
+    return (
+      <div>
+        <FieldName>{i18n.restrictSectionAccess()}</FieldName>
+        <FieldDescription>
+          {loginType === 'email'
+            ? i18n.explainRestrictedSectionEmail()
+            : i18n.explainRestrictedSectionWordAndPicture()}{' '}
+          <a
+            href="https://support.code.org/hc/en-us/articles/360060056611"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {i18n.learnMore()}
+          </a>
+        </FieldDescription>
+        <YesNoDropdown
+          value={value}
+          onChange={restrictSection => onChange(restrictSection)}
+          disabled={disabled}
+        />
+      </div>
+    );
+  } else {
+    return null;
+  }
+};
 RestrictAccessField.propTypes = {...FieldProps, loginType: PropTypes.string};
 
 const TtsAutoplayField = ({value, onChange, disabled, isEnglish}) => (
@@ -569,7 +577,7 @@ let defaultPropsFromState = state => ({
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
-  lessonExtrasAvailable: id => stageExtrasAvailable(state, id),
+  lessonExtrasAvailable: id => lessonExtrasAvailable(state, id),
   hiddenLessonState: state.hiddenLesson,
   assignedScriptName: assignedScriptName(state),
   localeEnglishName: state.locales.localeEnglishName,
