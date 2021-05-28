@@ -5,7 +5,7 @@ import {TestResults} from '@cdo/apps/constants';
 
 /**
  * This is based off of the currently version of U3L2_TurtleSquare_right.level,
- * which lives at /s/cspunit3/stage/2/puzzle/3
+ * which lives at /s/cspunit3/lessons/2/levels/3
  */
 var levelDefinition = {
   freePlay: true,
