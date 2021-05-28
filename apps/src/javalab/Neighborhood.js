@@ -84,9 +84,21 @@ export default class Neighborhood {
         return this.controller.addPegman(
           id,
           parseInt(x),
-          this.convertYCoordinate(parseInt(y)),
+          parseInt(y),
           Direction[direction.toUpperCase()]
         );
+      }
+      case NeighborhoodSignalType.PAINT: {
+        const {id, color} = signal.detail;
+        return this.controller.subtype.addPaint(id, color);
+      }
+      case NeighborhoodSignalType.REMOVE_PAINT: {
+        const {id} = signal.detail;
+        return this.controller.subtype.removePaint(id);
+      }
+      case NeighborhoodSignalType.TURN_LEFT: {
+        const {id} = signal.detail;
+        return this.controller.subtype.turnLeft(id);
       }
       default:
         console.log(signal.value);
