@@ -633,6 +633,45 @@ export function getSelectedColumns(state) {
     });
 }
 
+function isColumnCategorical(state, column) {
+  return (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL);
+}
+
+function isValidCategoricalData(state, column) {
+  return !hasTooManyUniqueOptions(state, column);
+}
+
+function isColumnNumerical(state, column) {
+  return (state.columnsByDataType[column] === ColumnTypes.NUMERICAL);
+}
+
+function isValidNumericalData(state, column) {
+  return !isNaN(getMaximumValue(state, column));
+}
+
+function isColumnDataValid(state, column) {
+  return (
+    isColumnCategorical(state, column) && isValidCategoricalData(state,column)
+  ) ||
+  (isColumnNumerical(state, column) && isValidNumericalData(state,column));
+}
+
+function isLabel(state, column) {
+  return column === state.labelColumn;
+}
+
+function isFeature(state, column) {
+  return state.selectedFeatures.includes(column);
+}
+
+function isSelected(state, column) {
+  return isLabel(state, column) || isFeature(state, column);
+}
+
+function isSelectable(state, column) {
+  return isColumnDataValid(state, column) && !isSelected(state, column);
+}
+
 export function getCurrentColumnData(state) {
   if (!state.currentColumn) {
     return null;
@@ -646,7 +685,9 @@ export function getCurrentColumnData(state) {
     extrema: getExtrema(state, state.currentColumn),
     frequencies: getOptionFrequencies(state, state.currentColumn),
     description: getColumnDescription(state, state.currentColumn),
-    hasTooManyUniqueOptions: hasTooManyUniqueOptions(state, state.currentColumn)
+    hasTooManyUniqueOptions: hasTooManyUniqueOptions(state, state.currentColumn),
+    isColumnDataValid: isColumnDataValid(state, state.currentColumn),
+    isSelectable: isSelectable(state, state.currentColumn)
   };
 }
 
@@ -688,7 +729,7 @@ export function getNumericalColumns(state) {
   models.
 */
 function hasTooManyUniqueOptions(state, column) {
-  if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
+  if (isColumnCategorical(state, column)) {
     const uniqueOptionsCount =
       getUniqueOptions(state, state.currentColumn).length;
     return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
@@ -846,7 +887,7 @@ export function getConvertedLabels(state, rawLabels = []) {
 }
 
 export function isRegression(state) {
-  return state.columnsByDataType[state.labelColumn] === ColumnTypes.NUMERICAL;
+  return isColumnNumerical(state, state.labelColumn);
 }
 
 export function getAccuracyGrades(state) {
@@ -1027,9 +1068,9 @@ export function getColumnDataToSave(state, column) {
   const columnData = {};
   columnData.id = column;
   columnData.description = getColumnDescription(state, column);
-  if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
+  if (isColumnCategorical(state, column)) {
     columnData.values = getUniqueOptions(state, column);
-  } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
+  } else if (isColumnNumerical(state, column)) {
     const {max, min} = getExtrema(state, column);
     columnData.max = max;
     columnData.min = min;
@@ -1088,6 +1129,7 @@ const panelList = [
   { id: "dataDisplayLabel", label: "Label" },
   { id: "dataDisplayFeatures", label: "Features" },
   { id: "trainModel", label: "Train" },
+  { id: "generateResults", label: "Test" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
   { id: "saveModel", label: "Save" },
@@ -1147,6 +1189,10 @@ function isPanelEnabled(state, panelId) {
     if (state.saveStatus === "started") {
       return false;
     }
+
+    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
+      return false;
+    }
   }
 
   return true;
@@ -1171,12 +1217,6 @@ function isPanelAvailable(state, panelId) {
 
   if (panelId === "saveModel") {
     if ((mode && mode.hideSave) || state.saveStatus === "success") {
-      return false;
-    }
-  }
-
-  if (panelId === "modelSummary") {
-    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
       return false;
     }
   }
@@ -1306,8 +1346,7 @@ export function getCrossTabData(state) {
   }
 
   if (
-    state.columnsByDataType[state.labelColumn] !== ColumnTypes.CATEGORICAL ||
-    state.columnsByDataType[state.currentColumn] !== ColumnTypes.CATEGORICAL
+    !isColumnCategorical(state, state.labelColumn) || !isColumnCategorical(state, state.currentColumn)
   ) {
     return null;
   }
@@ -1377,8 +1416,8 @@ export function getScatterPlotData(state) {
   }
 
   if (
-    state.columnsByDataType[state.labelColumn] !== ColumnTypes.NUMERICAL ||
-    state.columnsByDataType[state.currentColumn] !== ColumnTypes.NUMERICAL
+    !isColumnNumerical(state, state.labelColumn)
+    || !isColumnNumerical(state, state.currentColumn)
   ) {
     return null;
   }

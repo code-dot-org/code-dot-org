@@ -50,9 +50,8 @@ class ColumnInspector extends Component {
     setLabelColumn: PropTypes.func.isRequired,
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
-    currentPanel: PropTypes.string,
-    labelColumn: PropTypes.string,
-    selectedFeatures: PropTypes.array
+    setCurrentColumn: PropTypes.func,
+    currentPanel: PropTypes.string
   };
 
   handleChangeDataType = (event, feature) => {
@@ -79,17 +78,16 @@ class ColumnInspector extends Component {
   };
 
   render() {
-    const {
-      currentColumnData,
-      currentPanel,
-      labelColumn,
-      selectedFeatures
-    } = this.props;
+    const { currentColumnData, currentPanel } = this.props;
 
-    if (
+    const isCategorical =
       currentColumnData &&
-      currentColumnData.dataType === ColumnTypes.CATEGORICAL
-    ) {
+      currentColumnData.dataType === ColumnTypes.CATEGORICAL;
+
+    const isNumerical =
+      currentColumnData && currentColumnData.dataType === ColumnTypes.NUMERICAL;
+
+    if (isCategorical) {
       barData.labels = Object.values(currentColumnData.uniqueOptions);
       barData.datasets[0].data = barData.labels.map(option => {
         return currentColumnData.frequencies[option];
@@ -111,99 +109,85 @@ class ColumnInspector extends Component {
           <div style={styles.largeText}>{currentColumnData.id}</div>
           <div style={styles.scrollableContents}>
             <div style={styles.scrollingContents}>
-              <form>
+              <span style={styles.bold}>Data Type:</span>
+              &nbsp;
+              {currentColumnData.readOnly && currentColumnData.dataType}
+              {!currentColumnData.readOnly && (
+                <select
+                  onChange={event =>
+                    this.handleChangeDataType(event, currentColumnData.id)
+                  }
+                  value={currentColumnData.dataType}
+                >
+                  {Object.values(ColumnTypes).map((option, index) => {
+                    return (
+                      <option key={index} value={option}>
+                        {option}
+                      </option>
+                    );
+                  })}
+                </select>
+              )}
+              {currentColumnData.description && (
                 <div>
-                  <label>
-                    <span style={styles.bold}>Data Type:</span>
-                    &nbsp;
-                    {currentColumnData.readOnly && currentColumnData.dataType}
-                    {!currentColumnData.readOnly && (
-                      <select
-                        onChange={event =>
-                          this.handleChangeDataType(event, currentColumnData.id)
-                        }
-                        value={currentColumnData.dataType}
-                      >
-                        {Object.values(ColumnTypes).map((option, index) => {
-                          return (
-                            <option key={index} value={option}>
-                              {option}
-                            </option>
-                          );
-                        })}
-                      </select>
-                    )}
-                    {currentColumnData.description && (
-                      <div>
-                        <br />
-                        <span style={styles.bold}>Description:</span>
-                        &nbsp;
-                        <div>{currentColumnData.description}</div>
-                        <br />
-                      </div>
-                    )}
-                  </label>
+                  <br />
+                  <span style={styles.bold}>Description:</span>
+                  &nbsp;
+                  <div>{currentColumnData.description}</div>
+                  <br />
+                </div>
+              )}
+              {isCategorical && (
+                <div>
+                  <div style={styles.bold}>Column information:</div>
 
-                  {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
-                    <div>
-                      <div style={styles.bold}>Column information:</div>
-
-                      {barData.labels.length <= maxLabelsInHistogram && (
-                        <Bar
-                          data={barData}
-                          width={100}
-                          height={150}
-                          options={chartOptions}
-                        />
-                      )}
-                      {barData.labels.length > maxLabelsInHistogram && (
-                        <div>
-                          {barData.labels.length} values were found in this
-                          column. A graph is only shown when there are{" "}
-                          {maxLabelsInHistogram} or fewer.
-                        </div>
-                      )}
-                    </div>
+                  {barData.labels.length <= maxLabelsInHistogram && (
+                    <Bar
+                      data={barData}
+                      width={100}
+                      height={150}
+                      options={chartOptions}
+                    />
                   )}
-
-                  {currentPanel === "dataDisplayFeatures" && (
+                  {barData.labels.length > maxLabelsInHistogram && (
                     <div>
-                      <ScatterPlot />
-                      <CrossTab />
-                    </div>
-                  )}
-
-                  {currentColumnData.dataType === ColumnTypes.NUMERICAL && (
-                    <div>
-                      {currentColumnData.extrema && (
-                        <div>
-                          <div style={styles.bold}>Column information:</div>
-                          {isNaN(currentColumnData.extrema.min) && (
-                            <p style={styles.error}>
-                              Numerical columns should contain only numbers.
-                            </p>
-                          )}
-                          {!isNaN(currentColumnData.extrema.min) && (
-                            <div style={styles.contents}>
-                              min: {currentColumnData.extrema.min}
-                              <br />
-                              max: {currentColumnData.extrema.max}
-                              <br />
-                              range: {currentColumnData.extrema.range}
-                            </div>
-                          )}
-                        </div>
-                      )}
+                      {barData.labels.length} values were found in this column.
+                      A graph is only shown when there are{" "}
+                      {maxLabelsInHistogram} or fewer.
                     </div>
                   )}
                 </div>
-              </form>
+              )}
+              {currentPanel === "dataDisplayFeatures" && (
+                <div>
+                  <ScatterPlot />
+                  <CrossTab />
+                </div>
+              )}
+              {isNumerical && currentColumnData.extrema && (
+                <div>
+                  <div style={styles.bold}>Column information:</div>
+                  {!currentColumnData.isColumnDataValid && (
+                    <p style={styles.error}>
+                      Numerical columns should contain only numbers.
+                    </p>
+                  )}
+                  {currentColumnData.isColumnDataValid && (
+                    <div style={styles.contents}>
+                      min: {currentColumnData.extrema.min}
+                      <br />
+                      max: {currentColumnData.extrema.max}
+                      <br />
+                      range: {currentColumnData.extrema.range}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 
           {currentPanel === "dataDisplayLabel" &&
-            currentColumnData.id !== labelColumn &&
-            !currentColumnData.hasTooManyUniqueOptions && (
+            currentColumnData.isSelectable && (
               <button
                 type="button"
                 onClick={e => this.setPredictColumn(e, currentColumnData.id)}
@@ -214,8 +198,7 @@ class ColumnInspector extends Component {
             )}
 
           {currentPanel === "dataDisplayFeatures" &&
-            !selectedFeatures.includes(currentColumnData.id) &&
-            !currentColumnData.hasTooManyUniqueOptions && (
+            currentColumnData.isSelectable && (
               <button
                 type="button"
                 onClick={e => this.addFeature(e, currentColumnData.id)}
@@ -243,9 +226,7 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
-    currentPanel: state.currentPanel,
-    labelColumn: state.labelColumn,
-    selectedFeatures: state.selectedFeatures
+    currentPanel: state.currentPanel
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {
