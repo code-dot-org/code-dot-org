@@ -3446,6 +3446,8 @@
               display_name: Variabler
             csf_for_loops:
               display_name: For-løkker
+            lessonGroup-9:
+              display_name: Hendelser
         pre-express-2021:
           lesson_groups:
             csf_loops:

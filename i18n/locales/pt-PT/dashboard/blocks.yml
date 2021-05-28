@@ -1582,13 +1582,6 @@ pt:
         text: x coordenada de {SPRITE}
       Mikelab_yLocationOf:
         text: y coordenada de {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': grade
-            '"border"': fronteira
-            '"row"': aula
-            '"random"': aleatório
       RyanLab_moveForward:
         text: segue em frente
       RyanLab_turnLeft:

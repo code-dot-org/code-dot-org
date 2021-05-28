@@ -9391,7 +9391,7 @@ es-MX:
           * El botón de esta página redirige a [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
           * Si lo prefiere, puede establecer "Encuesta de post-curso de estudiante" como la unidad actual para su sección en el menú desplegable en el panel del profesor.
       CSD U1 Test:
-        title: Ordenadores y resolución de problemas post-proyecto prueba.
+        title: 'Prueba Fin de Proyecto: Ordenadores y Resolución de Problemas '
       Unit 1 Lesson 1 Overview:
         markdown: "# Resumen\n\nLa clase trabaja en grupos para diseñar barcos de
           papel aluminio que puedan cargar tantas monedas como sea posible. Al final
@@ -9541,9 +9541,9 @@ es-MX:
 
           Explicar cómo recrear una imagen utilizando sólo dos valores simples.
       CSD Interactive Animations and Games Post-Project Test:
-        title: Prueba fin de curso de Animaciones Interactivas y Juegos
+        title: 'Animaciones y Juegos Interactivos: Prueba Fin de Proyecto'
       CSD Physical Computing Post-Project Test:
-        title: Prueba fin de curso de Computación Física
+        title: Prueba Fin de Curso de Computación Física
       CSD U2 PSP Programming:
         markdown: |
           # El proceso de resolución de problemas de programación
@@ -9736,7 +9736,7 @@ es-MX:
           - Ejemplo ([PDF] (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf)
           | [DOCX] (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))"
       CSD U5 test:
-        title: Prueba postproyecto de datos y sociedad
+        title: Datos y Sociedad Prueba Fin de Proyecto
       CSD U6 circuit smart bike blinker build:
         markdown: |-
           # Construye tus intermitentes
@@ -9783,9 +9783,9 @@ es-MX:
 
           Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
       CSD User Centered Design Post-Project Test:
-        title: 'Diseño centrado en el usuario: Prueba fin de curso '
+        title: 'Diseño Centrado en el Usuario: Prueba Fin de Proyecto'
       CSD Web Development Post-Project Test:
-        title: Prueba final del Proyecto de Desarrollo Web
+        title: Prueba Final del Proyecto Desarrollo Web
       CSDU6 Innovation:
         markdown: |+
           #Investigación sobre la innovación
@@ -10448,3 +10448,5 @@ es-MX:
           escuchar música, comprar o simplemente navegar por la web.\n* ¡Es importante
           que los programadores entiendan las necesidades de los demás y diseñen las
           aplicaciones pensando en ellas!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      csd-pulse-check-survey-1-levelgroup U1Ch2:
+        title: "¡Encuesta rápida de CS Discoveries!"

@@ -1640,13 +1640,6 @@ uk:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': сітка
-            '"border"': рамка
-            '"row"': ряд
-            '"random"': випадковий
       RyanLab_moveForward:
         text: рухатись вперед
       RyanLab_turnLeft:

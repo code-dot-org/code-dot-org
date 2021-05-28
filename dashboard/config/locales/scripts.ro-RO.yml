@@ -9471,6 +9471,10 @@ ro:
               display_name: Liste
             csp_loops:
               display_name: Bucle
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: Învățare Automată
         coursea-2021:
           title: Curs A (2021)
           description: Învață noțiunile de bază ale științei calculatoarelor și siguranței
@@ -10651,6 +10655,7 @@ ro:
                 funcționează diferit în funcție de condițiile specifice întâlnite
                 de program.
             While Loops with the Farmer:
+              name: Bucle „while” în Fermier
               description_student: 'Buclele sunt extrem de utile atunci când scriem
                 cod. În această lecție vei învăța mai multe despre un nou tip de buclă:
                 buclele „while”!'
@@ -10708,8 +10713,8 @@ ro:
                 Pentru modele mai complicate, elevii vor învăța despre funcțiile imbricate,
                 prin care o funcție este apelată din altă funcție.
             Variables with Artist:
-              description_student: Nu uita să-ți aduci creativitatea cu tine în clasă!
-                În aceste puzzle-uri vei crea desene fantastice cu ajutorul variabilelor.
+              description_student: În această lecție vei desena cu variabile care
+                se schimbă pe măsură ce programul rulează.
               description_teacher: În această lecție, elevii vor explora crearea de
                 modele repetitive folosind variabile în mediul Artist. Elevii vor
                 învăța cum pot fi utilizate variabilele pentru a scrie și citi cod
@@ -10787,6 +10792,8 @@ ro:
               description_teacher: În această lecție elevii vor programa propria petrecere
                 dansantă interactivă. Pentru această activitate este nevoie de sunet,
                 deoarece instrumentul a fost creat pentru a reacționa la muzică.
+            lesson-3:
+              name: Spiriduși în acțiune
           lesson_groups:
             csf_sequencing:
               display_name: Secvențiere
@@ -10802,6 +10809,8 @@ ro:
               display_name: Bucle Pentru
             end_of_course_project:
               display_name: Proiect de final de curs
+            lessonGroup-9:
+              display_name: Evenimente
           student_description: Învață știința calculatoarelor în ritmul tău cu ajutorul
             lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți
             dezvolți abilitățile de rezolvare a problemelor și participă la provocări
@@ -10991,6 +11000,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -11036,3 +11047,7 @@ ro:
           lesson_groups:
             cspSurvey2020:
               display_name: Sondaj
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lecția 15

@@ -1051,12 +1051,6 @@ te:
             "{x: 300, y: 200}": కుడి
       Mikelab_whenKeyPressed:
         text: నొక్కినప్పుడు {KEY} కీ
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': గ్రిడ్
-            '"border"': బార్డర్
-            '"row"': రో
       aalab_layoutSprites:
         options:
           FORMAT:

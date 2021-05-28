@@ -63,10 +63,6 @@ mk:
             '"a"': А
             '"s"': Југ
             '"d"': Д
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': случајно
       aalab_layoutSprites:
         options:
           FORMAT:

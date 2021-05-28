@@ -15457,6 +15457,10 @@ zh-CN:
               name: 课程 F
             csf:
               name: 计算机科学基本原理
+            sprites_in_action_2021:
+              name: 精灵图实验室：在活动的精灵图 （计算机科学基础 2021 试航）
+            text_and_prompts_2021:
+              name: 精灵图实验室：精灵实验室：文本和提示 (CSF 2021 Pilot)
           lesson_groups:
             lesson group:
               display_name: 显示名称
@@ -16318,7 +16322,7 @@ zh-CN:
               name: 大数据、众包和机器学习
             Machine Learning and Bias:
               key: 机器学习和偏见
-              name: 机器学习和偏见
+              name: 机器学习
             Project - Tell a Data Story - Part 1:
               key: 项目 - 讲述数据的故事 - 第 1 部分
               name: 项目 - 讲述数据的故事 - 第 1 部分
@@ -17114,7 +17118,7 @@ zh-CN:
             Variables with Artist:
               key: 艺术家和变量
               name: 艺术家和变量
-              description_student: 别忘了将创意带到课堂中！在这些关卡中，你会用变量做出了不起的图画。
+              description_student: 本课程会使用在运行时变化的变量来画图。
               description_teacher: 这节课中，学生们会在小艺术家环境中用变量来探索重复的设计。学生们会学习到变量如何能被用来让代码更容易书写和阅读。在指导的关卡后，学生们会在自由关卡中结束，他们能展示他们学到了什么，创造他们自己的图案。
             Changing Variables with Bee:
               key: 蜜蜂与改变变量
@@ -17164,6 +17168,8 @@ zh-CN:
               name: 舞蹈派对
               description_student: 该庆祝了！这节课，会创作自己的舞蹈派对。
               description_teacher: 这节课中，学生会制作自己的交互舞蹈派对。这个活动需要声音，才能对音乐有响应。
+            lesson-3:
+              name: 动作精灵图
           lesson_groups:
             csf_sequencing:
               display_name: 序列
@@ -17181,6 +17187,8 @@ zh-CN:
               display_name: 精灵图
             end_of_course_project:
               display_name: 课程结束项目
+            lessonGroup-9:
+              display_name: 事件
           student_description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
         pre-express-2021:
           title: 学前儿童的速学课程 (2019)
@@ -17360,6 +17368,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            Designing With Empathy:
+              name: 设计分析
             Build a Paper Prototype:
               name: 纸面原型
             Digital Mode in App Lab:
@@ -17487,6 +17497,8 @@ zh-CN:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-4:
+              display_name: 测试
         csa2-pilot:
           lessons:
             lesson-15:
@@ -17573,3 +17585,9 @@ zh-CN:
           description_short: 计算机科学原理学生课后调查
           description: 欢迎来到Code.org的计算机科学原理课后问卷。这个调查需要10分钟来完成。你的答案会被保密，并是匿名的。
           student_description: 欢迎来到Code.org的计算机科学原理课后问卷。这个调查需要10分钟来完成。你的答案会被保密，并是匿名的。
+        aiml-2021:
+          lessons:
+            lesson1:
+              name: 机器学习的简介
+            lesson15:
+              name: 第 15 课

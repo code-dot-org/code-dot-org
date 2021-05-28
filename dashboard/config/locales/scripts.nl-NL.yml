@@ -5375,7 +5375,6 @@ nl:
           lessons:
             Machine Learning and Bias:
               key: Machinaal leren en vooringenomenheid (bias)
-              name: Machinaal leren en vooringenomenheid (bias)
         csp10-2021:
           lessons:
             Project - Innovation Simulation Part 1:
@@ -5574,7 +5573,7 @@ nl:
             csf_sprites:
               display_name: Sprites
             lessonGroup-9:
-              display_name: Opwarmen
+              display_name: Gebeurtenissen
         pre-express-2021:
           description_audience: 'Leeftijden: 4-8'
           lesson_groups:
@@ -5635,6 +5634,8 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -5681,3 +5682,7 @@ nl:
           lesson_groups:
             cspSurvey2020:
               display_name: Vragenlijst
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Les 15

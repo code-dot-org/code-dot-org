@@ -1751,6 +1751,10 @@ az:
           lessons:
             Wrap up:
               name: Yekun
+        jess-test-script:
+          lessons:
+            Tools:
+              name: Alətlər
         csp5-virtual:
           lessons:
             Variables:
@@ -1976,6 +1980,8 @@ az:
               display_name: Funksiyalar
             csf_variables:
               display_name: dəyişənlər
+            lessonGroup-9:
+              display_name: Hadisələr
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2002,6 +2008,8 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-4:
+              display_name: Yoxla
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -2030,3 +2038,7 @@ az:
               display_name: Giriş
             Introduction:
               display_name: Giriş
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Dərs 15

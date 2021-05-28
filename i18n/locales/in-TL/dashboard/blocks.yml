@@ -1314,8 +1314,12 @@ in:
           CONDITION:
             '"when"': crwdns401128:0crwdne401128:0
             '"while"': crwdns401130:0crwdne401130:0
+      gamelab_startAvoiding:
+        text: crwdns2547466:0[SPRITE]crwdnd2547466:0[0]crwdnd2547466:0[TARGET]crwdnd2547466:0[1]crwdne2547466:0
       gamelab_startFollowing:
         text: crwdns2486192:0[SPRITE]crwdnd2486192:0[0]crwdnd2486192:0[TARGET]crwdnd2486192:0[1]crwdne2486192:0
+      gamelab_stopAvoiding:
+        text: crwdns2547468:0[SPRITE]crwdnd2547468:0[0]crwdne2547468:0
       gamelab_stopCollectingData:
         text: crwdns2478930:0crwdne2478930:0
       gamelab_stopFollowing:
@@ -1664,6 +1668,8 @@ in:
         text: crwdns195177:0[SPRITE]crwdnd195177:0[0]crwdnd195177:0[COLOR]crwdnd195177:0[1]crwdne195177:0
       Mikelab_setupLevel:
         text: crwdns2546874:0[A1]crwdnd2546874:0[0]crwdnd2546874:0[A2]crwdnd2546874:0[1]crwdnd2546874:0[A3]crwdnd2546874:0[2]crwdnd2546874:0[A4]crwdnd2546874:0[3]crwdnd2546874:0[A5]crwdnd2546874:0[4]crwdnd2546874:0[A6]crwdnd2546874:0[5]crwdnd2546874:0[A7]crwdnd2546874:0[6]crwdnd2546874:0[A8]crwdnd2546874:0[7]crwdnd2546874:0[B1]crwdnd2546874:0[8]crwdnd2546874:0[B2]crwdnd2546874:0[9]crwdnd2546874:0[B3]crwdnd2546874:0[10]crwdnd2546874:0[B4]crwdnd2546874:0[11]crwdnd2546874:0[B5]crwdnd2546874:0[12]crwdnd2546874:0[B6]crwdnd2546874:0[13]crwdnd2546874:0[B7]crwdnd2546874:0[14]crwdnd2546874:0[B8]crwdnd2546874:0[15]crwdne2546874:0
+      Mikelab_setupOutbreak:
+        text: crwdns2547470:0[SPRITE2N]crwdnd2547470:0[0]crwdnd2547470:0[TOGGLE]crwdnd2547470:0[1]crwdne2547470:0
       Mikelab_setupSim:
         text: crwdns2486210:0[SPRITE1N]crwdnd2486210:0[0]crwdnd2486210:0[SPRITE1COSTUME]crwdnd2486210:0[1]crwdnd2486210:0[SPRITE1SPEED]crwdnd2486210:0[2]crwdnd2486210:0[SPRITE2N]crwdnd2486210:0[3]crwdnd2486210:0[SPRITE2COSTUME]crwdnd2486210:0[4]crwdnd2486210:0[SPRITE2SPEED]crwdnd2486210:0[5]crwdnd2486210:0[SPRITE3N]crwdnd2486210:0[6]crwdnd2486210:0[SPRITE3COSTUME]crwdnd2486210:0[7]crwdne2486210:0
       Mikelab_showScoreboard:
@@ -1761,14 +1767,14 @@ in:
         text: crwdns2546962:0crwdne2546962:0
       Outbreak_beginWearingMasks:
         text: crwdns2546964:0crwdne2546964:0
-      Outbreak_layoutSprites:
-        text: crwdns2546966:0[FORMAT]crwdnd2546966:0[0]crwdne2546966:0
-        options:
-          FORMAT:
-            '"grid"': crwdns2546968:0crwdne2546968:0
-            '"border"': crwdns2546970:0crwdne2546970:0
-            '"row"': crwdns2546972:0crwdne2546972:0
-            '"random"': crwdns2546974:0crwdne2546974:0
+      Outbreak_layoutBorder:
+        text: crwdns2547472:0crwdne2547472:0
+      Outbreak_layoutClusters:
+        text: crwdns2547474:0[NUM]crwdnd2547474:0[0]crwdne2547474:0
+      Outbreak_layoutGrid:
+        text: crwdns2547476:0crwdne2547476:0
+      Outbreak_layoutRandom:
+        text: crwdns2547478:0crwdne2547478:0
       Outbreak_setSpeed:
         text: crwdns2546976:0[VAL]crwdnd2546976:0[0]crwdne2546976:0
       Outbreak_setupOutbreak:
