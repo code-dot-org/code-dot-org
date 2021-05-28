@@ -43,7 +43,7 @@
         {
           "type": "checkbox",
           "name": "question5",
-          "title": "Course you're enrolled in for 2021-22 PD",
+          "title": "Course you're enrolled in for 2021-22 PD (Select only one)",
           "isRequired": true,
           "choices": [
             {
@@ -54,7 +54,8 @@
               "value": "item2",
               "text": "CS Principles"
             }
-          ]
+          ],
+          "maxSelectedChoices": 1
         },
         {
           "type": "multipletext",
@@ -305,10 +306,6 @@
             {
               "value": "item50",
               "text": "The STEM Center of Excellence at the Citadel"
-            },
-            {
-              "value": "item51",
-              "text": "Technology & Innovation in Education (SD)"
             },
             {
               "value": "item52",

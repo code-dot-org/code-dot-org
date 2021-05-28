@@ -2,7 +2,7 @@
   "script": {
     "name": "coursed-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-05-21 20:18:07 UTC",
+    "serialized_at": "2021-05-26 18:18:03 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -328,7 +328,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting** lesson, students will write *conditional (if/else) statements* to state the rules of simple card games. ",
         "preparation": "- Gather decks of cards or something similar.\n- Print or display the ***sample programs**.\n- Print one ***assessment** for each student.\n- Make sure every student has a reflection journal.",
-        "purpose": "One of the best parts of teaching conditionals is that students already understand the concept from their everyday lives. \n\nThis lesson merges computer science into the real world by building off of their ability to tell if a condition is true or false. Students will learn to use `if` statements to declare when a certain command should be run, as well as `if / else` statements to declare when a command should be run and what to run otherwise. Students may not recognize the word conditionals, but most students will understand the idea of using \"if\" to make sure that some action only occurs when it is supposed to.",
+        "purpose": "One of the best parts of teaching conditionals is that students already understand the concept from their everyday lives. \n\nThis lesson merges computer science into the real world by building off of their ability to tell if a condition is true or false. Students will learn to use if statements to declare when a certain command should be run, as well as if / else statements to declare when a command should be run and what to run otherwise. Students may not recognize the word conditionals, but most students will understand the idea of using \"if\" to make sure that some action only occurs when it is supposed to.",
         "student_overview": "It's time to play a game where you earn points only under certain conditions!",
         "unplugged": true
       },
@@ -368,7 +368,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, your class will continue to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
-        "purpose": "After being introduced to conditionals in \"Conditionals with Cards,\" students will now practice using them in their programs. The `if / else` blocks will allow for a more flexible program. The bee will only collect nectar **if** there is a flower or make honey **if** there is a honeycomb. ",
+        "purpose": "After being introduced to conditionals in \"Conditionals with Cards,\" students will now practice using them in their programs. The \"if / else\" blocks will allow for a more flexible program. The bee will only collect nectar *if* there is a flower or make honey *if* there is a honeycomb. ",
         "student_overview": "Now that you understand conditionals, it's time to program Bee to use them when collecting honey and nectar. "
       },
       "seeding_key": {
@@ -406,10 +406,10 @@
       "relative_position": 16,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this **skill-building** lesson, students will learn about `until` loops. Students will build programs that have the main character repeat actions `until` they reach their desired stopping point.",
+        "overview": "In this **skill-building** lesson, students will learn about \"until\" loops. Students will build programs that have the main character repeat actions \"until\" they reach their desired stopping point.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
         "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops by adding the `until` conditional. By pairing these concepts together, students will be able to explore the potential for creating complex and innovative programs.",
-        "student_overview": "You can do some amazing things when you use `until` loops!"
+        "student_overview": "You can do some amazing things when you use \"until\" loops!"
       },
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
@@ -2453,8 +2453,7 @@
       "key": "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab",
       "position": 13,
       "properties": {
-        "name": "Lesson Extras",
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab",
@@ -2846,8 +2845,7 @@
       "key": "725a7d9a-35a3-483e-a83b-f88bf0033095",
       "position": 9,
       "properties": {
-        "name": "Lesson Extras",
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "725a7d9a-35a3-483e-a83b-f88bf0033095",
@@ -3071,7 +3069,7 @@
       "key": "8cc71fbc-f53a-45d2-9b80-e102f01f25b7",
       "position": 2,
       "properties": {
-        "description": "Pull up a puzzle from this lesson, we recommend puzzle 9. \n\n - Ask the class what the bee should do when it gets to the cloud.\n    - The bee should use a conditional to check for a flower or a honeycomb.\n - Use the `if at flower / else` block. Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\n    - The bee should `get nectar` if there is a flower and `make honey` if there is a honeycomb.\n\nFill in the rest of the code and press `Run`. Discuss with the class why this worked.",
+        "description": "Pull up a puzzle from this lesson, we recommend puzzle 9. \n\n - Ask the class what the bee should do when it gets to the cloud.\n    - The bee should use a conditional to check for a flower or a honeycomb.\n - Use the \"if at flower / else block\". Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\n    - The bee should \"get nectar\" if there is a flower and \"make honey\" if there is a honeycomb.\n\nFill in the rest of the code and press \"Run\". Discuss with the class why this worked.",
         "name": "Preview of Online Puzzles \r"
       },
       "seeding_key": {
@@ -3183,8 +3181,7 @@
       "key": "9326c58a-39b6-4f40-a2ba-5c19267c2a3f",
       "position": 10,
       "properties": {
-        "name": "Lesson Extras",
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "9326c58a-39b6-4f40-a2ba-5c19267c2a3f",
@@ -3354,7 +3351,7 @@
       "key": "6ecd9736-c038-433f-bd11-18b7ae703bcd",
       "position": 1,
       "properties": {
-        "description": "In this lesson, students will be creating loops that only run `until` a condition is true.  Help the students understand how this works by leading them in group activities and having them do an action `until` some condition is true.  For example: Have students touch their nose `until` you tell them to stop.",
+        "description": "In this lesson, students will be creating loops that only run \"until\" a condition is true.  Help the students understand how this works by leading them in group activities and having them do an action \"until\" some condition is true.  For example: Have students touch their nose \"until\" you tell them to stop.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3366,7 +3363,7 @@
       "key": "21ce5499-3d29-40b9-8d79-184696838f2e",
       "position": 2,
       "properties": {
-        "description": "\n####Preview of Online Puzzles \n\nPull up a puzzle from today's Code Studio puzzles. We recommend Puzzle 4. \n\n - Ask the class what the bird should repeat to get to the pig.\n    - The bird should repeat `move forward`, `turn right`, `move forward`, and then `turn left`.\n - Ask the class what they can use to repeat this code. \n    - The bird should repeat this pattern *until* it reaches the pig. \n\nFill in the rest of the code using the `repeat until` loop and press `Run`. Discuss with the class why this worked."
+        "description": "\n####Preview of Online Puzzles \n\nPull up a puzzle from today's Code Studio puzzles. We recommend Puzzle 4. \n\n - Ask the class what the bird should repeat to get to the pig.\n    - The bird should repeat \"move forward\", \"turn right\", \"move forward\", and then \"turn left\".\n - Ask the class what they can use to repeat this code. \n    - The bird should repeat this pattern *until* it reaches the pig. \n\nFill in the rest of the code using the \"repeat until\" loop and press \"Run\". Discuss with the class why this worked."
       },
       "seeding_key": {
         "activity_section.key": "21ce5499-3d29-40b9-8d79-184696838f2e",
@@ -3377,7 +3374,7 @@
       "key": "743e2b7a-0738-44b2-afb4-44a8f1e3edab",
       "position": 1,
       "properties": {
-        "description": "####Online Puzzles\n\nBringing together concepts is not easy, but this set of lessons is meant to help students  see the endless possibilities of coding when using conditions. If students struggle at all with understanding the similarities or differences between `while` loops and `until` loops, have them try to think of how they would use similar statements in their real lives.",
+        "description": "####Online Puzzles\n\nBringing together concepts is not easy, but this set of lessons is meant to help students  see the endless possibilities of coding when using conditions. If students struggle at all with understanding the similarities or differences between \"while\" loops and \"until\" loops, have them try to think of how they would use similar statements in their real lives.",
         "name": "Until Loops in Maze",
         "progression_name": "Skill Building"
       },
@@ -3456,7 +3453,7 @@
       "key": "b9c0e01d-2222-4dca-ad71-dc6068af0439",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What's the difference between an `until` loop and a `while` loop?",
+        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What's the difference between an \"until\" loop and a \"while\" loop?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4999,7 +4996,7 @@
         "level_keys": [
           "CourseD_Dance_2020_bonus1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5025,7 +5022,7 @@
         "level_keys": [
           "CourseD_Dance_2020_bonus3_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5990,7 +5987,7 @@
         "level_keys": [
           "courseD_harvester_nested_loops_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -6016,7 +6013,7 @@
         "level_keys": [
           "courseD_collector_nested_loops_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -6773,7 +6770,7 @@
         "level_keys": [
           "courseD_bee_conditionals_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -6799,7 +6796,7 @@
         "level_keys": [
           "courseD_bee_conditionals_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -9400,18 +9397,6 @@
       }
     },
     {
-      "name": "Build a Star Wars Game Puzzles",
-      "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/preview",
-      "key": "build_a_star_wars_game_puzzles",
-      "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "build_a_star_wars_game_puzzles"
-      }
-    },
-    {
       "name": "Common Core and NGSS Guidance",
       "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
       "key": "common_core_and_ngss_guidance",
@@ -9691,6 +9676,42 @@
       },
       "seeding_key": {
         "resource.key": "lesson_type_guide"
+      }
+    },
+    {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
+      "key": "open-ended_programming_levels",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
+      "key": "open-ended_programming_levels_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels_1"
+      }
+    },
+    {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
+      "key": "open-ended_programming_levels_2",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels_2"
       }
     },
     {
@@ -10066,6 +10087,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
         "resource.key": "pause_and_think_online"
       }
@@ -10073,7 +10100,7 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
-        "resource.key": "build_a_star_wars_game_puzzles"
+        "resource.key": "open-ended_programming_levels_1"
       }
     },
     {
@@ -10092,6 +10119,12 @@
       "seeding_key": {
         "lesson.key": "Dance Party",
         "resource.key": "dance_party_unplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "open-ended_programming_levels_2"
       }
     },
     {

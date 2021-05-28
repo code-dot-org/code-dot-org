@@ -509,7 +509,7 @@ export default class Craft {
    * Initialize Blockly and the Craft app. Called on page load.
    */
   static init(config) {
-    config.level.disableFinalStageMessage = true;
+    config.level.disableFinalLessonMessage = true;
     config.showInstructionsInTopPane = true;
 
     document.body.className += ' minecraft';

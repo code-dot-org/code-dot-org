@@ -116,7 +116,7 @@ class ScriptLevelsController < ApplicationController
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
-      render 'levels/_hidden_stage'
+      render 'levels/_hidden_lesson'
       return
     end
 
@@ -167,8 +167,8 @@ class ScriptLevelsController < ApplicationController
       script.get_script_level_by_chapter(params[:chapter])
     elsif params[:lesson_position]
       script.get_script_level_by_relative_position_and_puzzle_position(params[:lesson_position], params[:id], false)
-    elsif params[:lockable_stage_position]
-      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
+    elsif params[:lockable_lesson_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_lesson_position], params[:id], true)
     else
       script.get_script_level_by_id(params[:id])
     end
@@ -231,7 +231,7 @@ class ScriptLevelsController < ApplicationController
     return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
 
     @script = Script.get_from_cache(params[:script_id])
-    @stage = @script.lesson_by_relative_position(params[:lesson_position].to_i)
+    @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
@@ -247,13 +247,13 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    @stage = Script.get_from_cache(
+    @lesson = Script.get_from_cache(
       params[:script_id]
     ).lesson_by_relative_position(
       params[:lesson_position].to_i
       )
-    @script = @stage.script
-    script_bonus_levels_by_lesson = @script.get_bonus_script_levels(@stage)
+    @script = @lesson.script
+    script_bonus_levels_by_lesson = @script.get_bonus_script_levels(@lesson)
 
     user = @user || current_user
     unless user.nil?
@@ -270,16 +270,16 @@ class ScriptLevelsController < ApplicationController
     end
 
     @stage_extras = {
-      next_stage_number: @stage.next_level_number_for_lesson_extras(user),
-      stage_number: @stage.relative_position,
-      next_level_path: @stage.next_level_path_for_lesson_extras(user),
+      next_stage_number: @lesson.next_level_number_for_lesson_extras(user),
+      stage_number: @lesson.relative_position,
+      next_level_path: @lesson.next_level_path_for_lesson_extras(user),
       bonus_levels: script_bonus_levels_by_lesson,
     }.camelize_keys
-    @bonus_level_ids = @stage.script_levels.where(bonus: true).map(
+    @bonus_level_ids = @lesson.script_levels.where(bonus: true).map(
       &:level_ids
     ).flatten
 
-    render 'scripts/stage_extras'
+    render 'scripts/lesson_extras'
   end
 
   # Provides a JSON summary of a particular lesson, that is consumed by tools used to
@@ -294,7 +294,7 @@ class ScriptLevelsController < ApplicationController
       if params[:lesson_position]
         script.lesson_by_relative_position(params[:lesson_position])
       else
-        script.lesson_by_relative_position(params[:lockable_stage_position], true)
+        script.lesson_by_relative_position(params[:lockable_lesson_position], true)
       end
 
     render json: lesson.summary_for_lesson_plans
@@ -469,7 +469,7 @@ class ScriptLevelsController < ApplicationController
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
     @game = @level.game
-    @stage ||= @script_level.lesson
+    @lesson ||= @script_level.lesson
 
     load_level_source
 

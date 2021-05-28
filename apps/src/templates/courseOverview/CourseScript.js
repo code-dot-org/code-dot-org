@@ -13,7 +13,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   isScriptHiddenForSection,
   toggleHiddenScript
-} from '@cdo/apps/code-studio/hiddenStageRedux';
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -175,7 +175,8 @@ const styles = {
     marginRight: 0
   },
   flex: {
-    display: 'flex'
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 export const UnconnectedCourseScript = CourseScript;
@@ -190,7 +191,7 @@ export default connect(
       ownProps.courseId,
       true
     ),
-    hiddenStageState: state.hiddenStage,
+    hiddenStageState: state.hiddenLesson,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
       state.teacherSections.sectionIds.length === 0
