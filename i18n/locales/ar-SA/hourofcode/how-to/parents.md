@@ -29,7 +29,7 @@ title: دليل "ساعة من البرمجة" الإرشادي لأولياء �
 تدمج جميع أنشطتنا حل المشكلات والتفكير النقدي بالمرح والابتكار، ولكن إليك بعض تفضيلات الطلاب:
 
 - الطفل الذي يحب اللعب: [ماينكرافت](https://code.org/minecraft) أو [حفلة رقص](https://code.org/dance) 
-- الطفل الذي يحب ديزني: [حرب النجوم](https://code.org/starwars) أو [ملكة الثلج](https://studio.code.org/s/frozen/stage/1/puzzle/1) أو [موانا](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C) 
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - الطفل الذي يحب التعلّم: [الذكاء الاصطناعي للمحيطات](https://code.org/oceans) أو [اصنع الموسيقى بلغة سكراتش](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg) 
 
 <h3>ضعف التقنيات أو عدم توفرها؟</h3>

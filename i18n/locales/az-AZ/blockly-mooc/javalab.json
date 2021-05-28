@@ -1,1 +1,11 @@
-{}
+{
+  "compilerError": "Proqramınızı tərtib edə bilmədik. Proqramınızdakı səhvləri axtarın və yenidən cəhd edin.",
+  "illegalMethodAccess": "Təhlükəsizlik siyasətimiz tərəfindən bloklanan bir metodu əldə etməyə çalışdınız.",
+  "internalCompilerException": "Ups. Proqramınızı tərtib edərkən bizim tərəfimizdə bir səhv var. Yenidən çalışdırın.Bu səhv davam edərsə, support@code.org ünvanından bizimlə əlaqə saxlayın. Mesajınıza {connectionId} əlaqə kimliyini daxil etdiyinizə əmin olun.",
+  "internalException": "Ups. Bizim tərəfimizdə bir səhv var.Proqramınızı yeniden çalışdırmağa cəhd edin.Bu səhv davam edərsə, support@code.org ünvanından bizimlə əlaqə saxlayın. Mesajınıza {connectionId} əlaqə kimliyini daxil etdiyinizə əmin olun.",
+  "internalRuntimeException": "Ups.Proqramınızı tərtib edərkən bizim tərəfimizdə bir səhv var.Yeniden çalışdırmağa cəhd edin.Bu səhv davam edərsə, support@code.org ünvanından bizimlə əlaqə saxlayın. Mesajınıza {connectionId} əlaqə kimliyini daxil etdiyinizə əmin olun.",
+  "javaExtensionMissing": "Yanlış fayl adı. Fayl adları '.java' ilə bitməlidir.",
+  "noMainMethod": "Səhv: sizin proqramda main metodu yoxdur.",
+  "runtimeError": "İşləyərkən kodunuz bir istisnaya uğradı.",
+  "twoMainMethods": "Səhv: Sizin kodun yalnız bir main metodu ola bilər. Kodda main metodu olan ən azı 2 class tapıldı."
+}

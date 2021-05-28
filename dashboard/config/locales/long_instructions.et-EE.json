@@ -160,7 +160,8 @@
         "frozen square iterative": "Näib et me oleme poolel teel joonistamaks ruutu. Ühendame 4 joont omavahel, et valmiks ruut.",
         "frozen square loop": "Tere, olen Anna! Teeme ruudu kasutades \"Korda\" blokki, sellega kasutame teisi blokke vähem. Kui palju kordi (???) peaks \"Korda\" blokki kasutama, et teha valmis ruut?",
         "frozen square loop 3x": "Loome kolm ruutu, peale igat ruutu peaks aga keerama. Keera peale igat ruutu 120 kraadi.",
-        "frozen square snowflake": "Kas sa saad luua lumehelbe kasutades \"Korda\" blokki, et joonistada ruutu 10 korda ja \"Keera\" blokki\", et keerata iga ruudu vahel 36 kraadi?"
+        "frozen square snowflake": "Kas sa saad luua lumehelbe kasutades \"Korda\" blokki, et joonistada ruutu 10 korda ja \"Keera\" blokki\", et keerata iga ruudu vahel 36 kraadi?",
+        "CourseD_EOC_dance": "Loo oma enda tants"
       }
     }
   }

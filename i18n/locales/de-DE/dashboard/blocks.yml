@@ -1649,13 +1649,6 @@ de:
         text: x Koordinate von {SPRITE}
       Mikelab_yLocationOf:
         text: y Koordinate von {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': Raster
-            '"border"': Grenze
-            '"row"': Zeile
-            '"random"': zufällig
       RyanLab_moveForward:
         text: vorwärts bewegen
       RyanLab_turnLeft:

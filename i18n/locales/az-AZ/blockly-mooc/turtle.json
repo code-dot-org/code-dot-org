@@ -1,4 +1,5 @@
 {
+  "backward": "Arxaya",
   "blocksUsed": "İstifadə olunmuş bloklar: %1",
   "branches": "budaqlar",
   "catColour": "Rəng",
@@ -92,5 +93,6 @@
   "turnTooltip": "Rəssamı qeyd olunmuş dərəcə qədər sola və ya sağa döndərir.",
   "turtleVisibilityTooltip": "Rəssamı görünən və ya görünməz edir.",
   "widthTooltip": "Karandaşın qalınlığını dəyişir.",
+  "withSize": "ölçüsü ilə\n",
   "wrongColour": "Sizin şəkliniz səhv rəngdədir. Bu tapmaca üçün bu %1 olmalıdır."
 }

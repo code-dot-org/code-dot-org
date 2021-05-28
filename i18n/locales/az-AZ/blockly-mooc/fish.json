@@ -1,9 +1,13 @@
 {
+    "fishshort-pond-init2": "A.I.-nin nə öyrəndiyini görmək üçün məlumat düyməsinə klikləyin.",
+    "didYouKnow": "Bilirdiniz mi?",
     "continue": "Davam et",
     "areYouSure": "Əminsiniz?",
+    "erase": "Silmək",
     "cancel": "İmtina et",
     "yes": "Bəli",
     "no": "Xeyr",
     "run": "İcra et",
+    "newWord": "Yeni söz",
     "finish": "Son"
 }

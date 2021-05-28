@@ -3018,6 +3018,10 @@ el:
           lesson_groups:
             csp_libraries:
               display_name: Βιβλιοθήκες
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: Εκμάθηση μηχανής
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -3148,6 +3152,8 @@ el:
               name: Πάρτι Χορού
             lesson-1:
               name: Πάρτι Χορού
+            lesson-3:
+              name: Χαρακτήρες σε Δράση
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
@@ -3161,6 +3167,8 @@ el:
               display_name: Βρόχοι Για
             csf_sprites:
               display_name: Χαρακτήρας
+            lessonGroup-9:
+              display_name: Συμβάντα
         pre-express-2021:
           lesson_groups:
             csf_loops:

@@ -315,6 +315,15 @@ km:
             '"x"': គូល​x
             '"y"': គូល​y
             '"speed"': ល្បឿន
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': មធ្យម
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -477,10 +486,24 @@ km:
         text: បត់​ឆ្វេង
       RyanLab_turnRight:
         text: បត់​ស្ដាំ
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': ព្រាវ
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': ទាំងអស់
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': ទាំងអស់
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:

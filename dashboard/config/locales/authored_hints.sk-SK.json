@@ -771,7 +771,7 @@
           "courseC_maze_programming4_b": "Pridaj komentár pri zmene smeru - čo by sa stalo, keby sa vták otočil opačným smerom?"
         },
         "course1_artist_loops_challenge3": {
-          "courseA_artist_loops_challenge2_a": "Blok ako tento: <xml> <block type=\"simple_move_up_left\"/></xml> umožní tvojmu umelcovi hýbať sa šikmo!"
+          "courseA_artist_loops_challenge2_a": "Blok ako tento: <xml> <block type=\"simple_move_up_right\"/></xml> umožní tvojmu umelcovi hýbať sa šikmo!"
         },
         "course1_artist_loops_challenge4": {
           "courseB_artist_loops_challenge1_a": "Blok ako tento: <xml> <block type=\"simple_move_up_right\"/></xml> umožní tvojmu umelcovi hýbať sa šikmo!",
@@ -1174,7 +1174,7 @@
         },
         "courseA_harvester_loops3": {
           "courseA_harvester_loops3_a": "Na pomoc využi takýto blok `opakuj`!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) a potom vlož dovnútra blok, ktorý chceš zopakovať. "
+          "courseA_harvester_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj`  (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ), a potom vlož dovnútra blok, ktorý chceš zopakovať. "
         },
         "courseA_harvester_loops3_2019": {
           "courseA_harvester_loops3_a": "Na pomoc využi takýto blok `opakuj`!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
@@ -1182,7 +1182,7 @@
         },
         "courseA_harvester_loops3_2020": {
           "courseA_harvester_loops3_a": "Na pomoc využi takýto blok `opakuj`!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) a potom vlož dovnútra blok, ktorý chceš zopakovať. "
+          "courseA_harvester_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj`  (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ), a potom vlož dovnútra blok, ktorý chceš zopakovať. "
         },
         "courseA_harvester_loops4": {
           "courseA_harvester_loops4_a": "Neboj sa kliknúť na `Spustiť` a uvidíš, čo sa stane!",
@@ -1413,49 +1413,49 @@
           "courseA_harvester_seq9_c": "Vyskúšaj túto trasu na pozbieranie všetkej kukurice."
         },
         "courseA_maze_ramp2_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp2_2019": {
           "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp2_2020": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp3a_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveNorth\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp3a_2019": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveNorth\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp3a_2020": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp3b_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveSouth\"> <next> <block type=\"maze_moveWest\"> <next> <block type=\"maze_moveWest\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp3b_2019": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveSouth\"> <next> <block type=\"maze_moveWest\"> <next> <block type=\"maze_moveWest\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp3b_2020": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp4a_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveSouth\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp4a_2019": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveSouth\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp4a_2020": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp5a_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveWest\"> <next> <block type=\"maze_moveWest\"> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp5a_2019": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveWest\"> <next> <block type=\"maze_moveWest\"> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_ramp5a_2020": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_a": "Ak máš problém pohnúť s vtáčikom, uisti sa, že bloky sú naozaj pospájané pod blokom <xml>\n  <block type=\"when_run\"/>\n</xml>",
@@ -1712,43 +1712,43 @@
           "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp2_2020": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp3a_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveNorth\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp3a_2019": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveNorth\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp3a_2020": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp3b_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveSouth\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp3b_2019": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveSouth\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp3b_2020": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp4a_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveSouth\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp4a_2019": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveSouth\"/> </next> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp4a_2020": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp5a_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveWest\"> <next> <block type=\"maze_moveWest\"> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp5a_2019": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveWest\"> <next> <block type=\"maze_moveWest\"> </block> </next> </block> </next> </block> </xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp5a_2020": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_artist_loops2": {
           "courseB_artist_loops2_a": "Ak chceš opakovať cyklus viac ako 4 krát, tak môžeš zmeniť číslo navrchu bloku.",
@@ -1778,7 +1778,7 @@
           "courseB_artist_loops3_b": "Umelec sa bude musieť pohnúť na juh, aby nakreslil túto čiaru."
         },
         "courseB_artist_loops3_2020": {
-          "courseB_artist_loops3_a": "Nezabudni použiť blok `opakuj` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> a napíš tak lepší kód!",
+          "courseB_artist_loops3_a": "Nezabudni použiť blok `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, aby si napísal lepší kód!",
           "courseB_artist_loops3_b": "Umelec sa bude musieť pohnúť na juh, aby nakreslil túto čiaru."
         },
         "courseB_artist_loops4": {
@@ -1811,7 +1811,7 @@
           "courseB_artist_loops5_a": "Vytiahni cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, a potom doňho vlož ostatné bloky. Koľko krát ich potrebuješ zopakovať?"
         },
         "courseB_artist_loops5_2020": {
-          "courseB_artist_loops5_a": "Vytiahni cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> a potom doňho vlož ostatné bloky. Koľkokrát ich potrebuješ zopakovať?"
+          "courseB_artist_loops5_a": "Vytiahni cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, a potom doňho vlož ostatné bloky. Koľko krát ich potrebuješ zopakovať?"
         },
         "courseB_artist_loops6": {
           "courseB_artist_loops6_b": "Skús si zapísať všetky kroky na kus papiera a pohľadaj vzor, ktorý sa opakuje."
@@ -1951,30 +1951,30 @@
         },
         "courseB_collector_loops2_2018": {
           "courseB_collector_loops2_a": "Musíš sa pohnúť predtým, ako dokážeš pozbierať nejaký drahokam.",
-          "courseB_collector_loops2_b": "Keď prídeš na miesto s drahokamom, použi na jeho pozbieranie blok <xml><block type=\"collector_collect\"/></xml>."
+          "courseB_collector_loops2_b": "Keď prídeš na miesto s drahokamom, tak použi blok <xml><block type=\"collector_collect\"/></xml>, aby si ho pozbieral."
         },
         "courseB_collector_loops2_2019": {
           "courseB_collector_loops2_a": "Musíš sa pohnúť predtým, ako dokážeš pozbierať nejaký drahokam.",
-          "courseB_collector_loops2_b": "Keď prídeš na miesto s drahokamom, použi na jeho pozbieranie blok <xml><block type=\"collector_collect\"/></xml>."
+          "courseB_collector_loops2_b": "Keď prídeš na miesto s drahokamom, tak použi blok <xml><block type=\"collector_collect\"/></xml>, aby si ho pozbieral."
         },
         "courseB_collector_loops2_2020": {
           "courseB_collector_loops2_a": "Musíš sa pohnúť predtým, ako dokážeš pozbierať nejaký drahokam.",
-          "courseB_collector_loops2_b": "Keď prídeš na miesto s drahokamom, použi na jeho pozbieranie blok <xml><block type=\"collector_collect\"/></xml>."
+          "courseB_collector_loops2_b": "Keď prídeš na miesto s drahokamom, tak použi blok <xml><block type=\"collector_collect\"/></xml>, aby si ho pozbieral."
         },
         "courseB_collector_loops3": {
           "courseB_collector_prog3_a": "Vyskúšaj použiť blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml>, aby si pozbieral tvoje drahokamy.",
           "courseB_collector_prog3_b": "Pamätaj, že do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "courseB_collector_loops3_2018": {
-          "courseB_collector_prog3_a": "Vyskúšaj použiť blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> a pozbieraj svoje drahokamy.",
+          "courseB_collector_prog3_a": "Vyskúšaj použiť blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml>, aby si pozbieral tvoje drahokamy.",
           "courseB_collector_prog3_b": "Pamätaj, že do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "courseB_collector_loops3_2019": {
-          "courseB_collector_prog3_a": "Vyskúšaj použiť blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> a pozbieraj svoje drahokamy.",
+          "courseB_collector_prog3_a": "Vyskúšaj použiť blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml>, aby si pozbieral tvoje drahokamy.",
           "courseB_collector_prog3_b": "Pamätaj, že do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "courseB_collector_loops3_2020": {
-          "courseB_collector_prog3_a": "Vyskúšaj použiť blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> a pozbieraj svoje drahokamy.",
+          "courseB_collector_prog3_a": "Vyskúšaj použiť blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml>, aby si pozbieral tvoje drahokamy.",
           "courseB_collector_prog3_b": "Pamätaj, že do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "courseB_collector_loops4": {
@@ -1995,7 +1995,7 @@
         "courseB_collector_loops4_2020": {
           "courseB_collector_loops4_a": "Skús použiť tlačidlo Krok a zisti, kde nastala chyba.",
           "courseB_collector_loops4_b": "Pre zmenu vzdialenosti, ktorú Laurel prejde, zmeň počet opakovaní daného cyklu.",
-          "courseB_collector_loops4_c": "Laurel potrebuje prejsť dolu a pozbierať drahokami potom ako dokončí cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+          "courseB_collector_loops4_c": "Laurel potrebuje prejsť dolu a pozbierať drahokamy hneď potom, ako dokončí cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
         },
         "courseB_collector_loops5": {
           "courseB_collector_loops5_a": "Na dokončenie úlohy použi viac ako jeden cyklus.",
@@ -2034,7 +2034,7 @@
         "courseB_collector_loops6_2020": {
           "courseB_collector_loops6_a": "Nevieš prísť na to, kde sa to pokazí? Použi tlačidlo \"Krok\" a prejdi svoj program blok po bloku.",
           "courseB_collector_loops6_b": "Kliknutím na \"3\" a zmenou na iné číslo môžeš zmeniť počet opakovaní cyklu.",
-          "courseB_collector_loops6_c": "Na vyriešenie tejto úlohy použi 3 cykly `opakuj` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>",
+          "courseB_collector_loops6_c": "Budeš chcieť použiť 3 cykly `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, aby si vyriešil túto úlohu.",
           "courseB_collector_loops6_d": "Ak nevieš ako ďalej, tak si skús túto úlohu rozdeliť na 3 časti."
         },
         "courseB_collector_loops7": {
@@ -2172,8 +2172,8 @@
           "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, a potom vlož dovnútra blok, ktorý chceš."
         },
         "courseB_iceage_loops3_2020": {
-          "courseB_iceage_loops3_a": "Použi tento nový blok!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> a potom vlož dovnútra blok, ktorý chceš."
+          "courseB_iceage_loops3_a": "Použi tento nový blok!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, a potom vlož dovnútra blok, ktorý chceš."
         },
         "courseB_iceage_loops4": {
           "courseB_iceage_loops4_a": "Skús si zapísať kroky, ktoré musí Scrat spraviť, aby sa dostal k žaluďu. Nájdeš v nich opakujúci sa vzor?",
@@ -2259,8 +2259,8 @@
           "courseB_maze_seq1_b": "Vytiahni tri takéto šípky <xml><block type=\"maze_moveSouth\"/></xml> a pripoj ich ku bloku <xml><block type=\"when_run\"/></xml>, aby sa Scrat dostal k žaluďu."
         },
         "courseB_maze_seq1_2020": {
-          "courseB_maze_seq1_a": "Aby sa Scrat pohol, pripoj bloky ku bloku <xml><block type=\"when_run\"/></xml>!",
-          "courseB_maze_seq1_b": "Aby sa Scrat dostal k žaluďu, vytiahni tri takéto šípky <xml><block type=\"maze_moveSouth\"/></xml> a pripoj ich ku bloku <xml><block type=\"when_run\"/></xml>."
+          "courseB_maze_seq1_a": "Pripoj bloky ku bloku <xml><block type=\"when_run\"/></xml>, aby sa Scrat pohol!",
+          "courseB_maze_seq1_b": "Vytiahni tri takéto šípky <xml><block type=\"maze_moveSouth\"/></xml> a pripoj ich ku bloku <xml><block type=\"when_run\"/></xml>, aby sa Scrat dostal k žaluďu."
         },
         "courseB_maze_seq4": {
           "courseB_maze_seq4_a": "Skús pridávať inštrukcie po jednej, až kým ma nedostaneš k prasiatku.",
@@ -2268,15 +2268,15 @@
         },
         "courseB_maze_seq4_2018": {
           "courseB_maze_seq4_a": "Vyskúšaj pridávať postupne jednu inštrukciu za druhou, až kým sa nedostaneš k žaluďu.",
-          "courseB_maze_seq4_b": "Použi blok <xml><block type=\"maze_moveEast\"/></xml> a vyrieš túto úlohu."
+          "courseB_maze_seq4_b": "Budeš chcieť použiť blok <xml><block type=\"maze_moveEast\"/></xml>, aby si vyriešil túto úlohu."
         },
         "courseB_maze_seq4_2019": {
           "courseB_maze_seq4_a": "Vyskúšaj pridávať postupne jednu inštrukciu za druhou, až kým sa nedostaneš k žaluďu.",
-          "courseB_maze_seq4_b": "Použi blok <xml><block type=\"maze_moveEast\"/></xml> a vyrieš túto úlohu."
+          "courseB_maze_seq4_b": "Budeš chcieť použiť blok <xml><block type=\"maze_moveEast\"/></xml>, aby si vyriešil túto úlohu."
         },
         "courseB_maze_seq4_2020": {
           "courseB_maze_seq4_a": "Vyskúšaj pridávať postupne jednu inštrukciu za druhou, až kým sa nedostaneš k žaluďu.",
-          "courseB_maze_seq4_b": "Použi blok <xml><block type=\"maze_moveEast\"/></xml> a vyrieš túto úlohu."
+          "courseB_maze_seq4_b": "Budeš chcieť použiť blok <xml><block type=\"maze_moveEast\"/></xml>, aby si vyriešil túto úlohu."
         },
         "courseB_maze_seq5": {
           "courseB_maze_seq5_a": "Ak sa zasekneš, skús si cestu nakresliť na papier.",
@@ -2432,15 +2432,15 @@
         },
         "courseB_playlab_events3_2018": {
           "courseB_playlab_events3_a": "Toto je blok, ktorý môžeš použiť na pridanie udalosti:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">0</title>\n</block>\n</xml>",
-          "courseB_playlab_events3_b": "Toto je blok, ktorý potrebuješ na zmenenie Daisinej nálady:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_b": "Toto je blok, ktorý potrebuješ na zmenenie nálady Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">random</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events3_2019": {
           "courseB_playlab_events3_a": "Toto je blok, ktorý môžeš použiť na pridanie udalosti:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">0</title>\n</block>\n</xml>",
-          "courseB_playlab_events3_b": "Toto je blok, ktorý potrebuješ na zmenenie Daisinej nálady:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_b": "Toto je blok, ktorý potrebuješ na zmenenie nálady Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">random</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events3_2020": {
           "courseB_playlab_events3_a": "Toto je blok, ktorý môžeš použiť na pridanie udalosti:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">0</title>\n</block>\n</xml>",
-          "courseB_playlab_events3_b": "Toto je blok, ktorý potrebuješ na zmenenie Daisinej nálady:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_b": "Toto je blok, ktorý potrebuješ na zmenenie nálady Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">random</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events4": {
           "courseB_playlab_events4_a": "Toto je udalosť, ktorá kontroluje ľavú šípku:\n\n<xml>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">left</title>\n</block>\n</xml>",
@@ -2564,15 +2564,15 @@
         },
         "courseB_starWars_prog1_2018": {
           "courseB_starWars_prog1_a": "Skús pridávať bloky po jednom, potom klikni \"Spustiť\". Uvidíš, čo sa stane.",
-          "courseB_starWars_prog1_b": "Budeš sa posúvať na východ, aby bola táto úloha vyriešená. Ako ďaleko sa potrebuješ posunúť?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Budeš sa pohybovať na východ, aby si vyriešil túto úlohu. Ako ďaleko potrebuješ ísť?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2019": {
           "courseB_starWars_prog1_a": "Skús pridávať bloky po jednom, potom klikni \"Spustiť\". Uvidíš, čo sa stane.",
-          "courseB_starWars_prog1_b": "Budeš sa posúvať na východ, aby bola táto úloha vyriešená. Ako ďaleko sa potrebuješ posunúť?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Budeš sa pohybovať na východ, aby si vyriešil túto úlohu. Ako ďaleko potrebuješ ísť?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2020": {
           "courseB_starWars_prog1_a": "Skús pridávať bloky po jednom, potom klikni \"Spustiť\". Uvidíš, čo sa stane.",
-          "courseB_starWars_prog1_b": "Budeš sa posúvať na východ, aby bola táto úloha vyriešená. Ako ďaleko sa potrebuješ posunúť?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Budeš sa pohybovať na východ, aby si vyriešil túto úlohu. Ako ďaleko potrebuješ ísť?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2": {
           "courseB_starWars_prog2_a": "Rozdeľ tento problém na dve časti. Najskôr vezmi jednu hromadu šrotu, potom príď na to, ako sa dostať k druhej."
@@ -2684,15 +2684,15 @@
         },
         "courseB_starWars_prog8_2018": {
           "courseB_starWars_prog8_a": "Je v poriadku, ak niekedy pôjdeš naspäť aj po miestach, ktoré sú prázdne a kusy kovu sú z nich už vyzbierané.",
-          "courseB_starWars_prog8_b": "Skús použiť blok `opakuj` a uvidíš, čo sa stane kódu, ktorý vložíš dovnútra.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "Skús použiť blok `opakuj` a uvidíš, čo sa stane kódu, ktorý vložíš dovnútra.\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog8_2019": {
           "courseB_starWars_prog8_a": "Je v poriadku, ak niekedy pôjdeš naspäť aj po miestach, ktoré sú prázdne a kusy kovu sú z nich už vyzbierané.",
-          "courseB_starWars_prog8_b": "Skús použiť blok `opakuj` a uvidíš, čo sa stane kódu, ktorý vložíš dovnútra.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "Skús použiť blok `opakuj` a uvidíš, čo sa stane kódu, ktorý vložíš dovnútra.\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog8_2020": {
           "courseB_starWars_prog8_a": "Je v poriadku, ak niekedy pôjdeš naspäť aj po miestach, ktoré sú prázdne a kusy kovu sú z nich už vyzbierané.",
-          "courseB_starWars_prog8_b": "Skús použiť blok `opakuj` a uvidíš, čo sa stane kódu, ktorý vložíš dovnútra.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "Skús použiť blok `opakuj` a uvidíš, čo sa stane kódu, ktorý vložíš dovnútra.\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. ",
@@ -2712,7 +2712,7 @@
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. ",
           "courseB_starWars_prog9_b": "Je veľa spôsobov ako vyriešiť túto úlohu.",
-          "courseB_starWars_prog9_c": "Pomohol by tu cyklus  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> `opakuj` ?"
+          "courseB_starWars_prog9_c": "Pomohol by tu cyklus <xml><block type=\"controls_repeat_simplified\"> <title name=\"TIMES\">3</title> </block></xml>?"
         },
         "courseC_PlayLab_events1": {
           "courseC_PlayLab_events1_a": "Pripoj tento blok k bloku `pri spustení`:\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</xml>"
@@ -2745,7 +2745,7 @@
         "courseC_PlayLab_events3": {
           "courseC_PlayLab_events3_a": "Musíš len posunúť Jorgeho doprava o približne 25 pixelov a vyriešiš túto úlohu.",
           "courseC_PlayLab_events3_b": "Vidíš v paneli nástrojov blok, ktorý by mohol posunúť našu postavu?",
-          "courseC_PlayLab_events3_c": "Pripoj tento blok k bloku `pri spustení`:\n\n<xml>\n<block type=\"studio_moveDistance\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">2</title>\n<title name=\"DISTANCE\">25</title>\n</block>\n</xml>"
+          "courseC_PlayLab_events3_c": "Pripoj tento blok k bloku `pri spustení`:\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</xml>"
         },
         "courseC_PlayLab_events3_2018": {
           "courseC_PlayLab_events3_a": "Musíš len posunúť Jorgeho doprava o približne 25 pixelov a vyriešiš túto úlohu.",
@@ -2947,7 +2947,7 @@
           "courseC_artist_loops1a_b": "Použi tento blok na nakreslenie nálepky!\n\n<xml>\n<block type=\"sticker\">\n<title name=\"VALUE\">Bird</title>\n</block>\n</xml>"
         },
         "courseC_artist_loops1a_2019": {
-          "courseC_artist_loops1a_a": "Toto je prvý blok, ktorý budeš potrebovať:\n\n<xml>\n<block type=\"jump_to\">\n<title name=\"VALUE\">13</title>\n</block>\n</xml>",
+          "courseC_artist_loops1a_a": "Toto je prvý blok, ktorý budeš potrebovať:\n\n<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>",
           "courseC_artist_loops1a_b": "Použi tento blok na nakreslenie nálepky!\n\n<xml>\n<block type=\"sticker\">\n<title name=\"VALUE\">Bird</title>\n</block>\n</xml>"
         },
         "courseC_artist_loops1a_2020": {
@@ -2999,7 +2999,7 @@
           "courseC_artist_loops4a_a": "Použi tento blok a skoč dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!"
         },
         "courseC_artist_loops4a_2019": {
-          "courseC_artist_loops4a_a": "Použi tento blok, aby si skočil dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">???</title>\n</block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!",
+          "courseC_artist_loops4a_a": "Použi tento blok a skoč dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!",
           "courseC_artist_loops4a_b": "Tvoj program by mal vyzerať takto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops4a_2020": {
@@ -3029,7 +3029,7 @@
         "courseC_artist_loops5b_2019": {
           "courseC_artist_loops5b_a": "Použi tento blok na nastavenie tvojho vzoru:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
           "courseC_artist_loops5b_b": "Na vytvorenie dizajnu, ako je ten hore, použi blok posuň sa dozadu rovnako veľakrát ako blok posuň sa dopredu.",
-          "courseC_artist_loops5b_c": "Tvoj program by mal vyzerať nejako takto!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">rainbowLine</title>\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"jump_to\">\n<title name=\"VALUE\">13</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">moveBackward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">???</title>\n<title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Cat</title>\n<next>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Dog</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseC_artist_loops5b_c": "Tvoj program by mal vyzerať takto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops5b_2020": {
           "courseC_artist_loops5b_a": "Použi tento blok na nastavenie tvojho vzoru:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
@@ -3097,12 +3097,12 @@
           "courseC_artist_prog2_b": "Máš problém, so zabočením? Použi blok <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2018": {
-          "courseC_artist_prog2_a": "*\"Ak použiješ blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, nakreslím čiaru.\"*",
-          "courseC_artist_prog2_b": "Máš problém so zabočením? Použi blok <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "-   \"Ak použiješ blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, nakreslím čiaru.\" \\*",
+          "courseC_artist_prog2_b": "Máš problém, so zabočením? Použi blok <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2019": {
-          "courseC_artist_prog2_a": "*\"Ak použiješ blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, nakreslím čiaru.\"*",
-          "courseC_artist_prog2_b": "Máš problém so zabočením? Použi blok <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "-   \"Ak použiješ blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, nakreslím čiaru.\" \\*",
+          "courseC_artist_prog2_b": "Máš problém, so zabočením? Použi blok <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2020": {
           "courseC_artist_prog2_a": "-   \"Ak použiješ blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, nakreslím čiaru.\" \\*",
@@ -5007,13 +5007,13 @@
           "courseD_bee_nestedLoops7_c": "Vnor do seba 3 cykly takto:\n\n-   opakuj 4 krát\n    -   opakuj 3 krát\n        -   opakuj 12 krát\n            -   získaj nektár\n        -   posuň sa dopredu\n    -   otoč sa vpravo"
         },
         "courseD_bounce_events10s_2018": {
-          "courseD_bounce_events10s_a": "Vo svojom kóde musíš mať tieto dve udalosti:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+          "courseD_bounce_events10s_a": "Vo svojom kóde musíš mať tieto dve udalosti:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\">svišťanie<title name=\"SOUND\"></title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">píšťalka</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
         },
         "courseD_bounce_events10s_2019": {
           "courseD_bounce_events10s_a": "Vo svojom kóde musíš mať tieto dve udalosti:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\">svišťanie<title name=\"SOUND\"></title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">píšťalka</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
         },
         "courseD_bounce_events10s_2020": {
-          "courseD_bounce_events10s_a": "Vo svojom kóde musíš mať tieto dve udalosti:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+          "courseD_bounce_events10s_a": "Vo svojom kóde musíš mať tieto dve udalosti:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\">svišťanie<title name=\"SOUND\"></title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">píšťalka</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
         },
         "courseD_bounce_events11s_2018": {
           "courseD_bounce_events11s_a": "Novú loptu vhodíš, keď hra začína, keď trafíš kôš a keď rukou netrafíš loptu."
@@ -5059,7 +5059,7 @@
         },
         "courseD_bounce_events5s_2018": {
           "courseD_bounce_events5s_a": "Na vyriešenie tejto úlohy nepotrebuješ hýbať rukou.",
-          "courseD_bounce_events5s_b": "Skontroluj, či je tento kód pridaný na tvojej pracovnej ploche:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+          "courseD_bounce_events5s_b": "Skontroluj, či si pridali tento kód na svoju pracovnú plochu:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
         },
         "courseD_bounce_events5s_2019": {
           "courseD_bounce_events5s_a": "Na vyriešenie tejto úlohy nepotrebuješ hýbať rukou.",
@@ -5067,7 +5067,7 @@
         },
         "courseD_bounce_events5s_2020": {
           "courseD_bounce_events5s_a": "Na vyriešenie tejto úlohy nepotrebuješ hýbať rukou.",
-          "courseD_bounce_events5s_b": "Skontroluj, či je tento kód pridaný na tvojej pracovnej ploche:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+          "courseD_bounce_events5s_b": "Skontroluj, či si pridali tento kód na svoju pracovnú plochu:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
         },
         "courseD_bounce_events6s_2018": {
           "courseD_bounce_events6s_a": "Máš vo svojom kóde takúto udalosť?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
@@ -5510,7 +5510,7 @@
         },
         "courseD_iceage_loops1": {
           "courseD_iceage_loops1_a": "Dávaj si pozor na rozbitý ľad! Skrat sa cezeň prepadne!",
-          "courseD_iceage_loops1_b": "Potrebuješ tento blok:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
+          "courseD_iceage_loops1_b": "Budeš musieť použiť tento blok: \n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseD_iceage_loops10": {
           "courseB_iceage_loops10_a": "Dávaj pozor na rozbitý ľad! Scrat sa cezeň prepadne do vody!",
@@ -5529,11 +5529,11 @@
         },
         "courseD_iceage_loops1_2019": {
           "courseD_iceage_loops1_a": "Dávaj si pozor na rozbitý ľad! Skrat sa cezeň prepadne!",
-          "courseD_iceage_loops1_b": "Potrebuješ tento blok:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
+          "courseD_iceage_loops1_b": "Budeš musieť použiť tento blok: \n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseD_iceage_loops1_2020": {
           "courseD_iceage_loops1_a": "Dávaj si pozor na rozbitý ľad! Skrat sa cezeň prepadne!",
-          "courseD_iceage_loops1_b": "Budeš musieť použiť tento blok: \n\n<xml><block type=\"maze_moveForward\"/></xml>"
+          "courseD_iceage_loops1_b": "Budeš musieť použiť tento blok: \n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseD_iceage_loops2": {
           "courseD_iceage_loops2_a": "Rozdeľ túto úlohu na dve časti, jednu pred zákrutou a druhú po zákrute.",
@@ -5551,7 +5551,7 @@
           "courseD_iceage_loops2_c": "Choď po tejto ceste a dostaň Scrata k žaluďu."
         },
         "courseD_iceage_loops3": {
-          "courseB_iceage_loops3_a": "Použi tento nový blok!\n<xml><block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_a": "Použi tento nový blok! <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
           "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj` a potom do jeho vnútra vlož blok, ktorý chceš opakovať."
         },
         "courseD_iceage_loops3_2019": {

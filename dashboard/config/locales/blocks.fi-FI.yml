@@ -1575,13 +1575,6 @@ fi:
         text: x koordinaatti {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinaatti {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': ruudukko
-            '"border"': raja
-            '"row"': rivi
-            '"random"': satunnainen
       RyanLab_moveForward:
         text: siirry eteenpäin
       RyanLab_turnLeft:
