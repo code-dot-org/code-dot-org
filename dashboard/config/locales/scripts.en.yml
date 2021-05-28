@@ -22992,3 +22992,97 @@ en:
               description_teacher: ''
           lesson_groups: {}
           name: kodea-pd-2021
+        vpl-csd-2021:
+          title: CS Discoveries Virtual Professional Learning 2020 - 21
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lessons:
+            Module 1:
+              key: Module 1
+              name: Module 1
+              description_student: ''
+              description_teacher: ''
+            Module 2:
+              key: Module 2
+              name: Module 2
+              description_student: ''
+              description_teacher: ''
+            Module 3:
+              key: Module 3
+              name: Module 3
+              description_student: ''
+              description_teacher: ''
+            Module 4:
+              key: Module 4
+              name: Module 4
+              description_student: ''
+              description_teacher: ''
+            Module 5:
+              key: Module 5
+              name: Module 5
+              description_student: ''
+              description_teacher: ''
+            Module 6:
+              key: Module 6
+              name: Module 6
+              description_student: ''
+              description_teacher: ''
+            Module 7:
+              key: Module 7
+              name: Module 7
+              description_student: ''
+              description_teacher: ''
+            Module 8:
+              key: Module 8
+              name: Module 8
+              description_student: ''
+              description_teacher: ''
+        vpl-csp-2021:
+          title: CS Principles Virtual Professional Learning
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lessons:
+            Module 1:
+              key: Module 1
+              name: 'Module 1: Introducing Unit 4 and new pedagogy for teaching programming'
+              description_student: ''
+              description_teacher: ''
+            Module 2:
+              key: Module 2
+              name: 'Module 2: Variables in Unit 4 and the role of collaboration'
+              description_student: ''
+              description_teacher: ''
+            Module 3:
+              key: Module 3
+              name: 'Module 3: Unit 5, using lists in apps, and recognizing CS skills in the classroom'
+              description_student: ''
+              description_teacher: ''
+            Module 4:
+              key: Module 4
+              name: 'Module 4: Unit 5 and using datasets in apps'
+              description_student: ''
+              description_teacher: ''
+            Module 5:
+              key: Module 5
+              name: 'Module 5: Unit 7 and understanding functions with parameters and return'
+              description_student: ''
+              description_teacher: ''
+            Module 6:
+              key: Module 6
+              name: 'Module 6: Introduction to the Create Performance Task'
+              description_student: ''
+              description_teacher: ''
+            Module 7:
+              key: Module 7
+              name: 'Module 7: Tools and structure in Unit 9 - Data'
+              description_student: ''
+              description_teacher: ''
+            Module 8:
+              key: Module 8
+              name: 'Module 8: Building community and preparing students for the AP Exam'
+              description_student: ''
+              description_teacher: ''
