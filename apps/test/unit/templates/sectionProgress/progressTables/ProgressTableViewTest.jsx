@@ -35,7 +35,7 @@ const LESSON_1 = fakeLessonWithLevels({position: 1});
 const LESSON_2 = fakeLessonWithLevels({position: 2}, 2);
 const STUDENTS = fakeStudents(2);
 const STAGES = [LESSON_1, LESSON_2];
-const SCRIPT_DATA = fakeScriptData({stages: STAGES});
+const SCRIPT_DATA = fakeScriptData({lessons: STAGES});
 
 const initialState = fakeProgressTableReduxInitialState(
   STAGES,

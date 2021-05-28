@@ -198,7 +198,7 @@ const initialScriptOverviewProgress = {
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
   lessonGroups: [],
-  stages: lessonData,
+  lessons: lessonData,
   scriptName: 'course3'
 };
 
@@ -209,7 +209,7 @@ const initialPuzzlePageProgress = {
   saveAnswersBeforeNavigation: false,
   lessonGroups: [],
   // We're on a puzzle in lesson 2. That is the only provided lesson
-  stages: [lessonData[1]],
+  lessons: [lessonData[1]],
   scriptName: 'course3'
 };
 
@@ -227,8 +227,8 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
 
       assert.deepEqual(
-        nextState.stages,
-        processedLessons(initialScriptOverviewProgress.stages)
+        nextState.lessons,
+        processedLessons(initialScriptOverviewProgress.lessons)
       );
       assert.equal(nextState.scriptName, 'course3');
       assert.equal(nextState.currentLessonId, undefined);
@@ -242,8 +242,8 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.professionalLearningCourse, false);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
       assert.deepEqual(
-        nextState.stages,
-        processedLessons(initialPuzzlePageProgress.stages)
+        nextState.lessons,
+        processedLessons(initialPuzzlePageProgress.lessons)
       );
       assert.equal(nextState.scriptName, 'course3');
       assert.equal(nextState.currentLessonId, 265);
@@ -270,7 +270,7 @@ describe('progressReduxTest', () => {
       });
 
       // lessons are unchanged
-      assert.strictEqual(nextState.stages, initializedState.stages);
+      assert.strictEqual(nextState.lessons, initializedState.lessons);
     });
 
     it('can update progress', () => {
@@ -280,7 +280,7 @@ describe('progressReduxTest', () => {
         levelResults: {
           '341': TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
         },
-        stages: [
+        lessons: [
           {
             lockable: false,
             levels: [
@@ -307,7 +307,7 @@ describe('progressReduxTest', () => {
         levelResults: {
           '339': TestResults.ALL_PASS
         },
-        stages: [
+        lessons: [
           {
             lockable: false,
             levels: [
@@ -468,7 +468,7 @@ describe('progressReduxTest', () => {
       currentLevelId: undefined,
       professionalLearningCourse: true,
       saveAnswersBeforeNavigation: false,
-      stages: lessonData,
+      lessons: lessonData,
       peerReviewLessonInfo: peerReviewLessonInfo,
       scriptName: 'alltheplcthings'
     };
@@ -482,8 +482,8 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
 
       assert.deepEqual(
-        nextState.stages,
-        processedLessons(intialOverviewProgressWithPeerReview.stages, true)
+        nextState.lessons,
+        processedLessons(intialOverviewProgressWithPeerReview.lessons, true)
       );
       assert.deepEqual(nextState.peerReviewLessonInfo, peerReviewLessonInfo);
       assert.equal(nextState.scriptName, 'alltheplcthings');
@@ -497,11 +497,11 @@ describe('progressReduxTest', () => {
         levelResults: {
           '341': TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
         },
-        stages: [lessonData[1]],
+        lessons: [lessonData[1]],
         peerReviewLessonInfo: peerReviewLessonInfo
       };
-      assert.equal(state.stages[0].levels[2].ids[0], '341');
-      state.stages[0].levels[2].status = LevelStatus.attempted;
+      assert.equal(state.lessons[0].levels[2].ids[0], '341');
+      state.lessons[0].levels[2].status = LevelStatus.attempted;
 
       assert.deepEqual(peerReviewLessonInfo.levels[0], {
         ids: ['0'],
@@ -731,7 +731,7 @@ describe('progressReduxTest', () => {
 
     it('Only numbers non-unplugged lesson', () => {
       const results = levelsByLesson({
-        stages: [
+        lessons: [
           {
             levels: [
               {
@@ -762,7 +762,7 @@ describe('progressReduxTest', () => {
 
     it('sets isLocked to true if lesson is lockabe', () => {
       const results = levelsByLesson({
-        stages: lockableLessonData,
+        lessons: lockableLessonData,
         scriptProgress: {},
         levelResults: {}
       });
@@ -1031,7 +1031,7 @@ describe('progressReduxTest', () => {
             big_questions: ' - Why'
           }
         ],
-        stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
+        lessons: [fakeLesson('Lesson Group', 'lesson1', 1)],
         scriptProgress: {},
         levelResults: {},
         focusAreaLessonIds: []
@@ -1055,7 +1055,7 @@ describe('progressReduxTest', () => {
             big_questions: 'Why?'
           }
         ],
-        stages: [
+        lessons: [
           fakeLesson('Lesson Group', 'lesson1', 1),
           fakeLesson('Lesson Group', 'lesson2', 2),
           fakeLesson('Lesson Group', 'lesson3', 3)
@@ -1087,7 +1087,7 @@ describe('progressReduxTest', () => {
             user_facing: false
           }
         ],
-        stages: [
+        lessons: [
           {
             lesson_group_display_name: 'Lesson Group',
             levels: [bonusLevel],
@@ -1173,7 +1173,7 @@ describe('progressReduxTest', () => {
       const state = reducer(stateWithProgress, setLessonExtrasEnabled(true));
 
       assert.strictEqual(
-        lessonExtrasUrl(state, state.stages[0].id),
+        lessonExtrasUrl(state, state.lessons[0].id),
         '//localhost.code.org:3000/s/course3/lessons/2/extras'
       );
     });

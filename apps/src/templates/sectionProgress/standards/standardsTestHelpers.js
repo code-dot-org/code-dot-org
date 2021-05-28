@@ -118,7 +118,7 @@ const scriptDataByScript = {
     id: scriptId,
     path: '//localhost-studio.code.org:3000/s/coursea-2019',
     title: 'Course A (2019)',
-    stages: [
+    lessons: [
       {
         script_id: 92,
         script_name: 'coursea-2019',
@@ -190,7 +190,7 @@ const scriptDataByScript = {
   }
 };
 
-export const pluggedLesson = scriptDataByScript[scriptId].stages[1];
+export const pluggedLesson = scriptDataByScript[scriptId].lessons[1];
 
 const progress20 = levelProgressFromResult(20);
 

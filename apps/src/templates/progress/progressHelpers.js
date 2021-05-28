@@ -84,7 +84,7 @@ export function lessonIsLockedForAllStudents(lessonId, state) {
  *   current user.
  */
 export function stageLocked(levels) {
-  // For lockable stages, there is a requirement that they have exactly one LevelGroup,
+  // For lockable lessons, there is a requirement that they have exactly one LevelGroup,
   // and that it be the last level in the stage. Because LevelGroup's can have
   // multiple "pages", and single LevelGroup might appear as multiple levels/bubbles
   // on the client. However, it is the case that each page in the LG should have
@@ -244,7 +244,7 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
 
 /**
  * The level object passed down to use via the server (and stored in
- * script.stages.levels) contains more data than we need. This parses the parts
+ * script.lessons.levels) contains more data than we need. This parses the parts
  * we care about to conform to our `levelType` oject.
  */
 export const processedLevel = level => {

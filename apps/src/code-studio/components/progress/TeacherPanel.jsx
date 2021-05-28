@@ -261,7 +261,7 @@ export default connect(state => {
   );
 
   let stageNames = {};
-  state.progress.stages.forEach(stage => {
+  state.progress.lessons.forEach(stage => {
     stageNames[stage.id] = stage.name;
   });
 

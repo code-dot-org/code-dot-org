@@ -400,7 +400,7 @@ describe('TeacherContentToggle', () => {
         selectedSectionId: {},
         progress: {
           currentLessonId: 123,
-          stages: [
+          lessons: [
             {
               id: 123,
               lockable: true

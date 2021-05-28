@@ -10,7 +10,7 @@ import {isLessonHiddenForSection} from '../hiddenLessonRedux';
 /**
  * When viewing a puzzle, we want teachers to be able to toggle between what the
  * student would see and what they see as a teacher. In some cases (such as
- * locked stages and hidden stages) this means hiding the main content, and
+ * locked lessons and hidden lessons) this means hiding the main content, and
  * replacing it with something else.
  * We accomplish this by having the server render that other content to a known
  * dom element (#locked-lesson, #hidden-lesson). This component then creates
@@ -71,8 +71,8 @@ class TeacherContentToggle extends React.Component {
     let hasOverlayFrame = isLockedStage || isHiddenStage;
 
     if (viewAs === ViewType.Student) {
-      // Keep this hidden until we've made our async calls for hidden_stages and
-      // locked stages, so that we don't flash content before hiding it
+      // Keep this hidden until we've made our async calls for hidden_lessons and
+      // locked lessons, so that we don't flash content before hiding it
       if (!hiddenLessonsInitialized || !sectionsAreLoaded || hasOverlayFrame) {
         contentStyle.visibility = 'hidden';
       }
@@ -138,7 +138,7 @@ export const mapStateToProps = state => {
     );
   } else if (!state.verifiedTeacher.isVerified) {
     // if not-authorized teacher
-    isLockedStage = state.progress.stages.some(
+    isLockedStage = state.progress.lessons.some(
       stage => stage.id === currentLessonId && stage.lockable
     );
   }

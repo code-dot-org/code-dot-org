@@ -13,7 +13,7 @@ describe('the level builder page init script', () => {
     initPage({
       script: {
         name: 'Test script',
-        stages: [],
+        lessons: [],
         is_migrated: false,
         scriptPath: '/s/test-script'
       },
