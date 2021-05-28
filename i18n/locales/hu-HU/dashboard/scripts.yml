@@ -3658,6 +3658,8 @@ hu:
               display_name: Számláló ciklusok
             csf_sprites:
               display_name: manók
+            lessonGroup-9:
+              display_name: Események
         pre-express-2021:
           lessons:
             Programming with Rey and BB-8:
@@ -3741,3 +3743,7 @@ hu:
           lesson_groups:
             cspSurvey2020:
               display_name: Kérdőív
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lecke 15

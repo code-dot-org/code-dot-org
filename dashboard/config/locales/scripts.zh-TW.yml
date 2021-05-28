@@ -16735,6 +16735,10 @@ zh-TW:
               name: 課程 F
             csf:
               name: CS 基本原理
+            sprites_in_action_2021:
+              name: Sprite Lab：會動的精靈圖（CSF 2021 先導）
+            text_and_prompts_2021:
+              name: Sprite Lab：文字與提示（CSF 2021 先導）
         virustest:
           title: 模擬疫情爆發
           description_short: '使用精靈圖實驗室創建一個病毒爆發模擬。 '
@@ -17664,7 +17668,7 @@ zh-TW:
               name: 大數據、群眾外包與機器學習
             Machine Learning and Bias:
               key: 機器學習與偏見
-              name: 機器學習與偏見
+              name: 機器學習
             Project - Tell a Data Story - Part 1:
               key: 專案 - 訴說關於資料的故事 - 第 1 部分
               name: 專案 - 訴說關於資料的故事 - 第 1 部分
@@ -18443,7 +18447,7 @@ zh-TW:
               description_teacher: 到了這個階段，學生已設計了程式，讓程式每次都使用相同的方法執行。這種做法十分可靠，不過欠缺點彈性。在本課堂中，班級同學將會開始使用條件式（conditional）編寫程式，讓他們編寫出來的程式，可依據程式遇到的特定條件，以不同方式運作。
             While Loops with the Farmer:
               key: 與農夫一起嘗試 while（當）迴圈
-              name: 與農夫一起嘗試 while（當）迴圈
+              name: 農夫遊戲中的 while（當）迴圈
               description_student: 迴圈（loop）在程式編寫中非用實用。本課堂會教你其中一種：while（當）迴圈！
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraft 中的條件式：水上巡航 '
@@ -18478,7 +18482,7 @@ zh-TW:
             Variables with Artist:
               key: 在藝術家遊戲中學習變數
               name: 在藝術家遊戲中學習變數
-              description_student: 別忘了把創意帶到課室！在這些謎題中，你會使用變數繪畫漂亮的圖畫。
+              description_student: 在本課堂中，你會使用變數來繪畫。在程式執行期間，這些變數都可變更。
               description_teacher: 在本課堂中，學生會在藝術家環境中，學習怎樣使用變數製作重複的設計。學生會學習變數可怎樣使程式碼更容易編寫和閱讀。在引導式謎題後，學生會在自由探索關卡中結束課堂，然後展示他們學到的內容，以及製作自己的設計。
             Changing Variables with Bee:
               key: 在蜜蜂遊戲中變更變數
@@ -18531,6 +18535,8 @@ zh-TW:
               name: 舞蹈派對
               description_student: 現在是時候慶祝一下了！你會在本課堂中編寫程式，製作自己的互動舞蹈派對。
               description_teacher: 在本課堂中，學生會編寫程式，製作自己的互動舞蹈派對。這項活動需要使用音效，音效工具用來對音樂做出反應。
+            lesson-3:
+              name: 運行中的角色
           lesson_groups:
             csf_warmup:
               display_name: 熱身
@@ -18551,7 +18557,7 @@ zh-TW:
             end_of_course_project:
               display_name: 課程結束專案
             lessonGroup-9:
-              display_name: 熱身
+              display_name: 事件
           student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         pre-express-2021:
           title: 學前兒童的速學課程（2020）
@@ -18745,6 +18751,8 @@ zh-TW:
             CS Discoveries Post Course survey:
               key: 電腦科學探索課後問卷調查
               name: 電腦科學探索課後問卷調查
+            Designing With Empathy:
+              name: 設計分析
             Build a Paper Prototype:
               name: 紙上原型
             Digital Mode in App Lab:
@@ -18882,6 +18890,8 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-4:
+              display_name: 測試
         csa2-pilot:
           lessons:
             lesson-15:
@@ -18971,3 +18981,7 @@ zh-TW:
             -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
           student_description: 歡迎來到 Code.org 電腦科學原理課後問卷調查。本問卷調查需要大約 15 分鐘完成。你的回覆將會保持私密與匿名
             -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: 第 15 課

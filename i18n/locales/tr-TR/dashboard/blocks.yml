@@ -1638,13 +1638,6 @@ tr:
         text: x {SPRITE} koordinatı
       Mikelab_yLocationOf:
         text: y koordinatı {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': ızgara
-            '"border"': kenarlık
-            '"row"': satır
-            '"random"': gelişigüzel
       RyanLab_moveForward:
         text: ilerle
       RyanLab_turnLeft:

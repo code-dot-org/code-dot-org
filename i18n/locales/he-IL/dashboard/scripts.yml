@@ -3935,7 +3935,6 @@ he:
             ASCII and Binary Representation:
               key: ייצוג ASCII וייצוג בינארי
               name: ייצוג ASCII וייצוג בינארי
-            Project - Make a Recommendation: {}
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
           lesson_groups:
@@ -3993,7 +3992,9 @@ he:
         csp8-2021:
           lessons:
             lesson-4: {}
-        csp9-2021: {}
+        csp9-2021:
+          lessons:
+            lesson-10: {}
         csp10-2021: {}
         coursea-2021:
           lessons:
@@ -4167,6 +4168,8 @@ he:
               display_name: בשביל לולאות
             csf_sprites:
               display_name: דמויות
+            lessonGroup-9:
+              display_name: אירועים
         pre-express-2021:
           lessons:
             Programming in with Angry Birds:
@@ -4295,3 +4298,5 @@ he:
           lesson_groups:
             cspSurvey2020:
               display_name: סקר
+        aiml-2021: {}
+        csd7-2021: {}

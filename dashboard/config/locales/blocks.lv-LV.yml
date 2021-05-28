@@ -280,6 +280,10 @@ lv:
           PROPERTY:
             '"scale"': izmērs
             '"speed"': ātrums
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -400,13 +404,10 @@ lv:
         text: pagriezt pa labi
       Vector_vectorNorth:
         text: uz ziemeļiem
-      aalab_moveInDirection:
+      aalab_layoutSprites:
         options:
-          DIRECTION:
-            '"North"': Ziemeļi
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"row"': rinda
             '"random"': nejaušs
       binary_move:
         options:

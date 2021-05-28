@@ -30,7 +30,7 @@ Semua aktiviti kami menggabungkan penyelesaian masalah dan pemikiran kritis deng
 
 - Për fëmijën që i pëlqen të luajë: [ Minecraft ](https://code.org/minecraft) ose  Dance Party </ a>></li> 
     
-    - Për fëmijën që e do Disney: [ Star Wars ](https://code.org/starwars), <a href = "https://studio.code.org/s/frozen/stage / 1 / puzzle / 1 "> I ngrirë </a>, ose [ Moana ](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+    - For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
     - Për fëmijën që i pëlqen të mësojë: [ AI për Oqeanet ](https://code.org/oceans) ose <a href = "https://scratch.mit.edu/projects/editor /? tutorial = music & utm_source = codeorg "> Bëni Muzikë me Gërvishtje </a></ul>
 
 <h3>  Berteknologi rendah atau tanpa teknologi?  </h3>

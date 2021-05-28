@@ -638,10 +638,6 @@ sr:
             '"down"': стрелица доле
             '"left"': стрелица лево
             '"right"': стрелица десно
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': насумичан
       RyanLab_moveForward:
         text: помери се напред
       RyanLab_turnLeft:

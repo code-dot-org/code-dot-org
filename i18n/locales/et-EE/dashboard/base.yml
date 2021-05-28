@@ -137,6 +137,8 @@ et:
     public: 'Avalik'
     homeschool: 'Kodukool'
     other: 'Muu'
+    state: 'Olek'
+    district: 'Piirkond'
     school: 'Kool'
     school_name: 'Kooli nimi'
     school_zip: 'Kooli postiindeks'

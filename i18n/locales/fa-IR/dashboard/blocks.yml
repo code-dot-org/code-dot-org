@@ -373,10 +373,6 @@ fa:
             '"down"': فلش سمت پایین
             '"left"': فلش سمت چپ
             '"right"': فلش سمت راست
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': در هم
       RyanLab_moveForward:
         text: برو جلو
       RyanLab_turnLeft:

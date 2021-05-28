@@ -17,6 +17,7 @@ cs:
         csp_2021_category_name: Principy informatiky (2021-2022)
         cspexams_category_name: Praktický test z principů informatiky
         csp17_category_name: Principy informatiky 2016-2017
+        full_course_category_name: Kompletní kurzy
         hoc_category_name: Hodina kódu
         math_category_name: Matematické
         tts_category_name: Převod textu na řeč
@@ -673,6 +674,8 @@ cs:
               name: Simulátor Internetu
             Text Compression Lesson:
               name: Lekce komprese textu
+            Text Compression Widget:
+              name: Widget na kompresi textu
             Welcome!:
               name: Vítejte!
         K5-OnlinePD:
@@ -1085,6 +1088,8 @@ cs:
               name: Vytvoř Star Wars hru!
             Digital Citizenship:
               name: Digitální občanství
+            'New Artist: Functions':
+              name: 'Nový Artist: Funkce'
             Songwriting:
               name: Skládání písniček
         grade1:
@@ -1238,6 +1243,9 @@ cs:
               display_name: Obsah
             practice:
               display_name: Výukové postupy
+          lessons:
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'Lekce 1 - 2: Byty, velikosti souborů a komprese textu'
         csp1-support:
           lesson_groups:
             required:
@@ -1277,6 +1285,9 @@ cs:
               display_name: Obsah
             practice:
               display_name: Výukové postupy
+          lessons:
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'Lekce 1 - 2: Byty, velikosti souborů a komprese textu'
         csd4-2017:
           lesson_groups:
             csd4_2:
@@ -1300,6 +1311,8 @@ cs:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy ze života: Zasadit semínko'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Going Places Safely:
               name: Cestování bezpečně
         courseb-draft:
@@ -1308,6 +1321,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy ze života: Zasadit semínko'
             Your Digital Footprint:
@@ -1316,6 +1331,8 @@ cs:
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy ze života: Papírová letadla'
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: Getting Loopy':
               name: 'Cykly: Bláznění s cykly'
             Build a Flappy Game:
@@ -1334,6 +1351,8 @@ cs:
               name: Události s Bounce
             Nested Loops in Maze:
               name: Vnořené cykly v bludišti
+            Nested Loops in Artist:
+              name: Vnořené cykly v Artist
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programování'
             While Loops in Farmer:
@@ -1352,6 +1371,8 @@ cs:
               name: Vnořené cykly
             Introduction:
               name: Úvod
+            Nested Loops Project in Artist:
+              name: Projekt vnořených cyklů v Artist
         coursee-draft:
           lesson_groups:
             content:
@@ -1361,6 +1382,8 @@ cs:
               name: Digitální občanství
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
+            Functions in Artist:
+              name: Funkce v Artist
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1378,8 +1401,14 @@ cs:
               name: Digitální občanství
             Envelope Variables:
               name: Obálkové proměnné
+            Variables in Artist:
+              name: Proměnné v Artist
             For Loop Fun:
               name: For cyklus zábavy
+            For Loops in Artist:
+              name: Na cykly v Artist
+            Functions with Parameters in Artist:
+              name: Funkce s parametry v Artist
             Songwriting with Parameters:
               name: Psaní písniček s parametry
             Introduction:
@@ -1450,6 +1479,8 @@ cs:
             content:
               display_name: Obsah
           lessons:
+            Functions in Artist:
+              name: Funkce v Artist
             Binary:
               name: Binární
             Snowflakes:
@@ -1589,6 +1620,10 @@ cs:
               name: Nezávislý posudek
         artist-and-bb8:
           lessons:
+            C9 Artist Loops:
+              name: Cykly C9 v Artist
+            D6 Frozen Artist:
+              name: D6 Frozen Artist
             Programming with BB-8:
               name: Programování s BB-8
             Loops with BB-8:
@@ -1603,6 +1638,8 @@ cs:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy ze života: Zasadit semínko'
+            Loops in Artist:
+              name: Smyčky v Umělci
         courseb-2017:
           title: Kurz B
           assignment_family_title: Kurz B
@@ -1615,6 +1652,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Programming with Rey and BB-8:
               name: Programování s Rey a BB-8
         coursec-2017:
@@ -1625,10 +1664,14 @@ cs:
               name: Odstraňujeme chyby v bludišti
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy ze života: Papírová letadla'
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: Getting Loopy':
               name: 'Cykly: Bláznění s cykly'
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
+            Loops in Artist:
+              name: Smyčky v Umělci
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
         coursed-2017:
@@ -1654,6 +1697,8 @@ cs:
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
                 uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
                 změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
+            Nested Loops in Artist:
+              name: Vnořené cykly v Artist
             While Loops in Farmer:
               name: Cykly pokud (while) s farmářkou
               description_teacher: "Když se studenti dostanou k této lekci, měli by
@@ -1696,6 +1741,8 @@ cs:
                 v různých binárních možnostech. Tato lekce posune celý koncept ještě
                 dále, když znázorní, jak počítač může binárně ukládat i ještě složitější
                 informace (jako jsou obrázky a barvy).
+            Artist Binary:
+              name: Binární v Artist
             Debugging in Collector:
               description_teacher: V této online aktivitě si studenti procvičí ladění
                 kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu
@@ -1713,24 +1760,36 @@ cs:
               name: Doba ledová Play Lab
             Envelope Variables:
               name: Obálkové proměnné
+            Variables in Artist:
+              name: Proměnné v Artist
             For Loop Fun:
               name: For cyklus zábavy
+            For Loops in Artist:
+              name: Na cykly v Artist
             Songwriting with Parameters:
               name: Psaní písniček s parametry
+            Functions with Parameters in Artist:
+              name: Funkce s parametry v Artist
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
               description_teacher: V této hodině si studenti procvičí události vystavěním
                 hry, kterou mohou sdílet online. R2-D2 a další postavy ze Star Wars
                 pomohou studentům projít událostmi. Studenti pak dostanou prostor
                 pro vytvoření své vlastní hry.
+            Functions in Artist:
+              name: Funkce v Artist
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
             Debugging with Scrat:
               name: Ladění se Scratem
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Nested Loops:
               name: Vnořené cykly
         coursef-2017:
@@ -1739,14 +1798,24 @@ cs:
           lessons:
             Introduction:
               name: Představení online úloh
+            Variables in Artist:
+              name: Proměnné v Artist
+            For Loops in Artist:
+              name: Na cykly v Artist
+            Functions with Parameters in Artist:
+              name: Funkce s parametry v Artist
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
             Debugging with Scrat:
               name: Ladění se Scratem
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
         cspnovice:
           lesson_groups:
             required:
@@ -1832,6 +1901,10 @@ cs:
               name: Úvod
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
+            Nested Loops Project in Artist:
+              name: Projekt vnořených cyklů v Artist
             Internet:
               name: Internet
             Digital Citizenship:
@@ -1848,10 +1921,16 @@ cs:
               name: Cykly pokud (while) s farmářkou
             Envelope Variables:
               name: Obálkové proměnné
+            Variables in Artist:
+              name: Proměnné v Artist
             For Loop Fun:
               name: For cyklus zábavy
+            For Loops in Artist:
+              name: Na cykly v Artist
             Songwriting with Parameters:
               name: Psaní písniček s parametry
+            Functions with Parameters in Artist:
+              name: Funkce s parametry v Artist
             Events with Flappy:
               name: Události s Flappy Bird
             Building a Foundation:
@@ -1870,6 +1949,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Spelling Bee:
               name: Hláskovací včelka
         subgoal-labels-opt-in:
@@ -1898,14 +1979,20 @@ cs:
               name: Budování základů
             Debugging with Scrat:
               name: Ladění se Scratem
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Nested Loops:
               name: Vnořené cykly
             Conditionals:
               name: Podmínky
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
+            Functions in Artist:
+              name: Funkce v Artist
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1918,6 +2005,10 @@ cs:
               name: Události s Bounce
             Nested Loops:
               name: Vnořené cykly
+            Nested Loops in Artist:
+              name: Vnořené cykly v Artist
+            Nested Loops Project in Artist:
+              name: Projekt vnořených cyklů v Artist
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programování'
             While Loops in Farmer:
@@ -1932,6 +2023,8 @@ cs:
               name: Binární umělec
             Building a Foundation:
               name: Budování základů
+            Loops in Artist:
+              name: Smyčky v Umělci
             Loops in Ice Age:
               name: Cykly v Době ledové
         csp3-a:
@@ -1949,18 +2042,34 @@ cs:
               name: 'Algoritmy: Štafetové programování'
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
+            Nested Loops Project in Frozen:
+              name: Projekt vnořených cyklů ve Frozen
             Events with Flappy:
               name: Události s Flappy Bird
             Events in Bounce:
               name: Události s Bounce
             While Loops in Farmer:
               name: Cykly pokud (while) s farmářkou
+            Variables in Artist:
+              name: Proměnné v Artist
+            For Loops in Artist:
+              name: Na cykly v Artist
+            Functions with Parameters in Artist:
+              name: Funkce s parametry v Artist
             Building a Foundation:
               name: Budování základů
             Debugging with Scrat:
               name: Ladění se Scratem
             Nested Loops:
               name: Vnořené cykly
+            Loops in Artist (UPDATED!):
+              name: Cykly v Artist (AKTUALIZOVÁNO!)
+        new-stages-sept-2017:
+          lessons:
+            Loops in Artist:
+              name: Smyčky v Umělci
         new-e:
           lessons:
             'Programming: My Robotic Friends':
@@ -1969,12 +2078,18 @@ cs:
               name: Budování základů
             Debugging with Scrat:
               name: Ladění se Scratem
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Conditionals:
               name: Podmínky
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
+            Functions in Artist:
+              name: Funkce v Artist
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1987,16 +2102,26 @@ cs:
               name: Budování základů
             Debugging with Scrat:
               name: Ladění se Scratem
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Ice Age Play Lab:
               name: Doba ledová Play Lab
             Envelope Variables:
               name: Obálkové proměnné
+            Variables in Artist:
+              name: Proměnné v Artist
             For Loop Fun:
               name: For cyklus zábavy
+            For Loops in Artist:
+              name: Na cykly v Artist
             Songwriting with Parameters:
               name: Psaní písniček s parametry
+            Functions with Parameters in Artist:
+              name: Funkce s parametry v Artist
         csd5-old:
           lesson_groups:
             csd5_2:
@@ -2016,6 +2141,8 @@ cs:
           lessons:
             Simple Encryption:
               name: Jednoduché šifrování
+            Intro to App Lab (13+):
+              name: Úvod do App Lab (od 13 let)
         hero:
           description_short: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu
             kódu!
@@ -2026,6 +2153,10 @@ cs:
               name: Hodina kódu s Minecraftem
           student_description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou!
             Procestuj Minecraft s kódem.
+        halloween:
+          lessons:
+            Halloween Artist:
+              name: Halloween Artist
         course-e-2018:
           lessons:
             'Programming: My Robotic Friends':
@@ -2034,14 +2165,20 @@ cs:
               name: Budování základů
             Debugging with Scrat:
               name: Ladění se Scratem
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Nested Loops:
               name: Vnořené cykly
             Introduction:
               name: Úvod
             Conditionals:
               name: Podmínky
+            Functions in Artist:
+              name: Funkce v Artist
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2056,18 +2193,28 @@ cs:
               name: Budování základů
             Debugging with Scrat:
               name: Ladění se Scratem
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Introduction:
               name: Úvod
             Ice Age Play Lab:
               name: Doba ledová Play Lab
             Envelope Variables:
               name: Obálkové proměnné
+            Variables in Artist:
+              name: Proměnné v Artist
             For Loop Fun:
               name: For cyklus zábavy
+            For Loops in Artist:
+              name: Na cykly v Artist
             Songwriting with Parameters:
               name: Psaní písniček s parametry
+            Functions with Parameters in Artist:
+              name: Funkce s parametry v Artist
         csd6-old:
           lesson_groups:
             csd6_1:
@@ -2155,6 +2302,8 @@ cs:
               name: Razítka v cyklech
             Nested Loops:
               name: Vnořené cykly
+            Nested Loops Project in Frozen:
+              name: Projekt vnořených cyklů ve Frozen
             'Events: The Big Event':
               name: Velká událost
             Events with Flappy:
@@ -2163,6 +2312,12 @@ cs:
               name: Události s Bounce
             While Loops in Farmer:
               name: Cykly pokud (while) s farmářkou
+            Variables in Artist:
+              name: Proměnné v Artist
+            For Loops in Artist:
+              name: Na cykly s Artist
+            Functions with Parameters in Artist:
+              name: Funkce s parametry v Artist
             Conditionals in Bee:
               name: Pokud/jinak se včelkou
             Until Loops in Maze:
@@ -2181,6 +2336,8 @@ cs:
               name: Cykly s Rey a BB-8
             'Concept Practice with Minecraft ':
               name: Pohled do budoucna s Minecraftem
+            Nested Loops in Frozen:
+              name: Vnořené cykly s Annou a Elsou
             Conditionals with Cards:
               name: Podmínky s kartami
             Conditionals & Loops in Harvester:
@@ -2189,10 +2346,16 @@ cs:
               name: Skládání písniček
             Functions in Harvester:
               name: Funkce se zahradnicí
+            Functions in Artist:
+              name: Funkce v Artist
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
             Envelope Variables:
               name: Obálkové proměnné
+            Variables as Constant in Artist:
+              name: Proměnné v Artist
+            Variables that Change in Artist:
+              name: Změna proměnných s Artist
             For Loop Fun:
               name: For cyklus zábavy
             Binary Bracelets:
@@ -2346,6 +2509,8 @@ cs:
                 pro vytvoření své vlastní hry.
             'Functions: Songwriting':
               name: Skládání písniček
+            Functions in Artist:
+              name: Funkce s Artist
             Functions in Harvester:
               name: Funkce s farmářkou
             Internet:
@@ -2379,12 +2544,22 @@ cs:
               name: Doba ledová Play Lab
             Envelope Variables:
               name: Obálkové proměnné
+            Variables in Artist:
+              name: Proměnné v Artist
             For Loop Fun:
               name: For cyklus zábavy
+            For Loops in Artist:
+              name: Na cykly s Artist
             Songwriting with Parameters:
               name: Psaní písniček s parametry
+            Functions with Parameters in Artist:
+              name: Funkce s parametry v Artist
             Conditionals with Cards:
               name: Podmínky s kartami
+            Variables as Constant in Artist:
+              name: Proměnné v Artist
+            Variables that Change in Artist:
+              name: Změna proměnných s Artist
         csp1-2018:
           lesson_groups:
             csp1_1:
@@ -2576,10 +2751,12 @@ cs:
             content:
               display_name: Obsah
         frozen-2018:
+          title: Nový skript Frozen
           lessons:
             Artist:
               name: Umělec
         frozen-2018-test:
+          title: Nový skript Frozen
           lessons:
             Artist:
               name: Umělec
@@ -2594,6 +2771,7 @@ cs:
           student_description: Vytvoř si svůj vlastní taneční večírek a sdílej ho
             s kamarády!
         frozen-2018-test-b:
+          title: Nový skript Frozen
           lessons:
             Artist:
               name: Umělec
@@ -2620,6 +2798,7 @@ cs:
             csp_functions:
               display_name: Funkce
         dance-extras:
+          title: Tančete dále (2018)
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
           student_description: Pokračuj i po první hodině kódu rozšířením nápadů ve
             svém projektu.
@@ -2643,14 +2822,24 @@ cs:
               name: Budování základů
             Debugging with Scrat:
               name: Ladění se Scratem
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Conditionals with Cards:
               name: Podmínky s kartami
             Envelope Variables:
               name: Obálkové proměnné
+            Variables as Constant in Artist:
+              name: Proměnné v Artist
+            Variables that Change in Artist:
+              name: Změna proměnných s Artist
             For Loop Fun:
               name: For cyklus zábavy
+            For Loops in Artist:
+              name: Na cykly s Artist
             The Artist:
               name: Umělec
             Nested Loops in the Maze:
@@ -2740,6 +2929,8 @@ cs:
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
                 uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
                 změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
+            Nested Loops in Artist:
+              name: Vnořené cykly v Artist
             While Loops in Farmer:
               name: Cykly pokud (while) s farmářkou
               description_teacher: "Když se studenti dostanou k této lekci, měli by
@@ -2835,8 +3026,12 @@ cs:
               name: Budování základů
             Debugging with Scrat:
               name: Ladění se Scratem
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Nested Loops:
               name: Vnořené cykly
             Conditionals with Cards:
@@ -2851,6 +3046,8 @@ cs:
               name: Skládání písniček
             Functions in Harvester:
               name: Funkce s farmářkou
+            Functions in Artist:
+              name: Funkce s Artist
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2932,12 +3129,20 @@ cs:
               name: Zahradničení s podmínkami
             Functions in Harvester:
               name: Funkce s farmářkou
+            Functions in Artist:
+              name: Funkce s Artist
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
             Envelope Variables:
               name: Obálkové proměnné
+            Variables as Constant in Artist:
+              name: Proměnné v Artist
+            Variables that Change in Artist:
+              name: Změna proměnných s Artist
             For Loop Fun:
               name: For cyklus zábavy
+            For Loops in Artist:
+              name: Na cykly s Artist
             Binary Bracelets:
               name: Binární náramky
             'Unplugged: Binary':
@@ -3003,6 +3208,8 @@ cs:
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
               description_student: Pomoz BB-8 dostat se z bludiště pomocí cyklů!
+            Loops in Artist:
+              name: Smyčky v Umělci
             Loops in Harvester:
               name: Sběr úrody s cykly
             'Events: The Big Event':
@@ -3043,6 +3250,8 @@ cs:
               name: Šťastné mapy
             Going Places Safely:
               name: Cestování bezpečně
+            Loops in Artist:
+              name: Smyčky v Umělci
             Programming with Rey and BB-8:
               name: Programování s Rey a BB-8
               description_student: Pomoz BB-8 posbírat šrot!
@@ -3231,12 +3440,18 @@ cs:
               name: Budování základů
             Debugging with Scrat:
               name: Ladění se Scratem
+            Programming in Artist:
+              name: Programování v Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
+            Functions in Artist:
+              name: Funkce v Artist
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3474,8 +3689,12 @@ cs:
               name: Úvod
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Loops in Artist:
+              name: Smyčky v Umělci
             Nested Loops:
               name: Vnořené cykly
+            Nested Loops Project in Frozen:
+              name: Projekt vnořených cyklů ve Frozen
         csp6-pilot:
           lesson_groups:
             content:
@@ -3518,6 +3737,7 @@ cs:
             End of Course projects:
               name: Projekty k ukončení kurzu
         dance-extras-2019:
+          title: Tančete dále (2019)
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
           student_description: Pokračuj i po první hodině kódu rozšířením nápadů ve
             svém projektu.
@@ -3552,6 +3772,10 @@ cs:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Podmínky s kartami
+            Nested Loops in Artist:
+              name: Vnořené cykly v Artist
+            Functions in Artist:
+              name: Funkce v Artist
             Nested Loops in the Maze:
               name: Vnořené cykly v bludišti
         time4cs-experiment-unit-2:
@@ -3560,6 +3784,8 @@ cs:
               name: Vnořené cykly v bludišti
             Functions with Harvester:
               name: Funkce s farmářkou
+            Functions with Artist:
+              name: Funkce s Artist
         time4cs-control-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -3949,6 +4175,8 @@ cs:
               name: Skládání písniček
             Functions in Harvester:
               name: Funkce s farmářkou
+            Functions in Artist:
+              name: Funkce s Artist
         coursef-2020:
           title: Kurz F (2019)
           lesson_groups:
@@ -3972,8 +4200,14 @@ cs:
                 změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             Envelope Variables:
               name: Obálkové proměnné
+            Variables as Constant in Artist:
+              name: Proměnné v Artist
+            Variables that Change in Artist:
+              name: Změna proměnných s Artist
             For Loop Fun:
               name: For cyklus zábavy
+            For Loops in Artist:
+              name: Na cykly s Artist
             Internet:
               name: Internet
             Crowdsourcing:
@@ -4002,12 +4236,20 @@ cs:
               name: Taneční večírek
             Debugging in Maze:
               name: Odstraňujeme chyby v bludišti
+            Programming in Artist:
+              name: Programování v Artist
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
+            Loops in Artist:
+              name: Smyčky v Umělci
             While Loops in Farmer:
               name: Cykly pokud (while) s farmářkou
             Until Loops in Maze:
               name: Cykly dokud (until) v bludišti
+            Functions in Artist:
+              name: Funkce v Artist
+            For Loops in Artist:
+              name: Na cykly v Artist
             Programming with Angry Birds:
               name: Programujeme s Angry Birds
             Debugging with Scrat:
@@ -4030,6 +4272,14 @@ cs:
               name: Zahradničení s podmínkami
             Functions with Harvester:
               name: Funkce s farmářkou
+            Functions with Artist:
+              name: Funkce s Artist
+            Variables with Artist:
+              name: Proměnné v Artist
+            Changing Variables with Artist:
+              name: Změna proměnných s Artist
+            For Loops with Artist:
+              name: Na cykly s Artist
         pre-express-2020:
           lesson_groups:
             csf_sequencing:
@@ -4045,6 +4295,8 @@ cs:
               name: Hláskovací včelka
             Loops in Ice Age:
               name: Cykly v Době ledové
+            Loops in Artist:
+              name: Smyčky v Umělci
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
@@ -4301,6 +4553,10 @@ cs:
               display_name: Seznamy
             csp_loops:
               display_name: Cykly
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: Strojové učení
         coursea-2021:
           title: Kurz A (2019)
           lessons:
@@ -4332,6 +4588,8 @@ cs:
             'Loops: Getting Loopy':
               key: 'Cykly: Bláznění s cykly'
               name: Bláznění s cykly
+            Loops in Artist:
+              key: Smyčky v Umělci
           lesson_groups:
             csf_digcit:
               display_name: Digitální občanství
@@ -4361,6 +4619,7 @@ cs:
                 studenti vytvoří sekvenční algoritmy, pomocí nichž pomohou Laurel
                 získat poklad na cestě.
             Programming in Artist:
+              key: Programování v Artist
               name: Malujeme s pomocí kódu
             Binary Bracelets:
               key: Binární náramky
@@ -4455,6 +4714,7 @@ cs:
                 cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji
                 dostali Scrata k žaludu.
             Loops in Artist:
+              key: Smyčky v Umělci
               name: Kreslení tvarů s cykly
               description_teacher: Tato lekce staví na pochopení cyklů z předchozí
                 lekce a dává studentům možnost být opravdu kreativní. Tato aktivita
@@ -4562,10 +4822,15 @@ cs:
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
                 uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
                 změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
+            Nested Loops in Artist:
+              key: Vnořené cykly v Artist
             'Functions: Songwriting':
               name: Skládání písniček
             Functions in Harvester:
               name: Funkce s farmářkou
+            Functions in Artist:
+              key: Funkce v Artist
+              name: Funkce s Artist
           lesson_groups:
             ramp_up:
               display_name: Vnořené cykly
@@ -4597,6 +4862,8 @@ cs:
             Envelope Variables:
               key: Obálkové proměnné
               name: Obálkové proměnné
+            Variables as Constant in Artist:
+              name: Proměnné v Artist
             AI for Oceans:
               key: AI pomáhá oceánům
               name: AI pomáhá oceánům
@@ -4606,6 +4873,9 @@ cs:
             For Loop Fun:
               key: For cyklus zábavy
               name: For cyklus zábavy
+            For Loops in Artist:
+              key: Na cykly v Artist
+              name: Na cykly s Artist
           lesson_groups:
             ramp_up:
               display_name: Postavy
@@ -4701,6 +4971,17 @@ cs:
             Functions with Harvester:
               key: Funkce s farmářkou
               name: Funkce s farmářkou
+            Functions with Artist:
+              key: Funkce s Artist
+              name: Funkce s Artist
+            Variables with Artist:
+              key: Proměnné v Artist
+            Changing Variables with Artist:
+              key: Změna proměnných s Artist
+              name: Změna proměnných s Artist
+            For Loops with Artist:
+              key: Na cykly s Artist
+              name: Na cykly s Artist
             lesson-1:
               name: Taneční večírek
               description_teacher: V této lekci studenti naprogramují svůj vlastní
@@ -4721,6 +5002,8 @@ cs:
               display_name: Cykly "For"
             csf_sprites:
               display_name: Postavy
+            lessonGroup-9:
+              display_name: Události
         pre-express-2021:
           lessons:
             Programming in with Angry Birds:
@@ -4772,6 +5055,8 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:

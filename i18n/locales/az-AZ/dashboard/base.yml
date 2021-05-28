@@ -121,6 +121,7 @@ az:
     user_type_student: "şagird"
     field_is_required: "zəruridir"
     accept_terms: "Hesabı yaratmaq üçün razılaşmalısınız."
+    email_preference_privacy: "(Daha ətraflı)"
     email_preference_yes: "Bəli"
     email_preference_no: "Xeyr"
   school_info:
@@ -313,6 +314,7 @@ az:
     update_email: "Yenilə"
     parent_guardian_email_label: "Valideyn/Qəyyum e-poçtu"
     none: "Heç biri"
+    encrypted: "şifrələnmişdir"
   user_level:
     completed: 'Tamamlandı'
     tried: 'Yoxlanıldı'

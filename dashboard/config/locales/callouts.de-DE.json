@@ -433,14 +433,14 @@
           "Infinity_move_collide_callout": "Spiele einen Ton, wenn dieses Ereignis passiert."
         },
         "Infinity_move_directions": {
-          "Infinity_move_directions_callout": "Welcher Baustein bewegt Baymax nach oben, wenn der Pfeil nach oben gedrückt wird?",
-          "Infinity_move_directions_callout_arrow": "Benutze diese Pfeile zum Steuern"
+          "Infinity_move_directions_callout": "Welcher Baustein bewegt Baymax nach oben, wenn Pfeil-nach-oben gedrückt wird?",
+          "Infinity_move_directions_callout_arrow": "Benutze die Pfeiltasten zum Bewegen"
         },
         "Infinity_move_right": {
           "Infinity_move_right_runbutton": "Füge den \"bewegen\"-Baustein hier hinzu"
         },
         "Infinity_repeat": {
-          "Infinity_repeat_callout": "Platziere den \"bewegen\"-Bausteine hier hinein"
+          "Infinity_repeat_callout": "Setze \"bewegen\"-Bausteine hier hinein"
         },
         "InspirationalArtwork": {
           "InspirationalArtwork_1": "Versuche, den neuen \"Kommentar\"-Block unter diesem Etikett zu verwenden, um Notizen für dich selbst in deinem Programm zu machen!"

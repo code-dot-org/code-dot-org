@@ -26315,7 +26315,7 @@ id:
               name: Mahadata, Crowdsourcing, dan Pembelajaran Mesin
             Machine Learning and Bias:
               key: Pembelajaran Mesin dan Bias
-              name: Pembelajaran Mesin dan Bias
+              name: Pembelajaran Mesin
             Project - Tell a Data Story - Part 1:
               key: Proyek - Menuturkan Cerita Data - Bagian 1
               name: Proyek - Menuturkan Cerita Data - Bagian 1
@@ -27654,7 +27654,7 @@ id:
                 yang dijumpai oleh program.
             While Loops with the Farmer:
               key: While Loop dengan Petani
-              name: While Loop dengan Petani
+              name: While Loop dalam Petani
               description_student: 'Loop sangat membantu dalam coding. Pelajaran ini
                 akan mengajari Anda tentang jenis loop baru: while loop!'
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -27715,9 +27715,8 @@ id:
             Variables with Artist:
               key: Variabel dengan Artis
               name: Variabel dengan Artis
-              description_student: Jangan lupa memancing kreativitas di ruang kelas!
-                Dalam puzzle ini, Anda akan membuat gambar-gambar yang fantastis menggunakan
-                variable.
+              description_student: Dalam pelajaran ini, Anda akan membuat gambar menggunakan
+                variable yang berubah pada saat program berjalan.
               description_teacher: Dalam pelajaran ini, murid akan mengeksplorasi
                 pembuatan desain berulang menggunakan variable di lingkungan Artis.
                 Murid akan mempelajari cara menggunakan variable untuk membuat code
@@ -27817,6 +27816,8 @@ id:
               description_teacher: Dalam pelajaran ini, murid akan memprogram pesta
                 dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena
                 alatnya dibuat untuk menanggapi musik.
+            lesson-3:
+              name: Sprite tengah Beraksi
           lesson_groups:
             csf_sequencing:
               display_name: Urutan
@@ -27834,6 +27835,8 @@ id:
               display_name: Sprites
             end_of_course_project:
               display_name: Proyek Akhir Kursus
+            lessonGroup-9:
+              display_name: kegiatan
           student_description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran
             di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan
             keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan
@@ -28277,6 +28280,8 @@ id:
             CS Discoveries Post Course survey:
               key: Survei Pascakursus CS Discoveries
               name: Survei Pascakursus CS Discoveries
+            Designing With Empathy:
+              name: Analisis desain
             Build a Paper Prototype:
               name: Prototipe Kertas
             Digital Mode in App Lab:
@@ -28769,3 +28774,7 @@ id:
             anonim untuk seluruh kelas. Hasil survei sangat penting bagi guru Anda
             dan Code.org demi kelangsungan dan kesempurnaan kursus. Terima kasih atas
             waktu dan pertimbangan Anda.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Pelajaran ke- 15

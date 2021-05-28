@@ -1308,8 +1308,12 @@ pl:
           CONDITION:
             '"when"': kiedy
             '"while"': dopóki
+      gamelab_startAvoiding:
+        text: "{SPRITE} zaczyna unikać {TARGET}"
       gamelab_startFollowing:
         text: "{SPRITE} zaczyna podążać {TARGET}"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} przestaje unikać inne duszki"
       gamelab_stopCollectingData:
         text: zatrzymaj zbieranie danych
       gamelab_stopFollowing:
@@ -1627,6 +1631,11 @@ pl:
             '"x"': współrzędna x
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
+      Mikelab_setupOutbreak:
+        text: |-
+          konfiguracja epidemii
+          populacja:{SPRITE2N}
+          {TOGGLE}wirus
       Mikelab_setupSim:
         text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
@@ -1701,14 +1710,14 @@ pl:
         text: potwory zaczynają wędrować
       Outbreak_beginWearingMasks:
         text: potwory zaczynają nosić maski
-      Outbreak_layoutSprites:
-        text: układ potworów jako {FORMAT}
-        options:
-          FORMAT:
-            '"grid"': siatka
-            '"border"': brzeg
-            '"row"': rząd
-            '"random"': losowy
+      Outbreak_layoutBorder:
+        text: układ potworów na brzegu
+      Outbreak_layoutClusters:
+        text: układ potworów w klastrach {NUM}
+      Outbreak_layoutGrid:
+        text: układ potworów jako siatka
+      Outbreak_layoutRandom:
+        text: układ potworów losowy
       Outbreak_setSpeed:
         text: ustaw prędkość potwora na {VAL}
       Outbreak_setupOutbreak:
