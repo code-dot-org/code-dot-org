@@ -228,7 +228,8 @@ describe('ProgressBubble', () => {
       />
     );
 
-    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(1);
+    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(1);
+    expect(wrapper.find('BubbleBadge').props().type).to.equal('assessment');
   });
 
   it('does not show assessment icon on bubble on assessment level, if smallBubble is true', () => {
@@ -243,7 +244,7 @@ describe('ProgressBubble', () => {
       />
     );
 
-    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
+    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(0);
   });
 
   it('renders a pill shape for unplugged lessons', () => {
