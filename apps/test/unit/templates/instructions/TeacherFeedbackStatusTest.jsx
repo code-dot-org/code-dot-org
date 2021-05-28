@@ -21,7 +21,8 @@ describe('TeacherFeedbackStatusText', () => {
 
       const wrapper = setUp(latestFeedback);
       expect(wrapper.find('FontAwesome').props().icon).to.equal('check');
-      expect(wrapper.text()).to.equal('<FontAwesome />Seen by student today');
+      expect(wrapper.contains('Seen by student')).to.be.true;
+      expect(wrapper.contains('today')).to.be.true;
     });
 
     it('displays nicely formatted date if student viewed teacher feedback yesterday', () => {
@@ -34,9 +35,8 @@ describe('TeacherFeedbackStatusText', () => {
 
       const wrapper = setUp(latestFeedback);
       expect(wrapper.find('FontAwesome').props().icon).to.equal('check');
-      expect(wrapper.text()).to.equal(
-        '<FontAwesome />Seen by student yesterday'
-      );
+      expect(wrapper.contains('Seen by student')).to.be.true;
+      expect(wrapper.contains('yesterday')).to.be.true;
     });
 
     it('displays nicely formatted date if student viewed teacher feedback two days ago', () => {
@@ -51,9 +51,8 @@ describe('TeacherFeedbackStatusText', () => {
       expect(wrapper.find('FontAwesome').props().icon).to.equal('check');
 
       const formattedDate = moment(twoDaysAgo).format('l');
-      expect(wrapper.text()).to.equal(
-        `<FontAwesome />Seen by student ${formattedDate}`
-      );
+      expect(wrapper.contains('Seen by student')).to.be.true;
+      expect(wrapper.contains(formattedDate)).to.be.true;
     });
 
     it('displays nicely formatted date if student updated their progress since feedback was left', () => {
@@ -66,7 +65,8 @@ describe('TeacherFeedbackStatusText', () => {
       };
 
       const wrapper = setUp(latestFeedback);
-      expect(wrapper.text()).to.equal('Last updated by student today');
+      expect(wrapper.contains('Last updated by student')).to.be.true;
+      expect(wrapper.contains('today')).to.be.true;
     });
 
     it('displays correct message if student has not viewed their feedback', () => {
@@ -74,7 +74,8 @@ describe('TeacherFeedbackStatusText', () => {
       const latestFeedback = {student_seen_feedback: null, updated_at: today};
 
       const wrapper = setUp(latestFeedback);
-      expect(wrapper.text()).to.equal('Updated by you today');
+      expect(wrapper.contains('Updated by you')).to.be.true;
+      expect(wrapper.contains('today')).to.be.true;
     });
   });
 
@@ -89,7 +90,8 @@ describe('TeacherFeedbackStatusText', () => {
       };
 
       const wrapper = setUp(latestFeedback, ViewType.Student);
-      expect(wrapper.text()).to.equal('Last updated a day ago');
+      expect(wrapper.contains('Last updated')).to.be.true;
+      expect(wrapper.contains('a day ago')).to.be.true;
     });
   });
 });
