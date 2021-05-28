@@ -16,7 +16,7 @@ describe('StandardsReportCurrentCourseInfo', () => {
           project_sharing: true
         },
         students: [],
-        lessonExtras: false
+        stageExtras: false
       },
       scriptFriendlyName: 'Express Course (2019)',
       scriptData: {

@@ -33,5 +33,5 @@ ReactDOM.render(
       showLessonExtrasWarning={viewer.show_stage_extras_warning}
     />
   </Provider>,
-  document.querySelector('#lesson-extras')
+  document.querySelector('#stage-extras')
 );

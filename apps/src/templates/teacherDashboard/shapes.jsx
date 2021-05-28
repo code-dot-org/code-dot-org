@@ -8,7 +8,7 @@ export const sectionShape = PropTypes.shape({
   // Though we validate valid login types here, the server actually owns the
   // canonical list, and passes us the list of valid login types.
   loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
-  lessonExtras: PropTypes.bool.isRequired,
+  stageExtras: PropTypes.bool.isRequired,
   pairingAllowed: PropTypes.bool.isRequired,
   ttsAutoplayEnabled: PropTypes.bool.isRequired,
   studentCount: PropTypes.number.isRequired,

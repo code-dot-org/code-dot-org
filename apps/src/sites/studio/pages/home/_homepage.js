@@ -12,7 +12,7 @@ import {
   pageTypes,
   setAuthProviders,
   setPageType,
-  setLessonExtrasScriptIds,
+  setStageExtrasScriptIds,
   setTextToSpeechScriptIds,
   setPreReaderScriptIds,
   setValidGrades,
@@ -42,7 +42,7 @@ function showHomepage() {
   registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
-  store.dispatch(setLessonExtrasScriptIds(homepageData.lessonExtrasScriptIds));
+  store.dispatch(setStageExtrasScriptIds(homepageData.lessonExtrasScriptIds));
   store.dispatch(setTextToSpeechScriptIds(homepageData.textToSpeechScriptIds));
   store.dispatch(setPreReaderScriptIds(homepageData.preReaderScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));

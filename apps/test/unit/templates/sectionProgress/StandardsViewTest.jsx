@@ -17,7 +17,7 @@ describe('StandardView', () => {
           project_sharing: true
         },
         students: [],
-        lessonExtras: false
+        stageExtras: false
       },
       scriptData: {
         id: 1163,

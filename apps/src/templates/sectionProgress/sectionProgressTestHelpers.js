@@ -56,7 +56,7 @@ export function createStore(numStudents, numLessons) {
     id: 11,
     script: scriptData,
     students: [],
-    lessonExtras: false
+    stageExtras: false
   };
   for (let i = 0; i < numStudents; i++) {
     section.students.push({id: i, name: 'Student' + i + ' Long Lastname'});

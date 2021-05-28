@@ -340,7 +340,7 @@ describe('sectionProgressLoader.loadScript', () => {
     });
 
     describe('the first time', () => {
-      let lessonExtras = true;
+      let stageExtras = true;
       beforeEach(() => {
         reduxStub.returns({
           getState: () => {
@@ -353,7 +353,7 @@ describe('sectionProgressLoader.loadScript', () => {
               sectionData: {
                 section: {
                   students: ['student'],
-                  lessonExtras: lessonExtras
+                  stageExtras: stageExtras
                 }
               }
             };
@@ -436,8 +436,8 @@ describe('sectionProgressLoader.loadScript', () => {
         progressHelpers.processedLevel.restore();
       });
 
-      it('filters out bonus levels when section.lessonExtras is false', () => {
-        lessonExtras = false;
+      it('filters out bonus levels when section.stageExtras is false', () => {
+        stageExtras = false;
         const scriptResponse = _.cloneDeep(serverScriptResponse);
         scriptResponse.lessons[0].levels.push({bonus: true});
 
@@ -459,8 +459,8 @@ describe('sectionProgressLoader.loadScript', () => {
         progressHelpers.processedLevel.restore();
       });
 
-      it('does not filter bonus levels when section.lessonExtras is true', () => {
-        lessonExtras = true;
+      it('does not filter bonus levels when section.stageExtras is true', () => {
+        stageExtras = true;
         const bonusLevel = {id: '2002', bonus: true};
 
         const scriptResponse = _.cloneDeep(serverScriptResponse);

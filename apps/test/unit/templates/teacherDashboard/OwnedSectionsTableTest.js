@@ -22,7 +22,7 @@ const sectionRowData = [
     scriptId: 168,
     grade: '5',
     loginType: 'picture',
-    lessonExtras: true,
+    stageExtras: true,
     pairingAllowed: true,
     providerManaged: false,
     hidden: false,

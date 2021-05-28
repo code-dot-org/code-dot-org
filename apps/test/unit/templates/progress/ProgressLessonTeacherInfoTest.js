@@ -8,7 +8,7 @@ import {fakeLesson} from '@cdo/apps/templates/progress/progressTestHelpers';
 const MOCK_SECTION = {
   id: 2,
   name: 'intro to computer science II',
-  lessonExtras: true,
+  stageExtras: true,
   pairingAllowed: true,
   studentCount: 4,
   code: 'TQGSJR',

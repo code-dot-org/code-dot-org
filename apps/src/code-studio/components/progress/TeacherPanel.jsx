@@ -26,7 +26,7 @@ class TeacherPanel extends React.Component {
     pageType: PropTypes.oneOf([
       pageTypes.level,
       pageTypes.scriptOverview,
-      pageTypes.lessonExtras
+      pageTypes.stageExtras
     ]),
 
     // Provided by redux.

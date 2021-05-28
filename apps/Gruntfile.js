@@ -570,8 +570,7 @@ describe('entry tests', () => {
     'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
     'scripts/code': './src/sites/studio/pages/scripts/code.js',
     'scripts/standards': './src/sites/studio/pages/scripts/standards.js',
-    'scripts/lesson_extras':
-      './src/sites/studio/pages/scripts/lesson_extras.js',
+    'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
     'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
     'teacher_dashboard/show':

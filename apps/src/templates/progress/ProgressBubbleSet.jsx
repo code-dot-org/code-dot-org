@@ -27,7 +27,7 @@ class ProgressBubbleSet extends React.Component {
       PropTypes.number
     ]),
     hideToolTips: PropTypes.bool,
-    lessonExtrasEnabled: PropTypes.bool,
+    stageExtrasEnabled: PropTypes.bool,
     showSublevels: PropTypes.bool,
     onBubbleClick: PropTypes.func,
     // Redux
@@ -35,10 +35,10 @@ class ProgressBubbleSet extends React.Component {
   };
 
   bubbleDisabled = level => {
-    const {disabled, lessonExtrasEnabled} = this.props;
+    const {disabled, stageExtrasEnabled} = this.props;
     // Bonus level (aka lesson extras) bubble is disabled if lesson extras are disabled
     // for the current section.
-    const disableBubble = disabled || (!lessonExtrasEnabled && level.bonus);
+    const disableBubble = disabled || (!stageExtrasEnabled && level.bonus);
     if (disableBubble) {
       return true;
     }

@@ -71,7 +71,7 @@ const teacherSections = {
       loginType: 'picture',
       grade: '9',
       providerManaged: false,
-      lessonExtras: true,
+      stageExtras: true,
       pairingAllowed: true,
       sharingDisabled: false,
       studentCount: 4,

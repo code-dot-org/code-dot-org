@@ -13,7 +13,7 @@ describe('ProgressViewHeader', () => {
         project_sharing: true
       },
       students: [],
-      lessonExtras: false
+      stageExtras: false
     },
     currentView: 'summary',
     scriptData: {

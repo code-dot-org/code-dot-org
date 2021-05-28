@@ -16,7 +16,7 @@ import teacherSections, {
   setValidGrades,
   setTextToSpeechScriptIds,
   setPreReaderScriptIds,
-  setLessonExtrasScriptIds,
+  setStageExtrasScriptIds,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
@@ -85,7 +85,7 @@ $(document).ready(function() {
   store.dispatch(setValidAssignments(validCourses, validScripts));
   store.dispatch(setValidGrades(validGrades));
   store.dispatch(setLocaleCode(localeCode));
-  store.dispatch(setLessonExtrasScriptIds(lessonExtrasScriptIds));
+  store.dispatch(setStageExtrasScriptIds(lessonExtrasScriptIds));
   store.dispatch(setTextToSpeechScriptIds(textToSpeechScriptIds));
   store.dispatch(setPreReaderScriptIds(preReaderScriptIds));
   store.dispatch(setShowSectionProgressDetails(showSectionProgressDetails));
