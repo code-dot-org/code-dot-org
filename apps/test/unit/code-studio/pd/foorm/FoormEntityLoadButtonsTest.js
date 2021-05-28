@@ -78,7 +78,7 @@ describe('FoormEntityLoadButtons', () => {
       .every((menuItem, i) => assert.equal(menuItem.text(), expectedOrder[i]));
   });
 
-  it("doesn't filter and sort menu items when toggled off", () => {
+  it("sorts, but doesn't filter menu items when toggled off", () => {
     wrapper = mount(
       <Provider store={store}>
         <FoormEntityLoadButtons
@@ -115,7 +115,7 @@ describe('FoormEntityLoadButtons', () => {
       .every((menuItem, i) => assert.equal(menuItem.text(), expectedOrder[i]));
   });
 
-  it("doesn't filter and sort menu items with no toggle", () => {
+  it("sorts, but doesn't filter menu items with no toggle", () => {
     wrapper = mount(
       <Provider store={store}>
         <FoormEntityLoadButtons

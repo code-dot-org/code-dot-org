@@ -343,19 +343,6 @@ class FoormFormSaveBar extends Component {
         <ConfirmationDialog
           show={
             this.state.confirmationDialogBeingShownName ===
-            confirmationDialogNames.saveNewVersion
-          }
-          onOk={() => {
-            this.handleSave(true);
-          }}
-          okText={'Yes, save the form'}
-          onCancel={this.handleSaveCancel}
-          headerText="Save Form as New Version"
-          bodyText={saveNewVersionWarning(this.props.formVersion + 1)}
-        />
-        <ConfirmationDialog
-          show={
-            this.state.confirmationDialogBeingShownName ===
             confirmationDialogNames.save
           }
           onOk={() => {
@@ -378,6 +365,19 @@ class FoormFormSaveBar extends Component {
           onCancel={this.handleSaveCancel}
           headerText="Publish Form"
           bodyText={aboutToPublishWarning}
+        />
+        <ConfirmationDialog
+          show={
+            this.state.confirmationDialogBeingShownName ===
+            confirmationDialogNames.saveNewVersion
+          }
+          onOk={() => {
+            this.handleSave(true);
+          }}
+          okText={'Yes, save the form'}
+          onCancel={this.handleSaveCancel}
+          headerText="Save Form as New Version"
+          bodyText={saveNewVersionWarning(this.props.formVersion + 1)}
         />
       </div>
     );
