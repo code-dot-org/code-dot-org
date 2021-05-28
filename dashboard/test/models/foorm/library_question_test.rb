@@ -80,7 +80,7 @@ class Foorm::LibraryQuestionTest < ActiveSupport::TestCase
     assert_empty library_question.published_forms_appeared_in
   end
 
-  test 'library question JSON cannot be updated with question name different than what is in' do
+  test 'library question JSON cannot be updated with question name different than what is in database entry' do
     library = create :foorm_library, :with_questions
     library_question = library.library_questions.first
 
