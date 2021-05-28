@@ -434,7 +434,7 @@ exports.doesUserOwnShard = function(user, shardID) {
  * @return {string} a level 'slug' like 's-csp1-stage-3-puzzle-2'
  */
 exports.getUniqueLevelKeyFromLocation = function(loc) {
-  return loc.pathname // something like '/s/csp1-2019/stage/3/puzzle/2'
+  return loc.pathname // something like '/s/csp1-2019/lessons/3/levels/2'
     .replace(/^\//, '') // Strip leading slash from pathname
     .replace(/\/$/, '') // Strip trailing slash (if it exists)
     .replace(/\W/g, '-'); // Replace non-word characters with dashes
