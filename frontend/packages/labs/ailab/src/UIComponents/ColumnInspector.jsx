@@ -144,28 +144,27 @@ class ColumnInspector extends Component {
                     )}
                   </label>
 
-                  {currentPanel === "dataDisplayLabel" &&
-                    currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
-                      <div>
-                        <div style={styles.bold}>Column information:</div>
+                  {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+                    <div>
+                      <div style={styles.bold}>Column information:</div>
 
-                        {barData.labels.length <= maxLabelsInHistogram && (
-                          <Bar
-                            data={barData}
-                            width={100}
-                            height={150}
-                            options={chartOptions}
-                          />
-                        )}
-                        {barData.labels.length > maxLabelsInHistogram && (
-                          <div>
-                            {barData.labels.length} values were found in this
-                            column. A graph is only shown when there are{" "}
-                            {maxLabelsInHistogram} or fewer.
-                          </div>
-                        )}
-                      </div>
-                    )}
+                      {barData.labels.length <= maxLabelsInHistogram && (
+                        <Bar
+                          data={barData}
+                          width={100}
+                          height={150}
+                          options={chartOptions}
+                        />
+                      )}
+                      {barData.labels.length > maxLabelsInHistogram && (
+                        <div>
+                          {barData.labels.length} values were found in this
+                          column. A graph is only shown when there are{" "}
+                          {maxLabelsInHistogram} or fewer.
+                        </div>
+                      )}
+                    </div>
+                  )}
 
                   {currentPanel === "dataDisplayFeatures" && (
                     <div>

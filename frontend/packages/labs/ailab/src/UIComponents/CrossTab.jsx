@@ -43,7 +43,7 @@ class CrossTab extends Component {
 
         {crossTabData && !showTable && (
           <div>
-            <div style={styles.bold}>Table:</div>
+            <div style={styles.bold}>Relationship information:</div>
 
             <div>The currently-selected data is too large to show in a table.</div>
           </div>
@@ -51,7 +51,7 @@ class CrossTab extends Component {
 
         {showTable && (
           <div>
-            <div style={styles.bold}>Table:</div>
+            <div style={styles.bold}>Relationship information:</div>
             <div style={styles.scrollableContents}>
               <div style={styles.scrollingContents}>
                 <table>
