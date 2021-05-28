@@ -9,7 +9,7 @@ class Api::V1::Pd::Foorm::LibraryQuestionsController < ApplicationController
     if library_question.errors.empty?
       return render status: 200, json: {}
     else
-      return render status: 500, json: {error: library_question.errors}
+      return render status: 500, json: {error: library_question.errors[:question].join(', ')}
     end
   end
 end
