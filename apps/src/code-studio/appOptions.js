@@ -225,7 +225,7 @@
  * @property {?} total_lines
  * @property {AutoplayVideo} video_info
  * @property {string} redirect - path to 'next' level in the stage/script sequence.
- * @property {{previous: {position: number, name: string}}} stage_changing
+ * @property {{previous: {position: number, name: string}}} lesson_changing
  * @property {boolean} end_of_stage_experience
  * @property {HintViewRequest[]} hint_view_requests
  * @property {string} hint_view_request_url

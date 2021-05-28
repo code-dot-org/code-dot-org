@@ -9,7 +9,7 @@ class LessonTest < ActiveSupport::TestCase
 
     lockable_state = lesson.lockable_state [@student]
 
-    assert_equal true, lockable_state[0][:locked], 'stage without userlevel should be locked'
+    assert_equal true, lockable_state[0][:locked], 'lesson without userlevel should be locked'
     assert_equal level1.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
   end
 
@@ -20,7 +20,7 @@ class LessonTest < ActiveSupport::TestCase
 
     lockable_state = lesson.lockable_state [@student]
 
-    assert_equal true, lockable_state[0][:locked], 'stage without userlevel should be locked'
+    assert_equal true, lockable_state[0][:locked], 'lesson without userlevel should be locked'
     assert_equal level2.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
   end
 
@@ -126,7 +126,7 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal last_script_level, lesson.last_progression_script_level
   end
 
-  test "next_level_path_for_stage_extras" do
+  test "next_level_path_for_lesson_extras" do
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, script: script, lesson_group: lesson_group
@@ -972,7 +972,7 @@ class LessonTest < ActiveSupport::TestCase
       @original_lesson.programming_expressions = [create(:programming_expression)]
 
       @destination_script.expects(:write_script_json).once
-      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      copied_lesson = @original_lesson.copy_to_script(@destination_script)
       assert_equal @destination_script, copied_lesson.script
       assert_equal 2, copied_lesson.script_levels.length
       assert_equal [level1, level2], copied_lesson.script_levels.map(&:level)
@@ -995,7 +995,7 @@ class LessonTest < ActiveSupport::TestCase
       Script.expects(:merge_and_write_i18n).once
       destination_resource = create :resource, name: 'resource1', course_version: @destination_course_version
       destination_vocab = create :vocabulary, word: 'word one', course_version: @destination_course_version
-      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      copied_lesson = @original_lesson.copy_to_script(@destination_script)
       assert_equal @destination_script, copied_lesson.script
       assert_equal [destination_resource], copied_lesson.resources
       assert_equal [destination_vocab], copied_lesson.vocabularies
@@ -1021,7 +1021,7 @@ class LessonTest < ActiveSupport::TestCase
       course_version_resource_count = course_version.resources.count
       course_version_vocab_count = course_version.vocabularies.count
       Script.expects(:merge_and_write_i18n).once
-      copied_lesson = Lesson.copy_to_script(original_lesson, destination_script)
+      copied_lesson = original_lesson.copy_to_script(destination_script)
       course_version.reload
 
       assert_equal destination_script, copied_lesson.script
@@ -1047,7 +1047,7 @@ class LessonTest < ActiveSupport::TestCase
 
       @destination_script.expects(:write_script_json).once
       Script.expects(:merge_and_write_i18n).once
-      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      copied_lesson = @original_lesson.copy_to_script(@destination_script)
       @destination_script.reload
 
       # Test that the script levels were correctly added to the script
@@ -1075,7 +1075,7 @@ class LessonTest < ActiveSupport::TestCase
       create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: false, lockable: true, absolute_position: 3, relative_position: 1
 
       @destination_script.expects(:write_script_json).once
-      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      copied_lesson = @original_lesson.copy_to_script(@destination_script)
       @destination_script.reload
       assert_equal @destination_script, copied_lesson.script
       assert_equal 4, copied_lesson.absolute_position
@@ -1092,7 +1092,7 @@ class LessonTest < ActiveSupport::TestCase
 
       @destination_script.expects(:write_script_json).once
       Script.expects(:merge_and_write_i18n).once
-      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      copied_lesson = @original_lesson.copy_to_script(@destination_script)
       @destination_script.reload
       assert_equal @destination_script, copied_lesson.script
       assert_equal 4, copied_lesson.absolute_position
@@ -1110,7 +1110,7 @@ class LessonTest < ActiveSupport::TestCase
 
       @destination_script.expects(:write_script_json).once
       Script.expects(:merge_and_write_i18n).once
-      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      copied_lesson = @original_lesson.copy_to_script(@destination_script)
       @destination_script.reload
       assert_equal @destination_script, copied_lesson.script
       assert_equal 4, copied_lesson.absolute_position
@@ -1122,7 +1122,7 @@ class LessonTest < ActiveSupport::TestCase
 
       @destination_script.expects(:write_script_json).once
       Script.expects(:merge_and_write_i18n).twice
-      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      copied_lesson = @original_lesson.copy_to_script(@destination_script)
       assert_equal 1, @destination_script.lesson_groups.count
       assert_equal 1, @destination_script.lessons.count
       assert_equal @destination_script.lesson_groups.first, copied_lesson.lesson_group
