@@ -287,6 +287,7 @@ class FoormLibraryEditorManager extends React.Component {
               '/api/v1/pd/foorm/library_questions/validate_library_question'
             }
             validateDataKey={'question'}
+            validateInExistingEntityContext={true}
             saveBar={this.renderSaveBar()}
           />
         )}

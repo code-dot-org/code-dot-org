@@ -42,10 +42,12 @@ class FoormEntityEditorHeader extends Component {
     livePreviewStatus: PropTypes.string,
     validateURL: PropTypes.string,
     validateDataKey: PropTypes.string,
+    validateInExistingEntityContext: PropTypes.bool,
     headerTitle: PropTypes.node,
 
     // populated by Redux
-    questions: PropTypes.object
+    questions: PropTypes.object,
+    foormEntityId: PropTypes.number
   };
 
   constructor(props) {
@@ -60,14 +62,25 @@ class FoormEntityEditorHeader extends Component {
 
   validateQuestions = () => {
     this.setState({validationStarted: true});
+
+    const requestData = {
+      [this.props.validateDataKey]: this.props.questions
+    };
+
+    // By default, we validate the JSON representing the Foorm configuration
+    // without the context of its existing database entry (if it exists).
+    // For library questions, we want to make sure that information in the JSON (question name)
+    // remains in sync with the name in the database entry.
+    if (this.props.validateInExistingEntityContext) {
+      requestData['id'] = this.props.foormEntityId;
+    }
+
     $.ajax({
       url: this.props.validateURL,
       type: 'post',
       contentType: 'application/json',
       processData: false,
-      data: JSON.stringify({
-        [this.props.validateDataKey]: this.props.questions
-      })
+      data: JSON.stringify(requestData)
     })
       .done(result => {
         this.setState({
@@ -141,5 +154,6 @@ class FoormEntityEditorHeader extends Component {
 }
 
 export default connect(state => ({
-  questions: state.foorm.questions || {}
+  questions: state.foorm.questions || {},
+  foormEntityId: state.foorm.foormEntityId
 }))(FoormEntityEditorHeader);
