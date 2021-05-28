@@ -116,7 +116,9 @@ Scenario: Switch versions using dropdown on script overview page
   And I click selector ".assignment-version-title:contains(2019)" once I see it
   Then I wait until I am on "http://studio.code.org/s/ui-test-versioned-script-2019"
 
-  When I wait until element "#script-title" is visible
+  # On Safari, the 2017 page may still be visible (even though the url has been changed)
+  # so we need to wait until we are looking at the 2019 page.
+  And I wait until element "#script-title" contains text "2019"
   And element "#uitest-version-selector" is visible
   And I click selector "#assignment-version-year" once I see it
   And element ".assignment-version-title:contains(2018)" is not visible

@@ -34,7 +34,7 @@ describe('StandardsReport', () => {
           project_sharing: true
         },
         students: [],
-        stageExtras: false
+        lessonExtras: false
       },
       scriptData: {
         id: 1163,

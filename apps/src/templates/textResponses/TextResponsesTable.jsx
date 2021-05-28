@@ -108,7 +108,7 @@ class TextResponsesTable extends Component {
       {
         property: 'stage',
         header: {
-          label: i18n.stage(),
+          label: i18n.lesson(),
           props: {
             style: {
               ...tableLayoutStyles.headerCell,

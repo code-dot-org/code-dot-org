@@ -1,5 +1,5 @@
 name 'U2 evaluation q9'
 question ‘Do you have experience **using or interpreting data visualizations made by other people**?’ 
 answer ‘Yes— I look at data visualizations all the time!’ 
-answer ‘Eh, I look at them occasionally.’, weight: 1, stage_name: ‘Lessons 7 - 10: Interpreting Visual Data’
-answer ‘I more or less ignore or skim over data visualizations.’, weight: 3, stage_name: ‘Lessons 7 - 10: Interpreting Visual Data’
+answer ‘Eh, I look at them occasionally.’, weight: 1, lesson_name: ‘Lessons 7 - 10: Interpreting Visual Data’
+answer ‘I more or less ignore or skim over data visualizations.’, weight: 3, lesson_name: ‘Lessons 7 - 10: Interpreting Visual Data’
