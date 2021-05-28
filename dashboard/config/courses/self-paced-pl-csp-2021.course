@@ -1,0 +1,25 @@
+{
+  "name": "self-paced-pl-csp-2021",
+  "script_names": [
+    "self-paced-pl-csp1-2021",
+    "self-paced-pl-csp2-2021",
+    "self-paced-pl-csp3-2021",
+    "self-paced-pl-csp4-2021",
+    "self-paced-pl-csp5-2021",
+    "self-paced-pl-csp6-2021",
+    "self-paced-pl-csp7-2021",
+    "self-paced-pl-csp8-2021",
+    "self-paced-pl-csp9-2021",
+    "self-paced-pl-csp10-2021",
+    "self-paced-pl-csp11-2021"
+  ],
+  "properties": {
+    "has_numbered_units": true
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
