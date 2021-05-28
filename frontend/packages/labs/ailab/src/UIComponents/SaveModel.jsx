@@ -122,7 +122,7 @@ class SaveModel extends Component {
               </div>
             </div>
             <div key={dataDescriptionField.id} style={styles.cardRow}>
-              <label style={styles.bold}>{dataDescriptionField.text}</label>
+              <div style={styles.bold}>{dataDescriptionField.text}</div>
               {this.props.isUserUploadedDataset && (
                 <div>
                   <textarea
@@ -187,7 +187,7 @@ class SaveModel extends Component {
               {this.getUsesFields().map(field => {
                 return (
                   <div key={field.id} style={styles.cardRow}>
-                    <label style={styles.bold}>{field.text}</label>
+                    <div style={styles.bold}>{field.text}</div>
                     <div>{field.description}</div>
                     <ul>
                       {field.descriptionDetails &&

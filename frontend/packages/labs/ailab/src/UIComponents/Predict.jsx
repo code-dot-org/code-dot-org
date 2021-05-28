@@ -44,27 +44,25 @@ class Predict extends Component {
         <div style={styles.largeText}>Try it out!</div>
         <div style={styles.scrollableContents}>
           <div style={styles.scrollingContents}>
-            <form>
+            <div>
               {this.props.selectedNumericalFeatures.map((feature, index) => {
                 let min = this.props.extremaByColumn[feature].min.toFixed(2);
                 let max = this.props.extremaByColumn[feature].max.toFixed(2);
 
                 return (
                   <div style={styles.cardRow} key={index}>
-                    <label>
-                      {feature} {`(min: ${+min}, max: ${+max})`}
-                      : &nbsp;
-                      <input
-                        type="number"
-                        onChange={event => this.handleChange(event, feature)}
-                        value={this.props.testData[feature] || ""}
-                      />
-                    </label>
+                    {feature} {`(min: ${+min}, max: ${+max})`}
+                    : &nbsp;
+                    <input
+                      type="number"
+                      onChange={event => this.handleChange(event, feature)}
+                      value={this.props.testData[feature] || ""}
+                    />
                   </div>
                 );
               })}
-            </form>
-            <form>
+            </div>
+            <div>
               {this.props.selectedCategoricalFeatures.map((feature, index) => {
                 return (
                   <div style={styles.cardRow} key={index}>
@@ -89,7 +87,7 @@ class Predict extends Component {
                   </div>
                 );
               })}
-            </form>
+            </div>
           </div>
         </div>
         <br />
