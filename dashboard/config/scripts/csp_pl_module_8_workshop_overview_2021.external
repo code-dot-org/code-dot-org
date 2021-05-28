@@ -1,0 +1,31 @@
+name 'CSP-PL Module 8 - Workshop Overview_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 8: CS Principles Virtual Professional Learning 
+
+## Module 8 Overview
+
+Welcome to your final set of asynchronous work for CS Principles! These experiences will help prepare you for the following synchronous workshop and also help you understand the content and curriculum as you prepare to teach your own students. Combined, these asynchronous tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+
+**During this asynchronous work you will:**
+
+* Learn about CS communities that can support your work beyond this workshop.
+* Learn about the structure of the AP Multiple Choice Exam
+* Consider the skills and knowledge students need to be successful for the AP Multiple Choice Exam.
+
+
+
+**After this asynchronous work you will:**
+
+* Understand how you might contribute to or benefit from participation in CS communities going forward.
+* Be able to implement a plan for preparing students for the AP Multiple Choice Exam.
+
+
+
+
+Let's get started!
+
+MARKDOWN
