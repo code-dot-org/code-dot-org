@@ -424,7 +424,15 @@ const styles = {
 const saveNewVersionWarning = version => (
   <div>
     <span style={styles.warning}>Warning: </span>You are about to save version{' '}
-    {version} of this form. This version will need to be deployed separately.
+    {version} of this form. Read more about versioning{' '}
+    <a
+      href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5d-The-Foorm-Editor#when-to-version"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      here
+    </a>
+    . Check with an engineer if you are unsure this needs a new version.
     <br />
     <br />
     Are you sure you want to save your changes?
