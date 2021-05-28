@@ -23,7 +23,7 @@ class Foorm::LibraryQuestion < ApplicationRecord
 
   belongs_to :library, primary_key: [:name, :version], foreign_key: [:library_name, :library_version], required: true
 
-  validate :validate_library_question
+  validate :validate_question
   validates :question_name, :question, presence: true
   validates_uniqueness_of :question_name, scope: [:library_name, :library_version]
 
@@ -45,7 +45,7 @@ class Foorm::LibraryQuestion < ApplicationRecord
     end
   end
 
-  def validate_library_question
+  def validate_question
     # Keep question name stored in the question JSON field in sync with what's in the database
     if JSON.parse(question)['name'] != question_name
       raise InvalidFoormConfigurationError, 'library question name in question JSON must match name of library question name in database.'
