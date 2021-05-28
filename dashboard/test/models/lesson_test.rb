@@ -9,7 +9,7 @@ class LessonTest < ActiveSupport::TestCase
 
     lockable_state = lesson.lockable_state [@student]
 
-    assert_equal true, lockable_state[0][:locked], 'stage without userlevel should be locked'
+    assert_equal true, lockable_state[0][:locked], 'lesson without userlevel should be locked'
     assert_equal level1.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
   end
 
@@ -20,7 +20,7 @@ class LessonTest < ActiveSupport::TestCase
 
     lockable_state = lesson.lockable_state [@student]
 
-    assert_equal true, lockable_state[0][:locked], 'stage without userlevel should be locked'
+    assert_equal true, lockable_state[0][:locked], 'lesson without userlevel should be locked'
     assert_equal level2.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
   end
 
