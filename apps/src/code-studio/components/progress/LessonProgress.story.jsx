@@ -93,8 +93,8 @@ export default storybook => {
   const createStoreForLevels = (
     levels,
     currentLevelIndex,
-    showStageExtras,
-    onStageExtras,
+    showLessonExtras,
+    onLessonExtras,
     bonusCompleted
   ) => {
     const store = createStore(combineReducers({progress, lessonLock}));
@@ -103,13 +103,13 @@ export default storybook => {
         currentLevelId: currentLevelIndex
           ? levels[currentLevelIndex].ids[0].toString()
           : null,
-        isLessonExtras: onStageExtras,
+        isLessonExtras: onLessonExtras,
         scriptName: 'csp1',
         saveAnswersBeforeNavigation: false,
         stages: [
           {
             id: 123,
-            lesson_extras_level_url: showStageExtras && 'fakeurl',
+            lesson_extras_level_url: showLessonExtras && 'fakeurl',
             levels
           }
         ]
@@ -120,7 +120,7 @@ export default storybook => {
       results[100] = TestResults.ALL_PASS;
     }
     store.dispatch(mergeResults(results));
-    store.dispatch(setLessonExtrasEnabled(showStageExtras));
+    store.dispatch(setLessonExtrasEnabled(showLessonExtras));
     return store;
   };
 
@@ -190,8 +190,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [activityPuzzle, conceptPuzzle],
           1,
-          true /* showStageExtras */,
-          false /* onStageExtras */
+          true /* showLessonExtras */,
+          false /* onLessonExtras */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">
@@ -211,8 +211,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [activityPuzzle, conceptPuzzle, bonus],
           1,
-          true /* showStageExtras */,
-          false /* onStageExtras */,
+          true /* showLessonExtras */,
+          false /* onLessonExtras */,
           true /* bonusCompleted */
         );
         return (
@@ -233,8 +233,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [activityPuzzle, conceptPuzzle],
           null,
-          true /* showStageExtras */,
-          true /* onStageExtras */
+          true /* showLessonExtras */,
+          true /* onLessonExtras */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">
@@ -254,8 +254,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [activityPuzzle, conceptPuzzle, bonus],
           null,
-          true /* showStageExtras */,
-          true /* onStageExtras */,
+          true /* showLessonExtras */,
+          true /* onLessonExtras */,
           true /* bonusCompleted */
         );
         return (
@@ -276,8 +276,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [assessment1, assessment1],
           0,
-          false /* showStageExtras */,
-          true /* onStageExtras */
+          false /* showLessonExtras */,
+          true /* onLessonExtras */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">
@@ -297,8 +297,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [activityPuzzle, assessment1, assessment1, assessment1, assessment1],
           0,
-          false /* showStageExtras */,
-          true /* onStageExtras */
+          false /* showLessonExtras */,
+          true /* onLessonExtras */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">
@@ -318,8 +318,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [activityPuzzle, activityPuzzle, assessment1],
           0,
-          false /* showStageExtras */,
-          true /* onStageExtras */
+          false /* showLessonExtras */,
+          true /* onLessonExtras */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">
@@ -339,8 +339,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [activityPuzzle, activityPuzzle, activityPuzzle],
           0,
-          false /* showStageExtras */,
-          true /* onStageExtras */
+          false /* showLessonExtras */,
+          true /* onLessonExtras */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">
