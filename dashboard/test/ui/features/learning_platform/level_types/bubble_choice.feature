@@ -14,7 +14,6 @@ Feature: BubbleChoice
     And I wait until element ".uitest-bubble-choice:eq(0)" is visible
     And element ".uitest-bubble-choice:eq(0) .progress-bubble:first" is visible
     And check that the url contains "/s/allthethings/lessons/40/levels/1"
-    And element ".uitest-bubble-choice:eq(0) .progress-bubble:first" is visible
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble" is "perfect"
 
     And I sign out
@@ -37,6 +36,4 @@ Feature: BubbleChoice
     # Teacher has not completed level, so make sure it is not shown as complete
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "not_tried"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
-    And I wait until element ".uitest-bubble-choice:eq(0)" is visible
-    And I wait for 4 seconds
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "perfect"

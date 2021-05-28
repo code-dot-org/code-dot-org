@@ -107,15 +107,15 @@
 
     script_data = script.summarize_header
     lesson_group_data = script.lesson_groups.map(&:summarize)
-    stage_data = (@stage || script_level.lesson).summarize(include_bonus_levels = true)
+    stage_data = (@lesson || script_level.lesson).summarize(include_bonus_levels = true)
     # If caching, we don't know the sign in state, and should be nil
     signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
 
     # Pass script name through to header
     if @lesson_extras
-      text = @stage.localized_title
+      text = @lesson.localized_title
     else
-      stage = @stage || @script_level.lesson
+      stage = @lesson || @script_level.lesson
       text = @script.professional_learning_course? ? stage.localized_name : stage.localized_title
     end
 

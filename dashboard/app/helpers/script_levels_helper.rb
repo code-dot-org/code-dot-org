@@ -1,6 +1,6 @@
 module ScriptLevelsHelper
   def script_level_solved_response(response, script_level)
-    next_user_redirect = script_level.next_level_or_redirect_path_for_user(current_user, @stage)
+    next_user_redirect = script_level.next_level_or_redirect_path_for_user(current_user, @lesson)
 
     if script_level.has_another_level_to_go_to?
       if script_level == script_level.lesson.last_progression_script_level
@@ -22,7 +22,7 @@ module ScriptLevelsHelper
         if enabled_for_stage && (enabled_for_user || enabled_for_teacher)
           response[:redirect] = script_lesson_extras_path(
             script_id: script_level.script.name,
-            lesson_position: (@stage || script_level.lesson).absolute_position
+            lesson_position: (@lesson || script_level.lesson).absolute_position
           )
         end
       end
