@@ -101,7 +101,7 @@ class DataTable extends Component {
   };
 
   render() {
-    const { data, setCurrentColumn, startingRow } = this.props;
+    const { data, startingRow } = this.props;
 
     if (data.length === 0) {
       return null;
