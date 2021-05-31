@@ -9,7 +9,7 @@ import {
   addSelectedFeature,
   removeSelectedFeature
 } from "../redux";
-import { ColumnTypes, styles, UNIQUE_OPTIONS_MAX } from "../constants.js";
+import { ColumnTypes, styles, colors, UNIQUE_OPTIONS_MAX } from "../constants.js";
 import { Bar } from "react-chartjs-2";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
@@ -19,11 +19,11 @@ const barData = {
   datasets: [
     {
       label: "",
-      backgroundColor: "rgba(255,99,132,0.2)",
-      borderColor: "rgba(255,99,132,1)",
+      backgroundColor: colors.tealTransparent,
+      borderColor: colors.teal,
       borderWidth: 1,
-      hoverBackgroundColor: "rgba(255,99,132,0.4)",
-      hoverBorderColor: "rgba(255,99,132,1)",
+      hoverBackgroundColor: "#59cad3",
+      hoverBorderColor: "white",
       data: []
     }
   ]

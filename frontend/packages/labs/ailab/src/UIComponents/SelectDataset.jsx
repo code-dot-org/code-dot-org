@@ -99,7 +99,8 @@ class SelectDataset extends Component {
                   onMouseLeave={() => this.props.setHighlightDataset(undefined)}
                 >
                   <img
-                    src={assetPath + dataset.imagePath}
+                    className="hoverimg"
+                    src={assetPath + /*"datasets/tile.png" */ dataset.imagePath}
                     style={styles.selectDatasetImage}
                     draggable={false}
                   />
