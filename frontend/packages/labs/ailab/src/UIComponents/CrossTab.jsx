@@ -78,12 +78,7 @@ class CrossTab extends Component {
                       <td
                         style={{
                           ...styles.bold,
-                          ...styles.regularText,
-                          ...{
-                            writingMode: "vertical-rl",
-                            whiteSpace: "nowrap",
-                            transform: "scale(-1)"
-                          }
+                          ...styles.crossTabLeftColumn
                         }}
                         rowSpan={crossTabData.results.length + 1}
                       >

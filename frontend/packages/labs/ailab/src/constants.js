@@ -45,9 +45,8 @@ export function getFadeOpacity(animationProgress) {
 const labelColor = "rgb(254, 96, 3)";
 const featureColor = "rgb(75, 155, 213)";
 const backgroundColor = "#f2f2f2";
-const tealColor =  "rgb(89, 202, 211)"; // "#61d2eb"; // "#00adbc"; // "#80d6de"; // "rgb(97, 210, 235)";
-const tealColorTransparent =  "rgba(89, 202, 211, 0.4)"; // "#61d2eb"; // "#00adbc"; // "#80d6de"; // "rgb(97, 210, 235)";
-
+const tealColor = "rgb(89, 202, 211)";
+const tealColorTransparent = "rgba(89, 202, 211, 0.4)";
 
 export const colors = {
   feature: featureColor,
@@ -416,6 +415,13 @@ export const styles = {
     border: "initial",
     fontSize: 14,
     padding: "initial"
+  },
+
+  crossTabLeftColumn: {
+    fontSize: 14,
+    writingMode: "vertical-rl",
+    whiteSpace: "nowrap",
+    transform: "scale(-1)"
   },
 
   crossTabTableCell: {
