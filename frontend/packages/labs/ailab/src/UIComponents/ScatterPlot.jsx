@@ -14,14 +14,11 @@ const scatterDataBase = {
       pointRadius: 4,
       pointHitRadius: 10,
       pointBorderWidth: 1,
-
-      //backgroundColor: "green",
-      pointBorderColor: "white", // "rgba(75,192,192,1)",
-      pointBackgroundColor: colors.teal, // "#fff",
-
+      pointBorderColor: "white",
+      pointBackgroundColor: colors.teal,
       pointHoverRadius: 6,
-      pointHoverBackgroundColor: "#59cad3", //"rgba(75,192,192,1)",
-      pointHoverBorderColor: "white", // "rgba(220,220,220,1)",
+      pointHoverBackgroundColor: "#59cad3",
+      pointHoverBorderColor: "white",
       pointHoverBorderWidth: 2,
       data: []
     }
