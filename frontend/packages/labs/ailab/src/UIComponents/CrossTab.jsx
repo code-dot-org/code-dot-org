@@ -16,7 +16,7 @@ class CrossTab extends Component {
   getCellStyle = percent => {
     return {
       ...styles["crossTabCell" + Math.round(percent / 20)],
-      ...styles.tableCell
+      ...styles.crossTabTableCell
     };
   };
 
@@ -40,35 +40,56 @@ class CrossTab extends Component {
 
     return (
       <div id="cross-tab">
-
         {crossTabData && !showTable && (
           <div>
-            <div style={styles.bold}>Table:</div>
+            <div style={styles.bold}>Relationship information:</div>
 
-            <div>The currently-selected data is too large to show in a table.</div>
+            <div>
+              The currently-selected data is too large to show in a table.
+            </div>
           </div>
         )}
 
         {showTable && (
           <div>
-            <div style={styles.bold}>Table:</div>
+            <div style={styles.bold}>Relationship information:</div>
             <div style={styles.scrollableContents}>
               <div style={styles.scrollingContents}>
                 <table>
                   <thead>
                     <tr>
-                      <th colSpan={crossTabData.featureNames.length}>&nbsp;</th>
-                      <th colSpan={crossTabData.uniqueLabelValues.length}>
+                      <th style={styles.crosssTabHeader} />
+                      <th
+                        style={styles.crosssTabHeader}
+                        colSpan={crossTabData.featureNames.length}
+                      >
+                        &nbsp;
+                      </th>
+                      <th
+                        colSpan={crossTabData.uniqueLabelValues.length}
+                        style={{ ...styles.crosssTabHeader, ...styles.bold }}
+                      >
                         {crossTabData.labelName}
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      {crossTabData.featureNames.map((featureName, index) => {
-                        return <td key={index}>{featureName}</td>;
-                      })}
-
+                      <td
+                        style={{
+                          ...styles.bold,
+                          ...styles.regularText,
+                          ...{
+                            writingMode: "vertical-rl",
+                            whiteSpace: "nowrap",
+                            transform: "scale(-1)"
+                          }
+                        }}
+                        rowSpan={crossTabData.results.length + 1}
+                      >
+                        {crossTabData.featureNames[0]}
+                      </td>
+                      <td />
                       {crossTabData.uniqueLabelValues.map(
                         (uniqueLabelValue, index) => {
                           return (
@@ -84,7 +105,11 @@ class CrossTab extends Component {
                         <tr key={resultIndex}>
                           {result.featureValues.map(
                             (featureValue, featureIndex) => {
-                              return <td key={featureIndex}>{featureValue}</td>;
+                              return (
+                                <td key={featureIndex} style={styles.tableCell}>
+                                  {featureValue}
+                                </td>
+                              );
                             }
                           )}
                           {crossTabData.uniqueLabelValues.map(

@@ -410,6 +410,23 @@ export const styles = {
   dataDisplayCellFeatureUnselected: {},
   dataDisplayCellUnselected: {},
 
+  crosssTabHeader: {
+    backgroundColor: "initial",
+    color: "initial",
+    border: "initial",
+    fontSize: 14,
+    padding: "initial"
+  },
+
+  crossTabTableCell: {
+    paddingLeft: 20,
+    textAlign: "right",
+    fontSize: 12,
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "white"
+  },
+
   crossTabCell0: {
     backgroundColor: "rgba(89, 202, 211, 0)"
   },
