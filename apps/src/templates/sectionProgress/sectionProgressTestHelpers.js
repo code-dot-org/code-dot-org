@@ -1,4 +1,3 @@
-import React from 'react';
 import {registerReducers, createStoreWithReducers} from '@cdo/apps/redux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import sectionProgress, {
@@ -32,22 +31,6 @@ export function fakeDetailRowsForStudent(student) {
     {id: `${student.id}.1`, student: student, expansionIndex: 1},
     {id: `${student.id}.2`, student: student, expansionIndex: 2}
   ];
-}
-
-export function wrapTable(table) {
-  return (
-    <div
-      className="main"
-      style={{
-        marginLeft: 80,
-        width: 970,
-        display: 'block',
-        backgroundColor: '#ffffff'
-      }}
-    >
-      {table}
-    </div>
-  );
 }
 
 export function createStore(numStudents, numLessons) {
