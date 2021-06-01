@@ -31,7 +31,7 @@ class Pd::ScholarshipInfo < ApplicationRecord
 
   belongs_to :user
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
-  belongs_to :application, class_name: 'Pd::Application::TeacherApplicationBase', foreign_key: :pd_application_id
+  belongs_to :application, class_name: 'Pd::Application::TeacherApplication', foreign_key: :pd_application_id
 
   validate :scholarship_must_be_valid_for_course
   validates_presence_of :user_id
