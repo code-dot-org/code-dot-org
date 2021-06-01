@@ -83,7 +83,12 @@ class ScatterPlot extends Component {
       scatterPlotData && (
         <div id="scatter-plot">
           <div style={styles.bold}>Relationship information:</div>
-          <Scatter data={scatterDataCombined} options={chartOptionsCombined} />
+          <div style={styles.scatterPlot}>
+            <Scatter
+              data={scatterDataCombined}
+              options={chartOptionsCombined}
+            />
+          </div>
         </div>
       )
     );

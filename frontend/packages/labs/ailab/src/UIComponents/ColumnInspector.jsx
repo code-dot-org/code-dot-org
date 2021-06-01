@@ -9,7 +9,12 @@ import {
   addSelectedFeature,
   removeSelectedFeature
 } from "../redux";
-import { ColumnTypes, styles, colors, UNIQUE_OPTIONS_MAX } from "../constants.js";
+import {
+  ColumnTypes,
+  styles,
+  colors,
+  UNIQUE_OPTIONS_MAX
+} from "../constants.js";
 import { Bar } from "react-chartjs-2";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
@@ -137,31 +142,33 @@ class ColumnInspector extends Component {
                   <br />
                 </div>
               )}
-              {isCategorical && (
-                <div>
-                  <div style={styles.bold}>Column information:</div>
-
-                  {barData.labels.length <= maxLabelsInHistogram && (
-                    <Bar
-                      data={barData}
-                      width={100}
-                      height={150}
-                      options={chartOptions}
-                    />
-                  )}
-                  {barData.labels.length > maxLabelsInHistogram && (
-                    <div>
-                      {barData.labels.length} values were found in this column.
-                      A graph is only shown when there are{" "}
-                      {maxLabelsInHistogram} or fewer.
-                    </div>
-                  )}
-                </div>
-              )}
               {currentPanel === "dataDisplayFeatures" && (
                 <div>
                   <ScatterPlot />
                   <CrossTab />
+                </div>
+              )}
+              {isCategorical && (
+                <div>
+                  <div style={styles.bold}>Column information:</div>
+
+                  <div style={styles.barChart}>
+                    {barData.labels.length <= maxLabelsInHistogram && (
+                      <Bar
+                        data={barData}
+                        width={100}
+                        height={150}
+                        options={chartOptions}
+                      />
+                    )}
+                    {barData.labels.length > maxLabelsInHistogram && (
+                      <div>
+                        {barData.labels.length} values were found in this
+                        column. A graph is only shown when there are{" "}
+                        {maxLabelsInHistogram} or fewer.
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
               {isNumerical && currentColumnData.extrema && (
