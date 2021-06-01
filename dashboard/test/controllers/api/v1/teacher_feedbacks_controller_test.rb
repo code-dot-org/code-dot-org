@@ -312,7 +312,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal 'Test Name', parsed_response[0]['teacher_name']
   end
 
-  test 'serializer returns student_last_updated' do
+  test 'serializer returns student_last_updated and student_updated_since_feedback' do
     @teacher1 = create :teacher, name: 'Test Name'
     @section1 = create :section, user: @teacher1
     @section1.add_student(@student)
@@ -324,6 +324,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
 
     assert_equal user_level.updated_at, parsed_response[0]['student_last_updated']
+    assert_equal false, parsed_response[0]['student_updated_since_feedback']
   end
 
   test 'increment_visit_count returns no_content on successful save' do
