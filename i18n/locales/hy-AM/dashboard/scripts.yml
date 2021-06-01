@@ -2613,6 +2613,8 @@ hy:
               display_name: փոփոխականների
             csf_for_loops:
               display_name: For Loops
+            lessonGroup-9:
+              display_name: Իրադարձություններ
         pre-express-2021:
           lesson_groups:
             csf_loops:

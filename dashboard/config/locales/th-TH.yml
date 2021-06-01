@@ -447,9 +447,12 @@ th:
     dance-2019:
       title: Dance Party
     20-hour:
+      title: หลักสูตรเร่งรัด
       body: This 20-hour คอร์ส covers the core computer science and programming concepts
         in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส
         2-4 for a more complete experience!
+      body_short: เรียนรู้วิทยาการคอมพิวเตอร์พื้นฐานในเวอร์ชั่นเร่งรัดของหลักสูตร
+        2-4
     gallery:
       title: แกลเลอรี่
     gamelab:
@@ -479,7 +482,9 @@ th:
       title: ไมน์คราฟท์
       body: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาผจญภัยไปกับไมน์คราฟท์ด้วยการใช้โค้ดเป็นเครื่องมือ
     unplugged:
+      title: บทเรียนแบบออฟไลน์
       audience: อายุ 4+
+      body_short: หากคุณไม่มีคอมพิวเตอร์ ให้ลองบทเรียนแบบออฟไลน์เหล่านี้ในห้องเรียน
     unplugged_conditionals:
       title: 'เงื่อนไข '
     widgets:
@@ -603,6 +608,8 @@ th:
         kodable: Kodable
       robotics:
         kodable: Kodable
+      workshop_course:
+        csf_express: CS พื้นฐาน (Pre-Express หรือ Express)
       email_opt_in:
         opt_in_yes: ใช่
         opt_in_no: ไม่ใช่

@@ -2398,6 +2398,8 @@ eu:
               display_name: Aldagaiak
             csf_for_loops:
               display_name: For begiztak
+            lessonGroup-9:
+              display_name: Gertaerak
         pre-express-2021:
           lesson_groups:
             csf_loops:

@@ -956,13 +956,6 @@ ca:
             '"down"': fletxa cap avall
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': quadrícula
-            '"border"': frontera
-            '"row"': filera
-            '"random"': atzar
       RyanLab_moveForward:
         text: avança
       RyanLab_turnLeft:

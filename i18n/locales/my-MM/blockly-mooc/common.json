@@ -489,6 +489,7 @@
   "myCourses": "ကျွန်ုပ်၏သင်တန်းများ",
   "name": "အမည္",
   "nestedForSameVariable": "သင်နှစ်ခု့ သို့မဟုတ် နှစ်ခုထက်ပိုတဲ့ nested loopအထဲမှ တူညီသော variable ကိုသုံးနေပါတယ်. Infinite loopကို ရှောင်ရှားရန် ထင်ရှားသော အမည်များကို သုံးပါ။",
+  "newSectionUpdated": "Section အသစ်ပြုလုပ်ပါ",
   "newSectionEllipsis": "Section အသစ်...",
   "newSectionAdd": "Section အသစ်ထပ်ထည့်ပါ",
   "newSectionCreate": "Section အသစ်ပြုလုပ်ပါ",

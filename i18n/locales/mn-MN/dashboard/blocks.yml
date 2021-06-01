@@ -1573,12 +1573,6 @@ mn:
         text: "{SPRITE}-н х тэнхлэг"
       Mikelab_yLocationOf:
         text: "{SPRITE}-н у тэнхлэг"
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': сүлжээ
-            '"border"': хил
-            '"row"': мөр
       RyanLab_moveForward:
         text: урагш хөдлөх
       RyanLab_turnLeft:

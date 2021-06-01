@@ -1,2 +1,10 @@
 {
+  "zh-CN": {
+    "data": {
+      "bubble_choice_description": {
+        "outbreak4": "改变模拟是怎么样工作的并推测什么事情会发生。",
+        "outbreak5": "帮你的精灵图缓慢地恢复！"
+      }
+    }
+  }
 }

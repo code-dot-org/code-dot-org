@@ -1843,3 +1843,276 @@ si-LK:
         - {}
       outbreak_freeplay_choice:
         display_name: නොමිලේ ක්‍රීඩා කිරීම
+      Begin planning your project:
+        content1: විස්තරය මෙහි
+      Begin planning your project_2018:
+        content1: විස්තරය මෙහි
+      Begin planning your project_2018_2019:
+        content1: විස්තරය මෙහි
+      Begin planning your project_2018_2019_2020:
+        content1: විස්තරය මෙහි
+      CSD U2 Design Project:
+        content1: විස්තරය මෙහි
+      CSD U2 Design Project_2018:
+        content1: විස්තරය මෙහි
+      CSD U2 Design Project_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U2 L1 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L2 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L3 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L4 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L5 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L6 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 Lesson 6 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 expand project:
+        content1: විස්තරය මෙහි
+      CSD U2 expand project_2018:
+        content1: විස්තරය මෙහි
+      CSD U2 expand project_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U2 project guide:
+        content1: විස්තරය මෙහි
+      CSD U2 project guide_2018:
+        content1: විස්තරය මෙහි
+      CSD U2 project guide_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U3 Card Examples_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 Card Examples_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U3 combining rep:
+        content1: විස්තරය මෙහි
+      CSD U3 combining rep_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 combining rep_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U3 game intro:
+        content1: විස්තරය මෙහි
+      CSD U3 game intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 game intro_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U3 platform intro:
+        content1: විස්තරය මෙහි
+      CSD U3 platform intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 platform intro_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 1:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 1_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 1_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 2:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 2_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 2_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: විස්තරය මෙහි
+      CSD U5 crosstab warmup:
+        content1: විස්තරය මෙහි
+      CSD U5 crosstab warmup_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 crosstab warmup_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 data visualization:
+        content1: විස්තරය මෙහි
+      CSD U5 data visualization_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 data visualization_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 student record:
+        content1: විස්තරය මෙහි
+      CSD U5 student record_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 student record_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U6 LED create intro:
+        content1: විස්තරය මෙහි
+      CSD U6 LED create intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U6 LED create intro_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U6 final intro:
+        content1: විස්තරය මෙහි
+      CSD U6 final intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U6 final intro_2018_2019:
+        content1: විස්තරය මෙහි
+      Internet Simulator Setup:
+        content1: විස්තරය මෙහි
+      Internet Simulator Setup 2:
+        content1: විස්තරය මෙහි
+      Internet Simulator Setup 3:
+        content1: විස්තරය මෙහි
+      Multi-Screen Apps:
+        content1: විස්තරය මෙහි
+      New Challenge Introduction:
+        content1: විස්තරය මෙහි
+        markdown: |-
+          ### නව අභියෝගය: අහඹු ආදේශක කේතාංකයක් බිඳ දැමීම ... නව විජට් එකක් සමඟ
+
+          මුළු හෝඩියම මාරු කරනවා වෙනුවට, අපි හෝඩියේ සෑම අක්ෂරයක්ම අහඹු ලෙස හෝඩියකට අනුරූපණය කළහොත් කුමක් කළ යුතුද? මෙය ** අහඹු ආදේශන කේතාංකයක් ලෙස හැඳින්වේ. **
+
+          ![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)
+
+          දැන්, රහස් පණිවිඩය සරල අකාරාදී මාරුවකින් කේතනය කර ඇතිවා වෙනුවට, ** අහඹු ආදේශනය ** සමඟ කේතනය කර ඇති පණිවිඩ වලට ඔබ මුහුණ දෙනු ඇත.
+
+
+          මෙය බිඳ දැමීමට වඩා දුෂ්කර වන අතර වඩාත් නවීන මෙවලමක් අවශ්‍ය වේ, එබැවින් ...
+
+          ඔබ ඉදිරියට යන්න ක්ලික් කළ විට, ගුප්තකේතන මෙවලමෙහි ** නව, වඩාත් නවීන අනුවාදයක් ඔබට පෙනෙනු ඇත ** එය ඔබට විවිධ දේවල් පෙන්වයි.
+
+          නමුත් එය කරන්නේ ටිකක් අභිරහසක්!
+
+          ### ඔබේ කාර්යය:
+
+            * මෙවලමෙහි මෙම නව අනුවාදයේ සිදුවන්නේ කුමක්දැයි සොයා බලන්න
+            * ඔබ වෙත ඉදිරිපත් කරනු ලබන තොරතුරු මොනවාද?
+            * මෙවලම ඔබට කිරීමට ඉඩ දෙන්නේ කුමක්දැයි සොයා බලන්න
+            * සුපුරුදු පරිදි: ඔබට එය බිඳ දැමිය නොහැක. ඒ නිසා දේවල් මත ක්ලික් කරන්න.
+            * ඔබ එය වටහා ගන්නේ නම්, අහඹු ආදේශකයක් සමඟ කේතනය කර ඇති පණිවිඩයක් බිඳ දැමිය හැකිය.
+
+          ### ඉඟිය
+
+          ඉංග්‍රීසියෙන් බහුලව භාවිතා වන අකුර ** E ** බව ඔබ දැන සිටියාද?
+
+          ### නැවත හමුවී සාකච්ඡා කරන්න
+            ටික වේලාවක් එය සමඟ සෙල්ලම් කිරීමෙන් පසුව, ඔබ සොයාගත් දේ සාකච්ඡා කිරීමට සහ සිදුවන්නේ කුමක්ද සහ මෙවලම භාවිතා කළ හැකි විවිධ ක්‍රම පිළිබඳව ඔබ දන්නා බව තහවුරු කර ගැනීමට ඔබ හවුල්කරුවෙකු, කුඩා කණ්ඩායමක්, මුළු පන්තියම සමඟ එකතු විය යුතුය.
+      OPD-K5 Reviewing Reflections:
+        content1: විස්තරය මෙහි
+      OPD-K5 Stage3aGo:
+        content1: විස්තරය මෙහි
+      OPD-K5 Stage3aGo_copy:
+        content1: විස්තරය මෙහි
+      OPD-K5 conditionals introduced:
+        content1: විස්තරය මෙහි
+      OPD-K5 debugging:
+        content1: විස්තරය මෙහි
+      OPD-K5 diving deeper intro:
+        content1: විස්තරය මෙහි
+      OPD-K5 events introduced:
+        content1: විස්තරය මෙහි
+      OPD-K5 for loops:
+        content1: විස්තරය මෙහි
+      OPD-K5 for loops intro:
+        content1: විස්තරය මෙහි
+      OPD-K5 for loops introduction:
+        content1: විස්තරය මෙහි
+      OPD-K5 functions introduced:
+        content1: විස්තරය මෙහි
+      OPD-K5 journaling:
+        content1: විස්තරය මෙහි
+      OPD-K5 lesson implementation planning:
+        content1: විස්තරය මෙහි
+      OPD-K5 lesson plans:
+        content1: විස්තරය මෙහි
+      OPD-K5 loops introduced:
+        content1: විස්තරය මෙහි
+      OPD-K5 project:
+        content1: විස්තරය මෙහි
+      OPD-K5 projects introduction:
+        content1: විස්තරය මෙහි
+      OPD-K5 role_of_teacher:
+        content1: විස්තරය මෙහි
+      OPD-K5 sequencing introduced:
+        content1: විස්තරය මෙහි
+      OPD-K5 sprite lab:
+        content1: විස්තරය මෙහි
+      OPD-K5 sprite lab introduction:
+        content1: විස්තරය මෙහි
+      OPD-K5 sprite lab unplugged:
+        content1: විස්තරය මෙහි
+      OPD-K5 sprite lab video:
+        content1: විස්තරය මෙහි
+      OPD-K5 types of lessons:
+        content1: විස්තරය මෙහි
+      OPD-K5 using lesson plans:
+        content1: විස්තරය මෙහි
+      OPD-K5 variables:
+        content1: විස්තරය මෙහි
+      OPD-K5 variables introduction:
+        content1: විස්තරය මෙහි
+      OPD-K5 variables unplugged:
+        content1: විස්තරය මෙහි
+      OPD-K5 where to next:
+        content1: විස්තරය මෙහි
+      OPD-K5-projects-1:
+        content1: විස්තරය මෙහි
+      Prepare for your presentation:
+        content1: විස්තරය මෙහි
+      'Technique: Frequency Analysis':
+        content1: විස්තරය මෙහි
+        markdown: |-
+          # ආදේශන කේතාංක බිඳ දැමීම
+
+          අහඹු ආදේශක කේතාංකයක් බිඳ දැමීමේ හොඳම තාක්‍ෂණය ** සංඛ්‍යාත විශ්ලේෂණය ** ලෙස හැඳින්වේ.
+
+          අක්ෂර වින්‍යාසය: [විකිපීඩියා](https://en.wikipedia.org/wiki/Frequency_analysis)
+
+          * ** සංඛ්‍යාත විශ්ලේෂණය ** යනු ඉංග්‍රීසි භාෂාවෙන් * නිතර නිතර * සමහර අකුරු දිස්වන ආකාරය මත පදනම් වූ තාක්‍ෂණයකි.
+          * උදාහරණයක් ලෙස, ඉංග්‍රීසි පෙළෙහි කොටසක් ලබා දී ඇති විට, * E *, * T *, * A * සහ * O * වඩාත් සුලභ වන අතර * Z *, * Q * සහ * X * දුර්ලභ වේ. ඒ හා සමානව, * TH *, * ER *, * ON *, සහ * AN * යනු එකිනෙකට යාබදව ඇති අකුරු යුගල වේ.
+          * ඇත්ත වශයෙන්ම, ඉංග්‍රීසි පෙළේ සියලුම සාම්පල සඳහා අකුරු බෙදා හැරීම දළ වශයෙන් සමාන වේ.
+
+
+          පෙර පිටුවේ ඇති විජට් අනුවාදය ඔබට සංඛ්‍යාත විශ්ලේෂණය හරහා ආදේශක කේතාංකයක් බිඳ දැමීමට උදව් කිරීමට අදහස් කරයි **.
+
+          සාමාන්‍ය ඉංග්‍රීසි ගද්‍ය කැබැල්ලක අකුරු සංඛ්‍යාතයට සාපේක්ෂව සංකේතාත්මක පණිවිඩයේ ඇති අක්ෂරවල සංඛ්‍යාතය විශ්ලේෂණය කිරීමෙන්, සමහර අක්ෂර සිතියම් ගත කිරීම් කුමක් විය හැකිද යන්න පිළිබඳව ඔබට පටු වීමට පටන් ගත හැකිය.
+
+          සංකේතාත්මක පෙළේ (තැඹිලි) අක්ෂරවල සංඛ්‍යාතය සාමාන්‍ය ඉංග්‍රීසි (නිල්) සංඛ්‍යාත සමඟ සැසඳෙන ආකාරය මෙවලම ඔබට පෙන්වයි.
+
+          ### ඉඟිය: ආරම්භ කළ යුත්තේ කොතැනින්ද?
+
+          1. කෙටි වචන සොයාගෙන පළමුව ඒවා "බිඳ දමන්න". එක් අකුරු වචන කීයක් ඔබ දන්නවාද? ("ඒ"). අකුරු 3 කින් යුත් වචනයක් වන්නේ "ද" යන්නයි.
+          2. ඔබ එය කළ පසු, ඔබට වඩාත් පොදු අකුරු කිහිපයක් සඳහා ආදේශක තිබේ. මෙම අර්ධ උපසිරැසි සමඟ වෙනත් වචන දෙස බැලීමට සහ හොඳ අනුමාන කිරීමට ඔබට බුද්ධිය භාවිතා කළ හැකිය.
+          3. අසීරු අකුරු අතළොස්සක් පමණක් සොයා ගැනීමෙන් පසුව, ඉතිරිය ඉක්මනින් කඩා වැටෙනු ඇත.
+          4. අක්ෂරවල සංඛ්‍යාත සංසන්දනය කිරීමෙන් සංවේදී අනුමාන කිරීම සඳහා හොඳ අවබෝධයක් ලැබේ.
+
+          ### මේක උත්සාහ කරන්න:
+          පහත සජීවිකරණය මඟින් යමෙකු ආරම්භ කරන බව පෙන්වයි. මෙන්න ඔවුන් උත්සාහ කළ දේ
+
+          * පළමුව අක්ෂර සංඛ්‍යාත අනුව වර්ග කරන්න.
+          * `` යන වචනයට අනුරූප විය හැකි අක්ෂර සමූහයක් හඳුනා ගන්න.
+          එය හොඳ ආරම්භයක්!
+
+          ! [](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
+
+          ## අහඹු ආදේශනය හොඳද?
+          * කුඩා පුහුණුවකින් පසු, අහඹු ආදේශක කේතාංකයක් බිඳ දැමීමට ඔබට කොපමණ කාලයක් ගතවේද?
+          * මෙය හොඳ ද නැද්ද?
+      Terminology Recap:
+        content1: විස්තරය මෙහි
+        markdown: |-
+          # විරාමය සහ නැවත සකස් කිරීම
+
+          ** සීසර් කේතාංකය ** සමඟ සංකේතනය කර ඇති පණිවිඩ, විශේෂයෙන් පරිගණකමය මෙවලමක් සමඟ බිඳ දැමීම ඉතා පහසුය. දැන් ඔබට අකාරාදී මාර්‍ග කේතාංකයක් ඉරිතලා යාමේ පුරුද්දක් ඇත (තරමක් පහසුයි, හාහ්?) අපි වඩාත් දුෂ්කර දෙයක් උත්සාහ කරමු.
+
+          ** පාරිභාෂිතය නැවත කියවීම: **
+
+          * ** ගුප්තකේතනය ** - පණිවිඩ රහසිගතව තබා ගැනීම සඳහා කේතනාංකනය කිරීමේ ක්‍රියාවලියක් වන බැවින් එය කියවිය හැක්කේ “බලයලත්” පාර්ශ්වයන්ට පමණි.
+          * ** විකේතනය ** - ගුප්තකේතනය ආපසු හරවන, රහස් පණිවිඩයක් ගෙන මුල් පිටපත ප්‍රතිනිෂ්පාදනය කරන ක්‍රියාවලියකි
+          * ** කේතාංකය ** - ගුප්තකේතනය සිදු කරන තාක්‍ෂණයක (හෝ ඇල්ගොරිතමයේ) සාමාන්‍ය යෙදුම
+          * ** සීසර්ගේ කේතාංකය ** - අක්ෂර මාලාව අක්ෂර කිහිපයකින් වෙනස් කරන සංකේතාංකනය සඳහා වූ තාක්‍ෂණයකි.
+          * ** ගුප්ත කේතනය බිඳ දැමීම ** - කේතාංකයේ සියලුම විශේෂතා නොදැන ඔබ රහස් පණිවිඩයක් විකේතනය කිරීමට උත්සාහ කරන විට, ඔබ උත්සාහ කරන්නේ ගුප්තකේතනය ** බිඳ දැමීමට ** ය.
+
+          ** ඊළඟ අභියෝගය බැලීමට ඉදිරියට යන්න ක්ලික් කරන්න ** ...
+      csf_be_a_super_digital_citizen:
+        content1: විස්තරය මෙහි
+      csf_password_power-up:
+        content1: විස්තරය මෙහි
+      csf_putting_a_stop_to_online_meanness:
+        content1: විස්තරය මෙහි
+      outbreak_story:
+        content1: විස්තරය මෙහි
+      outbreak_story2:
+        content1: විස්තරය මෙහි

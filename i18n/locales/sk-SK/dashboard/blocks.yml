@@ -1632,13 +1632,6 @@ sk:
         text: x súradnica {SPRITE}
       Mikelab_yLocationOf:
         text: y súradnica {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': mriežka
-            '"border"': okraj
-            '"row"': riadok
-            '"random"': náhodný
       RyanLab_moveForward:
         text: posuň sa dopredu
       RyanLab_turnLeft:

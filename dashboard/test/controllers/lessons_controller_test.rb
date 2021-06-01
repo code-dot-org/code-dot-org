@@ -1281,7 +1281,7 @@ class LessonsControllerTest < ActionController::TestCase
     script = create :script
     lesson = create :lesson
     cloned_lesson = create :lesson, script: script
-    Lesson.stubs(:copy_to_script).returns(cloned_lesson)
+    Lesson.any_instance.stubs(:copy_to_script).returns(cloned_lesson)
     put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
 
     assert_response 200
