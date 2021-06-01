@@ -44,6 +44,28 @@ class LessonsController < ApplicationController
     @lesson_data = @lesson.summarize_for_student_lesson_plan
   end
 
+  # GET /s/script-name/lessons/1/start
+  def start
+    # dedupe check that script is migrated?
+    script = Script.get_from_cache(params[:script_id])
+    return render :forbidden unless script.is_migrated
+
+    # dedupe getting lesson?
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+    raise ActiveRecord::RecordNotFound unless @lesson
+    return render :forbidden unless can?(:read, @lesson)
+
+    first_script_level = @lesson.script_levels.first
+    student_lesson_plan_url = @lesson.student_lesson_plan_pdf_url
+    if first_script_level
+      return redirect_to build_script_level_path(first_script_level)
+    elsif student_lesson_plan_url
+      return redirect_to student_lesson_plan_url
+    end
+  end
+
   # GET /lessons/1/edit
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit

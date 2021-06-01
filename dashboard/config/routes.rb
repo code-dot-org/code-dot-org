@@ -353,6 +353,7 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/lessons/yyy
     resources :lessons, only: [:show], param: 'position', format: false do
+      get 'start', to: 'lessons#start'
       get 'student', to: 'lessons#student_lesson_plan'
       get 'extras', to: 'script_levels#stage_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
