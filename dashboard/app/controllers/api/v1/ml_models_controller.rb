@@ -10,8 +10,11 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # Save a trained ML model to S3 and a reference to it in the database.
   def save
     model_id = generate_id
+
+    return head :bad_request if params["ml_model"].nil? || params["ml_model"] == ""
+
     metadata = params["ml_model"].except(:trainedModel, :featureNumberKey)
-    @user_ml_model = UserMlModel.create!(
+    @user_ml_model = UserMlModel.create(
       user_id: current_user&.id,
       model_id: model_id,
       name: params["ml_model"]["name"],
@@ -29,23 +32,16 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # GET api/v1/ml_models/names
   # Retrieve the names, ids and metadata of a user's trained ML models.
   def names
-    user_ml_model_data = UserMlModel.where(user_id: current_user&.id).map {|user_ml_model| {id: user_ml_model.model_id, name: user_ml_model.name, metadata: JSON.parse(user_ml_model.metadata)}}
+    user_ml_model_data = UserMlModel.where(user_id: current_user&.id).
+      map {|user_ml_model| {id: user_ml_model.model_id, name: user_ml_model.name, metadata: JSON.parse(user_ml_model.metadata)}}
     render json: user_ml_model_data.to_json
-  end
-
-  # GET api/v1/ml_models/:id/metadata
-  # Retrieve a trained ML model's metadata
-  def metadata
-    metadata = UserMlModel.where(model_id: params[:id])&.first&.metadata
-    return render_404 unless metadata
-    render json: JSON.parse(metadata)
   end
 
   # GET api/v1/ml_models/:id
   # Retrieve a trained ML model from S3
   def show
     model = download_from_s3(params[:id])
-    return render_404 unless model
+    return head :not_found unless model
     render json: model
   end
 

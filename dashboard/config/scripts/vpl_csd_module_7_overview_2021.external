@@ -1,0 +1,34 @@
+name 'VPL - CSD Module 7 Overview_2021'
+editor_experiment ''
+display_name 'CSD Module 3 Overview'
+
+title 'CSD Module 3 Overview'
+markdown <<MARKDOWN
+# Module 7: CS Discoveries Virtual Professional Learning
+
+## Module 7 Overview
+
+Welcome to the asynchronous work for Module 7 for CS Discoveries!
+
+This asynchronous work will feed into the upcoming synchronous workshop of this module and help you understand the content and curriculum as you prepare to teach your own students. The asynchronous work for Module 7 takes about 90 minutes to complete. Feel free to start and stop at your own pace.
+
+
+Module 7 introduces Unit 6 - Physical Computing and focuses on the theme of "Learning through Creation". 
+
+**During this asynchronous work you will:**
+
+* Preview Unit 6 content which focuses on hardware
+* Become familiar with the Problem Solving Process for **Programming**
+* Prepare to support students in programming a Circuit Playground
+* Reflect on the how students can build knowledge as they build a product
+
+**Note about Unit 6 and this module:**  
+
+Unit 6: Physical Computing is about students exploring the connection between hardware and software using the Circuit Playground and App Lab.  Ideally Unit 6 is taught in-person, using Circuit Playgrounds connected to devices, in order to program the Circuit Playgrounds with App Lab in Code Studio.  
+
+Module 7 will support you planning and preparing for in-person instruction, but it will also provide a preview of alternative units to consider using, if you are teaching in a distance learning setting.  More time will be dedicated to exploring the alternative units during the synchronous workshop.
+
+**Note:** You will **NOT** need to have a Circuit Playground to complete the following activities. 
+
+### Let's get started!
+MARKDOWN

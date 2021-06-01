@@ -252,6 +252,7 @@ vi-VN:
   just_did_course2: Mình vừa hoàn thành khóa 2 tại @codeorg, xem thử đi
   just_did_course3: Mình vừa hoàn thành khóa 3 tại @codeorg, xem thử đi
   just_did_course4: Mình vừa hoàn thành khóa 4 tại @codeorg, xem thử đi
+  just_did_accelerated: Tôi vừa hoàn thành Khóa học tăng tốc - hãy thử đi! @codeorg
   twitter_teach_cs: |-
     Cứ 10 người thì có 9 người đồng ý "các trường học nên dạy khoa học máy tính".
     http://youtu.be/nKIu9yen5nc. Truy cập vào trang web: https://code.org/.
@@ -745,6 +746,7 @@ vi-VN:
   dashboard_course2: 'Khóa 2:'
   dashboard_course3: 'Khóa 3:'
   dashboard_course4: 'Khóa 4 (beta): '
+  dashboard_pre-express: 'Khóa học cấp tốc cho trẻ chưa biết đọc:'
   dashboard_curriculum: Chương trình
   dashboard_curriculum_overview: Chương trình tiểu học tổng quan
   dashboard_overview: Tổng quan
@@ -879,8 +881,35 @@ vi-VN:
   coursee_name: Khóa học E
   coursef-draft_name: Khóa học F
   coursef_name: Khóa học F
-  coursed-2018_name: Kịch bản khóa D mới
+  coursea-2017_name: Khóa học A (2017)
+  coursec-2017_name: Khóa học C (2017)
+  coursed-2017_name: Khóa học D (2017)
+  coursee-2017_name: Khóa học E (2017)
+  coursef-2017_name: Khóa học F (2017)
+  coursea-2018_name: Khóa học A (2018)
+  courseb-2018_name: Khóa học B (2018)
+  coursec-2018_name: Khóa học C (2018)
+  coursed-2018_name: Khóa học D (2018)
+  coursee-2018_name: Khóa học E (2018)
+  coursef-2018_name: Khóa học F (2018)
+  coursea-2019_name: Khóa học A (2019)
+  courseb-2019_name: Khóa học B (2019)
+  coursec-2019_name: Khóa học C (2019)
+  coursed-2019_name: Khóa học D (2019)
+  coursee-2019_name: Khóa học E (2019)
+  coursef-2019_name: Khóa học F (2019)
+  coursea-2020_name: Khóa học A (2020)
+  courseb-2020_name: Khóa học B (2020)
+  coursec-2020_name: Khóa học C (2020)
+  coursed-2020_name: Khóa học D (2020)
+  coursee-2020_name: Khóa học E (2020)
+  coursef-2020_name: Khóa học F (2020)
+  pre-express-2018_name: Khóa học cấp tốc cho trẻ chưa biết đọc (2018)
+  express-2019_name: Khóa học cấp tốc (2019)
+  pre-express-2019_name: Khóa học cấp tốc cho trẻ chưa biết đọc (2019)
+  pre-express-2020_name: Khóa học cấp tốc cho trẻ chưa biết đọc (2020)
   accelerated_name: Khóa học cấp tốc
+  pre-express_name: Khóa học cấp tốc cho trẻ chưa biết đọc
   20-hour_name: Khóa học cấp tốc
   classicmaze_name: Mê cung cổ điển
   iceage_name: Kỉ băng hà
@@ -952,8 +981,8 @@ vi-VN:
     trên điện thoại của bạn. '
   appinventor_shortdescription: Làm ứng dụng của riêng bạn! (Chỉ cho android)
   hourofcode_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
-  frozen_shortdescription: Hãy sử dụng mã để tham gia cùng Anna và Elsa khi họ khám
-    phá sự kỳ diệu và vẻ đẹp của băng.
+  frozen_shortdescription: Hãy sử dụng mã lệnh để cùng Anna và Elsa khám phá sự kỳ
+    diệu và vẻ đẹp của băng tuyết.
   starwars_shortdescription: Học cách lập trình droid và làm game Chiến tranh giữa
     các vì sao của riêng bạn ở một thiên hà xa rất xa.
   playlab_shortdescription: Tạo ra một câu chuyện hoặc làm cho một trò chơi với phòng
@@ -961,62 +990,81 @@ vi-VN:
   infinity_shortdescription: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện
     hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
   artist_shortdescription: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
-  coursea_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc
-    trước.
-  courseb_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc
-    trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
-  coursec_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy tính
-    và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+  coursea_shortdescription_congrats: Giới thiệu môn khoa học máy tính cho trẻ chưa
+    biết đọc.
+  courseb_shortdescription_congrats: Giới thiệu môn khoa học máy tính cho trẻ chưa
+    biết đọc. (Tương tự như Khóa học A, nhưng đa dạng hơn, cho học sinh lớn hơn.)
+  coursec_shortdescription_congrats: Tìm hiểu những kiến thức cơ bản về khoa học máy
+    tính và sáng tạo tác phẩm, câu chuyện và game của riêng bạn.
   coursed_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa học
-    C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn thế
-    nữa.
-  coursee_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong Khóa
-    học C & D và sau đó đi xa hơn với các chức năng.
-  coursef_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong Cơ bản về
-    Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của
-    riêng bạn.
-  coursea-2017_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
-    đọc trước.
-  courseb-2017_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
-    đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
-  coursec-2017_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy
-    tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+    C, sau đó tiếp tục với các thuật toán, vòng lặp lồng nhau, điều kiện, v.v.
+  coursee_shortdescription_congrats: Nhanh chóng bao quát các khái niệm trong Khóa
+    học C & D, sau đó tiếp tục với các hàm.
+  coursef_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong bài học Nguyên
+    tắc cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu chuyện và game
+    của riêng bạn.
+  coursea-2017_shortdescription_congrats: Giới thiệu môn khoa học máy tính cho trẻ
+    chưa biết đọc.
+  courseb-2017_shortdescription_congrats: Giới thiệu môn khoa học máy tính cho trẻ
+    chưa biết đọc. (Tương tự như Khóa học A, nhưng đa dạng hơn, cho học sinh lớn hơn.)
+  coursec-2017_shortdescription_congrats: Tìm hiểu những kiến thức cơ bản về khoa
+    học máy tính và sáng tạo tác phẩm, câu chuyện và game của riêng bạn.
   coursed-2017_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa
-    học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn
-    thế nữa.
-  coursee-2017_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong
-    Khóa học C & D và sau đó đi xa hơn với các chức năng.
-  coursef-2017_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong Cơ bản
-    về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của
-    riêng bạn.
-  coursea-2018_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
-    đọc trước.
-  courseb-2018_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
-    đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
-  coursec-2018_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy
-    tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+    học C, sau đó tiếp tục với các thuật toán, vòng lặp lồng nhau, điều kiện, v.v.
+  coursee-2017_shortdescription_congrats: Nhanh chóng bao quát các khái niệm trong
+    Khóa học C & D, sau đó tiếp tục với các hàm.
+  coursef-2017_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong bài
+    học Nguyên tắc cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu
+    chuyện và game của riêng bạn.
+  coursea-2018_shortdescription_congrats: Giới thiệu môn khoa học máy tính cho trẻ
+    chưa biết đọc.
+  courseb-2018_shortdescription_congrats: Giới thiệu môn khoa học máy tính cho trẻ
+    chưa biết đọc. (Tương tự như Khóa học A, nhưng đa dạng hơn, cho học sinh lớn hơn.)
+  coursec-2018_shortdescription_congrats: Tìm hiểu những kiến thức cơ bản về khoa
+    học máy tính và sáng tạo tác phẩm, câu chuyện và game của riêng bạn.
   coursed-2018_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa
-    học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn
-    thế nữa.
-  coursee-2018_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong
-    Khóa học C & D và sau đó đi xa hơn với các chức năng.
-  coursef-2018_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong Cơ bản
-    về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của
-    riêng bạn.
-  coursea-2019_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
-    đọc trước.
-  courseb-2019_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
-    đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
-  coursec-2019_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy
-    tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+    học C, sau đó tiếp tục với các thuật toán, vòng lặp lồng nhau, điều kiện, v.v.
+  coursee-2018_shortdescription_congrats: Nhanh chóng bao quát các khái niệm trong
+    Khóa học C & D, sau đó tiếp tục với các hàm.
+  coursef-2018_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong bài
+    học Nguyên tắc cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu
+    chuyện và game của riêng bạn.
+  coursea-2019_shortdescription_congrats: Giới thiệu môn khoa học máy tính cho trẻ
+    chưa biết đọc.
+  courseb-2019_shortdescription_congrats: Giới thiệu môn khoa học máy tính cho trẻ
+    chưa biết đọc. (Tương tự như Khóa học A, nhưng đa dạng hơn, cho học sinh lớn hơn.)
+  coursec-2019_shortdescription_congrats: Tìm hiểu những kiến thức cơ bản về khoa
+    học máy tính và sáng tạo tác phẩm, câu chuyện và game của riêng bạn.
   coursed-2019_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa
-    học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn
-    thế nữa.
-  coursee-2019_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong
-    Khóa học C & D và sau đó đi xa hơn với các chức năng.
-  coursef-2019_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong Cơ bản
-    về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của
-    riêng bạn.
+    học C, sau đó tiếp tục với các thuật toán, vòng lặp lồng nhau, điều kiện, v.v.
+  coursee-2019_shortdescription_congrats: Nhanh chóng bao quát các khái niệm trong
+    Khóa học C & D, sau đó tiếp tục với các hàm.
+  coursef-2019_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong bài
+    học Nguyên tắc cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu
+    chuyện và game của riêng bạn.
+  coursea-2020_shortdescription_congrats: Hãy tìm hiểu kiến thức cơ bản về khoa học
+    máy tính và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng
+    tạo câu chuyện của riêng bạn để có thể chia sẻ.
+  courseb-2020_shortdescription_congrats: Hãy tìm hiểu kiến thức cơ bản về khoa học
+    máy tính và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng
+    tạo câu chuyện của riêng bạn để có thể chia sẻ.
+  coursec-2020_shortdescription_congrats: Tạo chương trình với trình tự, vòng lặp
+    và sự kiện. Dịch tên viết tắt của bạn sang dạng nhị phân, khám phá các kỹ thuật
+    giải quyết vấn đề khác nhau và tìm hiểu cách đối phó với nạn bắt nạt trực tuyến.
+    Vào cuối khóa học, hãy làm game hoặc sáng tác câu chuyện của riêng bạn để có thể
+    chia sẻ!
+  coursed-2020_shortdescription_congrats: Học sinh phát triển kiến thức về vòng lặp,
+    lệnh điều kiện và sự kiện. Ngoài lập trình, học sinh còn tìm hiểu về quyền công
+    dân kỹ thuật số.
+  coursee-2020_shortdescription_congrats: Bắt đầu viết mã với các thuật toán, vòng
+    lặp, điều kiện và sự kiện, sau đó bạn sẽ chuyển sang các hàm. Trong phần thứ hai
+    của khóa học này, hãy thiết kế và tạo một dự án thực tiễn để có thể chia sẻ với
+    bạn bè và gia đình của mình.
+  coursef-2020_shortdescription_congrats: Học cách sử dụng các loại vòng lặp, sự kiện,
+    hàm và lệnh điều kiện khác nhau. Phân tích các kỹ thuật giải quyết vấn đề khác
+    nhau và thảo luận về các tác động xã hội của máy tính và internet. Trong phần
+    thứ hai của khóa học này, hãy thiết kế và tạo dự án thực tiễn để có thể chia sẻ
+    với bạn bè và gia đình.
   frozen_longdescription: Hãy sử dụng mã để tham gia Anna và Elsa khi họ khám phá
     sự kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn trượt
     băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có thể chia sẻ
@@ -1160,6 +1208,8 @@ vi-VN:
   hoc_overview_view_teacher_guide: Xem hướng dẫn cho giáo viên
   hoc2018_creativity_create: Tạo
   hoc2018_creativity_what_will_you_create: Bạn sẽ tạo những gì?
+  hoc2018_creativity_courses_link: Hãy tiếp tục với <a href="https://studio.code.org/courses">các
+    khóa học Code.org</a>
   hoc2018_mc_page_title: Bài Hướng dẫn Giờ Lập trình Minecraft
   hoc2018_mc_details: Nhiều ngôn ngữ | Các trình duyệt hiện đại và máy tính bảng |
     Lứa tuổi 6-106
@@ -1324,3 +1374,10 @@ vi-VN:
   footer_donate: Quyên góp
   footer_support: Trợ giúp và Cộng đồng
   footer_terms: Điều khoản
+  ai_for_oceans: Trí Tuệ Nhân Tạo cho Đại Dương
+  ai_in_partnership_with: Hợp tác cùng
+  ai_microsoft_thanks: Cảm ơn Microsoft đã ủng hộ tầm nhìn và sứ mệnh của chúng tôi
+    để giúp cho mọi trẻ em đều có cơ hội học khoa học máy tính cũng như các kỹ năng
+    cần thiết để thành công trong thế kỷ 21.
+  ai_activity: Hoạt động
+  ai_description: Mô tả

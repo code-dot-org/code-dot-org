@@ -1,0 +1,32 @@
+name 'VPL - CSD - Module 6 - CI - U5L6_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 5 - Lesson 6:  Keeping Data Secret  
+**Estimated time: 20 minutes**
+
+
+
+
+## Investigation Goal
+
+**Identify how a binary message is encrypted and decrypted**
+
+## Investigation Tasks
+
+* Review the "Warm Up" in the lesson plan, <a href="https://curriculum.code.org/csd-20/unit5/6/" target="_blank">Lesson 6: Keeping Data Secret</a>
+
+* Complete the first page of the Keeping Data Secret<a href= 
+"https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/edit" target="_blank"> Activity Guide  </a>
+
+
+
+
+
+
+
+
+
+MARKDOWN
