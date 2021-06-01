@@ -17,7 +17,8 @@ const getInitialState = () => ({
   levelKeyList: {
     2001: 'Level One',
     2002: 'Level Two',
-    2003: 'Level Three'
+    2003: 'Level Three',
+    2004: 'blockly:Maze:2_3'
   },
   lessonGroups: [
     {
@@ -174,6 +175,42 @@ describe('scriptEditorRedux reducer tests', () => {
           "  level 'Level Two', active: false\n" +
           "  level 'Level Three'\n" +
           'endvariants\n\n' +
+          "lesson 'b', display_name: 'B', has_lesson_plan: false\n\n" +
+          "lesson 'c', display_name: 'C', has_lesson_plan: true\n\n" +
+          "lesson_group 'lg-key-2', display_name: 'Display Name 2'\n" +
+          "lesson 'd', display_name: 'D', has_lesson_plan: true\n\n" +
+          "lesson 'e', display_name: 'E', has_lesson_plan: true\n\n" +
+          "lesson 'f', display_name: 'F', has_lesson_plan: false\n\n"
+      );
+    });
+
+    it('serializes legacy level settings', () => {
+      const scriptLevel = {
+        activeId: '2004',
+        ids: ['2004'],
+        kind: 'puzzle',
+        position: 3,
+        skin: 'birds',
+        concepts: "'sequence'",
+        conceptDifficulty: '{"sequencing":2}'
+      };
+      initialState.lessonGroups[0].lessons[0].levels.push(scriptLevel);
+
+      let serializedLessonGroups = getSerializedLessonGroups(
+        initialState.lessonGroups,
+        initialState.levelKeyList
+      );
+
+      expect(serializedLessonGroups).to.equal(
+        "lesson_group 'lg-key', display_name: 'Display Name'\n" +
+          "lesson_group_description 'My Description'\n" +
+          "lesson 'a', display_name: 'A', has_lesson_plan: true, unplugged: true\n" +
+          "level 'Level One'\n" +
+          "level 'Level Two'\n" +
+          "skin 'birds'\n" +
+          "concepts 'sequence'\n" +
+          'level_concept_difficulty \'{"sequencing":2}\'\n' +
+          "level 'blockly:Maze:2_3'\n\n" +
           "lesson 'b', display_name: 'B', has_lesson_plan: false\n\n" +
           "lesson 'c', display_name: 'C', has_lesson_plan: true\n\n" +
           "lesson_group 'lg-key-2', display_name: 'Display Name 2'\n" +
