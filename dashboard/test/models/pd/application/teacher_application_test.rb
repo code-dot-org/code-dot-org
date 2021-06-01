@@ -477,7 +477,7 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
-        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
+        program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: ['6'],
         csd_which_units: ['Unit 1: Problem Solving'],
         previous_yearlong_cdo_pd: ['CS Principles'],
@@ -520,7 +520,7 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
-        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
+        program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: ['12'],
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
@@ -562,7 +562,7 @@ module Pd::Application
       options = Pd::Application::TeacherApplication.options
 
       application_hash = build :pd_teacher_application_hash,
-        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
+        program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: ['12'],
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
@@ -594,7 +594,7 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
-        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
+        program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: %w(11 12),
         csd_which_units: ['Unit 1: Problem Solving'],
         previous_yearlong_cdo_pd: ['CS Discoveries'],
@@ -636,7 +636,7 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
-        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
+        program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         csp_which_grades: [options[:csp_which_grades].last],
         previous_yearlong_cdo_pd: 'CS Principles',
         csp_how_offer: options[:csp_how_offer].first,
@@ -764,7 +764,7 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
-        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
+        program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
         principal_approval: principal_options[:do_you_approve].first,

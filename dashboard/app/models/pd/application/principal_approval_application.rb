@@ -36,7 +36,7 @@
 #
 
 module Pd::Application
-  class PrincipalApprovalApplication < PrincipalApprovalApplicationBase
+  class PrincipalApprovalApplication < ApplicationBase
     include Pd::PrincipalApprovalApplicationConstants
 
     belongs_to :teacher_application, class_name: 'Pd::Application::TeacherApplication',

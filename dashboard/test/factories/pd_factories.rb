@@ -824,14 +824,14 @@ FactoryGirl.define do
     replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
 
     trait :csp do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
+      program Pd::Application::TeacherApplication::PROGRAMS[:csp]
       csp_which_grades ['11', '12']
       csp_which_units ['Unit 1: Digital Information', 'Unit 2: The Internet']
       csp_how_offer 'As an AP course'
     end
 
     trait :csd do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
+      program Pd::Application::TeacherApplication::PROGRAMS[:csd]
       csd_which_grades ['6', '7']
       csd_which_units ['Unit 1: Problem Solving', 'Unit 2: Web Development']
     end
