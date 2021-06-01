@@ -204,8 +204,8 @@ export class TeacherFeedback extends Component {
       ? styles.tabAreaVisible
       : styles.tabAreaHidden;
 
-    // Pilots which the user is enrolled in are stored on window.appOptions.experiments,
-    // which is queried by experiement.js
+    // Pilots which the user is enrolled in (such as keep working experiment) are stored on
+    // window.appOptions.experiments, which is queried by experiments.js
     const keepWorkingEnabled = experiments.isEnabled(keepWorkingExperiment);
 
     return (
