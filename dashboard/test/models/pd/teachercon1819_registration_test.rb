@@ -50,7 +50,7 @@ class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
 
   test 'waitlisting or declining the registration will also update the application status' do
     {
-      accepted: 'accepted',
+      accepted: 'accepted_not_notified',
       waitlisted: 'waitlisted',
       declined: 'withdrawn'
     }.each do |registration_status, expected_application_status|
