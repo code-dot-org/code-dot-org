@@ -1129,6 +1129,7 @@ const panelList = [
   { id: "dataDisplayLabel", label: "Label" },
   { id: "dataDisplayFeatures", label: "Features" },
   { id: "trainModel", label: "Train" },
+  { id: "generateResults", label: "Test" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
   { id: "saveModel", label: "Save" },
@@ -1188,6 +1189,10 @@ function isPanelEnabled(state, panelId) {
     if (state.saveStatus === "started") {
       return false;
     }
+
+    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
+      return false;
+    }
   }
 
   return true;
@@ -1212,12 +1217,6 @@ function isPanelAvailable(state, panelId) {
 
   if (panelId === "saveModel") {
     if ((mode && mode.hideSave) || state.saveStatus === "success") {
-      return false;
-    }
-  }
-
-  if (panelId === "modelSummary") {
-    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
       return false;
     }
   }

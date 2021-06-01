@@ -44,7 +44,7 @@ class Predict extends Component {
         <div style={styles.largeText}>Try it out!</div>
         <div style={styles.scrollableContents}>
           <div style={styles.scrollingContents}>
-            <form>
+            <div>
               {this.props.selectedNumericalFeatures.map((feature, index) => {
                 let min = this.props.extremaByColumn[feature].min.toFixed(2);
                 let max = this.props.extremaByColumn[feature].max.toFixed(2);
@@ -64,8 +64,8 @@ class Predict extends Component {
                   </div>
                 );
               })}
-            </form>
-            <form>
+            </div>
+            <div>
               {this.props.selectedCategoricalFeatures.map((feature, index) => {
                 return (
                   <div style={styles.cardRow} key={index}>
@@ -90,7 +90,7 @@ class Predict extends Component {
                   </div>
                 );
               })}
-            </form>
+            </div>
           </div>
         </div>
         <br />
