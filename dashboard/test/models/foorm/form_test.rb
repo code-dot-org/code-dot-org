@@ -10,6 +10,15 @@ class Foorm::FormTest < ActiveSupport::TestCase
     assert_equal form2.version, version
   end
 
+  test 'get latest form and version gets correct form with latest version unpublished' do
+    form1 = create :foorm_form
+    create :foorm_form, name: form1.name, version: form1.version + 1, published: false
+
+    questions, version = Foorm::Form.get_questions_and_latest_version_for_name(form1.name)
+    assert_equal JSON.parse(form1.questions), questions
+    assert_equal form1.version, version
+  end
+
   test 'readable_questions formats matrix questions for general workshop question' do
     form = build :foorm_form_csf_intro_post_survey
     readable_questions = form.readable_questions
