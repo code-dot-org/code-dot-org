@@ -57,8 +57,8 @@ describe('LevelTokenContents', () => {
       y: 0,
       scale: 0,
       shadow: 0,
-      activitySectionPosition: 1,
-      activityPosition: 1,
+      activitySectionPosition: 2,
+      activityPosition: 3,
       scriptLevel: defaultScriptLevel,
       handleDragStart,
       removeLevel,
@@ -69,5 +69,21 @@ describe('LevelTokenContents', () => {
   it('renders a ProgressBubble', () => {
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
     expect(wrapper.find('ProgressBubble').length).to.equal(1);
+  });
+
+  it('calls toggleExpand when level name is clicked', () => {
+    const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
+    expect(wrapper.find('LevelTokenDetails').length).to.equal(0);
+    expect(toggleExpand).not.to.have.been.called;
+    const nameWrapper = wrapper.find('.uitest-level-token-name');
+    nameWrapper.simulate('click');
+    expect(toggleExpand).to.have.been.calledWith(3, 2, 1);
+  });
+
+  it('shows LevelTokenDetails when expanded', () => {
+    defaultProps.scriptLevel.expand = true;
+    const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
+    console.log(wrapper.debug());
+    expect(wrapper.find('Connect(LevelTokenDetails)').length).to.equal(1);
   });
 });
