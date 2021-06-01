@@ -100,3 +100,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        self-paced-pl-csd-2021:
+          title: self-paced-pl-csd-2021
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-csp-2021:
+          title: self-paced-pl-csp-2021
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

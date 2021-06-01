@@ -16,11 +16,11 @@ const ANIMATED_STEPS = [
 export default class Neighborhood {
   constructor() {
     this.controller = null;
-    // TODO: set this based on level once we have variable sizes
-    this.numRows = 8;
+    this.numRows = null;
   }
 
   afterInject(level, skin, config, studioApp) {
+    this.numRows = level.serializedMaze.length;
     this.controller = new MazeController(level, skin, config, {
       methods: {
         playAudio: (sound, options) => {
@@ -87,6 +87,14 @@ export default class Neighborhood {
           this.convertYCoordinate(parseInt(y)),
           Direction[direction.toUpperCase()]
         );
+      }
+      case NeighborhoodSignalType.PAINT: {
+        const {id, color} = signal.detail;
+        return this.controller.subtype.addPaint(id, color);
+      }
+      case NeighborhoodSignalType.REMOVE_PAINT: {
+        const {id} = signal.detail;
+        return this.controller.subtype.removePaint(id);
       }
       default:
         console.log(signal.value);

@@ -96,7 +96,8 @@ level 'ml-final project-ai lab', progression: 'App with Real-World Data - AI Lab
 level 'ml-final project-app lab', progression: 'App with Real-World Data - App Lab'
 
 lesson 'videoLevels', display_name: 'Video Recording Levels', has_lesson_plan: true
-level 'ml-video recording-import app 1', progression: 'Importing A Model'
+level 'ml-video recording-import app 1', progression: 'Importing A Model + If Statements'
+level 'ml-video recording-custom design elts', progression: 'Custome Design Elts + Edit Code'
 
 lesson 'bug-bash', display_name: 'Bug Bash Playground', has_lesson_plan: false
 level 'ml-ai lab template', progression: 'AI Lab Bash'

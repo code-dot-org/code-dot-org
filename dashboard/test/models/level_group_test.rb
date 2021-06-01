@@ -15,15 +15,15 @@ class LevelGroupTest < ActiveSupport::TestCase
   end
 
   def get_evaluation_multi_dsl(id)
-    stage1 = create :lesson
-    stage2 = create :lesson
+    lesson1 = create :lesson
+    lesson2 = create :lesson
 
     "
     name 'evaluation_multi_#{id}'
     title 'evaluation multi #{id}'
     question 'Some Question'
-    answer 'Answer 1', weight: #{rand(5)}, lesson_name: '#{stage1.name}'
-    answer 'Answer 2', weight: #{rand(5)}, lesson_name: '#{stage2.name}'
+    answer 'Answer 1', weight: #{rand(5)}, lesson_name: '#{lesson1.name}'
+    answer 'Answer 2', weight: #{rand(5)}, lesson_name: '#{lesson2.name}'
     answer 'Answer 3'
     "
   end

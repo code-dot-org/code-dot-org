@@ -21,7 +21,7 @@ export const sectionDataPropType = PropTypes.shape({
       name: PropTypes.string.isRequired
     })
   ).isRequired,
-  stageExtras: PropTypes.bool,
+  lessonExtras: PropTypes.bool,
   ttsAutoplayEnabled: PropTypes.bool
 });
 
@@ -45,7 +45,7 @@ export const setSection = section => {
     id: section.id,
     script: section.script,
     students: sortedStudents,
-    stageExtras: section.lesson_extras,
+    lessonExtras: section.lesson_extras,
     ttsAutoplayEnabled: section.tts_autoplay_enabled
   };
   return {type: SET_SECTION, section: filteredSectionData};
