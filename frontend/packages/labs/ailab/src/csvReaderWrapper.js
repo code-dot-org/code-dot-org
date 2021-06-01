@@ -1,6 +1,10 @@
 import Papa from "papaparse";
 import { store } from "./index.js";
-import { setImportedData, setColumnsByDataType } from "./redux";
+import {
+  setImportedData,
+  setRemovedRowsCount,
+  setColumnsByDataType
+} from "./redux";
 import { ColumnTypes } from "./constants.js";
 
 export const parseCSV = (csvfile, download, setColumnsToOther) => {
@@ -33,12 +37,18 @@ const cleanData = (data) => {
   return cleanedData;
 }
 
-const updateData = (result, setColumnsToOther) => {
-  var data = cleanData(result.data);
+const countRemovedRows = (originalData, cleanedData) => {
+  var removedRowsCount = originalData.length - cleanedData.length;
+  store.dispatch(setRemovedRowsCount(removedRowsCount));
+}
 
-  store.dispatch(setImportedData(data));
+const updateData = (result, setColumnsToOther) => {
+  var data = result.data;
+  var cleanedData = cleanData(data);
+  countRemovedRows(data, cleanedData);
+  store.dispatch(setImportedData(cleanedData));
   if (setColumnsToOther) {
-    setDefaultColumnDataType(data);
+    setDefaultColumnDataType(cleanedData);
   }
 };
 
