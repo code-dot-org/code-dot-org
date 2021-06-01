@@ -1796,6 +1796,145 @@
         },
         "outbreak7": {
           "costumes_callout": "点击以制作新服装"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "点击这里扩展块。",
+          "pointerlocation": "在这里拖动一个主题块。"
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "点击以制作新服装"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "这个数字意味着只有一个这样的模块可以在最终的答案中使用。"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "你知道在任何时候，都能往回画线吗？"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "当您需要提示时点击灯泡!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "这是一个标注"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "单击此处可更改事件箭头的方向。"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "这让你选择一个 \"随机\" 的声音，这意味着在你听到声音前，不知道你会得到什么!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "工具箱中只有一个这样的模块。你将如何使用它？"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "当您需要提示时点击灯泡!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "使用绿色下拉箭头可更改方向。"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "让演员到这个标志移动到下一层。"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "当企鹅和恐龙碰到一起时，使用这个模块！"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "这个模块允许你把演员移动到游戏空间的不同部分。"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "这个模块对这个项目很重要。请确认使用它。"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "将这个加到你程序的中部。"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "如果你需要的话，可以从工具箱里取更多的模块！"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "南瓜上的数字四告诉你有四个南瓜可供挑选。"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "这些块是锁定的, 不能删除!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "模块可以从工具区拖到你的工作区。"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "可以将额外的模块拖动到工具箱中, 以将其丢弃。",
+          "courseC_maze_programming3_3": "这些块是石头, 不能扔掉。"
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "这是你的模块限制。 它告诉你还可以使用多少个模块。"
+        },
+        "courseC_maze_programming5_2021": {
+          "": "这些模块上面没有数字。可以随便使用多少个！"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "这是你的第一个挑战关卡！这些都是很难的，可能需要几次尝试。",
+          "courseC_maze_programming7_2": "这些块是石头做的, 不能扔掉。"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "在这个关卡中，你只能使用一个这样的模块。"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "在这个关卡中，你只能使用一个这样的模块。"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。",
+          "4_5_Bee_Conditionals_2_2": "需要帮助吗？ 点击这里查看视频提示!"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "让我们用这个模块来帮助创建第一个正方形。"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "工具箱是\"分类\"模式，这会给代码留出更多的空间。`计数循环`在这里。"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "你会在这里发现 ' 计数循环 '!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "你会在这里找到`math`（数学）模块。"
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "可以在下面找到你的变量！"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "点这里发现如何工作。"
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
         }
       }
     }

@@ -27,6 +27,7 @@ zh-CN:
       Debugging: 调试
       Demo Apps: "演示App\n"
       Design Mode: 设计模式
+      Designing for Accessibility: 辅助功能设计
       Drawing: 绘画
       Events: 事件
       Exploring more CSS: 探索更多样式
@@ -48,7 +49,11 @@ zh-CN:
       Lists: 列表
       Make a Prediction: 猜测一下
       Measures: 节拍
+      'Mini-Project: About Me': '关于我'
+      My Online Neighborhood: 我的在线邻居
       Pair Programming: 结对编程
+      Picturing Data: 图片数据
+      Planning: 规划
       Predict: 预测
       Programming with Rey and BB-8: 与雷伊，BB-8一起编程
       Project: 项目
@@ -56,6 +61,7 @@ zh-CN:
       Publishing Your Website: 发布您的网站
       Reflection: 反射
       Representing Images: 表示图像
+      Review: 审阅
       Sprite Lab Project: 精灵图实验室项目
       Stopping the Outbreak with Masks: 用口罩阻止疫情爆发
       The Buzzer: 蜂鸣器
@@ -64,5 +70,6 @@ zh-CN:
       Velocity: 矢量
       Velocity and the Counter Pattern: 速度和计数模式
       Video: 视频
+      'Video: For Loops': '视频：计数循环'
       While Loops with the Farmer: 当在农民循环中
       Wrap-up: 总结
