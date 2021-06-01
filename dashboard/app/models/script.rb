@@ -1195,7 +1195,7 @@ class Script < ApplicationRecord
 
       # Make sure we don't modify any files in unit tests.
       if Rails.application.config.levelbuilder_mode
-        copied_script.copy_and_write_i18n(new_name)
+        copy_and_write_i18n(new_name)
         copied_script.write_script_json
         copied_script.write_script_dsl
       end

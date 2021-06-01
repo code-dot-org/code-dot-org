@@ -789,7 +789,7 @@ class Lesson < ApplicationRecord
 
       # Copy objects that require course version, i.e. resources and vocab
       course_version = destination_script.get_course_version
-      copied_lesson.resources = resources.map {|r| r.copy_to_course_version(course_version)}
+      copied_lesson.resources = resources.map {|r| r.copy_to_course_version(course_version)}.uniq
 
       copied_lesson.vocabularies = vocabularies.map do |original_vocab|
         persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
