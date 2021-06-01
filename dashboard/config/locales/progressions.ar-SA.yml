@@ -11,6 +11,7 @@ ar:
       Combining Representations: الجمع بين التمثيلات
       Debugging: تصحيح الأخطاء
       Design Mode: وضع التصميم
+      Designing for Accessibility: التصميم من أجل الوصول
       Drawing: الرسم
       Events: الأحداث
       Example Projects: مشاريع كمثال
@@ -30,7 +31,11 @@ ar:
       Linking Screens: ربط الشاشات
       Lists: القوائم
       Measures: الإجراءات
+      'Mini-Project: About Me': نبذة عني مع مختبر النقوش المتحركة
+      My Online Neighborhood: الحي الذي أقطنه عبر الإنترنت
       Pair Programming: البرمجة الزوجية
+      Picturing Data: البيانات المصوّرة
+      Planning: التخطيط
       Programming with Rey and BB-8: البرمجة مع Rey وBB-8
       Project: مشروع
       Properties: 'خصائص
@@ -38,6 +43,7 @@ ar:
 '
       Reflection: تأملات
       Representing Images: تمثيل الصور
+      Review: مراجعة
       Sprite Lab Project: مشروع Sprite Lab
       Stopping the Outbreak with Masks: وقف الانتشار باستخدام الأقنعة
       The Harvester: عامِلة الحصاد
