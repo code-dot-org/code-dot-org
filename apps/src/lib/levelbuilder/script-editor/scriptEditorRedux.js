@@ -364,11 +364,12 @@ const serializeLesson = (lesson, levelKeyList) => {
         s.push('variants');
         level.ids.forEach(id => {
           const active = id === level.activeId;
-          s.push(`  ${serializeLevel(levelKeyList, id, level, active)}`);
+          const lines = serializeLevel(levelKeyList, id, level, active);
+          s = s.concat(lines.map(line => `  ${line}`));
         });
         s.push('endvariants');
       } else {
-        s.push(serializeLevel(levelKeyList, level.ids[0], level));
+        s = s.concat(serializeLevel(levelKeyList, level.ids[0], level));
       }
     });
   }
@@ -385,7 +386,7 @@ const serializeLesson = (lesson, levelKeyList) => {
  * to move on to our future system.
  * @param id
  * @param level
- * @return {string}
+ * @return {Array.<string>}
  */
 const serializeLevel = (levelKeyList, id, level, active = true) => {
   const s = [];
