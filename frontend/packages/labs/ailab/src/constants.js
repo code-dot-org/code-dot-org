@@ -333,7 +333,10 @@ export const styles = {
     borderWidth: 1,
     borderColor: "white",
     padding: 7,
-    fontSize: 14,
+    fontSize: 14
+  },
+
+  dataDisplayHeaderClickable: {
     cursor: "pointer"
   },
 
