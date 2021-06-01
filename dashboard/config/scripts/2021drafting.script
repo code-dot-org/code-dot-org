@@ -88,6 +88,8 @@ level 'courseF_2021_template', progression: 'Full Toolbox and/or Template'
 level 'avoid_follow', progression: 'A/B Test for Following Behavior'
 level 'avoid_follow_lines', progression: 'Draw Lines'
 level 'drawshape', progression: 'Draw Shape'
+level 'spritelab_speech_prototype_mike', progression: 'Speech Bubbles'
+level 'spritelab_speech_prototype_mike2', progression: 'Speech Bubbles'
 
 lesson_group 'Loom Levels', display_name: 'Loom Levels'
 lesson 'video', display_name: 'Sprite Lab Videos', has_lesson_plan: false
