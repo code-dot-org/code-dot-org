@@ -108,7 +108,6 @@ export const sortRows = (data, columnIndexList, orderList) => {
   return addRows.concat(newStudentRows).concat(studentRows);
 };
 
-// SafeMarkedown required to convert i18n string to clickable link
 export const ManageStudentsNotificationFull = ({manageStatus}) => {
   const {sectionCapacity, sectionCode, sectionStudentCount} = manageStatus;
 
@@ -117,23 +116,35 @@ export const ManageStudentsNotificationFull = ({manageStatus}) => {
       ? sectionCapacity - sectionStudentCount
       : 0;
 
+  const notificationParams = {
+    studentLimit: sectionCapacity,
+    currentStudentCount: sectionStudentCount,
+    sectionCode: sectionCode,
+    availableSpace: sectionSpotsRemaining
+  };
+
+  const notification = {
+    notice: i18n.manageStudentsNotificationCannotVerb({
+      numStudents: manageStatus.numStudents,
+      verb: manageStatus.verb || 'add'
+    }),
+    details: `${
+      sectionSpotsRemaining === 0
+        ? i18n.manageStudentsNotificationFull(notificationParams)
+        : i18n.manageStudentsNotificationWillBecomeFull(notificationParams)
+    } 
+          ${i18n.contactSupportFullSection({
+            supportLink: 'https://support.code.org/hc/en-us/requests/new'
+          })}`
+  };
+
   return (
     <Notification
       type={NotificationType.failure}
-      notice={i18n.manageStudentsNotificationCannotVerb({
-        numStudents: manageStatus.numStudents,
-        verb: manageStatus.verb || 'add'
-      })}
+      notice={notification.notice}
       details={
-        <SafeMarkdown
-          markdown={i18n.manageStudentsNotificationAtCapacity({
-            sectionCapacity,
-            sectionCode,
-            sectionStudentCount,
-            sectionSpotsRemaining,
-            supportLink: 'https://support.code.org/hc/en-us/requests/new'
-          })}
-        />
+        // SafeMarkedown required to convert i18n string to clickable link
+        <SafeMarkdown markdown={notification.details} />
       }
       dismissible={false}
     />
