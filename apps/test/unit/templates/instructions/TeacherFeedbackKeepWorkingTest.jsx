@@ -9,7 +9,8 @@ const DEFAULT_PROPS = {
   latestFeedback: {
     review_state: null,
     created_at: new Date(),
-    student_last_updated: null
+    student_last_updated: null,
+    student_updated_since_feedback: false
   },
   reviewState: null,
   setReviewState: () => {},
@@ -23,14 +24,9 @@ const setUp = overrideProps => {
 };
 
 const feedbackForIndeterminateState = () => {
-  const yesterday = new Date();
-  yesterday.setDate(yesterday.getDate() - 1);
-
-  // awaiting review because the student has updated since the feedback was left
   return {
     review_state: 'keepWorking',
-    created_at: yesterday,
-    student_last_updated: new Date() // today
+    student_updated_since_feedback: true
   };
 };
 
