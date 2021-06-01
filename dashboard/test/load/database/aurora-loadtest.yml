@@ -183,7 +183,6 @@ Resources:
       Roles:
         - Ref: "RootRole"
   ## Create the sysbench host
-  # TODO:(suresh) Configure with a larger Volume so that code-dot-org project fits on local storage.
   SysbenchHost:
     Type: 'AWS::EC2::Instance'
     Properties:
@@ -201,7 +200,7 @@ Resources:
         -
           DeviceName: /dev/xvda
           Ebs:
-            VolumeSize: 50
+            VolumeSize: 100
             VolumeType: gp2
   ## Create CloudWatch Dashboard
   LabDashboard:
