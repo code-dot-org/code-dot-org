@@ -8773,6 +8773,1619 @@
         },
         "course1_maze_debugging_challenge1": {
           "courseA_maze_seq_challenge1_a": "Niektóre ścieżki mogą Cię doprowadzić do TNT, jeśli pójdziesz za daleko."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**Jak mam przejść ten poziom?**\n\n-   Postaraj się, aby na ekranie pojawił się tancerz.\n\n_Ten poziom kończy się po 4 taktach._",
+          "challenges": "**Opcjonalne wyzwania**\n\n-   Wybierz inną piosenkę do odtworzenia.\n-   Przenieś swojego tancerza w nowe miejsce.\n-   Stwórz więcej niż jednego tancerza."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**Jak mam przejść ten poziom?**\n\n-   Tancerz musi wykonać ruch.\n-   Musisz nacisnąć klawisz strzałki.\n\n_Ten poziom kończy się po 4 taktach._",
+          "challenges": "**Dodatkowe wyzwanie**\n\nUżyj więcej niż jednego bloku <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**Jak mam przejść ten poziom?**\n\n-   Obaj tancerze muszą wykonać ruch.\n-   Musisz naciskać klawisze strzałek.\n\n_Ten poziom kończy się po 6 taktach._",
+          "challenges": "**Dodatkowe wyzwanie**\n\n-   Spraw, aby tancerz reagował na naciśnięcie klawiszy strzałek w lewo i w prawo."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Jak mam przejść ten poziom?**\n\n-   Ten tancerz musi zmienić ruch na nowy po 4 taktach.\n\n_Ten poziom kończy się po 7 taktach._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Jak mam przejść ten poziom?**\n\n-   Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.\n\n_Ten poziom kończy się po 11 taktach._",
+          "challenges": "**Dodatkowe wyzwanie**\n\n-   Zmień tło zawsze wtedy, gdy tancerze zmieniają ruchy."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Jak mam przejść ten poziom?**\n\n-   Utwórz jednego tancerza głównego i grupę tancerzy pomocniczych w ciągu 4 pierwszych taktów piosenki.\n\n_Ten poziom kończy się po siedmiu taktach._",
+          "challenges": "**Dodatkowe wyzwanie**\n\n-   Utwórz wiele grup tancerzy pomocniczych."
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Jak mam przejść ten poziom?**\n\n-   Zmień rozmiar co najmniej jednego tancerza.\n\n_Ten poziom kończy się po 6 taktach._",
+          "challenges": "**Dodatkowe wyzwanie**\n\n-   Eksperymentuj, zmieniając inne właściwości takie, jak szerokość lub obrót."
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Jak mam przejść ten poziom?**\n\n-   Zmień odcień co najmniej jednego tancerza.\n\n_Ten poziom kończy się po 6 taktach._",
+          "tint_hint": "Czy zauważyłeś, że twoi tancerze nie zmieniają się dokładnie na wybrany przez Ciebie kolor? To dlatego, że **odcienie** mieszają wybrany kolor z kolorami tancerza."
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**Jak przejść ten poziom?**\n\n-   Wystarczy nacisnąć przycisk „Zakończ”!",
+          "repeat_every_ideas": "**Czy potrzebujesz pomysłów?**\n\n-   Wielokrotnie zmieniaj rozmiar tancerza, aby rósł.\n-   Wielokrotnie zmieniaj rotację tancerza, aby się obracał.\n\n_Można również użyć liczb ujemnych, aby uzyskać odwrotny efekt!_",
+          "next_previous": "**Dodatkowe wyzwanie**\n\n-   Możesz również użyć tego nowego bloku zdarzeń, aby cyklicznie przechodzić listę ruchów tanecznych, ustawiając ruch na „(Losowo)”, „(Następny)” lub „(Poprzedni)”.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "Naprzemienny blok znajduje się w kategorii „Tancerze”."
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?"
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "Możesz użyć bloku \"jeśli jest ścieżka\", aby wykonać właściwy skręt."
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Cóż za przepiękna rafa koralowa! Niebieski koral jest \\*\\* właściwą drogą, i uważaj, aby czerwony koral nie był po **lewej** stronie!"
+        },
+        "CourseF_outbreak1": {
+          "step1": "Użyj tych bloków, aby tworzyć swoje duszki:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nTen blok znajduje się w kategorii **Duszki** w przyborniku.",
+          "step2": "Zmień wielkość za pomocą tego bloku: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nZnajduje się w kategorii **Działania** w przyborniku.",
+          "step3": "Spraw z tym blokiem, by wszystkie duszki zaczęły wędrować: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nTen blok znajduje się w kategorii **Działania** w przyborniku."
+        },
+        "CourseF_outbreak2": {
+          "hint1": "Kliknij przycisk \\`+' w bloku zdarzeń. Wypełnij puste miejsce w bloku „zmiana kostiumu” blokiem „temat” znajdującym się w środku.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak3": {
+          "hint1": "Aby nadać maski potworom, użyj bloku „zmiana kostiumu” ze zdarzeniem „po kliknięciu”:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nPamiętaj, aby przeciągnąć również mały czerwony blok z kliknięciem!",
+          "hint2": "Nowy kod dla tego poziomu powinien wyglądać następująco:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak4": {
+          "challenge": "## Szukasz dodatkowego wyzwania?\n\nMożesz także sprawić, by potwory poruszały się szybciej lub wolniej.\n\n1.  Kliknij „Edytuj” w tym bloku <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>\n2.  Zwiększ lub zmniejsz liczbę w tym bloku:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nAby potwory poruszały się wolniej, wybierz liczbę dziesiętną, taką jak „0,5” lub „0,25”. Aby poruszały się szybciej, wybierz dowolną liczbę większą niż 1."
+        },
+        "CourseF_outbreak6": {
+          "hint2": "Pamiętaj, aby przesunąć pozostałe bloki „akcji” do wnętrza bloku „jeśli szansa”:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": "Będziesz musiał dodać jeszcze 3 zdarzenia „kiedy dotyka”, aby sprawdzić wszystkie możliwe kombinacje „dotknięć” zdrowych i zainfekowanych duszków.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+        },
+        "CourseF_outbreak7": {
+          "whenclicked": "## Szczepionki\n\nKlikając na nie, możesz symulować podawanie szczepionki potworom. Aby to zrobić, użyj bloku „zmień kostium” w przypadku tego zdarzenia:\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "Czujesz się zablokowany? Zawsze możesz zresetować swój kod, klikając na Historia wersji poniżej, a następnie wybierając opcję Zacznij od nowa."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_b": "Jeśli wywołasz funkcję poprawnie, to jest ścieżką którą będziesz się przemieszczać...",
+          "Function_intro_Ryan_a": "W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę."
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Przeciągnij jeden blok \"idź do przodu\" ze skrzynki z narzędziami do obszaru roboczego i umieść pod blokiem \"po uruchomieniu\".",
+          "MC_HOC_2017_01_RETRY_b": "Nie zapomnij kliknąć na \"Uruchom\", aby uruchomić kod dla Agenta.",
+          "MC_HOC_2017_01_RETRY_c": "Po wykonaniu całego kodu przez Agenta, możesz poruszać się graczem przy użyciu klawiszy strzałek!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Przesuń Agenta o dwa pola do przodu, aby stanął na płycie naciskowej.  Dzięki temu przed graczem otworzą się drzwi.",
+          "MC_HOC_2017_02_Cole_b": "Naciśnij przycisk \"Uruchom\"! \nMożesz uruchomić swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż zobaczysz, co dzieje się źle.",
+          "MC_HOC_2017_02_Cole_c": "Gdy Agent otworzy drzwi, użyj klawiszy strzałek, aby gracz dotarł do mapy!",
+          "MC_HOC_2017_02_Cole_d": "Upewnij się, że Agent podąża ścieżką nakreśloną na mapie!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Gdy Agent dotrze do płyty naciskowej, możesz użyć klawiszy strzałek, aby gracz dotarł do kompasu!",
+          "MC_HOC_2017_03_Cole_b": "Czy uważasz, że kod jest trochę za długi?  Spróbuj użyć pętli \"powtórze\", aby zobaczyć, czy da się go skrócić!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Aby Agent się obrócił, Użyj bloku \"skręć w prawo\", aby Agent się obrócił ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Wystarczy, że Agent dotrze do pierwszej płyty naciskowej, aby Alex lub Steve mogli dotrzeć do siekiery."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent musi wykonać \"idź do przodu\" siedem razy.  Jak użyjesz pętli \"powtórz\", aby to zrobił?",
+          "MC_HOC_2017_04_Cole_c": "Naciśnij przycisk \"Uruchom\"! \nMożesz uruchomić swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż zobaczysz, co dzieje się źle.",
+          "MC_HOC_2017_04_Cole_b": "Gdy Agent dotrze do płyty naciskowej, otworzy drzwi dla gracza."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Czy wiesz, że w pętli możesz umieścić więcej niż jeden fragment kodu?  Spróbuj umieścić w pętli \"powtórz\" deskę oraz \"idź do przodu\", aby ukończyć tę łamigłówkę.",
+          "MC_HOC_2017_05_Cole_b": "Przeprowadź Agenta przez rzekę, budując stopniowo most."
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Ile razy powtarza się ta pętla, a ile razy powinna się powtórzyć?",
+          "MC_HOC_2017_06_Cole_b": "Pomóż Agentowi zbudować most przez calutką wodę! "
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "Wszystko, co Agent musi zrobić, to wyczyścić ścieżkę do Minecartu.",
+          "MC_HOC_2017_07_Cole_a": "Aby rozwiązać tę łamigłówkę, musisz zrozumieć działanie funkcji \"clear path\". Można ją wywołać wiele razy, używając zielonego bloczku \"clear path\" znajdującego się w skrzynce z narzędziami.",
+          "MC_HOC_2017_07_Cole_b": "Spróbuj użyć bloków funkcyjnych jednocześnie z innymi blokami, aby ułatwić sobie rozwiązanie tej łamigłówki."
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "Nie wiesz, gdzie iść? Sprawdź, czy możesz znaleźć wykropkowaną linię!",
+          "MC_HOC_2017_10_Cole_a": "Użycie funkcji ułatwi rozwiązanie tej łamigłówki!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Naciśnij przycisk \"Uruchom\"! \nMożesz uruchomić swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż zobaczysz, co dzieje się źle.",
+          "MC_HOC_2017_08_RY_b": "Tę łamigłówkę można rozwiązać na WIELE różnych sposobów.  Wypróbuj kilka z nich!",
+          "MC_HOC_2017_08_RY_c": "Wykropkowana linia wskaże ci prostą ścieżkę poprzez lawę."
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Spróbuj tak pokierować Agentem tak, aby zbudował kilka dróg dla minicart, dzięki temu będziesz mógł wyruszyć w świat!"
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "Do wyboru jest kilka ścieżek. Która jest najkrótsza?",
+          "mc_8_b": "Wykorzystaj pętlę `repeat` aby uprościć swój kod.",
+          "mc_8_c": "Twoim celem jest dojście do wejścia domu na samej górze ekranu."
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "Aby stanąć przed drzewem musisz podwójnie `move forward`.",
+          "mc_2_b": "Polecenie \"zniszcz blok\" ścina drzewo przed Tobą."
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "Możesz zrąbać drzewa w dowolnej kolejności. Jaka ścieżka wymaga najmniejszej liczby bloków?",
+          "mc_4_b": "Polecenie \"zniszcz blok\" ścina drzewo przed Tobą."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "Kliknij strzałkę na bloku \"umieść\", aby wybrać, co chcesz umieścić.",
+          "mc_6_b": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "mc_6_c": "Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok."
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "Blok \"idź do przodu\" znajduje się w górnej części przybornika.",
+          "mc_1_b": "Upewnij się, że oba bloki \"idź do przodu\" są podłączone do bloku \"po uruchomieniu\"."
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "Na początku użyj bloku `place`, następnie `move`.",
+          "mc_5_b": "Upewnij się, że oba bloki są wewnątrz pętli `repeat` aby wywołać kod więcej niż raz.",
+          "mc_5_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "Użyj bloku \"sadź rośliny\", aby sadzić rośliny w miejscu, w którym stoisz.",
+          "mc_7_b": "Oba spłachetki ciemnobrązowej ziemi nad wodą należy wypełnić roślinami.",
+          "mc_7_c": "Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok."
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "Użyj \"umieść szynę\", aby umieścić szynę, w miejscu w którym stoisz.",
+          "mc_13_b": "Aby skrócić swój kod użyj pętli `repeat`."
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "Blok \"strzyż\" powoduje, że owca pojawia się przed Tobą. Czy stoisz naprzeciw owcy?",
+          "mc_3_b": "Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.",
+          "mc_3_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "Wszystkie kody są na miejscu, aby sprawdzić lawę i zająć się nią. Wystarczy, że dodasz blok, aby iść.",
+          "mc_11_b": "Czy Twoje polecenie \"idź do przodu\" powinna się znajdować wewnątrz instrukcji \"jeśli\" czy po niej?"
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "Miejsca z czerwonymi plamkami, to miejsca gdzie znajdziesz Redstone.",
+          "mc_12_b": "Czy możesz wykorzystać pętlę `powtórz` aby skrócić swój kod?",
+          "mc_12_c": "Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. "
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "Żelazne bloki są nakrapianymi miejscami za pochodnią! Jak masz zamiar się tam dostać?",
+          "mc_10_b": "Kiedy stoisz na krawędzi lawy, użyj `umieść kostkę brukową` aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po tym przejść!",
+          "mc_10_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.",
+          "mc_9_b": "Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.",
+          "mc_9_c": "Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz."
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "Nie możesz wymyślić, jak narysować linię? Zacznij od dołączenia bloków do bloku <xml><block type=\"when_run\"/></xml>, aby zobaczyć, co się stanie.",
+          "courseA_artist_loops2_b": "Użyj tego bloku <xml><block type=\"simple_move_right\"/></xml>, aby rozwiązać tę łamigłówkę."
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "Przejdź powoli przez program wodząc palcem, aby zobaczyć, w którym miejscu coś jest nie tak.",
+          "courseA_artist_loops3_b": "Będziesz chciał użyć bloku takiego, jak ten, aby rozwiązać tę łamigłówkę.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.",
+          "courseA_artist_loops4_b": "Ponieważ możesz użyć tylko jednego bloku <xml><block type=\"simple_move_right\"/></xml>,\n\nspróbuj włożyć go w pętlę <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>."
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_a": "Spróbuj wykorzystać tego, czego nauczyłeś się o blokach  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, aby ukończyć tę łamigłówkę!",
+          "courseA_artist_loops5_b": "Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.",
+          "courseA_artist_loops5_c": "Ponieważ możesz użyć tylko jednego bloku <xml><block type=\"simple_move_right\"/></xml>,  spróbuj włożyć go do środka\n\npętli <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
+        },
+        "courseA_artist_loops6_2021": {
+          "courseA_artist_loops6_a": "Nie możesz wymyślić, jak zrobić pagórek? Spróbuj pobawić się trochę blokami, aby zobaczyć, co każdy może narysować.",
+          "courseA_artist_loops6_b": "Będziesz potrzebował 2 bloków w 2 kierunkach, aby rozwiązać tę łamigłówkę."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_a": "Nie wiesz, gdzie umieścić pętlę? Spróbuj pisać swój kod krok po kroku oraz szukać wzorców.",
+          "courseA_artist_loops7_b": "Napisz kod tylko dla pierwszej fali, potem to powtórz, aby narysować pozostałe dwie.",
+          "courseA_artist_loops7_c": "Pamiętaj, że możesz umieścić więcej niż jeden blok w pętli  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml>."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_a": "Spróbuj uruchomić kod, aby zobaczyć, co dla Ciebie napisano.",
+          "courseA_artist_loops8_b": "Jak zapętliłbyś kod, który Ci przekazano?",
+          "courseA_artist_loops8_c": "Do czego służy kod?\\\nDo czego ma służyć?\\\nJakie informacje ze sobą niesie?"
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_a": "Dodaj jeszcze jeden blok do kodu, który dostałeś, aby narysować resztę schodów. ",
+          "courseA_artist_loops9_b": "Blok, który dodałeś, powinien znaleźć się w środku \n\npętli <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>.",
+          "courseA_artist_loops9_c": "Jeśli nie wiesz, gdzie umieścić pętlę, spróbuj pisać swój kod krok po kroku oraz szukać wzorców."
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "Bloki takie, jak ten <xml>  <block type=\"simple_move_up_left\"/></xml>, umożliwią Twojemu artyście przemieszczać się ukosem!",
+          "courseA_artist_loops_challenge2_b": "Jak skończysz jeden namiot, \"skocz\" dwa razy, aby przejść do następnego!",
+          "courseA_artist_loops_challenge2_c": "Wszystkie Twoje bloki muszą być wewnątrz pętli, aby ukończyć tę łamigłówkę."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "Kiedy zbliżyłeś się do kwadratu ze skarbem, użyj tego bloku, aby go podnieść.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "Najprostszym rozwiązaniem byłoby przemieszczenie się na wschód dwa razy, aby potem zdobyć skarb."
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "Będziesz musiał się ruszyć zanim zbierzesz jakiś skarb.",
+          "courseA_collector_loops2_b": "Kiedy zbliżyłeś się do kwadratu ze skarbem, użyj tego bloku, aby go podnieść.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "Spróbuj użyć pętli <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
+          "courseA_collector_loops3_b": "Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz pętli  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "Aby zmienić odległość, jaką pokonuje Laurel, zmień liczbę powtórzeń przebiegu pętli.",
+          "courseA_collector_loops4_b": "Nie zapomnij, że Laurel musi iść na dół i zebrać skarb po zakończeniu pętli <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "Jeśli nie możesz zgadnąć odpowiedzi od razu, spróbuj użyć kartki papieru aby rozwiązać jakich strzałek będziesz potrzebował i poszukaj wzorca.",
+          "courseA_collector_loops5_b": "Spróbuj rozdzielić problem na 2 części, poruszaj się bokiem i potem na dół.",
+          "courseA_collector_loops5_c": "Będziesz chciał rozpocząć od pętli <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, która przemieszcza Laurel na zachód i zbiera skarb."
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "Nie możesz znaleźć, co jest źle? Spróbuj uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.",
+          "courseA_collector_loops6_b": "Najkrótsze rozwiązanie składa się z 2 pętli <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, jedna po drugiej."
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "Jeśli nie wiesz, co będzie dalej, uruchom kod, aby zobaczyć, gdzie Laurel skończy."
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "Jeśli masz problem z tym zadaniem, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.",
+          "courseA_collector_loops8_b": "Spróbuj rozbić tę łamigłówkę na 3 oddzielne części, i napisać pętle dla każdej z nich.",
+          "courseA_collector_loops8_c": "Pamiętaj, że możesz napisać jeden fragment kodu, nacisnąć \"Uruchom\", aby dowiedzieć się, gdzie musisz iść."
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "Jeśli nie widzisz najlepszych miejsc do umieszczenia tych pętli, spróbuj utworzyć swój kod krok po kroku w poszukiwaniu jakiegoś wzorca. ",
+          "courseA_collector_loops9_b": "Spróbuj włożyć 2 z Twoich pętli <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> do wnętrza innej pętli, aby skrócić kod!"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "Spróbuj zmienić wartości w każdej pętli, jeśli coś wydaje się źle.",
+          "courseA_collector_loops_challenge1_b": "Nie musisz używać pętli, jeśli robisz coś tylko jeden raz.",
+          "courseA_collector_loops_challenge1_c": "Gdy zaczynasz, po prawej stronie jaskini znajduje się 6 klejnotów, ale ty musisz jedynie zdobywać skarb 5 razy przemieszczając się na południe. Wiesz dlaczego?",
+          "courseA_collector_loops_challenge1_d": "Program początkowy nie zbiera ostatnich 2 klejnotów. Spróbuj dodać ten kod na samym końcu:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "Wypróbuj, czy ta ścieżka doprowadzi Cię do rozwiązania.",
+          "courseA_collector_loops_challenge2kp_a": "Czy możesz użyć tych pętli, aby rozwiązać to zadanie?"
+        },
+        "courseA_harvester_loops1_2021": {
+          "courseA_harvester_loops1_a": "Kiedy już zbliżysz się do kukurydzy, użyj tego bloku, aby ją zebrać!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops2_2021": {
+          "courseA_harvester_loops2_a": "Twój kod będzie miał **cztery** bloki  \"przejdź na zachód\"\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\ni **cztery** bloki <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. ",
+          "courseA_harvester_loops2_b": "Jeśli nadal masz problem, spróbuj wypowiedzieć kroki/ czynności na głos."
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_a": "Użyj bloku \"powtórz\" takiego, jak ten, aby sobie pomóc!",
+          "courseA_harvester_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał."
+        },
+        "courseA_harvester_loops4_2021": {
+          "courseA_harvester_loops4_a": "Nie bój się wcisnąć \"Uruchom\", aby przekonać się, co się stanie!",
+          "courseA_harvester_loops4_b": "Ile jest tam egzemplarzy kukurydzy? Ile razy powtarza się Twój kod?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "Jeśli utkniesz, spróbuj rozwiązać zagadkę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie.",
+          "courseA_harvester_loops5_b": "Twój kod końcowy będzie miał **jedną** pętlę <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> **jeden** blok \"przejdź na południe\" <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> i **jeden** blok \"przejdź na wschód\" <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_c": "Użyj tej ścieżki, aby zebrać całą kukurydzę!"
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "Będzie Ci potrzebna jedna pętla \"powtórz\" <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> po drugiej.",
+          "courseA_harvester_loops5a_b": "Jedna pętla będzie powtarzać \"przejdź na południe\" <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, a druga będzie powtarzać \"przejdź na wschód\" <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_c": "Użyj tej ścieżki, aby przejść w jedną stronę, a potem w drugą."
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "Naciśnij  \"Uruchom\", aby przekonać się, co się stanie!",
+          "courseA_harvester_loops5b_b": "Czy Twoje pętle powtarzają się odpowiednią liczbę razy?",
+          "courseA_harvester_loops5b_c": "Przemieszczaj się w jedną stronę, a potem w drugą, tą ścieżką."
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru i znajdź powtarzające się wzorce. ",
+          "courseA_harvester_loops6_b": "To jest ścieżka, którą powinieneś obrać, aby zebrać całą kukurydzę."
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_a": "Będziesz potrzebować dwóch pętli \"powtórz\" <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> jedna po drugiej!",
+          "courseA_harvester_loops7_b": "Użyj dwóch pętli, aby podążać tą ścieżką."
+        },
+        "courseA_harvester_loops9_2021": {
+          "courseA_harvester_loops9_a": "Podziel tę łamigłówkę na trzy różne części. Jedną część do pierwszego zakrętu, jedną część do drugiego zakrętu i jedną część do końca.",
+          "courseA_harvester_loops9_b": "Nie bój się uruchomić swojego kodu po każdej części, aby przekonać się, co się stanie!",
+          "courseA_harvester_loops9_c": "Podążaj tą ścieżką, aby zebrać całą kukurydzę."
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "Czy utknąłeś? Spróbuj najpierw zapisać kroki na kartce papieru.",
+          "courseA_harvester_seq10_b": "Musisz \"Iść na wschód\", a następnie \"Iść na północ\". Zrób to dwukrotnie. Nie zapomnij też zebrać całej kukurydzy!",
+          "courseA_harvester_seq10_c": "Spróbuj użyć tej ścieżki, aby zebrać całą kukurydzę."
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "Użyj tego bloku, aby zebrać kukurydzę, gdy żniwiarka ją znajdzie!"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "Użyj tego bloku, aby zebrać kukurydzę, gdy żniwiarka ją znajdzie!",
+          "courseA_harvester_seq1_b": "Żniwiarka będzie musiała się przesunąć 3 razy na wschód, aby dotrzeć do kukurydzy. Użyj tego bloku:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "Nie zapomnij użyć <xml><block type=\"harvester_corn\"/></xml>, aby zebrać kukurydzę!",
+          "courseA_harvester_seq2_b": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "Czy pamiętałeś, aby użyć tego bloku?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "Wypowiedz głośno kroki i zobacz, czy to Ci pomaga wymyślić odpowiedź."
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "Ile jest spacji pomiędzy żniwiarkę, a kukurydzę? Ile bloków jest już w Waszym obszarze roboczym?",
+          "courseA_harvester_seq4_b": "Będziesz potrzebować pięć bloków \"Przesuń na wschód\" i jednego bloku \"Zbierz kukurydzę\":\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "Który blok przesuwa żniwiarkę w złą stronę?",
+          "courseA_harvester_seq5_b": "Musisz usunąć jeden blok.",
+          "courseA_harvester_seq5_c": "Wyrzuć ten blok do kosza!"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "Jeśli utkniesz, spróbuj głośno wypowiedzieć kroki/czynności. Pomóc może wypracowanie właściwej ścieżki."
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "Spróbuj rozwiązać zagadkę w 2 etapach, jeden etap przed zakrętem i jeden etap po zakręcie.",
+          "courseA_harvester_seq7_b": "Masz kłopot? To jest ścieżka, jaką powinna obrać żniwiarka."
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "Twój kod końcowy powinien zawierać **4** bloki przemieszczania i **2** bloki zbierania."
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "Uruchom kod kilka razy, aby zobaczyć, co się dzieje. Gdzie żniwiarka się zatrzyma?",
+          "courseA_harvester_seq9_b": "Nie zapomnij zebrać całej kukurydzy! Będziesz potrzebować **3** bloków zbierania kukurydzy.",
+          "courseA_harvester_seq9_c": "Powinieneś obrać tę ścieżkę, aby zebrać całą kukurydzę."
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "Jeśli masz problem, spróbuj najpierw zapisać wszystkie kroki na kartce papieru.",
+          "courseA_maze_seq10_b": "Będziesz musiał poruszać się w 3 różnych kierunkach, aby rozwiązać tę łamigłówkę."
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_a": "Jeśli ścieżka, którą musisz iść, jest zablokowana, użyj palca aby prześledzić drogę od ptaka do świnki.",
+          "courseA_maze_seq13_b": "Nie bój się popełniać błędów! Spróbuj dodawać bloki i uruchom kod, aby zobaczyć co się stanie.",
+          "courseA_maze_seq13_c": "Te bloki <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n pomogą Ci zbliżyć się do świnki."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "Jeśli masz kłopot, aby ptak się poruszył sprawdź, czy bloki podłączyły się pod <xml>\n  <block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "Ptak będzie musiał się przesunąć 3 razy na zachód, aby dotrzeć do świnki. Użyj tego bloku:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!",
+          "2": "Będziesz musiał użyć tego bloku:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "Wypowiedz głośno kroki i zobacz, czy to Ci pomaga wymyślić odpowiedź."
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "Twój kod końcowy powinien zawierać 3 bloki przemieszczania.",
+          "courseA_maze_seq6_b": "Jeśli utkniesz, spróbuj rozwiązać zagadkę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie."
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "Jeśli gdzieś utkniesz, spróbuj narysować obrazek na kartce papieru i zobaczyć, dokąd powinien przemieścić się ptak."
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "Istnieją dwa rozwiązania tej łamigłówki."
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "Spróbuj policzyć miejsca palcami. Pamiętaj, aby nie liczyć miejsca, w którym zacząłeś!"
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_a": "Poszukaj bloku, przy pomocy którego pies może coś powiedzieć.",
+          "courseA_playLab_events2_b": "To jest kod, którego potrzebujesz, aby ukończyć tę łamigłówkę:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "Przeciągnij blok <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> i dopnij go do dolnej części [blockly block]1",
+          "courseA_playLab_events3_b": "Pamiętaj, aby użyć klawisza strzałki w lewo, aby przemieścić Jorge do flagi po napisaniu programu. Gdy flaga zmieni kolor na czerwony, skończyłeś!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "To jest blok zdarzenia, którego potrzebujesz, aby sprawić, by Jorge poruszał się w prawo: \n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "To jest kod, którego potrzebujesz, aby ukończyć tę łamigłówkę:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_a": "To są bloki zdarzeń, których potrzebujesz, aby sprawić, by Jorge poruszał się w górę i w dół: \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\ni\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>",
+          "courseA_playLab_events5_b": "Czy wiedziałeś, że możesz zmieniać klawisz na potrzeby strzałki zdarzenia klikając w obrazek na bloku i wybierając nowy klawisz?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "To jest blok zdarzenia, którego użyjesz, by Jorge coś zrobił, po jego kliknięciu: \n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_b": "To jest blok, którego użyłbyś, aby zmienić tło:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>",
+          "courseA_playLab_events6_c": "To jest blok, którego użyłbyś, aby odtworzyć losowo wybrany dźwięk:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "Użyj tego bloku, aby kontrolować, co się będzie działo, gdy postaci na siebie wpadną.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "Spraw, by Pingwin Waddle pojawił się, gdy klikniesz Robina!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Spraw, aby Duch Boo się pojawił, gdy klikniesz w Waddlesa!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Spraw, by Niewyraźny Potwór Jayden pojawił się, gdy klikniesz Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Spraw, by Robot Spiff pojawił się, gdy klikniesz potwora!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "W końcu spraw, by Czarodziej Wendel pokazał się, gdy klikniesz Spiffa!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "Możesz sprawić, by ptak śpiewał.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Możesz sprawić, by robot trąbił.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "Możesz sprawić, by rozzłoszczony potwór warczał.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "Jeśli Scrat nie robi tego, co chcesz, upewnij się, czy oba bloki zostały całkowicie ze sobą połączone, a następnie ponownie kliknij \"Uruchom\". ",
+          "2": "Nie bój się popełniać błędów! Wypróbuj jedną rzecz, a jeśli ona się nie sprawdzi, wypróbuj coś innego!"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "Jeśli chcesz, aby pętla powtarzała się więcej niż 4 razy, możesz zmienić wartość na górze bloku.",
+          "courseB_artist_loops2_b": "Spróbuj najpierw uruchomić kod, a potem zobaczyć, dokąd dotrze artysta."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "Pamiętaj, aby użyć pętli \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> w celu uzyskania lepszego kodu![0]",
+          "courseB_artist_loops3_b": "Artysta będzie chciał przenieść się na południe aby rysować linię."
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "Blok skoku pozwala Ci przechodzić do przodu bez rysowania linii.",
+          "courseB_artist_loops4_b": "Będziesz musiał dodać blok w pętli powtarzania, aby rozwiązać tę łamigłówkę.",
+          "courseB_artist_loops4_c": "Nie zapomnij zmienić ilości powtórzeń pętli."
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "Przeciągnij na zewnątrz pętlę \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, a następnie wstaw do niej pozostałe bloki. Ile razy musisz tę czynność powtórzyć?"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "Spróbuj zapisać ruchy na kartce papieru i poszukać wzorca."
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "W tym wyzwaniu używa się **4** pętli, jednej bezpośrednio po drugiej!",
+          "courseB_artist_loops7_b": "Zauważ, że każda pętla tworzy wzór schodów, które będą zmierzać w inną stronę.",
+          "courseB_artist_loops7_c": "Pętle powinny wykonywać to, co przedstawiono poniżej:\n\n-   Pętla 1\n    -   W prawo\n    -   W dół\n\n-   Pętla 2\n    -   W prawo\n    -   W górę\n\n-   Pętla 3\n    -   W lewo\n    -   W górę\n\n-   Pętla 4\n    -   W lewo\n    -   W dół"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "Ile razy musisz powtórzyć ten wzorzec, aby zrobić drabinę?",
+          "courseB_artist_loops8_b": "Spróbuj uruchomić otrzymany kod, aby zobaczyć czynności, jakie wykonuje."
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_a": "Pamiętaj, że blok skoku może być wykorzystany aby poruszać się bez rysowania linii.",
+          "courseB_artist_loops9_b": "Będziesz musiał użyć bloku W, aby rozwiązać tą zagadkę.",
+          "courseB_artist_loops9_c": "Nie wiesz, gdzie umieścić pętlę? Spróbuj pisać swój kod krok po kroku oraz szukać wzorców."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "Bloki takie, jak ten: <xml>  <block type=\"simple_move_up_right\"/></xml>, umożliwią Twojemu artyście przemieszczać się ukosem!",
+          "courseB_artist_loops_challenge1_b": "Kiedy skończysz jedną kostkę, \"skocz\" do następnej!",
+          "courseB_artist_loops_challenge1_c": "Będziesz musiał `move` lub `jump` dwukrotnie nad niektórymi liniami. "
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "Dostałeś już kod do narysowania X. Teraz musisz tylko powtórzyć X i \"skoczyć\" do następnego miejsca.",
+          "courseB_artist_loops_challenge2_b": "Możesz użyć bloków 'Skocz' aby przenieść się w inne miejsce."
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "Jeśli nie jesteś w stanie wymyślić,  gdzie umieścić pętle \"powtórz\", spróbuj zapisać kod krok po kroku i poszukaj wzorca. ",
+          "courseB_collector_loops10_b": "Spróbuj zapisać ruchy na kartce papieru i znaleźć wzór."
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "Bloku <xml><block type=\"collector_collect_simplified\"/></xml> można użyć do zebrania skarbu, gdy na nim stoisz."
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "Będziesz musiał się ruszyć zanim zbierzesz jakiś skarb.",
+          "courseB_collector_loops2_b": "Kiedy dotrzesz do miejsca ze skarem, użyj bloku <xml><block type=\"collector_collect\"/></xml>, aby go podnieść."
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "Spróbuj skorzystać z bloku <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml>, aby zebrać skarb.",
+          "courseB_collector_prog3_b": "Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz powtarzającej się pętli."
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": " Spróbuj sprawdzić gdzie jest błąd używając przycisku krok.",
+          "courseB_collector_loops4_b": "Aby zmienić odległość, jaką pokonuje Laurel, zmień liczbę powtórzeń przebiegu pętli.",
+          "courseB_collector_loops4_c": "Laurel musi iść na dół i zebrać skarb po zakończeniu pętli `repeat`!"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "Użyj jeszcze jednej pętli, aby sprawić, że zadanie zostanie wykonane.",
+          "courseB_collector_loops5_b": "Spróbuj uruchomić kod kilka razy, aby zobaczyć, co się dzieje."
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "Czy nie jesteś w stanie stwierdzić, co działa źle?  Spróbuj użyć przycisku \"Krok\", aby uruchomić swój program po jednym bloku.",
+          "courseB_collector_loops6_b": "Możesz zmienić ilość powtarzania się pętli poprzez kliknięcie w \"3\" i wybranie innej wartości.",
+          "courseB_collector_loops6_c": "Być może będziesz chciał użyć 3 pętli  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, aby rozwiązać tę łamigłówkę.",
+          "courseB_collector_loops6_d": "Jeśli nie wiesz co zrobić, rozbij tą zagadkę na 3 części."
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "Jeśli ta łamigłówka sprawia Ci kłopot, spróbuj narysować ją na papierze, co pomoże Ci ją rozwikłać.",
+          "courseB_collector_loops7_b": "Będziesz potrzebować trzech pętli powtarzania, aby rozwiązać tę łamigłówkę i nie zapominaj o dodatkowym skarbie na końcu!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "Jeśli nie jesteś w stanie wymyślić,  gdzie umieścić pętle powtarzania, spróbuj zapisać kod krok po kroku i poszukaj wzorca. "
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "Wydaje się zbyt trudne? Rozbij to na 3 mniejsze zadania, aby to uprościć.",
+          "courseB_collector_loops9_b": "Będziesz potrzebować 3 pętli powtarzania, jedną po drugiej, do tego rozwiązania."
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "Rozpocznij od zapętlenia następujących komend:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Przemieść się dwukrotnie na wschód pomiędzy każdą ścieżką.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nMożesz to zrobić przy pomocy tylko 14 bloków. Kliknij po jeszcze jedną wskazówkę, aby zobaczyć rozwiązanie.",
+          "courseB_collector_loops_challenge1_d": "Wypróbuj to!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "Jeśli coś idzie źle, spróbuj to debugować. Nie poddawaj się!",
+          "courseB_collector_loops_challenge2a_b": "Spójrz na te opcje, aby wydostać się z labiryntu. Czy zauważasz jakiś wzór, który możesz powtórzyć?",
+          "courseB_collector_loops_challenge2a_c": "Aby zebrać cały skarb, musisz albo dodać dwa bloki <xml> <block type=\"collector_collect\"/></xml> w swojej pętli, albo umieścić blok wewnątrz własnego bloku „powtarzaj\"."
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Uważaj na popękany lód! Scart wpadnie do wody!",
+          "courseB_iceage_loops10_b": "Spróbuj wypowiedzieć głośno kroki/ działania głośno lub zapisać je na kartce papieru. Czy dostrzegasz jakieś wzorca?",
+          "courseB_iceage_loops10_c": "To jest długa łamigłówka! Podążaj tą ścieżką."
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "Uważaj na popękany lód! Scart wpadnie do środka!",
+          "courseB_iceage_loops1_b": "Będziesz musiał użyć tego bloku:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "Podziel tę łamigłówkę na dwie części: pierwszą przed zakrętem, a drugą po zakręcie.",
+          "courseB_iceage_loops2_b": "Jeśli gdzieś utkniesz, spróbuj wypowiedzieć kroki/ czynności na głos.",
+          "courseB_iceage_loops2_c": "Podążaj tę ścieżkę, aby doprowadzić Scrata do żołędzia."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Użyj tego nowego bloku! \n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał."
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_a": "Spróbuj zapisać kroki, które Scrat podjąłby, aby dojść do żołędzia. Czy dostrzegasz wzorzec?",
+          "courseB_iceage_loops4_b": "Nie bój się uruchomić swojego kodu, aby przekonać się, co się stanie!",
+          "courseB_iceage_loops4_c": "To jest ścieżka, jaką powinien obrać Scrat."
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "Twój kod końcowy powinien zawierać **trzy** bloki ruchu.",
+          "courseB_iceage_loops6_b": "Musisz już tylko dodać jeszcze **jedną** pętlę!",
+          "courseB_iceage_loops6_c": "Twoja ścieżka końcowa powinna wyglądać tak."
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru. Czy dostrzegasz wzorzec?",
+          "courseB_iceage_loops7_b": "To jest ścieżka, jaką powinien obrać Scrat, aby dotrzeć do żołędzia."
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "Czy bloki ruchu są odpowiednie? Co jeszcze możesz zmienić?",
+          "courseB_iceage_loops8_b": "Pierwsza pętla powinna się powtarzać **3** razy, druga powinna się powtarzać **5** razy, trzecia pętla powinna się powtarzać **4** razy, a ostatnia pętla powinna się powtórzyć **4** razy.",
+          "courseB_iceage_loops8_c": "Użyj pętli, aby pomóc Scratowi podążać tą ścieżką."
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "Masz kłopot? Spróbuj podzielić tę łamigłówkę na mniejsze kawałki. Nie bój się uruchomić swoją łamigłówkę w trakcie kodowania!",
+          "courseB_iceage_loops9_b": "Twój kod końcowy powinien zawierać **4** pętle.",
+          "courseB_iceage_loops9_c": "Scrat powinien podążać tę ścieżkę, aby dojść do żołędzia."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "Połącz bloki z blokiem <xml><block type=\"when_run\"/></xml>, aby wprawić Scrata w ruch!",
+          "courseB_maze_seq1_b": "Przeciągnij trzy z tych strzałek <xml><block type=\"maze_moveSouth\"/></xml> na zewnątrz i połącz je z blokiem <xml><block type=\"when_run\"/></xml>, aby doprowadzić Scrata do żołędzia."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "Spróbuj dodawać jedno polecenie na raz, aż dojdziesz do żołędzia.",
+          "courseB_maze_seq4_b": "Być może będziesz chciał użyć bloku <xml><block type=\"maze_moveEast\"/></xml>, aby rozwiązać tę łamigłówkę."
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "Jeśli gdzieś utkniesz, spróbuj narysować ścieżkę na papierze.",
+          "courseB_maze_seq5_b": "Istnieją 2 sposoby rozwiązania tej łamigłówki!",
+          "courseB_maze_seq5_c": "Nie jesteś pewny, jak dostać się do świnki? Spróbuj tej ścieżki."
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "Twój kod końcowy powinien zawierać trzy bloki przemieszczania.",
+          "courseB_maze_seq6_b": "Jeśli utkniesz, spróbuj rozwiązać łamigłówkę w dwóch częściach - jednej na boki, a drugą w górę i w dół.",
+          "courseB_maze_seq5_c": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę.",
+          "courseB_maze_seq5_d": "Nie jesteś pewny, jak dostać się do żołędzia? Wypróbuj tę ścieżkę!"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "Dodaj 1 blok, aby doprowadzić Scrata do żołędzia.",
+          "courseB_maze_seq7_b": "Spróbuj uruchomić kod, który otrzymasz, aby zobaczyć, gdzie dotrzesz.",
+          "courseB_maze_seq7_c": "Nie jesteś w stanie dostać się do żołędzia? Wypróbuj tę ścieżkę!"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "Spróbuj dodawać po jednym bloku, aż rozwiążesz tę łamigłówkę.",
+          "courseB_maze_seq8_b": "Istnieją dwa sposoby, aby rozwiązać ten problem!",
+          "courseB_maze_seq8_c": "Nie wiesz, w którą stronę iść? Wypróbuj tę ścieżkę!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "Spróbuj zapisać wszystkie kroki na kartce papieru.",
+          "courseB_maze_seq9_b": "Buduj swój program po jednym bloku i testuj go w trakcie budowania.",
+          "courseB_maze_seq9_c": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę.",
+          "courseB_maze_seq9_d": "Utknąłeś? Wypróbuj tę ścieżkę!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "Najkrótsza ścieżka może tym razem nie działać.",
+          "courseB_maze_seq_challenge1_b": "Spróbuj skorzystać z bloku <xml><block type=\"maze_moveWest\"/></xml>, aby rozpocząć."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Nie musisz dodawać ani usuwać bloków, aby rozwiązać tą zagadkę.",
+          "courseB_maze_seq_challenge2_b": "Zmień kolejność bloków i wybierz ścieżkę o układzie kaskady."
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "To jest blok, który sprawia że Daisy coś powie:"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "To jest blok, którego należy użyć, aby dodać zdarzenie:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "To jest kod, którego potrzebujesz, aby zmienić nastrój Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "To jest zdarzenie, które steruje strzałką w lewo:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_b": "To jest blok, który sprawia, że rycerz idzie w lewo.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "To jest blok zdarzenia, który steruje strzałką w prawo:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "To jest blok, który sprawia, że rycerz ucieka.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Będą Ci potrzebne następujące bloki zdarzeń:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_b": "Użyj strzałek rozwijanych na zielonych blokach zdarzenia \"kiedy strzałka \\_\\_\\_ jest przyciśnięta\", aby wybrać różne kierunki.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_c": "Zdobądź wszystkie flagi, aby przejść!"
+        },
+        "courseB_playlab_events7_2021": {
+          "courseB_playlab_events7_a": "To jest blok zdarzenia, którego będziesz potrzebował:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "To jest blok, którego potrzebujesz, aby wydać dźwięk:\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "To jest blok, którego potrzebujesz, aby spowodować zniknięcie rycerza:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "Spowoduj, aby inne zwierzęta poruszały się w dół po naciśnięciu▼. ",
+          "courseB_playlab_events_challenge1_b": "Zmień prędkość zwierząt posługując się tym blokiem:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
+          "courseB_playlab_events_challenge1_c": "Co każdy powie, gdy wyścig dobiegnie końca? Spraw, by rozmawiali przy pomocy tego zdarzenia:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "Każde zwierzę w grze powinno zniknąć, gdy w nie klikniesz. Powinno również powrócić po sekundzie lub dwóch!",
+          "courseB_playlab_events_challenge2_b": "Użyj bloków innych zdarzeń, aby sprawić, by inne zwierzęta znikały!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "Użyj komend dodatkowych, aby wydawać dźwięk lub zbierać punkty, gdy klikniesz w zwierzęta!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "Pomieszaj to!\n\nSpraw, by niektóre zwierzęta dawały więcej punktów, od innych.\nUżywaj różnych dźwięków.\nZmieniaj nastroje zwierząt!"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "Spróbuj dodawać po jednym bloku, a następnie kliknij \"uruchom\", aby przekonać się, co się stanie.",
+          "courseB_starWars_prog1_b": "Chcesz przejść na wschód, aby rozwiązać tę łamigłówkę. Jak daleko musisz się przemieścić?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "Podziel ten problem na dwie części. Zbierz jeden stos złomu, a następnie wymyśl, jak dostać się do kolejnego."
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "Będziesz musiał poruszać się na 3 sposoby, aby rozwiązać tą łamigłówkę.",
+          "courseB_starWars_prog3_b": "Twórz jeden fragment kodu za jednym razem. Uruchom go, aby przekonać się, dokąd Cię doprowadzi."
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "Twórz jeden fragment kodu za jednym razem. Uruchom go, aby przekonać się, dokąd Cię doprowadzi.",
+          "courseB_starWars_prog4_b": "Spróbuj użyć bloku \"powtórz\", aby skrócić kod.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "Czy ten wzorzec nie przypomina trochę ostatniej łamigłówki?",
+          "courseB_starWars_prog5_b": "BB-8 będzie chwytał złom w trakcie przetaczania się nad nim.",
+          "courseB_starWars_prog5_c": "Śledź ten wzór swoim palcem. Licz kawałki metalu jak się poruszasz.",
+          "courseB_starWars_prog5_da": "Zobacz, co się stanie, jeśli użyjesz tego samego rozwiązania na potrzeby łamigłówki drabinkowej:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "Ten wzór to po prostu drabinka z dwoma ruchami przypadającymi na każdy kierunek!",
+          "courseB_starWars_prog6_b": "Spróbuj użyć bloku \"powtórz\", aby skrócić kod.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "Czy ten wzorzec nie przypomina trochę ostatniej łamigłówki?",
+          "courseB_starWars_prog7_b": "BB-8 będzie chwytał złom w trakcie przetaczania się nad nim.",
+          "courseB_starWars_prog7_c": "Spróbuj narysować wzór dużej drabiny w tej łamigłówce. Czy pokrywa cały złom?"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "Można wrócić do zbioru miejsc, gdzie już podróżowałeś.",
+          "courseB_starWars_prog8_b": "Spróbuj użyć bloku \"powtórz\", aby zobaczyć, co się stanie z tym kodem, jeśli włożysz go do środka.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseB_starWars_prog9_b": "Jest wiele sposobów na rozwiązanie tej zagadki.",
+          "courseB_starWars_prog9_c": "Czy pętla \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> mogłaby tutaj pomóc?"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "Blok \"ustaw postać 1 w obrazku ???\" może być użyty, aby dodać postać do sceny.",
+          "courseE_playLab_scaffold1_b": "Wstaw blok \"ustaw postać\" pod blokiem \"po uruchomieniu\", aby Twoja postać pojawiła się na początku programu.",
+          "courseE_playLab_scaffold1_c": "Użyj \"ustaw tło ???\", aby wybrać tło dla Twojej sceny."
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "courseE_playLab_scaffold1_a": "Wyciągnij menu rozwijane zdarzenia \"Gdy strzałka **\\_**\", aby zmienić kierunek elementów sterujących blokiem.",
+          "courseE_playLab_scaffold1_b": "Powinieneś mieć cztery bloki zdarzeń \"kiedy strzałka\" z kierunkiem poruszania się pod każdym z nich.",
+          "courseE_playLab_scaffold1_c": "Kiedy skończysz, będziesz mógł poruszać swoim bohaterem przy pomocy klawiszy strzałek!"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "Użyj bloku \"zdobądź punkt\", aby dodać punkt, oraz \"usuń punkt\", aby odjąć punkt."
+        },
+        "courseC_PlayLab_events1_2021": {
+          "courseC_PlayLab_events1_a": "Dołącz ten blok do bloku \"po uruchomieniu\"\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "Dołącz dwa z tych bloków do bloku \"po uruchomieniu\":\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Użyj menu rozwijanego na drugim bloku \"postać**\\_\\_** mówi\", aby zmienić postać, która mówi. "
+        },
+        "courseC_PlayLab_events3_2021": {
+          "courseC_PlayLab_events3_a": "Będziesz musiał jedynie przemieścić Jorge'a w prawo o około 25 pikseli, aby rozwiązać tę łamigłówkę. ",
+          "courseC_PlayLab_events3_b": "Czy w przyborniku jest blok, który wygląda, jakby przemieszczał postać?",
+          "courseC_PlayLab_events3_c": "Dołącz ten blok do bloku \"po uruchomieniu\"\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
+          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać ****\\_\\_\\_****mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "Trzeba kliknąć menu rozwijane na bloku \"postać mówi\", aby znaleźć tekst: \"Co nowego?\"",
+          "courseC_PlayLab_events5_b": "Kliknij w Oktawię, gdy uruchomisz program, aby sprawdzić, czy działa!"
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_a": "Każdy zielony blok \"kiedy strzałka\" powinien mieć jedną akcję poniżej.",
+          "courseC_PlayLab_events6_b": "Użyj menu rozwijanego na drugim bloku \"przemieść postać 1\", aby zmienić kierunek, w którym przemieszcza się Waddles.",
+          "courseC_PlayLab_events6_c": "Kiedy skończysz, powinieneś być w stanie poruszać Waddlesem dookoła używając klawiszy ze strzałkami na swoim klawiaturze!"
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "Użyj zarówno bloku \"przemieść postać 2 w górę o 400 pikseli\" jak i \"przemieść postać w dół o 400 pikseli\" wewnątrz pętli \"powtarzaj bez końca\", aby rozwiązać tę łamigłówkę. ",
+          "courseC_PlayLab_events7_b": "Pętla \"powtarzaj bez końca\"  nie musi być połączona z żadnym innym blokiem zdarzeń; będzie działać samodzielnie."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_a": "Musisz dołączyć bloki do bloku \"gdy postać dotknie\", aby to wydarzyło się poprawnie.",
+          "courseC_PlayLab_events8_b": "Bloki: \"postać mówi\" i \"odtwórz dźwięk\" w przyborniku powinny Ci pomóc!"
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "Blok \"zdobądź punkt\"  pomoże Ci w rozwiązaniu tej łamigłówki.",
+          "courseC_PlayLab_events9_b": "Sprawdź, czy nowy blok \"gdy postać dotknie\" mówi postać **1** i postać **3**.",
+          "courseC_PlayLab_events9_c": "Możesz mieć więcej niż jedno zdarzenie \"gdy postać dotknie\" w swoim obszarze roboczym w tym samym czasie, więc nie musisz usuwać tego pierwszego!"
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "Użyj bloku \"ustaw tło\" z blokiem \"ustaw postać na prędkość  \\_\\_\\_\\_ \", aby rozwiązać tę łamigłówkę.",
+          "courseC_PlayLab_eventsA_b": "Będziesz musiał wyciągnąć blok zdarzenia \"po uruchomieniu\" do obszaru roboczego, aby rozwiązać tę łamigłówkę."
+        },
+        "courseC_PlayLab_eventsA_embed_2021": {
+          "courseC_PlayLab_eventsA_a": "Użyj klawiszy ze strzałkami, aby przemieścić pingwina. Nie musisz pisać żadnego kodu, aby ukończyć ten poziom."
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "idea1": "_Potrzebujesz pomysłu?_\n\n**Kto tam?** Spraw, by postacie pojawiały się w przypadkowych obrazkach tak, aby nikt nie wiedział, kto pojawi się jako następny. \n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_Potrzebujesz pomysłu?_\n\n**Udajesz się na przygodę**  - Zmień tło, a następnie spraw, by postaci rozmawiały o tym, gdzie są teraz. \n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea3": "_Potrzebujesz pomysłu?_\n\n**Pinball** - Spraw, by jedna z postaci poruszała się, korzystając z klawiszy ze strzałkami (użyj bloków \"gdy strzałka w górę\", \"gdy strzałka w dół\"), a następnie odtwarzaj przypadkowe dźwięki, gdy zderzy się z innymi postaciami na ekranie. "
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "Możesz skorzystać z tego bloku, aby przemieszczać postaci w różne miejsca na obszarze gry.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Spróbuj użyć: \"Ustaw postać 1 na pozycji w środku, bardziej z lewej, gdy dotyka którąś z innych postaci. To doprowadzi do zresetowania gry, a gracz będzie mógł próbowac dalej!",
+          "courseC_PlayLab_events_challenge_c": "Możesz chcieć spróbować zmienić tempo różnych postaci, aby uprościć lub utrudnić grę!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "To jest pierwszy blok, którego będziesz potrzebował:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "Użyj tego bloku, aby narysować nalepkę!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "T jest pierwszy blok, którego będziesz potrzebować:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nMożesz wybrać stronę lewą lub stronę prawą oraz dowolną liczbę stopni."
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_a": "Wewnątrz pętli będziesz chciał skoczyć do środka, potem obrócić, a następnie narysować naklejkę.",
+          "courseC_artist_loops2a_b": "Naciśnij na numer na górze pętli `repeat` aby zmienić ilość jej powtórzeń."
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "Być może będziesz chciał dodać jeden blok wewnątrz pętli, po pierwszej naklejce.",
+          "courseC_artist_loops3a_b": "Twój program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>! \n\nMożesz użyć dowolnych naklejek, jakie Ci się podobają!"
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "Użyj tego bloku, aby skoczyć w przód:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nNie zapomnij zmienić odległości!",
+          "courseC_artist_loops4a_b": "Program główny powinien wyglądać tak!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "Użyj tego bloku, aby ustawić wzór swoich linii:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Aby zrobić wzór podobny do powyższego, musisz poruszać się do przodu i do tyłu o taką samą odległość.",
+          "courseC_artist_loops5b_c": "Program główny powinien wyglądać tak!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "Aby upodobnić wzorzec do tego powyżej, przeskocz mniej niż 75 pikseli pomiędzy każdą nalepką."
+        },
+        "courseC_artist_loops7a_2021": {
+          "courseC_artist_loops7a_a": "Koło ma 360 stopni. Pomnóż liczbę stopni w swoim obrocie przez liczbę powtórzeń. Czy to daje 360?\nSprawdź sugerowane rotacje, aby przekonać się, że to działa!"
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "Jeżeli użyjesz bloku \"idź do przodu o 100 pikseli\", narysuję linię automatycznie.",
+          "courseC_artist_prog2_b": "Masz problem z zakrętem? Użyj bloku \"skręć w prawo o 90 stopni\"."
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "Aby utworzyć to okna, narysuj o kwadrat o bokach 100 pikseli.\n\n-   idź do przodu\n-   skręć\n-   idź do przodu\n-   skręć \n-   idź do przodu\n-   skręć\n-   idź do przodu",
+          "courseC_artist_prog3_b": "Czy chcesz utworzyć krótszy kod? W tej łamigłówce spróbuj użyć pętli."
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "Narysuj trójkąt na górze, aby skończyć tworzenie rakiety!",
+          "courseC_artist_prog4_b": "Możesz użyć menu rozwijanego na blokach \"skręć\", aby przekonać się, jaki kąt jest potrzebny!",
+          "courseC_artist_prog4_c": "Aby narysować trójkąt, wykorzystaj:\n\n-   idź do przodu\n-   skręć w lewo o 120 stopni\n-   idź do przodu\n-   skręć w lewo o 120 stopni\n-   idź do przodu"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_a": "Zwolnij tempo przewijania w dół, aż będziesz w stanie uruchomić i przechodzić wiersze kodu po kolei, aby zobaczyć, gdzie coś poszło nie tak, jak powinno. ",
+          "courseC_artist_prog5_b": "Nie obawiaj się popełnienia błędu! Spróbuj dodać bloki i uruchomić kod, aby zobaczyć co się dzieje, nawet jeśli nie wydaje Ci się, że rozwiązałeś tę łamigłówkę. ",
+          "courseC_artist_prog5_c": "Możesz użyć menu rozwijanego w blokach, aby zmienić to, co robią!",
+          "courseC_artist_prog5_d": "Każdy skręt powinien mieć 90 stopni w prawo. "
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "Artysta patrzy już we właściwą stronę, aby narysować pierwszą linię.",
+          "courseC_artist_prog6_b": "Ten romb to tak naprawdę kwadrat stojący na wierzchołku.",
+          "courseC_artist_prog6_c": "Ponieważ ten romb jest też kwadratem upewnij się, by skręcić w rogu o 90 stopni."
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "Każdy kąt ma 45 lub 90 stopni.",
+          "courseC_artist_prog7_b": "Czy to działa w pierwszym kroku?\\\nCzy co w drugim?\\\nA gdzie źle działa?",
+          "courseC_artist_prog7_c": "Możesz użyć menu rozwijanego na blokach skrętów, aby zobaczyć, jakiego potrzebujesz kąta!",
+          "courseC_artist_prog7_d": "Będziesz chciał wykonać:\n\n-   Idź do przodu\n-   Skręć w prawo o 45 stopni\n-   Idź do przodu\n-   Skręć w prawo o 90 stopni\n-   Idź do przodu\n-   Skręć w prawo o 45 stopni\n\nPowtórz to 2 razy!",
+          "courseC_artist_prog7_e": "Nie obawiaj się popełnienia błędu! Spróbuj dodać bloki i uruchomić kod, aby zobaczyć co się dzieje, nawet jeśli nie wydaje Ci się, że rozwiązałeś tę łamigłówkę. "
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "Możesz to narysować jako prostokąt przedzielony linią w środku lub jako dwa różne kwadraty!"
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "Po narysowaniu pierwszej linii, obróć się w lewo zanim narysujesz drugą linię.",
+          "courseC_artist_prog_challenge2_b": "Po narysowaniu drugiej linii, obróć się w prawo zanim narysujesz trzecią linię."
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "Skorzystaj z pętli, aby nie brakło Ci bloków \"zbierz\"!"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "Kiedy stoisz w pewnej odległości od skarbu, użyj bloku <xml><block type=\"collector_collect\"/></xml>, aby go podnieść.",
+          "courseC_collector_prog1_b": "Najprostszym rozwiązaniem będzie najpierw przejście do przodu, aby potem zebrać skarb."
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "Można użyć czterech bloków <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> albo bloku <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, aby skrócić program.",
+          "courseC_collector_prog2_b": "Nie obawiaj się popełnienia błędu! Spróbuj dodać bloki i uruchomić kod, aby zobaczyć co się dzieje, nawet jeśli nie wydaje Ci się, że rozwiązałeś tę łamigłówkę. "
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "Program uruchomi tylko te bloki, które są podłączone do bloku <xml><block type=\"when_run\"/></xml>.",
+          "courseC_collector_prog3_b": "Spróbuj użyć bloku \"Krok\", aby uruchomić swój po jednym wierszu kodu. Czy widzisz, gdzie z kodem jest źle?",
+          "courseC_collector_prog3_c": "Jeśli masz problemy z rozszyfrowaniem tej łamigłówki, spróbuj zapisać ruchy na kartce papieru."
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru.",
+          "courseC_collector_prog4_b": "Nie obawiaj się popełnienia błędu! Spróbuj dodać bloki i uruchomić kod, aby zobaczyć co się dzieje, nawet jeśli nie wydaje Ci się, że rozwiązałeś tę łamigłówkę. ",
+          "courseC_collector_prog4_c": "Wypróbuj tę opcję na potrzeby ścieżki."
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "\"Czy po pierwszym kroku wszystko jest w porządku?\nCzy po drugim kroku wszystko jest w porządku? \nGdzie sprawy poszły nie tak, jak powinny?\"",
+          "courseC_collector_prog5_b": "Jeśli naprawisz problem spowodowany przez jeden błd, a program nadal nie będzie działać, użyj powyższych kroków, aby znaleźć więcej błędów. ",
+          "courseC_collector_prog5_c": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru.",
+          "courseC_collector_prog5_d": "Podążaj ścieżką, aby zebrać skarb. "
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "Czy jesteś w stanie stwierdzić, co działa źle?  \n\nSpróbuj użyć przycisku \"Krok\", aby znaleźć błędy, uruchamiając swój kod wiersz po wierszu.",
+          "courseC_collector_prog6_b": "Zgubiłeś się? Wypróbuj tę ścieżkę, aby zebrać skarb. "
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "W obszarze roboczym jest już mnóstwo świetnego kodu. Nie trzeba usuwać żadnej jego części, aby rozwiązać tę łamigłówkę.  ",
+          "courseC_collector_prog7_b": "Nie widzisz bloku, który jest potrzebny, aby poprowadzić poszukiwacza przygód we właściwym kierunku? Wyciągnij jeden z przybornika.",
+          "courseC_collector_prog7_c": "Czy zauważenie trasy umożliwiającej zebranie całego skarbu sprawia Ci kłopot? Wypróbuj tę ścieżkę!"
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "Używaj komendy \"zbierz\" częściej, aby zebrać dodatkowy skarb."
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "Można użyć więcej niż jednego bloku \"zbierz\" w każdym miejscu.",
+          "courseC_collector_prog_challenge1_b": "Zgubiłeś się? Spróbuj tej ścieżki, aby rozwiązać tę łamigłówkę!"
+        },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseC_flappy_events2_2021": {
+          "courseC_flappy_events2_a": "Blok, który musisz dodać, nazywa się \"ustaw prędkość\". ",
+          "courseC_flappy_events2_b": "Połącz blok \\`\"ustaw prędkość\" z blokiem \"po uruchomieniu\", aby rozwiązać tę łamigłówkę."
+        },
+        "courseC_flappy_events3_2021": {
+          "courseC_flappy_events3_a": "Jeśli coś nie działa prawidłowo, upewnij się, że bloki połączone są z odpowiednimi zdarzeniami w obszarze roboczym."
+        },
+        "courseC_flappy_events4_2021": {
+          "courseC_flappy_events4_a": "Połącz blok \"zakończ grę\" z blokiem `kiedy uderzy w przeszkodę`, aby rozwiązać tę łamigłówkę."
+        },
+        "courseC_flappy_events5_2021": {
+          "courseC_flappy_events5_a": "Musisz użyć bloku \"zdobądź punkt\", aby przejść ten poziom."
+        },
+        "courseC_flappy_events6_2021": {
+          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami ******\\_****** razy\" do wydarzenia \"Gdy klikniesz\"."
+        },
+        "courseC_flappy_events7_2021": {
+          "courseC_flappy_events7_a": "Możesz zmienić tło używając bloku \"ustaw scenę\". "
+        },
+        "courseC_flappy_events8_2021": {
+          "courseC_flappy_events8_a": "Spróbuj połączyć drugi blok \"ustaw scenę\" pod zdarzeniem \"gdy mija przeszkodę\", aby przejść ten poziom."
+        },
+        "courseC_flappy_events9_2021": {
+          "courseC_flappy_events9_a": "Dołącz blok \"Ustaw punktację na 0\" do wydarzenia \"Przy uderzeniu w przeszkodę\", aby przejść ten poziom."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "Po dotarciu do dyni użyj <xml><block type=\"harvester_pumpkin\"/></xml>, aby ją zebrać.",
+          "courseC_harvester_loops1_b": "Możesz użyć pętli wraz z blokiem <xml><block type=\"harvester_pumpkin\"/></xml>, aby zebrać więcej niż jedną dynię z kwadratu."
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru i znajdź powtarzające się wzorce. ",
+          "courseC_harvester_loops2_b": "Będziesz potrzebować jedną po drugiej pętlę \"powtórz\". ",
+          "courseC_harvester_loops2_c": "Jedna pętla będzie powtarzać komendę \"idź do przodu\", a inna \"zbierz dynie\"."
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "Nie bój się popełniać błędów! Spróbuj dodawać bloki i uruchamiać ten kod aby przekonać się, co się stanie, nawet jeśli jeszcze nie rozwiązałeś taj łamigłówki. ",
+          "courseC_harvester_loops3_b": "W przypadku pierwszych dyń, możesz posługiwać się kodem bardzo podobnym do ostatniej łamigłówki. W którą stronę musisz później skręcić?",
+          "courseC_harvester_loops3_c": "Jeśli chcesz uprościć swój kod, możesz umieścić jedną pętlę w drugiej! Nazywa się to **zagnieżdżona pętla**."
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "Użyj nowego bloku \"zbierz kukurydzę\", aby nazbierać kukurydzy.",
+          "courseC_harvester_loops4_b": "Możesz użyć kilku pętli powtarzających się w swoim kodzie, kilka do zbierania kukurydzy a inne do zbierania dyni.",
+          "courseC_harvester_loops4_c": "Jeśli chcesz uprościć swój kod, możesz umieścić jedną pętlę w drugiej! Nazywa się to **zagnieżdżona pętla**."
+        },
+        "courseC_harvester_loops5_2021": {
+          "courseC_harvester_loops5_a": "Jeśli gdzieś utkniesz, spróbuj narysować cały program, a potem znaleźć powtarzające się wzorce. ",
+          "courseC_harvester_loops5_b": "Czy ta kaskada przypomina Ci coś z innych łamigłówek? Ruchy powinny być podobne, pamiętaj tylko, aby po drodze zbierać plony."
+        },
+        "courseC_harvester_loops6_2021": {
+          "courseC_harvester_loops6_a": "Pamiętaj, że możesz umieścić więcej niż jeden blok w jednej pętli \"powtórz\".",
+          "courseC_harvester_loops6_b": "Nie zapomnij się obrócić przy końcu rzędu kukurydzy."
+        },
+        "courseC_harvester_loops7_2021": {
+          "courseC_harvester_loops7_a": "Możesz rozwiązać to zadanie na dwa sposoby, zbierz jako pierwsze kukurydzę lub dynie.",
+          "courseC_harvester_loops7_b": "Będziesz potrzebował wiele pętli \"powtórz\", aby rozwiązać to zadanie."
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_a": "Czy ten stopień wygląda znajomo z poprzedniej łamigłówki? Ruchy powinny być podobne, pamiętaj tylko, aby zbierać plony po drodze.",
+          "courseC_harvester_loops8_b": "Jeśli chcesz jeszcze bardziej uprościć swój kod, możesz umieścić jedną pętlę \"powtórz\" w drugiej! To się nazywa **zagnieżdżona pętla**."
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "To jest zbyt trudne bez pętel!",
+          "courseC_harvester_loops_challenge1_b": "Możesz powtarzać \"idź do przodu\" i \"zbieraj kukurydzę\" tyle razy, ile trzeba, a następnie \"skręć w prawo\" na każdym rogu.",
+          "courseC_harvester_loops_challenge1_c": "Najlepszy sposób na zebranie kukurydzy w środku polega na użyciu bloku \"powtórz\", wewnątrz innego bloku \"powtórz\".\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "Jedno z rozwiązań tego zadania wygląda jak zygzak. Inne wygląda jak spirala! Istnieje wiele sposobów rozwiązania podobnej łamigłówki. Bądź wytrwały!",
+          "courseC_harvester_loops_challenge2_b": "Możesz powtarzać \"idź do przodu\" i \"zbierz sałatę\" tyle razy, ile trzeba, a następnie skręć na każdym rogu.z",
+          "courseC_harvester_loops_challenge2_c": "Taki wzorze zygzaka można powtarzać dwa razy, aby ukończyć tę łamigłówkę przy pomocy zaledwie 20 bloków!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Taki wzór spirali można zakodować przy pomocy zaledwie 18 bloków!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   Czy po pierwszym kroku wszystko jest w porządku?\n-   Czy po drugim kroku nadal działa? \n-   Gdzie idzie nie tak?",
+          "courseC_maze_debugging1_b": "Jest jeden blok, który musisz dodać, aby skończyć tę łamigłówkę."
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "W obszarze roboczym jest już mnóstwo wartościowego kodu. Nie usuwaj niczego i zacznij od nowa!",
+          "courseC_maze_debugging2_b": "-   Czy po pierwszym kroku wszystko jest w porządku?\n-   Czy po drugim kroku nadal działa? \n-   Gdzie idzie nie tak?",
+          "courseC_maze_debugging2_c": "Nie możesz znaleźć, co jest źle? Spróbuj uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje."
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "[0]\n\nAby usunąć blok ze środka kodu, przeciągnij wszystkie bloki do innej części obszaru roboczego.\n\nPrzeciągnij blok, który chcesz usunąć, z powrotem do przybornika.\n\nNa koniec, przeciągnij pozostałe bloki tam, gdzie były.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Nie możesz znaleźć, co jest źle? Spróbuj uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje."
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "Użyj przycisku \"Krok\", aby przejść instrukcja po instrukcji. Czy to pomaga Ci znaleźć wiersz, w którym coś nie działa?",
+          "courseC_maze_debugging4_b": "Jeden ze skrętów kieruje Scrata w niewłaściwym kierunku. Czy potrafisz wskazać, który? "
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "W obszarze roboczym jest już mnóstwo przydatnych bloków. Nie usuwaj ich! \n\nUżyj przycisku \"Krok\", aby przejść i znaleźć, gdzie kod działa źle.",
+          "courseC_maze_debugging5_c": "Możesz zmienić kierunek obrotu bloku klikając w menu rozwijane.",
+          "courseC_maze_debugging5_b": "Spróbuj powiedzieć głośno, co Scrat powinien zrobić. Czy to pokrywa się z kodem w obszarze roboczym? Co poszło nie tak?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   Co Scrat powinien zrobić?\n-   Co Scrat robi?\n-   Co nam to mówi?",
+          "courseC_maze_debugging6_b": "Po znalezieniu i naprawieniu pierwszego błędu, powtórz debugowanie, by znaleźć kolejny błąd.\n\nPowtarzaj debugowanie, aż program zadziała!"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "\\-- Czy wszystko działa w pierwszym kroku?\n\n-   A w drugim kroku? \n-   Gdzie idzie nie tak?",
+          "courseC_maze_debugging7_b": "Nie zapomnij użyć przycisku „Krok”, aby uruchamiać i przechodzić każdy wiersz programu po kolei!",
+          "courseC_maze_debugging7_c": "Po znalezieniu i naprawieniu pierwszego błędu, postaraj się użyć debugowania, by znaleźć kolejny błąd.\n\nPowtarzaj proces debugowania do czasu zadziałania programu!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "W lewo czy w prawo? To zależy od Ciebie!",
+          "courseC_maze_debugging_challenge1_b": "Ścieżka Scrata jest w kształcie prostokąta! Musi obrócić się za każdym razem tak samo.",
+          "courseC_maze_debugging_challenge1_c": "Jeśli utkniesz, zawsze możesz zacząć od nowa lub znaleźć nową drogę!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "Jeśli utkniesz, spróbuj zdebudować kod. Gdzie coś poszło nie tak?",
+          "courseC_maze_debugging_challenge2_c": "Są dwie różne ścieżki, którymi możesz podążać idąc naprzód i obracając się cztery razy. Jeśli znajdziesz sposób na użycie pętli, może ich być nawet więcej!"
+        },
+        "courseC_maze_loops_challenge1a_2021": {
+          "courseC_maze_loops_challenge1_a": "Pomyśl o tej  ścieżce tak, jakby była dwoma różnymi elementami.  Każda ma wzorzec, który możesz powtórzyć.",
+          "courseC_maze_loops_challenge1_b": "Czy pamiętasz, jak stosować pętle, aby powtarzać układ kaskady?"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "Upewnij się, że wszystkie bloki zostały połączone ze sobą, a następnie ponownie kliknij Uruchom."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "Aby użyć bloku <xml><block type=\"maze_moveForward\"/></xml>, przeciągnij go z przybornika i przyciągnij do bloku <xml><block type=\"when_run\"/></xml>.",
+          "courseC_maze_programming2_b": "Upewnij się, że wszystkie bloki zostały połączone ze sobą, a następnie ponownie kliknij Uruchom."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "Spróbuj najpierw uruchomić program, aby sprawdzić gdzie źle działa.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAby usunąć blok ze środka kodu, przeciągnij wszystkie bloki do innej części obszaru roboczego.\n\nPrzeciągnij blok, który chcesz usunąć, z powrotem do przybornika.\n\nNa koniec, przeciągnij pozostałe bloki tam, gdzie powinny być."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "Pamiętaj, że kiedy skręcasz, obracasz się z punktu widzenia ptaka. Jeśli skręcisz w prawo, to ptak skieruje się do dołu.",
+          "courseC_maze_programming4_b": "Aby podążać ścieżką:\n\n-   idź do przodu\n-   skręć w jedną stronę\n-   idź do przodu\n-   skręć do tyłu w drugą stronę\n-   idź do przodu"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "Spróbuj użyć bloku \"Krok\", aby uruchomić po jednym wierszu swojego kodu. Czy jesteś w stanie wymyślić, co musisz następnie zrobić?",
+          "courseC_maze_programming5_b": "Ptak potrzebuje wykonać jeden skręt, aby ukończyć tę łamigłówkę. Czy potrafisz wymyślić, w którą stronę?",
+          "courseC_maze_programming5_c": "Rozwiązanie będzie miało dwa bloki „idź do przodu”, skręt, dwa kolejne bloki „idź do przodu”."
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę!",
+          "courseC_maze_programming6_b": "Podążaj za palcem od ptaka do świnki, jakie podjąłeś kroki?",
+          "courseC_maze_programming6_c": "Pamiętaj, że musisz najpierw skręcić, ponieważ ptak stoi na przeciwko ściany.",
+          "courseC_maze_programming6_d": "Czujesz, że utknąłeś? Spójrz na tę ścieżkę!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "Nie zapomnij użyć przycisku „Krok”, aby przechodzić między blokami i szukać błędów.",
+          "courseC_maze_programming7_b": "Jeśli masz problemy z rozszyfrowaniem tej łamigłówki, spróbuj zapisać ruchy na kartce papieru."
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_a": "Pamiętaj, że możesz użyć przycisku „Krok”, aby przejrzeć kod wiersz po wierszu, jeśli utkniesz.",
+          "courseC_maze_programming8_b": "Nie obawiaj się popełnienia błędu! Spróbuj dodać bloki i uruchomić kod, aby zobaczyć co się dzieje, nawet jeśli nie wydaje Ci się, że rozwiązałeś tę łamigłówkę. "
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "Istnieje wiele tras dotarcia do świnki. Użyj palca, aby znaleźć drogę, a następnie ją zaprogramuj!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "_\"Jeśli wyślesz mnie w drogę tak, abym poruszał się do tyłu, sprawdź najpierw, czy odwróciłem się w odpowiednim kierunku!\"_",
+          "courseC_maze_programming_challenge2_b": "Najkrótsze rozwiązanie wykorzystuje tylko 5 bloków, ale używa tego bloku:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_a": "Czy to nie przypomina gigantycznej kaskady? Przekonaj się, czy możesz wykorzystać to, czego się nauczyłeś w poprzednich łamigłowkach, aby pokonać wszystkie zakręty? ",
+          "courseC_starWars_loops10_b": "Jeśli chcesz użyć mniej kodu, możesz umieścić jedną pętlę \"powtórz\" w drugiej! !\\\\To się nazywa  **pętla zagnieżdżona**.",
+          "courseC_starWars_loops10_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_a": "Gdy BB-8 przetacza złom, zbiera go automatycznie.",
+          "courseC_starWars_loops1_b": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseC_starWars_loops1_c": "Będziesz musiał użyć bloku \"Idź do przodu\" pięć razy, aby rozwiązać tę łamigłówkę."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "Aby powtórzyć kod, przeciągnij pętlę \"powtarzaj\" i umieść tam blok, który chcesz, aby się powtarzał."
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "Kliknięcie w małą strzałkę obok \"w lewo\" na bloku skrętu pozwoli Ci zmienić ją na \"w prawo\".",
+          "courseC_starWars_loops4_a": "Użyj dwóch bloków \"powtórz\".",
+          "courseC_starWars_loops4_b": "Każda pętla \"powtórz\" ma tylko jedną komendę w środku: \"idź do przodu\"."
+        },
+        "courseC_starWars_loops5_2021": {
+          "courseC_starWars_loops5_a": "W najlepszym rozwiązaniu używa się pojedynczego \"przejdź do przodu\", następnie skrętu, a potem pętli."
+        },
+        "courseC_starWars_loops6_2021": {
+          "courseC_starWars_loops6_a": "Spróbuj zapisać wszystkie ruchy na kartce papieru i znaleźć wzorzec.",
+          "courseC_starWars_loops6_b": "Jeśli chcesz użyć mniej kodu, możesz umieścić jedną pętlę \"powtórz\" w drugiej! !\\\\To się nazywa  **pętla zagnieżdżona**."
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_a": "Ten wzorzec wygląda na trudniejszy niż jest w rzeczywistości! Rozpocznij od prostego stopnia schodów. Czy to obejmuje cały złom?",
+          "courseC_starWars_loops7_b": "Jeśli masz problem z tą łamigłówką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.",
+          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_a": "Pomyśl o tym problemie małymi partiami. Nie spiesz się. Nie musisz rozwiązać go przy pierwszej próbie!",
+          "course_starWars_loops8_b": "Pomyśl o pierwszej połowie problemu jako o problemie stopni schodów. Jak to rozwiązałeś wcześniej?",
+          "course_starWars_loops8_c": "Rzuć okiem na tę ścieżkę.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops9_2021": {
+          "course_starWars_loops9_b": "Wewnątrz pętli \"powtórz\" możesz umieścić więcej niż jeden blok.",
+          "course_starWars_loops9_c": "Musisz skręcić w lewo, aby rozwiązać tę łamigłówkę. Wszystkie Twoje skręty mogą być w prawą stronę. \n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseD_artist_1_2021": {
+          "courseD_artist_project1_a": "Możesz użyć menu rozwijanego na blokach \"skręć\", aby wybrać kąt, jaki jest Ci potrzebny!",
+          "courseD_artist_project1_b": "Pamiętaj, że przy pomocy polecenia \"idź do przodu\" rysuje się linię, ale przy pomocy komendy \"skocz do przodu\" już nie."
+        },
+        "courseD_artist_2_2021": {
+          "courseD_artist_project1_b": "Pamiętaj, że przy pomocy polecenia \"idź\" rysuje się linię, ale przy pomocy komendy \"skocz\" już nie.",
+          "courseD_artist_project1_a": "Możesz użyć menu rozwijanego na blokach \"skręć\", aby wybrać kąt, jaki jest Ci potrzebny!"
+        },
+        "courseD_artist_5_2021": {
+          "1": "Jeśli zmieniasz kształty, nie zapomnij, że będziesz musiał zmienić również ich kształty!"
+        },
+        "courseD_artist_nestedLoops1_2021": {
+          "courseD_artist_nestedLoops1_a": "Najprostszym sposobem narysowania tego jest przejście do przodu i wykorzystanie skrętów w prawo. ",
+          "courseD_artist_nestedLoops1_b": "Czy jesteś w stanie narysować ten trójkąt przy pomocy pętli \"powtórz\" z dwoma blokami wewnątrz. Które bloki są Ci potrzebne?",
+          "courseD_artist_nestedLoops1_c": "Spróbuj zapisać te kroki na papierze i szukać wzorców, które można uprościć przy pomocy pętli."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_a": "Będziesz musiał narysować w sumie 6 trójkątów. Po zakończeniu rysowania każdego trójkąta, obróć się o 60 stopni i przejdź do rysowania kolejnego.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Jeśli utworzysz swój trójkąt przy pomocy pętli, Artysta powinien być skierowany w tym samym kierunku, w którym rozpoczął. To znacznie ułatwi wykonywanie skrętów o 60 stopni.",
+          "courseD_artist_nestedLoops1a_c": "Jeśli chcesz użyć kolorów, skorzystaj z bloku \"ustaw kolor\" w swoim kodzie. Nie musisz dopasować kolorów w obrazie szablonu."
+        },
+        "courseD_artist_nestedLoops2_2021": {
+          "courseD_artist_nestedLoops2_a": "Dokonaj zagnieżdżenia swoich pętli otaczając swój kod trójkąta przez kolejną pętlę \"powtórz\".",
+          "courseD_artist_nestedLoops2_b": "Pamiętaj o umieszczeniu wewnątrz pętli bloku \"skręć\" tak, aby artysta wykonał skręt po każdym trójkącie."
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Spróbuj użyć bloku \"skocz do przodu\", aby przejść z górnej części jednego kwadratu do miejsca, w którym rozpocznie się rysowanie następnego.   \n\nJeśli bok Twoich kwadratów ma 20 pikseli wysokości i są one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?",
+          "courseD_artist_nestedLoops3_b": "Nie zapomnij skorzystać z zagnieżdżonej pętli, aby szybko rozwiązać tę łamigłówkę.",
+          "courseD_artist_nestedLoops3_c": "Rozpocznij od wykorzystania pętli \"powtórz\", aby wykonać jeden kwadrat. Następnie powtórz ten kwadrat 8 razy, przeskakując o 40 pikseli pomiędzy nimi."
+        },
+        "courseD_artist_nestedLoops4_2021": {
+          "courseD_artist_nestedLoops4_d": "Aby rozwiązać to poprawnie, musisz się przemieścić **przed** wykonaniem skrętu; w przeciwnym razie Twoje okręgi będą nieco wykrzywione!",
+          "courseD_artist_nestedLoops4_a": "Aby utworzyć okręg:\n\n-   powtórz 360 razy\n    -   przejdź do przodu o 1 piksel\n    -   skręć o 1 stopień",
+          "courseD_artist_nestedLoops4_b": "Nie zapomnij przeskoczyć do przodu o 50 pikseli pomiędzy okręgami.",
+          "courseD_artist_nestedLoops4_c": "Użyj zagnieżdżonej pętli, aby narysować swoje okręgi 4 razy."
+        },
+        "courseD_artist_nestedLoops5_2021": {
+          "courseD_artist_nestedLoops5_a": "Aby osiągnąć to w prosty sposób:\n\n-   powtórz 4 razy\n    -   utwórz okrąg\n-   skocz do przodu o 50 pikseli\n    -   skręć w prawo o 90 stopni",
+          "courseD_artist_nestedLoops5_b": "Aby utworzyć okręg, należy ustawić pętlę powtarzania na powtarzanie 360 razy. W pętli. przejdź do przodu o 1 piksel i wykonaj skręt o 1 stopień."
+        },
+        "courseD_artist_nestedLoops7_2021": {
+          "courseD_artist_nestedLoops7_a": "Musisz użyć tutaj zagnieżdżonych pętli. Najpierw użyj pętli, aby narysować kwadrat. Za co będzie odpowiadać pętla zewnętrzna, jeśli pętla wewnętrzna rysuje kwadrat?",
+          "courseD_artist_nestedLoops7_b": "Skorzystaj z zagnieżdżonej pętli tam, gdzie pętla wewnętrzna jest kodem dla kwadratu.\n\n-   powtórz 6\n    -   utwórz kwadrat\n    -   skocz do przodu o **50 pikseli**\n    -   skręć o **60 stopni**"
+        },
+        "courseD_artist_nestedLoops8_2021": {
+          "courseD_artist_nestedLoops8_a": "Aby uzyskać 8 sześciokątów w swoim rysunku, musisz wykonać skręt o **45 stopni** pomiędzy nimi. Dlaczego? Ponieważ 360 stopni (pełny obrót) podzielone przez 8 (liczba sześciokątów) daje 45 stopni.",
+          "courseD_artist_nestedLoops8_b": "Jeśli utknąłeś, zacznij od spojrzenia na ostatnią łamigłówkę, a następnie zmień to, co jest inne.",
+          "courseD_artist_nestedLoops8_c": "Użyj zagnieżdżonej pętli:\n\n-   Powtórz 8 razy\n    -   narysuj sześciokąt\n    -   skocz o 50 pikseli\n    -   skręćt w prawo o 45 stopni"
+        },
+        "courseD_artist_nestedLoops9_2021": {
+          "courseD_artist_nestedLoops9_a": "Zacznij używać pętli zagnieżdżonej jak wcześniej, ale tym razem, użyj jej z kwadratami. ",
+          "courseD_artist_nestedLoops9_b": "Dodaj drugi zestaw pętli zagnieżdżonych do końca pierwszego zestawu, ale tym razem użyj trójkątów.",
+          "courseD_artist_nestedLoops9_c": "Użyj dwóch pętli zagnieżdżonych:\n\n-   Powtórz 8 razy\n    -   narysuj kwadrat\n    -   skocz do przodu o 50 pikseli\n    -   skręć w prawo o 45 stopni\n-   Powtórz 8 razy\n    -   narysuj trójkąt\n    -   skocz o 50 pikseli\n    -   skręć w prawo o 45 stopni"
+        },
+        "courseD_artist_nestedLoopsFP_2021": {
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nTen obrazek został utworzony z wykorzystaniem pojedynczej pętli zagnieżdżonej, która powtarza sześciokąt (o bokach długości 50 pikseli) 15 razy ze skrętem 48 stopni.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nTen obrazek utworzono z użycie podobnego kodu na innych poziomach, który wykonałeś wcześniej, ale dla okręgów (powtórz 360 razy, idź do przodu o 1, skręć o 1 stopień).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nTen obrazek został utworzono z użyciem pojedynczej pętli zagnieżdżonej, która powtarza pięciokąt (o bokach długości 50 pikseli) 15 razy ze skrętem o 48 stopni."
+        },
+        "courseD_artist_nestedLoops_challenge1_2021": {
+          "courseD_artist_nestedLoops_challenge1_a": "Zacznij od zmiany koloru na niebieski, a później utwórz pięciokąt o boku 50 pikseli oraz skrętów w lewo o 45 stopni.",
+          "courseD_artist_nestedLoops_challenge1_b": "Dodaj kod, aby zmienić kolor na niebieski, a później utwórz trójkąt o boku 50 pikseli oraz skrętów w lewo o 120 stopni.",
+          "courseD_artist_nestedLoops_challenge1_c": "Po narysowaniu obu kształtów musisz pójść do przodu 50 pikseli, a następnie skręcić w prawo o 90 stopni.",
+          "courseD_artist_nestedLoops_challenge1_d": "Wprowadź cały swój kod do środka pętli \"powtórz 4 razy\", aby ukończyć go."
+        },
+        "courseD_artist_nestedLoops_challenge2_2021": {
+          "courseD_artist_nestedLoops_challenge2_a": "Aby wykonać rysunek regularnego ośmiokąta, artysta musi 8 razy skręcić o 45 stopni.",
+          "courseD_artist_nestedLoops_challenge2_b": "Aby narysować kwadrat, artysta musi 4 razy wykonać skręt o 90 stopni."
+        },
+        "courseD_artist_project1_2021": {
+          "courseD_artist_project1_a": "Możesz użyć menu rozwijanego na blokach \"skręć\", aby wybrać kąt, jaki jest Ci potrzebny!",
+          "courseD_artist_project1_b": "Pamiętaj, że przy pomocy polecenia \"idź do przodu\" rysuje się linię, ale przy pomocy komendy \"skocz do przodu\" już nie."
+        },
+        "courseD_artist_project1a_2021": {
+          "courseD_artist_project1a_a": "W tej kaskadzie używa się skrętów o 76 stopnie i powtarza się je 4 razy.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Te wzorce w dużym stopniu wyglądają jak kaskady z innych łamigłówek, ale używa się w nich innych kątów."
+        },
+        "courseD_artist_project2_2021": {
+          "courseD_artist_project2_a": "Pamiętaj, że przy pomocy polecenia \"idź do przodu\" rysuje się linię, ale przy pomocy komendy \"skocz do przodu\" już nie.",
+          "courseD_artist_project2_b": "Po narysowaniu i przemieszczeniu się po raz pierwszy możesz powtórzyć kod dodając pętlę wokół na zewnątrz."
+        },
+        "courseD_artist_project2a_2021": {
+          "courseD_artist_project2a_a": "Ten rysunek sporządzono zagnieżdżając pętlę 4 schodów i blok \"skręć w prawo o 180 stopni\" w bloku \"powtórz 2 razy\".\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project3_2021": {
+          "courseD_artist_project3_a": "Możesz użyć menu rozwijanego na blokach \"skręć\", aby wybrać kąt, jaki jest Ci potrzebny!",
+          "courseD_artist_project3_b": "Wypróbuj pętle zagnieżdżone!\n\nUżyj kodu, który stworzyłeś, aby narysować linię kształtów i zagnieźdź je w innej pętli. Na dole, zanim skończy się pętla zewnętrzna, dodaj blok, który obróci Elsę.  \n\n-   Wypróbuj 72 stopni, jeśli powtarzasz pięciokrotnie zewnętrzną pętlę\n-   Wypróbuj 60 stopni, jeśli powtarzasz sześciokrotnie zewnętrzną pętlę"
+        },
+        "courseD_artist_project3a_2021": {
+          "courseD_artist_project3a_a": "Możesz wybrać różne ilości obracania swojego kształtu! Może około 18 razy ze skrętem o 20 stopni pomiędzy nimi?"
+        },
+        "courseD_artist_project4_2021": {
+          "courseD_artist_project4_a": "Tutaj jest pięciokątny płatek śniegu ze skrętem o 36 stopni przed trójkątnym płatkiem śniegu:\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nTutaj jest zbiór sześciokątów z kwadratami:\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Wypróbuj to, narysuj swój pierwszy płatek śniegu, obróć, a następnie narysuj drugi płatek śniegu."
+        },
+        "courseD_artist_project4a_2021": {
+          "courseD_artist_project4a_a": "Tutaj mamy dwie różne długości płatka śniegu, narysowane jedna po drugiej (z obrotem o 30 stopni pomiędzy nimi.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project5_2021": {
+          "courseD_artist_project4_a": "Linie 2 sześciokątów i 4 trójkątów:\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+        },
+        "courseD_bee_conditionals1_predict1_2021": {
+          "courseD_bee_conditionals1_a": "Będziesz musiał skorzystać z bloku \"jeśli\", aby sprawdzić, czy pod chmurką znajduje się kwiatek, zanim podejmiesz próbę zebrania nektaru."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "courseD_bee_conditionals2_a": "Czasem będzie tam kwiatek, a czasem nie. Jeśli chcesz uruchomić swój kod w obu przypadkach, upewnij się, że używasz instrukcji \"jeśli\".",
+          "courseD_bee_conditionals2_c": "Nie musisz sprawdzać plastrów miodu, pod chmurkami będą tylko kwiatki lub puste miejsca."
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_a": "Dopilnuj użycia instrukcji \"jeśli\", aby sprawdzić każde miejsce pod kątem tego, czy jest tam kwiatek, czy nie ma tam niczego.",
+          "courseD_bee_conditionals3_c": "Nie bój się popełniać błędów! Spróbuj dodawać bloki i uruchamiać ten kod aby przekonać się, co się stanie, nawet jeśli jeszcze nie rozwiązałeś taj łamigłówki. "
+        },
+        "courseD_bee_conditionals4_2021": {
+          "courseD_bee_conditionals4_a": "Możesz traktować każde miejsce tak, jakby była nad nim chmura, nawet jeśli widzisz całą ścieżkę.",
+          "courseD_bee_conditionals4_b": "Użyj instrukcji \"jeśli\" wewnątrz pętli, aby sprawdzić każde miejsce pod kątem nektaru."
+        },
+        "courseD_bee_conditionals5_2021": {
+          "courseD_bee_conditionals5_a": "Jeśli użyjesz bloku \"jeśli na kwiatku\", możesz to rozwiązać używając pętli zagnieżdżonej. Napisz program dla ścieżek po lewej stronie i na dole, a potem powtórz wszystko dwa razy!",
+          "courseD_bee_conditionals5_c": "Aby kontynuować pokonywanie ścieżki, pszczółka będzie musiała wykonać polecenie \"idź do przodu\". Poruszając się, pszczółka musi sprawdzić czy jest kwiatek. \"Jeśli jest kwiatek\", pszczółka powinna \"zebrać nektar\"."
+        },
+        "courseD_bee_conditionals6_2021": {
+          "courseD_bee_conditionals6_a": "Dopilnuj zastosowania oświadczenia \"warunkowego\", aby sprawdzić pod każdą chmurką, czy jest tam plaster miodu.",
+          "courseD_bee_conditionals6_b": "W tym przypadku nie trzeba sprawdzać, czy pod chmurami są kwiatki.",
+          "courseD_bee_conditionals6_c": "Czy jest pętla, której możesz użyć, aby uprościć swój kod?"
+        },
+        "courseD_bee_conditionals7_2021": {
+          "courseD_bee_conditionals7_a": "**Pamiętaj:** Ta łamigłówka zmienia się za każdym uruchomieniem.\n\nBędziesz chciał użyć bloku warunkowego („jeśli/w przeciwnym razie”) do jej rozwiązania.",
+          "courseD_bee_conditionals7_b": "Jeśli pod chmurką nie ma kwiatka, musi być plaster miodu, zatem nie musisz myśleć o pustym miejscu."
+        },
+        "courseD_bee_conditionals7_predict2_2021": {
+          "courseD_bee_conditionals7_a": "**Pamiętaj:** Ta łamigłówka zmienia się za każdym uruchomieniem.\n\nBędziesz chciał użyć bloku warunkowego („jeśli/w przeciwnym razie”) do jej rozwiązania."
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "\\*\\* Pamiętaj: \\*\\*\n\nTa plansza jest inna za każdym uruchomieniem.\n\nBędziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu.",
+          "courseD_bee_conditionals8_b": "Ta łamigłówka jest podchwytliwa, ponieważ nie można sprawdzać pustych kwadratów, nektaru, _i_miód przy pomocy jednego wyrażenia warunkowego."
+        },
+        "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_a": "Czy możesz znaleźć ścieżkę prowadzącą do każdego kwiatka i plastra miodu bez zderzenia się z żadnym drzewem? Najlepszą ścieżką jest spirala.",
+          "courseD_bee_conditionals_challenge1_b": "W tej łamigłówce każde miejsce może mieścić kwiatek, plaster miodu lub nic. Oznacza to, że w każdym kwadracie możesz powtórzyć swoją sekwencję „jeśli/w przeciwnym razie”. "
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "Nie działa? Nie zapomnij użyć przycisku „Krok”, aby uruchamiać i przechodzić każdy wiersz programu po kolei.",
+          "courseD_bee_nestedLoops1_b": "Najpierw spróbuj napisać kod dla jednego boku kwadratu. Możesz to zapętlić, aby zebrać cały nektar?",
+          "courseD_bee_nestedLoops1_c": "Pamiętaj, aby użyć bloku \"zbierz nektar\", gdy znajdziesz się na kwadracie z kwiatkiem."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "Nie działa? Nie zapomnij użyć przycisku „Krok”, aby uruchamiać i przechodzić każdy wiersz programu po kolei.",
+          "courseD_bee_nestedLoops1_c": "Pamiętaj, aby użyć bloku \"zbierz nektar\", gdy znajdziesz się na kwadracie z kwiatkiem."
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "W celu rozwiązania tej łamigłówki trzeba będzie zagnieździć pętlę \"powtórz\" w innej pętli.",
+          "courseD_bee_nestedLoops2_b": "Nie jesteś w stanie wymyślić, gdzie umieścić pętle? Spróbuj zapisać swój kod na papierze krok po kroku oraz szukać wzorca.",
+          "courseD_bee_nestedLoops2_c": "Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz pętli."
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "Będziesz musiał powtarzać \"zbierz nektar\" wewnątrz innego \"powtórz\", który również zawiera w sobie \"idź do przodu\".",
+          "courseD_bee_nestedLoops7_b": "Będziesz musiał użyć wszystkie trzy z dostępnych bloków \"powtórz\", aby rozwiązać tę łamigłówkę.",
+          "courseD_bee_nestedLoops7_c": "Zagnieźdź swoje trzy bloki głęboko, tak, jak poniżej:\n\n-   powtórz 4\n    -   powtórz 3\n        -   powtórz 12\n            -   zbierz nektar\n        -   idź do przodu\n    -   skręć w prawo"
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_a": "Nie zapomnij, że możesz \"powtarzać\" pojedyncze polecenie lub dłuższy wzorzec. Możesz nawet \"powtarzać\" blok \"powtórz\"!",
+          "courseD_bee_nested_loops_challenge2_b": "Najpierw korzystaj z pętli, aby odejść od centrum, aby zebrać wszystkie 4 klejnoty. Skręć w lewo lub w prawo, a następnie użyj pętli zagnieżdżonej, aby przejść od pierwszego stosu skarbu do drugiego Jeśli będziesz powtarzać pętlę zagnieżdżoną wystarczającą liczbę razy, poszukiwacz będzie się przemieszczać po _całej_jaskini!",
+          "courseD_bee_nested_loops_challenge2_c": "Najkrótszy program, przy pomocy którego można dotrzeć do całego skarbu, posługuję się jedynie blokiem \"zbierz\" oraz dwoma skrętami.",
+          "courseD_bee_nested_loops_challenge2_d": "**Rozwiązanie:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_farmer_condLoops1_2021": {
+          "courseD_farmer_condLoops1_a": "Będziesz musiał szukać kukurydzy 5 razy, używając pętli \"powtórz\".",
+          "courseD_farmer_condLoops1_b": "Dopilnuj, by użyć bloku \"jeśli przy kukurydzy\" lub będziesz próbować zebrać coś, czego nie ma!"
+        },
+        "courseD_farmer_condLoops2_2021": {
+          "courseD_farmer_condLoops2_a": "Najlepszym rozwiązaniem jest zagnieżdżenie wyrażenia \"jeśli\" poprzez umieszczenie jednej wewnątrz drugiej.",
+          "courseD_farmer_condLoops2_b": "Na potrzeby tej łamigłówki musisz mieć jedno wyrażenie \"jeśli/ w przeciwnym razie\" oraz jedno czyste wyrażenie \"jeśli\".",
+          "courseD_farmer_condLoops2_c": "Twoje wyrażenie \"jeśli\" mogłoby wyglądać tak:\n\n-   jeśli przy kukurydzy\n    -   zbierz kukurydzę\n-   w przeciwnym razie\n    -   jeśli przy sałacie\n        -   zbierz sałatę\n\nJeśli nie ma tam niczego, nie zbieraj niczego!"
+        },
+        "courseD_farmer_condLoops3_2021": {
+          "courseD_farmer_condLoops3_a": "Zbierz wszystkie artykuły, spróbuj zagnieździć wyrażenie \"jeśli, na głębokość trzech poziomów.\n\nOznacza to, że powinieneś włożyć jedno wyrażenie \"jeśli\" do drugiego, a następnie trzecie wyrażenie \"jeśli\" do drugiego.",
+          "courseD_farmer_condLoops3_b": "Na potrzeby tej łamigłówki musisz mieć dwa wyrażenia \"jeśli/ w przeciwnym razie\" oraz jedno czyste wyrażenie \"jeśli\"."
+        },
+        "courseD_farmer_condLoops4_2021": {
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nie każdy wie, ile główek sałaty będzie wyrastać z każdego pędu.\n\nUżyj pętli \"dopóki jest sałata\", aby zbierać do czasu, gdy każda główka zostanie zebrana. ",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "Pętla `dopóki` będzie obsługiwać również puste miejsca! Z uwagi na fakt, że nie ma już sałaty, nie zbierze niczego i pozwala kodowi przejść dalej.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Jeśli nie użyjesz ani pętli \"dopóki jest ścieżka z przodu\" lub pętli \"powtórz\", aby przejść całe uprawy. "
+        },
+        "courseD_farmer_condLoops5_2021": {
+          "courseD_farmer_condLoops5_a": "Jest nowa pętla: \"powtarzaj aż do dyni\". Czy wiesz jak używać jej w tej łamigłówce?",
+          "courseD_farmer_condLoops5_b": "Może być więcej niż jedna kukurydza lub roślina sałaty w każdym miejscu! Użyj pętli \"dopóki\", aby zebrać je wszystkie!"
+        },
+        "courseD_farmer_condLoops6_2021": {
+          "courseD_farmer_condLoops6_a": "Użyj pętli \"dopóki jest ścieżka z przodu\" lub bloku \"jeśli jest ścieżka z przodu/ w przeciwnym razie\", aby przemieścić farmerkę w dół każdą częścią spirali.",
+          "courseD_farmer_condLoops6_b": "Musisz tylko sprawdzać kukurydzę przez większa część żniw. Po prostu zerwij jedną dynię pod koniec swojego programu. "
+        },
+        "courseD_farmer_condLoops7_2021": {
+          "courseD_farmer_condLoops7_a": "Zauważ, że najłatwiejsza ścieżka do wszystkich upraw przebiega po spirali.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "Spróbuj użyć \"dopóki jest ścieżka z przodu\", aby utrzymywać żniwiarkę w ruchu o właściwą liczbę kroków."
+        },
+        "courseD_farmer_condLoops_challenge1_2021": {
+          "courseD_farmer_condLoops_challenge1_a": "Przycisk \"Krok\" może być bardzo pomocny w tym wyzwaniu.",
+          "courseD_farmer_condLoops_challenge1_b": "W normalnych warunkach wykonałbyś po prostu \"zbierz dynię\" jeśli znajdziesz się przy dyni. Co jeszcze musisz zrobić, jeśli dotrzesz do dyni?"
+        },
+        "courseD_farmer_condLoops_challenge2_2021": {
+          "courseD_farmer_condLoops_challenge2_a": "Ilość każdego warzywa na każdym polu może się zmieniać. Pętla \"dopóki\" może pomóc!"
+        },
+        "courseD_farmer_while1_2021": {
+          "courseD_farmer_while1_a": "Będziesz musiał przejść do przodu cztery razy, aby dojść do stosu. Czy możesz użyć pętli \"powtórz\" do tego celu?",
+          "courseD_farmer_while1_b": "Użyj bloku \"usuń 1\", gdy stoisz na stercie śmieci, aby ją usunąć."
+        },
+        "courseD_farmer_while2_2021": {
+          "courseD_farmer_while2_a": "Będziesz musiał przejść tylko raz, aby dotrzeć do otworu.",
+          "courseD_farmer_while2_b": "Będziesz potrzebować blok \"wypełnij 1\" sześć razy. Czy możesz użyć pętli, aby to uprościć?"
+        },
+        "courseD_farmer_while3_2021": {
+          "courseD_farmer_while3_a": "Pętla może Ci pomóc, aby uprościć tutaj Twój kod.",
+          "courseD_farmer_while3_b": "Do tego, aby dotrzeć do stosu nie powinny być potrzebne żadne bloki \"obróć\"."
+        },
+        "courseD_farmer_while4_2021": {
+          "courseD_farmer_conditionals4_a": "Zamiast używania pętli \"powtórz\", użyj pętli \"dopóki\", aby kopać tak długo, aż stos zniknie.",
+          "courseD_farmer_conditionals4_b": "To wygląda bardzo podobnie do wcześniejszej łamigłówki, a jedyna różnica polega na tym, która pętla jest Ci potrzebna."
+        },
+        "courseD_farmer_while5_2021": {
+          "courseD_farmer_conditionals5a_a": "Spróbuj zagnieździć pętlę \"dopóki\" zamiast pętli \"powtórz\".",
+          "courseD_farmer_conditionals5a_b": "Farmerka musi przejść do przodu łącznie pięć razy, aby dojść do końca rzędu. Co w tym celu musi zrobić farmerka?",
+          "courseD_farmer_conditionals5a_c": "Przejdź do przodu 5 razy. Za każdym razem, gdy przejdziesz do przodu, usuń stos śmieci używając bloku \"dopóki jest stos\"."
+        },
+        "courseD_farmer_while6_2021": {
+          "courseD_farmer_conditionals6_a": "Upewnij się, czy używasz pętli \"dopóki\", aby stwierdzić ile razy jest potrzebnych do wypełnienia każdego otworu.",
+          "courseD_farmer_conditionals6_b": "Należy zauważyć, że farmerka potrzebuje przejść do przodu i w dół kilka razy według wzorca kaskadowego.",
+          "courseD_farmer_conditionals6_c": "Na potrzeby wzorca kaskadowego używa się następujących bloków \n\n-   idź do przodu\n-   wypełnij otwór\n-   skręć w prawo\n-   idź do przodu\n-   wypełnij otwór\n-   skręć w lewo\n\nIle razy musisz użyć tego wzorca kaskadowego?\n\nUpewnij się, czy używasz \"dopóki jest otwór\", aby wypełnić otwór."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_conditionals8_a": "Blok \"dopóki jest ścieżka z przodu\", idźmy, nawet jeśli nie wiemy, ile kwadratów liczby ścieżka.",
+          "courseD_farmer_conditionals8_b": "Włożenie pętli \"dopóki jest ścieżka z przodu\" do pętli \"powtórz\" może Ci pomóc w tej łamigłówce.",
+          "courseD_farmer_conditionals8_c": "Co musisz zrobić na końcu każdej ścieżki?"
+        },
+        "courseD_farmer_while8_2021": {
+          "courseD_farmer_conditionals8_a": "Być może będziesz musiał użyć więcej niż jednej pętli \"dopóki\".",
+          "courseD_farmer_conditionals8_b": "Każdy otwór znajduje się na końcu ścieżki, zatem użyj \"dopóki jest ścieżka z przodu\" zanim użyjesz \"dopóki jest otwór\".",
+          "courseD_farmer_conditionals8_c": "Należy zauważyć, że trzeba powtórzyć kod \"dopóki jest ścieżka z przodu\", \"dopóki jest otwór\" sześć razy."
+        },
+        "courseD_farmer_while_challenge1_2021": {
+          "courseD_farmer_while_challenge1_a": "Każdy otwór lub stos znajduje się o jedno miejsce **w tył** od końca ścieżki.",
+          "courseD_farmer_while_challenge1_b": "Jeśli używasz pętli \"dopóki\", możesz nakazać farmerce usunięcie stosu lub wypełnienie otworu, nawet, jeśli go nie ma. Oznacza to, że możesz ją zaprogramować tak, aby usuwała wszelkie śmieci lub wypełniła dowolny otwór, bez względu na to, gdzie ona przebywa.",
+          "courseD_farmer_conditionals8_c": "Istnieje możliwość rozwiązania tego bez żadnych pętli \"powtórz\". W tym celu trzeba użyć czterech pętli \"dopóki\"."
+        },
+        "courseD_harvester_nested_loops_challenge1_2021": {
+          "courseD_harvester_nested_loops_challenge1_a": "Spróbuj pójść tą ścieżką, aby dojść do całej kukurydzy!",
+          "courseD_harvester_nested_loops_challenge1_b": "Aby zebrać więcej niż jedną część kukurydzy musisz użyć \"zbieraj kukurydzę\" więcej niż jeden raz.",
+          "courseD_harvester_nested_loops_challenge1_c": "Będziesz musiał włożyć małą pętlę do swojej głównej pętli, aby rozwiązać tę łamigłówkę!"
+        },
+        "courseD_maze_nestedLoops3_2021": {
+          "courseD_maze_nestedLoops3_a": "W celu rozwiązania tej łamigłówki będziesz musiał \"zagnieździć\" jedną pętlę \"powtórz\" w innej pętli \"powtórz\".",
+          "courseD_maze_nestedLoops3_b": "Nie jesteś w stanie wymyślić, gdzie umieścić pętle? Spróbuj zapisać swój kod na papierze krok- po-kroku oraz szukać wzorca.",
+          "courseD_maze_nestedLoops3_c": "Spróbuj napisać kod dla jednego prostego fragmentu ścieżki i skrętu. Czy możesz to powtórzyć, aby dotrzeć do słonecznika?"
+        },
+        "courseD_maze_nestedLoops4_2021": {
+          "courseD_maze_nestedLoops4_a": "Spróbuj skorzystać z tej ścieżki, aby przejść labirynt.",
+          "courseD_maze_nestedLoops4_b": "Jeśli trudno dostrzec wzorzec pętli, spróbuj najpierw to wszystko zakodować i sprawdź, który kod się powtarza zanim wprowadzisz pętle.",
+          "courseD_maze_nestedLoops4_c": "Spróbuj użyć pętli \"powtórz\" wewnątrz innej pętli, by skrócić ilość kodu, który potrzebujesz."
+        },
+        "courseD_maze_nestedLoops5_2021": {
+          "courseD_maze_nestedLoops5_a": "Znajdź wzór schodków w tym labiryncie, aby dowiedzieć się, gdzie można użyć zagnieżdżonej pętli.",
+          "courseD_maze_nestedLoops5_b": "Nie jesteś w stanie wymyślić, gdzie umieścić pętle? Spróbuj zapisać swój kod na papierze krok- po-kroku oraz szukać wzorca."
+        },
+        "courseD_maze_nestedLoops6_2021": {
+          "courseD_maze_nestedLoops6_a": "Jeśli utkniesz, spróbuj zapisać kod na papierze początkowo bez pętli i poszukaj wzorców.",
+          "courseD_maze_nestedLoops6_b": "Zagnieżdżanie pętli \"powtórz\", może zmniejszyć liczbę używanych bloków.",
+          "courseD_maze_nestedLoops6_c": "Będziesz musiał użyć dwóch zestawów zagnieżdżonych pętli \"powtórz\", aby rozwiązać tę łamigłówkę."
+        },
+        "courseD_maze_until1_2021": {
+          "courseD_maze_until1_a": "Czy są jakieś sekwencje, które możesz zapętlić, aby skrócić swój kod?",
+          "courseD_maze_until1_b": "Spróbuj użyć zagnieżdżonych pętli, aby rozwiązać tę łamigłówkę."
+        },
+        "courseD_maze_until3_2021": {
+          "courseD_maze_until3_a": "-   Do czego służy Twój kod?\\\\\n-   Do czego ma służyć?\\\\\n-   Jakie informacje dla Ciebie niesie ze sobą?",
+          "courseD_maze_until3_b": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru i poszukaj miejsc, w których się powtarzają.",
+          "courseD_maze_until3_c": "Czy jest wzorzec kaskadowy, którym możesz podążać na potrzeby tej łamigłówki?",
+          "courseD_maze_until3_d": "Czy możesz użyć bloku \"powtórz\", aby skrócić swój kod."
+        },
+        "courseD_maze_until4_2021": {
+          "courseD_maze_until4_a": "Użyj przycisku \"Krok\", aby przejść swój kod wiersz po wierszu.\n\n-   Czy wszystko działa w pierwszym kroku?\n-   Czy wszystko działa w drugim kroku? \n-   Gdzie idzie nie tak?",
+          "courseD_maze_until4_b": "Czy jest wzorzec kaskadowy, którym możesz podążać na potrzeby tej łamigłówki?",
+          "courseD_maze_until4_c": "Czy możesz użyć bloku \"powtórz\", aby skrócić swój kod."
+        },
+        "courseD_maze_until5_2021": {
+          "courseD_maze_until5_b": "Celem użycia jednego \"idź do przodu\", włóż do środka blok \"powtarzaj aż do słonecznika\""
+        },
+        "courseD_maze_until6_2021": {
+          "courseD_maze_until6_b": "Celem użycia jednego \"idź do przodu\", włóż do środka blok \"powtarzaj aż do słonecznika\""
+        },
+        "courseD_maze_until7_2021": {
+          "courseD_maze_until7_a": "Nie potrzebujesz kodu dłuższego niż ostatnim razem, tylko dlatego, że labirynt jest dłuższy!",
+          "courseD_maze_until7_b": "Chociaż jest tutaj więcej zakrętów niż w ostatniej łamigłówce, Twój kod może być prawie identyczny z uwagi na blok \"powtarzaj aż do\"!"
+        },
+        "courseD_maze_until9_2021": {
+          "courseD_maze_until8_c": "Pamiętaj, aby używać bloku \"powtarzaj aż\", by doprowadzić zombie do słonecznika!"
+        },
+        "courseE_artist_functions10_2021": {
+          "courseD_artist_functions10_b": "Ten rysunek bardzo przypomina ostatni, ale funkcja \"naysuj linię\" służy teraz do rysowania innego kształtu.",
+          "courseD_artist_functions10_a": "Aby uniknąć wielokrotnego użycia bloków \"idź do przodu\", utwórz funkcję \"narysuj sześciokąt\" i wywołaj ją wiele razy. ",
+          "courseD_artist_functions10_c": "Czy widzisz, gdzie w tym rysunku można użyć funkcji \"rząd sześciokątów\"?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_b": "Funkcja nie powinna zawierać całego Twojego programu, a tylko jego część, która rysuje kwadrat o bokach 100 pikseli.",
+          "courseD_artist_functions2_c": "Dopilnuj, abyś użył zielonego bloku \"narysuj kwadrat\", aby \"wywołać\" swoją funkcję. W przeciwnym razie, kod w Twojej funkcji nie uruchomi się. ",
+          "courseD_artist_functions2_a": "Twój program powinien:\n\n-   uzyć funkcji, \n-   przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji"
+        },
+        "courseE_artist_functions5_2021": {
+          "courseD_artist_functions5_a": "Nie poddawaj się! Pamiętaj, czego się uczyłeś.",
+          "courseD_artist_functions5_b": "Funkcje ułatwiają wywoływanie zapisanego kodu w dowolnym momencie, nie tylko z wnętrza pętli!",
+          "courseD_artist_functions5_c": "Rozpocznij od tworzenia swojej funkcji \"narysuj gwiazdę\", aby użyjesz funkcję, aby narysować trzy gwiazdy!"
+        },
+        "courseE_artist_functions7_2021": {
+          "courseD_artist_functions7_a": "Spróbuj najpierw utworzyć swoją funkcję, a potem dodawać okna po jednym. ",
+          "courseD_artist_functions7_b": "Aby dostać się z górnych okien do dolnych okien, po prostu przekręć artystę w prawo, skocz o 150 pikseli, a następnie obróć artystę ponownie w prawo! Teraz artysta będzie zwrócony w odpowiednim kierunku, aby skończyć resztę domu!"
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_f": "Potrzebny Ci jest tylko jeden blok \"idź to przodu\", ale potrzebujesz więcej bloków \"skocz do przodu\" i/lub \"skocz do tyłu\"!",
+          "courseD_artist_functions8_a": "Rozpocznij od tworzenia funkcji dla kwadratu, a następnie spróbuj utworzyć funkcję dla rzędu kwadratów. \n\nW jaki sposób skorzystałbyś z funkcji \"narysuj rząd kwadratów\", aby wykonać ten obrazek?",
+          "courseD_artist_functions8_d": "Aby sporządzić rząd kwadratów,\n\n-   trzykrotnie powtórz:\n    -   narysuj kwadrat o boku **50 pikseli**\n    -   skocz **100 pikseli**",
+          "courseD_artist_functions8_b": "Pomyśl o każdym wierszu na tym obrazku jako o rzędzie 3 kwadratów. Ile jest tam rzedów kwadratów i gdzie zaczynasz rysować każdy z nich?",
+          "courseD_artist_functions8_c": "Na koniec każdego zestawu przesuniętych kwadratów, artysta będzie musiał skakać w dół i z powrotem zanim narysuje kolejny rząd kwadratów.",
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseE_artist_functions8b_2021": {
+          "courseD_artist_functions8_f": "Potrzebujesz tylko jednego bloku \"przejdź do przodu\" jeśli robisz to, jak należy!",
+          "courseD_artist_functions8_a": "Rozpocznij od tworzenia funkcji dla kwadratu, a następnie spróbuj utworzyć funkcję dla rzędu kwadratów. ",
+          "courseD_artist_functions8_d": "Aby zrobić rząd kwadratów\n\n-   powtórz 3 razy\n    -   narysuj kwadrat\n    -   skocz do przodu o **100 pikseli**"
+        },
+        "courseE_artist_functions8c_2021": {
+          "courseD_artist_functions8_f": "To jest łatwiejsze niż się wydaje! Nie powinieneś potrzebować żadnych bloków \"przejdź\" lub \"skocz\"!",
+          "courseD_artist_functions8_a": "Drugi rząd kwadratów różni się tylko o obrót o 18 stopni od pierwszego!",
+          "courseD_artist_functions8_c": "Pod koniec każdego rzędu kwadratów, artysta musi tylko obrócić o 180 stopni zanim narysuje kolejny rząd kwadratów. Wstaw to wszystko w pętlę \"powtórz\", aby przygotować Cię do kolejnego ćwiczenia!"
+        },
+        "courseE_artist_functions9_2021": {
+          "courseD_artist_functions9_e": "Czy widzisz wszystkie cztery miejsca, w których na tym rysunku można wykorzystać \"rząd trójkątów\"?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Tę łamigłówkę można podzielić na trzy części:\n\n-   utwórz funkcję \"narysuj trójkąt\"\n-   utwórz funkcję \"naysuj rząd trójkątów\"\n-   użyj swojej funkcji \"narysuj rząd trójkątów\" cztery razy, aby skończyć rysunek",
+          "courseD_artist_functions9_b": "Ten rysunek jest wykonany poprzez narysowanie rzędu trójkątów cztery razy i obrót o 60 lub 120 stopni przed narysowaniem kolejnego rzędu trójkątów.",
+          "courseD_artist_functions9_c": "Aby narysować rząd kwadratów\n\n-   powtórz 4 razy\n    -   narysuj trójkąt\n    -   skocz do przodu 50 pikseli",
+          "courseD_artist_functions9_d": "Aby narysować romb:\n\n-   powtórz dwukrotnie 2\n    -   narysuj rząd trójkątów\n    -   obróć się o 60 stopni\n    -   narysuj rząd trójkątów\n    -   obróć się o 120 stopni"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_a": "Jeśli wywołasz funkcję jeszcze raz, możesz utworzyć ten sam wzór w rogu na końcu. ",
+          "courseE_artist_functions_challenge1_b": "Możesz też \"skocz do\" innych pozycji i zmienić cały wzór tak, jak chcesz!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nTen blok \"skocz do\" pozwala Ci przenieść artystę zombie na dowolny piksel na siatce wtedy, kiedy chcesz. To działa na zasadzie przenoszenia go o pewną liczbę pikseli w prawo i o pewną liczbę pikseli w dół. Liczy się to zawsze od górnego lewego rogu, co oznacza, że to nie ma znaczenia gdzie jest grafik zombie _przed_ uruchomieniem komendy!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_a": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, jakie masz bloki.",
+          "courseE_farmer_functions1_b": "Musisz zebrać tylko jedną dynię, ale czy możesz użyć pętli, aby się do niej dostać?"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_a": "Dopilnuj zapoznania się z definicją funkcji. Czy możesz powiedzieć, jak to działa?",
+          "courseE_farmer_functions1a_b": "Użyj bloku \"powtarzaj aż\", aby dotrzeć do dyni!"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions2b_a": "Możesz użyć komendy \"powtarzaj aż do dyni\", aby dostać się do krańców obu ścieżek.",
+          "courseE_farmer_functions2b_b": "Nie ma kukurydzy na ścieżce łączącej, więc możesz iść dalej i skręcić.",
+          "courseE_farmer_functions2b_c": "Będziesz potrzebować dwóch odrębnych bloków \"powtarzaj aż\", aby zebrać cały plon."
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "courseE_farmer_functions2ba_a": "Użyj zielonego bloku \"zbierz wszystkie dynie\", aby upewnić się, że zbierzesz wszystkie dynie!"
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "coursee_farmer_functions3c1_2018_a": "W celu rozwiązania tej łamigłówki będziesz musiał trzykrotnie użyć funkcji \"dopóki jest ścieżka z przodu\".",
+          "coursee_farmer_functions3c1_2018_b": "Jakiego kodu musisz dodać, aby obejść zakręty?"
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "courseE_farmer_functions7a1_2018_a": "Utwórz swoją funkcję w sekcji \"funkcje\" w przyborniku.",
+          "courseE_farmer_functions7a1_2018_b": "Nie zapomnij dodać swojej funkcji, gdy skończysz ją robić!"
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "courseE_farmer_functions8a1_2018a": "Rozpocznij łamigłówkę od kodowania tej samej funkcji, którą zrobiłeś w ostatniej  łamigłówce.",
+          "courseE_farmer_functions8a1_2018b": "Po pierwszym uruchomieniu funkcji, będziesz musiał wykonać jeden dodatkowy skręt, zanim będziesz mógł znów ją uruchomić."
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "courseE_farmer_functions9a1_2018a": "Będziesz używać tej samej funkcji, którą zrobiłeś w ostatnich kilku łamigłówkach.",
+          "courseE_farmer_functions9a1_2018b": "Użyj tych samych kroków/działań z poprzedniej łamigłówki, aby rozwiązać pierwszą połowę tej łamigłówki.",
+          "courseE_farmer_functions9a1_2018c": "Będziesz musiał \"skręcić\" kilka razy i \"pójść do przodu\", aby dostać się do ostatniej uprawy sałaty, zanim będziesz mógł znowu wywołać swoją funkcję."
+        },
+        "courseE_farmer_ramp11a_2021": {
+          "courseE_farmer_ramp12_a": "Zamiast stosowania pętli \"powtórz\", aby powiedzieć farmerowi, ile razy ma zebrać łopatą brud, użyj bloku \"dopóki jest stos\".  ",
+          "courseE_farmer_ramp12_b": "Musisz przejść do przodu tylko raz, aby dotrzeć do brudu."
+        },
+        "courseE_farmer_ramp11b_2021": {
+          "courseE_farmer_ramp11b_a": "Możesz zagnieździć swoją pętlę \"dopóki\" wewnątrz pętli \"powtórz\", aby skrócić swój kod."
+        },
+        "courseE_farmer_ramp12_forswap_2021": {
+          "courseE_farmer_ramp12_b": "Będziesz nadal musiał użyć pętli \"powtórz\" na zewnątrz tego wszystkiego, aby dać znać żniwiarce, ile razy ma przejść do przodu i zebrać sałatę."
+        },
+        "courseE_farmer_ramp12c_2021": {
+          "courseE_farmer_ramp12b_b": "Będziesz nadal musiał użyć najpierw pętli \"aż do\",  następnie użyć pętli \"dopóki\", gdy już dotrzesz do sałaty."
+        },
+        "courseE_farmer_ramp12d_2021": {
+          "courseE_farmer_ramp12d_b": "Będziesz musiał wstawić swoje pętle \"aż do\" i \"dopóki\" do wewnątrz pętli \"powtórz\", aby rozwiązać tę łamigłówkę!"
+        },
+        "courseE_farmer_ramp12e_2021": {
+          "courseE_farmer_ramp12e_b": "Rozwiązanie tej łamigłówki będzie bardzo przypominać rozwiązanie ostatniej łamigłówki, ale będzie się zwracać w innym kierunku."
+        },
+        "courseE_farmer_ramp12f_2021": {
+          "courseE_farmer_ramp12f_b": "Użyj bloku „jeśli/w przeciwnym razie”, aby pomóc farmerce zadecydować, czy musi skręcić w prawo czy w lewo. "
+        },
+        "courseE_farmer_while1_2021": {
+          "courseE_farmer_ramp12G_b": "Użyj bloku „jeśli/w przeciwnym razie”, aby pomóc farmerce zadecydować, czy musi skręcić w prawo czy w lewo. "
+        },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_a": "Rysunek na obrazku wykonano z użyciem licznika, aby \"ustawić alfa\" i \"licznik\" / 10 jako rozmiar pędzla.",
+          "courseF_artist_for10_b": "W rysunku na obrazku wykorzystuje się obrót o 61 stopni.",
+          "courseF_artist_for10_c": "Czy chcesz wiedzieć w jaki sposób wykonano rysunek? \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "Czy jesteś w stanie narysować coś takiego:\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "Twoja pętla \"dla\" będzie musiała liczyć od 15 do 300 o 15.",
+          "courseF_artist_for6_b": "W tę pętlę \"dla\" wstaw pętlę \"idź do przodu\" i \"obróć\".",
+          "courseF_artist_for6_c": "Wystarczy, że zmienisz liczbę stopni w bloku \"obróć\"."
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_a": "W tej łamigłówce pióro jest cieńsze. Wystarczy, że ustawisz je na \"1\" przed rozpoczęciem.",
+          "courseF_artist_for7_b": "Zauważ, że ta spirala obraca się w prawo nie w lewo!",
+          "courseF_artist_for7_c": "Twoja pętla \"dla\" w tej łamigłówce przechodzi od 15 do 300 o 2.",
+          "courseF_artist_for7_d": "Ten obraz powstaje w wyniku obrotu tylko o 89 stopni."
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_a": "Wszystko inne w swoim kodzie zachowaj takie, jak było, tylko kąt obrotu musi ulec zmianie.",
+          "courseF_artist_for8_b": "Jeśli chcesz, możesz wybrać inny kolor dla swojej spirali."
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "Jeśli wstawisz blok \"Ustaw alfa\" do swojej pętli \"dla\" i użyjesz zmiennej \"licznik\", aby to zmienić, możesz utworzyć taki wzór.",
+          "courseF_artist_for9_b": "Blok \"ustaw alfa\" zmienia nieprzejrzystość koloru. Im niższa wartość, tym bardziej przejrzysty jest kolor."
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_a": "`pen width` wynosi 1. Pierwszy kwadrat ma boki o szerokości 50 pikseli, kolejny kwadrat jest o 50 pikseli szerszy od poprzedniego.",
+          "courseF_artist_for_challenge1_b": "Nieprzejrzystość pędzla wynosi zawsze \"licznik\" /2.",
+          "courseF_artist_for_challenge1_c": "Po wykonaniu każdego kwadratu, nie zapomnij skoczyć w tył, wykonaniu obrotu, skoczyć ponownie, a następnie wykonać obrót w tył!",
+          "courseF_artist_for_challenge1_d": "**Rozwiązanie:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_c": "`pętla for` zmienia się od 5 do 250 z krokiem równym 2. ",
+          "courseF_artist_for_challenge2_a": "Zmiana koloru odbywa się poprzez użycie bloku `ustaw kolor z kolorem czerwonym, zielonym, niebieskim`. Czerwony ma stałą wartość 255, zielony jest zawsze wartością `licznik`, a niebieski to `255-licznik`.",
+          "courseF_artist_for_challenge2_b": "Kod do tego celu jest prostszy niż może Ci się wydawać. Po prostu ustaw kolor w pętli, przejdź do przodu, a następnie wykonaj obrót.",
+          "courseF_artist_for_challenge2_d": "**Rozwiązanie:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "Zabaw się na tym poziomie! Zobacz, co niewielkie zmiany mogą sprawić w zakresie Twojego kodu.",
+          "courseF_artist_variables10_b": "Możesz wypróbować wiele rzeczy i uruchamiać swój kod wiele razy."
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": "Rozpocznij swój kod od użycia bloku \"ustaw długość\". Ustaw zmienną długości na 150.",
+          "courseF_artist_variables7_b": "Możesz wykorzystać pętlę \"powtórz\" do tego, by uprościć trójkąt.",
+          "courseF_artist_variables7_c": "Musisz skręcać w lewo o 120 stopni, aby utworzyć kąty trójkąta."
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_b": "Pamiętaj, aby rozpocząć swój kod dla trójkąta od bloku \"ustaw długość\" i zacznij od 150 pikseli.",
+          "courseF_artist_variables8_c": "Dopilnuj, by użyto pętli \"powtórz\", aby narysować swój trójkąt."
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_a": "Jeśli chodzi o tę łamigłówkę, to wystarczy tyko, że zmienić, ilość razy powtórzenia pętli."
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_a": "Czy jesteś w stanie znaleźć związek pomiędzy liczbą kroków, które musisz wykonać a liczbą nektarów do zebrania?",
+          "courseF_bee_for10_b": "Pierwszy zestaw kwiatów liczy łącznie **14 kwiatów**. Aby uzyskać to po raz pierwszy, pszczółka musi przelecieć z brzękiem w dół o **7 kwadratów** (lub 14 kwadratów podzielonych przez 2.) Ile kwiatów jest w kolejnym zestawie i ile kwadratów odległości będzie musiała pokonać pszczółka, aby tam dotrzeć?",
+          "courseF_bee_for10_c": "W zagadce pierwszy zestaw ma **14** kwiatów, drugi zestaw ma **10** kwiatów, trzeci zestaw ma **6** kwiatów a czwarty zestaw ma **2** kwiaty.\n\nZauważ, że na obrazku jest **7** czerwonych kwadratów, **5** pomarańczowych kwadratów, **3** zielone kwadraty i **1** niebieski blok.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nJak te liczby są ze sobą powiązane?",
+          "courseF_bee_for10_d": "Będziesz musiał mieć 2 powtórki, a w jednej zostanie wykorzystany blok matematyki."
+        },
+        "courseF_bee_for11_2021": {
+          "courseF_bee_for11_a": "O ile mniejsza jest wartość 12 od 15?\\\nO ile mniejsza jest wartość 9 od 12?\n\nCzy dostrzegasz wzorzec?"
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "Będziesz potrzebować dwóch bloków w swojej pętli \"powtórz\", by zebrać cały nektar."
+        },
+        "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "Jeśli jesteś zdezorientowany,  zajmuj się kwiatami po jednym i często przeprowadzaj testy.",
+          "courseF_bee_for2_b": "Pamiętaj, aby iść do przodu pomiędzy każdą pętlą, aż dojdziesz do każdego kwiatka."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "Użyj pętli \"dla\", która przechodzi od 1 do 7 z przyrostem o 1, aby rozwiązać tę łamigłówkę.",
+          "courseF_bee_for4_b": "W pętli \"dla\", być może będziesz dysponować komendę \"idź do przodu\" oraz pętlę, aby zbierać nektar.",
+          "courseF_bee_for4_c": "Dopilnuj używania zmiennej \"licznik\" w zagnieżdżonej pętli \"powtórz\", aby uzyskać odpowiednią ilość nektaru!"
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_a": "Tym razem Twój blok \"idź do przodu\" oraz Twój blok \"zbierz nektar\" będzie w odrębnych pętlach \"powtórz\", oba w tej samej pętli \"dla\". ",
+          "courseF_bee_for5_b": "Użyj zmiennej \"licznik\" w każdej pętli tak, aby pszczółka przemieszczała się na różnych odległościach pomiędzy każdym kwiatkiem.",
+          "courseF_bee_for5_c": "Nie bój się popełniać błędów! Spróbuj dodawać bloki i uruchamiać ten kod aby przekonać się, co się stanie, nawet jeśli jeszcze nie rozwiązałeś taj łamigłówki. "
+        },
+        "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "Nie zapominaj o używaniu zmiennej \"licznik\" w zagnieżdżonej pętli \"powtórz\".",
+          "courseF_bee_for6_b": "W pętli \"dla\", być może będziesz dysponować komendę \"idź do przodu\" oraz pętlę, aby zbierać nektar.",
+          "courseF_bee_for6_c": "Twoja pętla powinna odliczać **\\*od 5 do 1**."
+        },
+        "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "Twoja pętla \"dla\" będzie musiała liczyć od 1 do 7 o 2.",
+          "courseF_bee_for7_b": "W pętli \"dla\", być może będziesz dysponować komendę \"idź do przodu\" oraz pętlę, aby zbierać nektar.",
+          "courseF_bee_for7_c": "Pamiętaj o używaniu zmiennej \"licznik\" w zagnieżdżonej pętli \"powtórz\"."
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_a": "Jeśli Twoja pętla liczy w górę za każdym razem do zmiennej licznika dodawany jest przyrost. \n\nCo musisz dodać do każdej wartości, aby otrzymać kolejną ilość nektaru?",
+          "courseF_bee_for8_b": "W tej łamigłówce będziesz musiał poruszać się według wzorca kaskadowego, aby dotrzeć do kwiatów.",
+          "courseF_bee_for8_c": "Twoja pętla będzie liczyć _od 3 do 15_ z pewnym przyrostem. Co to jest?"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_a": "Spróbuj wykonywać działania matematyczne przy pomocy zmiennej \"licznik\".\n\nCo musisz zrobić względem \"licznika\" przy każdym kwiatku, aby wyrównać ilość nektaru, który musisz zebrać?",
+          "courseF_bee_for9_c": "Wygląda na to, że będziesz musiał skręcić pszczółkę na początku iteracji każdej pętli, jeśli chcesz rozwiązać tę łamigłówkę.",
+          "courseF_bee_for9_b": "**Pamiętaj:** Jeśli Twoja pętla liczy do góry, to przyrost jest dodawany do zmiennej licznika za każdym razem? "
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_a": "Spójrz na tę opcję dla ruchu:! \\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)",
+          "courseF_bee_for_challenge2_b": "Spróbuj użyć dwóch pętlach \"dla\": jednej dla wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.",
+          "courseF_bee_for_challenge2_c": "Zauważ, że jedna pętla \"dla\" potrzebuje wewnątrz wielu zwykłych pętli, które powtarzaj się 'licznik' razy, aby utworzyć wzór wznoszących się schodów. Inna pętla \"dla\" potrzebuje tylko jednej zwykłej pętli, aby zrobić 'licznik' miodu.",
+          "courseF_bee_for_challenge2_d": "**Rozwiązanie:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_text_concat": {
+          "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "Jeśli ten ptak nie dociera do świnki upewnij się, że oba bloki zostały w ściśle połączone, a następnie ponownie kliknij „Uruchom”.",
+          "courseC_maze_programming1_b": "Nie bój się popełniać błędów! Wypróbuj jedną rzecz, a jeśli ona się nie sprawdzi, wypróbuj coś innego!"
         }
       }
     }
