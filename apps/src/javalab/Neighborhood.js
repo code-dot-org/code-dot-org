@@ -88,6 +88,10 @@ export default class Neighborhood {
           Direction[direction.toUpperCase()]
         );
       }
+      case NeighborhoodSignalType.TAKE_PAINT: {
+        const {id} = signal.detail;
+        return this.controller.subtype.takePaint(id);
+      }
       case NeighborhoodSignalType.PAINT: {
         const {id, color} = signal.detail;
         return this.controller.subtype.addPaint(id, color);
