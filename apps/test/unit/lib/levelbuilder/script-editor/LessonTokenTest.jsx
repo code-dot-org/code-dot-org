@@ -4,6 +4,19 @@ import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 
+const defaultLesson = {
+  id: 10,
+  key: 'lesson-1',
+  name: 'Lesson 1',
+  levels: [],
+  position: 1,
+  relative_position: 1,
+  lockable: false,
+  unplugged: false,
+  assessment: true,
+  hasLessonPlan: true
+};
+
 describe('LessonToken', () => {
   let handleDragStart, cloneLesson, removeLesson, defaultProps;
 
@@ -18,18 +31,7 @@ describe('LessonToken', () => {
       handleDragStart,
       cloneLesson,
       removeLesson,
-      lesson: {
-        id: 10,
-        key: 'lesson-1',
-        name: 'Lesson 1',
-        levels: [],
-        position: 1,
-        relative_position: 1,
-        lockable: false,
-        unplugged: false,
-        assessment: true,
-        hasLessonPlan: true
-      },
+      lesson: defaultLesson,
       lessonGroupPosition: 1
     };
   });
