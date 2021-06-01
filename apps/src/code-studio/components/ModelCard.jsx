@@ -114,7 +114,7 @@ const styles = {
     borderColor: color.gray,
     marginBottom: 10,
     padding: 10,
-    overflowWrap: 'breakWord'
+    overflowWrap: 'break-word'
   },
   bold: {
     fontFamily: "'Gotham 7r', sans-serif"
