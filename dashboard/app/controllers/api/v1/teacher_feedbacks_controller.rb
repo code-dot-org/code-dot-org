@@ -18,7 +18,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     if @feedback.nil?
       head :no_content
     else
-      render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
+      render json: @feedback.summarize
     end
   end
 
@@ -32,9 +32,9 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       student_id: params.require(:student_id),
       level_id: params.require(:level_id),
       script_id: params.require(:script_id)
-    ).latest_per_teacher
+    ).latest_per_teacher.map(&:summarize)
 
-    render json: @level_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
+    render json: @level_feedbacks
   end
 
   # Determine how many not yet seen feedback entries from any verified teacher
@@ -60,7 +60,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
 
     if @teacher_feedback.save
       # reload is called so that the correct created_at date is sent back
-      render json: @teacher_feedback.reload, serializer: Api::V1::TeacherFeedbackSerializer, status: :created
+      render json: @teacher_feedback.reload.summarize, status: :created
     else
       head :bad_request
     end

@@ -7,6 +7,12 @@ import {makeEnum} from '@cdo/apps/utils';
 
 const ReviewStates = makeEnum('completed', 'keepWorking');
 
+// TeacherFeedbackKeepWorking displays a checkbox which can be in one of 3 states:
+// 1. Checked - meaning the teacher has requested the student to keep working
+// 2. Unchecked - meaning the teacher has not requested the student to keep working, or has removed the previous request
+// 3. Indeterminate - meaning the level is awaiting teacher review (the teacher requested
+// the student to keep working and the student has made progress since that feedback was given)
+// This checkbox is displayed to and controlled by the teacher.
 class TeacherFeedbackKeepWorking extends Component {
   static propTypes = {
     latestFeedback: PropTypes.object,
@@ -16,27 +22,14 @@ class TeacherFeedbackKeepWorking extends Component {
   };
 
   checkbox = null;
+  isAwaitingTeacherReview =
+    this.props.latestFeedback.review_state === ReviewStates.keepWorking &&
+    this.props.latestFeedback.student_updated_since_feedback;
 
   componentDidMount() {
-    if (this.isAwaitingTeacherReview()) {
+    if (this.isAwaitingTeacherReview) {
       this.checkbox.indeterminate = true;
     }
-  }
-
-  isAwaitingTeacherReview() {
-    const {
-      student_last_updated,
-      created_at,
-      review_state
-    } = this.props.latestFeedback;
-
-    const previouslyMarkedKeepWorking =
-      review_state === ReviewStates.keepWorking;
-
-    const studentHasUpdated =
-      student_last_updated && student_last_updated > created_at;
-
-    return previouslyMarkedKeepWorking && studentHasUpdated;
   }
 
   onCheckboxChange = () => {
@@ -52,7 +45,7 @@ class TeacherFeedbackKeepWorking extends Component {
 
     if (this.checkbox.checked) {
       newReviewState = ReviewStates.keepWorking;
-    } else if (this.isAwaitingTeacherReview()) {
+    } else if (this.isAwaitingTeacherReview) {
       newReviewState = ReviewStates.completed;
     }
 
@@ -61,7 +54,7 @@ class TeacherFeedbackKeepWorking extends Component {
 
   isDifferentFromInitial(newReviewState) {
     const removedIndeterminateState =
-      this.isAwaitingTeacherReview() && !this.checkbox.indeterminate;
+      this.isAwaitingTeacherReview && !this.checkbox.indeterminate;
     const reviewStateChanged =
       newReviewState !== this.props.latestFeedback.review_state;
 
@@ -69,7 +62,7 @@ class TeacherFeedbackKeepWorking extends Component {
   }
 
   getTooltipText() {
-    if (this.isAwaitingTeacherReview()) {
+    if (this.isAwaitingTeacherReview) {
       return i18n.teacherFeedbackAwaitingReviewTooltip();
     }
     return i18n.teacherFeedbackKeepWorkingTooltip();
@@ -89,10 +82,9 @@ class TeacherFeedbackKeepWorking extends Component {
         <div data-tip data-place="bottom" data-for="keep-working-tooltip">
           <label htmlFor="keep-working" style={styles.label}>
             <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
-            {this.isAwaitingTeacherReview() && (
+            {this.isAwaitingTeacherReview && (
               <span style={styles.awaitingReviewText}>
-                <span style={styles.awaitingReviewSpacer}>-</span>
-                {i18n.awaitingTeacherReview()}
+                &nbsp;-&nbsp;{i18n.awaitingTeacherReview()}
               </span>
             )}
           </label>
@@ -123,9 +115,6 @@ const styles = {
   keepWorkingText: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'bold'
-  },
-  awaitingReviewSpacer: {
-    margin: '0 3px'
   },
   awaitingReviewText: {
     fontStyle: 'italic'

@@ -29,6 +29,7 @@ class TeacherFeedback < ApplicationRecord
   acts_as_paranoid # use deleted_at column instead of deleting rows
   validates_presence_of :student_id, :script_id, :level_id, :teacher_id, unless: :deleted?
   belongs_to :student, class_name: 'User'
+  has_many :user_levels, through: :student
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
   belongs_to :script
   belongs_to :level
@@ -78,7 +79,7 @@ class TeacherFeedback < ApplicationRecord
 
   def self.latest_per_teacher
     #Only select feedback from teachers who lead sections in which the student is still enrolled
-    find(
+    where(id:
       joins(:student_sections).
         where('sections.user_id = teacher_id').
         group([:teacher_id, :student_id]).
@@ -90,8 +91,36 @@ class TeacherFeedback < ApplicationRecord
     find_by(id: maximum(:id))
   end
 
-  def student_last_updated
-    student.last_attempt(level, script)&.updated_at
+  def user_level
+    @user_level ||= user_levels.where(level_id: level_id, script_id: script_id)&.first
+  end
+
+  def student_seen_feedback
+    return seen_on_feedback_page_at if seen_on_feedback_page_at && seen_on_feedback_page_at > created_at
+    return student_last_visited_at if student_last_visited_at && student_last_visited_at > created_at
+  end
+
+  def student_updated_since_feedback?
+    user_level.present? && user_level.updated_at > created_at
+  end
+
+  # TODO: update to use camelcase
+  def summarize
+    {
+      id: id,
+      teacher_name: teacher.name,
+      feedback_provider_id: teacher.id,
+      student_id: student_id,
+      script_id: script_id,
+      level_id: level_id,
+      comment: comment,
+      performance: performance,
+      created_at: created_at,
+      student_seen_feedback: student_seen_feedback,
+      review_state: review_state,
+      student_last_updated: user_level&.updated_at,
+      student_updated_since_feedback: student_updated_since_feedback?
+    }
   end
 
   # Increments student_visit_count and related metrics timestamps for a TeacherFeedback.
