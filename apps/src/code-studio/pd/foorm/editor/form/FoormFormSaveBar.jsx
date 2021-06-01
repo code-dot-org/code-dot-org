@@ -318,7 +318,7 @@ class FoormFormSaveBar extends Component {
               Publish
             </button>
           )}
-          {this.props.isFormPublished && this.props.isLatestVersion && (
+          {this.props.isLatestVersion && (
             <button
               className="btn btn-primary"
               type="button"
