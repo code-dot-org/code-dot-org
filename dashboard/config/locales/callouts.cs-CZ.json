@@ -535,6 +535,46 @@
         },
         "express_maze_debugging9_2020": {
           "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Kliknutím sem rozšíříte blok.",
+          "pointerlocation": "Přetáhněte blok předmětu sem."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Kliknutím vytvořte nový kostým"
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Tento blok bude v našem projektu velmi důležitý. Určitě jej použij!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Toto vlož doprostřed svého programu."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Tyto bloky jsou uzamčeny a nelze je smazat."
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!"
         }
       }
     }
