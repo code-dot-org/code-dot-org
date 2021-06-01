@@ -166,7 +166,7 @@ export class LevelTokenContents extends Component {
         <div
           style={styles.edit}
           onClick={() => {
-            const win = window.open(activeLevel.url, '_blank');
+            const win = window.open(activeLevel.url, 'noopener', 'noreferrer');
             win.focus();
           }}
         >
