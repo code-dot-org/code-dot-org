@@ -84,7 +84,7 @@ export default class Neighborhood {
         return this.controller.addPegman(
           id,
           parseInt(x),
-          parseInt(y),
+          this.convertYCoordinate(parseInt(y)),
           Direction[direction.toUpperCase()]
         );
       }
