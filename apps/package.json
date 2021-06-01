@@ -55,7 +55,7 @@
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
-    "@code-dot-org/maze": "2.3.0",
+    "@code-dot-org/maze": "2.4.0",
     "@code-dot-org/ml-activities": "0.0.26",
     "@code-dot-org/ml-playground": "0.0.31",
     "@code-dot-org/p5.play": "^1.3.17-cdo",
