@@ -3211,3 +3211,11 @@ bs:
           lessons:
             lesson15:
               name: Lekcija 15
+        kodea-pd-2021:
+          lessons:
+            Planning:
+              key: Planiranje
+              name: Planiranje
+            Next Steps:
+              key: Slijedeći Koraci
+              name: Slijedeći Koraci
