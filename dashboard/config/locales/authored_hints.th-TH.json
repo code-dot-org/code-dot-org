@@ -790,7 +790,6 @@
           "harvey_tictactoe": "คุณสามารถใช้บล็อก `กระโดด` เพื่อเคลื่อนที่ไปยังพื้นที่อื่น"
         },
         "course1_artist_loops_challenge3": {
-          "courseA_artist_loops_challenge2_a": "บล็อกพวกนี้: <xml>  <block type=\"simple_move_up_left\"/></xml> จะทำให้ศิลปินเดินตามทางลาดเอียงได้นะ!",
           "courseA_artist_loops_challenge2_b": "เมื่อสร้างบ้านนกหลังแรกเสร็จแล้ว `กระโดด`เพื่อไปยังหลังถัดไปเลย!",
           "courseA_artist_loops_challenge2_c": "คุณต้องการบล็อกเยอะมากอยู่ในลูปเพื่อการท้าทายนี้"
         },
@@ -804,8 +803,7 @@
         },
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_b": "เริ่มต้นโดยการวนลูปคำสั่ง `เคลื่อนไปทางใต้` และ `เก็บสมบัติ`\n\n<xml>\n  <block type=\"maze_moveSouth\"/><next>\n  <block type=\"collector_collect\"/></next>\n  </xml>",
-          "courseB_collector_loops_challenge1_a": "รูปแบบที่อยู่ทางด้านทิศเหนือจะแตกต่างจากรูปแบบที่อยู่ทางด้านทิศใต้อยู่เล็กน้อย\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>",
-          "courseB_collector_loops_challenge1_c": "เคลื่อนไปทางทิศตะวันออกสองครั้งในแต่ละเส้นทาง\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\n\nคุณสามารถทำสิ่งนี้ได้โดยใช้บล็อกเพียงแค่ 14 บล็อกเท่านั้น คลิกหาคำใบ้อีกครั้งเพื่อดูเฉลยวิธีการแก้ปัญหา "
+          "courseB_collector_loops_challenge1_a": "รูปแบบที่อยู่ทางด้านทิศเหนือจะแตกต่างจากรูปแบบที่อยู่ทางด้านทิศใต้อยู่เล็กน้อย\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>"
         },
         "course1_collector_loops_challenge4": {
           "courseB_collector_loops_challenge2_a": "ถ้าทำอะไรพลาดไป อย่ากลัวที่จะเริ่มต้นใหม่ อย่ายอมแพ้นะ!",
@@ -959,12 +957,12 @@
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_a": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
           "courseA_artist_loops7_b": "เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม",
-          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อคได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
+          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
         },
         "courseA_artist_loops7_2019": {
           "courseA_artist_loops7_a": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
           "courseA_artist_loops7_b": "เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม",
-          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อคได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
+          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
         },
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
@@ -1424,37 +1422,37 @@
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3a_2018": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3a_2019": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3a_2020": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3b_2018": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3b_2019": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3b_2020": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp4a_2018": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp4a_2019": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp4a_2020": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp5a_2018": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp5a_2019": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp5a_2020": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1630,37 +1628,37 @@
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2018": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2019": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2020": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2018": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2019": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2020": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2018": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2019": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2020": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2018": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2019": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2020": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2049,8 +2047,7 @@
         },
         "courseC_PlayLab_events3": {
           "courseC_PlayLab_events3_a": "คุณจะต้องย้าย จอร์จไปทางขวาประมาณ 25 พิกเซล เพื่อแก้ปริศนานี้.",
-          "courseC_PlayLab_events3_b": "มีบล็อกในกล่องเครื่องมือไหม ที่ดูเหมือนว่ามันจะสามารถย้ายนักแสดงได้?",
-          "courseC_PlayLab_events3_c": "ต่อบล็อกนี้กับบล็อก `เมื่อเรียกใช้งาน`:\n<xml>\n<block type=\"studio_moveDistance\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">2</title>\n<title name=\"DISTANCE\">25</title>\n</block>\n</xml>"
+          "courseC_PlayLab_events3_b": "มีบล็อกในกล่องเครื่องมือไหม ที่ดูเหมือนว่ามันจะสามารถย้ายนักแสดงได้?"
         },
         "courseC_PlayLab_events3_2018": {
           "courseC_PlayLab_events3_a": "คุณจะต้องย้าย จอร์จไปทางขวาประมาณ 25 พิกเซล เพื่อแก้ปริศนานี้.",
@@ -3700,7 +3697,7 @@
         },
         "courseD_iceage_loops1": {
           "courseD_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveForward\"/></xml>"
+          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseD_iceage_loops10": {
           "courseB_iceage_loops10_a": "ระวังแผ่นน้ำแข็งที่แตกร้าว เจ้ากระรอกเขี้ยวดาบสแกรทอาจจะตกลงไปในน้ำได้!",
@@ -3719,7 +3716,7 @@
         },
         "courseD_iceage_loops1_2019": {
           "courseD_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveForward\"/></xml>"
+          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseD_iceage_loops1_2020": {
           "courseD_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
@@ -3741,7 +3738,7 @@
           "courseD_iceage_loops2_c": "ลองไปตามเส้นทางนี้ดู เพื่อพาเจ้ากระรอกเขี้ยวดาบไปให้ถึงลูกโอ๊ค"
         },
         "courseD_iceage_loops3": {
-          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n<xml><block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
           "courseB_iceage_loops3_b": "ในการทำซ้ำโค้ดนั้น ให้ลากลูป `ทำซ้ำ`ออกมาจากกล่องเครื่องมือ แล้วใส่บล็อกที่คุณต้องการทำซ้ำไว้ภายใน"
         },
         "courseD_iceage_loops3_2019": {

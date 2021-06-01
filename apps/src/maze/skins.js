@@ -199,7 +199,10 @@ var CONFIGS = {
     pegmanWidth: 32,
     pegmanYOffset: 0,
     pegmanXOffset: 0,
-    pegmanSheetWidth: 512
+    pegmanSheetWidth: 512,
+    squareSize: 32,
+    svgHeight: 400,
+    svgWidth: 400
   }
 };
 

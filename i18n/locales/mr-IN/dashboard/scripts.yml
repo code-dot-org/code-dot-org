@@ -150,6 +150,9 @@ mr:
               name: डांस पार्टी
             lesson-1:
               name: डांस पार्टी
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ईव्हेंट्स
         pre-express-2021:
           lesson_groups:
             csf_events:

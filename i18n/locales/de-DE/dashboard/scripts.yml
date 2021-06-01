@@ -16568,7 +16568,7 @@ de:
               name: Big Data, Crowdsourcing und maschinelles Lernen
             Machine Learning and Bias:
               key: Maschinelles Lernen und Voreingenommenheit
-              name: Maschinelles Lernen und Voreingenommenheit
+              name: Maschinelles Lernen
             Project - Tell a Data Story - Part 1:
               key: Projekt - Erzählen Sie eine Datengeschichte - Teil 1
               name: Projekt - Erzählen Sie eine Datengeschichte - Teil 1
@@ -16578,6 +16578,7 @@ de:
             'Lesson 9: Assessment Day':
               key: 'Lektion 9: Bewertungstag'
               name: 'Lektion 15: Bewertungstag'
+            lesson-10: {}
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Lektion 9: Daten'
@@ -17329,7 +17330,7 @@ de:
               description_teacher: Bis zu diesem Zeitpunkt haben die SchülerInnen Code geschrieben, der bei jeder Ausführung exakt gleich ausgeführt wird - zuverlässig, aber nicht sehr flexibel. In dieser Lektion beginnt Ihre Klasse mit der Programmierung mit Bedingungen, dies es ihnen ermöglichen, Code zu schreiben, der je nach den spezifischen Bedingungen, auf die das Programm trifft, unterschiedlich funktioniert.
             While Loops with the Farmer:
               key: Während Schleifen mit dem Farmer
-              name: Während Schleifen mit dem Farmer
+              name: Während-Schleifen in Farmer
               description_student: Schleifen sind beim Codieren extrem nützlich. In dieser Lektion lernen Sie eine neue Art von Schleifen kennen:die `während`-Schleifen!
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Bedingungen in Minecraft: Voyage Aquatic'
@@ -17364,7 +17365,7 @@ de:
             Variables with Artist:
               key: Variablen mit dem Künstler
               name: Variablen mit dem Künstler
-              description_student: Vergessen Sie nicht, Kreativität in den Unterricht einzubringen! In diesen Aufgaben werden Sie fantastische Zeichnungen mit Hilfe von Variablen erstellen.
+              description_student: In dieser Lektion erstellen Sie Zeichnungen mit Variablen, die sich während der Ausführung des Programms ändern.
               description_teacher: In dieser Lektion beschäftigen sich die SchülerInnen mit der Erstellung sich wiederholender Designs unter Verwendung von Variablen in der `Künstler`-Umgebung. Die SchülerInnen lernen, wie Variablen verwendet werden können, um Code leichter zu schreiben und leichter zu lesen. Nach geführten Aufgaben gelangen die SchülerInnen auf einem Level für freie Gestaltung, wo sie zeigen können, was sie gelernt haben, und ihre eigenen Designs erstellen.
             Changing Variables with Bee:
               key: Verändern von Variablen mit der Biene
@@ -17414,6 +17415,8 @@ de:
               name: Tanzparty
               description_student: Zeit zum Feiern! In dieser Lektion programmieren Sie Ihre eigene interaktive Tanzparty.
               description_teacher: In dieser Lektion programmieren die SchülerInnen ihre eigene interaktive Tanzparty. Diese Aktivität erfordert Ton, da das Werkzeug so gebaut wurde, dass es auf Musik reagiert.
+            lesson-3:
+              name: Sprites in Aktion
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -17431,6 +17434,8 @@ de:
               display_name: Sprites
             end_of_course_project:
               display_name: Projekt am Ende des Kurses
+            lessonGroup-9:
+              display_name: Ereignisse
           student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
         pre-express-2021:
           title: Schnellkurs für Leseanfänger (2020)
@@ -17609,6 +17614,8 @@ de:
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            Designing With Empathy:
+              name: Analyse der Planung
             Build a Paper Prototype:
               name: Papier-Prototypen
             Digital Mode in App Lab:
@@ -17738,6 +17745,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lessons:
             lesson-15:
@@ -17840,3 +17849,8 @@ de:
           description_short: Grundsätze der Informatik Befragung nach dem Kurs von SchülerInnen
           description: Willkommen bei der Befragung nach dem Kurs zu Grundsätzen der Informatik von Code.org. Diese Befragung dauert ca. 15 Minuten. Ihre Antworten sind privat und anonym- Ihr Lehrer kann anonyme Gesamtergebnisse für die gesamte Klasse einsehen. Die Ergebnisse sind für Ihren Lehrer und für Code.org von entscheidender Bedeutung, um den Kurs weiterzuführen und zu verbessern. Vielen Dank für Ihre Zeit und Aufmerksamkeit.
           student_description: Willkommen bei der Befragung nach dem Kurs zu Grundsätzen der Informatik von Code.org. Diese Befragung dauert ca. 15 Minuten. Ihre Antworten sind privat und anonym- Ihr Lehrer kann anonyme Gesamtergebnisse für die gesamte Klasse einsehen. Die Ergebnisse sind für Ihren Lehrer und für Code.org von entscheidender Bedeutung, um den Kurs weiterzuführen und zu verbessern. Vielen Dank für Ihre Zeit und Aufmerksamkeit.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lektion 15
+        csd7-2021: {}

@@ -1,1 +1,7 @@
-{}
+{
+  "danceFeedbackNeedNewDancer": "Rəqqas düzəltməlisiniz.",
+  "danceFeedbackNoDancers": "Sizin rəqqasınız yoxdur.",
+  "danceFeedbackNoBackground": "Arxa fon effekti əlavə etməlisiniz.",
+  "danceFeedbackNeedTwoDancers": "2 rəqqas düzəltməlisiniz.",
+  "danceFeedbackOnlyOneDancerMoved": "Sadecə 1 rəqqasınız hərəkət etdi."
+}

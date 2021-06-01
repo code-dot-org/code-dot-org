@@ -480,10 +480,6 @@ ky:
             '"down"': жебе төмөн
             '"left"': жебе солго
             '"right"': жебе оңго
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': туш келди
       RyanLab_moveForward:
         text: алдыга жылдыр
       RyanLab_turnLeft:

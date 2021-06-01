@@ -311,7 +311,7 @@ pt:
   follower:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi adicionado como seu professor"
-    registered: Você se cadastrou para %{section_name}.
+    registered: Você já está registrado para %{section_name}.
     error:
       signed_in: Saia antes de prosseguir
       username_not_found: Nome de usuário %{username} não encontrado
