@@ -10,7 +10,6 @@ import {lessonShape} from '@cdo/apps/lib/levelbuilder/shapes';
  */
 export default class LessonToken extends Component {
   static propTypes = {
-    lessonGroupPosition: PropTypes.number.isRequired,
     lesson: lessonShape.isRequired,
     dragging: PropTypes.bool,
     draggedLessonPos: PropTypes.bool,

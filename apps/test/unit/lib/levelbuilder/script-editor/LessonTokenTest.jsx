@@ -34,8 +34,7 @@ describe('LessonToken', () => {
         handleDragStart,
         cloneLesson,
         removeLesson,
-        lesson: defaultLesson,
-        lessonGroupPosition: 1
+        lesson: defaultLesson
       };
     });
 
@@ -58,8 +57,7 @@ describe('LessonToken', () => {
         handleDragStart,
         cloneLesson,
         removeLesson,
-        lesson: defaultLesson,
-        lessonGroupPosition: 1
+        lesson: defaultLesson
       };
     });
 
