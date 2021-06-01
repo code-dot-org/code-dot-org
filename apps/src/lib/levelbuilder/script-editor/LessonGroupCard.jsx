@@ -293,7 +293,6 @@ class LessonGroupCard extends Component {
               }
             }}
             key={lesson.key}
-            lessonGroupPosition={this.props.lessonGroup.position}
             lesson={lesson}
             dragging={!!draggedLessonPos}
             draggedLessonPos={lesson.position === draggedLessonPos}
