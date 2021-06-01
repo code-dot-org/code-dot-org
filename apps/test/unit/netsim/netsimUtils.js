@@ -200,7 +200,7 @@ describe('NetSimUtils', function() {
     });
 
     it('ignores trailing slash in the URL', function() {
-      expect('s-csp1-2019-stage-3-puzzle-2')
+      expect('s-csp1-2019-lessons-3-levels-2')
         .to.equal(
           urlToKey('https://studio.code.org/s/csp1-2019/lessons/3/levels/2')
         )
