@@ -65,4 +65,13 @@ class Multi < Match
     end
     return question_text
   end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    question_text = localized_property(:questions).blank? ? '' : questions[0]['text']
+    super.merge(
+      {
+        questionText: question_text
+      }
+    )
+  end
 end
