@@ -75,7 +75,8 @@ class LessonTokenContents extends Component {
 
   handleEditLesson = () => {
     window.lessonEditorOpened = true;
-    const win = window.open(`${this.props.lesson.lessonEditPath}`, '_blank');
+    const url = this.props.lesson.lessonEditPath;
+    const win = window.open(url, 'noopener', 'noreferrer');
     win.focus();
   };
 
