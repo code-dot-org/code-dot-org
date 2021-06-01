@@ -280,8 +280,9 @@ en:
   follower:
     invite_sent: 'Invite sent'
     added_teacher: '%{name} added as your teacher'
-    registered:  "You've registered for %{section_name}."
+    registered:  "You have successfully joined %{section_name}."
     captcha_required: 'Please fill out the CAPTCHA to join this section.'
+    already_exists: 'You have already joined section %{section_name}.'
     error:
       signed_in: 'Please signout before proceeding'
       username_not_found: 'Username %{username} not found'
@@ -291,7 +292,8 @@ en:
       blank_code: "Please enter a section code"
       cant_join_own_section: "Sorry, you can't join your own section."
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
-      full_section: "We couldn't add you to section %{section_code} because there are already 500 students in it. Please contact your teacher for help."
+      restricted_section: "We couldn't add you to section %{section_code} because it is locked. Please contact your teacher for help."
+      full_section: "We couldn't add you to section %{section_code} because there are already %{section_capacity} students in it. Please contact your teacher for help."
     mail:
       student_disassociated:
         subject: "Code.org notification: %{student_name} is no longer associated as your student."
