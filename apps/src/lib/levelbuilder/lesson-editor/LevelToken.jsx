@@ -14,7 +14,7 @@ import _ from 'lodash';
 /**
  * Component for editing puzzle dots with one or more level variants.
  */
-class LevelToken extends Component {
+export class UnconnectedLevelToken extends Component {
   static propTypes = {
     activitySectionPosition: PropTypes.number.isRequired,
     activityPosition: PropTypes.number.isRequired,
@@ -76,7 +76,7 @@ class LevelToken extends Component {
 // This component renders an uneditable view of the script level object.
 // Editing of script level properties is controlled by LevelTokenDetails,
 // which expands or collapses by clicking this component.
-class LevelTokenContents extends Component {
+export class LevelTokenContents extends Component {
   static propTypes = {
     y: PropTypes.number.isRequired,
     scale: PropTypes.number.isRequired,
@@ -261,9 +261,11 @@ const styles = {
   }
 };
 
-export default connect(
+export const LevelToken = connect(
   state => ({}),
   {
     toggleExpand
   }
-)(LevelToken);
+)(UnconnectedLevelToken);
+
+export default LevelToken;
