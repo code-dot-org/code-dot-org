@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-13 17:03:03 UTC",
+    "serialized_at": "2021-06-01 17:09:04 UTC",
     "seeding_key": {
       "script.name": "2021drafting"
     }
@@ -1797,6 +1797,56 @@
     },
     {
       "chapter": 60,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "spritelab_speech_prototype_mike"
+        ],
+        "progression": "Speech Bubbles"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "spritelab_speech_prototype_mike"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "spritelab_speech_prototype_mike"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "spritelab_speech_prototype_mike2"
+        ],
+        "progression": "Speech Bubbles"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "spritelab_speech_prototype_mike2"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "spritelab_speech_prototype_mike2"
+      ]
+    },
+    {
+      "chapter": 62,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1821,7 +1871,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1846,7 +1896,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1871,7 +1921,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1896,7 +1946,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2565,6 +2615,28 @@
         "level.key": "drawshape",
         "script_level.level_keys": [
           "drawshape"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "spritelab_speech_prototype_mike",
+        "script_level.level_keys": [
+          "spritelab_speech_prototype_mike"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "spritelab_speech_prototype_mike2",
+        "script_level.level_keys": [
+          "spritelab_speech_prototype_mike2"
         ],
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "Toolbox Levels",
