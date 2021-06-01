@@ -36,4 +36,5 @@ Feature: BubbleChoice
     # Teacher has not completed level, so make sure it is not shown as complete
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "not_tried"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
+    And I wait for 4 seconds
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "perfect"
