@@ -245,6 +245,19 @@ class Lesson < ApplicationRecord
     end
   end
 
+  def start_url
+    # we should maybe pull out the logic in the if statement in student_lesson_plan_pdf_url
+    # to identify lessons where we have lesson plans generally?
+    #
+    # We only want to make this start URL accessible for lessons
+    # that have studnet resources or have levels.
+    if script_levels.first || student_lesson_plan_pdf_url
+      # This URL path does not work for lockable lessons (see the last lesson in
+      # /s/csd4-2021 for an example, which is a survey)
+      CDO.studio_url("/s/#{script.name}/lessons/#{relative_position}/start", CDO.default_scheme)
+    end
+  end
+
   def lesson_plan_base_url
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
@@ -281,7 +294,8 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonEditPath: edit_lesson_path(id: id)
+        lessonEditPath: edit_lesson_path(id: id),
+        lessonStartPath: start_url
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.

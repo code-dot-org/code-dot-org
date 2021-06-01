@@ -62,6 +62,9 @@ class LessonsController < ApplicationController
     if first_script_level
       return redirect_to build_script_level_path(first_script_level)
     elsif student_lesson_plan_url
+      # This opens the PDF of the lesson plan, which is not actually the desired behavior.
+      # We should redirect to student_lesson_plan,
+      # and preferably dedupe the logic to determine whether there is a lesson plan to go to.
       return redirect_to student_lesson_plan_url
     end
   end

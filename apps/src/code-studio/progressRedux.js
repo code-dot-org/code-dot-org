@@ -533,7 +533,8 @@ const lessonFromLesson = lesson =>
     'lesson_plan_html_url',
     'student_lesson_plan_html_url',
     'description_student',
-    'description_teacher'
+    'description_teacher',
+    'lessonStartPath'
   ]);
 export const lessons = state =>
   state.stages.map((_, index) => lessonFromLessonAtIndex(state, index));
