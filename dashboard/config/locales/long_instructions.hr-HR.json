@@ -32,7 +32,8 @@
         "CourseD_EOC_dance": "Stvori vlastiti ples!",
         "CourseD_EOC_starwars": "Stvori vlastitu igru Star Wars!",
         "courseA_playLab_events3_2020": "Pomozite psu Jorgeu da se pokrene tako što ćete povezati blok <xml><block type=\"studio_move\" block-text=\"move dog west\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> s blokom događaja <xml><block type=\"studio_whenArrow\" block-text=\"when left arrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> koji je već u radnom prostoru.\n\nUpotrijebite strelice na tastaturi ili pritisnite tipke sa strelicama da premjestite Jorgea do zastave i završite razinu!",
-        "courseF_extras_sim": "# Stvori osobnu simulaciju!\n\nEvo još jedne verzije simulacije. Pokušaj unijeti neke promjene u kostime spritea ili u kod. Zabavi se prilagođavajući osobnu simulaciju!"
+        "courseF_extras_sim": "# Stvori osobnu simulaciju!\n\nEvo još jedne verzije simulacije. Pokušaj unijeti neke promjene u kostime spritea ili u kod. Zabavi se prilagođavajući osobnu simulaciju!",
+        "courseA_playLab_events3_2021": "Pomozite psu Jorgeu da se pokrene tako što ćete povezati blok <xml><block type=\"studio_move\" block-text=\"move dog west\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> s blokom događaja <xml><block type=\"studio_whenArrow\" block-text=\"when left arrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> koji je već u radnom prostoru.\n\nUpotrijebite strelice na tastaturi ili pritisnite tipke sa strelicama da premjestite Jorgea do zastave i završite razinu!"
       }
     }
   }
