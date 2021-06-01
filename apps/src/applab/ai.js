@@ -4,8 +4,8 @@ import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';
 
 function generateCodeDesignElements(modelId, modelData) {
   var x = 20;
-  var y = 20;
-  var SPACER_PIXELS = 20;
+  var y = 0;
+  var SPACER_PIXELS = 18;
 
   const modelClass = 'ml_model_' + modelId;
 
@@ -50,14 +50,11 @@ function generateCodeDesignElements(modelId, modelData) {
     } else {
       // Create text input field for each continuous feature.
       label.textContent = feature.id;
-      var labelMinMax = designMode.createElement('LABEL', x, y);
+      var input = designMode.createElement('TEXT_INPUT', x, y);
       var min = feature.min.toFixed(2);
       var max = feature.max.toFixed(2);
-      // Unary plus operator returns a number and truncates trailing zeroes.
-      labelMinMax.textContent = `(min: ${+min}, max: ${+max}):`;
-      labelMinMax.style.width = '300px';
-      y = y + SPACER_PIXELS;
-      var input = designMode.createElement('TEXT_INPUT', x, y);
+      var maxMinPlaceholder = `min: ${+min}, max: ${+max}`;
+      designMode.updateProperty(input, 'placeholder', maxMinPlaceholder);
       fieldId = alphaNumFeature + '_input';
       input.id = 'design_' + fieldId;
       input.className = modelClass;
@@ -73,7 +70,6 @@ function generateCodeDesignElements(modelId, modelData) {
   label.id = 'design_' + alphaNumModelName + '_label';
   label.className = modelClass;
   label.style.width = '300px';
-  y = y + SPACER_PIXELS;
   var predictionId = alphaNumModelName + '_prediction';
   // Button to do the prediction.
   var predictButton = designMode.createElement('BUTTON', x, y);

@@ -1,0 +1,27 @@
+name 'VPL - CSD Module 6 Overview_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 6: CS Discoveries Virtual Professional Learning
+
+## Module 6 Overview
+
+Welcome to the asynchronous work for Module 6 for CS Discoveries!  
+
+Module 6 is a continuation of Unit 5 - Data and Society and continues with the theme of "Learning in Context". The asynchronous work here will feed into the upcoming synchronous workshop of this module and help you understand the content and curriculum as you prepare to teach your own students. Combined, these asynchronous tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+
+Module 6 focuses on investigating and reflecting on how to implement Unit 5 lessons with students. Although it does not cover all unit content, core concepts are highlighted. As you progress through this asynchronous work, continue to consider how you will support students with "Learning in Context" - the why and how of Unit 5.
+
+**During this asynchronous work you will:**
+
+* Review key vocabulary in Unit 5 
+* Identify resources to reference throughout lessons
+* Review the Problem Solving Process for **data**
+* Reflect on differentiation strategies to meet the learning needs of students
+* Reflect on how "Learning in Context" can help motivate students
+
+
+### Let's get started!
+MARKDOWN
