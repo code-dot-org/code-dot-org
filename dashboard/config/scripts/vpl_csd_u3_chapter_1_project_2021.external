@@ -1,0 +1,22 @@
+name 'VPL - CSD U3 Chapter 1 Project_2021'
+title 'Create Your Own Game'
+display_name 'Design Your Game'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 3 Chapter 1 Project: Interactive Card
+
+Chapter 1 of Unit 3 ends with a project. In this project, students plan for and develop an interactive greeting card using all of the programming techniques they have learned up to this point. 
+
+## Sample Projects
+
+Check out some sample projects to get an idea of what students will create at the conclusion of Chapter 1 of Unit 3: Interactive Animations and Games. 
+
+[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)
+
+## Project Resources 
+
+**Optional:** During the synchronous workshop, you will dig deeper into this project and the accompanying resources. If you would like to dig deeper into the project now, check out the project lesson plan. 
+
+><a href="https://curriculum.code.org/csd-20/unit3/17/" target="blank" rel="noopener noreferrer">Unit 3 Lesson 17: Interactive Card Project - Lesson Plan</a>
+MARKDOWN
