@@ -451,6 +451,67 @@
           "maxRateDescription": "Strongly Agree"
         },
         {
+          "type": "matrix",
+          "name": "identity_and_dei",
+          "title": "Please rate the extent to which you agree or disagree with the following statements.",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "identity_impacts_interactions",
+              "text": "My identity impacts my interactions with students."
+            },
+            {
+              "value": "understand_who_has_access",
+              "text": "As a result of this workshop, I better understand who has access to CS in my community."
+            },
+            {
+              "value": "identify_barriers",
+              "text": "As a result of this workshop, I am better able to identify barriers to access, diversity, and inclusion in my CS classroom."
+            },
+            {
+              "value": "impact_barriers",
+              "text": "As a result of this workshop, I am better able to impact the barriers to access, diversity, and inclusion that students face in my CS classroom. "
+            },
+            {
+              "value": "describe_responsibility",
+              "text": "As a result of this workshop, I am better able to describe my responsibility to improve access, diversity, and inclusion in my CS classroom."
+            },
+            {
+              "value": "know_what_to_do",
+              "text": "As a result of this workshop,I know what I can do in the next year to improve access, diversity, and inclusion in my CS classroom. "
+            }
+          ]
+        },
+        {
           "type": "panel",
           "name": "instructional_focus_panel",
           "elements": [
