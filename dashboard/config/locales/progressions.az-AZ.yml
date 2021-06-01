@@ -2,12 +2,26 @@
 az:
   data:
     progressions:
+      Accelerometer Events: Akselerometr hadisələri
+      Adding Images: Şəkillər əlavə etmək
+      Adding Screens: ekranlar əlavə etmək
       Artist Project: Sənətçi Layihəsi
       'Artist: Variables': 'Rəssam: Dəyişənlər'
+      Attribution: Atributlar
+      Building an App: Bir App qurmaq
+      Button Circuits: düymə dövrələri
+      Challenge: meydan oxumaq
+      Change: Dəyişmək
       Events: Hadisələr
+      Events and Properties: Hadisələr və xüsusiyyətlər
+      Example projects: " nümunə layihələr\n"
       Functions: Funksiyalar
       Functions with Parameters: Parametrli funksiyalar
       Lesson Extras: Dərsə əlavələr
       Lists: Siyahılar
+      Pair Programming: Estafet proqramlaşdırması
       Properties: Xüsusiyyətlər
+      Review: Gözdən keçirmə
+      Video: Video
+      'Video: For Loops': 'Video: For dövrləri'
       Wrap-up: Yekun

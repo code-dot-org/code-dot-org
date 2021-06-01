@@ -67,7 +67,7 @@ az:
   trophies: "kuboklar"
   courses: 'marşrutlar'
   courses_page:
-    title_student: "İnformatikanı öyrənin"
+    title_student: "Kompyuter elmini öyrənin"
     title_teacher: "İnformatikanı öyrədin"
   unplugged_activity: 'Sərbəst fəaliyyət'
   of: "/"
@@ -92,6 +92,7 @@ az:
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
     microsoft_v2_auth: 'Microsoft Hesabı'
+    clever: 'Ağıllı'
     forgot_password: 'Parolunuzu unutmusunuz?'
     need_confirmation: "Təsdiq göstərişlərini almamisiniz?"
     need_unlock: "Kilidaçma göstərişlərini almamisiniz?"
@@ -184,6 +185,7 @@ az:
     type:
       word: 'Məxfi söz'
       email: 'E-poçt'
+      clever: 'Ağıllı'
   follower:
     invite_sent: 'Dəvətnamə göndərildi'
     added_teacher: '%{name} müəlliminiz kimi əlavə olundu'
@@ -265,16 +267,19 @@ az:
       applab: 'Proqram Labı'
       artist: 'Rəssam'
       artist_k1: 'Rəssam (məktəbəqədər)'
+      basketball: 'Basketbol'
       bounce: 'Tullan'
       calc: 'Hesablama'
       dance: 'Rəqs şənliyi'
       eval: 'Qiymət'
       flappy: 'Flappy'
       frozen: 'Buzlu ürək'
+      gamelab: 'Oyun labaratoriyası'
       iceage: 'Buz dövrü'
       infinity: 'Sonsuz sayda'
       minecraft_designer: 'Minecraft'
       playlab: 'Oyun labı'
+      sports: 'İdman'
       starwars: 'Star Wars'
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
@@ -373,12 +378,13 @@ az:
     notes: 'Video yoxdur? Qeydləri göstər.'
     autoplay_option: 'Videoların avtoifası'
     download: 'Videonu endir'
+    label: 'Video'
   compatibility:
     upgrade:
       link: "Daha ətraflı"
   slow_loading: 'Bu, adi halda olduğundan daha çox vaxt aparır...'
   try_reloading: 'Səhifəni yenidən yükləməyə cəhd edin'
-  next_stage: 'Qurtardı! Növbəti mərhələyə keçin'
+  next_stage: 'Bitdi! Növbəti dərsə keçin'
   download_pdf: 'Dərs planını aç'
   lesson_plan: 'Dərs Planı'
   view_lesson_plan: 'Dərs palnına baxın'
@@ -412,6 +418,7 @@ az:
       title: "Qalereya"
       body: "İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına baxın"
     gamelab:
+      title: "Oyun labaratoriyası"
       audience: "13+ yaş"
     weblab:
       audience: "13+ yaş"
@@ -428,6 +435,8 @@ az:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+    sports:
+      title: "İdman"
     unplugged:
       title: "Sərbəst dərslər"
       audience: "4+ yaş"
@@ -549,7 +558,7 @@ az:
         chile: 'Çili'
         israel: 'İtrail'
       subjects:
-        cs: 'İnformatika'
+        cs: 'Kompüter Elmləri'
         ict: 'IKT'
         math: 'Riyaziyyat'
         science: 'Elm'
@@ -565,4 +574,8 @@ az:
       title: 'Məşğələdə iştirak'
   cookie_banner:
     accept: 'Razıyam'
+  page_not_found_title: "Səhifə tapılmadı"
+  page_not_found_header: '404: Səhifə tapılmadı'
+  page_not_found_description: "Sizin müraciət etdiyiniz səhifə bu ünvanda mövcud deyil. Veb ünvanı dəqiqləşdirib yenidən cəhd edin. və ya geri, ilk səhifəyə qayıdın."
+  page_not_found_button: "İlk səhifəyə qayıt"
   copy: 'Köçür'

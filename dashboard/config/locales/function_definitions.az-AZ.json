@@ -285,24 +285,34 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "3 nektar al"
+            "name": "3 nektar al",
+            "parameters": {
+              "direction": "istiqamət"
+            }
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "3 nektar al"
+            "name": "3 nektar al",
+            "parameters": {
+              "direction": "istiqamət"
+            }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "çoxlu nektar al"
+            "name": "çoxlu nektar al",
+            "parameters": {
+              "direction": "istiqamət"
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "nektar al bal hazırla",
             "parameters": {
-              "honey": "bal"
+              "honey": "bal",
+              "direction": "istiqamət"
             }
           }
         },
@@ -405,7 +415,8 @@
           "get nectar": {
             "name": "nektarı al",
             "parameters": {
-              "counter": "sayğac"
+              "counter": "sayğac",
+              "dir": "istiqamət"
             }
           }
         },
@@ -2335,17 +2346,29 @@
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "5 nektar əldə edin"
+            "name": "5 nektar əldə edin",
+            "parameters": {
+              "direction": "istiqamət"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "5 nektar əldə edin"
+            "name": "5 nektar əldə edin",
+            "parameters": {
+              "nectar units": "nektar vahidləri",
+              "direction": "istiqamət"
+            }
           }
         },
         "Course 4 SCF 2": {
           "draw a square 20": {
             "name": "20 kvadratı çəkin"
+          },
+          "draw octagons": {
+            "parameters": {
+              "numOctagons": "numSəkkizguşəli"
+            }
           }
         },
         "Function intro Ryan": {
@@ -2470,6 +2493,107 @@
         "courseB_artist_loops_challenge2_2020": {
           "potential solution": {
             "name": "potensial həll"
+          }
+        },
+        "Guess The Number": {
+          "check guess": {
+            "parameters": {
+              "theGuess": "təxmini"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "bir ulduz çək",
+            "parameters": {
+              "points": "xallar",
+              "length": "uzunluq"
+            }
+          },
+          "draw a circle": {
+            "name": "çevrə çək",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq",
+              "repeat": "təkrar et"
+            }
+          },
+          "draw a triangle": {
+            "name": "üçbucaq çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a shape": {
+            "name": "bir forma çək",
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq"
+            }
+          },
+          "draw a house": {
+            "name": "ev çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "potensial həll"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "təkanverici"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "kvadrat çək"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "bir ulduz çək"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "bir ulduz çək"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "kvadrat çək"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "oyunu bitir"
           }
         }
       }
