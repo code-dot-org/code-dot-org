@@ -645,6 +645,15 @@ function isColumnNumerical(state, column) {
   return (state.columnsByDataType[column] === ColumnTypes.NUMERICAL);
 }
 
+export function columnContainsOnlyNumbers(data, column) {
+  for (let row of data) {
+    if (isNaN((row[column]))) {
+      return false;
+    }
+  }
+  return true;
+}
+
 function isValidNumericalData(state, column) {
   return !isNaN(getMaximumValue(state, column));
 }
