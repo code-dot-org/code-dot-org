@@ -103,7 +103,7 @@ class LevelDetailsDialog extends Component {
           {level.content.map((content, i) => (
             <SafeMarkdown key={i} markdown={content} />
           ))}
-          {level.question && <SafeMarkdown markdown={level.question} />}
+          {level.questionText && <SafeMarkdown markdown={level.questionText} />}
           {this.getTeacherOnlyMarkdownComponent(level)}
         </div>
       );

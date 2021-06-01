@@ -78,7 +78,6 @@ class Match < DSLDefined
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)
-    question_text = localized_property(:questions).blank? ? '' : questions[0]['text']
     content = [
       localized_property('content1'),
       localized_property('content2'),
@@ -88,8 +87,7 @@ class Match < DSLDefined
     ].compact
     super.merge(
       {
-        content: content,
-        question: question_text
+        content: content
       }
     )
   end
