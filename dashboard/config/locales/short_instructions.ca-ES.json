@@ -252,7 +252,10 @@
         "frozen square loop 3x": "Anem a crear 3 quadrats, girant després de cada quadrat. Assegura't de girar 120 graus abans de cada nou quadrat.",
         "frozen square snowflake": "Pots fer un floquet de neu emprant el bloc \"Repetir\" per fer un quadrat 10 vegades i un bloc \"Girar\" que giri 36 graus entre cada quadrat?",
         "grade5_artist_binary8": "Acaba aquest dibuix.",
-        "scrat 19": "Una pràctica més del blocs \"si-sino\", pots fer-ho bé en el primer intent?"
+        "scrat 19": "Una pràctica més del blocs \"si-sino\", pots fer-ho bé en el primer intent?",
+        "courseC_artist_prog5_2021": "Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.",
+        "courseE_artist_functions1_dani": "Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda'm a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat.",
+        "courseF_bee2": "Pots usar un bucle per recollir tot el nèctar?"
       }
     }
   }

@@ -2343,3 +2343,8 @@ ca:
               display_name: Introducció
             Introduction:
               display_name: Introducció
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Fonaments de la informàtica
+              name: Fonaments de la informàtica
