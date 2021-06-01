@@ -61,7 +61,7 @@ export default class LessonToken extends Component {
   }
 }
 
-class LessonTokenContents extends Component {
+export class LessonTokenContents extends Component {
   static propTypes = {
     y: PropTypes.number.isRequired,
     scale: PropTypes.number.isRequired,
