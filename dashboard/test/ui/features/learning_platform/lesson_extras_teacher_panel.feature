@@ -21,5 +21,5 @@ Feature: Lesson extras teacher panel
     And I wait until element "#teacher-panel-container" is visible
     And check that the URL contains "section_id="
     And check that the URL contains "user_id="
-    And I wait until element "td:eq(1)" contains text "Sally"
     And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
+    And I wait until element "td:eq(1)" contains text "Sally"
