@@ -188,6 +188,16 @@ img.video_thumbnail {
       padding: 4px 16px;
       margin-top: 0;
     }
+
+    .mini-view {
+      a:link {
+        color: $blue;
+      }
+
+      a:visited {
+        color: $blue;
+      }
+    }
   }
 
   .project_info {
