@@ -6,11 +6,16 @@ require_relative '../../../lib/cdo/redshift'
 require_relative '../../../dashboard/config/environment'
 require_relative './translation_service'
 
+# Redshift table where known string_keys are logged to.
+STRING_TRACKING_TABLE = 'analysis.i18n_string_tracking_events'.freeze
+# Redshift table where the translation status of string_key is stored.
+STRING_TRANSLATION_STATUS_TABLE = 'analysis.i18n_string_translation_status'.freeze
+
 # Queries the analysis.i18n_string_tracking_events for all the unique string_keys we have logged in the past day_count
 # days, checks their translation status in every language we support, and then uploads the statuses to the
 # analysis.i18n_string_translation_status Redshift table.
 # @param [Integer] day_count The number of days in the past to look for unique string_key's
-def update_translation_status(day_count = 90)
+def update_translation_status(day_count = 7)
   redshift_client = RedshiftClient.instance
   # Updating the translation status in the Redshift table first requires deleting the existing records and then
   # inserting them. We do this because Redshift doesn't have unique keys, so if we inserted data for a string_key which
@@ -29,7 +34,7 @@ def delete_translation_status(redshift_client, day_count)
   # The query first retrieves all the unique string_key's logged in the analysis.i18n_string_tracking events, then it
   # deletes every row from analysis.i18n_string_translation_status which has one of the unique string_key's.
   query = <<~SQL.squish
-    DELETE FROM analysis.i18n_string_translation_status
+    DELETE FROM #{STRING_TRANSLATION_STATUS_TABLE}
     WHERE string_key IN (
       #{unique_string_key_query}
     )
@@ -84,7 +89,7 @@ def insert_translation_status(redshift_client, day_count)
     end.join(',')
     # Run a Redshift query to insert the translation statuses into the analysis.i18n_string_translation_status table.
     query = <<~SQL.squish
-      INSERT INTO analysis.i18n_string_translation_status (string_key, locale, has_translation, checked_at)
+      INSERT INTO #{STRING_TRANSLATION_STATUS_TABLE} (string_key, locale, has_translation, checked_at)
       VALUES #{values}
     SQL
     redshift_client.exec(query)
@@ -96,7 +101,7 @@ end
 def unique_string_key_sql_query(day_count)
   <<~SQL.squish
     SELECT DISTINCT string_key
-    FROM analysis.i18n_string_tracking_events
+    FROM #{STRING_TRACKING_TABLE}
     WHERE environment = 'production'
     AND created_at >= current_timestamp - interval '#{day_count} days'
   SQL
