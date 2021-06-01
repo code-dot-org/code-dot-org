@@ -2064,3 +2064,122 @@ th-TH:
           อะไรคือสิ่งที่การจำลองของคุณไม่สามารถทำได้หรือเป็นสิ่งที่คุณต้องการให้ทำได้?
           กดดำเนินการต่อเพื่อดำเนินการและเรียนรู้การสร้างแบบจำลองเพิ่มเติม:\n* เพิ่มจำนวนมอนสเตอร์ในการจำลอง\n*
           ช่วยเหลือมอนสเตอร์จากไวรัส\n* ความน่าจะเป็น ภูมิคุ้มกัน วัคซีน และอื่นๆ!\n\nคุณยังสามารถแบ่งปันแบบจำลองของคุณให้กับคนอื่นหรือแบ่งปันข้อความเกี่ยวกับสิ่งที่คุณคิดว่าเราสามารถทำได้เพื่อช่วยให้ผู้อื่นมีสุขภาพที่ดีเมื่อไวรัสแพร่มา "
+      OPD-K5 CS Courses:
+        markdown: "# การวางแผน > การเริ่มต้นบน Code.org\n\n\n## ขั้นที่ 1: เลือกหลักสูตร\nหลักสูตรทั้งหมดของเรา
+          ตั้งแต่สำหรับเด็กก่อนวัยเรียนจนถึงนักเรียนระดับมัธยมปลายแสดงรายการไว้ใน
+          **[แค็ตตาล็อกหลักสูตร] (https://studio.code.org/courses)** หากต้องการค้นหาหลักสูตรพื้นฐานด้านวิทยาการคอมพิวเตอร์ที่คุณเคยเข้ามาฝึก
+          ให้ไปที่ **[หน้าหลักสูตรพื้นฐาน](https://code.org/educate/curriculum/elementary-school)**
+          และเลื่อนลงไปที่ส่วน \"หลักสูตร\" ที่เปิดให้คุณเรียนรู้ได้โดยไม่เสียค่าใช้จ่าย
+          พูดคุยกับเพื่อนครูที่โรงเรียนเพื่อตัดสินใจเลือกว่าจะรวมหลักสูตรเข้ากับรายวิชาต่างๆ
+          ในโรงเรียนอย่างไร\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          ขั้นที่ 2: ตั้งค่าส่วนที่จะใช้รองรับ\nตั้งค่าส่วนที่จะนำมาใช้ติดตามความคืบหน้าของนักเรียน
+          พิมพ์การ์ดล็อกเข้าระบบไว้ให้กับนักเรียน จัดการบัญชีของนักเรียน และพิมพ์ประกาศนียบัตรที่นักเรียนนำกลับบ้านได้เมื่อเรียนจบหลักสูตรแล้ว
+          คลิกที่ลิงก์นี้เพื่อ **[ดูวิดีโอสรุป](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          ที่จะสาธิตวิธีเตรียมชั้นเรียนวิทยาการคอมพิวเตอร์แรกของคุณบน Code.org คุณยังจะพบขั้นตอนต่าง
+          ๆ ใน **[บทความสนับสนุนนี้](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          ขั้นที่ 3: กำหนดหลักสูตรให้กับส่วนของคุณ\nคลิกในหลักสูตรที่คุณจะสอน คุณควรเห็นหน้าจอที่เหมือนกับด้านล่างนี้
+          หลังจากนั้น ให้คลิกที่ \"กำหนดหลักสูตร\" และมอบหมายหลักสูตรนั้นให้กับส่วนที่เป็นของคุณ
+          \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          ขั้นที่ 4: เริ่มสอน! \nทั้งหมดที่ต้องการคือหนึ่งบทเรียนเพื่อแนะนำแนวคิดเรื่องวิทยาการคอมพิวเตอร์สู่ห้องเรียนของคุณ
+          ทันทีที่คุณเห็นนักเรียนกระตือรือร้นที่จะเรียนรู้เรื่องนี้ ให้แนะนำแผนการเรียนการสอนประจำวันเพื่อแนะแนวทางให้กับนักเรียน
+          กิจกรรมออฟไลน์ที่คุณใช้ได้โดยไม่ต้องมีคอมพิวเตอร์ และฟอรัมเพื่อเชื่อมโยงกับผู้สอนท่านอื่น\n\n\n"
+      OPD-K5 CS Courses_copy:
+        markdown: "# การเริ่มต้นบน Code.org\n\n\n## ขั้นที่ 1: เลือกหลักสูตร\nหลักสูตรทั้งหมดของเรา
+          ตั้งแต่สำหรับเด็กก่อนวัยเรียนจนถึงนักเรียนระดับมัธยมปลายแสดงรายการไว้ใน
+          \ **<a href=\"https://studio.code.org/courses\" target=\"blank\" rel=\"noopener
+          noreferrer\">แค็ตตาล็อกหลักสูตร</a>**  ที่เปิดให้คุณเรียนรู้ได้โดยไม่เสียค่าใช้จ่าย
+          พูดคุยกับเพื่อนครูที่โรงเรียนเพื่อตัดสินใจเลือกว่าจะรวมหลักสูตรเข้ากับรายวิชาต่างๆ
+          ในโรงเรียนอย่างไร\n\n<table style=\"width:100%; border-style:none;\">\n
+          \ <tr>\n    <th style=\"background-color:#ff9900; text-align:center; border-style:none;
+          font-weight:bold;\"\"\">\n      <b>หลักสูตร A</b><br/>\n      <i>ระดับอนุบาล</i>\n
+          \   </th>\n    <th style=\"background-color:#f1c232; text-align:center;
+          border-style:none;\"\"\">\n        หลักสูตร B<br/>\n        <i>เกรด 1</i>\n
+          \   </th>\n    <th style=\"background-color:#b8bf0d; text-align:center;
+          border-style:none;\"\"\">\n        หลักสูตร C<br/>\n        <i>เกรด 2</i>\n
+          \   </th>\n    <th style=\"background-color:#53bac2; text-align:center;
+          border-style:none;\"\"\">\n        หลักสูตร D<br/>\n        <i>เกรด 3</i>\n
+          \   </th>\n    <th style=\"background-color:#0094ca; text-align:center;
+          border-style:none;\"\"\">\n        หลักสูตร E<br/>\n        <i>เกรด 4</i>\n
+          \   </th>\n    <th style=\"background-color:#7664a0; text-align:center;
+          border-style:none;\"\"\">\n        หลักสูตร F<br/>\n        <i>เกรด 5</i>\n
+          \   </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 บทเรียน ใช้เวลาเรียนประมาณ
+          12 ชั่วโมง</td>\n    <td style=\"background-color:#ffe599; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 บทเรียน ใช้เวลาเรียนประมาณ
+          12 ชั่วโมง</td>\n    <td style=\"background-color:#d2da0e; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 บทเรียน ใช้เวลาเรียนประมาณ
+          18 ชั่วโมง</td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 บทเรียน ใช้เวลาเรียนประมาณ
+          18 ชั่วโมง</td>\n    <td style=\"background-color:#9ed7ed; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 บทเรียน ใช้เวลาเรียนประมาณ
+          18-20 ชั่วโมง</td>\n    <td style=\"background-color:#c9c1e9; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 บทเรียน ใช้เวลาเรียนประมาณ
+          20-22 ชั่วโมง</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;\">แนวคิด</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>พลเมืองดิจิทััล</li>\n        <li>การจัดลำดับ</li>\n
+          \       <li>ลูป</li>\n        <li>เหตุการณ์</li>\n      </ul>\n    </td>\n
+          \   <td style=\"background-color:#ffe599; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>พลเมืองดิจิทัล</li>\n        <li>การจัดลำดับ</li>\n        <li>ลูป</li>\n
+          \       <li>ผลกระทบของการใช้คอมพิวเตอร์</li>\n        <li>เหตุการณ์</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#d2da0e; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>พลเมืองดิจิทัล</li>\n        <li>การจัดลำดับ</li>\n        <li>ไบนารี</li>\n
+          \       <li>ลูป</li>\n        <li>เหตุการณ์</li>\n        <li>ข้อมูล</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>การจัดลำดับ</li>\n        <li>เหตุการณ์</li>\n        <li>ลูป</li>\n
+          \       <li>เงื่อนไข</li>\n        <li>ไบนารี</li>\n        <li>พลเมืองดิจิทัล</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#9ed7ed; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>สไปร์ท</li>\n        <li>พลเมืองดิจิทัล</li>\n        <li>ผลกระทบของการใช้คอมพิวเตอร์</li>\n
+          \       <li>ลูปซ้อนลูป</li>\n        <li>ฟังก์ชั่น</li>\n      </ul>\n    </td>\n
+          \   <td style=\"background-color:#c9c1e9; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>ตัวแปร</li>\n        <li>ข้อมูล</li>\n        <li>For Loops</li>\n
+          \       <li>อินเทอร์เน็ต</li>\n        <li>สไปรท์</li>\n        <li>พลเมืองดิจิทัล</li>\n
+          \       </ul>\n    </td>\n  <tr>\n  \t<td style=\"background-color:#f9cb9c\">\n
+          \    <a href=\"https://studio.code.org/s/coursea\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>ดูหลักสูตร</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n          <button>แผนการเรียนการสอน</button>\n
+          \     </a>\n    </td>\n    <td style=\"background-color:#ffe599\">\n    <a
+          href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>ดูหลักสูตร</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>แผนการเรียนการสอน</button>\n
+          \     </a>\n    </td>   \n   \t<td style=\"background-color:#d2da0e\">\n
+          \   <a href=\"https://studio.code.org/s/coursec\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>ดูหลักสูตร</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>แผนการเรียนการสอน</button>\n
+          \     </a>\n    </td>   \n    <td style=\"background-color:#68ebf5\">\n
+          \   <a href=\"https://studio.code.org/s/coursed\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>ดูหลักสูตร</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>แผนการเรียนการสอน</button>\n
+          \     </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n    <a
+          href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>ดูหลักสูตร</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>แผนการเรียนการสอน</button>\n
+          \     </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>ดูหลักสูตร</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>แผนการเรียนการสอน</button>\n
+          \     </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n## ขั้นที่ 2:
+          ตั้งค่าส่วนที่จะใช้รองรับ\nตั้งค่าส่วนที่จะนำมาใช้ติดตามความคืบหน้าของนักเรียน
+          พิมพ์การ์ดล็อกเข้าระบบไว้ให้กับนักเรียน จัดการบัญชีของนักเรียน และพิมพ์ประกาศนียบัตรที่นักเรียนนำกลับบ้านได้เมื่อเรียนจบหลักสูตรแล้ว
+          คลิกที่ลิงก์นี้เพื่อ **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          target=\"blank\" rel=\"noopener noreferrer\">ดูวิดีโอสรุป</a>** ที่จะสาธิตวิธีเตรียมชั้นเรียนวิทยาการคอมพิวเตอร์แรกของคุณบน
+          Code.org คุณยังจะพบขั้นตอนต่าง ๆ ใน **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
+          target=\"blank\" rel=\"noopener noreferrer\">บทความสนับสนุนนี้</a>**\n\n***\n##
+          ขั้นที่ 3: กำหนดหลักสูตรให้กับส่วนของคุณ\nคลิกในหลักสูตรที่คุณจะสอน แล้วคลิกที่
+          \"กำหนดหลักสูตร\" และมอบหมายหลักสูตรนั้นให้กับส่วนที่เป็นของคุณ \n***\n##
+          ขั้นที่ 4: เริ่มสอน! \nทั้งหมดที่ต้องการคือหนึ่งบทเรียนเพื่อแนะนำแนวคิดเรื่องวิทยาการคอมพิวเตอร์สู่ห้องเรียนของคุณ
+          ทันทีที่คุณเห็นนักเรียนกระตือรือร้นที่จะเรียนรู้เรื่องนี้ ให้แนะนำแผนการเรียนการสอนประจำวันเพื่อแนะแนวทางให้กับนักเรียน
+          กิจกรรมออฟไลน์ที่คุณใช้ได้โดยไม่ต้องมีคอมพิวเตอร์ และฟอรัมเพื่อเชื่อมโยงกับผู้สอนท่านอื่น\n\n\n"
+      courseD_EOC_2020:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      courseE_EOC_2020:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      courseExpress_EOC_2020:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      courseF_EOC_2020:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร

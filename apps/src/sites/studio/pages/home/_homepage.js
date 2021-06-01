@@ -12,7 +12,7 @@ import {
   pageTypes,
   setAuthProviders,
   setPageType,
-  setStageExtrasScriptIds,
+  setLessonExtrasScriptIds,
   setTextToSpeechScriptIds,
   setPreReaderScriptIds,
   setValidGrades,
@@ -21,7 +21,7 @@ import {
 import currentUser, {
   setCurrentUserId
 } from '@cdo/apps/templates/currentUserRedux';
-import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {
   setLocaleCode,
@@ -42,7 +42,7 @@ function showHomepage() {
   registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
-  store.dispatch(setStageExtrasScriptIds(homepageData.lessonExtrasScriptIds));
+  store.dispatch(setLessonExtrasScriptIds(homepageData.lessonExtrasScriptIds));
   store.dispatch(setTextToSpeechScriptIds(homepageData.textToSpeechScriptIds));
   store.dispatch(setPreReaderScriptIds(homepageData.preReaderScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));

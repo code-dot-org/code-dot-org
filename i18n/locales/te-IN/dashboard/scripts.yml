@@ -146,6 +146,9 @@ te:
               name: డాన్స్ పార్టీ
             lesson-1:
               name: డాన్స్ పార్టీ
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ఈవెంట్లు
         pre-express-2021:
           lesson_groups:
             csf_events:

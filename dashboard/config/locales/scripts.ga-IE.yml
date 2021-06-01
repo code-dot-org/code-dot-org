@@ -4119,6 +4119,10 @@ ga:
               display_name: Paraiméadair agus Luachanna Athfhillte
             csp_libraries:
               display_name: Leabharlanna
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: Meaisínfhoghlaim
         csp10-2021:
           lesson_groups:
             csp_unit10_2020:
@@ -4298,6 +4302,8 @@ ga:
               name: Peata Fíorúil i Saotharlann na Sprideanna
             lesson-1:
               name: Cóisir Dhamhsa
+            lesson-3:
+              name: Sprideanna ar Obair
           lesson_groups:
             csf_sequencing:
               display_name: Seicheamhú
@@ -4313,6 +4319,8 @@ ga:
               display_name: Lúba "Do Gach"
             csf_sprites:
               display_name: Sprideanna
+            lessonGroup-9:
+              display_name: Teagmhais
         pre-express-2021:
           description_short: 'Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí:
             scoth an ábhair ónár gcúrsaí do ghasúir sa chiondargairdín agus sa chéad

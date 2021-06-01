@@ -1308,12 +1308,6 @@ mi:
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': tukutuku
-            '"border"': pae
-            '"row"': rārangi
       RyanLab_moveForward:
         text: neke ki mua
       RyanLab_turnLeft:

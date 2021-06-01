@@ -20065,9 +20065,6 @@ fil:
                 mga function sa pamamagitan ng pagtawag ng isang function sa loob
                 ng isa pa.
             Variables with Artist:
-              description_student: Huwag kalimutan ng magdala ng pagkamalikhain sa
-                klase! Sa mga palaisipang ito ikaw ay gagawa ng hindi kapani-paniwalang
-                mga drowing gamit ang mga variable.
               description_teacher: Sa araling ito, ang mga estudyante ay tutuklas
                 sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa
                 Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang
@@ -20128,6 +20125,8 @@ fil:
               display_name: For Loops
             csf_sprites:
               display_name: Mga Sprites
+            lessonGroup-9:
+              display_name: Mga event
           student_description: Alamin ang mga pangunahing alituntunin sa computer
             science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
             iyong sariling laro o istorya na maaari mong ibahagi.
@@ -20523,6 +20522,8 @@ fil:
                 ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung
                 saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang
                 mga plano para sa hinaharap.
+            Designing With Empathy:
+              name: Pagsusuri ng Disenyo
             Build a Paper Prototype:
               name: Papel na mga Prototype
             Digital Mode in App Lab:
@@ -20992,3 +20993,7 @@ fil:
           student_description: Maligawang pagdating sa Code.org na Surbey Pagkatapos
             ng Kurso na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10
             minuto para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Araling 15

@@ -22424,8 +22424,8 @@ en:
               description_teacher: In this unplugged lesson, students create objects and represent relevant attributes using instance variables. Students learn the difference between `public` and `private` and the purpose of encapsulation to hide the internal implementation of an object.
             lesson-2:
               name: Using Variables
-              description_student: 'One way that software engineers can store information in a computer’s memory is by using variables. In this lesson, you use variables to store information used to create `Painter` objects and also to store information input by a user. '
-              description_teacher: In this lesson, students define variables to represent attributes for an object and use these variables to store values. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.
+              description_student: Variables provide a way for software engineers to store information. The type of information we need to store determines what kind of variable we need to use, its data type, and how we can use it. In this lesson, you use variables to store information used to create `Painter` objects and store information input by a user.
+              description_teacher: In this lesson, students explore the functionality of variables and differentiate between primitive and reference variables. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.
             lesson-3:
               name: Writing Constructors
               description_student: The Project Mercury Pastries food truck needs your help! The owner wants to sell desserts in The Neighborhood but needs to be able to input and store their desserts in a program. You have been asked to use your software engineering skills to create a program that can create dessert objects so the owner can keep track of their inventory. You start by creating a `Dessert` class so the owner can enter the flavor, available quantity, and price of each dessert they sell.
@@ -22444,22 +22444,40 @@ en:
               description_teacher: In this lesson, students implement conditionals and local variables to make decisions about object initialization and verify values passed to the constructor. Students explore the scope of local variables and parameters within a constructor and use the keyword `this` to refer to the current object. These concepts are used to add another constructor to the `Dessert` class.
             lesson-7:
               name: Writing Constructors for Hierarchies
+              description_student: 'The owner of the Project Mercury food truck is expanding the menu to include different desserts. In this lesson, you use software development techniques to create classes and constructors for `Dessert` subclasses efficiently. To initialize inherited private instance variables, you use the `super` keyword to call the superclass constructor.  '
+              description_teacher: In this lesson, students write constructors for superclasses and subclasses. Students use the `super` keyword to call the superclass constructor and pass any necessary parameters to the superclass constructor to initialize instance variables. The lesson introduces the D.R.Y. (Don’t Repeat Yourself) software development principle to highlight the benefits of using inheritance in object-oriented programming design.
             lesson-8:
               name: Accessing Object Data
+              description_student: We have created private instance variables to represent attributes of `Dessert` objects, which means we cannot access these values from outside the class. But what if we needed to use these values in our programs? In this lesson, you explore methods that return values to write accessor methods for your `Dessert` class and its subclasses. You use these values to print out information about `Dessert` objects and within expressions to solve problems.
+              description_teacher: Students discover the need for accessor methods to obtain the values stored in the instance variables of a class. Students identify the components of a method signature and explore how methods return values to use in programs. As students write accessor methods for the `Dessert` class and its subclasses, students work with printing these values and using object data within expressions.
             lesson-9:
               name: Modifying Object Data
+              description_student: We have created accessor methods to obtain the value of instance variables of `Dessert` objects. What if we needed to change these values in our programs? In this lesson, you explore `void` methods to write mutator methods for your `Dessert` class and its subclasses. You use these methods along with accessor methods to solve problems. You strengthen your software development skills and processes through code reviews to give and use feedback to improve your program.
+              description_teacher: Students discover the need for mutator methods to change the values stored in the instance variables of a class. As students write mutator methods for the `Dessert` class and its subclasses, they learn what `void` means, recall edge cases, and practice calling mutator and accessor methods. Students participate in a code review to give and receive feedback to improve their programs.
             lesson-10:
               name: Displaying Object Information
+              description_student: 'Today we look ‘under the hood’ at some of the built-in classes we use in Java. You investigate `System.out.print()`, the `Object` class, and learn about the `toString()` method. You practice using the DRY principle to refactor your code in `Dessert` and `FoodTruck`. '
+              description_teacher: In this lesson, students trace `System.out.print()` to explore the results of printing an `Object`. Students override a superclass method by writing `toString()` methods for `Dessert` and `FoodTruck`. Students concatenate instance variables and strings while also using escape sequences to format output.
             lesson-11:
               name: The Neighborhood Store Management Project - Day 1
+              description_student: For this project, you work with a partner to create a management program for a business in The Neighborhood. You begin by planning the superclass and its subclasses using a Unified Modeling Language (UML) diagram and creating the first draft of your superclass.
+              description_teacher: For this project, students work with a partner to create a management program for a business in The Neighborhood. Students begin by planning the superclass and its subclasses using a Unified Modeling Language (UML) diagram and creating the first draft of their superclass.
             lesson-12:
               name: The Neighborhood Store Management Project - Day 2
+              description_student: You continue working through your Neighborhood Store Management Project by writing subclasses that extend your superclass. You complete a code review and review your project against the rubric to gain feedback to continue developing your program.
+              description_teacher: In the previous lesson, students planned their superclass and subclasses and began writing their superclass. Students begin this lesson by individually writing a subclass that extends their superclass. They participate in a code review and self-assess against the project rubric to give and use feedback as they develop their program.
             lesson-13:
               name: The Neighborhood Store Management Project - Day 3
+              description_student: You finalize your super and subclass code using the prioritized list you created yesterday. You write your `main` method to interact with your classes, then you share your final projects with your peers and celebrate your success!
+              description_teacher: In the previous lesson, students created a prioritized list of work to be completed. Students consider this list as they make revisions to their super and subclasses and then complete their main method. Finally, they share their final projects with peers to celebrate their successes.
             lesson-14:
               name: FRQ Day
+              description_student: 'Today you complete a Free Response Question (FRQ). You do this by first looking and annotating an FRQ with peers, then handwriting code to solve a problem, following up with scoring your solution with a partner. '
+              description_teacher: "Students complete a Free Response Question (FRQ) in this lesson. They annotate a College Board FRQ as a class, then write code to answer an FRQ.\n\nThe goals of this lesson are:\n* Practice reading a College Board FRQ\n* Practice handwriting an FRQ\n* Serve as a summative assessment of the content from Unit 2\n\nWhile the format of this FRQ is not the same as an FRQ on the AP exam, it helps students develop strategies for approaching these questions. "
             lesson-15:
               name: Assessment Day
+              description_student: In this unit, you created objects and defined instance variables to represent attributes. You explored creating and using constructors to establish values for these attributes and how to work with the data stored in objects. You implemented accessor and mutator methods to access and modify the values stored in the instance variables and wrote `toString` methods to output information about the state of the object. You used the `Scanner` class to obtain user input to use as program data to create and work with your objects. You learned about using data types, operators, and expressions and implementing data encapsulation and object-oriented design. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students developed an understanding of data encapsulation and object-oriented design decisions to build a program to meet the needs of the Project Mercury Pastries food truck. Students created objects with appropriate instance variables based on program needs while exploring data types, variables, and expressions to work with object data. Students also implemented accessor, mutator, and `toString` methods to retrieve, modify, and output object data. Throughout the unit, students used the `Scanner` class to obtain user input to expand the interactivity of their programs. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
           lesson_groups:
             lesson group:
               display_name: Content
@@ -22926,3 +22944,328 @@ en:
             Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
 
             **Coming Soon! This unit will be available in July 2021!**
+        kodea-pd-2021:
+          title: CSF Online PD - Kodea
+          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description_audience: ''
+          lessons:
+            Getting Started:
+              key: Getting Started
+              name: Getting Started
+              description_student: ''
+              description_teacher: ''
+            Computer Science Fundamentals:
+              key: Computer Science Fundamentals
+              name: Computer Science Fundamentals
+              description_student: ''
+              description_teacher: ''
+            Looking Ahead:
+              key: Looking Ahead
+              name: Looking Ahead
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Sequencing':
+              key: 'Mastering the Basics: Sequencing'
+              name: 'Mastering the Basics: Sequencing'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Loops':
+              key: 'Mastering the Basics: Loops'
+              name: 'Mastering the Basics: Loops'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Conditionals':
+              key: 'Mastering the Basics: Conditionals'
+              name: 'Mastering the Basics: Conditionals'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Functions':
+              key: 'Mastering the Basics: Functions'
+              name: 'Mastering the Basics: Functions'
+              description_student: ''
+              description_teacher: ''
+            'Mastering the Basics: Events':
+              key: 'Mastering the Basics: Events'
+              name: 'Mastering the Basics: Events'
+              description_student: ''
+              description_teacher: ''
+            Best Practices for Teaching Computer Science:
+              key: Best Practices for Teaching Computer Science
+              name: Best Practices for Teaching Computer Science
+              description_student: ''
+              description_teacher: ''
+            Planning:
+              key: Planning
+              name: Planning
+              description_student: ''
+              description_teacher: ''
+            Next Steps:
+              key: Next Steps
+              name: Next Steps
+              description_student: ''
+              description_teacher: ''
+          lesson_groups: {}
+          name: kodea-pd-2021
+        vpl-csd-2021:
+          title: CS Discoveries Virtual Professional Learning 2020 - 21
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lessons:
+            Module 1:
+              key: Module 1
+              name: Module 1
+              description_student: ''
+              description_teacher: ''
+            Module 2:
+              key: Module 2
+              name: Module 2
+              description_student: ''
+              description_teacher: ''
+            Module 3:
+              key: Module 3
+              name: Module 3
+              description_student: ''
+              description_teacher: ''
+            Module 4:
+              key: Module 4
+              name: Module 4
+              description_student: ''
+              description_teacher: ''
+            Module 5:
+              key: Module 5
+              name: Module 5
+              description_student: ''
+              description_teacher: ''
+            Module 6:
+              key: Module 6
+              name: Module 6
+              description_student: ''
+              description_teacher: ''
+            Module 7:
+              key: Module 7
+              name: Module 7
+              description_student: ''
+              description_teacher: ''
+            Module 8:
+              key: Module 8
+              name: Module 8
+              description_student: ''
+              description_teacher: ''
+          lesson_groups: {}
+        vpl-csp-2021:
+          title: CS Principles Virtual Professional Learning
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lessons:
+            Module 1:
+              key: Module 1
+              name: 'Module 1: Introducing Unit 4 and new pedagogy for teaching programming'
+              description_student: ''
+              description_teacher: ''
+            Module 2:
+              key: Module 2
+              name: 'Module 2: Variables in Unit 4 and the role of collaboration'
+              description_student: ''
+              description_teacher: ''
+            Module 3:
+              key: Module 3
+              name: 'Module 3: Unit 5, using lists in apps, and recognizing CS skills in the classroom'
+              description_student: ''
+              description_teacher: ''
+            Module 4:
+              key: Module 4
+              name: 'Module 4: Unit 5 and using datasets in apps'
+              description_student: ''
+              description_teacher: ''
+            Module 5:
+              key: Module 5
+              name: 'Module 5: Unit 7 and understanding functions with parameters and return'
+              description_student: ''
+              description_teacher: ''
+            Module 6:
+              key: Module 6
+              name: 'Module 6: Introduction to the Create Performance Task'
+              description_student: ''
+              description_teacher: ''
+            Module 7:
+              key: Module 7
+              name: 'Module 7: Tools and structure in Unit 9 - Data'
+              description_student: ''
+              description_teacher: ''
+            Module 8:
+              key: Module 8
+              name: 'Module 8: Building community and preparing students for the AP Exam'
+              description_student: ''
+              description_teacher: ''
+          lesson_groups: {}
+        self-paced-pl-csd1-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd1-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csd2-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd2-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csd3-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd3-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csd4-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd4-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csd5-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd5-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csd6-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd6-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csd7-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd7-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csd8-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd8-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csp1-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp1-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csp2-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp2-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csp3-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp3-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csp4-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp4-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csp5-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp5-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csp6-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp6-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csp7-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp7-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csp8-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp8-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csp9-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp9-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csp10-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp10-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        self-paced-pl-csp11-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csp11-2021
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        poster:
+          lessons:
+            HoC Tutorial 1:
+              name: Self-Expression
+          lesson_groups:
+            about me_ip:
+              display_name: 'Interactive Poster: Self-Expression'
+              description: 'Version 1 of Interactive Poster: Self-Expression'
+          name: poster
+          title: 'V1_Interactive Poster: Self-Expression'
+          description_audience: ''
+          description_short: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
+          description: ''

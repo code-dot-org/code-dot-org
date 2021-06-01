@@ -828,10 +828,6 @@ eu:
             '"down"': behera gezia
             '"left"': ezker gezia
             '"right"': eskuin gezia
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': ausazkoa
       RyanLab_moveForward:
         text: mugitu aurrera
       RyanLab_turnLeft:

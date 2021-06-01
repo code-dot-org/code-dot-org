@@ -2978,7 +2978,7 @@
         },
         "courseB_maze_seq8": {
           "courseB_maze_seq8_a": "Versuche, einen Block nach dem anderen hinzuzufügen, bis du das Rätsel gelöst hast.",
-          "courseB_maze_seq8_b": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!",
+          "courseB_maze_seq8_b": "Es gibt zwei Möglichkeiten, diese Aufgabe zu lösen!",
           "courseB_maze_seq8_c": "Du weißt nicht, in welche Richtung du gehen sollst? Probiere diesen Weg aus!"
         },
         "courseB_maze_seq8_2018": {
@@ -6629,7 +6629,7 @@
         },
         "courseD_maze_ramp2_2019": {
           "courseC_maze_programming2_a": "Um einen `Vorwärts´-Block zu verwenden, ziehe ihn aus der Werkzeugkiste in den Arbeitsbereich und verbinde ihn mit dem`wenn ausgeführt\\`-Block.",
-          "courseC_maze_programming2_b": "Überprüfe, ob alle drei Blöcke vollständig zusammengeklickt sind. Klicke dann erneut auf \"\"Ausführen\"\"."
+          "courseC_maze_programming2_b": "Überprüfe, ob alle drei Blöcke vollständig zusammengeklickt sind und am `wenn ausgeführt`-Block hängen."
         },
         "courseD_maze_ramp2_2020": {
           "courseC_maze_programming2_a": "Um einen `Vorwärts´-Block zu verwenden, ziehe ihn aus der Werkzeugkiste in den Arbeitsbereich und verbinde ihn mit dem`wenn ausgeführt\\`-Block.",

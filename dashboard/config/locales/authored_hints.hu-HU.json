@@ -400,7 +400,7 @@
           "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   A „balra nyíl megnyomásakor“ blokk használatával érd el, hogy a Robot valamilyen táncmozdulatot tegyen, amikor megnyomod.\n\n_Ez a szint 8 ütem után ér véget._"
         },
         "Dance_Party_extras_alternate_2019": {
-          "alternate": "A Váltakoztatás blokk a \"Táncosok\" kategóriában található."
+          "alternate": "A \"váltakozik\" blokk a \"Táncosok\" kategóriában található."
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "A programodon belül többször is meghívhatsz egy függvényt.  A kirakós megoldásához próbáld kétszer meghívni."
@@ -3015,6 +3015,15 @@
         "courseC_maze_programming_challenge2_2020": {
           "courseC_maze_programming_challenge2_a": "_\"Ha visszafelé küldesz, légy nagyon óvatos, hogy megfelelő irányba álljak!\"_",
           "courseC_maze_programming_challenge2_b": "A legrövidebb megoldás mindössze 5 blokkból felépíthető, és ezt a blokkot használja:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseB_maze_seq8": {
+          "courseB_maze_seq8_b": "Két úton is megoldhatod ezt a feladványt!"
+        },
+        "courseD_maze_ramp6": {
+          "courseC_maze_programming6_a": "Két úton is megoldhatod ezt a feladványt!"
+        },
+        "courseD_maze_ramp7": {
+          "courseD_maze_ramp7_b": "Ne felejtsd el, hogy használhatod a `lépés` gombot, amivel blokkról blokkra vizsgálhatod végig a kódot a hibák után kutatva."
         }
       }
     }

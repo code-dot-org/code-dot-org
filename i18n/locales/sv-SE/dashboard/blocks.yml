@@ -1570,13 +1570,6 @@ sv:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': rutnät
-            '"border"': gräns
-            '"row"': rad
-            '"random"': slumpad
       RyanLab_moveForward:
         text: gå framåt
       RyanLab_turnLeft:

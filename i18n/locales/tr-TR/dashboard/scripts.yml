@@ -17129,7 +17129,7 @@ tr:
               name: Büyük Veri, Kalabalık Kaynaklandırma ve Makine Öğrenimi
             Machine Learning and Bias:
               key: Makine Öğrenimi ve Yanlılık
-              name: Makine Öğrenimi ve Yanlılık
+              name: Makine Öğrenimi
             Project - Tell a Data Story - Part 1:
               key: Proje - Bir Veri Hikayesi Anlat - Kısım 1
               name: Proje - Bir Veri Hikayesi Anlat - Kısım 1
@@ -17944,7 +17944,7 @@ tr:
             Variables with Artist:
               key: Sanatçı ile Değişkenler
               name: Sanatçı ile Değişkenler
-              description_student: Sınıfa yaratıcılık getirmeyi unutmayın! Bu bulmacalarda değişkenleri kullanarak muhteşem çizimler yapacaksınız.
+              description_student: Bu derste, program çalışırken değişen değişkenleri kullanarak çizimler yapacaksınız.
               description_teacher: Bu derste öğrenciler, Sanatçı çevresindeki değişkenleri kullanarak tekrar eden tasarımların oluşturulmasını tecrübe edecekler. Öğrenciler, kodların daha kolay yazılmasını ve okunması daha kolay hale getirilebilmesi için değişkenlerin nasıl kullanılacağını öğrenecek. Kılavuzlu bulmacalardan sonra, öğrenciler öğrendiklerini göstermek ve kendi tasarımlarını oluşturmak için serbest seviye seviyesinde sona ereceklerdir.
             Changing Variables with Bee:
               key: Arı ile Değişkenleri Değiştirme
@@ -17995,6 +17995,8 @@ tr:
               name: Dans Partisi
               description_student: Kutlama zamanı! Bu derste kendi etkileşimli dans partinizi programlayacaksınız.
               description_teacher: Bu derste öğrenciler, kendi etkileşimli dans partisini programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan dolayı bu aktivite ses gerektirir.
+            lesson-3:
+              name: Eylem halindeki Hareketli Nesneler
           lesson_groups:
             csf_warmup:
               display_name: Isınmak
@@ -18015,7 +18017,7 @@ tr:
             end_of_course_project:
               display_name: Ders Projesinin Sonu
             lessonGroup-9:
-              display_name: Isınmak
+              display_name: Olaylar
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
         pre-express-2021:
           title: Okul Öncesi Çocuklar için Hızlandırılmış (2020)
@@ -18195,6 +18197,8 @@ tr:
             CS Discoveries Post Course survey:
               key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
               name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+            Designing With Empathy:
+              name: Tasarım analizi
             Build a Paper Prototype:
               name: Kağıt Prototipler
             Digital Mode in App Lab:
@@ -18327,6 +18331,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lessons:
             lesson-15:
@@ -18413,3 +18419,7 @@ tr:
           description_short: CSP Öğrenci Kurs Sonu Anketi
           description: Code.org CS Principles Post-Course Survey' e hoşgeldiniz. Bu anketi tamamlamak 10 dakikanızı alır. Yanıtlarınız özel ve anonimdir.
           student_description: Code.org CS Principles Post-Course Survey' e hoşgeldiniz. Bu anketi tamamlamak 10 dakikanızı alır. Yanıtlarınız özel ve anonimdir.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Ders 15

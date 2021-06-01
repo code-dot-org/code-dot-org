@@ -1238,6 +1238,7 @@ pl-PL:
         - correct: true
         questions:
         - {}
+        title: Przewidzieć coś
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -1246,6 +1247,7 @@ pl-PL:
         - correct: true
         questions:
         - {}
+        title: Przewidzieć coś
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -1254,6 +1256,7 @@ pl-PL:
         - correct: true
         questions:
         - {}
+        title: Przewidzieć coś
       Choosing Good IDs:
         teacher_markdown: |-
           #### Rozwijanie dobrych nawyków programistycznych
@@ -1354,95 +1357,30 @@ pl-PL:
 
           </div>
       Dance_Party_extras_intro_2019:
-        markdown: |
-          # Nie przestawaj tańczyć!
-
-          W części 2 stworzysz własny projekt. Nie ma tu żadnych łamigłówek - zamiast tego jest wiele projektów, które pokazują różne sposoby tworzenia bardziej złożonych imprez tanecznych.
-
-          Możesz przechodzić te poziomy _w dowolnej kolejności_. Przejdź, aby zobaczyć, jak coś zostało zrobione na poprzednim poziomie, lub połącz pomysły między projektami. Wypróbuj je wszystkie, wybierz swój ulubiony i poświęć swój czas na powiększenie go, utworzyć swój własny.
-
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Kontynuuj</a>
-
-          <div class="clearfix"></div>
-
-          <div style="float: left; margin: 10px">
-          <a href="2">
-          <h2>
-          Tam i z powrotem
-          </h2>
-
-          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
-
-          </div>
-
-          <div style="float: left; margin: 10px">
-          <a href="3">
-          <h2>
-          Więcej przycisków
-          </h2>
-
-          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
-
-          </div>
-          <div style="float: left; margin: 10px">
-          <a href="4">
-          <h2>
-          Twórzmy formację
-          </h2>
-
-          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
-
-          </div>
-
-          <div style="float: left; margin: 10px">
-          <a href="5">
-          <h2>
-          Gdzie oni poszli?
-          </h2>
-
-          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
-
-          </div>
-
-          <div style="float: left; margin: 10px">
-          <a href="6">
-          <h2>
-          Zespoły taneczne
-          </h2>
-
-          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
-
-          </div>
-
-          <div style="float: left; margin: 10px">
-          <a href="7">
-          <h2>
-          Ćwierćnuty
-          </h2>
-
-          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
-
-          </div>
-
-          <div style="float: left; margin: 10px">
-          <a href="8">
-          <h2>
-          Bas, średni i wysoki ton
-          </h2>
-
-          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
-
-          </div>
-
-          <div style="float: left; margin: 10px">
-          <a href="9">
-          <h2>
-          Przyspiesz, zwolnij
-          </h2>
-
-          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
-
-          </div>
+        markdown: "\"# Tańcz dalej!\n\nW Ii części stworzysz swój własny projekt.
+          Nie ma tam żadnych łamigłówek — za to jest zbiór projektów, które pokazują
+          różne sposoby, w jakie można stworzyć bardziej złożone potańcówki.\n\nMożesz
+          przerabiać te poziomy _w dowolnej kolejności_. Przeskocz do poprzedniego
+          poziomu, aby zobaczyć, jak coś zostało w nim zrobione, lub połącz koncepcje
+          z różnych projektów. Wypróbuj je wszystkie, wybierz swój ulubiony i poświęć
+          trochę czasu na tworzenie projektu, tak by stał się on naprawdę Twój.\n\n<a
+          class=\"\"btn btn-large btn-primary next-stage submitButton pull-right\"\">Dalej</a>\n\n<div
+          class=\"\"clearfix\"\"></div>\n\n\n<div style=\"\"float: left; margin: 10px\"\">\n<a
+          href=\"\"2\"\">\n<h2>\nTam i z powrotem\n</h2>\n\n<img src=\"\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"\"></a>\n\n</div>\n\n<div
+          style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"3\"\">\n<h2>\nWięcej
+          przycisków\n</h2>\n\n<img src=\"\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"\"></a>\n\n</div>\n<div
+          style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"4\"\">\n<h2>\nUstaw
+          się w szyku\n</h2>\n\n<img src=\"\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"\"></a>\n\n</div>\n\n<div
+          style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"5\"\">\n<h2>\nGdzie
+          oni poszli?\n</h2>\n\n<img src=\"\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"\"></a>\n\n</div>\n\n<div
+          style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"6\"\">\n<h2>\nEkipy
+          taneczne\n</h2>\n\n<img src=\"\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"\"></a>\n\n</div>\n\n<div
+          style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"7\"\">\n<h2>\nĆwierćnuty
+          \n</h2>\n\n<img src=\"\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"\"></a>\n\n</div>\n\n<div
+          style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"8\"\">\n<h2>\nNiskie,
+          średnie i wysokie tony\n</h2>\n\n<img src=\"\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"\"></a>\n\n</div>\n\n<div
+          style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"9\"\">\n<h2>\nPrzyśpiesz,
+          zwolnij\n</h2>\n\n<img src=\"\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"\"></a>\n\n</div>\"\n"
       DigitalFootprint-Unplugged:
         markdown: |
           # Twój cyfrowy ślad
@@ -3436,8 +3374,8 @@ pl-PL:
           feedback: Niepoprawnie. Zniwiarka nie wywołuje "sprawdź i podnieś", zanim
             nie dotrze do kukurydzy.
         - text: Żniwiarka zbierze wszystkie dynie.
-          feedback: Niepoprawnie. Pani żniwiarka nie wywołuje "Sprawdź i podnieś",
-            zanim nie dotrze do kukurydzy.
+          feedback: Niepoprawnie. Zniwiarka nie wywołuje "sprawdź i podnieś", zanim
+            nie dotrze do kukurydzy.
         - text: Żniwiarka zbierze sałatę.
           feedback: Niepoprawnie. Żniwiarka wykonuje tylko jeden skręt i kończy przy
             kukurydzy.
@@ -5247,3 +5185,13 @@ pl-PL:
           funkcję `doSomething` funkcji `onEvent` _nie_ wstawiamy nawiasów na końcu.
           Robimy tak dlatego, że przekazujemy samą funkcję jako argument, nie jej
           wynik.\n"
+      CSD Interactive Animations and Games Post-Project Test:
+        title: 'Test po projekcie Interaktywnych animacji i gier '
+      CSD Physical Computing Post-Project Test:
+        title: 'Test po projekcie: Obliczenia fizyczne'
+      CSD U5 test:
+        title: 'Test po projekcie: Dane i społeczeństwo'
+      CSD User Centered Design Post-Project Test:
+        title: 'Test po projekcie: Projektowanie zorientowane na użytkownika'
+      CSD Web Development Post-Project Test:
+        title: 'Test po projekcie: Tworzenie stron internetowych '

@@ -40,7 +40,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "per ogni elemento",
     "CONTROLS_FOREACH_TOOLTIP": "Per ogni elemento contenuto nella lista, assegna l'elemento alla variabile '%1' e quindi esegue alcune istruzioni.",
     "CONTROLS_FOR_HELPURL": "http://it.wikipedia.org/wiki/Struttura_di_controllo#Iterazione",
-    "CONTROLS_FOR_INPUT_COUNTER": "per %1 da %2 a %3 conta da %4",
+    "CONTROLS_FOR_INPUT_COUNTER": "per %1 da %2 a %3 a passi di %4",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "da %1 a %2 a passi di %3",
     "CONTROLS_FOR_INPUT_WITH": "per",
     "CONTROLS_FOR_TOOLTIP": "Ripete le azioni incluse, con la variabile %1 che assume tutti i valori da quello iniziale a quello finale, usando l'incremento specificato.",

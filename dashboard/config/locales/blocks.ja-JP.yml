@@ -1580,13 +1580,6 @@ ja:
         text: x 座標の {SPRITE}
       Mikelab_yLocationOf:
         text: y 座標 {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': グリッド
-            '"border"': 境界
-            '"row"': 行
-            '"random"': ランダム に
       RyanLab_moveForward:
         text: 前に すすむ
       RyanLab_turnLeft:
