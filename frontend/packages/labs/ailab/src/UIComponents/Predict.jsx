@@ -51,13 +51,16 @@ class Predict extends Component {
 
                 return (
                   <div style={styles.cardRow} key={index}>
-                    {feature} {`(min: ${+min}, max: ${+max})`}
-                    : &nbsp;
-                    <input
-                      type="number"
-                      onChange={event => this.handleChange(event, feature)}
-                      value={this.props.testData[feature] || ""}
-                    />
+                    <label>
+                      {feature}
+                      : &nbsp;
+                      <input
+                        type="number"
+                        onChange={event => this.handleChange(event, feature)}
+                        value={this.props.testData[feature] || ""}
+                        placeholder={`min: ${+min}, max: ${+max}`}
+                      />
+                    </label>
                   </div>
                 );
               })}

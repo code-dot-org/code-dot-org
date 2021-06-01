@@ -31,7 +31,10 @@ class DataTable extends Component {
       style = styles.dataDisplayHeaderFeature;
     }
 
-    return { ...styles.dataDisplayHeader, ...style };
+    const pointerStyle =
+      !this.props.reducedColumns && styles.dataDisplayHeaderClickable;
+
+    return { ...styles.dataDisplayHeader, ...pointerStyle, ...style };
   };
 
   getColumnCellStyle = key => {
@@ -85,13 +88,20 @@ class DataTable extends Component {
     }
   };
 
+  setCurrentColumn = columnId => {
+    if (!this.props.reducedColumns) {
+      this.props.setCurrentColumn(columnId);
+    }
+  };
+
+  setHighlightColumn = columnId => {
+    if (!this.props.reducedColumns) {
+      this.props.setHighlightColumn(columnId);
+    }
+  };
+
   render() {
-    const {
-      data,
-      setCurrentColumn,
-      setHighlightColumn,
-      startingRow
-    } = this.props;
+    const { data, startingRow } = this.props;
 
     if (data.length === 0) {
       return null;
@@ -101,16 +111,16 @@ class DataTable extends Component {
       <table style={styles.displayTable}>
         <thead>
           <tr>
-            {this.getColumns().map(key => {
+            {this.getColumns().map(columnId => {
               return (
                 <th
-                  key={key}
-                  style={this.getColumnHeaderStyle(key)}
-                  onClick={() => setCurrentColumn(key)}
-                  onMouseEnter={() => setHighlightColumn(key)}
-                  onMouseLeave={() => setHighlightColumn(undefined)}
+                  key={columnId}
+                  style={this.getColumnHeaderStyle(columnId)}
+                  onClick={() => this.setCurrentColumn(columnId)}
+                  onMouseEnter={() => this.setHighlightColumn(columnId)}
+                  onMouseLeave={() => this.setHighlightColumn(undefined)}
                 >
-                  {key}
+                  {columnId}
                 </th>
               );
             })}
@@ -120,19 +130,19 @@ class DataTable extends Component {
           {this.getRows().map((row, index) => {
             return (
               <tr key={index}>
-                {this.getColumns().map(key => {
+                {this.getColumns().map(columnId => {
                   return (
                     <td
-                      key={key}
-                      style={this.getColumnCellStyle(key)}
-                      onClick={() => setCurrentColumn(key)}
-                      onMouseEnter={() => setHighlightColumn(key)}
-                      onMouseLeave={() => setHighlightColumn(undefined)}
+                      key={columnId}
+                      style={this.getColumnCellStyle(columnId)}
+                      onClick={() => this.setCurrentColumn(columnId)}
+                      onMouseEnter={() => this.setHighlightColumn(columnId)}
+                      onMouseLeave={() => this.setHighlightColumn(undefined)}
                     >
                       {startingRow !== undefined && index <= startingRow ? (
                         <span>&nbsp;</span>
                       ) : (
-                        row[key]
+                        row[columnId]
                       )}
                     </td>
                   );
