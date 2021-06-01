@@ -45,11 +45,15 @@ export function getFadeOpacity(animationProgress) {
 const labelColor = "rgb(254, 96, 3)";
 const featureColor = "rgb(75, 155, 213)";
 const backgroundColor = "#f2f2f2";
+const tealColor = "rgb(89, 202, 211)";
+const tealColorTransparent = "rgba(89, 202, 211, 0.4)";
 
 export const colors = {
   feature: featureColor,
   label: labelColor,
-  background: backgroundColor
+  background: backgroundColor,
+  teal: tealColor,
+  tealTransparent: tealColorTransparent
 };
 
 export const styles = {
@@ -282,7 +286,7 @@ export const styles = {
     border: "none",
     cursor: "pointer",
     borderRadius: 5,
-    backgroundColor: "#61d2eb",
+    backgroundColor: colors.teal,
     color: "white",
     padding: "10px 20px",
     display: "inline-block"
@@ -408,23 +412,47 @@ export const styles = {
   dataDisplayCellFeatureUnselected: {},
   dataDisplayCellUnselected: {},
 
+  crosssTabHeader: {
+    backgroundColor: "initial",
+    color: "initial",
+    border: "initial",
+    fontSize: 14,
+    padding: "initial"
+  },
+
+  crossTabLeftColumn: {
+    fontSize: 14,
+    writingMode: "vertical-rl",
+    whiteSpace: "nowrap",
+    transform: "scale(-1)"
+  },
+
+  crossTabTableCell: {
+    paddingLeft: 20,
+    textAlign: "right",
+    fontSize: 12,
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "white"
+  },
+
   crossTabCell0: {
-    backgroundColor: "rgba(255,100,100, 0)"
+    backgroundColor: "rgba(89, 202, 211, 0)"
   },
   crossTabCell1: {
-    backgroundColor: "rgba(255,100,100, 0.2)"
+    backgroundColor: "rgba(89, 202, 211, 0.2)"
   },
   crossTabCell2: {
-    backgroundColor: "rgba(255,100,100, 0.4)"
+    backgroundColor: "rgba(89, 202, 211, 0.4)"
   },
   crossTabCell3: {
-    backgroundColor: "rgba(255,100,100, 0.6)"
+    backgroundColor: "rgba(89, 202, 211, 0.6)"
   },
   crossTabCell4: {
-    backgroundColor: "rgba(255,100,100, 0.8)"
+    backgroundColor: "rgba(89, 202, 211, 0.8)"
   },
   crossTabCell5: {
-    backgroundColor: "rgba(255,100,100, 1)"
+    backgroundColor: "rgba(89, 202, 211, 1)"
   },
 
   resultsPanelContainer: {
@@ -459,7 +487,7 @@ export const styles = {
     border: "none",
     cursor: "pointer",
     borderRadius: 5,
-    backgroundColor: "#61d2eb",
+    backgroundColor: colors.teal,
     color: "white",
     lineHeight: 1.3,
     position: "relative",
@@ -490,7 +518,7 @@ export const styles = {
     cursor: "pointer"
   },
   selectedPill: {
-    backgroundColor: "#61d2eb",
+    backgroundColor: colors.teal,
     color: "white",
     border: "none"
   },
