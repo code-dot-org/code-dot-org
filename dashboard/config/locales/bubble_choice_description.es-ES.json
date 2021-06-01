@@ -10,7 +10,12 @@
         "outbreak8": "Utiliza tu proyecto para compartir un mensaje. ¿Qué quieres que aprendan los demás de todo esto?",
         "outbreak_freeplay": "¡Amplía tu proyecto con funciones, variables y mucho más!",
         "outbreak_freeplay_basic": "¡Sigue con los mismos bloques que ya has visto!",
-        "spritelab_extras_repeat": "¡Crea muchos sprites iguales rápidamente, usando bucles!"
+        "spritelab_extras_repeat": "¡Crea muchos sprites iguales rápidamente, usando bucles!",
+        "courseC_artist_prog_challenge1_2021": "Dibuja habitaciones para cada uno de los animales. ",
+        "courseD_bee_nestedLoops8_2021": "Recolecta todo el néctar de cada flor y haz miel en cada panal. ",
+        "courseD_bee_nestedLoops9_2021": "Haz toda la miel.",
+        "courseF_bee_variables_7a_2021": "Este desafío es un poco diferente. ¿Qué necesitas para resolverlo?",
+        "ramp_artist_loops8_2021": "Busca un patrón y acorta este código usando bucles."
       }
     }
   }
