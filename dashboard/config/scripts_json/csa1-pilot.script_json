@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-27 13:03:00 UTC",
+    "serialized_at": "2021-05-28 14:56:35 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -42,18 +42,6 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa1-pilot"
-      }
-    },
-    {
-      "key": "lessonGroup-4",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "Test"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -420,21 +408,6 @@
       "seeding_key": {
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa1-pilot"
-      }
-    },
-    {
-      "key": "lesson-21",
-      "name": "Test Lesson #1",
-      "absolute_position": 21,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 21,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
