@@ -38,7 +38,7 @@ describe('LessonToken', () => {
       };
     });
 
-    it('renders default props', () => {
+    it('renders a Motion component', () => {
       const wrapper = shallow(<LessonToken {...defaultProps} />);
       expect(wrapper.find('Motion').length).to.equal(1);
     });
@@ -61,7 +61,7 @@ describe('LessonToken', () => {
       };
     });
 
-    it('renders default props', () => {
+    it('renders existing lesson with edit and clone buttons', () => {
       const wrapper = shallow(<LessonTokenContents {...defaultProps} />);
       expect(wrapper.contains('Lesson 1')).to.be.true;
       expect(wrapper.find('.fa-pencil').length).to.equal(1);
@@ -69,7 +69,7 @@ describe('LessonToken', () => {
       expect(wrapper.contains('assessment')).to.be.true;
     });
 
-    it('renders newly added lesson without edit button', () => {
+    it('renders newly added lesson without edit and clone buttons', () => {
       let wrapper = shallow(
         <LessonTokenContents
           {...defaultProps}
