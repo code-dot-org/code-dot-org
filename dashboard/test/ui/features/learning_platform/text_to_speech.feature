@@ -1,6 +1,6 @@
-# Test playing audio only on chrome; other browsers in the saucelabs ecosystem do not
-# come with the appropriate audio codecs, and end up responding with
+# Test playing audio only on chrome; other browsers in the saucelabs ecosystem # do not come with the appropriate audio codecs, and end up responding with
 # "Media resource could not be decoded" errors
+
 Feature: Text To Speech
 
 Scenario: Check that TTS player is displayed

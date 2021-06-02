@@ -961,10 +961,6 @@ class Script < ApplicationRecord
   def logged_out_age_13_required?
     return false if login_required
 
-    # hard code some exceptions. ideally we'd get rid of these and just make our
-    # UI tests deal with the 13+ requirement
-    return false if %w(allthethings allthehiddenthings allthettsthings).include?(name)
-
     script_levels.any? {|script_level| script_level.levels.any?(&:age_13_required?)}
   end
 
