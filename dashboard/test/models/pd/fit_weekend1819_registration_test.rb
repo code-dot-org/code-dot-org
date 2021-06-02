@@ -44,7 +44,7 @@ class Pd::FitWeekend1819RegistrationTest < ActiveSupport::TestCase
 
   test 'declining the registration updates the application status' do
     {
-      accepted: 'accepted',
+      accepted: 'accepted_not_notified',
       declined: 'withdrawn'
     }.each do |registration_status, expected_application_status|
       application = create(:pd_teacher_application, :locked)
