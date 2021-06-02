@@ -3608,11 +3608,11 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
 
-    section1 = create :section, stage_extras: true, script_id: script.id, user: teacher
+    section1 = create :section, lesson_extras: true, script_id: script.id, user: teacher
     section1.add_student(student)
-    section2 = create :section, stage_extras: true, script_id: script.id, user: teacher
+    section2 = create :section, lesson_extras: true, script_id: script.id, user: teacher
     section2.add_student(student)
-    section3 = create :section, stage_extras: true, script_id: other_script.id
+    section3 = create :section, lesson_extras: true, script_id: other_script.id
     section3.add_student(teacher)
 
     assert student.lesson_extras_enabled?(script)
