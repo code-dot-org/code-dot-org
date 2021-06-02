@@ -210,7 +210,7 @@ class P5LabVisualizationColumn extends React.Component {
 
           {!isSpritelab && !isShareView && this.renderGridCheckbox()}
         </GameButtons>
-        {this.spritelabPoemBotExperiment && <PoemBank />}
+        {isSpritelab && this.spritelabPoemBotExperiment && <PoemBank />}
         {!isSpritelab && this.renderAppSpaceCoordinates()}
         <ProtectedStatefulDiv
           id={GAMELAB_DPAD_CONTAINER_ID}

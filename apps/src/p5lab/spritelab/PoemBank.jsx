@@ -8,34 +8,31 @@ export const INITIAL_STATE = {
   selectedPoem: null
 };
 
-class PoemTile extends React.Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    lines: PropTypes.arrayOf(PropTypes.string).isRequired,
-    onSelect: PropTypes.func.isRequired
-  };
-
-  selectPoem() {
-    this.props.onSelect(this.props.name, this.props.author, this.props.lines);
+function PoemTile(props) {
+  function selectPoem() {
+    const {onSelect, name, author, lines} = props;
+    onSelect(name, author, lines);
   }
 
-  render() {
-    return (
-      <div style={styles.poemTile} onClick={this.selectPoem.bind(this)}>
-        <p style={styles.tileTitle}>{this.props.name}</p>
-        <p>{this.props.author}</p>
-        {this.props.lines.map((line, i) => (
-          <div key={line + i}>{line}</div>
-        ))}
-      </div>
-    );
-  }
+  return (
+    <div style={styles.poemTile} onClick={selectPoem}>
+      <p style={styles.tileTitle}>{props.name}</p>
+      <p>{props.author}</p>
+      {props.lines.map((line, i) => (
+        <div key={line + i}>{line}</div>
+      ))}
+    </div>
+  );
 }
 
-export default class PoemBank extends React.Component {
-  static propTypes = {};
+PoemTile.propTypes = {
+  name: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  lines: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onSelect: PropTypes.func.isRequired
+};
 
+export default class PoemBank extends React.Component {
   state = {...INITIAL_STATE};
 
   handleOpen = () => this.setState({isOpen: true});
