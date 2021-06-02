@@ -11,11 +11,13 @@ const defaultScriptLevel = {
   id: '11',
   position: 1,
   activeId: '2001',
+  key: 'level-one',
   levels: [
     {
-      id: '11',
-      name: 'My Level',
-      url: '/path/to/edit/url'
+      id: '2001',
+      name: 'Level One',
+      key: 'level-one',
+      url: '/path/to/edit/1'
     }
   ],
   kind: 'puzzle'
@@ -66,9 +68,29 @@ describe('LevelTokenContents', () => {
     };
   });
 
-  it('renders a ProgressBubble', () => {
+  it('renders a ProgressBubble and level key', () => {
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
     expect(wrapper.find('ProgressBubble').length).to.equal(1);
+    const nameWrapper = wrapper.find('.uitest-level-token-name');
+    expect(nameWrapper.text()).to.include('level-one');
+    expect(wrapper.text()).to.not.include('inactive variant');
+  });
+
+  it('renders inactive level variant key', () => {
+    defaultProps.scriptLevel.activeId = '2002';
+    defaultProps.scriptLevel.key = 'level-two';
+    defaultProps.scriptLevel.levels.push({
+      id: '2002',
+      name: 'Level Two',
+      key: 'level-two',
+      url: '/path/to/edit/2'
+    });
+    const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
+    expect(wrapper.find('ProgressBubble').length).to.equal(1);
+    const nameWrapper = wrapper.find('.uitest-level-token-name');
+    expect(nameWrapper.text()).to.include('level-two');
+    // match the &nbsp; whitespace character
+    expect(!!wrapper.text().match(/inactive variant:\W"level-one"/)).to.be.true;
   });
 
   it('calls toggleExpand when level name is clicked', () => {
@@ -83,7 +105,6 @@ describe('LevelTokenContents', () => {
   it('shows LevelTokenDetails when expanded', () => {
     defaultProps.scriptLevel.expand = true;
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
-    console.log(wrapper.debug());
     expect(wrapper.find('Connect(LevelTokenDetails)').length).to.equal(1);
   });
 });
