@@ -62,12 +62,12 @@ class ProgrammingExpression < ApplicationRecord
 
   def self.get_syntax(config)
     syntax = config['func']
-    if config['paletteParams']
+    if config['syntax']
+      syntax = config['syntax']
+    elsif config['paletteParams']
       syntax = config['func'] + "(" + config['paletteParams'].join(', ') + ")"
     elsif config['block']
       syntax = config['block']
-    elsif config['syntax']
-      syntax = config['syntax']
     end
 
     syntax
