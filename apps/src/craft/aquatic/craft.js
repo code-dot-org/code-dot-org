@@ -118,7 +118,7 @@ function trySetLocalStorageItem(key, value) {
  * Initialize Blockly and the Craft app. Called on page load.
  */
 Craft.init = function(config) {
-  if (config.level.puzzle_number === 1 && config.level.stage_total === 1) {
+  if (config.level.puzzle_number === 1 && config.level.lesson_total === 1) {
     // Not viewing level within a script, bump puzzle # to unused one so
     // asset loading system and levelbuilder overrides don't think this is
     // level 1 or any other special level.

@@ -820,14 +820,14 @@ class Pd::Workshop < ApplicationRecord
   # @return an array of tuples, each in the format:
   #   [unit_name, [lesson names]]
   # Units represent the localized titles for scripts in the Course
-  # Lessons are the stage names for that script (unit) preceded by "Lesson n: "
+  # Lessons are the lesson names for that script (unit) preceded by "Lesson n: "
   def pre_survey_units_and_lessons
     return nil unless pre_survey?
     pre_survey_course.default_scripts.map do |script|
       unit_name = script.title_for_display
-      stage_names = script.lessons.where(lockable: false).pluck(:name)
-      lesson_names = stage_names.each_with_index.map do |stage_name, i|
-        "Lesson #{i + 1}: #{stage_name}"
+      lesson_names = script.lessons.where(lockable: false).pluck(:name)
+      lesson_names = lesson_names.each_with_index.map do |lesson_name, i|
+        "Lesson #{i + 1}: #{lesson_name}"
       end
       [unit_name, lesson_names]
     end
