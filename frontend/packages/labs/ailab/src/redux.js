@@ -609,7 +609,7 @@ function reportPanelView(panel) {
   const syntheticPagePath = window.location.pathname + '/' + panel;
   window.ga('set', 'page', syntheticPagePath);
   window.ga('send', 'pageview');
-};
+}
 
 export function getFeatures(state) {
   return state.data.length > 0 ? Object.keys(state.data[0]) : [];
