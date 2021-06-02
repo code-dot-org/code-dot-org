@@ -79,7 +79,7 @@ class TeacherFeedback < ApplicationRecord
 
   def self.latest_per_teacher
     #Only select feedback from teachers who lead sections in which the student is still enrolled
-    where(id:
+    find(
       joins(:student_sections).
         where('sections.user_id = teacher_id').
         group([:teacher_id, :student_id]).
