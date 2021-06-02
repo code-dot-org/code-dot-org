@@ -100,6 +100,10 @@ export default class Neighborhood {
         const {id} = signal.detail;
         return this.controller.subtype.removePaint(id);
       }
+      case NeighborhoodSignalType.TURN_LEFT: {
+        const {id} = signal.detail;
+        return this.controller.subtype.turnLeft(id);
+      }
       default:
         console.log(signal.value);
         break;

@@ -1,6 +1,6 @@
 import {TestResults} from '@cdo/apps/constants.js';
 
-// Inspired by https://studio.code.org/s/course4/stage/16/puzzle/4
+// Inspired by https://studio.code.org/s/course4/lessons/16/levels/4
 // In this level, we set variables `left` and `right` in a hidden
 // "when_run" block that's positioned to be above the user-visible start
 // block. The code should therefore run before the user's code, and the
