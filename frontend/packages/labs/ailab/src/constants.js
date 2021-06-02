@@ -252,15 +252,16 @@ export const styles = {
   },
 
   selectDatasetItem: {
-    width: "calc(33.33% - 8px)",
-    padding: 20,
+    width: "calc(33.33% - 4px)",
+    padding: 10,
     float: "left",
     boxSizing: "border-box",
     border: "solid 4px #f2f2f2",
     borderRadius: 0,
     cursor: "pointer",
     backgroundColor: "white",
-    margin: 4
+    margin: 2,
+    position: "relative"
   },
 
   selectDatasetItemHighlighted: {
@@ -277,7 +278,15 @@ export const styles = {
 
   selectDatasetText: {
     fontSize: 14,
-    marginTop: 5
+    marginTop: 5,
+    marginRight: 25,
+    position: "absolute",
+    bottom: 28,
+    left: 25,
+    color: "white",
+    backgroundColor: "rgba(0,0,0,0.3)",
+    padding: "3px 5px",
+    borderRadius: 3
   },
 
   uploadCsvButton: {
