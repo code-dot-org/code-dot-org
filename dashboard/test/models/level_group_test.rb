@@ -474,7 +474,7 @@ level 'level1 copy2'"
 
     expected_results = {
       level1.id => {
-        stage_name: script_level.lesson.localized_title,
+        lesson_name: script_level.lesson.localized_title,
         levelgroup_results: [
           {
             type: "text_match",
@@ -522,8 +522,8 @@ level 'level1 copy2'"
     }
 
     assert_equal expected_results.keys, actual_survey_results.keys
-    assert_equal expected_results[level1.id][:stage_name],
-      actual_survey_results[level1.id][:stage_name]
+    assert_equal expected_results[level1.id][:lesson_name],
+      actual_survey_results[level1.id][:lesson_name]
     assert_equal expected_results[level1.id][:levelgroup_results],
       actual_survey_results[level1.id][:levelgroup_results]
   end
@@ -559,14 +559,14 @@ level 'level1 copy2'"
 
     expected_results = {
       level1.id => {
-        stage_name: script_level.lesson.localized_title,
+        lesson_name: script_level.lesson.localized_title,
         levelgroup_results: []
       }
     }
 
     assert_equal expected_results.keys, actual_survey_results.keys
-    assert_equal expected_results[level1.id][:stage_name],
-      actual_survey_results[level1.id][:stage_name]
+    assert_equal expected_results[level1.id][:lesson_name],
+      actual_survey_results[level1.id][:lesson_name]
     assert_equal [], actual_survey_results[level1.id][:levelgroup_results]
   end
 end

@@ -5,7 +5,7 @@ const exampleExportableFeedbackData = [
   {
     studentName: 'Mike',
     lessonNum: '4',
-    stageName: 'Loops',
+    lessonName: 'Loops',
     levelNum: '7',
     keyConcept: 'You should be learning about loops',
     performanceLevelDetails: 'A loop is in the code',
@@ -16,7 +16,7 @@ const exampleExportableFeedbackData = [
   {
     studentName: 'Anne',
     lessonNum: '8',
-    stageName: 'Functions',
+    lessonName: 'Functions',
     levelNum: '10',
     keyConcept: '',
     performanceLevelDetails: '',
@@ -27,7 +27,7 @@ const exampleExportableFeedbackData = [
   {
     studentName: 'Mike',
     lessonNum: '3',
-    stageName: 'Variables',
+    lessonName: 'Variables',
     levelNum: '3',
     keyConcept: 'Use variables to help and make coding better.',
     performanceLevelDetails:
@@ -39,7 +39,7 @@ const exampleExportableFeedbackData = [
   {
     studentName: 'Anne',
     lessonNum: '3',
-    stageName: 'Variables',
+    lessonName: 'Variables',
     levelNum: '3',
     keyConcept: 'Use variables to help and make coding better.',
     performanceLevelDetails: 'You uses no variables',
