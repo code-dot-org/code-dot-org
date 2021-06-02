@@ -34,7 +34,7 @@ function initPage() {
     store.dispatch(setVerified());
   }
   // Stage Extras fail to load with this
-  if (!teacherPanelData.stage_extra) {
+  if (!teacherPanelData.lesson_extra) {
     renderTeacherContentToggle(store);
   }
   renderTeacherPanel(
