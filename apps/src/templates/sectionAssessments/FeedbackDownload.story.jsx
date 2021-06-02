@@ -4,7 +4,7 @@ import {UnconnectedFeedbackDownload} from './FeedbackDownload';
 const exampleExportableFeedbackData = [
   {
     studentName: 'Mike',
-    stageNum: '4',
+    lessonNum: '4',
     stageName: 'Loops',
     levelNum: '7',
     keyConcept: 'You should be learning about loops',
@@ -15,7 +15,7 @@ const exampleExportableFeedbackData = [
   },
   {
     studentName: 'Anne',
-    stageNum: '8',
+    lessonNum: '8',
     stageName: 'Functions',
     levelNum: '10',
     keyConcept: '',
@@ -26,7 +26,7 @@ const exampleExportableFeedbackData = [
   },
   {
     studentName: 'Mike',
-    stageNum: '3',
+    lessonNum: '3',
     stageName: 'Variables',
     levelNum: '3',
     keyConcept: 'Use variables to help and make coding better.',
@@ -38,7 +38,7 @@ const exampleExportableFeedbackData = [
   },
   {
     studentName: 'Anne',
-    stageNum: '3',
+    lessonNum: '3',
     stageName: 'Variables',
     levelNum: '3',
     keyConcept: 'Use variables to help and make coding better.',
