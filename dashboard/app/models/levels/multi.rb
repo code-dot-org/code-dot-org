@@ -68,7 +68,7 @@ class Multi < Match
 
   def summarize_for_lesson_show(can_view_teacher_markdown)
     localized_questions = localized_property(:questions)
-    question_text = localized_questions.any? ? '' : localized_questions[0]['text']
+    question_text = localized_questions.any? ? localized_questions[0]['text'] : nil
     super.merge(
       {
         questionText: question_text
