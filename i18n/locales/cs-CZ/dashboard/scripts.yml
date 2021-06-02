@@ -4700,3 +4700,11 @@ cs:
               display_name: Úvod
             Introduction:
               display_name: Úvod
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: Začínáme
+              name: Začínáme
+            Computer Science Fundamentals:
+              key: Základy informatiky
+              name: Základy informatiky

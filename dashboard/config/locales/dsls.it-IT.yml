@@ -6984,35 +6984,35 @@ it-IT:
           style=\"float:right; width:30%\">\n\nLe simulazioni sono un ottimo modo
           per imparare cose che possono essere difficili da osservare nel mondo reale.
           Aiutano gli scienziati a risolvere problemi e testare nuove idee in modo
-          sicuro ed efficiente. La tua simulazione è un modo per mostrare come potrebbe
-          apparire un'epidemia da virus a Monster Town.\n\n## Ripristina e riproduci!\nAnche
-          quando scrivi tu stesso il codice, è impossibile sapere esattamente cosa
-          succederà quando premi esegui. I mostri vagano in modo casuale, quindi non
-          sai se il virus si diffonderà velocemente o lentamente. Ogni volta che modifichi
-          il codice, assicurati di eseguire la simulazione più di una volta. Le cose
-          non succederanno due volte allo stesso modo!\n\n## Raccolta dati\nProva
-          a scrivere le tue osservazioni mentre esegui la simulazione. Puoi contare
-          il numero di mostri che si ammalano o utilizzare un timer per vedere quanto
-          velocemente accadono le cose. Ad esempio, quanto tempo ci vuole di solito
-          perché tutti i mostri si ammalino se nessuno ha la mascherina? \n\n## Fare
-          previsioni\nSe comprendi il tuo modello, puoi usarlo per fare previsioni.
-          Puoi persino modificare il modo in cui viene eseguita la simulazione e indovinare
-          cosa accadrà diversamente. Per esempio:\n* Cosa succederebbe se ci fossero
-          il doppio dei mostri?\n* Cosa succederebbe se i mostri si muovessero a metà
-          della velocità?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
-          style=\"float:right\">\n\n## Monster Town è come il mondo reale?\nC'è un
-          limite al grado di realismo di qualsiasi modello. \n* Che cosa ha in comune
-          la simulazione dell'epidemia con le epidemie di virus nel mondo reale?\n*
+          sicuro ed efficiente. La tua simulazione è un modo per mostrare quali potrebbero
+          essere le conseguenze di un'epidemia da virus nella Città dei mostri.\n\n##
+          Ripristina e riproduci!\nAnche quando scrivi tu stesso il codice, è impossibile
+          sapere esattamente cosa succederà quando premerai il pulsante \"Esegui\".
+          I mostri vagano in modo casuale, quindi non sai se il virus si diffonderà
+          velocemente o lentamente. Ogni volta che modifichi il codice, assicurati
+          di eseguire la simulazione più di una volta. Le cose non succederanno due
+          volte allo stesso modo!\n\n## Raccolta dati\nProva a scrivere le tue osservazioni
+          mentre esegui la simulazione. Puoi contare il numero di mostri che si ammalano
+          o utilizzare un timer per vedere in quanto tempo accadono le cose. Ad esempio,
+          quanto tempo ci vuole di solito perché tutti i mostri si ammalino se nessuno
+          ha la mascherina? \n\n## Fare previsioni\nSe comprendi il tuo modello, puoi
+          usarlo per fare previsioni. Puoi persino modificare il modo in cui viene
+          eseguita la simulazione e indovinare cosa accadrà diversamente. Per esempio:\n*
+          Cosa succederebbe se ci fossero il doppio dei mostri?\n* Cosa succederebbe
+          se i mostri si muovessero a metà della velocità?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## La Città dei mostri è come il mondo reale?\nC'è
+          un limite al grado di realismo di qualsiasi modello. \n* Che cosa ha in
+          comune la simulazione dell'epidemia con le epidemie di virus nel mondo reale?\n*
           Quali sono le differenze?\nDopo aver completato questa attività, discuti
           queste domande con gli insegnanti o con la tua famiglia!\n\n## Cos'altro
           possiamo rappresentare?\nHai già creato un modello funzionante dell'epidemia
-          a Monster Town. Quali cose non è possibile riprodurre o mostrare nella simulazione
-          che vorresti fosse possibile? Premi Continua per andare avanti e imparare
-          ancora di più a  rappresentare:\n* Aumentare il numero di mostri nella simulazione\n*
-          Aiutare i mostri a riprendersi dal virus\n* Probabilità, immunità, vaccini
-          e altro!\n\nPuoi anche condividere il tuo modello di simulazione con altri
-          o condividere un messaggio su ciò che pensi che possiamo fare per aiutare
-          a mantenere gli altri in buona salute quando un virus arriva in città. "
+          nella Città dei mostri. Quali cose non è possibile riprodurre o mostrare
+          nella simulazione che vorresti fosse possibile? Premi \"Prosegui\" per:\n*
+          aumentare il numero di mostri nella simulazione,\n* aiutare i mostri a riprendersi
+          dal virus,\n* imparare di più sui concetti di probabilità, immunità, vaccini
+          e altro!\n\nPuoi anche condividere il tuo modello di simulazione con i tuoi
+          amici oppure un tuo messaggio su cosa pensi che si possa fare per limitare
+          la diffusione del virus quando questo arriva in città."
       BigEvent-Unplugged:
         markdown: |-
           # Il Grande Evento

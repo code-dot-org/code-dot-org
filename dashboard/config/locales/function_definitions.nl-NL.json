@@ -1642,6 +1642,98 @@
               "length": "lengte"
             }
           }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "teken een ster",
+            "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+            "parameters": {
+              "points": "punten",
+              "length": "lengte"
+            }
+          },
+          "draw a circle": {
+            "name": "teken een cirkel",
+            "description": "teken een cirkel met gegeven straal",
+            "parameters": {
+              "radius": "straal"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teken een windmolen",
+            "parameters": {
+              "sides": "zijden",
+              "length": "lengte",
+              "repeat": "herhaal"
+            }
+          },
+          "draw a triangle": {
+            "name": "teken een driehoek",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "sides": "zijden",
+              "length": "lengte"
+            }
+          },
+          "draw a house": {
+            "name": "teken een huis",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a square": {
+            "name": "teken een vierkant",
+            "parameters": {
+              "length": "lengte"
+            }
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "mogelijke oplossing"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "teken een vierkant"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "teken een ster"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "teken een ster"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "teken een vierkant"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "einde spel"
+          }
         }
       }
     }

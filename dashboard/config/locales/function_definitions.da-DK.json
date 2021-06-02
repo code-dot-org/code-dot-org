@@ -1306,6 +1306,84 @@
               "length": "længde"
             }
           }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "tegn en stjerne",
+            "parameters": {
+              "points": "point",
+              "length": "længde"
+            }
+          },
+          "draw a circle": {
+            "name": "tegn en cirkel"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "længde",
+              "repeat": "gentag"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "længde"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "tegn en stjerne"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "tegn en stjerne"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "afslut spil"
+          }
         }
       }
     }

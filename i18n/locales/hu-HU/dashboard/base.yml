@@ -551,7 +551,7 @@ hu:
       applab_unsupported_tablet: "Az App Lab legjobban asztali számítógépen vagy laptopon működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe ütközhet."
   slow_loading: 'Ez a megszokottnál tovább tart...'
   try_reloading: 'Próbálja meg újratölteni az oldalt'
-  next_stage: 'Befejezve! Folytatás a következő pályával.'
+  next_stage: 'Befejezve! Folytatás a következő pályára'
   download_pdf: 'Óravázlat megnyitása'
   lesson_plan: 'Óravázlat'
   view_lesson_plan: 'Óravázlat megtekintése'

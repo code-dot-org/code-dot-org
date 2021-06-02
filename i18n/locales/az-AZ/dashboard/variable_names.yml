@@ -2,6 +2,9 @@ az:
   data:
     variable_names:
       "???": "???"
+      Blue: Göy
+      Green: Yaşıl
+      Red: Qırmızı
       actor: personaj
       age: yaş
       answer: cavab
@@ -10,20 +13,33 @@ az:
       bit: bit
       blue1: mavi1
       blue2: mavi2
+      cats: pişiklər
+      choice: seçim
+      circ: dövrə
       counter: sayğac
+      direction: istiqamət
+      dogs: itlər
+      energy: enerji
       firstName: Ad
+      gather: toplamaq
+      green1: yaşıl1
+      green2: yaşıl2
+      guess: təxmin
       height: hündürlük
       honey: bal
       i: i
       left: sola
       length: uzunluq
+      level: səviyyə
       name: ad
       nectar: nektar
+      planet: planet
       points: xallar
       random: təsadüfi
       red1: qırmızı1
       red2: qırmızı2
       repeat: təkrar et
+      repetitions: təkrarlar
       right: sağa
       score: xal
       shout: bağırmaq
@@ -33,3 +49,4 @@ az:
       variable: dəyişən
       wizard: sehrbaz
       x: x
+      your var 2: sənin dəyişənin 2

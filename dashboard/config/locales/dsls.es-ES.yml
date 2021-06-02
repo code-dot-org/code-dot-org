@@ -10389,3 +10389,589 @@ es-ES:
           # Información privada y personal
 
           ## ¿Qué información sobre tí es adecuada para compartir en línea?
+      BigEvent-Unplugged_2021:
+        markdown: "# El Gran Evento \n\nEn ciencias de la computación, eventos son
+          acciones que un computador monitorea. En esta lección usted reaccionará
+          de manera diferente dependiendo cuál botón esta presionado.\n"
+      BinaryBracelets-Unplugged_2021:
+        markdown: |-
+          # Pulseras binarias
+
+          ¡Crea una pulsera que represente tu nombre en un sistema que los ordenadores entiendan!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |-
+          # Condicionales con cartas
+
+          Juega a un juego de cartas y crea reglas como "Si saco una carta roja, me llevo un punto" y "Si saco una carta negra, te llevas un punto".
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |-
+          # Diseñando para ser accesible
+
+          * En el mundo de la informática, la **accesibilidad** consiste en crear tecnología para personas con discapacidades.
+          * Las discapacidades incluyen las físicas, auditivas, visuales y muchas otras.
+          * Las discapacidades son diversas y afectan a las personas de diferentes maneras, incluida la forma en que utilizan la tecnología, como las **aplicaciones para teléfonos inteligentes**.
+          * El diseño de aplicaciones accesibles para las personas con discapacidad hace que esas aplicaciones sean mejores para todos los demás.
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |-
+          # Intercambio digital
+
+          En esta lección tendrás en cuenta los retos y las ventajas de respetar la propiedad y los derechos de autor, especialmente en los entornos digitales.
+      GettingLoopy-Unplugged_2021:
+        markdown: |-
+          # Haciendo un Loopy
+
+          Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |
+          #Programación de papel cuadriculado
+
+          Escribe algoritmos que tus compañeros puedan usar para dibujar imágenes.
+      HappyMaps-Unplugged_2021:
+        markdown: |
+          # Mapas felices
+
+          Crea un algoritmo para mover al personaje a través de un laberinto.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |-
+          # Muévete, muévete
+
+          Utiliza un mapa y da órdenes para llegar a la meta.
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Mis amigos robóticos de Loopy
+
+          ¡Haz tus programas más cortos usando bucles!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Mis Amigos Robóticos
+
+          ¡Aprende a programar escribiendo código para tus amigos!
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |
+          # Información privada y personal
+
+          ## ¿Qué información sobre tí es adecuada para compartir en línea?
+      RelayProgramming-Unplugged_2021:
+        markdown: |-
+          # Programación por relevos
+
+          Divídanse en equipos y trabajen juntos para escribir programas que hagan dibujos.
+      Songwriting-Unplugged_2021:
+        markdown: |-
+          # Composición de canciones
+
+          Utiliza el concepto de estribillo en una canción para aprender a definir y llamar a las funciones.
+      TheRightAppMarkdownLevel_2021:
+        markdown: "# La aplicación correcta\n\n* Hoy en día todo el mundo utiliza
+          ordenadores, especialmente los smartphones. \n* Las aplicaciones para teléfonos
+          inteligentes ayudan a la gente a hacer cosas como hablar con los amigos,
+          escuchar música, comprar o simplemente navegar por la web.\n* ¡Es importante
+          que los programadores entiendan las necesidades de los demás y diseñen las
+          aplicaciones pensando en ellas!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      courseAB_EOC_2021:
+        description: "¡Has llegado a la última lección! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      courseB_EOC_2021:
+        description: "¡Has llegado a la última lección! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - text: El artista dibujará un triángulo con tres lados iguales.
+          feedback: Incorrecto. El artista dibuja un cuadrado.
+        - text: El artista dibujará una sola línea.
+          feedback: Incorrecto. El artista dibuja un cuadrado.
+        - text: El artista dibujará un cuadrado.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El artista dibujará un pentágono
+          feedback: Incorrecto. El artista dibuja un cuadrado.
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+          feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
+            3 loops. 4 veces 3 es 12!
+        - text: '12'
+          correct: true
+          feedback: "¡Correcto!"
+        - text: '15'
+          feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
+            3 loops. 4 veces 3 es 12!
+        - text: '20'
+          feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
+            3 loops. 4 veces 3 es 12!
+        questions:
+        - text: Mira el siguiente código con atención. ¿Cuántas calabazas recogerá
+            la granjera luego de que hagas clic en "Ejecutar"?
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - text: Scrat llegará a la bellota. No hay errores en el código.
+          feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota.
+        - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
+          correct: true
+          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota."
+        - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
+            "avance".
+          correct: true
+          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota."
+        - text: Scrat no se moverá del primer bloque.
+          feedback: Hay dos errores en este código. En primer lugar, Scrat gira en
+            la dirección equivocada y a continuación, Scrat no se mueve hacia adelante
+            suficientes veces para llegar a la bellota.
+        questions:
+        - text: Busca errores en este código. ¿Llegará Scrat a la bellota o hay algún
+            problema?
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - text: El pájaro se quedará a un paso del cerdo.
+          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
+            el cerdo.
+        - text: El pájaro logrará llegar hasta el cerdo.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El pájaro chocará con el TNT.
+          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
+            el cerdo.
+        - text: El pájaro se estrellará contra la pared.
+          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
+            el cerdo.
+        questions:
+        - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
+            en "Ejecutar"?
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - text: BB-8 no se moverá.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
+        - text: BB-8 se moverá solo un espacio
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
+        - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
+          correct: true
+          feedback: "¡Correcto!"
+        - text: BB-8 se moverá sólo 3 espacios.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
+        questions:
+        - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - text: BB-8 llegará demasiado lejos en el primer bucle.
+          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
+            cuando necesita avanzar 3 espacios.
+        - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
+            recoger toda la chatarra.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: BB-8 recogerá toda la chatarra sin problemas.
+          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
+            cuando necesita avanzar 3 espacios.
+        - text: BB-8 girará en la dirección equivocada después del primer bucle.
+          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
+            cuando necesita avanzar 3 espacios.
+        questions:
+        - text: Mira el siguiente programa con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?
+      courseD_EOC_2021:
+        description: "¡Has llegado a la última lección del Curso D! Elige un proyecto
+          para crear."
+        display_name: Proyecto de fin de curso
+      courseD_EOC_examples_2021:
+        display_name: Ejemplos de Proyecto
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+          feedback: "¡Correcto!"
+        - text: B
+          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
+            repite un círculo 4 veces.
+        - text: C
+          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
+            repite un círculo 4 veces.
+        - feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
+            repite un círculo 4 veces.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Observa bien el siguiente código. ¿Qué dibujo hará el programa si
+            haces clic en "Ejecutar"?
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
+            lo que pase. '
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
+            flor debajo.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: 'La abeja no llegará a la nube. '
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        questions:
+        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
+            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
+          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja intentará obtener miel y néctar tanto de las flores como
+            del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
+            haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
+            detrás de cada nube.
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
+            el néctar, lo que permite resolver el puzle.
+        - text: La abeja recogerá solo 2 unidades de néctar.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
+            el néctar, lo que permite resolver el puzle.
+        - text: La abeja recogerá todo el néctar.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La abeja girará en la dirección equivocada.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
+            el néctar, lo que permite resolver el puzle.
+        questions:
+        - text: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué
+            ocurrirá si haces clic en "Ejecutar"?
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
+            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
+            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+        - text: '8'
+          correct: true
+          feedback: "¡Correcto!"
+        - text: '10'
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
+            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
+            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+        - text: '12'
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
+            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
+            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+        questions:
+        - text: Mira el código a continuación. ¿Cuánta miel hará la abeja si haces
+            clic en "Ejecutar"?
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - text: La granjera recogerá todos los cultivos.
+          feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
+        - text: La granjera no recogerá ninguna de las cosechas con el camino que
+            está tomando.
+          feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
+            varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
+            No recogerá la calabaza.
+        - text: La cosechadora recogerá todos los cultivos, excepto la calabaza.
+          correct: true
+          feedback: "¡Correcto!"
+        - feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
+            varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
+            No recogerá la calabaza.
+        markdown: |
+          Los brotes en este desafió serán de maíz o lechuga.
+          <br/>
+        questions:
+        - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
+            en "Ejecutar"?
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - text: Nada. Este código solo nivelará el suelo.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
+        - text: Este código dejará la pila completamente intacta.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: Este código dejará los hoyos completamente intactos.
+          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
+            de bucle, pero no existe un código para eliminar la tierra de la pila.
+        - text: Este código dejará el último agujero sin tocar.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
+        questions:
+        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
+            este puzle?
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - text: No sucederá nada.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
+            pila, y luego se detendrá cuando la pila desaparezca
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
+            pila, y luego se detendrá cuando la pila desaparezca
+        - text: La granjera quitará la tierra mientras exista una pila, y luego se
+            detendrá cuando la pila desaparezca.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La granjera removerá la tierra sólo una vez.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
+            pila, y luego se detendrá cuando la pila desaparezca
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
+            y hacia atrás para siempre.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El zombie llegará al girasol.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
+        - text: El zombie girará a la derecha en el primer camino y dará vueltas en
+            círculos sin parar.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
+        - text: El zombi se quedará atascado al final del camino de frente.
+          feedback: En este código, el zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
+        questions:
+        - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
+            clic en "Ejecutar"?
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - text: El pájaro no se moverá en lo absoluto.
+          feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
+            camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
+            al cerdo!
+        - text: El pájaro logrará llegar hasta el cerdo.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El pájaro avanzará y chocará con el TNT.
+          feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
+            camino seguro, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta
+            llegar al cerdo!
+        - text: El pájaro gira en sentido contrario.
+          feedback: En este código, el pájaro avanza mientras haya un camino, y luego
+            gira a la izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué crees que sucederá cuando
+            hagas clic en "Ejecutar"?
+      courseE_EOC_2021:
+        description: "¡Has llegado al final del Curso E! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      courseE_EOC_examples_2021:
+        description: "¡Has llegado al final del Curso E! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - text: No sucederá nada.
+        - {}
+        - correct: true
+          feedback: "¡Correcto!"
+        - {}
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - text: La granjera recogerá dos calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+            da la vuelta y retrocede hasta que recoge la lechuga.
+        - text: La granjera recogerá todas las calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+            da la vuelta y retrocede hasta que recoge la lechuga.
+        - text: La granjera recogerá la lechuga.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: La granjera recogerá el maíz.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+            da la vuelta y retrocede hasta que recoge la lechuga.
+        questions:
+        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la granjera?
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - text: Nada. El programa no activa la función.
+          feedback: Incorrecto. El programa activa dos veces la función.
+        - text: El artista dibujará un solo cuadrado.
+          feedback: Incorrecto. El programa activa dos veces la función.
+        - text: El artista dibujará dos cuadrados que se superponen.
+          feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
+            pixeles, pero el artista salta a 175 pixeles entre funciones.
+        - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
+          correct: true
+          feedback: "¡Correcto! La función se activa dos veces en el programa, con
+            un salto en el medio de ambas."
+        questions:
+        - text: ¿Qué sucederá cuando presiones "Ejecutar"?
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - text: No sucederá nada.
+        - {}
+        - correct: true
+          feedback: "¡Correcto!"
+        - {}
+        questions:
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en "Ejecutar"?
+      courseF_EOC_samples_2021:
+        display_name: Proyecto de fin de curso
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - text: El artista dibujará un triángulo con lados de 50 pixeles.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El artista dibujará un polígono de 50 caras con lados de 3 píxeles.
+          feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
+            que estar en el bucle `repetir`.
+        - text: El artista dibujará tres lados abiertos con giros de 50 grados.
+          feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
+            que ser usada en el bloque `girar`.
+        - feedback: La variable `longitud` se establece en 50 y se usa en el bloque
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
+        questions:
+        - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
+            hagas clic en "Ejecutar"?
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
+          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
+            correcta de néctar, pero solo llegará a 4 flores.
+        - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
+            de una.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
+          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
+            correcta de néctar, pero solo llegará a 4 flores.
+        - feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
+            correcta de néctar, pero solo llegará a 4 flores.
+        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        questions:
+        - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - text: El artista resolverá el puzle correctamente.
+          feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
+            línea de polígonos".
+        - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: El artista dibujará solo una línea de cuadrados.
+          feedback: Incorrecto. El programa no llama a la función "dibujar línea de
+            polígonos".
+        - text: El artista dibujará cuatro cuadrados, uno encima de otro.
+          feedback: Incorrecto. El bucle gira 90 grados entre las activaciones de
+            la función "dibujar polígono".
+        questions:
+        - text: ¿Qué sucederá cuando presiones el botón "Ejecutar"?
+      csf_be_a_super_digital_citizen_2021:
+        content1: descripción aquí
+        markdown: |-
+          # Super Ciudadano Digital
+
+          ## ¿Cómo podemos ser "defensores" cuando vemos el ciberacoso?
+      csf_digital_trails_2021:
+        markdown: |-
+          # Sigue el Rastro Digital
+
+          ## ¿Qué información es buena para obtener en tu huellas digitales?
+      csf_password_power-up_2021:
+        content1: descripción aquí
+        markdown: |-
+          # Potencia tu contraseña
+
+          ## Consejos para recordar la contraseña
+
+          * Empieza con una **frase** que se pueda recordar.
+          * Sólo tus **padres** deben conocer tu contraseña.
+          * Nunca utilices **información de carácter privado** en tu contraseña.
+          * Crea contraseñas con al menos **ocho** caracteres.
+          * Utiliza letras, números y **símbolos** en tu contraseña.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: descripción aquí
+        markdown: |-
+          # STOP a la maldad
+
+          ## ¿Qué debes hacer si alguien no se porta bien contigo en Internet?
+
+          * Aléjate.
+          * Habla con un adulto de confianza.
+          * Sitios seguros primero.
+          * Haz una pausa y piensa en Internet.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # Mi Barrio en Línea
+
+          ## ¿Cómo navegas en la Red sin riesgo?
+      express_EOC_2021:
+        description: "¡Has llegado al final del Curso E! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      express_EOC_examples_2021:
+        display_name: Ejemplos de Proyecto
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - text: Laurel recogerá 4 piezas del tesoro con este programa.
+          feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
+            y esto provoca un error.
+        - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
+            error.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: Laurel recogerá todo el tesoro.
+          feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
+            y esto provoca un error.
+        - text: Laurel conseguirá 1 pieza del tesoro usando este código.
+          feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
+            y esto provoca un error.
+        questions:
+        - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando
+            ejecutes el programa?

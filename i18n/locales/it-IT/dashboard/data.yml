@@ -572,6 +572,8 @@ it:
         codebreak_e11: 'Code Break 11.0: Astrazione con Susan Wojcicki e China Anne McClain'
         codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor e Paula Mejia'
         csd_ml_intro_to_ai_lab: Lezione 6
+        playlab_2021: Introduzione al Laboratorio
+        playlab_2021_reader: Introduzione al Laboratorio
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

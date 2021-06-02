@@ -432,6 +432,28 @@
         },
         "outbreak7": {
           "costumes_callout": "Klik for at lave et nyt kostume"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Klik her for at udvide blokken.",
+          "pointerlocation": "Træk en emneblok her."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Klik for at lave et nyt kostume"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Klik på TIP! hvis du har brug for hjælp!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Dette er en opfordring"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Klik her for at ændre på retningen."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Med denne kan du vælge en tilfældig lyd. Så ved du ikke hvad du får, før du hører lyden!"
         }
       }
     }

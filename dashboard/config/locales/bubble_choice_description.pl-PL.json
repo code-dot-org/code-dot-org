@@ -10,7 +10,17 @@
         "outbreak7": "Chroń swoje duszki przed zachorowaniem, dając im odporność. ",
         "outbreak8": "Użyj swojego projektu, aby udostępnić wiadomość. Czego chcesz, aby inni się z tego nauczyli? ",
         "outbreak_freeplay": "Rozszerz swój projekt o funkcje, zmienne i nie tylko! ",
-        "outbreak_freeplay_basic": "Kontynuuj z tymi samymi blokami, które już widziałeś! "
+        "outbreak_freeplay_basic": "Kontynuuj z tymi samymi blokami, które już widziałeś! ",
+        "CourseF_outbreak4": "Zmień sposób działania symulacji i postaraj się przewidzieć, co się stanie. ",
+        "CourseF_outbreak5": "Pomóż swoim duszkom automatycznie stawać się coraz lepszymi z upływem czas",
+        "CourseF_outbreak6": "Wirus nie zawsze jest przenoszony, a maski nie zatrzymują transmisji doskonale. Ulepsz swoją symulację, powodując przypadkowe infekcje.",
+        "CourseF_outbreak7": "Chroń swoje duszki przed zachorowaniem, dając im odporność. ",
+        "CourseF_outbreak8": "Użyj swojego projektu, aby udostępnić wiadomość. Czego chcesz, aby inni się z tego nauczyli? ",
+        "courseC_artist_prog_challenge1_2021": "Narysuj pomieszczenia dla każdego ze zwierząt.\n",
+        "courseD_bee_nestedLoops8_2021": "Zbierz cały nektar z każdego kwiatka i zrób miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. ",
+        "courseD_bee_nestedLoops9_2021": "Zrób cały miód.",
+        "courseF_bee_variables_7a_2021": "Ta łamigłówka jest nieco inna. Co musisz zrobić, aby ją rozwiązać?",
+        "ramp_artist_loops8_2021": "Szukaj wzorca i skracaj kod z wykorzystaniem pętli."
       }
     }
   }

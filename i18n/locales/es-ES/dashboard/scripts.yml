@@ -16506,6 +16506,8 @@ es:
               name: 'Proyecto: Aplicación con Datos del Mundo Real'
             ailab-explore:
               name: Explora el laboratorio de Inteligencia Artificial
+            videoLevels:
+              name: Niveles de Grabación de Vídeo
           title: Unidad de ML/AI - CSD
           description_short: Unidad ML/AI
           description: Aportación de ideas / Área de juegos, para el desarrollo de la unidad de ML/AI para el CSD. Para futuras preguntas sobre esto, pregunte a Dan Schneider.
@@ -20223,7 +20225,7 @@ es:
               description_teacher: En esta lección desconectada, los alumnos crean objetos y representan los atributos relevantes utilizando variables de instancia. Los alumnos aprenden la diferencia entre `público` y `privado` y el propósito de la encapsulación para ocultar la construcción interna de un objeto.
             lesson-2:
               name: Usando Variables
-              description_student: 'Una de las formas en que los ingenieros de software pueden almacenar información en la memoria de un ordenador es mediante el uso de variables. En esta lección, se usan variables para almacenar información utilizada para crear objetos `Pintor` y también para almacenar información introducida por un usuario. '
+              description_student: Una de las formas en que los ingenieros de software pueden almacenar información en la memoria de un ordenador es mediante el uso de variables. En esta lección, se usan variables para almacenar información utilizada para crear objetos `Pintor` y también para almacenar información introducida por un usuario.
               description_teacher: En esta lección, los alumnos definen variables para representar los atributos de un objeto y utilizan estas variables para almacenar valores. Los alumnos utilizan la clase `Escáner` para obtener información del usuario y definen variables para almacenar los valores proporcionados por el usuario. Estos valores se utilizan para construir objetos `Pintor` en El Barrio.
             lesson-3:
               name: Escribir Constructores
@@ -20231,28 +20233,52 @@ es:
               description_teacher: Los alumnos conocen el camión de comida del Proyecto "Pastelería Mercurio" y la necesidad del propietario de un programa para introducir y almacenar artículos de postre. Como ingenieros de software, los alumnos utilizan estrategias de diseño orientado a objetos para identificar los atributos necesarios y los tipos de datos apropiados para una clase "Postre". Los alumnos escriben un constructor y utilizan un objeto `Escáner` que permite obtener los valores de las variables de instancia para inicializar un objeto `Postre`.
             lesson-4:
               name: Agregando Varios Constructores
+              description_student: ¡El camión de comida del Proyecto Pastelería Mercurio ha crecido en popularidad! Para ayudar al propietario a rellenar los pedidos, mejoras la clase `Postre` para crear objetos `Postre` de forma más eficiente. Para resolver este problema, debes implementar "constructores sobrecargados" para simplificar tu código y añadir flexibilidad a la creación de objetos `Postre`. Para rellenar los pedidos estándar, creas un constructor por defecto para utilizar los valores por defecto de los `Postres`.
+              description_teacher: 'Los alumnos continúan trabajando en el programa de camiones de comida del Proyecto Pastelería Mercurio. Los alumnos escriben constructores sobrecargados para la clase `Postre` con el fin de proporcionar múltiples formas de creación de instancias de objetos `Postre`. Los alumnos determinan cuándo es apropiado establecer valores por defecto para una o más variables de instancia y utilizar constructores sin argumentos. '
             lesson-5:
               name: Manipulación de Variables y Datos de Objeto
+              description_student: Explora las reglas que utiliza un ordenador para determinar el valor resultante y el tipo de una expresión, similares a las que ves en la clase de matemáticas. Creas expresiones para que el ordenador haga las cuentas por ti.
+              description_teacher: En esta lección, los alumnos escriben y evalúan expresiones utilizando variables y datos de objetos. Los alumnos utilizan los operadores aritméticos (+, -, *, /, %) y los operadores de asignación compuesta (+=, -=, *=, /=, %=) para realizar cálculos con variables y datos de objetos.
             lesson-6:
               name: Minimizar Errores en Inicialización
+              description_student: "¿Cómo puedes asegurarte de que los valores dados a un `Postre` son correctos? Recordando lo que has aprendido sobre los casos de borde, añade código para comprobar los errores lógicos en el constructor. En esta lección, exploras dónde están accesibles los diferentes tipos de variables y utilizas estos conceptos para añadir otro constructor a la clase `Postre`."
+              description_teacher: En esta lección, los alumnos emplean condicionales y variables locales para tomar decisiones sobre la inicialización de objetos y verificar los valores pasados al constructor. Los alumnos exploran el alcance de las variables locales y los parámetros dentro de un constructor y utilizan la palabra clave `this` para referirse al objeto actual. Estos conceptos se utilizan para añadir otro constructor a la clase `Postre`.
             lesson-7:
               name: Escribir Constructores para Jerarquías
+              description_student: 'El propietario del camión de comida del Proyecto Mercurio está ampliando el menú para incluir diferentes postres. En esta lección, utilizarás técnicas de desarrollo de software para crear clases y constructores para las subclases de `Postres` de forma eficiente. Para inicializar las variables de instancia privadas heredadas, se utiliza la palabra clave `super` para llamar al constructor de la superclase.  '
+              description_teacher: En esta lección, los alumnos escriben constructores para superclases y subclases. Los alumnos utilizan la palabra clave `super` para llamar al constructor de la superclase y pasan los parámetros necesarios al constructor de la superclase para inicializar las variables de instancia. La lección introduce el principio de desarrollo de software D.R.Y. (Don't Repeat Yourself) para resaltar los beneficios de utilizar la herencia en el diseño de la programación orientada a objetos.
             lesson-8:
               name: Accediendo a Datos de Objeto
+              description_student: Hemos creado variables de instancia privadas para representar los atributos de los objetos `Postre`, lo que significa que no podemos acceder a estos valores desde fuera de la clase. ¿Pero qué pasaría si necesitáramos utilizar estos valores en nuestros programas? En esta lección, explorarás los métodos que devuelven valores para escribir métodos de acceso para tu clase `Postre` y sus subclases. Utilizarás estos valores para imprimir información sobre los objetos `Postre` y dentro de expresiones para resolver problemas.
+              description_teacher: Los alumnos descubren la necesidad de los métodos de acceso para obtener los valores almacenados en las variables de instancia de una clase. Los alumnos identifican los componentes de la firma de un método y exploran cómo los métodos devuelven valores para utilizarlos en los programas. A medida que los alumnos escriben métodos de acceso para la clase `Postre` y sus subclases, los alumnos trabajan con la impresión de estos valores y el uso de datos de objetos dentro de expresiones.
             lesson-9:
               name: Modificando Datos de Objeto
+              description_student: Hemos creado métodos accesores para obtener el valor de las variables de instancia de los objetos `Postre`. ¿Qué pasa si necesitamos cambiar estos valores en nuestros programas? En esta lección, explorarás los métodos `void` para escribir métodos mutadores para tu clase `Postre` y sus subclases. Utilizarás estos métodos junto con los métodos "accesor" para resolver problemas. Fortalecerás tus habilidades y procesos de desarrollo de software a través de revisiones de código para dar y usar retroalimentación y mejorar tu programa.
+              description_teacher: Los alumnos descubren la necesidad de los métodos mutadores para cambiar los valores almacenados en las variables de instancia de una clase. A medida que los alumnos escriben métodos mutadores para la clase `Postre` y sus subclases, aprenden lo que significa `void`, recuerdan casos límite y practican la llamada a métodos mutadores y accesores. Los alumnos participan en una revisión del código para dar y recibir comentarios para mejorar sus programas.
             lesson-10:
               name: Visualizando Información de Objeto
+              description_student: 'Hoy veremos "bajo el capó" algunas de las clases incorporadas que utilizamos en Java. Investigarás `System.out.print()`, la clase `Object`, y conocerás el método `toString()`. Practicarás el principio DRY para rediseñar tu código en `Postre` y `Camión de Comida`. '
+              description_teacher: En esta lección, los alumnos trazan `System.out.print()` para explorar los resultados de la impresión de un `Objeto`. Los alumnos sobrescriben un método de la superclase escribiendo métodos `toString()` para `Postre` y `Camión de Comida`. Los alumnos concatenan variables de instancia y cadenas mientras utilizan secuencias de escape para formatear la salida.
             lesson-11:
               name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 1'
+              description_student: En este proyecto, trabajas con un socio creando un programa de gestión para un negocio en El Barrio. Comienza por planificar la superclase y sus subclases utilizando un diagrama de Lenguaje de Modelado Unificado (UML) y creando el primer borrador de su superclase.
+              description_teacher: En este proyecto, los alumnos trabajan con un compañero creando un programa de gestión para un negocio en El Barrio. Los alumnos comienzan por planificar la superclase y sus subclases utilizando un diagrama de Lenguaje de Modelado Unificado (UML) y creando el primer borrador de su superclase.
             lesson-12:
               name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 2'
+              description_student: Continúa trabajando en tu proyecto de gestión de la tienda del barrio escribiendo subclases que extienden tu superclase. Completas una revisión de código y revisas tu proyecto conforme a la rúbrica para obtener experiencia y continuar desarrollando tu programa.
+              description_teacher: En la lección anterior, los alumnos planificaron su superclase y subclase y comenzaron a escribir su superclase. Los alumnos comienzan esta lección escribiendo individualmente una subclase que extiende su superclase. Participan en una revisión del código y se autoevalúan con respecto a la rúbrica del proyecto para aportar y utilizar la experiencia mientras desarrollan su programa.
             lesson-13:
               name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 3'
+              description_student: Finalizas el código de tu superclase y subclase utilizando la lista de prioridades que creaste ayer. Escribes tu método `main` para interactuar con tus clases y luego compartes tus proyectos finales con tus compañeros y ¡celebras tu éxito!
+              description_teacher: En la lección anterior, los alumnos crearon una lista priorizada de trabajo a completar. Los alumnos tienen en cuenta esta lista mientras realizan revisiones de sus superclases y subclases y luego completan su método principal. Por último, comparten sus proyectos finales con sus compañeros para celebrar sus éxitos.
             lesson-14:
               name: Día FRQ
+              description_student: 'Hoy completarás una pregunta de respuesta libre (FRQ). Para ello, primero se mira y se anota una FRQ con los compañeros, luego se escribe un código a mano para resolver un problema, y finalmente se puntúa la solución con un compañero. '
+              description_teacher: "Los alumnos completan una pregunta de respuesta libre (FRQ) en esta lección. Anotan una FRQ del College Board como una clase, y luego escriben un código para responder una FRQ.\n\nLos objetivos de esta lección son:\n\n* Practicar la lectura de una FRQ del College Board\n\n* Practicar la escritura de un FRQ\n\n* Servir como evaluación sumativa del contenido de la Unidad 2\n\nAunque el formato de este FRQ no es el mismo que un FRQ del examen AP, ayuda a los alumnos a desarrollar estrategias para abordar estas preguntas. "
             lesson-15:
               name: 'Lección 15: día de evaluación'
+              description_student: En esta unidad, has creado objetos y definido variables de instancia para representar atributos. Has explorado la creación y el uso de constructores para establecer valores para estos atributos y cómo trabajar con los datos almacenados en los objetos. Has implementado métodos "accessor" y "mutator" para acceder y modificar los valores almacenados en las variables de instancia y has escrito métodos `toString` para obtener información sobre el estado del objeto. Utilizaste la clase `Scanner` para obtener la entrada del usuario y utilizarla como datos del programa para crear y trabajar con tus objetos. Has aprendido a utilizar tipos de datos, operadores y expresiones y a implementar la encapsulación de datos y el diseño orientado a objetos. Ahora, debes evaluar tu logro de los objetivos de aprendizaje y habilidades de la unidad en una evaluación de opción múltiple.
+              description_teacher: En esta unidad, los alumnos desarrollaron una comprensión de la encapsulación de datos y las decisiones de diseño orientado a objetos para construir un programa que respondiera a las necesidades del camión de comida del Proyecto Pastelería Mercurio. Los alumnos crearon objetos con variables de instancia apropiadas en función de las necesidades del programa, al tiempo que exploraron los tipos de datos, las variables y las expresiones para trabajar con los datos de los objetos. Los alumnos también han desarrollado métodos accessor, mutator y `toString` para recuperar, modificar y generar datos de objetos. A lo largo de la unidad, los alumnos utilizaron la clase `Scanner` para obtener información del usuario y ampliar la interactividad de sus programas. Ahora, los alumnos evalúan el logro de los objetivos de aprendizaje de la unidad y las habilidades en una evaluación de opción múltiple.
           lesson_groups:
             lesson group:
               display_name: Contenido
@@ -20625,3 +20651,143 @@ es:
           title: Inteligencia Artificial y Aprendizaje Automático
           description: "¡Próximamente!"
           student_description: "¡Próximamente!"
+        kodea-pd-2021:
+          title: CSF Online PD - Kodea
+          lessons:
+            Getting Started:
+              key: Primeros pasos
+              name: Primeros pasos
+            Computer Science Fundamentals:
+              key: Fundamentos de la informatica
+              name: Fundamentos de la informatica
+            Looking Ahead:
+              key: Mirar hacia adelante
+              name: Mirar hacia adelante
+            'Mastering the Basics: Sequencing':
+              key: 'Dominio de los conceptos básicos: secuencias'
+              name: 'Dominio de los conceptos básicos: secuencias'
+            'Mastering the Basics: Loops':
+              key: 'Dominio de los conceptos básicos: bucles'
+              name: 'Dominio de los conceptos básicos: bucles'
+            'Mastering the Basics: Conditionals':
+              key: 'Dominio de los conceptos básicos: condicionales'
+              name: 'Dominio de los conceptos básicos: condicionales'
+            'Mastering the Basics: Functions':
+              key: 'Dominio de los conceptos básicos: funciones'
+              name: 'Dominio de los conceptos básicos: funciones'
+            'Mastering the Basics: Events':
+              key: 'Dominio de los conceptos básicos: eventos'
+              name: 'Dominio de los conceptos básicos: eventos'
+            Best Practices for Teaching Computer Science:
+              key: Mejores prácticas para la enseñanza de ciencias de la computación
+              name: Mejores prácticas para la enseñanza de ciencias de la computación
+            Planning:
+              key: Planificación
+              name: Planificación
+            Next Steps:
+              key: Próximos pasos
+              name: Próximos pasos
+          name: kodea-pd-2021
+        vpl-csd-2021:
+          title: Aprendizaje Profesional Virtual de CS Discoveries 2020 - 21
+          lessons:
+            Module 1:
+              key: Módulo 1
+              name: Módulo 1
+            Module 2:
+              key: Módulo 2
+              name: Módulo 2
+            Module 3:
+              key: Módulo 3
+              name: Módulo 3
+            Module 4:
+              key: Módulo 4
+              name: Módulo 4
+            Module 5:
+              key: Módulo 5
+              name: Módulo 5
+            Module 6:
+              key: Módulo 6
+              name: Módulo 6
+            Module 7:
+              key: Módulo 7
+              name: Módulo 7
+            Module 8:
+              key: Módulo 8
+              name: Módulo 8
+        vpl-csp-2021:
+          title: Aprendizaje profesional virtual de los principios de Ciencias de la Computación (CS)
+          lessons:
+            Module 1:
+              key: Módulo 1
+              name: Módulo 1
+            Module 2:
+              key: Módulo 2
+              name: 'Módulo 2: Las Variables de la Unidad 4 y el papel de la colaboración'
+            Module 3:
+              key: Módulo 3
+              name: 'Módulo 3: Unidad 5, uso de listas en las aplicaciones y reconocimiento de las habilidades de Ciencias de la Computación en el aula'
+            Module 4:
+              key: Módulo 4
+              name: 'Módulo 4: Unidad 5 y uso de conjuntos de datos en las aplicaciones'
+            Module 5:
+              key: Módulo 5
+              name: 'Módulo 5: Unidad 7 y comprensión de las funciones con parámetros y retorno'
+            Module 6:
+              key: Módulo 6
+              name: 'Módulo 6: Introducción a la  Creación de la Tarea de Rendimiento PT'
+            Module 7:
+              key: Módulo 7
+              name: 'Módulo 7: Herramientas y estructura de la Unidad 9 - Datos'
+            Module 8:
+              key: Módulo 8
+              name: 'Módulo 8: Construir una comunidad y preparar a los alumnos para el examen AP'
+        self-paced-pl-csd1-2021:
+          name: autodidáctico-pl-csd1-2021
+        self-paced-pl-csd2-2021:
+          name: autodidáctico-pl-csd2-2021
+        self-paced-pl-csd3-2021:
+          name: autodidáctico-pl-csd3-2021
+        self-paced-pl-csd4-2021:
+          name: autodidáctico-pl-csd4-2021
+        self-paced-pl-csd5-2021:
+          name: autodidáctico-pl-csd5-2021
+        self-paced-pl-csd6-2021:
+          name: autodidáctico-pl-csd6-2021
+        self-paced-pl-csd7-2021:
+          name: autodidáctico-pl-csd7-2021
+        self-paced-pl-csd8-2021:
+          name: autodidáctico-pl-csd8-2021
+        self-paced-pl-csp1-2021:
+          name: autodidáctico-pl-csp1-2021
+        self-paced-pl-csp2-2021:
+          name: autodidáctico-pl-csp2-2021
+        self-paced-pl-csp3-2021:
+          name: autodidáctico-pl-csp3-2021
+        self-paced-pl-csp4-2021:
+          name: autodidáctico-pl-csp4-2021
+        self-paced-pl-csp5-2021:
+          name: autodidáctico-pl-csp5-2021
+        self-paced-pl-csp6-2021:
+          name: autodidáctico-pl-csp6-2021
+        self-paced-pl-csp7-2021:
+          name: autodidáctico-pl-csp7-2021
+        self-paced-pl-csp8-2021:
+          name: autodidáctico-pl-csp8-2021
+        self-paced-pl-csp9-2021:
+          name: autodidáctico-pl-csp9-2021
+        self-paced-pl-csp10-2021:
+          name: autodidáctico-pl-csp10-2021
+        self-paced-pl-csp11-2021:
+          name: autodidáctico-pl-csp11-2021
+        poster:
+          lessons:
+            HoC Tutorial 1:
+              name: Autoexpresión
+          lesson_groups:
+            about me_ip:
+              display_name: 'Póster Interactivo: Autoexpresión'
+              description: 'Versión 1 del Póster Interactivo: Autoexpresión'
+          name: póster
+          title: 'V1_Póster Interactivo: Autoexpresión'
+          description_short: '(Hay que cambiar el nombre) Proyecto de Póster Interactivo en formato " Sobre Mí " para HoC - V1 '

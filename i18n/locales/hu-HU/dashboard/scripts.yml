@@ -3747,3 +3747,11 @@ hu:
           lessons:
             lesson15:
               name: Lecke 15
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: Első lépések
+              name: Első lépések
+            Computer Science Fundamentals:
+              key: A számítógép-tudomány alapjai
+              name: A számítógép-tudomány alapjai

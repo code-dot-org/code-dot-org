@@ -18,6 +18,7 @@ es:
       Games/Score: Juegos/Puntaje
       Groups: Grupos
       Input: Entrada
+      Location: Ubicación
       Locations: Ubicaciones
       Logic: Lógica
       Loops: Bucles
@@ -28,4 +29,5 @@ es:
       Text: Texto
       Variables: Variables
       'Variables ': 'Variables'
+      'Variables  ': 'Variables  '
       World: Mundo

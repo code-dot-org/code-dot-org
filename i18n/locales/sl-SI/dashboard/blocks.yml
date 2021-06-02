@@ -1,4 +1,3 @@
----
 sl:
   data:
     blocks:
@@ -636,8 +635,8 @@ sl:
             "'ahead'": spredaj
       craft_ifStandingOn:
         text: |-
-          če stojiš na {TYPE}
-          {STATEMENT}
+          če stojiš na [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": moder koral
@@ -648,8 +647,8 @@ sl:
             "'seaLantern'": morska svetilka
       craft_ifStandingOnLimit:
         text: |-
-          če stojiš na {TYPE}
-          {STATEMENT}
+          če stojiš na [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": pesek

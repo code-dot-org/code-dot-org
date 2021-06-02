@@ -7,13 +7,24 @@
   upgrade_ie_message: "Code.org tezlikdə Internet Explorer 8, 9 və 10 versiyalarını dəstəkləməyəcək. Zəhmət olmasa müasir bir brauzerə yüksəldin."
   upgrade_ie_message_csedweek: "CSEdWeek.org tezlikdə Internet Explorer 8, 9 və 10 versiyalarını dəstəkləməyəcək. Zəhmət olmasa müasir bir brauzerə yüksəldin."
   upgrade_ie_link: "Daha ətraflı"
-  en: "İnformatika"
+  en: "Kompüter Elmləri"
   computer_science_edweek: "İnformatika Təhsili Həftəsi"
-  csedweek_dates: "8-14 dekabr 2014"
+  csedweek_dates: "3-9 dekabr 2018"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kod Saatı</a> gəlir. Bütün müəllim və təşkilaçıları <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">öz Kod Saatınızı planlaşdırmağa</a> çağırırıq'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">İnformatika müəllimisiniz? İnformatika Təhsil Həftəsi üçün digər materiallarımızı nəzərdən keçirin</a>'
   csedweek_banner_teachers_text: "İnformatika müəllimisiniz? İnformatika Təhsil Həftəsi üçün digər materiallarımızı nəzərdən keçirin"
   n_have_learned_an_hoc: "<h1>Kod Saatında</h1><h2>özünüzü sınayın</h2><h3># nəfər faydalanıb</h3>"
+  try_hoc_num_served: "<h1>Kod Saatı</h1><h2>ilə özünüzü sınayın</h2><h3>%{num} nəfər faydalanıb</h3>"
+  try_hoc_num_served_markdown: |-
+    # Kod Saatı
+
+    ## ilə özünüzü sınayın
+
+    ### %{num} nəfər faydalanıb #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Hər kəs öyrənə bilər."
   learn_now: "İndi öyrən"
   petition_message: "Hər bir məktəbdə hər bir şagirdin informatikanı öyrənmək imkanı olmalıdır"
@@ -30,6 +41,7 @@
   og_description: "Hər məktəbdəki hər şagird informatikanı öyrənməyə layiqdir."
   og_description_celeb: "Yeni dərslikləri sınaqdan keçirin, özünüz və ya sinifiniz üçün məşhur bir video qazanın!"
   csedweek_og_title: "İnformatika Təhsili Həftəsi"
+  csedweek_og_description: "Kompüter elmləri hər bir tələbə üçün öyrənilməli özüldür."
   hoc2014_heading: "<a href=\"http://hourofcode.com\">Kod Saatı</a>na qoşulun<br/>8 - 14 dekabr, 2014<br/>"
   hoc2014_students: "Şagirdlər"
   hoc2014_try: "Sınaqdan keçirin"
@@ -92,6 +104,7 @@
   thanks_for_submitting: "Göndərdiyiniz üçün təşəkkürlər!"
   if_you_enjoyed: "Öyrənmək xoşunuza gəldisə, dostlarınızdan da bunu sınaqdan keçirməyi xahiş edin! Bütün dünyanın öyrənməyini istəyirik."
   personalize_certificate: "Sertifikatınızı fərdiləşdirin"
+  print_certificates: "Sertifikatları çap edin"
   share_achievement: "Nailiyyətinizi bölüşün"
   leaderboards_for_hoc: "Kod Saaatı üçün liderlər cədvəli."
   support_url: "http://support.code.org/"
@@ -129,7 +142,19 @@
   learn_next_level: "Növbəti mərhələyə keçin"
   learn_online: "Digər onlayn kursları sınaqdan keçirin"
   learn_classes: "Yerli siniflər tapın"
+  learn_back_to_minecraft: "Minecraft ilə öyrənməyə davam edin"
   just_did_hoc: 'Mən elə indicə #HourOfCode Kod Saatını bitirdim - özünüz baxın! @codeorg'
+  just_did_course1: "Mən elə indicə Kurs 1i bitirdim - özünüz baxın! @codeorg"
+  just_did_course2: "Mən elə indicə Kurs 2ni bitirdim - özünüz baxın! @codeorg"
+  just_did_course3: "Mən elə indicə Kurs 3ü bitirdim - özünüz baxın! @codeorg"
+  just_did_course4: "Mən elə indicə Kurs 4ü bitirdim - özünüz baxın! @codeorg"
+  just_did_coursea: "Mən elə indicə A Kursunu bitirdim - özünüz baxın! @codeorg"
+  just_did_courseb: "Mən elə indicə B Kursunu bitirdim - özünüz baxın! @codeorg"
+  just_did_coursec: "Mən elə indicə C Kursunu bitirdim - özünüz baxın! @codeorg"
+  just_did_coursed: "Mən elə indicə D Kursunu bitirdim - özünüz baxın! @codeorg"
+  just_did_coursee: "Mən elə indicə E Kursunu bitirdim - özünüz baxın! @codeorg"
+  just_did_coursef: "Mən elə indicə F Kursunu bitirdim - özünüz baxın! @codeorg"
+  just_did_accelerated: "Mən elə indicə Akselerasiya olunmuş Kursu bitirdim - özünüz baxın! @codeorg"
   learn_hoc: "Bir Kod Saatı öyrənin"
   beyond_hoc: "Kod Saatı bitəndən sonra"
   what_gender: "Cinsiniz nədir?"
@@ -208,6 +233,7 @@
   homepage_banner_text_link: "Daha ətraflı"
   homepage_banner_privacy_link: "Daha ətraflı"
   homepage_banner_20k_teachers_link: "Daha ətraflı"
+  homepage_banner_emailprivacy_link: "Ətraflı oxu"
   homepage_banner_40k_teachers_link: "Daha ətraflı"
   homepage_slot_text_title_hoc: "Kod Saatı"
   homepage_slot_text_blurb_hoc: "Hər kəs öyrənə bilər. Elə bu gün başlayın"
@@ -222,6 +248,7 @@
   homepage_slot_text_link_othercourses: "Digər onlayn kurslar"
   homepage_slot_text_title_educators: "Təlimçilər"
   homepage_slot_text_blurb_educators: "Şagirdlərinizi öyrədin"
+  homepage_slot_text_link_elementary: "İbtidai məktəb"
   homepage_slot_text_link_middle: "Orta məktəb"
   homepage_slot_text_link_high: "Ali məktəb"
   homepage_slot_text_link_k5: "K-5 (11-12 yaşlılar) üçün kurslar"
@@ -251,13 +278,16 @@
   class_submission_in_school_robotics_club: "Robotika klubu"
   class_submission_in_school_programming_integrated_in_other_classes: "Digər dərslərə (riyaziyyat, təbiət fənləri və s.) daxil edilmiş proqramlaşdırma kursları"
   class_submission_in_school_summer_school_cs_program: "Yay məktəbi informatika proqramı"
+  class_submission_in_school_other: "Digər, məktəbdə"
   class_submission_out_of_school: "Məktəbdənkənar "
   class_submission_out_of_school_summer_camp: "Yay düşərgəsi"
   class_submission_out_of_school_afterschool_program: "Məktəbdənkənar proqram"
   class_submission_out_of_school_all-day_workshop: Tam günlük məşğələ (1 həftəyə qədər)
   class_submission_out_of_school_multi-week_workshop: Bir neçə həftəlik məşğələ
+  class_submission_out_of_school_other: "Digər, məktəbdən kənar"
   class_submission_online: "Onlayn"
   class_submission_online_programming_class: "Onlayn proqramlaşdırma sinifi"
+  class_submission_online_teacher_resource: "Onlayn müəllim resursları"
   class_submission_online_other: "Digər onlayn"
   class_submission_level_preschool: "Məktəbəqədər"
   class_submission_level_elementary: "İbtidai"
@@ -279,6 +309,7 @@
   mc_longdescription: "Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft dünyasında bir macəra yaşadın."
   mc_shortdescription: "Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft dünyasında bir macəra yaşadın."
   mc_gradelevel: "6+ yaş"
+  minecraft_start_tutorial: "Tutoriala başla"
   minecraft_agent_button: "Başlayın"
   minecraft_designer_button: "Başlayın"
   minecraft_adventurer_button: "Başlayın"
@@ -286,6 +317,9 @@
   minecraft_subtitle: "Maynkraft Kod Saatı"
   sports_watch_video: "Videoya baxın"
   video_title_inspire_girl: "Bir qızı həvəsləndirin"
+  video_title_cs_intro: "Kompüter Elmlərinə giriş"
+  video_title_anybody_can_learn: "Hər kəs Öyrənə Bilər"
+  video_1min: "1 dəq"
   video_2min: "2 dəq"
   video_3min: "3 dəq"
   video_5min: "5 dəq"
@@ -294,12 +328,17 @@
   no_internet: "İnternetiniz yoxdur? "
   download_offline: "Offline versiyanı yükləyin."
   are_you_teacher: "Müəllimsiniz?"
+  volunteer_engineer_submission_update_information: "Öz məlumatınızı yeniləyin"
   volunteer_engineer_submission_header_shared: "Könüllülər xəritəsində müəllimlərlə bölüşülən məlumat"
   volunteer_engineer_submission_field_name: "Ad"
   volunteer_engineer_submission_field_name_placeholder: "Tam Ad"
   volunteer_engineer_submission_field_company: "Şirkət (və ya universitet)"
   volunteer_engineer_submission_field_company_placeholder: "Şirkət (və ya universitet)"
   volunteer_engineer_submission_field_location: "Yer"
+  volunteer_engineer_submission_field_linkedin: "LinkedIn profili"
+  volunteer_engineer_submission_field_linkedin_placeholder: "http://www.linkedin.com/in/sizin_adınız"
+  volunteer_engineer_submission_field_facebook: "Facebook profili"
+  volunteer_engineer_submission_field_facebook_placeholder: "https://www.facebook.com/sizin_adınız"
   volunteer_engineer_submission_field_description: "Təsvir"
   volunteer_engineer_submission_header_private: "Məxfi saxlanaraq heç vaxt bölüşülməyən məlumat"
   volunteer_engineer_submission_field_email: "E-poçt ünvanı"
@@ -312,7 +351,11 @@
   volunteer_engineer_submission_commitment_one_hr_per_week: "Həftədə 1 saat"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "Həftədə 3 saat"
   volunteer_engineer_submission_commitment_five_hrs_per_week: "Həftədə 5 saat"
+  volunteer_engineer_submission_commitment_annually: "ildə 2-3 dəfə"
+  volunteer_engineer_submission_commitment_monthly: "Ayda bir neçə saat"
+  volunteer_engineer_submission_commitment_weekly: "Həftədə bir neçə saat"
   volunteer_engineer_submission_commitment_more: "Daha çox"
+  volunteer_engineer_submission_experience_unspecified: "Dəqiqləşdirilməmiş"
   volunteer_engineer_submission_experience_university_student_or_researcher: "İnformatika üzrə universitet tələbəsi"
   volunteer_engineer_submission_experience_software_professional: "Proqramçı-mühəndis"
   volunteer_engineer_submission_distance_8: "8 km"
@@ -320,12 +363,17 @@
   volunteer_engineer_submission_distance_24: "24 km"
   volunteer_engineer_submission_distance_32: "32 km"
   volunteer_engineer_submission_num_volunteers_5: "5 konüllü"
+  volunteer_engineer_submission_num_volunteers_10: "10 konüllü"
+  volunteer_engineer_submission_num_volunteers_25: "25 konüllü"
+  volunteer_engineer_submission_num_volunteers_50: "50 konüllü"
   petition_age: "Yaşınız"
   dashboard_announce_learn_more_button: "Daha ətraflı"
   dashboard_landing_title: "Müəllimin ev səhifəsi"
   dashboard_landing_video: "Bu videoya baxın"
+  dashboard_landing_view_as_student: "Bu sayta tələbə kimi bax"
   dashboard_landing_students_title: "Şagirdləriniz"
   dashboard_landing_useful_links: "Digər faydalı linklər"
+  dashboard_landing_available_title: "Mövcud kurslar"
   dashboard_landing_loading: "Yüklənir..."
   dashboard_action_cancel: "İmtina et"
   dashboard_action_delete: "Sil"
@@ -333,15 +381,22 @@
   dashboard_action_delete_no: 'Xeyr'
   dashboard_action_confirm: "Sil?"
   dashboard_action_done: "Tamamlandı"
+  dashboard_action_print_certificates: "Sertifikatları çap edin"
   dashboard_assessments_answers: "Bütün yoxlama cavabları"
   dashboard_surveys_answers: "Anketlər"
   dashboard_percent: "Faiz"
   dashboard_filter_all: "Hamısı"
+  dashboard_download_csv: "CVS Yükləyin"
   dashboard_navigation_home_page: "Müəllimin ev səhifəsi"
+  dashboard_navigation_section_teacher_progress: "Sizin kusrun vəziyyəti"
   dashboard_navigation_section_community: "Dəstək"
+  dashboard_navigation_section_pd: "Peşəkar İnkişaf"
+  dashboard_navigation_section_speakers: "Kompüter Elmləri <br/> Qonaq natiqlər"
   dashboard_navigation_view_progress: "Nəticə"
   dashboard_navigation_view_assessments: "Yoxlamalar"
   dashboard_navigation_view_assessments_surveys: "Yoxlamalar və sorğular"
+  dashboard_navigation_add_students: "Tələbə əlavə et"
+  dashboard_navigation_manage_students: "Tələbələri idarə edin"
   dashboard_navigation_view_stats: "Göstəricilər"
   dashboard_navigation_section: 'Bölmə: %{section_name}'
   dashboard_navigation_student: 'Şagird: %{student_name}'
@@ -352,8 +407,10 @@
   dashboard_progress_completed_perfect: "tamamlanıb, əladır"
   dashboard_sections_new_section: "Yeni bölmə"
   dashboard_sections_table_section: "Bölmə"
+  dashboard_sections_table_secret: "Daxil olma tipi"
   dashboard_sections_table_grade: "Sinif"
   dashboard_sections_table_course: "Kurs"
+  dashboard_sections_table_pairing_allowed: "Estafet proqramlaşdırması"
   dashboard_sections_table_students: "Şagirdlər"
   dashboard_sections_table_code: "Bölmə kodu"
   dashboard_sections_name: 'Bölmənin adı'
@@ -370,12 +427,23 @@
   dashboard_students_no_email: "Şagirdlərinizin e-poçt ünvanı yoxdursa, yaxud onların hesablarını özünüz düzəltmək istəyirsinizsə, bu bölmənin məxfi kodunu <b>söz</b> və ya <b>şəkil</b> növünə dəyişin."
   dashboard_students_print_page: "Bu səhifəni çap et"
   dashboard_students_url: "URL ünvan"
+  dashboard_lesson_plans: "Dərs Planları"
   dashboard_view_all_lesson_plans: "Kurs 1-3 üçün tam kurikulumu endirin"
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
+  dashboard_course4: 'Kurs 4: '
+  dashboard_coursea: 'Kurs A: '
+  dashboard_courseb: 'Kurs B: '
+  dashboard_coursec: 'Kurs C: '
+  dashboard_coursed: 'Kurs D: '
+  dashboard_coursee: 'Kurs E: '
+  dashboard_coursef: 'Kurs F: '
+  dashboard_express: 'Ekspress Kurs: '
+  dashboard_tools: 'Alətlər: '
   dashboard_overview: "Yekun"
   dashboard_sequence: "Ardıcıllıq"
+  dashboard_framework: "Freymvörk"
   dashboard_standards: "Standartlar"
   dashboard_glossary: "Lüğət"
   dashboard_grade_k: "K"
@@ -388,16 +456,20 @@
   dashboard_question: "Sual"
   dashboard_response: "Cavab"
   dashboard_correctness_correct: "Düzgün"
+  dashboard_correctness_incorrect: "Yalnış"
   dashboard_submission_submitted: "Göndərilib"
   dashboard_submission_in_progress: "Tamamlanmayıb"
   dashboard_status: "Vəziyyət"
   dashboard_teacher: "Müəllim"
   dashboard_student: "şagird"
+  dashboard_sections_sign_in_main: "http://code.org və \"Daxil ol\" klik edin"
   code_hoc_coming: "Kod Saatı artıq buradadır - 8-14 dekabr!"
   learn_more: "Elə indi sınaqdan keçirin"
   learn_sign_up_button: "Qeydiyyatdan keçin"
+  learn_educator_resources_button: "Təlimçi resursları"
   hoc2014_try_frozen: "\"Buzlu ürək\"dən Anna və Elza ilə Rəssam"
   carousel_heading_international: "Sizin dilinizdə olan dərsliklər"
+  carousel_heading_beyond_javascript: "JavaScripti öyrən"
   carousel_heading_university: "Onlayn kurslar və məktəblər"
   carousel_heading_webpages: "Veb səhifələr düzəltməyi öyrənin"
   participants: "iştirakçılar"
@@ -416,6 +488,25 @@
   course2_name: "Kurs 2"
   course3_name: "Kurs 3"
   course4_name: "Kurs 4"
+  coursea-draft_name: A Kursu
+  coursea_name: "A Kursu"
+  courseb-draft_name: B Kursu
+  courseb_name: "B Kursu"
+  coursec-draft_name: C Kursu
+  coursec_name: "C Kursu"
+  coursed-draft_name: D Kursu
+  coursed_name: "D Kursu"
+  coursee-draft_name: E Kursu
+  coursee_name: "E Kursu"
+  coursef-draft_name: F Kursu
+  coursef_name: "F Kursu"
+  coursea-2017_name: A Kursu (2017)
+  courseb-2017_name: B Kursu (2017)
+  coursec-2017_name: C Kursu (2017)
+  coursed-2017_name: D Kursu (2017)
+  coursee-2017_name: E Kursu (2017)
+  coursef-2017_name: F Kursu (2017)
+  express-2018_name: Ekspress Kurs (2018)
   accelerated_name: "Sürətləndirilmiş kurs"
   20-hour_name: Sürətləndirilmiş kurs
   gumball_name: "Gumball"
@@ -423,9 +514,16 @@
   iceage_name: "Buz dövrü"
   minecraft_name: "Minecraft"
   applab_name: "Proqram Labı"
+  gamelab_name: "Oyun labaratoriyası"
   applab_gradelevel: "13+ yaş"
   codeorg_gradelevel: "4-104 yaş"
   codeintl_gradelevel: "4-104 yaş"
+  khan_gradelevel: "Orta məktəb +"
+  khanes_gradelevel: "Orta məktəb +"
+  khanpt_gradelevel: "Orta məktəb +"
+  khanhe_gradelevel: "Orta məktəb +"
+  khanfr_gradelevel: "Orta məktəb +"
+  khanpl_gradelevel: "Orta məktəb +"
   tynker_gradelevel: "5-13 yaş"
   scratch_gradelevel: "8+ yaş"
   lightbot_gradelevel: "Bütün yaşlar"
@@ -434,8 +532,13 @@
   lightbotintl_gradelevel: "Bütün yaşlar"
   codehs_gradelevel: "Ali məktəb"
   codecademy_gradelevel: "Ali məktəb"
+  codecombat_gradelevel: "Orta məktəb +"
+  codemonkey_gradelevel: "Orta məktəb +"
+  codeavengers_gradelevel: "Orta məktəb +"
   processing_gradelevel: "Ali məktəb"
   robomind_gradelevel: "8-13 yaş"
+  groklearning_gradelevel: "Orta məktəb +"
+  quorum_gradelevel: "Orta məktəb +"
   codespark_gradelevel: "İbtidai"
   kodable_gradelevel: "İbtidai"
   tynkerapp_gradelevel: "5-13 yaş"
@@ -444,6 +547,7 @@
   bitsbox_gradelevel: "İbtidai"
   makeschool_gradelevel: "Ali məktəb"
   touchdevelop_gradelevel: "Ali məktəb"
+  appinventor_gradelevel: "Orta məktəb +"
   blockly_gradelevel: "Bütün yaşlar"
   thinkersmith2_gradelevel: "8+ yaş"
   kodableunplugged_gradelevel: "8-13 yaş"
@@ -458,21 +562,43 @@
   allcancode_gradelevel: "5-10 yaş"
   csfirst_gradelevel: "9-14 yaş"
   boxisland_gradelevel: "İbtidai"
+  codesters_gradelevel: "12-14 yaş"
+  texasinstruments_gradelevel: "13-16 yaş"
   teacherled_gradelevel: "5+ yaş"
   course1_gradelevel: "4+ yaş (oxumağı bacarmayanlar)"
   course2_gradelevel: "6+ yaş (oxuma tələb olunur)"
   course3_gradelevel: "8+ yaş (Kurs 2-dən sonra)"
   course4_gradelevel: "10+ yaş (Kurs 3-dən sonra)"
+  coursea_gradelevel: "4-7 yaş"
+  courseb_gradelevel: "5-8 yaş"
+  coursec_gradelevel: "6-10 yaş"
   coursed_gradelevel: "8+ siniflər"
   coursee_gradelevel: "8-12 yaş"
+  coursef_gradelevel: "9-13 yaş"
+  coursea-2017_gradelevel: 4-7 yaş
+  courseb-2017_gradelevel: 5-8 yaş
+  coursec-2017_gradelevel: 6-10 yaş
   coursed-2017_gradelevel: 8+ siniflər
   coursee-2017_gradelevel: 8-12 yaş
+  coursef-2017_gradelevel: 9-13 yaş
+  coursea-2018_gradelevel: 4-7 yaş
+  courseb-2018_gradelevel: 5-8 yaş
+  coursec-2018_gradelevel: 6-10 yaş
   coursed-2018_gradelevel: 8+ siniflər
   coursee-2018_gradelevel: 8-12 yaş
+  coursef-2018_gradelevel: 9-13 yaş
+  coursea-2019_gradelevel: 4-7 yaş
+  courseb-2019_gradelevel: 5-8 yaş
+  coursec-2019_gradelevel: 6-10 yaş
   coursed-2019_gradelevel: 8+ siniflər
   coursee-2019_gradelevel: 8-12 yaş
+  coursef-2019_gradelevel: 9-13 yaş
+  coursea-2020_gradelevel: 4-7 yaş
+  courseb-2020_gradelevel: 5-8 yaş
+  coursec-2020_gradelevel: 6-10 yaş
   coursed-2020_gradelevel: 8+ siniflər
   coursee-2020_gradelevel: 8-12 yaş
+  coursef-2020_gradelevel: 9-13 yaş
   accelerated_gradelevel: "10+ yaş (Kurs 3-dən sonra)"
   thinkersmithspanish_platformtext: "Sərbəst"
   khan_platformtext: "Müasir veb səyyahlar"
@@ -485,12 +611,14 @@
   scratch_platformtext: "Ancaq masaüstü veb səyyahlar (planşetlər yox)"
   thinkersmith_platformtext: "Sərbəst"
   condcards_platformtext: "Sərbəst"
+  lightbotintl_platformtext: "iOS, Android (və ya veb brauzer)"
   codecademy_platformtext: "Müasir veb səyyahlar. iOS, Android proqramları"
   codemonkey_platformtext: "Müasir veb səyyahlar"
   codeavengers_platformtext: "Müasir veb səyyahlar"
   processing_platformtext: "Müasir veb səyyahlar"
   robomind_platformtext: "Müasir veb səyyahlar, mobil veb"
   groklearning_platformtext: "Müasir veb səyyahlar"
+  codespark_platformtext: "iOS, Android (və ya veb brauzer)"
   robomindnl_platformtext: "Müasir veb səyyahlar, mobil veb"
   bitsbox_platformtext: "Müasir veb səyyahlar"
   makeschool_platformtext: "Müasir veb səyyahlar"
@@ -503,6 +631,7 @@
   frozen_platformtext: "Müasir veb səyyahlar + planşetlər"
   starwars_platformtext: "Müasir veb səyyahlar + planşetlər"
   csfirst_platformtext: "Müasir veb səyyahlar"
+  boxisland_platformtext: "Android, iOS"
   codesters_platformtext: "Müasir veb səyyahlar"
   scratch_shortdescription: "İnteraktiv oyunlar, əhvalat və animasiyalar düzəldin."
   thinkersmith_shortdescription: "Heç bir avadanlığı olmayan bir qrup üçün sərbəst dərslik"
@@ -516,19 +645,30 @@
   codeintl_longdescription: "İnfromatikanın təməl anlayışlarını sürüklə-burax tipli proqramlaşdırma ilə öyrənin. Bu oyuna bənzər dərslikdə Bill Qeyts və Mark Tsukerberqin video mühazirələri, \"Angry Birds\" və \"Plants vs. Zombies\" yer alır. \"Təkrar et\" dövrləri, şərti ifadələr və sadə alqoritmləri öyrənin. 34 dildə təqdim olunur."
   frozen_longdescription: "Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək. Buz üzərində sürüşərək siz qar dənəcikləri və naxışlar düzəldəcək, sonradan dostlarınızla bölüşə biləcəyiniz bir qış möcüzəsi quracaqsınız!"
   starwars_longdescription: "Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin."
+  tynker_beyond_name: "Proqramlaşdırmanı evdə öyrənin"
   scratch_beyond_name: "Proqramlaşdırma ilə yaradıcı olun"
   kodable_beyond_name: "Kodlanabilər"
+  groklearning_beyond_name: "Python proqramlaşdırmanı öyrən"
+  hacketyhack_beyond_name: "Ruby öyrən"
+  udemy_beyond_name: "Onlayn proqramlaşdırma kursları"
+  lynda_beyond_name: "Onlayn proqramlaşdırma kursları"
   teachingtree_beyond_name: "Onlayn universitet kursları"
+  w3schools_beyond_name: "HTML-i öyrən"
   codeorg_beyond_gradelevel: "4-104 yaş"
+  khan_beyond_gradelevel: "Orta məktəb +"
   tynker_beyond_gradelevel: "5-13 yaş"
   scratch_beyond_gradelevel: "8+ yaş"
   lightbot_beyond_gradelevel: "Bütün yaşlar"
   codecademy_beyond_gradelevel: "Ali məktəb"
   kodable_beyond_gradelevel: "İbtidai"
   scratchjr_beyond_gradelevel: "İbtidai"
+  hopscotch_beyond_gradelevel: "Orta məktəb +"
+  pocketcode_beyond_gradelevel: "Orta məktəb +"
+  groklearning_beyond_gradelevel: "Orta məktəb +"
   hacketyhack_beyond_gradelevel: "Ali məktəb"
   robomind_beyond_gradelevel: "8-13 yaş"
   makeschool_beyond_gradelevel: "Ali məktəb"
+  appinventor_beyond_gradelevel: "Orta məktəb +"
   touchdevelop_beyond_gradelevel: "Ali məktəb"
   codehs_beyond_gradelevel: "Ali məktəb"
   edx_beyond_gradelevel: "Universitet"
@@ -539,15 +679,21 @@
   cargobot_beyond_gradelevel: "8+ yaş"
   kidsruby_beyond_gradelevel: "12+ yaş"
   w3schools_beyond_gradelevel: "12+ yaş"
+  codeavengers_beyond_gradelevel: "Orta məktəb +"
   mozilla_beyond_gradelevel: "12+ yaş"
+  codecombat_beyond_gradelevel: "Orta məktəb +"
+  lego_beyond_gradelevel: "Orta məktəb +"
   finch_beyond_gradelevel: "8+ yaş"
   processing_beyond_gradelevel: "Ali məktəb"
+  alice_beyond_gradelevel: "Orta məktəb +"
   sphero_beyond_gradelevel: "8+ yaş"
   codeorg_beyond_platformtext: "Müasir veb səyyahlar, planşetlər"
   khan_beyond_platformtext: "Müasir veb səyyahlar"
   tynker_beyond_platformtext: "Müasir veb səyyahlar (ödənişlidir)"
   scratch_beyond_platformtext: "İstənilən veb səyyah"
+  lightbot_beyond_platformtext: "iOS, Android (və ya veb brauzer)"
   codecademy_beyond_platformtext: "Müasir veb səyyahlar. iOS, Android proqramları"
+  pocketcode_beyond_platformtext: "Mobil Tətbiq"
   groklearning_beyond_platformtext: "Müasir veb səyyahlar"
   robomind_beyond_platformtext: "Müasir veb səyyahlar, mobil veb"
   makeschool_beyond_platformtext: "Müasir veb səyyahlar"
@@ -604,30 +750,41 @@
   header_legal_privacy: "Məxfilik siyasəti"
   header_legal_tos: "Xidmət şərtləri"
   header_tutorials: "Dərsliklər"
+  header_screen_reader_hamburger: "Menyu"
+  header_screen_reader_help: "Yardım menysusu"
   header_documentation: "Təlimat və sənədlər"
   user_header_label: "Salam %{username}"
   user_header_team: "Komanda"
   user_header_settings: "Mənim hesabım"
   user_header_logout: "Çıxın"
   user_header_signin: "Daxil olun"
+  user_header_create: 'Yarat '
   user_header_artist: 'Rəssam'
+  user_header_gamelab: "Oyun labaratoriyası"
   user_header_playlab: "Oyun labı"
   user_header_dance: "Rəqs şənliyi"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  view_all_sections: "Bütün bölmələrə bax"
   applab_tile_start_tutorial: "Başlayın"
   hoc_overview_dance_title: "Rəqs şənliyi"
   hoc_overview_start_tutorial: "Başlayın"
   hoc2018_creativity_create: "Düzəlt"
   hoc2018_mc_start: "Başlayın"
   hoc2018_mc_no_internet: "İnternetiniz yoxdur? "
+  hoc2018_mc_educators_box1_button: "Başlayın"
+  hoc2018_mc_educators_box2_button: "yüklə"
+  hoc2018_mc_video_1min: "1 dəq"
   hoc2018_mc_video_2min: "2 dəq"
   hoc2018_mc_video_3min: "3 dəq"
   hoc2018_mc_video_5min: "5 dəq"
   hoc2018_mc_video_title_inspire_girl: "Bir qızı həvəsləndirin"
+  hoc2018_mc_video_title_cs_intro: "Kompüter Elmlərinə giriş"
+  hoc2018_mc_video_title_anybody_can_learn: "Hər kəs Öyrənə Bilər"
   hoc2018_mc_homepage_join_us: "Bizə qoşulun"
   hoc2018_mc_homepage_try_it: "Sınaqdan keçirin"
   hoc2018_dance_party_main_heading: "Rəqs şənliyi"
+  hoc2018_dance_party_landing_title: "Rəqs"
   hoc2018_dance_party_subheading: "Rəqs Şənliyini tərcümə etməyə kömək edin"
   hoc2018_dance_create_your_own_dance_title: "Öz rəqs şənliyinizi düzəldin"
   hoc2018_dance_party_box_title: "Rəqs şənliyi"
@@ -646,18 +803,30 @@
   hoc2018_dance_amazon_about_future_engineer_title: "\"Amazon\"un Gələcək Mühəndis proqramı barədə"
   hoc2018_dance_amazon_about_future_engineer_button: "Daha ətraflı"
   hoc2018_dance_amazon_try_coding_this_summer_title: "Bu yay proqramlaşdırmanı sınaqdan keçirin"
+  hoc2018_dance_amazon_scholarship_programs_button: "İndi müraciət et"
   hoc2018_dance_video1: "Rəqs Şənliyi - Giriş"
   hoc2018_dance_video2: "Rəqs Şənliyi - Hadisələr"
   hoc2018_dance_video3: "Rəqs Şənliyi - Xüsusiyyətlər"
   hoc2018_dance_video4: "Rəqs Şənliyi - Təbriklər"
+  page_not_found_title: "Səhifə tapılmadı"
+  page_not_found_header: '404: Səhifə tapılmadı'
+  page_not_found_description: "Sizin müraciət etdiyiniz səhifə bu ünvanda mövcud deyil. Veb ünvanı dəqiqləşdirib yenidən cəhd edin. və ya geri, ilk səhifəyə qayıdın."
+  page_not_found_button: "İlk səhifəyə qayıt"
   hoc2018_mc_with_microsoft: "Tərəfdaşlarımız: "
+  homepage_slot_text_title_at_home: "Evdə Öyrən"
+  homepage_slot_text_link_express_course: "Ekspress kursu cəhd edin"
+  page_not_available_button: "İlk səhifəyə qayıt"
   codebytes_skinny_banner_english_only: "Yalnız ingilis dili"
   footer_privacy_policy: "Məxfilik siyasəti"
   footer_about: "Haqqımızda"
   footer_partners: "Tərəfdaşlar"
+  footer_blog: "Bloq"
   footer_donate: "İanə verin"
+  footer_store: "Mağaza"
   footer_support: "Dəstək"
   footer_terms: "Şərtlər"
+  ai_for_oceans_lesson_plan: "dərs planı"
   ai_in_partnership_with: "Tərəfdaşlarımız: "
+  view_resources: "Resurslara baxın"
   ai_activity: "Fəaliyyət"
   ai_description: "Təsvir"
