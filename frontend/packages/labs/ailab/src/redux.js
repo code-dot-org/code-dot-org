@@ -646,12 +646,7 @@ function isColumnNumerical(state, column) {
 }
 
 export function columnContainsOnlyNumbers(data, column) {
-  for (let row of data) {
-    if (isNaN((row[column]))) {
-      return false;
-    }
-  }
-  return true;
+  return data.every(row => !isNaN(row[column]));
 }
 
 function isValidNumericalData(state, column) {
