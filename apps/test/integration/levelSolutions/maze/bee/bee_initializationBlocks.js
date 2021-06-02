@@ -1,7 +1,7 @@
 import {TestResults} from '@cdo/apps/constants';
 
 // Bee level which requires initialization blocks to work
-// inspired by Course 4 Bee Params 5: https://studio.code.org/s/course4/stage/16/puzzle/5
+// inspired by Course 4 Bee Params 5: https://studio.code.org/s/course4/lessons/16/levels/5
 var levelDef = {
   startDirection: 2, // Direction.SOUTH,
   serializedMaze: [
