@@ -1,4 +1,5 @@
 {
   "func": "doctype",
-  "category": "HTML Tags"
+  "category": "HTML Tags",
+  "syntax": "<!DOCTYPE>"
 }

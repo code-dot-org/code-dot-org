@@ -66,6 +66,8 @@ class ProgrammingExpression < ApplicationRecord
       syntax += `(#{config['paletteParams'].join(', ')})`
     elsif config['block']
       syntax = config['block']
+    elsif config['syntax']
+      syntax = config['syntax']
     end
 
     syntax
