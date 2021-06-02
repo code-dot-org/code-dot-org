@@ -82,7 +82,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
+      application.status = 'accepted_not_notified'
       application.save!
       application.lock!
 
@@ -131,7 +131,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
+      application.status = 'accepted_not_notified'
       application.save!
       application.lock!
 
@@ -179,7 +179,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
+      application.status = 'accepted_not_notified'
       application.save!
       application.lock!
 
@@ -203,7 +203,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
+      application.status = 'accepted_not_notified'
       application.save!
       application.lock!
 
@@ -227,7 +227,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
+      application.status = 'accepted_not_notified'
       application.save!
       application.lock!
 
