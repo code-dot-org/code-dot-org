@@ -55,7 +55,7 @@ class CrossTab extends Component {
             <div style={styles.bold}>Relationship information:</div>
             <div style={styles.scrollableContents}>
               <div style={styles.scrollingContents}>
-                <table>
+                <table style={styles.crossTabTable}>
                   <thead>
                     <tr>
                       <th style={styles.crosssTabHeader} />

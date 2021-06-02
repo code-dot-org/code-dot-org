@@ -412,6 +412,21 @@ export const styles = {
   dataDisplayCellFeatureUnselected: {},
   dataDisplayCellUnselected: {},
 
+  barChart: {
+    marginTop: 10,
+    marginBottom: 10
+  },
+
+  scatterPlot: {
+    marginTop: 10,
+    marginBottom: 10
+  },
+
+  crossTabTable: {
+    marginTop: 10,
+    marginBottom: 20
+  },
+
   crosssTabHeader: {
     backgroundColor: "initial",
     color: "initial",
