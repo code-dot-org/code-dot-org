@@ -248,7 +248,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
         "student_name" => @student_1.name,
         "responses_by_assessment" => {
           level1.id.to_s => {
-            "stage" => script.name,
+            "lesson" => script.name,
             "puzzle" => 1,
             "question" => "Long assessment 1",
             "url" => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
@@ -332,7 +332,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
         "student_name" => @student_1.name,
           "responses_by_assessment" => {
             level1.id.to_s => {
-              "stage" => script.name,
+              "lesson" => script.name,
               "puzzle" => 1,
               "question" => "Long assessment 1",
               "url" => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",

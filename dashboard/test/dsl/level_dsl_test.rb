@@ -85,9 +85,9 @@ class LevelDslTest < ActiveSupport::TestCase
         options: {},
         questions: [{text: 'Question text'}],
         answers: [
-          {text: 'answer 1', weight: 1, stage: nil},
-          {text: 'answer 2', weight: 2, stage: lesson1.name},
-          {text: 'answer 3', weight: 1, stage: lesson2.name},
+          {text: 'answer 1', weight: 1, lesson: nil},
+          {text: 'answer 2', weight: 2, lesson: lesson1.name},
+          {text: 'answer 3', weight: 1, lesson: lesson2.name},
         ]
       }
     }
