@@ -55,7 +55,7 @@ export default class ModelCard extends React.Component {
               <div style={styles.heading}>Summary</div>
               <p style={styles.details}>
                 Predict {metadata.label.id} based on{' '}
-                {selectedFeatures.join(',')} with {metadata.summaryStat?.stat}%
+                {selectedFeatures.join(', ')} with {metadata.summaryStat?.stat}%
                 accuracy.
               </p>
             </div>
@@ -113,7 +113,8 @@ const styles = {
     borderRadius: 5,
     borderColor: color.gray,
     marginBottom: 10,
-    padding: 10
+    padding: 10,
+    overflowWrap: 'break-word'
   },
   bold: {
     fontFamily: "'Gotham 7r', sans-serif"
