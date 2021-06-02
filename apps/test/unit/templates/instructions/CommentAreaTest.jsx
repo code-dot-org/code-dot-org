@@ -5,16 +5,16 @@ import {CommentArea} from '@cdo/apps/templates/instructions/CommentArea';
 import sinon from 'sinon';
 
 const DEFAULT_PROPS = {
-  disabledMode: false,
+  isReadonly: false,
   onCommentChange: () => {},
   comment: 'Good Work!',
   placeholderText: 'Add your comment here'
 };
 
 describe('CommentArea', () => {
-  it('has a display only textarea if in disabledMode', () => {
+  it('has a display only textarea if in isReadonly', () => {
     const wrapper = shallow(
-      <CommentArea {...DEFAULT_PROPS} disabledMode={true} />
+      <CommentArea {...DEFAULT_PROPS} isReadonly={true} />
     );
 
     const confirmTextArea = wrapper.find('textarea').first();
