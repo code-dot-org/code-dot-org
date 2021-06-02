@@ -19,16 +19,4 @@ class MatchLevelTest < ActiveSupport::TestCase
       refute_equal shuffle, original_order
     end
   end
-
-  test 'summarize_for_lesson_show includes all set content' do
-    @level = create :match, properties: {
-      content1: 'content 1',
-      content2: nil,
-      content3: 'content 3',
-      content4: nil
-    }
-
-    summary = @level.summarize_for_lesson_show(false)
-    assert_equal ['content 1', 'content 3'], summary[:content]
-  end
 end

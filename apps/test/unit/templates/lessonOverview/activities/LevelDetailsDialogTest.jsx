@@ -311,9 +311,8 @@ describe('LevelDetailsDialogTest', () => {
           level: {
             type: 'Multi',
             id: 'level',
-            content: [
-              'Look at the code below and predict how the headings will be displayed.'
-            ],
+            question:
+              'Look at the code below and predict how the headings will be displayed.',
             questionText: 'Eggs, Bacon, Waffles',
             teacherMarkdown: 'This is a multiple choice level.'
           }
