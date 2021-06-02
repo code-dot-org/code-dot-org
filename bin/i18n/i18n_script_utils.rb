@@ -144,8 +144,8 @@ class I18nScriptUtils
     when "show"
       script_level = ScriptLevelsController.get_script_level(script, route_params)
       script_level&.level
-    when "stage_extras"
-      # Copied from ScriptLevelsController.stage_extras
+    when "lesson_extras"
+      # Copied from ScriptLevelsController.lesson_extras
       uri = URI.parse(url)
       uri_params = CGI.parse(uri.query)
       if uri_params.key?('id')
