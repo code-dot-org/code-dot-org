@@ -16,7 +16,6 @@ const ReviewStates = makeEnum('completed', 'keepWorking', 'awaitingReview');
 class TeacherFeedbackKeepWorking extends Component {
   static propTypes = {
     latestFeedback: PropTypes.object,
-    reviewState: PropTypes.oneOf(Object.values(ReviewStates)),
     setReviewState: PropTypes.func,
     setReviewStateChanged: PropTypes.func
   };
@@ -24,12 +23,13 @@ class TeacherFeedbackKeepWorking extends Component {
   checkbox = null;
 
   isAwaitingTeacherReview =
+    this.props.latestFeedback &&
     this.props.latestFeedback.review_state === ReviewStates.keepWorking &&
     this.props.latestFeedback.student_updated_since_feedback;
 
   initialReviewState = this.isAwaitingTeacherReview
     ? ReviewStates.awaitingReview
-    : this.props.latestFeedback.review_state;
+    : this.props.latestFeedback?.review_state || null;
 
   constructor(props) {
     super(props);
