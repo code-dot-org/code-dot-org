@@ -12,36 +12,6 @@ class TeacherFeedbackStatus extends Component {
     latestFeedback: PropTypes.object.isRequired
   };
 
-  studentViewAttributes(latestFeedback) {
-    return {
-      style: styles.timeStudent,
-      time: moment.min(moment(), moment(latestFeedback.created_at)).fromNow(),
-      message: i18n.lastUpdated()
-    };
-  }
-
-  studentSeenAttributes(latestFeedback) {
-    return {
-      style: {
-        ...styles.timeTeacher,
-        ...styles.timeTeacherStudentSeen
-      },
-      message: i18n.seenByStudent(),
-      time: this.getFriendlyDate(latestFeedback.student_seen_feedback),
-      displayCheck: true
-    };
-  }
-
-  studentNotSeenAttributes(latestFeedback) {
-    return {
-      style: {
-        ...styles.timeTeacher
-      },
-      message: i18n.lastUpdatedCurrentTeacher(),
-      time: this.getFriendlyDate(latestFeedback.created_at)
-    };
-  }
-
   getFriendlyDate(feedbackSeen) {
     const now = moment();
     const dateFeedbackSeen = moment(feedbackSeen);
@@ -56,8 +26,65 @@ class TeacherFeedbackStatus extends Component {
     }
   }
 
-  hasStudentSeenFeedback() {
-    return !!this.props.latestFeedback.student_seen_feedback;
+  renderStudentView() {
+    const {created_at} = this.props.latestFeedback;
+    const formattedTime = moment.min(moment(), moment(created_at)).fromNow();
+    return (
+      <div style={styles.timeStudent} id="ui-test-feedback-time">
+        {i18n.lastUpdated()}
+        {formattedTime && (
+          <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+        )}
+      </div>
+    );
+  }
+
+  renderTeacherViewStudentUpdated() {
+    const {student_last_updated} = this.props.latestFeedback;
+    const style = {
+      ...styles.timeTeacher,
+      ...styles.timeTeacherStudentSeen
+    };
+    const formattedTime = this.getFriendlyDate(student_last_updated);
+
+    return (
+      <div style={style} id="ui-test-feedback-time">
+        {i18n.lastUpdatedByStudent()}
+        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+      </div>
+    );
+  }
+
+  renderTeacherViewStudentSeen() {
+    const {student_seen_feedback} = this.props.latestFeedback;
+    const style = {
+      ...styles.timeTeacher,
+      ...styles.timeTeacherStudentSeen
+    };
+    const formattedTime = this.getFriendlyDate(student_seen_feedback);
+
+    return (
+      <div style={style} id="ui-test-feedback-time">
+        <FontAwesome
+          icon="check"
+          className="fa-check"
+          style={styles.checkboxIcon}
+        />
+        {i18n.seenByStudent()}
+        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+      </div>
+    );
+  }
+
+  renderTeacherViewStudentNotSeen() {
+    const {created_at} = this.props.latestFeedback;
+    const formattedTime = this.getFriendlyDate(created_at);
+    return (
+      <div style={styles.timeTeacher} id="ui-test-feedback-time">
+        {i18n.lastUpdatedCurrentTeacher()}
+        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+      </div>
+    );
   }
 
   render() {
@@ -67,34 +94,27 @@ class TeacherFeedbackStatus extends Component {
       return null;
     }
 
-    let attributes;
     if (viewAs === ViewType.Student) {
-      attributes = this.studentViewAttributes(latestFeedback);
-    } else if (viewAs === ViewType.Teacher) {
-      if (this.hasStudentSeenFeedback()) {
-        //Teacher view if current teacher left feedback & student viewed
-        attributes = this.studentSeenAttributes(latestFeedback);
-      } else {
-        //Teacher view if current teacher left feedback & student did not view
-        attributes = this.studentNotSeenAttributes(latestFeedback);
-      }
+      return this.renderStudentView();
     }
 
-    const {style, time, message, displayCheck} = attributes;
+    if (viewAs === ViewType.Teacher) {
+      if (
+        latestFeedback.student_last_updated &&
+        latestFeedback.student_last_updated > latestFeedback.created_at
+      ) {
+        //Teacher view if current teacher left feedback & student updated
+        return this.renderTeacherViewStudentUpdated();
+      }
 
-    return (
-      <div style={style} id="ui-test-feedback-time">
-        {displayCheck && (
-          <FontAwesome
-            icon="check"
-            className="fa-check"
-            style={styles.checkboxIcon}
-          />
-        )}
-        {`${message} `}
-        {time && <span style={styles.timestamp}>{time}</span>}
-      </div>
-    );
+      if (!!this.props.latestFeedback.student_seen_feedback) {
+        //Teacher view if current teacher left feedback & student viewed
+        return this.renderTeacherViewStudentSeen();
+      }
+
+      //Teacher view if current teacher left feedback & student did not view
+      return this.renderTeacherViewStudentNotSeen();
+    }
   }
 }
 
