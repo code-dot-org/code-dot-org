@@ -179,7 +179,7 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenStageElement.style.display, 'none');
   });
 
-  it('does show hidden stage message once initialized when viewAs Student', () => {
+  it('does show hidden lesson message once initialized when viewAs Student', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
@@ -226,7 +226,7 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenStageElement.style.display, '');
   });
 
-  it('does show locked stage message once initialized when viewAs Student', () => {
+  it('does show locked lesson message once initialized when viewAs Student', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
@@ -439,7 +439,7 @@ describe('TeacherContentToggle', () => {
         );
       });
 
-      it('sets lockable to true for unverified teacher, when stage is lockable', () => {
+      it('sets lockable to true for unverified teacher, when lesson is lockable', () => {
         const props = mapStateToProps(stateUnverified);
 
         assert.strictEqual(props.isHiddenStage, false);

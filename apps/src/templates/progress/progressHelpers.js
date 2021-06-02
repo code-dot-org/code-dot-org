@@ -66,7 +66,7 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
  * Check to see if a lesson is locked for all students in the current section
  * or not. If called as a student, this should always return false since they
  * don't have a selected section.
- * @param {number} lessonId - Id representing the stage/lesson we're curious about
+ * @param {number} lessonId - Id representing the lesson we're curious about
  * @param {object} state - State of our entire redux store
  * @returns {boolean} True if the given lesson is locked for all students in the
  *   currently selected section.
@@ -79,18 +79,18 @@ export function lessonIsLockedForAllStudents(lessonId, state) {
 }
 
 /**
- * @param {level[]} levels - A set of levels for a given stage
- * @returns {boolean} True if we should consider the stage to be locked for the
+ * @param {level[]} levels - A set of levels for a given lesson
+ * @returns {boolean} True if we should consider the lesson to be locked for the
  *   current user.
  */
 export function stageLocked(levels) {
   // For lockable lessons, there is a requirement that they have exactly one LevelGroup,
-  // and that it be the last level in the stage. Because LevelGroup's can have
+  // and that it be the last level in the lesson. Because LevelGroup's can have
   // multiple "pages", and single LevelGroup might appear as multiple levels/bubbles
   // on the client. However, it is the case that each page in the LG should have
   // an identical locked/unlocked state.
   // Given this, we should be able to look at the last level in our collection
-  // to determine whether the LG (and thus the stage) should be considered locked.
+  // to determine whether the LG (and thus the lesson) should be considered locked.
   return !!levels[levels.length - 1].isLocked;
 }
 

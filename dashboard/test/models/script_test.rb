@@ -172,8 +172,8 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should remove empty lessons, reordering lessons' do
-    script_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
-    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-stages.script")
+    script_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-lessons.script")
+    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-lessons.script")
     script_names, _ = Script.setup([script_file_3_lessons])
     script = Script.find_by!(name: script_names.first)
     assert_equal 3, script.lessons.count
@@ -1008,12 +1008,12 @@ class ScriptTest < ActiveSupport::TestCase
 
       @script = create(:script, name: 'script-with-visible-after')
       @lesson_group = create(:lesson_group, key: 'key1', script: @script)
-      stage_no_visible_after = create(:lesson, script: @script, name: 'Stage 1', lesson_group: @lesson_group)
-      create(:script_level, script: @script, lesson: stage_no_visible_after)
-      stage_future_visible_after = create(:lesson, script: @script, name: 'Stage 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @script, lesson: stage_future_visible_after)
-      stage_past_visible_after = create(:lesson, script: @script, name: 'Stage 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @script, lesson: stage_past_visible_after)
+      lesson_no_visible_after = create(:lesson, script: @script, name: 'Stage 1', lesson_group: @lesson_group)
+      create(:script_level, script: @script, lesson: lesson_no_visible_after)
+      lesson_future_visible_after = create(:lesson, script: @script, name: 'Stage 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
+      create(:script_level, script: @script, lesson: lesson_future_visible_after)
+      lesson_past_visible_after = create(:lesson, script: @script, name: 'Stage 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
+      create(:script_level, script: @script, lesson: lesson_past_visible_after)
     end
 
     teardown do
@@ -1435,7 +1435,7 @@ class ScriptTest < ActiveSupport::TestCase
       'title' => 'Report Script Name',
       'description' => 'This is what Report Script is all about',
       stage_descriptions: [{
-        'name' => 'Report Stage 1',
+        'name' => 'Report Lesson 1',
         'descriptionStudent' => 'lesson 1 is pretty neat',
         'descriptionTeacher' => 'This is what you should know as a teacher'
       }].to_json
@@ -1447,9 +1447,9 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal 'Report Script Name', updated_report_script['title']
     assert_equal 'This is what Report Script is all about', updated_report_script['description']
-    assert_equal 'report-stage-1', updated_report_script['lessons']['Report Stage 1']['name']
-    assert_equal 'lesson 1 is pretty neat', updated_report_script['lessons']['Report Stage 1']['description_student']
-    assert_equal 'This is what you should know as a teacher', updated_report_script['lessons']['Report Stage 1']['description_teacher']
+    assert_equal 'report-lesson-1', updated_report_script['lessons']['Report Lesson 1']['name']
+    assert_equal 'lesson 1 is pretty neat', updated_report_script['lessons']['Report Lesson 1']['description_student']
+    assert_equal 'This is what you should know as a teacher', updated_report_script['lessons']['Report Lesson 1']['description_teacher']
   end
 
   test "update_i18n with new lesson display name" do

@@ -784,7 +784,7 @@ class ApiControllerTest < ActionController::TestCase
       level: level, level_source: level_source
     create :activity, user: user, level: level, level_source: level_source
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -825,7 +825,7 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user
     sign_in user
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -844,7 +844,7 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user
     sign_out user
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -872,7 +872,7 @@ class ApiControllerTest < ActionController::TestCase
     young_student = create :young_student
     sign_in young_student
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -889,7 +889,7 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user, total_lines: 2
     sign_in user
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -909,7 +909,7 @@ class ApiControllerTest < ActionController::TestCase
     create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
     create :activity, user: @student_1, level: level1a, level_source: level_source
 
-    get :user_progress_for_stage, params: {
+    get :user_progress_for_lesson, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1,
