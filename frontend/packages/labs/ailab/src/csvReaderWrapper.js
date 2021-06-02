@@ -24,12 +24,7 @@ const isCellValid = (cell) => {
 
 const isRowValid = (row) => {
   var cells = Object.values(row);
-  for (var i = 0; i < cells.length; i++) {
-    if (!isCellValid(cells[i])) {
-      return false;
-    }
-  }
-  return true;
+  return cells.every(isCellValid)
 }
 
 const cleanData = (data) => {
