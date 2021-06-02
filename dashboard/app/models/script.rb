@@ -873,7 +873,7 @@ class Script < ApplicationRecord
     unless @all_bonus_script_levels
       @all_bonus_script_levels = lessons.map do |lesson|
         {
-          stageNumber: lesson.relative_position,
+          lessonNumber: lesson.relative_position,
           levels: lesson.script_levels.select(&:bonus)
         }
       end
@@ -881,13 +881,14 @@ class Script < ApplicationRecord
     end
 
     lesson_levels = @all_bonus_script_levels.select do |lesson|
-      lesson[:stageNumber] <= current_lesson.absolute_position
+      lesson[:lessonNumber] <= current_lesson.absolute_position
     end
 
     # we don't cache the level summaries because they include localized text
     summarized_lesson_levels = lesson_levels.map do |lesson|
       {
-        stageNumber: lesson[:stageNumber],
+        lessonNumber: lesson[:lessonNumber],
+        stageNumber: lesson[:lessonNumber], #TODO: remove once launched
         levels: lesson[:levels].map(&:summarize_as_bonus)
       }
     end

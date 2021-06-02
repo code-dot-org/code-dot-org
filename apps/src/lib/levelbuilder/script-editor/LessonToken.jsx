@@ -10,7 +10,6 @@ import {lessonShape} from '@cdo/apps/lib/levelbuilder/shapes';
  */
 export default class LessonToken extends Component {
   static propTypes = {
-    lessonGroupPosition: PropTypes.number.isRequired,
     lesson: lessonShape.isRequired,
     dragging: PropTypes.bool,
     draggedLessonPos: PropTypes.bool,
@@ -18,18 +17,6 @@ export default class LessonToken extends Component {
     handleDragStart: PropTypes.func,
     removeLesson: PropTypes.func.isRequired,
     cloneLesson: PropTypes.func.isRequired
-  };
-
-  handleDragStart = e => {
-    this.props.handleDragStart(this.props.lesson.position, e);
-  };
-
-  handleRemove = () => {
-    this.props.removeLesson(this.props.lesson.position);
-  };
-
-  handleClone = () => {
-    this.props.cloneLesson(this.props.lesson.position);
   };
 
   render() {
@@ -57,61 +44,103 @@ export default class LessonToken extends Component {
         {// Use react-motion to interpolate the following values and create
         // smooth transitions.
         ({y, scale, shadow}) => (
-          <div
-            style={Object.assign({}, styles.lessonToken, {
-              transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
-              boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`,
-              zIndex: draggedLessonPos ? 1000 : 500 - this.props.lesson.position
-            })}
-          >
-            <div style={styles.reorder} onMouseDown={this.handleDragStart}>
-              <i className="fa fa-arrows-v" />
-            </div>
-            <span style={styles.lessonTokenName}>
-              <span style={styles.lessonArea}>
-                <span style={styles.lessonTitle}>{this.props.lesson.name}</span>
-                <span style={styles.lessonDetails}>
-                  {this.props.lesson.unplugged && (
-                    <span style={styles.tag}>unplugged</span>
-                  )}
-                  {this.props.lesson.assessment && (
-                    <span style={styles.tag}>assessment</span>
-                  )}
-                  {!this.props.lesson.hasLessonPlan && (
-                    <span style={styles.tag}>no lesson plan</span>
-                  )}
-                  {this.props.lesson.lockable && (
-                    <span style={styles.tag}>lockable</span>
-                  )}
-                </span>
-              </span>
-            </span>
-            {this.props.lesson.id && (
-              <div
-                style={styles.edit}
-                onClick={() => {
-                  window.lessonEditorOpened = true;
-                  const win = window.open(
-                    `${this.props.lesson.lessonEditPath}`,
-                    '_blank'
-                  );
-                  win.focus();
-                }}
-              >
-                <i className="fa fa-pencil" />
-              </div>
-            )}
-            {this.props.lesson.id && (
-              <div style={styles.clone} onMouseDown={this.handleClone}>
-                <i className="fa fa-clone" />
-              </div>
-            )}
-            <div style={styles.remove} onMouseDown={this.handleRemove}>
-              <i className="fa fa-times" />
-            </div>
-          </div>
+          <LessonTokenContents
+            y={y}
+            scale={scale}
+            shadow={shadow}
+            draggedLessonPos={draggedLessonPos}
+            lesson={this.props.lesson}
+            handleDragStart={this.props.handleDragStart}
+            removeLesson={this.props.removeLesson}
+            cloneLesson={this.props.cloneLesson}
+          />
         )}
       </Motion>
+    );
+  }
+}
+
+export class LessonTokenContents extends Component {
+  static propTypes = {
+    y: PropTypes.number.isRequired,
+    scale: PropTypes.number.isRequired,
+    shadow: PropTypes.number.isRequired,
+    draggedLessonPos: PropTypes.bool,
+    lesson: lessonShape.isRequired,
+    handleDragStart: PropTypes.func.isRequired,
+    removeLesson: PropTypes.func.isRequired,
+    cloneLesson: PropTypes.func.isRequired
+  };
+
+  handleEditLesson = () => {
+    window.lessonEditorOpened = true;
+    const url = this.props.lesson.lessonEditPath;
+    const win = window.open(url, 'noopener', 'noreferrer');
+    win.focus();
+  };
+
+  handleDragStart = e => {
+    this.props.handleDragStart(this.props.lesson.position, e);
+  };
+
+  handleRemove = () => {
+    this.props.removeLesson(this.props.lesson.position);
+  };
+
+  handleClone = () => {
+    this.props.cloneLesson(this.props.lesson.position);
+  };
+
+  render() {
+    return (
+      <div
+        style={Object.assign({}, styles.lessonToken, {
+          transform: `translate3d(0, ${this.props.y}px, 0) scale(${
+            this.props.scale
+          })`,
+          boxShadow: `${color.shadow} 0 ${this.props.shadow}px ${this.props
+            .shadow * 3}px`,
+          zIndex: this.props.draggedLessonPos
+            ? 1000
+            : 500 - this.props.lesson.position
+        })}
+      >
+        <div style={styles.reorder} onMouseDown={this.handleDragStart}>
+          <i className="fa fa-arrows-v" />
+        </div>
+        <span style={styles.lessonTokenName}>
+          <span style={styles.lessonArea}>
+            <span style={styles.lessonTitle}>{this.props.lesson.name}</span>
+            <span style={styles.lessonDetails}>
+              {this.props.lesson.unplugged && (
+                <span style={styles.tag}>unplugged</span>
+              )}
+              {this.props.lesson.assessment && (
+                <span style={styles.tag}>assessment</span>
+              )}
+              {!this.props.lesson.hasLessonPlan && (
+                <span style={styles.tag}>no lesson plan</span>
+              )}
+              {this.props.lesson.lockable && (
+                <span style={styles.tag}>lockable</span>
+              )}
+            </span>
+          </span>
+        </span>
+        {this.props.lesson.id && (
+          <div style={styles.edit} onClick={this.handleEditLesson}>
+            <i className="fa fa-pencil" />
+          </div>
+        )}
+        {this.props.lesson.id && (
+          <div style={styles.clone} onMouseDown={this.handleClone}>
+            <i className="fa fa-clone" />
+          </div>
+        )}
+        <div style={styles.remove} onMouseDown={this.handleRemove}>
+          <i className="fa fa-times" />
+        </div>
+      </div>
     );
   }
 }

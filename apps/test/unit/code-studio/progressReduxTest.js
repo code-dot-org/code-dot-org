@@ -49,7 +49,7 @@ const lessonData = [
         icon: null,
         title: 'Unplugged Activity',
         url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/1/puzzle/1',
+          'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
         previous: false,
         is_concept_level: false,
         bonus: false,
@@ -65,7 +65,7 @@ const lessonData = [
         icon: null,
         title: 1,
         url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/1/puzzle/2',
+          'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/2',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -80,7 +80,7 @@ const lessonData = [
         icon: null,
         title: 2,
         url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/1/puzzle/3',
+          'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3',
         next: [2, 1],
         is_concept_level: false,
         bonus: true,
@@ -115,7 +115,7 @@ const lessonData = [
         icon: null,
         title: 1,
         url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/2/puzzle/1',
+          'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/1',
         previous: [1, 3],
         is_concept_level: false,
         bonus: false,
@@ -130,7 +130,7 @@ const lessonData = [
         icon: null,
         title: 2,
         url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/2/puzzle/2',
+          'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/2',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -144,7 +144,7 @@ const lessonData = [
         icon: null,
         title: 3,
         url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/2/puzzle/3',
+          'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/3',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -180,7 +180,7 @@ const lockableLessonData = [
         icon: null,
         title: 'Unplugged Activity',
         url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/1/puzzle/1',
+          'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
         previous: false,
         is_concept_level: false,
         bonus: false,
@@ -589,7 +589,7 @@ describe('progressReduxTest', () => {
             id: '2106',
             status: 'not_tried',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/1/puzzle/1',
+              'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -610,7 +610,7 @@ describe('progressReduxTest', () => {
             id: '323',
             status: 'not_tried',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/1/puzzle/2',
+              'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/2',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -631,7 +631,7 @@ describe('progressReduxTest', () => {
             id: '322',
             status: 'not_tried',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/1/puzzle/3',
+              'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -654,7 +654,7 @@ describe('progressReduxTest', () => {
             id: '330',
             status: 'not_tried',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/2/puzzle/1',
+              'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/1',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -675,7 +675,7 @@ describe('progressReduxTest', () => {
             id: '339',
             status: 'perfect',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/2/puzzle/2',
+              'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/2',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -696,7 +696,7 @@ describe('progressReduxTest', () => {
             id: '341',
             status: 'attempted',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/2/puzzle/3',
+              'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/3',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -1132,7 +1132,7 @@ describe('progressReduxTest', () => {
       assert.strictEqual(processed[1].hidden, undefined);
     });
 
-    it('adds stageNumber to numbered lessons', () => {
+    it('adds lessonNumber to numbered lessons', () => {
       const lessons = [
         {
           name: 'lesson1',
@@ -1157,10 +1157,10 @@ describe('progressReduxTest', () => {
       ];
 
       const processed = processedLessons(lessons);
-      assert.strictEqual(processed[0].stageNumber, 1);
-      assert.strictEqual(processed[1].stageNumber, 2);
-      assert.strictEqual(processed[2].stageNumber, undefined);
-      assert.strictEqual(processed[3].stageNumber, 3);
+      assert.strictEqual(processed[0].lessonNumber, 1);
+      assert.strictEqual(processed[1].lessonNumber, 2);
+      assert.strictEqual(processed[2].lessonNumber, undefined);
+      assert.strictEqual(processed[3].lessonNumber, 3);
     });
   });
 

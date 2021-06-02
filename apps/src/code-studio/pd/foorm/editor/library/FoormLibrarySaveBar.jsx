@@ -59,7 +59,7 @@ class FoormLibrarySaveBar extends Component {
     isSaving: false,
     showNewLibraryQuestionSave: false,
     libraryQuestionName: null,
-    libraryName: null,
+    libraryShortName: null,
     formsAppearedIn: [],
     libraryCategory: null
   };
@@ -140,7 +140,7 @@ class FoormLibrarySaveBar extends Component {
     let fullLibraryName = '';
     if (!this.props.libraryId) {
       fullLibraryName = `${this.state.libraryCategory}/${
-        this.state.libraryName
+        this.state.libraryShortName
       }`;
     }
 
@@ -222,7 +222,8 @@ class FoormLibrarySaveBar extends Component {
     return (
       (this.state.libraryQuestionName &&
         !this.isNameValid(this.state.libraryQuestionName)) ||
-      (this.state.libraryName && !this.isNameValid(this.state.libraryName))
+      (this.state.libraryShortName &&
+        !this.isNameValid(this.state.libraryShortName))
     );
   }
 
@@ -241,7 +242,7 @@ class FoormLibrarySaveBar extends Component {
     if (
       !this.props.libraryId &&
       !(
-        this.state.libraryName &&
+        this.state.libraryShortName &&
         this.state.libraryCategory &&
         this.state.libraryQuestionName
       )
@@ -320,7 +321,9 @@ class FoormLibrarySaveBar extends Component {
                   id="libraryName"
                   type="text"
                   required={true}
-                  onChange={e => this.setState({libraryName: e.target.value})}
+                  onChange={e =>
+                    this.setState({libraryShortName: e.target.value})
+                  }
                 />
               </div>
             )}

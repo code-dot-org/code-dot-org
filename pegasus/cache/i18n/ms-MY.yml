@@ -121,6 +121,8 @@ ms-MY:
   learn_online: Cuba kursus-kursus lain secara online
   learn_classes: cari kelas tempatan
   just_did_hoc: 'Saya baru buat #SatuJamKod - Jom tengok! @codeorg'
+  just_did_accelerated: Saya baru sahaja menyelesaikan Kursus Dipercepatkan - lihat!
+    @codeorg
   learn_hoc: Belajar Hour of Code
   beyond_hoc: Melepasi Satu Jam
   what_gender: Apakah jantina anda?
@@ -303,6 +305,7 @@ ms-MY:
   dashboard_course1: 'Kursus 1:'
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
+  dashboard_pre-express: 'Kursus Ekspres Prapembaca:'
   dashboard_sequence: Urutan
   dashboard_framework: Rangka kerja
   dashboard_standards: Piawaian
@@ -338,6 +341,48 @@ ms-MY:
   course1_name: Kursus 1
   course2_name: Kursus 2
   course3_name: Kursus 3
+  coursea-draft_name: Kursus A
+  coursea_name: Kursus A
+  courseb-draft_name: Kursus B
+  courseb_name: Kursus B
+  coursec-draft_name: Kursus C
+  coursec_name: Kursus C
+  coursed-draft_name: Kursus D
+  coursed_name: Kursus D
+  coursee-draft_name: Kursus E
+  coursee_name: Kursus E
+  coursef-draft_name: Kursus F
+  coursef_name: Kursus F
+  coursea-2017_name: Kursus A (2017)
+  coursec-2017_name: Kursus C (2017)
+  coursed-2017_name: Kursus D (2017)
+  coursee-2017_name: Kursus E (2017)
+  coursef-2017_name: Kursus F (2017)
+  coursea-2018_name: Kursus A (2018)
+  courseb-2018_name: Kursus B (2018)
+  coursec-2018_name: Kursus C (2018)
+  coursed-2018_name: Kursus D (2018)
+  coursee-2018_name: Kursus E (2018)
+  coursef-2018_name: Kursus F (2018)
+  coursea-2019_name: Kursus A (2019)
+  courseb-2019_name: Kursus B (2019)
+  coursec-2019_name: Kursus C (2019)
+  coursed-2019_name: Kursus D (2019)
+  coursee-2019_name: Kursus E (2019)
+  coursef-2019_name: Kursus F (2019)
+  coursea-2020_name: Kursus A (2020)
+  courseb-2020_name: Kursus B (2020)
+  coursec-2020_name: Kursus C (2020)
+  coursed-2020_name: Kursus D (2020)
+  coursee-2020_name: Kursus E (2020)
+  coursef-2020_name: Kursus F (2020)
+  pre-express-2018_name: Kursus Ekspres Prapembaca (2018)
+  express-2019_name: Kursus Dipercepatkan (2019)
+  pre-express-2019_name: Kursus Ekspres Prapembaca (2019)
+  pre-express-2020_name: Kursus Ekspres Prapembaca (2020)
+  accelerated_name: Kursus Dipercepatkan
+  pre-express_name: Kursus Ekspres Prapembaca
+  20-hour_name: Kursus Dipercepatkan
   codeorg_gradelevel: Peringkat umur 4-104 tahun
   codeintl_gradelevel: Peringkat umur 4-104 tahun
   khan_gradelevel: Sekolah Menengah +
@@ -387,6 +432,82 @@ ms-MY:
   coursee-2018_gradelevel: Umur 8-12 tahun
   coursee-2019_gradelevel: Umur 8-12 tahun
   coursee-2020_gradelevel: Umur 8-12 tahun
+  frozen_shortdescription: Mari kita gunakan kod untuk menyertai Anna dan Elsa semasa
+    mereka meneroka keajaiban dan kecantikan ais.
+  coursea_shortdescription_congrats: Pengenalan kepada sains komputer untuk prapembaca.
+  courseb_shortdescription_congrats: Pengenalan kepada sains komputer untuk prapembaca.
+    (Serupa dengan Kursus A, tetapi lebih banyak kepelbagaian untuk pelajar yang lebih
+    tua.)
+  coursec_shortdescription_congrats: Pelajari asas sains komputer dan cipta seni,
+    cerita dan permainan anda sendiri.
+  coursed_shortdescription_congrats: Meliputi konsep daripada Kursus C dengan pantas,
+    kemudian pergi lebih jauh dengan algoritma, gelung bersarang, bersyarat dan banyak
+    lagi.
+  coursee_shortdescription_congrats: Meliputi konsep dalam Kursus C & D dengan pantas
+    dan kemudian pergi lebih jauh dengan fungsi.
+  coursef_shortdescription_congrats: Pelajari semua konsep dalam Asas Sains Komputer
+    dan cipta seni, cerita atau permainan anda sendiri.
+  coursea-2017_shortdescription_congrats: Pengenalan kepada sains komputer untuk prapembaca.
+  courseb-2017_shortdescription_congrats: Pengenalan kepada sains komputer untuk prapembaca.
+    (Serupa dengan Kursus A, tetapi lebih banyak kepelbagaian untuk pelajar yang lebih
+    tua.)
+  coursec-2017_shortdescription_congrats: Pelajari asas sains komputer dan cipta seni,
+    cerita dan permainan anda sendiri.
+  coursed-2017_shortdescription_congrats: Meliputi konsep daripada Kursus C dengan
+    pantas, kemudian pergi lebih jauh dengan algoritma, gelung bersarang, bersyarat
+    dan banyak lagi.
+  coursee-2017_shortdescription_congrats: Meliputi konsep dalam Kursus C & D dengan
+    pantas dan kemudian pergi lebih jauh dengan fungsi.
+  coursef-2017_shortdescription_congrats: Pelajari semua konsep dalam Asas Sains Komputer
+    dan cipta seni, cerita atau permainan anda sendiri.
+  coursea-2018_shortdescription_congrats: Pengenalan kepada sains komputer untuk prapembaca.
+  courseb-2018_shortdescription_congrats: Pengenalan kepada sains komputer untuk prapembaca.
+    (Serupa dengan Kursus A, tetapi lebih banyak kepelbagaian untuk pelajar yang lebih
+    tua.)
+  coursec-2018_shortdescription_congrats: Pelajari asas sains komputer dan cipta seni,
+    cerita dan permainan anda sendiri.
+  coursed-2018_shortdescription_congrats: Meliputi konsep daripada Kursus C dengan
+    pantas, kemudian pergi lebih jauh dengan algoritma, gelung bersarang, bersyarat
+    dan banyak lagi.
+  coursee-2018_shortdescription_congrats: Meliputi konsep dalam Kursus C & D dengan
+    pantas dan kemudian pergi lebih jauh dengan fungsi.
+  coursef-2018_shortdescription_congrats: Pelajari semua konsep dalam Asas Sains Komputer
+    dan cipta seni, cerita atau permainan anda sendiri.
+  coursea-2019_shortdescription_congrats: Pengenalan kepada sains komputer untuk prapembaca.
+  courseb-2019_shortdescription_congrats: Pengenalan kepada sains komputer untuk prapembaca.
+    (Serupa dengan Kursus A, tetapi lebih banyak kepelbagaian untuk pelajar yang lebih
+    tua.)
+  coursec-2019_shortdescription_congrats: Pelajari asas sains komputer dan cipta seni,
+    cerita dan permainan anda sendiri.
+  coursed-2019_shortdescription_congrats: Meliputi konsep daripada Kursus C dengan
+    pantas, kemudian pergi lebih jauh dengan algoritma, gelung bersarang, bersyarat
+    dan banyak lagi.
+  coursee-2019_shortdescription_congrats: Meliputi konsep dalam Kursus C & D dengan
+    pantas dan kemudian pergi lebih jauh dengan fungsi.
+  coursef-2019_shortdescription_congrats: Pelajari semua konsep dalam Asas Sains Komputer
+    dan cipta seni, cerita atau permainan anda sendiri.
+  coursea-2020_shortdescription_congrats: Pelajari asas sains komputer dan keselamatan
+    internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh
+    anda kongsikan.
+  courseb-2020_shortdescription_congrats: Pelajari asas sains komputer dan keselamatan
+    internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh
+    anda kongsikan.
+  coursec-2020_shortdescription_congrats: Cipta atur cara dengan penjujukan, gelung
+    dan peristiwa. Terjemahkan tanda nama anda kepada binari, selidik teknik penyelesaian
+    masalah yang berbeza dan pelajari cara bertindak balas terhadap buli siber. Pada
+    akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan!
+  coursed-2020_shortdescription_congrats: Pelajar membangunkan pemahaman mereka mengenai
+    gelung, bersyarat dan peristiwa. Di luar pengekodan, pelajar mempelajari tentang
+    kewarganegaraan digital.
+  coursee-2020_shortdescription_congrats: Mulakan pengekodan dengan algoritma, gelung,
+    bersyarat dan peristiwa dan kemudian anda akan bergerak kepada fungsi. Dalam bahagian
+    kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan
+    dengan rakan dan keluarga anda.
+  coursef-2020_shortdescription_congrats: Pelajari menggunakan pelbagai jenis gelung,
+    peristiwa, fungsi dan bersyarat. Selidik teknik penyelesaian masalah yang berbeza
+    dan bincangkan kesan pengkomputeran dan internet terhadap kemasyarakatan. Dalam
+    bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh
+    anda kongsikan dengan rakan dan keluarga.
   codeorg_beyond_gradelevel: Peringkat umur 4-104 tahun
   khan_beyond_gradelevel: Sekolah Menengah +
   tynker_beyond_gradelevel: Umur 5-13 tahun
@@ -440,6 +561,8 @@ ms-MY:
     Jonas Brothers, Nicki Minaj, dan 34 lagi!
   hoc_overview_start_tutorial: Mula
   hoc2018_creativity_create: Buat
+  hoc2018_creativity_courses_link: Pergi lebih jauh dengan <a href="https://studio.code.org/courses">kursus
+    Code.org</a>
   hoc2018_mc_start: Mula
   hoc2018_mc_homepage_try_it: Selamat mencuba
   hoc2018_dance_party_main_heading: Majlis Tari-Menari
