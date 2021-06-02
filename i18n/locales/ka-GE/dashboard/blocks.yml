@@ -703,12 +703,6 @@ ka:
             '"down"': ქვედა ისარი
             '"left"': მარცხენა ისარი
             '"right"': მარჯვენა ისარი
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': ბადე
-            '"row"': მწკრივი
-            '"random"': შემთხვევითი
       RyanLab_moveForward:
         text: წინ გადაადგილება
       RyanLab_turnLeft:

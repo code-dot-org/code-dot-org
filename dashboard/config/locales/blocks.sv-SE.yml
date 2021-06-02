@@ -1192,6 +1192,15 @@ sv:
             '"y"': y-position
             '"direction"': rörelseriktning
             '"speed"': hastighet
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medel
+            '100': large
       gamelab_setSizes:
         text: ställ in {SPRITE} {PROPERTY} till {N} %
         options:
@@ -1493,6 +1502,13 @@ sv:
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
+      Mikelab_setupSim:
+        text: |-
+          Ställ in simulering med
+          {SPRITE1N}{SPRITE1COSTUME}Hastighet{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Hastighet{SPRITE2SPEED}
+          Samla
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1588,42 +1604,27 @@ sv:
         options:
           PROPERTY:
             "'shapeColor'": färg
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} börjar {BEHAVIOR} för {SECONDS} sekunder
-      aalab_addBehaviorUntilBoolean:
-        text: Sprite {SPRITE} Börjar {BEHAVIOR} Tills {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: ny Sprite med namnet{SPRITE_NAME} med kostym{ANIMATION_NAME} på plats{LOCATION}
-      aalab_goToScene:
-        text: gå till scen {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: Flytta {SPRITE} {DISTANCE} Pixlar {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Norr
-            '"East"': Österut
-            '"South"': Söder
-            '"West"': Väst
-      aalab_prompt:
-        text: fråga {MESSAGE}
-      aalab_scene:
-        text: scen {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: installationsberättelse
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': rutnät
+            '"border"': gräns
+            '"row"': rad
             '"random"': slumpad
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': alla
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': alla
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: rita binär {BIN}
       binary_drawBinScreen:

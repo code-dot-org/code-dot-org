@@ -347,6 +347,9 @@ es:
       restricted_section: No hemos podido añadirte a la sección %{section_code} porque
         está bloqueada. Por favor, póngase en contacto con su profesor para obtener
         ayuda.
+      full_section: No hemos podido añadirte a la sección %{section_code} porque ya
+        existen %{section_capacity} alumnos en ella. Ponte en contacto con tu profesor
+        para que te ayude.
     mail:
       student_disassociated:
         subject: 'Notificación Code.org: %{student_name} ya no está asociado como

@@ -5,6 +5,7 @@ th:
       Green: สีเขียว
       Red: สีแดง
       actor: นักแสดง
+      birds: นก
       cats: แมวทั้งหมด
       color: สี
       counter: ตัวนับ
@@ -23,6 +24,7 @@ th:
       score: คะแนน
       size: ขนาด
       speed: ความเร็ว
+      variable: ตัวแปร
       width: ความกว้าง
       wizard: พ่อมด
       x: x

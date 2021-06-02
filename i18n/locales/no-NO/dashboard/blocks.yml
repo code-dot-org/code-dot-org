@@ -1274,13 +1274,6 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': rutenett
-            '"border"': kantlinje
-            '"row"': rad
-            '"random"': tilfeldig
       RyanLab_moveForward:
         text: gå fremover
       RyanLab_turnLeft:

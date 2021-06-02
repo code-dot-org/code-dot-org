@@ -304,6 +304,7 @@
   volunteer_engineer_submission_header_private: "Məxfi saxlanaraq heç vaxt bölüşülməyən məlumat"
   volunteer_engineer_submission_field_email: "E-poçt ünvanı"
   volunteer_engineer_submission_field_email_placeholder: "E-poçt ünvanı"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Daha ətraflı)"
   volunteer_engineer_submission_field_email_preference_yes: 'Bəli'
   volunteer_engineer_submission_field_email_preference_no: 'Xeyr'
   volunteer_engineer_submission_submit: "Göndər"
@@ -650,9 +651,13 @@
   hoc2018_dance_video3: "Rəqs Şənliyi - Xüsusiyyətlər"
   hoc2018_dance_video4: "Rəqs Şənliyi - Təbriklər"
   hoc2018_mc_with_microsoft: "Tərəfdaşlarımız: "
+  codebytes_skinny_banner_english_only: "Yalnız ingilis dili"
   footer_privacy_policy: "Məxfilik siyasəti"
   footer_about: "Haqqımızda"
   footer_partners: "Tərəfdaşlar"
   footer_donate: "İanə verin"
   footer_support: "Dəstək"
   footer_terms: "Şərtlər"
+  ai_in_partnership_with: "Tərəfdaşlarımız: "
+  ai_activity: "Fəaliyyət"
+  ai_description: "Təsvir"

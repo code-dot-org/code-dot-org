@@ -7335,7 +7335,6 @@ ro:
               display_name: Sondaj
         csd5-2021:
           lessons:
-            Project - Make a Recommendation: {}
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
           lesson_groups:
@@ -7400,7 +7399,11 @@ ro:
         csp8-2021:
           lessons:
             lesson-4: {}
-        csp9-2021: {}
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: Învățare Automată
+            lesson-10: {}
         csp10-2021: {}
         coursea-2021:
           title: Curs A (2021)
@@ -8027,6 +8030,7 @@ ro:
               description_student: 'Acum că înțelegeți relațiile de condiționalitate, este timpul să programați Albinuța să le utilizeze atunci când strânge miere și nectar. '
               description_teacher: Până acum elevii au scris cod care este executat exact la fel de fiecare dată când este rulat – acesta este fiabil, dar nu foarte flexibil. În această lecție, elevii vor începe să includă relații de condiționalitate, care le vor permite să scrie cod care funcționează diferit în funcție de condițiile specifice întâlnite de program.
             While Loops with the Farmer:
+              name: Bucle „while” în Fermier
               description_student: 'Buclele sunt extrem de utile atunci când scriem cod. În această lecție vei învăța mai multe despre un nou tip de buclă: buclele „while”!'
               description_teacher: Până la această lecție, elevii au folosit pentru destul de mult timp buclele `repeat`, așa că a sosit momentul să complicăm puțin lucrurile. _Buclele while_ sunt bucle care continuă să repete comenzi atâta timp cât este îndeplinită o condiție. Buclele „while” sunt folosite atunci când programatorul nu știe cu exactitate de câte ori trebuie să se repete comenzile, dar știe ce condiție trebuie să fie adevărată pentru ca bucla să se repete în continuare. De exemplu, elevii trebuie să umple gropile și să sape pentru a face grămezi de pământ în Fermier. Aceștia nu vor ști care este dimensiunea gropilor sau înălțimea grămezilor de pământ, dar știu că trebuie să continue să umple gropile și să sape pentru a face grămezi de pământ atâta timp cât solul nu este nivelat.
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -8053,7 +8057,7 @@ ro:
               description_student: Realizează desene complexe mai ușor cu ajutorul funcțiilor!
               description_teacher: Elevii vor începe să studieze utilizarea funcțiilor cu ajutorul mediului Artist. Aici vor crea și modifica imagini extraordinare. Pentru modele mai complicate, elevii vor învăța despre funcțiile imbricate, prin care o funcție este apelată din altă funcție.
             Variables with Artist:
-              description_student: Nu uita să-ți aduci creativitatea cu tine în clasă! În aceste puzzle-uri vei crea desene fantastice cu ajutorul variabilelor.
+              description_student: În această lecție vei desena cu variabile care se schimbă pe măsură ce programul rulează.
               description_teacher: În această lecție, elevii vor explora crearea de modele repetitive folosind variabile în mediul Artist. Elevii vor învăța cum pot fi utilizate variabilele pentru a scrie și citi cod cu mai multă ușurință. După o serie de puzzle-uri ghidate, elevii vor încheia ora cu un nivel de joc liber, fără reguli, în care vor demonstra ce au învățat și în care își vor crea propriile modele.
             Changing Variables with Bee:
               description_student: Această albină adoră variabilele!
@@ -8090,6 +8094,8 @@ ro:
               name: Petrecere dansantă
               description_student: A venit momentul să sărbătorim! În această lecție vei programa propria petrecere dansantă interactivă.
               description_teacher: În această lecție elevii vor programa propria petrecere dansantă interactivă. Pentru această activitate este nevoie de sunet, deoarece instrumentul a fost creat pentru a reacționa la muzică.
+            lesson-3:
+              name: Spiriduși în acțiune
           lesson_groups:
             csf_sequencing:
               display_name: Secvențiere
@@ -8105,6 +8111,8 @@ ro:
               display_name: Bucle Pentru
             end_of_course_project:
               display_name: Proiect de final de curs
+            lessonGroup-9:
+              display_name: Evenimente
           student_description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
         pre-express-2021:
           description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
@@ -8234,6 +8242,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -8300,3 +8310,8 @@ ro:
           lesson_groups:
             cspSurvey2020:
               display_name: Sondaj
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lecția 15
+        csd7-2021: {}

@@ -128,6 +128,8 @@ cs:
     already_linked: "Účet %{provider} je již propojen s vaším účtem Code.org."
     existing_account:
       account_exists: "Dobrá zpráva! Již máte účet Code.org, který využívá %{email}"
+      sign_in: "Přihlaste se prosím ke svému aktuálnímu účtu. Pak budete mít možnost napojit se  ze stránky Nastavení Vašeho účtu na profil %{provider}."
+      sign_up: "Není to Váš e-mail? Chcete si vytvořit nový účet s jinou e-mailovou adresou? Jestliže se rozhodnete vytvořit si nový účet, budete mít také možnost napojit svůj profil %{provider} ze své stránky Nastavení účtu."
   signup_form:
     email_signup: 'Zaregistrujte se svou e-mailovou adresou'
     student_count: 'Již se zaregistrovalo %{count} studentů.'
@@ -157,6 +159,11 @@ cs:
     invalid_password: "Heslo musí obsahovat nejméně 6 znaků"
     mismatch_password: "Zadaná dvě hesla se neshodují"
     student_consent: "Potvrzuji, že mám od svých rodičů nebo zákonného zástupce dovoleno používat Code.org."
+    agree_us_data_transfer_student: '**Souhlasím, že společnost Code.org smí přenášet údaje (včetně osobních údajů) pocházející z mého užívání tohoto serveru do Spojených států amerických** za účelem ukládání a zpracování těchto údajů.'
+    agree_us_data_transfer_teacher: '**Souhlasím, že společnost Code.org smí přenášet údaje (včetně osobních údajů) pocházející z užívání tohoto serveru mnou a mými studenty do Spojených států amerických** za účelem ukládání a zpracování těchto údajů.'
+    data_collection_us: "Jsem si vědom, že Code.org je americký neziskový server a že zákony upravující shromažďování osobních údajů ve Spojených státech amerických se mohou lišit od zákonů platných v mé zemi."
+    visit_privacy: 'Navštivte zásady ochrany osobních údajů Code.org [Zásady ochrany osobních údajů](%{privacy_url}), kde se dozvíte více.'
+    student_terms_markdown: "E-mailové adresy se neukládají v podobě, která by nám umožňovala kontaktovat studenty. Studenti nikdy nedostanou od Code.org e-maily za jiným účelem než za účelem obnovení hesla. Podívejte se na naše [zásady ochrany osobních údajů](http://code.org/privacy), kde najdete další informace."
     additional_information: "Potřebujeme další informace pro pokračování vaši registrace."
     user_type_button: "Aktualizovat typ účtu"
     user_type_label: "Typ účtu"
@@ -263,6 +270,8 @@ cs:
     invite_sent: 'Pozvánka odeslána'
     added_teacher: '%{name} přidán jako tvůj učitel'
     registered: "Připojili jste se do sekce %{section_name}."
+    captcha_required: 'Vyplňte prosím CAPTCHA, abyste se mohli přidat do této sekce.'
+    already_exists: 'Do části %{section_name} jste se už přidal(a).'
     error:
       signed_in: 'Dříve než budeš pokračovat se, prosím, odhlas'
       username_not_found: 'Uživatelské jméno %{username} nebylo nalezeno'
@@ -272,6 +281,7 @@ cs:
       blank_code: "Zadej, prosím, kód sekce"
       cant_join_own_section: "Je nám líto, ale ke své vlastní sekci se nemůžete připojit."
       provider_managed_section: "Tuto sekci spravuje jiný poskytovatel a nelze se k ní připojit. Požádej svého učitele, aby tě prostřednictvím %{provider} přidal a pak sekci zosynchronizoval."
+      restricted_section: "Do části %{section_code} jsme Vás nemohli přidat, protože je zablokovaná. Kontaktujte prosím svého učitele nebo učitelku a požádejte jej/ji o pomoc."
     mail:
       student_disassociated:
         subject: "Code.org upozornění: %{student_name} už není vašim studentem."
@@ -312,6 +322,7 @@ cs:
       professional_learning: "Odborné vzdělání"
       documentation: "Dokumentace"
       tutorials: "Návody"
+      web_lab_documentation: "Dokumentace k Web Lab"
       educate_overview: "Pedagogův přehled"
       educate_elementary: "Základní škola"
       educate_middle: "2. stupeň ZŠ"
@@ -369,8 +380,10 @@ cs:
       gumball: 'Gumball'
       iceage: 'Doba ledová'
       infinity: 'Nekonečno'
+      makerlab: 'Nástrojová sada Maker'
       minecraft_adventurer: 'Minecraft Adventurer'
       minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_codebuilder: 'Minecraft: Kódové připojení'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Play Lab'
@@ -420,6 +433,7 @@ cs:
       worked_with: 'Pracoval s'
       update_lock_settings: 'Aktualizace zámku zde.'
       clear_response: 'Vymazat odpověď'
+    student_code_view_diabled: 'Kód studenta pro tuto aktivitu nelze zobrazit.'
   user:
     email_confirm_needed: 'E-mailová adresa nebyla potvrzena:'
     email_confirm_needed_required: 'Vaše e-mailová adresa %{email} nebyla potvrzena:'
@@ -435,6 +449,7 @@ cs:
     delete_confirm: 'Jste si jisti, že chcete vymazat tento účet?'
     deleted_user: 'odstraněný uživatel'
     no_password_because_oauth: 'Bez hesla, protože se přihlašujete pomocí jiného poskytovatele.'
+    no_password_because_sponsored: 'Se správou hesla se obraťte na svého učitele.'
     create_personal_login: 'Vytvořte osobní přihlašovací heslo'
     create_personal_login_under_13_info: 'Pokud chcete používat účet Code.org i po skončení školního roku, požádejte své rodiče nebo zákonného zástupce, aby vám pomohl vytvořit vlastní přístup níže.'
     create_personal_login_under_13_username: "Uživatelské jméno (nepoužívejte vaše skutečné jméno!)"
@@ -452,10 +467,13 @@ cs:
     enter_parent_email: "Zadejte e-mailovou adresu vašich rodičů nebo zákonného zástupce (pro obnovení hesla)"
     update: "Aktualizovat účet"
     account_successfully_updated: "Účet úspěšně aktualizován."
+    auth_option_saved: "Úspěšně jste propojili svůj účet %{provider} s e-mailem %{email}."
+    auth_option_saved_no_email: "Úspěšně jste napojili svůj účet %{provider}."
     update_email: "Aktualizovat"
     for_parents_and_guardians: "Pro rodiče a zákonné zástupce"
     link_a_parent_email: "Když k tomuto účtu připojíte e-mailovou adresu rodiče nebo zákonného zástupce, budete dostávat pravidelné aktualizace o pokroku a projektech vašeho dítěte. Tuto e-mailovou adresu budete také moci použít k obnovení hesla."
     parent_guardian_email_label: "E-mail rodiče/zákonného zástupce"
+    remove_parent_email_label: "Odstranit"
     none: "Žádný"
     only_one_parent_email_supported_warning: "Poznámka: v současnosti můžeme podporovat jen jednu e-mailovou adresu rodiče nebo zákonného zástupce na jeden studentský účet."
     encrypted: "šifrováno"
@@ -493,6 +511,7 @@ cs:
     test_videos_help: 'Vyzkoušejte náš nový video přehrávač ve své škole'
     try_beta_courses: 'Novinka! Vyzkoušejte naše beta kurzy pro žáky 1. stupně ZŠ'
     use_as_teacher: 'Použijte jako učitel tento web'
+    heading_elementary_markdown: "## 20 hodinové kurzy pro\n\n# Základy počítačových věd (všechny věkové kategorie)"
     your_gallery: Galerie
     no_primary_course: "Zkuste Code Studio kurz"
     choose_next_course: "Zkuste kurz Code Studio výběrem níže"
@@ -505,6 +524,7 @@ cs:
     student_not_found: "Nelze nalézt jednoho nebo více studentů."
     all_students_must_be_in_current_section: "Všichni žáci musí být zapsáni ve vaší sekci."
     already_enrolled_in_new_section: "Tyto žáky nelze přesunout, protože se již nacházejí v nové sekci."
+    third_party_login: "Studenty nemůžete přemístit do části, která je synchronizována s nástrojem od třetí strany."
   share:
     title: "Code studio"
     description: "Každý se může naučit informatiku. Udělejte hry, aplikace a umění s kódem."
@@ -512,6 +532,8 @@ cs:
   gender:
     male: 'Muž'
     female: 'Žena'
+    non_binary: 'Nebinární'
+    not_listed: 'Preferovaný termín není uveden'
     none: 'Raději bych neodpovídal/a'
   user_type:
     student: 'Student'
@@ -524,6 +546,7 @@ cs:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org používá p5.play, který je licencován pod <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Poháněn Amazon Web Services'
+    google_copyright: '&copy; Google Inc. používáno se svolením. Třída Google (Google Classroom) je obchodní známka společnosti Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo a Hour of Code&reg; jsou trademarks of Code.org.'
     copyright: 'Autorská práva'
     more: 'Více'
@@ -561,7 +584,11 @@ cs:
     upgrade:
       unsupported_message: "Váš prohlížeč není podporován. Nainstalujte a použijte některý z <a href='%{supported_browsers_url}', target='_blank'>podporovaných prohlížečů</a>. Můžete zkusit pokračovat se současným prohlížečem, ale mohou nastat chyby ve funkcionalitě."
       link: "Zjisti více"
+      applab_unsupported_tablet: "App Lab funguje nejlépe na stolním počítači nebo laptopu s klávesnicí a myší. Při používání tohoto nástroje na svém aktuálním zařízení můžete zaznamenat problémy."
+      gamelab_unsupported_tablet: "Game Lab funguje nejlépe na stolním počítači nebo laptopu s myší a klávesnicí. Při používání tohoto nástroje na svém aktuálním zařízení můžete zaznamenat problémy."
       oceans_unsupported_browser: "Tento kurz nepodporuje váš prohlížeč. Zkuste prosím použít Edge, Chrome, Firefox nebo jiný moderní prohlížeč."
+      weblab_unsupported_browser: "Bohužel právě máme problémy s načítáním Web Lab do tohoto prohlížeče. Možná budete chtít používat jiný prohlížeč, dokud to nebude vyřešeno. Omlouváme se za nepříjemnosti."
+      weblab_unsupported_locale_storage: "Při používání Web Lab v režimu soukromého prohlížení možná zaznamenáte problémy. Načtěte prosím svůj projekt znovu v normálním režimu. Omlouváme se za nepříjemnosti."
   slow_loading: 'Trvá to déle než obvykle...'
   try_reloading: 'Zkus znovu načíst stránku'
   next_stage: 'Hotovo! Pokračuj do další fáze'
@@ -627,6 +654,7 @@ cs:
       cta: "Jak na to"
     hoc-encryption:
       title: "Jednoduché šifrování"
+      body: "Studenti se budou učit způsoby vytváření šifrovaných zpráv a prolamování šifer."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab je programovací prostředí, kde můžete vytvářej jednoduché webové stránky pomocí HTML a CSS. Navrhněte své webové stránky a sdílejte je ve vteřině dál."
@@ -663,11 +691,14 @@ cs:
       body_short: "Pokud nemáte přístup k počítačům, vyzkoušejte tyto lekce bez počítače."
     unplugged_conditionals:
       title: "Podmínky"
+      body: "Učte se algoritmy a podmíněné příkazy v&nbsp;této „vypnuté“ aktivitě, která se hraje pomocí balíčku karet."
     widgets:
       title: "Widgety"
+      body: "Studenti mohou pomocí těchto digitálních nástrojů sami probádat různé koncepce z našich Principů počítačových vědy. Tyto widgety můžete užívat samostatně nebo vytvořit jednokoncepční lekci pro svou třídu."
       audience: "Věk 14+"
       cta: "Jak na to"
   landing:
+    prerelease_tutorial: "Tento výukový kurz je ve verzi **beta**. Může být revidován tím, jak jsou přijímány revize a prováděna vylepšení."
     report_bug: "Nahlásit chybu"
     support: "Získat pomoc"
     support_url: "//support.code.org"
@@ -693,6 +724,7 @@ cs:
     correct_title: "Děkuji"
     correct_body: "Děkujeme vám za odeslání odpovědí."
     hide_survey_last_answer: "Tento průzkum je anonymní. Pro souhrné informace o výsledcích navštiv prosím nástěnku tvého učitele. Výsledky budou zobrazené pouze při účasti pěti žáků."
+    survey_submission_thankyou: "Děkujeme Vám za podání tohoto průzkumu! Průzkum byl vyprázdněn tak, aby Vaše odpovědi byly anonymní. Pamatujte, že Váš učitel i tak uvidí odpovědi celé Vaší třídy, ale bez uvedení jmen."
   level_group-submittable:
     wrong_title: "Děkuji"
     wrong_body: "Děkujeme vám za odeslání odpovědí."
@@ -723,6 +755,8 @@ cs:
     open_response_body: "Děkujeme za odpověď!"
     correct_title: "Správně"
     correct_body: "To je správná odpověď."
+  lesson_extras:
+    bonus_level: "Bonusová úroveň"
   dialog:
     ok: "OK"
     startover_title: "Určitě chceš začít znovu?"
@@ -736,6 +770,9 @@ cs:
   age_interstitial:
     age: Váš věk
     header: Aktualizace informací účtu
+    warning: "Právě provádíme proces aktualizace Vašeho prožitku tak, abychom Vám poskytovali ještě větší ochranu Vašeho soukromí. Abychom to mohli provést, potřebujeme, aby sem aktuální uživatelé zadali svůj věk."
+    disclaimer: "Jako vždy, Code.org nebude tyto informace nikdy pronajímat, prodávat, ani je sdílet s žádnými třetími stranami."
+    sign_out_markdown: 'Jestliže nám svůj věk nechcete sdělit, můžete [se odhlásit](%{url}).'
   terms_interstitial:
     title: "Aktualizované podmínky služeb a ochrana osobních údajů"
     intro_desc: "Aktualizovali jsme naše smluvní podmínky a ochranu osobních údajů. Změny jsou platné od 24. srpna 2016. Největší změnou je, že <i> už více nebudeme uchovávat e-mailové adresy studentských účtů na Studiu kódu. </i> Je to pro nás velký krok a doufáme, že jsme nastavili nový standard pro soukromí studentů v technologiích ve vzdělávání. Souhrn změn sme vám poslali e-mailem."
@@ -752,8 +789,18 @@ cs:
     reminder_desc: 'Aktualizovali jsme naše <a href="%{tos_url}" target="_blank">Smluvní podmínky</a>a<a href="%{privacy_url}" target="_blank">Ochranu osobních údajů </a>. Prosím čtěte pečlivě, než je potvrdíte. Berte v úvahu, že pokud studenti neřijmnou aktualizované podmínky, naše nástroje vyučující JavaScript jim mohou být nedostupné.'
     reminder_desc_markdown: Aktualizovali jsme naše [Smluvní podmínky](%{tos_url})a[Ochranu osobních údajů](%{privacy_url}). Prosím čtěte pečlivě, než je potvrdíte. Berte v úvahu, že pokud studenti neřijmnou aktualizované podmínky, naše nástroje vyučující JavaScript jim mohou být nedostupné.
     review_terms: "Zkontrolujte aktualizované podmínky"
+  donor_interstitial:
+    title: "Vaše bezplatné kurzy počítačových věd umožňuje..."
+    subtitle: "Rádi bychom poděkovali štědrým dárcům, jejichž podpora umožnila úspěch Code.org. Díky neutuchající štědrosti našich [dárců](%{donors_url}) jsme odhodláni nadále poskytovat Code.org studentům a školám po celém světě zdarma!"
+    local_supporters: "Místní podporovatelé"
+    global_supporters: "Globální podporovatelé"
+    support_codeorg_1: "Každý dolar daný společnosti Code.org přináší příležitost dalším studentům."
+    support_codeorg_2: "[Darujte teď](%{donate_url}) a podpořte Code.org."
+    get_started: "Začněte na Code.org"
   school_info_interstitial:
+    title: "Chceme přinášet počítačovou vědu všem studentům - pomozte nám sledovat náš pokrok!"
     message: "Zadejte prosím níže údaje vaší školy."
+    message_with_suggestion: "Ověřte prosím, že následující informace jsou správné, nebo je dle potřeby upravte."
     save: "Uložit"
   race_interstitial:
     title: "Dobrovolné: Pomozte nám sledovat pokrok ve zlepšení diverzity"
@@ -831,8 +878,10 @@ cs:
   peer_review:
     accepted:
       name: 'Přijato'
+      description_markdown: '**Ano**, toto podání **splňuje** požadavky'
     rejected:
       name: 'Odmítnuto'
+      description_markdown: '**Ne**, toto podání **nesplňuje** požadavky'
     escalated:
       name: 'Předáno k rozhodnutí'
       description: 'Rád bych, aby toto podání zkontroloval instruktor'
@@ -900,6 +949,8 @@ cs:
     mac: 'Mac OS X'
   locked_stage: 'Obsah této úrovně není viditelný, protože tato úroveň je momentálně zamčená. Tvůj učitel odemkne tuto úroveň hned, jakmile se na ní bude pracovat anebo až bude procházet tvoje odpovědi.'
   hidden_stage: "Tvůj učitel nepředpokládal, že bude zrovna tady. Prosím zeptej se ho, na které lekci máš pracovat."
+  hidden_script: "Váš učitel nečekal, že tady budete. Zeptejte se svého učitele, v které jednotce byste měl(a) být."
+  no_course_access_student: "K tomuto kurzu nemáte přístup. Zeptejte se prosím svého učitele, v kterém kurzu byste měl(a) být."
   return_unit_overview: 'Přejít na přehled kapitoly'
   return_course_overview: 'Přejít na přehled'
   view_all_units: 'Zobrazit všechny kapitoly'
@@ -910,22 +961,38 @@ cs:
       first_name_preferred: 'Preferované jméno'
       last_name: 'Příjmení'
       email: 'E-mail'
+      email_alternate: 'Alternativní e-mail'
       gender: 'Rod'
       school_name: 'Název školy'
       school_country: 'Země školy'
+      colombian_school_department: 'Školní oddělení '
+      colombian_school_municipality: 'Školní městský obvod'
       colombian_school_name: 'Název školy'
+      ages: 'Jaké jsou věky studentů, které letos učíte?'
+      subjects: 'Jaké předměty letos vyučujete?'
+      resources: 'Které z následujících vzdělávacích prostředků výuky počítačových věd používáte?'
+      robotics: 'Které z následujících prostředků robotiky používáte?'
+      workshop_organizer: 'Organizátor dílen'
+      workshop_facilitator: 'Usnadňovatel dílen'
+      workshop_course: 'Kurz dílen'
+      email_opt_in: 'Smíme Vám zaslat e-mail o našem mezinárodním programu Code.org, aktualizace našich kurzů, nebo jiné zprávy z oblasti počítačových věd?'
+      legal_opt_in: 'Odesláním tohoto formuláře dáváte souhlas s tím, že Code.org bude sdílet informace o tom, jak používáte Code.org a Profesionální prostředky výuky u mezinárodního partnera Code.org ve Vaší zemi, školním okrsku a u svých usnadňovatelů. S těmito partnery budeme sdílet Vaše kontaktní údaje, to, které kurzy nebo jednotky užíváte a agregované údaje o Vaší výuce. Sem patří mimo jiné počet studentů ve Vašich třídách, demografické rozdělení Vaší učebny a název Vaší školy a název Vašeho školního obvodu. S našimi partnery nebudeme sdílet žádné informace o individuálních studentech: Veškeré informace o studentech budou takové, že nebudou umožňovat identifikaci, a agregované. Naši mezinárodní partneři a usnadňovatelé budou smluvně zavázáni nakládat s těmito informacemi na stejné úrovni důvěrnosti jako Code.org.'
     form_entries:
       gender:
         male: 'Muž'
         female: 'Žena'
+        non_binary: 'Nebinární'
+        not_listed: 'Preferovaný termín není uveden'
         none: 'Raději bych neodpovídal/a'
       school_country:
         canada: 'Kanada'
         chile: 'Chile'
+        colombia: 'Kolumbie'
         israel: 'Izrael'
         malaysia: 'Malajsie'
         mexico: 'Mexiko'
         thailand: 'Thajsko'
+        uzbekistan: 'Uzbekistán'
       ages:
         ages_under_6: '< 6 let'
         ages_7_8: '7-8 let'
@@ -937,14 +1004,17 @@ cs:
         ages_19_over: 'Více než 19 let'
       subjects:
         cs: 'Informatika'
+        ict: 'Informační a komunikační technologie'
         math: 'Matematické'
         science: 'Věda'
+        history: 'Dějiny / společenské vědy'
         la: 'Jazyky'
         efl: 'Angličtina jako cizí jazyk'
         music: 'Hudba'
         art: 'Umění'
         other: "Ostatní:"
       resources:
+        bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
         csfirst: 'Google CS First'
         khan: 'Khan Academy'
@@ -960,15 +1030,26 @@ cs:
         ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
+        wonder: 'Divotvorná dílna'
         other: "Ostatní:"
       workshop_course:
         csf_af: 'Základy informatiky (Kurzy A-F)'
         csf_express: 'Základy informatiky (Zrychlené kurzy)'
         csd: 'Objevujeme informatiku'
         csp: 'Principy informatiky 2016-2017'
+        not_applicable: "Nemá význam"
       email_opt_in:
         opt_in_yes: 'Ano'
         opt_in_no: 'Ne'
+    international_opt_in:
+      title: 'Účast na dílnách'
+      intro: "Děkujeme Vám, že jste si udělali čas nechat se školit na téma osnov výuky u Code.org. Naše poslání přinášet příležitosti k vzdělávání v oboru počítačových věd všem dětem ve všech školách na celém světě by nebylo možné bez Vás."
+      facilitator_not_listed: "Můj zprovozňovatel není uveden"
+      facilitator_not_applicable: "Nemá význam"
+      organizer_not_listed: "Můj organizátor není uveden"
+    logged_out:
+      heading: 'Děkujeme Vám za Váš zájem o profesionální výukový program!'
+  courses_category: 'Kompletní kurzy'
   cookie_banner:
     message: 'Pokud budete pokračovat v prohlížení naší stránky nebo kliknete na "Souhlasím", souhlasíte s uložením cookies na svém počítači nebo přístroji.'
     more_information: "Zobrazte si zásady ochrany soukromí pro Code.org."

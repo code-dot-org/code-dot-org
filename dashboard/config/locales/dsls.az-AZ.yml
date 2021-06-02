@@ -1115,7 +1115,7 @@ az-AZ:
         - {}
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
@@ -1123,7 +1123,7 @@ az-AZ:
         - {}
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
@@ -1131,7 +1131,7 @@ az-AZ:
         - {}
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1139,7 +1139,7 @@ az-AZ:
         - {}
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict2:
@@ -1849,7 +1849,8 @@ az-AZ:
         - {}
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. Kod sonuna qədər işləyəcəksə (səhvlərə
+            məhəl qoymadan) Laurel neçə xəzinə parçası toplayar?
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}

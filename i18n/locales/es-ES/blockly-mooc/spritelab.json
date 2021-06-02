@@ -87,6 +87,7 @@
   "behaviorsIncreased": "El número de comportamientos de tu sprite aumentó. Para detener un comportamiento antiguo, utiliza este bloque. \n <xml><block type=\"gamelab_removeBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"criatura_18_1\"</title></block></value></block></xml>",
   "eventsWrongBehaviors": "Tu sprite debería tener exactamente 3 comportamientos. Intenta mover el bloque `parar todo` a un lugar diferente en tu código.",
   "spinBothWays": "Tu sprite tiene que girar tanto a la izquierda como a la derecha, en diferentes momentos.",
+  "moveBothWays": "Tu sprite debería moverse hacia un lado y luego hacia el otro.",
   "didntMoveUp": "Tu sprite no se ha movido hacia arriba.",
   "didntMoveDown": "Tu sprite no se ha movido hacia abajo.",
   "didntMoveLeft": "Tu sprite no se ha movido a la izquierda.",
@@ -167,5 +168,9 @@
   "atLeastOneSpriteStillMoving": "Al menos uno de tus sprites se seguía moviendo. Asegúrate de que tienes un bloque \"Detiene todo\" para cada sprite.",
   "spritesNotTouch": "Asegúrate de que tus sprites se tocan en algún momento.",
   "addWhenTouchesEvent": "Añade este bloque a tu espacio de trabajo:\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"cuando\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"alienígena azul\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"alienígena rosa\"</title></block></value></block></xml>",
-  "changeSpriteBehaviorsWhenTouch": "Un sprite necesita cambiar de comportamiento cuando dos de ellos se tocan."
+  "changeSpriteBehaviorsWhenTouch": "Un sprite necesita cambiar de comportamiento cuando dos de ellos se tocan.",
+  "moveSpriteLocation": "Tus sprites están en la misma ubicación. Mueve uno de tus sprites usando el bloque `location`. <xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">'{\"x\":200,\"y\":200}'</title></block></xml>",
+  "createDraggableSprite": "El sprite de la comida de tu mascota tiene que empezar el comportamiento de \"ser arrastrable\". <xml><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"cara_zanahoria_1\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_draggable\"></block></value></block></xml>",
+  "createNotDraggableSPrite": "Sólo el sprite de la comida debería ser arrastrable. Elimina el comportamiento de tu mascota.",
+  "moveSpriteByDrag": "¡Tu código se ve muy bien! Para arrastrar tu sprite, haz clic en él mientras se ejecuta el programa."
 }

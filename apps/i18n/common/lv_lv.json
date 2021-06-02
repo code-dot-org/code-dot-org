@@ -158,6 +158,7 @@
   "errorUnusedParam": "Tu pievienoji parametra bloku, bet neizmanto to funkcijas definēšanā. Pārliecinies, ka izmanto parametru, klikšķinot \"labot\" un ievietojot parametra bloku zaļajā blokā.",
   "exampleErrorMessage": "Funkcijai {functionName} ir viens vai vairāki piemēri, kurus nepieciešams pielāgot. Pārliecinieties, ka tie atbilst jūsu definīcijai un atbild uz jautājumu.",
   "examplesFailedOnClose": "Viens vai vairāki no jūsu piemēriem neatbilst jūsu definīcijai. Pārbaudiet savus piemērus pirms to aizvēršanas",
+  "explainRestrictedSectionLearnMore": "Uzzini vairāk",
   "extraTopBlocks": "Tev ir nepievienoti bloki.",
   "extraTopBlocksWhenRun": "Tev ir nepievienoti bloki. Vai biji domājis tos pievienot \"Kad palaists\" blokam?",
   "fallbackVideoClosedCaptioningDialogClose": "Aizvērt",

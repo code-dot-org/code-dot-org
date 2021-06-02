@@ -895,11 +895,11 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
         var finalLevel =
           options.response && options.response.message === 'no more levels';
         var lessonCompleted = null;
-        if (options.response && options.response.stage_changing) {
-          lessonCompleted = options.response.stage_changing.previous.name;
+        if (options.response && options.response.lesson_changing) {
+          lessonCompleted = options.response.lesson_changing.previous.name;
         }
         var msgParams = {
-          stageNumber: 0, // TODO: remove once localized strings have been fixed
+          lessonNumber: 0, // TODO: remove once localized strings have been fixed
           stageName: lessonCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };

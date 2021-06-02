@@ -2289,6 +2289,8 @@ mi:
               display_name: Ngā Taurangi
             csf_for_loops:
               display_name: Mō Ngā Koromeke
+            lessonGroup-9:
+              display_name: Ngā Takunetanga
         pre-express-2021:
           lesson_groups:
             csf_loops:

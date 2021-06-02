@@ -15856,6 +15856,8 @@ uz:
           name: csp8-2021
         csp9-2021:
           lessons:
+            Machine Learning and Bias:
+              name: Mashinalar o‘rganishi
             'Lesson 9: Assessment Day':
               key: '9-dars: Baholash kuni'
               name: '15-dars: Baholash kuni'
@@ -16579,7 +16581,7 @@ uz:
               description_teacher: Shu paytgacha talabalar har safar ishlatib ko‘rilganda aynan bir xil tarzda ijro etiladigan -ishonchli, ammo moslashuvchan bo‘lmagan kod yozib kelishayotgan edi. Bu darsda, sinfingiz dasturingiz turli xil maxsus holatlarga duch kelishiga qarab turli xil vazifalarni bajaradigan funksiyalarni yozishga imkon beradigan shartli boyonotlar bilan kod yozishni boshlashadi.
             While Loops with the Farmer:
               key: While Loops with the Farmer
-              name: While Loops with the Farmer
+              name: While Loops in Farmer
               description_student: 'Sikllar kod yozishda juda foydali. Bu dars sizga siklning yangi turini o‘rgatadi: while sikllari!'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraftda shartli bayonotlar: Suv sayohati'
@@ -16614,7 +16616,7 @@ uz:
             Variables with Artist:
               key: Variables with Artist
               name: Variables with Artist
-              description_student: Sinfga ijodkorlikni jalb qilishni unutmang! Ushbu jumboqlarda siz o'zgaruvchilardan foydalanib hayoliy rasmlar chizasiz.
+              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
               description_teacher: Ushbu darsda talabalar Artist  muhitida o'zgaruvchilar yordamida takrorlanadigan dizaynlarni yaratishni o'rganadilar. Talabalar o'zgaruvchilar yordamida qanday qilib kodni yozishni va o'qishni osonlashtirish uchun qanday foydalanish mumkinligini bilib oladilar. Yonaltirilgan jumboqlar tugagandan  so'ng talabalar freeplay darajasida o'zlarining o'rgangan narsalarini namoyish etish va o'z dizaynlarini yaratishni o’rganadilar
             Changing Variables with Bee:
               key: Changing Variables with Bee
@@ -16663,6 +16665,8 @@ uz:
               name: Dance Party
               description_student: Bayram qilish vaqti keldi! Ushbu darsda siz o‘z interaktiv raqs bazmingizni dasturlashtirasiz.
               description_teacher: Bu darsda, talabalar o‘zlarining interaktiv raqs bazmini dasturlashtiradilar. Qurilma musiqaga javob qaytarish uchun yaratilganligi sababli bu mashg‘ulot tovushni talab qiladi.
+            lesson-3:
+              name: Spraytlar amalda
           lesson_groups:
             csf_warmup:
               display_name: Qizdirish
@@ -16683,7 +16687,7 @@ uz:
             end_of_course_project:
               display_name: End of Course Project
             lessonGroup-9:
-              display_name: Qizdirish
+              display_name: Hodisalar
           name: Ekspress 2021
           student_description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
         pre-express-2021:
@@ -16889,6 +16893,8 @@ uz:
             CS Discoveries Post Course survey:
               key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
               name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+            Designing With Empathy:
+              name: Analysis of Design
             Build a Paper Prototype:
               name: Paper Prototypes
             Digital Mode in App Lab:
@@ -17063,6 +17069,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lessons:
             lesson-15:
@@ -17130,3 +17138,27 @@ uz:
           description_short: CSP Student Post Course Survey
           description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+        aiml-2021:
+          lessons:
+            lesson2:
+              name: 2-dars
+            lesson3:
+              name: 3-dars
+            lesson4:
+              name: 4-dars
+            lesson5:
+              name: Model va ma'lumotlar
+            lesson6:
+              name: 6-dars
+            lesson7:
+              name: 7-dars
+            lesson8:
+              name: 8-dars
+            lesson10:
+              name: 10-dars
+            lesson11:
+              name: 11-dars
+            lesson12:
+              name: 12-dars
+            lesson15:
+              name: 15-Dars
