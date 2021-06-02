@@ -31,8 +31,10 @@ class TeacherFeedbackStatus extends Component {
     const formattedTime = moment.min(moment(), moment(created_at)).fromNow();
     return (
       <div style={styles.timeStudent} id="ui-test-feedback-time">
-        {i18n.lastUpdated()}&nbsp;
-        {formattedTime && <span style={styles.timestamp}>{formattedTime}</span>}
+        {i18n.lastUpdated()}
+        {formattedTime && (
+          <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+        )}
       </div>
     );
   }
@@ -47,8 +49,8 @@ class TeacherFeedbackStatus extends Component {
 
     return (
       <div style={style} id="ui-test-feedback-time">
-        {i18n.lastUpdatedByStudent()}&nbsp;
-        <span style={styles.timestamp}>{formattedTime}</span>
+        {i18n.lastUpdatedByStudent()}
+        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
       </div>
     );
   }
@@ -68,8 +70,8 @@ class TeacherFeedbackStatus extends Component {
           className="fa-check"
           style={styles.checkboxIcon}
         />
-        {i18n.seenByStudent()}&nbsp;
-        <span style={styles.timestamp}>{formattedTime}</span>
+        {i18n.seenByStudent()}
+        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
       </div>
     );
   }
@@ -79,8 +81,8 @@ class TeacherFeedbackStatus extends Component {
     const formattedTime = this.getFriendlyDate(created_at);
     return (
       <div style={styles.timeTeacher} id="ui-test-feedback-time">
-        {i18n.lastUpdatedCurrentTeacher()}&nbsp;
-        <span style={styles.timestamp}>{formattedTime}</span>
+        {i18n.lastUpdatedCurrentTeacher()}
+        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
       </div>
     );
   }
