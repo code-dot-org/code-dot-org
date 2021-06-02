@@ -17,6 +17,7 @@ ko:
       length: length
       name: 맵 이름
       nectar: 꽃꿀의 양
+      planet: 행성
       points: 점수
       random: random(랜덤)
       repeat: 반복

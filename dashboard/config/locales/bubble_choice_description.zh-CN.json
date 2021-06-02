@@ -3,7 +3,14 @@
     "data": {
       "bubble_choice_description": {
         "outbreak4": "改变模拟是怎么样工作的并推测什么事情会发生。",
-        "outbreak5": "帮你的精灵图缓慢地恢复！"
+        "outbreak5": "帮你的精灵图缓慢地恢复！",
+        "CourseF_outbreak4": "改变模拟是怎么样工作的并推测什么事情会发生。",
+        "CourseF_outbreak5": "帮你的精灵图缓慢地恢复！",
+        "courseC_artist_prog_challenge1_2021": "为每种动物绘制房间。 ",
+        "courseD_bee_nestedLoops8_2021": "从所有的花里收集花蜜，然后在蜂窝那里酿花蜜。 ",
+        "courseD_bee_nestedLoops9_2021": "酿蜂蜜。",
+        "courseF_bee_variables_7a_2021": "这个难题有点不同。需要什么来解决它？",
+        "ramp_artist_loops8_2021": "寻找规律，使用循环使此代码更短。"
       }
     }
   }

@@ -18,6 +18,7 @@ ar:
       Games/Score: "ألعاب/نقطة\n"
       Groups: "مجموعات\n"
       Input: الإدخال
+      Location: الموقع
       Locations: مواقع
       Logic: المنطق
       Loops: الحلقات

@@ -3897,6 +3897,123 @@
               "length": "长度"
             }
           }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "画一个星星",
+            "description": "用所给予的点和指定长度的边画一个星星",
+            "parameters": {
+              "points": "分数",
+              "length": "长度"
+            }
+          },
+          "draw a circle": {
+            "name": "画一个圆圈",
+            "description": "用给予的半径画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "画一个风车",
+            "parameters": {
+              "sides": "边",
+              "length": "长度",
+              "repeat": "重复"
+            }
+          },
+          "draw a triangle": {
+            "name": "画一个三角形",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a shape": {
+            "name": "画一个图形",
+            "parameters": {
+              "sides": "边",
+              "length": "长度"
+            }
+          },
+          "draw a house": {
+            "name": "画一个房子",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a square": {
+            "name": "画一个正方形",
+            "parameters": {
+              "length": "长度"
+            }
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "可能的解决方案"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "绘制火焰",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "绘制火焰"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "助推器"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "做点什么"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "画眼镜腿"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "画一个正方形"
+          },
+          "draw ear stems": {
+            "name": "画眼镜腿"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "画一个星星"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "画一个星星"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "画一个正方形"
+          },
+          "draw ear stems": {
+            "name": "画眼镜腿"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "结束游戏"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "用计数器移动并获取花蜜"
+          }
         }
       }
     }

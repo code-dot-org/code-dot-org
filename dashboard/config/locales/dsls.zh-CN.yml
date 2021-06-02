@@ -7946,3 +7946,1067 @@ zh-CN:
       outbreak_freeplay_choice:
         display_name: 自由发挥
         description: 你已完成教程！不断更改或改进你的项目。你可以选择继续使用相同的块或尝试扩展工具箱。
+      BigEvent-Unplugged_2021:
+        markdown: |
+          # 大事件
+
+          在计算机科学中，事件是计算机监控的行动。这节课中，当按钮按下时，会用不同的方法来响应。
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # 二进制手镯
+
+          创建一个二进制手镯，在一个计算机能够理解的系统中代表你的名字。
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      CourseF_outbreak_story:
+        content1: 描述
+      CourseF_outbreak_story2:
+        content1: 描述
+        markdown: "# 疫情爆发：像科学家一样思考\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n模拟是学习现实世界中难以观察的事物的好方法。它们帮助科学家解决问题，安全有效地测试新想法。你的模拟是一种展示怪物镇病毒爆发景象的方法。\n\n##
+          重置和重复！\n即使你自己编写代码，也不可能确切地知道当你按下运行时将发生什么。怪物随机漫步，所以你不知道病毒传播的速度是快还是慢。无论何时更改代码，请确保多次运行模拟。事物不会以同样的方式发生两次！\n\n##
+          收集数据\n试着在运行模拟时写下观察结果。你可以计算生病的怪物数量，或使用计时器查看事物发生的速度。例如，如果没有人戴口罩，那么所有怪物都生病通常需要多久？
+          \n\n## 进行预测\n如果你理解了你的模型，你就可以用它来进行预测。你甚至可以更改模拟运行的方式，并猜测将会发生什么不同的情况。例如：\n*
+          如果有两倍数量的怪物会发生什么？\n* 如果怪物以一半的速度移动会发生什么？\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## 怪物镇像真实世界吗？\n任何模型所能达到的逼真程度都是有限的。 \n* 你的疫情爆发模拟与真实世界的病毒爆发有什么共同点？\n*
+          有什么区别？\n当你完成这个活动后，与老师或你的家人讨论这些问题！\n\n## 我们还能对什么建模？\n你已经创建了魔鬼镇疫情爆发的工作模型。哪些事情是你希望它能而你的模拟却无法做或显示的？继续前进，学习更多模型：\n*
+          增加模拟中的怪物数量\n* 帮助怪物从病毒中恢复\n* 概率，免疫，疫苗，等等！\n\n你还可以与其他人分享你的模拟模型，或者分享你认为在病毒来到城镇时我们可以做些什么来帮助他人保持健康的信息。 "
+      ForLoopFun-Unplugged_2021:
+        markdown: |
+          # 有趣的计数循环
+
+          学习了循环能重复做一些事情后，现在要学习如何使用有额外的结构的循环。
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # 循环吧
+
+          这节课会通过舞蹈活动，来介绍编程中循环的概念。
+      HappyMaps-Unplugged_2021:
+        markdown: |
+          # 快乐地图
+
+          创建算法来移动角色通过迷宫。
+      Internet-Unplugged_2021:
+        markdown: |
+          # 互联网
+
+          在班级里只用纸来构建自己的互联网。
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # 移动它，移动它
+
+          用地图和给出的命令来到达目标。
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # 我的循环机器人朋友们Jr.
+
+          将假装您的同学是机器人，但这次使用循环把你的程序变短。
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # 我的机器人朋友
+
+          将假装您的同学是机器人，并对它们进行编程以构建堆叠杯子的模式。
+      OPD-K5 About_dani:
+        markdown: "# 入门：关于本课程\n\n## 课程概述\n\n本课程旨在介绍 Code.org 的计算机科学基础课程和教师资源。通过阅读，观看视频，完成互动难题并反思自己的学习。在准备课堂上教授计算机科学的同时，发展自己的理解。\n\n##
+          学习目标\n\n通过完成这些在线课程，参与者可以：\n\n- 学习计算机科学的基础 \n- 查看向学生教授这些基础知识的最佳实践 \n- 访问免费的教师资源和教案
+          \n- 规划如何开始教授计算机科学基础知识\n- 与社区的教育工作者建立联系，他们通过在课堂上编码来产生积极的变化 \n\n## 先决条件\n\n不需要编码或计算机科学教育的预先经验。这是个初学者教程。\n\n>
+          **听众注意事项：** 本课程侧重于 k-5 学生的 Code.org 的免费计算机科学基础课程。尽管许多相同的概念都可以应用于任何计算机科学课程，但是如果希望教授比计算机科学基础知识更深入的计算机科学课程（例如，我们的
+          [中学](https://code.org/educate/csd) 或 [高中](https://code.org/educate/csp)
+          课程），建议您继续学习 [深入持续的专业发展机会](https://code.org/educate/professional-learning/middle-high)。\n\n##
+          课程长度\n\n完成在线课程可能需要 3-7 个小时，体取决于先前的知识以及希望探究 Code.org 资源的深度。\n"
+      OPD-K5 Assessment_dani:
+        markdown: "# 计划 > 其它资源\n\n作为教师登录 Code.org 后，可以看到更多学生没有的功能。已经了解了如何查找课程，创建部分并将课程分配给该部分。还可以：
+          \n\n- **跟踪学生进度**：[评估](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress)
+          所有学生的学习情况。\n- **课程进度**：作为学习者，可以在 Code.org 课程上查看自己的个人进度。学生也可以查看他自己的进度。但作为老师，也可以查看课程计划并查看每个难题的解决方案。\n-
+          **帮助和社区**: 访问 [support.code.org](https://support.code.org/)，可发布问题，答复其他教师的发现，阅读
+          Code.org 员工提供的常见问答。在这个页面，还可以直接联系 Code.org，提出任何问题。\n- **专业发展**：访问为教师提供的 [个人培训](https://code.org/professional-development-workshops)。\n-
+          **计算机科学演讲嘉宾**: [寻找聪明、热情和有吸引力的科技行业专业人员](https://code.org/volunteer/local)，他们非常愿意到班级中谈论自己的工作。\n\n<br/>\n---\n>
+          ## 访问 support.code.org\n> 如果遇到困难或有疑问，请确保查看了 support.code.org 上的支持文档！也可以直接通过此页面找到我们。[论坛](http://forum.code.org/t/teaching-conditionals/406/1)。\n\n>
+          <a href=\"http://support.code.org\" target=\"blank\"><button class=\"plc\">获得帮助
+          >></button></a>\n\n在论坛中发表评论后，返回此处，然后单击下面的按钮进入下一阶段。\n"
+      OPD-K5 CS Courses_dani:
+        markdown: "# 计划 > Code.org 入门\n\n\n## 第 1 步：选择课程\n所有的课程 -- 从学前班到高中 -- 都列在了
+          **[课程分类](https://studio.code.org/courses)**。要找到学习的计算机科学基础课程，访问 **[小学页面](https://code.org/educate/curriculum/elementary-school)**
+          并滚动到 \"课程\" 章节。所有的课程都不需要付费。与学校的同事讨论，以确定如何将课程与各种科目整合在一起。\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          第 2 步：设置课堂小组\n设置课堂小组来查看学生进度，为学生打印登录卡片，管理账号，并在完成后打印出能带回家的证书。点击链接 **[观看简短介绍](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**，展示了如何在
+          Code.org 设置第一个计算机科学班级。也可以在 **[支持文档](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**
+          中找到这些步骤。\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          第 3 步：将课程分配给小组\n点击正在教学的课程 -- 应该可看到下面这样的页面。点击 \"分配课程\" 并将课程分配给某个小组。 \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          第 4 步：开始教学！ \n所需要的只是一堂将计算机科学概念带入课堂的课程。一旦看到学生对计算机科学的热情，就可以进一步制定每日课程计划来指导学生，无需计算机即可进行的线下活动，以及与其他老师建立联系的论坛。\n\n\n"
+      OPD-K5 CS Tips_dani:
+        markdown: |
+          # 入门 > 浏览在线课程
+
+          如果已经做过了，恭喜！当完成此课程后，将熟悉计算机科学基础提供的所有内容。
+
+          如果遇到问题，下列信息会帮助浏览并使用此专业工具，来完成在线课程。
+
+          ---
+
+          ## 阶段
+
+          主要的专业发展页面如图。本页会分成几个 _阶段_，每个都表示一个不同的主题或创意。
+
+          <img src ="https://images.code.org/3f0fa0abc76fa6e6bde06bb4bc705202-image-1548976538784.png" />
+
+          <br/>
+          <br/>
+
+          ## 难题
+
+          每个阶段都由一组，称之为 __难题__ 所组成，包括单独的视频、读物、或问题。难题由带数字的圆圈来表示。难题圆圈的颜色会根据进度而改变。在专业发展课程中，会看到以下几种类型的颜色：
+          <br/>
+
+          <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
+
+          <br/>
+          <br/>
+
+          ## 访问难题
+
+          难题会在以下几处：
+          <p>-在专业发展主页面</p>
+          <p>-在任何难题页面的页头上</p>
+          <p>-任何难题页头的下拉列表里</p>
+
+          <h4><details>
+          <summary style="color:#ffa400;">点击了解如何访问难题的更多介绍</summary>
+          <br>
+          <div><em>查看结束后，点击上面的箭头来折叠本节</em></div>
+          <br>
+          <img src ="https://images.code.org/27681ae1028bb26bcacd9970086c3792-image-1548976069596.gif" />
+          </details></h4>
+
+          <br/>
+
+          ## 在难题间移动
+
+          在每个难题之后，要达到下一个，点击 "继续" 或 "下一个资源"。或者，任何时候，都可以点击页头的数字来跳到新的难题上。
+
+          <h4><details>
+          <summary style="color:#ffa400;">点击了解如何在难题间移动的更多介绍</summary>
+          <br>
+          <div><em>>查看结束后，点击上面的箭头来折叠本节</em></div>
+          <br>
+          <img src ="https://images.code.org/d28046a78ecb03f9501f3bb7764c7ce8-image-1548976730590.gif" />
+          </details></h4>
+
+          <br/>
+          <br/>
+
+
+          > 这就是所有内容！如果要了解如何使用此平台，可随时回到此关。
+      OPD-K5 Celebrate_dani:
+        markdown: |
+          # 下一步 > 该庆祝了！
+
+          祝贺完成了专业发展在线课程！如果已完成本培训的所有级别，则可以通过完成以下步骤立即下载并打印成就证书：
+
+          1. 访问[链接](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+          2. 在输入狂中输入姓名。
+          3. 点击打印证书
+          4. 右击证书图片，并选择 "另存为"，即可将证书下载到自己的计算机。
+
+          别忘了... 可随时返回此在线课程来回顾学习，访问链接或资源，或者仅仅回忆一下！
+
+          感谢您的参与！迫不及待想听听您如何在课堂中实践计算机科学和代码工作室！
+      OPD-K5 CongratsFinal_dani:
+        markdown: |
+          # 祝贺！
+
+          <img src="https://images.code.org/3e21c6e68f0b6565ba16ad2b63b892f0-image-1434398206115.jpg" width="450px">
+          <br/><br/>
+          现在，已经完成了第 1-8 阶段，学会了计算机科学的基础。希望在这个过程中感到了喜悦！也希望您已经考虑好了如何将学到的东西，应用到教学实践中。
+          <br/><br/>
+          下个阶段中，会介绍一些最佳实践，以便在课堂上传授这些基础知识。
+      OPD-K5 Congrats_dani:
+        markdown: "# 事件 > 回顾\n\n本阶段中，制作了一些有趣的游戏，组合了关键概念，并展示了学习成果。通过基于程序的其它部分来触发动作，事件提高了代码的能力。
+          \ \n\n**花点时间来看看计算机科学基础教案是如何介绍事件的，并考虑如何在课堂中开展建议的活动。**\n\n![](https://images.code.org/8312823c84d52d7119ab0b5e99363d39-image-1549054807593.jpg)\n"
+      OPD-K5 Connect_dani:
+        markdown: "# 下一步 > 建立联系\n\n除了进行进一步的正式培训之外，还可以考虑访问 code.org 社区以继续与他人进行非正式学习，或者只是寻求支持或建立同伴网络。这样做：
+          \ \n\n<br/><br/>\n\n> **继续参与 code.org 的教师专业学习社区：** 在本课程中一直使用的论坛将是前进的重要资源。不仅可以使用它来回顾本课程的学习内容，还可以在继续旅途中找到支持，甚至为需要专业知识的其他人提供支持。请立即将其添加为书签并经常访问：[http://forum.code.org/c/csf](http://forum.code.org/c/csf)
+          \ \n\n<br/>\n\n> **与推特中的 [@teachcode](http://twitter.com/teachcode) 联系。**
+          \ \n\n<br/>\n\n> **加入计算机科学教师协会 (CSTA):** [CSTA](http://csta.acm.org/index.html)
+          是一个遍布全国的教育工作者团体，致力于为学生提供计算机科学教育，同时提高公众对这一学科的认识。他们会举办年度会议和地区分会。\n"
+      OPD-K5 Culture_dani:
+        markdown: |+
+          # 最佳实践 > 课堂文化
+
+          如何在计算机科学课程中倡导健康的课堂文化？首先，要确保教室中的每个人，包括我们自己，都了解我们可以像计算机科学家一样行事的方式以及应牢记的注意事项。这样可以使每个人都有同样的理解，并使课堂上的教学工作更加轻松。
+
+          <img src="https://images.code.org/b5d9ae18a882a4359f096b9c6ade135e-image-1434398703448.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          ## 像计算机科学家一样的行动方式：
+
+          - **保持好奇：** 好奇时，会点点不同的菜单，运行一段代码看看会发生什么，或者看看不同设置的效果。好奇心经常能让自己找到问题的答案。
+          - **问问题：** 尝试自己解决问题后，再寻求他人的合作。
+          - **有耐心：** 保持信息来解决开放复杂的问题，并坚持住。一旦成功的写了一些程序，并感受了解决困难问题后成功的喜悦，这就会更容易了。
+          - **将大问题分解为更小，更易于管理的问题：** 这称为 **分解**。
+          - **通读自己的代码：** 计算机会严格执行人的指令。逐步跟踪代码（就像自己在处理指令一样），这有助于查找逻辑错误或缺少的步骤。
+          - **不要为犯错误感到难过：** 犯错不是失败；这是里找到正确方案或完成产品的更近的一步。
+          - **离开屏幕：** 这会给自己一个急需的休息时间，通常在回来看问题的时候会有新的视角。
+
+          ## 学习计算机科学时要记住的事情：
+
+          - 计算机编程的世界发展的非常快，因而没人真正的精通。**我们都是学习者**。虽然所处的阶段不同，但一直都是学习者。
+          - 每次回来时，都会感到更适应。**没人会在第一次学习时就成为专家。**
+          - 不能绕过去，**编程的活动以及学习编程都需要时间，但任何人都能做到！**
+          - 可以与学生分享 **自己学习编程的真实体验**！
+
+          > ## 反思：
+          > 在讲授计算机科学时，准备如何创造健康的课堂文化？ [分享推特](https://twitter.com/codeorg) 并加上 @teachcode 标签，以便我们能反馈。
+
+          > <a href="http://ctt.ec/pdL3a" target="blank"><button class="default">在推特上分享 >></button></a>
+
+      OPD-K5 Outline_dani:
+        markdown: |
+          # 入门 > 课程大纲
+
+          该课程分为11个阶段，每个阶段均由 "关卡" 或 "难题" 组成。以下是完成整个课程后所学内容的概述：
+
+          ## 第 1 阶段：入门 (10-30 分钟)
+
+          通过完成第 1 阶段：
+
+          - 回顾课程详情
+          - 练习将 Code.org 作为学习平台来使用
+          - 计划参与课程
+
+          ## 第 2 阶段：计算机科学基础 (10-30 分钟)
+
+          通过完成第 2 阶段：
+
+          - 定义计算机科学，回顾关键词汇
+          - 确定计算机科学教学的好处
+          - "编码" 和 "计算机科学" 的不同
+          - 说明可视化编程来入门的好处
+
+          ## 第 3 阶段：展望 (10 分钟)
+
+          通过完成第 3 阶段：
+
+          - 通过回顾接下来的课程，来准备好 "掌握计算机科学基础"
+
+          ## 第 4 阶段：掌握基础知识：序列 (10-30 分钟)
+
+          通过完成第 4 阶段：
+
+          - 定义 "程序" 和 "算法"
+          - 使用 Code.org 可视化编程引擎写一些简单程序
+          - 在班级应用上的反思
+
+          ## 第 5 阶段：掌握基础知识：循环 (20-45 分钟)
+
+          通过完成第 5 阶段：
+
+          - 定义 "循环" 并解释它们的重要性
+          - 练习编写简单的循环
+          - 反思班级应用
+
+          ## 第 6 阶段：掌握基础知识：条件语句 (20-45 分钟)
+
+          通过完成第 6 阶段：
+
+          - 定义 "条件语句" 并解释它们的重要性
+          - 练习编写简单的条件语句
+          - 反思班级应用
+
+          ## 第 7 阶段：掌握基础知识：函数 (20-45 分钟)
+
+          通过完成第 7 阶段：
+
+          - 定义 "函数" 并解释它们的重要性
+          - 练习编写简单的函数
+          - 反思班级应用
+
+          ## 第 8 阶段：掌握基础知识：事件 (30-60 分钟)
+
+          通过完成第 8 阶段：
+
+          - 定义 "事件" 并解释它们的重要性
+          - 练习编写简单的事件
+          - 反思班级应用
+
+          ## 第 9 阶段：教授计算机科学的最佳实践 (30-60 分钟)
+
+          通过完成第 9 阶段：
+
+          - 回顾教授计算机科学的最佳实践
+
+          ## 第 10 阶段：计划 (30-60 minutes)
+
+          通过完成第 10 阶段：
+
+          - 浏览 Code.org 资源，如教师面板
+          - 计划如何将计算机科学集成到实践中
+
+          ## 第 11 阶段：下一步 (10-30 分钟)
+
+          通过完成第 11 阶段：
+
+          - 反思学习过程
+          - 为下一步继续学习做计划
+          - 与对计算机科学教育感兴趣的全球教育工作者社区建立联系
+          - 分享体验和对此课程的反馈
+
+          > **注意**：上面提供了建议时间，以帮助计划学习。请注意，根据自己以前的知识，兴趣和学习速度，实际花费的时间可能更多或更少。这门课程完全是自定进度的；可以随时退出课程并随时返回，或重新访问任何阶段或级别。
+      OPD-K5 Pair_dani:
+        markdown: |+
+          # 最佳实践 > 结对编程
+
+          许多教师使用的最重要的课堂管理方法是有策略的分组。在 Code.org，我们建议尝试使用顶级技术公司在现实世界中使用的分组策略：结对编程。
+
+          >**结对编程（pair programming）** 是两个学生使用同一台计算机写程序。The National Center for Women & Information Technology (NCWIT,国家妇女与信息技术中心) 有 [关于结对编程好处的大量资源](http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf).
+
+          研究表示，结对编程：
+
+          - 相对于非配对学生的程序，可以带来更高质量的学生程序。
+          - 减少男女学生之间的所谓 "自信差距"，同时增加所有学生的编程信心
+          <br/><br/>
+
+          观看视频来了解结对编程是如何起作用的，并直接从学生听到它是如何增强学习效果的。
+
+          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=vgkahOzFH2Q)
+
+          [不能打开视频？点击这里](http://videos.code.org/2014/C1-pair-programming.mp4)
+          <br/><br/>
+          结对编程不仅对学生有益，而且某些专业计算机程序员也正在实践这种编程。观看此视频，了解如何向学生介绍结对编程。
+
+          [![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16 PM.png)](https://www.youtube.com/watch?v=sxToW3ixrwo)
+
+          [不能打开视频？点击这里](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
+          <br/>
+
+
+      OPD-K5 Participation_dani:
+        markdown: "# 入门 > 规划学习\n\n在开始前，先花点时间考虑学习的需求，目标，以及在线学习的特点，自定进度的环境 - 特别是如果这是第一个在线课程！\n\n##
+          由自己主导\n\n自定进度的在线课程，进度控制在自己手上。 ***请抽出时间，按照自己的进度来完成本课程。每个阶段的建议时间都已给出。*** 如果自己的速度比每个阶段的多或者少，都不用担心！我们的主要目标是让你感兴趣，学习基础，并且将学到的内容按照自己的方法应用到班级中。\n\n##
+          建立联系\n\n要在整个学习过程中保持动力和专注，一种方法是积极参与我们的 <a href=\"http://forum.code.org/c/plc\"
+          target=\"_new\">专业学习社区 (PLC) 论坛</a>。 \n可以先介绍一下自己：<a href=\"http://forum.code.org/t/welcome-please-introduce-yourself/410\"
+          target=\"_new\">\"自我介绍\" 贴</a>。整个过程中，都可以用论坛来与其他学习者，随时分享想法，收获与问题。\n\n<a href=\"http://forum.code.org/t/welcome-please-introduce-yourself/410/1\"
+          target=\"blank\"><button class=\"plc\">立刻介绍自己 >></button></a><br>\n\n##
+          在需要时寻求帮助\n\n无论何时，在课程中卡住了，可前往 [support.code.org](http://support.code.org)
+          并访问 [社区论坛](https://support.code.org/hc/communities/public/topics)。可能会找到答案。如果没找到答案，或还有困难，可发邮件给
+          [teacher@code.org](mailto:teacher@code.org)，Code.org 的工作人员会尽快与您联系。\n\n##
+          一起学习！\n\n请记住，我们是一个很小的团队，并且我们能力的规模，我们无法像面对面的培训一样回应所有的支持请求。出于这个原因，我们建议您与合作伙伴或同事小组一起完成此在线课程***。\n\nCode.org
+          认识到结对学习和协作的力量。实际上，\"结对编程\" 是一种很好的行业实践，将在第 8 阶段将其作为课堂最佳实践进行探讨。如果觉得与伙伴或小组学习会更好，为什么不与他们一起完成课程？如果您不认识现实中有人能一起学习，可前往
+          [PLC论坛](http://forum.code.org/t/never-swim-alone-the-find-a-buddy-thread/411),
+          [Twitter](https://twitter.com/teachcode), or [Facebook](https://www.facebook.com/groups/1457214714576953/)
+          以及 Code.org 社区中找到一起学习的人。\n\n## 寻找适合的学习体验\n\n最后，在线学习并不适合所有人。本课程没有指导者或内置机制可以与伙伴进行及时交流。如果发现自己需要更多的一对一关注，或者知道自己在一个有更多合作和参与机会的现实世界教室中学习得更好，建议选择我们的面对面的专业发展机会。\n\n<a
+          href=\"http://code.org/professional-development-workshops\" target=\"blank\"><button>查找附近的面对面学习研讨会
+          >></button></a>\n\n* * *\n\n## 有什么计划？\n\n现在花点时间考虑如何和何时完成此在线课程，以确保从体验中获得最大的收益。当草拟好计划后，继续深入研究第一阶段。\n"
+      OPD-K5 PostSurvey_dani:
+        markdown: "# 入门 - 填写结束问卷\n\n感谢使用教师的计算机科学基础在线专业发展课程！ \n\n无论是否完成了整个课程，我们都希望听到您的反馈。请提交这份简短的问卷调查，以帮助我们改进此课程！\n\n<a
+          class=\"btn btn-large btn-primary submitButton\" href=\"https://form.jotform.com/90557778075168?user_id=<user_id/>\">
+          填写结束问卷</a>\n\n"
+      OPD-K5 PreSurvey_dani:
+        markdown: |+
+          # 开始 > 填写前置问卷
+
+          希望您从这次专业发展中获得最大的收获。因此，我们请您填写 [此简短的前置问卷](https://form.jotform.com/90556900301146)。调查将要求您对本课程的目标进行反思，并介绍您的身份以及我们如何为您提供支持。
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">填写前置问卷</a>
+
+      OPD-K5 Puzzles_dani:
+        markdown: "# 展望 > 关于难题\n\n在接下来的阶段中，将使用 Code.org 学习计算机科学的基础知识。将面临一系列需要解决的难题。为了解决难题，必须使用不同的角色编写程序来完成不同的目标。将在第
+          3 阶段中练习第一个难题。在那之前，这里总结了将遇到的各种难题：\n\n## 示例迷宫难题\n\n![](//code.org/images/mockup_birds.png)\n![](//code.org/images/pvz.png)\n\n需要让愤怒的小鸟抓到猪，还要让僵尸到达太阳花。\n\n##
+          示例小艺术家难题\n\n![](//code.org/images/artist.png)\n\n要让小艺术家通过移动，在画布上画出灰色的线条。无论他走到哪里，都会在后面划一条线。\n\n##
+          示例蜜蜂难题\n\n![](//code.org/images/bee.png)\n\n需要四处移动蜜蜂来收集花蜜，并酿蜂蜜。每个需要的花和蜂蜜的数量，都写在它的右下方。\n\n##
+          剧本实验室\n\n![](//code.org/images/playlab.png)\n\n在剧本实验室中，需要根据不同目标，来创建游戏和故事。\n\n##
+          像素鸟\n\n![](//code.org/images/flappy.png)\n\n在像素鸟中，可以创建自己的像素鸟游戏。\n此游戏的难题，会帮助学习创建自己游戏所需要的代码。\n\n##
+          弹球\n\n![](//code.org/images/bounce.png)\n\n在弹球游戏中，要创建自己的游戏。 \n和像素鸟类似，此游戏的难题，会帮助学习创建自己游戏所需要的代码。\n\n*
+          * *\n\n本系列中，将介绍 [计算机科学基础](http://code.org/educate/k5) 中的难题。这些难题可作为在线教程，帮助学生学习循环，事件，条件和函数等概念。\n\n在此专业发展体验中，将穿插一些难题的过程，使得有机会熟悉计算机科学基础中的编程概念以及学生会喜欢的角色。在本课程中，会注意到在不同的环境之间快速切换；是让愤怒的小鸟抓到猪，画图，或者让蜜蜂收集花蜜。在本课程中，这些切换会很快，以展示计算机科学基础中提供的一系列难题。学生将在每种环境上花费更多的时间。\n\n如果要更熟悉学生的体验，随时可以自行完成
+          [计算机科学基础](http://studio.code.org/) 课程。但本课程通过提供一些最基本的难题和课程，将在短时间内提供很好预期的结果。\n"
+      OPD-K5 Stage10Start_dani:
+        markdown: |
+          # 下一步 > 开始回顾
+
+          <img src="https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG" width="450px">
+
+          ## 快完成了！
+
+          到目前为止，已经学习了编码的基础知识，探索了如何教授计算机科学，并为下一步创建简单的计划。
+
+          完成第 11 阶段，可以：
+
+          - 反思自己的学习
+          - 为下一步继续学习做计划
+          - 与对计算机科学教育感兴趣的全球教育工作者社区建立联系
+      OPD-K5 Stage1Go_dani:
+        markdown: |
+          # 入门 > 准备好了？开始！
+
+          <img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+          完成此阶段后，可以：
+
+          - 回顾课程详情
+          - 学习如何浏览学习平台
+          - 规划如何参与此课程
+
+          下一阶段会：
+
+          - 定义 "计算机科学"，并回顾关键词汇
+          - 明确教、学计算机科学的好处
+          - "编码" 和 "计算机科学" 的不同
+          - 说明通过可视化编程入门的好处
+      OPD-K5 Stage2Go_dani:
+        markdown: |
+          # 计算机科学基础 > 展望
+
+          希望本阶段能给计算机科学一个很好的介绍。
+
+          完成此阶段后，可以：
+
+          - 定义 "计算机科学"，并回顾关键词汇
+          - 明确教、学计算机科学的好处
+          - "编码" 和 "计算机科学" 的不同
+          - 说明通过可视化编程入门的好处
+
+          > **教学技巧：** 尽管计算机科学可以是一门丰富而复杂的学科，但在 Code.org 中，我们认识到教师和学生在进入更高层次的项目之前需要掌握基础知识。该在线课程将教给老师这些基本知识，以便可以为学生提供支持。
+
+          在下一阶段，将简要介绍一些框架，用于思考本课程的其余内容。然后，将深入研究并开始学习计算机科学。
+      OPD-K5 Stage2Overview_dani:
+        markdown: |
+          # 计算机科学基础 > 阶段概述
+
+          在第 1 阶段中，了解了本课程，并学习了如何浏览学习平台。现在要开始学习真正的内容了。
+
+          先从基础开始。
+
+          <img src="https://images.code.org/8af62f96e37199542519fae8580b0a29-image-1434146715374.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          通过学习第 2 阶段，可以：
+
+          - 定义 "计算机科学"，并回顾关键词汇
+          - 明确教、学计算机科学的好处
+          - "编码" 和 "计算机科学" 的不同
+          - 说明通过可视化编程入门的好处
+
+          规划出 10-30 分钟来完成此阶段。
+      OPD-K5 Stage3Go_dani:
+        markdown: "# 顺序 > 反思\n\n祝贺！刚刚写了一些代码，成为了正式的程序员！我们的平台会跟踪写出了多少代码，在完成每个难关之后显示！\n\n---\n\n注意到最后一关有一点困难了吗？这是一个
+          **挑战** 难题。挑战难题意味着扩展学生们能达到的边界。要明确说明的是，我们希望学生去尝试，但不应该要求他们完成了，才表示本课成功了。\n\n<img
+          src=\"https://images.code.org/e3b9903cf4acc68be5c01c4118b3d53d-image-1434152749660.JPG\"
+          width=\"450px\" style=\"margin-right:45px; border-radius:10px;\">  \n\n---\n\n**现在花一些时间来看看顺序（包括编程和算法）是如何在计算机科学基础教案中介绍的，并思考如何在课堂上实现这些建议的活动。**\n\n"
+      OPD-K5 Stage3Start_dani:
+        markdown: |
+          # 顺序 > 阶段概述
+
+          <img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          完成第 4 阶段后，可以：
+
+          - 定义 "算法" 和 "程序"
+          - 使用代码模块编程
+          - 在班级应用上思考
+
+          > **本阶段的期望：** 在接下来的关卡中，将从线下课程计划开始，来介绍概念，以展示如何班级的学生介绍想法。然后，将提供视频指导，介绍一系列难题，并进行学习。为了完成难题，需要使用代码块编写代码。这些课程来自课程 A，该课程适用于幼儿园学生。最后，将有机会思考如何向学生传授这一概念。此阶段可能需要 10-30 分钟。
+
+          准备好了？开始吧！
+      OPD-K5 Stage3aGo_dani:
+        content1: 描述
+        markdown: "# 序列 > 线下课程\n\n如前所述，会在线下课程中介绍计算机科学的主题。然后，会将这些活动过渡到在线课程。从这些好玩并且有好的现在课程开始，来介绍概念。接着，学生们在线上课程中就熟悉了这些概念，就能将在线课程与线下活动联系起来了。\n\n对于要经过的变成阶段，也会从线下课程示例开始。通读课程计划，并观看附带的视频，思考如何在课堂中与学生进行实践。\n<br/>\n***\n<br/>\n从顺序开始。从根本上看，计算机科学的风格就是
+          **顺序的**。顺序是一些事物相互跟随的特殊排列。在这些难关中，要为指令找到正确的顺序，来告诉计算机做什么。指令的列表叫做 **算法**。一旦算法被编码成了能被计算机读取的语言，就成为了
+          **程序**。\n<br/>\n<br/>\n\n**1. 查看课程 A 的 \"[快乐地图](https://curriculum.code.org/csf/coursea/5/)\"
+          课程计划。**\n<br/>\n记住，课程 A 是为幼儿园学生设计的。顺序也会在其它课程中介绍，可以在本页底部找到这些课程的示例。\n\n<br/>\n\n**2.
+          观看学生视频：快乐地图**\n<br/>\n可以向学生展示这段视频，以帮助介绍顺序的概念，并开始线下课程。\n\n[![](https://images.code.org/f00fb02e8f24d57e88d396eb0f2c5cce-image-1571253011379.09.54
+          PM.png)](https://youtube.com/watch?v=hrnhiKAQ1_k)\n\n[不能打开视频？点击这里](http://videos.code.org/2014/C1-happy-maps-unplugged.mp4)
+          \ \n\n<br/>\n\n**3. 观看教师视频：如何主持 \"快乐地图\"。**\n<br/>\n\n[![](https://images.code.org/ab93b99493bfe68acc24aaaaf66d4129-image-1571253013543.10.01
+          PM.png)](https://youtube.com/watch?v=En6Bshuqljg)\n\n<br/>\n\n\n**4. 查看其它介绍顺序的线下课程：**\n\n-
+          课程 A (幼儿园): [生活中的算法：种下种子](https://curriculum.code.org/csf-18/coursea/3/)\n-
+          课程 B (1 年级): [我的机器人朋友（初级）](https://curriculum.code.org/csf-18/coursea/3/),
+          [动一动，动一动](https://curriculum.code.org/csf-18/courseb/1/)\n- 课程 C (2 年级):
+          [纸飞机](https://curriculum.code.org/csf-18/coursec/4/)\n- 课程 D (3 年级): [纸上画图编程](https://curriculum.code.org/csf-18/coursed/1/)\n-
+          课程 E, 课程 F (4, 5 年级): [我的机器人朋友（高级）](https://curriculum.code.org/csf-18/coursee/1/)\n\n\n---\n\n\n>
+          ## 反思\n> 如何像学生解释编程的概念（包括顺序和算法）？在<a href=\"http://forum.code.org/t/teaching-sequencing/408\">论坛上</a>分享。\n\n>
+          <a href=\"http://forum.code.org/t/teaching-sequencing/408\" target=\"blank\"><button
+          class=\"plc\">在论坛上讨论 >></button></a>\n\n在论坛中发表评论后，返回此处，然后点击下面的继续。\n\n下个阶段，会增加循环来让程序更复杂一些。\n"
+      OPD-K5 Stage4Go_dani:
+        markdown: "# 循环 > 线下课程\n\n在这个阶段中，会看到将循环添加到有重复动作的程序中，会多么有效率。下个阶段，会编码 **如果语句**
+          和其它条件语句。  \n<br/>\n\n**1. 观看 2 年级的课程 C \"[开始循环](https://levelbuilder.code.org/curriculum/coursec/7/Teacher)\"
+          的课程计划：**\n<br/>课程 C 是为 2 年级学生准备的。循环也会在其它课程中介绍，可在页面下方找到这些课程的示例。\n\n<br/>\n\n**2.
+          观看学生视频：开始循环**\n<br/>\n可以向学生展示这段视频，以帮助介绍循环的概念，并开始线下课程。\n\n[![](https://images.code.org/eb585fcc71f5f1d2fa4d3bcddcf74b8b-image-1571253274522.14.26
+          PM.png)](https://www.youtube.com/watch?v=JoKTqHCni0M)\n\n[不能打开视频？点击这里](http://videos.code.org/2014/C1-getting-loopy.mp4)\n\n<br/>\n\n**3.
+          观看教师视频：如何主持 \"开始循环\"**\n<br/>\n如果需要如何开始本节课的提示，可参考本视频。 \n[![](https://images.code.org/fc594434f8b6869b1db1872fc85ca309-image-1571253220717.13.14
+          PM.png)](https://www.youtube.com/watch?v=Vo2woYRRogA)\n\n\n<br/>\n\n**4.
+          查看其它介绍循环的线下课程：**\n\n- 课程 A (幼儿园): [快乐的循环](https://curriculum.code.org/csf-18/coursea/9/)\n-
+          课程 B (1 年级): [我的循环机器人好友（初级）](https://curriculum.code.org/csf-18/courseb/8/)\n-
+          课程 E, F (4, 5 年级): [我的循环机器人好友](https://curriculum.code.org/csf-18/coursee/6/)\n\n***\n\n>
+          ## 反思\n> 如何向学生介绍循环的概念？<br><br> [在论坛中分享。](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)\n\n>
+          <a href=\"http://forum.code.org/t/teaching-loops-and-efficiency/405/1\"
+          target=\"blank\"><button class=\"plc\">在论坛中讨论 >></button></a>\n\n在论坛中发表评论后，返回此处，然后单击下面的按钮进入下一阶段。\n\n"
+      OPD-K5 Stage4Review_dani:
+        markdown: |
+          # 循环 > 反思
+
+          这个阶段中，探索了循环是如何让代码更有效率的。下个阶段，会看到条件语句如何帮助将逻辑加到程序里。
+
+          **花一些时间，来看看在计算机科学基础教案中是如何介绍循环的。思考如何将建议的活动带到课堂上。**
+
+          ![](https://images.code.org/c6dca0407f5a517823f7e71b8da3880b-image-1549050118354.jpg)
+      OPD-K5 Stage4Start_dani:
+        markdown: |
+          # 循环 > 第 5 阶段概述
+
+          本阶段会在第一个程序的基础上，添加 **循环** 的核心概念。
+
+          <img src="https://images.code.org/fcd3262b1c25e70426ac90e6f9fa65ac-image-1434152998854.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          完成第 5 阶段后，可以：
+
+          - 练习编写简单的循环
+          - 思考在课堂上的应用
+
+          > **本阶段的期望：** 在接下来的内容中，会介绍来自课程 C （适用于 2 年级），重点关注于循环概念的一个线下课程和一系列的难题。要完成难题，需要用可视化、基于模块的方法编程。最后会有机会进行反思。此阶段可能需要 20-45 分钟。
+
+          准备好了？开始！
+      OPD-K5 Stage5Go_dani:
+        markdown: "# 条件语句 > 线下课程\n\n\n**1. 观看来自课程 D 的 \"[扑克牌与条件语句](https://curriculum.code.org/csf-18/coursed/13/)\"
+          课程计划：** \n<br/>\n课程 D 是为 3 年级准备的。同样的课程也在课程 E 和课程 F 中。条件语句不在课程 A, B, 或 C
+          中介绍。\n<br/><br/>\n\n**2. 观看学生视频：扑克牌与条件语句**\n<br/>\n可以向学生展示这段视频，以帮助介绍条件语句的概念，并开始线下课程。\n[![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41
+          PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)\n<br/>\n[不能打开视频？点击这里](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)\n\n<br/><br/>\n**3.
+          观看教师课程示例视频： \"扑克牌与条件语句\"**\n<br/>\n 如果需要如何讲授本节课的提示，可参考本视频。 \n\n\n[![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37
+          PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)\n\n[不能打开视频？点击这里](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)\n\n<br/><br/>\n\n---\n\n>
+          ## 反思\n> 如何向学生们解释条件语句的概念？[在论坛上分享](http://forum.code.org/t/teaching-conditionals/406/1).\n\n>
+          <a href=\"http://forum.code.org/t/teaching-conditionals/406/1\" target=\"blank\"><button
+          class=\"plc\">在论坛中讨论 >></button></a>\n\n 在论坛中发表评论后，返回此处，然后单击下面的按钮进入下一阶段。\n"
+      OPD-K5 Stage5Review_dani:
+        markdown: "# 条件语句 > 反思\n\n在这个阶段中，探索了条件语句是如何帮助程序员将逻辑加入代码中。下个阶段，会看到函数是如何让编码到达新的水平。
+          \ \n\n**花一些时间，来看看计算机科学基础教案中是如何介绍条件语句的，思考如何将建议的活动带到自己的课堂上。**\n\n![](https://images.code.org/6335e7aa128d84c96ac402005cd9a3bb-image-1549053033052.jpg)\n"
+      OPD-K5 Stage5Start_dani:
+        markdown: |
+          # 条件语句 > 阶段概述
+
+          <img src="https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png" width="450px"  style="border-radius:10px; float:right; margin: 0 0 40px 40px;"/>
+
+          现在，已经写了简单的程序，并通过循环来提高效率。这个阶段中，会探索 **如果语句**，来开始为程序加入逻辑。
+
+          完成第 6 阶段后，可以：
+
+          - 练习简单的条件语句编程
+          - 思考在课堂上的应用
+
+          >**本阶段的期望：** 首先会介绍来自课程 D（3 年级）的线下课程，来介绍条件语句的思想。然后，会完成一系列难题，来应用学到的条件语句。最后会有机会进行反思。本阶段可能需要 20-45 分钟。
+
+          准备好了？开始！
+      OPD-K5 Stage6Go_dani:
+        markdown: |
+          # 函数 > 线下课程
+
+          程序员会一直寻找方法让代码更有效率。其中一种方法是通过 **函数**，这能用于重用一段代码。
+
+          **1. 观看来自课程 E 的 "[函数：写歌](https://curriculum.code.org/csf-18/coursee/14/)" 的课程计划。**
+          <br/>
+          课程 E 是为 4 年级准备的。函数不会在课程 A-D 中覆盖。
+
+          <br/>
+
+          **2. 观看学生视频：函数：写歌**
+          <br/>
+          可以向学生展示这段视频，以帮助介绍函数的概念，并开始线下课程。
+
+          [![](https://images.code.org/7fe2de2239edca27f26ae77cd0dc4c35-image-1571253900570.24.39 PM.png)](https://youtube.com/watch?v=5iDCKkI6y2Y)
+
+          <br/>
+
+          [不能打开视频？点击这里](http://videos.code.org/2014/C3-songwriting-with-parameters.mp4)
+
+          <br/>
+
+          **3. 观看教师课程示例视频："函数：写歌"**
+          <br/>
+          如果需要如何讲授这节课的提示，可参考本视频。
+          [![](https://images.code.org/cfa0204ea2de0de27dab274369069a58-image-1571253902872.24.46 PM.png)](https://youtube.com/watch?v=QuIMLel1mmw)
+          [不能打开视频？点击这里](https://videos.code.org/levelbuilder/unplugged-lessoninaction-songwritingwithfunctions-mp4.mp4)
+          <br/>
+
+          ---
+
+          > ## 反思
+          > 如何向学生介绍函数的概念？在<a href="http://forum.code.org/t/teaching-functions/407/1" target="blank">论坛</a>上分享思考。
+
+          > <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank"><button class="plc">在论坛中讨论 >></button></a>
+
+          在论坛中发表评论后，返回此处，然后单击下面的按钮进入下一阶段。
+      OPD-K5 Stage6Review_dani:
+        markdown: |
+          # 函数 > 反思
+
+          本阶段中，探索了函数如何通过重用代码片段，让人成为更快更好的程序员。在下个阶段中，会学会事件的核心概念，并用编程技巧来测试它。
+
+          **花点时间看看计算机科学基础教案是如何介绍函数的，并考虑如何在课堂中实践建议的活动。**
+
+          ![](https://images.code.org/47e2d3956aaafb745e462f0017c2a2b1-image-1549053916687.jpg)
+      OPD-K5 Stage6Start_dani:
+        markdown: |+
+          # 函数 > 阶段概述
+
+          <img src="https://images.code.org/6ac5cc9f26b87a62b0558947d4cfd457-image-1501267730981.jpg" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          在前几个阶段，学会了如何写程序，添加循环，使用条件。在这个阶段，会介绍 **函数** 的概念。
+
+          完成第 7 阶段后，可以：
+
+          - 练习编写简单的函数
+          - 思考在课堂上的应用
+
+          > **本阶段的期望：** 首先，会观看来自课程 E（4 年级），介绍函数的线下课程。然后会通过视频，以及练习一系列的难题来学习使用函数。还有机会思考自己的实践。本阶段可能需要 20-45 分钟。
+
+          准备好了？开始！
+
+      OPD-K5 Stage7Go_dani:
+        markdown: |+
+          # 事件 > 线下活动
+
+          <br/>
+
+          **1. 观看来自课程 C 的 "[大事件](https://curriculum.code.org/csf-18/coursec/11/)" 课程计划。**
+          <br/>
+          课程 C 是为 2 年级学生准备的。事件会在从 A 到 F，每一阶段的计算机科学基础课程中。不是每个课程都有线下活动来覆盖事件，但可以查看页面下方课程 A 和课程 B 的线下活动。
+          <br/><br/>
+
+          **2. 观看学生视频：大事件**
+          <br/>
+          可以向学生展示这段视频，以帮助介绍事件的概念，并开始线下课程。
+
+          [![](https://images.code.org/e5d8d5fc84416e34232f3e00142e5b2a-image-1571254248844.30.31 PM.png)](https://youtube.com/watch?v=u0WV9shCoak)
+
+          [不能打开视频？点击这里](http://videos.code.org/2014/C1-bigevent-unplugged.mp4)
+          <br/><br/>
+
+          **3. 观看教师视频：如何主持 "大事件"**
+          <br/>
+          如果需要如何讲授这节课的提示，可参考本视频。
+
+          [![](https://images.code.org/666ace3e1b7de917e112733112d358e4-image-1571254314712.31.50 PM.png)](https://youtube.com/watchv=aYECW6V8nQA)
+          <br/><br/>
+
+          **4. 观看其它介绍事件的线下课程：**
+
+          - 课程 A, 课程 B (幼儿园，1 年级): [大事件（初级）](https://curriculum.code.org/csf-18/courseb/12/)
+
+          ---
+
+          > ## 反思
+          > 何向学生介绍事件的概念？在<a href="http://forum.code.org/t/teaching-events/409/1">论坛</a>分享思考。
+
+          > <a href="http://forum.code.org/t/teaching-events/409/1" target="blank"><button class="plc">在论坛上讨论 >></button></a>
+
+          论坛中发表评论后，返回此处，然后单击下面的按钮进入下一阶段。
+
+
+      OPD-K5 Stage7Start_dani:
+        markdown: "# 事件 > 阶段概述\n\n<img src=\"https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG\"
+          width=\"450px\" style=\"border-radius: 10px; float: right; margin: 0 0 40px
+          40px;\">\n\n现在，已经学会了顺序程序，添加循环，使用条件语句和函数。快要学完了！   \n\n本阶段中，会看一看 *事件*，这是计算机科学中另一个关键的概念。在探索事件时，将组合已经学会的知识，写出一些更复杂的程序。\n\n完成第
+          8 阶段后，可以：\n\n- 练习编写简单的事件\n- 思考在课堂上的应用\n\n>**本阶段的期望：** 从来自课程 C （2 年级）的线下课程开始。然后会探索一些来自课程
+          F（5 年级）的难题，来体验事件模块。最后有机会进行反思。本阶段可能需要 20-45 分钟。\n\n准备好了？开始！\n"
+      OPD-K5 Stage8Go_dani:
+        markdown: |
+          # 最佳实践 > 反思
+
+          第 8 阶段介绍了许多教授计算机科学的最佳实践。花一些时间来思考，哪些策略会被用到自己的实践中。下个阶段中，会创建简单的计划，并反思整个课程。
+
+          ## 在课堂上促进计算机科学学习时，将使用哪些策略？
+
+          这是教师论坛中的一些示例：
+
+          - **主持 "线下" 活动** 来学习核心概念 (点击[这里查看线下活动列表](https://code.org/curriculum/unplugged.)
+          - 在课堂上实践 **"先问 3 个人，然后问我"** 的规则，让学生先寻求 3 个同学的帮助，然后再问老师同样的问题。这会减少大量需要单独回答的问题，并促进了同伴间的学习。
+          - **冷静并坚持** 当问题出现时（总会出现的）。老师的反应会为学生定下基调。如果在最初出现问题时，老师表示 "我害怕技术。我要放弃。"。学生也会觉得可以这么做。
+          - **引以为傲** 来对待他们的程序。展示它们，让它们能工作，并发布到线上。这是老师和学生应该庆贺的巨大成就。
+          - **提出探索性问题** 给学生（甚至自己不知道答案的情况）。问问班级里有没有人知道答案。轻松的说 "我不知道；让我们一起弄清楚！"
+
+          ---
+
+          > ## 反思
+          <a href ="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4">在论坛上</a>查看更多方法，或加上自己的：
+
+          > <a href="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4" target="blank"><button class="plc">分享自己的方法 >></button></a>
+
+          探索了论坛中的主题，并添加了自己的想法后，点击下列按钮继续第 10 阶段。
+      OPD-K5 Stage8Start_dani:
+        markdown: "# 最佳实践 > 阶段概述\n\n<img src=\"https://images.code.org/1faca2c2dd1c9bd64ab5def347524d9c-image-1434398377360.JPG\"
+          width=\"450px\" style=\"border-radius:10px; float:right; margin: 0 0 40px
+          40px;\">\n\n**已经完成了本课程的大部分内容。祝贺！**   \n\n在第 1 阶段中，了解了课程信息。  \n在第 2 阶段中，将计算机科学作为一门科目进行了探索。
+          \ \n在第 3 阶段中，准备好了掌握计算机科学的基础知识。  \n在第 4-8 阶段中，自己扮演了学生的角色。  \n现在，开始探索如何向年轻人传授所学知识。
+          \ \n\n\n完成第 9 阶段后，可以：\n\n- 了解讲授计算机科学的最佳实践\n\n> ## 展望：\n> 本阶段会覆盖以下最佳实践：\n\n>-
+          建立积极的课堂文化，支持自主学习，试验和失败\n- 知道何时以及如何应用其他学科领域的教学设计策略\n- 使用策略性的分组方法，如 \"结对编程\"\n-
+          明确的讲授元认知的解决问题的策略\n- \"线下\" 在很少技术，或没有技术的情况下讲授核心概念\n- 其它 Code.org 教师社区建议的最佳实践\n\n还为您提供了与社区分享最佳实践的机会。\n"
+      OPD-K5 Stage9Go_dani:
+        markdown: |
+          # 计划 > 回顾
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          本阶段中：
+
+          - 回顾教师面板和其他 Code.org 资源
+          - 规划如何将计算机科学融入自己的的实践中
+
+          在第 11 阶段，即最后阶段中会：
+
+          - 反思自己的学习
+          - 为下一步继续学习做计划
+          - 与对计算机科学教育感兴趣的全球教育工作者社区建立联系
+      OPD-K5 Stage9Start_dani:
+        markdown: "# 计划 > 探索教师资源\n\n通过第 4-8 阶段，了解了计算机科学基础可用的一些 \"线下\" 和线上的学习资源，它们与当前学习的计算机科学概念一致。
+          \n\n现在已经对如何编码以及如何教授计算机科学有了一些了解，是时候开始指定计划了。在这个阶段，会参观 Code.org 平台的 **[教师面板](http://studio.code.org/)**，和其它部分。
+          \n\n完成第 10 阶段后，可以：\n\n- 浏览教师的资源\n- 浏览 Code.org **[教师面板](http://studio.code.org/)**\n-
+          计划如何将计算机科学集成到实践中\n\n***\n\n下面是教师面板的截图。需要登录 Code.org 的教师账号才能看见它 - 登录后会是教师账号的默认界面。如果没有教师账号，可以
+          **[免费注册](https://studio.code.org/users/sign_up)**。\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
+      OPD-K5 Using CS_dani:
+        markdown: "# 计划 > 为代码工作室课程做准备\n\n了解 Code Studio 如何为自己和学生进行课堂设置。\n\n## 第 1
+          步：选择课程\n浏览 [小学课程页面](https://code.org/educate/curriculum/elementary-school)
+          并从计算机科学基础 A-F 课程中找到课程计划和完整的课程。如果对初中或高中课程感兴趣，可以找到所有年级的内容 - 从学前到高中高年级，其中所有人。所有课程都是免费的。与同事讨论，以确定如何将课程教案与各种科目整合在一起。
+          \n \n## 第 2 步：设置课堂小组\n设置课堂小组，可查看学生进度，打印学生的登录卡片，管理账号，打印可带回家的完成课程的证书。点击链接来
+          [观看简介](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)，其演示了如何在
+          Code.org 设置第一个计算机科学班级。 也可在 [支持文档](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)
+          中找到所有步骤。\n\n## Step 3: 第 3 步：将课程分配给小组\n点击正在教学的课程 -- 应该可看到下面这样的页面。点击 \"分配课程\"
+          并将课程分配给某个小组。\n\n## 第 4 步：开始教学！\n所需要的只是一堂将计算机科学概念带入课堂的课程。一旦看到学生对计算机科学的热情，就可以进一步制定每日课程计划来指导学生，无需计算机即可进行的线下活动，以及与其他老师建立联系的论坛。\n\n\n\n"
+      OPD-K5 Vocabulary_dani:
+        markdown: |
+          # 计算机科学基础 > 关键词汇
+
+          在开始学习计算机科学时，最重要的任务之一就是熟悉编程语言。在本课程和整个计算机科学基础资源中，我们使用与计算机科学行业相同的词汇。鼓励年轻学生学习和使用专业术语，使他们能够与他人交流并建立计算机科学知识，而无需稍后重新学习术语和概念。这些课程中使用的术语和概念，使用了大多数年轻学生应该能够理解的单词来定义的。
+
+          这是计算机科学基础资源中使用的 [词汇表](http://code.org/curriculum/docs/k-5/glossary) ；在本课程中还将介绍其中大部分术语。现在不必学习所有这些单词。在此在线专业发展课程中，以及与学生一起使用课程时，请将该列表用作参考。
+
+          <a href="http://code.org/curriculum/docs/k-5/glossary" target="blank"><button class="default">查看词汇表 >></button></a>
+
+          > **教学技巧：** 最佳做法是用易于理解的语言介绍这些术语，将其与以前的经历联系起来，在适当的情况下在整个课程中（以及其他情况下）重复使用这些术语，并加强学生在口语中的使用和书面交流。
+      OPD-K5 Welcome 2_dani:
+        markdown: |+
+          # 开始 > 计算机科学基础课程
+
+          Code.org 专业发展的目标是为像您这样的老师做好准备，以将计算机科学整合到课堂中，并支持成长为老师。完成本在线课程后，可以在课堂上教授以下一个或多个以下 Code.org 计算机科学基础课程：
+
+           - **[课程 A](http://studio.code.org/s/coursea)**: 大约 12 小时 (幼儿园)
+           - **[课程 B](http://studio.code.org/s/courseb)**: 大约 12 小时 (1 年级)
+           - **[课程 C](http://studio.code.org/s/coursec)**: 大约 18 小时 (2 年级)
+           - **[课程 D](http://studio.code.org/s/coursed)**: 大约 18 小时 (3 年级)
+           - **[课程 E](http://studio.code.org/s/coursee)**: 大约 18 小时 (4 年级)
+           - **[课程 F](http://studio.code.org/s/coursef)**: 大约 20 小时 (5 年级)
+           - **[计算机科学 (CS) 基础 速成](http://studio.code.org/s/express)**: 大约 20 小时 (8+ 岁)
+           - **[计算机科学 (CS) 基础 预速成](http://studio.code.org/s/pre-express)**: 大约 20 小时 (4-8 岁)
+
+
+      OPD-K5 What is Mastery_dani:
+        markdown: |
+          # 展望 > 什么是精通？
+
+          在接下来的阶段，会精通计算机科学基本的核心概念：
+
+          - 第 4 阶段：序列
+          - 第 5 阶段：循环
+          - 第 6 阶段：条件语句
+          - 第 7 阶段：函数
+          - 第 8 阶段：事件
+
+          ## 什么是精通？
+
+          我们将 "精通" 定义为能够执行以下操作：
+
+          - 定义并解释核心概念的含义，以及它在计算机科学中为什么很重要
+          - 编写使用此概念的简单程序 （通过可视化编程来解决难题）
+          - 思考如何将概念集成到实践中
+
+          在学习课程的过程中，将此列表用作守则。完成每个阶段时，问自己：
+
+          - 我可以在初学层面上定义和解释这个特定核心概念的重要性吗？
+          - 在这一阶段，我能否成功完成这些简单的题目？
+          - 我对在课堂上如何使用它有一些想法吗？
+
+          如果每个问题的答案都是肯定的，可进入下一阶段。如果对任何问题不确定，可考虑在继续前，重新进入这个阶段，或从学生端的代码工作室来浏览更多内容。
+
+          ## 学习计算机科学时要记住的事情：
+
+          - 计算机编程的世界发展的非常快，因而没人真正的精通。**我们都是学习者**。虽然所处的阶段不同，但一直都是学习者。
+          - 每次回来时，都会觉得更适应。**没人会在第一次学习就成为专家。**
+          - 不能绕过去，**编程的活动以及学习编程都需要时间，但任何人都能做到！**
+
+          > **关键点：** 接下来的几个阶段不是要将您变成计算机科学家，而是能够足够适应这些基本概念，从而能够很高兴的与学生分享知识。
+
+          ## "精通" 这些概念后，下一步是什么？
+
+          在 **第 9 阶段**，会浏览 Code.org 的教师免费教案和资源。可以选择使用这些或其它资源。完成课程后，就能理解任何计算机科学教案的基础知识。
+
+          在 **第 10 和 11 阶段**，会给出继续学习或准备在课堂上讲授这些概念的资源。
+      OPD-K5 Why teach CS_dani:
+        markdown: |
+          # 计算机科学基础 > 为什么要教授计算机科学？
+
+          <img src="//code.org/images/edquote1.png" width="250px" style="margin-right:45px; float:left">
+
+          研究表明，计算机科学会提升真实世界的批判性思维，创造力，解决问题的能力，以及参与度等技能。实际上，一份[最近的研究](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) 发现，在有资源教学了计算机科学基础课程后，在英语、数学和科学标准化测试中的分都会更高。
+
+          如果不是 STEM 的老师，为什么要教授计算机科学？学完本课程后，会有自己的答案，但如果需要进一步的启发，可以观看此[视频集](http://code.org/educate/inspire) 来了解 "为什么"。如果需要对将计算机科学带入课堂进行解说，这些视频非常适合给学生、管理者、父母和社区观看。也可能也对CS教育的一些统计数据和证据感兴趣。
+
+          <a href="http://code.org/educate/inspire" target="blank"><button class="default">Explore inspirational videos >></button></a><a href="http://code.org/promote" target="blank"><button class="default">浏览研究 >></button></a>
+
+          花一些时间浏览研究，并记下发现的任何相关或有趣的事实或见解。
+      OPD-K5 Younger Grades_dani:
+        markdown: |
+          # 为什么要在低年级教授计算机科学？
+
+          <img src="https://images.code.org/0149da542dae03da5f40b7b8aacf73c0-image-1434818868152.jpg" class="level-image">
+
+          除了通过学习编程经验而带来的计算思维时间，在低年级讲授计算机科学，还能对学生和社会带来额外的好处 - 为创建技术领域带来更多的平等。
+
+          如果等到高中或大学才介绍计算机科学，一些学生已经会认为计算机不适合他们，或与其他在课外学习过的学生相比长居太大。
+
+          在 K-5 就将计算机科学带给学生们，与高中选课不同，这能让所有学生都了解这门课，并自己决定是否感兴趣。
+
+          > ## 为什么认为讲授计算机科学是值得的？
+          [发推特分享](https://twitter.com/teachcode) 并加上 @teachcode 标签，以便我们能反馈。
+
+          > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">在推特上分享 >></button></a><br><br>
+          还没有推特账号？可以在 [Facebook](https://www.facebook.com/Code.org/) 或 [Instagram](https://www.instagram.com/codeorg/) 上找到我们。
+      OPD-K5 Your Plan_dani:
+        markdown: |
+          # 计划 > 自己的计划
+
+          希望这一阶段能帮助介绍代码工作室上的可用资源。当考虑将来如何使用 code.org 或代码工作室资源中的任何内容教授计算机科学时，请花一点时间[与专业学习社区（PLC）分享自己的计划](http://forum.code.org/t/teaching-computer-science-your-plans/412)。
+
+          与我们分享：
+
+          - 课堂目标是什么？ 计算机科学或 code.org 资源将如何帮助实现这些目标？
+          - 当实现了其中某些目标时，最兴奋的是什么？
+          - 在尝试实现目标时会遇到哪些挑战？
+          - 有什么社区可能能帮助回答的问题？
+
+          发布初始的计划后，请随时重新访问[此话题](http://forum.code.org/t/teaching-computer-science-your-plans/412)，来向我们介绍最新的进展！
+
+          <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">发布自己的计划 >></button></a>
+
+          在论坛中发表评论后，返回此处，然后单击下面的按钮继续。
+      OPD-Stage3Start_dani:
+        markdown: |
+          # 展望 > 阶段概述
+
+          <img src="https://images.code.org/0b8c948f309ae1df3d9920520e4a168c-image-1435004357188.JPG" width="450px" style="border-radius:10px;">
+
+          完成此阶段后，可以：
+
+          - 通过了解课程中接下来的内容，来准备好 "掌握基础知识"
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          # 语言的力量
+
+          ## 在有人在网上使用攻击性的语言时，你应该做什么？
+      TheRightAppMarkdownLevel_2021:
+        markdown: |
+          # 正确的应用
+
+          * 如今每个人都在使用计算机，尤其是智能手机。
+          * 智能手机上的应用，能帮助人们做很多事情，例如与朋友聊天、听音乐、购物或浏览互联网。
+          * 对于开发者而言，站在其他人的角度上，并从他们的需求出发来设计应用是颇为重要的！
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      courseAB_EOC_2021:
+        display_name: 课程结束项目
+      courseB_EOC_2021:
+        display_name: 课程结束项目
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - text: 艺术家将会画一个等边三角形。
+          feedback: 错误。艺术家画了一个正方形。
+        - text: 艺术家将会画一条线。
+          feedback: 错误。艺术家画了一个正方形。
+        - text: 艺术家将会画一个正方形。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - {}
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
+        - text: '12'
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: '15'
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
+        - text: '20'
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
+        questions:
+        - text: 仔细查看下面的代码。你点击 "运行" 后, 农民会收集多少南瓜？
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - text: 斯奎特会被橡子吸引，这说明了这个程序没有缺陷。
+          feedback: 不正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
+        - text: 因为斯奎特转向了错误的方向，所以斯奎特不会碰到橡子
+          correct: true
+          feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
+        - text: 斯奎特不会碰到橡子因为没有足够的`向前移动`模块。
+          correct: true
+          feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
+        - feedback: 这段代码中有两个缺陷。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
+        questions:
+        - text: 在代码中寻找缺陷。斯奎特是否能碰到橡子？
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - text: 这只鸟最终会比猪少走一步。
+          feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
+        - text: 小鸟会到达猪的位置。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 这只鸟将撞上 TNT 炸药。
+          feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
+        - feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
+        questions:
+        - text: 仔细阅读下面的代码。点击 "运行" 后，会发生什么？
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - text: BB-8 将不会移动。
+          feedback: 不正确。重复模块让 BB-8 向前移动 5 次。
+        - text: BB-8 将只移动一格.
+          feedback: 不正确。重复模块让 BB-8 向前移动 5 次。
+        - text: BB-8 将移动 5次, 并得到所有的废金属
+          correct: true
+          feedback: 叮咚！答对啦！
+        - feedback: 不正确。重复模块让 BB-8 向前移动 5 次。
+        questions:
+        - text: 当您单击 "运行" 时, 会发生什么情况？
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - text: BB-8将在第一个循环中走得太远。
+          feedback: 不正确。当 BB-8 需要往前移动 3 格时，第一个循环只能让它向前移动 2 格。
+        - text: BB-8在第一个循环中走得不够远, 无法获得所有的废金属。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: BB-8将会毫无困难地收集所有的废金属。
+          feedback: 不正确。当 BB-8 需要往前移动 3 格时，第一个循环只能让它向前移动 2 格。
+        - feedback: 不正确。当 BB-8 需要往前移动 3 格时，第一个循环只能让它向前移动 2 格。
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - text: '蜜蜂会移动到云中，然后采花粉，不论云下是什么。 '
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        - text: 蜜蜂会移动到云中，只有在下面有花朵的情况下，才会尝试采花粉。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂会采花粉。
+        - text: 我不知道。
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        questions:
+        - text: 云挡住了视线。在这朵云下可能有花。如果有 1 朵花，蜜蜂将需要收集 1 次花粉。如果没有花，蜜蜂就什么也不做。仔细查看下面的代码，在点击
+            “运行” 后会发生什么？
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - text: 什么都没有发生，函数没有被调用。
+          feedback: 不正确！这个函数实际上在程序中被调用了两次。
+        - text: 艺术家只会绘制一个正方形。
+          feedback: 不正确！这个函数实际上在程序中被调用了两次。
+        - text: 艺术家将绘制两个部分重叠的正方形。
+          feedback: 不正确！正方形的每条边的长度只有100像素，但是艺术家在不同的函数之间跳跃了175像素。
+        - text: 艺术家将绘制两个正方形，中间有空隙隔开。
+          correct: true
+          feedback: 正确的！该函数在程序中被调用两次，其间有一个跳转。
+        questions:
+        - text: 当您单击“运行”时，会发生什么情况？
+      courseF_EOC_2021:
+        description: 你已经完成了课程F！点击以创建项目。
+        display_name: 课程结束项目
+      courseF_EOC_examples_2021:
+        description: 你已经完成了课程F！点击以创建项目。
+        display_name: 课程结束项目
+      courseF_EOC_samples_2021:
+        display_name: 课程结束项目
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - text: 艺术家将会绘制一个边长为50像素的三角形。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 艺术家将绘制一个有50条边的多边形，其中每条边长为3个像素。
+          feedback: 错误。 变量“长度”需要在“重复”循环中使用，才能实现。
+        - text: 艺术家将绘制一个开放的图形，其中三条边分别旋转50度。
+          feedback: 错误。 变量“长度”需要在“转x度”积木块中使用，才能实现。
+        - feedback: "`length`（长度）变量设置为 50，并在`向前移动`模块中使用。因此艺术家会画一个边长为 50 像素的三角形。"
+        questions:
+        - text: 变量 "length"（长度）已设为 50。当单击 “运行” 时，会发生什么？
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - text: 蜜蜂将向前移动，并收集所有花朵中的所有花蜜。
+          feedback: 错误。“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。
+        - text: 蜜蜂将向前移动，并收集花朵中所有的花蜜，但是会有一朵花收集不到。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 蜜蜂将向前移动，并在每朵花中收集一个花蜜。
+          feedback: 错误。“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。
+        - feedback: 错误。“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。
+        markdown: |+
+          啊！ 使用 `计数循环` 让这一关简单多了！
+
+
+        questions:
+        - text: 仔细阅读下面的代码。单击 "运行" 会发生什么情况？
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: 描述
+      csf_digital_trails_2021:
+        markdown: |-
+          # 顺着电子线索
+          ##什么东西是可以在你的电子足迹
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: 描述
+        markdown: |
+          # STOP 意思
+
+          ## 假如有人在网上对你不友好，你应该怎么做？
+          ***S**离开（Step away）
+          ***T**告诉可信的成年人 （Tell a trusted adult）
+          ***O**
+          ***P**暂停然后在网上想   (Pause and thing online
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          我的网上邻居
+          你是如何在网上安全地浏览信息
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - text: 用这段代码让罗瑞尔收集4个宝贝
+          feedback: 不正确。罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
+        - text: 罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 罗瑞尔要收集所有宝藏。
+          feedback: 不正确。罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
+        - feedback: 不正确。罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
+        questions:
+        - text: 仔细观察代码。你认为程序运行时会发生什么？

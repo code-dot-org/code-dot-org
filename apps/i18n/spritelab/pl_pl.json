@@ -171,5 +171,6 @@
   "changeSpriteBehaviorsWhenTouch": "Duszek musi zmienić zachowanie, gdy zetkną się dwa duszki. ",
   "moveSpriteLocation": "Twoje duszki są w tym samym miejscu. Przenieś jednego z nich za pomocą bloku „lokalizacja”. <xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">'{\"x\":200,\"y\":200}'</title></block></xml>",
   "createDraggableSprite": "Duszek potrzebuje pokarm Twojego zwierzaka, aby zacząć zachowywać 'być przeciągalnym'. <xml><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"face_carrot_1\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_draggable\"></block></value></block></xml>",
+  "createNotDraggableSPrite": "Tylko duszek jedzenia powinien być przeciągany. Usuń to zachowanie ze swojego zwierzaka.",
   "moveSpriteByDrag": "Twój kod wygląda świetnie! Aby przeciągnąć swojego duszka, kliknij go podczas działania programu."
 }

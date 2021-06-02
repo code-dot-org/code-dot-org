@@ -1,4 +1,3 @@
----
 vi:
   data:
     script:
@@ -28,7 +27,7 @@ vi:
             'Artist: Loops':
               name: 'Nghệ sĩ: vòng'
             'Artist: Sequence':
-              name: 'Nghệ sĩ: trình tự'
+              name: "Nghệ sĩ: trình tự\n"
             'Artist: Shapes':
               name: 'Nghệ sĩ: hình dạng'
             'Bee: Loops':
@@ -48,7 +47,7 @@ vi:
             'Maze: Debugging':
               name: 'Mê cung: Hiệu chỉnh'
             'Maze: Loops':
-              name: Vòng lặp mê cung
+              name: 'Vòng lặp mê cung'
             'Maze: Sequence':
               name: 'Mê cung: Trình tự'
             Move it, Move it:
@@ -75,7 +74,7 @@ vi:
             'Artist: Nested Loops':
               name: 'Nghệ sĩ: các vòng lồng vào nhau'
             'Artist: Sequence':
-              name: 'Nghệ sĩ: trình tự'
+              name: "Nghệ sĩ: trình tự\n"
             'Bee: Conditionals':
               name: 'Ong: Các điều kiện'
             'Bee: Debugging':
@@ -93,7 +92,7 @@ vi:
             Graph Paper Programming:
               name: lập trình đồ thị trên giấy
             'Maze: Loops':
-              name: Vòng lặp mê cung
+              name: 'Vòng lặp mê cung'
             'Maze: Sequence':
               name: 'Mê cung: Trình tự'
             'Real-life Algorithms: Paper Planes':
@@ -105,7 +104,7 @@ vi:
             The Big Event:
               name: Sự kiện lớn
             Your Digital Footprint:
-              name: Dấu chân kỹ thuật số
+              name: Dấu chân kỹ thuật số 
           student_description: Khóa học 2 được thiết kế cho người biết đọc và không có kinh nghiệm lập trình. Trong khóa học này, học viên sẽ tạo ra các chương trình để giải quyết vấn đề và phát triển các trò chơi tương tác hoặc chia sẻ những mẩu chuyện. Khuyến khích cho học sinh từ lớp 2 đến lớp 5.
         course3:
           title: Khóa học 3
@@ -140,7 +139,7 @@ vi:
             Digital Citizenship:
               name: Công dân số
             'Farmer: While Loops':
-              name: Nông dân - trong các vòng
+              name: 'Nông dân - trong các vòng'
             Functional Suncatchers:
               name: Chức năng của tấm hứng ánh nắng
             Internet:
@@ -251,7 +250,7 @@ vi:
             'Artist: Nested Loops':
               name: 'Nghệ sĩ: các vòng lồng vào nhau'
             'Artist: Sequence':
-              name: 'Nghệ sĩ: trình tự'
+              name: "Nghệ sĩ: trình tự\n"
             'Bee: Conditionals':
               name: 'Ong: Các điều kiện'
             'Bee: Debugging':
@@ -259,7 +258,7 @@ vi:
             'Bee: Nested Loops':
               name: 'Ong: Các vòng lồng'
             'Farmer: While Loops':
-              name: Nông dân - trong các vòng
+              name: 'Nông dân - trong các vòng'
             'Maze: Sequence':
               name: 'Mê cung: Trình tự'
           student_description: Một dựng lên các khái niệm ngắn cho những sinh viên đã không thực hiện khóa học 2 và 3.
@@ -1108,6 +1107,10 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
+            0: |-
+              Phần 1, ngày 1-2 máy tính là gì?
+            1: |-
+              Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1225,6 +1228,10 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
+            0: |-
+              Phần 1, ngày 1-2 máy tính là gì?
+            1: |-
+              Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1248,6 +1255,10 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
+            0: |-
+              Phần 1, ngày 1-2 máy tính là gì?
+            1: |-
+              Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -2074,7 +2085,7 @@ vi:
             Unit 5 Assessment 2:
               name: Phần 5 Đánh giá 2
             '"If" Statements Unplugged':
-              name: Câu lệnh "If"
+              name: 'Câu lệnh "If"'
             Unit 3 Chapter 1 Assessment 3:
               name: Phần 3 Chương 1 Đánh giá 3
             If statements:
@@ -2096,7 +2107,7 @@ vi:
             Boolean Expressions and "If" Statements:
               name: Biểu thức boolean và câu lệnh "If"
             '"if-else-if" and Conditional Logic':
-              name: If-else-if và logic có điều kiện
+              name: 'If-else-if và logic có điều kiện'
             'Building an App: Multi-Screen App':
               name: 'Xây dựng một ứng dụng: ứng dụng đa màn hình'
             'Building an App: Clicker Game':
@@ -2573,6 +2584,10 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
+            0: |-
+              Phần 1, ngày 1-2 máy tính là gì?
+            1: |-
+              Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -2680,7 +2695,7 @@ vi:
             Farmer Impacts of Computing:
               name: Tác động của người nông dân với máy tính
             'Farmer: While Loops':
-              name: Nông dân - trong các vòng
+              name: 'Nông dân - trong các vòng'
             'Maze: Conditionals with Loops':
               name: 'Mê cung: Các điều kiện với Vòng lặp'
             'Maze: Nested Loops':
@@ -3019,7 +3034,7 @@ vi:
             Styling Text with CSS:
               name: Tạo phong cách cho văn bản với CSS
               description_student: Bài học này giới thiệu CSS là một cách để tạo phong cách cho các thành phần trên trang web. Các lớp học tìm hiểu bộ quy tắc cú pháp cơ bản cho CSS và sau đó khám phá các tính chất tác động đến các thành phần văn bản HTML.  Cuối cùng, tất cả mọi người áp dụng phong cách văn bản cho trang web cá nhân của họ.
-              description_teacher: 'Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \r \r '
+              description_teacher: "Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \\r \\r \n"
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính phong cách CSS, thời gian này tập trung nhiều vào các thành phần phi văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người áp dụng kiến thức mới này cho các trang web cá nhân của họ.
@@ -3156,7 +3171,7 @@ vi:
             'Real-life Algorithms: Plant a Seed':
               name: 'Thuật toán đời sống: Trồng một hạt giống'
             Your Digital Footprint:
-              name: Dấu chân kỹ thuật số
+              name: Dấu chân kỹ thuật số 
         coursec-draft:
           description_short: Tìm hiểu những kiến thức cơ bản về khoa học máy tính và sáng tạo tác phẩm, câu chuyện và game của riêng bạn.
           lessons:
@@ -3185,7 +3200,7 @@ vi:
             Events in Play Lab:
               name: Sự kiện trong Play Lab
             Your Digital Footprint:
-              name: Dấu chân kỹ thuật số
+              name: Dấu chân kỹ thuật số 
             Building a Foundation:
               name: Xây dựng nền tảng
             Screen Out the Mean:
@@ -3725,7 +3740,7 @@ vi:
             Using the Game Design Process:
               name: Sử dụng quy trình thiết kế trò chơi
             'null':
-              name: giá trị rỗng
+              name: 'giá trị rỗng'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -3809,13 +3824,10 @@ vi:
               description_teacher: 'Bài học này sẽ hướng dẫn học sinh các bước sửa lỗi. Học sinh sẽ học chân ngôn: “Điều gì đã xảy ra? Điều gì lẽ ra nên xảy ra? Bạn rút ra điều gì từ đó?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Sự kiên trì: Stevie và bài tập lớn'
-              description_teacher: |-
-                Khi học sinh gặp khó khăn trong quá trình trả lời câu hỏi hoặc làm dự án, các em rất dễ nản lòng và bỏ cuộc. Bài học này sẽ giới thiệu cho học sinh ý tưởng rằng bực bội có thể là một phần quan trọng của việc học. Ở đây, sự bực bội được thể hiện như một bước trong quá trình sáng tạo, chứ không phải là một dấu hiệu của sự thất bại.\r
-                \r
-                Bài tập này có thể thực hiện trong một hoặc hai buổi học. Nếu bạn có nhiều thời gian hơn, cứ thử bắt đầu giai đoạn xây dựng và chỉnh sửa của hoạt động Đường trượt bi.
+              description_teacher: "Khi học sinh gặp khó khăn trong quá trình trả lời câu hỏi hoặc làm dự án, các em rất dễ nản lòng và bỏ cuộc. Bài học này sẽ giới thiệu cho học sinh ý tưởng rằng bực bội có thể là một phần quan trọng của việc học. Ở đây, sự bực bội được thể hiện như một bước trong quá trình sáng tạo, chứ không phải là một dấu hiệu của sự thất bại.\\r\n\\r\nBài tập này có thể thực hiện trong một hoặc hai buổi học. Nếu bạn có nhiều thời gian hơn, cứ thử bắt đầu giai đoạn xây dựng và chỉnh sửa của hoạt động Đường trượt bi."
             'Real-life Algorithms: Plant a Seed':
               name: 'Thuật toán đời sống: Trồng một hạt giống'
-              description_teacher: Trong bài học này, học sinh sẽ liên hệ khái niệm thuật toán với các hoạt động thực tiễn hàng ngày bằng cách gieo một hạt giống thật. Mục tiêu ở đây là bắt đầu xây dựng các kỹ năng để chuyển các tình huống trong thế giới thực sang các tình huống trực tuyến và ngược lại.\r
+              description_teacher: "Trong bài học này, học sinh sẽ liên hệ khái niệm thuật toán với các hoạt động thực tiễn hàng ngày bằng cách gieo một hạt giống thật. Mục tiêu ở đây là bắt đầu xây dựng các kỹ năng để chuyển các tình huống trong thế giới thực sang các tình huống trực tuyến và ngược lại.\\r\n"
             Learn to Drag and Drop:
               name: Sắp xếp thứ tự bằng thao tác Kéo và Thả
               description_teacher: Bài học này sẽ cung cấp cho học sinh ý tưởng về những hoạt động sẽ diễn ra khi các em đến phòng máy tính. Bài học bắt đầu với một cuộc thảo luận ngắn giới thiệu về cách hành xử trong phòng máy tính, sau đó sẽ tiếp tục sử dụng máy tính để hoàn thành các bài tập trực tuyến.
@@ -3957,17 +3969,14 @@ vi:
             While Loops in Farmer:
               name: Vòng lặp while trong game Bác nông dân
               description_student: 'Vòng lặp rất hữu ích trong quá trình viết mã lệnh. Bài học này sẽ dạy bạn về một loại vòng lặp mới: vòng lặp while!'
-              description_teacher: |-
-                Vào thời điểm học sinh tiếp cận bài học này, các em đã được thực hành nhiều cách sử dụng các vòng lặp `lặp lại`, và bây giờ là lúc để kết hợp mọi kiến thức đã học.
-
-                _Vòng lặp while_ là các vòng lặp tiếp tục lặp lại các lệnh khi đáp ứng điều kiện. Vòng lặp while được sử dụng khi người lập trình không biết chính xác số lần mà lệnh đó cần được lặp lại, nhưng biết điều kiện cần đáp ứng để vòng lặp tiếp tục lặp lại. Ví dụ: học sinh sẽ tiến hành lấp lỗ và đào đất trong game Bác nông dân. Các em không biết kích thước của lỗ hoặc độ cao của đống đất, nhưng học sinh sẽ biết các em cần phải tiếp tục lấp lỗ và đào đất miễn là mặt đất không bằng phẳng.
+              description_teacher: "Vào thời điểm học sinh tiếp cận bài học này, các em đã được thực hành nhiều cách sử dụng các vòng lặp `lặp lại`, và bây giờ là lúc để kết hợp mọi kiến thức đã học.\n\n_Vòng lặp while_ là các vòng lặp tiếp tục lặp lại các lệnh khi đáp ứng điều kiện. Vòng lặp while được sử dụng khi người lập trình không biết chính xác số lần mà lệnh đó cần được lặp lại, nhưng biết điều kiện cần đáp ứng để vòng lặp tiếp tục lặp lại. Ví dụ: học sinh sẽ tiến hành lấp lỗ và đào đất trong game Bác nông dân. Các em không biết kích thước của lỗ hoặc độ cao của đống đất, nhưng học sinh sẽ biết các em cần phải tiếp tục lấp lỗ và đào đất miễn là mặt đất không bằng phẳng."
             Conditionals with Cards:
               name: 'If/Else: Lệnh điều kiện với thẻ'
               description_student: Đã đến lúc chơi trò chơi mà bạn chỉ giành được điểm khi đáp ứng một số điều kiện nhất định!
-              description_teacher: Bài học này trình bày cách sử dụng các lệnh điều kiện để điều chỉnh chương trình sao cho phù hợp với thông tin cụ thể. Không phải lúc nào chúng ta cũng có tất cả thông tin cần thiết khi viết một chương trình. Đôi khi bạn sẽ muốn tùy cơ ứng biến trong những tình huống khác nhau, ngay cả khi bạn không biết tình huống nào sẽ xuất hiện khi chạy mã lệnh. Đó là khi lệnh điều kiện phát huy tác dụng. Lệnh điều kiện cho phép máy tính đưa ra quyết định dựa trên thông tin đúng bất cứ khi nào bạn chạy mã lệnh.
+              description_teacher: "Bài học này trình bày cách sử dụng các lệnh điều kiện để điều chỉnh chương trình sao cho phù hợp với thông tin cụ thể. Không phải lúc nào chúng ta cũng có tất cả thông tin cần thiết khi viết một chương trình. Đôi khi bạn sẽ muốn tùy cơ ứng biến trong những tình huống khác nhau, ngay cả khi bạn không biết tình huống nào sẽ xuất hiện khi chạy mã lệnh. Đó là khi lệnh điều kiện phát huy tác dụng. Lệnh điều kiện cho phép máy tính đưa ra quyết định dựa trên thông tin đúng bất cứ khi nào bạn chạy mã lệnh.\n\n"
             Conditionals in Bee:
               name: Lệnh điều kiện trong game Chú ong
-              description_student: Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa.
+              description_student: 'Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa.'
               description_teacher: Cho đến thời điểm này, học sinh đã viết mã lệnh thực thi giống hệt nhau mỗi khi chạy – an toàn nhưng không thực sự linh hoạt. Trong bài học này, lớp của bạn sẽ bắt đầu viết mã lệnh với lệnh điều kiện, cho phép các em viết mã lệnh có chức năng khác nhau tùy thuộc vào các điều kiện cụ thể mà chương trình gặp phải.
             Conditionals & Loops in Maze:
               name: Lệnh điều kiện & vòng lặp trong game Mê cung
@@ -3990,7 +3999,7 @@ vi:
               description_teacher: Trong hoạt động trực tuyến này, học sinh sẽ có cơ hội học cách sử dụng các sự kiện trong Play Lab và áp dụng tất cả các kỹ năng mã hóa mà họ đã học để làm game dạng hoạt họa. Đã đến lúc sáng tạo và làm game trong Play Lab rồi!
             'Unplugged: Binary':
               name: 'Không chỉ là lập trình: Hình ảnh nhị phân'
-              description_student: Tìm hiểu cách máy tính lưu trữ ảnh bằng những ý tưởng đơn giản là bật và tắt.
+              description_student: 'Tìm hiểu cách máy tính lưu trữ ảnh bằng những ý tưởng đơn giản là bật và tắt.'
               description_teacher: Mặc dù nhiều người nghĩ về nhị phân là các số không và các số một, học sinh sẽ được giới thiệu về ý tưởng thông tin có thể được biểu diễn theo nhiều tùy chọn nhị phân khác nhau. Bài học này nâng cao khái niệm đó lên một bậc bằng cách minh họa cách lưu trữ thông tin phức tạp hơn của máy tính (chẳng hạn như hình ảnh và màu sắc) ở dạng nhị phân.
             Artist Binary:
               name: Nhị phân trong Artist
@@ -4055,10 +4064,7 @@ vi:
             Explore Project Ideas:
               name: Khám phá ý tưởng dự án
               description_student: Sau đây là một số trò chơi và tranh vẽ. Hãy chơi từng trò chơi để lấy ý tưởng cho các dự án của riêng bạn!
-              description_teacher: |-
-                Bốn bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.
-
-                Trong giai đoạn khám phá, học sinh sẽ có thể xem các ví dụ được tạo sẵn về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án trong Artist hoặc Play Lab. (Đây có thể là giai đoạn dài nhất của dự án.) Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè.
+              description_teacher: "Bốn bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\n\nTrong giai đoạn khám phá, học sinh sẽ có thể xem các ví dụ được tạo sẵn về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án trong Artist hoặc Play Lab. (Đây có thể là giai đoạn dài nhất của dự án.) Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè."
             The Design Process:
               name: Quy trình thiết kế
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Tại đây, bạn sẽ tìm hiểu về quy trình thiết kế mà bạn sẽ sử dụng để xây dựng tác phẩm của riêng mình.
@@ -4108,9 +4114,7 @@ vi:
               description_teacher: Học sinh đã thực hành sáng tạo các thiết kế ấn tượng trong Artist và định hướng mê cung trong game Chú ong, nhưng hôm nay các em sẽ sử dụng hàm để thu hoạch mùa màng trong game Bác nông dân. Bài học này sẽ khuyến khích học sinh sử dụng các hàm theo những cách mới bằng cách kết hợp với các vòng lặp `while` và câu lệnh `if/else`.
             Determine the Concept:
               name: Xác định khái niệm
-              description_student: |-
-                Bí mật không thể dễ dàng bật mí!
-                Bài học này có thể sử dụng bất kỳ kỹ năng nào bạn đã học được cho đến thời điểm hiện tại.
+              description_student: "Bí mật không thể dễ dàng bật mí!\nBài học này có thể sử dụng bất kỳ kỹ năng nào bạn đã học được cho đến thời điểm hiện tại."
               description_teacher: Bài học này tập hợp các khái niệm từ các bài học trước và cho học sinh cơ hội tư duy phản biện về cách giải quyết từng vấn đề, nhưng không cho học sinh biết khái niệm nào nên áp dụng. Học sinh sẽ ôn lại các thuật toán cơ bản, sửa lỗi, vòng lặp `lặp lại, lệnh điều kiện, vòng lặp `while` và các hàm.
             Build a Play Lab Game:
               name: Làm game trong Play Lab
@@ -4173,14 +4177,11 @@ vi:
             Introduction:
               name: Giới thiệu về Bài tập trực tuyến
               description_student: Bài học này sẽ giới thiệu ngắn gọn về một số điều thú vị mà bạn sẽ học được trong khóa học này!
-              description_teacher: Trong bài học này, học sinh sẽ được giới thiệu về trình tự, vòng lặp và vòng lặp lồng nhau để chuẩn bị cho các khái niệm phức tạp hơn trong phần sau của khóa học. Bài học “chuẩn bị” này sẽ cân bằng lợi thế giữa các chuyên gia và những người mới bắt đầu trong lớp của bạn.
+              description_teacher: 'Trong bài học này, học sinh sẽ được giới thiệu về trình tự, vòng lặp và vòng lặp lồng nhau để chuẩn bị cho các khái niệm phức tạp hơn trong phần sau của khóa học. Bài học “chuẩn bị” này sẽ cân bằng lợi thế giữa các chuyên gia và những người mới bắt đầu trong lớp của bạn.'
             The Power of Words:
               name: 'Quyền công dân kỹ thuật số: Sức mạnh của ngôn từ'
               description_student: Bắt nạt chưa bao giờ là đúng. Bài học này sẽ dạy bạn về những điều nên và không nên phát ngôn trực tuyến.
-              description_teacher: |-
-                Học sinh cho rằng khi xem các trang web yêu thích, các em có thể gặp phải tin nhắn từ những đứa trẻ khác khiến các em cảm thấy tức giận, tổn thương, buồn bã hoặc sợ hãi. Các em khám phá các cách để xử lý nạn bắt nạt trực tuyến và cách ứng phó khi đối mặt với ngôn ngữ gây khó chịu trên mạng.
-
-                Học sinh thảo luận về tất cả các cách sử dụng công nghệ để giao tiếp và khám phá những điểm giống và khác nhau giữa giao tiếp trực tiếp và trực tuyến. Sau đó, học sinh suy nghĩ về cách đối phó với nạn bắt nạt trực tuyến.
+              description_teacher: "Học sinh cho rằng khi xem các trang web yêu thích, các em có thể gặp phải tin nhắn từ những đứa trẻ khác khiến các em cảm thấy tức giận, tổn thương, buồn bã hoặc sợ hãi. Các em khám phá các cách để xử lý nạn bắt nạt trực tuyến và cách ứng phó khi đối mặt với ngôn ngữ gây khó chịu trên mạng.\n\nHọc sinh thảo luận về tất cả các cách sử dụng công nghệ để giao tiếp và khám phá những điểm giống và khác nhau giữa giao tiếp trực tiếp và trực tuyến. Sau đó, học sinh suy nghĩ về cách đối phó với nạn bắt nạt trực tuyến."
             Ice Age Play Lab:
               name: Sự kiện trong Kỷ băng hà
               description_student: Hãy nghĩ về tựa video game yêu thích. Bạn đã bao giờ tự hỏi nó được tạo ra như thế nào chưa? Trong những bài tập này, bạn sẽ phát triển một video game của riêng mình với những người bạn từ Kỷ băng hà!
@@ -4200,7 +4201,7 @@ vi:
             For Loop Fun:
               name: 'Vòng lặp for: Vui cùng vòng lặp for'
               description_student: Bạn sẽ có vô số điều thú vị khi học về vòng lặp `for`!
-              description_teacher: Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại nhiều việc, nhưng bây giờ chúng ta sẽ học cách sử dụng các vòng lặp có các cấu trúc bổ sung được tích hợp sẵn. Những cấu trúc mới này sẽ cho phép học sinh tạo ra mã lệnh hiệu quả hơn và linh hoạt hơn.
+              description_teacher: 'Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại nhiều việc, nhưng bây giờ chúng ta sẽ học cách sử dụng các vòng lặp có các cấu trúc bổ sung được tích hợp sẵn. Những cấu trúc mới này sẽ cho phép học sinh tạo ra mã lệnh hiệu quả hơn và linh hoạt hơn.'
             For Loops in Bee:
               name: Dành cho vòng lặp trong game Chú ong
               description_student: Vo ve. Trong những bài tập này, bạn sẽ hướng dẫn một chú ong lấy mật hoa và mật ong bằng cách sử dụng vòng lặp `for`!
@@ -4216,7 +4217,7 @@ vi:
             Conditionals and Functions in Bee:
               name: Lệnh điều kiện và hàm trong game Chú ong
               description_student: Chú ong cần sự giúp đỡ của bạn một lần nữa! Ở đây bạn sẽ sử dụng các hàm để lấy mật hoa và làm mật ong!
-              description_teacher: Bài học này hướng dẫn học sinh cách tạo các hàm đơn giản bằng cách sử dụng trình soạn thảo hàm “hộp thoại” phức tạp, chuẩn bị cho các em cách kết hợp các thông số trong các bài học sau này.
+              description_teacher: 'Bài học này hướng dẫn học sinh cách tạo các hàm đơn giản bằng cách sử dụng trình soạn thảo hàm “hộp thoại” phức tạp, chuẩn bị cho các em cách kết hợp các thông số trong các bài học sau này.'
             Functions with Parameters in Artist:
               name: Hàm và Tham số trong Artist
               description_student: Hãy chuẩn bị các kỹ năng lập trình của bạn. Trong những bài tập này, bạn sẽ tạo ra những bức tranh ấn tượng trong Artist bằng cách sử dụng các hàm có thông số.
@@ -4228,10 +4229,7 @@ vi:
             Explore Project Ideas:
               name: Khám phá ý tưởng dự án
               description_student: Đã đến lúc khơi nguồn cảm hứng rồi! Những bài tập này sẽ cho bạn thấy một số game và hình ảnh minh họa tạo sẵn để giúp phát triển kế hoạch cho dự án LỚN của bạn.
-              description_teacher: |-
-                Năm bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với đồng nghiệp và những người thân yêu. Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.
-
-                Trong giai đoạn khám phá, học sinh sẽ có thể xem ví dụ về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách thực hiện trong các dự án của chính mình. Sau đó, họ sẽ có không gian để tự tạo dự án của riêng mình trong Artist hoặc Play Lab (đây có thể là giai đoạn dài nhất của dự án). Sau đó, học sinh sẽ chỉnh sửa dự án của mình sau khi thử nghiệm và suy xét thêm. Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè.
+              description_teacher: "Năm bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với đồng nghiệp và những người thân yêu. Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\n\nTrong giai đoạn khám phá, học sinh sẽ có thể xem ví dụ về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách thực hiện trong các dự án của chính mình. Sau đó, họ sẽ có không gian để tự tạo dự án của riêng mình trong Artist hoặc Play Lab (đây có thể là giai đoạn dài nhất của dự án). Sau đó, học sinh sẽ chỉnh sửa dự án của mình sau khi thử nghiệm và suy xét thêm. Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè."
             The Design Process:
               name: Quy trình thiết kế
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Tại đây, bạn sẽ tìm hiểu về quy trình thiết kế mà bạn sẽ sử dụng để xây dựng tác phẩm của riêng mình.
@@ -5345,7 +5343,7 @@ vi:
             For Loops:
               name: Cho vòng lặp
         csd3-1819draft:
-          description_short: Lập trình
+          description_short: "Lập trình"
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
@@ -5381,7 +5379,7 @@ vi:
             new stage:
               name: giai đoạn mới
         csd3-2018:
-          description_short: Lập trình
+          description_short: "Lập trình"
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
@@ -5438,7 +5436,7 @@ vi:
             Styling Text with CSS:
               name: Tạo phong cách cho văn bản với CSS
               description_student: Bài học này giới thiệu CSS là một cách để tạo phong cách cho các thành phần trên trang web. Các lớp học tìm hiểu bộ quy tắc cú pháp cơ bản cho CSS và sau đó khám phá các tính chất tác động đến các thành phần văn bản HTML.  Cuối cùng, tất cả mọi người áp dụng phong cách văn bản cho trang web cá nhân của họ.
-              description_teacher: 'Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \r \r '
+              description_teacher: "Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \\r \\r \n"
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính phong cách CSS, thời gian này tập trung nhiều vào các thành phần phi văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người áp dụng kiến thức mới này cho các trang web cá nhân của họ.
@@ -5452,13 +5450,10 @@ vi:
             'Debugging: Unspotted Bugs':
               description_teacher: 'Bài học này sẽ hướng dẫn học sinh các bước sửa lỗi. Học sinh sẽ học chân ngôn: “Điều gì đã xảy ra? Điều gì lẽ ra nên xảy ra? Bạn rút ra điều gì từ đó?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              description_teacher: |-
-                Khi học sinh gặp khó khăn trong quá trình trả lời câu hỏi hoặc làm dự án, các em rất dễ nản lòng và bỏ cuộc. Bài học này sẽ giới thiệu cho học sinh ý tưởng rằng bực bội có thể là một phần quan trọng của việc học. Ở đây, sự bực bội được thể hiện như một bước trong quá trình sáng tạo, chứ không phải là một dấu hiệu của sự thất bại.\r
-                \r
-                Bài tập này có thể thực hiện trong một hoặc hai buổi học. Nếu bạn có nhiều thời gian hơn, cứ thử bắt đầu giai đoạn xây dựng và chỉnh sửa của hoạt động Đường trượt bi.
+              description_teacher: "Khi học sinh gặp khó khăn trong quá trình trả lời câu hỏi hoặc làm dự án, các em rất dễ nản lòng và bỏ cuộc. Bài học này sẽ giới thiệu cho học sinh ý tưởng rằng bực bội có thể là một phần quan trọng của việc học. Ở đây, sự bực bội được thể hiện như một bước trong quá trình sáng tạo, chứ không phải là một dấu hiệu của sự thất bại.\\r\n\\r\nBài tập này có thể thực hiện trong một hoặc hai buổi học. Nếu bạn có nhiều thời gian hơn, cứ thử bắt đầu giai đoạn xây dựng và chỉnh sửa của hoạt động Đường trượt bi."
             'Real-life Algorithms: Plant a Seed':
               name: Trồng hạt giống
-              description_teacher: Trong bài học này, học sinh sẽ liên hệ khái niệm thuật toán với các hoạt động thực tiễn hàng ngày bằng cách gieo một hạt giống thật. Mục tiêu ở đây là bắt đầu xây dựng các kỹ năng để chuyển các tình huống trong thế giới thực sang các tình huống trực tuyến và ngược lại.\r
+              description_teacher: "Trong bài học này, học sinh sẽ liên hệ khái niệm thuật toán với các hoạt động thực tiễn hàng ngày bằng cách gieo một hạt giống thật. Mục tiêu ở đây là bắt đầu xây dựng các kỹ năng để chuyển các tình huống trong thế giới thực sang các tình huống trực tuyến và ngược lại.\\r\n"
             Learn to Drag and Drop:
               name: Học cách kéo và thả
               description_teacher: Bài học này sẽ cung cấp cho học sinh ý tưởng về những hoạt động sẽ diễn ra khi các em đến phòng máy tính. Bài học bắt đầu với một cuộc thảo luận ngắn giới thiệu về cách hành xử trong phòng máy tính, sau đó sẽ tiếp tục sử dụng máy tính để hoàn thành các bài tập trực tuyến.
@@ -5616,7 +5611,7 @@ vi:
             Learn to Drag and Drop:
               name: Học cách kéo và thả
             Your Digital Footprint:
-              name: Dấu chân kỹ thuật số
+              name: Dấu chân kỹ thuật số 
             'Programming: My Robotic Friends':
               name: Những người bạn robot của tôi – nâng cao
             Programming in Maze:
@@ -5807,9 +5802,7 @@ vi:
               name: Hàm với game Người thu hoạch
             Determine the Concept:
               name: Xác định khái niệm
-              description_student: |-
-                Bí mật không thể dễ dàng bật mí!
-                Bài học này có thể sử dụng bất kỳ kỹ năng nào bạn đã học được cho đến thời điểm hiện tại.
+              description_student: "Bí mật không thể dễ dàng bật mí!\nBài học này có thể sử dụng bất kỳ kỹ năng nào bạn đã học được cho đến thời điểm hiện tại."
               description_teacher: Bài học này tập hợp các khái niệm từ các bài học trước và cho học sinh cơ hội tư duy phản biện về cách giải quyết từng vấn đề, nhưng không cho học sinh biết khái niệm nào nên áp dụng. Học sinh sẽ ôn lại các thuật toán cơ bản, sửa lỗi, vòng lặp `lặp lại, lệnh điều kiện, vòng lặp `while` và các hàm.
             Build a Play Lab Game:
               name: Làm game trong Play Lab
@@ -5818,10 +5811,7 @@ vi:
             Explore Project Ideas:
               name: Khám phá ý tưởng dự án
               description_student: Sau đây là một số trò chơi và tranh vẽ. Hãy chơi từng trò chơi để lấy ý tưởng cho các dự án của riêng bạn!
-              description_teacher: |-
-                Bốn bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.
-
-                Trong giai đoạn khám phá, học sinh sẽ có thể xem các ví dụ được tạo sẵn về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án trong Artist hoặc Play Lab. (Đây có thể là giai đoạn dài nhất của dự án.) Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè.
+              description_teacher: "Bốn bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\n\nTrong giai đoạn khám phá, học sinh sẽ có thể xem các ví dụ được tạo sẵn về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án trong Artist hoặc Play Lab. (Đây có thể là giai đoạn dài nhất của dự án.) Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè."
             The Design Process:
               name: Quy trình thiết kế
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Tại đây, bạn sẽ tìm hiểu về quy trình thiết kế mà bạn sẽ sử dụng để xây dựng tác phẩm của riêng mình.
@@ -5882,14 +5872,11 @@ vi:
             Introduction:
               name: Giới thiệu
               description_student: Bài học này sẽ giới thiệu ngắn gọn về một số điều thú vị mà bạn sẽ học được trong khóa học này!
-              description_teacher: Trong bài học này, học sinh sẽ được giới thiệu về trình tự, vòng lặp và vòng lặp lồng nhau để chuẩn bị cho các khái niệm phức tạp hơn trong phần sau của khóa học. Bài học “chuẩn bị” này sẽ cân bằng lợi thế giữa các chuyên gia và những người mới bắt đầu trong lớp của bạn.
+              description_teacher: 'Trong bài học này, học sinh sẽ được giới thiệu về trình tự, vòng lặp và vòng lặp lồng nhau để chuẩn bị cho các khái niệm phức tạp hơn trong phần sau của khóa học. Bài học “chuẩn bị” này sẽ cân bằng lợi thế giữa các chuyên gia và những người mới bắt đầu trong lớp của bạn.'
             The Power of Words:
               name: Sức mạnh của ngôn từ
               description_student: Bắt nạt chưa bao giờ là đúng. Bài học này sẽ dạy bạn về những điều nên và không nên phát ngôn trực tuyến.
-              description_teacher: |-
-                Học sinh cho rằng khi xem các trang web yêu thích, các em có thể gặp phải tin nhắn từ những đứa trẻ khác khiến các em cảm thấy tức giận, tổn thương, buồn bã hoặc sợ hãi. Các em khám phá các cách để xử lý nạn bắt nạt trực tuyến và cách ứng phó khi đối mặt với ngôn ngữ gây khó chịu trên mạng.
-
-                Học sinh thảo luận về tất cả các cách sử dụng công nghệ để giao tiếp và khám phá những điểm giống và khác nhau giữa giao tiếp trực tiếp và trực tuyến. Sau đó, học sinh suy nghĩ về cách đối phó với nạn bắt nạt trực tuyến.
+              description_teacher: "Học sinh cho rằng khi xem các trang web yêu thích, các em có thể gặp phải tin nhắn từ những đứa trẻ khác khiến các em cảm thấy tức giận, tổn thương, buồn bã hoặc sợ hãi. Các em khám phá các cách để xử lý nạn bắt nạt trực tuyến và cách ứng phó khi đối mặt với ngôn ngữ gây khó chịu trên mạng.\n\nHọc sinh thảo luận về tất cả các cách sử dụng công nghệ để giao tiếp và khám phá những điểm giống và khác nhau giữa giao tiếp trực tiếp và trực tuyến. Sau đó, học sinh suy nghĩ về cách đối phó với nạn bắt nạt trực tuyến."
             Ice Age Play Lab:
               name: Kho dữ liệu trò chơi Kỷ băng hà
               description_student: Hãy nghĩ về tựa video game yêu thích. Bạn đã bao giờ tự hỏi nó được tạo ra như thế nào chưa? Trong những bài tập này, bạn sẽ phát triển một video game của riêng mình với những người bạn từ Kỷ băng hà!
@@ -5913,7 +5900,7 @@ vi:
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
               description_student: Bạn sẽ có vô số điều thú vị khi học về vòng lặp `for`!
-              description_teacher: Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại nhiều việc, nhưng bây giờ chúng ta sẽ học cách sử dụng các vòng lặp có các cấu trúc bổ sung được tích hợp sẵn. Những cấu trúc mới này sẽ cho phép học sinh tạo ra mã lệnh hiệu quả hơn và linh hoạt hơn.
+              description_teacher: 'Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại nhiều việc, nhưng bây giờ chúng ta sẽ học cách sử dụng các vòng lặp có các cấu trúc bổ sung được tích hợp sẵn. Những cấu trúc mới này sẽ cho phép học sinh tạo ra mã lệnh hiệu quả hơn và linh hoạt hơn.'
             For Loops in Bee:
               description_student: Vo ve. Trong những bài tập này, bạn sẽ hướng dẫn một chú ong lấy mật hoa và mật ong bằng cách sử dụng vòng lặp `for`!
               description_teacher: Với game Chú ong, bài học này tập trung vào các vòng lặp for và sử dụng một biến tăng dần để giải các bài tập phức tạp hơn. Học sinh sẽ bắt đầu bằng cách ôn lại vòng lặp từ các bài học trước, sau đó chuyển sang sử dụng vòng lặp for để giải quyết các bài toán phức tạp một cách hiệu quả hơn.
@@ -5938,10 +5925,7 @@ vi:
             Explore Project Ideas:
               name: Khám phá ý tưởng dự án
               description_student: Đã đến lúc khơi nguồn cảm hứng rồi! Những bài tập này sẽ cho bạn thấy một số game và hình ảnh minh họa tạo sẵn để giúp phát triển kế hoạch cho dự án LỚN của bạn.
-              description_teacher: |-
-                Năm bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với đồng nghiệp và những người thân yêu. Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.
-
-                Trong giai đoạn khám phá, học sinh sẽ có thể xem ví dụ về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách thực hiện trong các dự án của chính mình. Sau đó, họ sẽ có không gian để tự tạo dự án của riêng mình trong Artist hoặc Play Lab (đây có thể là giai đoạn dài nhất của dự án). Sau đó, học sinh sẽ chỉnh sửa dự án của mình sau khi thử nghiệm và suy xét thêm. Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè.
+              description_teacher: "Năm bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với đồng nghiệp và những người thân yêu. Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\n\nTrong giai đoạn khám phá, học sinh sẽ có thể xem ví dụ về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách thực hiện trong các dự án của chính mình. Sau đó, họ sẽ có không gian để tự tạo dự án của riêng mình trong Artist hoặc Play Lab (đây có thể là giai đoạn dài nhất của dự án). Sau đó, học sinh sẽ chỉnh sửa dự án của mình sau khi thử nghiệm và suy xét thêm. Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè."
             The Design Process:
               name: Quy trình thiết kế
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Tại đây, bạn sẽ tìm hiểu về quy trình thiết kế mà bạn sẽ sử dụng để xây dựng tác phẩm của riêng mình.
@@ -6189,11 +6173,11 @@ vi:
             User Input and Strings:
               name: Đầu vào và chuỗi người dùng
             '"If" Statements Unplugged':
-              name: Câu lệnh "If"
+              name: 'Câu lệnh "If"'
             Boolean Expressions and "If" Statements:
               name: Biểu thức boolean và câu lệnh "If"
             '"if-else-if" and Conditional Logic':
-              name: If-else-if và logic có điều kiện
+              name: 'If-else-if và logic có điều kiện'
             'Building an App: Color Sleuth':
               name: 'Xây dựng một ứng dụng: màu Sleuth'
             Unit 5 Assessment 2:
@@ -6516,7 +6500,7 @@ vi:
             Sequencing with Scrat:
               name: Học về chuỗi tuần tự cùng sóc Scrat
             Your Digital Footprint:
-              name: Dấu chân kỹ thuật số
+              name: Dấu chân kỹ thuật số 
             Programming in Ice Age:
               name: Lập trình với Scrat
             Programming with Rey and BB-8:
@@ -6559,7 +6543,7 @@ vi:
             Artist:
               name: Họa sĩ
         aquatic:
-          title: Minecraft Chuyến thám hiểm đại dương
+          title: 'Minecraft Chuyến thám hiểm đại dương'
           description_short: Sử dụng khả năng sáng tạo và giải quyết vấn đề của bạn để khám phá và xây dựng thế giới dưới nước bằng mã!
           lessons:
             Aquatic:
@@ -6630,12 +6614,7 @@ vi:
             The Power of Words:
               name: Sức mạnh của ngôn từ
               description_student: Bắt nạt chưa bao giờ là đúng. Bài học này sẽ dạy bạn về những điều nên và không nên phát ngôn trực tuyến.
-              description_teacher: |-
-                Học sinh cho rằng khi xem các trang web yêu thích, các em có thể gặp phải tin nhắn từ những đứa trẻ khác khiến các em cảm thấy tức giận, tổn thương, buồn bã hoặc sợ hãi. Các em khám phá các cách để xử lý nạn bắt nạt trực tuyến và cách ứng phó khi đối mặt với ngôn ngữ gây khó chịu trên mạng.\r
-                \r
-                Học sinh thảo luận về tất cả các cách sử dụng công nghệ để giao tiếp và khám phá những điểm giống và khác nhau giữa giao tiếp trực tiếp và trực tuyến. Sau đó, học sinh suy nghĩ về cách đối phó với nạn bắt nạt trực tuyến.\r
-                \r
-                Để biết thêm thông tin, vui lòng truy cập: [r common-sense-media-power-of-words]
+              description_teacher: "Học sinh cho rằng khi xem các trang web yêu thích, các em có thể gặp phải tin nhắn từ những đứa trẻ khác khiến các em cảm thấy tức giận, tổn thương, buồn bã hoặc sợ hãi. Các em khám phá các cách để xử lý nạn bắt nạt trực tuyến và cách ứng phó khi đối mặt với ngôn ngữ gây khó chịu trên mạng.\\r\n\\r\nHọc sinh thảo luận về tất cả các cách sử dụng công nghệ để giao tiếp và khám phá những điểm giống và khác nhau giữa giao tiếp trực tiếp và trực tuyến. Sau đó, học sinh suy nghĩ về cách đối phó với nạn bắt nạt trực tuyến.\\r\n\\r\nĐể biết thêm thông tin, vui lòng truy cập: [r common-sense-media-power-of-words]"
             Envelope Variables:
               name: Các biến phong bì
               description_student: 'Phong bì và biến có điểm chung: cả hai đều có thể đựng những thứ có giá trị. Tại đây bạn sẽ tìm hiểu định nghĩa về biến và những điều tuyệt vời mà biến có thể thực hiện.'
@@ -6646,7 +6625,7 @@ vi:
               description_teacher: Trong bài học này, học sinh sẽ khám phá việc tạo ra các thiết kế lặp lại bằng cách sử dụng biến trong môi trường Artist. Học sinh sẽ học cách sử dụng biến để khiến mã lệnh dễ viết và dễ đọc hơn, ngay cả khi các giá trị không thay đổi trong quá trình chạy.
             Variables that Change in Bee:
               description_student: Chú ong này rất thích các biến!
-              description_teacher: Bài học này sẽ giúp minh họa cách gia tăng sức mạnh cho chương trình với các biến bằng cách cho phép các giá trị thay đổi trong quá trình chạy mã lệnh.
+              description_teacher: 'Bài học này sẽ giúp minh họa cách gia tăng sức mạnh cho chương trình với các biến bằng cách cho phép các giá trị thay đổi trong quá trình chạy mã lệnh.'
             Variables that Change in Artist:
               name: Thay đổi biến với Artist
               description_student: Trong bài học này, bạn sẽ tạo ra các bản vẽ bằng cách sử dụng biến thay đổi khi chương trình chạy.
@@ -6654,7 +6633,7 @@ vi:
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
               description_student: Bạn sẽ có vô số điều thú vị khi học về vòng lặp `for`!
-              description_teacher: Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại nhiều việc, nhưng bây giờ chúng ta sẽ học cách sử dụng các vòng lặp có các cấu trúc bổ sung được tích hợp sẵn. Những cấu trúc mới này sẽ cho phép học sinh tạo ra mã lệnh hiệu quả hơn và linh hoạt hơn.
+              description_teacher: 'Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại nhiều việc, nhưng bây giờ chúng ta sẽ học cách sử dụng các vòng lặp có các cấu trúc bổ sung được tích hợp sẵn. Những cấu trúc mới này sẽ cho phép học sinh tạo ra mã lệnh hiệu quả hơn và linh hoạt hơn.'
             For Loops in Bee:
               description_student: Vo ve. Trong những bài tập này, bạn sẽ hướng dẫn một chú ong lấy mật hoa và mật ong bằng cách sử dụng vòng lặp `for`!
               description_teacher: Với game Chú ong, bài học này tập trung vào các vòng lặp `for` và sử dụng một biến tăng dần để giải các bài tập phức tạp hơn. Học sinh sẽ bắt đầu bằng cách ôn lại vòng lặp từ các bài học trước, sau đó chuyển sang bài giới thiệu về vòng lặp for để giải quyết các bài toán phức tạp một cách hiệu quả hơn.
@@ -6671,10 +6650,7 @@ vi:
             Explore Project Ideas:
               name: Khám phá ý tưởng dự án
               description_student: Đã đến lúc khơi nguồn cảm hứng rồi! Những bài tập này sẽ cho bạn thấy một số game và hình ảnh minh họa tạo sẵn để giúp phát triển kế hoạch cho dự án LỚN của bạn.
-              description_teacher: |-
-                Năm bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với đồng nghiệp và những người thân yêu. Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.
-
-                Trong giai đoạn khám phá, học sinh sẽ có thể xem ví dụ về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách thực hiện trong các dự án của chính mình. Sau đó, họ sẽ có không gian để tự tạo dự án của riêng mình trong Artist hoặc Play Lab (đây có thể là giai đoạn dài nhất của dự án). Sau đó, học sinh sẽ chỉnh sửa dự án của mình sau khi thử nghiệm và suy xét thêm. Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè.
+              description_teacher: "Năm bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với đồng nghiệp và những người thân yêu. Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\n\nTrong giai đoạn khám phá, học sinh sẽ có thể xem ví dụ về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách thực hiện trong các dự án của chính mình. Sau đó, họ sẽ có không gian để tự tạo dự án của riêng mình trong Artist hoặc Play Lab (đây có thể là giai đoạn dài nhất của dự án). Sau đó, học sinh sẽ chỉnh sửa dự án của mình sau khi thử nghiệm và suy xét thêm. Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè."
             The Design Process:
               name: Quy trình thiết kế
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Tại đây, bạn sẽ tìm hiểu về quy trình thiết kế mà bạn sẽ sử dụng để xây dựng tác phẩm của riêng mình.
@@ -6702,7 +6678,7 @@ vi:
             Events with Sprite Lab:
               name: Bữa tiệc khiêu vũ của người ngoài hành tinh với Sprite Lab
               description_student: Hãy tạo một dự án tương tác có thể chia sẻ với các bạn cùng lớp.
-              description_teacher: Bài học này sử dụng Sprite Lab, một nền tảng để học sinh có thể làm game và hoạt hình tương tác của riêng mình. Ngoài các hành vi, hôm nay học sinh sẽ kết hợp dữ liệu đầu vào của người dùng dưới dạng sự kiện để tạo ra một “bữa tiệc khiêu vũ của người ngoài hành tinh”.
+              description_teacher: 'Bài học này sử dụng Sprite Lab, một nền tảng để học sinh có thể làm game và hoạt hình tương tác của riêng mình. Ngoài các hành vi, hôm nay học sinh sẽ kết hợp dữ liệu đầu vào của người dùng dưới dạng sự kiện để tạo ra một “bữa tiệc khiêu vũ của người ngoài hành tinh”.'
             Loops with the Artist:
               name: Vẽ bằng vòng lặp
               description_student: Trong bài học này, các vòng lặp giúp bạn dễ dàng tạo ra những bức ảnh tuyệt tác với Artist!
@@ -6722,10 +6698,7 @@ vi:
             End of Course Project:
               name: Dự án tổng kết khóa học
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!
-              description_teacher: |-
-                Năm bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với đồng nghiệp và những người thân yêu. Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\r
-                \r
-                Trong giai đoạn “Khám phá”, học sinh sẽ có thể thử dùng các chương trình Artist và Sprite Lab xây dựng sẵn để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án của riêng mình trong Artist hoặc Sprite Lab hoặc bất kỳ giao diện nào khác mà bạn có thể cung cấp. (Đây có thể là giai đoạn dài nhất của dự án.) Sau đó, học sinh sẽ chỉnh sửa mã lệnh của mình sau khi thử nghiệm và cho các bạn xem. Cuối cùng, học sinh có thể trình bày tác phẩm hoàn chỉnh của mình với các bạn cùng lớp.
+              description_teacher: "Năm bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với đồng nghiệp và những người thân yêu. Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\\r\n\\r\nTrong giai đoạn “Khám phá”, học sinh sẽ có thể thử dùng các chương trình Artist và Sprite Lab xây dựng sẵn để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án của riêng mình trong Artist hoặc Sprite Lab hoặc bất kỳ giao diện nào khác mà bạn có thể cung cấp. (Đây có thể là giai đoạn dài nhất của dự án.) Sau đó, học sinh sẽ chỉnh sửa mã lệnh của mình sau khi thử nghiệm và cho các bạn xem. Cuối cùng, học sinh có thể trình bày tác phẩm hoàn chỉnh của mình với các bạn cùng lớp."
             Internet:
               name: Internet
               description_student: Bạn đã bao giờ tự hỏi thông tin di chuyển trên Internet như thế nào chưa? Không phải nhờ phép thuật đâu nhé! Bài học này sẽ dạy bạn những kiến thức cơ bản về cách thức hoạt động của Internet.
@@ -6735,7 +6708,7 @@ vi:
               description_student: Bài học này sẽ hướng dẫn bạn về nguồn cung ứng cộng đồng, quy trình xây dựng một dự án với một nhóm.
               description_teacher: Trong ngành khoa học máy tính, chúng ta phải đối mặt với một số vấn đề lớn và khó khăn. Hầu như không có cá nhân nào có thể tự mình đương đầu với những thử thách như tìm số nguyên tố lớn hay sắp xếp thứ tự DNA. Việc góp thêm công sức từ những người khác sẽ khiến những nhiệm vụ này trở nên khả thi. Bài học này sẽ cho học sinh của bạn thấy lợi ích của phương pháp làm việc nhóm trong ngành khoa học máy tính.
             Digital Sharing:
-              description_student: Trong bài học này, bạn sẽ tìm hiểu về những thách thức và lợi ích của quyền sở hữu và bản quyền.
+              description_student: 'Trong bài học này, bạn sẽ tìm hiểu về những thách thức và lợi ích của quyền sở hữu và bản quyền.'
             Running Simulations:
               name: Chạy trình mô phỏng
             Simulating Experiments:
@@ -6772,7 +6745,7 @@ vi:
             'Algorithms: Graph Paper Programming':
               name: lập trình đồ thị trên giấy
               description_student: Trong bài học này, bạn sẽ lập trình cho bạn cùng lớp của mình vẽ những bức tranh!
-              description_teacher: Bằng cách “lập trình” cho nhau để vẽ tranh, học sinh sẽ có cơ hội trải nghiệm một số khái niệm căn bản về lập trình một cách thú vị và dễ hiểu. Lớp học sẽ bắt đầu bằng cách cho học sinh sử dụng các biểu tượng để hướng dẫn nhau tô màu các ô vuông trên giấy kẻ ô ly và cố gắng mô phỏng một bức tranh hiện có. Nếu còn thời gian, bài học có thể kết thúc bằng những bức tranh mà học sinh tự tạo.
+              description_teacher: 'Bằng cách “lập trình” cho nhau để vẽ tranh, học sinh sẽ có cơ hội trải nghiệm một số khái niệm căn bản về lập trình một cách thú vị và dễ hiểu. Lớp học sẽ bắt đầu bằng cách cho học sinh sử dụng các biểu tượng để hướng dẫn nhau tô màu các ô vuông trên giấy kẻ ô ly và cố gắng mô phỏng một bức tranh hiện có. Nếu còn thời gian, bài học có thể kết thúc bằng những bức tranh mà học sinh tự tạo.'
             Introduction to Online Puzzles:
               name: Giới thiệu về Bài tập trực tuyến
               description_student: Bài học này sẽ cho bạn thực hành các kỹ năng bạn sẽ cần cho khóa học này.
@@ -6807,20 +6780,15 @@ vi:
             While Loops in Farmer:
               name: Vòng lặp while trong game Bác nông dân
               description_student: 'Vòng lặp rất hữu ích trong quá trình viết mã lệnh. Bài học này sẽ dạy bạn về một loại vòng lặp mới: vòng lặp while!'
-              description_teacher: |-
-                Vào thời điểm học sinh tiếp cận bài học này, các em đã được thực hành nhiều cách sử dụng các vòng lặp `lặp lại`, và bây giờ là lúc để kết hợp mọi kiến thức đã học.\r
-                \r
-                _Vòng lặp while_ là các vòng lặp tiếp tục lặp lại các lệnh khi đáp ứng điều kiện. Vòng lặp `while` được sử dụng khi người lập trình không biết chính xác số lần mà lệnh đó cần được lặp lại, nhưng biết điều kiện cần đáp ứng để vòng lặp tiếp tục lặp lại. Ví dụ: học sinh sẽ tiến hành lấp lỗ và đào đất trong game Bác nông dân. Các em không biết kích thước của lỗ hoặc độ cao của đống đất, nhưng học sinh sẽ biết các em cần phải tiếp tục lấp lỗ và đào đất miễn là mặt đất không bằng phẳng.
+              description_teacher: "Vào thời điểm học sinh tiếp cận bài học này, các em đã được thực hành nhiều cách sử dụng các vòng lặp `lặp lại`, và bây giờ là lúc để kết hợp mọi kiến thức đã học.\\r\n\\r\n_Vòng lặp while_ là các vòng lặp tiếp tục lặp lại các lệnh khi đáp ứng điều kiện. Vòng lặp `while` được sử dụng khi người lập trình không biết chính xác số lần mà lệnh đó cần được lặp lại, nhưng biết điều kiện cần đáp ứng để vòng lặp tiếp tục lặp lại. Ví dụ: học sinh sẽ tiến hành lấp lỗ và đào đất trong game Bác nông dân. Các em không biết kích thước của lỗ hoặc độ cao của đống đất, nhưng học sinh sẽ biết các em cần phải tiếp tục lấp lỗ và đào đất miễn là mặt đất không bằng phẳng."
             Until Loops in Maze:
               description_student: Bạn có thể làm những điều vô cùng thú vị khi sử dụng vòng lặp `đến khi` đấy!
               description_teacher: Trong bài học này, học sinh sẽ tìm hiểu về vòng lặp `đến khi`. Học sinh sẽ xây dựng các chương trình có nhân vật chính lặp lại các hành động `đến khi` đạt được điểm dừng mong muốn.
             Conditionals with Cards:
               description_student: Đã đến lúc chơi trò chơi mà bạn chỉ giành được điểm khi đáp ứng một số điều kiện nhất định!
-              description_teacher: |-
-                Bài học này trình bày cách sử dụng các lệnh điều kiện để điều chỉnh chương trình sao cho phù hợp với thông tin cụ thể. Không phải lúc nào chúng ta cũng có tất cả thông tin cần thiết khi viết một chương trình. Đôi khi bạn sẽ muốn tùy cơ ứng biến trong những tình huống khác nhau, ngay cả khi bạn không biết tình huống nào sẽ xuất hiện khi chạy mã lệnh. Đó là khi lệnh điều kiện phát huy tác dụng. Lệnh điều kiện cho phép máy tính đưa ra quyết định dựa trên thông tin đúng bất cứ khi nào bạn chạy mã lệnh.\r
-                \r
+              description_teacher: "Bài học này trình bày cách sử dụng các lệnh điều kiện để điều chỉnh chương trình sao cho phù hợp với thông tin cụ thể. Không phải lúc nào chúng ta cũng có tất cả thông tin cần thiết khi viết một chương trình. Đôi khi bạn sẽ muốn tùy cơ ứng biến trong những tình huống khác nhau, ngay cả khi bạn không biết tình huống nào sẽ xuất hiện khi chạy mã lệnh. Đó là khi lệnh điều kiện phát huy tác dụng. Lệnh điều kiện cho phép máy tính đưa ra quyết định dựa trên thông tin đúng bất cứ khi nào bạn chạy mã lệnh.\\r\n\\r\n"
             Conditionals in Bee:
-              description_student: Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa.
+              description_student: 'Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa.'
               description_teacher: Cho đến thời điểm này, học sinh đã viết mã lệnh thực thi giống hệt nhau mỗi khi chạy – an toàn nhưng không thực sự linh hoạt. Trong bài học này, lớp của bạn sẽ bắt đầu viết mã lệnh với lệnh điều kiện, cho phép các em viết mã lệnh có chức năng khác nhau tùy thuộc vào các điều kiện cụ thể mà chương trình gặp phải.
             Conditionals & Loops in Harvester:
               description_student: Việc sử dụng từng lệnh điều kiện không phải lúc nào cũng rõ ràng. Bài học này sẽ giúp bạn thực hành quyết định xem mình cần làm gì.
@@ -6828,10 +6796,7 @@ vi:
             Digital Citizenship:
               name: Công dân số
               description_student: Một số thông tin không an toàn để chia sẻ trực tuyến. Bài học này sẽ giúp bạn tìm hiểu sự khác biệt giữa thông tin an toàn và thông tin riêng tư.
-              description_teacher: |-
-                Với sự hợp tác của Common Sense Education, bài học này giúp học sinh học cách tư duy phản biện về thông tin người dùng mà một số trang web yêu cầu hoặc bắt buộc. Học sinh sẽ tìm hiểu sự khác biệt giữa thông tin riêng tư và thông tin cá nhân, phân biệt những thông tin nào là an toàn và không an toàn để chia sẻ trực tuyến.\r
-                \r
-                Học sinh cũng sẽ khám phá ý nghĩa của việc hành xử trách nhiệm và tôn trọng cộng đồng ngoại tuyến và trực tuyến của các em như một phần trong quá trình học cách trở thành những công dân kỹ thuật số gương mẫu.
+              description_teacher: "Với sự hợp tác của Common Sense Education, bài học này giúp học sinh học cách tư duy phản biện về thông tin người dùng mà một số trang web yêu cầu hoặc bắt buộc. Học sinh sẽ tìm hiểu sự khác biệt giữa thông tin riêng tư và thông tin cá nhân, phân biệt những thông tin nào là an toàn và không an toàn để chia sẻ trực tuyến.\\r\n\\r\nHọc sinh cũng sẽ khám phá ý nghĩa của việc hành xử trách nhiệm và tôn trọng cộng đồng ngoại tuyến và trực tuyến của các em như một phần trong quá trình học cách trở thành những công dân kỹ thuật số gương mẫu."
             Build a Play Lab Game:
               name: Làm game trong Play Lab
             'Unplugged: Binary':
@@ -6894,10 +6859,7 @@ vi:
               description_teacher: Bài học này giới thiệu cho học sinh các vòng lặp `while` và câu lệnh`if/else`. _Vòng lặp while_ là các vòng lặp tiếp tục lặp lại các lệnh miễn là đáp ứng điều kiện. Vòng lặp while được sử dụng khi người lập trình không biết chính xác số lần các lệnh cần được lặp lại, nhưng người lập trình biết điều kiện nào cần có để vòng lặp tiếp tục lặp lại. Các câu lệnh `If/Else` cho khả năng lập trình linh hoạt bằng cách chỉ chạy toàn bộ phần mã lệnh nếu đáp ứng điều kiện, nếu không thì sẽ chạy lệnh khác.
             Private and Personal Information:
               description_student: Internet rất vui và thú vị, nhưng điều quan trọng là phải giữ an toàn. Bài học này sẽ chỉ cho bạn thấy sự khác biệt giữa thông tin an toàn để chia sẻ và thông tin riêng tư.
-              description_teacher: |-
-                Với sự phát triển của Common Sense Education, bài học này nói về sự khác biệt giữa thông tin an toàn để chia sẻ trực tuyến và thông tin không an toàn.\r
-                \r
-                Khi học sinh truy cập các trang web yêu cầu thông tin danh tính, các em sẽ học cách triển khai quy trình tìm hiểu thiết yếu giúp các em có thể tự bảo vệ bản thân và gia đình khỏi bị ăn cắp danh tính. Trong bài học này, học sinh sẽ học cách tư duy phản biện về thông tin người dùng mà một số trang web yêu cầu hoặc bắt buộc. Các em sẽ tìm hiểu sự khác biệt giữa thông tin riêng tư và thông tin cá nhân cũng như cách phân biệt những thông tin an toàn hoặc không an toàn để chia sẻ trực tuyến.
+              description_teacher: "Với sự phát triển của Common Sense Education, bài học này nói về sự khác biệt giữa thông tin an toàn để chia sẻ trực tuyến và thông tin không an toàn.\\r\n\\r\nKhi học sinh truy cập các trang web yêu cầu thông tin danh tính, các em sẽ học cách triển khai quy trình tìm hiểu thiết yếu giúp các em có thể tự bảo vệ bản thân và gia đình khỏi bị ăn cắp danh tính. Trong bài học này, học sinh sẽ học cách tư duy phản biện về thông tin người dùng mà một số trang web yêu cầu hoặc bắt buộc. Các em sẽ tìm hiểu sự khác biệt giữa thông tin riêng tư và thông tin cá nhân cũng như cách phân biệt những thông tin an toàn hoặc không an toàn để chia sẻ trực tuyến."
             Build a Star Wars Game:
               name: Làm game Chiến tranh giữa các vì sao
               description_student: Hãy cảm nhận thần lực khi làm game Chiến tranh giữa các vì sao của riêng mình trong bài học này.
@@ -6920,9 +6882,7 @@ vi:
               description_teacher: Học sinh sẽ được giới thiệu cách sử dụng các hàm với Artist. Những hình ảnh lộng lẫy sẽ được tạo ra và chỉnh sửa. Đối với các mô hình phức tạp hơn, học sinh sẽ học về các hàm lồng nhau bằng cách khai báo hàm bên trong một hàm khác.
             Determine the Concept:
               name: Xác định khái niệm
-              description_student: |-
-                Bí mật không thể dễ dàng bật mí!
-                Bài học này có thể sử dụng bất kỳ kỹ năng nào bạn đã học được cho đến thời điểm hiện tại.
+              description_student: "Bí mật không thể dễ dàng bật mí!\nBài học này có thể sử dụng bất kỳ kỹ năng nào bạn đã học được cho đến thời điểm hiện tại."
               description_teacher: Bài học này tập hợp các khái niệm từ các bài học trước và cho học sinh cơ hội tư duy phản biện về cách giải quyết từng vấn đề, nhưng không cho học sinh biết khái niệm nào nên áp dụng. Học sinh sẽ ôn lại các thuật toán cơ bản, sửa lỗi, vòng lặp `lặp lại, lệnh điều kiện, vòng lặp `while` và các hàm.
             Learning Sprites with Sprite Lab:
               name: Cá bơi với Sprite Lab
@@ -6931,14 +6891,11 @@ vi:
             Alien Dance Party with Sprite Lab:
               name: Bữa tiệc khiêu vũ của người ngoài hành tinh với Sprite Lab
               description_student: Hãy tạo một dự án tương tác có thể chia sẻ với các bạn cùng lớp.
-              description_teacher: Bài học này sử dụng Sprite Lab, một nền tảng để học sinh có thể làm game và hoạt hình tương tác của riêng mình. Ngoài các hành vi, hôm nay học sinh sẽ kết hợp dữ liệu đầu vào của người dùng dưới dạng sự kiện để tạo ra một “bữa tiệc khiêu vũ của người ngoài hành tinh”.
+              description_teacher: 'Bài học này sử dụng Sprite Lab, một nền tảng để học sinh có thể làm game và hoạt hình tương tác của riêng mình. Ngoài các hành vi, hôm nay học sinh sẽ kết hợp dữ liệu đầu vào của người dùng dưới dạng sự kiện để tạo ra một “bữa tiệc khiêu vũ của người ngoài hành tinh”.'
             Explore Project Ideas:
               name: Khám phá ý tưởng dự án
               description_student: Sau đây là một số trò chơi và tranh vẽ. Hãy chơi từng trò chơi để lấy ý tưởng cho các dự án của riêng bạn!
-              description_teacher: |-
-                Bốn bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.
-
-                Trong giai đoạn khám phá, học sinh sẽ có thể xem các ví dụ được tạo sẵn về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án trong Artist hoặc Play Lab. (Đây có thể là giai đoạn dài nhất của dự án.) Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè.
+              description_teacher: "Bốn bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\n\nTrong giai đoạn khám phá, học sinh sẽ có thể xem các ví dụ được tạo sẵn về các dự án trong cả Artist và Play Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án trong Artist hoặc Play Lab. (Đây có thể là giai đoạn dài nhất của dự án.) Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè."
             The Design Process:
               name: Quy trình thiết kế
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Tại đây, bạn sẽ tìm hiểu về quy trình thiết kế mà bạn sẽ sử dụng để xây dựng tác phẩm của riêng mình.
@@ -6969,14 +6926,12 @@ vi:
               description_teacher: Học sinh sẽ tạo ra các bản thiết kế phức tạp bằng cách sử dụng Artist trong bộ bài tập của ngày hôm nay. Bằng cách tiếp tục thực hành các vòng lặp lồng nhau với các mục tiêu mới, học sinh sẽ thấy nhiều công dụng hơn của các vòng lặp nói chung. Bộ bài tập này cũng mang lại nhiều tiềm năng sáng tạo hơn với cơ hội để học sinh tự sáng tạo bản thiết kế của riêng mình vào cuối bài học.
             Nested Loops in Frozen:
               name: Vòng lặp lồng nhau với Frozen
-              description_student: Anna và Elsa có kỹ năng trượt băng tuyệt vời, nhưng cần sự giúp đỡ của bạn để tạo ra các mô hình trên băng. Hãy sử dụng các vòng lặp lồng nhau để tạo ra thứ gì đó siêu NGẦU nhé.
+              description_student: 'Anna và Elsa có kỹ năng trượt băng tuyệt vời, nhưng cần sự giúp đỡ của bạn để tạo ra các mô hình trên băng. Hãy sử dụng các vòng lặp lồng nhau để tạo ra thứ gì đó siêu NGẦU nhé.'
               description_teacher: Bây giờ, học sinh đã biết cách xếp lớp các vòng lặp của mình, các em có thể tạo ra rất nhiều hình ảnh đẹp. Bài học này sẽ hướng dẫn học sinh xử lý một loạt bài tập để giúp các em tạo những hình ảnh có thể đưa ngay vào portfolio của riêng mình bằng kỹ năng trượt băng điêu luyện của Anna và Elsa!
             Sequencing in the Maze:
               name: Chuỗi tuần tự trong mê cung
               description_student: Trong bài học này, bạn sẽ học cách viết các chương trình của riêng mình!
-              description_teacher: |-
-                Trong bộ bài tập này, học sinh sẽ bắt đầu với phần giới thiệu (hoặc đánh giá tùy thuộc vào kinh nghiệm của lớp) về không gian làm việc trực tuyến của Code.org. Sẽ có các video chỉ ra chức năng cơ bản của không gian làm việc bao gồm các nút `Chạy`, `Đặt lại` và `Bước`. Những nội dung cũng được thảo luận trong các video này: kéo các khối Blockly, xóa các khối Blockly và kết nối các khối Blockly. Tiếp theo, học sinh sẽ thực hành các kỹ năng _sắp xếp thứ tự_ và _sửa lỗi_ trong mê cung.\r
-                Sửa lỗi là một yếu tố cần thiết trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập đã được giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để xác định lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu, khối bổ sung và khối không đúng thứ tự.
+              description_teacher: "Trong bộ bài tập này, học sinh sẽ bắt đầu với phần giới thiệu (hoặc đánh giá tùy thuộc vào kinh nghiệm của lớp) về không gian làm việc trực tuyến của Code.org. Sẽ có các video chỉ ra chức năng cơ bản của không gian làm việc bao gồm các nút `Chạy`, `Đặt lại` và `Bước`. Những nội dung cũng được thảo luận trong các video này: kéo các khối Blockly, xóa các khối Blockly và kết nối các khối Blockly. Tiếp theo, học sinh sẽ thực hành các kỹ năng _sắp xếp thứ tự_ và _sửa lỗi_ trong mê cung.\\r\nSửa lỗi là một yếu tố cần thiết trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập đã được giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để xác định lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu, khối bổ sung và khối không đúng thứ tự."
             Programming and Loops with the Artist:
               name: Vẽ bằng vòng lặp
               description_student: Trong bài học này, các vòng lặp giúp bạn dễ dàng tạo ra những bức ảnh tuyệt tác với Artist!
@@ -6984,25 +6939,22 @@ vi:
             End of Course Project:
               name: Dự án tổng kết khóa học
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!
-              description_teacher: |-
-                Bốn bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\r
-                \r
-                Trong giai đoạn khám phá, học sinh sẽ xem các ví dụ được tạo sẵn về các dự án trong cả Artist và Sprite Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án trong Artist, Sprite Lab hoặc giao diện khác mà các em đã quen thuộc. (Đây có thể là giai đoạn dài nhất của dự án.) Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè.
+              description_teacher: "Bốn bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\\r\n\\r\nTrong giai đoạn khám phá, học sinh sẽ xem các ví dụ được tạo sẵn về các dự án trong cả Artist và Sprite Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án trong Artist, Sprite Lab hoặc giao diện khác mà các em đã quen thuộc. (Đây có thể là giai đoạn dài nhất của dự án.) Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè."
             Conditionals in Minecraft:
               name: Lệnh điều kiện trong Minecraft
             About Me:
               name: Giới thiệu bản thân với Sprite Lab
               description_student: Bằng cách tạo poster tương tác với Sprite Lab, học sinh sẽ áp dụng kiến thức của mình về việc chia sẻ thông tin cá nhân và riêng tư trên web.
-              description_teacher: Bằng cách tạo poster tương tác với Sprite Lab, học sinh sẽ áp dụng kiến thức của mình về việc chia sẻ thông tin cá nhân và riêng tư trên web.\r
+              description_teacher: "Bằng cách tạo poster tương tác với Sprite Lab, học sinh sẽ áp dụng kiến thức của mình về việc chia sẻ thông tin cá nhân và riêng tư trên web.\\r\n"
             Aquatic Conditionals in Minecraft:
               name: Lệnh điều kiện thủy sinh trong Minecraft
             Access Ability:
               name: Thiết kế cho trợ năng
-              description_student: Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
-              description_teacher: Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
+              description_student: 'Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.'
+              description_teacher: 'Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.'
             Simon Says:
               description_student: Hãy chơi game và suy nghĩ về những lệnh cần thiết để cho kết quả phù hợp.
-              description_teacher: Trong bài học này, học sinh sẽ chơi game nhằm giúp các em suy nghĩ về cách đặt lệnh để cho kết quả đúng. Điều này sẽ giúp các em dễ dàng vận dụng kiến thức vào Sprite Lab trong các bài học sắp tới.
+              description_teacher: 'Trong bài học này, học sinh sẽ chơi game nhằm giúp các em suy nghĩ về cách đặt lệnh để cho kết quả đúng. Điều này sẽ giúp các em dễ dàng vận dụng kiến thức vào Sprite Lab trong các bài học sắp tới.'
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Lệnh điều kiện trong Minecraft: Chuyến du hành dưới nước'
               description_student: Trong bài học này, bạn sẽ tìm hiểu về lệnh điều kiện trong thế giới Minecraft.
@@ -7136,7 +7088,7 @@ vi:
             new stage:
               name: giai đoạn mới
             'null':
-              name: giá trị rỗng
+              name: 'giá trị rỗng'
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
         dance-extras-gallery:
@@ -7182,17 +7134,17 @@ vi:
               name: 'Vòng lặp: Bắt lấy Loopy'
             Loops with Rey and BB-8:
               name: Vòng lặp với Rey và BB-8
-              description_student: Giúp BB-8 vượt qua mê cung bằng cách sử dụng vòng lặp!
+              description_student: 'Giúp BB-8 vượt qua mê cung bằng cách sử dụng vòng lặp!'
               description_teacher: Được xây dựng dựa trên khái niệm lặp lại các hướng dẫn từ bài “Bắt lấy Loopy”, giai đoạn này sẽ yêu cầu học sinh sử dụng vòng lặp để giúp BB-8 đi qua mê cung hiệu quả hơn trước.
             Loops in Artist:
               name: Vòng lặp trong Artist
             Loops in Harvester:
               name: Thu hoạch mùa màng bằng vòng lặp
               description_student: Hãy sử dụng vòng lặp để giúp máy gặt thu hoạch một số loại rau nhé!
-              description_teacher: Trong giai đoạn trước, học sinh đã sử dụng vòng lặp để tạo ra những bức tranh tuyệt tác. Giờ đây, các em sẽ lặp lại các hành động mới để giúp máy gặt thu thập nhiều loại rau mọc thành cụm lớn.\r
+              description_teacher: "Trong giai đoạn trước, học sinh đã sử dụng vòng lặp để tạo ra những bức tranh tuyệt tác. Giờ đây, các em sẽ lặp lại các hành động mới để giúp máy gặt thu thập nhiều loại rau mọc thành cụm lớn.\\r\n"
             'Events: The Big Event':
               name: Sự kiện lớn
-              description_student: Chơi game thú vị để tìm hiểu về sự kiện.
+              description_student: 'Chơi game thú vị để tìm hiểu về sự kiện.'
               description_teacher: Học sinh sẽ sớm hiểu rằng sự kiện là một cách tuyệt vời để tăng tính linh hoạt cho một thuật toán viết sẵn. Đôi khi bạn muốn chương trình của mình có thể phản hồi người dùng chính xác khi người dùng muốn. Sự kiện có thể làm cho chương trình của bạn thú vị và có tính tương tác cao hơn.
             Build a Flappy Game:
               name: Làm game dạng Flappy Bird
@@ -7201,10 +7153,7 @@ vi:
             Screen Out the Mean:
               name: Loại trừ kẻ xấu tính
               description_student: Trong bài học này, bạn sẽ tìm hiểu cách xử lý nếu có nội dung trực tuyến nào đó khiến bạn cảm thấy tức giận, buồn bã hoặc sợ hãi.
-              description_teacher: |-
-                Bài học này giúp trẻ em nhận ra rằng điều cần thiết là phải nói chuyện với một người lớn đáng tin cậy nếu có nội dung trực tuyến khiến các em cảm thấy tức giận, buồn bã hoặc sợ hãi.\r
-                \r
-                Học sinh biết rằng người ta đôi khi có thể hành động như những kẻ bắt nạt trên môi trường trực tuyến. Các em sẽ khám phá địnhh nghĩa bắt nạt trực tuyến và cách xử lý khi phải đối mặt với hiện tượng này. Sau khi đọc kịch bản về hành vi trực tuyến tiêu cực, học sinh sẽ thảo luận về định nghĩa bắt nạt trực tuyến, cảm xúc của mọi người trước hiện tượng này và cách đối phó. Cuối cùng, các em sẽ sử dụng kiến thức của mình để soạn thảo tờ hướng dẫn đơn giản về bắt nạt trực tuyến trong nhật ký của mình.\r
+              description_teacher: "Bài học này giúp trẻ em nhận ra rằng điều cần thiết là phải nói chuyện với một người lớn đáng tin cậy nếu có nội dung trực tuyến khiến các em cảm thấy tức giận, buồn bã hoặc sợ hãi.\\r\n\\r\nHọc sinh biết rằng người ta đôi khi có thể hành động như những kẻ bắt nạt trên môi trường trực tuyến. Các em sẽ khám phá địnhh nghĩa bắt nạt trực tuyến và cách xử lý khi phải đối mặt với hiện tượng này. Sau khi đọc kịch bản về hành vi trực tuyến tiêu cực, học sinh sẽ thảo luận về định nghĩa bắt nạt trực tuyến, cảm xúc của mọi người trước hiện tượng này và cách đối phó. Cuối cùng, các em sẽ sử dụng kiến thức của mình để soạn thảo tờ hướng dẫn đơn giản về bắt nạt trực tuyến trong nhật ký của mình.\\r\n"
             Events in Play Lab:
               name: Trò chơi đuổi bắt với sự kiện
               description_student: Đã đến lúc sáng tạo và làm game trong Play Lab rồi!
@@ -7222,7 +7171,7 @@ vi:
             'End of Course Project: Create a Play Lab Game':
               name: Dự án tổng kết khóa học
               description_student: Hãy sẵn sàng lập trình nào! Đã đến lúc bắt đầu xây dựng dự án của bạn.
-              description_teacher: Bài học thực tiễn này đưa học sinh qua quá trình thiết kế, phát triển và trình bày các dự án Play Lab của riêng mình! Để đảm bảo quá trình này diễn ra suôn sẻ, chúng tôi đã cung cấp cấu trúc từng bước để học sinh làm theo, từ lập kế hoạch trên giấy đến viết mã lệnh trên trang web của chúng tôi. Ngoài ra, chúng tôi còn đưa ra các ý tưởng để giúp giáo viên tạo điều kiện cho buổi thuyết trình tổng kết!
+              description_teacher: 'Bài học thực tiễn này đưa học sinh qua quá trình thiết kế, phát triển và trình bày các dự án Play Lab của riêng mình! Để đảm bảo quá trình này diễn ra suôn sẻ, chúng tôi đã cung cấp cấu trúc từng bước để học sinh làm theo, từ lập kế hoạch trên giấy đến viết mã lệnh trên trang web của chúng tôi. Ngoài ra, chúng tôi còn đưa ra các ý tưởng để giúp giáo viên tạo điều kiện cho buổi thuyết trình tổng kết!'
             'Programming: My Robotic Friends':
               name: Những người bạn robot của tôi – nâng cao
               description_student: Trong bài học này, bạn sẽ giả vờ rằng các bạn cùng lớp của mình là rô bốt và lập trình các bạn để tạo ra các mô hình cốc xếp chồng lên nhau.
@@ -7235,10 +7184,7 @@ vi:
               name: Dữ liệu đồ thị
             Powerful Passwords:
               description_student: Trong bài học này, bạn sẽ tìm hiểu cách mật khẩu bảo vệ thông tin của bạn và cách tạo mật khẩu hiệu quả.
-              description_teacher: |-
-                Với sự hợp tác của **Common Sense Education**, trong bài học này, học sinh sẽ khám phá lý do mọi người sử dụng mật khẩu, tìm hiểu lợi ích của việc sử dụng mật khẩu và khám phá các chiến lược để tạo và duy trì mật khẩu mạnh, an toàn.\r
-                \r
-                Học sinh sẽ học các bí quyết về mật khẩu, kiểm tra mật khẩu hiện có của các em bằng game tương tác và tạo mật khẩu mới bằng cách sử dụng hướng dẫn tạo mật khẩu mạnh.\r
+              description_teacher: "Với sự hợp tác của **Common Sense Education**, trong bài học này, học sinh sẽ khám phá lý do mọi người sử dụng mật khẩu, tìm hiểu lợi ích của việc sử dụng mật khẩu và khám phá các chiến lược để tạo và duy trì mật khẩu mạnh, an toàn.\\r\n\\r\nHọc sinh sẽ học các bí quyết về mật khẩu, kiểm tra mật khẩu hiện có của các em bằng game tương tác và tạo mật khẩu mới bằng cách sử dụng hướng dẫn tạo mật khẩu mạnh.\\r\n"
             Sticker Art with Loops:
               description_student: Trong bài học này, các vòng lặp giúp bạn dễ dàng tạo ra những bức ảnh tuyệt tác với Artist!
               description_teacher: Hãy ngắm khuôn mặt của các em học sinh rạng rỡ khi tạo ra những thiết kế tuyệt đẹp của riêng mình bằng cách sử dụng một số lượng nhỏ các khối và sticker kỹ thuật số! Bài học này dựa trên sự hiểu biết về các vòng lặp từ các bài học trước và giúp học sinh có cơ hội thực sự sáng tạo. Đây là hoạt động lý tưởng để tạo ra các sản phẩm cho portfolio hoặc các cuộc họp phụ huynh/giáo viên.
@@ -7348,8 +7294,8 @@ vi:
             Sequencing with Scrat:
               name: Học về chuỗi tuần tự cùng sóc Scrat
             Your Digital Footprint:
-              name: Dấu chân kỹ thuật số
-              description_student: Tìm hiểu về dấu ấn kỹ thuật số và cách giữ an toàn khi truy cập các trang web.
+              name: Dấu chân kỹ thuật số 
+              description_student: 'Tìm hiểu về dấu ấn kỹ thuật số và cách giữ an toàn khi truy cập các trang web.'
               description_teacher: Với sự hợp tác cùng **Common Sense Education**, bài học này giúp học sinh tìm hiểu về những điểm tương đồng giữa an toàn trong thế giới thực và khi truy cập các trang web. Học sinh cũng sẽ hiểu được rằng thông tin mà các em đưa lên mạng sẽ để lại dấu chân kỹ thuật số, hay “dấu vết”. Dấu vết này có thể lớn hoặc nhỏ, hữu ích hoặc có hại, tùy thuộc vào cách các em quản lý.
             'Programming: My Robotic Friends':
               name: 'Lập trình: Những người bạn rô bốt của tôi'
@@ -7383,7 +7329,7 @@ vi:
               description_teacher: Khi bắt đầu viết các chương trình dài hơn và thú vị hơn, mã lệnh của chúng ta thường lặp lại rất nhiều. Trong bài học này, học sinh sẽ tìm hiểu cách sử dụng vòng lặp để truyền đạt các hướng dẫn lặp lại nhiều lần một cách dễ dàng hơn bằng cách xem mô hình chuyển động lặp đi lặp lại trong một điệu nhảy.
             The Right App:
               description_student: Phác thảo ứng dụng điện thoại thông minh của riêng bạn.
-              description_teacher: Bài học này giúp học sinh nhận ra rằng khoa học máy tính có thể giúp ích cho mọi người trong cuộc sống thực. Đầu tiên, học sinh cần đồng cảm với một số người dùng điện thoại thông minh hư cấu để giúp họ tìm thấy “ứng dụng phù hợp”, đáp ứng nhu cầu của họ. Sau đó, học sinh luyện tập khả năng đồng cảm và sáng tạo để phác thảo ứng dụng điện thoại thông minh của riêng mình nhằm đáp ứng nhu cầu của một người dùng khác.
+              description_teacher: 'Bài học này giúp học sinh nhận ra rằng khoa học máy tính có thể giúp ích cho mọi người trong cuộc sống thực. Đầu tiên, học sinh cần đồng cảm với một số người dùng điện thoại thông minh hư cấu để giúp họ tìm thấy “ứng dụng phù hợp”, đáp ứng nhu cầu của họ. Sau đó, học sinh luyện tập khả năng đồng cảm và sáng tạo để phác thảo ứng dụng điện thoại thông minh của riêng mình nhằm đáp ứng nhu cầu của một người dùng khác.'
             Loops in Harvester:
               name: Vòng lặp với game Người thu hoạch
               description_student: Giúp Người thu hoạch thu hoạch thật nhiều mùa màng bằng cách sử dụng vòng lặp!
@@ -7395,7 +7341,7 @@ vi:
             Programming in Harvester:
               name: Lập trình với game Người thu hoạch
               description_student: Giúp Người thu hoạch thu thập các loại rau trên đường đi.
-              description_teacher: Học sinh sẽ áp dụng các khái niệm lập trình đã học vào môi trường game Người thu hoạch. Bây giờ, thay vì chỉ đưa nhân vật đến đích, học sinh phải thu thập ngô bằng cách sử dụng một khối mới. Học sinh sẽ tiếp tục phát triển các kỹ năng giải thuật toán trình tự và bắt đầu áp dụng quy trình sửa lỗi.
+              description_teacher: 'Học sinh sẽ áp dụng các khái niệm lập trình đã học vào môi trường game Người thu hoạch. Bây giờ, thay vì chỉ đưa nhân vật đến đích, học sinh phải thu thập ngô bằng cách sử dụng một khối mới. Học sinh sẽ tiếp tục phát triển các kỹ năng giải thuật toán trình tự và bắt đầu áp dụng quy trình sửa lỗi.'
             Sequencing in Maze:
               name: Chuỗi tuần tự cùng Angry Birds
               description_student: Giúp chú chim Red đi theo con đường dẫn đến con heo hư đốn.
@@ -7420,7 +7366,7 @@ vi:
             Sequencing with Scrat:
               name: Học về chuỗi tuần tự cùng sóc Scrat
             Your Digital Footprint:
-              name: Dấu chân kỹ thuật số
+              name: Dấu chân kỹ thuật số 
             'Programming: My Robotic Friends':
               name: 'Lập trình: Những người bạn rô bốt của tôi'
             Programming in Ice Age:
@@ -7479,12 +7425,12 @@ vi:
             Styling Text with CSS:
               name: Tạo phong cách cho văn bản với CSS
               description_student: Bài học này giới thiệu CSS là một cách để tạo phong cách cho các thành phần trên trang web. Các lớp học tìm hiểu bộ quy tắc cú pháp cơ bản cho CSS và sau đó khám phá các tính chất tác động đến các thành phần văn bản HTML.  Cuối cùng, tất cả mọi người áp dụng phong cách văn bản cho trang web cá nhân của họ.
-              description_teacher: 'Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \r \r '
+              description_teacher: "Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \\r \\r \n"
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính phong cách CSS, thời gian này tập trung nhiều vào các thành phần phi văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người áp dụng kiến thức mới này cho các trang web cá nhân của họ.
         csd3-2019:
-          description_short: Lập trình
+          description_short: "Lập trình"
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
@@ -7697,11 +7643,11 @@ vi:
             User Input and Strings:
               name: Đầu vào và chuỗi người dùng
             '"If" Statements Unplugged':
-              name: Câu lệnh "If"
+              name: 'Câu lệnh "If"'
             Boolean Expressions and "If" Statements:
               name: Biểu thức boolean và câu lệnh "If"
             '"if-else-if" and Conditional Logic':
-              name: If-else-if và logic có điều kiện
+              name: 'If-else-if và logic có điều kiện'
             'Building an App: Color Sleuth':
               name: 'Xây dựng một ứng dụng: màu Sleuth'
             Unit 5 Assessment 2:
@@ -7999,14 +7945,14 @@ vi:
             Styling Text with CSS:
               name: Tạo phong cách cho văn bản với CSS
               description_student: Bài học này giới thiệu CSS là một cách để tạo phong cách cho các thành phần trên trang web. Các lớp học tìm hiểu bộ quy tắc cú pháp cơ bản cho CSS và sau đó khám phá các tính chất tác động đến các thành phần văn bản HTML.  Cuối cùng, tất cả mọi người áp dụng phong cách văn bản cho trang web cá nhân của họ.
-              description_teacher: 'Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \r \r '
+              description_teacher: "Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \\r \\r \n"
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính phong cách CSS, thời gian này tập trung nhiều vào các thành phần phi văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người áp dụng kiến thức mới này cho các trang web cá nhân của họ.
             Intellectual Property:
               name: Sở hữu trí tuệ
         csd3-pilot:
-          description_short: Lập trình
+          description_short: "Lập trình"
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
@@ -8439,13 +8385,13 @@ vi:
               name: Dấu vết số
             Styling Text with CSS:
               name: Tạo phong cách cho văn bản với CSS
-              description_student: Bài học này giới thiệu CSS là một cách để tạo phong cách cho các thành phần trên trang web. Các lớp học tìm hiểu bộ quy tắc cú pháp cơ bản cho CSS và sau đó khám phá các tính chất tác động đến các thành phần văn bản HTML.  Cuối cùng, tất cả mọi người áp dụng phong cách văn bản cho trang web cá nhân của họ.
-              description_teacher: 'Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \r \r '
+              description_student: "Bài học này giới thiệu CSS là một cách để tạo phong cách cho các thành phần trên trang web. Các lớp học tìm hiểu bộ quy tắc cú pháp cơ bản cho CSS và sau đó khám phá các tính chất tác động đến các thành phần văn bản HTML.  Cuối cùng, tất cả mọi người áp dụng phong cách văn bản cho trang web cá nhân của họ."
+              description_teacher: "Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \\r \\r \n"
             Intellectual Property:
               name: Sở hữu trí tuệ
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
-              description_student: Bài học này tiếp tục giới thiệu với các thuộc tính phong cách CSS, thời gian này tập trung nhiều vào các thành phần phi văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người áp dụng kiến thức mới này cho các trang web cá nhân của họ.
+              description_student: "Bài học này tiếp tục giới thiệu với các thuộc tính phong cách CSS, thời gian này tập trung nhiều vào các thành phần phi văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người áp dụng kiến thức mới này cho các trang web cá nhân của họ."
         csd1-2020:
           lesson_groups:
             cspSurvey:
@@ -8461,6 +8407,7 @@ vi:
               name: Khám phá Giải quyết vấn đề
             What is a Computer?:
               name: Máy tính là gì?
+            0:
         csd4-2020:
           lesson_groups:
             cspSurvey:
@@ -8496,15 +8443,15 @@ vi:
             Functions with Parameters:
               name: Hàm và tham số
         csd3-2020:
-          description_short: Lập trình
+          description_short: "Lập trình"
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
           lessons:
             Drawing in Game Lab:
               name: Bản vẽ trong Kho trò chơi
-              description_student: Các lớp học được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Bài học của bạn bao gồm những điều cơ bản của việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, các lớp học tạo ra một phiên bản trực tuyến của hình ảnh mà họ thiết kế ở bài học trước đó.
-              description_teacher: Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó.
+              description_student: "Các lớp học được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Bài học của bạn bao gồm những điều cơ bản của việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, các lớp học tạo ra một phiên bản trực tuyến của hình ảnh mà họ thiết kế ở bài học trước đó."
+              description_teacher: "Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó."
             Variables:
               name: Các biến
             Booleans Unplugged:
@@ -8514,20 +8461,20 @@ vi:
             Project - Interactive Card:
               name: 'Dự án: Thẻ tương tác'
             Velocity:
-              description_student: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
-              description_teacher: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
+              description_student: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
+              description_teacher: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
             Collision Detection:
               name: Phát hiện va chạm
-              description_student: Các lớp học tìm hiểu về các phát hiện va chạm trên máy tính.  Các cặp khám phá việc làm thế nào một máy tính có thể sử dụng vị trí và thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không. Các lớp học sau đó sử dụng  isTouching() các khối lệnh để tạo ra các hiệu ứng khác nhau khi nhân vật va chạm, bao gồm cả phần chạy âm thanh.  Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ bắt đầu ở bài học gần nhất.
-              description_teacher: Học sinh tìm hiểu về phát hiện va chạm trên máy tính.  Họ làm việc theo cặp, khám phá làm thế nào một máy tính có thể sử dụng vị trí và các thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không.  Họ sau đó sử dụng 'isTouching()'  các khối lệnh để tạo ra các hiệu ứng khác nhau khi các nhân vật va chạm, bao gồm cả phần chạy âm thanh. Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ đã bắt đầu ở bài học gần nhất.
+              description_student: "Các lớp học tìm hiểu về các phát hiện va chạm trên máy tính.  Các cặp khám phá việc làm thế nào một máy tính có thể sử dụng vị trí và thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không. Các lớp học sau đó sử dụng  isTouching() các khối lệnh để tạo ra các hiệu ứng khác nhau khi nhân vật va chạm, bao gồm cả phần chạy âm thanh.  Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ bắt đầu ở bài học gần nhất."
+              description_teacher: "Học sinh tìm hiểu về phát hiện va chạm trên máy tính.  Họ làm việc theo cặp, khám phá làm thế nào một máy tính có thể sử dụng vị trí và các thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không.  Họ sau đó sử dụng 'isTouching()'  các khối lệnh để tạo ra các hiệu ứng khác nhau khi các nhân vật va chạm, bao gồm cả phần chạy âm thanh. Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ đã bắt đầu ở bài học gần nhất."
             Complex Sprite Movement:
               name: Di chuyển nhân vật phức tạp
-              description_student: 'Các lớp học tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn, chẳng hạn như mô phỏng trọng lực, làm cho một nhân vật nhảy và cho phép một nhân vật nổi bên trái hoặc bên phải. Ở các cấp độ cuối cùng lớp học kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập tiền xu. '
-              description_teacher: Học sinh tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn. Đặc biệt, học sinh sẽ tìm hiểu làm thế nào để mô phỏng các lực hấp dẫn, làm cho một nhân vật nhảy, và cho phép một nhân vật nổi sang trái hoặc sang phải. Ở các cấp độ cuối cùng của tiến trình Code Studio sinh viên kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập các đồng xu. Học sinh được khuyến khích để tạo ra những nội dung thêm của riêng họ bổ sung cho các trò chơi ở cấp độ cuối cùng.
+              description_student: "Các lớp học tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn, chẳng hạn như mô phỏng trọng lực, làm cho một nhân vật nhảy và cho phép một nhân vật nổi bên trái hoặc bên phải. Ở các cấp độ cuối cùng lớp học kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập tiền xu. "
+              description_teacher: "Học sinh tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn. Đặc biệt, học sinh sẽ tìm hiểu làm thế nào để mô phỏng các lực hấp dẫn, làm cho một nhân vật nhảy, và cho phép một nhân vật nổi sang trái hoặc sang phải. Ở các cấp độ cuối cùng của tiến trình Code Studio sinh viên kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập các đồng xu. Học sinh được khuyến khích để tạo ra những nội dung thêm của riêng họ bổ sung cho các trò chơi ở cấp độ cuối cùng."
             Collisions:
               name: Va chạm
-              description_student: Lớp học lập trình các nhân vật tương tác theo nhiều cách mới.  Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
-              description_teacher: Học sinh lập trình các nhân vật của họ tương tác theo nhiều cách mới. Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh, lớp học khởi động thử các cách khác để 2 nhân vật có thể tương tác. Sau đó chúng có thể sử dụng để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
+              description_student: "Lớp học lập trình các nhân vật tương tác theo nhiều cách mới.  Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên)."
+              description_teacher: "Học sinh lập trình các nhân vật của họ tương tác theo nhiều cách mới. Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh, lớp học khởi động thử các cách khác để 2 nhân vật có thể tương tác. Sau đó chúng có thể sử dụng để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên)."
             Functions:
               name: Các hàm
             The Game Design Process:
@@ -8624,8 +8571,8 @@ vi:
               display_name: Các sự kiện
           lessons:
             Your Digital Footprint:
-              name: Dấu chân kỹ thuật số
-              description_student: Tìm hiểu về dấu ấn kỹ thuật số và cách giữ an toàn khi truy cập các trang web.
+              name: Dấu chân kỹ thuật số 
+              description_student: 'Tìm hiểu về dấu ấn kỹ thuật số và cách giữ an toàn khi truy cập các trang web.'
               description_teacher: Với sự hợp tác cùng [r common-sense-media], bài học này giúp học sinh tìm hiểu về những điểm tương đồng giữa an toàn trong thế giới thực và khi truy cập các trang web. Học sinh cũng sẽ hiểu được rằng thông tin mà các em đưa lên mạng sẽ để lại dấu chân kỹ thuật số, hay “dấu vết”. Dấu vết này có thể lớn hoặc nhỏ, hữu ích hoặc có hại, tùy thuộc vào cách các em quản lý.
             Move It, Move It:
               name: Di chuyển nó, di chuyển nó
@@ -8642,7 +8589,7 @@ vi:
             Programming in Harvester:
               name: Lập trình với game Người thu hoạch
               description_student: Giúp Người thu hoạch thu thập các loại rau trên đường đi.
-              description_teacher: Học sinh sẽ áp dụng các khái niệm lập trình đã học vào môi trường game Người thu hoạch. Bây giờ, thay vì chỉ đưa nhân vật đến đích, học sinh phải thu thập ngô bằng cách sử dụng một khối mới. Học sinh sẽ tiếp tục phát triển các kỹ năng giải thuật toán trình tự và bắt đầu áp dụng quy trình sửa lỗi.
+              description_teacher: 'Học sinh sẽ áp dụng các khái niệm lập trình đã học vào môi trường game Người thu hoạch. Bây giờ, thay vì chỉ đưa nhân vật đến đích, học sinh phải thu thập ngô bằng cách sử dụng một khối mới. Học sinh sẽ tiếp tục phát triển các kỹ năng giải thuật toán trình tự và bắt đầu áp dụng quy trình sửa lỗi.'
             'Loops: Getting Loopy':
               name: Tạo vòng lặp
               description_student: Trong bài học này, chúng ta sẽ tổ chức một bữa tiệc khiêu vũ bằng cách sử dụng vòng lặp!
@@ -8661,7 +8608,7 @@ vi:
               description_teacher: Quay trở lại với vòng lặp, học sinh sẽ học cách vẽ hình ảnh bằng cách lặp lại các chuỗi hướng dẫn đơn giản. Trong bài học trực tuyến trước đó, vòng lặp được sử dụng để đi qua mê cung và thu thập kho báu. Ở đây, học sinh sử dụng vòng lặp để tạo thành các mô hình. Vào cuối giai đoạn này, học sinh sẽ có cơ hội tạo ra hình ảnh của riêng mình bằng cách sử dụng vòng lặp.
             The Right App:
               description_student: Phác thảo ứng dụng điện thoại thông minh của riêng bạn.
-              description_teacher: Bài học này giúp học sinh nhận ra rằng khoa học máy tính có thể giúp ích cho mọi người trong cuộc sống thực. Đầu tiên, học sinh cần đồng cảm với một số người dùng điện thoại thông minh hư cấu để giúp họ tìm thấy “ứng dụng phù hợp”, đáp ứng nhu cầu của họ. Sau đó, học sinh luyện tập khả năng đồng cảm và sáng tạo để phác thảo ứng dụng điện thoại thông minh của riêng mình nhằm đáp ứng nhu cầu của một người dùng khác.
+              description_teacher: 'Bài học này giúp học sinh nhận ra rằng khoa học máy tính có thể giúp ích cho mọi người trong cuộc sống thực. Đầu tiên, học sinh cần đồng cảm với một số người dùng điện thoại thông minh hư cấu để giúp họ tìm thấy “ứng dụng phù hợp”, đáp ứng nhu cầu của họ. Sau đó, học sinh luyện tập khả năng đồng cảm và sáng tạo để phác thảo ứng dụng điện thoại thông minh của riêng mình nhằm đáp ứng nhu cầu của một người dùng khác.'
             'Events: The Big Event':
               name: Sự kiện lớn – nâng cao
               description_student: Di chuyển hoặc hét lên khi giáo viên của bạn nhấn các nút trên chiếc điều khiển từ xa khổng lồ.
@@ -8672,7 +8619,7 @@ vi:
               description_teacher: Trong hoạt động trực tuyến này, học sinh sẽ có cơ hội học cách sử dụng các sự kiện trong Play Lab và áp dụng tất cả các kỹ năng mã hóa mà họ đã học để làm game dạng hoạt họa. Đã đến lúc sáng tạo và làm game trong Play Lab rồi!
             Digital Trails:
               name: Dấu vết kỹ thuật số
-              description_student: Tìm hiểu về dấu ấn kỹ thuật số và cách giữ an toàn khi truy cập các trang web.
+              description_student: 'Tìm hiểu về dấu ấn kỹ thuật số và cách giữ an toàn khi truy cập các trang web.'
               description_teacher: Bài học này vốn do Common Sense Education biên soạn. Liệu những việc bạn làm trên mạng có luôn tồn tại trên mạng không? Học sinh sẽ học được rằng thông tin các em chia sẻ trực tuyến sẽ để lại dấu chân kỹ thuật số, hay “dấu vết”. Tùy thuộc vào cách các em quản lý mà dấu vết này có thể lớn hoặc nhỏ, có hại hoặc hữu ích. Học sinh sẽ so sánh các dấu vết khác nhau và tư duy phản biện về những loại thông tin mà các em muốn để lại.
           student_description: Hãy tìm hiểu kiến thức cơ bản về khoa học máy tính và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng tạo câu chuyện của riêng bạn để có thể chia sẻ.
         coursec-2020:
@@ -8697,16 +8644,10 @@ vi:
             Screen Out the Mean:
               name: Loại trừ kẻ xấu tính
               description_student: Trong bài học này, bạn sẽ tìm hiểu cách xử lý nếu có nội dung trực tuyến nào đó khiến bạn cảm thấy tức giận, buồn bã hoặc sợ hãi.
-              description_teacher: |-
-                Bài học này giúp trẻ em nhận ra rằng điều cần thiết là phải nói chuyện với một người lớn đáng tin cậy nếu có nội dung trực tuyến khiến các em cảm thấy tức giận, buồn bã hoặc sợ hãi.\r
-                \r
-                Học sinh biết rằng người ta đôi khi có thể hành động như những kẻ bắt nạt trên môi trường trực tuyến. Các em sẽ khám phá địnhh nghĩa bắt nạt trực tuyến và cách xử lý khi phải đối mặt với hiện tượng này. Sau khi đọc kịch bản về hành vi trực tuyến tiêu cực, học sinh sẽ thảo luận về định nghĩa bắt nạt trực tuyến, cảm xúc của mọi người trước hiện tượng này và cách đối phó. Cuối cùng, các em sẽ sử dụng kiến thức của mình để soạn thảo tờ hướng dẫn đơn giản về bắt nạt trực tuyến trong nhật ký của mình.\r
+              description_teacher: "Bài học này giúp trẻ em nhận ra rằng điều cần thiết là phải nói chuyện với một người lớn đáng tin cậy nếu có nội dung trực tuyến khiến các em cảm thấy tức giận, buồn bã hoặc sợ hãi.\\r\n\\r\nHọc sinh biết rằng người ta đôi khi có thể hành động như những kẻ bắt nạt trên môi trường trực tuyến. Các em sẽ khám phá địnhh nghĩa bắt nạt trực tuyến và cách xử lý khi phải đối mặt với hiện tượng này. Sau khi đọc kịch bản về hành vi trực tuyến tiêu cực, học sinh sẽ thảo luận về định nghĩa bắt nạt trực tuyến, cảm xúc của mọi người trước hiện tượng này và cách đối phó. Cuối cùng, các em sẽ sử dụng kiến thức của mình để soạn thảo tờ hướng dẫn đơn giản về bắt nạt trực tuyến trong nhật ký của mình.\\r\n"
             Powerful Passwords:
               description_student: Trong bài học này, bạn sẽ tìm hiểu cách mật khẩu bảo vệ thông tin của bạn và cách tạo mật khẩu hiệu quả.
-              description_teacher: |-
-                Học sinh sẽ khám phá lý do mọi người sử dụng mật khẩu, tìm hiểu lợi ích của việc sử dụng mật khẩu và khám phá các chiến lược để tạo và duy trì mật khẩu mạnh, an toàn.\r
-                \r
-                Học sinh sẽ học các bí quyết về mật khẩu, kiểm tra mật khẩu hiện có của các em bằng game tương tác và tạo mật khẩu mới bằng cách sử dụng hướng dẫn tạo mật khẩu mạnh.\r
+              description_teacher: "Học sinh sẽ khám phá lý do mọi người sử dụng mật khẩu, tìm hiểu lợi ích của việc sử dụng mật khẩu và khám phá các chiến lược để tạo và duy trì mật khẩu mạnh, an toàn.\\r\n\\r\nHọc sinh sẽ học các bí quyết về mật khẩu, kiểm tra mật khẩu hiện có của các em bằng game tương tác và tạo mật khẩu mới bằng cách sử dụng hướng dẫn tạo mật khẩu mạnh.\\r\n"
             'Programming: My Robotic Friends':
               name: Những người bạn robot của tôi – nâng cao
               description_student: Trong bài học này, bạn sẽ giả vờ rằng các bạn cùng lớp của mình là rô bốt và lập trình các bạn để tạo ra các mô hình cốc xếp chồng lên nhau.
@@ -8735,12 +8676,12 @@ vi:
               description_teacher: Dựa trên hoạt động “Người bạn robot của tôi” ban đầu, học sinh xử lý các thiết kế lớn hơn và phức tạp hơn. Để lập trình “robot” của mình hoàn thành những thiết kế lớn hơn này, học sinh sẽ cần xác định các mô hình lặp lại trong hướng dẫn của các em mà có thể thay thế bằng vòng lặp.
             Loops with Rey and BB-8:
               name: Vòng lặp với Rey và BB-8
-              description_student: Giúp BB-8 vượt qua mê cung bằng cách sử dụng vòng lặp!
+              description_student: 'Giúp BB-8 vượt qua mê cung bằng cách sử dụng vòng lặp!'
               description_teacher: Được xây dựng dựa trên khái niệm lặp lại các hướng dẫn từ bài “Bắt lấy Loopy”, giai đoạn này sẽ yêu cầu học sinh sử dụng vòng lặp để giúp BB-8 đi qua mê cung hiệu quả hơn trước.
             Loops in Harvester:
               name: Thu hoạch mùa màng bằng vòng lặp
               description_student: Hãy sử dụng vòng lặp để giúp máy gặt thu hoạch một số loại rau nhé!
-              description_teacher: Trong giai đoạn trước, học sinh đã sử dụng vòng lặp để tạo ra những bức tranh tuyệt tác. Giờ đây, các em sẽ lặp lại các hành động mới để giúp máy gặt thu thập nhiều loại rau mọc thành cụm lớn.\r
+              description_teacher: "Trong giai đoạn trước, học sinh đã sử dụng vòng lặp để tạo ra những bức tranh tuyệt tác. Giờ đây, các em sẽ lặp lại các hành động mới để giúp máy gặt thu thập nhiều loại rau mọc thành cụm lớn.\\r\n"
             Looking Ahead:
               name: Nhìn về phía trước
               description_student: Hãy tránh dung nham! Ở đây, bạn sẽ bắt đầu tìm hiểu về lệnh điều kiện trong thế giới Minecraft.
@@ -8750,7 +8691,7 @@ vi:
               description_teacher: Hãy ngắm khuôn mặt của các em học sinh rạng rỡ khi tạo ra những thiết kế tuyệt đẹp của riêng mình bằng cách sử dụng một số lượng nhỏ các khối và sticker kỹ thuật số! Bài học này dựa trên sự hiểu biết về các vòng lặp từ các bài học trước và giúp học sinh có cơ hội thực sự sáng tạo. Đây là hoạt động lý tưởng để tạo ra các sản phẩm cho portfolio hoặc các cuộc họp phụ huynh/giáo viên.
             'Events: The Big Event':
               name: Sự kiện lớn
-              description_student: Chơi game thú vị để tìm hiểu về sự kiện.
+              description_student: 'Chơi game thú vị để tìm hiểu về sự kiện.'
               description_teacher: Học sinh sẽ sớm hiểu rằng sự kiện là một cách tuyệt vời để tăng tính linh hoạt cho một thuật toán viết sẵn. Đôi khi bạn muốn chương trình của mình có thể phản hồi người dùng chính xác khi người dùng muốn. Sự kiện có thể làm cho chương trình của bạn thú vị và có tính tương tác cao hơn.
             Build a Flappy Game:
               name: Làm game dạng Flappy Bird
@@ -8766,7 +8707,7 @@ vi:
             'End of Course Project: Create a Play Lab Game':
               name: Dự án tổng kết khóa học
               description_student: Hãy sẵn sàng lập trình nào! Đã đến lúc bắt đầu xây dựng dự án của bạn.
-              description_teacher: Bài học thực tiễn này đưa học sinh qua quá trình thiết kế, phát triển và trình bày các dự án Play Lab của riêng mình! Để đảm bảo quá trình này diễn ra suôn sẻ, chúng tôi đã cung cấp cấu trúc từng bước để học sinh làm theo, từ lập kế hoạch trên giấy đến viết mã lệnh trên trang web của chúng tôi. Ngoài ra, chúng tôi còn đưa ra các ý tưởng để giúp giáo viên tạo điều kiện cho buổi thuyết trình tổng kết!
+              description_teacher: 'Bài học thực tiễn này đưa học sinh qua quá trình thiết kế, phát triển và trình bày các dự án Play Lab của riêng mình! Để đảm bảo quá trình này diễn ra suôn sẻ, chúng tôi đã cung cấp cấu trúc từng bước để học sinh làm theo, từ lập kế hoạch trên giấy đến viết mã lệnh trên trang web của chúng tôi. Ngoài ra, chúng tôi còn đưa ra các ý tưởng để giúp giáo viên tạo điều kiện cho buổi thuyết trình tổng kết!'
             Putting a STOP to Online Meanness:
               name: Hãy CHẤM DỨT hành vi tiêu cực trên mạng
               description_student: Trong bài học này, bạn sẽ tìm hiểu về hành vi tiêu cực và những việc cần làm nếu bạn gặp phải hành vi này trên mạng.
@@ -8800,7 +8741,7 @@ vi:
             'Algorithms: Graph Paper Programming':
               name: lập trình đồ thị trên giấy
               description_student: Trong bài học này, bạn sẽ lập trình cho bạn cùng lớp của mình vẽ những bức tranh!
-              description_teacher: Bằng cách “lập trình” cho nhau để vẽ tranh, học sinh sẽ có cơ hội trải nghiệm một số khái niệm căn bản về lập trình một cách thú vị và dễ hiểu. Lớp học sẽ bắt đầu bằng cách cho học sinh sử dụng các biểu tượng để hướng dẫn nhau tô màu các ô vuông trên giấy kẻ ô ly và cố gắng mô phỏng một bức tranh hiện có. Nếu còn thời gian, bài học có thể kết thúc bằng những bức tranh mà học sinh tự tạo.
+              description_teacher: 'Bằng cách “lập trình” cho nhau để vẽ tranh, học sinh sẽ có cơ hội trải nghiệm một số khái niệm căn bản về lập trình một cách thú vị và dễ hiểu. Lớp học sẽ bắt đầu bằng cách cho học sinh sử dụng các biểu tượng để hướng dẫn nhau tô màu các ô vuông trên giấy kẻ ô ly và cố gắng mô phỏng một bức tranh hiện có. Nếu còn thời gian, bài học có thể kết thúc bằng những bức tranh mà học sinh tự tạo.'
             Introduction to Online Puzzles:
               name: Giới thiệu về Bài tập trực tuyến
               description_student: Bài học này sẽ cho bạn thực hành các kỹ năng bạn sẽ cần cho khóa học này.
@@ -8834,19 +8775,14 @@ vi:
               description_teacher: Trong hoạt động trực tuyến này, học sinh sẽ có cơ hội nâng cao hiểu biết của mình về các vòng lặp lên một cấp độ hoàn toàn mới. Chơi game Chú ong và Plants vs Zombies sẽ giúp học sinh học cách lập trình vòng lặp để nằm trong một vòng lặp khác. Các em cũng sẽ được khuyến khích tìm ra ảnh hưởng đối với chương trình của mình khi có thay đổi nhỏ ở một trong hai vòng lặp sau khi nhấp chuột vào `Chạy`.
             Conditionals with Cards:
               description_student: Đã đến lúc chơi trò chơi mà bạn chỉ giành được điểm khi đáp ứng một số điều kiện nhất định!
-              description_teacher: |-
-                Bài học này trình bày cách sử dụng các lệnh điều kiện để điều chỉnh chương trình sao cho phù hợp với thông tin cụ thể. Không phải lúc nào chúng ta cũng có tất cả thông tin cần thiết khi viết một chương trình. Đôi khi bạn sẽ muốn tùy cơ ứng biến trong những tình huống khác nhau, ngay cả khi bạn không biết tình huống nào sẽ xuất hiện khi chạy mã lệnh. Đó là khi lệnh điều kiện phát huy tác dụng. Lệnh điều kiện cho phép máy tính đưa ra quyết định dựa trên thông tin đúng bất cứ khi nào bạn chạy mã lệnh.\r
-                \r
+              description_teacher: "Bài học này trình bày cách sử dụng các lệnh điều kiện để điều chỉnh chương trình sao cho phù hợp với thông tin cụ thể. Không phải lúc nào chúng ta cũng có tất cả thông tin cần thiết khi viết một chương trình. Đôi khi bạn sẽ muốn tùy cơ ứng biến trong những tình huống khác nhau, ngay cả khi bạn không biết tình huống nào sẽ xuất hiện khi chạy mã lệnh. Đó là khi lệnh điều kiện phát huy tác dụng. Lệnh điều kiện cho phép máy tính đưa ra quyết định dựa trên thông tin đúng bất cứ khi nào bạn chạy mã lệnh.\\r\n\\r\n"
             Conditionals in Bee:
-              description_student: Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa.
+              description_student: 'Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa.'
               description_teacher: Cho đến thời điểm này, học sinh đã viết mã lệnh thực thi giống hệt nhau mỗi khi chạy – an toàn nhưng không thực sự linh hoạt. Trong bài học này, lớp của bạn sẽ bắt đầu viết mã lệnh với lệnh điều kiện, cho phép các em viết mã lệnh có chức năng khác nhau tùy thuộc vào các điều kiện cụ thể mà chương trình gặp phải.
             While Loops in Farmer:
               name: Vòng lặp while trong game Bác nông dân
               description_student: 'Vòng lặp rất hữu ích trong quá trình viết mã lệnh. Bài học này sẽ dạy bạn về một loại vòng lặp mới: vòng lặp while!'
-              description_teacher: |-
-                Vào thời điểm học sinh tiếp cận bài học này, các em đã được thực hành nhiều cách sử dụng các vòng lặp `lặp lại`, và bây giờ là lúc để kết hợp mọi kiến thức đã học.\r
-                \r
-                _Vòng lặp while_ là các vòng lặp tiếp tục lặp lại các lệnh khi đáp ứng điều kiện. Vòng lặp `while` được sử dụng khi người lập trình không biết chính xác số lần mà lệnh đó cần được lặp lại, nhưng biết điều kiện cần đáp ứng để vòng lặp tiếp tục lặp lại. Ví dụ: học sinh sẽ tiến hành lấp lỗ và đào đất trong game Bác nông dân. Các em không biết kích thước của lỗ hoặc độ cao của đống đất, nhưng học sinh sẽ biết các em cần phải tiếp tục lấp lỗ và đào đất miễn là mặt đất không bằng phẳng.
+              description_teacher: "Vào thời điểm học sinh tiếp cận bài học này, các em đã được thực hành nhiều cách sử dụng các vòng lặp `lặp lại`, và bây giờ là lúc để kết hợp mọi kiến thức đã học.\\r\n\\r\n_Vòng lặp while_ là các vòng lặp tiếp tục lặp lại các lệnh khi đáp ứng điều kiện. Vòng lặp `while` được sử dụng khi người lập trình không biết chính xác số lần mà lệnh đó cần được lặp lại, nhưng biết điều kiện cần đáp ứng để vòng lặp tiếp tục lặp lại. Ví dụ: học sinh sẽ tiến hành lấp lỗ và đào đất trong game Bác nông dân. Các em không biết kích thước của lỗ hoặc độ cao của đống đất, nhưng học sinh sẽ biết các em cần phải tiếp tục lấp lỗ và đào đất miễn là mặt đất không bằng phẳng."
             Until Loops in Maze:
               description_student: Bạn có thể làm những điều vô cùng thú vị khi sử dụng vòng lặp `đến khi` đấy!
               description_teacher: Trong bài học này, học sinh sẽ tìm hiểu về vòng lặp `đến khi`. Học sinh sẽ xây dựng các chương trình có nhân vật chính lặp lại các hành động `đến khi` đạt được điểm dừng mong muốn.
@@ -8864,10 +8800,7 @@ vi:
             Digital Citizenship:
               name: Công dân số
               description_student: Một số thông tin không an toàn để chia sẻ trực tuyến. Bài học này sẽ giúp bạn tìm hiểu sự khác biệt giữa thông tin an toàn và thông tin riêng tư.
-              description_teacher: |-
-                Với sự hợp tác của Common Sense Education, bài học này giúp học sinh học cách tư duy phản biện về thông tin người dùng mà một số trang web yêu cầu hoặc bắt buộc. Học sinh sẽ tìm hiểu sự khác biệt giữa thông tin riêng tư và thông tin cá nhân, phân biệt những thông tin nào là an toàn và không an toàn để chia sẻ trực tuyến.\r
-                \r
-                Học sinh cũng sẽ khám phá ý nghĩa của việc hành xử trách nhiệm và tôn trọng cộng đồng ngoại tuyến và trực tuyến của các em như một phần trong quá trình học cách trở thành những công dân kỹ thuật số gương mẫu.
+              description_teacher: "Với sự hợp tác của Common Sense Education, bài học này giúp học sinh học cách tư duy phản biện về thông tin người dùng mà một số trang web yêu cầu hoặc bắt buộc. Học sinh sẽ tìm hiểu sự khác biệt giữa thông tin riêng tư và thông tin cá nhân, phân biệt những thông tin nào là an toàn và không an toàn để chia sẻ trực tuyến.\\r\n\\r\nHọc sinh cũng sẽ khám phá ý nghĩa của việc hành xử trách nhiệm và tôn trọng cộng đồng ngoại tuyến và trực tuyến của các em như một phần trong quá trình học cách trở thành những công dân kỹ thuật số gương mẫu."
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
               description_student: Đã đến lúc ăn mừng rồi! Trong bài học này, bạn sẽ tự lập trình một bữa tiệc khiêu vũ tương tác của riêng mình.
@@ -8877,7 +8810,7 @@ vi:
             End of Course Project:
               name: Dự án tổng kết khóa học
               description_student: Hãy sẵn sàng lập trình nào! Đã đến lúc bắt đầu xây dựng dự án của bạn.
-              description_teacher: Bài học thực tiễn này dẫn dắt học sinh qua quá trình thiết kế, phát triển và giới thiệu các dự án của riêng mình!
+              description_teacher: 'Bài học thực tiễn này dẫn dắt học sinh qua quá trình thiết kế, phát triển và giới thiệu các dự án của riêng mình!'
             Be A Super Digital Citizen:
               name: Hãy trở thành một công dân kỹ thuật số tuyệt vời
               description_student: Tìm hiểu cách trở thành người đứng lên chống lại nạn bắt nạt trên mạng.
@@ -8905,9 +8838,7 @@ vi:
             Sequencing in the Maze:
               name: Chuỗi tuần tự trong mê cung
               description_student: Trong bài học này, bạn sẽ học cách viết các chương trình của riêng mình!
-              description_teacher: |-
-                Trong bộ bài tập này, học sinh sẽ bắt đầu với phần giới thiệu (hoặc đánh giá tùy thuộc vào kinh nghiệm của lớp) về không gian làm việc trực tuyến của Code.org. Sẽ có các video chỉ ra chức năng cơ bản của không gian làm việc bao gồm các nút `Chạy`, `Đặt lại` và `Bước`. Những nội dung cũng được thảo luận trong các video này: kéo các khối Blockly, xóa các khối Blockly và kết nối các khối Blockly. Tiếp theo, học sinh sẽ thực hành các kỹ năng _sắp xếp thứ tự_ và _sửa lỗi_ trong mê cung.\r
-                Sửa lỗi là một yếu tố cần thiết trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập đã được giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để xác định lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu, khối bổ sung và khối không đúng thứ tự.
+              description_teacher: "Trong bộ bài tập này, học sinh sẽ bắt đầu với phần giới thiệu (hoặc đánh giá tùy thuộc vào kinh nghiệm của lớp) về không gian làm việc trực tuyến của Code.org. Sẽ có các video chỉ ra chức năng cơ bản của không gian làm việc bao gồm các nút `Chạy`, `Đặt lại` và `Bước`. Những nội dung cũng được thảo luận trong các video này: kéo các khối Blockly, xóa các khối Blockly và kết nối các khối Blockly. Tiếp theo, học sinh sẽ thực hành các kỹ năng _sắp xếp thứ tự_ và _sửa lỗi_ trong mê cung.\\r\nSửa lỗi là một yếu tố cần thiết trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập đã được giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để xác định lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu, khối bổ sung và khối không đúng thứ tự."
             Programming and Loops with the Artist:
               name: Vẽ bằng vòng lặp
               description_student: Trong bài học này, các vòng lặp giúp bạn dễ dàng tạo ra những bức ảnh tuyệt tác với Artist!
@@ -8922,7 +8853,7 @@ vi:
               description_teacher: Bài học này giới thiệu cho học sinh các vòng lặp `while` và câu lệnh`if/else`. _Vòng lặp while_ là các vòng lặp tiếp tục lặp lại các lệnh miễn là đáp ứng điều kiện. Vòng lặp while được sử dụng khi người lập trình không biết chính xác số lần các lệnh cần được lặp lại, nhưng người lập trình biết điều kiện nào cần có để vòng lặp tiếp tục lặp lại. Các câu lệnh `If/Else` cho khả năng lập trình linh hoạt bằng cách chỉ chạy toàn bộ phần mã lệnh nếu đáp ứng điều kiện, nếu không thì sẽ chạy lệnh khác.
             Simon Says:
               description_student: Hãy chơi game và suy nghĩ về những lệnh cần thiết để cho kết quả phù hợp.
-              description_teacher: Trong bài học này, học sinh sẽ chơi game nhằm giúp các em suy nghĩ về cách đặt lệnh để cho kết quả đúng. Điều này sẽ giúp các em dễ dàng vận dụng kiến thức vào Sprite Lab trong các bài học sắp tới.
+              description_teacher: 'Trong bài học này, học sinh sẽ chơi game nhằm giúp các em suy nghĩ về cách đặt lệnh để cho kết quả đúng. Điều này sẽ giúp các em dễ dàng vận dụng kiến thức vào Sprite Lab trong các bài học sắp tới.'
             Learning Sprites with Sprite Lab:
               name: Cá bơi với Sprite Lab
               description_student: Tìm hiểu cách tạo và chỉnh sửa nhân vật.
@@ -8930,18 +8861,18 @@ vi:
             Alien Dance Party with Sprite Lab:
               name: Bữa tiệc khiêu vũ của người ngoài hành tinh với Sprite Lab
               description_student: Hãy tạo một dự án tương tác có thể chia sẻ với các bạn cùng lớp.
-              description_teacher: Bài học này sử dụng Sprite Lab, một nền tảng để học sinh có thể làm game và hoạt hình tương tác của riêng mình. Ngoài các hành vi, hôm nay học sinh sẽ kết hợp dữ liệu đầu vào của người dùng dưới dạng sự kiện để tạo ra một “bữa tiệc khiêu vũ của người ngoài hành tinh”.
+              description_teacher: 'Bài học này sử dụng Sprite Lab, một nền tảng để học sinh có thể làm game và hoạt hình tương tác của riêng mình. Ngoài các hành vi, hôm nay học sinh sẽ kết hợp dữ liệu đầu vào của người dùng dưới dạng sự kiện để tạo ra một “bữa tiệc khiêu vũ của người ngoài hành tinh”.'
             Private and Personal Information:
               description_student: Internet rất vui và thú vị, nhưng điều quan trọng là phải giữ an toàn. Bài học này sẽ chỉ cho bạn thấy sự khác biệt giữa thông tin an toàn để chia sẻ và thông tin riêng tư.
               description_teacher: Bài học này vốn do Common Sense Education biên soạn. Bản chất của các em học sinh là thích chia sẻ và kết nối với người khác. Nhưng chia sẻ trực tuyến đi kèm với một số rủi ro. Làm cách nào để chúng ta có thể giúp trẻ em thiết lập các mối quan hệ bền chặt, tích cực và an toàn trên mạng? Hãy giúp học sinh của bạn tìm hiểu sự khác biệt giữa thông tin cá nhân và thông tin nên giữ bí mật.
             About Me:
               name: Giới thiệu bản thân với Sprite Lab
               description_student: Bằng cách tạo poster tương tác với Sprite Lab, học sinh sẽ áp dụng kiến thức của mình về việc chia sẻ thông tin cá nhân và riêng tư trên web.
-              description_teacher: Bằng cách tạo poster tương tác với Sprite Lab, học sinh sẽ áp dụng kiến thức của mình về việc chia sẻ thông tin cá nhân và riêng tư trên web.\r
+              description_teacher: "Bằng cách tạo poster tương tác với Sprite Lab, học sinh sẽ áp dụng kiến thức của mình về việc chia sẻ thông tin cá nhân và riêng tư trên web.\\r\n"
             Access Ability:
               name: Thiết kế cho trợ năng
-              description_student: Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
-              description_teacher: Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
+              description_student: 'Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.'
+              description_teacher: 'Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.'
             Nested Loops in Bee:
               name: Vòng lặp lồng nhau trong game Mê cung
               description_student: Vòng lặp trong vòng lặp trong vòng lặp. Điều này có nghĩa là gì? Bài học này sẽ cho bạn thấy hiện tượng xảy ra khi bạn đặt vòng lặp bên trong một vòng lặp khác.
@@ -8952,7 +8883,7 @@ vi:
               description_teacher: Học sinh sẽ tạo ra các bản thiết kế phức tạp bằng cách sử dụng Artist trong bộ bài tập của ngày hôm nay. Bằng cách tiếp tục thực hành các vòng lặp lồng nhau với các mục tiêu mới, học sinh sẽ thấy nhiều công dụng hơn của các vòng lặp nói chung. Bộ bài tập này cũng mang lại nhiều tiềm năng sáng tạo hơn với cơ hội để học sinh tự sáng tạo bản thiết kế của riêng mình vào cuối bài học.
             Nested Loops in Frozen:
               name: Vòng lặp lồng nhau với Frozen
-              description_student: Anna và Elsa có kỹ năng trượt băng tuyệt vời, nhưng cần sự giúp đỡ của bạn để tạo ra các mô hình trên băng. Hãy sử dụng các vòng lặp lồng nhau để tạo ra thứ gì đó siêu NGẦU nhé.
+              description_student: 'Anna và Elsa có kỹ năng trượt băng tuyệt vời, nhưng cần sự giúp đỡ của bạn để tạo ra các mô hình trên băng. Hãy sử dụng các vòng lặp lồng nhau để tạo ra thứ gì đó siêu NGẦU nhé.'
               description_teacher: Bây giờ, học sinh đã biết cách xếp lớp các vòng lặp của mình, các em có thể tạo ra rất nhiều hình ảnh đẹp. Bài học này sẽ hướng dẫn học sinh xử lý một loạt bài tập để giúp các em tạo những hình ảnh có thể đưa ngay vào portfolio của riêng mình bằng kỹ năng trượt băng điêu luyện của Anna và Elsa!
             'Functions: Songwriting':
               name: Sáng tác với tham số
@@ -8973,16 +8904,13 @@ vi:
             End of Course Project:
               name: Dự án tổng kết khóa học
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!
-              description_teacher: |-
-                Bốn bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\r
-                \r
-                Trong giai đoạn khám phá, học sinh sẽ xem các ví dụ được tạo sẵn về các dự án trong cả Artist và Sprite Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án trong Artist, Sprite Lab hoặc giao diện khác mà các em đã quen thuộc. (Đây có thể là giai đoạn dài nhất của dự án.) Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè.
+              description_teacher: "Bốn bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với bạn bè và những người thân yêu. Theo dự kiến, đây sẽ là trải nghiệm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\\r\n\\r\nTrong giai đoạn khám phá, học sinh sẽ xem các ví dụ được tạo sẵn về các dự án trong cả Artist và Sprite Lab để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án trong Artist, Sprite Lab hoặc giao diện khác mà các em đã quen thuộc. (Đây có thể là giai đoạn dài nhất của dự án.) Cuối cùng, học sinh sẽ có thể trình bày tác phẩm đã hoàn thành của mình với bạn bè."
             Digital Sharing:
-              description_student: Trong bài học này, bạn sẽ tìm hiểu về những thách thức và lợi ích của quyền sở hữu và bản quyền.
+              description_student: 'Trong bài học này, bạn sẽ tìm hiểu về những thách thức và lợi ích của quyền sở hữu và bản quyền.'
             Designing for Accessibility:
               name: Thiết kế cho trợ năng
-              description_student: Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
-              description_teacher: Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
+              description_student: 'Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.'
+              description_teacher: 'Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.'
           student_description: Bắt đầu viết mã với các thuật toán, vòng lặp, điều kiện và sự kiện, sau đó bạn sẽ chuyển sang các hàm. Trong phần thứ hai của khóa học này, hãy thiết kế và tạo một dự án thực tiễn để có thể chia sẻ với bạn bè và gia đình của mình.
         coursef-2020:
           title: Khóa học F (2020)
@@ -9012,7 +8940,7 @@ vi:
             Events with Sprite Lab:
               name: Bữa tiệc khiêu vũ của người ngoài hành tinh với Sprite Lab
               description_student: Hãy tạo một dự án tương tác có thể chia sẻ với các bạn cùng lớp.
-              description_teacher: Bài học này sử dụng Sprite Lab, một nền tảng để học sinh có thể làm game và hoạt hình tương tác của riêng mình. Ngoài các hành vi, hôm nay học sinh sẽ kết hợp dữ liệu đầu vào của người dùng dưới dạng sự kiện để tạo ra một “bữa tiệc khiêu vũ của người ngoài hành tinh”.
+              description_teacher: 'Bài học này sử dụng Sprite Lab, một nền tảng để học sinh có thể làm game và hoạt hình tương tác của riêng mình. Ngoài các hành vi, hôm nay học sinh sẽ kết hợp dữ liệu đầu vào của người dùng dưới dạng sự kiện để tạo ra một “bữa tiệc khiêu vũ của người ngoài hành tinh”.'
             Loops with the Artist:
               name: Vẽ bằng vòng lặp
               description_student: Trong bài học này, các vòng lặp giúp bạn dễ dàng tạo ra những bức ảnh tuyệt tác với Artist!
@@ -9031,7 +8959,7 @@ vi:
               description_teacher: Trong bài học này, học sinh sẽ khám phá việc tạo ra các thiết kế lặp lại bằng cách sử dụng biến trong môi trường Artist. Học sinh sẽ học cách sử dụng biến để khiến mã lệnh dễ viết và dễ đọc hơn, ngay cả khi các giá trị không thay đổi trong quá trình chạy.
             Variables that Change in Bee:
               description_student: Chú ong này rất thích các biến!
-              description_teacher: Bài học này sẽ giúp minh họa cách gia tăng sức mạnh cho chương trình với các biến bằng cách cho phép các giá trị thay đổi trong quá trình chạy mã lệnh.
+              description_teacher: 'Bài học này sẽ giúp minh họa cách gia tăng sức mạnh cho chương trình với các biến bằng cách cho phép các giá trị thay đổi trong quá trình chạy mã lệnh.'
             Variables that Change in Artist:
               name: Thay đổi biến với Artist
               description_student: Trong bài học này, bạn sẽ tạo ra các bản vẽ bằng cách sử dụng biến thay đổi khi chương trình chạy.
@@ -9043,7 +8971,7 @@ vi:
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
               description_student: Bạn sẽ có vô số điều thú vị khi học về vòng lặp `for`!
-              description_teacher: Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại nhiều việc, nhưng bây giờ chúng ta sẽ học cách sử dụng các vòng lặp có các cấu trúc bổ sung được tích hợp sẵn. Những cấu trúc mới này sẽ cho phép học sinh tạo ra mã lệnh hiệu quả hơn và linh hoạt hơn.
+              description_teacher: 'Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại nhiều việc, nhưng bây giờ chúng ta sẽ học cách sử dụng các vòng lặp có các cấu trúc bổ sung được tích hợp sẵn. Những cấu trúc mới này sẽ cho phép học sinh tạo ra mã lệnh hiệu quả hơn và linh hoạt hơn.'
             For Loops in Bee:
               description_student: Vo ve. Trong những bài tập này, bạn sẽ hướng dẫn một chú ong lấy mật hoa và mật ong bằng cách sử dụng vòng lặp `for`!
               description_teacher: Với game Chú ong, bài học này tập trung vào các vòng lặp `for` và sử dụng một biến tăng dần để giải các bài tập phức tạp hơn. Học sinh sẽ bắt đầu bằng cách ôn lại vòng lặp từ các bài học trước, sau đó chuyển sang bài giới thiệu về vòng lặp for để giải quyết các bài toán phức tạp một cách hiệu quả hơn.
@@ -9072,22 +9000,15 @@ vi:
               description_student: Bài học này sẽ hướng dẫn bạn về nguồn cung ứng cộng đồng, quy trình xây dựng một dự án với một nhóm.
               description_teacher: Trong ngành khoa học máy tính, chúng ta phải đối mặt với một số vấn đề lớn và khó khăn. Hầu như không có cá nhân nào có thể tự mình đương đầu với những thử thách như tìm số nguyên tố lớn hay sắp xếp thứ tự DNA. Việc góp thêm công sức từ những người khác sẽ khiến những nhiệm vụ này trở nên khả thi. Bài học này sẽ cho học sinh của bạn thấy lợi ích của phương pháp làm việc nhóm trong ngành khoa học máy tính.
             Digital Sharing:
-              description_student: Trong bài học này, bạn sẽ tìm hiểu về những thách thức và lợi ích của quyền sở hữu và bản quyền.
+              description_student: 'Trong bài học này, bạn sẽ tìm hiểu về những thách thức và lợi ích của quyền sở hữu và bản quyền.'
             End of Course Project:
               name: Dự án tổng kết khóa học
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!
-              description_teacher: |-
-                Năm bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với đồng nghiệp và những người thân yêu. Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\r
-                \r
-                Trong giai đoạn “Khám phá”, học sinh sẽ có thể thử dùng các chương trình Artist và Sprite Lab xây dựng sẵn để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án của riêng mình trong Artist hoặc Sprite Lab hoặc bất kỳ giao diện nào khác mà bạn có thể cung cấp. (Đây có thể là giai đoạn dài nhất của dự án.) Sau đó, học sinh sẽ chỉnh sửa mã lệnh của mình sau khi thử nghiệm và cho các bạn xem. Cuối cùng, học sinh có thể trình bày tác phẩm hoàn chỉnh của mình với các bạn cùng lớp.
+              description_teacher: "Năm bài học tiếp theo tạo cơ hội cho học sinh sử dụng các kỹ năng viết mã của mình trong một dự án thực tiễn. Dự án này sẽ giúp các cá nhân tích lũy kinh nghiệm về lập trình và tạo ra sản phẩm mẫu để chia sẻ với đồng nghiệp và những người thân yêu. Theo dự kiến, đây sẽ là dự án bao gồm nhiều bài học hoặc nhiều tuần, trong đó học sinh sẽ dành thời gian khám phá, brainstorm, tìm hiểu về quy trình thiết kế, xây dựng và trình bày tác phẩm cuối cùng của mình.\\r\n\\r\nTrong giai đoạn “Khám phá”, học sinh sẽ có thể thử dùng các chương trình Artist và Sprite Lab xây dựng sẵn để lấy cảm hứng. Tiếp theo, học sinh sẽ tìm hiểu về quy trình thiết kế và cách triển khai quy trình này trong các dự án của chính mình. Sau đó, các em sẽ tự mình tạo dự án của riêng mình trong Artist hoặc Sprite Lab hoặc bất kỳ giao diện nào khác mà bạn có thể cung cấp. (Đây có thể là giai đoạn dài nhất của dự án.) Sau đó, học sinh sẽ chỉnh sửa mã lệnh của mình sau khi thử nghiệm và cho các bạn xem. Cuối cùng, học sinh có thể trình bày tác phẩm hoàn chỉnh của mình với các bạn cùng lớp."
             AI for Oceans:
               name: Trí Tuệ Nhân Tạo cho Đại Dương
               description_student: 'Tóm tắt bài hướng dẫn: Đầu tiên, học sinh phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh mới.'
-              description_teacher: |-
-                **Tóm tắt hướng dẫn:** Đầu tiên, học sinh phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh mới.\r
-                \r
-                \r
-                **Kiểm tra độ chính xác:** Bài hướng dẫn này sẽ không cho học sinh biết liệu các em có hoàn thành cấp độ một cách chính xác hay không. Học sinh có thể lướt qua các phần khác nhau của hoạt động một cách nhanh chóng. Hãy khuyến khích học sinh xem video, đọc hướng dẫn và thử nhiều hoạt động khác nhau trong quá trình học. Các em có thể chia sẻ những phát hiện của mình với bạn hoặc một người bạn cùng lớp bất cứ lúc nào.\r
+              description_teacher: "**Tóm tắt hướng dẫn:** Đầu tiên, học sinh phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh mới.\\r\n\\r\n\\r\n**Kiểm tra độ chính xác:** Bài hướng dẫn này sẽ không cho học sinh biết liệu các em có hoàn thành cấp độ một cách chính xác hay không. Học sinh có thể lướt qua các phần khác nhau của hoạt động một cách nhanh chóng. Hãy khuyến khích học sinh xem video, đọc hướng dẫn và thử nhiều hoạt động khác nhau trong quá trình học. Các em có thể chia sẻ những phát hiện của mình với bạn hoặc một người bạn cùng lớp bất cứ lúc nào.\\r\n"
           student_description: Học cách sử dụng các loại vòng lặp, sự kiện, hàm và lệnh điều kiện khác nhau. Phân tích các kỹ thuật giải quyết vấn đề khác nhau và thảo luận về các tác động xã hội của máy tính và internet. Trong phần thứ hai của khóa học này, hãy thiết kế và tạo dự án thực tiễn để có thể chia sẻ với bạn bè và gia đình.
         express-2020:
           description: Hãy tìm hiểu khoa học máy tính bằng cách thử các bài học dưới đây theo tốc độ của riêng bạn! Hãy học cách tạo các chương trình máy tính, phát triển kỹ năng giải quyết vấn đề và vượt qua các thử thách thú vị! Hãy làm game và các dự án sáng tạo để chia sẻ với bạn bè, gia đình và giáo viên.
@@ -9196,7 +9117,7 @@ vi:
               name: Lập trình cùng Rey và robot BB-8
               description_teacher: Trong bài học này, học sinh sẽ sử dụng các kỹ năng lập trình mới học của mình theo những cách phức tạp hơn để tham gia một khóa học khó hơn với BB-8.
             Programming in Harvester:
-              description_teacher: Học sinh sẽ áp dụng các khái niệm lập trình đã học vào môi trường game Người thu hoạch. Bây giờ, thay vì chỉ đưa nhân vật đến đích, học sinh phải thu thập ngô bằng cách sử dụng một khối mới. Học sinh sẽ tiếp tục phát triển các kỹ năng giải thuật toán trình tự và bắt đầu áp dụng quy trình sửa lỗi.
+              description_teacher: 'Học sinh sẽ áp dụng các khái niệm lập trình đã học vào môi trường game Người thu hoạch. Bây giờ, thay vì chỉ đưa nhân vật đến đích, học sinh phải thu thập ngô bằng cách sử dụng một khối mới. Học sinh sẽ tiếp tục phát triển các kỹ năng giải thuật toán trình tự và bắt đầu áp dụng quy trình sửa lỗi.'
             Spelling Bee:
               name: Ong tìm chữ
             Loops in Ice Age:
@@ -9328,7 +9249,7 @@ vi:
             Styling Text with CSS:
               name: Tạo phong cách cho văn bản với CSS
               description_student: Bài học này giới thiệu CSS là một cách để tạo phong cách cho các thành phần trên trang web. Các lớp học tìm hiểu bộ quy tắc cú pháp cơ bản cho CSS và sau đó khám phá các tính chất tác động đến các thành phần văn bản HTML.  Cuối cùng, tất cả mọi người áp dụng phong cách văn bản cho trang web cá nhân của họ.
-              description_teacher: 'Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \r \r '
+              description_teacher: "Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \\r \\r \n"
             Intellectual Property:
               name: Sở hữu trí tuệ
             Styling Elements with CSS:
@@ -9351,11 +9272,11 @@ vi:
             User Input and Strings:
               name: Đầu vào và chuỗi người dùng
             '"If" Statements Unplugged':
-              name: Câu lệnh "If"
+              name: 'Câu lệnh "If"'
             Boolean Expressions and "If" Statements:
               name: Biểu thức boolean và câu lệnh "If"
             '"if-else-if" and Conditional Logic':
-              name: If-else-if và logic có điều kiện
+              name: 'If-else-if và logic có điều kiện'
             'Building an App: Color Sleuth':
               name: 'Xây dựng một ứng dụng: màu Sleuth'
             Unit 5 Assessment 2:
@@ -9470,12 +9391,12 @@ vi:
             cspSurvey:
               display_name: Khảo sát
         csd3-virtual:
-          description_short: Lập trình
+          description_short: "Lập trình"
           lessons:
             Drawing in Game Lab:
               name: Bản vẽ trong Kho trò chơi
-              description_student: Các lớp học được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Bài học của bạn bao gồm những điều cơ bản của việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, các lớp học tạo ra một phiên bản trực tuyến của hình ảnh mà họ thiết kế ở bài học trước đó.
-              description_teacher: Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó.
+              description_student: "Các lớp học được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Bài học của bạn bao gồm những điều cơ bản của việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, các lớp học tạo ra một phiên bản trực tuyến của hình ảnh mà họ thiết kế ở bài học trước đó."
+              description_teacher: "Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó."
             Variables:
               name: Các biến
             Text:
@@ -9485,20 +9406,20 @@ vi:
             Project - Interactive Card:
               name: 'Dự án: Thẻ tương tác'
             Velocity:
-              description_student: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
-              description_teacher: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
+              description_student: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
+              description_teacher: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
             Collision Detection:
               name: Phát hiện va chạm
-              description_student: Các lớp học tìm hiểu về các phát hiện va chạm trên máy tính.  Các cặp khám phá việc làm thế nào một máy tính có thể sử dụng vị trí và thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không. Các lớp học sau đó sử dụng  isTouching() các khối lệnh để tạo ra các hiệu ứng khác nhau khi nhân vật va chạm, bao gồm cả phần chạy âm thanh.  Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ bắt đầu ở bài học gần nhất.
-              description_teacher: Học sinh tìm hiểu về phát hiện va chạm trên máy tính.  Họ làm việc theo cặp, khám phá làm thế nào một máy tính có thể sử dụng vị trí và các thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không.  Họ sau đó sử dụng 'isTouching()'  các khối lệnh để tạo ra các hiệu ứng khác nhau khi các nhân vật va chạm, bao gồm cả phần chạy âm thanh. Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ đã bắt đầu ở bài học gần nhất.
+              description_student: "Các lớp học tìm hiểu về các phát hiện va chạm trên máy tính.  Các cặp khám phá việc làm thế nào một máy tính có thể sử dụng vị trí và thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không. Các lớp học sau đó sử dụng  isTouching() các khối lệnh để tạo ra các hiệu ứng khác nhau khi nhân vật va chạm, bao gồm cả phần chạy âm thanh.  Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ bắt đầu ở bài học gần nhất."
+              description_teacher: "Học sinh tìm hiểu về phát hiện va chạm trên máy tính.  Họ làm việc theo cặp, khám phá làm thế nào một máy tính có thể sử dụng vị trí và các thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không.  Họ sau đó sử dụng 'isTouching()'  các khối lệnh để tạo ra các hiệu ứng khác nhau khi các nhân vật va chạm, bao gồm cả phần chạy âm thanh. Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ đã bắt đầu ở bài học gần nhất."
             Complex Sprite Movement:
               name: Di chuyển nhân vật phức tạp
-              description_student: 'Các lớp học tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn, chẳng hạn như mô phỏng trọng lực, làm cho một nhân vật nhảy và cho phép một nhân vật nổi bên trái hoặc bên phải. Ở các cấp độ cuối cùng lớp học kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập tiền xu. '
-              description_teacher: Học sinh tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn. Đặc biệt, học sinh sẽ tìm hiểu làm thế nào để mô phỏng các lực hấp dẫn, làm cho một nhân vật nhảy, và cho phép một nhân vật nổi sang trái hoặc sang phải. Ở các cấp độ cuối cùng của tiến trình Code Studio sinh viên kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập các đồng xu. Học sinh được khuyến khích để tạo ra những nội dung thêm của riêng họ bổ sung cho các trò chơi ở cấp độ cuối cùng.
+              description_student: "Các lớp học tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn, chẳng hạn như mô phỏng trọng lực, làm cho một nhân vật nhảy và cho phép một nhân vật nổi bên trái hoặc bên phải. Ở các cấp độ cuối cùng lớp học kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập tiền xu. "
+              description_teacher: "Học sinh tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn. Đặc biệt, học sinh sẽ tìm hiểu làm thế nào để mô phỏng các lực hấp dẫn, làm cho một nhân vật nhảy, và cho phép một nhân vật nổi sang trái hoặc sang phải. Ở các cấp độ cuối cùng của tiến trình Code Studio sinh viên kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập các đồng xu. Học sinh được khuyến khích để tạo ra những nội dung thêm của riêng họ bổ sung cho các trò chơi ở cấp độ cuối cùng."
             Collisions:
               name: Va chạm
-              description_student: Lớp học lập trình các nhân vật tương tác theo nhiều cách mới.  Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
-              description_teacher: Học sinh lập trình các nhân vật của họ tương tác theo nhiều cách mới. Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh, lớp học khởi động thử các cách khác để 2 nhân vật có thể tương tác. Sau đó chúng có thể sử dụng để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
+              description_student: "Lớp học lập trình các nhân vật tương tác theo nhiều cách mới.  Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên)."
+              description_teacher: "Học sinh lập trình các nhân vật của họ tương tác theo nhiều cách mới. Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh, lớp học khởi động thử các cách khác để 2 nhân vật có thể tương tác. Sau đó chúng có thể sử dụng để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên)."
             Functions:
               name: Các hàm
             The Game Design Process:
@@ -9542,7 +9463,7 @@ vi:
               name: Khóa học F
         virustest:
           title: Mô phỏng dịch bệnh bùng phát
-          description_short: Hãy sử dụng Sprite Lab để tạo ra bản mô phỏng dịch bệnh bùng phát vi rút.
+          description_short: 'Hãy sử dụng Sprite Lab để tạo ra bản mô phỏng dịch bệnh bùng phát vi rút.'
         ml-playground:
           lessons:
             AI for Oceans:
@@ -9561,10 +9482,10 @@ vi:
             outbreak:
               display_name: Mô phỏng dịch bệnh bùng phát
           title: Trình mô phỏng dịch bệnh bùng phát
-          description_short: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.
-          description: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.
+          description_short: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
+          description: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
           name: dịch bệnh bùng phát
-          student_description: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.
+          student_description: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
         2021drafting:
           lessons:
             Virus Simulation for Code Bytes:
@@ -9607,7 +9528,7 @@ vi:
             Styling Text with CSS:
               key: Tạo phong cách cho văn bản với CSS
               name: Tạo phong cách cho văn bản với CSS
-              description_teacher: 'Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \r \r '
+              description_teacher: "Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \\r \\r \n"
             Intellectual Property:
               key: Sở hữu trí tuệ
               name: Sở hữu trí tuệ
@@ -9618,12 +9539,12 @@ vi:
             cspSurvey:
               display_name: Khảo sát
         csd3-2021:
-          description_short: Lập trình
+          description_short: "Lập trình"
           lessons:
             Drawing in Game Lab:
               key: Bản vẽ trong Kho trò chơi
               name: Bản vẽ trong Kho trò chơi
-              description_teacher: Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó.
+              description_teacher: "Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó."
             Variables:
               key: Các biến
               name: Các biến
@@ -9637,7 +9558,7 @@ vi:
               key: 'Dự án: Thẻ tương tác'
               name: 'Dự án: Thẻ tương tác'
             Velocity:
-              description_teacher: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
+              description_teacher: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
             Collision Detection:
               key: Phát hiện va chạm
               name: Phát hiện va chạm
@@ -9833,7 +9754,7 @@ vi:
             Digital Trails:
               key: Dấu vết kỹ thuật số
               name: Dấu vết kỹ thuật số
-              description_student: Tìm hiểu về dấu ấn kỹ thuật số và cách giữ an toàn khi truy cập các trang web.
+              description_student: 'Tìm hiểu về dấu ấn kỹ thuật số và cách giữ an toàn khi truy cập các trang web.'
               description_teacher: |2-
                  [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
 
@@ -9877,7 +9798,7 @@ vi:
               description_student: Di chuyển hoặc hét lên khi giáo viên của bạn nhấn các nút trên chiếc điều khiển từ xa khổng lồ.
             Events in Play Lab:
               key: Sự kiện trong Play Lab
-              name: Trận chiến hoàng gia với các sự kiện
+              name: 'Trận chiến hoàng gia với các sự kiện'
               description_student: Sử dụng sự kiện để tạo một câu chuyện hoặc làm game tương tác.
             lesson-1:
               name: Dự án tổng kết khóa học
@@ -9956,7 +9877,7 @@ vi:
             'Events: The Big Event':
               key: 'Sự kiện: Sự kiện lớn'
               name: Sự kiện lớn
-              description_student: Chơi game thú vị để tìm hiểu về sự kiện.
+              description_student: 'Chơi game thú vị để tìm hiểu về sự kiện.'
             Build a Flappy Game:
               key: Làm game dạng Flappy Bird
               name: Làm game dạng Flappy Bird
@@ -10030,7 +9951,7 @@ vi:
               description_student: Đã đến lúc chơi trò chơi mà bạn chỉ giành được điểm khi đáp ứng một số điều kiện nhất định!
             Conditionals in Bee:
               key: Lệnh điều kiện trong game Chú ong
-              description_student: Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa.
+              description_student: 'Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa.'
             While Loops in Farmer:
               key: Vòng lặp while trong game Bác nông dân
               name: Vòng lặp while trong game Bác nông dân
@@ -10072,7 +9993,7 @@ vi:
             lesson-5:
               name: Nâng cấp mật khẩu
               description_student: Trong bài học này, bạn sẽ tìm hiểu cách mật khẩu bảo vệ thông tin của bạn và cách tạo mật khẩu hiệu quả.
-              description_teacher: |-
+              description_teacher: |2-
                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
 
                 Bài học này vốn do [Common Sense Education] biên soạn.(https://www.commonsense.org/education/digital-citizenship/curriculum).
@@ -10112,9 +10033,7 @@ vi:
               key: Chuỗi tuần tự trong mê cung
               name: Chuỗi tuần tự trong mê cung
               description_student: Trong bài học này, bạn sẽ học cách viết các chương trình của riêng mình!
-              description_teacher: |-
-                Trong bộ bài tập này, học sinh sẽ bắt đầu với phần giới thiệu (hoặc đánh giá tùy thuộc vào kinh nghiệm của lớp) về không gian làm việc trực tuyến của Code.org. Sẽ có các video chỉ ra chức năng cơ bản của không gian làm việc bao gồm các nút `Chạy`, `Đặt lại` và `Bước`. Những nội dung cũng được thảo luận trong các video này: kéo các khối Blockly, xóa các khối Blockly và kết nối các khối Blockly. Tiếp theo, học sinh sẽ thực hành các kỹ năng _sắp xếp thứ tự_ và _sửa lỗi_ trong mê cung.\r
-                Sửa lỗi là một yếu tố cần thiết trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập đã được giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để xác định lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu, khối bổ sung và khối không đúng thứ tự.
+              description_teacher: "Trong bộ bài tập này, học sinh sẽ bắt đầu với phần giới thiệu (hoặc đánh giá tùy thuộc vào kinh nghiệm của lớp) về không gian làm việc trực tuyến của Code.org. Sẽ có các video chỉ ra chức năng cơ bản của không gian làm việc bao gồm các nút `Chạy`, `Đặt lại` và `Bước`. Những nội dung cũng được thảo luận trong các video này: kéo các khối Blockly, xóa các khối Blockly và kết nối các khối Blockly. Tiếp theo, học sinh sẽ thực hành các kỹ năng _sắp xếp thứ tự_ và _sửa lỗi_ trong mê cung.\\r\nSửa lỗi là một yếu tố cần thiết trong quá trình học lập trình. Học sinh sẽ gặp một số bài tập đã được giải sai. Các em sẽ cần phải phân tích mã lệnh hiện có để xác định lỗi, bao gồm các vòng lặp không chính xác, khối bị thiếu, khối bổ sung và khối không đúng thứ tự."
             Programming and Loops with the Artist:
               name: Vẽ bằng vòng lặp
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -10142,7 +10061,7 @@ vi:
 
                 Bản chất của các em học sinh là thích chia sẻ và kết nối với người khác. Nhưng chia sẻ trực tuyến đi kèm với một số rủi ro. Làm cách nào để chúng ta có thể giúp trẻ em thiết lập các mối quan hệ bền chặt, tích cực và an toàn trên mạng? Hãy giúp học sinh của bạn tìm hiểu sự khác biệt giữa thông tin cá nhân và thông tin nên giữ bí mật.
             Digital Sharing:
-              description_student: Trong bài học này, bạn sẽ tìm hiểu về những thách thức và lợi ích của quyền sở hữu và bản quyền.
+              description_student: 'Trong bài học này, bạn sẽ tìm hiểu về những thách thức và lợi ích của quyền sở hữu và bản quyền.'
             Nested Loops in Bee:
               name: Vòng lặp lồng nhau trong game Mê cung
               description_student: Vòng lặp trong vòng lặp trong vòng lặp. Điều này có nghĩa là gì? Bài học này sẽ cho bạn thấy hiện tượng xảy ra khi bạn đặt vòng lặp bên trong một vòng lặp khác.
@@ -10154,7 +10073,7 @@ vi:
               description_teacher: Trong bài học **xây dựng kỹ năng** này, học sinh sẽ tạo ra các thiết kế phức tạp bằng cách sử dụng Artist. Bài học kết thúc với cơ hội cho học sinh tự tạo thiết kế của riêng mình.
             Nested Loops in Frozen:
               key: Vòng lặp lồng nhau trong Frozen
-              name: Vòng lặp lồng với Frozen
+              name: 'Vòng lặp lồng với Frozen'
             'Functions: Songwriting':
               key: 'Hàm: Viết bài hát'
               name: Sáng tác với tham số
@@ -10174,8 +10093,8 @@ vi:
             Designing for Accessibility:
               key: Thiết kế cho trợ năng
               name: Thiết kế cho trợ năng
-              description_student: Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
-              description_teacher: Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
+              description_student: 'Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.'
+              description_teacher: 'Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.'
             End of Course Project:
               key: Dự án tổng kết khóa học
               name: Dự án tổng kết khóa học
@@ -10227,7 +10146,7 @@ vi:
               key: Sự kiện với Sprite Lab
               name: Bữa tiệc khiêu vũ của người ngoài hành tinh với Sprite Lab
               description_student: Hãy tạo một dự án tương tác có thể chia sẻ với các bạn cùng lớp.
-              description_teacher: Bài học này sử dụng Sprite Lab, một nền tảng để học sinh có thể làm game và hoạt hình tương tác của riêng mình. Ngoài các hành vi, hôm nay học sinh sẽ kết hợp dữ liệu đầu vào của người dùng dưới dạng sự kiện để tạo ra một “bữa tiệc khiêu vũ của người ngoài hành tinh”.
+              description_teacher: 'Bài học này sử dụng Sprite Lab, một nền tảng để học sinh có thể làm game và hoạt hình tương tác của riêng mình. Ngoài các hành vi, hôm nay học sinh sẽ kết hợp dữ liệu đầu vào của người dùng dưới dạng sự kiện để tạo ra một “bữa tiệc khiêu vũ của người ngoài hành tinh”.'
             Loops with the Artist:
               name: Vẽ bằng vòng lặp
               description_teacher: Bài học **xây dựng kỹ năng** này chuyển trọng tâm từ Sprite Lab sang Artist, công cụ mới mà học sinh sẽ khám phá trong suốt phần còn lại của khóa học.
@@ -10291,7 +10210,7 @@ vi:
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!
             lesson-1:
               name: Thiết kế cho trợ năng
-              description_student: Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
+              description_student: 'Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.'
             lesson-2:
               name: Sức mạnh của ngôn từ
               description_student: Bắt nạt chưa bao giờ là đúng. Bài học này sẽ dạy bạn về những điều nên và không nên phát ngôn trực tuyến.
@@ -10352,7 +10271,7 @@ vi:
             'Looking Ahead with Minecraft ':
               name: Nhìn về phía trước
             If/Else with Bee:
-              description_student: Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa.
+              description_student: 'Bây giờ bạn đã hiểu về lệnh điều kiện, đã đến lúc lập trình game Chú ong và sử dụng lệnh điều kiện khi lấy mật ong và mật hoa.'
             While Loops with the Farmer:
               name: Vòng lặp while trong game Bác nông dân
               description_student: 'Vòng lặp rất hữu ích trong quá trình viết mã lệnh. Bài học này sẽ dạy bạn về một loại vòng lặp mới: vòng lặp while!'
@@ -10539,9 +10458,9 @@ vi:
             cspSurvey:
               display_name: Khảo sát
         contagion-pilot:
-          description_short: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.
-          description: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.
-          student_description: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.
+          description_short: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
+          description: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
+          student_description: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
         ai-unit-pilot:
           lessons:
             lesson14:
@@ -10600,3 +10519,38 @@ vi:
           lessons:
             lesson15:
               name: Bài học 15
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: Bắt đầu
+              name: Bắt đầu
+            Computer Science Fundamentals:
+              key: Máy tính khoa học cơ bản
+              name: Máy tính khoa học cơ bản
+            Looking Ahead:
+              key: Nhìn về phía trước
+              name: Nhìn về phía trước
+            'Mastering the Basics: Sequencing':
+              key: 'Nắm vững các khái niệm cơ bản: Trình tự'
+              name: 'Nắm vững các khái niệm cơ bản: Trình tự'
+            'Mastering the Basics: Loops':
+              key: 'Nắm vững các khái niệm cơ bản: Các vòng lặp'
+              name: 'Nắm vững các khái niệm cơ bản: Các vòng lặp'
+            'Mastering the Basics: Conditionals':
+              key: 'Nắm vững các khái niệm cơ bản: Các điều kiện'
+              name: 'Nắm vững các khái niệm cơ bản: Các điều kiện'
+            'Mastering the Basics: Functions':
+              key: 'Nắm vững các khái niệm cơ bản: Các chức năng'
+              name: 'Nắm vững các khái niệm cơ bản: Các chức năng'
+            'Mastering the Basics: Events':
+              key: 'Nắm vững các khái niệm cơ bản: Các sự kiện'
+              name: 'Nắm vững các khái niệm cơ bản: Các sự kiện'
+            Best Practices for Teaching Computer Science:
+              key: Những thực hành tốt nhất cho việc dạy Khoa học máy tính
+              name: Những thực hành tốt nhất cho việc dạy Khoa học máy tính
+            Planning:
+              key: Lên kế hoạch
+              name: Lên kế hoạch
+            Next Steps:
+              key: Bước tiếp theo
+              name: Bước tiếp theo

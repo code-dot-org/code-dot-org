@@ -3801,3 +3801,11 @@ bg:
           lessons:
             lesson15:
               name: Урок 15
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Основи на компютърните науки
+              name: Основи на компютърните науки
+            Next Steps:
+              key: Следващи стъпки
+              name: Следващи стъпки

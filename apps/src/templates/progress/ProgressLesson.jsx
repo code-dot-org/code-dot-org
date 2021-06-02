@@ -102,9 +102,9 @@ class ProgressLesson extends React.Component {
     const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
     const showAsLocked = isLockedForUser || isLockedForSection;
 
-    const title = lesson.stageNumber
+    const title = lesson.lessonNumber
       ? i18n.lessonNumbered({
-          lessonNumber: lesson.stageNumber,
+          lessonNumber: lesson.lessonNumber,
           lessonName: lesson.name
         })
       : lesson.name;

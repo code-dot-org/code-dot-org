@@ -1,11 +1,8 @@
----
 ja:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: |-
-          {GROUP} は {MOVE1} と {MOVE2}
-          の間の毎 {N} 小節を変更する
+        text: "[GROUP][0] は [MOVE1][2] と [MOVE2][3]\nの間の毎 [N][1] 小節を変更する"
         options:
           GROUP:
             sprites: すべて
@@ -46,20 +43,20 @@ ja:
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
       Dancelab_atTimestamp:
-        text: "{TIMESTAMP} {UNIT} 後"
+        text: '[TIMESTAMP][0] [UNIT][1] 後'
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
       Dancelab_changeColorBy:
-        text: "{COLOR} {METHOD} を {AMOUNT} 変更 "
+        text: '[COLOR][0] [METHOD][1] を [AMOUNT][2] 変更 '
         options:
           METHOD:
             '"hue"': 色相
             '"saturation"': 彩度
             '"brightness"': 明るさ
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} で実行 {MOVE} {DIR} ずっとくりかえす"
+        text: "[GROUP][0] で実行 [MOVE][1] [DIR][2] ずっとくりかえす"
         options:
           GROUP:
             sprites: すべて
@@ -91,7 +88,7 @@ ja:
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
       Dancelab_changeMoveLR:
-        text: "{SPRITE} で実行 {MOVE} {DIR} ずっとくりかえす"
+        text: "[GROUP][0] で実行 [MOVE][1] [DIR][2] ずっとくりかえす"
         options:
           MOVE:
             '"next"': "(次へ)"
@@ -109,7 +106,7 @@ ja:
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
       Dancelab_changePropBy:
-        text: "{SPRITE} {PROPERTY} を {VAL} 変更"
+        text: '[SPRITE][0] [PROPERTY][1] を [VAL][2] 変更'
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -119,9 +116,7 @@ ja:
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
       Dancelab_changePropEachBy:
-        text: |-
-          {VAL} で{GROUP} {PROPERTY}
-           を変更する
+        text: "[VAL][2] で[GROUP][0] [PROPERTY][1]\n を変更する"
         options:
           GROUP:
             sprites: すべて
@@ -145,7 +140,7 @@ ja:
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
       Dancelab_doMoveEachLR:
-        text: "{GROUP} で実行 {MOVE} {DIR} いちどだけ"
+        text: "[GROUP][0] で実行 [MOVE][1] [DIR][2] いちどだけ"
         options:
           GROUP:
             sprites: すべて
@@ -187,7 +182,7 @@ ja:
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
       Dancelab_doMoveLR:
-        text: "{SPRITE} で実行 {MOVE} {DIR} いちどだけ"
+        text: "[GROUP][0] で実行 [MOVE][1] [DIR][2] いちどだけ"
         options:
           MOVE:
             '"rand"': "(ランダム)"
@@ -215,34 +210,34 @@ ja:
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
       Dancelab_everyMeasuresRange:
-        text: "{START} 後に、毎 {N} 小節 "
+        text: '[START][1] 後に、毎 [N][0] 小節 '
       Dancelab_everySeconds:
-        text: "{N} ごとに{UNIT} を繰り返します "
+        text: '[N][0] ごとに[UNIT][1] を繰り返します '
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
       Dancelab_everySecondsRange:
-        text: 'すべての {N} {UNIT} {START} から {STOP} まで '
+        text: 'すべての [N][0] [UNIT][1] [START][2] から [STOP][3] まで '
         options:
           UNIT:
             measures: 小節
             seconds: 秒
       Dancelab_everyVerseChorus:
-        text: 'すべての {UNIT} '
+        text: 'すべての [UNIT][0] '
         options:
           UNIT:
             '"verse"': Aメロ・Bメロ
             '"chorus"': サビ
       Dancelab_getEnergy:
-        text: 取得 {RANGE}
+        text: 取得 [RANGE][0]
         options:
           RANGE:
             '"low"': ベース
             '"mid"': ミドル
             '"high"': トレブル
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -253,15 +248,15 @@ ja:
             '"y"': 垂直方向の位置
             '"tint"': 色合い
       Dancelab_getTime:
-        text: "{UNIT} 経過"
+        text: '[UNIT][0] 経過'
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
       Dancelab_ifDanceIs:
         text: |-
-          もし {SPRITE} が {DANCE} をしてたら
-          {DO1} {DO2}
+          もし [SPRITE][0] が [DANCE][1] をしてたら
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: 手を高く上げてたたく
@@ -277,8 +272,8 @@ ja:
             MOVES.Rest: 設定なし
       Dancelab_ifTime:
         text: |-
-          もし、{UNIT} が {OP}
-           {N} {DO1} {DO2} の場合
+          もし、[UNIT][0] が [OP][1]
+           [N][2] [DO1][3] [DO2][4] の場合
         options:
           UNIT:
             '"measures"': 小節
@@ -288,7 +283,7 @@ ja:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE}　{LOCATION}にとぶ"
+        text: "[SPRITE][0]　[LOCATION][1]にとぶ"
         options:
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -302,7 +297,7 @@ ja:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
       Dancelab_jumpToEach:
-        text: "{GROUP} から{LOCATION} にジャンプ"
+        text: '[GROUP][0] から[LOCATION][1] にジャンプ'
         options:
           GROUP:
             sprites: すべて
@@ -330,7 +325,7 @@ ja:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ランダム に
       Dancelab_layoutSprites:
-        text: "{GROUP} を {FORMAT} にレイアウト"
+        text: '[GROUP][0] を [FORMAT][1] にレイアウト'
         options:
           GROUP:
             sprites: すべて
@@ -362,7 +357,7 @@ ja:
             '"plus"': プラス
             '"random"': ランダム に
       Dancelab_makeAnonymousDanceSprite:
-        text: "{LOCATION} で新しい{COSTUME} を作成します"
+        text: '[LOCATION][1] で新しい[COSTUME][0] を作成します'
         options:
           COSTUME:
             '"ALIEN"': エイリアン
@@ -390,8 +385,8 @@ ja:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
       Dancelab_makeNewDanceSprite:
         text: |-
-          {COSTUME} を新しくつくる
-          名前は {NAME} 場所は {LOCATION}
+          [COSTUME][0] を新しくつくる
+          名前は [NAME][1] 場所は [LOCATION][2]
         options:
           COSTUME:
             '"ALIEN"': エイリアン
@@ -419,8 +414,8 @@ ja:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          {N} を新しい {COSTUME} にする
-          {LAYOUT} で
+          [N][0] を新しい [COSTUME][1] にする
+          [LAYOUT][2] で
         options:
           'N':
             '2': '2'
@@ -471,9 +466,9 @@ ja:
             '"plus"': プラス
             '"random"': ランダム に
       Dancelab_mixColors:
-        text: "{COLOR1} と {COLOR2} をまぜる"
+        text: '[COLOR1][0] と [COLOR2][1] をまぜる'
       Dancelab_nMeasures:
-        text: "{N} 小節"
+        text: "[N][0] 小節"
       Dancelab_onPointerDown:
         text: ポインターを下げたとき
       Dancelab_onPointerDrag:
@@ -483,12 +478,14 @@ ja:
       Dancelab_randomColor:
         text: てきとうな色
       Dancelab_setBackground:
-        text: 背景色を {COLOR} にセット
+        text: 背景色を [COLOR][0] にセット
       Dancelab_setBackgroundEffect:
-        text: 背景エフェクトを {EFFECT} {PALETTE} にセット
+        text: |-
+          背景エフェクトを [EFFECT][0] [PALETTE][1] にセット
         options:
           EFFECT:
             '"none"': 設定なし
+            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(ランダム)"
             '"circles"': トンネル
             '"color_cycle"': 色
             '"diamonds"': ダイヤモンド
@@ -519,7 +516,7 @@ ja:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           "バックグラウンド効果を設定します
-          {PALETTE} {EFFECT}"
+          [PALETTE][0] [EFFECT][1]"
         options:
           EFFECT:
             '"none"': 設定なし
@@ -559,7 +556,7 @@ ja:
             '"vintage"': ビンテージ
             '"warm"': 赤
       Dancelab_setDanceSpeed:
-        text: "{SPRITE} のダンスの速さを {SPEED} に変更"
+        text: '[SPRITE][0] のダンスの速さを [SPEED][1] に変更'
         options:
           SPEED:
             '1': ノーマル
@@ -568,7 +565,7 @@ ja:
             '0.5': おそい
             '0.25': すごくおそい
       Dancelab_setDanceSpeedEach:
-        text: "{GROUP} のダンス速度を {SPEED} に設定"
+        text: '[GROUP][0] のダンス速度を [SPEED][1] に設定'
         options:
           GROUP:
             sprites: すべて
@@ -591,10 +588,11 @@ ja:
             '0.5': おそい
             '0.25': すごくおそい
       Dancelab_setForegroundEffect:
-        text: 前景エフェクトを {EFFECT} にセット
+        text: 前景エフェクトを [EFFECT][0] にセット
         options:
           EFFECT:
             '"none"': 設定なし
+            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(ランダム)"
             '"bubbles"': 泡
             '"confetti"': 紙吹雪
             '"hearts_red"': ハート
@@ -609,7 +607,7 @@ ja:
             '"color_lights"': ステージライト
             '"raining_tacos"': タコス
       Dancelab_setForegroundEffectExtended:
-        text: 前景エフェクトを {EFFECT} にセット
+        text: 前景エフェクトを [EFFECT][0] にセット
         options:
           EFFECT:
             '"none"': 設定なし
@@ -632,7 +630,7 @@ ja:
             '"exploding_stars"': スターバースト
             '"raining_tacos"': タコス
       Dancelab_setProp:
-        text: "{SPRITE} {PROPERTY} を {VAL} にセット "
+        text: '[SPRITE][0] [PROPERTY][1] を [VAL][2] にセット '
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -642,7 +640,7 @@ ja:
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
       Dancelab_setPropEach:
-        text: "{GROUP} {PROPERTY} を {VAL} にセット"
+        text: '[GROUP][0] [PROPERTY][1] を [VAL][2] にセット'
         options:
           GROUP:
             sprites: すべて
@@ -667,7 +665,7 @@ ja:
             '"y"': 垂直方向の位置
             '"tint"': 色合い
       Dancelab_setPropRandom:
-        text: ランダムにする {SPRITE} {PROPERTY}
+        text: ランダムにする [SPRITE][0] [PROPERTY][1]
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -678,7 +676,7 @@ ja:
             '"y"': 垂直方向の位置
             '"tint"': 色合い
       Dancelab_setPropRandomEach:
-        text: "{GROUP} {PROPERTY} をランダム化します"
+        text: '[GROUP][0] [PROPERTY][1] をランダム化します'
         options:
           GROUP:
             sprites: すべて
@@ -703,9 +701,9 @@ ja:
             '"y"': 垂直方向の位置
             '"tint"': 色合い
       Dancelab_setTint:
-        text: "{SPRITE} の色合いを {VAL} にセット"
+        text: '[SPRITE][0] の色合いを [VAL][1] にセット'
       Dancelab_setTintEach:
-        text: "{THIS} の色合いを {VAL} に設定"
+        text: '[THIS][0] の色合いを [VAL][1] に設定'
         options:
           THIS:
             sprites: すべて
@@ -722,7 +720,7 @@ ja:
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
       Dancelab_setTintEachInline:
-        text: "{THIS} の色合いを {VAL} に設定"
+        text: '[THIS][0] の色合いを [VAL][1] に設定'
         options:
           THIS:
             sprites: すべて
@@ -739,15 +737,15 @@ ja:
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
       Dancelab_setTintInline:
-        text: "{SPRITE} の色合いを {VAL} にセット"
+        text: '[SPRITE][0] の色合いを [VAL][1] にセット'
       Dancelab_setVisible:
-        text: "{SPRITE} 可視を{VISIBILITY} に設定"
+        text: '[SPRITE][0] 可視を[VISIBILITY][1] に設定'
         options:
           VISIBILITY:
             'true': 見える
             'false': 見えない
       Dancelab_setVisibleEach:
-        text: "{THIS} の見え方を {VISIBILITY} にセット"
+        text: '[THIS][0] の見え方を [VISIBILITY][1] にセット'
         options:
           THIS:
             sprites: すべて
@@ -767,7 +765,7 @@ ja:
             'true': 見える
             'false': 見えない
       Dancelab_startMapping:
-        text: "{SPRITE} が {PROPERTY} をはじめる、{RANGE} のあとに"
+        text: "[SPRITE][0] が [PROPERTY][1] をはじめる、[RANGE][2] のあとに"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -782,7 +780,7 @@ ja:
             '"mid"': ミドル
             '"treble"': トレブル
       Dancelab_startMappingEach:
-        text: "{GROUP} は{PROPERTY} を{RANGE} の後に開始"
+        text: "[GROUP][0] は[PROPERTY][1] を[RANGE][2] の後に開始"
         options:
           GROUP:
             sprites: すべて
@@ -811,7 +809,7 @@ ja:
             '"mid"': ミドル
             '"treble"': トレブル
       Dancelab_stopMapping:
-        text: "{SPRITE} が {PROPERTY} をやめる、{RANGE} のあとに"
+        text: "[SPRITE][0] が [PROPERTY][1] をやめる、[RANGE][2] のあとに"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -827,7 +825,7 @@ ja:
             '"mid"': ミドル
             '"treble"': トレブル
       Dancelab_stopMappingEach:
-        text: "{GROUP} は{PROPERTY} を{RANGE} の後に終了"
+        text: "[GROUP][0] は[PROPERTY][1] を[RANGE][2] の後に終了"
         options:
           GROUP:
             sprites: すべて
@@ -857,7 +855,7 @@ ja:
             '"mid"': ミドル
             '"treble"': トレブル
       Dancelab_translateStrings:
-        text: "{STRING} を翻訳"
+        text: '[STRING][0] を翻訳'
         options:
           STRING:
             '"music_wave"': 波
@@ -903,7 +901,7 @@ ja:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: "{KEY} が押されたとき"
+        text: '[KEY][0] が押されたとき'
         options:
           KEY:
             '"up"': 上 に
@@ -949,7 +947,7 @@ ja:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: "{RANGE} がいちばん大きいとき"
+        text: '[RANGE][0] がいちばん大きいとき'
         options:
           RANGE:
             '0': ベース
@@ -960,15 +958,15 @@ ja:
       Dancelab_whenSetup2:
         text: セットアップ
       gamelab_addBehaviorSimple:
-        text: スプライト {SPRITE} 開始 {BEHAVIOR}
+        text: スプライト [SPRITE][0] 開始 [BEHAVIOR][1]
       gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       gamelab_atTime:
         options:
           UNIT:
             '"seconds"': 秒
       gamelab_changePropBy:
-        text: "{SPRITE} {PROPERTY} を {VAL} 変更"
+        text: '[SPRITE][0] [PROPERTY][1] を [VAL][2] 変更'
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -978,27 +976,27 @@ ja:
             '"direction"': 動きの方向
             '"speed"': スピード
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} 触れる {SPRITE2}"
+        text: "[CONDITION][0] [SPRITE1][1] 触れる [SPRITE2][2]"
         options:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
       gamelab_clickedOn:
-        text: いつ {SPRITE} クリック
+        text: いつ [SPRITE][0] クリック
       gamelab_clickedSpritePointer:
-        text: クリック {SPRITE}
+        text: "クリック [SPRITE][0]"
       gamelab_comment:
-        text: コメント： {COMMENT}
+        text: 'コメント： [COMMENT][0]'
       gamelab_createNewSprite:
-        text: "新しいスプライトを作る \n と呼ばれる {NAME} \n 衣装付き {COSTUME} \n で {LOCATION}"
+        text: "新しいスプライトを作る \n と呼ばれる [NAME][0] \n 衣装付き [COSTUME][1] \n で [LOCATION][2]"
       gamelab_destroy:
-        text: 削除 {THIS}
+        text: 削除 [THIS][0]
       gamelab_draggable:
         text: ドラッグ可能
       gamelab_edgesDisplace:
-        text: エッジ ブロック {SPRITE} 移動から
+        text: エッジ ブロック [SPRITE][0] 移動から
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -1009,7 +1007,7 @@ ja:
             '"tint"': 色合い
             '"speed"': スピード
       gamelab_getThisSprite:
-        text: "{CHOICE} スプライト"
+        text: "[CHOICE][0] スプライト"
         options:
           CHOICE:
             '"this"': これ
@@ -1054,11 +1052,11 @@ ja:
             '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
-        text: "{SPRITE} エッジに触れている"
+        text: "[SPRITE][0] エッジに触れている"
       gamelab_jumpTo:
-        text: "{SPRITE}　{LOCATION}にとぶ"
+        text: "[SPRITE][0]　[LOCATION][1]にとぶ"
       gamelab_keyPressed:
-        text: "{CONDITION} {KEY} 押さ れた"
+        text: "[CONDITION][0] [KEY][1] 押さ れた"
         options:
           CONDITION:
             '"when"': もし
@@ -1096,7 +1094,7 @@ ja:
             '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
-        text: '場所 x: {X} Y： {Y}'
+        text: '場所 x: [X][0] Y： [Y][1]'
       gamelab_locationModifier:
         options:
           DIRECTION:
@@ -1107,13 +1105,13 @@ ja:
       gamelab_locationMouse:
         text: マウスの位置
       gamelab_locationOf:
-        text: の場所 {SPRITE}
+        text: の場所 [SPRITE][0]
       gamelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       gamelab_makeNewSpriteAnon:
-        text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
+        text: 新しくする [ANIMATION_NAME][0] スプライト [LOCATION][1]
       gamelab_mirrorSprite:
-        text: "{SPRITE} 顔 {DIRECTION}"
+        text: "[SPRITE][0] 顔 [DIRECTION][1]"
         options:
           DIRECTION:
             '"right"': 右 に
@@ -1121,9 +1119,9 @@ ja:
       gamelab_mouseLocation:
         text: マウスの位置
       gamelab_moveForward:
-        text: 移動 {SPRITE} {DISTANCE} ピクセルフォワード
+        text: 移動 [SPRITE][0] [DISTANCE][1] ピクセルフォワード
       gamelab_moveInDirection:
-        text: 移動 {SPRITE} {DISTANCE} ピクセル {DIRECTION}
+        text: 移動 [SPRITE][0] [DISTANCE][1] ピクセル [DIRECTION][2]
         options:
           DIRECTION:
             '"North"': 北だ
@@ -1131,15 +1129,15 @@ ja:
             '"South"': 南だ
             '"West"': 西だ
       gamelab_moveToward:
-        text: 移動 {SPRITE} ピクセル {DISTANCE} に向かって {TARGET}
+        text: 移動 [SPRITE][0] ピクセル [DISTANCE][1] に向かって [TARGET][2]
       gamelab_newSpritePointer:
-        text: クリック {SPRITE}
+        text: "クリック [SPRITE][0]"
       gamelab_objectSpritePointer:
-        text: クリック {SPRITE}
+        text: "クリック [SPRITE][0]"
       gamelab_playSound:
-        text: Playsound {SOUND}
+        text: Playsound [SOUND][0]
       gamelab_pointInDirection:
-        text: ポイント {SPRITE} {DIRECTION}
+        text: ポイント [SPRITE][0] [DIRECTION][1]
         options:
           DIRECTION:
             '"North"': 北だ
@@ -1147,7 +1145,7 @@ ja:
             '"South"': 南だ
             '"West"': 西だ
       gamelab_printText:
-        text: 印刷 {TEXT}
+        text: 印刷 [TEXT][0]
       gamelab_randColor:
         text: てきとうな色
       gamelab_randomColor:
@@ -1155,19 +1153,19 @@ ja:
       gamelab_randomLocation:
         text: ランダムな位置
       gamelab_removeAllBehaviors:
-        text: "{SPRITE} は、すべてを停止します"
+        text: "[SPRITE][0] は、すべてを停止します"
       gamelab_removeBehaviorSimple:
-        text: スプライト {SPRITE} 停止 {BEHAVIOR}
+        text: スプライト [SPRITE][0] 停止 [BEHAVIOR][1]
       gamelab_removeTint:
-        text: 色の削除元 {THIS}
+        text: 色の削除元 [THIS][0]
       gamelab_repeatForever:
         text: ずっと
       gamelab_setAnimation:
-        text: 変更 {THIS} 衣装に {ANIMATION}
+        text: 変更 [THIS][0] 衣装に [ANIMATION][1]
       gamelab_setBackground:
-        text: 背景色を {COLOR} にセット
+        text: 背景色を [COLOR][0] にセット
       gamelab_setBackgroundImage:
-        text: 背景を次の値に設定する {IMG}
+        text: 背景を次の値に設定する [IMG][0]
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': どうくつ
@@ -1183,7 +1181,7 @@ ja:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ふゆ
             undefined: なし
       gamelab_setBackgroundImageAs:
-        text: 背景を次の値に設定する {IMG}
+        text: 背景を次の値に設定する [IMG][0]
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -1192,7 +1190,7 @@ ja:
             '75': 普通
             '100': large
       gamelab_setProp:
-        text: 設定 {SPRITE} {PROPERTY} 宛先 {VAL}
+        text: 設定 [SPRITE][0] [PROPERTY][1] 宛先 [VAL][2]
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -1211,33 +1209,33 @@ ja:
             '75': 普通
             '100': large
       gamelab_setSizes:
-        text: "{SPRITE} {PROPERTY} を {N}%に設定"
+        text: '{SPRITE} {PROPERTY} を {N}%に設定'
         options:
           PROPERTY:
             '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
       gamelab_setTint:
-        text: 色を変更する {THIS} 宛先 {COLOR}
+        text: 色を変更する [THIS][0] 宛先 [COLOR][1]
       gamelab_setupSim:
         text: |-
           でシミュレーションを設定する
-          {SPRITE1N}{SPRITE1COSTUME}速度{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}速度{SPRITE2SPEED}
+          [SPRITE1N][0][SPRITE1COSTUME][1]速度[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]速度[SPRITE2SPEED][5]
           収集
-          {SPRITE3N}{SPRITE3COSTUME}
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       gamelab_showTitleScreen:
-        text: タイトル画面の表示 {BREAK} タイトル {TITLE} テキスト {SUBTITLE}
+        text: タイトル画面の表示 [BREAK][0] タイトル [TITLE][1] テキスト [SUBTITLE][2]
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} クリック"
+        text: "[CONDITION][0] [SPRITE][1] クリック"
         options:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
       gamelab_subjectSpritePointer:
-        text: クリック {SPRITE}
+        text: "クリック [SPRITE][0]"
       gamelab_turn:
-        text: ターン {SPRITE} {DIRECTION} {N} 度
+        text: ターン [SPRITE][0] [DIRECTION][1] [N][2] 度
         options:
           DIRECTION:
             '"right"': 右 に
@@ -1245,7 +1243,7 @@ ja:
       gamelab_whenDownArrow:
         text: 下矢印が押されたとき
       gamelab_whenKey:
-        text: "{KEY} が押されたとき"
+        text: '[KEY][0] が押されたとき'
         options:
           KEY:
             '"up"': 上 に
@@ -1262,13 +1260,13 @@ ja:
       gamelab_whenRightArrow:
         text: 右矢印が押されたとき
       gamelab_whenTouching:
-        text: いつ {SPRITE1} 触れる {SPRITE2}
+        text: いつ [SPRITE1][0] 触れる [SPRITE2][1]
       gamelab_whenUpArrow:
         text: 上矢印が押されたとき
       gamelab_whileDownArrow:
         text: 下矢印を押したまま
       gamelab_whileKey:
-        text: ながら {KEY} 押さ れた
+        text: ながら [KEY][0] 押さ れた
         options:
           KEY:
             '"up"': 上 に
@@ -1285,17 +1283,17 @@ ja:
       gamelab_whileRightArrow:
         text: 右矢印を押したまま
       gamelab_whileTouching:
-        text: ながら {SPRITE1} 触れている {SPRITE2}
+        text: ながら [SPRITE1][0] 触れている [SPRITE2][1]
       gamelab_whileUpArrow:
         text: 上矢印を押したまま
       gamelab_xLocationOf:
-        text: x 座標の {SPRITE}
+        text: x 座標の [SPRITE][0]
       gamelab_yLocationOf:
-        text: y 座標 {SPRITE}
+        text: y 座標 [SPRITE][0]
       Mikelab_addBehaviorSimple:
-        text: スプライト {SPRITE} 開始 {BEHAVIOR}
+        text: スプライト [SPRITE][0] 開始 [BEHAVIOR][1]
       Mikelab_addTrainingData:
-        text: 'トレーニング データを追加する: {NAME},{LOCATION}'
+        text: 'トレーニング データを追加する: [NAME][0],[LOCATION][1]'
         options:
           NAME:
             "{x: 201, y: 100}": オブジェクトを返します
@@ -1306,7 +1304,7 @@ ja:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": マイレーベル
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 私のラベルではありません
       Mikelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1338,13 +1336,13 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
       Mikelab_groupChangeAnim:
-        text: "[SELECT] [0] [COSTUME] [1] を[COSTUME2] [2] に変更します"
+        text: '[SELECT] [0] [COSTUME] [1] を[COSTUME2] [2] に変更します'
         options:
           SELECT:
             '"all"': すべて
             '"this"': これ
       Mikelab_groupChangePropBy:
-        text: 変更 {PROPERTY} の {SELECT} {COSTUME} によって {VAL}
+        text: 変更 [PROPERTY][0] の [SELECT][1] [COSTUME][2] によって [VAL][3]
         options:
           SELECT:
             '"all"': すべて
@@ -1356,7 +1354,7 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
       Mikelab_groupCreateNewSprite:
-        text: "{LOCATION} で新しい{COSTUME} を作成します"
+        text: '[LOCATION][1] で新しい[COSTUME][0] を作成します'
         options:
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -1369,17 +1367,17 @@ ja:
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
       Mikelab_groupDestroy:
-        text: 削除 {SELECT} {COSTUME}
+        text: 削除 [SELECT][0] [COSTUME][1]
         options:
           SELECT:
             '"all"': すべて
             '"this"': これ
       Mikelab_groupDisplace:
-        text: すべての {COSTUME} ブロック {COSTUME2} 移動から
+        text: すべての [COSTUME][0] ブロック [COSTUME2][1] 移動から
       Mikelab_groupEdgesDisplace:
-        text: エッジ ブロック {COSTUME} 移動から
+        text: エッジ ブロック [COSTUME][0] 移動から
       Mikelab_groupGetProp:
-        text: "{SELECT} {COSTUME}'s {PROPERTY}"
+        text: "[SELECT][0] [COSTUME][1]'s [PROPERTY][2]"
         options:
           SELECT:
             '"average"': 平均
@@ -1391,25 +1389,25 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
       Mikelab_groupRemoveAllBehaviors:
-        text: 停止 {SELECT} {COSTUME} 動作
+        text: 停止 [SELECT][0] [COSTUME][1] 動作
         options:
           SELECT:
             '"all"': すべて
             '"this"': これ
       Mikelab_groupRemoveBehaviorSimple:
-        text: "{SELECT} {COSTUME} 停止 {BEHAVIOR}"
+        text: "[SELECT][0] [COSTUME][1] 停止 [BEHAVIOR][2]"
         options:
           SELECT:
             '"all"': すべて
             '"this"': これ
       Mikelab_groupRemoveTint:
-        text: 色の削除元 {SELECT} {COSTUME}
+        text: 色の削除元 [SELECT][0] [COSTUME][1]
         options:
           SELECT:
             '"all"': すべて
             '"this"': これ
       Mikelab_groupSetProp:
-        text: 設定 {PROPERTY} の {SELECT} {COSTUME} 宛先 {VAL}
+        text: 設定 [PROPERTY][0] の [SELECT][1] [COSTUME][2] 宛先 [VAL][3]
         options:
           SELECT:
             '"all"': すべて
@@ -1421,33 +1419,33 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
       Mikelab_groupSetTint:
-        text: 色を変更する {SELECT} {COSTUME} 宛先 {COLOR}
+        text: 色を変更する [SELECT][0] [COSTUME][1] 宛先 [COLOR][2]
         options:
           SELECT:
             '"all"': すべて
             '"this"': これ
       Mikelab_groupWhenClickedOn:
-        text: いつ {COSTUME} クリック
+        text: いつ [COSTUME][0] クリック
       Mikelab_groupWhenXTouchesY:
-        text: いつ{COSTUME} 触れる {COSTUME2}
+        text: いつ[COSTUME][0] 触れる [COSTUME2][1]
       Mikelab_groupWhileClicked:
-        text: をクリックしながら {COSTUME}
+        text: をクリックしながら [COSTUME][0]
       Mikelab_groupWhileTouchingAny:
         text: |-
-          ながら{COSTUME} 触れている {COSTUME2}
-          {STATEMENT}
+          ながら[COSTUME][0] 触れている [COSTUME2][1]
+          [STATEMENT][2]
       Mikelab_hasBehavior:
-        text: "{SPRITE} は現在 {BEHAVIOR}"
+        text: "[SPRITE][0] は現在 [BEHAVIOR][1]"
       Mikelab_hideFish:
-        text: 削除 {TRASH}
+        text: 削除 [TRASH][0]
         options:
           TRASH:
             object: オブジェクトを返します
             fish: 魚
       Mikelab_ifDanceIs:
         text: |-
-          もし {SPRITE} が {DANCE} をしてたら
-          {DO1} {DO2}
+          もし [SPRITE][0] が [DANCE][1] をしてたら
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: 手を高く上げてたたく
@@ -1463,36 +1461,36 @@ ja:
             MOVES.Rest: 設定なし
       Mikelab_ifLabel:
         text: |-
-          もし {DANCE}
-          行う {DO1} 他 {DO2}
+          もし [DANCE][0]
+          行う [DO1][1] 他 [DO2][2]
         options:
           DANCE:
             MOVES.ClapHigh: 魚
             MOVES.Clown: マイレーベル
       Mikelab_ifRecognizeLabel:
         text: |-
-          オブジェクトを次のように認識する場合 {DANCE}
-          行う {DO1} 他 {DO2}
+          オブジェクトを次のように認識する場合 [DANCE][0]
+          行う [DO1][1] 他 [DO2][2]
         options:
           DANCE:
             MOVES.ClapHigh: 魚
             MOVES.Clown: マイレーベル
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          オブジェクトを次のように認識する場合 {DANCE}
-          行う {DO1}
+          オブジェクトを次のように認識する場合 [DANCE][0]
+          行う [DO1][1]
         options:
           DANCE:
             MOVES.ClapHigh: 魚
             MOVES.Clown: 私のラベルではありません
       Mikelab_locationAt:
-        text: '場所 x: {X} Y： {Y}'
+        text: '場所 x: [X][0] Y： [Y][1]'
       Mikelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       Mikelab_randomColor:
         text: てきとうな色
       Mikelab_removeBehaviorSimple:
-        text: スプライト {SPRITE} 停止 {BEHAVIOR}
+        text: スプライト [SPRITE][0] 停止 [BEHAVIOR][1]
       Mikelab_repeatUntilComplete:
         text: ずっと
       Mikelab_sendBad:
@@ -1514,17 +1512,17 @@ ja:
       Mikelab_setupSim:
         text: |-
           でシミュレーションを設定する
-          {SPRITE1N}{SPRITE1COSTUME}速度{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}速度{SPRITE2SPEED}
+          [SPRITE1N][0][SPRITE1COSTUME][1]速度[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]速度[SPRITE2SPEED][5]
           収集
-          {SPRITE3N}{SPRITE3COSTUME}
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': 右 に
             '"left"': 左 に
       Mikelab_sprite:
-        text: 新機能 {COSTUME} スプライト {LOCATION}
+        text: 新機能 [COSTUME][0] スプライト [LOCATION][1]
         options:
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -1537,9 +1535,9 @@ ja:
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
       Mikelab_whenClickedOn:
-        text: いつ {SPRITE} クリック
+        text: いつ [SPRITE][0] クリック
       Mikelab_whenKeyPressed:
-        text: "{KEY} が押されたとき"
+        text: '[KEY][0] が押されたとき'
         options:
           KEY:
             '"up"': 上矢じるしキーが おされたら
@@ -1564,11 +1562,11 @@ ja:
       Mikelab_whenMouseClicked:
         text: マウスがクリックされたとき
       Mikelab_whenYesNoClicked:
-        text: いつ {KEY} クリック
+        text: いつ [KEY][0] クリック
         options:
           KEY:
-            '"yes"': はい
-            '"no"': いいえ
+            '"yes"': 'はい'
+            '"no"': 'いいえ'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1577,9 +1575,9 @@ ja:
             '"left"': 左矢じるしキーが おされたら
             '"right"': 右矢じるしキーが おされたら
       Mikelab_xLocationOf:
-        text: x 座標の {SPRITE}
+        text: x 座標の [SPRITE][0]
       Mikelab_yLocationOf:
-        text: y 座標 {SPRITE}
+        text: y 座標 [SPRITE][0]
       RyanLab_moveForward:
         text: 前に すすむ
       RyanLab_turnLeft:
@@ -1587,29 +1585,29 @@ ja:
       RyanLab_turnRight:
         text: みぎに まがる
       SpriteLab2Beta_spriteSay:
-        text: スプライト {SPRITE} 言う {TEXT} 用 {SECONDS} 秒
+        text: スプライト [SPRITE][0] 言う [TEXT][1] 用 [SECONDS][2] 秒
       Vector_createSpriteWith:
         text: |-
           スプライトの作成
-          行う{STATEMENT}
+          行う[STATEMENT][0]
       Vector_log:
-        text: ログ メッセージ {MESSAGE}
+        text: ログ メッセージ [MESSAGE][0]
       Vector_positionCenter:
         text: 中央
       Vector_push:
-        text: 速度を設定する {VECTOR}
+        text: 速度を設定する [VECTOR][0]
       Vector_randomLocation:
         text: ランダムな位置
       Vector_setColor:
-        text: 色を次に設定する {COLOR}
+        text: 色を次に設定する [COLOR][0]
       Vector_setSize:
-        text: 幅を設定する {WIDTH} 高さ {HEIGHT}
+        text: 幅を設定する [WIDTH][0] 高さ [HEIGHT][1]
       Vector_teleportTo:
-        text: 位置の設定 {POSITION}
+        text: 位置の設定 [POSITION][0]
       Vector_vectorNorth:
         text: 北
       Vector_where:
-        text: 各スプライト {PROPERTY} は {VALUE} 行う{STATEMENT}
+        text: 各スプライト [PROPERTY][0] は [VALUE][1] 行う[STATEMENT][2]
         options:
           PROPERTY:
             "'shapeColor'": 色
@@ -1635,37 +1633,37 @@ ja:
             '0.5': half of
             '0.25': few
       binary_drawBin:
-        text: バイナリを描画する {BIN}
+        text: バイナリを描画する [BIN][0]
       binary_drawBinScreen:
         text: |-
           描画画面
-          {B1}
-          {B2}
-          {B3}
-          {B4}
-          {B5}
-          {B6}
-          {B7}
-          {B8}
+          [B1][0]
+          [B2][1]
+          [B3][2]
+          [B4][3]
+          [B5][4]
+          [B6][5]
+          [B7][6]
+          [B8][7]
       binary_drawDec:
-        text: 10 進数を描画する {DEC}
+        text: 10 進数を描画する [DEC][0]
       binary_drawPixelHere:
-        text: ピクセルを設定する {VAL}
+        text: ピクセルを設定する [VAL][0]
         options:
           VAL:
-            '0': をオフにします
-            '1': に
+            '0': 'をオフにします'
+            '1': 'に'
             '"toggle"': のトグルを選択します
       binary_drawString:
-        text: 文字列を描画する {STR}
+        text: 文字列を描画する [STR][0]
       binary_goTo:
-        text: にジャンプする {LOC}
+        text: にジャンプする [LOC][0]
       binary_goToHome:
         text: 左上にジャンプ
       binary_gridSize:
-        text: グリッド サイズを設定する {SIZE}
+        text: グリッド サイズを設定する [SIZE][0]
       binary_move:
-        text: 移動 {DIR}
+        text: 移動 [DIR][0]
         options:
           DIR:
             '"up"': 上 に
@@ -1673,7 +1671,7 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
       binary_whenKey:
-        text: "{KEY} が押されたとき"
+        text: '[KEY][0] が押されたとき'
         options:
           KEY:
             '"up"': 上 に
@@ -1687,8 +1685,8 @@ ja:
             '"d"': d
       craft_ifPath:
         text: |-
-          {DIR}に道がある時
-          {STATEMENT}
+          [DIR][0]に道がある時
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": その前に
@@ -1696,8 +1694,8 @@ ja:
             "'left'": 左
       craft_ifStandingOn:
         text: |-
-          {TYPE}の上にいる時
-          {STATEMENT}
+          [TYPE][0]の上にいる時
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": 青色のサンゴ
@@ -1708,19 +1706,19 @@ ja:
             "'seaLantern'": 海のランタン
       craft_ifStandingOnLimit:
         text: |-
-          {TYPE}の上にいる時
-          {STATEMENT}
+          [TYPE][0]の上にいる時
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": 砂
             "'darkPrismarine'": 暗海晶ブロック
             "'seaLantern'": 海のランタン
       craft_log:
-        text: ログ メッセージ {MESSAGE}
+        text: ログ メッセージ [MESSAGE][0]
       craft_moveForward:
         text: 前に すすむ
       craft_placeBlock:
-        text: "{blockType}を置く"
+        text: '[blockType][0]を置く'
         options:
           blockType:
             '"strippedOak"': 樹皮を剥いだオーク
@@ -1754,13 +1752,13 @@ ja:
       craft_repeatUntilConduit:
         text: |-
           コンジットができるまでリピート
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           ゴールまでリピート
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: "{ENTITY}を産む"
+        text: '[ENTITY][0]を産む'
         options:
           ENTITY:
             '"cod"': タラ
@@ -1770,7 +1768,7 @@ ja:
             '"squid"': イカ
             '"tropicalFish"': 熱帯魚
       craft_turn:
-        text: "{DIR}を向く"
+        text: '[DIR][0]を向く'
         options:
           DIR:
             right: 右↻

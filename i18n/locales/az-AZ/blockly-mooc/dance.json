@@ -2,6 +2,16 @@
   "danceFeedbackNeedNewDancer": "Rəqqas düzəltməlisiniz.",
   "danceFeedbackNoDancers": "Sizin rəqqasınız yoxdur.",
   "danceFeedbackNoBackground": "Arxa fon effekti əlavə etməlisiniz.",
+  "danceFeedbackTooManyDancers": "Diqqətli olun!  əgər  `every 2 measures` içərisinə  `make a new`  blokunu əlavə etsəniz 2 rəqqas yaratmış olacaqsınız.",
+  "danceFeedbackStartNewMove": "Rəqqasınız 4 cü  ölçüdən sonra yeni hərəkət icra etmədi.",
+  "danceFeedbackNeedDifferentDance": "Fərqli rəqs istifadə etməlisiniz.",
+  "danceFeedbackNeedEveryTwoMeasures": "`every 2 measures`  blokunu istifadə etdiyinizdən əmin olun.",
+  "danceFeedbackNeedMakeANewDancer": "ikinci rəqqas yaradarkən `make a new`  blokundan istifadə edin.",
+  "danceFeedbackKeyEvent": " <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml>  blokuna kodunuzu əlavə etdiyinizdən və rəqs zamanı düyməni basdığınızdan əmin olun.",
+  "danceFeedbackDidntPress": "rəqs zamanı ox klavişlərini basdığınızdan əmin olun.",
+  "danceFeedbackPressedKey": " düyməni basdınız, amma rəqqasınız hərəkət etmədi.",
   "danceFeedbackNeedTwoDancers": "2 rəqqas düzəltməlisiniz.",
-  "danceFeedbackOnlyOneDancerMoved": "Sadecə 1 rəqqasınız hərəkət etdi."
+  "danceFeedbackOnlyOneDancerMoved": "Sadecə 1 rəqqasınız hərəkət etdi.",
+  "danceFeedbackNeedLead": "Həmçinin siz   <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> bloku ilə başçı rəqqas yaratmalısınız.",
+  "danceFeedbackSetSize": "musiqi başlamamışdan öncə ən azı 1 rəqqasın ölçüsünü dəyişməlisiniz."
 }

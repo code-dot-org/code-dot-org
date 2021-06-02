@@ -12056,3 +12056,38 @@ fil:
           lessons:
             lesson15:
               name: Araling 15
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: Pagsisimula
+              name: Pagsisimula
+            Computer Science Fundamentals:
+              key: Mga Batayan ng Computer Science
+              name: Mga Batayan ng Computer Science
+            Looking Ahead:
+              key: Masdan ang Hinaharap
+              name: Masdan ang Hinaharap
+            'Mastering the Basics: Sequencing':
+              key: 'Pag-amo sa mga Pangunahing Kaalaman: Pagsunod-sunod'
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Pagsunod-sunod'
+            'Mastering the Basics: Loops':
+              key: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Loop'
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Loop'
+            'Mastering the Basics: Conditionals':
+              key: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kondisyonal'
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kondisyonal'
+            'Mastering the Basics: Functions':
+              key: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Function'
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Function'
+            'Mastering the Basics: Events':
+              key: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kaganapan'
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kaganapan'
+            Best Practices for Teaching Computer Science:
+              key: Mga Magandang Gawi sa Pagtuturo ng Computer Science
+              name: Mga Magandang Gawi sa Pagtuturo ng Computer Science
+            Planning:
+              key: Pagpaplano
+              name: Pagpaplano
+            Next Steps:
+              key: Mga susunod na Hakbang
+              name: Mga susunod na Hakbang

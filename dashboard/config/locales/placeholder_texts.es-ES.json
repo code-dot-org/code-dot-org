@@ -404,6 +404,79 @@
         },
         "courseF_extras_sim": {
           "a2e534e7e893bd7ddb5d2047ed29dc8e": "elefante capturado"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puedes escribir algo.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texto aquí"
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puedes escribir algo.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texto aquí"
+        },
+        "courseC19_playLab_sample1_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puedes escribir algo.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texto aquí"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "83db90f8846d091d3532256816f105d9": "Esta es Neila.",
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila intenta proteger su casa del robot espacial.",
+          "df8312187449c70820d7c58229a6b17e": "El robot espacial está asustando a las otras criaturas.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila quiere ayudar al robot espacial para que aprenda a ser amable.",
+          "b2f02bf648ce32c4362afe1578d41f70": "¡Ha funcionado! Neila mostró al robot espacial el poder de la bondad.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "¡Las otras criaturas ya no tienen miedo!",
+          "5cec903c4d41c49412a70a94d54999ee": "Puedes escribir algo.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texto aquí"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+        },
+        "courseC_data wizard_2021": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "¡Un perro!",
+          "336ad881e37e713ba0325500a8fa1f00": " ¡perros!",
+          "27944770529dd15319a983bee8951560": "¡Un gato!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " ¡Gatos!",
+          "1c64ef29c853587fbe94f69f05272b79": "¡Un pájaro!",
+          "5b402e6ea05e847a076e03ad74420c45": " ¡Pájaros!",
+          "4b23c908b939eaf7918e07142b9e05e0": "¡Un dragón!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " ¡dragones!",
+          "71fc859f3abd22273bad5d0d8eda2173": "¡Cuenta todos los animales!",
+          "f62038e77820419cd978f7b722da560a": "¿Cuántos van a aparecer?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Contar las mascotas"
+        },
+        "courseE_aboutme_1_2021": {
+          "b63151482630edd1589a9ac24d107c49": "¡Esa soy yo! ¡Rikki! Me gusta codificar, salir con Thuy y comer helado.",
+          "810896b14fc6615f0c76628b9b6a727e": "¡Esa es mi mejor amiga Thuy! Es muy buena en los deportes.",
+          "6f97975a0bda0c9219915161149cbb26": "¡Ese es mi ordenador! ¡Codifico en él todo el tiempo!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "¡Hola mundo!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "¡Hola mundo!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "¡Hola mundo!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "¡Hola!"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "¿Cómo te llamas?"
         }
       }
     }

@@ -202,7 +202,8 @@ var CONFIGS = {
     pegmanSheetWidth: 512,
     squareSize: 32,
     svgHeight: 400,
-    svgWidth: 400
+    svgWidth: 400,
+    paintCan: 'paint_can.png'
   }
 };
 

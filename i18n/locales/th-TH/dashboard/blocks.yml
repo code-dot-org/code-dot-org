@@ -1,11 +1,8 @@
----
 th:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: |-
-          {GROUP} สลับทุกๆ {N} ห้องดนตรีร
-          ะหว่าง {MOVE1} และ {MOVE2}
+        text: "[GROUP][0] สลับทุกๆ [N][1] ห้องดนตรีร\nะหว่าง [MOVE1][2] และ [MOVE2][3]"
         options:
           GROUP:
             sprites: ทั้งหมด
@@ -46,20 +43,20 @@ th:
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
       Dancelab_atTimestamp:
-        text: หลังจาก {TIMESTAMP} {UNIT}
+        text: หลังจาก [TIMESTAMP][0] [UNIT][1]
         options:
           UNIT:
             '"measures"': ห้องดนตรี
             '"seconds"': วินาที
       Dancelab_changeColorBy:
-        text: เปลี่ยน {COLOR} {METHOD} จำนวน {AMOUNT}
+        text: เปลี่ยน [COLOR][0] [METHOD][1] จำนวน [AMOUNT][2]
         options:
           METHOD:
             '"hue"': สีสัน
             '"saturation"': ความอิ่มตัวของสี
             '"brightness"': ความสว่าง
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} ทำ {MOVE} {DIR} ตลอดไป"
+        text: "[GROUP][0] ทำ [MOVE][1] [DIR][2] ตลอดไป"
         options:
           GROUP:
             sprites: ทั้งหมด
@@ -91,7 +88,7 @@ th:
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
       Dancelab_changeMoveLR:
-        text: "{SPRITE} ทำ {MOVE} {DIR} ตลอดไป"
+        text: "[GROUP][0] ทำ [MOVE][1] [DIR][2] ตลอดไป"
         options:
           MOVE:
             '"next"': "(ถัดไป)"
@@ -109,7 +106,7 @@ th:
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
       Dancelab_changePropBy:
-        text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
+        text: เปลี่ยน [SPRITE][0] [PROPERTY][1] โดย [VAL][2]
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -119,7 +116,7 @@ th:
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
       Dancelab_changePropEachBy:
-        text: เปลี่ยน {GROUP} {PROPERTY} ตาม {VAL}
+        text: เปลี่ยน [GROUP][0] [PROPERTY][1] ตาม [VAL][2]
         options:
           GROUP:
             sprites: ทั้งหมด
@@ -143,7 +140,7 @@ th:
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
       Dancelab_doMoveEachLR:
-        text: "{GROUP} ทำ {MOVE} {DIR} ตลอดไป"
+        text: "[GROUP][0] ทำ [MOVE][1] [DIR][2] ตลอดไป"
         options:
           GROUP:
             sprites: ทั้งหมด
@@ -185,7 +182,7 @@ th:
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
       Dancelab_doMoveLR:
-        text: "{SPRITE} ทำ {MOVE} {DIR} ครั้งเดียว"
+        text: "[SPRITE][0] ทำ [MOVE][1] [DIR][2] ครั้งเดียว"
         options:
           MOVE:
             '"rand"': "(สุ่ม)"
@@ -213,15 +210,15 @@ th:
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
       Dancelab_everyMeasuresRange:
-        text: 'ซ้ำทุกๆ {N} ห้องดนตรีหลังจาก {START} '
+        text: 'ซ้ำทุกๆ [N][0] ห้องดนตรีหลังจาก [START][1] '
       Dancelab_everySeconds:
-        text: 'ทุกๆ {N} {UNIT} '
+        text: 'ทุกๆ [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': ห้องดนตรี
             '"seconds"': วินาที
       Dancelab_everySecondsRange:
-        text: 'ทุก {N} {UNIT} จาก {START} ถึง {STOP} '
+        text: 'ทุก [N][0] [UNIT][1] จาก [START][2] ถึง [STOP][3] '
         options:
           UNIT:
             measures: ห้องดนตรี
@@ -233,14 +230,14 @@ th:
             '"verse"': ท่อนร้อง
             '"chorus"': ประสานเสียง
       Dancelab_getEnergy:
-        text: รับ {RANGE}
+        text: รับ [RANGE][0]
         options:
           RANGE:
             '"low"': เสียงต่ำ
             '"mid"': เสียงกลาง
             '"high"': เสียงสูง
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -251,15 +248,15 @@ th:
             '"y"': อยู่ที่แกน Y
             '"tint"': ระดับอ่อนสี
       Dancelab_getTime:
-        text: "[หน่วย] [0] ล่วงผ่าน"
+        text: '[หน่วย] [0] ล่วงผ่าน'
         options:
           UNIT:
             '"measures"': ห้องดนตรี
             '"seconds"': วินาที
       Dancelab_ifDanceIs:
         text: |-
-          ถ้า {SPRITE} กำลัง {DANCE}
-          {DO1} {DO2}
+          ถ้า [SPRITE][0] กำลัง [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: ปรบมือสูง
@@ -275,8 +272,8 @@ th:
             MOVES.Rest: ไม่มี
       Dancelab_ifTime:
         text: |-
-          ถ้า {UNIT} คือ {OP} {N}
-           {DO1} {DO2}
+          ถ้า [UNIT][0] คือ [OP][1] [N][2]
+           [DO1][3] [DO2][4]
         options:
           UNIT:
             '"measures"': ห้องดนตรี
@@ -286,7 +283,7 @@ th:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} ข้ามไปที่ {LOCATION}"
+        text: "[SPRITE][0] ข้ามไปที่ [LOCATION][1]"
         options:
           LOCATION:
             "{x: 200, y: 100}": ด้านบน
@@ -300,7 +297,7 @@ th:
             "{x: 300, y: 300}": ขวาล่าง
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
       Dancelab_jumpToEach:
-        text: ข้าม {GROUP} ไปที่ {LOCATION}
+        text: ข้าม [GROUP][0] ไปที่ [LOCATION][1]
         options:
           GROUP:
             sprites: ทั้งหมด
@@ -328,7 +325,7 @@ th:
             "{x: 300, y: 300}": ขวาล่าง
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": สุ่ม
       Dancelab_layoutSprites:
-        text: วางผัง {GROUP} เป็น {FORMAT}
+        text: วางผัง [GROUP][0] เป็น [FORMAT][1]
         options:
           GROUP:
             sprites: ทั้งหมด
@@ -360,7 +357,7 @@ th:
             '"plus"': เครื่องหมายบวก
             '"random"': สุ่ม
       Dancelab_makeAnonymousDanceSprite:
-        text: ทำ {COSTUME} ใหม่ที่ {LOCATION}
+        text: ทำ [COSTUME][0] ใหม่ที่ [LOCATION][1]
         options:
           COSTUME:
             '"ALIEN"': มนุษย์ต่างดาว
@@ -388,8 +385,8 @@ th:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
       Dancelab_makeNewDanceSprite:
         text: |-
-          ทำใหม่ {COSTUME}
-          เรียก {NAME} ที่ {LOCATION}
+          ทำใหม่ [COSTUME][0]
+          เรียก [NAME][1] ที่ [LOCATION][2]
         options:
           COSTUME:
             '"ALIEN"': มนุษย์ต่างดาว
@@ -417,8 +414,8 @@ th:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          ทำ {N} ใหม่ {COSTUME}
-          ใน {LAYOUT}
+          ทำ [N][0] ใหม่ [COSTUME][1]
+          ใน [LAYOUT][2]
         options:
           'N':
             '2': '2'
@@ -469,9 +466,9 @@ th:
             '"plus"': เครื่องหมายบวก
             '"random"': สุ่ม
       Dancelab_mixColors:
-        text: ผสม{COLOR1} กับ {COLOR2}
+        text: ผสม[COLOR1][0] กับ [COLOR2][1]
       Dancelab_nMeasures:
-        text: "{N} ห้องดนตรี"
+        text: "[N][0] ห้องดนตรี"
       Dancelab_onPointerDown:
         text: ที่ตัวชี้ลง
       Dancelab_onPointerDrag:
@@ -481,12 +478,14 @@ th:
       Dancelab_randomColor:
         text: สุ่มสี
       Dancelab_setBackground:
-        text: กำหนดสีแบ็กกราวนด์ {COLOR}
+        text: กำหนดสีแบ็กกราวนด์ [COLOR][0]
       Dancelab_setBackgroundEffect:
-        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {EFFECT} {PALETTE}
+        text: |-
+          กำหนดแบ็กกราวนด์เอฟเฟกต์ [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"none"': ไม่มี
+            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(สุ่ม)"
             '"circles"': อุโมงค์
             '"color_cycle"': สี
             '"diamonds"': เพชร
@@ -517,7 +516,7 @@ th:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           "กำหนดแบ็กกราวนด์เอฟเฟกต์
-          {PALETTE} {EFFECT}"
+          [PALETTE][0] [EFFECT][1]"
         options:
           EFFECT:
             '"none"': ไม่มี
@@ -557,7 +556,7 @@ th:
             '"vintage"': วินเทจ
             '"warm"': แดง
       Dancelab_setDanceSpeed:
-        text: เปลี่ยน {SPRITE} ความเร็วของการเต้นเป็น {SPEED}
+        text: เปลี่ยน [SPRITE][0] ความเร็วของการเต้นเป็น [SPEED][1]
         options:
           SPEED:
             '1': ธรรมดา
@@ -566,7 +565,7 @@ th:
             '0.5': ช้า
             '0.25': ช้ามาก
       Dancelab_setDanceSpeedEach:
-        text: กำหนด {GROUP} ความเร็วในการเต้นเป็น {SPEED}
+        text: กำหนด [GROUP][0] ความเร็วในการเต้นเป็น [SPEED][1]
         options:
           GROUP:
             sprites: ทั้งหมด
@@ -589,10 +588,11 @@ th:
             '0.5': ช้า
             '0.25': ช้ามาก
       Dancelab_setForegroundEffect:
-        text: กำหนดโฟร์กราวด์เอฟเฟค {EFFECT}
+        text: กำหนดโฟร์กราวด์เอฟเฟค [EFFECT][0]
         options:
           EFFECT:
             '"none"': ไม่มี
+            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(สุ่ม)"
             '"bubbles"': ฟองสบู่
             '"confetti"': คอนเฟตติ
             '"hearts_red"': หัวใจ
@@ -607,7 +607,7 @@ th:
             '"color_lights"': ไฟบนเวที
             '"raining_tacos"': ทาโก้
       Dancelab_setForegroundEffectExtended:
-        text: กำหนดโฟร์กราวด์เอฟเฟค {EFFECT}
+        text: กำหนดโฟร์กราวด์เอฟเฟค [EFFECT][0]
         options:
           EFFECT:
             '"none"': ไม่มี
@@ -630,7 +630,7 @@ th:
             '"exploding_stars"': ดาวกระจาย
             '"raining_tacos"': ทาโก้
       Dancelab_setProp:
-        text: 'กำหนด {SPRITE} {PROPERTY} เป็น {VAL} '
+        text: 'กำหนด [SPRITE][0] [PROPERTY][1] เป็น [VAL][2] '
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -640,7 +640,7 @@ th:
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
       Dancelab_setPropEach:
-        text: กำหนด {GROUP} {PROPERTY} เป็น {VAL}
+        text: กำหนด [GROUP][0] [PROPERTY][1] เป็น [VAL][2]
         options:
           GROUP:
             sprites: ทั้งหมด
@@ -665,7 +665,7 @@ th:
             '"y"': ตำแหน่งแนวตั้ง
             '"tint"': ระดับอ่อนสี
       Dancelab_setPropRandom:
-        text: การสุ่ม {SPRITE} {PROPERTY}
+        text: การสุ่ม [SPRITE][0] [PROPERTY][1]
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -676,7 +676,7 @@ th:
             '"y"': ตำแหน่งแนวตั้ง
             '"tint"': ระดับอ่อนสี
       Dancelab_setPropRandomEach:
-        text: สุ่ม {GROUP} {PROPERTY}
+        text: สุ่ม [GROUP][0] [PROPERTY][1]
         options:
           GROUP:
             sprites: ทั้งหมด
@@ -701,9 +701,9 @@ th:
             '"y"': ตำแหน่งแนวตั้ง
             '"tint"': ระดับอ่อนสี
       Dancelab_setTint:
-        text: กำหนด {SPRITE} ระดับอ่อนสีเป็น {VAL}
+        text: กำหนด [SPRITE][0] ระดับอ่อนสีเป็น [VAL][1]
       Dancelab_setTintEach:
-        text: กำหนดระดับอ่อนสี {THIS} นี้เป็น {VAL}
+        text: กำหนดระดับอ่อนสี [THIS][0] นี้เป็น [VAL][1]
         options:
           THIS:
             sprites: ทั้งหมด
@@ -720,7 +720,7 @@ th:
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
       Dancelab_setTintEachInline:
-        text: กำหนดระดับอ่อนสี {THIS} นี้เป็น {VAL}
+        text: กำหนดระดับอ่อนสี [THIS][0] นี้เป็น [VAL][1]
         options:
           THIS:
             sprites: ทั้งหมด
@@ -737,15 +737,15 @@ th:
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
       Dancelab_setTintInline:
-        text: กำหนด {SPRITE} ระดับอ่อนสีเป็น {VAL}
+        text: กำหนด [SPRITE][0] ระดับอ่อนสีเป็น [VAL][1]
       Dancelab_setVisible:
-        text: ตั้งค่า {SPRITE} การมองเห็นเป็น {VISIBILITY}
+        text: ตั้งค่า [SPRITE][0] การมองเห็นเป็น [VISIBILITY][1]
         options:
           VISIBILITY:
             'true': มองเห็นได้
             'false': มองไม่เห็น
       Dancelab_setVisibleEach:
-        text: กำหนด {THIS} สภาพมองเห็นได้เป็น {VISIBILITY}
+        text: กำหนด [THIS][0] สภาพมองเห็นได้เป็น [VISIBILITY][1]
         options:
           THIS:
             sprites: ทั้งหมด
@@ -765,7 +765,7 @@ th:
             'true': มองเห็นได้
             'false': มองไม่เห็น
       Dancelab_startMapping:
-        text: "{SPRITE} เริ่ม {PROPERTY} หลังจาก {RANGE}"
+        text: "[SPRITE][0] เริ่ม [PROPERTY][1] หลังจาก [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -780,7 +780,7 @@ th:
             '"mid"': เสียงกลาง
             '"treble"': เสียงสูง
       Dancelab_startMappingEach:
-        text: "{GROUP} เริ่มต้น {PROPERTY} ตามด้วย {RANGE}"
+        text: "[GROUP][0] เริ่มต้น [PROPERTY][1] ตามด้วย [RANGE][2]"
         options:
           GROUP:
             sprites: ทั้งหมด
@@ -809,7 +809,7 @@ th:
             '"mid"': เสียงกลาง
             '"treble"': เสียงสูง
       Dancelab_stopMapping:
-        text: "{SPRITE} หยุด {PROPERTY} หลังจาก {RANGE}"
+        text: "[SPRITE][0] หยุด [PROPERTY][1] หลังจาก [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -825,7 +825,7 @@ th:
             '"mid"': เสียงกลาง
             '"treble"': เสียงสูง
       Dancelab_stopMappingEach:
-        text: "{GROUP} หยุด {PROPERTY} ตามด้วย {RANGE}"
+        text: "[GROUP][0] หยุด [PROPERTY][1] ตามด้วย [RANGE][2]"
         options:
           GROUP:
             sprites: ทั้งหมด
@@ -855,7 +855,7 @@ th:
             '"mid"': เสียงกลาง
             '"treble"': เสียงสูง
       Dancelab_translateStrings:
-        text: แปล {STRING}
+        text: แปล [STRING][0]
         options:
           STRING:
             '"music_wave"': คลื่น
@@ -901,7 +901,7 @@ th:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: เมื่อ {KEY} ถูกกด
+        text: เมื่อ [KEY][0] ถูกกด
         options:
           KEY:
             '"up"': ขึ้นข้างบน
@@ -947,7 +947,7 @@ th:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: เมื่อ {RANGE} สูงสุด
+        text: เมื่อ [RANGE][0] สูงสุด
         options:
           RANGE:
             '0': เสียงต่ำ
@@ -958,15 +958,15 @@ th:
       Dancelab_whenSetup2:
         text: การตั้งค่า
       gamelab_addBehaviorSimple:
-        text: "[SPRITE]เทพเจ้าเริ่มต้น[0] {BEHAVIOR}"
+        text: '[SPRITE]เทพเจ้าเริ่มต้น[0] [BEHAVIOR][1]'
       gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       gamelab_atTime:
         options:
           UNIT:
             '"seconds"': วินาที
       gamelab_changePropBy:
-        text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
+        text: เปลี่ยน [SPRITE][0] [PROPERTY][1] โดย [VAL][2]
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -976,27 +976,27 @@ th:
             '"direction"': ทิศทางการเคลื่อนไหว
             '"speed"': ความเร็ว
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} สัมผัส {SPRITE2}"
+        text: "[CONDITION][0] [SPRITE1][1] สัมผัส [SPRITE2][2]"
         options:
           CONDITION:
             '"when"': เมื่อ (สัมผัสกัน)
             '"while"': ในขณะที่
       gamelab_clickedOn:
-        text: เมื่อคลิก {SPRITE}
+        text: เมื่อคลิก [SPRITE][0]
       gamelab_clickedSpritePointer:
         text: "[SPRITE]คลิก[0]"
       gamelab_comment:
-        text: 'แสดงความคิดเห็น: {COMMENT}'
+        text: 'แสดงความคิดเห็น: [COMMENT][0]'
       gamelab_createNewSprite:
-        text: "สร้างแบบเรียงใหม่ \n เรียก {NAME} \n พร้อมเครื่องแต่งกาย {COSTUME} \n ที่ {LOCATION}"
+        text: "สร้างแบบเรียงใหม่ \n เรียก [NAME][0] \n พร้อมเครื่องแต่งกาย [COSTUME][1] \n ที่ [LOCATION][2]"
       gamelab_destroy:
-        text: ลบ {THIS}
+        text: ลบ [THIS][0]
       gamelab_draggable:
         text: ลากได้
       gamelab_edgesDisplace:
-        text: "[SPRITE]บล็อกขอบ[0] จากการย้าย"
+        text: '[SPRITE]บล็อกขอบ[0] จากการย้าย'
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -1007,7 +1007,7 @@ th:
             '"tint"': ระดับอ่อนสี
             '"speed"': ความเร็ว
       gamelab_getThisSprite:
-        text: "{CHOICE} สไปรท์"
+        text: "[CHOICE][0] สไปรท์"
         options:
           CHOICE:
             '"this"': นี่
@@ -1052,11 +1052,11 @@ th:
             '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
-        text: "{SPRITE} สัมผัสขอบ"
+        text: "[SPRITE][0] สัมผัสขอบ"
       gamelab_jumpTo:
-        text: "{SPRITE} ข้ามไปที่ {LOCATION}"
+        text: "[SPRITE][0] ข้ามไปที่ [LOCATION][1]"
       gamelab_keyPressed:
-        text: "{CONDITION} {KEY} กด"
+        text: "[CONDITION][0] [KEY][1] กด"
         options:
           CONDITION:
             '"when"': เมื่อ (สัมผัสกัน)
@@ -1094,7 +1094,7 @@ th:
             '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
-        text: 'สถานที่ x: {X} Y: {Y}'
+        text: 'สถานที่ x: [X][0] Y: [Y][1]'
       gamelab_locationModifier:
         options:
           DIRECTION:
@@ -1105,13 +1105,13 @@ th:
       gamelab_locationMouse:
         text: ตำแหน่งเมาส์
       gamelab_locationOf:
-        text: ที่ตั้งของ {SPRITE}
+        text: ที่ตั้งของ [SPRITE][0]
       gamelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       gamelab_makeNewSpriteAnon:
-        text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
+        text: ทำใหม่ [ANIMATION_NAME][0] สไปรท์ [LOCATION][1]
       gamelab_mirrorSprite:
-        text: "{SPRITE} หน้า {DIRECTION}"
+        text: "[SPRITE][0] หน้า [DIRECTION][1]"
         options:
           DIRECTION:
             '"right"': ขวา
@@ -1119,9 +1119,9 @@ th:
       gamelab_mouseLocation:
         text: ตำแหน่งเมาส์
       gamelab_moveForward:
-        text: ย้าย {SPRITE} {DISTANCE} พิกเซลไปข้างหน้า
+        text: ย้าย [SPRITE][0] [DISTANCE][1] พิกเซลไปข้างหน้า
       gamelab_moveInDirection:
-        text: ย้าย {SPRITE} {DISTANCE} พิก เซล {DIRECTION}
+        text: ย้าย [SPRITE][0] [DISTANCE][1] พิก เซล [DIRECTION][2]
         options:
           DIRECTION:
             '"North"': ทิศเหนือ
@@ -1129,15 +1129,15 @@ th:
             '"South"': ทางใต้
             '"West"': เวสต์
       gamelab_moveToward:
-        text: ย้าย {SPRITE} พิก เซล {DISTANCE} ไป ยัง {TARGET}
+        text: ย้าย [SPRITE][0] พิก เซล [DISTANCE][1] ไป ยัง [TARGET][2]
       gamelab_newSpritePointer:
         text: "[SPRITE]คลิก[0]"
       gamelab_objectSpritePointer:
         text: "[SPRITE]คลิก[0]"
       gamelab_playSound:
-        text: เล่นเสียง {SOUND}
+        text: เล่นเสียง [SOUND][0]
       gamelab_pointInDirection:
-        text: จุด {SPRITE} {DIRECTION}
+        text: จุด [SPRITE][0] [DIRECTION][1]
         options:
           DIRECTION:
             '"North"': ทิศเหนือ
@@ -1145,7 +1145,7 @@ th:
             '"South"': ทางใต้
             '"West"': เวสต์
       gamelab_printText:
-        text: พิมพ์ {TEXT}
+        text: พิมพ์ [TEXT][0]
       gamelab_randColor:
         text: สุ่มสี
       gamelab_randomColor:
@@ -1153,19 +1153,19 @@ th:
       gamelab_randomLocation:
         text: ตำแหน่งแบบสุ่ม
       gamelab_removeAllBehaviors:
-        text: "{SPRITE} หยุดทุกอย่าง"
+        text: "[SPRITE][0] หยุดทุกอย่าง"
       gamelab_removeBehaviorSimple:
-        text: "[SPRITE]สไปรท์[0] หยุด {BEHAVIOR}"
+        text: '[SPRITE]สไปรท์[0] หยุด [BEHAVIOR][1]'
       gamelab_removeTint:
-        text: ลบสีจาก {THIS}
+        text: ลบสีจาก [THIS][0]
       gamelab_repeatForever:
         text: ทำซ้ำตลอดไป
       gamelab_setAnimation:
-        text: เปลี่ยน {THIS} เครื่องแต่งกาย {ANIMATION}
+        text: เปลี่ยน [THIS][0] เครื่องแต่งกาย [ANIMATION][1]
       gamelab_setBackground:
-        text: กำหนดสีแบ็กกราวนด์ {COLOR}
+        text: กำหนดสีแบ็กกราวนด์ [COLOR][0]
       gamelab_setBackgroundImage:
-        text: ตั้งค่าพื้นหลังเป็น {IMG}
+        text: ตั้งค่าพื้นหลังเป็น [IMG][0]
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ถ้ำ
@@ -1181,7 +1181,7 @@ th:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ฤดูหนาว
             undefined: ไม่เลย
       gamelab_setBackgroundImageAs:
-        text: ตั้งค่าพื้นหลังเป็น {IMG}
+        text: ตั้งค่าพื้นหลังเป็น [IMG][0]
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -1190,7 +1190,7 @@ th:
             '75': ปานกลาง
             '100': large
       gamelab_setProp:
-        text: ตั้ง ค่า {SPRITE} {PROPERTY} ถึง {VAL}
+        text: ตั้ง ค่า [SPRITE][0] [PROPERTY][1] ถึง [VAL][2]
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -1216,18 +1216,18 @@ th:
             '"width"': ความกว้าง
             '"height"': ความสูง
       gamelab_setTint:
-        text: เปลี่ยนสีของ {THIS} {COLOR}
+        text: เปลี่ยนสีของ [THIS][0] [COLOR][1]
       gamelab_setupSim:
         text: |-
           การจำลองการตั้งค่าที่มี
-          {SPRITE1N}{SPRITE1COSTUME}ความเร็ว{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}ความเร็ว{SPRITE2SPEED}
+          [SPRITE1N][0][SPRITE1COSTUME][1]ความเร็ว[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]ความเร็ว[SPRITE2SPEED][5]
           รวบ รวม
-          {SPRITE3N}{SPRITE3COSTUME}
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       gamelab_showTitleScreen:
-        text: แสดงหน้าจอชื่อเรื่อง {BREAK} {TITLE} ข้อความ {SUBTITLE} ข้อความ [2] 123_321
+        text: แสดงหน้าจอชื่อเรื่อง [BREAK][0] [TITLE][1] ข้อความ [SUBTITLE][2] ข้อความ [2] 123_321
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} คลิ ก"
+        text: "[CONDITION][0] [SPRITE][1] คลิ ก"
         options:
           CONDITION:
             '"when"': เมื่อ (สัมผัสกัน)
@@ -1235,7 +1235,7 @@ th:
       gamelab_subjectSpritePointer:
         text: "[SPRITE]คลิก[0]"
       gamelab_turn:
-        text: เปิด {SPRITE} {DIRECTION} [1] {N} องศา
+        text: เปิด [SPRITE][0] [DIRECTION][1] [1] [N][2] องศา
         options:
           DIRECTION:
             '"right"': ขวา
@@ -1243,7 +1243,7 @@ th:
       gamelab_whenDownArrow:
         text: เมื่อลูกศรลงกด
       gamelab_whenKey:
-        text: เมื่อ {KEY} ถูกกด
+        text: เมื่อ [KEY][0] ถูกกด
         options:
           KEY:
             '"up"': ขึ้นข้างบน
@@ -1260,13 +1260,13 @@ th:
       gamelab_whenRightArrow:
         text: เมื่อลูกศรขวากด
       gamelab_whenTouching:
-        text: เมื่อ {SPRITE1} สัมผัส {SPRITE2}
+        text: เมื่อ [SPRITE1][0] สัมผัส [SPRITE2][1]
       gamelab_whenUpArrow:
         text: เมื่อลูกศรขึ้นกด
       gamelab_whileDownArrow:
         text: ขณะที่ลูกศรลงกด
       gamelab_whileKey:
-        text: ในขณะที่กด {KEY}
+        text: ในขณะที่กด [KEY][0]
         options:
           KEY:
             '"up"': ขึ้นข้างบน
@@ -1283,17 +1283,17 @@ th:
       gamelab_whileRightArrow:
         text: ในขณะที่ลูกศรขวากด
       gamelab_whileTouching:
-        text: ในขณะที่ {SPRITE1} สัมผัส {SPRITE2}
+        text: ในขณะที่ [SPRITE1][0] สัมผัส [SPRITE2][1]
       gamelab_whileUpArrow:
         text: ในขณะที่ลูกศรขึ้นกด
       gamelab_xLocationOf:
-        text: x พิกัดของ {SPRITE}
+        text: x พิกัดของ [SPRITE][0]
       gamelab_yLocationOf:
-        text: พิกัด y ของ {SPRITE}
+        text: พิกัด y ของ [SPRITE][0]
       Mikelab_addBehaviorSimple:
-        text: "[SPRITE]เทพเจ้าเริ่มต้น[0] {BEHAVIOR}"
+        text: '[SPRITE]เทพเจ้าเริ่มต้น[0] [BEHAVIOR][1]'
       Mikelab_addTrainingData:
-        text: 'เพิ่มข้อมูลการฝึกอบรม: {NAME}{LOCATION}'
+        text: 'เพิ่มข้อมูลการฝึกอบรม: [NAME][0][LOCATION][1]'
         options:
           NAME:
             "{x: 201, y: 100}": วัตถุ
@@ -1304,7 +1304,7 @@ th:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ป้ายกำกับของ
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ไม่ใช่ป้ายกำกับของฉลาก
       Mikelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1336,13 +1336,13 @@ th:
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_groupChangeAnim:
-        text: เปลี่ยน {SELECT} {COSTUME} เป็น {COSTUME2}
+        text: เปลี่ยน [SELECT][0] [COSTUME][1] เป็น [COSTUME2][2]
         options:
           SELECT:
             '"all"': ทั้งหมด
             '"this"': นี่
       Mikelab_groupChangePropBy:
-        text: เปลี่ยน {PROPERTY} ของ {SELECT} {COSTUME} โดย {VAL}
+        text: เปลี่ยน [PROPERTY][0] ของ [SELECT][1] [COSTUME][2] โดย [VAL][3]
         options:
           SELECT:
             '"all"': ทั้งหมด
@@ -1354,7 +1354,7 @@ th:
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_groupCreateNewSprite:
-        text: ทำ {COSTUME} ใหม่ที่ {LOCATION}
+        text: ทำ [COSTUME][0] ใหม่ที่ [LOCATION][1]
         options:
           LOCATION:
             "{x: 200, y: 100}": ด้านบน
@@ -1367,17 +1367,17 @@ th:
             "{x: 100, y: 300}": ซ้ายล่าง
             "{x: 300, y: 300}": ขวาล่าง
       Mikelab_groupDestroy:
-        text: ลบ {SELECT} {COSTUME}
+        text: ลบ [SELECT][0] [COSTUME][1]
         options:
           SELECT:
             '"all"': ทั้งหมด
             '"this"': นี่
       Mikelab_groupDisplace:
-        text: "{COSTUME} บล็อกทั้งหมด {COSTUME2} จากการย้าย"
+        text: '[COSTUME][0] บล็อกทั้งหมด [COSTUME2][1] จากการย้าย'
       Mikelab_groupEdgesDisplace:
-        text: "[COSTUME]บล็อกขอบ[0] จากการย้าย"
+        text: '[COSTUME]บล็อกขอบ[0] จากการย้าย'
       Mikelab_groupGetProp:
-        text: "{SELECT} {COSTUME}[1] {PROPERTY}"
+        text: "[SELECT][0] [COSTUME][1][1] [PROPERTY][2]"
         options:
           SELECT:
             '"average"': เฉลี่ย
@@ -1389,25 +1389,25 @@ th:
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_groupRemoveAllBehaviors:
-        text: หยุด {SELECT} {COSTUME} พฤติกรรม
+        text: หยุด [SELECT][0] [COSTUME][1] พฤติกรรม
         options:
           SELECT:
             '"all"': ทั้งหมด
             '"this"': นี่
       Mikelab_groupRemoveBehaviorSimple:
-        text: "{SELECT} {COSTUME} หยุด {BEHAVIOR}"
+        text: "[SELECT][0] [COSTUME][1] หยุด [BEHAVIOR][2]"
         options:
           SELECT:
             '"all"': ทั้งหมด
             '"this"': นี่
       Mikelab_groupRemoveTint:
-        text: ลบสีจาก {SELECT} {COSTUME}
+        text: ลบสีจาก [SELECT][0] [COSTUME][1]
         options:
           SELECT:
             '"all"': ทั้งหมด
             '"this"': นี่
       Mikelab_groupSetProp:
-        text: ตั้ง ค่า {PROPERTY} ของ {SELECT} {COSTUME} ถึง {VAL}
+        text: ตั้ง ค่า [PROPERTY][0] ของ [SELECT][1] [COSTUME][2] ถึง [VAL][3]
         options:
           SELECT:
             '"all"': ทั้งหมด
@@ -1419,33 +1419,33 @@ th:
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_groupSetTint:
-        text: เปลี่ยนสีของ {SELECT} {COSTUME} ถึง {COLOR}
+        text: เปลี่ยนสีของ [SELECT][0] [COSTUME][1] ถึง [COLOR][2]
         options:
           SELECT:
             '"all"': ทั้งหมด
             '"this"': นี่
       Mikelab_groupWhenClickedOn:
-        text: เมื่อคลิก {COSTUME}
+        text: เมื่อคลิก [COSTUME][0]
       Mikelab_groupWhenXTouchesY:
-        text: เมื่อ{COSTUME} สัมผัส {COSTUME2}
+        text: เมื่อ[COSTUME][0] สัมผัส [COSTUME2][1]
       Mikelab_groupWhileClicked:
-        text: ในขณะที่คลิกที่ {COSTUME}
+        text: ในขณะที่คลิกที่ [COSTUME][0]
       Mikelab_groupWhileTouchingAny:
         text: |-
-          ในขณะที่{COSTUME} สัมผัส {COSTUME2}
-          {STATEMENT}
+          ในขณะที่[COSTUME][0] สัมผัส [COSTUME2][1]
+          [STATEMENT][2]
       Mikelab_hasBehavior:
-        text: "{SPRITE} ปัจจุบันคือ {BEHAVIOR}"
+        text: "[SPRITE][0] ปัจจุบันคือ [BEHAVIOR][1]"
       Mikelab_hideFish:
-        text: ลบ {TRASH}
+        text: ลบ [TRASH][0]
         options:
           TRASH:
             object: วัตถุ
             fish: ปลา
       Mikelab_ifDanceIs:
         text: |-
-          ถ้า {SPRITE} กำลัง {DANCE}
-          {DO1} {DO2}
+          ถ้า [SPRITE][0] กำลัง [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: ปรบมือสูง
@@ -1461,36 +1461,36 @@ th:
             MOVES.Rest: ไม่มี
       Mikelab_ifLabel:
         text: |-
-          ถ้า {DANCE}
-          ทำ {DO1} อื่น {DO2}
+          ถ้า [DANCE][0]
+          ทำ [DO1][1] อื่น [DO2][2]
         options:
           DANCE:
             MOVES.ClapHigh: ปลา
             MOVES.Clown: ป้ายกำกับของ
       Mikelab_ifRecognizeLabel:
         text: |-
-          ถ้ารู้จักวัตถุเป็น {DANCE}
-          ทำ {DO1} อื่น {DO2} อื่น [2]
+          ถ้ารู้จักวัตถุเป็น [DANCE][0]
+          ทำ [DO1][1] อื่น [DO2][2] อื่น [2]
         options:
           DANCE:
             MOVES.ClapHigh: ปลา
             MOVES.Clown: ป้ายกำกับของ
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          ถ้ารู้จักวัตถุเป็น {DANCE}
-          ทำ {DO1}
+          ถ้ารู้จักวัตถุเป็น [DANCE][0]
+          ทำ [DO1][1]
         options:
           DANCE:
             MOVES.ClapHigh: ปลา
             MOVES.Clown: ไม่ใช่ป้ายกำกับของฉลาก
       Mikelab_locationAt:
-        text: 'สถานที่ x: {X} Y: {Y}'
+        text: 'สถานที่ x: [X][0] Y: [Y][1]'
       Mikelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       Mikelab_randomColor:
         text: สุ่มสี
       Mikelab_removeBehaviorSimple:
-        text: "[SPRITE]สไปรท์[0] หยุด {BEHAVIOR}"
+        text: '[SPRITE]สไปรท์[0] หยุด [BEHAVIOR][1]'
       Mikelab_repeatUntilComplete:
         text: ทำซ้ำตลอดไป
       Mikelab_sendBad:
@@ -1512,17 +1512,17 @@ th:
       Mikelab_setupSim:
         text: |-
           การจำลองการตั้งค่าที่มี
-          {SPRITE1N}{SPRITE1COSTUME}ความเร็ว{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}ความเร็ว{SPRITE2SPEED}
+          [SPRITE1N][0][SPRITE1COSTUME][1]ความเร็ว[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]ความเร็ว[SPRITE2SPEED][5]
           รวบ รวม
-          {SPRITE3N}{SPRITE3COSTUME}
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': ขวา
             '"left"': ซ้าย
       Mikelab_sprite:
-        text: "{COSTUME} สไปรท์ {LOCATION}"
+        text: '[COSTUME][0] สไปรท์ [LOCATION][1]'
         options:
           LOCATION:
             "{x: 200, y: 100}": ด้านบน
@@ -1535,9 +1535,9 @@ th:
             "{x: 100, y: 300}": ซ้ายล่าง
             "{x: 300, y: 300}": ขวาล่าง
       Mikelab_whenClickedOn:
-        text: เมื่อคลิก {SPRITE}
+        text: เมื่อคลิก [SPRITE][0]
       Mikelab_whenKeyPressed:
-        text: เมื่อ {KEY} ถูกกด
+        text: เมื่อ [KEY][0] ถูกกด
         options:
           KEY:
             '"up"': ลูกศรชี้ขึ้น
@@ -1562,11 +1562,11 @@ th:
       Mikelab_whenMouseClicked:
         text: เมื่อคลิกเมาส์
       Mikelab_whenYesNoClicked:
-        text: เมื่อคลิก {KEY}
+        text: เมื่อคลิก [KEY][0]
         options:
           KEY:
-            '"yes"': ใช่
-            '"no"': ไม่
+            '"yes"': 'ใช่'
+            '"no"': 'ไม่'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1575,9 +1575,9 @@ th:
             '"left"': ลูกศรชี้ทางซ้าย
             '"right"': ลูกศรชี้ทางขวา
       Mikelab_xLocationOf:
-        text: x พิกัดของ {SPRITE}
+        text: x พิกัดของ [SPRITE][0]
       Mikelab_yLocationOf:
-        text: พิกัด y ของ {SPRITE}
+        text: พิกัด y ของ [SPRITE][0]
       RyanLab_moveForward:
         text: ไปข้างหน้า
       RyanLab_turnLeft:
@@ -1585,29 +1585,29 @@ th:
       RyanLab_turnRight:
         text: หันขวา
       SpriteLab2Beta_spriteSay:
-        text: "[SPRITE]สไปรท์[0] {TEXT} สำหรับ {SECONDS} วินาที"
+        text: '[SPRITE]สไปรท์[0] [TEXT][1] สำหรับ [SECONDS][2] วินาที'
       Vector_createSpriteWith:
         text: |-
           สร้างเทพดาร
-          ทำ{STATEMENT}
+          ทำ[STATEMENT][0]
       Vector_log:
-        text: "[MESSAGE]ข้อความบันทึก[0]"
+        text: '[MESSAGE]ข้อความบันทึก[0]'
       Vector_positionCenter:
         text: ตรงกลาง
       Vector_push:
-        text: ตั้งค่าความเร็ว {VECTOR}
+        text: ตั้งค่าความเร็ว [VECTOR][0]
       Vector_randomLocation:
         text: ตำแหน่งแบบสุ่ม
       Vector_setColor:
-        text: ตั้งค่าสีเป็น {COLOR}
+        text: ตั้งค่าสีเป็น [COLOR][0]
       Vector_setSize:
-        text: ความกว้าง {WIDTH} ความสูง {HEIGHT} [1]
+        text: ความกว้าง [WIDTH][0] ความสูง [HEIGHT][1] [1]
       Vector_teleportTo:
-        text: "[POSITION]ตำแหน่งที่ตั้งไว้[0]"
+        text: '[POSITION]ตำแหน่งที่ตั้งไว้[0]'
       Vector_vectorNorth:
         text: ทิศเหนือ
       Vector_where:
-        text: แต่ละเทพเจ้าที่ {PROPERTY} {VALUE} ทำ{STATEMENT} ทำ [2]
+        text: แต่ละเทพเจ้าที่ [PROPERTY][0] [VALUE][1] ทำ[STATEMENT][2] ทำ [2]
         options:
           PROPERTY:
             "'shapeColor'": สี
@@ -1633,37 +1633,37 @@ th:
             '0.5': half of
             '0.25': few
       binary_drawBin:
-        text: วาดเลขฐานสอง {BIN}
+        text: วาดเลขฐานสอง [BIN][0]
       binary_drawBinScreen:
         text: |-
           วาดหน้าจอ
-          {B1}
-          {B2}
-          {B3}
-          {B4}
-          {B5}
-          {B6}
-          {B7}
-          {B8}
+          [B1][0]
+          [B2][1]
+          [B3][2]
+          [B4][3]
+          [B5][4]
+          [B6][5]
+          [B7][6]
+          [B8][7]
       binary_drawDec:
-        text: วาดทศนิยม {DEC} ทศนิยม
+        text: วาดทศนิยม [DEC][0] ทศนิยม
       binary_drawPixelHere:
-        text: ชุดพิกเซล {VAL}
+        text: ชุดพิกเซล [VAL][0]
         options:
           VAL:
-            '0': ปิด
-            '1': บน
+            '0': 'ปิด'
+            '1': 'บน'
             '"toggle"': สลับกัน
       binary_drawString:
-        text: วาดสตริง {STR}
+        text: วาดสตริง [STR][0]
       binary_goTo:
-        text: ข้ามไปยัง {LOC}
+        text: ข้ามไปยัง [LOC][0]
       binary_goToHome:
         text: ข้ามไปด้านบนซ้าย
       binary_gridSize:
-        text: ชุดตารางขนาด {SIZE}
+        text: ชุดตารางขนาด [SIZE][0]
       binary_move:
-        text: ย้าย {DIR}
+        text: ย้าย [DIR][0]
         options:
           DIR:
             '"up"': ขึ้นข้างบน
@@ -1671,7 +1671,7 @@ th:
             '"left"': ซ้าย
             '"right"': ขวา
       binary_whenKey:
-        text: เมื่อ {KEY} ถูกกด
+        text: เมื่อ [KEY][0] ถูกกด
         options:
           KEY:
             '"up"': ขึ้นข้างบน
@@ -1685,8 +1685,8 @@ th:
             '"d"': d
       craft_ifPath:
         text: |-
-          ถ้ามีเส้นทาง {DIR}
-          {STATEMENT}
+          ถ้ามีเส้นทาง [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": ข้างหน้า
@@ -1694,8 +1694,8 @@ th:
             "'left'": ไปทางซ้าย
       craft_ifStandingOn:
         text: |-
-          ถ้าหากยืนอยู่บน {TYPE}
-          {STATEMENT}
+          ถ้าหากยืนอยู่บน [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": ปะการังสีฟ้า
@@ -1706,15 +1706,15 @@ th:
             "'seaLantern'": โคมทะเล
       craft_ifStandingOnLimit:
         text: |-
-          ถ้าหากยืนอยู่บน {TYPE}
-          {STATEMENT}
+          ถ้าหากยืนอยู่บน [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": ทราย
             "'darkPrismarine'": หินพริสมารีนสีดำ
             "'seaLantern'": โคมทะเล
       craft_log:
-        text: "[MESSAGE]ข้อความบันทึก[0]"
+        text: '[MESSAGE]ข้อความบันทึก[0]'
       craft_moveForward:
         text: ไปข้างหน้า
       craft_placeBlock:
@@ -1752,11 +1752,12 @@ th:
       craft_repeatUntilConduit:
         text: |-
           ทำซ้ำจนกว่าน้ำพุจะสร้างเสร็จ
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
-        text: ทำซ้ำจนสำเร็จ{STATEMENT}
+        text: |-
+          ทำซ้ำจนสำเร็จ[STATEMENT][0]
       craft_spawnEntity:
-        text: แพร่พันธ์ุ {ENTITY}
+        text: แพร่พันธ์ุ [ENTITY][0]
         options:
           ENTITY:
             '"cod"': ปลาคอด
@@ -1766,7 +1767,7 @@ th:
             '"squid"': ปลาหมึก
             '"tropicalFish"': ปลาทรอปปิค
       craft_turn:
-        text: หัน {DIR}
+        text: หัน [DIR][0]
         options:
           DIR:
             right: ไปทางขวา ↻

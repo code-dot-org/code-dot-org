@@ -121,7 +121,8 @@
         "frozen square iterative": "Sembla que estem a mig camí per fer un quadrat. Anem a posar 4 línies juntes per crear un quadrat.",
         "frozen square loop": "Hola, sóc Anna d'Arendelle! Anem a fer un quadrat amb el bloc \"Repetir\", que fa servir menys blocs. Quantes vegades (???) haurà de repetir-se el contingut del bloc \"Repetir\" per fer un quadrat?",
         "frozen square loop 3x": "Anem a crear 3 quadrats, girant després de cada quadrat. Assegura't de girar 120 graus abans de cada nou quadrat.",
-        "frozen square snowflake": "Pots fer un floquet de neu emprant el bloc \"Repetir\" per fer un quadrat 10 vegades i un bloc \"Girar\" que giri 36 graus entre cada quadrat?"
+        "frozen square snowflake": "Pots fer un floquet de neu emprant el bloc \"Repetir\" per fer un quadrat 10 vegades i un bloc \"Girar\" que giri 36 graus entre cada quadrat?",
+        "courseF_bee2": "Pots usar un bucle per recollir tot el nèctar?"
       }
     }
   }

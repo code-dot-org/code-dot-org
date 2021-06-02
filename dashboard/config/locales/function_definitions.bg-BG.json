@@ -1463,6 +1463,84 @@
               "length": "дължина"
             }
           }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "рисува звезда",
+            "parameters": {
+              "points": "точки",
+              "length": "дължина"
+            }
+          },
+          "draw a circle": {
+            "name": "чертае кръг"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "рисува звезда"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "рисува звезда"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "прекрати игра"
+          }
         }
       }
     }
