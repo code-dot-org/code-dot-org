@@ -4,7 +4,7 @@ class EvaluationMultiDSL < MultiDSL
     answer = {
       text: text,
       weight: weight || 1,
-      stage: lesson_name
+      lesson: lesson_name
     }
     @hash[:answers] << answer
   end
