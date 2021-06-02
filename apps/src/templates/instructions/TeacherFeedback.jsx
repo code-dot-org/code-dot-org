@@ -13,6 +13,7 @@ import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedb
 import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedbackRubric';
 import {teacherFeedbackShape, rubricShape} from '@cdo/apps/templates/types';
 import experiments from '@cdo/apps/util/experiments';
+import BubbleBadge from '@cdo/apps/templates/progress/BubbleBadge';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -234,6 +235,12 @@ export class TeacherFeedback extends Component {
                   setReviewStateChanged={this.onReviewStateUpdated}
                 />
               )}
+              {viewAs === ViewType.Student &&
+                latestFeedback?.review_state === 'keepWorking' && (
+                  <div>
+                    <BubbleBadge type="keepWorking" />
+                  </div>
+                )}
             </div>
             <CommentArea
               isReadonly={disabledMode}
