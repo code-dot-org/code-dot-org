@@ -22,7 +22,7 @@ const SAMPLE_IMAGE_URL = 'example.gif';
 
 const DEFAULT_PROPS = {
   puzzleNumber: TEST_PUZZLE_NUMBER,
-  stageTotal: TEST_LESSON_TOTAL,
+  lessonTotal: TEST_LESSON_TOTAL,
   shortInstructions: TEST_INSTRUCTIONS_1,
   shortInstructions2: TEST_INSTRUCTIONS_2,
   imgURL: SAMPLE_IMAGE_URL
