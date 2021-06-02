@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:13 UTC",
+    "serialized_at": "2021-06-02 14:28:55 UTC",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
     }
@@ -84,27 +84,12 @@
       }
     },
     {
-      "key": "Lesson Planning",
-      "name": "Lesson Planning",
+      "key": "CS Teaching and Student Practices",
+      "name": "CS Teaching and Student Practices",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Lesson Planning",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "key": "CS Teaching and Student Practices",
-      "name": "CS Teaching and Student Practices",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -116,6 +101,21 @@
     {
       "key": "Implementation Approaches and Barriers",
       "name": "Implementation Approaches and Barriers",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "key": "Lesson Planning",
+      "name": "Lesson Planning",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
@@ -123,7 +123,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson.key": "Lesson Planning",
         "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
@@ -536,81 +536,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 LessonPlanning1"
-        ],
-        "progression": "Lesson Planning"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 LessonPlanning1"
-        ],
-        "lesson.key": "Lesson Planning",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 LessonPlanning1"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 LessonPlanning2"
-        ],
-        "progression": "Lesson Planning"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 LessonPlanning2"
-        ],
-        "lesson.key": "Lesson Planning",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 LessonPlanning2"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 LessonPlanning_Reflection"
-        ],
-        "progression": "Lesson Planning"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 LessonPlanning_Reflection"
-        ],
-        "lesson.key": "Lesson Planning",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 LessonPlanning_Reflection"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "OPD-K5 CSTeachingLearning1"
         ],
         "progression": "CS Teaching and Student Practices"
@@ -630,7 +555,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -655,7 +580,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -680,7 +605,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -705,7 +630,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -730,7 +655,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -755,7 +680,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -780,7 +705,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -805,7 +730,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -830,7 +755,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -855,7 +780,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -880,7 +805,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -902,6 +827,81 @@
       },
       "level_keys": [
         "OPD-K5 ImplementationBarriers1"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 LessonPlanning1"
+        ],
+        "progression": "Lesson Planning"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 LessonPlanning1"
+        ],
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 LessonPlanning1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 LessonPlanning2"
+        ],
+        "progression": "Lesson Planning"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 LessonPlanning2"
+        ],
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 LessonPlanning2"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 LessonPlanning_Reflection"
+        ],
+        "progression": "Lesson Planning"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 LessonPlanning_Reflection"
+        ],
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 LessonPlanning_Reflection"
       ]
     },
     {
@@ -3636,39 +3636,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 LessonPlanning1",
-        "script_level.level_keys": [
-          "OPD-K5 LessonPlanning1"
-        ],
-        "lesson.key": "Lesson Planning",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 LessonPlanning2",
-        "script_level.level_keys": [
-          "OPD-K5 LessonPlanning2"
-        ],
-        "lesson.key": "Lesson Planning",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 LessonPlanning_Reflection",
-        "script_level.level_keys": [
-          "OPD-K5 LessonPlanning_Reflection"
-        ],
-        "lesson.key": "Lesson Planning",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "OPD-K5 CSTeachingLearning1",
         "script_level.level_keys": [
           "OPD-K5 CSTeachingLearning1"
@@ -3795,6 +3762,39 @@
           "OPD-K5 ImplementationBarriers1"
         ],
         "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 LessonPlanning1",
+        "script_level.level_keys": [
+          "OPD-K5 LessonPlanning1"
+        ],
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 LessonPlanning2",
+        "script_level.level_keys": [
+          "OPD-K5 LessonPlanning2"
+        ],
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 LessonPlanning_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 LessonPlanning_Reflection"
+        ],
+        "lesson.key": "Lesson Planning",
         "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
