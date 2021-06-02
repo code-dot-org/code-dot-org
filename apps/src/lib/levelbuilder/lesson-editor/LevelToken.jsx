@@ -170,7 +170,7 @@ export class LevelTokenContents extends Component {
             {hasVariants && (
               <span style={styles.inactiveVariants}>
                 inactive variant:&nbsp;
-                {inactiveLevels.map(level => `"${level.name}" `).join('\n')}
+                {inactiveLevels.map(level => `"${level.key}" `).join('\n')}
               </span>
             )}
           </span>
