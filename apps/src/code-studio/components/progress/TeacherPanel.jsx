@@ -261,8 +261,8 @@ export default connect(state => {
   );
 
   let lessonNames = {};
-  state.progress.stages.forEach(stage => {
-    lessonNames[stage.id] = stage.name;
+  state.progress.stages.forEach(lesson => {
+    lessonNames[lesson.id] = lesson.name;
   });
 
   // Pretend we don't have lockable lessons if we're not authorized to see them
