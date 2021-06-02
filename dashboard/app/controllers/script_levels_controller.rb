@@ -209,7 +209,7 @@ class ScriptLevelsController < ApplicationController
     render json: []
   end
 
-  def stage_extras
+  def lesson_extras
     authorize! :read, ScriptLevel
 
     if current_user&.teacher?
@@ -223,7 +223,7 @@ class ScriptLevelsController < ApplicationController
       end
       # This errs on the side of showing the warning by only if the script we are in
       # is the assigned script for the section
-      @show_stage_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
+      @show_lesson_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
     # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
@@ -269,9 +269,9 @@ class ScriptLevelsController < ApplicationController
       end
     end
 
-    @stage_extras = {
-      next_stage_number: @lesson.next_level_number_for_lesson_extras(user),
-      stage_number: @lesson.relative_position,
+    @lesson_extras = {
+      next_lesson_number: @lesson.next_level_number_for_lesson_extras(user),
+      lesson_number: @lesson.relative_position,
       next_level_path: @lesson.next_level_path_for_lesson_extras(user),
       bonus_levels: script_bonus_levels_by_lesson,
     }.camelize_keys

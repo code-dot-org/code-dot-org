@@ -41,6 +41,7 @@ class MiniView extends React.Component {
     } else {
       body = (
         <div
+          className="mini-view"
           style={{
             ...(!hasGroups && !isSummaryView && styles.detailView),
             ...(hasGroups && styles.groupView)

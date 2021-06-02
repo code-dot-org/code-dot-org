@@ -79,7 +79,7 @@ const APP_OPTIONS_ALLOWLIST = {
     beginnerMode: true,
     levelId: true,
     puzzle_number: true,
-    stage_total: true,
+    lesson_total: true,
     iframeEmbed: true,
     lastAttempt: true,
     submittable: true

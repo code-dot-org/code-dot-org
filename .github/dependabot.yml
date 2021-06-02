@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/apps"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 1
+    labels:
+      - "npm"
+      - "dependencies"
+    ignore:
+      - dependency-name: "react*"

@@ -386,7 +386,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'my-unit-group', summary[:versions].first[:name]
     assert_equal '1999', summary[:versions].first[:version_year]
 
-    # make sure we dont have stage info
+    # make sure we dont have lesson info
     assert_nil summary[:scripts][0][:stages]
     assert_nil summary[:scripts][0][:stageDescriptions]
   end

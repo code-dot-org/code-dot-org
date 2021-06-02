@@ -18,12 +18,12 @@ export const fakeLesson = (
   name,
   id,
   lockable = false,
-  stageNumber = undefined
+  lessonNumber = undefined
 ) => ({
   name,
   id,
   lockable,
-  stageNumber,
+  lessonNumber,
   isFocusArea: false
 });
 
