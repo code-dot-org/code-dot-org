@@ -269,7 +269,7 @@ class ScriptLevelsController < ApplicationController
       end
     end
 
-    @stage_extras = {
+    @lesson_extras = {
       next_lesson_number: @lesson.next_level_number_for_lesson_extras(user),
       lesson_number: @lesson.relative_position,
       next_level_path: @lesson.next_level_path_for_lesson_extras(user),
