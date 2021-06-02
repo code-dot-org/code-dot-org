@@ -22490,10 +22490,46 @@ en:
           description: In this unit, students create objects and define instance variables to represent attributes. Students explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. Students implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with objects, students use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
           student_description: In this unit, you create objects and define instance variables to represent attributes. You explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. You implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with your objects, you use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
         csa3-pilot:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Creating Arrays
+            lesson-2:
+              name: Accessing and Modifying Elements
+            lesson-3:
+              name: Traversing Arrays with for Loops
+            lesson-4:
+              name: Traversing Arrays with while Loops
+            lesson-5:
+              name: Storing Objects into Arrays
+            lesson-6:
+              name: Traversing Arrays with Enhanced for Loops
+            lesson-7:
+              name: Using Static Variables and Constants
+            lesson-8:
+              name: Answering Questions with Arrays
+            lesson-9:
+              name: Solving Problems with Arrays
+            lesson-10:
+              name: Manipulating Elements in an Array
+            lesson-11:
+              name: Concert in the Theater Project Day 1
+            lesson-12:
+              name: Concert in the Theater Project Day 2
+            lesson-13:
+              name: Concert in the Theater Project Day 3
+            lesson-14:
+              name: FRQ Day
+            lesson-15:
+              name: Assessment Day
+              description_student: In this unit, you worked with one-dimensional arrays to store primitive values and object references in The Theater. You represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects.
+              description_teacher: In this unit, students worked with one-dimensional arrays to store primitive values and object references in The Theater. Students represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
           name: csa3-pilot
-          title: ''
+          title: Expanding Program Data
           description_audience: ''
           description_short: ''
           description: ''
