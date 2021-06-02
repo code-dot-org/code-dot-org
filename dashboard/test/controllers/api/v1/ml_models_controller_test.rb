@@ -4,6 +4,7 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
   setup do
     AWS::S3.stubs(:delete_from_bucket).returns(true)
     AWS::S3.stubs(:upload_to_bucket).returns(true)
+    ShareFiltering.stubs(:find_failure).returns(nil)
     @owner = create :student
     @model = create :user_ml_model, user: @owner
     @not_owner = create :student
@@ -29,10 +30,18 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
     assert_response :bad_request
   end
 
-  test 'returns failure when model cannot save' do
+  test 'returns failure when model does not have a name' do
     sign_in @owner
     post :save, params: {"ml_model" => {"name" => nil}}
     assert_equal "failure", JSON.parse(@response.body)["status"]
+  end
+
+  test 'returns failure when model contains profanity' do
+    sign_in @owner
+    ShareFiltering.stubs(:find_failure).returns(ShareFailure.new('profanity', 'damn'))
+    post :save, params: {"ml_model" => {"name" => "Naughty Model"}}
+    assert_equal "failure", JSON.parse(@response.body)["status"]
+    assert_equal "profanity", JSON.parse(@response.body)["details"]
   end
 
   test 'returns failure when model saves to database but not S3' do
