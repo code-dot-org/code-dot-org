@@ -11,8 +11,8 @@
     }
   },
   "fields": [
-    { "type": "numerical", "id": "\ufeffage", "description": "" },
-    { "type": "categorical", "id": "sex", "description": "" },
+    { "type": "numerical", "id": "Age", "description": "" },
+    { "type": "categorical", "id": "Sex", "description": "" },
     { "type": "categorical", "id": "Chest Pain Type", "description": "" },
     {
       "type": "numerical",

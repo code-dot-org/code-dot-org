@@ -1,4 +1,4 @@
-﻿age,sex,Chest Pain Type,Resting Blood Pressure,Cholesterol,Fasting Blood Sugar > 120mg/dl,Resting ECG Results,Maximum Heart Rate Achieved,Exercise Induced Angina,ST Depression Induced By Exercise Relative To Rest,Slope of Peak Exercise ST Segment,Number of Major Vessels Colored by Flourosopy,Diagnosis of Heart Disease
+﻿Age,Sex,Chest Pain Type,Resting Blood Pressure,Cholesterol,Fasting Blood Sugar > 120mg/dl,Resting ECG Results,Maximum Heart Rate Achieved,Exercise Induced Angina,ST Depression Induced By Exercise Relative To Rest,Slope of Peak Exercise ST Segment,Number of Major Vessels Colored by Flourosopy,Diagnosis of Heart Disease
 63,male,None,145,233,TRUE,Normal,150,No,2.3,0,0,Yes
 37,male,Non-Anginal,130,250,FALSE,Some abnormality,187,No,3.5,0,0,Yes
 41,female,Atypical Angina,130,204,FALSE,Normal,172,No,1.4,2,0,Yes
