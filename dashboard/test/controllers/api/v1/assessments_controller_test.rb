@@ -539,7 +539,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     expected_response = {
       level1.id.to_s => {
-        "stage_name" => script.name,
+        "lesson_name" => script.name,
         "levelgroup_results" => [
           {
             "type" => "text_match",
@@ -612,7 +612,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     actual_response = JSON.parse(@response.body)
     assert_equal expected_response.keys, actual_response.keys
-    assert_equal expected_response[level1.id.to_s]['stage_name'], actual_response[level1.id.to_s]['stage_name']
+    assert_equal expected_response[level1.id.to_s]['lesson_name'], actual_response[level1.id.to_s]['lesson_name']
     assert_equal expected_response[level1.id.to_s]['levelgroup_results'],
       actual_response[level1.id.to_s]['levelgroup_results']
   end
@@ -677,7 +677,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     expected_response = {
       level1.id.to_s => {
-        "stage_name" => script.name,
+        "lesson_name" => script.name,
         "levelgroup_results" => []
       }
     }
@@ -685,7 +685,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     assert_response :success
     actual_response = JSON.parse(@response.body)
     assert_equal expected_response.keys, actual_response.keys
-    assert_equal expected_response[level1.id.to_s]['stage_name'], actual_response[level1.id.to_s]['stage_name']
+    assert_equal expected_response[level1.id.to_s]['lesson_name'], actual_response[level1.id.to_s]['lesson_name']
     assert_equal expected_response[level1.id.to_s]['levelgroup_results'],
       actual_response[level1.id.to_s]['levelgroup_results']
   end

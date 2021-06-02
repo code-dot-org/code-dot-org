@@ -1000,7 +1000,7 @@ export const getExportableSurveyData = state => {
   for (let i = 0; i < currentSurvey.levelgroup_results.length; i++) {
     const questionResults = currentSurvey.levelgroup_results[i];
     const rowBase = {
-      stage: currentSurvey.stage_name,
+      stage: currentSurvey.lesson_name,
       questionNumber: questionResults.question_index + 1,
       questionText: questionResults.question
     };
@@ -1169,7 +1169,7 @@ const computeScriptAssessmentList = (state, scriptId) => {
   const surveys = Object.keys(surveysStructure).map(surveyId => {
     return {
       id: parseInt(surveyId),
-      name: surveysStructure[surveyId].stage_name
+      name: surveysStructure[surveyId].lesson_name
     };
   });
 
