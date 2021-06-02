@@ -11,7 +11,7 @@ class DialogInstructions extends React.Component {
   static propTypes = {
     // redux
     puzzleNumber: PropTypes.number.isRequired,
-    stageTotal: PropTypes.number.isRequired,
+    lessonTotal: PropTypes.number.isRequired,
     shortInstructions: PropTypes.string.isRequired,
     shortInstructions2: PropTypes.string,
     longInstructions: PropTypes.string,
@@ -28,7 +28,7 @@ class DialogInstructions extends React.Component {
     return (
       <Instructions
         puzzleTitle={msg.puzzleTitle({
-          stage_total: this.props.stageTotal,
+          stage_total: this.props.lessonTotal,
           puzzle_number: this.props.puzzleNumber
         })}
         shortInstructions={
@@ -51,7 +51,7 @@ class DialogInstructions extends React.Component {
 export const UnconnectedDialogInstructions = DialogInstructions;
 export default connect(state => ({
   puzzleNumber: state.pageConstants.puzzleNumber,
-  stageTotal: state.pageConstants.stageTotal,
+  lessonTotal: state.pageConstants.lessonTotal,
   shortInstructions: state.instructions.shortInstructions,
   shortInstructions2: state.instructions.shortInstructions2,
   longInstructions: state.instructions.longInstructions,

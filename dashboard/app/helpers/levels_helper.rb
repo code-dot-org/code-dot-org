@@ -385,7 +385,7 @@ module LevelsHelper
   def set_puzzle_position_options(level_options)
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
+    level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
   end
 
   # Options hash for non-blockly puzzle apps
@@ -515,7 +515,7 @@ module LevelsHelper
     # ScriptLevel-dependent option
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
+    level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
     level_options['final_level'] = script_level.final_level? if script_level
 
     # Edit blocks-dependent options
