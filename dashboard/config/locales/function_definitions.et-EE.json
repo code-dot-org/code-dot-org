@@ -1303,6 +1303,64 @@
               "length": "pikkus"
             }
           }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "joonista täht",
+            "parameters": {
+              "points": "punktid",
+              "length": "pikkus"
+            }
+          },
+          "draw a circle": {
+            "name": "joonista ring"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "lõpeta mäng"
+          }
         }
       }
     }

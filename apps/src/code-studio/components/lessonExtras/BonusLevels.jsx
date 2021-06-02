@@ -39,8 +39,8 @@ class BonusLevels extends React.Component {
   render() {
     const previousNumLessons = this.props.bonusLevels.filter(
       lesson =>
-        lesson.stageNumber <
-        this.props.bonusLevels[this.state.lessonIndex].stageNumber
+        lesson.lessonNumber <
+        this.props.bonusLevels[this.state.lessonIndex].lessonNumber
     ).length;
     const scrollAmount = -1 * previousNumLessons * CARD_AREA_SIZE;
 
@@ -52,8 +52,8 @@ class BonusLevels extends React.Component {
       <div>
         <div style={styles.lessonNumberHeading}>
           {i18n.extrasStageNChallenges({
-            stageNumber: this.props.bonusLevels[this.state.lessonIndex]
-              .stageNumber
+            lessonNumber: this.props.bonusLevels[this.state.lessonIndex]
+              .lessonNumber
           })}
         </div>
         <div style={styles.scroller}>
@@ -70,7 +70,7 @@ class BonusLevels extends React.Component {
           >
             {this.props.bonusLevels.map(lesson => (
               <div
-                key={lesson.stageNumber}
+                key={lesson.lessonNumber}
                 style={{
                   ...styles.challengeRow,
                   left: scrollAmount,

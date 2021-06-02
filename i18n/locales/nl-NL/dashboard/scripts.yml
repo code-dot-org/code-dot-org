@@ -1,4 +1,3 @@
----
 nl:
   data:
     script:
@@ -145,7 +144,7 @@ nl:
             Songwriting:
               name: Songwriting
             'Studio: Create a Game':
-              name: Speel Lab - Maak een Spel
+              name: 'Speel Lab - Maak een Spel'
             'Studio: Create a Story':
               name: 'Speel Lab: Maak een Verhaal'
           student_description: Cursus 3 is ontwikkeld voor studenten die Cursus 2 hebben gevolgd. Studenten zullen dieper ingaan op de programmeeronderwerpen die geïntroduceerd zijn in vorige cursussen om flexibele oplossingen te maken om moeilijkere problemen op te lossen. Aan het einde van deze cursus kunnen leerlingen interactieve verhalen en spellen maken die ze met iedereen kunnen delen. Aanbevolen voor rangen 4-5.
@@ -226,7 +225,7 @@ nl:
             'Unplugged: For Loop Fun':
               name: 'Unplugged: Voor-Lus plezier'
             'Unplugged: Madlibs':
-              name: Unplugged:Madlibs
+              name: 'Unplugged:Madlibs'
             'Unplugged: Songwriting with Parameters':
               name: 'Unplugged: Liedjes schrijven met Parameters'
             'Unplugged: Tangrams':
@@ -834,6 +833,12 @@ nl:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -885,6 +890,12 @@ nl:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -894,6 +905,12 @@ nl:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -1036,7 +1053,7 @@ nl:
               name: 'Unplugged: Het ontwerp recept'
           student_description: Leer functioneel programmeren door Algebra
         AlgebraB:
-          title: Informatica in Algebra
+          title: 'Informatica in Algebra'
           description: Leer functioneel programmeren door Algebra
           description_short: Leer functioneel programmeren door Algebra
           lessons:
@@ -1341,6 +1358,12 @@ nl:
               name: 'Unplugged: Liedjes schrijven met Parameters'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -1352,7 +1375,7 @@ nl:
         grade3:
           lessons:
             " Bee: Conditionals":
-              name: 'Bij: voorwaardelijke instructies'
+              name: "Bij: voorwaardelijke instructies"
             'Artist: Nested Loops':
               name: 'Kunstenaar: geneste lussen'
             Bee Debugging:
@@ -1831,7 +1854,7 @@ nl:
             'Project: Design a Game':
               name: 'Project: Ontwerp een Spel'
             'null':
-              name: niets
+              name: 'niets'
             temp:
               name: temp
         coursef-ramp:
@@ -1905,7 +1928,7 @@ nl:
             Build a Star Wars Game:
               name: Bouw een Star Wars Spel!
             'Functions: Songwriting':
-              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
             Building a Foundation:
               name: Een Basis Bouwen
             Nested Loops:
@@ -2269,7 +2292,7 @@ nl:
             For Loops:
               name: For-lussen
         csd3-1819draft:
-          description_short: Programmeren
+          description_short: "Programmeren"
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
@@ -2291,7 +2314,7 @@ nl:
             new stage:
               name: nieuw niveau
         csd3-2018:
-          description_short: Programmeren
+          description_short: "Programmeren"
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
@@ -2445,7 +2468,7 @@ nl:
               name: Bouw een Star Wars Spel!
             'Functions: Songwriting':
               name: Songwriting
-              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
             Internet:
               name: Het Internet
             Crowdsourcing:
@@ -2938,7 +2961,7 @@ nl:
               name: Bouw een Star Wars Spel!
             'Functions: Songwriting':
               name: Songwriting
-              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3001,7 +3024,7 @@ nl:
             module2:
               name: module2
             'null':
-              name: niets
+              name: 'niets'
             Part 1:
               name: Deel 1
             Part 2:
@@ -3100,7 +3123,7 @@ nl:
             Intellectual Property and Images:
               name: Intellectuele Eigendom en Afbeeldingen
         csd3-2019:
-          description_short: Programmeren
+          description_short: "Programmeren"
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
@@ -3291,13 +3314,13 @@ nl:
             Intellectual Property:
               name: Intellectuele Eigendom
             'Project: Digital Information Dilemmas, pt. 1':
-              name: Project - Digitale informatie dilemma's, deel 1
+              name: 'Project - Digitale informatie dilemma''s, deel 1'
             'Project: Digital Information Dilemmas, pt. 2':
-              name: Project - Digitale informatie dilemma's, deel 2
+              name: 'Project - Digitale informatie dilemma''s, deel 2'
             'Project: Digital Information Dilemmas, pt 1':
-              name: Project - Digitale informatie dilemma's, deel 1
+              name: 'Project - Digitale informatie dilemma''s, deel 1'
             'Project: Digital Information Dilemmas, pt 2':
-              name: Project - Digitale informatie dilemma's, deel 2
+              name: 'Project - Digitale informatie dilemma''s, deel 2'
             Binary Numbers:
               name: Binaire getallen
             Overflow and Rounding:
@@ -3792,7 +3815,7 @@ nl:
             Images:
               name: Afbeeldingen
         csd3-pilot:
-          description_short: Programmeren
+          description_short: "Programmeren"
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
@@ -4280,6 +4303,7 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
+            0:
             Storage:
               name: Opslag
         csd4-2020:
@@ -4309,7 +4333,7 @@ nl:
             Functions with Parameters:
               name: Functies met Parameters
         csd3-2020:
-          description_short: Programmeren
+          description_short: "Programmeren"
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
@@ -4420,7 +4444,7 @@ nl:
           lessons:
             'Functions: Songwriting':
               name: Songwriting
-              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
         coursef-2020:
           description_audience: 'Leeftijden: 9-13'
           lesson_groups:
@@ -4762,7 +4786,7 @@ nl:
             cs_lg:
               display_name: LG GOOD
         csd3-virtual:
-          description_short: Programmeren
+          description_short: "Programmeren"
           lessons:
             Variables:
               name: Variabelen
@@ -4857,21 +4881,21 @@ nl:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Module 1
+              name: 'Module 1'
             Module 2:
-              name: Module 2
+              name: 'Module 2'
             Module 3:
-              name: Module 3
+              name: 'Module 3'
             Module 4:
-              name: Module 4
+              name: 'Module 4'
             Module 5:
-              name: Module 5
+              name: 'Module 5'
             Module 6:
-              name: Module 6
+              name: 'Module 6'
             Module 7:
-              name: Module 7
+              name: 'Module 7'
             Module 8:
-              name: Module 8
+              name: 'Module 8'
         curriculum-sandbox-levels:
           lessons:
             csf:
@@ -4879,10 +4903,10 @@ nl:
           lesson_groups:
             lesson group:
               display_name: weergavenaam
-          description_audience: Intern
+          description_audience: 'Intern'
         virustest:
           title: Een uitbraak simuleren
-          description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
+          description_short: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
         ml-playground:
           lessons:
             lesson14:
@@ -4897,10 +4921,10 @@ nl:
             outbreak:
               display_name: Uitbraaksimulatie
           title: Uitbraaksimulator
-          description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
-          description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
+          description_short: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+          description: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
           name: uitbraak
-          student_description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
+          student_description: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
         2021drafting:
           lessons:
             Virus Simulation for Code Bytes:
@@ -4939,7 +4963,7 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
         csd3-2021:
-          description_short: Programmeren
+          description_short: "Programmeren"
           lessons:
             Variables:
               key: Variabelen
@@ -5333,7 +5357,7 @@ nl:
               key: Over mij
             'Functions: Songwriting':
               name: Songwriting
-              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
           lesson_groups:
             ramp_up:
               display_name: Inleiding
@@ -5439,9 +5463,9 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
         contagion-pilot:
-          description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
-          description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
-          student_description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.
+          description_short: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+          description: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+          student_description: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
         ai-unit-pilot:
           lessons:
             lesson14:
@@ -5506,3 +5530,66 @@ nl:
           lessons:
             lesson15:
               name: Les 15
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Basisbegrippen Informatica
+              name: Basisbegrippen Informatica
+            Planning:
+              key: Plannen
+              name: Plannen
+            Next Steps:
+              key: Volgende stappen
+              name: Volgende stappen
+        vpl-csd-2021:
+          lessons:
+            Module 1:
+              key: Module 1
+              name: Module 1
+            Module 2:
+              key: Module 2
+              name: Module 2
+            Module 3:
+              key: Module 3
+              name: Module 3
+            Module 4:
+              key: Module 4
+              name: Module 4
+            Module 5:
+              key: Module 5
+              name: Module 5
+            Module 6:
+              key: Module 6
+              name: Module 6
+            Module 7:
+              key: Module 7
+              name: Module 7
+            Module 8:
+              key: Module 8
+              name: Module 8
+        vpl-csp-2021:
+          lessons:
+            Module 1:
+              key: Module 1
+              name: 'Module 1'
+            Module 2:
+              key: Module 2
+              name: 'Module 2'
+            Module 3:
+              key: Module 3
+              name: 'Module 3'
+            Module 4:
+              key: Module 4
+              name: 'Module 4'
+            Module 5:
+              key: Module 5
+              name: 'Module 5'
+            Module 6:
+              key: Module 6
+              name: 'Module 6'
+            Module 7:
+              key: Module 7
+              name: 'Module 7'
+            Module 8:
+              key: Module 8
+              name: 'Module 8'

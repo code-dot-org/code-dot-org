@@ -629,6 +629,8 @@ hy:
         CSF_loops_AB: loops
         csd_pair_programming: Զույգ Ծրագրավորում
         csd_applab_parameters: Գործառույթները պարամետրերով
+        playlab_2021: Ներածություն Խաղալ Lab
+        playlab_2021_reader: Ներածություն Խաղալ Lab
     callout:
       text:
         drag_blocks: Քաշեք է մի «քայլ» թաղամաս եւ տալ այն ներքեւում մյուս թաղամաս

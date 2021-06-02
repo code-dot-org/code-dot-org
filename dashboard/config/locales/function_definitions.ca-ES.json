@@ -1297,6 +1297,84 @@
               "length": "longitud"
             }
           }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "dibuixa una estrella",
+            "parameters": {
+              "points": "punts",
+              "length": "longitud"
+            }
+          },
+          "draw a circle": {
+            "name": "dibuixa un cercle"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "longitud",
+              "repeat": "repeteix"
+            }
+          },
+          "draw a triangle": {
+            "name": "dibuixa un triangle",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a house": {
+            "name": "dibuixa una casa",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a square": {
+            "name": "dibuixa un quadrat",
+            "parameters": {
+              "length": "longitud"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "fes alguna cosa"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "dibuixa un quadrat"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "dibuixa una estrella"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "dibuixa una estrella"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "dibuixa un quadrat"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "finalitza la partida"
+          }
         }
       }
     }

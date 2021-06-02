@@ -267,7 +267,12 @@
         "grade5_artist_binary5": "Svaki binarni niz predstavlja jedan red ove slike. Možeš li ih ispremetati tako da crtaju smješka umjesto ljutka?",
         "grade5_artist_binary8": "Dovrši crtež.",
         "k-1 maze 1": "Možeš li me pokrenuti ka Zapadu da bih došao do svinje?",
-        "scrat 19": "Još jedna vježba za \"ako-inače\" blok. Možeš li to uspješno izvršiti od prve?"
+        "scrat 19": "Još jedna vježba za \"ako-inače\" blok. Možeš li to uspješno izvršiti od prve?",
+        "courseC_artist_prog5_2021": "Ova kuća treba krov! Nacrtaj trokut. Savjet: sve tri stranice su iste dužine.",
+        "courseD_bee_nestedLoops8_2021": "Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. ",
+        "courseE_artist_functions1_dani": "Zdravo. Ja zombi umjetnik. Ja voljeti crtati! Pomozi mi da nacrtam kvadratne naočale. Savjet: premosnica između naočala je 25 piksela kraća od dužine kvadrata.",
+        "courseF_bee2": "Možeš li upotrijebiti petlju da sakupiš sav nektar?",
+        "courseF_bee_for8_2021": "Ako tvoja petlja broji prema gore, prirast je dodat na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati da bi sakupio/la 3, 6, 9 nektara?\r\n"
       }
     }
   }

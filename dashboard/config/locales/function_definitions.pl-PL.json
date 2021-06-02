@@ -3819,6 +3819,479 @@
               "length": "długość"
             }
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "moja funkcja"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "small flower": {
+            "name": "mały kwiatek"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGIC FLOWERS2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGIC FLOWER"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGIC FLOWERS"
+          },
+          "draw a star": {
+            "name": "narysuj gwiazdę",
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości",
+            "parameters": {
+              "points": "punkty",
+              "length": "długość"
+            }
+          },
+          "draw a circle": {
+            "name": "narysuj okrąg",
+            "description": "narysuj okrąg o danym promieniu",
+            "parameters": {
+              "radius": "promień"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "narysuj rozetę",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość",
+              "repeat": "powtarzaj"
+            }
+          },
+          "draw a triangle": {
+            "name": "narysuj trójkąt",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a shape": {
+            "name": "narysuj wielokąt foremny",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość"
+            }
+          },
+          "draw a house": {
+            "name": "narysuj dom",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a square": {
+            "name": "narysuj kwadrat",
+            "parameters": {
+              "length": "długość",
+              "sides": "boki"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "narysuj gwiazdę",
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości",
+            "parameters": {
+              "points": "punkty",
+              "length": "długość"
+            }
+          },
+          "draw a circle": {
+            "name": "narysuj okrąg",
+            "description": "narysuj okrąg o danym promieniu",
+            "parameters": {
+              "radius": "promień"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "narysuj rozetę",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość",
+              "repeat": "powtarzaj"
+            }
+          },
+          "draw a triangle": {
+            "name": "narysuj trójkąt",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a shape": {
+            "name": "narysuj wielokąt foremny",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość"
+            }
+          },
+          "draw a house": {
+            "name": "narysuj dom",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a square": {
+            "name": "narysuj kwadrat",
+            "parameters": {
+              "length": "długość"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "narysuj gwiazdę",
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości",
+            "parameters": {
+              "points": "punkty",
+              "length": "długość"
+            }
+          },
+          "draw a circle": {
+            "name": "narysuj okrąg",
+            "description": "narysuj okrąg o danym promieniu",
+            "parameters": {
+              "radius": "promień"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "narysuj rozetę",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość",
+              "repeat": "powtarzaj"
+            }
+          },
+          "draw a triangle": {
+            "name": "narysuj trójkąt",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a shape": {
+            "name": "narysuj wielokąt foremny",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość"
+            }
+          },
+          "draw a house": {
+            "name": "narysuj dom",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a square": {
+            "name": "narysuj kwadrat",
+            "parameters": {
+              "length": "długość"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "zbuduj most"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "wyczyść ścieżkę"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "napraw długą ścieżkę"
+          },
+          "fix short path": {
+            "name": "napraw krótką ścieżkę"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "zbuduj krótki most"
+          },
+          "build long bridge": {
+            "name": "zbuduj długi most"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funkcja 1"
+          },
+          "function 2": {
+            "name": "funkcja 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "możliwe rozwiązanie"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "narysuj płomień",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "narysuj ogień"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "podbicie"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "wykonaj coś"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "wykonaj coś"
+          },
+          "draw hexagon": {
+            "name": "narysuj sześciokąt"
+          },
+          "draw line of hexagons": {
+            "name": "narysuj serię sześciokątów"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "narysuj kwadrat"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "narysuj gwiazdę"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "narysuj gwiazdę"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "narysuj okno"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "wykonaj coś"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
+          },
+          "draw square": {
+            "name": "narysuj kwadrat"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "narysuj kwadrat"
+          },
+          "do something": {
+            "name": "wykonaj coś"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
+          },
+          "draw square": {
+            "name": "narysuj kwadrat"
+          },
+          "do something": {
+            "name": "wykonaj coś"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
+          },
+          "draw square": {
+            "name": "narysuj kwadrat"
+          },
+          "do something": {
+            "name": "wykonaj coś"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "wykonaj coś"
+          },
+          "draw triangle": {
+            "name": "narysuj trójkąt"
+          },
+          "draw line of triangles": {
+            "name": "narysuj serię trójkątów"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "narysuj sześciokąt"
+          },
+          "draw line of hexagons": {
+            "name": "narysuj serię sześciokątów"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
+          },
+          "draw square": {
+            "name": "narysuj kwadrat"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "my design": {
+            "name": "mój projekt"
+          },
+          "do something": {
+            "name": "wykonaj coś"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "my design": {
+            "name": "mój projekt"
+          },
+          "do something": {
+            "name": "wykonaj coś"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "narysuj kwadrat"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "narysuj serię wielokątów"
+          },
+          "draw polygon": {
+            "name": "narysuj wielokąt"
+          },
+          "do something": {
+            "name": "wykonaj coś"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydzę w kwadracie"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          },
+          "pumpkin square": {
+            "name": "kwadrat z dynią"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "pumpkin square": {
+            "name": "kwadrat z dynią"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydzę w kwadracie"
+          },
+          "get produce": {
+            "name": "zbierz plon"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check for corn": {
+            "name": "sprawdź kukurydzę"
+          },
+          "corn rectangle": {
+            "name": "trójkąt z kukurydzą"
+          },
+          "lettuce stairs": {
+            "name": "schody z sałaty"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "sprawdź kukurydzę w kwadracie"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "sprawdź kukurydzę w kwadracie"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "sprawdź kukurydzę w kwadracie"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydzę w kwadracie"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "sprawdź kukurydzę w kwadracie"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "ogróod w kwadracie"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "ogróod w kwadracie"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "ogróod w kwadracie"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "zakończ grę"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "Poruszaj się i zbieraj nektar wykorzystując licznik `counter`."
+          }
         }
       }
     }

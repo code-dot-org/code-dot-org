@@ -4259,3 +4259,8 @@ ga:
           lesson_groups:
             cspSurvey2020:
               display_name: Suirbhé
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Buntús na Ríomheolaíochta
+              name: Buntús na Ríomheolaíochta

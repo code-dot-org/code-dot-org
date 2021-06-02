@@ -5026,3 +5026,290 @@ zh-TW:
       outbreak_freeplay_choice:
         description: 你已完成教程！不斷更改或改進你的項目。你可以選擇繼續使用相同的塊或嘗試擴展工具箱。
         display_name: 自由發揮
+      BigEvent-Unplugged_2021:
+        markdown: |
+          # 大事件（Evnets）
+
+          在計算機科學（Computer Science）、事件（Evnets）是一個由電腦監控的動作。在本課中，依據按下的按鈕，反應會有所不同。
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          "# 二進位制手鐲
+
+          構建一個手環，用電腦能夠理解的系統來代表你的名字！
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)"
+      CourseF_outbreak_story:
+        content1: 在此描述
+      CourseF_outbreak_story2:
+        content1: 在此描述
+        markdown: "# 疫情爆發：像科學家一樣思考\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n模擬是學習現實世界中難以觀察的事物的好方法。它們幫助科學家解決問題，安全有效地測試新想法。你的類比是一種展示怪物鎮病毒爆發景象的方法。\n\n##
+          重置和重複！\n即使你自己編寫代碼，也不可能確切地知道當你按下運行時將發生什麼。怪物隨機漫步，所以你不知道病毒傳播的速度是快還是慢。無論何時更改代碼，請確保多次運行模擬。事物不會以同樣的方式發生兩次！\n\n##
+          收集資料\n試著在運行模擬時寫下觀察結果。你可以計算生病的怪物數量，或使用計時器查看事物發生的速度。例如，如果沒有人戴口罩，那麼所有怪物都生病通常需要多久？
+          \n\n## 進行預測\n如果你理解了你的模型，你就可以用它來進行預測。你甚至可以更改類比運行的方式，並猜測將會發生什麼不同的情況。例如：\n*
+          如果有兩倍數量的怪物會發生什麼？\n* 如果怪物以一半的速度移動會發生什麼？\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## 怪物鎮像真實世界嗎？\n任何模型所能達到的逼真程度都是有限的。 \n* 你的疫情爆發類比與真實世界的病毒爆發有什麼共同點？\n*
+          有什麼區別？\n當你完成這個活動後，與老師或你的家人討論這些問題！\n\n## 我們還能對什麼建模？\n你已經創建了魔鬼鎮疫情爆發的工作模型。哪些事情是你希望它能而你的類比卻無法做或顯示的？繼續前進，學習更多模型：\n*
+          增加模擬中的怪物數量\n* 説明怪物從病毒中恢復\n* 概率，免疫，疫苗，等等！\n\n你還可以與其他人分享你的類比模型，或者分享你認為在病毒來到城鎮時我們可以做些什麼來説明他人保持健康的資訊。 "
+      ForLoopFun-Unplugged_2021:
+        markdown: |
+          "# 計數迴圈的樂趣
+
+          我們知道迴圈可以讓我們重複做一些事情，但現在我們要學習如何在迴圈中加入額外的結構。"
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # 學習迴圈
+
+          本課透過跳舞活動來介紹迴圈（Loop）的程式設計概念。
+      HappyMaps-Unplugged_2021:
+        markdown: |
+          # 開心地圖
+
+          建立一個演算法去移動字符穿過迷宮。
+      Internet-Unplugged_2021:
+        markdown: |
+          "# 網際網路
+
+          在課堂上只需用紙片就能建立自己的網際網路。"
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # 移動它, 移動它
+
+          使用地圖和給予指令而抵達目標。
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          "# 我的糊塗機器人朋友
+
+          使用迴圈，讓你的程式更短！"
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |
+          "# 我的機器人朋友
+
+          透過為朋友們寫程式碼來學習程式設計！"
+      OPD-K5 PreSurvey_dani:
+        markdown: "# 課程入門 > 填寫問卷\n\n我們希望你可以在此專業的開發課程學到越多越好，所以請您在上課之前填寫一個小問卷\n(https://form.jotform.com/90556900301146).
+          \n問券裡會問你想在此課程達到什麼目標，也會請您小小的自我介紹以及我們如何可以協助。\n\n<a class=\"btn btn-large btn-primary\"
+          href=\"https://form.jotform.com/90556900301146?user_id=<user_id/>\">填寫問卷</a>"
+      OPD-K5 Stage3aGo_dani:
+        content1: 在此描述
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          # 文字的力量
+
+          ## 當網路上有人使用卑劣或傷人的語言時,你該怎麼做?
+      TheRightAppMarkdownLevel_2021:
+        markdown: "# 正確的應用程式\n\n* 現在所有人都使用電腦，特別是智慧型手機。 \n* 智慧型手機的應用程式幫助人們做一些事情，像是與們有說話，聽音樂，買東西，或只是瀏覽網頁。\n*
+          對於程序員來說，了解他人的需求並設計應用程式對他們來說非常重要！\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      courseAB_EOC_2021:
+        display_name: 課程結束專案
+      courseB_EOC_2021:
+        display_name: 課程結束專案
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - text: 小藝術家將畫出一個三邊相等的三角形。
+          feedback: 不正確。小藝術家會畫出一個正方形。
+        - text: 小藝術家將畫出一條線。
+          feedback: 不正確。小藝術家會畫出一個正方形。
+        - text: '小藝術家會畫一個正方形。
+
+'
+          correct: true
+          feedback: 正確！
+        - {}
+        questions:
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+          feedback: 不正確。農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
+        - text: '12'
+          correct: true
+          feedback: 正確！
+        - text: '15'
+          feedback: 不正確。農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
+        - text: '20'
+          feedback: 不正確。農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
+        questions:
+        - text: 仔細查看下面的程式碼。點擊「運行」後，農夫將收集多少個南瓜？
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - text: 小松鼠即將拿到橡果.程式碼中沒有錯誤.
+          feedback: 正確。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
+        - text: 松鼠不會取得橡果因為他轉錯了方向。
+          correct: true
+          feedback: 正確。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
+        - text: 松鼠不會取得像果，因為「前進」的區塊不夠多。
+          correct: true
+          feedback: 正確。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
+        - feedback: 這段程式碼中有兩個臭蟲。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
+        questions:
+        - text: 在這段程式碼裡找找看臭蟲。松鼠會取得橡果還是不會？
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - text: 這隻鳥離豬豬只差了一步。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
+        - text: 小鳥會成功抓住豬豬。
+          correct: true
+          feedback: 正確！
+        - text: 這隻鳥會撞到炸藥。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
+        - feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
+        questions:
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - text: BB-8 不會移動。
+          feedback: 不正確。重複積木將使 BB-8 前進 5 次。
+        - text: BB-8 只會移動一個空格
+          feedback: 不正確。重複積木將使 BB-8 前進 5 次。
+        - text: BB-8 將移動 5 次並獲得所有廢金屬
+          correct: true
+          feedback: 正確！
+        - feedback: 不正確。重複積木將使 BB-8 前進 5 次。
+        questions:
+        - text: 當你點擊「運行」時，你覺得會發生什麼？
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - text: BB-8 在第一次循環會跑太遠。
+          feedback: 不正確。第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
+        - text: BB-8 在第一個迴圈中行進的距離不足獲取所有廢金屬。
+          correct: true
+          feedback: 正確！
+        - text: BB-8 會順利收集到所有廢金屬。
+          feedback: 不正確。第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
+        - feedback: 不正確。第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
+        questions:
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - text: 無論如何，蜜蜂都需要移動到雲朵之中，並且嘗試獲取花蜜。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵之中，但只有在雲朵下方有花的情況，才會嘗試獲取花蜜。
+          correct: true
+          feedback: 正確！
+        - text: 蜜蜂會移動到雲朵上方，然後不管怎樣什麼也都不會做。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。
+        - text: 我不知道。
+          feedback: "`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。"
+        questions:
+        - text: 雲朵遮擋了視線。雲朵下可能會有花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下方的程式。你認為點擊「運行」按鈕後會發生什麼事呢？
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - text: 什麼事都沒發生，因為程式沒有呼叫函式。
+          feedback: 不正確，這個函式在程式中被呼叫了兩次。
+        - text: 小藝術家將繪製一個正方形。
+          feedback: 不正確，這個函式在程式中被呼叫了兩次。
+        - text: 小藝術家將繪製兩個重疊的正方形。
+          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳躍了 175 像素。
+        - text: 小藝術家將繪製兩個間距很小正方形。
+          correct: true
+          feedback: 正確！該函式在程式中被呼叫了兩次，並且中間有向後跳躍了一小步。
+        questions:
+        - text: 按下「運行」後會發生什麼事呢？
+      courseF_EOC_2021:
+        description: 你已經到達課程F的結尾!選擇一個要創建的項目
+        display_name: 課程結束專案
+      courseF_EOC_examples_2021:
+        description: 你已經到達課程F的結尾!選擇一個要創建的項目
+        display_name: 課程結束專案
+      courseF_EOC_samples_2021:
+        display_name: 課程結束專案
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - text: 小藝術家將繪製一個邊長 50 像素的三角形。
+          correct: true
+          feedback: 正確！
+        - text: 小藝術家將繪製一個邊長 3 像素的 50 邊形。
+          feedback: 不正確。變數`長度`必須放在`重複`積木中才能順利執行。
+        - text: 小藝術家將繪製三條開放邊，然後轉向 50 度。
+          feedback: 不正確。可能需要在`轉向`積木中使用到`長度`變數才能正確執行。
+        - feedback: "`長度`變數設定為 50，並在`移動向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
+        questions:
+        - text: 我們將變數`長度`設定為 50。你覺得點擊「運行」時會發生什麼事呢？
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - text: 蜜蜂會向前移動，並從每朵花中採集所有的花蜜。
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+        - text: 蜜蜂將向前移動，並從每朵花中收集所有的花蜜，除了一朵。
+          correct: true
+          feedback: 正確！
+        - text: 蜜蜂會向前移動，並從每朵花中收集一個花蜜。
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+        - feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+        markdown: '啊!  使用`計數`迴圈能使這個關卡變得容易得多！
+
+'
+        questions:
+        - text: 觀察下方的程式。點擊「運行」時會發生什麼事呢？
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: 在此描述
+      csf_digital_trails_2021:
+        markdown: |-
+          #跟隨數位蹤跡
+
+          ##你的數位足跡可以有哪些資訊?
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: 在此描述
+        markdown: |
+          # 停止(STOP) 霸凌/惡意行爲
+
+          ## 當有人在網路霸凌你的時候，應該怎麼做呢？
+
+          * 先遠離霸凌現場 (**S**tep away)
+          * 告知你所信任的大人此事 (**T**ell a trusted adult)
+          * 優先使用經過大人認為適合小朋友的網站 (**O**K sites first)
+          * 讓自己暫緩上網，並且思考如果自己遇到了霸凌或是惡意的行為時，應該要怎麼做 (**P**ause and think online)
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          #我的網路鄰居
+
+          ##你如何安全地上網？
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - text: 使用此程式碼萊拉將收集到 4 個寶藏。
+          feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: 萊拉試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+          correct: true
+          feedback: 正確！
+        - text: Laurel 會收集到所有寶石。
+          feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        questions:
+        - text: '仔細看一下這段程式碼。你認為程式執行後會發生什麼？
+
+'

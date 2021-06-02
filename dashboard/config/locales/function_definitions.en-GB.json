@@ -912,6 +912,65 @@
           "draw a square": {
             "name": "dibuja un cuadrado"
           }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "dibuja una estrella"
+          },
+          "draw a circle": {
+            "name": "dibujar un circulo"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "repeat"
+            }
+          },
+          "draw a triangle": {
+            "name": "dibuja un triangulo"
+          },
+          "draw a house": {
+            "name": "dibuja una casa"
+          },
+          "draw a square": {
+            "name": "dibuja un cuadrado"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "dibuja un cuadrado"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "dibuja una estrella"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "dibuja una estrella"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "dibuja un cuadrado"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "end game"
+          }
         }
       }
     }

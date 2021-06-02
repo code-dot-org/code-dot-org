@@ -618,6 +618,8 @@ in:
         csd_ml_intro_to_ai_lab: crwdns2485808:0crwdne2485808:0
         csd_ml_import_model: crwdns2485810:0crwdne2485810:0
         csf_lots_of_sprites: 'crwdns2547482:0crwdne2547482:0'
+        playlab_2021: crwdns2572172:0crwdne2572172:0
+        playlab_2021_reader: crwdns2572174:0crwdne2572174:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

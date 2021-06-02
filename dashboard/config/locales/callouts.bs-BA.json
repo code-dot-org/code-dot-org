@@ -386,6 +386,9 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Ovaj broj možete promijeniti.",
           "courseE_artist_ramp8_2": "Kliknite ovdje za upis broja ponavljanja vašeg koda."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
         }
       }
     }

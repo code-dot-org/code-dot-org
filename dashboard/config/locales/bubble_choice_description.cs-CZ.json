@@ -1,2 +1,11 @@
 {
+  "cs-CZ": {
+    "data": {
+      "bubble_choice_description": {
+        "courseD_bee_nestedLoops8_2021": "Sesbírej všechen nektar z každého květu a udělej med na plástvi. Použij vnořené cykly.",
+        "courseD_bee_nestedLoops9_2021": "Vyrob med na každé plástvi.",
+        "ramp_artist_loops8_2021": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus."
+      }
+    }
+  }
 }

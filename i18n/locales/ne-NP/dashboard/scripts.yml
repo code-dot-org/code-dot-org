@@ -1,12 +1,11 @@
----
 ne:
   data:
     script:
       category:
         csf_category_name: CS Fundamentals
-        csp_category_name: "'15-'16 CS Principles"
+        csp_category_name: '''15-''16 CS Principles'
         cspexams_category_name: CS Principles Practice Test
-        csp17_category_name: "'16-'17 CS Principles"
+        csp17_category_name: '''16-''17 CS Principles'
         hoc_category_name: Hour of Code
         math_category_name: Math
         other_category_name: अन्य
@@ -345,9 +344,9 @@ ne:
             The Maze:
               name: The Maze
         events:
-          title: कार्य
-          description: कार्य
-          description_short: कार्य
+          title: कार्य 
+          description: कार्य 
+          description_short: कार्य 
           lessons:
             Bounce:
               name: Bounce
@@ -357,7 +356,7 @@ ne:
               name: Eval
             Studio:
               name: स्टुडियो
-          student_description: कार्य
+          student_description: कार्य 
         flappy:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
@@ -458,6 +457,12 @@ ne:
               name: Internet Simulator
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         algebraPD2:
@@ -480,10 +485,22 @@ ne:
               name: Wrap-Up
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         asUnplugged:
@@ -629,7 +646,7 @@ ne:
         gradeKinder:
           lessons:
             Events:
-              name: कार्य
+              name: कार्य 
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Learn to drag and drop'
             Loops:
@@ -645,7 +662,7 @@ ne:
         grade1:
           lessons:
             Events:
-              name: कार्य
+              name: कार्य 
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Learn to drag and drop'
             Loops:
@@ -674,6 +691,12 @@ ne:
               name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         grade3:
@@ -719,7 +742,7 @@ ne:
             Conditionals:
               name: Conditionals
             Events:
-              name: कार्य
+              name: कार्य 
             For Loops:
               name: For Loops
             Functions:
@@ -1572,7 +1595,7 @@ ne:
         coursed-2019:
           lesson_groups:
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
             csf_loops:
               display_name: Loops
             csf_conditionals:
@@ -1666,7 +1689,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
@@ -1681,7 +1704,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
           lessons:
             'Programming: Happy Maps':
               name: Happy Maps
@@ -1694,7 +1717,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
           lessons:
             Move It, Move It:
               name: Move It, Move It
@@ -1707,7 +1730,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
           lessons:
             Move It, Move It:
               name: Move It, Move It
@@ -1885,7 +1908,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
@@ -1974,7 +1997,7 @@ ne:
             Conditionals:
               name: Conditionals
             Events:
-              name: कार्य
+              name: कार्य 
             Functions:
               name: Functions
             Variables:
@@ -2015,7 +2038,7 @@ ne:
             csf_conditionals:
               display_name: Conditionals
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
             csf_digcit:
               display_name: Digital Citizenship
           lessons:
@@ -2028,7 +2051,7 @@ ne:
             csf_conditionals:
               display_name: Conditionals
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
             csf_digcit:
               display_name: Digital Citizenship
           lessons:
@@ -2073,7 +2096,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
           lessons:
             Going Places Safely:
               name: Going Places Safely
@@ -2086,7 +2109,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
           lessons:
             Your Digital Footprint:
               name: Your Digital Footprint
@@ -2103,7 +2126,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
           lessons:
             Binary Bracelets:
               name: Binary Bracelets
@@ -2112,7 +2135,7 @@ ne:
         coursed-2020:
           lesson_groups:
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
             csf_loops:
               display_name: Loops
             csf_conditionals:
@@ -2179,14 +2202,14 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
           lessons:
             Spelling Bee:
               name: Spelling Bee
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
-              display_name: "(old) Unit 1: Digital Information"
+              display_name: '(old) Unit 1: Digital Information'
         csp3-virtual:
           lessons:
             Creating Functions:
@@ -2209,7 +2232,7 @@ ne:
             Algorithms:
               name: Algorithms
             Events:
-              name: कार्य
+              name: कार्य 
         csp5-virtual-part2:
           lessons:
             While Loops:
@@ -2219,7 +2242,7 @@ ne:
             Loops:
               name: Loops
             Events:
-              name: कार्य
+              name: कार्य 
             Conditionals:
               name: Conditionals
             Functions:
@@ -2293,7 +2316,7 @@ ne:
         csp1-2021:
           lesson_groups:
             csp_unit1_2020:
-              display_name: "(old) Unit 1: Digital Information"
+              display_name: '(old) Unit 1: Digital Information'
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2318,7 +2341,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
         courseb-2021:
           lessons:
             Move It, Move It:
@@ -2332,7 +2355,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
         coursec-2021:
           lessons:
             Binary Bracelets:
@@ -2348,7 +2371,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
         coursed-2021:
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -2367,7 +2390,7 @@ ne:
               name: Artist Binary
           lesson_groups:
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
             csf_loops:
               display_name: Loops
             csf_conditionals:
@@ -2428,13 +2451,13 @@ ne:
             csf_for_loops:
               display_name: For Loops
             lessonGroup-9:
-              display_name: कार्य
+              display_name: कार्य 
         pre-express-2021:
           lesson_groups:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: कार्य 
         csf-2021-pilot:
           lesson_groups:
             ramp_up:
@@ -2459,8 +2482,8 @@ ne:
               key: Loops
               name: Loops
             Events:
-              key: कार्य
-              name: कार्य
+              key: कार्य 
+              name: कार्य 
             Conditionals:
               key: Conditionals
               name: Conditionals

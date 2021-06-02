@@ -392,6 +392,8 @@ ne:
         CSF_loops_AB: Loops
         csd_pair_programming: Pair Programming
         csd_applab_parameters: Functions with Parameters
+        playlab_2021: Introduction to Play Lab
+        playlab_2021_reader: Introduction to Play Lab
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

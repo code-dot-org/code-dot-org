@@ -3850,6 +3850,123 @@
               "length": "長度"
             }
           }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "畫顆星星",
+            "description": "根據給予的點和邊來畫一個星星吧。",
+            "parameters": {
+              "points": "分",
+              "length": "長度"
+            }
+          },
+          "draw a circle": {
+            "name": "畫個圓形",
+            "description": "用提供的半徑畫一個圓",
+            "parameters": {
+              "radius": "半徑"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "畫個風車",
+            "parameters": {
+              "sides": "邊",
+              "length": "長度",
+              "repeat": "重複"
+            }
+          },
+          "draw a triangle": {
+            "name": "畫個三角形",
+            "parameters": {
+              "length": "長度"
+            }
+          },
+          "draw a shape": {
+            "name": "畫個形狀",
+            "parameters": {
+              "sides": "邊",
+              "length": "長度"
+            }
+          },
+          "draw a house": {
+            "name": "畫個房子",
+            "parameters": {
+              "length": "長度"
+            }
+          },
+          "draw a square": {
+            "name": "畫個正方形",
+            "parameters": {
+              "length": "長度"
+            }
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "\"simple\" solution"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "draw flame",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "draw fire"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "booster"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "函式名稱"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "draw ear stems"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "畫個正方形"
+          },
+          "draw ear stems": {
+            "name": "draw ear stems"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "畫顆星星"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "畫顆星星"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "畫個正方形"
+          },
+          "draw ear stems": {
+            "name": "draw ear stems"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "結束遊戲"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "move and get nectar with counter"
+          }
         }
       }
     }
