@@ -900,7 +900,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
         }
         var msgParams = {
           lessonNumber: 0, // TODO: remove once localized strings have been fixed
-          stageName: lessonCompleted,
+          lessonName: lessonCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (
