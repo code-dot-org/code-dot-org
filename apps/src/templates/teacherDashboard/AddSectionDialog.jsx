@@ -46,6 +46,7 @@ class AddSectionDialog extends Component {
         useUpdatedStyles
         fixedWidth={1010}
         isOpen={isOpen}
+        overflow="hidden"
         uncloseable
       >
         <PadAndCenter>

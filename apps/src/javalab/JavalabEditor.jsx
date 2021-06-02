@@ -24,6 +24,7 @@ import NameFileDialog from './NameFileDialog';
 import DeleteConfirmationDialog from './DeleteConfirmationDialog';
 import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
+import Backpack from './Backpack';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
@@ -61,6 +62,13 @@ const style = {
     marginBottom: 0,
     display: 'flex',
     alignItems: 'center'
+  },
+  backpackSection: {
+    textAlign: 'left',
+    display: 'inline-block',
+    float: 'left',
+    overflow: 'visible',
+    marginLeft: 3
   }
 };
 
@@ -471,14 +479,9 @@ class JavalabEditor extends React.Component {
             label={javalabMsg.newFile()}
             leftJustified
           />
-          <PaneButton
-            id="javalab-editor-backpack"
-            iconClass="fa fa-briefcase"
-            headerHasFocus
-            isRtl={false}
-            label={javalabMsg.backpackLabel()}
-            leftJustified
-          />
+          <PaneSection style={style.backpackSection}>
+            <Backpack isDarkMode={isDarkMode} />
+          </PaneSection>
           <PaneButton
             id="data-mode-versions-header"
             iconClass="fa fa-clock-o"
@@ -544,7 +547,7 @@ class JavalabEditor extends React.Component {
                       }}
                       onClick={e => this.toggleTabMenu(tabKey, e)}
                       className="no-focus-outline"
-                      disabled={activeTabKey === tabKey}
+                      disabled={activeTabKey !== tabKey}
                     >
                       <FontAwesome
                         icon={

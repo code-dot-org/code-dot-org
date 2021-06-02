@@ -1299,7 +1299,7 @@ StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose) {
   var headerElement;
 
   var puzzleTitle = msg.puzzleTitle({
-    stage_total: level.stage_total,
+    stage_total: level.lesson_total,
     puzzle_number: level.puzzle_number
   });
 
@@ -3441,7 +3441,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
       hasContainedLevels: config.hasContainedLevels,
       puzzleNumber: level.puzzle_number,
-      stageTotal: level.stage_total,
+      lessonTotal: level.lesson_total,
       noVisualization: false,
       visualizationInWorkspace: false,
       smallStaticAvatar: config.skin.smallStaticAvatar,
