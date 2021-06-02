@@ -304,7 +304,8 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @platformization_partner
     post :create, params: {
       script: {name: 'test-script-create'},
-      script_text: ''
+      script_text: '',
+      is_migrated: true
     }
     assert_response :forbidden
   end
@@ -379,6 +380,19 @@ class ScriptsControllerTest < ActionController::TestCase
     script = Script.find_by_name(script_name)
     assert_equal script_name, script.name
     assert script.is_migrated
+  end
+
+  test 'cannot create legacy script' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    script_name = 'legacy'
+    post :create, params: {
+      script: {name: script_name},
+    }
+
+    assert_response :bad_request
+    refute Script.find_by_name(script_name)
   end
 
   test 'destroy raises exception for evil filenames' do
