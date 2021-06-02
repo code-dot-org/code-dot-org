@@ -1603,12 +1603,12 @@ class ScriptTest < ActiveSupport::TestCase
     bonus_levels3 = script.get_bonus_script_levels(lesson3)
 
     assert_equal 1, bonus_levels1.length
-    assert_equal 1, bonus_levels1[0][:stageNumber]
+    assert_equal 1, bonus_levels1[0][:lessonNumber]
     assert_equal 2, bonus_levels1[0][:levels].length
 
     assert_equal 2, bonus_levels3.length
-    assert_equal 1, bonus_levels3[0][:stageNumber]
-    assert_equal 3, bonus_levels3[1][:stageNumber]
+    assert_equal 1, bonus_levels3[0][:lessonNumber]
+    assert_equal 3, bonus_levels3[1][:lessonNumber]
     assert_equal 2, bonus_levels3[0][:levels].length
     assert_equal 2, bonus_levels3[1][:levels].length
   end

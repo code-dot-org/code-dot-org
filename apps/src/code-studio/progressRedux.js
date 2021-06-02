@@ -298,21 +298,21 @@ function bestResultLevelId(levelIds, progressData) {
 /**
  * Does some processing of our passed in lesson, namely
  * - Removes 'hidden' field
- * - Adds 'stageNumber' field for non-PLC lessons which
+ * - Adds 'lessonNumber' field for non-PLC lessons which
  * are not lockable or have a lesson plan
  */
 export function processedLessons(lessons, isPlc) {
   let numLessonsWithLessonPlan = 0;
 
   return lessons.map(lesson => {
-    let stageNumber;
+    let lessonNumber;
     if (!isPlc && lesson.numberedLesson) {
       numLessonsWithLessonPlan++;
-      stageNumber = numLessonsWithLessonPlan;
+      lessonNumber = numLessonsWithLessonPlan;
     }
     return {
       ..._.omit(lesson, 'hidden'),
-      stageNumber
+      lessonNumber
     };
   });
 }
@@ -529,7 +529,7 @@ const lessonFromLesson = lesson =>
     'name',
     'id',
     'lockable',
-    'stageNumber',
+    'lessonNumber',
     'lesson_plan_html_url',
     'student_lesson_plan_html_url',
     'description_student',

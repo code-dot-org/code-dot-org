@@ -1,6 +1,6 @@
 export const bonusLevels = [
   {
-    stageNumber: 1,
+    lessonNumber: 1,
     levels: [
       {
         id: '23222',
@@ -23,7 +23,7 @@ export const bonusLevels = [
     ]
   },
   {
-    stageNumber: 2,
+    lessonNumber: 2,
     levels: [
       {
         id: '23224',
@@ -48,7 +48,7 @@ export const bonusLevels = [
     ]
   },
   {
-    stageNumber: 3,
+    lessonNumber: 3,
     levels: [
       {
         id: '23226',

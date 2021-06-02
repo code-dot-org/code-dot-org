@@ -1132,7 +1132,7 @@ describe('progressReduxTest', () => {
       assert.strictEqual(processed[1].hidden, undefined);
     });
 
-    it('adds stageNumber to numbered lessons', () => {
+    it('adds lessonNumber to numbered lessons', () => {
       const lessons = [
         {
           name: 'lesson1',
@@ -1157,10 +1157,10 @@ describe('progressReduxTest', () => {
       ];
 
       const processed = processedLessons(lessons);
-      assert.strictEqual(processed[0].stageNumber, 1);
-      assert.strictEqual(processed[1].stageNumber, 2);
-      assert.strictEqual(processed[2].stageNumber, undefined);
-      assert.strictEqual(processed[3].stageNumber, 3);
+      assert.strictEqual(processed[0].lessonNumber, 1);
+      assert.strictEqual(processed[1].lessonNumber, 2);
+      assert.strictEqual(processed[2].lessonNumber, undefined);
+      assert.strictEqual(processed[3].lessonNumber, 3);
     });
   });
 
