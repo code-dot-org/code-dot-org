@@ -25,7 +25,7 @@ describe('SectionSelector', () => {
     assert(component.html() === null);
   });
 
-  it('renders something if we have lockable stages', () => {
+  it('renders something if we have lockable lessons', () => {
     const component = mount(
       <SectionSelector
         sections={[fakeSection]}
@@ -37,7 +37,7 @@ describe('SectionSelector', () => {
     assert(component.html() !== null);
   });
 
-  it('renders something if we allow hidden stages', () => {
+  it('renders something if we allow hidden lessons', () => {
     const component = mount(
       <SectionSelector
         sections={[fakeSection]}
@@ -49,7 +49,7 @@ describe('SectionSelector', () => {
     assert(component.html() !== null);
   });
 
-  it('renders something if alwaysShow even if no lockable/hidden stages', () => {
+  it('renders something if alwaysShow even if no lockable/hidden lessons', () => {
     const component = mount(
       <SectionSelector
         alwaysShow={true}
