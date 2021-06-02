@@ -2379,3 +2379,8 @@ gl:
               display_name: Introdución
             Introduction:
               display_name: Introdución
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Fundamentos de Informática
+              name: Fundamentos de Informática

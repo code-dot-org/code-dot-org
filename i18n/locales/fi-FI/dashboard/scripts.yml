@@ -3090,3 +3090,8 @@ fi:
           lesson_groups:
             cspSurvey2020:
               display_name: Kysely
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Tietojenkäsittelyn Perusteet
+              name: Tietojenkäsittelyn Perusteet

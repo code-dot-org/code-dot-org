@@ -17065,3 +17065,48 @@ fr:
           lessons:
             lesson15:
               name: Leçon 15
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: La Mise en Route
+              name: La Mise en Route
+            Computer Science Fundamentals:
+              key: Fondamentaux de l'informatique
+              name: Fondamentaux de l'informatique
+            Looking Ahead:
+              key: Regarder en avant
+              name: Regarder en avant
+            'Mastering the Basics: Sequencing':
+              key: 'Maîtriser les bases: Les séquences'
+              name: 'Maîtriser les bases: Les séquences'
+            'Mastering the Basics: Loops':
+              key: 'Maîtriser les bases: Les boucles'
+              name: 'Maîtriser les bases: Les boucles'
+            'Mastering the Basics: Conditionals':
+              key: 'Maîtriser les bases: Les conditions'
+              name: 'Maîtriser les bases: Les conditions'
+            'Mastering the Basics: Functions':
+              key: 'Maîtriser les bases: Les fonctions'
+              name: 'Maîtriser les bases: Les fonctions'
+            'Mastering the Basics: Events':
+              key: 'Maîtriser les bases: Les événements'
+              name: 'Maîtriser les bases: Les événements'
+            Best Practices for Teaching Computer Science:
+              key: Les Meilleures Pratiques pour l'Enseignement de l'Informatique
+              name: Les Meilleures Pratiques pour l'Enseignement de l'Informatique
+            Planning:
+              key: Planifier
+              name: Planifier
+            Next Steps:
+              key: Prochaines étapes
+              name: Prochaines étapes
+        vpl-csd-2021:
+          lessons:
+            Module 1:
+              key: Module 1
+              name: Module 1
+        vpl-csp-2021:
+          lessons:
+            Module 1:
+              key: Module 1
+              name: Module 1

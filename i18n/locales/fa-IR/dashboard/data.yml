@@ -377,6 +377,8 @@ fa:
         CSF_loops_AB: حلقه‌ها
         csd_pair_programming: برنامه نویسی دوتایی
         csd_applab_parameters: معادله با پارامترها
+        playlab_2021: معرفی آزمایشگاه بازی
+        playlab_2021_reader: معرفی آزمایشگاه بازی
     callout:
       text:
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان

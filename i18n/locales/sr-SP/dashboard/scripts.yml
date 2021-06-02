@@ -1,4 +1,3 @@
----
 sr:
   data:
     script:
@@ -497,6 +496,12 @@ sr:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -536,6 +541,12 @@ sr:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -545,6 +556,12 @@ sr:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -768,6 +785,12 @@ sr:
               name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -996,7 +1019,7 @@ sr:
             Functions:
               name: Функције
             'null':
-              name: ништа
+              name: 'ништа'
         coursef-ramp:
           lessons:
             Ice Age Play Lab:
@@ -1164,7 +1187,7 @@ sr:
             For Loops:
               name: Бројачке петље
         csd3-1819draft:
-          description_short: Programming
+          description_short: "Programming"
           lessons:
             Variables:
               name: Променљиве
@@ -1175,7 +1198,7 @@ sr:
             Functions:
               name: Функције
         csd3-2018:
-          description_short: Programming
+          description_short: "Programming"
           lessons:
             Variables:
               name: Променљиве
@@ -1489,7 +1512,7 @@ sr:
               display_name: Преглед
           lessons:
             'null':
-              name: ништа
+              name: 'ништа'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -1555,7 +1578,7 @@ sr:
             Lists:
               name: Листе
         csd3-2019:
-          description_short: Programming
+          description_short: "Programming"
           lessons:
             Variables:
               name: Променљиве
@@ -1688,7 +1711,7 @@ sr:
             Lists:
               name: Листе
         csd3-pilot:
-          description_short: Programming
+          description_short: "Programming"
           lessons:
             Variables:
               name: Променљиве
@@ -1847,7 +1870,7 @@ sr:
             Functions with Parameters:
               name: Функције са параметрима
         csd3-2020:
-          description_short: Programming
+          description_short: "Programming"
           lessons:
             Variables:
               name: Променљиве
@@ -2002,7 +2025,7 @@ sr:
             For Loops:
               name: Бројачке петље
         csd3-virtual:
-          description_short: Programming
+          description_short: "Programming"
           lessons:
             Variables:
               name: Променљиве
@@ -2019,7 +2042,7 @@ sr:
             lessonGroup-3:
               display_name: Променљиве
         csd3-2021:
-          description_short: Programming
+          description_short: "Programming"
           lessons:
             Variables:
               key: Променљиве

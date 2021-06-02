@@ -1,14 +1,13 @@
----
-'no':
+"no":
   data:
     script:
       category:
         csf_category_name: Grunnleggende informatikk
         csf_international_category_name: Grunnleggende informatikk internasjonalt
         csf2_draft_category_name: 'Under utvikling: Kurs A - F'
-        csp_category_name: "'15-'16 Prinsipper i informatikk"
+        csp_category_name: '''15-''16 Prinsipper i informatikk'
         cspexams_category_name: Prinsipper i informatikk teoriprøve
-        csp17_category_name: "'17-'18 Prinsipper i informatikk"
+        csp17_category_name: '''17-''18 Prinsipper i informatikk'
         full_course_category_name: Alle kurs
         hoc_category_name: Kodetimen
         math_category_name: Matematikk
@@ -491,8 +490,8 @@
             The Internet:
               name: Internett
         algebraPD2a:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Lär ut funktionell programmering genom algebra'
+          description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
             Booleans:
               name: Boolske verdier
@@ -506,7 +505,7 @@
               name: Strenger og bilder
             The Design Recipe:
               name: Design-oppskriften
-          student_description: Lär ut funktionell programmering genom algebra
+          student_description: 'Lär ut funktionell programmering genom algebra'
         allthethings:
           title: Alt!
           description: Alle nivå typer for UI tester
@@ -540,8 +539,8 @@
               name: Weblaboratoriet
           student_description: Alle nivå typer for UI tester
         algebraPD2b:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Lär ut funktionell programmering genom algebra'
+          description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
             Booleans:
               name: Boolske verdier
@@ -559,7 +558,7 @@
               name: Strenger og bilder
             Teacher Dashboard:
               name: Lærersider
-          student_description: Lär ut funktionell programmering genom algebra
+          student_description: 'Lär ut funktionell programmering genom algebra'
         cspfacilitator:
           lessons:
             App Lab:
@@ -575,14 +574,20 @@
             Next Steps:
               name: De Neste Trinnene
         ECSPD2:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Lär ut funktionell programmering genom algebra'
+          description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
               name: Oppsummering
-          student_description: Lär ut funktionell programmering genom algebra
+          student_description: 'Lär ut funktionell programmering genom algebra'
         algebraPD2:
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
@@ -595,14 +600,14 @@
               name: Velkommen!
           student_description: Lär ut funktionell programmering genom algebra
         sciencePD2b:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Lär ut funktionell programmering genom algebra'
+          description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
             Welcome!:
               name: Velkommen!
             Wrap-Up:
               name: Oppsummering
-          student_description: Lär ut funktionell programmering genom algebra
+          student_description: 'Lär ut funktionell programmering genom algebra'
         science-PD2:
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
@@ -617,32 +622,44 @@
             Next Steps:
               name: De Neste Trinnene
         sciencePD2b-iZone:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Lär ut funktionell programmering genom algebra'
+          description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
             Welcome!:
               name: Velkommen!
             Wrap-Up:
               name: Oppsummering
-          student_description: Lär ut funktionell programmering genom algebra
+          student_description: 'Lär ut funktionell programmering genom algebra'
         ECSPD2-iZone:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Lär ut funktionell programmering genom algebra'
+          description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
               name: Oppsummering
-          student_description: Lär ut funktionell programmering genom algebra
+          student_description: 'Lär ut funktionell programmering genom algebra'
         ECSPD2-NexTech:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Lär ut funktionell programmering genom algebra'
+          description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
               name: Oppsummering
-          student_description: Lär ut funktionell programmering genom algebra
+          student_description: 'Lär ut funktionell programmering genom algebra'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -927,6 +944,12 @@
               name: 'Uten datamaskin: Låtskriving med parametere'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
@@ -3083,7 +3106,7 @@
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
-              display_name: "(gammel) Enhet 1: Digital informasjon"
+              display_name: '(gammel) Enhet 1: Digital informasjon'
             cspSurvey:
               display_name: Undersøkelse
           lessons:
@@ -3299,7 +3322,7 @@
             cspSurvey:
               display_name: Undersøkelse
             csp_unit1_2020:
-              display_name: "(gammel) Enhet 1: Digital informasjon"
+              display_name: '(gammel) Enhet 1: Digital informasjon'
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -3523,3 +3546,11 @@
           lesson_groups:
             cspSurvey2020:
               display_name: Undersøkelse
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Grunnleggende informatikk
+              name: Grunnleggende informatikk
+            Next Steps:
+              key: De Neste Trinnene
+              name: De Neste Trinnene

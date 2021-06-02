@@ -18350,3 +18350,48 @@ id:
           lessons:
             lesson15:
               name: Pelajaran ke- 15
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: Dapat Dimulai
+              name: Dapat Dimulai
+            Computer Science Fundamentals:
+              key: Computer Science Fundamentals
+              name: Computer Science Fundamentals
+            Looking Ahead:
+              key: Melihat ke depan
+              name: Melihat ke depan
+            'Mastering the Basics: Sequencing':
+              key: 'Menguasai Dasar-dasar: Pengurutan'
+              name: 'Menguasai Dasar-dasar: Pengurutan'
+            'Mastering the Basics: Loops':
+              key: 'Menguasai Dasar-dasar: Loop '
+              name: 'Menguasai Dasar-dasar: Loop '
+            'Mastering the Basics: Conditionals':
+              key: 'Menguasai Dasar-dasar: Kondisional'
+              name: 'Menguasai Dasar-dasar: Kondisional'
+            'Mastering the Basics: Functions':
+              key: 'Menguasai Dasar-dasar: Fungsi'
+              name: 'Menguasai Dasar-dasar: Fungsi'
+            'Mastering the Basics: Events':
+              key: 'Menguasai Dasar-dasar: Peristiwa'
+              name: 'Menguasai Dasar-dasar: Peristiwa'
+            Best Practices for Teaching Computer Science:
+              key: Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer
+              name: Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer
+            Planning:
+              key: Perencanaan
+              name: Perencanaan
+            Next Steps:
+              key: Langkah berikutnya
+              name: Langkah berikutnya
+        vpl-csd-2021:
+          lessons:
+            Module 1:
+              key: Modul 1
+              name: Modul 1
+        vpl-csp-2021:
+          lessons:
+            Module 1:
+              key: Modul 1
+              name: Modul 1

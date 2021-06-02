@@ -1,4 +1,3 @@
----
 nn:
   data:
     script:
@@ -8,7 +7,7 @@ nn:
         csf_2018_category_name: Grunnleggande informatikk (2018)
         csf_international_category_name: Grunnleggande informatikk internasjonalt
         csf2_draft_category_name: 'Under utvikling: Kurs A - F'
-        csp_category_name: "'15-'16 Prinsipper i informatikk"
+        csp_category_name: '''15-''16 Prinsipper i informatikk'
         csp_2018_category_name: Prinsipp i informatikk (2018-19)
         cspexams_category_name: Prinsipp i teoriprøve i informatikk
         csp17_category_name: Prinsipp i datavitskap ('17-'18)
@@ -830,6 +829,12 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -883,6 +888,12 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -892,6 +903,12 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -1306,6 +1323,12 @@ nn:
               name: 'Trådlaust: Låtskriving med parameter'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -3921,7 +3944,7 @@ nn:
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
-              display_name: "(gammel) Eining 1: Digital informasjon"
+              display_name: '(gammel) Eining 1: Digital informasjon'
             cspSurvey:
               display_name: Undersøking
             cspSurvey2020:
@@ -4176,7 +4199,7 @@ nn:
             cspSurvey:
               display_name: Undersøking
             csp_unit1_2020:
-              display_name: "(gammel) Eining 1: Digital informasjon"
+              display_name: '(gammel) Eining 1: Digital informasjon'
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -4210,7 +4233,7 @@ nn:
               name: Glade Kart
             Events in Play Lab:
               key: Hendingar i Spel-lab
-              name: Hendingar i Spellab
+              name: 'Hendingar i Spellab'
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -4232,7 +4255,7 @@ nn:
               name: Den rette appen
             Events in Play Lab:
               key: Hendingar i Spel-lab
-              name: Hendingar i Spellab
+              name: 'Hendingar i Spellab'
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -4251,7 +4274,7 @@ nn:
               name: Den store hendinga
             Events in Play Lab:
               key: Hendingar i Spel-lab
-              name: Hendingar i Spellab
+              name: 'Hendingar i Spellab'
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -4472,3 +4495,11 @@ nn:
           lessons:
             lesson15:
               name: Leksjon 15
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Grunnleggande datavitskap
+              name: Grunnleggande datavitskap
+            Next Steps:
+              key: Neste steg
+              name: Neste steg

@@ -393,6 +393,8 @@ sq:
         CSF_loops_AB: cikle 
         csd_pair_programming: Programim në çift
         csd_applab_parameters: Funksionet me parametra
+        playlab_2021: Hyrje në Play Lab
+        playlab_2021_reader: Hyrje në Play Lab
     callout:
       text:
         drag_blocks: Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër

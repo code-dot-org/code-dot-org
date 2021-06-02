@@ -404,6 +404,168 @@
         "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "78d989e01047ba7043a38650d695abaa": "Wybierz gracza",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+        },
+        "courseC19_playLab_sample1_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "courseC_data wizard_2021": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pies!",
+          "336ad881e37e713ba0325500a8fa1f00": " psy!",
+          "27944770529dd15319a983bee8951560": "Kot!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " koty!",
+          "1c64ef29c853587fbe94f69f05272b79": "Ptak!",
+          "5b402e6ea05e847a076e03ad74420c45": "ptaki!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Smok!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " smoki!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Policz wszystkie zwierzęta!",
+          "f62038e77820419cd978f7b722da560a": "Ile się pojawi?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Policz zwierzaki"
+        },
+        "courseE_aboutme_1_2021": {
+          "b63151482630edd1589a9ac24d107c49": "To ja! Rikki! Lubię kodować, spotykać się z Thuy i jeść lody!",
+          "810896b14fc6615f0c76628b9b6a727e": "To mój najlepszy przyjaciel Thuy! Jest naprawdę dobra w sportach!",
+          "6f97975a0bda0c9219915161149cbb26": "To mój komputer! Koduję na nim cały czas!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hej!"
+        },
+        "courseF_apps_aquarium": {
+          "83e4a96aed96436c621b9809e258b309": "ryba",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "stworzenie",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "inne"
+        },
+        "courseF_apps_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_apps_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
+          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
+          "ae096fbf24d913754b01a1601672bf62": "też!"
+        },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!",
+          "077449fb290b51b9d70c9f2f3d3213bc": " sekund",
+          "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:"
+        },
+        "courseF_apps_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_editable_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_editable_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
+          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
+          "ae096fbf24d913754b01a1601672bf62": "też!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_editable_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
         }
       }
     }

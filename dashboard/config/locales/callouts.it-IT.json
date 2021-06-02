@@ -1442,8 +1442,8 @@
           "express_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
         },
         "outbreak2": {
-          "minitoolbox": "Fai clic qui per espandere il blocco.",
-          "pointerlocation": "Trascina qui un blocco oggetto."
+          "minitoolbox": "Clicca qui per espandere il blocco.",
+          "pointerlocation": "Trascina qui un blocco soggetto."
         },
         "outbreak7": {
           "costumes_callout": "Fai clic per creare un nuovo costume"

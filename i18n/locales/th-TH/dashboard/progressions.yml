@@ -3,6 +3,7 @@ th:
     progressions:
       'Artist: Variables': 'ศิลปิน: Variables'
       Debugging: การแก้ไขจุดบกพร่อง
+      Designing for Accessibility: การออกแบบสำหรับการช่วยการเข้าถึง
       Events: เหตุการณ์
       For Loops: การวนรอบ
       Free Play: เล่นฟรี
@@ -15,6 +16,7 @@ th:
       Programming with Rey and BB-8: การเขียนโปรแกรมกับเรย์และบีบี-8
       Project: โปรเจกต์
       Properties: คุณสมบัติ
+      Review: ตรวจสอบ
       Stopping the Outbreak with Masks: หยุดการระบาดด้วยหน้ากากอนามัย
       The Harvester: เกษตรกรผู้เก็บเกี่ยว
       While Loops with the Farmer: ลูปขณะที่ (while loops) กับเกมเกษตรกร

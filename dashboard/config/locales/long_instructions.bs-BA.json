@@ -80,7 +80,9 @@
         "frozen square iterative": "Izgleda da smo na pola puta za pravljenje kvadrata. Hajde da sastavimo 4 linije da bismo dobili kvadrat.",
         "frozen square loop": "Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa \"Ponavljaj\" blokom koji koristi manje blokova. Koliko puta (???) bi trebao \"Ponavljaj\" blok izvršiti blokove unutar sebe da bi se napravio kvadrat? ",
         "frozen square loop 3x": "Hajde da napravimo tri kvadrata, okrečući nakon svakog kvadrata. Obavezno okreni za 120 stepeni prije svakog kvadrata.",
-        "frozen square snowflake": "Možeš li napraviti pahulju snijega koristeći \"Ponavljaj\" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti \"Okreni\" blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?"
+        "frozen square snowflake": "Možeš li napraviti pahulju snijega koristeći \"Ponavljaj\" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti \"Okreni\" blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?",
+        "courseD_bee_nestedLoops8_2021": "Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. ",
+        "courseF_bee2": "Možeš li upotrijebiti petlju da sakupiš sav nektar?"
       }
     }
   }

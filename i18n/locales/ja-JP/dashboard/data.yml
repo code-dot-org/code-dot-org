@@ -543,6 +543,8 @@ ja:
         codebreak_e10: 'コードブレーク 10.0: Kat GrahamとKate ParkのAI'
         codebreak_e11: 'コードブレイク 11.0: Susan WojcickiとChina Anne McClainの抽象化'
         codebreak_e12: 'コードブレーク 12.0: Aloe Blacc、Bret TaylorとPaula Mejiaのハードウェア'
+        playlab_2021: Playラボの概要
+        playlab_2021_reader: Playラボの概要
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'

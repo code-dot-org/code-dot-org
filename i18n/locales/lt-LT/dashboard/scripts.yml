@@ -1,9 +1,8 @@
----
 lt:
   data:
     script:
       category:
-        hoc_category_name: "„Programavimo valanda“"
+        hoc_category_name: '„Programavimo valanda“'
         math_category_name: Matematika
         other_category_name: Kita
       name:
@@ -452,12 +451,12 @@ lt:
               name: Bitų persiuntimas realiame pasaulyje
         algebraPD:
           title: Informatika algebroje
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         algPDmiami:
           title: Informatika algebroje
           description: Algebros mokymas per funkcijų programavimą
@@ -485,19 +484,19 @@ lt:
             Lesson 15:
               name: 15 pamoka
         ECSPD:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         sciencePD:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         cspunit3:
           lessons:
             Creating Functions:
               name: Komandų kūrimas
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -509,37 +508,37 @@ lt:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
         ECSPD-NexTech:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         ECSPD-iZone:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         algebraPD-NexTech:
           title: Informatika algebroje
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         algebraPD-iZone:
           title: Informatika algebroje
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         sciencePD-NexTech:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         sciencePD-iZone:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         sciencePD2:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
@@ -555,8 +554,8 @@ lt:
               name: Internetas
         algebraPD2a:
           title: Informatika algebroje
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
           lessons:
             Booleans:
               name: Loginės reikšmės
@@ -566,7 +565,7 @@ lt:
               name: Šikšnosparnis Semas
             Strings and Images:
               name: Eilutės ir paveikslėliai
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         allthethings:
           lessons:
             Artist:
@@ -593,8 +592,8 @@ lt:
               name: Studija
         algebraPD2b:
           title: Informatika algebroje
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
           lessons:
             Booleans:
               name: Loginės reikšmės
@@ -608,7 +607,7 @@ lt:
               name: Eilutės ir paveikslėliai
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         cspfacilitator:
           lessons:
             App Lab:
@@ -622,14 +621,20 @@ lt:
             Next Steps:
               name: Kiti žingsniai
         ECSPD2:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         algebraPD2:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
@@ -640,14 +645,14 @@ lt:
               name: Sveiki atvykę!
           student_description: Išmokite programuoti funkcijas panaudojant algebrą
         sciencePD2b:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
           lessons:
             Welcome!:
               name: Sveiki atvykę!
             Wrap-Up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         science-PD2:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
@@ -662,32 +667,44 @@ lt:
             Next Steps:
               name: Kiti žingsniai
         sciencePD2b-iZone:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
           lessons:
             Welcome!:
               name: Sveiki atvykę!
             Wrap-Up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         ECSPD2-iZone:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         ECSPD2-NexTech:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -733,7 +750,7 @@ lt:
         cspunit3temp:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         gumball:
           title: Gumball laboratorija
           description: Sukurk istoriją arba žaidimą su Gumball laboratorija!
@@ -780,7 +797,7 @@ lt:
               name: 'Žaidimų laboratorija: komandų apibrėžimas'
           student_description: Išmokite programuoti funkcijas panaudojant algebrą
         AlgebraB:
-          title: Informatika algebroje
+          title: 'Informatika algebroje'
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
@@ -802,7 +819,7 @@ lt:
         algebraPD1:
           title: Informatika algebroje
           description: Algebros mokymas per funkcijų programavimą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
@@ -826,7 +843,7 @@ lt:
         csp5-2017:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         CSDU3-Draft:
           lessons:
             Functions:
@@ -836,7 +853,7 @@ lt:
         CSF_Secret_Sample:
           description_audience: Amžius 8-18 metų
         ECSPD1:
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
         algebraFacilitator:
           description: Algebros mokymas per funkcijų programavimą
           description_short: Algebros mokymas per funkcijų programavimą
@@ -845,7 +862,7 @@ lt:
               name: Mokytojo prietaisų skydelis
           student_description: Algebros mokymas per funkcijų programavimą
         sciencePD1:
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
         cspunit1-support:
           lesson_groups:
             required:
@@ -939,6 +956,12 @@ lt:
               name: 'Be kompiuterio: dainų rašymas pagal parametrus'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
@@ -1002,7 +1025,7 @@ lt:
             Variables:
               name: Kintamieji
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         algebrapdnext:
           description: Algebros mokymas per funkcijų programavimą
           lessons:
@@ -1273,7 +1296,7 @@ lt:
             Functions:
               name: Komandų kūrimas
             'null':
-              name: nieko
+              name: 'nieko'
         coursef-ramp:
           lessons:
             Introduction:
@@ -1673,7 +1696,7 @@ lt:
         csp5-2018:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -1918,7 +1941,7 @@ lt:
               display_name: Turinys
           lessons:
             'null':
-              name: nieko
+              name: 'nieko'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2028,7 +2051,7 @@ lt:
         csp5-2019:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         csp1-pilot:
           lesson_groups:
             required:
@@ -2468,7 +2491,7 @@ lt:
         csp5-virtual:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
             Variables:
               name: Kintamieji
         virtual-holding-place:
@@ -2489,7 +2512,7 @@ lt:
         csp5-virtual-part2:
           lessons:
             While Loops:
-              name: "„Kol“ kartojimas"
+              name: '„Kol“ kartojimas'
         k5-onlinepd-2020:
           lessons:
             Loops:
@@ -2775,3 +2798,8 @@ lt:
           lessons:
             lesson15:
               name: 15 pamoka
+        kodea-pd-2021:
+          lessons:
+            Next Steps:
+              key: Kiti žingsniai
+              name: Kiti žingsniai
