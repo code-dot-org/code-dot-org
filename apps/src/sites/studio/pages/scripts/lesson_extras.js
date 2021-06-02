@@ -22,8 +22,8 @@ config.bonusLevels = config.bonusLevels.map(bonus => {
 ReactDOM.render(
   <Provider store={store}>
     <LessonExtras
-      lessonNumber={config.stageNumber}
-      nextLessonNumber={config.nextStageNumber}
+      lessonNumber={config.lessonNumber}
+      nextLessonNumber={config.nextLessonNumber}
       nextLevelPath={config.nextLevelPath}
       bonusLevels={config.bonusLevels}
       showProjectWidget={showProjectWidget}
