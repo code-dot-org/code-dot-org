@@ -217,6 +217,7 @@
  * @property {string} level_source_id
  * @property {string} level_source_image_url
  */
+
 /**
  * @typedef {Object} MilestoneResponse
  * @property {?} script_id
