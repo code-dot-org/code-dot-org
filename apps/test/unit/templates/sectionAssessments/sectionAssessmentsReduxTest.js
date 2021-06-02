@@ -87,7 +87,7 @@ describe('sectionAssessmentsRedux', () => {
   describe('setSurveys', () => {
     it('associates the assessment data to the correct script', () => {
       const scriptId = 2;
-      const surveyData = [{stage_name: 'a name', levelgroup_results: []}];
+      const surveyData = [{lesson_name: 'a name', levelgroup_results: []}];
       const action = setSurveys(scriptId, surveyData);
       const nextState = sectionAssessments(initialState, action);
       const actualSurveyData = nextState.surveysByScript[scriptId];
@@ -131,7 +131,7 @@ describe('sectionAssessmentsRedux', () => {
             levelNum: '5',
             performance: 'performanceLevel3',
             performanceLevelDetails: '3',
-            stageName: 'Lesson 5: Creating Functions',
+            lessonName: 'Lesson 5: Creating Functions',
             lessonNum: '5',
             studentName: 'Student',
             timestamp: '03/20/19 at 02:34:22'
@@ -143,7 +143,7 @@ describe('sectionAssessmentsRedux', () => {
             levelNum: '4',
             performance: 'performanceLevel2',
             performanceLevelDetails: 'My meets value',
-            stageName: 'Lesson 4: Using Simple Commands',
+            lessonName: 'Lesson 4: Using Simple Commands',
             lessonNum: '4',
             studentName: 'Student',
             timestamp: '03/21/19 at 11:54:17'
@@ -218,7 +218,7 @@ describe('sectionAssessmentsRedux', () => {
           },
           surveysByScript: {
             123: {
-              9: {stage_name: 'Survey 9'}
+              9: {lesson_name: 'Survey 9'}
             }
           }
         }
@@ -250,7 +250,7 @@ describe('sectionAssessmentsRedux', () => {
           },
           surveysByScript: {
             123: {
-              9: {stage_name: 'Survey 9'}
+              9: {lesson_name: 'Survey 9'}
             }
           }
         }
@@ -636,7 +636,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: [
                     {
                       type: 'free_response',
@@ -687,7 +687,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: [
                     {
                       type: 'multi',
@@ -1280,7 +1280,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: [
                     {
                       type: 'multi',
@@ -1318,7 +1318,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: []
                 }
               }
@@ -1343,7 +1343,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: [
                     {
                       type: 'multi',
@@ -1527,7 +1527,7 @@ describe('sectionAssessmentsRedux', () => {
                 13: {
                   studentName: 'Mike',
                   lessonNum: '4',
-                  stageName: 'Loops',
+                  lessonName: 'Loops',
                   levelNum: '7',
                   keyConcept: 'You should be learning about loops',
                   performanceLevelDetails: 'A loop is in the code',
@@ -1538,7 +1538,7 @@ describe('sectionAssessmentsRedux', () => {
                 40: {
                   studentName: 'Anne',
                   lessonNum: '8',
-                  stageName: 'Functions',
+                  lessonName: 'Functions',
                   levelNum: '10',
                   keyConcept: '',
                   performanceLevelDetails: '',
@@ -1549,7 +1549,7 @@ describe('sectionAssessmentsRedux', () => {
                 52: {
                   studentName: 'Mike',
                   lessonNum: '3',
-                  stageName: 'Variables',
+                  lessonName: 'Variables',
                   levelNum: '3',
                   keyConcept: 'Use variables to help and make coding better.',
                   performanceLevelDetails:
@@ -1562,7 +1562,7 @@ describe('sectionAssessmentsRedux', () => {
                 61: {
                   studentName: 'Anne',
                   lessonNum: '3',
-                  stageName: 'Variables',
+                  lessonName: 'Variables',
                   levelNum: '3',
                   keyConcept: 'Use variables to help and make coding better.',
                   performanceLevelDetails: 'You uses no variables',
@@ -1580,7 +1580,7 @@ describe('sectionAssessmentsRedux', () => {
           {
             studentName: 'Mike',
             lessonNum: '4',
-            stageName: 'Loops',
+            lessonName: 'Loops',
             levelNum: '7',
             keyConcept: 'You should be learning about loops',
             performanceLevelDetails: 'A loop is in the code',
@@ -1591,7 +1591,7 @@ describe('sectionAssessmentsRedux', () => {
           {
             studentName: 'Anne',
             lessonNum: '8',
-            stageName: 'Functions',
+            lessonName: 'Functions',
             levelNum: '10',
             keyConcept: '',
             performanceLevelDetails: '',
@@ -1602,7 +1602,7 @@ describe('sectionAssessmentsRedux', () => {
           {
             studentName: 'Mike',
             lessonNum: '3',
-            stageName: 'Variables',
+            lessonName: 'Variables',
             levelNum: '3',
             keyConcept: 'Use variables to help and make coding better.',
             performanceLevelDetails:
@@ -1614,7 +1614,7 @@ describe('sectionAssessmentsRedux', () => {
           {
             studentName: 'Anne',
             lessonNum: '3',
-            stageName: 'Variables',
+            lessonName: 'Variables',
             levelNum: '3',
             keyConcept: 'Use variables to help and make coding better.',
             performanceLevelDetails: 'You uses no variables',
@@ -1765,7 +1765,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name',
+                  lesson_name: 'name',
                   levelgroup_results: [
                     {
                       question: 'What is a variable?',
@@ -1910,7 +1910,7 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  stage_name: 'name'
+                  lesson_name: 'name'
                 }
               }
             }
