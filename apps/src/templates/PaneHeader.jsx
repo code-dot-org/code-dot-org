@@ -170,10 +170,11 @@ export const PaneButton = Radium(function(props) {
     }
 
     if (icon) {
+      const Icon = icon.type;
       return (
-        <icon.type {...icon.props} style={{...iconStyle, ...icon.props.style}}>
+        <Icon {...icon.props} style={{...iconStyle, ...icon.props.style}}>
           {icon.children}
-        </icon.type>
+        </Icon>
       );
     }
   }
