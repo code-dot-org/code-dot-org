@@ -53,8 +53,7 @@ export default class TeacherSectionSelector extends Component {
     this.setState({isMenuOpen: true, canMenuOpen: false, targetPoint});
   }
 
-  beforeClose = (node, resetPortalState) => {
-    resetPortalState();
+  onClose = () => {
     this.closeMenu();
     // Work around a bug in react-portal. see SettingsCog.jsx for details.
     window.setTimeout(() => {
@@ -104,7 +103,7 @@ export default class TeacherSectionSelector extends Component {
         <PopUpMenu
           isOpen={this.state.isMenuOpen}
           targetPoint={this.state.targetPoint}
-          beforeClose={this.beforeClose}
+          onClose={this.onClose}
           offset={menuOffset}
         >
           {sections &&
