@@ -102,8 +102,7 @@ export default class AssignmentVersionSelector extends Component {
     this.setState({isMenuOpen: false});
   }
 
-  beforeClose = (node, resetPortalState) => {
-    resetPortalState();
+  onClose = () => {
     this.closeMenu();
     // Work around a bug in react-portal. see SettingsCog.jsx for details.
     window.setTimeout(() => {
@@ -158,7 +157,7 @@ export default class AssignmentVersionSelector extends Component {
           targetPoint={this.state.targetPoint}
           offset={menuOffset}
           style={styles.popUpMenuStyle}
-          beforeClose={this.beforeClose}
+          onClose={this.onClose}
         >
           <AssignmentVersionMenuHeader />
           {versions.map(version => (

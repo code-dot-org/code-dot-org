@@ -69,8 +69,7 @@ class SettingsCog extends Component {
   open = () => this.setState({open: true, canOpen: false});
   close = () => this.setState({open: false});
 
-  beforeClose = (_, resetPortalState) => {
-    resetPortalState();
+  onClose = () => {
     this.setState({open: false});
     window.setTimeout(() => this.setState({canOpen: true}), 0);
   };
@@ -169,7 +168,7 @@ class SettingsCog extends Component {
           className="settings-cog-menu"
           targetPoint={this.targetPoint}
           isOpen={this.state.open}
-          beforeClose={this.beforeClose}
+          onClose={this.onClose}
           showTail={true}
         >
           <ManageAssets onClick={this.manageAssets} />
