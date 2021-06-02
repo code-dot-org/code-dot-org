@@ -5,7 +5,7 @@ import color from '@cdo/apps/util/color';
 import ReactTooltip from 'react-tooltip';
 import {makeEnum} from '@cdo/apps/utils';
 
-const ReviewStates = makeEnum('completed', 'keepWorking');
+const ReviewStates = makeEnum('completed', 'keepWorking', 'awaitingReview');
 
 // TeacherFeedbackKeepWorking displays a checkbox which can be in one of 3 states:
 // 1. Checked - meaning the teacher has requested the student to keep working
@@ -22,50 +22,66 @@ class TeacherFeedbackKeepWorking extends Component {
   };
 
   checkbox = null;
+
   isAwaitingTeacherReview =
     this.props.latestFeedback.review_state === ReviewStates.keepWorking &&
     this.props.latestFeedback.student_updated_since_feedback;
 
-  componentDidMount() {
-    if (this.isAwaitingTeacherReview) {
-      this.checkbox.indeterminate = true;
-    }
+  initialReviewState = this.isAwaitingTeacherReview
+    ? ReviewStates.awaitingReview
+    : this.props.latestFeedback.review_state;
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      reviewState: this.initialReviewState
+    };
   }
 
-  onCheckboxChange = () => {
-    const newReviewState = this.getNewReviewState();
-    this.props.setReviewState(newReviewState);
+  componentDidMount() {
+    this.setCheckboxState();
+  }
 
-    const isDifferentFromInitial = this.isDifferentFromInitial(newReviewState);
-    this.props.setReviewStateChanged(isDifferentFromInitial);
+  setCheckboxState = () => {
+    if (this.state.reviewState === ReviewStates.awaitingReview) {
+      this.checkbox.indeterminate = true;
+    } else {
+      this.checkbox.checked =
+        this.state.reviewState === ReviewStates.keepWorking;
+    }
   };
 
-  getNewReviewState() {
-    let newReviewState = null;
+  onCheckboxChange = () => {
+    const newReviewState = this.getNextReviewState();
+    this.setState({reviewState: newReviewState}, this.setCheckboxState);
 
-    if (this.checkbox.checked) {
-      newReviewState = ReviewStates.keepWorking;
-    } else if (this.isAwaitingTeacherReview) {
-      newReviewState = ReviewStates.completed;
+    this.props.setReviewState(newReviewState);
+    this.props.setReviewStateChanged(
+      newReviewState !== this.initialReviewState
+    );
+  };
+
+  getNextReviewState() {
+    if (this.state.reviewState === ReviewStates.awaitingReview) {
+      return ReviewStates.completed;
+    } else if (this.state.reviewState === ReviewStates.keepWorking) {
+      if (!this.initialReviewState) {
+        return null;
+      } else {
+        return ReviewStates.completed;
+      }
+    } else {
+      return ReviewStates.keepWorking;
     }
-
-    return newReviewState;
-  }
-
-  isDifferentFromInitial(newReviewState) {
-    const removedIndeterminateState =
-      this.isAwaitingTeacherReview && !this.checkbox.indeterminate;
-    const reviewStateChanged =
-      newReviewState !== this.props.latestFeedback.review_state;
-
-    return removedIndeterminateState || reviewStateChanged;
   }
 
   getTooltipText() {
-    if (this.isAwaitingTeacherReview) {
+    if (this.initialReviewState === 'awaitingReview') {
       return i18n.teacherFeedbackAwaitingReviewTooltip();
+    } else {
+      return i18n.teacherFeedbackKeepWorkingTooltip();
     }
-    return i18n.teacherFeedbackKeepWorkingTooltip();
   }
 
   render() {
@@ -76,13 +92,12 @@ class TeacherFeedbackKeepWorking extends Component {
           ref={ref => (this.checkbox = ref)}
           type="checkbox"
           style={styles.checkbox}
-          checked={this.props.reviewState === ReviewStates.keepWorking}
           onChange={this.onCheckboxChange}
         />
         <div data-tip data-place="bottom" data-for="keep-working-tooltip">
           <label htmlFor="keep-working" style={styles.label}>
             <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
-            {this.isAwaitingTeacherReview && (
+            {this.initialReviewState === 'awaitingReview' && (
               <span style={styles.awaitingReviewText}>
                 &nbsp;-&nbsp;{i18n.awaitingTeacherReview()}
               </span>
