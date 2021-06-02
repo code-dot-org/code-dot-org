@@ -3,5 +3,13 @@
 
 #csa_features.in.collapse
   .field
-    Select the desired CSA view:
-    = f.select :csa_view_mode, options_for_select([['Console', 'console'], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']])
+    = f.label :csa_view_mode, 'CSA view mode'
+    = f.select :csa_view_mode, options_for_select([['Console', 'console'], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']], @level.csa_view_mode)
+
+  .field
+    = f.label :start_direction
+    = f.select :start_direction, options_for_select(@level.class.start_directions, @level.start_direction)
+
+  .field
+    = f.label :serialized_maze
+    = f.text_area :serialized_maze, value: JSON.pretty_generate(@level.serialized_maze), rows: 20, class: 'input-block-level'

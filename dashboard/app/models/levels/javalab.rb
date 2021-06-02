@@ -39,13 +39,16 @@ class Javalab < Level
 
   before_save :fix_examples, :parse_maze
 
+  def self.start_directions
+    [['North', 0], ['East', 1], ['South', 2], ['West', 3]]
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
         user: params[:user],
         game: Game.javalab,
-        level_num: 'custom',
-        properties: {}
+        level_num: 'custom'
       )
     )
   end
