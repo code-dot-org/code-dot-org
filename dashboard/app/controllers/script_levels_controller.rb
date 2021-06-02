@@ -270,8 +270,8 @@ class ScriptLevelsController < ApplicationController
     end
 
     @stage_extras = {
-      next_stage_number: @lesson.next_level_number_for_lesson_extras(user),
-      stage_number: @lesson.relative_position,
+      next_lesson_number: @lesson.next_level_number_for_lesson_extras(user),
+      lesson_number: @lesson.relative_position,
       next_level_path: @lesson.next_level_path_for_lesson_extras(user),
       bonus_levels: script_bonus_levels_by_lesson,
     }.camelize_keys
