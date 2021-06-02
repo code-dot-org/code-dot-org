@@ -100,9 +100,7 @@ class LevelDetailsDialog extends Component {
     } else if (level.type === 'Match' || level.type === 'Multi') {
       return (
         <div style={styles.scrollContainer}>
-          {level.content.map((content, i) => (
-            <SafeMarkdown key={i} markdown={content} />
-          ))}
+          {level.question && <SafeMarkdown markdown={level.question} />}
           {level.questionText && <SafeMarkdown markdown={level.questionText} />}
           {this.getTeacherOnlyMarkdownComponent(level)}
         </div>
