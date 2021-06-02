@@ -44,7 +44,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 
-    user_progress_path = user_progress_for_stage_and_level_path(
+    user_progress_path = user_progress_for_lesson_and_level_path(
       script: script.name,
       lesson_position: 1,
       level_position: 1,

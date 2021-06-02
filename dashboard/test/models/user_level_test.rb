@@ -16,39 +16,39 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test "by_lesson" do
     script = create :script
-    stage = create :lesson, script: script
-    script_level = create :script_level, script: script, lesson: stage
+    lesson = create :lesson, script: script
+    script_level = create :script_level, script: script, lesson: lesson
     level = script_level.levels.first
 
-    stage_user_level = create :user_level, script: script, level: level
+    lesson_user_level = create :user_level, script: script, level: level
     other_user_level = create :user_level
 
-    assert_includes UserLevel.by_lesson(stage), stage_user_level
-    refute_includes UserLevel.by_lesson(stage), other_user_level
+    assert_includes UserLevel.by_lesson(lesson), lesson_user_level
+    refute_includes UserLevel.by_lesson(lesson), other_user_level
   end
 
   test "by_lesson will find all levels for each script_level" do
     script = create :script
-    stage = create :lesson, script: script
+    lesson = create :lesson, script: script
     first_level = create :level
     second_level = create :level
     create :script_level,
       script: script,
-      lesson: stage,
+      lesson: lesson,
       levels: [
         first_level,
         second_level
       ]
 
-    assert_equal UserLevel.by_lesson(stage), []
+    assert_equal UserLevel.by_lesson(lesson), []
 
     first_user_level = create :user_level, script: script, level: first_level
 
-    assert_equal UserLevel.by_lesson(stage), [first_user_level]
+    assert_equal UserLevel.by_lesson(lesson), [first_user_level]
 
     second_user_level = create :user_level, script: script, level: second_level
 
-    assert_equal UserLevel.by_lesson(stage), [first_user_level, second_user_level]
+    assert_equal UserLevel.by_lesson(lesson), [first_user_level, second_user_level]
   end
 
   test "perfect? finished? and passing? should be able to handle ScriptLevels that have nil as best_result" do

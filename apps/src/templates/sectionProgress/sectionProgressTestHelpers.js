@@ -88,8 +88,8 @@ function buildSectionProgress(students, scriptData) {
     lastUpdates[scriptData.id][student.id] = Date.now();
     progress[student.id] = {};
   });
-  scriptData.stages.forEach(stage => {
-    stage.levels.forEach(level => {
+  scriptData.stages.forEach(lesson => {
+    lesson.levels.forEach(level => {
       students.forEach(student => {
         progress[student.id][level.id] = randomProgress();
         level.sublevels &&
