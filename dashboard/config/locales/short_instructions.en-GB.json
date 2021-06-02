@@ -90,7 +90,8 @@
         "Underground Iron_2020": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
         "Underground Mining Coal": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.",
         "Underground Mining Coal_2019": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.",
-        "Underground Mining Coal_2020": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal."
+        "Underground Mining Coal_2020": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.",
+        "courseF_bee2": "Use a `repeat` loop to collect all of the nectar."
       }
     }
   }

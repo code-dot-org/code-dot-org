@@ -396,6 +396,8 @@ eu:
         CSF_loops_AB: Itzuliak
         csd_pair_programming: Bikoteka programatzen
         csd_applab_parameters: Parametrodun funtzioak
+        playlab_2021: 'Sarrera: Jolas Laborategia'
+        playlab_2021_reader: 'Sarrera: Jolas Laborategia'
     callout:
       text:
         drag_blocks: Arrastatu "mugitu" blokea eta lotu beste blokearen azpian

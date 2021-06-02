@@ -3992,9 +3992,7 @@ he:
         csp8-2021:
           lessons:
             lesson-4: {}
-        csp9-2021:
-          lessons:
-            lesson-10: {}
+        csp9-2021: {}
         csp10-2021: {}
         coursea-2021:
           lessons:
@@ -4300,3 +4298,60 @@ he:
               display_name: סקר
         aiml-2021: {}
         csd7-2021: {}
+        kodea-pd-2021:
+          lessons:
+            Getting Started: {}
+            Computer Science Fundamentals:
+              key: יסודות מדעי המחשב
+              name: יסודות מדעי המחשב
+            Looking Ahead: {}
+            'Mastering the Basics: Sequencing': {}
+            'Mastering the Basics: Loops': {}
+            'Mastering the Basics: Conditionals': {}
+            'Mastering the Basics: Functions': {}
+            'Mastering the Basics: Events': {}
+            Best Practices for Teaching Computer Science: {}
+            Planning: {}
+            Next Steps:
+              key: השלבים הבאים
+              name: השלבים הבאים
+        vpl-csd-2021:
+          lessons:
+            Module 1: {}
+            Module 2: {}
+            Module 3: {}
+            Module 4: {}
+            Module 5: {}
+            Module 6: {}
+            Module 7: {}
+            Module 8: {}
+        vpl-csp-2021:
+          lessons:
+            Module 1: {}
+            Module 2: {}
+            Module 3: {}
+            Module 4: {}
+            Module 5: {}
+            Module 6: {}
+            Module 7: {}
+            Module 8: {}
+        self-paced-pl-csd1-2021: {}
+        self-paced-pl-csd2-2021: {}
+        self-paced-pl-csd3-2021: {}
+        self-paced-pl-csd4-2021: {}
+        self-paced-pl-csd5-2021: {}
+        self-paced-pl-csd6-2021: {}
+        self-paced-pl-csd7-2021: {}
+        self-paced-pl-csd8-2021: {}
+        self-paced-pl-csp1-2021: {}
+        self-paced-pl-csp2-2021: {}
+        self-paced-pl-csp3-2021: {}
+        self-paced-pl-csp4-2021: {}
+        self-paced-pl-csp5-2021: {}
+        self-paced-pl-csp6-2021: {}
+        self-paced-pl-csp7-2021: {}
+        self-paced-pl-csp8-2021: {}
+        self-paced-pl-csp9-2021: {}
+        self-paced-pl-csp10-2021: {}
+        self-paced-pl-csp11-2021: {}
+        poster: {}

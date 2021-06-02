@@ -432,6 +432,8 @@ pt:
         csd_applab_parameters: Funções com parâmetros
         csp-pd-welcome: Bem-vindo(a) à Família!
         csd_what_computers_do: O que é que os Computadores fazem?
+        playlab_2021: Introdução ao Laboratório
+        playlab_2021_reader: Introdução ao Laboratório
     callout:
       text:
         drag_blocks: Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco

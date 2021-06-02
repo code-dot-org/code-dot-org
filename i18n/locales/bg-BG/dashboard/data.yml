@@ -459,6 +459,8 @@ bg:
         writing_first_program: Напишете първата си компютърна програма!
         csd_pair_programming: Програмиране по двойки
         csd_applab_parameters: Функции с параметри
+        playlab_2021: Въведение в игрална лаборатория
+        playlab_2021_reader: Въведение в игрална лаборатория
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

@@ -1568,6 +1568,145 @@
         },
         "outbreak7": {
           "costumes_callout": "點擊以製作新服裝"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "點擊這裡擴展塊。",
+          "pointerlocation": "在這裡拖動一個主題塊。"
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "點擊以製作新服裝"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "這個數字指的是解答中只可以使用一個這類型的積木"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "你知道嗎？只要有需要，你隨時可以沿著一條線反向的畫回來哦！"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "當您需要提示時，點一下燈泡！"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "這是一個標注"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "點擊此處變更方向事件的箭頭方向。"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這表示在聲音出現前，你完全不會知道將會聽到什麼！"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "工具箱裡只有一個積木可以做到。您會如何使用它？"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "當您需要提示時，點一下燈泡！"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "使用綠色的下拉選單來改變方向。"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "讓角色移動到這個旗幟以完成這個關卡。"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "當企鵝碰到恐龍時，使用此積木！"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "這個積木對這個專案非常重要。請務必使用它！\n"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "把這個新增到你的程式中間。\n"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "如果需要，可以從工具箱中拖出來更多積木！"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "在南瓜上的數字 4 意思是有 4 個南瓜可以收集。"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "這些積木被鎖定了，無法刪除！\n"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "courseC_maze_programming3_3": "You can drag extra blocks to the toolbox to throw them away."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseC_maze_programming5_2021": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。",
+          "courseC_maze_programming7_2": "這些積木就像石頭一樣，不能被破壞。"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "此關卡中只有這些積木可以用。"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "此關卡中只有這些積木可以用。"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。",
+          "4_5_Bee_Conditionals_2_2": "需要幫忙嗎？點擊此處來獲取影片提示！"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "讓我們先使用這個積木來畫出第一個正方形。"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "當這個綠色積木運行時，該函式中的所有程式積木都會執行。在繪製第一個正方形後，小藝術家應該怎麼做？"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "您將在這裡找到「for」迴圈！"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "您將在此處找到「math」積木。"
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "可以在這裡找到你的變量！"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "按一下這裡檢視這個行為是如何工作的。\n"
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "在將所有的積木連在一起後，按「執行」啟動程式。\n"
         }
       }
     }

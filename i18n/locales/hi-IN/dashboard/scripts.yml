@@ -16572,3 +16572,48 @@ hi:
           lessons:
             lesson15:
               name: पाठ 15
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: शुरू करें
+              name: शुरू करें
+            Computer Science Fundamentals:
+              key: कंप्यूटर साइंस के मूल सिद्धांत
+              name: कंप्यूटर साइंस के मूल सिद्धांत
+            Looking Ahead:
+              key: आगे देखना
+              name: आगे देखना
+            'Mastering the Basics: Sequencing':
+              key: 'मूल सिद्धांतों पर निपुणता हासिल करना: अनुक्रमण'
+              name: 'मूल सिद्धांतों पर निपुणता हासिल करना: अनुक्रमण'
+            'Mastering the Basics: Loops':
+              key: 'मूल सिद्धांतों पर निपुणता हासिल करना: लूप्स'
+              name: 'मूल सिद्धांतों पर निपुणता हासिल करना: लूप्स'
+            'Mastering the Basics: Conditionals':
+              key: 'मूल सिद्धांतों पर निपुणता हासिल करना: सापेक्ष'
+              name: 'मूल सिद्धांतों पर निपुणता हासिल करना: सापेक्ष'
+            'Mastering the Basics: Functions':
+              key: 'मूल सिद्धांतों पर निपुणता हासिल करना: फंक्शन्स'
+              name: 'मूल सिद्धांतों पर निपुणता हासिल करना: फंक्शन्स'
+            'Mastering the Basics: Events':
+              key: 'मूल सिद्धांतों पर निपुणता हासिल करना: इवेंट्स'
+              name: 'मूल सिद्धांतों पर निपुणता हासिल करना: इवेंट्स'
+            Best Practices for Teaching Computer Science:
+              key: कंप्यूटर साइंस पढ़ाने के लिए बेहतर अभ्यास
+              name: कंप्यूटर साइंस पढ़ाने के लिए बेहतर अभ्यास
+            Planning:
+              key: नियोजन
+              name: नियोजन
+            Next Steps:
+              key: अगले चरण
+              name: अगले चरण
+        vpl-csd-2021:
+          lessons:
+            Module 1:
+              key: मॉड्यूल 1
+              name: मॉड्यूल 1
+        vpl-csp-2021:
+          lessons:
+            Module 1:
+              key: मॉड्यूल 1
+              name: मॉड्यूल 1

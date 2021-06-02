@@ -3127,3 +3127,8 @@ el:
           lesson_groups:
             cspSurvey2020:
               display_name: Έρευνα
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Βασικές αρχές της επιστήμης υπολογιστών
+              name: Βασικές αρχές της επιστήμης υπολογιστών

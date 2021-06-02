@@ -1,4 +1,3 @@
----
 lv:
   data:
     script:
@@ -112,7 +111,7 @@ lv:
             'Bee: Debugging':
               name: 'Bite: atkļūdošana'
             'Bee: Functions':
-              name: Bites funkcijas
+              name: 'Bites funkcijas'
             'Bee: Nested Loops':
               name: 'Bite: Nosacījuma cikli'
             Bounce:
@@ -134,7 +133,7 @@ lv:
             Maze:
               name: Labirints
             'Maze: Conditionals':
-              name: Labirinta nosacījums
+              name: 'Labirinta nosacījums'
             Songwriting:
               name: Dziesmu rakstīšana
             'Studio: Create a Game':
@@ -436,6 +435,12 @@ lv:
               name: Interneta simulators
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Ietīt
         algebraPD2:
@@ -458,10 +463,22 @@ lv:
               name: Kopsavilkums
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Ietīt
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Ietīt
         asUnplugged:
@@ -638,6 +655,12 @@ lv:
               name: 'Atvienots: Dziesmu rakstīšana ar parametriem'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Ietīt
         grade3:
@@ -891,7 +914,7 @@ lv:
             Functions:
               name: Funkcijas
             'null':
-              name: bez vērtības
+              name: 'bez vērtības'
         coursef-ramp:
           lessons:
             Introduction:
@@ -1497,7 +1520,7 @@ lv:
               display_name: Pārskats
           lessons:
             'null':
-              name: bez vērtības
+              name: 'bez vērtības'
         coursec-2019:
           lesson_groups:
             csf_digcit:

@@ -1,2 +1,13 @@
 {
+  "zh-TW": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "為每隻動物畫一個房間。",
+        "courseD_bee_nestedLoops8_2021": "使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。",
+        "courseD_bee_nestedLoops9_2021": "釀造全部的蜂蜜。",
+        "courseF_bee_variables_7a_2021": "這個難題有些不同。需要做些什麼來解決呢？",
+        "ramp_artist_loops8_2021": "找到規律，用迴圈讓這個程式更簡潔！"
+      }
+    }
+  }
 }

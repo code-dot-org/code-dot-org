@@ -543,6 +543,8 @@ ro:
         codebreak_e10: 'Code Break 10.0: IA cu Kat Graham și Kate Park'
         codebreak_e11: 'Code Break 11.0: Teorii cu Susan Wojcicki și China Anne McClain'
         codebreak_e12: 'Code Break 12.0: Hardware cu Aloe Blacc, Bret Taylor, & Paula Mejia'
+        playlab_2021: Introducere in Play Lab
+        playlab_2021_reader: Introducere in Play Lab
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
