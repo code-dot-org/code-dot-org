@@ -16,11 +16,6 @@ level 'OPD-K5 GettingStarted1_2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted2', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted_Reflection', progression: 'Getting Started'
 
-lesson 'Lesson Planning', display_name: 'Lesson Planning', has_lesson_plan: false
-level 'OPD-K5 LessonPlanning1', progression: 'Lesson Planning'
-level 'OPD-K5 LessonPlanning2', progression: 'Lesson Planning'
-level 'OPD-K5 LessonPlanning_Reflection', progression: 'Lesson Planning'
-
 lesson 'CS Teaching and Student Practices', display_name: 'CS Teaching and Student Practices', has_lesson_plan: false
 level 'OPD-K5 CSTeachingLearning1', progression: 'CS Teaching and Student Practices'
 level 'OPD-K5 CSTeachingLearning_Reflection', progression: 'CS Teaching and Student Practices'
@@ -36,6 +31,11 @@ level 'OPD-K5 ImplementationApproach_Reflection', progression: 'Implementation A
 level 'OPD-K5 ImplementationBarriers1_Reflection', progression: 'Implementation Approaches and Barriers'
 level 'OPD-K5 ImplementationBarriers2_Reflection', progression: 'Implementation Approaches and Barriers'
 level 'OPD-K5 ImplementationBarriers1', progression: 'Implementation Approaches and Barriers'
+
+lesson 'Lesson Planning', display_name: 'Lesson Planning', has_lesson_plan: false
+level 'OPD-K5 LessonPlanning1', progression: 'Lesson Planning'
+level 'OPD-K5 LessonPlanning2', progression: 'Lesson Planning'
+level 'OPD-K5 LessonPlanning_Reflection', progression: 'Lesson Planning'
 
 lesson_group 'k5_basic_concepts_1', display_name: 'CS Fundamentals Concepts'
 lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
