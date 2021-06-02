@@ -22493,8 +22493,12 @@ en:
           lessons:
             lesson-1:
               name: Creating Arrays
+              description_student: The food truck owner increased her inventory of desserts. Before you had to declare separate variables to keep track of inventory, but what if you had 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements.
+              description_teacher: In this unplugged lesson, students create one-dimensional (1D) arrays to store lists of values. Students learn how to refer to the length of a 1D array and access individual elements that are stored.
             lesson-2:
               name: Accessing and Modifying Elements
+              description_student: You create arrays to store values using the keyword `new`. You explore The Theater, which allows you to manipulate sounds and shapes. You use The Neighborhood and The Theater to practice accessing and modifying elements in arrays using index values.
+              description_teacher: In this lesson, students create arrays to store values using the keyword `new`. They explore The Theater, which allows them to manipulate sounds and shapes. They use The Neighborhood and The Theater to practice accessing and modifying elements in arrays using index values.
             lesson-3:
               name: Traversing Arrays with for Loops
             lesson-4:
@@ -23343,3 +23347,16 @@ en:
           description_audience: ''
           description_short: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
           description: ''
+        poster-draft:
+          lessons:
+            lesson-1:
+              name: Interactive Poster
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poster-draft
+          title: 'V1_Interactive Poster: Self-Expression'
+          description_audience: ''
+          description_short: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
+          description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
+          student_description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '

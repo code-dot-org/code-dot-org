@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-02 14:28:55 UTC",
+    "serialized_at": "2021-06-02 22:15:50 UTC",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
     }
@@ -293,6 +293,30 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "OPD-K5 Why teach CS_copy_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Why teach CS_copy_2021"
+        ],
+        "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 Why teach CS_copy_2021"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "OPD-K5 About_copy_2021"
         ]
       },
@@ -311,8 +335,8 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -332,30 +356,6 @@
       },
       "level_keys": [
         "OPD-K5 WhatIsCS_2021"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 Why teach CS_copy_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 Why teach CS_copy_2021"
-        ],
-        "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 Why teach CS_copy_2021"
       ]
     },
     {
@@ -3526,6 +3526,17 @@
   "levels_script_levels": [
     {
       "seeding_key": {
+        "level.key": "OPD-K5 Why teach CS_copy_2021",
+        "script_level.level_keys": [
+          "OPD-K5 Why teach CS_copy_2021"
+        ],
+        "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "OPD-K5 About_copy_2021",
         "script_level.level_keys": [
           "OPD-K5 About_copy_2021"
@@ -3540,17 +3551,6 @@
         "level.key": "OPD-K5 WhatIsCS_2021",
         "script_level.level_keys": [
           "OPD-K5 WhatIsCS_2021"
-        ],
-        "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 Why teach CS_copy_2021",
-        "script_level.level_keys": [
-          "OPD-K5 Why teach CS_copy_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
         "lesson_group.key": "Implementing and Teaching CS",

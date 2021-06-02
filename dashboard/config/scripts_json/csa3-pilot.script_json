@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-02 18:59:39 UTC",
+    "serialized_at": "2021-06-02 21:14:56 UTC",
     "seeding_key": {
       "script.name": "csa3-pilot"
     }
@@ -55,6 +55,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "In this unplugged lesson, students create one-dimensional (1D) arrays to store lists of values. Students learn how to refer to the length of a 1D array and access individual elements that are stored.",
+        "preparation": "* Gather five sticky notes or small pieces of paper for each student\n* Print copies of the Array Manipulatives (one array and reference variable per student)\n* Gather scissors and 18 paper clips per student\n* (Optional) Cut out the Array Manipulatives and place the cutouts, paper clips, and sticky notes or pieces of paper in baggies\n* Print copies of the Creating Arrays handout (one per student)",
+        "student_overview": "The food truck owner increased her inventory of desserts. Before you had to declare separate variables to keep track of inventory, but what if you had 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -70,6 +73,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "In this lesson, students create arrays to store values using the keyword `new`. They explore The Theater, which allows them to manipulate sounds and shapes. They use The Neighborhood and The Theater to practice accessing and modifying elements in arrays using index values.",
+        "student_overview": "You create arrays to store values using the keyword `new`. You explore The Theater, which allows you to manipulate sounds and shapes. You use The Neighborhood and The Theater to practice accessing and modifying elements in arrays using index values."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -278,6 +283,90 @@
   ],
   "lesson_activities": [
     {
+      "key": "8ce42c10-c841-4360-bfe9-e4134f17295d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8ce42c10-c841-4360-bfe9-e4134f17295d",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "59822af3-1dda-433d-8d48-16ad16fae41b",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59822af3-1dda-433d-8d48-16ad16fae41b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "0a2ba629-bcf2-44de-80de-c8d5d7530c35",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a2ba629-bcf2-44de-80de-c8d5d7530c35",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "f587ecc4-b0a5-4bd2-9bd2-3de2e5eb5920",
+      "position": 1,
+      "properties": {
+        "duration": 3,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f587ecc4-b0a5-4bd2-9bd2-3de2e5eb5920",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22",
+      "position": 2,
+      "properties": {
+        "duration": 37,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "6da23833-157b-49b6-ab7b-9e975d66dc7e",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6da23833-157b-49b6-ab7b-9e975d66dc7e",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
       "key": "186dc8a3-6e6b-43cc-95ed-04bdeb134835",
       "position": 1,
       "properties": {
@@ -306,6 +395,327 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "38d78c48-60e1-4274-879a-b11a2fa22bdb",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *The food truck owner wants to create a list of flavors that she will offer. What would we need to do to store all of the flavors she wants to offer in one variable?*\n\n**Discussion Goal:** Students share ideas to store multiple flavors in one variable and may begin to suggest a list structure.\n\n**Distribute:** Give each student five sticky notes or small pieces of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write a flavor on each sticky note.",
+        "name": "Variable Storage"
+      },
+      "seeding_key": {
+        "activity_section.key": "38d78c48-60e1-4274-879a-b11a2fa22bdb",
+        "lesson_activity.key": "8ce42c10-c841-4360-bfe9-e4134f17295d"
+      }
+    },
+    {
+      "key": "d959647f-1a95-4490-8f92-152e14eabe5a",
+      "position": 2,
+      "properties": {
+        "description": "What if the food truck owner wanted to create 50 flavors or even 1,000 flavors?\n\nIn Java, when you have several values that you want to store that are of the same type, you can create a one-dimensional array.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d959647f-1a95-4490-8f92-152e14eabe5a",
+        "lesson_activity.key": "8ce42c10-c841-4360-bfe9-e4134f17295d"
+      }
+    },
+    {
+      "key": "80c51fbe-10f4-4bb7-b7a3-41afbeec8c24",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Introduce one-dimensional arrays.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define a one-dimensional array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define an element and an index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arrays video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some physical examples that are similar to a one-dimensional array? What does it mean to be immutable? How are arrays immutable?*\n\n**Discussion Goal:** Students should point out physical items that can store one or more values. Some examples might include a storage facility, school lockers, or freight cars. Students define the term immutable as something that cannot be changed. Students recall that the size of an array cannot be changed after it is created and is therefore immutable.",
+        "duration": "5",
+        "name": "Hip Hip Array"
+      },
+      "seeding_key": {
+        "activity_section.key": "80c51fbe-10f4-4bb7-b7a3-41afbeec8c24",
+        "lesson_activity.key": "59822af3-1dda-433d-8d48-16ad16fae41b"
+      }
+    },
+    {
+      "key": "4f9ba64e-8bb4-4563-8141-75b2371a0844",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a set of Array Manipulatives.\n\n**Do This:** Have students cut out the manipulatives and create paper clip chains by connecting three paper clips together.\n\n**Do This:** Demonstrate declaring and initializing an array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare an array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize the array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare and create the array in one line of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use their Array Manipulatives to declare and initialize an array to store the flavors they wrote on their sticky notes. On a piece of paper, students write the line of code to declare and initialize the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show a solution for declaring and initializing a `String` array named `flavors`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can you assign your flavors into the array?*\n\n**Discussion Goal:** Students suggest assigning each flavor to an index location in the array.",
+        "duration": "15",
+        "name": "Declaring and Initializing an Array",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may suggest placing the sticky notes directly in each index location in the array. Remind students that the flavors are `String`s, and `String`s are objects. Reinforce the difference between primitive variables and reference variables to guide students to suggest linking each index location to a flavor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4f9ba64e-8bb4-4563-8141-75b2371a0844",
+        "lesson_activity.key": "59822af3-1dda-433d-8d48-16ad16fae41b"
+      }
+    },
+    {
+      "key": "a6599771-7e0d-48a1-8bca-20abd8c9225a",
+      "position": 3,
+      "properties": {
+        "description": "Arrays can be created in multiple ways. To create an array with initial values specified, you can either declare and assign values or create an initializer list.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a6599771-7e0d-48a1-8bca-20abd8c9225a",
+        "lesson_activity.key": "59822af3-1dda-433d-8d48-16ad16fae41b"
+      }
+    },
+    {
+      "key": "8a76b429-9638-4e60-9ffb-76153e1a9ad7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce creating an array by declaring its type and name and storing values by assigning it to an index. Direct students to connect a paper clip chain from each index to one of their sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce creating an array using an initializer list.\n\n**Display:** Show the `flavors` array that is created using the initializer list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce referring to the length of the array.\n* Trace the code to determine the array's length.\n* Show the output of printing the length of the array.\n* Define the length of the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would happen if we wanted to print the value at index 5?*\n\n**Discussion Goal:** Students predict that an error will occur because there is not an index 5 in this array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `ArrayIndexOutofBoundsExecption`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would happen if we wanted to add a value at index 5?*\n\n**Discussion Goal:** Students predict that an error will occur because there is not an index 5 in this array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to reinforce that the length of the array cannot be changed after the array has been created."
+      },
+      "seeding_key": {
+        "activity_section.key": "8a76b429-9638-4e60-9ffb-76153e1a9ad7",
+        "lesson_activity.key": "59822af3-1dda-433d-8d48-16ad16fae41b"
+      }
+    },
+    {
+      "key": "3cd93cf6-4c1a-44bd-9510-481d251492d2",
+      "position": 5,
+      "properties": {
+        "description": "Let's play the Array Game! If I call your name, bring your sticky notes and place them on the slide.",
+        "duration": "15",
+        "name": "Array Practice",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3cd93cf6-4c1a-44bd-9510-481d251492d2",
+        "lesson_activity.key": "59822af3-1dda-433d-8d48-16ad16fae41b"
+      }
+    },
+    {
+      "key": "b36b54c6-1d61-413f-94bb-c1077b29a6b1",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Array Game instructions with students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to play the Array Game.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To play the array game, have students stand up and place them in groups of 3-4. Groups need to stand close to the area where the presentation will be displayed. For each question, select a student to use the sticky notes they created in the warm up activity.\n* Choose a student to place sticky notes in the designated array square on the slide.\n* Read the question out loud to the class.\n* Have groups discuss then select a group to answer the question. If the group gets the answer wrong, select another group. Rotate to different groups for each question.\n    * Answers will vary based on the student's sticky note. \n    * For the length of the array, have different students place fewer of their stickies on the slide so the length of the array will vary.\n* Have the student take the sticky notes off the slide and click through the animation to display the next question.\n* Repeat the instructions for the next round."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b36b54c6-1d61-413f-94bb-c1077b29a6b1",
+        "lesson_activity.key": "59822af3-1dda-433d-8d48-16ad16fae41b"
+      }
+    },
+    {
+      "key": "250cdb0f-76ce-4a0b-b4a1-9e75f45187ea",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Creating Arrays handout.\n\n**Do This:** Students individually complete the Creating Arrays handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "250cdb0f-76ce-4a0b-b4a1-9e75f45187ea",
+        "lesson_activity.key": "59822af3-1dda-433d-8d48-16ad16fae41b"
+      }
+    },
+    {
+      "key": "6a5b8801-e1bb-4335-92f5-e03529d4bf73",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did we learn today? So what? Now what?*\n\n**Discussion Goal:** Students discuss the importance of arrays and how it is useful to store multiple values. Students make predictions on different uses of arrays in future lessons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Three W's"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a5b8801-e1bb-4335-92f5-e03529d4bf73",
+        "lesson_activity.key": "0a2ba629-bcf2-44de-80de-c8d5d7530c35"
+      }
+    },
+    {
+      "key": "c91c1300-b8e3-4a31-8af2-b2a98b29ee26",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c91c1300-b8e3-4a31-8af2-b2a98b29ee26",
+        "lesson_activity.key": "0a2ba629-bcf2-44de-80de-c8d5d7530c35"
+      }
+    },
+    {
+      "key": "31b412e3-7cbb-4b11-af29-cc5dfced44cd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play a round of the array game from Lesson 1 using the array on the slide. Click through the animated slide and have students predict the output of the statements.",
+        "name": "Array Game",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Instead of playing the array game as a class, place students in groups of 3 or 4. Have each group work together to write the answer for each statement. Share the solutions as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "31b412e3-7cbb-4b11-af29-cc5dfced44cd",
+        "lesson_activity.key": "f587ecc4-b0a5-4bd2-9bd2-3de2e5eb5920"
+      }
+    },
+    {
+      "key": "aa5ede21-80b9-443b-95de-18391ff475b3",
+      "position": 1,
+      "properties": {
+        "description": "As many of you guessed yesterday, today is all about using arrays. We’re going to start by working in Code Studio to explore the structure of arrays and consider the types of information they can store.",
+        "duration": "7",
+        "name": "Investigating Arrays",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aa5ede21-80b9-443b-95de-18391ff475b3",
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
+      }
+    },
+    {
+      "key": "c37e9344-8ba9-42e2-82ca-dfc103f65176",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Group students into pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair an Investigating Arrays activity guide.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct pairs to Level 1 on Code Studio on a single computer and use the following protocol:\n    * For each question, the student with the worksheet answers a question or predicts the outcome out loud.\n    * The student with the computer then writes the code to check the hypothesis.\n    * Students trade roles after each question.\n* Have students complete the Know and Want to Know section of the KWL chart."
+      },
+      "seeding_key": {
+        "activity_section.key": "c37e9344-8ba9-42e2-82ca-dfc103f65176",
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
+      }
+    },
+    {
+      "key": "8e26a74a-cd73-4183-b25f-6d30d037db6f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you know? What do you want to know?*\n\n**Discussion Goal:** Students share what they understand about how arrays work and what they wonder about using arrays. As students share what they know, encourage them to give examples to help recall syntax.\n\n**Do This:** Click through the animations on each slide to review array syntax and structure:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show students a sample ‘Know’ section of the KWL chart and use the slide animation to share an example of each known item. Note that this is not an exhaustive list of the things they know about arrays (for example, a student may have \"find the length of a list\").\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share a sample ‘Want to Know’ section of the KWL. Note that one of the questions is “What is the Theater?”, which does not directly relate to arrays. Students learn about The Theater later."
+      },
+      "seeding_key": {
+        "activity_section.key": "8e26a74a-cd73-4183-b25f-6d30d037db6f",
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
+      }
+    },
+    {
+      "key": "9452f208-d9dd-4dd7-a4f5-bd06d85becc2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Now that you’ve taken some time to investigate arrays, we’re going to use them to solve some challenges with `PainterPlus` in The Neighborhood. I'm here to help you when you need me! However, I first want to remind you of the following:\n* Use your debugging skills. Try to zoom in on precisely where you're getting stuck and reference the Debugging Wall.\n* Talk out loud to process.\n* Use the documentation to learn about arrays and how they work.\n* Talk to your partner or a pair next to you. If another pair asks for help, make sure to take some time to talk their question through with them.",
+        "duration": "10",
+        "name": "Arrays in The Neighborhood",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9452f208-d9dd-4dd7-a4f5-bd06d85becc2",
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
+      }
+    },
+    {
+      "key": "2c9d379a-6073-4227-a4e8-7fbed3d60b90",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students complete Levels 2 through 4 navigating `PainterPlus` in The Neighborhood using arrays.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Circulate the room and encourage students to use the strategies displayed on the slide. Level 2 may take longer and feel somewhat tedious to students. Reassure students during this activity, as this sets up the value of how quickly they can complete Level 3."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c9d379a-6073-4227-a4e8-7fbed3d60b90",
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
+      }
+    },
+    {
+      "key": "24f558be-3062-42f8-9ba0-38bea90acf9f",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How did the array make completing Level 3 easier than it would have been if you were doing it in Unit 1?*\n\n**Discussion Goal:** Students identify the value of using an array data structure as a form of abstraction. Students realize that without an array, they would have to use individual variables like in previous units. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students have not discussed abstractions at this point in the course. It is, however, a useful concept for understanding the value of many data structures. You may choose to do a brief introduction to abstraction:\n* (Optional if your students have taken CSP) - Call back to using abstraction in CSP. *What were examples that we learned about in CSP?*\n* Define abstraction - Abstraction allows us to reduce the complexity of a program by removing the details of a process.\n* Ask students, *How is abstraction applicable to your use of arrays in Levels 2 and 3?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "24f558be-3062-42f8-9ba0-38bea90acf9f",
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
+      }
+    },
+    {
+      "key": "df774f62-ad1c-416a-bb2e-7438cd65bd3f",
+      "position": 7,
+      "properties": {
+        "description": "In addition to creating and using arrays, we will also be exploring The Theater in this unit. The Theater has just opened in The Neighborhood, and you have been asked to help create a concert using audio and visual effects.",
+        "duration": "10",
+        "name": "Arrays in The Theater",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "df774f62-ad1c-416a-bb2e-7438cd65bd3f",
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
+      }
+    },
+    {
+      "key": "6dca50b8-c5b1-4a37-84d7-fcfae6b43117",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Introduction to The Theater video.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 5 on Code Studio. Give students 4 minutes to try to manipulate sounds using arrays.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Regroup the class and ask students to share their sounds and how they made them. Make sure students are comfortable manipulating and updating sounds.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to continue working in The Theater on Levels 5 and 6.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits after regrouping, log in to Code Studio yourself and open Level 5. Ask students to talk you through the steps of making a short song. Ask leading questions such as:\n* *How do I access notes from the scale array?*\n* *How do I make my song longer?*\n* *Can I add a rest?*\n* *What values do you think are used for the duration?*\n\nThe video discusses these questions, but it may be helpful to review them after exploring The Theater on their own."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6dca50b8-c5b1-4a37-84d7-fcfae6b43117",
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
+      }
+    },
+    {
+      "key": "05b58014-b801-4eee-9de8-2998786500aa",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Check in with students as they complete Level 6. If they feel comfortable accessing and modifying arrays, direct them to complete the Choice Levels 7 and 8. If they are unsure, ask them to join you and a small group to work on the first choice of Level 8 together.",
+        "duration": "10",
+        "name": "Arrays Practice",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Choice Level 7 gives students practice accessing values from arrays in The Neighborhood. Choice Level 8 gives students practice accessing and modifying arrays in The Theater. Depending on the amount of time remaining, you may choose to assign one, two, or three levels from each set.\n\nEncourage students who finish early to work on the third choice in The Theater (Level 8), which is an open sandbox where they can create a song."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "05b58014-b801-4eee-9de8-2998786500aa",
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
+      }
+    },
+    {
+      "key": "f0329aee-1636-4c63-9a17-0b751a353cd3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Closing the Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0329aee-1636-4c63-9a17-0b751a353cd3",
+        "lesson_activity.key": "6da23833-157b-49b6-ab7b-9e975d66dc7e"
+      }
+    },
+    {
+      "key": "0d1559c3-5194-4d46-85fa-475df9565d27",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d1559c3-5194-4d46-85fa-475df9565d27",
+        "lesson_activity.key": "6da23833-157b-49b6-ab7b-9e975d66dc7e"
+      }
+    },
     {
       "key": "216086d1-8d9e-4c36-a1bc-38de812c435b",
       "position": 1,
@@ -362,6 +772,114 @@
   ],
   "resources": [
     {
+      "name": "[KEY] Creating Arrays",
+      "url": "https://docs.google.com/document/d/1_icFQH-KZy7G_sG4-8uXESX6cTJPTNCjDaLXiIBhO2w/edit?usp=sharing",
+      "key": "_key_creating_arrays",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_creating_arrays"
+      }
+    },
+    {
+      "name": "[KEY] Investigating Arrays",
+      "url": "https://docs.google.com/document/u/0/d/16eDAaJDkUhlYixPOD3C4dJGyQVOM8Y7gfTKCSkS9Ljo/edit",
+      "key": "_key_investigating_arrays",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_investigating_arrays"
+      }
+    },
+    {
+      "name": "[KEY] U3L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1GvSdrFnG-A41Huljco76LSDBC-RBYobOfUiOpY3QJ94/edit?usp=sharing",
+      "key": "_key_u3l1_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u3l1_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U3L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Ex5qOzydDc3u2EUaaEYvFxmAv_KpDvB0-TV46cYrQ_c/edit?usp=sharing",
+      "key": "_key_u3l2_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u3l2_extra_practice"
+      }
+    },
+    {
+      "name": "Array Manipulatives",
+      "url": "https://docs.google.com/presentation/d/1rYOgAAhDzl7nI6Od73dmxaDdvWWYUFVBjpDwpo8Wh0U/edit?usp=sharing",
+      "key": "array_manipulatives",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "array_manipulatives"
+      }
+    },
+    {
+      "name": "Creating Arrays",
+      "url": "https://docs.google.com/document/d/1iizfp7lBTE9AR5joYnilOkcjFAMo4AFL83dDuJmSXv0/edit?usp=sharing",
+      "key": "creating_arrays",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "creating_arrays"
+      }
+    },
+    {
+      "name": "Investigating Arrays",
+      "url": "https://docs.google.com/document/u/0/d/1_CR2CMcBWjVLt8UipUguTdB-0E5W_xSJhHps_jfkS7g/edit",
+      "key": "investigating_arrays",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "investigating_arrays"
+      }
+    },
+    {
+      "name": "U3L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1bO4r4KRJZbIL9GVGuAzsnUShRPzfcXI82MrCWe5FHC8/edit?usp=sharing",
+      "key": "u3l1_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u3l1_extra_practice"
+      }
+    },
+    {
+      "name": "U3L2 Extra Practice",
+      "url": "https://docs.google.com/document/u/0/d/161vgw2E5Khi22fnhJLR4G2tPDdX4JJgLY7HMgmoCvv4/edit",
+      "key": "u3l2_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u3l2_extra_practice"
+      }
+    },
+    {
       "name": "Unit 3 Presentation Slides",
       "url": "https://docs.google.com/presentation/d/1NRROUww6flqxv0sMrJFva8rTILBBEWzfSQmBl_28EDw/edit?usp=sharing",
       "key": "unit_3_presentation_slides",
@@ -377,6 +895,72 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_creating_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_u3l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "array_manipulatives"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "creating_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "u3l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_investigating_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_u3l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "investigating_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u3l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-15",
         "resource.key": "unit_3_presentation_slides"
       }
@@ -389,19 +973,229 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "element",
+      "word": "Element",
+      "definition": "An item in an array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "element"
+      }
+    },
+    {
+      "key": "index",
+      "word": "Index",
+      "definition": "The numerical position of an item in an array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "index"
+      }
+    },
+    {
+      "key": "length",
+      "word": "Length",
+      "definition": "The size of the array that is set when it is created",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "length"
+      }
+    },
+    {
+      "key": "immutable",
+      "word": "Immutable",
+      "definition": "The data type cannot be changed once it is created",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "immutable"
+      }
+    },
+    {
+      "key": "initializer_list",
+      "word": "Initializer List",
+      "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( { } )",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initializer_list"
+      }
+    },
+    {
+      "key": "arrayindexoutofboundsexception",
+      "word": "ArrayIndexOutOfBoundsException",
+      "definition": "An index value that is either negative or greater than or equal to the length of the array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "arrayindexoutofboundsexception"
+      }
+    },
+    {
+      "key": "one_dimensional_d_array",
+      "word": "One-Dimensional (1D) Array",
+      "definition": "A linear structure that stores one or more values of the same data type",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "one_dimensional_d_array"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "element"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "index"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "length"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "immutable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "initializer_list"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "arrayindexoutofboundsexception"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "one_dimensional_d_array"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "5fa93ff0-3ca2-414d-8922-ecb159af3b45",
+      "properties": {
+        "description": "Create one-dimensional (1D) arrays to store values using initializer lists"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "5fa93ff0-3ca2-414d-8922-ecb159af3b45"
+      }
+    },
+    {
+      "key": "b93224f9-9dd7-4b99-b173-6f8c30c66e53",
+      "properties": {
+        "description": "Determine the length of a one-dimensional array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b93224f9-9dd7-4b99-b173-6f8c30c66e53"
+      }
+    },
+    {
+      "key": "ac5d162c-1e70-43c8-9266-ce92ba794a1f",
+      "properties": {
+        "description": "Use index values to access individual elements"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "ac5d162c-1e70-43c8-9266-ce92ba794a1f"
+      }
+    },
+    {
+      "key": "1c98472f-1a05-46c2-98fd-9b13f8069724",
+      "properties": {
+        "description": "Explain the cause of an ArrayIndexOutOfBoundsException"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "1c98472f-1a05-46c2-98fd-9b13f8069724"
+      }
+    },
+    {
+      "key": "ab90c470-8d0e-42d4-962d-f9615cf65939",
+      "properties": {
+        "description": "Create arrays to store values "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "ab90c470-8d0e-42d4-962d-f9615cf65939"
+      }
+    },
+    {
+      "key": "d9076ccf-def3-4bd1-a577-b9d794f387ba",
+      "properties": {
+        "description": "Access and modify elements in an array by referring to an index location"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "d9076ccf-def3-4bd1-a577-b9d794f387ba"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.6"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

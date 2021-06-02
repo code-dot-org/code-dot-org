@@ -1,0 +1,257 @@
+{
+  "script": {
+    "name": "poster-draft",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-06-02 20:22:10 UTC",
+    "seeding_key": {
+      "script.name": "poster-draft"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "poster-draft"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Interactive Poster",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "892d1990-1e28-4cd2-8f8a-22078e86c0cd",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "892d1990-1e28-4cd2-8f8a-22078e86c0cd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft"
+      }
+    },
+    {
+      "key": "213463b5-75b7-4bf3-8505-dd49952e6e01",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "213463b5-75b7-4bf3-8505-dd49952e6e01",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft"
+      }
+    },
+    {
+      "key": "27b4be6f-9142-4109-b020-78f5ce560c6e",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "27b4be6f-9142-4109-b020-78f5ce560c6e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "740f9f13-73c7-4051-9338-ca134710db12",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "740f9f13-73c7-4051-9338-ca134710db12",
+        "lesson_activity.key": "892d1990-1e28-4cd2-8f8a-22078e86c0cd"
+      }
+    },
+    {
+      "key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7",
+        "lesson_activity.key": "213463b5-75b7-4bf3-8505-dd49952e6e01"
+      }
+    },
+    {
+      "key": "9329c9bb-377d-4680-96c0-6fd0b2540794",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9329c9bb-377d-4680-96c0-6fd0b2540794",
+        "lesson_activity.key": "27b4be6f-9142-4109-b020-78f5ce560c6e"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      },
+      "level_keys": [
+        "CourseEF_video_MakeSprite_2021"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-expression_make1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      },
+      "level_keys": [
+        "self-expression_make1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-expression_positioning"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      },
+      "level_keys": [
+        "self-expression_positioning"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_MakeSprite_2021",
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-expression_make1",
+        "script_level.level_keys": [
+          "self-expression_make1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-expression_positioning",
+        "script_level.level_keys": [
+          "self-expression_positioning"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

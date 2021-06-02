@@ -3,9 +3,9 @@ version_year '2021'
 
 lesson_group 'Implementing and Teaching CS', display_name: 'Implementing and Teaching CS'
 lesson 'Welcome to "Teaching Computer Science Fundamentals"', display_name: 'Introduction', has_lesson_plan: false
+level 'OPD-K5 Why teach CS_copy_2021'
 level 'OPD-K5 About_copy_2021'
 level 'OPD-K5 WhatIsCS_2021'
-level 'OPD-K5 Why teach CS_copy_2021'
 level 'OPD-K5 Outline_copy_2021'
 level 'OPD-K5 CS Tips_copy_2021'
 level 'OPD-K5 Participation_copy_2021'
