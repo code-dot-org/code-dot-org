@@ -176,6 +176,7 @@ export function setInstructionsKeyCallback(instructionsKeyCallback) {
 }
 
 export function setCurrentPanel(currentPanel) {
+  reportPanelView(currentPanel);
   return { type: SET_CURRENT_PANEL, currentPanel };
 }
 
@@ -599,6 +600,16 @@ export default function rootReducer(state = initialState, action) {
   }
   return state;
 }
+
+function reportPanelView(panel) {
+  if (!window.ga || !panel) {
+    return;
+  }
+  // Record each panel as a different page view in Google Analytics.
+  const syntheticPagePath = window.location.pathname + '/' + panel;
+  window.ga('set', 'page', syntheticPagePath);
+  window.ga('send', 'pageview');
+};
 
 export function getFeatures(state) {
   return state.data.length > 0 ? Object.keys(state.data[0]) : [];

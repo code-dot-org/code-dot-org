@@ -36,23 +36,11 @@ class PanelButtons extends Component {
     shouldDisplaySaveStatus: PropTypes.func
   };
 
-  reportPanelView = panel => {
-    if (!window.ga || !panel) {
-      return;
-    }
-    // Record each panel as a different page view in Google Analytics.
-    const syntheticPagePath = window.location.pathname + '/' + panel;
-    window.ga('set', 'page', syntheticPagePath);
-    window.ga('send', 'pageview');
-  };
-
   onClickPrev = () => {
-    this.reportPanelView(this.props.currentPanel);
     this.props.setCurrentPanel(this.props.panelButtons.prev.panel);
   };
 
   onClickNext = () => {
-    this.reportPanelView(this.props.currentPanel);
     if (["continue", "finish"].includes(this.props.panelButtons.next.panel)) {
       this.props.onContinue();
     } else if (this.props.currentPanel === "saveModel") {
