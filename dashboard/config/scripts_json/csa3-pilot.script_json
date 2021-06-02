@@ -7,26 +7,352 @@
     "properties": {
       "curriculum_umbrella": "CSA",
       "is_migrated": true,
-      "pilot_experiment": "csa-pilot"
+      "pilot_experiment": "csa-pilot",
+      "hideable_lessons": true,
+      "weekly_instructional_minutes": 225,
+      "show_calendar": true,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-19 17:29:54 UTC",
+    "serialized_at": "2021-06-02 18:59:39 UTC",
     "seeding_key": {
       "script.name": "csa3-pilot"
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Creating Arrays",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Accessing and Modifying Elements",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Traversing Arrays with for Loops",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Traversing Arrays with while Loops",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Storing Objects into Arrays",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Traversing Arrays with Enhanced for Loops",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Using Static Variables and Constants",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Answering Questions with Arrays",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Solving Problems with Arrays",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Manipulating Elements in an Array",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Concert in the Theater Project Day 1",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Concert in the Theater Project Day 2",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Concert in the Theater Project Day 3",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "FRQ Day",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Assessment Day",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+        "overview": "In this unit, students worked with one-dimensional arrays to store primitive values and object references in The Theater. Students represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects.",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions",
+        "student_overview": "In this unit, you worked with one-dimensional arrays to store primitive values and object references in The Theater. You represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "186dc8a3-6e6b-43cc-95ed-04bdeb134835",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "186dc8a3-6e6b-43cc-95ed-04bdeb134835",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "0afa0cc9-cb26-43e3-a7eb-d427ee80e9d4",
+      "position": 2,
+      "properties": {
+        "name": "Wrap Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0afa0cc9-cb26-43e3-a7eb-d427ee80e9d4",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "216086d1-8d9e-4c36-a1bc-38de812c435b",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations, you have made it to the end of Unit 3! You learned a lot about creating and working with arrays to help The Theater host their first concert. Today, you will complete an assessment to put your skills to the test.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "216086d1-8d9e-4c36-a1bc-38de812c435b",
+        "lesson_activity.key": "186dc8a3-6e6b-43cc-95ed-04bdeb134835"
+      }
+    },
+    {
+      "key": "0a9eaa07-f1c2-4bff-9942-4ab9a708d890",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 3 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys). Allow five minutes for students to log in to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Topic Questions and Personal Progress Checks**\n\nFor more information, see the Code.org CSA Topic Coverage."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0a9eaa07-f1c2-4bff-9942-4ab9a708d890",
+        "lesson_activity.key": "186dc8a3-6e6b-43cc-95ed-04bdeb134835"
+      }
+    },
+    {
+      "key": "6df7f101-922d-4e83-937e-ef0e0c9f89fc",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "name": "Assessment Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discuss any questions that come up and take note of topics where students may need extra review.\n\nAs you review answers with students, consider the following suggested strategies:\n* Students write down solutions to questions in their journals that they answered incorrectly.\n* Identify mostly missed questions and review as a class.\n* Review answers asynchronously and allow students to complete corrections.\n* Place students in pairs to review answers and share areas that need extra review.\n\nIf you do not have time to review answers with students, create a data chart that includes assessment results. For students who did not meet the learning expectations, follow up to ensure they learn from errors made on the assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6df7f101-922d-4e83-937e-ef0e0c9f89fc",
+        "lesson_activity.key": "0afa0cc9-cb26-43e3-a7eb-d427ee80e9d4"
+      }
+    }
   ],
   "script_levels": [
 
@@ -35,10 +361,26 @@
 
   ],
   "resources": [
-
+    {
+      "name": "Unit 3 Presentation Slides",
+      "url": "https://docs.google.com/presentation/d/1NRROUww6flqxv0sMrJFva8rTILBBEWzfSQmBl_28EDw/edit?usp=sharing",
+      "key": "unit_3_presentation_slides",
+      "properties": {
+        "type": "Slides",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_presentation_slides"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    }
   ],
   "scripts_resources": [
 
