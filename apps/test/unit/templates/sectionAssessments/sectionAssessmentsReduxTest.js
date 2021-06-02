@@ -132,7 +132,7 @@ describe('sectionAssessmentsRedux', () => {
             performance: 'performanceLevel3',
             performanceLevelDetails: '3',
             stageName: 'Lesson 5: Creating Functions',
-            stageNum: '5',
+            lessonNum: '5',
             studentName: 'Student',
             timestamp: '03/20/19 at 02:34:22'
           },
@@ -144,7 +144,7 @@ describe('sectionAssessmentsRedux', () => {
             performance: 'performanceLevel2',
             performanceLevelDetails: 'My meets value',
             stageName: 'Lesson 4: Using Simple Commands',
-            stageNum: '4',
+            lessonNum: '4',
             studentName: 'Student',
             timestamp: '03/21/19 at 11:54:17'
           }
@@ -1526,7 +1526,7 @@ describe('sectionAssessmentsRedux', () => {
               2: {
                 13: {
                   studentName: 'Mike',
-                  stageNum: '4',
+                  lessonNum: '4',
                   stageName: 'Loops',
                   levelNum: '7',
                   keyConcept: 'You should be learning about loops',
@@ -1537,7 +1537,7 @@ describe('sectionAssessmentsRedux', () => {
                 },
                 40: {
                   studentName: 'Anne',
-                  stageNum: '8',
+                  lessonNum: '8',
                   stageName: 'Functions',
                   levelNum: '10',
                   keyConcept: '',
@@ -1548,7 +1548,7 @@ describe('sectionAssessmentsRedux', () => {
                 },
                 52: {
                   studentName: 'Mike',
-                  stageNum: '3',
+                  lessonNum: '3',
                   stageName: 'Variables',
                   levelNum: '3',
                   keyConcept: 'Use variables to help and make coding better.',
@@ -1561,7 +1561,7 @@ describe('sectionAssessmentsRedux', () => {
                 },
                 61: {
                   studentName: 'Anne',
-                  stageNum: '3',
+                  lessonNum: '3',
                   stageName: 'Variables',
                   levelNum: '3',
                   keyConcept: 'Use variables to help and make coding better.',
@@ -1579,7 +1579,7 @@ describe('sectionAssessmentsRedux', () => {
         assert.deepEqual(csvData, [
           {
             studentName: 'Mike',
-            stageNum: '4',
+            lessonNum: '4',
             stageName: 'Loops',
             levelNum: '7',
             keyConcept: 'You should be learning about loops',
@@ -1590,7 +1590,7 @@ describe('sectionAssessmentsRedux', () => {
           },
           {
             studentName: 'Anne',
-            stageNum: '8',
+            lessonNum: '8',
             stageName: 'Functions',
             levelNum: '10',
             keyConcept: '',
@@ -1601,7 +1601,7 @@ describe('sectionAssessmentsRedux', () => {
           },
           {
             studentName: 'Mike',
-            stageNum: '3',
+            lessonNum: '3',
             stageName: 'Variables',
             levelNum: '3',
             keyConcept: 'Use variables to help and make coding better.',
@@ -1613,7 +1613,7 @@ describe('sectionAssessmentsRedux', () => {
           },
           {
             studentName: 'Anne',
-            stageNum: '3',
+            lessonNum: '3',
             stageName: 'Variables',
             levelNum: '3',
             keyConcept: 'Use variables to help and make coding better.',
