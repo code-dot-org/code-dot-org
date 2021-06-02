@@ -36,5 +36,6 @@ describe('VideoThumbnail', () => {
     const windowOpenStub = sinon.stub(window, 'open');
     wrapper.instance().onThumbnailClick();
     expect(windowOpenStub.callCount).to.equal(1);
+    windowOpenStub.restore();
   });
 });
