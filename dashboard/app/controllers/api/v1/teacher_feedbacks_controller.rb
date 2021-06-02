@@ -33,7 +33,11 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       params.require(:script_id)
     )
 
-    render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
+    if @feedback.nil?
+      head :no_content
+    else
+      render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
+    end
   end
 
   # Determine how many not yet seen feedback entries from any verified teacher

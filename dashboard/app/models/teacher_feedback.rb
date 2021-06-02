@@ -96,7 +96,7 @@ class TeacherFeedback < ApplicationRecord
 
   def self.get_student_unseen_feedback_count(student_id)
     authorized_unseen_feedbacks = where(
-      student_id: current_user.id,
+      student_id: student_id,
       seen_on_feedback_page_at: nil,
       student_first_visited_at: nil
     ).select do |feedback|
