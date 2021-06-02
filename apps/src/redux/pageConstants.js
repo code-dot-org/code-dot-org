@@ -23,7 +23,7 @@ var ALLOWED_KEYS = new Set([
   'isSubmitted',
   'noInstructionsWhenCollapsed',
   'puzzleNumber',
-  'stageTotal',
+  'lessonTotal',
   'showDebugButtons',
   'showDebugConsole',
   'showDebugWatch',
