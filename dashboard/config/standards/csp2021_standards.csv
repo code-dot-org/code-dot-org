@@ -290,7 +290,7 @@ csp2021,IOC-1.A,IOC-1.A.2,The way people complete tasks often changes to incorpo
 csp2021,IOC-1.A,IOC-1.A.3,Not every effect of a computing innovation is anticipated in advance.
 csp2021,IOC-1.A,IOC-1.A.4,"A single effect can be viewed as both beneficial and harmful by different people, or even by the same person. "
 csp2021,IOC-1.A,IOC-1.A.5,"Advances in computing have generated and increased creativity in other fields, such as medicine, engineering, communications, and the arts."
-csp2021,IOC-1.B,IOC-1.B.1,Computing innovations can be used in ways that their creators had not originally intended:●       The World Wide Web was originally intended only for rapid and easy exchange of information within the scientific community. ●       Targeted advertising is
+csp2021,IOC-1.B,IOC-1.B.1,"Computing innovations can be used in ways that their creators had not originally intended:●       The World Wide Web was originally intended only for rapid and easy exchange of information within the scientific community. ●       Targeted advertising is used to help businesses, but it can be misused at both individual and aggregate levels. ●       Machine learning and data mining have enabled innovation in medicine, business, and science, but information discovered in this way has also been used to discriminate against groups of individuals."
 csp2021,IOC-1.B,IOC-1.B.2,"Some of the ways computing innovations can be used may have a harmful impact on society, economy, or culture."
 csp2021,IOC-1.B,IOC-1.B.3,Responsible programmers try to consider the unintended ways their computing innovations can be used and the potential beneficial and harmful effects of these new uses.
 csp2021,IOC-1.B,IOC-1.B.4,It is not possible for a programmer to consider all the ways a computing innovation can be used.
@@ -311,8 +311,8 @@ csp2021,IOC-1.E,IOC-1.E.4,Crowdsourcing is the practice of obtaining input or in
 csp2021,IOC-1.E,IOC-1.E.5,Human capabilities can be enhanced by collaboration via computing.
 csp2021,IOC-1.E,IOC-1.E.6,"Crowdsourcing offers new models for collaboration, such as connecting businesses or social causes with funding."
 csp2021,IOC-1.F,IOC-1.F.1,Material created on a computer is the intellectual property of the creator or an organization. 
-csp2021,IOC-1.F,IOC-1.F.10, The digital divide raises ethical concerns around computing. 
-csp2021,IOC-1.F,IOC-1.F.11, Computing innovations can raise legal and ethical concerns. Some examples of these include:●       the development of software that allows access to digital media downloads and streaming●       the development of algorithms that include bias●       th
+csp2021,IOC-1.F,IOC-1.F.10, The digital divide raises ethical concerns around computing.
+csp2021,IOC-1.F,IOC-1.F.11, Computing innovations can raise legal and ethical concerns. Some examples of these include:●       the development of software that allows access to digital media downloads and streaming●       the development of algorithms that include bias●       the existence of computing devices that collect and analyze data by continuously monitoring activities
 csp2021,IOC-1.F,IOC-1.F.2,"Ease of access and distribution of digitized information raises intellectual property concerns regarding ownership, value, and use."
 csp2021,IOC-1.F,IOC-1.F.3,Measures should be taken to safeguard intellectual property.
 csp2021,IOC-1.F,IOC-1.F.4,The use of material created by someone else without permission and presented as one’s own is plagiarism and may have legal consequences. 
