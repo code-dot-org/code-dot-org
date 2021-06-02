@@ -45,7 +45,8 @@ class ProgrammingExpression < ApplicationRecord
         name: expression_config['config']['func'] || expression_config['config']['name'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
-        color: expression_config['config']['color']
+        color: expression_config['config']['color'],
+        syntax: expression_config['config']['func'] || expression_config['config']['name']
       }
     else
       {
