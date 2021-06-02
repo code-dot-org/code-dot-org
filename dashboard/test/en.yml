@@ -18,9 +18,9 @@ en:
         laurel:
           title: custom-script-laurel
           lessons:
-            Laurel Stage 1:
+            Laurel Lesson 1:
               name: laurel-stage-1
-            Laurel Stage 2:
+            Laurel Lesson 2:
               name: laurel-stage-2
         text-response-script:
           lessons:

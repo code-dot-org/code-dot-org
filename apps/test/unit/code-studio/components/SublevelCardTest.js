@@ -10,7 +10,7 @@ const DEFAULT_PROPS = {
     display_name: 'Choice 1',
     description: 'Sublevel 1 is lots of fun',
     thumbnail_url: 'some-fake.url/kittens.png',
-    url: '/s/script/stage/1/puzzle/2/sublevel/1',
+    url: '/s/script/lessons/1/levels/2/sublevel/1',
     position: 1,
     letter: 'a',
     perfect: true,
@@ -26,7 +26,7 @@ const LESSON_EXTRAS_DEFAULT_PROPS = {
     description: 'Sublevel 1 is lots of fun',
     thumbnail_url: 'some-fake.url/kittens.png',
     url:
-      'http://studio.code.org:3000/s/coursef-2019/stage/4/extras?level_name=courseC_artist_prog_challenge1_2019',
+      'http://studio.code.org:3000/s/coursef-2019/lessons/4/extras?level_name=courseC_artist_prog_challenge1_2019',
     perfect: false
   }
 };
@@ -36,7 +36,7 @@ const sublevel_no_thumbnail = {
   display_name: 'Choice 1',
   description: 'Sublevel 1 is lots of fun',
   thumbnail_url: null,
-  url: '/s/script/stage/1/puzzle/2/sublevel/1',
+  url: '/s/script/lessons/1/levels/2/sublevel/1',
   position: 1,
   letter: 'a',
   perfect: true,
