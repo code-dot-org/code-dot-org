@@ -45,7 +45,7 @@ const initialState = {
   professionalLearningCourse: null,
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
-  stages: null,
+  lessons: null,
   lessonGroups: null,
   scriptId: null,
   scriptName: null,
@@ -85,7 +85,7 @@ const initialState = {
  */
 export default function reducer(state = initialState, action) {
   if (action.type === INIT_PROGRESS) {
-    let lessons = action.stages;
+    let lessons = action.lessons;
     // Re-initializing with full set of lessons shouldn't blow away currentLessonId
     const currentLessonId =
       state.currentLessonId ||
@@ -96,7 +96,7 @@ export default function reducer(state = initialState, action) {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: processedLessons(lessons, action.professionalLearningCourse),
+      lessons: processedLessons(lessons, action.professionalLearningCourse),
       lessonGroups: action.lessonGroups,
       peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
@@ -398,7 +398,7 @@ export const initProgress = ({
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
-  stages,
+  lessons,
   lessonGroups,
   peerReviewLessonInfo,
   scriptId,
@@ -416,7 +416,7 @@ export const initProgress = ({
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
-  stages,
+  lessons,
   lessonGroups,
   peerReviewLessonInfo,
   scriptId,
@@ -509,7 +509,7 @@ export const queryUserProgress = userId => (dispatch, getState) => {
 
 // Do we have one or more lockable lessons
 export const hasLockableLessons = state =>
-  state.stages.some(lesson => lesson.lockable);
+  state.lessons.some(lesson => lesson.lockable);
 
 export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
 
@@ -521,8 +521,8 @@ export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
  * @returns {Lesson}
  */
 const lessonFromLessonAtIndex = (state, lessonIndex) => ({
-  ...lessonFromLesson(state.stages[lessonIndex]),
-  isFocusArea: state.focusAreaLessonIds.includes(state.stages[lessonIndex].id)
+  ...lessonFromLesson(state.lessons[lessonIndex]),
+  isFocusArea: state.focusAreaLessonIds.includes(state.lessons[lessonIndex].id)
 });
 const lessonFromLesson = lesson =>
   _.pick(lesson, [
@@ -536,7 +536,7 @@ const lessonFromLesson = lesson =>
     'description_teacher'
   ]);
 export const lessons = state =>
-  state.stages.map((_, index) => lessonFromLessonAtIndex(state, index));
+  state.lessons.map((_, index) => lessonFromLessonAtIndex(state, index));
 
 /**
  * Extract lesson from our peerReviewLessonInfo if we have one. We want this to end up
@@ -566,7 +566,7 @@ const peerReviewLevels = state =>
   }));
 
 /**
- * The level object passed down to use via the server (and stored in stage.stages.levels)
+ * The level object passed down to use via the server (and stored in stage.lessons.levels)
  * contains more data than we need. This (a) filters to the parts our views care
  * about and (b) determines current status based on the current state of
  * state.levelResults
@@ -619,13 +619,13 @@ const levelWithProgress = (
  * Get level data for all lessons
  */
 export const levelsByLesson = ({
-  stages,
+  lessons,
   levelResults,
   scriptProgress,
   levelPairing,
   currentLevelId
 }) =>
-  stages.map(lesson =>
+  lessons.map(lesson =>
     lesson.levels.map(level => {
       let statusLevel = levelWithProgress(
         {levelResults, scriptProgress, levelPairing, currentLevelId},
@@ -649,7 +649,7 @@ export const levelsByLesson = ({
  * Get data for a particular lesson
  */
 export const levelsForLessonId = (state, lessonId) => {
-  const lesson = state.stages.find(lesson => lesson.id === lessonId);
+  const lesson = state.lessons.find(lesson => lesson.id === lessonId);
   return lesson.levels.map(level =>
     levelWithProgress(state, level, lesson.lockable)
   );
@@ -657,7 +657,7 @@ export const levelsForLessonId = (state, lessonId) => {
 
 export const lessonExtrasUrl = (state, lessonId) =>
   state.lessonExtrasEnabled
-    ? state.stages.find(lesson => lesson.id === lessonId)
+    ? state.lessons.find(lesson => lesson.id === lessonId)
         .lesson_extras_level_url
     : '';
 
@@ -691,7 +691,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
     };
   });
 
-  state.stages.forEach((lesson, index) => {
+  state.lessons.forEach((lesson, index) => {
     const group = lesson.lesson_group_display_name;
     const lessonAtIndex = lessonFromLessonAtIndex(state, index);
     let lessonLevels = allLevels[index];

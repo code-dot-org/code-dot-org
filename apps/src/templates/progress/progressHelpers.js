@@ -57,7 +57,7 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
   } else if (viewAs === ViewType.Teacher) {
     return !state.lessonLock.lockableAuthorized;
   } else if (viewAs === ViewType.Student) {
-    return stageLocked(levels);
+    return lessonLocked(levels);
   }
   return true;
 }
@@ -74,8 +74,8 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
 export function lessonIsLockedForAllStudents(lessonId, state) {
   const currentSectionId = state.teacherSections.selectedSectionId;
   const currentSection = state.lessonLock.lessonsBySectionId[currentSectionId];
-  const fullyLockedStages = fullyLockedLessonMapping(currentSection);
-  return !!fullyLockedStages[lessonId];
+  const fullyLockedLessons = fullyLockedLessonMapping(currentSection);
+  return !!fullyLockedLessons[lessonId];
 }
 
 /**
@@ -83,7 +83,7 @@ export function lessonIsLockedForAllStudents(lessonId, state) {
  * @returns {boolean} True if we should consider the lesson to be locked for the
  *   current user.
  */
-export function stageLocked(levels) {
+export function lessonLocked(levels) {
   // For lockable lessons, there is a requirement that they have exactly one LevelGroup,
   // and that it be the last level in the lesson. Because LevelGroup's can have
   // multiple "pages", and single LevelGroup might appear as multiple levels/bubbles
@@ -244,8 +244,8 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
 
 /**
  * The level object passed down to use via the server (and stored in
- * script.stages.levels) contains more data than we need. This parses the parts
- * we care about to conform to our `levelType` oject.
+ * script.lessons.levels) contains more data than we need. This parses the parts
+ * we care about to conform to our `levelType` object.
  */
 export const processedLevel = level => {
   return {
