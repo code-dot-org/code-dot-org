@@ -213,17 +213,17 @@ export const fakeStudentLastUpdateByScript = (scriptData, students) => {
 };
 
 export const fakeProgressTableReduxInitialState = (
-  stages,
+  lessons,
   scriptData,
   students = fakeStudents(2)
 ) => {
-  if (!stages) {
+  if (!lessons) {
     const lesson1 = fakeLessonWithLevels({position: 1, levels: fakeLevels(1)});
     const lesson2 = fakeLessonWithLevels({position: 2, levels: fakeLevels(2)});
-    stages = [lesson1, lesson2];
+    lessons = [lesson1, lesson2];
   }
   if (!scriptData) {
-    scriptData = fakeScriptData({stages});
+    scriptData = fakeScriptData({stages: lessons});
   }
   const levelProgressData = fakeStudentLevelProgress(
     scriptData.stages[0].levels,
@@ -233,7 +233,7 @@ export const fakeProgressTableReduxInitialState = (
   return {
     progress: {
       lessonGroups: [],
-      lessons: stages,
+      lessons: lessons,
       focusAreaLessonIds: [],
       professionalLearningCourse: false
     },
