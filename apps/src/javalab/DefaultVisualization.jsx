@@ -1,10 +1,6 @@
 import React from 'react';
-import PaneHeader, {
-  PaneSection,
-  PaneButton
-} from '@cdo/apps/templates/PaneHeader';
-import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
+import PreviewPaneHeader from './PreviewPaneHeader';
 
 export default class DefaultVisualization extends React.Component {
   state = {
@@ -12,45 +8,17 @@ export default class DefaultVisualization extends React.Component {
     isFullscreen: false
   };
 
-  fullscreenIcon = () => {
-    return this.state.isFullscreen ? 'fa fa-compress' : 'fa fa-arrows-alt';
-  };
-
   render() {
+    const {isCollapsed, isFullscreen} = this.state;
+
     return (
-      <PaneHeader hasFocus>
-        <PaneButton
-          headerHasFocus
-          icon={<CollapserIcon isCollapsed={this.state.isCollapsed} />}
-          onClick={() => {}}
-          label=""
-          isRtl={false}
-          style={styles.transparent}
-          leftJustified
+      <div>
+        <PreviewPaneHeader
+          isCollapsed={isCollapsed}
+          isFullscreen={isFullscreen}
         />
-        {/* TODO: Uncomment iconClass and remove icon prop when we are ready to implement fullscreen. */}
-        {/* The empty icon element keeps everything centered in the header pane. */}
-        <PaneButton
-          headerHasFocus
-          // iconClass={this.fullscreenIcon()}
-          icon={<span style={{width: 13}} />}
-          onClick={() => {}}
-          label=""
-          isRtl={false}
-          style={styles.transparent}
-        />
-        <PaneSection>Preview</PaneSection>
         <ProtectedVisualizationDiv />
-      </PaneHeader>
+      </div>
     );
   }
 }
-
-const styles = {
-  transparent: {
-    backgroundColor: 'transparent',
-    ':hover': {
-      backgroundColor: 'transparent'
-    }
-  }
-};
