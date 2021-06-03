@@ -237,7 +237,7 @@ function extractLevelResults(userProgressResponse) {
  * @param {object} scriptData
  * @param {string} scriptData.id
  * @param {boolean} scriptData.plc
- * @param {object[]} scriptData.stages
+ * @param {object[]} scriptData.lessons
  * @param {string} scriptData.name
  * @param {boolean} scriptData.hideable_lessons
  * @param {boolean} scriptData.isHocScript
@@ -386,7 +386,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {string} scriptData.name
  * @param {boolean} scriptData.disablePostMilestone
  * @param {boolean} [scriptData.plc]
- * @param {object[]} [scriptData.stages]
+ * @param {object[]} [scriptData.lessons]
  * @param {boolean} scriptData.age_13_required
  * @param {string} currentLevelId The id of the level the user is currently on.
  *   This gets used in the url and as a key in many objects. Therefore, it is a
@@ -413,7 +413,7 @@ function initializeStoreWithProgress(
       currentLevelId: currentLevelId,
       professionalLearningCourse: scriptData.plc,
       saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
-      stages: scriptData.lessons,
+      lessons: scriptData.lessons,
       lessonGroups: scriptData.lessonGroups,
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
