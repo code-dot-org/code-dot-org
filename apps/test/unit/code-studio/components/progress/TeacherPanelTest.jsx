@@ -16,8 +16,8 @@ const MINIMUM_PROPS = {
   viewAs: ViewType.Student,
   hasSections: false,
   sectionsAreLoaded: false,
-  scriptHasLockableStages: false,
-  scriptAllowsHiddenStages: false,
+  scriptHasLockableLessons: false,
+  scriptAllowsHiddenLessons: false,
   unlockedLessonNames: [],
   sectionData: null,
   onSelectUser: () => {},
@@ -107,7 +107,7 @@ describe('TeacherPanel', () => {
       <TeacherPanel
         {...MINIMUM_PROPS}
         viewAs={ViewType.Teacher}
-        scriptHasLockableStages={true}
+        scriptHasLockableLessons={true}
         hasSections={true}
       />
     );
@@ -125,7 +125,7 @@ describe('TeacherPanel', () => {
       <TeacherPanel
         {...MINIMUM_PROPS}
         viewAs={ViewType.Teacher}
-        scriptHasLockableStages={true}
+        scriptHasLockableLessons={true}
         hasSections={true}
         unlockedLessonNames={['lesson1', 'lesson2']}
       />

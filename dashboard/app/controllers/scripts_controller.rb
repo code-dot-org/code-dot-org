@@ -73,6 +73,7 @@ class ScriptsController < ApplicationController
   end
 
   def create
+    return head :bad_request unless general_params[:is_migrated]
     @script = Script.new(script_params)
     if @script.save && @script.update_text(script_params, params[:script_text], i18n_params, general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
