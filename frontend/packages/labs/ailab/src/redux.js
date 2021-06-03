@@ -176,7 +176,6 @@ export function setInstructionsKeyCallback(instructionsKeyCallback) {
 }
 
 export function setCurrentPanel(currentPanel) {
-  reportPanelView(currentPanel);
   return { type: SET_CURRENT_PANEL, currentPanel };
 }
 
@@ -453,6 +452,7 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_CURRENT_PANEL) {
+    reportPanelView(action.currentPanel);
     let showedOverlay = false;
     if (state.instructionsKeyCallback) {
       const options = {};
