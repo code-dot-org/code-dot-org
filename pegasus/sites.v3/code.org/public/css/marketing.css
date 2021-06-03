@@ -1,11 +1,12 @@
 /* banner */
 .banner-pt1, .banner-pt2 {
 padding: 0 20px; 
- 
-}
+ }
 
 banner-pt1 {width20%;} 
 banner-pt2 {width80%;}
+
+h2.purple-block{background-color:#7665a0; padding:10px;font-size:24px;color:#ffffff;}
 
 /* columns */
 .column-container{
