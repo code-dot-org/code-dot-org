@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-02 20:22:10 UTC",
+    "serialized_at": "2021-06-03 18:59:51 UTC",
     "seeding_key": {
       "script.name": "poster-draft"
     }
@@ -108,6 +108,16 @@
       }
     },
     {
+      "key": "19a7d426-8a9a-4f4c-b6e9-c73a1c86d4d1",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "19a7d426-8a9a-4f4c-b6e9-c73a1c86d4d1",
+        "lesson_activity.key": "213463b5-75b7-4bf3-8505-dd49952e6e01"
+      }
+    },
+    {
       "key": "9329c9bb-377d-4680-96c0-6fd0b2540794",
       "position": 1,
       "properties": {
@@ -125,6 +135,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -147,6 +160,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-expression_make1"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -169,6 +185,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-expression_positioning"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -183,6 +202,50 @@
       },
       "level_keys": [
         "self-expression_positioning"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "IPL_text_print"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      },
+      "level_keys": [
+        "IPL_text_print"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "IPL_sprites_behaviors"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      },
+      "level_keys": [
+        "IPL_sprites_behaviors"
       ]
     }
   ],
@@ -216,6 +279,30 @@
         "level.key": "self-expression_positioning",
         "script_level.level_keys": [
           "self-expression_positioning"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "IPL_text_print",
+        "script_level.level_keys": [
+          "IPL_text_print"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "IPL_sprites_behaviors",
+        "script_level.level_keys": [
+          "IPL_sprites_behaviors"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
