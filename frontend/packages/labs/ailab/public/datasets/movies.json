@@ -42,9 +42,21 @@
       "id": "Country",
       "description": "The movie's country of origin."
     },
-    { "type": "categorical", "id": "Director", "description": "" },
-    { "type": "categorical", "id": "Genre", "description": "" },
-    { "type": "categorical", "id": "Name", "description": "" },
+    {
+      "type": "categorical", 
+      "id": "Director", 
+      "description": "" 
+    },
+    { 
+      "type": "categorical",
+      "id": "Genre", 
+      "description": "" 
+    },
+    { 
+      "type": "categorical",
+      "id": "Name", 
+      "description": ""
+    },
     {
       "type": "categorical",
       "id": "Rating",
@@ -66,9 +78,10 @@
       "description": ""
     },
     {
-      "type": "categorical", 
-      "id": "Writer", 
-      "description": "" },
+      "type": "categorical",
+      "id": "Writer",
+      "description": ""
+    },
     {
       "type": "categorical",
       "id": "Year",
