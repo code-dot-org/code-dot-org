@@ -66,18 +66,14 @@ class TeacherFeedbackKeepWorking extends Component {
     if (this.state.reviewState === ReviewStates.awaitingReview) {
       return ReviewStates.completed;
     } else if (this.state.reviewState === ReviewStates.keepWorking) {
-      if (!this.initialReviewState) {
-        return null;
-      } else {
-        return ReviewStates.completed;
-      }
+      return this.initialReviewState ? ReviewStates.completed : null;
     } else {
       return ReviewStates.keepWorking;
     }
   }
 
   getTooltipText() {
-    if (this.initialReviewState === 'awaitingReview') {
+    if (this.initialReviewState === ReviewStates.awaitingReview) {
       return i18n.teacherFeedbackAwaitingReviewTooltip();
     } else {
       return i18n.teacherFeedbackKeepWorkingTooltip();
@@ -97,7 +93,7 @@ class TeacherFeedbackKeepWorking extends Component {
         <div data-tip data-place="bottom" data-for="keep-working-tooltip">
           <label htmlFor="keep-working" style={styles.label}>
             <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
-            {this.initialReviewState === 'awaitingReview' && (
+            {this.initialReviewState === ReviewStates.awaitingReview && (
               <span style={styles.awaitingReviewText}>
                 &nbsp;-&nbsp;{i18n.awaitingTeacherReview()}
               </span>
