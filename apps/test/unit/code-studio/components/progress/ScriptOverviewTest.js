@@ -22,7 +22,7 @@ const defaultProps = {
   isRtl: false,
   sectionsForDropdown: [],
   scriptHasLockableLessons: false,
-  scriptAllowsHiddenStages: false,
+  scriptAllowsHiddenLessons: false,
   versions: []
 };
 

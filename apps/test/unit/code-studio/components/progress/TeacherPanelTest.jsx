@@ -17,7 +17,7 @@ const MINIMUM_PROPS = {
   hasSections: false,
   sectionsAreLoaded: false,
   scriptHasLockableLessons: false,
-  scriptAllowsHiddenStages: false,
+  scriptAllowsHiddenLessons: false,
   unlockedLessonNames: [],
   sectionData: null,
   onSelectUser: () => {},

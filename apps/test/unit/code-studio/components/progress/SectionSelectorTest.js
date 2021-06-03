@@ -18,7 +18,7 @@ describe('SectionSelector', () => {
       <SectionSelector
         sections={[]}
         scriptHasLockableLessons={true}
-        scriptAllowsHiddenStages={true}
+        scriptAllowsHiddenLessons={true}
         selectSection={() => {}}
       />
     );
@@ -30,7 +30,7 @@ describe('SectionSelector', () => {
       <SectionSelector
         sections={[fakeSection]}
         scriptHasLockableLessons={true}
-        scriptAllowsHiddenStages={false}
+        scriptAllowsHiddenLessons={false}
         selectSection={() => {}}
       />
     );
@@ -42,7 +42,7 @@ describe('SectionSelector', () => {
       <SectionSelector
         sections={[fakeSection]}
         scriptHasLockableLessons={false}
-        scriptAllowsHiddenStages={true}
+        scriptAllowsHiddenLessons={true}
         selectSection={() => {}}
       />
     );
@@ -55,7 +55,7 @@ describe('SectionSelector', () => {
         alwaysShow={true}
         sections={[fakeSection]}
         scriptHasLockableLessons={false}
-        scriptAllowsHiddenStages={false}
+        scriptAllowsHiddenLessons={false}
         selectSection={() => {}}
       />
     );
@@ -79,7 +79,7 @@ describe('SectionSelector', () => {
           alwaysShow={true}
           sections={[fakeSection]}
           scriptHasLockableLessons={false}
-          scriptAllowsHiddenStages={false}
+          scriptAllowsHiddenLessons={false}
           selectSection={() => {}}
         />
       );
@@ -97,7 +97,7 @@ describe('SectionSelector', () => {
           alwaysShow={true}
           sections={[fakeSection]}
           scriptHasLockableLessons={false}
-          scriptAllowsHiddenStages={false}
+          scriptAllowsHiddenLessons={false}
           selectSection={() => {}}
         />
       );
@@ -114,7 +114,7 @@ describe('SectionSelector', () => {
           alwaysShow={true}
           sections={[fakeSection]}
           scriptHasLockableLessons={false}
-          scriptAllowsHiddenStages={false}
+          scriptAllowsHiddenLessons={false}
           selectSection={selectSection}
           reloadOnChange={true}
         />
@@ -133,7 +133,7 @@ describe('SectionSelector', () => {
           alwaysShow={true}
           sections={[fakeSection]}
           scriptHasLockableLessons={false}
-          scriptAllowsHiddenStages={false}
+          scriptAllowsHiddenLessons={false}
           selectSection={selectSection}
           reloadOnChange={false}
         />
