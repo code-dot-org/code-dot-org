@@ -60,7 +60,15 @@
       "id": "Star",
       "description": "The lead actor or actress."
     },
-    { "type": "categorical", "id": "Writer", "description": "" },
+    {
+      "type": "numerical",
+      "id": "Votes",
+      "description": ""
+    },
+    {
+      "type": "categorical", 
+      "id": "Writer", 
+      "description": "" },
     {
       "type": "categorical",
       "id": "Year",
