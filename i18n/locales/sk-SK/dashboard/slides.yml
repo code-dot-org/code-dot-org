@@ -1023,24 +1023,34 @@ sk:
     csd_concept_computer:
       1:
         image: 'notes/csd_concept_computer_1.png'
+        text: "Volám sa May-Li Khoe, som dizajnérka a vynálezkyňa. Niekoľko návrhov dizajnu som robila pre Apple, teraz navrhujem produkty pre deti, ktoré im uľahčia vyučovanie v škole. Som tiež DJka a venujem sa aj tancu."
       2:
         image: 'notes/csd_concept_computer_2.png'
+        text: "Počítače sú všade! Nájdeš ich v našich vreckách, autách, niektorí ich nosia na ruke. Možno sa jeden taký nachádza práve teraz v tvojom ruksaku. Čo však robí z počítača počítač? Čo vôbec robí z počítača počítač? A ako funguje?"
       3:
         image: 'notes/csd_concept_computer_3.png'
+        text: "Ahoj, som Nat! Jeden z pôvodných dizajnérov Xboxu. S počítačmi pracujem asi od svojich siedmich rokov a v súčasnosti sa venujem virtuálnej realite. Vždy sme ako ľudia budovali nástroje, ktoré nám pomáhali riešiť problémy. Nástroje ako napr. \nfúrik, kladivo, tlačiareň alebo príves traktora."
       4:
         image: 'notes/csd_concept_computer_4.png'
+        text: "Všetky tieto vynálezy nám pomohli pri manuálnej práci. Po čase začali byť ľudia zvedaví, či by sa dalo navrhnúť a vyrobiť zariadenie, ktoré by nám pomohlo pri premýšľaní, napr. pri riešení rovníc alebo sledovaní hviezd na oblohe. Namiesto presunu alebo spracúvania fyzických predmetov, ako sú hlina a kameň, by tieto zariadenia mali slúžiť na spracúvanie informácií. Kým priekopníci informatiky skúmali, ako navrhnúť mysliaci stroj, uvedomili si, že musí plniť štyri rôzne úlohy."
       5:
         image: 'notes/csd_concept_computer_5.png'
+        text: "Mal by vedieť vkladať vstupy, ukladať informácie, spracúvať ich a následne odovzdávať výsledky. Teraz to možno znie jednoducho, ale tieto štyri veci majú spoločné všetky počítače. Je to to, čo robí z počítača počítač."
       6:
         image: 'notes/csd_concept_computer_6.png'
+        text: "Počítače sa začali používať ako kalkulačka, čo bolo v tom čase naozaj úžasné, a vtedy spracúvali len čísla. Teraz ich však môžeme použiť na komunikáciu, hranie hier, ovládanie robotov a iné bláznivé veci, aké si viete predstaviť. Moderné počítače už dávno nevyzerajú ako tie veľké staré stroje, stále však vykonávajú tie isté 4 úlohy."
       7:
         image: 'notes/csd_concept_computer_7.png'
+        text: "Najskôr sa porozprávame o vstupe. Moja obľúbená časť, pretože vstupy sú všetko, čo robí svet alebo čo robíte vy, vďaka \nčomu počítač plní úlohy. Počítaču môžete dávať príkazy pomocou klávesnice, myši, mikrofónu alebo kamery. Všetky tieto rôzne vstupy poskytujú počítaču informácie, ktoré sa potom uložia do pamäte."
       8:
         image: 'notes/csd_concept_computer_8.png'
+        text: "Procesor počítača prijíma informácie z jeho pamäte. Spracúva ich alebo ich mení pomocou algoritmu, ktorý predstavuje sériu príkazov. A potom odošle spracované informácie späť na uloženie do pamäte. Toto pokračuje, kým spracované informácie nie sú pripravené na výstup."
       9:
         image: 'notes/csd_concept_computer_9.png'
+        text: "Spôsob, akým počítač odovzdáva informácie, závisí od toho, na čo bol navrhnutý. Displej počítača zobrazuje text, fotografie, videá, interaktívne hry -- aj virtuálnu realitu! Výstup môže dokonca obsahovať signály na riadenie robota."
       10:
         image: 'notes/csd_concept_computer_10.png'
+        text: "A kto vie, ako budú počítače vyzerať v budúcnosti? Dúfam, že práve ty budeš rozhodovať o tom, ako budú počítače v budúcnosti vyzerať. Bez ohľadu na rôzne typy technológií, ktoré počítače používajú, vykonávajú stále rovnaké 4 úlohy. Prijímajú informácie, ukladajú ich ako dáta, spracovávajú ich a nakoniec odovzdávajú výsledky."
     csd_concept_binary_data:
       1:
         image: 'notes/csd_concept_binary_data_1.png'

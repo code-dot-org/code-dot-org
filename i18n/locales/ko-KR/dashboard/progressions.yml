@@ -43,6 +43,7 @@ ko:
       Debugging with the Step Button: 스텝버튼으로 디버깅하기
       Demo Apps: 데모 앱
       Design Mode: 디자인 모드
+      Designing for Accessibility: 접근가능성을 위한 설계
       Drawing: 그리기
       Events: 이벤트
       Events and Linking Screens: 이벤트 및 연결 화면
@@ -96,6 +97,7 @@ ko:
       Making Sounds: 소리 만들기
       'Maze Intro: Programming with Blocks': '메이즈 인트로: 블록으로 프로그래밍'
       Measures: 마디
+      'Mini-Project: About Me': '스프라이트 랩으로 자기 소개'
       'Mini-Project: Alien Dance Moves': '미니 프로젝트: 에일리언 댄스 무브스'
       'Mini-Project: Alien Dance Party': '미니 프로젝트: 에일리언 댄스 파티'
       'Mini-Project: Royal Battle': '미니 프로젝트: 로열 배틀'
@@ -103,6 +105,7 @@ ko:
       'Mini-Project: Snowflake #2': '미니 프로젝트: 눈송이 #2'
       'Mini-Project: Swimming Fish': '미니 프로젝트: 수영하는 물고기'
       'Mini-Project: Swimming Fish (continued)': '미니 프로젝트: 수영하는 물고기 (계속하기)'
+      'Mini-Project: User Input Programs': '챗봇 만들기'
       'Mini-Project: Virtual Pet': '미니 프로젝트: 가상 애완동물'
       'Mini-project: Chase Game': '미니 프로젝트: 따라잡기 게임'
       'Mini-project: Flappy Game': '미니 프로젝트: 플래피 게임'
@@ -116,10 +119,13 @@ ko:
       Movement with the Counter Pattern: 카운터 패턴을 사용한 이동
       Multiframe Animations: 멀티 프레임 애니메이션
       Musical Arrays: 음악 배열
+      My Online Neighborhood: 내 온라인 이웃
       Nested Loops with the Bee: 벌과 함께 내포된 루프
       New Shapes: 새 도형
       Orientation: 오리엔테이션
       Pair Programming: 페어 프로그래밍
+      Picturing Data: 데이터 묘사
+      Planning: 계획
       Platform Jumper - Background and Variables: 플랫폼 점퍼 - 배경 및 변수
       Platform Jumper - Items: 플랫폼 점퍼 - 아이템
       Platform Jumper - Platforms: 플랫폼 점퍼 - 플랫폼
@@ -145,6 +151,7 @@ ko:
       Repeat Unit Statements: 장치 문장 반복
       Repeat Until Statements: 장치 문장 반복
       Representing Images: 이미지 표현
+      Review: 검토
       Run a simulation: 시뮬레이션 실행
       Sample Programs: 샘플 프로그램
       Screen Design: 스크린 디자인

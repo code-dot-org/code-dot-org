@@ -5789,3 +5789,32 @@ ru:
           lessons:
             lesson15:
               name: Урок 15
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: Приступить к работе
+              name: Приступить к работе
+            Computer Science Fundamentals:
+              key: Основы программирования
+              name: Основы программирования
+            'Mastering the Basics: Sequencing':
+              key: 'Освоение основ: последовательности'
+              name: 'Освоение основ: последовательности'
+            'Mastering the Basics: Loops':
+              key: 'Освоение основ: циклы'
+              name: 'Освоение основ: циклы'
+            'Mastering the Basics: Conditionals':
+              key: 'Освоение основ: условные операторы'
+              name: 'Освоение основ: условные операторы'
+            'Mastering the Basics: Functions':
+              key: 'Освоение основ: функции'
+              name: 'Освоение основ: функции'
+            'Mastering the Basics: Events':
+              key: 'Освоение основ: события'
+              name: 'Освоение основ: события'
+            Planning:
+              key: Планирование
+              name: Планирование
+            Next Steps:
+              key: Следующие шаги
+              name: Следующие шаги

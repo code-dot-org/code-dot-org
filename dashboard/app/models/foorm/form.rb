@@ -91,12 +91,12 @@ class Foorm::Form < ApplicationRecord
   end
 
   def self.get_questions_and_latest_version_for_name(form_name)
-    latest_version = Foorm::Form.where(name: form_name).maximum(:version)
-    return nil if latest_version.nil?
+    latest_published_version = Foorm::Form.where(name: form_name, published: true).maximum(:version)
+    return nil if latest_published_version.nil?
 
-    questions = get_questions_for_name_and_version(form_name, latest_version)
+    questions = get_questions_for_name_and_version(form_name, latest_published_version)
 
-    return questions, latest_version
+    return questions, latest_published_version
   end
 
   def self.get_questions_for_name_and_version(form_name, form_version)

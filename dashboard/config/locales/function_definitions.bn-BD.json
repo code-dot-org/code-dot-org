@@ -1175,6 +1175,83 @@
               "length": "দৈর্ঘ্য"
             }
           }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a circle": {
+            "name": "একটি বৃত্ত আঁকুন।"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "দৈর্ঘ্য",
+              "repeat": "পুনরাই"
+            }
+          },
+          "draw a triangle": {
+            "name": "একটি ত্রিভুজ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a house": {
+            "name": "একটি ঘর আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "এক্স"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "খেলা শেষ করুন"
+          }
         }
       }
     }

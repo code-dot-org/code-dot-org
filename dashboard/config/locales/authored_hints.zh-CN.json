@@ -8780,6 +8780,1175 @@
         "outbreak7": {
           "whenclicked": "## 疫苗\n\n当你点击怪物时，你可以模拟给它们接种疫苗。要做到这一点，使用带这个事件的“更改服装”块：\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "感觉被难住了？你总是可以通过点击下面的“版本历史”重置你的代码，然后选择“重新开始”。"
+        },
+        "CourseF_outbreak1": {
+          "step1": "使用这些块来创建你的精灵图：\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\n这个块位于工具箱的**精灵图**类别中。",
+          "step2": "用这个块改变精灵图的大小：<xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>。\n\n它可以在工具箱的**操作**类别中找到。",
+          "step3": "用这个使所有精灵图开始漫步：<xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>。\n\n这个块可以在工具箱的**操作**类别中找到。"
+        },
+        "CourseF_outbreak2": {
+          "hint1": "点击事件块上的“+”按钮。用里面找到的“主题”块填充“更改服装”块中的空位。\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak3": {
+          "hint1": "要给怪物戴口罩，请使用带“被点击时”事件的“更改服装”块：\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\n确保还要拖入小型的红色“被点击”块！",
+          "hint2": "这一级别的新代码如下：\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak4": {
+          "challenge": "## 寻找额外的挑战？\n\n你还可以让怪物移动得更快或更慢。\n\n1.  在此块<xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>点击“编辑” \n2.  增大或减小此块中的数字： \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\n为了让怪物移动得更慢，选择一个十进制数字，比如“0.5”或“0.25”。为了让它们移动得更快，请选择任何大于1的数字。"
+        },
+        "CourseF_outbreak6": {
+          "hint2": "确保将其他“操作”块移动到“如果有机会”块的内部：\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": "你需要再添加3个“接触时”事件来检查健康精灵图和受感染精灵图之间所有可能的“接触”组合。\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+        },
+        "CourseF_outbreak7": {
+          "whenclicked": "## 疫苗\n\n当你点击怪物时，你可以模拟给它们接种疫苗。要做到这一点，使用带这个事件的“更改服装”块：\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "感觉被难住了？你总是可以通过点击下面的“版本历史”重置你的代码，然后选择“重新开始”。"
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "无法想到怎样画线吗？请开始把模块添加到 <xml><block type=\"when_run\"/></xml>模块看会发生什么。",
+          "courseA_artist_loops2_b": "使用模块<xml><block type=\"simple_move_right\"/></xml>来解决此关卡。"
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "用手指慢慢地追踪程序, 看看是哪里出问题了。",
+          "courseA_artist_loops3_b": "您将使用这样的模块来解决这个关卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "如果希望循环重复4次以上, 你可以更改该模块顶部的数字。",
+          "courseA_artist_loops4_b": "由于只能使用一个<xml><block type=\"simple_move_right\"/></xml>模块, 请尝试将其放入<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> 循环中。"
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_a": "请试着使用你已经学到的<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>模块知识来完成此关卡。",
+          "courseA_artist_loops5_b": "如果希望循环重复4次以上, 你可以更改该模块顶部的数字。",
+          "courseA_artist_loops5_c": "由于只能使用一个<xml><block type=\"simple_move_right\"/></xml>模块, 请尝试将其放入\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环中。"
+        },
+        "courseA_artist_loops6_2021": {
+          "courseA_artist_loops6_a": "无法想出如何制作山峰吗？请试着运行这些模块看它们每个是画什么的？",
+          "courseA_artist_loops6_b": "您需要两个方向的两个模块来解决这个难题。"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_a": "想不出在哪里放此循环吗？请试着逐步写下代码并寻找规律模式。",
+          "courseA_artist_loops7_b": "先写一个波浪的代码, 然后再重复来画另外两个。",
+          "courseA_artist_loops7_c": "请记住, 可以在<xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>循环中放置多个块。"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_a": "请尝试运行代码看已经为你写了些什么。",
+          "courseA_artist_loops8_b": "如何循环已经给你的代码？",
+          "courseA_artist_loops8_c": "这个代码是做什么的？\n它应该做什么？\n那告诉你什么？"
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_a": "将另一个模块添加到已经给您的代码中来绘制其余的楼梯。",
+          "courseA_artist_loops9_b": "您添加的模块应该在<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>循环的内部。",
+          "courseA_artist_loops9_c": "如果您无法确定将循环放在何处, 请尝试逐步编写代码并查找规律。"
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "像这样的模块 <xml> <block type=\"simple_move_up_left\"/></xml>会让你的艺术家在斜面上移动!",
+          "courseA_artist_loops_challenge2_b": "当您完成一个帐篷时，向上`跳跃`两次到达下一个!",
+          "courseA_artist_loops_challenge2_c": "所有的模块都将需要在一个循环内才可以完成此关卡。"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。\n<xml> <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "一个简单的解决方案是向东移动两次, 然后得到宝藏。"
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "在你收集财宝之前, 你必须先向前移动。",
+          "courseA_collector_loops2_b": "在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。\n<xml> <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "试试使用 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n 循环！",
+          "courseA_collector_loops3_b": "请记住, 您可以在 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 循环中放置超过1个模块。"
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "要改变劳雷尔所走的距离, 请更改循环运行的次数。",
+          "courseA_collector_loops4_b": "请别忘了罗瑞尔需要在她完成 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环后走下去收集所有的宝藏！"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "如果你不能马上找到答案，试着用一张纸来找出你需要的箭头并找到一个图案。",
+          "courseA_collector_loops5_b": "试着把问题分成2部分, 然后侧身移动, 然后向下。",
+          "courseA_collector_loops5_c": "您将开始使用 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 循环, 来让劳雷尔向西移动并收集宝藏。"
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "搞不清楚那里有错？尝试运行代码多次，看看会发生什么。",
+          "courseA_collector_loops6_b": "最短解决方案有 2 个<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环, 一个接一个。"
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "如果您不知道接下来会发生什么，请尝试运行代码以查看罗瑞尔结束的位置。"
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "如果您遇到此难题，请尝试在一张纸上写下所有的动作并寻找规律。",
+          "courseA_collector_loops8_b": "尝试将这个谜题分解成3个单独的问题, 并为每一个编写循环。",
+          "courseA_collector_loops8_c": "记住, 你可以一次写一段代码, 然后按 \"运行\" 来找出你需要去哪里。"
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "如果无法发现使用循环的最佳位置, 请尝试逐步对其进行编码, 并寻找规律。 ",
+          "courseA_collector_loops9_b": "尝试将你的两个<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环之一放入另一个循环中, 来让代码更短!"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "如果有错误，请尝试更改每个循环中的数字。",
+          "courseA_collector_loops_challenge1_b": "如果有什么事情只做一次，就不需要使用循环, 。",
+          "courseA_collector_loops_challenge1_c": "当你开始的时候, 有6个宝石在洞穴的右侧, 但你只需要向南移动5次获得宝藏。你知道这是为什么吗？",
+          "courseA_collector_loops_challenge1_d": "开始的程序没有收集最后两个宝石。尝试在末尾添加此代码: \n\n<xml><block type=\"maze_moveEast\">\n<next>\n<block type=\"collector_collect_simplified\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "请尝试此路径以获得解决方案。",
+          "courseA_collector_loops_challenge2kp_a": "你能用循环来解决这个关卡吗？"
+        },
+        "courseA_harvester_loops1_2021": {
+          "courseA_harvester_loops1_a": "一旦移动到了某个玉米上，用这个模块采摘它！\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops2_2021": {
+          "courseA_harvester_loops2_a": "代码会有 **四个**`向西移动`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n模块和**四个**<xml>`采摘玉米`<block type=\"harvester_corn\"/></xml>模块。 ",
+          "courseA_harvester_loops2_b": "如果你仍然遇到麻烦，请尝试将步骤大声说出来。 "
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_a": "用一个这样的`重复`模块来帮忙！\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
+          "courseA_harvester_loops3_b": "要重复代码, 拖出一个`重复`循环, 然后把它放在你想要的模块里面。"
+        },
+        "courseA_harvester_loops4_2021": {
+          "courseA_harvester_loops4_a": "勇敢按下`运行`按钮，看看会发生什么！",
+          "courseA_harvester_loops4_b": "有多少块玉米？你的代码重复了多少次？"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "如果你被难住了，试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。",
+          "courseA_harvester_loops5_b": "最终的代码会有**一个**`重复`<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-10\">6</title></block></xml>循环，**一个**`向南移动`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>模块和**一个**`向东`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>移动的模块。",
+          "courseA_harvester_loops5_c": "通过这条路来采摘所有的玉米。"
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "你需要一个`重复`循环连着另一个。",
+          "courseA_harvester_loops5a_b": "一个循环要重复`向南移动`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一个要重复`向东移动`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>。",
+          "courseA_harvester_loops5a_c": "走这条路，先往一个方向走，再往另一个方向走。"
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "点击`运行`看看会发生什么！",
+          "courseA_harvester_loops5b_b": "你的循环重复了正确的次数吗？",
+          "courseA_harvester_loops5b_c": "沿着这条路往一个方向移动，然后往另一个方向移动。"
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "如果你被难住了，试着在纸上写下步骤, 寻找重复的规律。",
+          "courseA_harvester_loops6_b": "想要采摘所有玉米就得走这条路。"
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_a": "你需要两个`重复`<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-10\">5</title></block></xml>循环相连！",
+          "courseA_harvester_loops7_b": "用两个循环来沿着这条路走。"
+        },
+        "courseA_harvester_loops9_2021": {
+          "courseA_harvester_loops9_a": "将这一关分成三个不同部分，一部分到达第一个角落，一部分到达第二个角落，最后一部分到达终点。",
+          "courseA_harvester_loops9_b": "在每个部分完成后，别害怕运行代码，看看会发生什么！",
+          "courseA_harvester_loops9_c": "沿这条路来收获所有的玉米。"
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "被难住了？请试着先在一张纸上写下步骤。",
+          "courseA_harvester_seq10_b": "你需要`向东移动`，然后`向北移动`。这样做两次。别忘了还要采摘所有的玉米！",
+          "courseA_harvester_seq10_c": "试着用这条路捡起所有橡子。"
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "用这个模块来让收割者到达玉米时，采摘它。\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "用这个模块来让收割者一旦找到玉米，就采摘它！\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "收割者需要向东移动三次来采摘玉米，用这个模块：\n\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "别忘了用<xml><block type=\"harvester_corn\"/></xml>来采摘玉米！",
+          "courseA_harvester_seq2_b": "请试着在纸张上写下步骤来找到解决方法！"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "还记得用这个模块吗？\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "大声的说出这些步骤，来看看是否能帮你找到答案。"
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "在收割者和玉米之间有多少空间？工作区里已经有多少个模块了？",
+          "courseA_harvester_seq4_b": "你需要用5次`向西移动`和一次`采摘玉米`模块：\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "哪个模块将收割者移向了错误的路？",
+          "courseA_harvester_seq5_b": "你需要去掉一个模块。",
+          "courseA_harvester_seq5_c": "将这个模块扔进垃圾箱！\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "如果被难住了，试着大声的说出这些步骤。这会帮你找到正确的路径。"
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。",
+          "courseA_harvester_seq7_b": "有困难了？这是收割者应该走的路。"
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "你的最终代码应该有**4**移动块和**2**选择块。"
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "运行代码几次来看看发生了什么。收割者在哪里停下来了？",
+          "courseA_harvester_seq9_b": "别忘了采摘所有的玉米！你需要**3**个采摘玉米模块。",
+          "courseA_harvester_seq9_c": "你应该用这条路来捡起所有橡子。"
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "你的代码应该会像这样：\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "你的代码应该会像这样：\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "你的代码应该会像这样：\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "你的代码应该会像这样：\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "你的代码应该会像这样：\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "如果你有困难, 试着先写下一张纸上的步骤。",
+          "courseA_maze_seq10_b": "您将需要移动3 个方向来通过此关卡。"
+        },
+        "courseA_maze_seq10_dani": {
+          "courseA_maze_seq10_a": "如果你有困难, 试着先写下一张纸上的步骤。",
+          "courseA_maze_seq10_b": "您将需要移动3 个方向来通过此关卡。"
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_a": "如果对路径不明白，请使用手指来追踪鸟到猪的线路。",
+          "courseA_maze_seq13_b": "不要害怕犯错误！尝试添加块并运行代码, 看看会发生什么。",
+          "courseA_maze_seq13_c": "这些 <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>块会帮你靠近猪。"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "如果在让鸟移动时遇到问题, 请确保模块是被放置在<xml>\n<block type=\"when_run\"/>\n</xml> 下面",
+          "courseA_maze_seq1_b": "这只鸟需要向西移动3次才能到达猪。用这个模块: <xml> <block type=\"maze_moveWest\"/> </xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "请试着在纸张上写下步骤来找到解决方法！",
+          "2": "你需要用这个模块：\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+        },
+        "courseA_maze_seq5_dani": {
+          "courseA_maze_seq5_a": "请试着在纸张上写下步骤来找到解决方法！",
+          "courseA_maze_seq5_b": "您将需要指向两个方向的两个模块。"
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "大声的说出这些步骤，来看看是否能帮你找到答案。"
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "最终的代码应该有3个移动模块。",
+          "courseA_maze_seq6_b": "如果你被难住了，试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。"
+        },
+        "courseA_maze_seq6_dani": {
+          "courseA_maze_seq6_a": "最终的代码应该有3个移动模块。",
+          "courseA_maze_seq6_b": "如果你被难住了，试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。"
+        },
+        "courseA_maze_seq7_dani": {
+          "courseA_maze_seq7_a": "你需要添加1个模块来把鸟移到猪那。",
+          "courseA_maze_seq7_b": "如果无法想出要怎么做，请试着在纸张上画出关卡，并用手指来找出要移动的方向。"
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "如果你被卡住了, 试着在纸上画出图像, 看看鸟儿应该如何移动。"
+        },
+        "courseA_maze_seq8_dani": {
+          "courseA_maze_seq8_a": "如果你被卡住了, 试着在纸上画出图像, 看看鸟儿应该如何移动。"
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "这个关卡有两个解决方法。"
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "试着用手指数一下空格。记住不要数你开始的空间!"
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_a": "请找出可以让狗说些什么的模块。",
+          "courseA_playLab_events2_b": "这是你要解决这问题要用的代码：\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">1</title>\n<title name=\"VALUE\">你好。</title>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "拖拽此模块<xml><block type=\"studio_move\">\n\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">8</title>\n</block></xml>并放在此模块的下面<xml><block type=\"studio_whenArrow\">\n<title name=\"VALUE\">左</title>\n</block></xml>",
+          "courseA_playLab_events3_b": "请记住, 在您编写完程序后, 使用左箭头键将乔治移动到旗那里。当国旗变绿的时候就完成了."
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "这是您将要让乔治右移的事件模块：\n\n<xml><block type=\"studio_move\">\n\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">2</title>\n</block></xml>",
+          "courseA_playLab_events4_b": "这是您将要完成此关卡的代码：\n\n<xml><block type=\"studio_whenArrow\">\n\n<title name=\"VALUE\">right</title>\n<next>\n<block type=\"studio_move\">\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">2</title>\n</block></next></block></xml>"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_a": "这是要用来让乔治上下移动的事件模块：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">上</title>\n  </block></xml>\n和\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">下</title>\n  </block></xml>",
+          "courseA_playLab_events5_b": "您是否知道可以通过单击块中的图片并选择新的键来更改事件的方向键？ \n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "这是您要使用在点击时让乔治做些事情的事件模块：\n\n<xml><block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block></xml>",
+          "courseA_playLab_events6_b": "这是您要使用来改变背景的模块：\n\n<xml><block type=\"studio_setBackground\">\n\n<title name=\"VALUE\">random</title>\n</block></xml>",
+          "courseA_playLab_events6_c": "这是您要使用来播放随机声音的模块：\n\n<xml><block type=\"studio_playSound\">\n\n<title name=\"SOUND\">随机</title>\n</block></xml>"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "使用此块来控制当演员碰撞时会发生什么。 \n\n<xml><block type=\"studio_whenSpriteCollided\">\n\n<title name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">0</title>\n</block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "当点击罗宾时，让企鹅出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>",
+          "courseA_playlab_events_challenge1_b": "当点击企鹅时，让布出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>",
+          "courseA_playlab_events_challenge1_c": "当点击布时，让毛绒绒的怪物杰登出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">4</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">5</title>\n</block>\n</next>\n</block></xml>",
+          "courseA_playlab_events_challenge1_d": "当点击怪物的时候让机器人史毕福出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>",
+          "courseA_playlab_events_challenge1_e": "最后，当点击史毕福的时候让巫师温德尔出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "可以让小鸟唱歌。\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">2</title>\n<title name=\"TEXT\">吱喳</title>\n</block>\n</next>\n</block></xml>",
+          "courseA_playlab_events_challenge2_b": "可以让机器人发出咕噜声。\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">咕噜</title>\n</block>\n</next>\n</block></xml>",
+          "courseA_playlab_events_challenge2_c": "你可以让生气的怪物咆哮。\n\n<xml> <block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "如果斯奎特做的和你想的不一样，确保两个模块都完全链接到了一起，然后再点击\"运行\"。",
+          "2": "别害怕犯错误！试试一些办法，如果不起作用，就试试别的办法！"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "你的代码应该会像这样：\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "你的代码应该会像这样：\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "你的代码应该会像这样：\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "你的代码应该会像这样：\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "你的代码应该会像这样：\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "如果希望循环重复4次以上, 你可以更改该模块顶部的数字。",
+          "courseB_artist_loops2_b": "尝试先运行代码, 看看艺术家最后会在那里。"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "记住使用一个`重复`循环来更好地编码！",
+          "courseB_artist_loops3_b": "艺术家会想向南移动, 画出这条线。"
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "跳转模块允许您在不绘制直线的情况下向前移动。",
+          "courseB_artist_loops4_b": "您将需要添加一个模块到重复循环内，以解决这个关卡。",
+          "courseB_artist_loops4_c": "不要忘记更改循环重复的次数。"
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "拖出一个`重复`循环，然后把其他模块放在它里面。需要重复几次？"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "试着在一张纸上记下移动的路线, 并找出模式。"
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "这个挑战使用了**4**个循环，一个接一个！",
+          "courseB_artist_loops7_b": "请注意每个循环制作往不同方向上移动的楼梯模式。",
+          "courseB_artist_loops7_c": "循环应该这样做：\n\n-   循环1\n\n-   向右\n\n-   向下\n\n-   循环2\n\n-   向右\n    \\-向上\n\n-   循环3\n\n-   向左\n\n-   向上\n\n-   循环4\n\n-   向左\n\n-   向下"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "您需要重复模式多少次来制作楼梯？",
+          "courseB_artist_loops8_b": "尝试运行给出的代码来查看它的执行。"
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_a": "请记住, 跳跃模块可以用来移动, 而无需绘制直线。",
+          "courseB_artist_loops9_b": "您将使用 W 模块来解决这个关卡。",
+          "courseB_artist_loops9_c": "想不出在哪里放此循环吗？请试着逐步写下代码并寻找规律模式。"
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "像这样的模块:  <xml> <block type=\"simple_move_up_right\"/></xml> 将让您的艺术家在斜线上移动！",
+          "courseB_artist_loops_challenge1_b": "当你完成一个骰子, `跳`到下一个!",
+          "courseB_artist_loops_challenge1_c": "您将需要`移动`或`跳过`一些相同的行两次。 "
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "绘制 X 的代码已经给你了。所有你需要做的是重复 X 和`跳转`到下一个点。",
+          "courseB_artist_loops_challenge2_b": "您可以使用 \"跳转\" 模块移动到其他位置。"
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "如果想不出在哪里放置`重复`循环，请逐步写下代码并寻找规律。",
+          "courseB_collector_loops10_b": "试着在一张纸上写下移动的情况, 来寻找共同的模式。"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "当您站在上面时, <xml><block type=\"collector_collect_simplified\"/></xml> 块可以用来拾取宝藏。"
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "在你收集财宝之前, 你必须先向前移动。",
+          "courseB_collector_loops2_b": "当您到达有宝藏的地方时, 请使用 <xml><block type=\"collector_collect\"/></xml>模块来拾取它。"
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "请试着使用一个 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml>模块来收集宝藏。",
+          "courseB_collector_prog3_b": "请记住, 您可以在重复循环中放置多个块。"
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "请试着使用步进按钮来找出问题所在。",
+          "courseB_collector_loops4_b": "要改变劳雷尔所走的距离, 请更改循环运行的次数。",
+          "courseB_collector_loops4_c": "在完成了`重复`循环后，劳雷尔需要走下来, 并收集宝藏,!"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "请使用一个以上的循环来完成任务。",
+          "courseB_collector_loops5_b": "尝试运行代码几次, 看看会发生什么。"
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "无法找出哪里出错？请使用\"步进\"按钮来逐模块运行程序。",
+          "courseB_collector_loops6_b": "通过单击 \"3\" 并选择其他数字, 可以更改重复循环运行的次数。",
+          "courseB_collector_loops6_c": "需使用 3 次 `重复` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 循环来通过此关。",
+          "courseB_collector_loops6_d": "如果你感到迷惑, 试着把这个关卡分成3块。"
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "如果此关卡太难，请试着在纸张上把它画出来，看看怎么解决。",
+          "courseB_collector_loops7_b": "你将需要3个重复循环来解决这个关卡, 最后不要忘记额外的宝藏!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "如果无法想出在哪里放置重复循环，请逐步写下代码并寻找规律。"
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "这看起来太难了吗？请把它分解成3个小问题，这样会感觉容易些。  ",
+          "courseB_collector_loops9_b": "您将需要3个重复循环, 一个接一个, 来解决这个关卡。"
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "从循环执行以下命令开始：\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "在每条路径之间向东移动两次。\n\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\n\n只能使用14个模块来实现。单击查看更多解决方案来得到更多提示。",
+          "courseB_collector_loops_challenge1_d": "试试这个！\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "如果出了问题，请试着调试它。不要放弃！",
+          "courseB_collector_loops_challenge2a_b": "请看看此选项以通过迷宫。您是否看到了您可以重复的模式？",
+          "courseB_collector_loops_challenge2a_c": "要收集所有的宝藏，要么需要添加2 个<xml> <block type=\"collector_collect\"/></xml>模块到您的循环内，或者把此模块放到它自己的`重复`模块中。"
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "小心破冰！斯奎特会掉到水里的！",
+          "courseB_iceage_loops10_b": "试试大声说出步骤，或将它们写到纸上。找到什么规律了吗？",
+          "courseB_iceage_loops10_c": "这是一个很长的迷宫！沿这条路走。"
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "小心破冰！斯奎特会掉下去的！",
+          "courseB_iceage_loops1_b": "需要用这个模块：\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "将这一关分成两部分，一个在角落前，另一个在角落后。",
+          "courseB_iceage_loops2_b": "如果被难住了，试着大声说出步骤来。",
+          "courseB_iceage_loops2_c": "修复这条路，来帮助斯奎特到达橡子。"
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "用这个新的模块！\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "要重复代码, 拖出一个`重复`循环, 然后把它放在你想要的模块里面。"
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_a": "写下斯奎特要到达橡子的步骤。找到规律了吗？",
+          "courseB_iceage_loops4_b": "别害怕运行你的代码，看看会发生什么！",
+          "courseB_iceage_loops4_c": "这是斯奎特应该走的路。"
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "最终的代码会有**三个**移动模块。",
+          "courseB_iceage_loops6_b": "你只需要再添加**一个**循环！",
+          "courseB_iceage_loops6_c": "最终的路应该像这样。"
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "如果被难住了，试着在纸上写下步骤。找到规律了吗？",
+          "courseB_iceage_loops7_b": "斯奎特想要拿到橡子就得走这条路。"
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "这些移动模块正确吗？你还能改什么？",
+          "courseB_iceage_loops8_b": "第一个循环应当重复**3**次，第二个应当重复**5**次，第三个循环应当重复**4**次，最后一个循环应当重复**4**次。",
+          "courseB_iceage_loops8_c": "使用循环帮助斯奎特沿着这条路走。"
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "有困难吗？试着将这一关分成更小的部分。别害怕运行你的代码！",
+          "courseB_iceage_loops9_b": "最后的代码会有**4**个循环。",
+          "courseB_iceage_loops9_c": "斯奎特应该沿着这条路去找橡子。"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "将模块连接到 <xml><block type=\"when_run\"/></xml>模块以使鸟移动!",
+          "courseB_maze_seq1_b": "拖动三个 <xml><block type=\"maze_moveSouth\"/></xml>箭头并将它们连接到<xml><block type=\"when_run\"/></xml>模块中, 以将您的鸟带到猪那里。"
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "试着一次加一条指令，直到到达猪那里。",
+          "courseB_maze_seq4_b": "您需要使用 <xml><block type=\"maze_moveEast\"/></xml>模块来解决此关卡。"
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "如果你被卡住了, 试着在纸上画出路径。",
+          "courseB_maze_seq5_b": "有两种方法来解决这个难题！",
+          "courseB_maze_seq5_c": "不知道怎么去找猪？ 尝试此路径。"
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "最终的代码应该有3个移动模块。",
+          "courseB_maze_seq6_b": "如果你被卡住了, 试着分成两个部分来解决关卡, 一个是侧面的路, 一条是从上到下的。",
+          "courseB_maze_seq5_c": "有两种方法来解决这个难题！",
+          "courseB_maze_seq5_d": "不知道怎么去找猪？尝试这条路!"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "添加一个模块, 让鸟到猪那！",
+          "courseB_maze_seq7_b": "尝试运行给你的代码, 看看你是什么结果。",
+          "courseB_maze_seq7_c": "够不到猪吗？ 尝试这条路!"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "试着一次添加一个模块, 直到你解开这个关卡。",
+          "courseB_maze_seq8_b": "有两种方法来解决这个难题 ！",
+          "courseB_maze_seq8_c": "不知道该走哪条路？尝试这条路!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "请试着先在一张纸上写下所有的步骤。",
+          "courseB_maze_seq9_b": "每次生成一个模块，并在生成时进行测试。",
+          "courseB_maze_seq9_c": "有两种方法来解决这个难题！",
+          "courseB_maze_seq9_d": "卡住了? 尝试这条路!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "这一次最短路径可能无法解决问题。",
+          "courseB_maze_seq_challenge1_b": "请尝试使用 <xml><block type=\"maze_moveWest\"/></xml> 模块来开始。"
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "您不需要添加或删除块来解决此关卡。",
+          "courseB_maze_seq_challenge2_b": "重新排列模块, 并采取楼梯模式的路径。"
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "这个模块能让黛西说些什么\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">你好。</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "这是用来添加事件的模块：\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">0</title>\n</block>\n</xml>",
+          "courseB_playlab_events3_b": "这是用来改变黛西心情的模块。\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">random</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "这是控制左方向键的事件：\n\n<xml>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">left</title>\n</block>\n</xml>",
+          "courseB_playlab_events4_b": "这就是让骑士向左移动的模块。\n\n<xml>\n<block type=\"studio_move\">\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">8</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "这是控制右方向键的事件：\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "这是让骑士逃跑的模块：\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "你需要这些事件模块：\n\n<xml>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">up</title>\n</block>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">down</title>\n</block>\n</xml>",
+          "courseB_playlab_events6_b": "用绿色的\"当 \\_\\_\\_ 箭头按下\" 块的下拉箭头来选择不同的方向。\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_c": "得到所有的旗帜来通过!"
+        },
+        "courseB_playlab_events7_2021": {
+          "courseB_playlab_events7_a": "这是你要用到的事件模块：\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events7_b": "这是用来播放一个声音的模块。\n\n<xml>\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">slap</title>\n</block>\n</xml>",
+          "courseB_playlab_events7_c": "这是让骑士消失的模块。\n\n<xml>\n<block type=\"studio_vanish\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "当按下`▼`时, 让其他动物向下移动。\n\n<xml>\n<block type=\"studio_whenArrow\" movable=\"false\">\n<title name=\"VALUE\">down</title>\n</block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "用这个模块改变动物的速度：\n\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
+          "courseB_playlab_events_challenge1_c": "比赛结束后, 大家会怎么说？让他们交谈这次的活动：\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">啊哈！</title>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "游戏中的每种动物都应该在被敲击时消失。它也应该在一两秒钟后回来！",
+          "courseB_playlab_events_challenge2_b": "使用其他事件模块使其他动物消失！\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events_challenge2_c": "当点击动物时，使用额外的命令来播放声音或得分！\n\n<xml>\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">鼓掌</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "混合起来！\n\n使一些动物比其他给出更多的分数。使用不同的声音。改变动物的情绪!"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "尝试一次添加一个块, 然后单击 \"运行\" 以查看发生了什么。",
+          "courseB_starWars_prog1_b": "向东移动来通过本关。要移动多远？\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "把这个问题分成两部分。得到一堆废铁, 然后弄清楚如何得到另一堆。"
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "您将需要移动3条路来解决这个关卡。",
+          "courseB_starWars_prog3_b": "一次生成一段代码。运行它, 找出下步去哪里。"
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "一次生成一段代码。运行它, 找出下步去哪里。",
+          "courseB_starWars_prog4_b": "试试使用`重复`模块来缩短代码。\n\n<xml> <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "这种模式是不是有点像最后一个关卡？",
+          "courseB_starWars_prog5_b": "BB-8 会在他翻滚的时候抓住废铁。",
+          "courseB_starWars_prog5_c": "用你的手指追踪这个图案。在你移动的时候数一下金属碎片。",
+          "courseB_starWars_prog5_da": "看看如果你使用解决阶梯步进关卡一样的解决方案会如何:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "这个图案只是一个台阶, 每方向移动两步!",
+          "courseB_starWars_prog6_b": "试试使用`重复`模块来缩短代码。\n\n<xml> <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "这种模式是不是有点像最后一个关卡？",
+          "courseB_starWars_prog7_b": "BB-8 会在他翻滚的时候抓住废铁。",
+          "courseB_starWars_prog7_c": "试着画出这个关卡的大台阶图案。它能覆盖所有的废旧金属吗？"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "回到你已经旅行过的一组空间里是可以的。",
+          "courseB_starWars_prog8_b": "请尝试使用 \"重复\" 块来查看在内部放置的代码会发生什么变化。\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。",
+          "courseB_starWars_prog9_b": "解决这个难题有很多方法。",
+          "courseB_starWars_prog9_c": "使用`重复`循环有帮助吗？"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "`设置演员1为？？？图像`块可用于将演员添加到舞台。",
+          "courseE_playLab_scaffold1_b": "将`设置演员`模块置于`当运行时`下, 使您的演员出现在程序的开头。",
+          "courseE_playLab_scaffold1_c": "使用`设置？？？背景`为您的场景选择背景。"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "courseE_playLab_scaffold1_a": "打开`当按____方向键时` 事件的下拉菜单来更改模块控制的方向。",
+          "courseE_playLab_scaffold1_b": "您应该有四个`当按下方向键`事件模块，它们在每个之下朝着一个方向向前移动。",
+          "courseE_playLab_scaffold1_c": "当你完成后，你应该能够用方向键来移动你的英雄!"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "使用`得分`添加一分, 并用`扣分`减去一分。"
+        },
+        "courseC_PlayLab_events1_2021": {
+          "courseC_PlayLab_events1_a": "将此块附加到 \"当运行时\" 模块：\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">你好。</title>\n</block>\n</xml>"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "将其中的两个块附加到`当运行时`块：\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">你好。</title>\n</block>\n</xml>",
+          "courseC_PlayLab_events2_b": "使用下拉菜单上的第二个`演员 __ 说`模块改变由哪个演员说话。"
+        },
+        "courseC_PlayLab_events3_2021": {
+          "courseC_PlayLab_events3_a": "您只需将乔治向右移动大约25像素即可通过这个关卡。",
+          "courseC_PlayLab_events3_b": "工具箱中是否有一个模块看起来像是可以移动一个演员？",
+          "courseC_PlayLab_events3_c": "将此块附加到 \"当运行时\" 模块：\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">你好。</title>\n</block>\n</xml>"
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_b": "当点击\"运行\"按钮时，乔治需要向右移动\\*\\* 100 \\*\\*像素来够到奥丽芙猫。",
+          "courseC_PlayLab_events4_a": "你需要附加一个`演员 __ 说`模块到`当演员接触`事件来通过这个关卡。"
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "你需要点击 `演员说` 模块中的下拉菜单来查找文本 \"什么是新的？\"",
+          "courseC_PlayLab_events5_b": "当您运行程序时, 点击 \"奥克塔维亚\" 检查它是否有效!"
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_a": "每个绿色`当方向键按下`模块应该在它下面赋予一个行动。",
+          "courseC_PlayLab_events6_b": "使用`移动演员1`模块中的下拉菜单来更改企鹅移动的方向。",
+          "courseC_PlayLab_events6_c": "完成后, 您应该可以使用计算机上的方向键来移动企鹅!"
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "在`一直重复`循环内使用`将演员2向上移动400像素`模块和`将演员2向下移动400像素`模块来通过这个关卡。 ",
+          "courseC_PlayLab_events7_b": "`一直重复`循环不需要连接到任何其他事件（情景）模块; 它会自己运行。"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_a": "您需要将模块连接到`当演员碰到时`模块来使其发生。",
+          "courseC_PlayLab_events8_b": "工具箱中的`演员说`和`播放声音`模块应该可以帮上忙！"
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "`得分`模块将帮助你通过这个关卡。",
+          "courseC_PlayLab_events9_b": "确保你的新`当演员触摸`写着 演员 \\*\\*\\* 1 \\*\\* 和演员 \\*\\* 3 \\*\\*。",
+          "courseC_PlayLab_events9_c": "您可以在工作区中同时拥有多个`当演员碰到`事件, 所以您不必删除第一个!"
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "使用`设置背景`模块和`设置演员为____ 速`模块来通过这个关卡。",
+          "courseC_PlayLab_eventsA_b": "您需要将`当运行时`事件模块具体拖到工作区中以解决此关卡。"
+        },
+        "courseC_PlayLab_eventsA_embed_2021": {
+          "courseC_PlayLab_eventsA_a": "用方向键移动企鹅。不需要写代码来完成这关。"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "idea1": "_需要一点提示?_\n\n**谁在那里?** 让随机的人物显示在图片中， 这样没人知道下一次会显示谁？\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_需要一点提示?_\n\n**一起去探险** - 修改背景，然后让所有的演员谈谈他们的冒险之地。\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea3": "_需要一个想法？_\n\n**弹球游戏**- 使用箭头键让一个人物移动（使用`当上方向键按下时`，`当下方向键按下时`模块），然后当与屏幕上的其他人物相撞的时候播放随机声音。"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "可以使用此模块将演员移动到游戏空间中的不同位置。\n\n<xml> <block type=\"studio_setSpritePosition\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">12</title>\n</block></xml>",
+          "courseC_PlayLab_events_challenge_b": "当触及其他演员时，尝试使用`将演员1设置为左中间位置`。这将重置游戏, 让玩家可以继续尝试!",
+          "courseC_PlayLab_events_challenge_c": "还可以尝试改变不同的演员的速度，使游戏更容易或更具挑战性!\n\n<xml> <block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "这是您将需要的第一个模块：\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "使用此模块来绘制贴纸！\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "这是你将需要的第一段代码：\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\n您可以选择左或右和任意度数。"
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_a": "在你的循环中, 你需要跳到200以上，再向下200像素, 然后画鸟的贴纸, 然后转30度。",
+          "courseC_artist_loops2a_b": "单击`重复`循环顶部的数字来更改重复次数。"
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "你要在循环中的鸟贴纸之后只添加一个模块 。",
+          "courseC_artist_loops3a_b": "您的程序应该如下所示！\n\n <xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\n 您可以使用任何您喜欢的贴纸！"
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "使用此模块向前跳转：\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\n不要忘记更改跳多远！",
+          "courseC_artist_loops4a_b": "你的程序应该类似于这个！\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "使用此模块设置线条的图案：\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "要制作和上面类似设计, 向后移动与向前移动必须是相同的数量。",
+          "courseC_artist_loops5b_c": "你的程序应该类似于这个！\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "要制作和上面类似的设计, 在每个贴纸之间向前跳转少于75像素。"
+        },
+        "courseC_artist_loops7a_2021": {
+          "courseC_artist_loops7a_a": "一个圆有360度。把你的转弯角度乘以你重复次数。它等于360吗？检查建议的转角看这是否可行！"
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "如果使用模块让我 '前进 100 像素'，我会自动画一条线。",
+          "courseC_artist_prog2_b": "怎么才能转弯呢？使用 '向右转 90 度' 模块。"
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "要创建这个窗户，只需绘制一个100 像素边长的正方形。\n\n-   向前移动\n-   转弯\n-   向前移动\n-   转弯\n-   向前移动\n-   转弯\n-   向前移动",
+          "courseC_artist_prog3_b": "要写出更短的代码？尝试在这个关卡中使用一个循环。"
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "要完成这个火箭，只需要在最上面画个三角形！",
+          "courseC_artist_prog4_b": "您可以使用`转向`模块的下拉菜单来查看所需的角度!",
+          "courseC_artist_prog4_c": "要绘制三角形，你需要：\n\n-   向前移动\n-   向左120度\n-   向前移动\n-   左转120度\n-   向前移动"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_a": "放慢滑块速度直到你能逐行运行代码，来查看哪里出错了。",
+          "courseC_artist_prog5_b": "不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。",
+          "courseC_artist_prog5_c": "您可以使用`转向`模块的下拉菜单来查看所需的角度!",
+          "courseC_artist_prog5_d": "每个转弯应该是向右转90度。"
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "艺术家已经面朝着正确的方向来画第一条线。",
+          "courseC_artist_prog6_b": "这颗钻石真的只是一个立起来的正方形。",
+          "courseC_artist_prog6_c": "因为这个钻石也是一个正方形, 请确保在拐角处旋转90度。"
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "每个角度都是45度或90度。",
+          "courseC_artist_prog7_b": "它的第一步工作吗？ \n那第二步呢？\n哪里出问题了？",
+          "courseC_artist_prog7_c": "您可以使用转向模块的下拉菜单来查看所需的角度！",
+          "courseC_artist_prog7_d": "你需要：\n\n-   向前移动\n-   向右转45度\n-   向前移动\n-   向右转90度\n-   前进\n-   向右转45度\n\n重复此模式两次!",
+          "courseC_artist_prog7_e": "不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。"
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "你可以把它画成一个长方形, 其中一边在中间或在两个不同的正方形上!"
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "绘制第一行后，在绘制第二行前向左转。",
+          "courseC_artist_prog_challenge2_b": "绘制第二行后, 在绘制第三行之前向右转。"
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "使用循环，这样就不会用光`收集`模块！"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "当您站在具有宝藏的地方时, 请使用  <xml><block type=\"collector_collect\"/></xml>模块来拾取它。",
+          "courseC_collector_prog1_b": "最简单的解决方法是向前移动一次, 然后收集宝藏。"
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "你可以使用4 个 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> 模块或者使用  <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>模块来缩短程序。",
+          "courseC_collector_prog2_b": "不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。"
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "该程序将只运行连接到 <xml><block type=\"when_run\"/></xml>的模块。",
+          "courseC_collector_prog3_b": "尝试使用 \"步进\" 按钮逐行运行您的代码。你知道代码哪里出错了吗？",
+          "courseC_collector_prog3_c": "如果你很难弄清楚这个关卡, 试着在一张纸上写下这些动作。"
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "如果你被难住了, 试着在一张纸上写下步骤。",
+          "courseC_collector_prog4_b": "不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。",
+          "courseC_collector_prog4_c": "请为路径尝试此选项。"
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "\"它在第一步工作吗？\n它在第二步工作吗？ \n哪里出错了？”",
+          "courseC_collector_prog5_b": "如果修复了一个缺陷但程序仍然无法正常工作，请使用上面的步骤查找更多的缺陷。",
+          "courseC_collector_prog5_c": "如果你被难住了, 试着在一张纸上写下步骤。",
+          "courseC_collector_prog5_d": "沿着小路收集宝藏。"
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "能找出哪里出错吗？请尝试使用 \"步进\" 按钮逐行运行代码来查找错误。",
+          "courseC_collector_prog6_b": "被难住了? 尝试这条路径来收集宝藏。"
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "工作区中已经有很多很好的代码。你不需要删除任何代码来通过这个关卡。  ",
+          "courseC_collector_prog7_b": "没看出让冒险家朝着正确的方向移动的模块吗？请从工具箱里拉出一个。",
+          "courseC_collector_prog7_c": "没看到收集所有宝藏的路线吗？尝试这条路！"
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "你可以更经常使用`收集`命令来收集额外的宝藏。"
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "你可以使用多个`收集`命令来收集额外的宝藏。",
+          "courseC_collector_prog_challenge1_b": "迷路了？ 请尝试此路径来通过这个关卡!"
+        },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        },
+        "courseC_flappy_events2_2021": {
+          "courseC_flappy_events2_a": "您需要添加的模块称为`设置速度`。 ",
+          "courseC_flappy_events2_b": "将`设置速度`模块连接到`当运行时`模块来解决此关卡。"
+        },
+        "courseC_flappy_events3_2021": {
+          "courseC_flappy_events3_a": "如果运行出问题, 请确保您的块已连接到工作区中的正确事件上。"
+        },
+        "courseC_flappy_events4_2021": {
+          "courseC_flappy_events4_a": "将`结束游戏`模块连接到`当遇到障碍`来解决这个关卡。"
+        },
+        "courseC_flappy_events5_2021": {
+          "courseC_flappy_events5_a": "您将需要使用`得一分`模块来通过这个关卡。"
+        },
+        "courseC_flappy_events6_2021": {
+          "courseC_flappy_events6_a": "请尝试将`拍打____次时`模块连接到`当点击时`事件。"
+        },
+        "courseC_flappy_events7_2021": {
+          "courseC_flappy_events7_a": "您可以使用`设置场景`模块来更改背景。 "
+        },
+        "courseC_flappy_events8_2021": {
+          "courseC_flappy_events8_a": "尝把第二个`设置场景`模块连接到`当通过障碍`事件来通过这个关卡。"
+        },
+        "courseC_flappy_events9_2021": {
+          "courseC_flappy_events9_a": "将`设置分数为0`模块连接到`当遇到障碍`事件通过此关卡。"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "一旦你移到一个南瓜, 请使用 <xml><block type=\"harvester_pumpkin\"/></xml>来收集它。",
+          "courseC_harvester_loops1_b": "您可以使用 <xml><block type=\"harvester_pumpkin\"/></xml>模块循环从广场中选取多个南瓜。"
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "如果你被难住了，试着在纸上写下步骤, 寻找重复的规律。",
+          "courseC_harvester_loops2_b": "你需要一个`重复`循环连着另一个。",
+          "courseC_harvester_loops2_c": "一个循环将重复`向前移动`命令, 另一个将重复`捡起南瓜`命令。"
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。",
+          "courseC_harvester_loops3_b": "对于第一个南瓜, 你可以使用和上个关卡非常类似的代码。在这之后，你需要转到哪条路上？",
+          "courseC_harvester_loops3_c": "如果你想简化代码，实际上可以把一个循环放到另一个里面! 这称为 **嵌套循环**。"
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "使用这个新的`采摘玉米`模块来收集玉米。",
+          "courseC_harvester_loops4_b": "你可以在代码中使用多个重复循环, 一些捡玉米和一些采摘南瓜。",
+          "courseC_harvester_loops4_c": "如果你想简化代码，实际上可以把一个循环放到另一个里面! 这称为 **嵌套循环**。"
+        },
+        "courseC_harvester_loops5_2021": {
+          "courseC_harvester_loops5_a": "如果被难住了，请尝试画出整个程序，然后查找重复规律。",
+          "courseC_harvester_loops5_b": "这个台阶是不是看起来和其他的关卡类似？移动是相似的，只是记得一路上要收集庄稼。"
+        },
+        "courseC_harvester_loops6_2021": {
+          "courseC_harvester_loops6_a": "请记住，您可以在一个重复循环中放置多个模块。",
+          "courseC_harvester_loops6_b": "别忘了在玉米排的尽头转弯。"
+        },
+        "courseC_harvester_loops7_2021": {
+          "courseC_harvester_loops7_a": "你可以用两种方法解决这个关卡, 要么先取玉米要么南瓜。",
+          "courseC_harvester_loops7_b": "您将需要多个`重复`循环来解决这个关卡。"
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_a": "这个台阶是不是看起来和以前的关卡类似？移动是相似的，只是记得一路上要收集庄稼。",
+          "courseC_harvester_loops8_b": "如果你想简化你的代码，你实际上可以把一个重复循环放到另一个里！这称为 **嵌套循环**。"
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "如果不使用循环这太难了。",
+          "courseC_harvester_loops_challenge1_b": "你可以多次重复`前进`和`采摘玉米`，然后在每个角落右转。",
+          "courseC_harvester_loops_challenge1_c": "收集前四个玉米的最佳方法是在一个`重复`模块内再使用一个`重复`模块。你也可以在其余的关卡使用这个模式！\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block type=\"harvester_corn\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block></next></block></xml>"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "解决这个问题的一种方法看起来像是一个锯齿形。另一种方式看起来像一个螺旋！有很多不同的解决这个关卡的方案。请坚持下去!",
+          "courseC_harvester_loops_challenge2_b": "你可以多次重复`前进`和`采摘莴苣`，然后在每个角落右转。",
+          "courseC_harvester_loops_challenge2_c": "重复运用这个曲折的模式两次就可以只用20个模块来完成这个关卡！\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "这种螺旋模式只要18个模块的编码!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   在第一步之后一切运行正常吗？\n-   在第二步之后它还工作吗？\n-   哪里出错了？",
+          "courseC_maze_debugging1_b": "只需要添加1个模块来完成这个关卡。"
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "工作区内有许多有价值的代码。请不要把它们全部删除来重新开始!",
+          "courseC_maze_debugging2_b": "-   在第一步之后一切运行正常吗？\n-   在第二步之后它还工作吗？\n-   哪里出错了？",
+          "courseC_maze_debugging2_c": "搞不清楚那里有错？尝试运行代码多次，看看会发生什么。"
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "如果要从你的代码中删除一个模块，请把所有的模块拖到工作区的其他地方。\n\n把想要删除的模块拖回到工具箱中。\n\n最后，把其他模块归位。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "搞不清楚那里有错？尝试运行代码多次，看看会发生什么。"
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "使用 \"步进\" 按钮一次运行一个指令。这能帮你找到出错的行了吗？",
+          "courseC_maze_debugging4_b": "其中一个转折让斯奎特走错了方向。你能找出是哪一个吗？"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "工作区中已经有很多有用的模块。请不要全部删除!  \n\n使用 \"步进\" 按钮来仔细查看并找出代码出错的地方。",
+          "courseC_maze_debugging5_c": "您可以在转向模块的下拉菜单中更改其方向。",
+          "courseC_maze_debugging5_b": "试着大声说出斯奎特应该做什么。它是否和工作区的代码一样？哪里出错了？"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   斯奎特应该做什么？\n-   斯奎特做了什么？\n-   那告诉了你什么？",
+          "courseC_maze_debugging6_b": "等你发现并修复了第一个错误, 请再次进行调试过程来找到另一个错误。 重复这个过程, 直到程序可以正常工作!"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   在第一步的时候运行正常吗？\n-   第二步呢？\n-   哪里出错了？",
+          "courseC_maze_debugging7_b": "请不要忘了使用“步进”按钮来逐行运行程序！",
+          "courseC_maze_debugging7_c": "在发现并修复第一个缺陷后，请确保再次使用调试流程直到找到下一个。\n\n重复这个调试过程，直到程序正常工作！"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "向左还是向右？由你决定!",
+          "courseC_maze_debugging_challenge1_b": "斯奎特的路径是一个矩形！他每次都要以同样的方式转动！",
+          "courseC_maze_debugging_challenge1_c": "如果被难住了, 可以随时重新开始, 或删除所有的代码, 找到自己的方法!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "如果被难住了，试着调试代码。看看哪里错了？",
+          "courseC_maze_debugging_challenge2_c": "有两种不同的路径，有一种方法是只前进，并转向四次。如果你找到一个使用循环的方法, 可能会有更多方法！\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_loops_challenge1a_2021": {
+          "courseC_maze_loops_challenge1_a": "把这条路看成是两个不同的部分。每一个都有一个可以重复的模式。",
+          "courseC_maze_loops_challenge1_b": "你还记得如何使用循环来重复楼梯图案吗？"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "确保所有模块都完全粘到了一起，然后再次点击\"运行\"。"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "若要使用<xml><block type=\"maze_moveForward\"/></xml>模块，将它从工具箱中拖出，并粘贴到<xml><block type=\"when_run\"/></xml>模块下。",
+          "courseC_maze_programming2_b": "确保所有模块都完全粘到了一起，然后再次点击\"运行\"。"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "试着先运行一次代码, 看看哪里出问题了。",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n若要从代码中间删除模块, 请将所有模块拖到工作区的其他部分。\n\n将要删除的块拖回工具箱。\n\n最后, 把其他模块放回属于他们的地方。"
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "记住，当你转向时，你是从_小鸟_的视角来进行的转向。如果你向右转，小鸟会朝向下方。",
+          "courseC_maze_programming4_b": "遵循如下路径：\n\n-   向前移动\n-   转向一条路\n-   向前移动\n-   向后转向另一条路\n-   向前移动"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "尝试使用\"步进\"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？",
+          "courseC_maze_programming5_b": "这只鸟将转一个转弯来完成这个关卡。你能想出哪条路吗？",
+          "courseC_maze_programming5_c": "该解决方案将有两个`向前移动`模块，一个转向，并再加两个`向前移动`模块。"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "有两种方法来解决这个难题 ！",
+          "courseC_maze_programming6_b": "跟着你的手指从鸟到猪, 你采取了哪些步骤？",
+          "courseC_maze_programming6_c": "记住, 你必须先转弯, 因为鸟儿开始时面对一堵墙。",
+          "courseC_maze_programming6_d": "感觉被难住了？ 看看这条路!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "别忘了用\"步进\"按钮来一个模块一个模块的寻找错误。",
+          "courseC_maze_programming7_b": "如果你很难弄清楚这个关卡, 试着在一张纸上写下这些动作。"
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_a": "请记住, 如果你被难住了, 你可以使用 \"步进\" 按钮来查看你的代码。",
+          "courseC_maze_programming8_b": "不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。"
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "有很多方法可以找到猪。用你的手指找到一个路径, 然后写下程序！"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "\"如果你让我后退，要格外小心我朝向了正确的路！\\*",
+          "courseC_maze_programming_challenge2_b": "最短的解决方案仅使用5个模块, 但它使用了这个模块：\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_a": "这个图案看起来像一大套台阶吗？看看你是否可以用你从以前的关卡中学到的东西来到达所有的转弯。",
+          "courseC_starWars_loops10_b": "如果你想使用更少的代码, 你可以把`重复循环`放在另一个里面！这称为 \\*\\* 嵌套循环 \\*\\*。",
+          "courseC_starWars_loops10_c": "不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。"
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_a": "当 BB-8 在废金属上翻滚时, 他会自动把它捡起来。",
+          "courseC_starWars_loops1_b": "不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。",
+          "courseC_starWars_loops1_c": "你要`向前移动`五次来解决这个关卡。"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "要重复代码, 拖出一个`重复`循环, 然后把它放在你想要的模块里面。"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2_a": "要重复代码, 拖出一个`重复`循环, 然后把它放在你想要的模块里面。"
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "点击 \"左\" 在转向模块旁边的小箭头可以让你把它改成 \"右\"。",
+          "courseC_starWars_loops4_a": "使用两个`重复`模块。",
+          "courseC_starWars_loops4_b": "每个`重复`循环将只有一个命令在它里面: `向前移动`。"
+        },
+        "courseC_starWars_loops4_dani": {
+          "courseC_starWars_loops4_c": "点击 \"左\" 在转向模块旁边的小箭头可以让你把它改成 \"右\"。",
+          "courseC_starWars_loops4_a": "使用两个`重复`模块。",
+          "courseC_starWars_loops4_b": "每个`重复`循环将只有一个命令在它里面: `向前移动`。"
+        },
+        "courseC_starWars_loops5_2021": {
+          "courseC_starWars_loops5_a": "最好的方案是用一个 `向前移动`，然后转向，然后是循环。"
+        },
+        "courseC_starWars_loops5_dani": {
+          "courseC_starWars_loops5_b": "要往下走, 你必须转向, 然后向前移动。",
+          "courseC_starWars_loops5_a": "最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。"
+        },
+        "courseC_starWars_loops6_2021": {
+          "courseC_starWars_loops6_a": "试着在一张纸上写下移动的情况, 来寻找模式。",
+          "courseC_starWars_loops6_b": "如果你想使用更少的代码, 你可以把`重复循环`放在另一个里面！这称为 \\*\\* 嵌套循环 \\*\\*。"
+        },
+        "courseC_starWars_loops6_dani": {
+          "courseC_starWars_loops6_a": "试着在一张纸上写下移动的情况, 来寻找模式。",
+          "courseC_starWars_loops6_b": "如果你想使用更少的代码, 你可以把`重复循环`放在另一个里面！这称为 \\*\\* 嵌套循环 \\*\\*。"
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_a": "这个图案看起来比实际更难! 从一个简单的楼梯步进开始。这是否涵盖了所有的废旧金属？",
+          "courseC_starWars_loops7_b": "如果在这关遇到困难，请尝试在一张纸上写下所有的动作并寻找规律。",
+          "courseC_starWars_loops7_c": "不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。"
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_a": "这个图案看起来比实际更难! 从一个简单的楼梯步进开始。这是否涵盖了所有的废旧金属？",
+          "courseC_starWars_loops7_b": "如果在这关遇到困难，请尝试在一张纸上写下所有的动作并寻找规律。",
+          "courseC_starWars_loops7_c": "不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。"
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_a": "试着将问题分成更小的部分来思考。别着急。你不需要第一次就全做对！",
+          "course_starWars_loops8_b": "把这个问题的前半部分看成是台阶步进问题。你以前是怎么解决的？",
+          "course_starWars_loops8_c": "看看这条路。\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_dani": {
+          "course_starWars_loops8_a": "试着将问题分成更小的部分来思考。别着急。你不需要第一次就全做对！",
+          "course_starWars_loops8_b": "把这个问题的前半部分看成是台阶步进问题。你以前是怎么解决的？",
+          "course_starWars_loops8_c": "看看这条路。\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops9_2021": {
+          "course_starWars_loops9_b": "您可以在`重复`循环中放置多个模块。",
+          "course_starWars_loops9_c": "你不需要向左转来解决这个关卡。你所有的转向都可以向右。\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseD_bee_conditionals1_predict1_dani": {
+          "courseD_bee_conditionals1_a": "在您尝试获取花蜜之前，您将需要使用“if”（如果）模块来查看是否有一朵花在云下面。"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "courseD_bee_conditionals2_hintVid1": "需要入门帮助吗？ 看视频!",
+          "courseD_bee_conditionals2_a": "有时那里有花，有时不会。如果您希望在两种情况下都能运行代码，请确保使用`如果`语句。",
+          "courseD_bee_conditionals2_b": "您可以使用`重复`循环或`当前面有路时`来通过这个迷宫。",
+          "courseD_bee_conditionals2_c": "你不必查看蜂窝，在云层下只会有花朵或空白的空间。",
+          "courseD_bee_conditionals2_hintVid2": "观看此视频帮助解决这个难题。"
+        },
+        "courseD_bee_conditionals3_dani": {
+          "courseD_bee_conditionals3_hintVid1": "需要入门帮助吗？ 看视频!",
+          "courseD_bee_conditionals3_a": "一定要使用`如果`语句来检查每个空间，看看是否有花。",
+          "courseD_bee_conditionals3_b": "您可以使用`重复`循环或`当`循环来保持蜜蜂向前移动。用你喜欢的任何一个!",
+          "courseD_bee_conditionals3_c": "不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。",
+          "courseD_bee_conditionals3_hintVid2": "观看此视频帮助解决这个难题。"
+        },
+        "courseD_bee_conditionals4_dani": {
+          "courseD_bee_conditionals4_hintVid1": "需要入门帮助吗？ 看视频!",
+          "courseD_bee_conditionals4_a": "哪怕可以看到整条路径，仍然可以当作每个空间上面有朵云来处理。",
+          "courseD_bee_conditionals4_b": "在循环中使用`如果`语句检查每个空间是否有花蜜。 ",
+          "courseD_bee_conditionals4_c": "使用<xml><block type=\"maze_untilBlocked\"/></xml>模块，您应该向前移动并找一朵花。如果有一朵花, 蜜蜂该怎么办？",
+          "courseD_bee_conditionals4_hintVid2": "观看此视频帮助解决这个难题。"
+        },
+        "courseD_bee_conditionals5_dani": {
+          "courseD_bee_conditionals5_hintVid1": "需要入门帮助吗？ 看视频!",
+          "courseD_bee_conditionals5_a": "把矩形路径的每一条边都看成是一个路径。在外部设置一个`重复`模块的嵌套循环, 并在`当前面有路时`的内部循环。如果蜜蜂需要在每朵花旁边嗡嗡叫，它要飞过多少条路径？",
+          "courseD_bee_conditionals5_c": "花是长方形的3条边，因此代码需要`重复3次`。在每一个重复时，`当前面有路时`，蜜蜂将需要继续沿着路径。要继续沿着这条路走下去, 蜜蜂将需要`向前移动`。在小路上, 蜜蜂需要寻找朵花。`如果有一朵花`, 蜜蜂应该`采花蜜`。",
+          "courseD_bee_conditionals5_b": "在`当前面有路时`模块的里面, 你需要往前走开寻找朵花。你如何检查哪里是否有一朵花？如果有一朵花, 你会怎么做？",
+          "courseD_bee_conditionals5_hintVid2": "观看此视频帮助解决这个难题。"
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "不工作？ 请尝试使用 \"\"步进\"\" 按钮来逐行查证。",
+          "courseD_bee_nestedLoops1_b": "请先尝试为正方形的一条边编写代码。你能循环来得到所有的花蜜吗？",
+          "courseD_bee_nestedLoops1_c": "一旦你在一个有花朵的正方形的时候记得使用`采花蜜`模块。"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "不工作？ 请尝试使用 \"\"步进\"\" 按钮来逐行查证。",
+          "courseD_bee_nestedLoops1_c": "一旦你在一个有花朵的正方形的时候记得使用`采花蜜`模块。"
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "要通过此关卡，需要在另一个里面嵌套一个`重复`循环。",
+          "courseD_bee_nestedLoops2_b": "如果您无法确定将循环放在何处, 请尝试逐步编写代码并查找规律。",
+          "courseD_bee_nestedLoops2_c": "请记住, 您可以在一个循环中放置多个模块。"
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "需要在另一个里面有着‘`向前移动`模块的`重复`循环的里面重复`采花蜜`。",
+          "courseD_bee_nestedLoops7_b": "需要使用所有的三个`重复`模块来通过这个关卡。"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "这些方块的每个边都有100个像素，这意味着你将不得不在绘制你的第二个正方形前向前移动175个像素。",
+          "courseE_artist_functions1_b": "制作你的眼镜时绘制重叠的线条是可以的。",
+          "courseE_artist_functions1_c": "对于较短的代码, 请尝试使用`重复`循环来绘制眼镜的方形框架。"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_b": "您编写的函数不应包含整个程序, 只需绘制一个具有100像素边的正方形的部分。",
+          "courseD_artist_functions2_c": "使用绿色`draw a square`（画一个正方形）模块，在`当运行时`模块下\"调用\"函数。否则，函数中的代码将不会运行。\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "你的程序应该：\n\n-   使用函数\n-   向前移动 100+75像素\n-   使用函数"
+        },
+        "courseE_artist_functions3_dani": {
+          "courseD_artist_functions3_a": "为了通过这关，你只需要添加一个循环来重复初始的代码8次。\n\n如果你不记得初始代码是什么样了，点击工作区右上角\"重新开始\"。",
+          "courseD_artist_functions3_b": "您的循环里面应该有所有3个初始的代码块。"
+        },
+        "courseE_artist_functions4_dani": {
+          "courseD_artist_functions4_a": "尝试使用函数！",
+          "courseD_artist_functions4_b": "将`画一个星星`从工具箱中拖出以开始构造函数。因为你画的是同一个星形图案, 所以它应该和以前的拼图有相同的代码。",
+          "courseD_artist_functions4_c": "使用绿色`画一个星星`模块在您的主程序来调用这个功能。别忘了在每颗星星之间跳跃前进!"
+        },
+        "courseE_artist_functions5_dani": {
+          "courseD_artist_functions5_a": "别放弃！记住你已经学会的东西。",
+          "courseD_artist_functions5_b": "函数使它可以很容易地在任何时候调用保存的代码, 而不仅仅是从循环里！",
+          "courseD_artist_functions5_c": "首先, 将星星形状的代码拖动到`画一个星星`函数中, 然后使用此函数绘制三颗星星！"
+        },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_a": "这里的图片是通过一个`set alpha`（设置透明度）和`counter`/10的counter（计数器）来作为画笔尺寸来制作的。",
+          "courseF_artist_for10_b": "绘图中的图片使用61度转弯。",
+          "courseF_artist_for10_c": "想知道示例图片是如何做出来的？\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "你能画出这样的东西吗？\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "计数循环将从15数到 300，每次增加15。",
+          "courseF_artist_for6_b": "在这个计数循环中放一个 \"前进\" 和 \"转向\" 模块。",
+          "courseF_artist_for6_c": "你所要改变的就是 \"转弯\" 块中的度数。"
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_a": "这个关卡里的钢笔更细。在开始之前，需要将其设置为`1`。",
+          "courseF_artist_for7_b": "请注意这个螺旋是向右转而非向左！",
+          "courseF_artist_for7_c": "这个关卡中的计数循环是从15到300，每次增加2。",
+          "courseF_artist_for7_d": "这张图片是只转89度形成的。"
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_a": "在代码中保留其他所有内容, 只有转角需要改变。",
+          "courseF_artist_for8_b": "如果你想, 你可以为您的螺旋选择一个不同的颜色!"
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "如果将`set alpha`（设置透明度）模块放在计数循环中, 并使用 \"计数器\" 变量来更改它, 你就可以创建像这样的设计。",
+          "courseF_artist_for9_b": "`set alpha`（设置透明度）模块更改颜色的透明度。数值越小，颜色越透明。"
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_a": "·笔宽度·是1。第一个正方形有50像素边, 每个正方形比前一个宽50像素。",
+          "courseF_artist_for_challenge1_b": "画笔上的不透明度始终是 `counter`/2 （计数器/2）。",
+          "courseF_artist_for_challenge1_c": "在你画了每个正方形后, 别忘了向后跳, 转身, 再跳, 然后回头!",
+          "courseF_artist_for_challenge1_d": "\\*\\* 解决方案: \\*\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_c": "`计数循环` 从5增加到250，每次增加2。 ",
+          "courseF_artist_for_challenge2_a": "使用`用红色，绿色和蓝色设置颜色`的模块。红色设为常量255，绿色一直是`counter`（计数器）的值，蓝色一直是`255-counter`。",
+          "courseF_artist_for_challenge2_b": "这个代码比你想象的要简单。 只需在计数循环中设置颜色, 向前移动, 然后转向。",
+          "courseF_artist_for_challenge2_d": "**解决方案:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_width\" inline=\"false\">\n<value name=\"WIDTH\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<next>\n<block type=\"controls_for_counter\" inline=\"true\">\n<mutation counter=\"counter\"></mutation>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">5</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">250</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\">\n<block type=\"colour_rgb\" inline=\"false\">\n<value name=\"RED\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"GREEN\">\n<block type=\"variables_get\">\n<title name=\"VAR\">计数器</title>\n</block>\n</value>\n<value name=\"BLUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">减去</title>\n<value name=\"A\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"variables_get\">\n<title name=\"VAR\">计数器</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">向前移动</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">计数器</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">向右转</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">80</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "祝你在这个关卡玩得开心! 查看对代码可以做什么小更改。",
+          "courseF_artist_variables10_b": "您可以多次尝试, 并多次运行您的代码。"
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": "使用 \"设置长度\" 块启动代码。将长度变量设置为150。",
+          "courseF_artist_variables7_b": "您可以使用 \"重复\" 循环使您画三角形的代码更简单。",
+          "courseF_artist_variables7_c": "你要左转120度来做三角形的角。"
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_b": "请记住，开始用`set length`（设置长度）模块来创在三角形，并以150像素开始。",
+          "courseF_artist_variables8_c": "请确保使用 \"重复\" 循环来绘制三角形。"
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_a": "对于这个关卡, 你所需要做的就是改变循环重复的次数。"
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_a": "你能在需要走的步数和采花蜜的数量之间找到一个规律吗？",
+          "courseF_bee_for10_b": "第一组花总共有 ** 14 朵花 **。为了到达第一组, 蜜蜂必须嗡嗡作响往下移** 7 个正方形 ** （或14除以2个正方形。）下一组有多少朵花, 蜜蜂到那里需要走多少个正方形？",
+          "courseF_bee_for10_d": "你需要有2个重复循环，其中一个将使用数学模块。"
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "你将需要两个模块在你的 ' 重复 ' 循环里来收集所有的花蜜。"
+        },
+        "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "当你困惑时，一次只采一朵花，并经常测试。",
+          "courseF_bee_for2_b": "记住在每个循环之间向前移动, 这样你就能到达每一朵花。"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "使用`计数循环`从1到 7，增量为 1，来通过这个关卡。",
+          "courseF_bee_for4_b": "在`计数循环`循环中，你需要一个`向前移动` 指令，和一个循环来收集花蜜。",
+          "courseF_bee_for4_c": "确保在嵌套的`重复`循环中使用`counter`（计数器）变量来获得足够的花蜜!"
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_a": "这一次，`向前移动`模块和`采花蜜`模块需要在分开的`重复`循环里，二者都在同一个`计数循环`中。",
+          "courseF_bee_for5_b": "在每个循环中使用 \"计数器\" 变量, 以便蜜蜂在每朵花之间移动不同的距离。",
+          "courseF_bee_for5_c": "不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。"
+        },
+        "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "不要忘记在`重复`循环中使用`counter`（计数器）变量。",
+          "courseF_bee_for6_b": "在`计数循环`循环中，你需要一个`向前移动` 指令，和一个循环来收集花蜜。",
+          "courseF_bee_for6_c": "你的循环应该数 \\*\\* 从5到1 \\*\\*。"
+        },
+        "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "`计数循环`循环需要从1到7，增量为2。",
+          "courseF_bee_for7_b": "在`计数循环`循环中，你需要一个`向前移动` 指令，和一个循环来收集花蜜。",
+          "courseF_bee_for7_c": "请记住在 \"重复\" 循环中使用 \"计数器\" 变量。"
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_a": "如果循环往上计数，那么每次运行运行时都会将增量加到计数器变量中。 \n\n你需要将什么加到每个数字，来得到下一个花蜜的数量？",
+          "courseF_bee_for8_b": "在这个关卡中, 你需要在台阶上移动以获得花朵。"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_a": "试着用计数器变量来做些数学。\n\n要得到和你需要收集的花蜜一样的数量，你需要对每朵花的计数器做什么？",
+          "courseF_bee_for9_c": "如果想要通过此关卡，看起来需要在每次循环迭代的开始让蜜蜂转弯。",
+          "courseF_bee_for9_b": "**请记住：** 如果你的循环在往上计数，每次循环，增量会加到`counter`（计数器）上。"
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_a": "看看这个移动选项:\n\n\\!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)",
+          "courseF_bee_for_challenge2_b": "试着用两个 \"计数\" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。",
+          "courseF_bee_for_challenge2_c": "注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。\n\n另一个`计数循环`循环只需要一个普通的循环来酿造`counter`（计数器）个蜂蜜。",
+          "courseF_bee_for_challenge2_d": "\\*\\* 解决方案: \\*\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseF_text_concat": {
+          "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "如果小鸟不能到达猪，确保所有两个模块都完全连在了一起，然后再点击\"运行\"。",
+          "courseC_maze_programming1_b": "别害怕犯错误！试试一些办法，如果不起作用，就试试别的办法！"
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "每个 ' 当 \\_\\_\\_ 方向 ' 事件将需要连接一个不同的 ' 移动演员 1 ' 命令，来解决这个关卡 。 "
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "您将需要添加两个模块在 ' 当演员1触及演员 2 ' 事件下面。",
+          "iceage_sound_and_points_b": "你将需要用 ' 得一分 ' 块和 ' 播放\\_\\_\\_\\_声音 ' 模块来通过这个关卡。"
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "您只需要在需要的地方添加两个模块来过关。 ",
+          "iceage_warn_ice_age_b": "在 \"当运行时\" 事件下添加两个新模块, 使其在程序启动后立即运行。"
         }
       }
     }

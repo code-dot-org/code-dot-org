@@ -468,7 +468,18 @@
         "iceage_move_events": "Kirjutage kood, mille abil saab Scrat kõik tammetõrud kätte!",
         "k-1 maze 1": "Kas oskad mind läände liigutada, et jõuaksin põrsani?",
         "scrat 19": "Üks harjutus veel, kas sa saad esimese korraga õigesti?",
-        "CourseD_EOC_dance": "Loo oma enda tants"
+        "CourseD_EOC_dance": "Loo oma enda tants",
+        "courseB_collector_loops7_2021": "Kirjutage kood, et saada kätte kõik aare.",
+        "courseB_collector_loops8_2021": "\\*\\* Väljakutse: \\*\\* Aare läheb treppidest alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada.",
+        "courseC_PlayLab_events3_2021": "Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane 1) liikuma kass Olive poole?",
+        "courseC_artist_prog5_2021": "Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.",
+        "courseD_bee_nestedLoops8_2021": "Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. ",
+        "courseF_artist_for7_2021": "Selleks tee kolm väikest muudatust eelmise taseme koodis!",
+        "courseF_artist_for_challenge1_2021": "Kas saad aru, kuidas saaks selle joonistuse uuesti luua?",
+        "courseF_artist_for_challenge2_2021": "Kas saad aru, kuidas saaks selle joonistuse uuesti luua ühe tsükliga?",
+        "courseF_bee2": "Kasuta 'korda' tsüklit, et kogu nektar kokku koguda.",
+        "courseF_bee_for8_2021": "Sul on see selge! Millist juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\r Vihje: mille peab igale arvule lisama, et saada sellele järgnev arv?",
+        "courseF_bee_for_challenge2_2021": "Lahenda see mõistatus, kasutades võimalikult vähe plokke."
       }
     }
   }

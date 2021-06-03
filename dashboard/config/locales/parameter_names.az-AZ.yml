@@ -5,13 +5,18 @@ az:
       "???": "???"
       actor: personaj
       counter: sayğac
+      dir: istiqamət
+      direction: istiqamət
       height: hündürlük
       honey: bal
       left: sola
       length: uzunluq
       min: min
+      nectar units: nektar vahidləri
+      numOctagons: numSəkkizguşəli
       points: xallar
       radius: radius
       sides: tərəflər
       size: ölçü
       speed: sürət
+      theGuess: təxmini

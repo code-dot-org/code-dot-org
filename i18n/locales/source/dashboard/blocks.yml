@@ -1337,6 +1337,8 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_spriteSay:
+        text: "[SPRITE][0] say [SPEECH][1]"
       gamelab_startAvoiding:
         text: "[SPRITE][0] begins avoiding [TARGET][1]"
       gamelab_startFollowing:

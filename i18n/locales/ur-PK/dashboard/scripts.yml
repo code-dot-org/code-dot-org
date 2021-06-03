@@ -1,4 +1,3 @@
----
 ur:
   data:
     script:
@@ -171,7 +170,7 @@ ur:
             Conditionals:
               name: شرائط
             'null':
-              name: نَل
+              name: 'نَل'
         coursee-2017:
           lessons:
             Envelope Variables:
@@ -304,7 +303,7 @@ ur:
         andrea-test:
           lessons:
             'null':
-              name: نَل
+              name: 'نَل'
         coursec-2019:
           lesson_groups:
             csf_loops:
@@ -584,7 +583,7 @@ ur:
               name: سبق
         virustest:
           title: وباء کے پھیلنے کا سیمیولیشن
-          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
+          description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -593,10 +592,10 @@ ur:
             outbreak:
               display_name: وباء کی سیمولیشن
           title: وباء کا سیمیولیٹر
-          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
-          description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
+          description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
           name: وباء کا پھیلنا
-          student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
+          student_description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
         2021drafting:
           lessons:
             Virus Simulation for Code Bytes:
@@ -712,9 +711,9 @@ ur:
             variables:
               display_name: متغیرات
         contagion-pilot:
-          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
-          description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
-          student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
+          description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          student_description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
         k5-onlinepd-2021:
           lessons:
             Loops:

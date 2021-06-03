@@ -1,4 +1,3 @@
----
 ne:
   data:
     blocks:
@@ -307,9 +306,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
-            '"a"': क
+            '"a"': क 
             '"s"': द
-            '"d"': 'घ '
+            '"d"': "घ \n"
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -318,9 +317,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
-            '"a"': क
+            '"a"': क 
             '"s"': द
-            '"d"': 'घ '
+            '"d"': "घ \n"
       Mikelab_whileKeyPressed:
         options:
           KEY:

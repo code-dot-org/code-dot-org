@@ -451,6 +451,25 @@
               "repeat": "ထပ်မံ ပြုလုပ်ပါ"
             }
           }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "ထပ်မံ ပြုလုပ်ပါ"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "×"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          }
         }
       }
     }

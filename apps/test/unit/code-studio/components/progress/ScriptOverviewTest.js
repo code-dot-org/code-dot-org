@@ -21,8 +21,8 @@ const defaultProps = {
   viewAs: ViewType.Teacher,
   isRtl: false,
   sectionsForDropdown: [],
-  scriptHasLockableStages: false,
-  scriptAllowsHiddenStages: false,
+  scriptHasLockableLessons: false,
+  scriptAllowsHiddenLessons: false,
   versions: []
 };
 

@@ -25639,3 +25639,48 @@ ar:
           lessons:
             lesson15:
               name: التخطيط لتطبيقك
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: البدء
+              name: البدء
+            Computer Science Fundamentals:
+              key: أساسيات علم الحاسوب
+              name: أساسيات علم الحاسوب
+            Looking Ahead:
+              key: التطلع للمستقبل
+              name: التطلع للمستقبل
+            'Mastering the Basics: Sequencing':
+              key: 'إتقان الأساسيات: التسلسل'
+              name: 'إتقان الأساسيات: التسلسل'
+            'Mastering the Basics: Loops':
+              key: 'إتقان الأساسيات: الحلقات'
+              name: 'إتقان الأساسيات: الحلقات'
+            'Mastering the Basics: Conditionals':
+              key: 'إتقان الأساسيات: التعبيرات الشرطية'
+              name: 'إتقان الأساسيات: التعبيرات الشرطية'
+            'Mastering the Basics: Functions':
+              key: 'إتقان الأساسيات: الدوال'
+              name: 'إتقان الأساسيات: الدوال'
+            'Mastering the Basics: Events':
+              key: 'إتقان الأساسيات: الأحداث'
+              name: 'إتقان الأساسيات: الأحداث'
+            Best Practices for Teaching Computer Science:
+              key: أفضل الممارسات لتدريس علوم الكمبيوتر
+              name: أفضل الممارسات لتدريس علوم الكمبيوتر
+            Planning:
+              key: التخطيط
+              name: التخطيط
+            Next Steps:
+              key: الخطوات التالية
+              name: الخطوات التالية
+        vpl-csd-2021:
+          lessons:
+            Module 1:
+              key: الوحدة 1
+              name: الوحدة 1
+        vpl-csp-2021:
+          lessons:
+            Module 1:
+              key: الوحدة 1
+              name: الوحدة 1
