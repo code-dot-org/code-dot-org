@@ -37,7 +37,7 @@ const lessonData = [
     id: 264,
     position: 1,
     name: 'Computational Thinking',
-    title: 'Stage 1: Computational Thinking',
+    title: 'Lesson 1: Computational Thinking',
     lesson_group_display_name: null,
     lockable: false,
     levels: [
@@ -103,7 +103,7 @@ const lessonData = [
     id: 265,
     position: 2,
     name: 'Maze',
-    title: 'Stage 2: Maze',
+    title: 'Lesson 2: Maze',
     lesson_group_display_name: null,
     lockable: false,
     levels: [
@@ -168,7 +168,7 @@ const lockableLessonData = [
     id: 264,
     position: 1,
     name: 'Computational Thinking',
-    title: 'Stage 1: Computational Thinking',
+    title: 'Lesson 1: Computational Thinking',
     lesson_group_display_name: null,
     lockable: true,
     levels: [
