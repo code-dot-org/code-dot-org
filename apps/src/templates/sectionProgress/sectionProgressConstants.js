@@ -13,7 +13,7 @@ export const scriptDataPropType = PropTypes.shape({
   hasStandards: PropTypes.bool,
   title: PropTypes.string,
   path: PropTypes.string,
-  stages: PropTypes.arrayOf(
+  lessons: PropTypes.arrayOf(
     PropTypes.shape({
       levels: PropTypes.arrayOf(PropTypes.object).isRequired
     })

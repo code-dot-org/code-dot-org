@@ -102,7 +102,7 @@ export function loadScriptProgress(scriptId, sectionId) {
       ...sectionProgress.studentLessonProgressByScript,
       [scriptId]: lessonProgressForSection(
         sectionProgress.studentLevelProgressByScript[scriptId],
-        sectionProgress.scriptDataByScript[scriptId].stages
+        sectionProgress.scriptDataByScript[scriptId].lessons
       )
     };
     getStore().dispatch(addDataByScript(sectionProgress));

@@ -165,7 +165,7 @@ describe('sectionProgressRedux', () => {
         sectionProgress: {
           scriptDataByScript: {
             123: {
-              stages: [
+              lessons: [
                 {
                   levels: [
                     {
