@@ -6,6 +6,7 @@ import {
   UnconnectedLevelToken as LevelToken,
   LevelTokenContents
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
+import _ from 'lodash';
 
 const defaultScriptLevel = {
   id: '11',
@@ -33,7 +34,7 @@ describe('LevelToken', () => {
     defaultProps = {
       activitySectionPosition: 1,
       activityPosition: 1,
-      scriptLevel: defaultScriptLevel,
+      scriptLevel: _.cloneDeep(defaultScriptLevel),
       dragging: false,
       delta: 0,
       handleDragStart,
@@ -73,24 +74,6 @@ describe('LevelTokenContents', () => {
     expect(wrapper.find('ProgressBubble').length).to.equal(1);
     const nameWrapper = wrapper.find('.uitest-level-token-name');
     expect(nameWrapper.text()).to.include('level-one');
-    expect(wrapper.text()).to.not.include('inactive variant');
-  });
-
-  it('renders inactive level variant key', () => {
-    defaultProps.scriptLevel.activeId = '2002';
-    defaultProps.scriptLevel.key = 'level-two';
-    defaultProps.scriptLevel.levels.push({
-      id: '2002',
-      name: 'Level Two',
-      key: 'level-two',
-      url: '/path/to/edit/2'
-    });
-    const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
-    expect(wrapper.find('ProgressBubble').length).to.equal(1);
-    const nameWrapper = wrapper.find('.uitest-level-token-name');
-    expect(nameWrapper.text()).to.include('level-two');
-    // match the &nbsp; whitespace character
-    expect(!!wrapper.text().match(/inactive variant:\W"level-one"/)).to.be.true;
   });
 
   it('calls toggleExpand when level name is clicked', () => {
@@ -105,6 +88,25 @@ describe('LevelTokenContents', () => {
   it('shows LevelTokenDetails when expanded', () => {
     defaultProps.scriptLevel.expand = true;
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
-    expect(wrapper.find('Connect(LevelTokenDetails)').length).to.equal(1);
+    const details = wrapper.find('Connect(LevelTokenDetails)');
+    expect(details.length).to.equal(1);
+    expect(details.props().inactiveLevelKeys).to.have.length(0);
+  });
+
+  it('passes inactive level variants to LevelTokenDetails when present', () => {
+    defaultProps.scriptLevel.expand = true;
+    defaultProps.scriptLevel.activeId = '2002';
+    defaultProps.scriptLevel.key = 'level-two';
+    defaultProps.scriptLevel.levels.push({
+      id: '2002',
+      name: 'Level Two',
+      key: 'level-two',
+      url: '/path/to/edit/2'
+    });
+    const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
+    const details = wrapper.find('Connect(LevelTokenDetails)');
+    expect(details.length).to.equal(1);
+    expect(details.props().inactiveLevelKeys).to.have.length(1);
+    expect(details.props().inactiveLevelKeys[0]).to.equal('level-one');
   });
 });
