@@ -413,7 +413,7 @@ function initializeStoreWithProgress(
       currentLevelId: currentLevelId,
       professionalLearningCourse: scriptData.plc,
       saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
-      stages: scriptData.lessons,
+      lessons: scriptData.lessons,
       lessonGroups: scriptData.lessonGroups,
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
