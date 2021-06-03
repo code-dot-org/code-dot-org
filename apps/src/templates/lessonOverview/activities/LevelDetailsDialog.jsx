@@ -140,6 +140,7 @@ class LevelDetailsDialog extends Component {
           levelVideos={level.videos}
           mapReference={level.mapReference}
           referenceLinks={level.referenceLinks}
+          openReferenceLinksInNewTab
           teacherMarkdown={level.teacherMarkdown}
           viewAs={this.props.viewAs}
           height={this.state.height}
