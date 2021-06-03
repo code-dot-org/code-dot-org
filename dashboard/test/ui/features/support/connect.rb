@@ -37,7 +37,7 @@ def saucelabs_browser(test_run_name)
     name: test_run_name,
     tags: [ENV['GIT_BRANCH']],
     build: CDO.circle_run_identifier || ENV['BUILD'],
-    idleTimeout: 60
+    idleTimeout: 120
   }
   sauce_capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
   sauce_capabilities[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
