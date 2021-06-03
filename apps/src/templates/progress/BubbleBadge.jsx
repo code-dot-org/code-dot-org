@@ -9,7 +9,7 @@ import FontAwesome from '../FontAwesome';
 
 const badgeTypes = ['assessment', 'keepWorking'];
 
-function BubbleBadge({type, isDiamond}) {
+function BubbleBadge({type, isDiamond, positionedRelative}) {
   let backgroundColor, icon;
 
   if (type === 'assessment') {
@@ -20,9 +20,10 @@ function BubbleBadge({type, isDiamond}) {
     icon = 'exclamation';
   }
 
-  const position = isDiamond
-    ? styles.diamondBubblePosition
-    : styles.bubblePosition;
+  let position;
+  if (!positionedRelative) {
+    position = isDiamond ? styles.diamondBubblePosition : styles.bubblePosition;
+  }
 
   return (
     <span className="fa-stack" style={{...styles.container, ...position}}>
@@ -47,7 +48,8 @@ function BubbleBadge({type, isDiamond}) {
 
 BubbleBadge.propTypes = {
   type: PropTypes.oneOf(badgeTypes).isRequired,
-  isDiamond: PropTypes.bool
+  isDiamond: PropTypes.bool,
+  positionedRelative: PropTypes.bool
 };
 
 const styles = {

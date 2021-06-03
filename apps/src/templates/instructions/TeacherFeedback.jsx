@@ -14,6 +14,7 @@ import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedb
 import {teacherFeedbackShape, rubricShape} from '@cdo/apps/templates/types';
 import experiments from '@cdo/apps/util/experiments';
 import BubbleBadge from '@cdo/apps/templates/progress/BubbleBadge';
+import {makeEnum} from '@cdo/apps/utils';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -22,6 +23,8 @@ const ErrorType = {
 };
 
 const keepWorkingExperiment = 'teacher-feedback-review-state';
+
+const ReviewStates = makeEnum('completed', 'keepWorking');
 
 export class TeacherFeedback extends Component {
   static propTypes = {
@@ -46,6 +49,10 @@ export class TeacherFeedback extends Component {
     //Pull the student id from the url
     this.studentId = queryString.parse(window.location.search).user_id;
     this.onRubricChange = this.onRubricChange.bind(this);
+
+    this.isAwaitingTeacherReview =
+      latestFeedback?.review_state === ReviewStates.keepWorking &&
+      latestFeedback?.student_updated_since_feedback;
 
     const {latestFeedback} = this.props;
     this.state = {
@@ -162,6 +169,25 @@ export class TeacherFeedback extends Component {
     );
   }
 
+  renderReviewStateForStudent() {
+    return (
+      <div style={styles.studentReviewState}>
+        <BubbleBadge type="keepWorking" positionedRelative={true} />
+        {this.isAwaitingTeacherReview ? (
+          <span style={styles.studentReviewStateText}>
+            Waiting for teacher review
+          </span>
+        ) : (
+          <span
+            style={{...styles.studentReviewStateText, ...styles.keepWorking}}
+          >
+            Keep working
+          </span>
+        )}
+      </div>
+    );
+  }
+
   render() {
     const {
       verifiedTeacher,
@@ -236,11 +262,8 @@ export class TeacherFeedback extends Component {
                 />
               )}
               {viewAs === ViewType.Student &&
-                latestFeedback?.review_state === 'keepWorking' && (
-                  <div>
-                    <BubbleBadge type="keepWorking" />
-                  </div>
-                )}
+                latestFeedback?.review_state === 'keepWorking' &&
+                this.renderReviewStateForStudent()}
             </div>
             <CommentArea
               isReadonly={disabledMode}
@@ -312,6 +335,19 @@ const styles = {
   },
   commentAndFooter: {
     margin: '8px 16px 8px 16px'
+  },
+  studentReviewState: {
+    margin: '0 5px',
+    display: 'flex',
+    alignItems: 'center'
+  },
+  keepWorking: {
+    color: color.red
+  },
+  studentReviewStateText: {
+    margin: '0 3px',
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'bold'
   }
 };
 
