@@ -24,11 +24,11 @@ export function lessonIsVisible(lesson, state, viewAs) {
     throw new Error('missing param viewAs in lessonIsVisible');
   }
 
-  const hiddenStageState = state.hiddenLesson;
+  const hiddenLessonState = state.hiddenLesson;
   const sectionId = state.teacherSections.selectedSectionId;
 
   const isHidden = isLessonHiddenForSection(
-    hiddenStageState,
+    hiddenLessonState,
     sectionId,
     lesson.id
   );
