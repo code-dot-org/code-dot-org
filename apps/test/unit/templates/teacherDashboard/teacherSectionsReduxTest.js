@@ -661,7 +661,7 @@ describe('teacherSectionsRedux', () => {
       ).to.throw();
     });
 
-    it('switching script assignment updates stage extras value from script', () => {
+    it('switching script assignment updates lesson extras value from script', () => {
       let state = reducer(
         editingNewSectionState,
         setValidAssignments(validCourses, validScripts)
