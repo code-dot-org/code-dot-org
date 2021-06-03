@@ -22501,12 +22501,20 @@ en:
               description_teacher: In this lesson, students create arrays to store values using the keyword `new`. They explore The Theater, which allows them to manipulate sounds and shapes. They use The Neighborhood and The Theater to practice accessing and modifying elements in arrays using index values.
             lesson-3:
               name: Traversing Arrays with for Loops
+              description_student: In this lesson, you learn about `for` loops and how to use them to traverse arrays. You revisit The Neighborhood and use trace tables to document how code executes within a `for` loop. You use `for` loops to solve problems in The Neighborhood and get feedback on your work through a code review.
+              description_teacher: Students write `for` loops to traverse arrays and to search for and modify elements that meet certain conditions. Students revisit The Neighborhood and use trace tables to document how code executes within a `for` loop. They participate in a code review after completing a choice level and revise their code based on feedback.
             lesson-4:
               name: Traversing Arrays with while Loops
+              description_student: Do you remember `while` loops? In this lesson, you investigate edge cases of `while` loops and make connections between `while` and `for` loops. You create visuals for your music using the `Rectangle` class.
+              description_teacher: Students review `while` loops and learn about infinite loops. Students explore creating visuals before converting between `while` and `for` loops. Students create their own music visuals using the `Rectangle` class.
             lesson-5:
               name: Storing Objects into Arrays
+              description_student: You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Shape` objects. After reviewing inheritance, you discover how subclasses implement specific versions of behaviors. Analysis of a code segment provides an example to guide the implementation of polymorphism in The Theater.
+              description_teacher: Students explore the functionality and benefits of polymorphism to create and traverse an array of `Shape` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Analysis of a code segment provides an example to guide the implementation of polymorphism in The Theater.
             lesson-6:
               name: Traversing Arrays with Enhanced for Loops
+              description_student: 'To access each element stored in an array, we traverse the array using a loop. You previously learned how to use `while` and `for` loops to access all or just some parts of an array. Today, you implement an enhanced `for` loop, which is a simplified `for` loop used to access each element of an array one by one. '
+              description_teacher: In this lesson, students use an enhanced `for` loop to traverse an array. Students identify the differences, advantages, and disadvantages of using an enhanced `for` loop instead of a traditional `for` or `while` loop to traverse an array.
             lesson-7:
               name: Using Static Variables and Constants
             lesson-8:
@@ -22597,7 +22605,7 @@ en:
           description: "Welcome to Code.org’s free online educator course for CS Fundamentals! \n"
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
-          description_audience: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
+          description_audience: 'Welcome to Code.org’s free online course for getting started with CS Fundamentals! '
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: Welcome to "Teaching Computer Science Fundamentals"
@@ -22684,7 +22692,7 @@ en:
             k5_getting_started_1:
               display_name: Introduction
             k5_basic_concepts_1:
-              display_name: CS Fundamentals Concepts
+              display_name: CS Fundamentals CS Concepts
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
