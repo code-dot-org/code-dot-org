@@ -764,6 +764,7 @@ class Lesson < ApplicationRecord
         copied_activity_section.lesson_activity_id = copied_lesson_activity.id
         copied_activity_section.save!
         sl_data = original_activity_section.script_levels.map.with_index(1) do |original_script_level, pos|
+          # Only include active level and discard variants
           original_active_level = original_script_level.oldest_active_level
           copied_level = new_level_suffix.blank? ? original_active_level : original_active_level.clone_with_suffix(new_level_suffix)
           {
