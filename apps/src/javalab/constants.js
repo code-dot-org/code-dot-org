@@ -1,3 +1,5 @@
+import {makeEnum} from '@cdo/apps/utils';
+
 export const CsaViewMode = {
   NEIGHBORHOOD: 'neighborhood',
   CONSOLE: 'console',
@@ -45,3 +47,5 @@ export const NeighborhoodSignalType = {
   // Show all paint buckets
   SHOW_BUCKETS: 'SHOW_BUCKETS'
 };
+
+export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
