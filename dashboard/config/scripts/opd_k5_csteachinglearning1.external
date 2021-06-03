@@ -2,35 +2,41 @@ name 'OPD-K5 CSTeachingLearning1'
 skip_dialog true
 markdown <<MARKDOWN
 # CS Teaching Practices
-**Total Suggested Time:**
 
-This lesson highlights both CS teaching practices *and* student practices that support students in learning CS. Let's begin with first learning about CS teaching practices.
+The curriculum is designed to help educators use the following CS teaching practices to teach CS Fundamentals with a focus on inclusion.   
 
-The following Pedagogical Approaches to Curriculum values inform teaching CS practices that support learning CS in equitable and inclusive ways.
+<img src="https://images.code.org/44e2eb0f1b35d6922bb0fbc98fecbabc-image-1622756073372.png" class="level-image">
+
+These CS teaching practices stem from Code.org's <a href="https://code.org/educate/curriculum/values" target="blank" rel="noopener noreferrer">Curriculum values</a>.
 
 ## Role of the Teacher (Lead Learner)
-* The teacher will act as the lead learner, “I may not know the answer, but I know that together we can figure it out.”
-* Let the lesson activity expose the concept to students instead of lecturing or first offering an explanation.
-	* This can look like a teacher sharing they don't know everything about a CS concept during a lesson.
+The teacher will act as the lead learner, “I may not know the answer, but I know that together we can figure it out.”
 
+**The Role of the Teacher** in a CS Fundamentals classroom can look like:
 
-## Discovery and Inquity
-* The curriculum is designed for students to explore concepts and build their own understanding through lesson activities.  
-* Students (and teachers) do not need prior experience to learn CS concepts and engage with the course content.
-	* This can look like a teacher engaging students with guiding questions during the warm up of the lesson instead of an  a direct explanation.
-    * This can also look like a teacher encouraging students to engage with the main activity of the lesson before asking questions about CS concepts.
+* Letting the lesson activity expose the concept to students instead of lecturing or first offering an explanation.
+* The teacher actively teaching lessons in order to support active learning for **all** students.
+
+## Discovery and Inquiry
+The curriculum is designed for students to explore concepts and build their own understanding through lesson activities.  *
+
+**Discovery and Inquiry** in a CS Fundamentals classroom can look like:
+
+* Supporting students in asking questions when making sense of their own learning.
+* The teacher helping **all** students in taking in the lead in learning CS.
+   
 
 ## The Classroom Community
-* Lessons allow for building a classroom community where students are almost always communicating, solving problems, and creating things as a classroom.
-* Building this type of learning community leads to active learning and an inclusive classroom culture with opportunities for all students to share and listen to ideas.
-	* This can look like a teacher providing all students with multiple opportunities to communicate their ideas throughout the lesson with other students.
+Lessons encourage creating a learning environment where different approaches, solutions, and perspectives are welcomed.
+
+**The Classroom Community** in a CS Fundamentals classroom can look like:
+
+* **All** students building and strengthening their communication skills during lessons.
+*  The teacher establishing a classroom culture in which mistakes are part of the learning process.
 
 
 
 
-<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
 
-
-    
 
 MARKDOWN

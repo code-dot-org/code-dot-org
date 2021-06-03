@@ -1,7 +1,7 @@
 login_required true
 version_year '2021'
 
-lesson_group 'Implementing and Teaching CS', display_name: 'Implementing and Teaching CS'
+lesson_group 'Implementing and Teaching CS', display_name: 'Part I:  Implementing and Teaching CS'
 lesson 'Welcome to "Teaching Computer Science Fundamentals"', display_name: 'Introduction', has_lesson_plan: false
 level 'OPD-K5 Why teach CS_copy_2021'
 level 'OPD-K5 WhatIsCSF_2021'
@@ -18,7 +18,7 @@ level 'OPD-K5 GettingStarted1_2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted2', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted_Reflection', progression: 'Getting Started'
 
-lesson 'CS Teaching and Student Practices', display_name: 'CS Teaching and Student Practices', has_lesson_plan: false
+lesson 'CS Teaching and Student Practices', display_name: 'CS Teaching Practices', has_lesson_plan: false
 level 'OPD-K5 CSTeachingLearning1', progression: 'CS Teaching and Student Practices'
 level 'OPD-K5 CSTeachingLearning_Reflection', progression: 'CS Teaching and Student Practices'
 level 'OPD-K5 CSTeachingLearning2', progression: 'CS Teaching and Student Practices'
@@ -39,7 +39,7 @@ level 'OPD-K5 LessonPlanning1', progression: 'Lesson Planning'
 level 'OPD-K5 LessonPlanning2', progression: 'Lesson Planning'
 level 'OPD-K5 LessonPlanning_Reflection', progression: 'Lesson Planning'
 
-lesson_group 'k5_basic_concepts_1', display_name: 'CS Fundamentals CS Concepts'
+lesson_group 'k5_basic_concepts_1', display_name: 'Part II:  CS Fundamentals CS Concepts'
 lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
 level 'OPD-K5 Stage3Start_copy_2021'
 level 'OPD-K5 sequencing introduced_2021'
@@ -161,7 +161,7 @@ level 'OPD-K5 for loops free response_2021'
 level 'OPD-K5 sprite lab free response_2021'
 level 'OPD-K5 projects free response_2021'
 
-lesson 'Next steps', display_name: 'Next steps', has_lesson_plan: false
+lesson 'Next steps', display_name: 'Part III:  Next steps', has_lesson_plan: false
 level 'OPD-K5 Stage10Start_copy_2021'
 level 'OPD-K5 Stage9Start_copy_2021'
 level 'OPD-K5 CS Courses_copy_2021'

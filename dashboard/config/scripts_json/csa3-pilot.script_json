@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-03 17:59:15 UTC",
+    "serialized_at": "2021-06-03 21:25:07 UTC",
     "seeding_key": {
       "script.name": "csa3-pilot"
     }
@@ -161,6 +161,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "Students implement static variables and constants to count the number of `Shape` objects created and set maximum and minimum values for the volume of sounds. Students explore source code for the `Math` class to connect real-world code and the concepts they have learned so far.",
+        "preparation": "* Print copies of the Math Class Source Code handout (one per student)",
+        "student_overview": "Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Theater. You examine the `Math` class source code to see additional examples of static variables and constants."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -542,6 +545,60 @@
         "lesson_activity.key": "e04b70d7-5282-4fa7-800f-72741b7284e8",
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "817aff1f-032f-4277-bf9b-6e7b67690932",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "817aff1f-032f-4277-bf9b-6e7b67690932",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "f0605d96-96c7-4e19-8771-9da43b91c60e",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f0605d96-96c7-4e19-8771-9da43b91c60e",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "018e2d64-0daa-475c-a60b-3bbce727697d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "018e2d64-0daa-475c-a60b-3bbce727697d",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa3-pilot"
       }
     },
@@ -1746,6 +1803,242 @@
       }
     },
     {
+      "key": "fbe08d11-48a0-4505-bbd1-cf2dc3bd9b4f",
+      "position": 1,
+      "properties": {
+        "description": "Objects are created from the same class blueprint, but they have their own distinct copies of instance variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In the case of the `Student` class, the instance variables are `name`, `grade`, and `favoriteClass`. Each `Student` object has its own values for these variables stored in different locations in memory.",
+        "name": "Instance Variables",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fbe08d11-48a0-4505-bbd1-cf2dc3bd9b4f",
+        "lesson_activity.key": "817aff1f-032f-4277-bf9b-6e7b67690932"
+      }
+    },
+    {
+      "key": "6390063b-a426-4e60-9b66-27db4802bbf9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we wanted to store a value that is shared by all instances of a class? For example, all of these `Student` objects attend the same school. How could we share a variable that stores the school's name with all `Student` objects?*\n\n**Discussion Goal:** Students share ideas for storing a value that is shared by all instances of a class, including creating an instance variable to store the value."
+      },
+      "seeding_key": {
+        "activity_section.key": "6390063b-a426-4e60-9b66-27db4802bbf9",
+        "lesson_activity.key": "817aff1f-032f-4277-bf9b-6e7b67690932"
+      }
+    },
+    {
+      "key": "f8852e60-cbb0-440d-b716-00c1774459c0",
+      "position": 3,
+      "properties": {
+        "description": "You may have considered initializing a private instance variable with the shared value. This seems like it would be a valid solution because when an object is created it will have a variable storing this shared value.\n\nHowever, this is not ideal. Each object has its own distinct copy of the instance variable. If we wanted to change this shared variable, we would need to update each object individually. \n\nTo solve this we need a new type of variable — a static variable!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f8852e60-cbb0-440d-b716-00c1774459c0",
+        "lesson_activity.key": "817aff1f-032f-4277-bf9b-6e7b67690932"
+      }
+    },
+    {
+      "key": "37f81f41-9bb1-4580-88c2-741f45d33a4d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Definition of static variable and the `static` keyword.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Static Variables video.\n\n**Do This:** Click through the three slides to discuss static variables:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Each instance of the class shares a static variable, which is in one fixed location in memory.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A static variable can be created by adding the static keyword before the variable during declaration.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Static variables belong to a class, not an object. To use a static variable, use the `ClassName` and the dot operator.",
+        "duration": "15",
+        "name": "Static Variables",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may note the `static` keyword being used in the `main` method. The `main` method is declared as a static method so that the Java Virtual Machine can call it without creating any instance of a class. \n\nThe `static` keyword can be used with a class, variable, or method. A static class, variable, or method belongs to a class and can be used without creating an object."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "37f81f41-9bb1-4580-88c2-741f45d33a4d",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "65ac2dd3-fab3-4363-85a7-c20af27195bf",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When we assign a value to an instance variable, it is only changed for the object that it belongs to. What happens if we assign a value to a static variable?*\n\n**Discussion Goal:** Students guess that updating static variables will change the value for all instances of the class."
+      },
+      "seeding_key": {
+        "activity_section.key": "65ac2dd3-fab3-4363-85a7-c20af27195bf",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "9e6443fd-87ba-4401-8eca-88d71aaa77b1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If we change the value of a static variable for one object, it changes it for all objects of the class.\n\nConsider the code segment on the left. In the `Forecast` class, we have a static variable called `lastTemp`.\n\nIn the constructor, `lastTemp` is updated to store the value passed in for `temp`, meaning it will be updated any time a new `Forecast` object is created.\n\nLet’s look at the code on the right to see this in action.\n\nAfter creating a `Forecast` object called `monday`, which passed in 78 as the temperature, `lastTemp` is now 78. \n\nIf we create another `Forecast` object, `tuesday`, which passes in 70 as the temperature, `lastTemp` is now 70 for both `monday` and `tuesday`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9e6443fd-87ba-4401-8eca-88d71aaa77b1",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "51169ca2-b333-4b2e-95bb-c1088ba805c2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that static variables are often used to count how many objects have been created."
+      },
+      "seeding_key": {
+        "activity_section.key": "51169ca2-b333-4b2e-95bb-c1088ba805c2",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "7b1f0297-f869-4193-868f-b75117b0e04d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1, then complete Level 2 in pairs. They create and use a static variable to count the number of `Circle` objects created."
+      },
+      "seeding_key": {
+        "activity_section.key": "7b1f0297-f869-4193-868f-b75117b0e04d",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "a5790267-9e0a-420c-9a8a-851642f925ea",
+      "position": 6,
+      "properties": {
+        "description": "A static variable is stored in one space in memory and can be updated for all instances of the class.\n\nThere are situations in our program where we may want a variable to be unchangeable or constant.",
+        "duration": "10",
+        "name": "Constants",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a5790267-9e0a-420c-9a8a-851642f925ea",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "18fd18e8-1e43-48d0-adbc-16ee386e8b2e",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Definition of a constant.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you used constants before? How were they useful?*\n\n**Discussion Goal:** Students share constants they have used, such as pi in math class."
+      },
+      "seeding_key": {
+        "activity_section.key": "18fd18e8-1e43-48d0-adbc-16ee386e8b2e",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "4c1c54ca-d643-449c-a9bb-c8b984ffbfee",
+      "position": 8,
+      "properties": {
+        "description": "In math, a constant is a value set by a mathematical definition. They are reusable and useful for solving multiple mathematical problems that share common patterns. In computer science, constants are similar.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4c1c54ca-d643-449c-a9bb-c8b984ffbfee",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "69a972fc-0b91-473d-9ba3-cecf0fbc89a4",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Constants video."
+      },
+      "seeding_key": {
+        "activity_section.key": "69a972fc-0b91-473d-9ba3-cecf0fbc89a4",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "2b0698fe-6829-4298-ab51-05d424a8edc9",
+      "position": 10,
+      "properties": {
+        "description": "In The Theater, a useful place to use a constant is to store the minimum and the maximum volume to control how loud or quiet our sounds play.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Sounds are waves. The higher the amplitude (height) of the wave, the louder the sound is at that instant. When the amplitude of the sound is shorter, the sound is quieter.\n\nAt certain amplitudes, the sound we want to create becomes hard to hear clearly. Let’s create constants for the minimum and maximum volume in the `SoundEffects` class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2b0698fe-6829-4298-ab51-05d424a8edc9",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "8937d0f7-ee73-415c-a145-23c5c8644e0b",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 4 and 5 on Code Studio. Students independently complete the Check for Understanding on Level 4 then complete Level 5 in pairs, where they create constants for the minimum and maximum volume."
+      },
+      "seeding_key": {
+        "activity_section.key": "8937d0f7-ee73-415c-a145-23c5c8644e0b",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "74fae15e-e0a5-4983-abda-147b2e5c26f1",
+      "position": 12,
+      "properties": {
+        "description": "Static and constant variables are used across the industry. Let’s explore an example.\n\nThe `Math` class contains variables and methods for performing mathematical tasks with numbers. You will learn more about the `Math` class in a later unit, but let’s inspect the code to see how static variables and constants are used in the `Math` class.",
+        "duration": "10",
+        "name": "Math Class Source Code",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "74fae15e-e0a5-4983-abda-147b2e5c26f1",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "63b8dddf-a55a-4ec2-9237-d22bfac998ba",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Math Class Source Code handout.\n\n**Do This:** Students complete the Math Class Source Code handout with a partner.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The next unit covers the `Math` class. If you do not have time to review the activity guide, have students write down questions about the `Math` class and address their questions in the next unit. \n\nIf time permits, review the activity guide as a class or in student pairs. Discuss observations based on notes collected."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "63b8dddf-a55a-4ec2-9237-d22bfac998ba",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "3a131bbd-72c8-441b-ab5a-a70964b08a15",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Closing the Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a131bbd-72c8-441b-ab5a-a70964b08a15",
+        "lesson_activity.key": "f0605d96-96c7-4e19-8771-9da43b91c60e"
+      }
+    },
+    {
+      "key": "f21e0cce-2fe0-4ac8-a985-ce2f4fe8912d",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f21e0cce-2fe0-4ac8-a985-ce2f4fe8912d",
+        "lesson_activity.key": "f0605d96-96c7-4e19-8771-9da43b91c60e"
+      }
+    },
+    {
+      "key": "d815d629-8ed0-4134-a5f7-f5c90416be12",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d815d629-8ed0-4134-a5f7-f5c90416be12",
+        "lesson_activity.key": "018e2d64-0daa-475c-a60b-3bbce727697d"
+      }
+    },
+    {
       "key": "216086d1-8d9e-4c36-a1bc-38de812c435b",
       "position": 1,
       "properties": {
@@ -1837,6 +2130,18 @@
       }
     },
     {
+      "name": "[KEY] Math Class Source Code",
+      "url": "https://docs.google.com/document/d/1GjGz_NLEbBYDX0_LfgvhEPLS6fVmeOEnSVuw-roOXpA/edit?usp=sharing",
+      "key": "_key_math_class_source_code",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_math_class_source_code"
+      }
+    },
+    {
       "name": "[KEY] Tracing Loops",
       "url": "https://docs.google.com/document/d/1yqaWn3qOsI2EL2BKG117Gsvs7lwYLTWcOcu2gv59tRs",
       "key": "_key_tracing_loops",
@@ -1921,6 +2226,18 @@
       }
     },
     {
+      "name": "[KEY] U3L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1fHfpb44AJ2vE6R2iA3OFAW7O1veBN2YKbzJyy_co94U/edit?usp=sharing",
+      "key": "_key_u3l7_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u3l7_extra_practice"
+      }
+    },
+    {
       "name": "Array Manipulatives",
       "url": "https://docs.google.com/presentation/d/1rYOgAAhDzl7nI6Od73dmxaDdvWWYUFVBjpDwpo8Wh0U/edit?usp=sharing",
       "key": "array_manipulatives",
@@ -1966,6 +2283,18 @@
       },
       "seeding_key": {
         "resource.key": "investigating_arrays"
+      }
+    },
+    {
+      "name": "Math Class Source Code",
+      "url": "https://docs.google.com/document/d/1BO5II-icxNOI-r_atrO7uS9tx6mDvHcDBNEYkZLxEgA/edit?usp=sharing",
+      "key": "math_class_source_code",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "math_class_source_code"
       }
     },
     {
@@ -2062,6 +2391,18 @@
       },
       "seeding_key": {
         "resource.key": "u3l6_extra_practice"
+      }
+    },
+    {
+      "name": "U3L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1SgTy3e85y0kaTvXuLN_UVkChUsu78hW8hmbVJHO4-CU/edit?usp=sharing",
+      "key": "u3l7_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u3l7_extra_practice"
       }
     },
     {
@@ -2284,6 +2625,36 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_math_class_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_u3l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "math_class_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u3l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-15",
         "resource.key": "unit_3_presentation_slides"
       }
@@ -2475,6 +2846,46 @@
       "seeding_key": {
         "vocabulary.key": "enhanced_for_loop_variable"
       }
+    },
+    {
+      "key": "static_variable",
+      "word": "Static Variable",
+      "definition": "A variable defined in a class that stores a shared value for all instances of the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "static_variable"
+      }
+    },
+    {
+      "key": "static_keyword",
+      "word": "static Keyword",
+      "definition": "The keyword used to specify that a variable or method belongs to a class instead of an instance of a class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "static_keyword"
+      }
+    },
+    {
+      "key": "constant",
+      "word": "Constant",
+      "definition": "A variable containing a value that cannot be changed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constant"
+      }
+    },
+    {
+      "key": "final_keyword",
+      "word": "final Keyword",
+      "definition": "The keyword used to specify that a value cannot be changed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "final_keyword"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -2584,6 +2995,30 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "vocabulary.key": "enhanced_for_loop_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "static_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "static_keyword"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "constant"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "final_keyword"
       }
     }
   ],
@@ -2759,6 +3194,36 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "objective.key": "871ba35c-ac4a-43a6-92cb-4b7eba75ceda"
+      }
+    },
+    {
+      "key": "56973cf0-f6b5-4e56-84b4-f5a080a85839",
+      "properties": {
+        "description": "Define and use static variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "56973cf0-f6b5-4e56-84b4-f5a080a85839"
+      }
+    },
+    {
+      "key": "eb161259-a279-414e-97ef-6895c8ced620",
+      "properties": {
+        "description": "Define and use constants"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "eb161259-a279-414e-97ef-6895c8ced620"
+      }
+    },
+    {
+      "key": "12d31902-90f3-4c2e-ac46-9b0ef1255e56",
+      "properties": {
+        "description": "Examine source code for Java’s Math class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "12d31902-90f3-4c2e-ac46-9b0ef1255e56"
       }
     }
   ],
@@ -2950,6 +3415,34 @@
         "lesson.key": "lesson-6",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.H.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.H.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.4"
       }
     }
   ],
