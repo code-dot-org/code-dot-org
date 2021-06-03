@@ -1082,6 +1082,16 @@ export function getDataDescription(state) {
   }
 }
 
+export function getModelMetrics(state) {
+  const modelMetrics = {};
+  modelMetrics.userUploaded = isUserUploadedDataset(state);
+  modelMetrics.datasetName = state.metadata.name;
+  modelMetrics.features = state.selectedFeatures;
+  modelMetrics.label = state.labelColumn;
+  modelMetrics.accuracy = getSummaryStat(state).stat;
+  return modelMetrics;
+}
+
 export function getDatasetDetails(state) {
   const datasetDetails = {};
   datasetDetails.name = state.metadata.name;
