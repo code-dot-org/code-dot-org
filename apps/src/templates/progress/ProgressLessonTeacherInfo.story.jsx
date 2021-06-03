@@ -67,7 +67,7 @@ const createStore = ({
   store.dispatch(
     initProgress({
       scriptName: 'csp1',
-      stages: lessons
+      lessons: lessons
     })
   );
   if (teacherVerified) {
