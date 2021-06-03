@@ -28,7 +28,7 @@ class LevelTokenDetails extends Component {
     scriptLevel: scriptLevelShape.isRequired,
     activitySectionPosition: PropTypes.number.isRequired,
     activityPosition: PropTypes.number.isRequired,
-    inactiveLevelKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
+    inactiveLevelNames: PropTypes.arrayOf(PropTypes.string).isRequired,
 
     //redux
     setScriptLevelField: PropTypes.func.isRequired,
@@ -89,10 +89,10 @@ class LevelTokenDetails extends Component {
             </label>
           ))}
         </span>
-        {this.props.inactiveLevelKeys.length > 0 && (
+        {this.props.inactiveLevelNames.length > 0 && (
           <div>
             inactive variants:
-            {this.props.inactiveLevelKeys.map(key => `"${key}`).join(', ')}
+            {this.props.inactiveLevelNames.map(key => `"${key}`).join(', ')}
           </div>
         )}
       </div>

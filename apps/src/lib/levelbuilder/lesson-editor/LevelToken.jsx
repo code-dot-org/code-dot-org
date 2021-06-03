@@ -127,12 +127,12 @@ export class LevelTokenContents extends Component {
         })[0]
       : scriptLevel.levels[0];
 
-    const inactiveLevelKeys = hasVariants
+    const inactiveLevelNames = hasVariants
       ? scriptLevel.levels
           .filter(level => {
             return level.id !== activeLevel.id;
           })
-          .map(level => level.key)
+          .map(level => level.name)
       : [];
 
     const progressBubbleLevel = this.scriptLevelForProgressBubble(activeLevel);
@@ -188,7 +188,7 @@ export class LevelTokenContents extends Component {
             scriptLevel={scriptLevel}
             activitySectionPosition={this.props.activitySectionPosition}
             activityPosition={this.props.activityPosition}
-            inactiveLevelKeys={inactiveLevelKeys}
+            inactiveLevelNames={inactiveLevelNames}
           />
         )}
       </div>

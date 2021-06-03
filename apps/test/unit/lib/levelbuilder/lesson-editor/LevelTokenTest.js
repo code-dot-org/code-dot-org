@@ -90,7 +90,7 @@ describe('LevelTokenContents', () => {
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
     const details = wrapper.find('Connect(LevelTokenDetails)');
     expect(details.length).to.equal(1);
-    expect(details.props().inactiveLevelKeys).to.have.length(0);
+    expect(details.props().inactiveLevelNames).to.have.length(0);
   });
 
   it('passes inactive level variants to LevelTokenDetails when present', () => {
@@ -100,13 +100,12 @@ describe('LevelTokenContents', () => {
     defaultProps.scriptLevel.levels.push({
       id: '2002',
       name: 'Level Two',
-      key: 'level-two',
       url: '/path/to/edit/2'
     });
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
     const details = wrapper.find('Connect(LevelTokenDetails)');
     expect(details.length).to.equal(1);
-    expect(details.props().inactiveLevelKeys).to.have.length(1);
-    expect(details.props().inactiveLevelKeys[0]).to.equal('level-one');
+    expect(details.props().inactiveLevelNames).to.have.length(1);
+    expect(details.props().inactiveLevelNames[0]).to.equal('Level One');
   });
 });

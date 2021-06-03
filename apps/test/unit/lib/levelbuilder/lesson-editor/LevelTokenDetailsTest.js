@@ -51,7 +51,7 @@ describe('LevelTokenDetails', () => {
       activitySectionPosition: 5,
       activityPosition: 1,
       lessonExtrasAvailableForScript: false,
-      inactiveLevelKeys: []
+      inactiveLevelNames: []
     };
   });
 
@@ -117,7 +117,7 @@ describe('LevelTokenDetails', () => {
     const wrapper = shallow(
       <LevelTokenDetails
         {...defaultProps}
-        inactiveLevelKeys={['inactive-level']}
+        inactiveLevelNames={['inactive-level']}
       />
     );
     expect(wrapper.text()).to.contain('inactive variants');
