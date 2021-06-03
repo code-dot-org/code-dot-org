@@ -50,7 +50,8 @@ describe('LevelTokenDetails', () => {
       scriptLevel: defaultScriptLevel,
       activitySectionPosition: 5,
       activityPosition: 1,
-      lessonExtrasAvailableForScript: false
+      lessonExtrasAvailableForScript: false,
+      inactiveLevelKeys: []
     };
   });
 
