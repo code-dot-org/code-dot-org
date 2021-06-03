@@ -1,0 +1,43 @@
+---
+title: Code.org 2020 Annual Report
+nav: about_nav
+theme: responsive
+video_player: true
+style_min: true
+social:
+  "og:title": "Code.org 2020 Annual Report"
+  "og:image": "https://code.org/images/social-media/default-og-image.png"
+  "og:image:width": 1200
+  "og:image:height": 630
+  "twitter:title": "Code.org 2020 Annual Report"
+  "twitter:image:src": "https://code.org/images/social-media/default-og-image.png"
+---
+<link href="/css/marketing.css" rel="stylesheet" />
+
+# Code.org 2020 Annual Report
+
+[<button>View PDF of this report</button>](/files/Code.org-Annual-Report-2019.pdf)
+<p><em>PDF needs to be updated</em></p>
+
+<div class="AR2020">
+<h2 class="purple-block">Letter from Hadi</h2>
+
+## Computer science amid a global pandemic
+
+In 2020, we witnessed a global feat of agility and perseverance as our lives were turned upside down by the pandemic. In the education community, we saw educators all around the world rise to the unprecedented challenge of sweeping school closures and the limitations of remote teaching.
+
+The determination of teachers to keep students learning was Code.org’s inspiration as we pivoted to support them in the new world of distance learning. On March 9, two days before the World Health Organization declared COVID-19 a pandemic, there were already 13 country-wide school closures. Within a week, there were 109 country-wide closures and 44% of the world’s enrolled learners found themselves struggling to learn at home. During that same week, Code.org concentrated our efforts to rapidly create a set of resources for learning at home, and we launched a weekly series of live-interactive online lessons to reach students whose schools were closed for the year. By the end of March, 82.8% of total enrolled learners were impacted by school closures.
+
+COVID-19 was not the only calamity to erupt in 2020. Horrific images of injustices against Black Americans put a much-needed spotlight on racial inequity in the US. Like many other organizations across the country, Code.org reflected deeply on how our work could go further to address racial inequity. We made a commitment and a plan to better serve our Black employees, students, and teachers. As we took immediate action, we pledged to continue to evolve and execute on that plan. 
+
+As the world works to heal, one thing is certain: computer science is more important than ever. 
+
+With the world’s population in isolation, technology enabled businesses to operate, students to learn, and people to connect. Technology helped scientists devise novel mRNA-based vaccines. And, in our continued discussions about ethics in computer science, we saw how technology can either exacerbate or address social inequities. 
+
+As the economy becomes increasingly digital, and as a growing “remote first” mindset enables people to participate in the digital revolution from almost anywhere, every student, not just a select few, should have a chance to take part in creating the technology that shapes our world. 
+
+During 2020, as schools closed or transitioned to online learning, we saw the digital divide widen, increasing gaps that already existed based on income, gender, race, or geography. As schools reopen, we must redouble our efforts to close gaps in representation, and it is more critical than ever that every student in every school has the opportunity to learn computer science.
+
+<h2 class="purple-block">2020 Highlights</h2>
+
+</div>  [//]: # (AR2020)
