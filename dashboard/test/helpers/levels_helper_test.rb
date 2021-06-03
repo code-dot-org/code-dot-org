@@ -150,8 +150,8 @@ class LevelsHelperTest < ActionView::TestCase
   test "should select only callouts for current script level" do
     script = create(:script)
     @level = create(:level, :blockly, user_id: nil)
-    stage = create(:lesson, script: script)
-    @script_level = create(:script_level, script: script, levels: [@level], lesson: stage)
+    lesson = create(:lesson, script: script)
+    @script_level = create(:script_level, script: script, levels: [@level], lesson: lesson)
 
     callout1 = create(:callout, script_level: @script_level)
     callout2 = create(:callout, script_level: @script_level)
@@ -167,8 +167,8 @@ class LevelsHelperTest < ActionView::TestCase
   test "should localize callouts" do
     script = create(:script)
     @level = create(:level, :blockly, user_id: nil)
-    stage = create(:lesson, script: script)
-    @script_level = create(:script_level, script: script, levels: [@level], lesson: stage)
+    lesson = create(:lesson, script: script)
+    @script_level = create(:script_level, script: script, levels: [@level], lesson: lesson)
 
     create(:callout, script_level: @script_level, localization_key: 'run')
 
@@ -536,41 +536,41 @@ class LevelsHelperTest < ActionView::TestCase
       script_data[:lesson_groups]
     )
 
-    stage = script.lessons[0]
-    assert_equal 1, stage.absolute_position
-    assert_equal 1, stage.relative_position
-    assert_equal '/s/test_script/lockable/1/levels/1', build_script_level_path(stage.script_levels[0], {})
-    assert_equal '/s/test_script/lockable/1/levels/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+    lesson = script.lessons[0]
+    assert_equal 1, lesson.absolute_position
+    assert_equal 1, lesson.relative_position
+    assert_equal '/s/test_script/lockable/1/levels/1', build_script_level_path(lesson.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/1/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
 
-    stage = script.lessons[1]
-    assert_equal 2, stage.absolute_position
-    assert_equal 1, stage.relative_position
-    assert_equal '/s/test_script/lessons/1/levels/1', build_script_level_path(stage.script_levels[0], {})
-    assert_equal '/s/test_script/lessons/1/levels/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+    lesson = script.lessons[1]
+    assert_equal 2, lesson.absolute_position
+    assert_equal 1, lesson.relative_position
+    assert_equal '/s/test_script/lessons/1/levels/1', build_script_level_path(lesson.script_levels[0], {})
+    assert_equal '/s/test_script/lessons/1/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
 
-    stage = script.lessons[2]
-    assert_equal 3, stage.absolute_position
-    assert_equal 2, stage.relative_position
-    assert_equal '/s/test_script/lockable/2/levels/1', build_script_level_path(stage.script_levels[0], {})
-    assert_equal '/s/test_script/lockable/2/levels/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+    lesson = script.lessons[2]
+    assert_equal 3, lesson.absolute_position
+    assert_equal 2, lesson.relative_position
+    assert_equal '/s/test_script/lockable/2/levels/1', build_script_level_path(lesson.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/2/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
 
-    stage = script.lessons[3]
-    assert_equal 4, stage.absolute_position
-    assert_equal 3, stage.relative_position
-    assert_equal '/s/test_script/lockable/3/levels/1', build_script_level_path(stage.script_levels[0], {})
-    assert_equal '/s/test_script/lockable/3/levels/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+    lesson = script.lessons[3]
+    assert_equal 4, lesson.absolute_position
+    assert_equal 3, lesson.relative_position
+    assert_equal '/s/test_script/lockable/3/levels/1', build_script_level_path(lesson.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/3/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
 
-    stage = script.lessons[4]
-    assert_equal 5, stage.absolute_position
-    assert_equal 2, stage.relative_position
-    assert_equal '/s/test_script/lessons/2/levels/1', build_script_level_path(stage.script_levels[0], {})
-    assert_equal '/s/test_script/lessons/2/levels/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+    lesson = script.lessons[4]
+    assert_equal 5, lesson.absolute_position
+    assert_equal 2, lesson.relative_position
+    assert_equal '/s/test_script/lessons/2/levels/1', build_script_level_path(lesson.script_levels[0], {})
+    assert_equal '/s/test_script/lessons/2/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
 
-    stage = script.lessons[5]
-    assert_equal 6, stage.absolute_position
-    assert_equal 3, stage.relative_position
-    assert_equal '/s/test_script/lessons/3/levels/1', build_script_level_path(stage.script_levels[0], {})
-    assert_equal '/s/test_script/lessons/3/levels/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+    lesson = script.lessons[5]
+    assert_equal 6, lesson.absolute_position
+    assert_equal 3, lesson.relative_position
+    assert_equal '/s/test_script/lessons/3/levels/1', build_script_level_path(lesson.script_levels[0], {})
+    assert_equal '/s/test_script/lessons/3/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
   end
 
   test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
@@ -600,7 +600,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'build_script_level_path handles bonus levels with or without solutions' do
     input_dsl = <<~DSL
-      lesson 'My cool stage', display_name: 'My cool stage'
+      lesson 'My cool lesson', display_name: 'My cool lesson'
       level 'Level1'
       level 'Level2'
       level 'BonusLevel1', bonus: true
@@ -619,16 +619,16 @@ class LevelsHelperTest < ActionView::TestCase
       script_data[:lesson_groups]
     )
 
-    stage = script.lessons[0]
+    lesson = script.lessons[0]
 
-    sl = stage.script_levels[2]
+    sl = lesson.script_levels[2]
     uri = URI(build_script_level_path(sl, {}))
     query_params = CGI.parse(uri.query)
     assert_equal '/s/my_cool_script/lessons/1/extras', uri.path
     assert_equal sl.level.name, query_params['level_name'].first
     assert_nil query_params['solution'].first
 
-    sl = stage.script_levels[3]
+    sl = lesson.script_levels[3]
     uri = URI(build_script_level_path(sl, {solution: true}))
     query_params = CGI.parse(uri.query)
     assert_equal '/s/my_cool_script/lessons/1/extras', uri.path

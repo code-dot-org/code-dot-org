@@ -116,6 +116,68 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     assert_equal(feedbacks[1], TeacherFeedback.where(student: students[1]).latest)
   end
 
+  test 'user_level returns nil if there was no attempt by student' do
+    teacher = create :teacher
+    student = create :student
+    level = create :level
+    script = create :script
+    create :script_level, script: script, levels: [level]
+
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
+    assert_nil(feedback.user_level)
+  end
+
+  test 'user_level returns user_level if there was an attempt on the level' do
+    teacher = create :teacher
+    student = create :student
+    level = create :level
+    script = create :script
+    create :script_level, script: script, levels: [level]
+
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
+    user_level = create :user_level, user: student, level: level, script: script
+
+    assert_equal(feedback.user_level, user_level)
+  end
+
+  test 'student_updated_since_feedback? returns false if there was no attempt by student' do
+    teacher = create :teacher
+    student = create :student
+    level = create :level
+    script = create :script
+    create :script_level, script: script, levels: [level]
+
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
+
+    assert_equal(feedback.student_updated_since_feedback?, false)
+  end
+
+  test 'student_updated_since_feedback? returns false if the attempt by the student happened before the feedback was given' do
+    teacher = create :teacher
+    student = create :student
+    level = create :level
+    script = create :script
+    create :script_level, script: script, levels: [level]
+
+    create :user_level, user: student, level: level, script: script, updated_at: 1.week.ago
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
+
+    assert_equal(feedback.student_updated_since_feedback?, false)
+  end
+
+  test 'student_updated_since_feedback? returns true if the attempt by the student happened after the feedback was given' do
+    teacher = create :teacher
+    student = create :student
+    level = create :level
+    script = create :script
+    create :script_level, script: script, levels: [level]
+
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
+    create :user_level, user: student, level: level, script: script, updated_at: 1.week.from_now
+
+    assert_equal(feedback.student_updated_since_feedback?, true)
+  end
+
   test 'destroys when teacher is destroyed' do
     teacher = create :teacher
     first_feedback = create :teacher_feedback, teacher: teacher
