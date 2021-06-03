@@ -19,6 +19,10 @@ export const parseCSV = (csvfile, download, useDefaultColumnDataType) => {
   });
 };
 
+const isCellValid = (cell) => {
+  return cell !== undefined && cell !== "";
+}
+
 const isRowValid = (row) => {
   var cells = Object.values(row);
   return cells.every(isCellValid)
@@ -40,7 +44,7 @@ const updateData = (result, useDefaultColumnDataType) => {
   countRemovedRows(data, cleanedData);
   store.dispatch(setImportedData(cleanedData));
   if (useDefaultColumnDataType) {
-    setDefaultColumnDataType(data);
+    setDefaultColumnDataType(cleanedData);
   }
 }
 
