@@ -17,16 +17,9 @@ export function getManifest(appType, locale = 'en_us') {
   and error calls the associated function
  * @param destination {String} path to sprite location in the animation-library folder
  * @param imageData {Blob} sprite image data to upload
- * @param onSuccess {function} callback function for success upload
- * @param onError {function} callback function for upload error
  * @returns {Promise} resolves if successful upload, rejects otherwise
  */
-export function uploadSpriteToAnimationLibrary(
-  destination,
-  imageData,
-  onSuccess,
-  onError
-) {
+export function uploadSpriteToAnimationLibrary(destination, imageData) {
   return fetch(`/api/v1/animation-library` + destination, {
     method: 'POST',
     headers: {
@@ -40,12 +33,10 @@ export function uploadSpriteToAnimationLibrary(
           `Sprite Upload Error(${response.status}: ${response.statusText})`
         );
       }
-      onSuccess(UploadType.SPRITE);
       return Promise.resolve();
     })
     .catch(err => {
-      onError(UploadType.SPRITE, err.toString());
-      return Promise.reject();
+      return Promise.reject(err);
     });
 }
 
@@ -53,16 +44,9 @@ export function uploadSpriteToAnimationLibrary(
   and error calls the associated function
  * @param destination {String} path to metadata location in the animation-library folder
  * @param jsonData {String} JSON object of metadata to upload
- * @param onSuccess {function} callback function for success upload
- * @param onError {function} callback function for upload error
  * @returns {Promise} resolves if successful upload, rejects otherwise
  */
-export function uploadMetadataToAnimationLibrary(
-  destination,
-  jsonData,
-  onSuccess,
-  onError
-) {
+export function uploadMetadataToAnimationLibrary(destination, jsonData) {
   return fetch(`/api/v1/animation-library` + destination, {
     method: 'POST',
     headers: {
@@ -76,11 +60,9 @@ export function uploadMetadataToAnimationLibrary(
           `Metadata Upload Error(${response.status}: ${response.statusText})`
         );
       }
-      onSuccess(UploadType.METADATA);
       return Promise.resolve();
     })
     .catch(err => {
-      onError(UploadType.METADATA, err.toString());
-      return Promise.reject();
+      return Promise.reject(err);
     });
 }

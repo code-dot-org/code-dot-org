@@ -20,11 +20,7 @@ export default class SpriteUpload extends React.Component {
     currentCategories: [],
     aliases: [],
     metadata: '',
-    spriteUploadStatus: {
-      success: null,
-      message: ''
-    },
-    metadataUploadStatus: {
+    uploadStatus: {
       success: null,
       message: ''
     }
@@ -60,47 +56,27 @@ export default class SpriteUpload extends React.Component {
     // The sprite and metadata JSON should have the same name, but different file extensions
     let jsonDestination = destination.replace('.png', '.json');
 
-    return uploadSpriteToAnimationLibrary(
-      destination,
-      fileData,
-      this.onSuccess,
-      this.onError
-    )
-      .then(() =>
-        uploadMetadataToAnimationLibrary(
-          jsonDestination,
-          metadata,
-          this.onSuccess,
-          this.onError
-        )
-      )
+    return uploadSpriteToAnimationLibrary(destination, fileData)
+      .then(() => uploadMetadataToAnimationLibrary(jsonDestination, metadata))
+      .then(() => {
+        this.setState({
+          uploadStatus: {
+            success: true,
+            message: 'Successfully Uploaded Sprite and Metadata'
+          }
+        });
+      })
       .catch(error => {
         if (error) {
           console.log(error);
         }
+        this.setState({
+          uploadStatus: {
+            success: false,
+            message: `${error.toString()}: Error Uploading Sprite or Metadata. Please try again. If this occurs again, please reach out to an engineer.`
+          }
+        });
       });
-  };
-
-  // 'uploadType' indicates whether the response comes from uploading the sprite file or the metadata file
-  onSuccess = uploadType => {
-    let styledUploadType = uploadType.toLowerCase();
-    this.setState({
-      [`${styledUploadType}UploadStatus`]: {
-        success: true,
-        message: `${uploadType} Successfully Uploaded`
-      }
-    });
-  };
-
-  // 'uploadType' indicates whether the response comes from uploading the sprite file or the metadata file
-  onError = (uploadType, message) => {
-    let styledUploadType = uploadType.toLowerCase();
-    this.setState({
-      [`${styledUploadType}UploadStatus`]: {
-        success: false,
-        message: message
-      }
-    });
   };
 
   handleImageChange = event => {
@@ -145,8 +121,7 @@ export default class SpriteUpload extends React.Component {
 
   render() {
     const {
-      spriteUploadStatus,
-      metadataUploadStatus,
+      uploadStatus,
       filePreviewURL,
       currentCategories,
       spriteAvailability,
@@ -262,18 +237,10 @@ export default class SpriteUpload extends React.Component {
           <p
             style={{
               ...styles.uploadStatusMessage,
-              ...(!spriteUploadStatus.success && styles.uploadFailure)
+              ...(!uploadStatus.success && styles.uploadFailure)
             }}
           >
-            {spriteUploadStatus.message}
-          </p>
-          <p
-            style={{
-              ...styles.uploadStatusMessage,
-              ...(!metadataUploadStatus.success && styles.uploadFailure)
-            }}
-          >
-            {metadataUploadStatus.message}
+            {uploadStatus.message}
           </p>
         </form>
       </div>
