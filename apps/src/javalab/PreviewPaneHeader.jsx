@@ -7,10 +7,6 @@ import PaneHeader, {
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 
 export default function PreviewPaneHeader({isCollapsed, isFullscreen}) {
-  function fullscreenIcon() {
-    return isFullscreen ? 'fa fa-compress' : 'fa fa-arrows-alt';
-  }
-
   return (
     <PaneHeader hasFocus>
       <PaneButton
@@ -26,8 +22,8 @@ export default function PreviewPaneHeader({isCollapsed, isFullscreen}) {
       {/* The empty icon element keeps everything centered in the header pane. */}
       <PaneButton
         headerHasFocus
-        iconClass={fullscreenIcon()}
-        // icon={<span style={{width: 13}} />}
+        // iconClass={isFullscreen ? 'fa fa-compress' : 'fa fa-arrows-alt'}
+        icon={<span style={{width: 13}} />}
         onClick={() => {}}
         label=""
         isRtl={false}
