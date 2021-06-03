@@ -1,4 +1,5 @@
 {
   "func": "html",
-  "category": "HTML Tags"
+  "category": "HTML Tags",
+  "syntax": "<html></html>"
 }

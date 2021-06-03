@@ -1,4 +1,5 @@
 {
   "func": "ol",
-  "category": "HTML Tags"
+  "category": "HTML Tags",
+  "syntax": "<ol></ol>"
 }
