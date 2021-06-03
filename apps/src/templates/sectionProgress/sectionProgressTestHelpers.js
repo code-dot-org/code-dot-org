@@ -71,7 +71,7 @@ function buildSectionProgress(students, scriptData) {
     lastUpdates[scriptData.id][student.id] = Date.now();
     progress[student.id] = {};
   });
-  scriptData.stages.forEach(lesson => {
+  scriptData.lessons.forEach(lesson => {
     lesson.levels.forEach(level => {
       students.forEach(student => {
         progress[student.id][level.id] = randomProgress();
@@ -86,7 +86,7 @@ function buildSectionProgress(students, scriptData) {
     scriptDataByScript: {[scriptData.id]: scriptData},
     studentLevelProgressByScript: {[scriptData.id]: progress},
     studentLessonProgressByScript: {
-      [scriptData.id]: lessonProgressForSection(progress, scriptData.stages)
+      [scriptData.id]: lessonProgressForSection(progress, scriptData.lessons)
     },
     studentLastUpdateByScript: {[scriptData.id]: lastUpdates}
   };
@@ -136,7 +136,7 @@ function getScriptData(numLessons) {
     hasStandards: false,
     title: "CSD Unit 3 - Interactive Animations and Games ('20-'21)",
     path: '//localhost-studio.code.org:3000/s/csd3-2020',
-    stages: [
+    lessons: [
       {
         script_id: 162,
         script_name: 'coursea-2020',
