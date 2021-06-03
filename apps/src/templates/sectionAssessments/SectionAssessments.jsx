@@ -123,10 +123,9 @@ class SectionAssessments extends Component {
 
   onClickDownload(dataType) {
     const {assessmentId, scriptId} = this.props;
-    this.logEvent('download_results', {
+    this.logEvent(`download_${dataType}`, {
       script_id: scriptId,
-      level_group_id: assessmentId,
-      data_type: dataType
+      level_group_id: assessmentId
     });
   }
 
@@ -254,7 +253,9 @@ class SectionAssessments extends Component {
                   <div>{i18n.emptyAssessmentSubmissions()}</div>
                 )}
                 <SubmissionStatusAssessmentsContainer
-                  onClickDownload={() => this.onClickDownload('submissions')}
+                  onClickDownload={() =>
+                    this.onClickDownload('submission_stats')
+                  }
                 />
                 {totalStudentSubmissions > 0 && (
                   <div>
