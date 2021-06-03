@@ -35,23 +35,26 @@ class ModelCard extends Component {
     return (
       <div style={styles.panel}>
         <Statement />
-        <img
-          src={aiBotBorder}
-          style={styles.summaryScreenBot}
-        />
+        <div style={styles.summaryScreenBot}>
+          <img
+            src={aiBotBorder}
+            className="ailab-image-hover"
+            style={styles.summaryScreenBotImage}
+          />
+        </div>
         <div style={styles.modelCardContainer}>
           <h3 style={styles.modelCardHeader}>{trainedModelDetails.name}</h3>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Summary</h5>
             <div style={styles.modelCardContent}>
               <p style={styles.modelCardDetails}>
-              Predict {label.id} based on{" "}
-              {selectedFeatures.length > 0 && summaryStat && (
-                <span>
-                  {selectedFeatures.join(", ")} with {summaryStat.stat}%
-                  accuracy.
-                </span>
-              )}
+                Predict {label.id} based on{" "}
+                {selectedFeatures.length > 0 && summaryStat && (
+                  <span>
+                    {selectedFeatures.join(", ")} with {summaryStat.stat}%
+                    accuracy.
+                  </span>
+                )}
               </p>
             </div>
           </div>
@@ -94,34 +97,30 @@ class ModelCard extends Component {
             <h5 style={styles.modelCardHeading}>Label</h5>
             <div style={styles.modelCardContent}>
               <p style={styles.bold}>{label.id}</p>
-                {label.description && (
-                  <p>{label.description}</p>
-                )}
-                {!label.values && (
-                  <p style={styles.modelCardDetails}>
-                    Possible Values:
-                    <br />
-                    min: {label.min}, max: {label.max}
-                  </p>
-                )}
-                {label.values && (
-                  <p style={styles.modelCardDetails}>
-                    Possible Values: {label.values.join(', ')}
-                  </p>
-                )}
+              {label.description && <p>{label.description}</p>}
+              {!label.values && (
+                <p style={styles.modelCardDetails}>
+                  Possible Values:
+                  <br />
+                  min: {label.min}, max: {label.max}
+                </p>
+              )}
+              {label.values && (
+                <p style={styles.modelCardDetails}>
+                  Possible Values: {label.values.join(", ")}
+                </p>
+              )}
             </div>
           </div>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Features</h5>
             <div style={styles.modelCardContent}>
-              {feature.length > 0 && (
+              {feature.length > 0 &&
                 feature.map((feature, index) => {
                   return (
                     <div key={index}>
                       <p style={styles.bold}>{feature.id}</p>
-                      {feature.description && (
-                        <p>{feature.description}</p>
-                      )}
+                      {feature.description && <p>{feature.description}</p>}
                       {!feature.values && (
                         <p>
                           Possible Values:
@@ -130,16 +129,13 @@ class ModelCard extends Component {
                         </p>
                       )}
                       {feature.values && (
-                        <p>
-                          Possible Values: {feature.values.join(', ')}
-                        </p>
+                        <p>Possible Values: {feature.values.join(", ")}</p>
                       )}
                     </div>
                   );
-                })
-              )}
+                })}
             </div>
-        </div>
+          </div>
         </div>
       </div>
     );

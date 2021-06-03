@@ -169,7 +169,7 @@ class GenerateResults extends Component {
             transform: botContainerTransform
           }}
         >
-          <div style={{ ...styles.trainBot, margin: "0 auto" }}>
+          <div className="ailab-image-hover" style={styles.trainBot}>
             <img src={aiBotHead} style={styles.trainBotHead} />
             <img src={aiBotBody} style={styles.trainBotBody} />
             <div

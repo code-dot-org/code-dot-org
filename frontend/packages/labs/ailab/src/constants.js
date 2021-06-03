@@ -723,7 +723,9 @@ export const styles = {
   },
   trainBot: {
     position: "relative",
-    width: 300
+    width: 300,
+    margin: "0 auto",
+    transformOrigin: "25%"
   },
   trainBotHead: {
     transition: "transform 500ms",
@@ -906,6 +908,10 @@ export const styles = {
     transform: "translateY(-50%)",
     left: "calc(35% - 185px)",
     width: "150px"
+  },
+
+  summaryScreenBotImage: {
+    width: "100%"
   },
 
   modelSaveMessage: {

@@ -144,7 +144,7 @@ class TrainModel extends Component {
         </div>
 
         <div style={styles.trainModelBotContainer}>
-          <div style={{ ...styles.trainBot, margin: "0 auto" }}>
+          <div className="ailab-image-hover" style={styles.trainBot}>
             <img
               src={aiBotHead}
               style={{
@@ -155,7 +155,6 @@ class TrainModel extends Component {
             <img src={aiBotBody} style={styles.trainBotBody} />
           </div>
         </div>
-
       </div>
     );
   }

@@ -111,7 +111,11 @@ class Predict extends Component {
         {this.props.predictedLabel && (
           <div style={styles.contentsPredictBot}>
             <div style={styles.predictBotLeft}>
-              <img style={styles.predictBot} src={aiBotBorder} />
+              <img
+                className="ailab-image-hover"
+                style={styles.predictBot}
+                src={aiBotBorder}
+              />
             </div>
             <div style={styles.predictBotRight}>
               <div style={styles.statement}>A.I. predicts</div>
