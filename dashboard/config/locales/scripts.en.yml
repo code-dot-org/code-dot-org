@@ -22517,6 +22517,8 @@ en:
               description_teacher: In this lesson, students use an enhanced `for` loop to traverse an array. Students identify the differences, advantages, and disadvantages of using an enhanced `for` loop instead of a traditional `for` or `while` loop to traverse an array.
             lesson-7:
               name: Using Static Variables and Constants
+              description_student: Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Theater. You examine the `Math` class source code to see additional examples of static variables and constants.
+              description_teacher: Students implement static variables and constants to count the number of `Shape` objects created and set maximum and minimum values for the volume of sounds. Students explore source code for the `Math` class to connect real-world code and the concepts they have learned so far.
             lesson-8:
               name: Answering Questions with Arrays
             lesson-9:
@@ -22531,6 +22533,8 @@ en:
               name: Concert in the Theater Project Day 3
             lesson-14:
               name: FRQ Day
+              description_student: 
+              description_teacher: 
             lesson-15:
               name: Assessment Day
               description_student: In this unit, you worked with one-dimensional arrays to store primitive values and object references in The Theater. You represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects.
@@ -22669,7 +22673,7 @@ en:
               description_teacher: ''
             Next steps:
               key: Next steps
-              name: Next steps
+              name: 'Part III:  Next steps'
               description_student: ''
               description_teacher: ''
             Module 1:
@@ -22685,14 +22689,14 @@ en:
             CS Teaching and Learning Practices:
               name: CS Teaching and Learning Practices
             CS Teaching and Student Practices:
-              name: CS Teaching and Student Practices
+              name: CS Teaching Practices
             Implementation Approaches and Barriers:
               name: Implementation Approaches and Barriers
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduction
             k5_basic_concepts_1:
-              display_name: CS Fundamentals CS Concepts
+              display_name: 'Part II:  CS Fundamentals CS Concepts'
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
@@ -22700,7 +22704,7 @@ en:
             Introduction:
               display_name: Introduction
             Implementing and Teaching CS:
-              display_name: Implementing and Teaching CS
+              display_name: 'Part I:  Implementing and Teaching CS'
           name: k5-onlinepd-2021
         haikubot-pilot:
           lessons:

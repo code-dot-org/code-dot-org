@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-02 23:16:38 UTC",
+    "serialized_at": "2021-06-03 21:54:56 UTC",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
     }
@@ -20,7 +20,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Implementing and Teaching CS"
+        "display_name": "Part I:  Implementing and Teaching CS"
       },
       "seeding_key": {
         "lesson_group.key": "Implementing and Teaching CS",
@@ -32,7 +32,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "CS Fundamentals CS Concepts"
+        "display_name": "Part II:  CS Fundamentals CS Concepts"
       },
       "seeding_key": {
         "lesson_group.key": "k5_basic_concepts_1",
@@ -85,7 +85,7 @@
     },
     {
       "key": "CS Teaching and Student Practices",
-      "name": "CS Teaching and Student Practices",
+      "name": "CS Teaching Practices",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -265,7 +265,7 @@
     },
     {
       "key": "Next steps",
-      "name": "Next steps",
+      "name": "Part III:  Next steps",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
