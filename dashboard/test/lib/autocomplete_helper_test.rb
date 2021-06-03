@@ -5,6 +5,10 @@ class AutocompleteHelperTest < ActiveSupport::TestCase
     assert_equal '+ABC +DEF*', AutocompleteHelper.format_query('abc def')
   end
 
+  test 'to search string with two words with require_all_terms set to false' do
+    assert_equal 'ABC DEF*', AutocompleteHelper.format_query('abc def', require_all_terms: false)
+  end
+
   test 'to search string with special chars before second word' do
     assert_equal '+ABC +DEF*', AutocompleteHelper.format_query('abc +def')
   end

@@ -28,7 +28,7 @@ class AutocompleteHelper
   # @see https://dev.mysql.com/doc/refman/5.6/en/fulltext-boolean.html
   # @param query [String] the user-defined query string
   # @return [String] the formatted query string
-  def self.format_query(query)
+  def self.format_query(query, require_all_terms: true)
     words = get_query_terms query
     # Don't filter the last word if it is short since we will
     # append it with * for a wildcard search.
@@ -36,6 +36,10 @@ class AutocompleteHelper
       i == words.length - 1 || w.length >= MIN_WORD_LENGTH
     end
 
-    return words.empty? ? "" : "+#{words.join(' +')}*"
+    if require_all_terms
+      return words.empty? ? "" : "+#{words.join(' +')}*"
+    else
+      return words.empty? ? "" : "#{words.join(' ')}*"
+    end
   end
 end
