@@ -1,4 +1,5 @@
 {
   "func": "head",
-  "category": "HTML Tags"
+  "category": "HTML Tags",
+  "syntax": "<head></head>"
 }
