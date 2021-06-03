@@ -12,4 +12,5 @@
 
   .field
     = f.label :serialized_maze
-    = f.text_area :serialized_maze, value: JSON.pretty_generate(@level.serialized_maze), rows: 20, class: 'input-block-level'
+    - maze_value = @level.serialized_maze ? JSON.pretty_generate(@level.serialized_maze) : ''
+    = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'input-block-level'
