@@ -134,8 +134,10 @@ class LessonsController < ApplicationController
     raise "Cannot find script #{params[:destinationUnitName]}" unless destination_script
     raise 'Destination script and lesson script must be in a course version' unless destination_script.get_course_version && @lesson.script.get_course_version
     raise 'Destination script must have the same version year as the lesson' unless destination_script.get_course_version.version_year == @lesson.script.get_course_version.version_year
-    copied_lesson = @lesson.copy_to_script(destination_script)
-    render(status: 200, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
+    ActiveRecord::Base.transaction do
+      copied_lesson = @lesson.copy_to_script(destination_script)
+      render(status: 200, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
+    end
   rescue => err
     render(json: {error: err.message}.to_json, status: :not_acceptable)
   end
