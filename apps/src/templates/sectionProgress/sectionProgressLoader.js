@@ -124,17 +124,17 @@ function postProcessDataByScript(scriptData, includeBonusLevels) {
     hasStandards: scriptData.hasStandards,
     title: scriptData.title,
     path: scriptData.path,
-    stages: scriptData.lessons,
+    lessons: scriptData.lessons,
     family_name: scriptData.family_name,
     version_year: scriptData.version_year,
     name: scriptData.name
   };
-  if (!filteredScriptData.stages) {
+  if (!filteredScriptData.lessons) {
     return filteredScriptData;
   }
   return {
     ...filteredScriptData,
-    stages: filteredScriptData.stages.map(lesson =>
+    lessons: filteredScriptData.lessons.map(lesson =>
       postProcessLessonData(lesson, includeBonusLevels)
     )
   };
