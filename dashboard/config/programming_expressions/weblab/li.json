@@ -1,4 +1,5 @@
 {
   "func": "li",
-  "category": "HTML Tags"
+  "category": "HTML Tags",
+  "syntax": "<li></li>"
 }
