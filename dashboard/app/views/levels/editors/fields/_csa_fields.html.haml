@@ -6,7 +6,7 @@
     = f.label :csa_view_mode, 'CSA view mode'
     = f.select :csa_view_mode, options_for_select(@level.class.csa_view_modes, @level.csa_view_mode), {}, onchange: 'toggleFields(this.value);'
 
-  #neighborhood.collapse
+  #neighborhood{class: ('collapse' if @level.csa_view_mode != 'neighborhood')}
     .field
       = f.label :start_direction
       = f.select :start_direction, options_for_select(@level.class.start_directions, @level.start_direction)
