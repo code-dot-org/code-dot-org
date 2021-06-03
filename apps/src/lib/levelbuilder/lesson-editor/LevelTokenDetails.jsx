@@ -91,8 +91,8 @@ class LevelTokenDetails extends Component {
         </span>
         {this.props.inactiveLevelNames.length > 0 && (
           <div>
-            inactive variants:
-            {this.props.inactiveLevelNames.map(key => `"${key}`).join(', ')}
+            inactive variants:&nbsp;
+            {this.props.inactiveLevelNames.map(key => `"${key}"`).join(', ')}
           </div>
         )}
       </div>
