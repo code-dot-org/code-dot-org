@@ -41,8 +41,8 @@ describe('TeacherContentToggle', () => {
         viewAs="Teacher"
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
-        isHiddenStage={false}
-        isLockedStage={false}
+        isHiddenLesson={false}
+        isLockedLesson={false}
       />,
       {attachTo: renderElement}
     );
@@ -81,8 +81,8 @@ describe('TeacherContentToggle', () => {
         viewAs="Teacher"
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
-        isHiddenStage={false}
-        isLockedStage={false}
+        isHiddenLesson={false}
+        isLockedLesson={false}
       />,
       {attachTo: renderElement}
     );
@@ -107,8 +107,8 @@ describe('TeacherContentToggle', () => {
         viewAs="Teacher"
         hiddenLessonsInitialized={true}
         sectionsAreLoaded={true}
-        isHiddenStage={false}
-        isLockedStage={false}
+        isHiddenLesson={false}
+        isLockedLesson={false}
       />,
       {attachTo: renderElement}
     );
@@ -133,8 +133,8 @@ describe('TeacherContentToggle', () => {
         viewAs="Teacher"
         hiddenLessonsInitialized={true}
         sectionsAreLoaded={true}
-        isHiddenStage={false}
-        isLockedStage={true}
+        isHiddenLesson={false}
+        isLockedLesson={true}
       />,
       {attachTo: renderElement}
     );
@@ -159,8 +159,8 @@ describe('TeacherContentToggle', () => {
         viewAs="Student"
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
-        isHiddenStage={false}
-        isLockedStage={false}
+        isHiddenLesson={false}
+        isLockedLesson={false}
       />,
       {attachTo: renderElement}
     );
@@ -186,15 +186,15 @@ describe('TeacherContentToggle', () => {
         viewAs="Student"
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
-        isHiddenStage={false}
-        isLockedStage={false}
+        isHiddenLesson={false}
+        isLockedLesson={false}
       />,
       {attachTo: renderElement}
     );
 
     component.setProps({
       hiddenLessonsInitialized: true,
-      isHiddenStage: true
+      isHiddenLesson: true
     });
 
     let root = $(component.html());
@@ -233,15 +233,15 @@ describe('TeacherContentToggle', () => {
         viewAs="Student"
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
-        isHiddenStage={false}
-        isLockedStage={false}
+        isHiddenLesson={false}
+        isLockedLesson={false}
       />,
       {attachTo: renderElement}
     );
 
     component.setProps({
       sectionsAreLoaded: true,
-      isLockedStage: true
+      isLockedLesson: true
     });
 
     let root = $(component.html());
@@ -280,17 +280,17 @@ describe('TeacherContentToggle', () => {
         viewAs="Student"
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
-        isHiddenStage={false}
-        isLockedStage={false}
+        isHiddenLesson={false}
+        isLockedLesson={false}
       />,
       {attachTo: renderElement}
     );
 
     component.setProps({
       sectionsAreLoaded: true,
-      isLockedStage: true,
+      isLockedLesson: true,
       hiddenLessonsInitialized: true,
-      isHiddenStage: true
+      isHiddenLesson: true
     });
 
     const root = $(component.html());
@@ -318,17 +318,17 @@ describe('TeacherContentToggle', () => {
         viewAs="Student"
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
-        isHiddenStage={false}
-        isLockedStage={false}
+        isHiddenLesson={false}
+        isLockedLesson={false}
       />,
       {attachTo: renderElement}
     );
 
     component.setProps({
       sectionsAreLoaded: true,
-      isLockedStage: false,
+      isLockedLesson: false,
       hiddenLessonsInitialized: true,
-      isHiddenStage: false
+      isHiddenLesson: false
     });
 
     const root = $(component.html());
@@ -375,8 +375,8 @@ describe('TeacherContentToggle', () => {
 
         const props = mapStateToProps(state);
 
-        assert.strictEqual(props.isHiddenStage, true);
-        assert.strictEqual(props.isLockedStage, true);
+        assert.strictEqual(props.isHiddenLesson, true);
+        assert.strictEqual(props.isLockedLesson, true);
       });
 
       it('sets locked hidden to false when not locked or hidden', () => {
@@ -389,8 +389,8 @@ describe('TeacherContentToggle', () => {
 
         const props = mapStateToProps(state);
 
-        assert.strictEqual(props.isHiddenStage, false);
-        assert.strictEqual(props.isLockedStage, false);
+        assert.strictEqual(props.isHiddenLesson, false);
+        assert.strictEqual(props.isLockedLesson, false);
       });
     });
 
@@ -427,8 +427,8 @@ describe('TeacherContentToggle', () => {
 
         const props = mapStateToProps(state);
 
-        assert.strictEqual(props.isHiddenStage, false);
-        assert.strictEqual(props.isLockedStage, false);
+        assert.strictEqual(props.isHiddenLesson, false);
+        assert.strictEqual(props.isLockedLesson, false);
         assert.strictEqual(
           progressHelpers.lessonIsLockedForAllStudents.called,
           false
@@ -442,8 +442,8 @@ describe('TeacherContentToggle', () => {
       it('sets lockable to true for unverified teacher, when lesson is lockable', () => {
         const props = mapStateToProps(stateUnverified);
 
-        assert.strictEqual(props.isHiddenStage, false);
-        assert.strictEqual(props.isLockedStage, true);
+        assert.strictEqual(props.isHiddenLesson, false);
+        assert.strictEqual(props.isLockedLesson, true);
       });
     });
   });
