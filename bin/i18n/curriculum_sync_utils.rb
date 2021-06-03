@@ -187,7 +187,7 @@ module CurriculumSyncUtils
         script_objects[name] = data if data.present?
       end
 
-      # Then we recurisvely flatten all of our hashes of objects, and write
+      # Then we recursively flatten all of our hashes of objects, and write
       # each resulting collection of strings out to a rails i18n config file.
       result = flatten(script_objects, ScriptCrowdinSerializer, :scripts)
       result.each do |type, strings|
