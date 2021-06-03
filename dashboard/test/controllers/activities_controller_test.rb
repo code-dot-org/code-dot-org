@@ -926,7 +926,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     game = create(:game)
     (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
     script_dsl = ScriptDSL.parse(
-      "lesson 'Milestone Stage 1', display_name: 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Stage 2', display_name: 'Milestone Stage 2'; level 'Level 3'",
+      "lesson 'Milestone Lesson 1', display_name: 'Milestone Lesson 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Lesson 2', display_name: 'Milestone Lesson 2'; level 'Level 3'",
       "a filename"
     )
     script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
@@ -1094,7 +1094,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    lesson = create :lesson, name: 'Stage1', script: script, lockable: true
+    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true
 
     # Create a ScriptLevel joining this level to the script.
     script_level = create :script_level, script: script, levels: [level], assessment: true, lesson: lesson

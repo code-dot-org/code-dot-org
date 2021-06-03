@@ -88,7 +88,7 @@ class LessonTest < ActiveSupport::TestCase
   test "summary of levels for lesson plan" do
     script = create :script
     level = create :level
-    lesson = create :lesson, script: script, name: 'My Stage'
+    lesson = create :lesson, script: script, name: 'My Lesson'
     script_level = create :script_level, script: script, lesson: lesson, levels: [level]
 
     expected_summary_of_levels = [

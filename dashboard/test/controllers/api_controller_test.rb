@@ -48,7 +48,7 @@ class ApiControllerTest < ActionController::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    lesson = create :lesson, name: 'Stage1', script: script, lockable: true, lesson_group: lesson_group
+    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
 
     # Create a ScriptLevel joining this level to the script.
     create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
@@ -128,8 +128,8 @@ class ApiControllerTest < ActionController::TestCase
   test "should get text_responses for section with script with text response" do
     script = create :script, name: 'text-response-script'
     lesson_group = create :lesson_group, script: script
-    lesson1 = create :lesson, script: script, name: 'First Stage', key: 'First Stage', lesson_group: lesson_group
-    lesson2 = create :lesson, script: script, name: 'Second Stage', key: 'Second Stage', lesson_group: lesson_group
+    lesson1 = create :lesson, script: script, name: 'First Lesson', key: 'First Lesson', lesson_group: lesson_group
+    lesson2 = create :lesson, script: script, name: 'Second Lesson', key: 'Second Lesson', lesson_group: lesson_group
 
     # create 2 text_match levels
     level1 = create :text_match
@@ -173,7 +173,7 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Lesson 1: First Stage',
+        'stage' => 'Lesson 1: First Lesson',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
@@ -181,7 +181,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Lesson 2: Second Stage',
+        'stage' => 'Lesson 2: Second Lesson',
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
@@ -189,7 +189,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
-        'stage' => 'Lesson 1: First Stage',
+        'stage' => 'Lesson 1: First Lesson',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
