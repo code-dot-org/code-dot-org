@@ -732,8 +732,8 @@ class Lesson < ApplicationRecord
   # - be in course versions from the same version year
   def copy_to_script(destination_script, new_level_suffix = nil)
     return if script == destination_script
-    raise 'Both lesson and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
-    raise 'Destination script and lesson must be in a course version' if destination_script.get_course_version.nil? || script.get_course_version.nil?
+    raise 'Both lesson and unit must be migrated' unless script.is_migrated? && destination_script.is_migrated?
+    raise 'Destination unit and lesson must be in a course version' if destination_script.get_course_version.nil? || script.get_course_version.nil?
 
     ActiveRecord::Base.transaction(requires_new: true, joinable: false) do
       copied_lesson = dup
@@ -767,7 +767,13 @@ class Lesson < ApplicationRecord
           sl_data = original_activity_section.script_levels.map.with_index(1) do |original_script_level, pos|
             original_active_level = original_script_level.oldest_active_level
             copied_level = new_level_suffix.blank? ? original_active_level : original_active_level.clone_with_suffix(new_level_suffix)
-            JSON.parse({assessment: original_script_level.assessment, bonus: original_script_level.bonus, challenge: original_script_level.challenge, levels: [copied_level], activitySectionPosition: pos}.to_json)
+            {
+              "activitySectionPosition" => pos,
+              "assessment" => original_script_level.assessment,
+              "bonus" => original_script_level.bonus,
+              "challenge" => original_script_level.challenge,
+              "levels" => [copied_level]
+            }
           end
           copied_activity_section.update_script_levels(sl_data) unless sl_data.blank?
           copied_activity_section

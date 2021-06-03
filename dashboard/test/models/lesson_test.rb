@@ -1004,7 +1004,7 @@ class LessonTest < ActiveSupport::TestCase
 
     test "levels are cloned when new_level_suffix is passed in" do
       lesson_activity = create :lesson_activity, lesson: @original_lesson
-      activity_section = create :activity_section, lesson_activity: lesson_activity
+      activity_section = create :activity_section, lesson_activity: lesson_activity, progression_name: 'progression'
       level1 = create :maze, name: 'level 1', level_num: 'custom'
       create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
         activity_section: activity_section, activity_section_position: 1
@@ -1013,6 +1013,7 @@ class LessonTest < ActiveSupport::TestCase
       copied_lesson = @original_lesson.copy_to_script(@destination_script, '_2000')
       assert_equal 1, copied_lesson.script_levels.length
       refute_equal level1, copied_lesson.script_levels[0].oldest_active_level
+      assert_equal 'progression', copied_lesson.script_levels[0].progression
     end
 
     test "can clone lesson with duplicated resources and vocab into another script" do
