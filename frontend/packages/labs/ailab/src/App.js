@@ -154,6 +154,7 @@ class App extends Component {
     validationMessages: PropTypes.object,
     onContinue: PropTypes.func,
     logMetric: PropTypes.func,
+    modelMetrics: PropTypes.object,
     resultsPhase: PropTypes.number,
     startSaveTrainedModel: PropTypes.func,
     dataToSave: PropTypes.object,
