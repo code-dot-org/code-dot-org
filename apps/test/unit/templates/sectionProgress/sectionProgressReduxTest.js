@@ -165,7 +165,7 @@ describe('sectionProgressRedux', () => {
         sectionProgress: {
           scriptDataByScript: {
             123: {
-              stages: [
+              lessons: [
                 {
                   levels: [
                     {
@@ -190,7 +190,7 @@ describe('sectionProgressRedux', () => {
         }
       };
       expect(getCurrentScriptData(stateWithScript)).to.deep.equal({
-        stages: [
+        lessons: [
           {
             levels: [
               {
