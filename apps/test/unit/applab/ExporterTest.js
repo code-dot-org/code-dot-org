@@ -167,7 +167,7 @@ describe('Applab Exporter,', function() {
         beginnerMode: false,
         levelId: 'custom',
         puzzle_number: 1,
-        stage_total: 1,
+        lesson_total: 1,
         iframeEmbed: false,
         lastAttempt: null,
         submittable: false,

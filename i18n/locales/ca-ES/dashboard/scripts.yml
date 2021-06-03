@@ -2297,6 +2297,8 @@ ca:
               display_name: Variables
             csf_for_loops:
               display_name: Per bucles
+            lessonGroup-9:
+              display_name: Esdeveniments
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2341,3 +2343,8 @@ ca:
               display_name: Introducció
             Introduction:
               display_name: Introducció
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Fonaments de la informàtica
+              name: Fonaments de la informàtica

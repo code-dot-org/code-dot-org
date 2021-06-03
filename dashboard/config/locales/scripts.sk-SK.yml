@@ -2119,20 +2119,20 @@ sk:
           lessons:
             Intro to Problem Solving:
               name: Úvod do riešenia problémov
-              description_student: Študenti pracujú v skupinách na navrhovaní člnov
+              description_student: 'Študenti pracujú v skupinách na navrhovaní člnov
                 z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac
-                drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
+                mincí. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
                 s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých
-                budú pracovať po zvyšok kurzu.
-              description_teacher: V tejto lekcii študenti pracujú v skupinách na
+                budú pracovať po zvyšok kurzu. '
+              description_teacher: 'V tejto lekcii študenti pracujú v skupinách na
                 navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý
-                udrží čo najviac drobných. Skupiny pracujú na svojich člnoch počas
-                dvoch kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží.
-                Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov,
-                s ktorými sa študenti podrobnejšie zoznámia v priebehu nasledujúcej
-                lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
-                s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré
-                budú riešiť po zvyšok kurzu
+                udrží čo najviac mincí. Skupiny pracujú na svojich člnoch počas dvoch
+                kôl, ktorých cieľom je zvýšiť počet mincí, ktoré čln udrží. Štruktúra
+                aktivity načrtne rôzne kroky procesu riešenia problémov, s ktorými
+                sa študenti podrobnejšie zoznámia v priebehu nasledujúcej lekcie.
+                Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto
+                aktivitou a spoja si ich s typmi riešenia problémov, ktoré budú riešiť
+                po zvyšok kurzu. '
             The Problem Solving Process:
               name: Proces riešenia problémov
               description_student: Táto lekcia predstavuje formálny proces riešenia
@@ -2140,9 +2140,9 @@ sk:
                 - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových
                 člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia
                 dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli
-                zlepšiť. Na konci hodiny trieda zozbiera zoznam všeobecne užitočných
-                stratégií pre každý krok procesu, na vylepenie na plagáty, ktoré budú
-                používať počas celého kurzu a roka.
+                zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných
+                stratégií pre každý krok procesu na plagáty, ktoré budú používať počas
+                celého kurzu a roka.
               description_teacher: Táto lekcia predstavuje formálny proces riešenia
                 problémov, ktorý budú študenti počas roka používať, Definuj - Priprav
                 - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali
@@ -2168,6 +2168,12 @@ sk:
                 Dokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu.
             What is a Computer?:
               name: Čo je počítač?
+              description_student: V tejto lekcii trieda vypracuje predbežnú definíciu
+                počítača. Po diskusii možných definícií pre počítač, trieda v skupinách
+                roztriedi obrázky na plagát do kategórií „je počítač“ alebo „nie je
+                počítač“ a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách.
+                Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili
+                svoje plagáty podľa novej definície.
               description_teacher: V tejto lekcii študenti vypracujú predbežnú definíciu
                 počítača. Po diskusii možných definícií pre počítač trieda umiestni
                 výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia
@@ -2199,6 +2205,11 @@ sk:
                 vstupy a výstupy použité pre túto činnosť.
             Processing:
               name: Spracovanie
+              description_student: Táto lekcia sa hlbšie zaoberá konceptom spracovania,
+                ktorý bol predstavený ako súčasť definície počítača. Páry spolupracujú
+                na usporiadaní balíkov kariet, čo je forma spracovania informácií.
+                Na konci sa v triede diskutuje, čo znamená spracovanie v kontexte
+                riešenia informačných problémov.
               description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie
                 kariet - bez elektronických pomôcok, aby preskúmali význam spracovania
                 a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení
@@ -2211,8 +2222,29 @@ sk:
                 na riešenie problému.
             Storage:
               name: Pamäť
+            Apps and Problem Solving:
+              description_student: 'Táto lekcia sa venuje vstupným a výstupným aspektom
+                počítačov v kontexte, ktorý je pre študentov relevantný a známy: aplikácie.
+                Trieda hodnotí rôzne webové aplikácie s cieľom analyzovať konkrétne
+                problémy, ktoré majú dané aplikácie riešiť, vstupy, ktoré musia spracovať,
+                a výstupy, ktoré poskytujú používateľom. Záver hodiny je venovaný
+                pozorovaniu týchto aplikácií, ako aj diskusii vedenej učiteľom o dopade
+                aplikácií na spoločnosť.'
+              description_teacher: 'Táto lekcia sa venuje vstupným a výstupným aspektom
+                počítačov v kontexte, ktorý je pre študentov relevantný a známy: aplikácie.
+                Trieda hodnotí rôzne webové aplikácie s cieľom analyzovať konkrétne
+                problémy, ktoré majú dané aplikácie riešiť, vstupy, ktoré musia spracovať,
+                a výstupy, ktoré poskytujú používateľom. Záver hodiny je venovaný
+                pozorovaniu týchto aplikácií, ako aj diskusii vedenej učiteľom o dopade
+                aplikácií na spoločnosť. '
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+              description_student: Na záver štúdia procesu riešenia problémov a počítačového
+                modelu vstupu / výstupu / ukladania / spracovania študenti navrhnú
+                aplikácie určené na riešenie problémov v skutočnom svete. Riešenie
+                projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov,
+                ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý
+                pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
               description_teacher: Na záver svojej štúdie procesu riešenia problémov
                 a počítačového modelu vstup / výstup / pamäť / spracovanie študenti
                 navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie
@@ -5542,20 +5574,20 @@ sk:
           lessons:
             Intro to Problem Solving:
               name: Úvod do riešenia problémov
-              description_student: Študenti pracujú v skupinách na navrhovaní člnov
+              description_student: 'Študenti pracujú v skupinách na navrhovaní člnov
                 z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac
-                drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
+                mincí. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
                 s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých
-                budú pracovať po zvyšok kurzu.
+                budú pracovať po zvyšok kurzu. '
               description_teacher: V tejto lekcii študenti pracujú v skupinách na
                 navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý
-                udrží čo najviac drobných. Skupiny pracujú na svojich člnoch počas
-                dvoch kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží.
-                Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov,
-                s ktorými sa študenti podrobnejšie zoznámia v priebehu nasledujúcej
-                lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
-                s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré
-                budú riešiť po zvyšok kurzu.
+                udrží čo najviac mincí. Skupiny pracujú na svojich člnoch počas dvoch
+                kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží. Štruktúra
+                aktivity načrtne rôzne kroky procesu riešenia problémov, s ktorými
+                sa študenti podrobnejšie zoznámia v priebehu nasledujúcej lekcie.
+                Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto
+                aktivitou a spoja si ich s typmi riešenia problémov, ktoré budú riešiť
+                po zvyšok kurzu.
             The Problem Solving Process:
               name: Proces riešenia problémov
               description_student: Táto lekcia predstavuje formálny proces riešenia
@@ -5563,9 +5595,9 @@ sk:
                 - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových
                 člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia
                 dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli
-                zlepšiť. Na konci hodiny trieda zozbiera zoznam všeobecne užitočných
-                stratégií pre každý krok procesu, na vylepenie na plagáty, ktoré budú
-                používať počas celého kurzu a roka.
+                zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných
+                stratégií pre každý krok procesu na plagáty, ktoré budú používať počas
+                celého kurzu a roka.
               description_teacher: Táto lekcia predstavuje formálny proces riešenia
                 problémov, ktorý budú študenti počas roka používať, Definuj - Priprav
                 - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali
@@ -5600,6 +5632,12 @@ sk:
                 na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
+              description_student: V tejto lekcii trieda vypracuje predbežnú definíciu
+                počítača. Po diskusii možných definícií pre počítač, trieda v skupinách
+                roztriedi obrázky na plagát do kategórií „je počítač“ alebo „nie je
+                počítač“ a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách.
+                Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili
+                svoje plagáty podľa novej definície.
               description_teacher: "V tejto lekcii študenti vypracujú predbežnú definíciu
                 počítača. Po diskusii možných definícií pre počítač trieda umiestni
                 výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia
@@ -5631,6 +5669,11 @@ sk:
                 vstupy a výstupy použité pre túto činnosť.
             Processing:
               name: Spracovanie
+              description_student: Táto lekcia sa hlbšie zaoberá konceptom spracovania,
+                ktorý bol predstavený ako súčasť definície počítača. Páry spolupracujú
+                na usporiadaní balíkov kariet, čo je forma spracovania informácií.
+                Na konci sa v triede diskutuje, čo znamená spracovanie v kontexte
+                riešenia informačných problémov.
               description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie
                 kariet - bez elektronických pomôcok, aby preskúmali význam spracovania
                 a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení
@@ -5643,8 +5686,29 @@ sk:
                 na riešenie problému.
             Storage:
               name: Pamäť
+            Apps and Problem Solving:
+              description_student: 'Táto lekcia sa venuje vstupným a výstupným aspektom
+                počítačov v kontexte, ktorý je pre študentov relevantný a známy: aplikácie.
+                Trieda hodnotí rôzne webové aplikácie s cieľom analyzovať konkrétne
+                problémy, ktoré majú dané aplikácie riešiť, vstupy, ktoré musia spracovať,
+                a výstupy, ktoré poskytujú používateľom. Záver hodiny je venovaný
+                pozorovaniu týchto aplikácií, ako aj diskusii vedenej učiteľom o dopade
+                aplikácií na spoločnosť.'
+              description_teacher: 'Táto lekcia sa venuje vstupným a výstupným aspektom
+                počítačov v kontexte, ktorý je pre študentov relevantný a známy: aplikácie.
+                Trieda hodnotí rôzne webové aplikácie s cieľom analyzovať konkrétne
+                problémy, ktoré majú dané aplikácie riešiť, vstupy, ktoré musia spracovať,
+                a výstupy, ktoré poskytujú používateľom. Záver hodiny je venovaný
+                pozorovaniu týchto aplikácií, ako aj diskusii vedenej učiteľom o dopade
+                aplikácií na spoločnosť. '
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+              description_student: Na záver štúdia procesu riešenia problémov a počítačového
+                modelu vstupu / výstupu / ukladania / spracovania študenti navrhnú
+                aplikácie určené na riešenie problémov v skutočnom svete. Riešenie
+                projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov,
+                ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý
+                pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
               description_teacher: Na záver svojej štúdie procesu riešenia problémov
                 a počítačového modelu vstup / výstup / pamäť / spracovanie študenti
                 navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie
@@ -5656,6 +5720,13 @@ sk:
                 v dvojici, avšak je možné ho dokončiť aj individuálne.
             Apps and Storage:
               name: Aplikácie a Pamäť
+              description_student: 'Táto lekcia sa venuje vstupným a výstupným aspektom
+                počítačov v kontexte, ktorý je pre študentov relevantný a známy: aplikácie.
+                Trieda hodnotí rôzne webové aplikácie s cieľom analyzovať konkrétne
+                problémy, ktoré majú dané aplikácie riešiť, vstupy, ktoré musia spracovať,
+                a výstupy, ktoré poskytujú používateľom. Záver hodiny je venovaný
+                pozorovaniu týchto aplikácií, ako aj diskusii vedenej učiteľom o dopade
+                aplikácií na spoločnosť.'
               description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a
                 spracovateľské aspekty počítača v známom a relevantnom kontexte pre
                 študentov: mobilných aplikáciách. Študenti v pároch analyzujú mobilné
@@ -6747,6 +6818,7 @@ sk:
             Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
         csd1-2019:
+          title: CSD Lekcia 1 - Riešenie problémov a výpočtová technika ('19-'20)
           description: Riešenie problémov a výpočtová technika je vysoko interaktívny
             a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte
             riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie
@@ -6764,20 +6836,20 @@ sk:
           lessons:
             Intro to Problem Solving:
               name: Úvod do riešenia problémov
-              description_student: Študenti pracujú v skupinách na navrhovaní člnov
+              description_student: 'Študenti pracujú v skupinách na navrhovaní člnov
                 z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac
-                drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
+                mincí. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
                 s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých
-                budú pracovať po zvyšok kurzu.
+                budú pracovať po zvyšok kurzu. '
               description_teacher: V tejto lekcii študenti pracujú v skupinách na
                 navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý
-                udrží čo najviac drobných. Skupiny pracujú na svojich člnoch počas
-                dvoch kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží.
-                Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov,
-                s ktorými sa študenti podrobnejšie zoznámia v priebehu nasledujúcej
-                lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
-                s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré
-                budú riešiť po zvyšok kurzu.
+                udrží čo najviac mincí. Skupiny pracujú na svojich člnoch počas dvoch
+                kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží. Štruktúra
+                aktivity načrtne rôzne kroky procesu riešenia problémov, s ktorými
+                sa študenti podrobnejšie zoznámia v priebehu nasledujúcej lekcie.
+                Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto
+                aktivitou a spoja si ich s typmi riešenia problémov, ktoré budú riešiť
+                po zvyšok kurzu.
             The Problem Solving Process:
               name: Proces riešenia problémov
               description_student: Táto lekcia predstavuje formálny proces riešenia
@@ -6785,9 +6857,9 @@ sk:
                 - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových
                 člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia
                 dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli
-                zlepšiť. Na konci hodiny trieda zozbiera zoznam všeobecne užitočných
-                stratégií pre každý krok procesu, na vylepenie na plagáty, ktoré budú
-                používať počas celého kurzu a roka.
+                zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných
+                stratégií pre každý krok procesu na plagáty, ktoré budú používať počas
+                celého kurzu a roka.
               description_teacher: Táto lekcia predstavuje formálny proces riešenia
                 problémov, ktorý budú študenti počas roka používať, Definuj - Priprav
                 - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali
@@ -6822,6 +6894,12 @@ sk:
                 na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
+              description_student: V tejto lekcii trieda vypracuje predbežnú definíciu
+                počítača. Po diskusii možných definícií pre počítač, trieda v skupinách
+                roztriedi obrázky na plagát do kategórií „je počítač“ alebo „nie je
+                počítač“ a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách.
+                Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili
+                svoje plagáty podľa novej definície.
               description_teacher: "V tejto lekcii študenti vypracujú predbežnú definíciu
                 počítača. Po diskusii možných definícií pre počítač trieda umiestni
                 výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia
@@ -6853,6 +6931,11 @@ sk:
                 vstupy a výstupy použité pre túto činnosť.
             Processing:
               name: Spracovanie
+              description_student: Táto lekcia sa hlbšie zaoberá konceptom spracovania,
+                ktorý bol predstavený ako súčasť definície počítača. Páry spolupracujú
+                na usporiadaní balíkov kariet, čo je forma spracovania informácií.
+                Na konci sa v triede diskutuje, čo znamená spracovanie v kontexte
+                riešenia informačných problémov.
               description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie
                 kariet - bez elektronických pomôcok, aby preskúmali význam spracovania
                 a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení
@@ -6865,6 +6948,13 @@ sk:
                 na riešenie problému.
             Apps and Storage:
               name: Aplikácie a Pamäť
+              description_student: 'Táto lekcia sa venuje vstupným a výstupným aspektom
+                počítačov v kontexte, ktorý je pre študentov relevantný a známy: aplikácie.
+                Trieda hodnotí rôzne webové aplikácie s cieľom analyzovať konkrétne
+                problémy, ktoré majú dané aplikácie riešiť, vstupy, ktoré musia spracovať,
+                a výstupy, ktoré poskytujú používateľom. Záver hodiny je venovaný
+                pozorovaniu týchto aplikácií, ako aj diskusii vedenej učiteľom o dopade
+                aplikácií na spoločnosť.'
               description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a
                 spracovateľské aspekty počítača v známom a relevantnom kontexte pre
                 študentov: mobilných aplikáciách. Študenti v pároch analyzujú mobilné
@@ -6875,6 +6965,12 @@ sk:
                 ktoré sú pre študentov známe.'
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+              description_student: Na záver štúdia procesu riešenia problémov a počítačového
+                modelu vstupu / výstupu / ukladania / spracovania študenti navrhnú
+                aplikácie určené na riešenie problémov v skutočnom svete. Riešenie
+                projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov,
+                ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý
+                pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
               description_teacher: Na záver svojej štúdie procesu riešenia problémov
                 a počítačového modelu vstup / výstup / pamäť / spracovanie študenti
                 navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie
@@ -8026,20 +8122,20 @@ sk:
           lessons:
             Intro to Problem Solving:
               name: Úvod do riešenia problémov
-              description_student: Študenti pracujú v skupinách na navrhovaní člnov
+              description_student: 'Študenti pracujú v skupinách na navrhovaní člnov
                 z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac
-                drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
+                mincí. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
                 s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých
-                budú pracovať po zvyšok kurzu.
+                budú pracovať po zvyšok kurzu. '
               description_teacher: V tejto lekcii študenti pracujú v skupinách na
                 navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý
-                udrží čo najviac drobných. Skupiny pracujú na svojich člnoch počas
-                dvoch kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží.
-                Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov,
-                s ktorými sa študenti podrobnejšie zoznámia v priebehu nasledujúcej
-                lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
-                s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré
-                budú riešiť po zvyšok kurzu.
+                udrží čo najviac mincí. Skupiny pracujú na svojich člnoch počas dvoch
+                kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží. Štruktúra
+                aktivity načrtne rôzne kroky procesu riešenia problémov, s ktorými
+                sa študenti podrobnejšie zoznámia v priebehu nasledujúcej lekcie.
+                Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto
+                aktivitou a spoja si ich s typmi riešenia problémov, ktoré budú riešiť
+                po zvyšok kurzu.
             The Problem Solving Process:
               name: Proces riešenia problémov
               description_student: Táto lekcia predstavuje formálny proces riešenia
@@ -8047,9 +8143,9 @@ sk:
                 - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových
                 člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia
                 dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli
-                zlepšiť. Na konci hodiny trieda zozbiera zoznam všeobecne užitočných
-                stratégií pre každý krok procesu, na vylepenie na plagáty, ktoré budú
-                používať počas celého kurzu a roka.
+                zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných
+                stratégií pre každý krok procesu na plagáty, ktoré budú používať počas
+                celého kurzu a roka.
               description_teacher: Táto lekcia predstavuje formálny proces riešenia
                 problémov, ktorý budú študenti počas roka používať, Definuj - Priprav
                 - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali
@@ -8084,6 +8180,12 @@ sk:
                 na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
+              description_student: V tejto lekcii trieda vypracuje predbežnú definíciu
+                počítača. Po diskusii možných definícií pre počítač, trieda v skupinách
+                roztriedi obrázky na plagát do kategórií „je počítač“ alebo „nie je
+                počítač“ a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách.
+                Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili
+                svoje plagáty podľa novej definície.
               description_teacher: "V tejto lekcii študenti vypracujú predbežnú definíciu
                 počítača. Po diskusii možných definícií pre počítač trieda umiestni
                 výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia
@@ -8115,6 +8217,11 @@ sk:
                 vstupy a výstupy použité pre túto činnosť.
             Processing:
               name: Spracovanie
+              description_student: Táto lekcia sa hlbšie zaoberá konceptom spracovania,
+                ktorý bol predstavený ako súčasť definície počítača. Páry spolupracujú
+                na usporiadaní balíkov kariet, čo je forma spracovania informácií.
+                Na konci sa v triede diskutuje, čo znamená spracovanie v kontexte
+                riešenia informačných problémov.
               description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie
                 kariet - bez elektronických pomôcok, aby preskúmali význam spracovania
                 a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení
@@ -8127,6 +8234,13 @@ sk:
                 na riešenie problému.
             Apps and Storage:
               name: Aplikácie a Pamäť
+              description_student: 'Táto lekcia sa venuje vstupným a výstupným aspektom
+                počítačov v kontexte, ktorý je pre študentov relevantný a známy: aplikácie.
+                Trieda hodnotí rôzne webové aplikácie s cieľom analyzovať konkrétne
+                problémy, ktoré majú dané aplikácie riešiť, vstupy, ktoré musia spracovať,
+                a výstupy, ktoré poskytujú používateľom. Záver hodiny je venovaný
+                pozorovaniu týchto aplikácií, ako aj diskusii vedenej učiteľom o dopade
+                aplikácií na spoločnosť.'
               description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a
                 spracovateľské aspekty počítača v známom a relevantnom kontexte pre
                 študentov: mobilných aplikáciách. Študenti v pároch analyzujú mobilné
@@ -8137,6 +8251,12 @@ sk:
                 ktoré sú pre študentov známe.'
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+              description_student: Na záver štúdia procesu riešenia problémov a počítačového
+                modelu vstupu / výstupu / ukladania / spracovania študenti navrhnú
+                aplikácie určené na riešenie problémov v skutočnom svete. Riešenie
+                projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov,
+                ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý
+                pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
               description_teacher: Na záver svojej štúdie procesu riešenia problémov
                 a počítačového modelu vstup / výstup / pamäť / spracovanie študenti
                 navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie
@@ -8892,9 +9012,9 @@ sk:
               description_teacher: "**Otázka dňa: Čo nám môže pomôcť spolupracovať
                 a tímovo riešiť problémy?**\r\n\r\nV tejto lekcii študenti pracujú
                 v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť
-                čln, ktorý udrží čo najviac drobných. Skupiny pracujú na svojich člnoch
-                počas dvoch kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln
-                udrží. Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov,
+                čln, ktorý udrží čo najviac mincí. Skupiny pracujú na svojich člnoch
+                počas dvoch kôl, ktorých cieľom je zvýšiť počet mincí, ktoré čln udrží.
+                Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov,
                 s ktorými sa študenti podrobnejšie zoznámia v priebehu nasledujúcej
                 lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
                 s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré
@@ -8906,12 +9026,12 @@ sk:
               description_student: "**Otázka dňa: Aké všeobecné kroky môžeme použiť
                 na riešenie rôznych typov problémov?**\r\n\r\nTáto lekcia predstavuje
                 formálny proces riešenia problémov, ktorý bude trieda počas roka používať,
-                Definuj - Priprav - Vyskúšaj - Prehodnoť. Trieda najprv spojí tieto
+                Definuj - Priprav - Vyskúšaj - Prehodnoť. Trieda najprv prepojí tieto
                 kroky s problémom hliníkových člnov z predchádzajúcej lekcie, potom
                 s problémom, ktorý už vedia dobre riešiť, a nakoniec s problémom,
                 v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera
-                zoznam všeobecne užitočných stratégií, pre každý krok procesu, na
-                plagáty, ktoré budú používať počas celého kurzu a roka."
+                zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty,
+                ktoré budú používať počas celého kurzu a roka."
               description_teacher: "**Otázka dňa: Aké všeobecné kroky môžeme použiť
                 na riešenie rôznych typov problémov?**\r\n\r\nTáto lekcia predstavuje
                 formálny proces riešenia problémov, ktorý budú študenti počas roka
@@ -8953,11 +9073,11 @@ sk:
               name: Čo je počítač?
               description_student: "**Otázka dňa: Čo je počítač?**\r\n\r\nV tejto
                 lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii
-                možných definícií pre počítač, trieda v skupinách triedi obrázky na
-                „je počítač“ alebo „nie je počítač“ na plagáte a vysvetľuje ich rozhodnutia
-                pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu
-                počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej
-                definície."
+                možných definícií pre počítač, trieda v skupinách roztriedi obrázky
+                na plagát do kategórií „je počítač“ alebo „nie je počítač“ a vysvetľuje
+                ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom
+                predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje
+                plagáty podľa novej definície."
               description_teacher: "**Otázka dňa: Čo je počítač?**\r\n\r\nV tejto
                 lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii
                 možných definícií pre počítač trieda v skupinách triedi obrázky na
@@ -9018,14 +9138,14 @@ sk:
                 Táto lekcia predstavuje posledný komponent modelu výpočtu: pamäť. Po vyskúšaní aplikácie „výber oblečenia“ študenti diskutujú o tom, aké informácie by sa mali v aplikácii ukladať, a naopak, aké by mali byť vkladané pri jej každom spustení. Potom sa pozrú na sériu aplikácií a na základe svojich rozhodnutí o tom, čo sa má uložiť, vytvoria smernice o tom, ktoré informácie by sa mali ukladať. Potom preskúmajú štyri komponenty výpočtového modelu tejto kapitoly: vstup, výstup, pamäť a spracovanie. Potom majú ešte jednu príležitosť zrevidovať svoje rozhodnutia o tom, ktoré položky, spomínané skôr v tejto kapitole, by sa mali byť klasifikované ako „počítače“. Hodina končí úvahou o ich vlastných nápadoch na aplikáciu a o tom, ako by pamäť využívali.
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
-              description_student: "**Otázka dňa: Ako nám môže model IOSP pomôcť navrhnúť
-                aplikáciu, ktorá rieši problém?**\r\n\r\nNa záver svojej štúdie procesu
-                riešenia problémov a počítačového modelu vstup / výstup / pamäť /
-                výpočet študenti navrhnú aplikáciu s cieľom vyriešiť problém skutočného
-                sveta. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí
-                prezentáciou plagátov, ktorý zdôrazňujú vlastnosti jednotlivých aplikácií.
+              description_student: "**Otázka dňa: Ako nám môže model VVUS pomôcť navrhnúť
+                aplikáciu, ktorá rieši problém?**\r\n\r\nNa záver štúdia procesu riešenia
+                problémov a počítačového modelu vstupu / výstupu / ukladania / spracovania
+                študenti navrhnú aplikácie určené na riešenie problémov v skutočnom
+                svete. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí
+                prezentáciou plagátov, ktoré zdôrazňujú vlastnosti jednotlivých aplikácií.
                 Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť
-                individuálne."
+                aj individuálne."
               description_teacher: "**Otázka dňa: Ako nám môže model IOSP pomôcť navrhnúť
                 aplikáciu, ktorá rieši problém?**\r\n\r\nNa záver svojej štúdie procesu
                 riešenia problémov a počítačového modelu vstup / výstup / pamäť /
@@ -10734,14 +10854,26 @@ sk:
             Intro to Problem Solving:
               key: Úvod do riešenia problémov
               name: Úvod do riešenia problémov
-              description_student: Študenti pracujú v skupinách na navrhovaní člnov
-                z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac
-                drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
-                s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých
-                budú pracovať po zvyšok kurzu.
+              description_student: "**Otázka dňa: Čo nám môže pomôcť spolupracovať
+                a tímovo riešiť problémy?**\n\nBudete pracovať v skupine na navrhovaní
+                a testovaní člnu z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý
+                udrží čo najviac mincí. "
             The Problem Solving Process:
               key: Proces riešenia problémov
               name: Proces riešenia problémov
+              description_teacher: "**Otázka dňa: Aké všeobecné kroky môžeme použiť
+                na riešenie rôznych typov problémov?**\r\n\r\nTáto lekcia predstavuje
+                formálny proces riešenia problémov, ktorý budú študenti počas roka
+                používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Lekcia začína
+                požiadaním študentov, aby prediskutovali rôzne typy problémov, s ktorými
+                sa stretávajú v každodennom živote. Študentom sa potom ukážu štyri
+                kroky procesu riešenia problémov a budú sa spolu usilovať o prepojenie
+                týchto abstraktných krokov so svojimi skutočnými skúsenosťami s riešením
+                problémov. Študenti najprv prepoja tieto kroky s problémami z predchádzajúcej
+                lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec
+                s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny
+                trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok
+                procesu na plagáty, ktoré budú používať počas celého kurzu a roka."
             Exploring Problem Solving:
               key: Objavovanie riešenia problémov
               name: Objavovanie riešenia problémov
@@ -11033,6 +11165,10 @@ sk:
               display_name: Parametre a Hodnoty návratnosti
             csp_libraries:
               display_name: Knižnice
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: Strojové učenie
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
@@ -11779,8 +11915,6 @@ sk:
             Variables with Artist:
               key: Premenné s Umelcom
               name: Premenné s Umelcom
-              description_student: Nezabudni do triedy priniesť svoju tvorivosť! V
-                týchto úlohách pomocou premenných vytvoríš fantastické kresby.
               description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich
                 sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa
                 naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal
@@ -11838,6 +11972,8 @@ sk:
                 tvoj projekt.
             lesson-1:
               name: Tanečná Párty
+            lesson-3:
+              name: Postavy v akcii
           lesson_groups:
             csf_warmup:
               display_name: Úvodná aktivita
@@ -11858,7 +11994,7 @@ sk:
             end_of_course_project:
               display_name: Záverečný projekt
             lessonGroup-9:
-              display_name: Úvodná aktivita
+              display_name: Udalosti
           student_description: Nauč sa základy informatiky a bezpečnosti na internete.
             Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
@@ -11969,6 +12105,8 @@ sk:
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
+            Designing With Empathy:
+              name: Analýza dizajnu
             Digital Mode in App Lab:
               name: Digitálny dizajn
           lesson_groups:
@@ -12013,6 +12151,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -12067,3 +12207,7 @@ sk:
           lesson_groups:
             cspSurvey2020:
               display_name: Dotazník
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Hodina 15

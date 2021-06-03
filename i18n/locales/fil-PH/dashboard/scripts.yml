@@ -11739,7 +11739,6 @@ fil:
               description_student: Gumawa ng kumplikadong mga drowing nang mas madali gamit ang mga function!
               description_teacher: Ang mga estudyante ay ipapakilala sa paggamit ng mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng mga function sa pamamagitan ng pagtawag ng isang function sa loob ng isa pa.
             Variables with Artist:
-              description_student: Huwag kalimutan ng magdala ng pagkamalikhain sa klase! Sa mga palaisipang ito ikaw ay gagawa ng hindi kapani-paniwalang mga drowing gamit ang mga variable.
               description_teacher: Sa araling ito, ang mga estudyante ay tutuklas sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang mga variables maaaring gamitin para madaling isulat ang mga code at madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga estudyante ay magtatapos sa isang libreng laro na antas para ipakita kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga disenyo.
             Changing Variables with Artist:
               description_teacher: Sa araling ito, ang mga estudyante ay tutuklas sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang mga variables maaaring gamitin para madaling isulat ang mga code at madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga estudyante ay magtatapos sa isang libreng laro na antas para ipakita kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga disenyo.
@@ -11770,6 +11769,8 @@ fil:
               display_name: For Loops
             csf_sprites:
               display_name: Mga Sprites
+            lessonGroup-9:
+              display_name: Mga event
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         pre-express-2021:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -11895,6 +11896,8 @@ fil:
               name: Proyekto - Pagpapakita ng App
               description_student: Bawat koponan ay maghahanda ng isang pagtatanghal para "ipakita" ang app na nagawa nila. Ito ang panahon para ibahagi nilang ang kanilang mga paghihirap, tagumpay, at mga plano para sa hinaharap.
               description_teacher: Sa puntong ito ang mga koponan ay nakakapanaliksik na ng isang paksa na may personal at sosyal na kahalagahan, na ginawa at sinubukan pareho sa isang papel na prototype at sa isang digital ng prototype, at nai-iterate sa inisyal na app para maidagdag ang mga bagong katangian at pag-aayos sa mga bug. Ngayon ang oras para magbalik-aral sa kung ano ang nagawa nila at sama-samang buoin ang isang pagtatanghal para ipakita ang proseso ng paglikha. Gamit ang nabigay na pagtatanghal na template, ang mga koponan ay maghahandang ipakita ang tungkol sa kanilang proseso sa paggawa ng app, kalakip ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang mga plano para sa hinaharap.
+            Designing With Empathy:
+              name: Pagsusuri ng Disenyo
             Build a Paper Prototype:
               name: Papel na mga Prototype
             Digital Mode in App Lab:
@@ -12049,3 +12052,42 @@ fil:
           description_short: Surbey Pagkatapos ng Kurso para sa mga Estudyante ng CSP
           description: Maligawang pagdating sa Code.org na Surbey Pagkatapos ng Kurso na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10 minuto para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.
           student_description: Maligawang pagdating sa Code.org na Surbey Pagkatapos ng Kurso na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10 minuto para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Araling 15
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: Pagsisimula
+              name: Pagsisimula
+            Computer Science Fundamentals:
+              key: Mga Batayan ng Computer Science
+              name: Mga Batayan ng Computer Science
+            Looking Ahead:
+              key: Masdan ang Hinaharap
+              name: Masdan ang Hinaharap
+            'Mastering the Basics: Sequencing':
+              key: 'Pag-amo sa mga Pangunahing Kaalaman: Pagsunod-sunod'
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Pagsunod-sunod'
+            'Mastering the Basics: Loops':
+              key: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Loop'
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Loop'
+            'Mastering the Basics: Conditionals':
+              key: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kondisyonal'
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kondisyonal'
+            'Mastering the Basics: Functions':
+              key: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Function'
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Function'
+            'Mastering the Basics: Events':
+              key: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kaganapan'
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kaganapan'
+            Best Practices for Teaching Computer Science:
+              key: Mga Magandang Gawi sa Pagtuturo ng Computer Science
+              name: Mga Magandang Gawi sa Pagtuturo ng Computer Science
+            Planning:
+              key: Pagpaplano
+              name: Pagpaplano
+            Next Steps:
+              key: Mga susunod na Hakbang
+              name: Mga susunod na Hakbang

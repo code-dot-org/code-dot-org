@@ -1384,95 +1384,95 @@ it-IT:
           </div>
       Dance_Party_extras_intro_2019:
         markdown: |
-          # Continua a ballare!
+          "# Continua a ballare!
 
-          Nella parte 2, creerai il tuo progetto. Qui non trovi esercizi guidati, bensì tanti progetti che mostrano diversi modi di creare balli più complessi.
+          Per la parte 2, creerai il tuo progetto personale. Non ci sono rompicapi qui, invece ci sono un sacco di progetti che mostrano diversi modi per rendere più complessi i dance party.
 
-          Puoi provare questi progetti _in qualsiasi ordine_. Dai un'occhiata per scoprire com'è stato realizzato qualche effetto che hai intravisto in un esercizio precedente o combina dei meccanismi visti in diversi esercizi. Provali tutti, scegli il tuo preferito e divertiti a personalizzarlo per renderlo tuo.
+          Puoi fare questi livelli in qualsiasi ordine. Passa in rassegna per vedere come è stato fatto qualcosa in un livello precedente, o combina i concept tra i progetti. Provali tutti, scegli il tuo preferito, e passa il tuo tempo a lavorare su questo progetto per renderlo tuo.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
+          <a class=""btn btn-large btn-primary next-stage submitButton pull-right”>Continua</a>
 
-          <div class="clearfix"></div>
+          <div class=""clearfix""></div>
 
 
-          <div style="float: left; margin: 10px">
-          <a href="2">
+          <div style=""float: left; margin: 10px"">
+          <a href=""2"">
           <h2>
           Avanti e indietro
           </h2>
 
-          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+          <img src=""https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif""></a>
 
           </div>
 
-          <div style="float: left; margin: 10px">
-          <a href="3">
+          <div style=""float: left; margin: 10px"">
+          <a href=""3"">
           <h2>
-          Più pulsanti
+          Altri pulsanti
           </h2>
 
-          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+          <img src=""https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif""></a>
 
           </div>
-          <div style="float: left; margin: 10px">
-          <a href="4">
+          <div style=""float: left; margin: 10px"">
+          <a href=""4"">
           <h2>
-          Tutti in formazione!
+          Tutti in Formazione!
           </h2>
 
-          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+          <img src=""https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif""></a>
 
           </div>
 
-          <div style="float: left; margin: 10px">
-          <a href="5">
+          <div style=""float: left; margin: 10px"">
+          <a href=""5"">
           <h2>
-          Dove sono andati?
+          Dove vanno?
           </h2>
 
-          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+          <img src=""https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif""></a>
 
           </div>
 
-          <div style="float: left; margin: 10px">
-          <a href="6">
+          <div style=""float: left; margin: 10px"">
+          <a href=""6"">
           <h2>
-          Gruppi di ballo
+          Squadre di ballo
           </h2>
 
-          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+          <img src=""https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif""></a>
 
           </div>
 
-          <div style="float: left; margin: 10px">
-          <a href="7">
+          <div style=""float: left; margin: 10px"">
+          <a href=""7"">
           <h2>
-          Quartine
+          Quattro Quarti
           </h2>
 
-          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+          <img src=""https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif""></a>
 
           </div>
 
-          <div style="float: left; margin: 10px">
-          <a href="8">
+          <div style=""float: left; margin: 10px"">
+          <a href=""8"">
           <h2>
           Bassi, medi e alti
           </h2>
 
-          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+          <img src=""https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif""></a>
 
           </div>
 
-          <div style="float: left; margin: 10px">
-          <a href="9">
+          <div style=""float: left; margin: 10px"">
+          <a href=""9"">
           <h2>
           Accelerare, rallentare
           </h2>
 
-          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+          <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
 
-          </div>
+          </div>"
       GoingPlacesSafely-unplugged:
         markdown: |-
           # Navigare in sicurezza
@@ -6883,8 +6883,6 @@ it-IT:
         questions:
         - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
-      CSD U1 Test:
-        title: Computer e Risoluzione dei Problemi - Verifica finale
       Unit 1 Lesson 1 Overview:
         markdown: "# Panoramica\n\nLa classe lavora in gruppi per progettare barche
           con fogli di alluminio che possano imbarcare più centesimi possibili. Alla
@@ -6986,35 +6984,35 @@ it-IT:
           style=\"float:right; width:30%\">\n\nLe simulazioni sono un ottimo modo
           per imparare cose che possono essere difficili da osservare nel mondo reale.
           Aiutano gli scienziati a risolvere problemi e testare nuove idee in modo
-          sicuro ed efficiente. La tua simulazione è un modo per mostrare come potrebbe
-          apparire un'epidemia da virus a Monster Town.\n\n## Ripristina e riproduci!\nAnche
-          quando scrivi tu stesso il codice, è impossibile sapere esattamente cosa
-          succederà quando premi esegui. I mostri vagano in modo casuale, quindi non
-          sai se il virus si diffonderà velocemente o lentamente. Ogni volta che modifichi
-          il codice, assicurati di eseguire la simulazione più di una volta. Le cose
-          non succederanno due volte allo stesso modo!\n\n## Raccolta dati\nProva
-          a scrivere le tue osservazioni mentre esegui la simulazione. Puoi contare
-          il numero di mostri che si ammalano o utilizzare un timer per vedere quanto
-          velocemente accadono le cose. Ad esempio, quanto tempo ci vuole di solito
-          perché tutti i mostri si ammalino se nessuno ha la mascherina? \n\n## Fare
-          previsioni\nSe comprendi il tuo modello, puoi usarlo per fare previsioni.
-          Puoi persino modificare il modo in cui viene eseguita la simulazione e indovinare
-          cosa accadrà diversamente. Per esempio:\n* Cosa succederebbe se ci fossero
-          il doppio dei mostri?\n* Cosa succederebbe se i mostri si muovessero a metà
-          della velocità?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
-          style=\"float:right\">\n\n## Monster Town è come il mondo reale?\nC'è un
-          limite al grado di realismo di qualsiasi modello. \n* Che cosa ha in comune
-          la simulazione dell'epidemia con le epidemie di virus nel mondo reale?\n*
+          sicuro ed efficiente. La tua simulazione è un modo per mostrare quali potrebbero
+          essere le conseguenze di un'epidemia da virus nella Città dei mostri.\n\n##
+          Ripristina e riproduci!\nAnche quando scrivi tu stesso il codice, è impossibile
+          sapere esattamente cosa succederà quando premerai il pulsante \"Esegui\".
+          I mostri vagano in modo casuale, quindi non sai se il virus si diffonderà
+          velocemente o lentamente. Ogni volta che modifichi il codice, assicurati
+          di eseguire la simulazione più di una volta. Le cose non succederanno due
+          volte allo stesso modo!\n\n## Raccolta dati\nProva a scrivere le tue osservazioni
+          mentre esegui la simulazione. Puoi contare il numero di mostri che si ammalano
+          o utilizzare un timer per vedere in quanto tempo accadono le cose. Ad esempio,
+          quanto tempo ci vuole di solito perché tutti i mostri si ammalino se nessuno
+          ha la mascherina? \n\n## Fare previsioni\nSe comprendi il tuo modello, puoi
+          usarlo per fare previsioni. Puoi persino modificare il modo in cui viene
+          eseguita la simulazione e indovinare cosa accadrà diversamente. Per esempio:\n*
+          Cosa succederebbe se ci fossero il doppio dei mostri?\n* Cosa succederebbe
+          se i mostri si muovessero a metà della velocità?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## La Città dei mostri è come il mondo reale?\nC'è
+          un limite al grado di realismo di qualsiasi modello. \n* Che cosa ha in
+          comune la simulazione dell'epidemia con le epidemie di virus nel mondo reale?\n*
           Quali sono le differenze?\nDopo aver completato questa attività, discuti
           queste domande con gli insegnanti o con la tua famiglia!\n\n## Cos'altro
           possiamo rappresentare?\nHai già creato un modello funzionante dell'epidemia
-          a Monster Town. Quali cose non è possibile riprodurre o mostrare nella simulazione
-          che vorresti fosse possibile? Premi Continua per andare avanti e imparare
-          ancora di più a  rappresentare:\n* Aumentare il numero di mostri nella simulazione\n*
-          Aiutare i mostri a riprendersi dal virus\n* Probabilità, immunità, vaccini
-          e altro!\n\nPuoi anche condividere il tuo modello di simulazione con altri
-          o condividere un messaggio su ciò che pensi che possiamo fare per aiutare
-          a mantenere gli altri in buona salute quando un virus arriva in città. "
+          nella Città dei mostri. Quali cose non è possibile riprodurre o mostrare
+          nella simulazione che vorresti fosse possibile? Premi \"Prosegui\" per:\n*
+          aumentare il numero di mostri nella simulazione,\n* aiutare i mostri a riprendersi
+          dal virus,\n* imparare di più sui concetti di probabilità, immunità, vaccini
+          e altro!\n\nPuoi anche condividere il tuo modello di simulazione con i tuoi
+          amici oppure un tuo messaggio su cosa pensi che si possa fare per limitare
+          la diffusione del virus quando questo arriva in città."
       BigEvent-Unplugged:
         markdown: |-
           # Il Grande Evento
@@ -7166,8 +7164,6 @@ it-IT:
           * [rect()](//studio.code.org/docs/gamelab/rect/)
           * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
 
-      CSD User Centered Design Post-Project Test:
-        title: 'Design Incentrato sull''Utente: Test Post-Progetto'
       ConditionalsWithCards-Unplugged:
         markdown: |-
           # Condizionali con le Carte
@@ -7240,15 +7236,11 @@ it-IT:
           \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nVai al piano di lavoro della lezione\n</button>\n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Continua</a>"
-      CSD U5 test:
-        title: Test Post-Progetto sui Dati e la Società
       outbreak_freeplay_choice:
         display_name: Tempo di giocare
         description: Hai completato l'esercitazione! Continua ad apportare modifiche
           o miglioramenti al tuo progetto. Puoi scegliere di continuare a lavorare
           con gli stessi blocchi o provare una casetta degli attrezzi ampliata.
-      CSD Physical Computing Post-Project Test:
-        title: Test post-progetto di informatica fisica
       CSD U3 Entertainment_2018_2019:
         markdown: |+
           # Starting Your Search
@@ -7307,8 +7299,6 @@ it-IT:
           * All
 
           [/key]
-      CSD Web Development Post-Project Test:
-        title: Test post-progetto di sviluppo web
       Crowdsourcing-Unplugged:
         markdown: |-
           # Crowdsourcing

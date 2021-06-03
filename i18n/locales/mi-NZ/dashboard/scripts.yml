@@ -1,4 +1,3 @@
----
 mi:
   data:
     script:
@@ -44,7 +43,7 @@ mi:
             Spelling Bee:
               name: Ohu Takikupu
             'Studio: Create a Story':
-              name: Taiwhanga Tākaro - Waihangahia tētahi Paki
+              name: 'Taiwhanga Tākaro - Waihangahia tētahi Paki'
             The Big Event:
               name: Te Takahanga Nui
           student_description: Mō ngā kaipānui hou, me tīmata i Akoranga 1. Mā ngā akonga e hanga ngā papatono rorohiko hei āwhina i a rātou ki te ako ki te mahi tahi, me te whanake i ā rātou pukenga rapanga, me te manawanui ki te whakaoti i ngā mahi uaua. Hei te mutunga o te Akoranga ka hangaia e ngā akonga i ō rātou ake kēmu, kōrero paki rānei, ka taea hoki te tuari atu. Pai mō ngā tamariki tau 1-2 i te kura.
@@ -87,7 +86,7 @@ mi:
             Relay programming:
               name: Papatonotanga ā-Tānga
             'Studio: Create a Story':
-              name: Taiwhanga Tākaro - Waihangahia tētahi Paki
+              name: 'Taiwhanga Tākaro - Waihangahia tētahi Paki'
             The Big Event:
               name: Te Takahanga Nui
             Your Digital Footprint:
@@ -140,7 +139,7 @@ mi:
             'Studio: Create a Game':
               name: 'Taiwhanga Tākaro: Waihangahia tētahi Kēmu'
             'Studio: Create a Story':
-              name: Taiwhanga Tākaro - Waihangahia tētahi Paki
+              name: 'Taiwhanga Tākaro - Waihangahia tētahi Paki'
           student_description: I hoahoa ai te Akoranga 3 mō ngā ākonga kua puta kē i te Akoranga 2. Ka whakawhānuitia te titiro a ngā ākonga ki ngā kaupapa tuhiwaehere i tirohia i ngā akoranga o muri kia waihanga i ngā otinga hangore mō ngā rapanga matatini. Kia tae ki te paunga o tēnei ākoranga, ka waihangahia e ngā ākonga ngā pūrākau pāhekoheko me ngā kēmu hei tiritiri ki te tangata ahakoa ko wai. E manakohia ana mō ngā taumata 4-5.
         playlab:
           title: Taiwhanga Tākaro
@@ -451,6 +450,12 @@ mi:
               name: Pūtaruna ā-Ipurangi
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Tākaia
         algebraPD2:
@@ -473,10 +478,22 @@ mi:
               name: Whakamutunga
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Tākaia
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Tākaia
         asUnplugged:
@@ -661,6 +678,12 @@ mi:
               name: 'Momotu: Titowaiata me ngā Tawhā'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Tākaia
         grade3:
@@ -961,7 +984,7 @@ mi:
             Functions:
               name: Ngā Taumahi
             'null':
-              name: korenga
+              name: 'korenga'
         coursef-ramp:
           lessons:
             Introduction:
@@ -1566,7 +1589,7 @@ mi:
               display_name: Ihirangi
           lessons:
             'null':
-              name: korenga
+              name: 'korenga'
         dance-extras-gallery:
           title: Me Kanikani Tonu
           description: Neke atu i te kotahi haora, anei ethahi wero ano.
@@ -2289,6 +2312,8 @@ mi:
               display_name: Ngā Taurangi
             csf_for_loops:
               display_name: Mō Ngā Koromeke
+            lessonGroup-9:
+              display_name: Ngā Takunetanga
         pre-express-2021:
           lesson_groups:
             csf_loops:

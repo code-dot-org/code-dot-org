@@ -276,6 +276,7 @@ es:
       cant_join_own_section: "Lo sentimos, no te puedes unir a tu propia sección."
       provider_managed_section: "No puedes unirte a esta sección, porque está a cargo de otro proveedor. Consulta con tu docente para que te agregue a través de %{provider} y vuelve a sincronizar la sección."
       restricted_section: "No hemos podido añadirte a la sección %{section_code} porque está bloqueada. Por favor, póngase en contacto con su profesor para obtener ayuda."
+      full_section: "No hemos podido añadirte a la sección %{section_code} porque ya existen %{section_capacity} alumnos en ella. Ponte en contacto con tu profesor para que te ayude."
     mail:
       student_disassociated:
         subject: "Notificación Code.org: %{student_name} ya no está asociado como tu estudiante."
@@ -599,7 +600,7 @@ es:
       weblab_unsupported_locale_storage: "Puedes experimentar problemas con el Laboratorio web en el modo de navegación privada. Por favor, vuelve a cargar el proyecto en modo normal. Disculpa las molestias."
   slow_loading: 'Esto está tardando más tiempo de lo habitual...'
   try_reloading: 'Intenta volver a cargar la página'
-  next_stage: '¡Finalizado! Sigue a la siguiente etapa'
+  next_stage: '¡Acabado! Sigue a la siguiente etapa'
   download_pdf: 'Abrir la planificación de la lección'
   lesson_plan: 'Plan de clases'
   view_lesson_plan: 'Ver el plan de estudios'
@@ -768,7 +769,7 @@ es:
   dialog:
     ok: "OK"
     startover_title: "¿Seguro que quieres empezar de nuevo?"
-    startover_body: "Esto reiniciará el rompecabezas a su estado inicial y borrará todos los datos que hayas agregado o cambiado."
+    startover_body: "Esto reiniciará el rompecabeza a su estado inicial y borrará todos los datos que hayas agregado o cambiado."
     startover_ok: "Volver a empezar"
     startover_cancel: "Cancelar"
   time:

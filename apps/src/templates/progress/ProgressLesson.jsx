@@ -102,9 +102,9 @@ class ProgressLesson extends React.Component {
     const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
     const showAsLocked = isLockedForUser || isLockedForSection;
 
-    const title = lesson.stageNumber
+    const title = lesson.lessonNumber
       ? i18n.lessonNumbered({
-          lessonNumber: lesson.stageNumber,
+          lessonNumber: lesson.lessonNumber,
           lessonName: lesson.name
         })
       : lesson.name;
@@ -127,6 +127,7 @@ class ProgressLesson extends React.Component {
     const lessonUrl = levels[0] && levels[0].url;
     return (
       <div
+        className="uitest-progress-lesson"
         style={{
           ...styles.outer,
           ...((hiddenForStudents || showAsLocked) && styles.hiddenOrLocked)
@@ -294,7 +295,7 @@ const styles = {
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
-  currentLessonId: state.progress.currentStageId,
+  currentLessonId: state.progress.currentLessonId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
   lockableAuthorized: state.lessonLock.lockableAuthorized,

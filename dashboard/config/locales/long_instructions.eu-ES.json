@@ -51,7 +51,10 @@
         "frozen square iterative": "Badirudi karratu bat osatzeko erdibidean gaudela. Jar ditzagun 4 lerro elkarrekin karratu bat sortzeko.",
         "frozen square loop": "Kaixo, Arendelleko Anna naiz! Egin dezagun karratu bat \"Errepikatu\" blokea erabiliz, bloke gutxiago erabiltzeko. Zenbat aldiz (???) errepikatu beharko lituzke \"Errepikatu\" blokeak bere barneko blokeak karratu bat osatzeko?",
         "frozen square loop 3x": "Sor ditzagun hiru karratu, karratu bakoitza eta gero biratuz. Ziurtatu karratu berri bakoitzaren aurretik 120 graduko biraketa egiten duzula.",
-        "frozen square snowflake": "Elur-maluta bat sor al dezakezu, lauki bat 10 aldiz egiteko \"errepikatu\" blokea erabiliz, eta \"biratu\" blokea, laukien artean 36 graduko biraketa egiteko?"
+        "frozen square snowflake": "Elur-maluta bat sor al dezakezu, lauki bat 10 aldiz egiteko \"errepikatu\" blokea erabiliz, eta \"biratu\" blokea, laukien artean 36 graduko biraketa egiteko?",
+        "courseD_bee_nestedLoops8_2021": "Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. ",
+        "courseF_bee2": "Begizta bat erabiltzerik al duzu nektar guztia biltzeko?",
+        "courseF_bee_for_challenge2_2021": "Puzzle hau ebatz ezazu ahalik eta bloke gutxien erabiliz."
       }
     }
   }

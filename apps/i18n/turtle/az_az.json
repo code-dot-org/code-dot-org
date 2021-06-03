@@ -1,4 +1,5 @@
 {
+  "backward": "Arxaya",
   "blocksUsed": "İstifadə olunmuş bloklar: %1",
   "branches": "budaqlar",
   "catColour": "Rəng",
@@ -38,6 +39,7 @@
   "drawUpperWave": "üst dalğa çək",
   "drawLowerWave": "alt dalğa çək",
   "drawSticker": "etiket çək",
+  "drawStickerWithSize": "ölçüsü ilə stiker çəkin\n",
   "heightParameter": "hündürlük",
   "hideTurtle": "rəssamı gizlət",
   "jump": "atıl",
@@ -73,10 +75,12 @@
   "penDown": "karandaşı endir",
   "penTooltip": "Şəkil çəkməyi başlamaq və ya dayandırmaq üçün karandaşı endirir və ya qaldırır.",
   "penUp": "karandaşı qaldır",
+  "pointTo": "işarə etmək",
   "pixels": "piksellər",
   "reinfFeedbackMsg": "Bu da sizin rəsm əsəri! Üzərində işləməyə davam edin və ya növbəti tapmacaya keçin.",
   "right": "sağa",
   "setAlpha": "alfa seç",
+  "setCharacter": "xarakteri təyin et",
   "setColour": "rəngi təyin et",
   "setPattern": "model seç",
   "setWidth": "eni təyin et",
@@ -92,5 +96,6 @@
   "turnTooltip": "Rəssamı qeyd olunmuş dərəcə qədər sola və ya sağa döndərir.",
   "turtleVisibilityTooltip": "Rəssamı görünən və ya görünməz edir.",
   "widthTooltip": "Karandaşın qalınlığını dəyişir.",
+  "withSize": "ölçüsü ilə\n",
   "wrongColour": "Sizin şəkliniz səhv rəngdədir. Bu tapmaca üçün bu %1 olmalıdır."
 }

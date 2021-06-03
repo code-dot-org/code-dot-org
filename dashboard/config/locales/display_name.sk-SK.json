@@ -469,9 +469,9 @@
         "CourseD_EOC_starwars": "Vytvor Star Wars hru",
         "CourseE_Project_SpriteLab_2020": "Vytvor Sprite Lab projekt",
         "CourseF_Project_SpriteLab_2020": "Vytvor Sprite Lab projekt",
-        "CSD U2 HTML Tags Map": "HTML označenie",
-        "CSD U2 HTML Tags Map_2018": "HTML označenie",
-        "CSD U2 HTML Tags Map_2019": "HTML označenie",
+        "CSD U2 HTML Tags Map": "HTML tag-y",
+        "CSD U2 HTML Tags Map_2018": "HTML tag-y",
+        "CSD U2 HTML Tags Map_2019": "HTML tag-y",
         "CSD U2 Inspector Warm Up": "Objav HTML",
         "CSD U2 Inspector Warm Up_2018": "Objav HTML",
         "CSD U2 Inspector Warm Up_2019": "Objav HTML",
@@ -489,7 +489,19 @@
         "CSD: For Loop_2019": "Video: \"For-loop\" Slučky ",
         "outbreak5": "Zotavenie",
         "CSD LEDs Map_2019": "Cvičný obvod: Úvod",
-        "CSD U3 Functions Call Function_2019": "Video: Volanie a definovanie funkcií"
+        "CSD U3 Functions Call Function_2019": "Video: Volanie a definovanie funkcií",
+        "CSD U2 Headers map": "Nadpisy v HTML",
+        "CSD U2 Headers map_2018": "Nadpisy v HTML",
+        "CSD U2 Headers map_2019": "Nadpisy v HTML",
+        "CSD U2 Heading Demo": "Úvod do vytvárania nadpisov ",
+        "CSD U2 Heading Demo_2018": "Úvod do vytvárania nadpisov ",
+        "CSD U2 Heading Demo_2019": "Úvod do vytvárania nadpisov ",
+        "CSD U2 Heading Sizes": "Veľkosť nadpisov ",
+        "CSD U2 Heading Sizes_2018": "Veľkosť nadpisov ",
+        "CSD U2 Heading Sizes_2019": "Veľkosť nadpisov ",
+        "CSD U2 Heading Test": "Nadpisy a odseky ",
+        "CSD U2 Heading Test_2018": "Nadpisy a odseky ",
+        "CSD U2 Heading Test_2019": "Nadpisy a odseky "
       }
     }
   }

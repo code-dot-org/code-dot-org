@@ -124,10 +124,10 @@ export function setupApp(appOptions) {
       var lastServerResponse = reporting.getLastServerResponse();
       if (lastServerResponse.videoInfo) {
         showVideoDialog(lastServerResponse.videoInfo);
-      } else if (lastServerResponse.endOfStageExperience) {
+      } else if (lastServerResponse.endOfLessonExperience) {
         const body = document.createElement('div');
         const lessonInfo = lastServerResponse.previousStageInfo;
-        const lessonName = `${msg.stage()} ${lessonInfo.position}: ${
+        const lessonName = `${msg.lesson()} ${lessonInfo.position}: ${
           lessonInfo.name
         }`;
         ReactDOM.render(

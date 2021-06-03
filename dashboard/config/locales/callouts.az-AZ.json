@@ -85,13 +85,42 @@
           "move_elsa_forward": "Elzanı irəli aparmaq üçün \"irəli get\" blokunu sürükləyib şıqqıltı ilə \"icra etdikdə\" blokunun aşağısına yapışdırın"
         },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "Bu bloku proqramına əlavə et"
+          "dance_callout_11_a": "Bu bloku proqramına əlavə et",
+          "arrow_buttons": "Rəqqasınızı idarə etmək üçün ox düymələrini basın."
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "Proqramına yeni hadisə əlavə et"
         },
         "outbreak2": {
           "pointerlocation": "Mövzu blokunu bura çəkin."
+        },
+        "courseA_maze_seq2": {
+          "courseA_maze_seqA_callout1": "Proqramı addım-addım keçmək üçün addım düyməsini istifadə edin. Bu, səhvi tapmaqda kömək edəcək!"
+        },
+        "courseB_maze_seq2": {
+          "courseB_maze_seq2_callout1": "Proqramı addım-addım keçmək üçün addım düyməsini istifadə edin. Bu, səhvi tapmaqda kömək edəcək!"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "Ekran yaşıl oldu? Əgər belədirsə, 'Bitir' düyməsini vurun. Əks təqdirdə, 'Sıfırla' vurun, kodunuzu dəyişdirin və yenidən 'Çalıştır'ı vurun."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Siz indi dizayn rejimindəsiniz"
+        },
+        "CourseD_Dance_2020_01": {
+          "dance_callout_01": "Burada rəqqasın növünü seçin."
+        },
+        "Dance_2019_02": {
+          "dance_callout_11_a": "Bu bloku proqramına əlavə et",
+          "arrow_buttons": "Rəqqasınızı idarə etmək üçün ox düymələrini basın."
+        },
+        "Dance_2019_05": {
+          "dance_callout_05": "Proqramına yeni hadisə əlavə et"
+        },
+        "CourseF_outbreak2": {
+          "pointerlocation": "Mövzu blokunu bura çəkin."
+        },
+        "Dance_2019_01": {
+          "dance_callout_01": "Burada rəqqasın növünü seçin."
         }
       }
     }

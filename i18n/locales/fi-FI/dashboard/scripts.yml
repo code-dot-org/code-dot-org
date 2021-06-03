@@ -3023,6 +3023,8 @@ fi:
               display_name: Muuttujat
             csf_for_loops:
               display_name: Silmukat
+            lessonGroup-9:
+              display_name: Tapahtumat
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -3088,3 +3090,8 @@ fi:
           lesson_groups:
             cspSurvey2020:
               display_name: Kysely
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Tietojenkäsittelyn Perusteet
+              name: Tietojenkäsittelyn Perusteet

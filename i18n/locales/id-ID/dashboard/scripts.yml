@@ -17081,7 +17081,7 @@ id:
               name: Mahadata, Crowdsourcing, dan Pembelajaran Mesin
             Machine Learning and Bias:
               key: Pembelajaran Mesin dan Bias
-              name: Pembelajaran Mesin dan Bias
+              name: Pembelajaran Mesin
             Project - Tell a Data Story - Part 1:
               key: Proyek - Menuturkan Cerita Data - Bagian 1
               name: Proyek - Menuturkan Cerita Data - Bagian 1
@@ -17846,7 +17846,7 @@ id:
               description_teacher: Sampai titik ini, murid sudah menulis code yang mengeksekusi dengan cara yang sama persis setiap kali dijalankan - andal, tetapi tidak terlalu fleksibel. Dalam pelajaran ini, murid Anda akan mulai mengcode dengan kondisional, yang memungkinkan mereka menulis code yang berfungsi berbeda bergantung pada kondisi khusus yang dijumpai oleh program.
             While Loops with the Farmer:
               key: While Loop dengan Petani
-              name: While Loop dengan Petani
+              name: While Loop dalam Petani
               description_student: 'Loop sangat membantu dalam coding. Pelajaran ini akan mengajari Anda tentang jenis loop baru: while loop!'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditional dalam Minecraft: Perjalanan Air'
@@ -17881,7 +17881,7 @@ id:
             Variables with Artist:
               key: Variabel dengan Artis
               name: Variabel dengan Artis
-              description_student: Jangan lupa memancing kreativitas di ruang kelas! Dalam puzzle ini, Anda akan membuat gambar-gambar yang fantastis menggunakan variable.
+              description_student: Dalam pelajaran ini, Anda akan membuat gambar menggunakan variable yang berubah pada saat program berjalan.
               description_teacher: Dalam pelajaran ini, murid akan mengeksplorasi pembuatan desain berulang menggunakan variable di lingkungan Artis. Murid akan mempelajari cara menggunakan variable untuk membuat code lebih mudah ditulis dan lebih mudah dibaca. Setelah mengikuti puzzle terpandu, murid akan mengakhiri pelajaran dalam bentuk level bermain bebas untuk memperagakan materi yang sudah dipelajari dan membuat desain mereka sendiri.
             Changing Variables with Bee:
               key: Mengubah Variable dengan Lebah
@@ -17931,6 +17931,8 @@ id:
               name: Pesta Tari
               description_student: Saatnya merayakan! Dalam pelajaran ini, Anda akan memprogram pesta dansa interaktif Anda sendiri.
               description_teacher: Dalam pelajaran ini, murid akan memprogram pesta dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena alatnya dibuat untuk menanggapi musik.
+            lesson-3:
+              name: Sprite tengah Beraksi
           lesson_groups:
             csf_sequencing:
               display_name: Urutan
@@ -17948,6 +17950,8 @@ id:
               display_name: Sprites
             end_of_course_project:
               display_name: Proyek Akhir Kursus
+            lessonGroup-9:
+              display_name: kegiatan
           student_description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan guru.
         pre-express-2021:
           title: Kilat Pre-reader (2020)
@@ -18126,6 +18130,8 @@ id:
             CS Discoveries Post Course survey:
               key: Survei Pascakursus CS Discoveries
               name: Survei Pascakursus CS Discoveries
+            Designing With Empathy:
+              name: Analisis desain
             Build a Paper Prototype:
               name: Prototipe Kertas
             Digital Mode in App Lab:
@@ -18340,3 +18346,52 @@ id:
           description_short: Survei Pascakursus Murid CSP
           description: Selamat Datang di Survei Pascakursus CS Principles Code.org.  Survei ini membutuhkan kira-kira 15 menit sampai selesai. Tanggapan Anda bersifat privat dan anonim -- guru Anda dapat melihat hasil agregat anonim untuk seluruh kelas. Hasil survei sangat penting bagi guru Anda dan Code.org demi kelangsungan dan kesempurnaan kursus. Terima kasih atas waktu dan pertimbangan Anda.
           student_description: Selamat Datang di Survei Pascakursus CS Principles Code.org.  Survei ini membutuhkan kira-kira 15 menit sampai selesai. Tanggapan Anda bersifat privat dan anonim -- guru Anda dapat melihat hasil agregat anonim untuk seluruh kelas. Hasil survei sangat penting bagi guru Anda dan Code.org demi kelangsungan dan kesempurnaan kursus. Terima kasih atas waktu dan pertimbangan Anda.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Pelajaran ke- 15
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: Dapat Dimulai
+              name: Dapat Dimulai
+            Computer Science Fundamentals:
+              key: Computer Science Fundamentals
+              name: Computer Science Fundamentals
+            Looking Ahead:
+              key: Melihat ke depan
+              name: Melihat ke depan
+            'Mastering the Basics: Sequencing':
+              key: 'Menguasai Dasar-dasar: Pengurutan'
+              name: 'Menguasai Dasar-dasar: Pengurutan'
+            'Mastering the Basics: Loops':
+              key: 'Menguasai Dasar-dasar: Loop '
+              name: 'Menguasai Dasar-dasar: Loop '
+            'Mastering the Basics: Conditionals':
+              key: 'Menguasai Dasar-dasar: Kondisional'
+              name: 'Menguasai Dasar-dasar: Kondisional'
+            'Mastering the Basics: Functions':
+              key: 'Menguasai Dasar-dasar: Fungsi'
+              name: 'Menguasai Dasar-dasar: Fungsi'
+            'Mastering the Basics: Events':
+              key: 'Menguasai Dasar-dasar: Peristiwa'
+              name: 'Menguasai Dasar-dasar: Peristiwa'
+            Best Practices for Teaching Computer Science:
+              key: Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer
+              name: Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer
+            Planning:
+              key: Perencanaan
+              name: Perencanaan
+            Next Steps:
+              key: Langkah berikutnya
+              name: Langkah berikutnya
+        vpl-csd-2021:
+          lessons:
+            Module 1:
+              key: Modul 1
+              name: Modul 1
+        vpl-csp-2021:
+          lessons:
+            Module 1:
+              key: Modul 1
+              name: Modul 1

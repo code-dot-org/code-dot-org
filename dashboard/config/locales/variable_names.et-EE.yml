@@ -20,6 +20,7 @@ et:
       score: tulemus
       size: suurus
       speed: kiirus
+      variable: muutuja
       width: laius
       wizard: võlur
       x: x

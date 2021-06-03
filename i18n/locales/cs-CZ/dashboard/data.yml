@@ -352,6 +352,7 @@ cs:
         C4_unplugged_forloops: Cykly "For"
         C4_unplugged_parameters: Psaní písniček s parametry
         C4_unplugged_binary: Binární
+        CSF_a_b_artist_loops: Smyčky v Umělci
         CSF_artist_angles: Úhly s Malířem
         CSF_collector_k1_blocks: 'Základy informatiky: Sběračka'
         CSF_collector_repeat_loops: Opakovací cykly se sběratelkou
@@ -457,6 +458,8 @@ cs:
         hoc_dance_properties_2019: Dance Party 2019 - Vlastnosti
         csd_what_computers_do: Co dělají počítače?
         csf_my_online_neighborhood_2020: Mé online sousedství
+        playlab_2021: Úvod do Play Labu
+        playlab_2021_reader: Úvod do Play Labu
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

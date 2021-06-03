@@ -955,7 +955,7 @@ az-AZ:
         - {}
         - feedback: Düzgün!
         - {}
-        - {}
+        - feedback: Yalnış
         questions:
         - {}
       behaviors 1 predict_2020:
@@ -963,7 +963,7 @@ az-AZ:
         - {}
         - feedback: Düzgün!
         - {}
-        - {}
+        - feedback: Yalnış
         questions:
         - {}
       behaviors 4 predict:
@@ -971,7 +971,7 @@ az-AZ:
         - {}
         - feedback: Düzgün!
         - {}
-        - {}
+        - feedback: Yalnış
         questions:
         - {}
       behaviors 4 predict_2020:
@@ -979,7 +979,7 @@ az-AZ:
         - {}
         - feedback: Düzgün!
         - {}
-        - {}
+        - feedback: Yalnış
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:
@@ -1115,7 +1115,7 @@ az-AZ:
         - {}
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
@@ -1123,7 +1123,7 @@ az-AZ:
         - {}
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
@@ -1131,7 +1131,7 @@ az-AZ:
         - {}
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1139,7 +1139,7 @@ az-AZ:
         - {}
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict2:
@@ -1849,7 +1849,8 @@ az-AZ:
         - {}
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. Kod sonuna qədər işləyəcəksə (səhvlərə
+            məhəl qoymadan) Laurel neçə xəzinə parçası toplayar?
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
@@ -1928,3 +1929,146 @@ az-AZ:
           [Kompüter nədir - Nümunəvi](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - Aktivlik Bələdçisi ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))
 
 
+      CSD U4L02 SFLP:
+        markdown: 'Dizaynerlər istifadəçilərin ehtiyaclarını başa düşməlidirlər. Bu
+          dərsdə istifadəçi profilini oynayıb başqa bir insan üçün necə dizayn etməli
+          olduğunuzu düşünəcək və bir sıra produktlara reaksiya verəcəksiniz.
+
+'
+      CSD U4L03 SFLP:
+        markdown: Bu dərsdə istifadəçinin ehtiyaclarını qarşılayacaq şəkildə sıfırdan
+          bir produkt dizayn edəcəksiniz. Bunu edərkən seçimlər çox olduğu üçün düşünüb
+          ideyaları kateqorizə etməyin nə qədər kullanışlı bir yetenek olduğunu öyrənəcəksiniz.
+      CSD U4L04 SFLP:
+        markdown: Bu dərsdə uygulamanın nə olduğunu və necə istifadəçinin ehtiyaclarını
+          ödəmək üçün dizayn edildiyini öyrənəcəksiniz. Həmçinin programıb ümumi çertyojunu
+          çıxarmaq üçün prototiplərdən necə istifadə edildiyini öyrənəcəksiniz.
+      CSD U4L05 SFLP:
+        markdown: Bu dərsdə produkt barədə olan geri bildirişləri oxuyub ifadə olunan
+          ehtiyacları ayırd edə bilməyi öyrənəcəksiniz. Sonra bu ehtiyacları daha
+          yaxşı şəkildə qarşılayacaq kağız prototipi yeniləşdirəcəksiniz.
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - text: Bilmirəm.
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_EOC_2021:
+        description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+      courseF_EOC_examples_2021:
+        description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - feedback: Düzgün!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}

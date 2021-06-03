@@ -2171,3 +2171,169 @@ hr-HR:
           # Moja internetska četvrt
 
           ## Kako sigurno odlazite na mjesta na mreži?
+      CourseF_outbreak_story:
+        content1: opis ovdje
+      CourseF_outbreak_story2:
+        content1: opis ovdje
+      OPD-K5 Stage3aGo_dani:
+        content1: opis ovdje
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          # Snaga riječi
+
+          ## Što bi trebao učiniti kad netko koristi zli ili uvredljiv jezik na internetu?
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - text: Scrat će doći do žira. U programskom kodu nema grešaka.
+          feedback: Netočno. Prvo, Scrat skrene u pogrešnom smjeru, a zatim se Scrat
+            ne pomakne dovoljno naprijed da dosegne žir.
+        - text: Scrat neće doći do žira jer se okrenuo u krivom smjeru.
+          feedback: Točno! Prvo, Scrat skrene u pogrešnom smjeru, a zatim se Scrat
+            ne pomakne dovoljno naprijed da dosegne žir.
+        - text: Scrat neće doći do žira jer nema dovoljno blokova za "pomicanje naprijed".
+          feedback: Točno! Prvo, Scrat skrene u pogrešnom smjeru, a zatim se Scrat
+            ne pomakne dovoljno naprijed da dosegne žir.
+        - feedback: U ovom su kodu dvije greške. Prvo, Scrat skrene u pogrešnom smjeru,
+            a zatim se Scrat ne pomakne dovoljno naprijed da dosegne žir.
+        questions:
+        - text: Potražite greške u ovom kodu. Hoće li Scrat doći do žira ili postoji
+            problem?
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_EOC_2021:
+        description: Stigao si do posljednje lekcije tečaja F! Odaberi projekt koji
+          želiš izraditi.
+      courseF_EOC_examples_2021:
+        description: Stigao si do posljednje lekcije tečaja F! Odaberi projekt koji
+          želiš izraditi.
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: opis ovdje
+      csf_digital_trails_2021:
+        markdown: |-
+          # Slijedite Digitalni trag
+
+          ## Koje podatke možemo imati u svom digitalnom otisku?
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: opis ovdje
+        markdown: |
+          # STOP podlosti
+
+          ## Što bi trebao učiniti ako je netko na internetu zločest prema tebi?
+
+          *S**mjesta otići.
+          *T** Reći odrasloj osobi od povjerenja.
+          * **O**dlaziti na sigurna web sjedišta.
+          * **P**aziti i razmišljati dok sam online.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}

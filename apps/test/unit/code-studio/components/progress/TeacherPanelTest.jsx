@@ -18,7 +18,7 @@ const MINIMUM_PROPS = {
   sectionsAreLoaded: false,
   scriptHasLockableStages: false,
   scriptAllowsHiddenStages: false,
-  unlockedStageNames: [],
+  unlockedLessonNames: [],
   sectionData: null,
   onSelectUser: () => {},
   getSelectedUserId: () => {},
@@ -127,7 +127,7 @@ describe('TeacherPanel', () => {
         viewAs={ViewType.Teacher}
         scriptHasLockableStages={true}
         hasSections={true}
-        unlockedStageNames={['lesson1', 'lesson2']}
+        unlockedLessonNames={['lesson1', 'lesson2']}
       />
     );
     assert(

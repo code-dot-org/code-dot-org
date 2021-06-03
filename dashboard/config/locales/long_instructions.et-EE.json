@@ -160,7 +160,13 @@
         "frozen square iterative": "Näib et me oleme poolel teel joonistamaks ruutu. Ühendame 4 joont omavahel, et valmiks ruut.",
         "frozen square loop": "Tere, olen Anna! Teeme ruudu kasutades \"Korda\" blokki, sellega kasutame teisi blokke vähem. Kui palju kordi (???) peaks \"Korda\" blokki kasutama, et teha valmis ruut?",
         "frozen square loop 3x": "Loome kolm ruutu, peale igat ruutu peaks aga keerama. Keera peale igat ruutu 120 kraadi.",
-        "frozen square snowflake": "Kas sa saad luua lumehelbe kasutades \"Korda\" blokki, et joonistada ruutu 10 korda ja \"Keera\" blokki\", et keerata iga ruudu vahel 36 kraadi?"
+        "frozen square snowflake": "Kas sa saad luua lumehelbe kasutades \"Korda\" blokki, et joonistada ruutu 10 korda ja \"Keera\" blokki\", et keerata iga ruudu vahel 36 kraadi?",
+        "CourseD_EOC_dance": "Loo oma enda tants",
+        "courseB_collector_loops7_2021": "Kirjutage kood, et saada kätte kõik aare.",
+        "courseB_collector_loops8_2021": "\\*\\* Väljakutse: \\*\\* Aare läheb treppidest alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada.",
+        "courseD_bee_nestedLoops8_2021": "Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. ",
+        "courseF_bee2": "Kasuta 'korda' tsüklit, et kogu nektar kokku koguda.",
+        "courseF_bee_for_challenge2_2021": "Lahenda see mõistatus võimalikult väheste plokkidega."
       }
     }
   }

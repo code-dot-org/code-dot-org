@@ -14,7 +14,8 @@ describe('the level builder page init script', () => {
       script: {
         name: 'Test script',
         stages: [],
-        is_migrated: false
+        is_migrated: false,
+        scriptPath: '/s/test-script'
       },
       i18n: {
         stageDescriptions: [],

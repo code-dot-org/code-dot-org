@@ -24,6 +24,7 @@ import NameFileDialog from './NameFileDialog';
 import DeleteConfirmationDialog from './DeleteConfirmationDialog';
 import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
+import Backpack from './Backpack';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
@@ -55,6 +56,19 @@ const style = {
   },
   fileTypeIcon: {
     margin: 5
+  },
+  tabs: {
+    backgroundColor: color.background_gray,
+    marginBottom: 0,
+    display: 'flex',
+    alignItems: 'center'
+  },
+  backpackSection: {
+    textAlign: 'left',
+    display: 'inline-block',
+    float: 'left',
+    overflow: 'visible',
+    marginLeft: 3
   }
 };
 
@@ -455,43 +469,45 @@ class JavalabEditor extends React.Component {
     };
     return (
       <div style={this.props.style}>
-        <PaneHeader hasFocus={true}>
+        <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
             iconClass="fa fa-plus-circle"
             onClick={() => this.setState({openDialog: CREATE_FILE})}
-            headerHasFocus={true}
+            headerHasFocus
             isRtl={false}
-            label="Create File"
-            leftJustified={true}
+            label={javalabMsg.newFile()}
+            leftJustified
+          />
+          <PaneSection style={style.backpackSection}>
+            <Backpack isDarkMode={isDarkMode} />
+          </PaneSection>
+          <PaneButton
+            id="data-mode-versions-header"
+            iconClass="fa fa-clock-o"
+            label={msg.showVersionsHeader()}
+            headerHasFocus
+            isRtl={false}
+            onClick={this.props.handleVersionHistory}
           />
           <PaneButton
             id="javalab-editor-save"
             iconClass="fa fa-check-circle"
             onClick={onCommitCode}
-            headerHasFocus={true}
+            headerHasFocus
             isRtl={false}
-            label="Commit Code"
+            label={javalabMsg.commitCode()}
           />
-          <PaneButton
-            id="data-mode-versions-header"
-            iconClass="fa fa-clock-o"
-            label={msg.showVersionsHeader()}
-            headerHasFocus={true}
-            isRtl={false}
-            onClick={this.props.handleVersionHistory}
-          />
-          <PaneSection>Editor</PaneSection>
+          <PaneSection>{javalabMsg.editor()}</PaneSection>
         </PaneHeader>
         <Tab.Container
           activeKey={activeTabKey}
           onSelect={key => this.onChangeTabs(key)}
-          style={{marginTop: 10}}
           id="javalab-editor-tabs"
           className={isDarkMode ? 'darkmode' : ''}
         >
           <div>
-            <Nav bsStyle="tabs" style={{marginBottom: 0}}>
+            <Nav bsStyle="tabs" style={style.tabs}>
               <JavalabFileExplorer
                 fileMetadata={fileMetadata}
                 onSelectFile={this.onOpenFile}
@@ -512,25 +528,33 @@ class JavalabEditor extends React.Component {
                         }
                       />
                     )}
-                    <span>{fileMetadata[tabKey]}</span>
-                    {activeTabKey === tabKey && (
-                      <button
-                        type="button"
-                        style={{
-                          ...style.fileMenuToggleButton,
-                          ...(this.props.isDarkMode &&
-                            style.darkFileMenuToggleButton)
-                        }}
-                        onClick={e => this.toggleTabMenu(tabKey, e)}
-                        className="no-focus-outline"
-                      >
-                        <FontAwesome
-                          icon={
-                            contextTarget === tabKey ? 'caret-up' : 'caret-down'
-                          }
-                        />
-                      </button>
+                    {!isEditingStartSources && (
+                      <FontAwesome
+                        style={style.fileTypeIcon}
+                        icon={'file-text'}
+                      />
                     )}
+                    <span>{fileMetadata[tabKey]}</span>
+
+                    <button
+                      ref={`${tabKey}-file-toggle`}
+                      type="button"
+                      style={{
+                        ...style.fileMenuToggleButton,
+                        ...(this.props.isDarkMode &&
+                          style.darkFileMenuToggleButton),
+                        ...(activeTabKey !== tabKey && {visibility: 'hidden'})
+                      }}
+                      onClick={e => this.toggleTabMenu(tabKey, e)}
+                      className="no-focus-outline"
+                      disabled={activeTabKey !== tabKey}
+                    >
+                      <FontAwesome
+                        icon={
+                          contextTarget === tabKey ? 'caret-up' : 'caret-down'
+                        }
+                      />
+                    </button>
                   </NavItem>
                 );
               })}

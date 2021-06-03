@@ -3137,6 +3137,8 @@ bs:
               display_name: Varijable
             csf_for_loops:
               display_name: Od-Do-Za Petlje
+            lessonGroup-9:
+              display_name: Događaji
           student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         pre-express-2021:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -3205,3 +3207,15 @@ bs:
               display_name: Slijedeći Koraci
             Introduction:
               display_name: Uvod
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lekcija 15
+        kodea-pd-2021:
+          lessons:
+            Planning:
+              key: Planiranje
+              name: Planiranje
+            Next Steps:
+              key: Slijedeći Koraci
+              name: Slijedeći Koraci

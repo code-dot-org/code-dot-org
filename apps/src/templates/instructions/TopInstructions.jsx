@@ -11,6 +11,8 @@ import TeacherFeedback from './TeacherFeedback';
 import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import HelpTabContents from './HelpTabContents';
+import DocumentationTab from './DocumentationTab';
+import ReviewTab from './ReviewTab';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
@@ -42,6 +44,8 @@ export const TabType = {
   INSTRUCTIONS: 'instructions',
   RESOURCES: 'resources',
   COMMENTS: 'comments',
+  DOCUMENTATION: 'documentation',
+  REVIEW: 'review',
   TEACHER_ONLY: 'teacher-only'
 };
 
@@ -78,6 +82,7 @@ class TopInstructions extends Component {
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
+    openReferenceLinksInNewTab: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     readOnlyWorkspace: PropTypes.bool,
     serverLevelId: PropTypes.number,
@@ -95,6 +100,8 @@ class TopInstructions extends Component {
     resizable: PropTypes.bool,
     setAllowInstructionsResize: PropTypes.func,
     collapsible: PropTypes.bool,
+    displayDocumentationTab: PropTypes.bool,
+    displayReviewTab: PropTypes.bool,
     // Use this if the instructions will be somewhere other than over the code workspace.
     // This will allow instructions to be resized separately from the workspace.
     standalone: PropTypes.bool
@@ -135,6 +142,8 @@ class TopInstructions extends Component {
     this.instructions = null;
     this.helpTab = null;
     this.commentTab = null;
+    this.documentationTab = null;
+    this.reviewTab = null;
     this.teacherOnlyTab = null;
   }
 
@@ -216,9 +225,14 @@ class TopInstructions extends Component {
         this.setState({fetchingData: false}, this.forceTabResizeToMaxHeight);
       })
       .catch(error => {
-        console.log(
-          'Promise Rejection while getting instructions: ' + error.responseText
-        );
+        if (error.responseText) {
+          console.log(
+            'Promise Rejection while getting instructions: ' +
+              error.responseText
+          );
+        } else {
+          console.log(error);
+        }
       });
   }
 
@@ -282,6 +296,19 @@ class TopInstructions extends Component {
     this.props.setInstructionsRenderedHeight(newHeight);
   };
 
+  refForSelectedTab = () => {
+    const tabRefs = {
+      [TabType.INSTRUCTIONS]: this.instructions,
+      [TabType.RESOURCES]: this.helpTab,
+      [TabType.COMMENTS]: this.commentTab,
+      [TabType.DOCUMENTATION]: this.documentationTab,
+      [TabType.REVIEW]: this.reviewTab,
+      [TabType.TEACHER_ONLY]: this.teacherOnlyTab
+    };
+
+    return tabRefs[this.state.tabSelected];
+  };
+
   /**
    * Calculate how much height it would take to show top instructions with our
    * entire instructions visible and update store with this value.
@@ -306,23 +333,8 @@ class TopInstructions extends Component {
       return 0;
     }
 
-    let element;
-    switch (this.state.tabSelected) {
-      case TabType.RESOURCES:
-        element = this.helpTab;
-        break;
-      case TabType.INSTRUCTIONS:
-        element = this.instructions;
-        break;
-      case TabType.COMMENTS:
-        element = this.commentTab;
-        break;
-      case TabType.TEACHER_ONLY:
-        element = this.teacherOnlyTab;
-        break;
-    }
     const maxNeededHeight =
-      $(ReactDOM.findDOMNode(element)).outerHeight(true) +
+      $(ReactDOM.findDOMNode(this.refForSelectedTab())).outerHeight(true) +
       HEADER_HEIGHT +
       RESIZER_HEIGHT;
 
@@ -382,21 +394,17 @@ class TopInstructions extends Component {
     firehoseClient.putRecord(record);
   }
 
-  handleHelpTabClick = () => {
+  handleTabClick = newTab => {
     this.scrollToTopOfTab();
-    this.setState({tabSelected: TabType.RESOURCES}, () => {
+    this.setState({tabSelected: newTab}, () => {
       this.scrollToTopOfTab();
       this.adjustMaxNeededHeight();
     });
-    this.recordEvent('click-help-and-tips-tab');
   };
 
-  handleInstructionTabClick = () => {
-    this.scrollToTopOfTab();
-    this.setState({tabSelected: TabType.INSTRUCTIONS}, () => {
-      this.scrollToTopOfTab();
-      this.adjustMaxNeededHeight();
-    });
+  handleHelpTabClick = () => {
+    this.handleTabClick(TabType.RESOURCES);
+    this.recordEvent('click-help-and-tips-tab');
   };
 
   handleCommentTabClick = () => {
@@ -415,10 +423,7 @@ class TopInstructions extends Component {
   };
 
   handleTeacherOnlyTabClick = () => {
-    this.setState({tabSelected: TabType.TEACHER_ONLY}, () => {
-      this.scrollToTopOfTab();
-      this.adjustMaxNeededHeight();
-    });
+    this.handleTabClick(TabType.TEACHER_ONLY);
     this.recordEvent('click-teacher-only-tab');
   };
 
@@ -537,7 +542,9 @@ class TopInstructions extends Component {
       resizable,
       documentationUrl,
       ttsLongInstructionsUrl,
-      standalone
+      standalone,
+      displayDocumentationTab,
+      displayReviewTab
     } = this.props;
 
     const {
@@ -643,12 +650,20 @@ class TopInstructions extends Component {
           displayHelpTab={displayHelpTab}
           displayFeedback={displayFeedback}
           displayKeyConcept={displayReadonlyRubric} // Key Concept tab displays a readonly rubric
+          displayDocumentationTab={displayDocumentationTab}
+          displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
           fetchingData={fetchingData}
           handleDocumentationClick={this.handleDocumentationClick}
-          handleInstructionTabClick={this.handleInstructionTabClick}
+          handleInstructionTabClick={() =>
+            this.handleTabClick(TabType.INSTRUCTIONS)
+          }
           handleHelpTabClick={this.handleHelpTabClick}
           handleCommentTabClick={this.handleCommentTabClick}
+          handleDocumentationTabClick={() =>
+            this.handleTabClick(TabType.DOCUMENTATION)
+          }
+          handleReviewTabClick={() => this.handleTabClick(TabType.REVIEW)}
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
           collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
@@ -665,6 +680,9 @@ class TopInstructions extends Component {
                 videoData={levelVideos ? levelVideos[0] : []}
                 mapReference={mapReference}
                 referenceLinks={referenceLinks}
+                openReferenceLinksInNewTab={
+                  this.props.openReferenceLinksInNewTab
+                }
               />
             )}
             {displayFeedback && !fetchingData && (
@@ -683,6 +701,12 @@ class TopInstructions extends Component {
                 serverLevelId={this.props.serverLevelId}
                 teacher={this.props.user}
               />
+            )}
+            {tabSelected === TabType.DOCUMENTATION && (
+              <DocumentationTab ref={ref => (this.documentationTab = ref)} />
+            )}
+            {tabSelected === TabType.REVIEW && (
+              <ReviewTab ref={ref => (this.reviewTab = ref)} />
             )}
             {this.isViewingAsTeacher &&
               (hasContainedLevels || teacherMarkdown) && (

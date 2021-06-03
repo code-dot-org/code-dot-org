@@ -277,6 +277,499 @@
           "shrinking": "縮小",
           "moving left and right": "左右移動",
           "moving with arrow keys": "使用方向鍵移動"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "CourseF_outbreak1": {
+          "recovering": "恢復"
+        },
+        "CourseF_outbreak2": {
+          "recovering": "恢復"
+        },
+        "CourseF_outbreak3": {
+          "recovering": "恢復"
+        },
+        "CourseF_outbreak4": {
+          "recovering": "恢復",
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動"
+        },
+        "CourseF_outbreak5": {
+          "recovering": "恢復"
+        },
+        "CourseF_outbreak6": {
+          "recovering": "恢復"
+        },
+        "CourseF_outbreak7": {
+          "recovering": "恢復",
+          "shrinking": "縮小",
+          "moving left and right": "左右移動",
+          "moving with arrow keys": "使用方向鍵移動"
+        },
+        "CourseF_outbreak8": {
+          "recovering": "恢復",
+          "shrinking": "縮小",
+          "moving left and right": "左右移動",
+          "moving with arrow keys": "使用方向鍵移動"
+        },
+        "Virtual Pet 1_2021": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "Virtual Pet 2_2021": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 3_2021": {
+          "shrinking": "縮小"
+        },
+        "courseF_apps_aquarium": {
+          "wobbling": "搖晃",
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛"
+        },
+        "courseF_apps_card": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "moving with arrow keys": "使用方向鍵移動",
+          "shrinking": "縮小"
+        },
+        "courseF_apps_chatbot": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "moving with arrow keys": "使用方向鍵移動",
+          "shrinking": "縮小"
+        },
+        "courseF_apps_collector": {
+          "fluttering": "飄移",
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛"
+        },
+        "courseF_apps_madlib": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_apps_pet": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_editable_card": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "moving with arrow keys": "使用方向鍵移動",
+          "shrinking": "縮小"
+        },
+        "courseF_editable_chatbot": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "moving with arrow keys": "使用方向鍵移動",
+          "shrinking": "縮小"
+        },
+        "courseF_editable_madlib": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_events_choice_conflict": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_events_choice_conflict2": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_events_choice_penguin": {
+          "wobbling": "搖晃",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_events_choice_pufferfish": {
+          "wobbling": "搖晃",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_events_conflict": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_events_freeplay_air": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_freeplay_animals": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_freeplay_aquatic": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_freeplay_blank": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_freeplay_food": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_freeplay_space": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_key": {
+          "wobbling": "搖晃",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_events_practice_reorder": {
+          "moving with arrow keys": "使用方向鍵移動",
+          "wobbling": "搖晃",
+          "shrinking": "縮小",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_events_predict": {
+          "shrinking": "縮小"
+        },
+        "courseF_events_review": {
+          "wobbling": "搖晃",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_events_ship": {
+          "wobbling": "搖晃",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_events_stops": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_events_time": {
+          "wobbling": "搖晃",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_label_predict": {
+          "shrinking": "縮小"
+        },
+        "courseF_place_fruit": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_sprites_behaviors": {
+          "shrinking": "縮小"
+        },
+        "courseF_sprites_clouds": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_sprites_desert": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_sprites_freeplay_air": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_freeplay_animals": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_freeplay_aquatic": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_freeplay_blank": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_freeplay_food": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_freeplay_space": {
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環",
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_make": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_sprites_moreSprites": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_sprites_positioning": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_sprites_predict": {
+          "shrinking": "縮小"
+        },
+        "courseF_sprites_properties": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_sprites_ship": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_answer": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_choice_color": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_choice_conversation": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_choice_events": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_choice_freeplay": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_choice_interview": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_choice_multiprompt": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_choice_title": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_concat": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_events": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_print": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_prompts": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_text_review": {
+          "shrinking": "縮小",
+          "fluttering": "飄移",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_variables_card": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_variables_card_finish": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_variables_chatbot": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_variables_chatbot_finish": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_variables_madlib": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_variables_madlib_finish": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
+        },
+        "courseF_variables_predict": {
+          "shrinking": "縮小"
+        },
+        "simcustom_2021": {
+          "shrinking": "縮小",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
         }
       }
     }

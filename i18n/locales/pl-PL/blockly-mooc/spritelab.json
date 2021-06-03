@@ -87,6 +87,7 @@
   "behaviorsIncreased": "Liczba zachowań Twojego duszka wzrosła. Aby zatrzymać stare zachowanie, użyj tego bloku.\n <xml><block type=\"gamelab_removeBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"postać_18_1\"</title></block></value></block></xml>",
   "eventsWrongBehaviors": "Twój duszek powinien mieć dokładnie 3 zachowania. Spróbuj przesunąć blok `zatrzymaj wszystko' w inne miejsce swojego kodu.",
   "spinBothWays": "Twój duszek powinien obracać się w lewo i w prawo w różnych momentach.",
+  "moveBothWays": "Twój duszek powinien poruszać się w jedną stronę, a potem w drugą. ",
   "didntMoveUp": "Twój duszek nie ruszył w górę. ",
   "didntMoveDown": "Twój duszek nie ruszył na dół.",
   "didntMoveLeft": "Twój duszek nie ruszył w lewo.",
@@ -167,5 +168,9 @@
   "atLeastOneSpriteStillMoving": "Co najmniej jeden z Twoich duszków wciąż się poruszał. Upewnij się, że masz blok „zatrzymuje wszystko” dla każdego duszka. ",
   "spritesNotTouch": "Upewnij się, że Twoje duszki w pewnym punkcie się zetkną. ",
   "addWhenTouchesEvent": "Dodaj ten blok do swojego obszaru roboczego :\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"kiedy\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"niebieski kosmita\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"różowy kosmita\"</title></block></value></block></xml>",
-  "changeSpriteBehaviorsWhenTouch": "Duszek musi zmienić zachowanie, gdy zetkną się dwa duszki. "
+  "changeSpriteBehaviorsWhenTouch": "Duszek musi zmienić zachowanie, gdy zetkną się dwa duszki. ",
+  "moveSpriteLocation": "Twoje duszki są w tym samym miejscu. Przenieś jednego z nich za pomocą bloku „lokalizacja”. <xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">'{\"x\":200,\"y\":200}'</title></block></xml>",
+  "createDraggableSprite": "Duszek potrzebuje pokarm Twojego zwierzaka, aby zacząć zachowywać 'być przeciągalnym'. <xml><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"face_carrot_1\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_draggable\"></block></value></block></xml>",
+  "createNotDraggableSPrite": "Tylko duszek jedzenia powinien być przeciągany. Usuń to zachowanie ze swojego zwierzaka.",
+  "moveSpriteByDrag": "Twój kod wygląda świetnie! Aby przeciągnąć swojego duszka, kliknij go podczas działania programu."
 }

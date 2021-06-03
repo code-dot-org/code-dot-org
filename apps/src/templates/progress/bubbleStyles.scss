@@ -1,0 +1,21 @@
+@import 'color';
+
+.progress-bubble {
+  &.enabled {
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
+      color 0.2s ease-out;
+    &:hover {
+      text-decoration: none;
+      color: $white !important;
+      border-color: $level_current !important;
+      background-color: $level_current !important;
+    }
+  }
+}
+
+a.progress-bubble-link {
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+  }
+}

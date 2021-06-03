@@ -63,9 +63,9 @@ mk:
             '"a"': А
             '"s"': Југ
             '"d"': Д
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': случајно
       craft_ifPath:
         options:

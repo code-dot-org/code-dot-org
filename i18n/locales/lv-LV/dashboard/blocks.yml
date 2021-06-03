@@ -1,4 +1,3 @@
----
 lv:
   data:
     blocks:
@@ -396,11 +395,6 @@ lv:
             '"down"': bultiņa uz leju
             '"left"': bultiņa pa kreisi
             '"right"': bultiņa pa labi
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"row"': rinda
-            '"random"': nejaušs
       RyanLab_moveForward:
         text: pārvietot uz priekšu
       RyanLab_turnLeft:

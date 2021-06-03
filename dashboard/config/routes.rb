@@ -354,7 +354,7 @@ Dashboard::Application.routes.draw do
     # /s/xxx/lessons/yyy
     resources :lessons, only: [:show], param: 'position', format: false do
       get 'student', to: 'lessons#student_lesson_plan'
-      get 'extras', to: 'script_levels#stage_extras', format: false
+      get 'extras', to: 'script_levels#lesson_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
 
       # /s/xxx/lessons/yyy/levels/zzz
@@ -712,8 +712,8 @@ Dashboard::Application.routes.draw do
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
-  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
+  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson'
+  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson_and_level'
   put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
@@ -780,9 +780,6 @@ Dashboard::Application.routes.draw do
         collection do
           get 'names'
           post 'save'
-        end
-        member do
-          get 'metadata'
         end
       end
 

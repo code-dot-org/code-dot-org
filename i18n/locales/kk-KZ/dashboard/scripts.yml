@@ -1,4 +1,3 @@
----
 kk:
   data:
     script:
@@ -521,6 +520,12 @@ kk:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Қош келдіңіз!
             Wrap-up:
@@ -566,6 +571,12 @@ kk:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Қош келдіңіз!
             Wrap-up:
@@ -575,6 +586,12 @@ kk:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Қош келдіңіз!
             Wrap-up:
@@ -819,6 +836,12 @@ kk:
               name: 'Kомпьютерсіз: Параметрлермен Ән Жазу'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Қош келдіңіз!
             Wrap-up:
@@ -1146,7 +1169,7 @@ kk:
             Functions:
               name: Функциялар
             'null':
-              name: бос жиын
+              name: 'бос жиын'
         coursef-ramp:
           lessons:
             Introduction:
@@ -1407,7 +1430,7 @@ kk:
             For Loops:
               name: For ілмектері
         csd3-1819draft:
-          description_short: Бағдарламалау
+          description_short: "Бағдарламалау"
           lessons:
             Variables:
               name: Айнымалылар
@@ -1416,7 +1439,7 @@ kk:
             Functions:
               name: Функциялар
         csd3-2018:
-          description_short: Бағдарламалау
+          description_short: "Бағдарламалау"
           lessons:
             Variables:
               name: Айнымалылар
@@ -1811,7 +1834,7 @@ kk:
               display_name: Контент
           lessons:
             'null':
-              name: бос жиын
+              name: 'бос жиын'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -1879,7 +1902,7 @@ kk:
             Lists:
               name: Тізімдер
         csd3-2019:
-          description_short: Бағдарламалау
+          description_short: "Бағдарламалау"
           lessons:
             Variables:
               name: Айнымалылар
@@ -2017,7 +2040,7 @@ kk:
             Lists:
               name: Тізімдер
         csd3-pilot:
-          description_short: Бағдарламалау
+          description_short: "Бағдарламалау"
           lessons:
             Variables:
               name: Айнымалылар
@@ -2208,7 +2231,7 @@ kk:
             Functions with Parameters:
               name: Параметрлі Функциялар
         csd3-2020:
-          description_short: Бағдарламалау
+          description_short: "Бағдарламалау"
           lessons:
             Variables:
               name: Айнымалылар
@@ -2378,7 +2401,7 @@ kk:
             For Loops:
               name: For ілмектері
         csd3-virtual:
-          description_short: Бағдарламалау
+          description_short: "Бағдарламалау"
           lessons:
             Variables:
               name: Айнымалылар
@@ -2418,7 +2441,7 @@ kk:
             lessonGroup-3:
               display_name: Айнымалылар
         csd3-2021:
-          description_short: Бағдарламалау
+          description_short: "Бағдарламалау"
           lessons:
             Variables:
               key: Айнымалылар
@@ -2572,6 +2595,8 @@ kk:
               display_name: Айнымалылар
             csf_for_loops:
               display_name: For ілмектері
+            lessonGroup-9:
+              display_name: Шаралар
         pre-express-2021:
           lesson_groups:
             csf_loops:

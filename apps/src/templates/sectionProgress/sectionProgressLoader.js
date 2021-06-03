@@ -55,7 +55,10 @@ export function loadScriptProgress(scriptId, sectionId) {
     .then(response => response.json())
     .then(scriptData => {
       sectionProgress.scriptDataByScript = {
-        [scriptId]: postProcessDataByScript(scriptData, sectionData.stageExtras)
+        [scriptId]: postProcessDataByScript(
+          scriptData,
+          sectionData.lessonExtras
+        )
       };
 
       if (

@@ -1,17 +1,29 @@
----
 az:
   data:
     script:
       category:
+        csd_category_name: KE Kəşflər ('17-'18)
+        csd_2018_category_name: KE Kəşflər ('18-'19)
+        csd_2019_category_name: KE Kəşflər ('19-'20)
+        csd_2020_category_name: KE Kəşflər ('20-'21)
+        csf_category_name: Kompüter Elmlərinin əsasları
         csf_2018_category_name: Kompüter Elminin Əsasları ('18-'19)
         csf_2019_category_name: Kompüter Elminin Əsasları ('19-'20)
         csf_2020_category_name: Kompüter Elminin Əsasları ('20-'21)
         csf_2021_category_name: Kompüter Elminin Əsasları ('21-'22)
         csf_international_category_name: Kompüter Elminin Əsasları Beynəlxalq
+        csp_category_name: KE Prinsipləri ('15-'16)
+        csp_2018_category_name: KE Prinsipləri ('18-'19)
+        csp_2019_category_name: KE Prinsipləri ('19-'20)
+        csp_2020_category_name: KE Prinsipləri ('20-'21)
+        csp_2021_category_name: KE Prinsipləri ('21-'22)
+        cspexams_category_name: Kompüter Elmlərinin Prinsipləri Praktik Test
+        csp17_category_name: KE Prinsipləri ('17-'18)
         hoc_category_name: Kod Saatı
         math_category_name: Riyaziyyat
+        research_studies_category_name: "Tədqiqat işləri \nğ"
         twenty_hour_category_name: 20-Saat
-        tts_category_name: Mətndən nitqə
+        tts_category_name: Mətndən nitqə 
         other_category_name: Digər
       name:
         course1:
@@ -30,6 +42,8 @@ az:
               name: 'Arı: Dövrlər'
             'Bee: Sequence':
               name: 'Arı: Ardıcıllıq'
+            Building a Foundation:
+              name: Təməl qurmaq
             Happy Maps:
               name: Şən xəritələr
             'Maze: Debugging':
@@ -38,6 +52,10 @@ az:
               name: 'Labirint: Dövrlər'
             'Maze: Sequence':
               name: 'Labirint: Ardıcıllıq'
+            Move it, Move it:
+              name: Hərəkət et
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
             'Studio: Create a Story':
               name: 'Oyun labı: Bir əhvalat düzəldin'
           student_description: Oxumağa yeni başlayanlar üçün Kurs 1 ilə başla. Tələbələr kompyuter proqramlarını düzəldərkən başqaları ilə əməkdaşlıq etmək, məsələləri həll etmək bacarıqlarını inkişaf etdirmək və çətin tapşırıqlardan keçməyi öyrənəcəklər. Bu kursu tamamladıqda, tələbələr qeyri standtart oyun yaxud hekayə düzəldib, onu paylaşa bilirlər. Birinci sinif / 6 yaşlı üşaqlar üçün tövsiyyə olunur.
@@ -58,7 +76,7 @@ az:
             'Bee: Conditionals':
               name: 'Arı: Şərti ifadələr'
             'Bee: Debugging':
-              name: Arı Sazlama
+              name: 'Arı Sazlama'
             'Bee: Loops':
               name: 'Arı: Dövrlər'
             Conditionals:
@@ -92,7 +110,7 @@ az:
             'Bee: Conditionals':
               name: 'Arı: Şərti ifadələr'
             'Bee: Debugging':
-              name: Arı Sazlama
+              name: 'Arı Sazlama'
             'Bee: Functions':
               name: 'Arı: Funksiyalar'
             Bounce:
@@ -180,7 +198,7 @@ az:
             'Bee: Conditionals':
               name: 'Arı: Şərti ifadələr'
             'Bee: Debugging':
-              name: Arı Sazlama
+              name: 'Arı Sazlama'
             'Farmer: While Loops':
               name: 'Fermer: "Hələ ki" dövrləri'
             'Maze: Sequence':
@@ -201,12 +219,22 @@ az:
               name: Şərti ifadələr
             'Eval: Strings and Images':
               name: Sətir və Şəkillər
+            'Play Lab: Animation (Big Game)':
+              name: Böyük Oyun - Animasiya
+            'Play Lab: Boolean (Big Game)':
+              name: Böyük Oyun - Bool tipləri
+            'Play Lab: Defining Functions':
+              name: Raket yüksəkliyi
+            'Play Lab: Defining Variables (Big Game)':
+              name: Böyük oyun- dəyişənlər
         infinity:
           lessons:
             Infinity:
               name: Sonsuz sayda
         K5PD:
           lessons:
+            'Programming Concept: Loops':
+              name: 'Proqramlaşdırma Konsepsiyası: Dovrlər'
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
         20-hour:
@@ -313,6 +341,12 @@ az:
           lessons:
             Puzzles:
               name: Tapmacalar
+        cspunit1:
+          lessons:
+            Number Systems:
+              name: Say sistemləri
+            Sending Binary Messages:
+              name: İkilik mesajların göndərilməsi
         algebraPD:
           lessons:
             Teacher Dashboard:
@@ -321,18 +355,56 @@ az:
           lessons:
             Strings and Images:
               name: Sətir və Şəkillər
+            Your Game - Animation:
+              name: Sənin oyunun - Animasiya
+            Your Game - Booleans:
+              name: Sizin Oyun - Bul tipləri
+        CSPPD:
+          lessons:
+            Impact of Computer Science:
+              name: Kompüter elminin təsiri
+            Teaching Strategies:
+              name: Öyrətmə strategiyası
+            What is CSP?:
+              name: "CSP -content security policy. \nMəzmun təhlükəsizlik siyasəti "
         CSPLessonSamples:
           lessons:
             Lesson 14:
               name: Dərs 14
             Lesson 15:
               name: Dərs 15
+        ECSPD:
+          lessons:
+            Impact of Computer Science:
+              name: Kompüter elminin təsiri
+            Teaching Strategies:
+              name: Öyrətmə strategiyası
+            What is ECS?:
+              name: "ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.\n"
         algebraPD3:
           lessons:
             Strings and Images:
               name: Sətir və Şəkillər
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+            The Big Game:
+              name: Böyük Oyun
+        ECSPD-NexTech:
+          lessons:
+            Impact of Computer Science:
+              name: Kompüter elminin təsiri
+            Teaching Strategies:
+              name: Öyrətmə strategiyası
+            What is ECS?:
+              name: "ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.\n"
+        ECSPD-iZone:
+          lessons:
+            Impact of Computer Science:
+              name: Kompüter elminin təsiri
+            Teaching Strategies:
+              name: Öyrətmə strategiyası
+            What is ECS?:
+              name: "ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.\n"
         algebraPD-NexTech:
           lessons:
             Teacher Dashboard:
@@ -343,14 +415,22 @@ az:
               name: Müəllimin idarəetmə paneli
         sciencePD2:
           lessons:
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         cspunit2:
           lessons:
+            Encryption Algorithms:
+              name: Açar Sözləri və Parollar
             The Internet:
               name: İnternet
         algebraPD2a:
           lessons:
+            Big Game - Animation:
+              name: Böyük Oyun - Animasiya
+            Big Game - Booleans:
+              name: Böyük Oyun - But tipləri
             Strings and Images:
               name: Sətir və Şəkillər
         allthethings:
@@ -385,32 +465,70 @@ az:
           lessons:
             App Lab:
               name: Proqram Labı
+            Welcome!:
+              name: Xoş gəldiniz!
+        K5-OnlinePD:
+          lessons:
+            Computer Science Fundamentals:
+              name: Kompüter Elmləri Əsasları.
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-up:
               name: Yekun
         algebraPD2:
           lessons:
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+            Welcome!:
+              name: Xoş gəldiniz!
         sciencePD2b:
           lessons:
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         science-PD2:
           lessons:
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         sciencePD2b-iZone:
           lessons:
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-up:
               name: Yekun
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-up:
               name: Yekun
         CSPPD2:
@@ -419,14 +537,34 @@ az:
               name: Yekun və sonrakı addımlar
         asUnplugged:
           lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
             Graph Paper Programming:
               name: Millimetrlik kağızda proqramlaşdırma
             Happy Maps:
               name: Şən xəritələr
+            Move it, Move it:
+              name: Hərəkət et
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
             Songwriting:
               name: Mahnı yazma
+        ECSPD3-Unit2:
+          lessons:
+            Teaching Strategies:
+              name: Öyrətmə strategiyası
+        ECSPD3-Unit3:
+          lessons:
+            Teaching Strategies:
+              name: Öyrətmə strategiyası
+        ECSPD3-Unit4:
+          lessons:
+            Teaching Strategies:
+              name: Öyrətmə strategiyası
         ScienceP3OLPT2:
           lessons:
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         Special Fun:
@@ -459,6 +597,8 @@ az:
           student_description: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft dünyasında bir macəra yaşadın.
         ScienceP3OLPT3:
           lessons:
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         algebraPD1:
@@ -467,6 +607,10 @@ az:
               name: Müəllimin idarəetmə paneli
         csp1-2017:
           lessons:
+            Number Systems:
+              name: Say sistemləri
+            Sending Binary Messages:
+              name: İkilik mesajların göndərilməsi
             The Internet:
               name: İnternet
         CSDU3-Draft:
@@ -491,6 +635,9 @@ az:
               display_name: Məzmun
             practice:
               display_name: Öyrədici proqramlar
+          lessons:
+            Sending Binary Messages:
+              name: İkilik mesajların göndərilməsi
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
@@ -499,6 +646,10 @@ az:
               display_name: Məzmun
             practice:
               display_name: Öyrədici proqramlar
+        allthehiddenthings:
+          lessons:
+            Game Lab:
+              name: Oyun labaratoriyası
         MikeTest:
           lessons:
             Artist Functions:
@@ -523,6 +674,8 @@ az:
               name: Hadisələr
             Loops:
               name: dövrlər
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
         grade4:
           lessons:
             Build a Star Wars Game!:
@@ -551,8 +704,28 @@ az:
               name: Rəqəmsal vətəndaşlıq
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-up:
               name: Yekun
+        ecs-unit2:
+          lessons:
+            Teaching Strategies:
+              name: Öyrətmə strategiyası
+        ecs-unit3:
+          lessons:
+            Teaching Strategies:
+              name: Öyrətmə strategiyası
+        ecs-unit4:
+          lessons:
+            Teaching Strategies:
+              name: Öyrətmə strategiyası
         grade3:
           lessons:
             'Artist: Nested Loops':
@@ -603,6 +776,8 @@ az:
           lessons:
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+            Welcome!:
+              name: Xoş gəldiniz!
         csp-online-test:
           lesson_groups:
             required:
@@ -639,6 +814,18 @@ az:
           lessons:
             Flappy Code:
               name: Qanadlı Kod
+        coursea-draft:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+        courseb-draft:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+        coursec-draft:
+          lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
         coursed-draft:
           lessons:
             Digital Citizenship:
@@ -681,12 +868,20 @@ az:
           lessons:
             Hour of Code 2013:
               name: Kod Saatı 2013
+        sports:
+          lessons:
+            Sports:
+              name: İdman
         2016_sciencePD-phase2b:
           lessons:
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         2016_sciencePD_phase2b:
           lessons:
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         csp3-support:
@@ -707,10 +902,14 @@ az:
               display_name: Öyrədici proqramlar
         sciencepd4:
           lessons:
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         science-pd-ol-pt-5:
           lessons:
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         csf2harvey:
@@ -722,6 +921,8 @@ az:
               name: İkilik
         sciencepd5:
           lessons:
+            Welcome!:
+              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         csp5-support:
@@ -762,6 +963,8 @@ az:
               name: Giriş
             Conditionals:
               name: Şərti ifadələr
+            'Real Life Algorithms: Dice Race':
+              name: 'Həqiqi Həyat Alqoritmləri: Zər Yarışı'
         csd6-2017:
           lessons:
             Lists:
@@ -797,7 +1000,7 @@ az:
             Functions:
               name: Funksiyalar
             'null':
-              name: boş
+              name: 'boş'
         coursef-ramp:
           lessons:
             Introduction:
@@ -806,10 +1009,38 @@ az:
           lessons:
             Bounce:
               name: Tullan
+        coursea-2017:
+          title: A Kursu
+          assignment_family_title: A Kursu
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+        courseb-2017:
+          title: B Kursu
+          assignment_family_title: B Kursu
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+        coursec-2017:
+          title: C Kursu
+          assignment_family_title: C Kursu
+        coursed-2017:
+          title: D Kursu
+          assignment_family_title: D Kursu
         coursee-2017:
+          title: E Kursu
+          assignment_family_title: E Kursu
           lessons:
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
+            Building a Foundation:
+              name: Təməl qurmaq
+        coursef-2017:
+          title: F Kursu
+          assignment_family_title: F Kursu
+          lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
         csdnovice:
           lessons:
             Wrap Up:
@@ -902,8 +1133,12 @@ az:
               name: Rəqəmsal vətəndaşlıq
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
+            Building a Foundation:
+              name: Təməl qurmaq
         pre-express-2017:
           lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
             'Programming: Star Wars':
               name: 'Proqramlaşdırma: Ulduz Müharibələri'
         subgoal-labels-opt-in:
@@ -914,6 +1149,8 @@ az:
               name: Təşəkkürlər,
         e-f-ramp:
           lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
             Conditionals:
               name: Şərti ifadələr
             Build a Star Wars Game:
@@ -928,6 +1165,8 @@ az:
               name: Rəqəmsal vətəndaşlıq
             Artist Binary:
               name: 'Rəssam: ikilik sistem'
+            Building a Foundation:
+              name: Təməl qurmaq
         new-express:
           lesson_groups:
             content:
@@ -935,20 +1174,30 @@ az:
           lessons:
             Introduction:
               name: Giriş
+            Building a Foundation:
+              name: Təməl qurmaq
         new-e:
           lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
             Conditionals:
               name: Şərti ifadələr
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
             Internet:
               name: İnternet
+        new-f:
+          lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
         hero:
           lessons:
             Minecraft Hour of Code:
               name: Maynkraft Kod Saatı
         course-e-2018:
           lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
             Introduction:
               name: Giriş
             Conditionals:
@@ -959,6 +1208,8 @@ az:
               name: Ulduz Müharibələri oyunu düzəldin
         course-f-2018:
           lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
             Introduction:
               name: Giriş
         csd6-old:
@@ -986,15 +1237,22 @@ az:
             Lists:
               name: Siyahılar
         coursea-2018:
+          assignment_family_title: A Kursu
           lessons:
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie və Böyük Layihə
             'Programming: Happy Maps':
               name: Şən xəritələr
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie və Böyük Layihə
         express-2018:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
             Introduction:
               name: Giriş
+            Building a Foundation:
+              name: Təməl qurmaq
             'Functions: Songwriting':
               name: Mahnı yazma
             'Unplugged: Binary':
@@ -1005,12 +1263,22 @@ az:
               name: Estafet proqramlaşdırması
             Graph Paper Programming:
               name: Millimetrlik kağızda proqramlaşdırma
+        courseb-2018:
+          assignment_family_title: B Kursu
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+            Move It, Move It:
+              name: Hərəkət et
         coursed-2018:
+          assignment_family_title: D Kursu
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
             Introduction:
               name: Giriş
+            Building a Foundation:
+              name: Təməl qurmaq
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
             'Unplugged: Binary':
@@ -1019,12 +1287,20 @@ az:
               name: Millimetrlik kağızda proqramlaşdırma
             Relay Programming:
               name: Estafet proqramlaşdırması
+        coursec-2018:
+          assignment_family_title: C Kursu
+          lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
         csd6-2018:
           lessons:
             Functions with Parameters:
               name: Parametrli funksiyalar
         coursee-2018:
+          assignment_family_title: E Kursu
           lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
             Introduction:
               name: Giriş
             Build a Star Wars Game:
@@ -1036,11 +1312,18 @@ az:
             Minecraft Hour of Code:
               name: Maynkraft Kod Saatı
         coursef-2018:
+          assignment_family_title: F Kursu
           lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
             Introduction:
               name: Giriş
         csp1-2018:
           lessons:
+            Sending Binary Messages:
+              name: İkilik mesajların göndərilməsi
+            Number Systems:
+              name: Say sistemləri
             The Internet:
               name: İnternet
         csd1-dlp-18:
@@ -1165,8 +1448,16 @@ az:
               name: Yekun
         pre-express-2018:
           lessons:
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie və Böyük Layihə
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
             'Programming: Star Wars':
               name: 'Proqramlaşdırma: Ulduz Müharibələri'
+            Move It, Move It:
+              name: Hərəkət et
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie və Böyük Layihə
         fit-test:
           lesson_groups:
             required:
@@ -1214,6 +1505,8 @@ az:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
           lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
             The Artist:
               name: Rəssam
             Internet:
@@ -1254,6 +1547,8 @@ az:
             csf_functions:
               display_name: Funksiyalar
           lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
             'Functions: Songwriting':
@@ -1289,7 +1584,7 @@ az:
               display_name: Məzmun
           lessons:
             'null':
-              name: boş
+              name: 'boş'
         dance-extras-gallery:
           title: Rəqs etməyə davam edin
         coursec-2019:
@@ -1302,6 +1597,8 @@ az:
               display_name: dövrlər
             csf_events:
               display_name: Hadisələr
+        gamelab:
+          title: Oyun labaratoriyası
         coursea-2019:
           lesson_groups:
             csf_digcit:
@@ -1321,12 +1618,22 @@ az:
               display_name: dövrlər
             csf_events:
               display_name: Hadisələr
+          lessons:
+            Move It, Move It:
+              name: Hərəkət et
         pre-express-2019:
           lesson_groups:
             csf_loops:
               display_name: dövrlər
             csf_events:
               display_name: Hadisələr
+          lessons:
+            Move It, Move It:
+              name: Hərəkət et
+        removed19:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
         csd2-2019:
           lessons:
             Lists:
@@ -1358,14 +1665,25 @@ az:
               name: Anketlər
         csp1-2019:
           lessons:
+            Sending Binary Messages:
+              name: İkilik mesajların göndərilməsi
+            Number Systems:
+              name: Say sistemləri
             The Internet:
               name: İnternet
         csp1-pilot:
           lesson_groups:
             required:
               display_name: Yekun
+          lessons:
+            Number Systems:
+              name: Say sistemləri
+            Sending Binary Messages:
+              name: İkilik mesajların göndərilməsi
         time4csdemo:
           lessons:
+            Building a Foundation:
+              name: Təməl qurmaq
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
         csp1-pilot-staging:
@@ -1566,6 +1884,8 @@ az:
               name: Rəqs şənliyi
         k5-onlinepd-2019:
           lessons:
+            Computer Science Fundamentals:
+              name: Kompüter Elmləri Əsasları.
             Loops:
               name: dövrlər
             Conditionals:
@@ -1673,6 +1993,9 @@ az:
               display_name: dövrlər
             csf_events:
               display_name: Hadisələr
+          lessons:
+            Move It, Move It:
+              name: Hərəkət et
         coursec-2020:
           lesson_groups:
             csf_digcit:
@@ -1751,6 +2074,10 @@ az:
           lessons:
             Wrap up:
               name: Yekun
+        jess-test-script:
+          lessons:
+            Tools:
+              name: Alətlər
         csp5-virtual:
           lessons:
             Variables:
@@ -1825,6 +2152,18 @@ az:
           lesson_groups:
             lg_1:
               display_name: Məzmun
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: A Kursu
+            Course B:
+              name: B Kursu
+            Course E:
+              name: E Kursu
+            Course F:
+              name: F Kursu
+            csf:
+              name: Kompüter Elmlərinin əsasları
         ml-playground:
           lessons:
             lesson14:
@@ -1882,6 +2221,10 @@ az:
             csf_events:
               display_name: Hadisələr
         courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Hərəkət et
+              name: Hərəkət et
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -1976,6 +2319,8 @@ az:
               display_name: Funksiyalar
             csf_variables:
               display_name: dəyişənlər
+            lessonGroup-9:
+              display_name: Hadisələr
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2002,6 +2347,8 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-4:
+              display_name: Yoxla
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -2030,3 +2377,12 @@ az:
               display_name: Giriş
             Introduction:
               display_name: Giriş
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Dərs 15
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Kompüter Elmləri Əsasları.
+              name: Kompüter Elmləri Əsasları.
