@@ -176,7 +176,7 @@ export const fakeScriptData = (overrideFields = {}) => {
     id: 1,
     name: 'csd1-2020',
     title: 'CSD Unit 1 - Problem Solving and Computing (20-21)',
-    stages: [],
+    lessons: [],
     ...overrideFields
   };
 };
@@ -223,10 +223,10 @@ export const fakeProgressTableReduxInitialState = (
     lessons = [lesson1, lesson2];
   }
   if (!scriptData) {
-    scriptData = fakeScriptData({stages: lessons});
+    scriptData = fakeScriptData({lessons: lessons});
   }
   const levelProgressData = fakeStudentLevelProgress(
-    scriptData.stages[0].levels,
+    scriptData.lessons[0].levels,
     students
   );
 
@@ -248,7 +248,7 @@ export const fakeProgressTableReduxInitialState = (
       studentLessonProgressByScript: {
         [scriptData.id]: lessonProgressForSection(
           levelProgressData,
-          scriptData.stages
+          scriptData.lessons
         )
       },
       studentLastUpdateByScript: fakeStudentLastUpdateByScript(
