@@ -29,57 +29,19 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
-
-const style = {
-  editor: {
-    width: '100%',
-    height: 400,
-    backgroundColor: color.white
-  },
-  darkBackground: {
-    backgroundColor: color.dark_slate_gray
-  },
-  fileMenuToggleButton: {
-    margin: '0, 0, 0, 4px',
-    padding: 0,
-    height: 20,
-    width: 13,
-    backgroundColor: 'transparent',
-    border: 'none',
-    ':hover': {
-      cursor: 'pointer',
-      boxShadow: 'none'
-    }
-  },
-  darkFileMenuToggleButton: {
-    color: color.white
-  },
-  fileTypeIcon: {
-    margin: 5
-  },
-  tabs: {
-    backgroundColor: color.background_gray,
-    marginBottom: 0,
-    display: 'flex',
-    alignItems: 'center'
-  },
-  backpackSection: {
-    textAlign: 'left',
-    display: 'inline-block',
-    float: 'left',
-    overflow: 'visible',
-    marginLeft: 3
-  }
-};
+import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
 const RENAME_FILE = 'renameFile';
 const DELETE_FILE = 'deleteFile';
 const CREATE_FILE = 'createFile';
+const MIN_HEIGHT = 50;
+const MAX_HEIGHT = 600;
 
 class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
+    height: style.editor.height,
     // populated by redux
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
@@ -441,6 +403,30 @@ class JavalabEditor extends React.Component {
     });
   }
 
+  setRenderedHeight(height) {
+    this.height = height;
+  }
+
+  /**
+   * Returns the top Y coordinate of the instructions that are being resized
+   * via a call to handleHeightResize from HeightResizer.
+   */
+  getItemTop = () => {
+    return this.div.getBoundingClientRect().top;
+  };
+
+  /**
+   * Given a desired height, determines how much we can actually change the
+   * height (account for min/max) and changes the height to that.
+   * @param {number} desired height
+   */
+  handleHeightResize = desiredHeight => {
+    let newHeight = Math.max(MIN_HEIGHT, desiredHeight);
+    newHeight = Math.min(newHeight, MAX_HEIGHT);
+
+    this.setRenderedHeight(newHeight);
+  };
+
   render() {
     const {
       orderedTabKeys,
@@ -625,10 +611,57 @@ class JavalabEditor extends React.Component {
           saveButtonText="Create"
           errorMessage={newFileError}
         />
+        <HeightResizer
+          resizeItemTop={this.getItemTop}
+          position={this.props.height}
+          onResize={this.handleHeightResize}
+        />
       </div>
     );
   }
 }
+
+const style = {
+  editor: {
+    width: '100%',
+    height: 400,
+    backgroundColor: color.white
+  },
+  darkBackground: {
+    backgroundColor: color.dark_slate_gray
+  },
+  fileMenuToggleButton: {
+    margin: '0, 0, 0, 4px',
+    padding: 0,
+    height: 20,
+    width: 13,
+    backgroundColor: 'transparent',
+    border: 'none',
+    ':hover': {
+      cursor: 'pointer',
+      boxShadow: 'none'
+    }
+  },
+  darkFileMenuToggleButton: {
+    color: color.white
+  },
+  fileTypeIcon: {
+    margin: 5
+  },
+  tabs: {
+    backgroundColor: color.background_gray,
+    marginBottom: 0,
+    display: 'flex',
+    alignItems: 'center'
+  },
+  backpackSection: {
+    textAlign: 'left',
+    display: 'inline-block',
+    float: 'left',
+    overflow: 'visible',
+    marginLeft: 3
+  }
+};
 
 export default connect(
   state => ({
