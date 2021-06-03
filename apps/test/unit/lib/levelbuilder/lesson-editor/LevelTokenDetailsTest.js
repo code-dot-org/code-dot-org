@@ -117,10 +117,10 @@ describe('LevelTokenDetails', () => {
     const wrapper = shallow(
       <LevelTokenDetails
         {...defaultProps}
-        inactiveLevelNames={['inactive-level']}
+        inactiveLevelNames={['Inactive Level']}
       />
     );
     expect(wrapper.text()).to.contain('inactive variants');
-    expect(wrapper.text()).to.contain('inactive-level');
+    expect(wrapper.text()).to.contain('Inactive Level');
   });
 });
