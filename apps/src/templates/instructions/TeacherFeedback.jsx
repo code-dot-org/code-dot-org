@@ -8,9 +8,11 @@ import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
 import {CommentArea} from './CommentArea';
-import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedbackRubric';
+import TeacherFeedbackKeepWorking from '@cdo/apps/templates/instructions/TeacherFeedbackKeepWorking';
 import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedbackStatus';
+import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedbackRubric';
 import {teacherFeedbackShape, rubricShape} from '@cdo/apps/templates/types';
+import experiments from '@cdo/apps/util/experiments';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -18,38 +20,39 @@ const ErrorType = {
   Save: 'Save'
 };
 
+const keepWorkingExperiment = 'teacher-feedback-review-state';
+
 export class TeacherFeedback extends Component {
   static propTypes = {
     user: PropTypes.number,
     disabledMode: PropTypes.bool.isRequired,
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
-    //Provided by Redux
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     serverScriptId: PropTypes.number,
     serverLevelId: PropTypes.number,
     teacher: PropTypes.number,
-    verifiedTeacher: PropTypes.bool,
     displayReadonlyRubric: PropTypes.bool,
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
+    //Provided by Redux
+    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
+    verifiedTeacher: PropTypes.bool,
     selectedSectionId: PropTypes.string
   };
 
   constructor(props) {
     super(props);
     //Pull the student id from the url
-    const studentId = queryString.parse(window.location.search).user_id;
-
+    this.studentId = queryString.parse(window.location.search).user_id;
     this.onRubricChange = this.onRubricChange.bind(this);
 
     const {latestFeedback} = this.props;
-
     this.state = {
       comment: latestFeedback?.comment || '',
-      performance: latestFeedback?.performance,
-      studentId: studentId,
+      performance: latestFeedback?.performance || null,
       latestFeedback: latestFeedback,
+      reviewState: latestFeedback?.review_state || null,
+      reviewStateUpdated: false,
       submitting: false,
       errorState: ErrorType.NoError
     };
@@ -64,7 +67,7 @@ export class TeacherFeedback extends Component {
   }
 
   onUnload = event => {
-    if (!this.feedbackIsUnchanged()) {
+    if (this.didFeedbackChange()) {
       event.preventDefault();
       event.returnValue = i18n.feedbackNotSavedWarning();
     }
@@ -73,6 +76,18 @@ export class TeacherFeedback extends Component {
   onCommentChange = value => {
     this.setState({comment: value});
   };
+
+  onReviewStateChange = reviewState =>
+    this.setState({
+      reviewState: reviewState
+    });
+
+  // Review state changes are tracked differently than comment or performance
+  // because the teacher could repeatedly leave feedback for the student to
+  // keep working, which would have the same review_state value, but should be treated
+  // as independent feedbacks.
+  onReviewStateUpdated = isChanged =>
+    this.setState({reviewStateUpdated: isChanged});
 
   onRubricChange = value => {
     //If you click on the currently selected performance level clear the performance level
@@ -87,7 +102,8 @@ export class TeacherFeedback extends Component {
     this.setState({submitting: true});
     const payload = {
       comment: this.state.comment,
-      student_id: this.state.studentId,
+      review_state: this.state.reviewState,
+      student_id: this.studentId,
       script_id: this.props.serverScriptId,
       level_id: this.props.serverLevelId,
       teacher_id: this.props.teacher,
@@ -106,6 +122,7 @@ export class TeacherFeedback extends Component {
       .done(data => {
         this.setState({
           latestFeedback: data,
+          reviewStateUpdated: false,
           submitting: false,
           errorState: ErrorType.NoError
         });
@@ -118,16 +135,21 @@ export class TeacherFeedback extends Component {
       });
   };
 
-  feedbackIsUnchanged = () => {
-    const {latestFeedback} = this.state;
-    const feedbackUnchanged =
-      (latestFeedback &&
-        (this.state.comment === latestFeedback.comment &&
-          this.state.performance === latestFeedback.performance)) ||
-      (!latestFeedback &&
-        (this.state.comment.length === 0 && !this.state.performance));
+  didFeedbackChange = () => {
+    const {
+      latestFeedback,
+      comment,
+      performance,
+      reviewStateUpdated
+    } = this.state;
 
-    return feedbackUnchanged;
+    if (latestFeedback) {
+      const commentChanged = comment !== latestFeedback.comment;
+      const performanceChanged = performance !== latestFeedback.performance;
+      return commentChanged || performanceChanged || reviewStateUpdated;
+    } else {
+      return !!comment.length || !!performance || reviewStateUpdated;
+    }
   };
 
   renderError(errorText) {
@@ -157,10 +179,8 @@ export class TeacherFeedback extends Component {
       errorState
     } = this.state;
 
-    const feedbackUnchanged = this.feedbackIsUnchanged();
-
     const buttonDisabled =
-      feedbackUnchanged ||
+      !this.didFeedbackChange() ||
       submitting ||
       errorState === ErrorType.Load ||
       !verifiedTeacher;
@@ -180,10 +200,16 @@ export class TeacherFeedback extends Component {
 
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
-    const tabVisible = visible ? styles.tabAreaVisible : styles.tabAreaHidden;
+    const tabDisplayStyle = visible
+      ? styles.tabAreaVisible
+      : styles.tabAreaHidden;
+
+    // Pilots which the user is enrolled in (such as keep working experiment) are stored on
+    // window.appOptions.experiments, which is queried by experiments.js
+    const keepWorkingEnabled = experiments.isEnabled(keepWorkingExperiment);
 
     return (
-      <div style={tabVisible}>
+      <div style={tabDisplayStyle}>
         {errorState === ErrorType.Load &&
           this.renderError(i18n.feedbackLoadError())}
         {rubric && (
@@ -198,8 +224,19 @@ export class TeacherFeedback extends Component {
         )}
         {displayComment && (
           <div style={styles.commentAndFooter}>
+            <div style={styles.header}>
+              <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
+              {keepWorkingEnabled && viewAs === ViewType.Teacher && (
+                <TeacherFeedbackKeepWorking
+                  latestFeedback={latestFeedback}
+                  reviewState={this.state.reviewState}
+                  setReviewState={this.onReviewStateChange}
+                  setReviewStateChanged={this.onReviewStateUpdated}
+                />
+              )}
+            </div>
             <CommentArea
-              disabledMode={disabledMode}
+              isReadonly={disabledMode}
               comment={comment}
               placeholderText={placeholderText}
               studentHasFeedback={
@@ -253,10 +290,14 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start'
   },
+  header: {
+    display: 'flex',
+    alignItems: 'center',
+    marginTop: 8,
+    marginBottom: 8
+  },
   h1: {
     color: color.charcoal,
-    marginTop: 8,
-    marginBottom: 8,
     fontSize: 18,
     lineHeight: '18px',
     fontFamily: '"Gotham 5r", sans-serif',
@@ -268,6 +309,7 @@ const styles = {
 };
 
 export const UnconnectedTeacherFeedback = TeacherFeedback;
+
 export default connect(state => ({
   viewAs: state.viewAs,
   verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,

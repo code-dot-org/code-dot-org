@@ -9,7 +9,7 @@ export default storybook => {
     .add(
       'default',
       withInfo('This is the PlayZone component.')(() => (
-        <PlayZone lessonName="Test Stage" onContinue={() => {}} />
+        <PlayZone lessonName="Test Lesson" onContinue={() => {}} />
       ))
     )
     .add(

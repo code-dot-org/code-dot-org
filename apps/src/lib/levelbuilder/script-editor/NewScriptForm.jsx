@@ -24,6 +24,7 @@ export default function NewScriptForm() {
         </HelpTip>
       </label>
       <input name="script[name]" />
+      <input name="is_migrated" value={true} type="hidden" />
       <br />
       <button className="btn btn-primary" type="submit" style={buttonStyle}>
         Save Changes

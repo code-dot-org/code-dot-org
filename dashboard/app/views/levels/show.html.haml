@@ -37,7 +37,7 @@
   - if @script_level && @script_level.should_hide_survey(current_user, @user)
     = I18n.t('level_group.hide_survey_last_answer')
   - elsif @script_level && @script_level.lesson.lockable? && (!current_user || @script_level.locked?(current_user))
-    -# anonymous users shouldn't ever see lockable lesson, but give them the locked_stage message if they do
+    -# anonymous users shouldn't ever see lockable lesson, but give them the locked_lesson message if they do
     = render 'levels/locked_lesson'
   - else
     -# If we're a teacher, render the locked_lesson UI, which the client will conditionally hide based on Student/Teacher toggle

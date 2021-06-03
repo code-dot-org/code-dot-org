@@ -190,7 +190,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         timestamp = last_attempt[:updated_at].to_datetime
 
         responses_by_level_group[level_group.id] = {
-          stage: script_level.lesson.localized_title,
+          lesson: script_level.lesson.localized_title,
           puzzle: script_level.position,
           question: level_group.properties["title"],
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
