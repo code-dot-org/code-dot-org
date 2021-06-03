@@ -173,7 +173,7 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Stage 1: First Stage',
+        'stage' => 'Lesson 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
@@ -181,7 +181,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Stage 2: Second Stage',
+        'stage' => 'Lesson 2: Second Stage',
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
@@ -189,7 +189,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
-        'stage' => 'Stage 1: First Stage',
+        'stage' => 'Lesson 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
