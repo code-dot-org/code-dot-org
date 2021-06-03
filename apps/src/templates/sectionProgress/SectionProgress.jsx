@@ -86,7 +86,7 @@ class SectionProgress extends Component {
         data_json: JSON.stringify({
           section_id: this.props.section.id,
           script_id: this.props.scriptId,
-          stage_id: this.props.scriptData.stages[lessonOfInterest].id
+          stage_id: this.props.scriptData.lessons[lessonOfInterest].id
         })
       },
       {includeUserId: true}
@@ -118,7 +118,7 @@ class SectionProgress extends Component {
       showStandardsIntroDialog
     } = this.props;
     const levelDataInitialized = scriptData && !isLoadingProgress;
-    const lessons = scriptData ? scriptData.stages : [];
+    const lessons = scriptData ? scriptData.lessons : [];
     const scriptWithStandardsSelected =
       levelDataInitialized && scriptData.hasStandards;
     const standardsStyle =
