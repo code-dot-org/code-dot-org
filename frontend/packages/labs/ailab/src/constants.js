@@ -279,10 +279,10 @@ export const styles = {
   selectDatasetText: {
     fontSize: 14,
     marginTop: 5,
-    marginRight: 25,
+    marginRight: 20,
     position: "absolute",
-    bottom: 28,
-    left: 25,
+    bottom: 23,
+    left: 20,
     color: "white",
     backgroundColor: "rgba(0,0,0,0.3)",
     padding: "3px 5px",
