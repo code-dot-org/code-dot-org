@@ -837,7 +837,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_empty script.lessons
 
     script_text = <<~SCRIPT_TEXT
-      lesson 'stage 1', display_name: 'stage 1'
+      lesson 'lesson 1', display_name: 'lesson 1'
       level '#{level.name}'
     SCRIPT_TEXT
 
@@ -850,7 +850,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal level, script.lessons.first.script_levels.first.level
-    assert_equal 'stage 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
+    assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
     assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
   end
 
@@ -914,7 +914,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/dogs2"
   end
 
-  test "levelbuilder does not see visible after warning if stage does not have visible_after property" do
+  test "levelbuilder does not see visible after warning if lesson does not have visible_after property" do
     sign_in @levelbuilder
 
     get :show, params: {id: 'course1'}
@@ -922,7 +922,7 @@ class ScriptsControllerTest < ActionController::TestCase
     refute response.body.include? 'visible after'
   end
 
-  test "levelbuilder does not see visible after warning if stage has visible_after property that is in the past" do
+  test "levelbuilder does not see visible after warning if lesson has visible_after property that is in the past" do
     Timecop.freeze(Time.new(2020, 4, 2))
     sign_in @levelbuilder
 
@@ -936,7 +936,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Timecop.return
   end
 
-  test "levelbuilder sees visible after warning if stage has visible_after property that is in the future" do
+  test "levelbuilder sees visible after warning if lesson has visible_after property that is in the future" do
     Timecop.freeze(Time.new(2020, 3, 27))
     sign_in @levelbuilder
 
@@ -950,7 +950,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Timecop.return
   end
 
-  test "student does not see visible after warning if stage has visible_after property" do
+  test "student does not see visible after warning if lesson has visible_after property" do
     Timecop.freeze(Time.new(2020, 3, 27))
     sign_in create(:student)
 
@@ -964,7 +964,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Timecop.return
   end
 
-  test "teacher does not see visible after warning if stage has visible_after property" do
+  test "teacher does not see visible after warning if lesson has visible_after property" do
     Timecop.freeze(Time.new(2020, 3, 27))
     sign_in create(:teacher)
 
