@@ -7,7 +7,7 @@ export default storybook => {
   const initialState = {
     progress: {
       lessonGroups: [],
-      stages: [
+      lessons: [
         {
           levels: []
         }
@@ -33,7 +33,7 @@ export default storybook => {
           big_questions: 'Why?'
         }
       ],
-      stages: [
+      lessons: [
         {
           lesson_group_display_name: 'cat1',
           levels: []
