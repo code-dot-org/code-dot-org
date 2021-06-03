@@ -31,11 +31,13 @@ const style = {
     whiteSpace: 'pre-wrap',
     flexGrow: 1
   },
-  consoleInputWrapper: {
+  consoleLineWrapper: {
     flexGrow: 0,
     flexShrink: 0,
     display: 'flex',
-    overflow: 'auto'
+    alignItems: 'center',
+    overflow: 'auto',
+    fontSize: 14
   },
   consoleInputPrompt: {
     display: 'block',
@@ -47,7 +49,8 @@ const style = {
     flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none',
-    border: 'none'
+    border: 'none',
+    padding: 0
   }
 };
 
@@ -104,14 +107,13 @@ class JavalabConsole extends React.Component {
 
   displayConsoleLogs() {
     return this.props.consoleLogs.map((log, i) => {
-      let prefix = '<';
-      if (log.type === 'input') {
-        prefix = '>';
-      }
       return (
-        <p key={`log_${i}`}>
-          {prefix} {log.text}
-        </p>
+        <div key={`log-${i}`} style={style.consoleLineWrapper}>
+          {log.type === 'input' && (
+            <span style={style.consoleInputPrompt}>&gt;</span>
+          )}
+          {log.text}
+        </div>
       );
     });
   }
@@ -158,7 +160,7 @@ class JavalabConsole extends React.Component {
           className="javalab-console"
         >
           <div style={style.consoleLogs}>{this.displayConsoleLogs()}</div>
-          <div style={style.consoleInputWrapper}>
+          <div style={style.consoleLineWrapper}>
             <span style={style.consoleInputPrompt} onClick={this.focus}>
               &gt;
             </span>
