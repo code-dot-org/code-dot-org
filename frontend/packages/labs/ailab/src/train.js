@@ -103,9 +103,7 @@ const extractExamples = (state, row) => {
   state.selectedFeatures.forEach(feature =>
     exampleValues.push(convertValue(state, feature, row))
   );
-  return exampleValues.filter(
-    label => label !== undefined && label !== "" && !isNaN(label)
-  );
+  return exampleValues;
 };
 
 const extractLabel = (state, row) => {
@@ -119,11 +117,9 @@ const getRandomInt = max => {
 const prepareTrainingData = () => {
   const updatedState = store.getState();
   const trainingExamples = updatedState.data
-    .map(row => extractExamples(updatedState, row))
-    .filter(example => example.length > 0 && example !== undefined);
+    .map(row => extractExamples(updatedState, row));
   const trainingLabels = updatedState.data
-    .map(row => extractLabel(updatedState, row))
-    .filter(label => label !== undefined && label !== "" && !isNaN(label));
+    .map(row => extractLabel(updatedState, row));
   /*
   Select X% of examples and corresponding labels from the training set to use for a post-training accuracy calculation.
   */

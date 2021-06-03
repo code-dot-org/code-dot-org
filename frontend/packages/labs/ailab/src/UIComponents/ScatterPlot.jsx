@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getScatterPlotData } from "../redux";
-import { styles } from "../constants.js";
+import { styles, colors } from "../constants.js";
 import { Scatter } from "react-chartjs-2";
 
 const scatterDataBase = {
@@ -11,16 +11,15 @@ const scatterDataBase = {
     {
       label: "",
       fill: true,
-      backgroundColor: "rgba(75,192,192,0.4)",
-      pointBorderColor: "rgba(75,192,192,1)",
-      pointBackgroundColor: "#fff",
-      pointBorderWidth: 4,
-      pointHoverRadius: 6,
-      pointHoverBackgroundColor: "rgba(75,192,192,1)",
-      pointHoverBorderColor: "rgba(220,220,220,1)",
-      pointHoverBorderWidth: 2,
-      pointRadius: 1,
+      pointRadius: 4,
       pointHitRadius: 10,
+      pointBorderWidth: 1,
+      pointBorderColor: "white",
+      pointBackgroundColor: colors.teal,
+      pointHoverRadius: 6,
+      pointHoverBackgroundColor: "#59cad3",
+      pointHoverBorderColor: "white",
+      pointHoverBorderWidth: 2,
       data: []
     }
   ]
@@ -84,7 +83,12 @@ class ScatterPlot extends Component {
       scatterPlotData && (
         <div id="scatter-plot">
           <div style={styles.bold}>Relationship information:</div>
-          <Scatter data={scatterDataCombined} options={chartOptionsCombined} />
+          <div style={styles.scatterPlot}>
+            <Scatter
+              data={scatterDataCombined}
+              options={chartOptionsCombined}
+            />
+          </div>
         </div>
       )
     );

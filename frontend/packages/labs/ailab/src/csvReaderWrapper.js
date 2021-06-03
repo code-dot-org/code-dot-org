@@ -3,7 +3,8 @@ import { store } from "./index.js";
 import {
   setImportedData,
   setColumnsByDataType,
-  columnContainsOnlyNumbers
+  columnContainsOnlyNumbers,
+  setRemovedRowsCount
 } from "./redux";
 import { ColumnTypes } from "./constants.js";
 
@@ -18,13 +19,30 @@ export const parseCSV = (csvfile, download, useDefaultColumnDataType) => {
   });
 };
 
+const isRowValid = (row) => {
+  var cells = Object.values(row);
+  return cells.every(isCellValid)
+}
+
+const cleanData = (data) => {
+  var cleanedData = data.filter(row => isRowValid(row));
+  return cleanedData;
+}
+
+const countRemovedRows = (originalData, cleanedData) => {
+  var removedRowsCount = originalData.length - cleanedData.length;
+  store.dispatch(setRemovedRowsCount(removedRowsCount));
+}
+
 const updateData = (result, useDefaultColumnDataType) => {
   var data = result.data;
-  store.dispatch(setImportedData(data));
+  var cleanedData = cleanData(data);
+  countRemovedRows(data, cleanedData);
+  store.dispatch(setImportedData(cleanedData));
   if (useDefaultColumnDataType) {
     setDefaultColumnDataType(data);
   }
-};
+}
 
 const setDefaultColumnDataType = data => {
   const columns = Object.keys(data[0]);

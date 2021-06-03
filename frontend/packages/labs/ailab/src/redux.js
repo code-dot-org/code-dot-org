@@ -30,6 +30,7 @@ const SET_SELECTED_CSV = "SET_SELECTED_CSV";
 const SET_SELECTED_JSON = "SET_SELECTED_JSON";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
+const SET_REMOVED_ROWS_COUNT = "SET_REMOVED_ROWS_COUNT";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
 const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
@@ -84,6 +85,10 @@ export function setImportedData(data) {
 
 export function setImportedMetadata(metadata) {
   return { type: SET_IMPORTED_METADATA, metadata };
+}
+
+export function setRemovedRowsCount(removedRowsCount) {
+  return { type: SET_REMOVED_ROWS_COUNT, removedRowsCount };
 }
 
 export const setColumnsByDataType = (column, dataType) => ({
@@ -229,6 +234,7 @@ const initialState = {
   jsonfile: undefined,
   data: [],
   metadata: {},
+  removedRowsCount: 0,
   highlightDataset: undefined,
   highlightColumn: undefined,
   columnsByDataType: {},
@@ -317,6 +323,12 @@ export default function rootReducer(state = initialState, action) {
         ...state.columnsByDataType,
         [action.column]: action.dataType
       }
+    };
+  }
+  if (action.type === SET_REMOVED_ROWS_COUNT) {
+    return {
+      ...state,
+      removedRowsCount: action.removedRowsCount
     };
   }
   if (action.type === ADD_SELECTED_FEATURE) {
