@@ -38,7 +38,7 @@ const DEFAULT_PROPS = {
     id: 1,
     name: 'csd1-2020',
     title: 'CSD Unit 1 - Problem Solving and Computing (20-21)',
-    stages: LESSONS
+    lessons: LESSONS
   },
   lessonOfInterest: 1,
   levelProgressByStudent: fakeStudentLevelProgress(LESSON_1.levels, STUDENTS),

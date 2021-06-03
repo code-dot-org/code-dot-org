@@ -124,7 +124,7 @@ const fullExpectedResult = {
       hasStandards: false,
       id: 123,
       path: 'test/url',
-      stages: [{id: 11, levels: [{id: '2000'}, {id: '2001'}]}],
+      lessons: [{id: 11, levels: [{id: '2000'}, {id: '2001'}]}],
       title: 'Course B',
       version_year: '2020'
     }
@@ -393,7 +393,7 @@ describe('sectionProgressLoader.loadScript', () => {
               hasStandards: undefined,
               id: undefined,
               path: undefined,
-              stages: [{levels: ['success']}],
+              lessons: [{levels: ['success']}],
               title: undefined,
               version_year: undefined
             }
@@ -467,7 +467,7 @@ describe('sectionProgressLoader.loadScript', () => {
         scriptResponse.lessons[0].levels.push(bonusLevel);
 
         const expectedResult = _.cloneDeep(fullExpectedResult);
-        expectedResult.scriptDataByScript[123].stages[0].levels.push(
+        expectedResult.scriptDataByScript[123].lessons[0].levels.push(
           bonusLevel
         );
 
