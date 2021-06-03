@@ -105,7 +105,7 @@ export default class SpriteUpload extends React.Component {
 
     return (
       <div>
-        <h1>Sprite Upload</h1>
+        <h1>Sprite Lab Sprite Upload</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
             <h3>Sprite Category:</h3>
