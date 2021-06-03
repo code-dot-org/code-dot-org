@@ -107,4 +107,20 @@ describe('LevelTokenDetails', () => {
     assertChecked(wrapper, 'assessment', true);
     assertChecked(wrapper, 'challenge', true);
   });
+
+  it('does not show variants by default', () => {
+    const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
+    expect(wrapper.text()).not.to.contain('inactive variants');
+  });
+
+  it('shows inactive variants when present', () => {
+    const wrapper = shallow(
+      <LevelTokenDetails
+        {...defaultProps}
+        inactiveLevelKeys={['inactive-level']}
+      />
+    );
+    expect(wrapper.text()).to.contain('inactive variants');
+    expect(wrapper.text()).to.contain('inactive-level');
+  });
 });
