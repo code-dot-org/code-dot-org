@@ -18,8 +18,6 @@ class ProjectAppTypeArea extends React.Component {
     labName: PropTypes.string.isRequired,
     labViewMoreString: PropTypes.string.isRequired,
     // Ability to hide link for Applab and Gamelab
-    // TODO (Erin B.) remove when we have enough featured projects and a solid profanity filter
-    // that we can ensure there won't be inappropriate projects.
     hideViewMoreLink: PropTypes.bool,
     projectList: PropTypes.arrayOf(projectPropType),
     numProjectsToShow: PropTypes.number.isRequired,

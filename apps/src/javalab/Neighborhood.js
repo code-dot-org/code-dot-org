@@ -16,8 +16,11 @@ const ANIMATED_STEPS = [
 export default class Neighborhood {
   constructor() {
     this.controller = null;
+    this.numRows = null;
   }
+
   afterInject(level, skin, config, studioApp) {
+    this.numRows = level.serializedMaze.length;
     this.controller = new MazeController(level, skin, config, {
       methods: {
         playAudio: (sound, options) => {
@@ -81,9 +84,25 @@ export default class Neighborhood {
         return this.controller.addPegman(
           id,
           parseInt(x),
-          parseInt(y),
+          this.convertYCoordinate(parseInt(y)),
           Direction[direction.toUpperCase()]
         );
+      }
+      case NeighborhoodSignalType.TAKE_PAINT: {
+        const {id} = signal.detail;
+        return this.controller.subtype.takePaint(id);
+      }
+      case NeighborhoodSignalType.PAINT: {
+        const {id, color} = signal.detail;
+        return this.controller.subtype.addPaint(id, color);
+      }
+      case NeighborhoodSignalType.REMOVE_PAINT: {
+        const {id} = signal.detail;
+        return this.controller.subtype.removePaint(id);
+      }
+      case NeighborhoodSignalType.TURN_LEFT: {
+        const {id} = signal.detail;
+        return this.controller.subtype.turnLeft(id);
       }
       default:
         console.log(signal.value);
@@ -107,8 +126,17 @@ export default class Neighborhood {
 
   // Multiplier on the time per action or step at execution time.
   getPegmanSpeedMultiplier() {
-    // The slider goes from 0 to 1. We scale the speed slider value to be between -1 and 1 and
-    // return 2 to the power of that scaled value to get a multiplier between 0.5 and 2.
-    return Math.pow(2, -2 * this.speedSlider.getValue() + 1);
+    // The slider goes from 0 to 1. We scale the speed slider value to be between -1/3 and -1 2/3
+    // and return 8 to the power of that scaled value to get a multiplier between 2 (slowest) and
+    // ~0.03 (fastest).
+    return Math.pow(8, -2 * this.speedSlider.getValue() + 1 / 3);
+  }
+
+  // Convert y-coordinate from Neighborhood format to Maze format.
+  // In neighborhood (0,0) is the bottom-left grid square, in Maze
+  // it is the top left.
+  convertYCoordinate(y) {
+    // if we have 8 rows, y = 0 -> y = 7, y = 1 -> y = 6, and so on
+    return this.numRows - 1 - y;
   }
 }

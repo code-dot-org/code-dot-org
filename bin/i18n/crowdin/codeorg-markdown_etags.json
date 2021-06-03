@@ -3,8 +3,8 @@
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -14,31 +14,33 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "ar": {
-    "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/educate/curriculum/csf-transition-guide.md": "\"f6a59288118e4d904cd526ede187288f\"",
     "/international/about.md": "\"fcef51d7bea0389e57277d3617017f1c\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "\"f9a3b6741a8aea273d48c2f5fc26eed6\"",
-    "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
-    "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
-    "/hourofcode/unplugged-conditionals-with-cards.md": "\"bb47a15ef75c7eee9576d93b4d1a9a9c\"",
-    "/hourofcode/hourofcode.md": "\"bb47a15ef75c7eee9576d93b4d1a9a9c\"",
-    "/hourofcode/flappy.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
-    "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
-    "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
-    "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/infinity.md": "\"29da2ac85ce520eb6617aca229185f43\"",
+    "/hourofcode/mc.md": "\"29da2ac85ce520eb6617aca229185f43\"",
+    "/hourofcode/unplugged-conditionals-with-cards.md": "\"29da2ac85ce520eb6617aca229185f43\"",
+    "/hourofcode/hourofcode.md": "\"29da2ac85ce520eb6617aca229185f43\"",
+    "/hourofcode/flappy.md": "\"29da2ac85ce520eb6617aca229185f43\"",
+    "/hourofcode/starwars.md": "\"29da2ac85ce520eb6617aca229185f43\"",
+    "/hourofcode/frozen.md": "\"29da2ac85ce520eb6617aca229185f43\"",
+    "/hourofcode/playlab.md": "\"29da2ac85ce520eb6617aca229185f43\"",
+    "/hourofcode/artist.md": "\"29da2ac85ce520eb6617aca229185f43\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "hy-AM": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "\"7fefefc46e7981ef0745d3bd268a47de\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -48,14 +50,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "as": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "\"854c09e98e72e12c36a7ccc358e00f83\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -65,14 +68,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "az": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -82,14 +86,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "eu": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -99,14 +104,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "bn": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -116,14 +122,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "bs": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -133,14 +140,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "bg": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -150,14 +158,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "my": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -167,14 +176,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "ca": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -184,14 +194,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "zh-CN": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"d7da6fe241621889231a33c6bdaff243\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -201,14 +212,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"1a9dc1409a79989a0ef3f2ab159051d9\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "zh-TW": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "\"e87b4335623772a54598d2b6ddf714e5\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -218,14 +230,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "co": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -235,14 +248,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "hr": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -252,14 +266,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "cs": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -269,14 +284,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "da": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -286,14 +302,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "fa-AF": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -303,31 +320,33 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "nl": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/international/about.md": "\"992f78a240e18e4e8051a39a46cd7a0a\"",
+    "/international/about.md": "\"f3b423ffcb9f0b13636ed99d6bea432f\"",
     "/csforgood.md": "\"eac30124e6c2f7e9424ded9944a52acb\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"41572e93073ddd3e49c6fd9c79f93e2c\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
-    "/hourofcode/unplugged-conditionals-with-cards.md": "\"bb47a15ef75c7eee9576d93b4d1a9a9c\"",
+    "/hourofcode/unplugged-conditionals-with-cards.md": "\"6257dadfb3412577746e84b9017e3206\"",
     "/hourofcode/hourofcode.md": "\"bb47a15ef75c7eee9576d93b4d1a9a9c\"",
     "/hourofcode/flappy.md": "\"ddbfdfc7e751c30c905c0b4e98f17bee\"",
-    "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
+    "/hourofcode/starwars.md": "\"f5445b1d235732f8653ea09206275a15\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
-    "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"39db21f4c36d19c759b763988f98e31e\""
+    "/hourofcode/playlab.md": "\"c096dd67037e24c12c2e780aaef7f73b\"",
+    "/hourofcode/artist.md": "\"39db21f4c36d19c759b763988f98e31e\"",
+    "/ai.md": "\"e5f9b426a2fb39e8b8615402fae21177\""
   },
   "en-GB": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -337,14 +356,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "et": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -354,14 +374,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "fo": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -371,14 +392,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "fil": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -388,14 +410,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "fi": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -405,14 +428,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "fr": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"433deb9d92d6fdf9e4d79bbb2fc11ea4\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"67d883f5151d022e9d7f5ac3bb3acce8\"",
     "/hourofcode/mc.md": "\"67d883f5151d022e9d7f5ac3bb3acce8\"",
@@ -422,14 +446,15 @@
     "/hourofcode/starwars.md": "\"67d883f5151d022e9d7f5ac3bb3acce8\"",
     "/hourofcode/frozen.md": "\"67d883f5151d022e9d7f5ac3bb3acce8\"",
     "/hourofcode/playlab.md": "\"67d883f5151d022e9d7f5ac3bb3acce8\"",
-    "/hourofcode/artist.md": "\"67d883f5151d022e9d7f5ac3bb3acce8\""
+    "/hourofcode/artist.md": "\"67d883f5151d022e9d7f5ac3bb3acce8\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "gl": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -439,14 +464,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "ka": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -456,14 +482,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "de": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"af38af1928d9fdc49f6e0aaeba3839b0\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e54983a65bfa8b458145df18ad94e8a5\"",
     "/hourofcode/mc.md": "\"7f2e1c4b6ec97730d343e5b0a51da0d9\"",
@@ -473,14 +500,15 @@
     "/hourofcode/starwars.md": "\"4e43944e7195bb4f0c63e66c40cef1ef\"",
     "/hourofcode/frozen.md": "\"7f2e1c4b6ec97730d343e5b0a51da0d9\"",
     "/hourofcode/playlab.md": "\"146d14da4aada200b47dae5ff535ef40\"",
-    "/hourofcode/artist.md": "\"7f2e1c4b6ec97730d343e5b0a51da0d9\""
+    "/hourofcode/artist.md": "\"7f2e1c4b6ec97730d343e5b0a51da0d9\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "el": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"735ccbb1a0a8a3fccf5696d7a12486ae\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -490,14 +518,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "haw": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -507,14 +536,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "he": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"9c4b61993eb2496413f4073f960103dc\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -524,14 +554,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "hi": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "\"11af8cb6d2480f927d80927ec744f35d\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -541,14 +572,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "hu": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"f00d04123e141fb8324f31ceec34374d\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -558,14 +590,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "is": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -575,14 +608,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "id": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"a98efdad6728bbc579010004368e7f94\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"42468f496e82509cac07a45ecf07d136\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -592,14 +626,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"4f7b6d290b0d8070ae3c07c171b1930b\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ga-IE": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -609,14 +644,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "it": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"72e9a9db3434a69613dd0f1028b45a8c\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"e5ad155ce7926879b5f2758e5e0be952\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "\"673f0cf913b65a0a234c7b21c1395508\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -626,14 +662,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ja": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"cb8573220c0e8133e0e3fae755436726\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"bf2cfc78c7a54dd7fc42fe3bd9c0dfa0\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -643,14 +680,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "kk": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -660,14 +698,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "km": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"c860136e8519fc223f983bcece2615df\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"79810fa548c69294ebf15a3da0cc3f55\"",
     "/hourofcode/mc.md": "\"d7ad915ef4eb77c3340cd0d13ec2aad8\"",
@@ -677,14 +716,15 @@
     "/hourofcode/starwars.md": "\"7d1ddd913292bac97c588b0e16b2f631\"",
     "/hourofcode/frozen.md": "\"79810fa548c69294ebf15a3da0cc3f55\"",
     "/hourofcode/playlab.md": "\"a171c58a50049f5a149734c10f4d5bb8\"",
-    "/hourofcode/artist.md": "\"79810fa548c69294ebf15a3da0cc3f55\""
+    "/hourofcode/artist.md": "\"79810fa548c69294ebf15a3da0cc3f55\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ko": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"8f548afe8f2402daf46480f0e50a85c8\"",
     "/csforgood.md": "\"d23c6d410bdedd494e776010c7fc946d\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"edb328db07f3bd5829ba7e1d23b2531f\"",
     "/hourofcode/mc.md": "\"f738a889e2af5f728160f2b2fb9568b5\"",
@@ -694,14 +734,15 @@
     "/hourofcode/starwars.md": "\"dc449552be722be9c9f7ef905229bfe4\"",
     "/hourofcode/frozen.md": "\"e2f2b64bece24546ef8150720ba2fb01\"",
     "/hourofcode/playlab.md": "\"149684785fc239acbca054257093bcde\"",
-    "/hourofcode/artist.md": "\"c494b87088e9d4c3979e69b5a3e58140\""
+    "/hourofcode/artist.md": "\"c494b87088e9d4c3979e69b5a3e58140\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ku": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -711,14 +752,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ky": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -728,14 +770,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "lv": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -745,14 +788,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "lt": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -762,14 +806,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "mk": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -779,14 +824,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ms": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -796,14 +842,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "mt": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -813,14 +860,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "mi": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -830,14 +878,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "mr": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -847,14 +896,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "mn": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -864,14 +914,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ne-NP": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -881,14 +932,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "se": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -898,14 +950,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "no": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -915,14 +968,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "nn-NO": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -932,14 +986,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "pap": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -949,14 +1004,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ps": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -966,14 +1022,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "fa": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -983,14 +1040,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "pl": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"724b589b5fa9a4a599960110aeaf775d\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"401101a7d0cc0d5a4c4bc2a93aa5c648\"",
+    "/break.md": "\"56ba894eec3be0d7e9774ebe70be9f60\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"3e79c5447b32ab933f08683e2652d814\"",
     "/hourofcode/infinity.md": "\"d5e3dcd24e7370866a4eacaa907a8043\"",
     "/hourofcode/mc.md": "\"e57967c8d36734526e7ddd98783abc98\"",
@@ -1000,14 +1058,15 @@
     "/hourofcode/starwars.md": "\"d5e3dcd24e7370866a4eacaa907a8043\"",
     "/hourofcode/frozen.md": "\"d5e3dcd24e7370866a4eacaa907a8043\"",
     "/hourofcode/playlab.md": "\"d5e3dcd24e7370866a4eacaa907a8043\"",
-    "/hourofcode/artist.md": "\"d5e3dcd24e7370866a4eacaa907a8043\""
+    "/hourofcode/artist.md": "\"d5e3dcd24e7370866a4eacaa907a8043\"",
+    "/ai.md": "\"651bb1274ca5168af7f30419bd2f47b9\""
   },
   "pt-PT": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"4c822f96a158ea6e2b77a6dfeccf52da\"",
     "/csforgood.md": "\"536d416a2ec2d0acec9db1dae5fa4256\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"8d3f79fc18c09dadfa2e25bc124bb284\"",
     "/hourofcode/infinity.md": "\"402995f34609cc48be5909cee9730eff\"",
     "/hourofcode/mc.md": "\"f93306e464a28dfe63b39d26608d6bcd\"",
@@ -1017,14 +1076,15 @@
     "/hourofcode/starwars.md": "\"ee15a7266441d3c4b4c494b77931ed61\"",
     "/hourofcode/frozen.md": "\"f93306e464a28dfe63b39d26608d6bcd\"",
     "/hourofcode/playlab.md": "\"fca1bf83d9becbe2c3c9308437d53c8d\"",
-    "/hourofcode/artist.md": "\"f93306e464a28dfe63b39d26608d6bcd\""
+    "/hourofcode/artist.md": "\"f93306e464a28dfe63b39d26608d6bcd\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "pt-BR": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"0d359d05550a5aea3b62a29d9a194b8e\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1034,14 +1094,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ro": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"480fff17fae17aa162e645bba983582d\"",
     "/hourofcode/mc.md": "\"480fff17fae17aa162e645bba983582d\"",
@@ -1051,14 +1112,15 @@
     "/hourofcode/starwars.md": "\"480fff17fae17aa162e645bba983582d\"",
     "/hourofcode/frozen.md": "\"480fff17fae17aa162e645bba983582d\"",
     "/hourofcode/playlab.md": "\"480fff17fae17aa162e645bba983582d\"",
-    "/hourofcode/artist.md": "\"480fff17fae17aa162e645bba983582d\""
+    "/hourofcode/artist.md": "\"480fff17fae17aa162e645bba983582d\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ru": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"9e633a65572a0effa5aa52268bfbd9c8\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1068,14 +1130,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "sr": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1085,14 +1148,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "si-LK": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1102,14 +1166,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "sk": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"42e500394553086db791781072453764\"",
     "/hourofcode/mc.md": "\"42e500394553086db791781072453764\"",
@@ -1119,14 +1184,15 @@
     "/hourofcode/starwars.md": "\"42e500394553086db791781072453764\"",
     "/hourofcode/frozen.md": "\"42e500394553086db791781072453764\"",
     "/hourofcode/playlab.md": "\"42e500394553086db791781072453764\"",
-    "/hourofcode/artist.md": "\"21ae83912c7d266df79e1e6107767d70\""
+    "/hourofcode/artist.md": "\"21ae83912c7d266df79e1e6107767d70\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "sl": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1136,14 +1202,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "es-ES": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"4060dbb40a1d427bffdbc7247ae008a3\"",
     "/csforgood.md": "\"e2fe9b8fe79f852a2a5e2725fb56c97e\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"f3d6079f13b491df9966976700a82aad\"",
     "/hourofcode/infinity.md": "\"00d9fef4047cf901b488dbb499e636f9\"",
     "/hourofcode/mc.md": "\"00d9fef4047cf901b488dbb499e636f9\"",
@@ -1153,31 +1220,33 @@
     "/hourofcode/starwars.md": "\"00d9fef4047cf901b488dbb499e636f9\"",
     "/hourofcode/frozen.md": "\"00d9fef4047cf901b488dbb499e636f9\"",
     "/hourofcode/playlab.md": "\"00d9fef4047cf901b488dbb499e636f9\"",
-    "/hourofcode/artist.md": "\"00d9fef4047cf901b488dbb499e636f9\""
+    "/hourofcode/artist.md": "\"00d9fef4047cf901b488dbb499e636f9\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "es-MX": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
-    "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
-    "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/international/about.md": "\"393ac83d304e5820e971f456d8d600dc\"",
+    "/csforgood.md": "\"88386d9bce8d45c04e3e88bd1445a22f\"",
+    "/break.md": "\"741705973a6a710c66b3ce4a84792462\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"6286c70590614aaa2fd567884e63b6ff\"",
     "/hourofcode/infinity.md": "\"a633e8d69e6fc7a254b4932643e14fb6\"",
     "/hourofcode/mc.md": "\"901ab0061290e443cfdc0ad677f42fd1\"",
-    "/hourofcode/unplugged-conditionals-with-cards.md": "\"fa6191080db1a604b2ef5baa0fe5d593\"",
+    "/hourofcode/unplugged-conditionals-with-cards.md": "\"62754273b035ef123d39ce6448660bd1\"",
     "/hourofcode/hourofcode.md": "\"a633e8d69e6fc7a254b4932643e14fb6\"",
     "/hourofcode/flappy.md": "\"a633e8d69e6fc7a254b4932643e14fb6\"",
     "/hourofcode/starwars.md": "\"8f36bba74c40209f12d2188898580dfb\"",
     "/hourofcode/frozen.md": "\"901ab0061290e443cfdc0ad677f42fd1\"",
     "/hourofcode/playlab.md": "\"20cefd6b6fe0171553ea3f7cd55e9604\"",
-    "/hourofcode/artist.md": "\"901ab0061290e443cfdc0ad677f42fd1\""
+    "/hourofcode/artist.md": "\"901ab0061290e443cfdc0ad677f42fd1\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "sv-SE": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"e2fd468c21cfe15ed50ebbf079e1c2a6\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1187,14 +1256,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\""
+    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "tg": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1204,14 +1274,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\""
+    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ta": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"2bd29bfa1f1e8ecbb9752e8e31ea94a2\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1221,14 +1292,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\""
+    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "te": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1238,14 +1310,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\""
+    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "th": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"367c565130ab9589bf800d32be28105a\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"708bb6637fe5d06b9f0e9b8803bed9e9\"",
     "/hourofcode/mc.md": "\"76bfce609e97803336a35ae7315c21ca\"",
@@ -1255,14 +1328,15 @@
     "/hourofcode/starwars.md": "\"12b10c8f30390623d9385751e1b9908b\"",
     "/hourofcode/frozen.md": "\"ac113973d2c0597266ef80b50f97eb47\"",
     "/hourofcode/playlab.md": "\"5c507eb7733af52b5120fd33df84ea19\"",
-    "/hourofcode/artist.md": "\"ac113973d2c0597266ef80b50f97eb47\""
+    "/hourofcode/artist.md": "\"ac113973d2c0597266ef80b50f97eb47\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ti": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1272,14 +1346,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\""
+    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "tr": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"a2bd17d9ca6a943a66b77b4c36afb967\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1289,14 +1364,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\""
+    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "uk": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"58e58ffed27a2a895adf3b7d10846778\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1306,14 +1382,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\""
+    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "ur-PK": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"64fc9a9a0c8c751474b7dac627f503b7\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1323,14 +1400,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\""
+    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "uz": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"b76fa648c54b0ef00a5bae075fcea0d2\"",
     "/csforgood.md": "\"f5c052a8fd6b79fb7df2f0eda5b656d6\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"b76fa648c54b0ef00a5bae075fcea0d2\"",
     "/hourofcode/mc.md": "\"b76fa648c54b0ef00a5bae075fcea0d2\"",
@@ -1340,14 +1418,15 @@
     "/hourofcode/starwars.md": "\"8e99792b9a181c928d8411e468863341\"",
     "/hourofcode/frozen.md": "\"8e99792b9a181c928d8411e468863341\"",
     "/hourofcode/playlab.md": "\"8e99792b9a181c928d8411e468863341\"",
-    "/hourofcode/artist.md": "\"8e99792b9a181c928d8411e468863341\""
+    "/hourofcode/artist.md": "\"8e99792b9a181c928d8411e468863341\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "vi": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"a6639ccd8fbbb93a21aacac47de3c089\"",
     "/csforgood.md": "\"4eb2e36e2b00bcfe18c523027f09163b\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "\"812df53c9e11a58d3d8ff9eaadc41087\"",
     "/hourofcode/infinity.md": "\"ddc20febb0f92c2167d9aa4ea0be8295\"",
     "/hourofcode/mc.md": "\"ddc20febb0f92c2167d9aa4ea0be8295\"",
@@ -1357,14 +1436,15 @@
     "/hourofcode/starwars.md": "\"ddc20febb0f92c2167d9aa4ea0be8295\"",
     "/hourofcode/frozen.md": "\"ddc20febb0f92c2167d9aa4ea0be8295\"",
     "/hourofcode/playlab.md": "\"ddc20febb0f92c2167d9aa4ea0be8295\"",
-    "/hourofcode/artist.md": "\"ddc20febb0f92c2167d9aa4ea0be8295\""
+    "/hourofcode/artist.md": "\"ddc20febb0f92c2167d9aa4ea0be8295\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "zu": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/athome/csf.md": "W/\"4dbb5c5e35393743047fcaf1a51da85f\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
@@ -1374,14 +1454,15 @@
     "/hourofcode/starwars.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\""
+    "/hourofcode/artist.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "fr-CA": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"daeb11ce3cb207fed130a03121324888\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
     "/hourofcode/unplugged-conditionals-with-cards.md": "\"bb47a15ef75c7eee9576d93b4d1a9a9c\"",
@@ -1390,14 +1471,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "kn": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"984b9d3e3b48c8f08093021a53a92614\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/hourofcode/infinity.md": "\"e033ec5dd0bdd416bf04f650d285c0c5\"",
     "/hourofcode/mc.md": "\"acba6b9b52ff561d5204f5a9bb1632f6\"",
     "/hourofcode/unplugged-conditionals-with-cards.md": "\"bb47a15ef75c7eee9576d93b4d1a9a9c\"",
@@ -1406,14 +1488,15 @@
     "/hourofcode/starwars.md": "\"af2c5b8d188ac96fdda6bbef848bf13c\"",
     "/hourofcode/frozen.md": "\"3e307066c08d47ea7399433e45bc1088\"",
     "/hourofcode/playlab.md": "\"648bfef1a00652ce6ec50e9017a42683\"",
-    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\""
+    "/hourofcode/artist.md": "\"3e307066c08d47ea7399433e45bc1088\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   },
   "gu-IN": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"30f69d9bfe3983b104a51da28540949b\"",
     "/csforgood.md": "\"30f69d9bfe3983b104a51da28540949b\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/hourofcode/infinity.md": "\"30f69d9bfe3983b104a51da28540949b\"",
     "/hourofcode/mc.md": "\"30f69d9bfe3983b104a51da28540949b\"",
     "/hourofcode/unplugged-conditionals-with-cards.md": "\"30f69d9bfe3983b104a51da28540949b\"",
@@ -1422,14 +1505,15 @@
     "/hourofcode/starwars.md": "\"30f69d9bfe3983b104a51da28540949b\"",
     "/hourofcode/frozen.md": "\"30f69d9bfe3983b104a51da28540949b\"",
     "/hourofcode/playlab.md": "\"30f69d9bfe3983b104a51da28540949b\"",
-    "/hourofcode/artist.md": "\"30f69d9bfe3983b104a51da28540949b\""
+    "/hourofcode/artist.md": "\"30f69d9bfe3983b104a51da28540949b\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "af": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
     "/international/about.md": "\"d2975ae3b480a009965cdde5322a3f29\"",
     "/csforgood.md": "\"d2975ae3b480a009965cdde5322a3f29\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
     "/hourofcode/infinity.md": "\"24ea283426205c0c7ed57dc569ac508a\"",
     "/hourofcode/mc.md": "\"24ea283426205c0c7ed57dc569ac508a\"",
     "/hourofcode/unplugged-conditionals-with-cards.md": "\"24ea283426205c0c7ed57dc569ac508a\"",
@@ -1438,54 +1522,58 @@
     "/hourofcode/starwars.md": "\"24ea283426205c0c7ed57dc569ac508a\"",
     "/hourofcode/frozen.md": "\"24ea283426205c0c7ed57dc569ac508a\"",
     "/hourofcode/playlab.md": "\"24ea283426205c0c7ed57dc569ac508a\"",
-    "/hourofcode/artist.md": "\"24ea283426205c0c7ed57dc569ac508a\""
+    "/hourofcode/artist.md": "\"24ea283426205c0c7ed57dc569ac508a\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "in": {
-    "/educate/curriculum/csf-transition-guide.md": "\"1aba830cf93172f76321708f6f679143\"",
-    "/international/about.md": "\"533709a47c3e3c05a471bc3075636549\"",
-    "/csforgood.md": "\"6f904b25571507d3cd3bd85c1cb40e16\"",
-    "/break.md": "\"6f904b25571507d3cd3bd85c1cb40e16\"",
-    "/athome.md": "\"33b41df938da1d357693735f6b940a64\"",
-    "/hourofcode/infinity.md": "\"1aba830cf93172f76321708f6f679143\"",
-    "/hourofcode/mc.md": "\"1aba830cf93172f76321708f6f679143\"",
-    "/hourofcode/unplugged-conditionals-with-cards.md": "\"c6bd7472e565de1957d316b65f829b5b\"",
-    "/hourofcode/hourofcode.md": "\"c6bd7472e565de1957d316b65f829b5b\"",
-    "/hourofcode/flappy.md": "\"c6bd7472e565de1957d316b65f829b5b\"",
-    "/hourofcode/starwars.md": "\"e50008c84167f11fd9402ed38311427c\"",
-    "/hourofcode/frozen.md": "\"e50008c84167f11fd9402ed38311427c\"",
-    "/hourofcode/playlab.md": "\"e50008c84167f11fd9402ed38311427c\"",
-    "/hourofcode/artist.md": "\"533709a47c3e3c05a471bc3075636549\""
+    "/educate/curriculum/csf-transition-guide.md": "\"4561954112976b867b15ca326083e99c\"",
+    "/international/about.md": "\"9361ecd87b17a743a0de25798b72449c\"",
+    "/csforgood.md": "\"20c646805934c806abd87621ac96de54\"",
+    "/break.md": "\"20c646805934c806abd87621ac96de54\"",
+    "/athome.md": "\"20c646805934c806abd87621ac96de54\"",
+    "/hourofcode/infinity.md": "\"4561954112976b867b15ca326083e99c\"",
+    "/hourofcode/mc.md": "\"4561954112976b867b15ca326083e99c\"",
+    "/hourofcode/unplugged-conditionals-with-cards.md": "\"fe3d74224376c073c97106737255f28a\"",
+    "/hourofcode/hourofcode.md": "\"fe3d74224376c073c97106737255f28a\"",
+    "/hourofcode/flappy.md": "\"c49b8ae1661ea28f37b75075f10f2269\"",
+    "/hourofcode/starwars.md": "\"c49b8ae1661ea28f37b75075f10f2269\"",
+    "/hourofcode/frozen.md": "\"c49b8ae1661ea28f37b75075f10f2269\"",
+    "/hourofcode/playlab.md": "\"439ffe127e63363d538b11a3f21733fe\"",
+    "/hourofcode/artist.md": "\"439ffe127e63363d538b11a3f21733fe\"",
+    "/ai.md": "\"1c22aaffd996e7b7ebabd9e4bb22d9a1\""
   },
   "eo": {
     "/educate/curriculum/csf-transition-guide.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/international/about.md": "\"d3626dd7a3e02b7fdad8387caa9a0d8f\"",
-    "/csforgood.md": "\"d3626dd7a3e02b7fdad8387caa9a0d8f\"",
-    "/break.md": "\"04440e53beaa7da1a041b0131889aec2\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/hourofcode/infinity.md": "\"d3626dd7a3e02b7fdad8387caa9a0d8f\"",
-    "/hourofcode/mc.md": "\"d3626dd7a3e02b7fdad8387caa9a0d8f\"",
-    "/hourofcode/unplugged-conditionals-with-cards.md": "\"d3626dd7a3e02b7fdad8387caa9a0d8f\"",
-    "/hourofcode/hourofcode.md": "\"d3626dd7a3e02b7fdad8387caa9a0d8f\"",
-    "/hourofcode/flappy.md": "\"d3626dd7a3e02b7fdad8387caa9a0d8f\"",
-    "/hourofcode/starwars.md": "\"d3626dd7a3e02b7fdad8387caa9a0d8f\"",
-    "/hourofcode/frozen.md": "\"8cddd98851401ec9099ebb8b021fec43\"",
-    "/hourofcode/playlab.md": "\"8cddd98851401ec9099ebb8b021fec43\"",
-    "/hourofcode/artist.md": "\"8cddd98851401ec9099ebb8b021fec43\""
+    "/international/about.md": "\"2018e6b1cfc9906141dfe607e1b36d0c\"",
+    "/csforgood.md": "\"2018e6b1cfc9906141dfe607e1b36d0c\"",
+    "/break.md": "\"953eddd7e579864d2fb90497beb3a26d\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
+    "/hourofcode/infinity.md": "\"2018e6b1cfc9906141dfe607e1b36d0c\"",
+    "/hourofcode/mc.md": "\"2018e6b1cfc9906141dfe607e1b36d0c\"",
+    "/hourofcode/unplugged-conditionals-with-cards.md": "\"2018e6b1cfc9906141dfe607e1b36d0c\"",
+    "/hourofcode/hourofcode.md": "\"2018e6b1cfc9906141dfe607e1b36d0c\"",
+    "/hourofcode/flappy.md": "\"2018e6b1cfc9906141dfe607e1b36d0c\"",
+    "/hourofcode/starwars.md": "\"2018e6b1cfc9906141dfe607e1b36d0c\"",
+    "/hourofcode/frozen.md": "\"2018e6b1cfc9906141dfe607e1b36d0c\"",
+    "/hourofcode/playlab.md": "\"2018e6b1cfc9906141dfe607e1b36d0c\"",
+    "/hourofcode/artist.md": "\"e80cb91393b084cd64c39753a5ae9bd5\"",
+    "/ai.md": "\"866871f2c041dd395888ab5e0debd15a\""
   },
   "nv": {
     "/educate/curriculum/csf-transition-guide.md": "\"6108454ffe93f9caaa5c628541826b40\"",
-    "/international/about.md": "\"867d0272b2d97ed6fc5666c569f3b3ff\"",
-    "/csforgood.md": "\"867d0272b2d97ed6fc5666c569f3b3ff\"",
-    "/break.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/athome.md": "\"a2d24d9103560723c0ac09db8d485bc9\"",
-    "/hourofcode/infinity.md": "\"867d0272b2d97ed6fc5666c569f3b3ff\"",
-    "/hourofcode/mc.md": "\"867d0272b2d97ed6fc5666c569f3b3ff\"",
-    "/hourofcode/unplugged-conditionals-with-cards.md": "\"867d0272b2d97ed6fc5666c569f3b3ff\"",
-    "/hourofcode/hourofcode.md": "\"867d0272b2d97ed6fc5666c569f3b3ff\"",
-    "/hourofcode/flappy.md": "\"867d0272b2d97ed6fc5666c569f3b3ff\"",
-    "/hourofcode/starwars.md": "\"867d0272b2d97ed6fc5666c569f3b3ff\"",
-    "/hourofcode/frozen.md": "\"867d0272b2d97ed6fc5666c569f3b3ff\"",
-    "/hourofcode/playlab.md": "\"867d0272b2d97ed6fc5666c569f3b3ff\"",
-    "/hourofcode/artist.md": "\"2570060407039c2e821559697eae9a6f\""
+    "/international/about.md": "\"eef43ece39c41f316feccc096dab5c49\"",
+    "/csforgood.md": "\"eef43ece39c41f316feccc096dab5c49\"",
+    "/break.md": "\"f83a06c296a495f9dbd9c68ec976b5a2\"",
+    "/athome.md": "\"866871f2c041dd395888ab5e0debd15a\"",
+    "/hourofcode/infinity.md": "\"eef43ece39c41f316feccc096dab5c49\"",
+    "/hourofcode/mc.md": "\"eef43ece39c41f316feccc096dab5c49\"",
+    "/hourofcode/unplugged-conditionals-with-cards.md": "\"eef43ece39c41f316feccc096dab5c49\"",
+    "/hourofcode/hourofcode.md": "\"eef43ece39c41f316feccc096dab5c49\"",
+    "/hourofcode/flappy.md": "\"eef43ece39c41f316feccc096dab5c49\"",
+    "/hourofcode/starwars.md": "\"eef43ece39c41f316feccc096dab5c49\"",
+    "/hourofcode/frozen.md": "\"eef43ece39c41f316feccc096dab5c49\"",
+    "/hourofcode/playlab.md": "\"eef43ece39c41f316feccc096dab5c49\"",
+    "/hourofcode/artist.md": "\"eef43ece39c41f316feccc096dab5c49\"",
+    "/ai.md": "\"a275279d047c33f07984b0f692bcee56\""
   }
 }

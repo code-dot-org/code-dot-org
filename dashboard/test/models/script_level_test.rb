@@ -472,7 +472,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", script_level.next_level_or_redirect_path_for_user(nil)
   end
 
-  test 'end of stage' do
+  test 'end of lesson' do
     script = Script.find_by_name('course1')
 
     assert script.lessons[0].script_levels.last.end_of_lesson?

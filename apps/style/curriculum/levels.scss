@@ -1,1 +1,15 @@
 @import "pdf_printing";
+
+.header-wrapper {
+  .header {
+    .mini-view {
+      a:link {
+       color: #0596CE;
+      }
+
+      a:visited {
+        color: #0596CE;
+      }
+    }
+  }
+}

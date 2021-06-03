@@ -7,7 +7,7 @@ import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fullyLockedLessonMapping} from '../../lessonLockRedux';
 import {ViewType} from '../../viewAsRedux';
-import {hasLockableStages} from '../../progressRedux';
+import {hasLockableLessons} from '../../progressRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentTable, {studentShape} from './StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -26,7 +26,7 @@ class TeacherPanel extends React.Component {
     pageType: PropTypes.oneOf([
       pageTypes.level,
       pageTypes.scriptOverview,
-      pageTypes.stageExtras
+      pageTypes.lessonExtras
     ]),
 
     // Provided by redux.
@@ -38,7 +38,7 @@ class TeacherPanel extends React.Component {
       name: PropTypes.string.isRequired
     }),
     scriptHasLockableStages: PropTypes.bool.isRequired,
-    unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape)
   };
 
@@ -71,7 +71,7 @@ class TeacherPanel extends React.Component {
       sectionsAreLoaded,
       selectedSection,
       scriptHasLockableStages,
-      unlockedStageNames,
+      unlockedLessonNames,
       students,
       scriptName
     } = this.props;
@@ -169,7 +169,7 @@ class TeacherPanel extends React.Component {
                 <div style={styles.text}>
                   {i18n.selectSectionInstructions()}
                 </div>
-                {unlockedStageNames.length > 0 && (
+                {unlockedLessonNames.length > 0 && (
                   <div>
                     <div style={styles.text}>
                       <FontAwesome
@@ -181,7 +181,7 @@ class TeacherPanel extends React.Component {
                     <div style={styles.text}>
                       {i18n.lockFollowing()}
                       <ul>
-                        {unlockedStageNames.map((name, index) => (
+                        {unlockedLessonNames.map((name, index) => (
                           <li key={index}>{name}</li>
                         ))}
                       </ul>
@@ -260,14 +260,14 @@ export default connect(state => {
     stageId => !fullyLocked[stageId]
   );
 
-  let stageNames = {};
-  state.progress.stages.forEach(stage => {
-    stageNames[stage.id] = stage.name;
+  let lessonNames = {};
+  state.progress.stages.forEach(lesson => {
+    lessonNames[lesson.id] = lesson.name;
   });
 
   // Pretend we don't have lockable lessons if we're not authorized to see them
   const scriptHasLockableStages =
-    lockableAuthorized && hasLockableStages(state.progress);
+    lockableAuthorized && hasLockableLessons(state.progress);
 
   return {
     viewAs: state.viewAs,
@@ -275,7 +275,7 @@ export default connect(state => {
     sectionsAreLoaded,
     scriptHasLockableStages,
     selectedSection: state.teacherSections.sections[selectedSectionId],
-    unlockedStageNames: unlockedStageIds.map(id => stageNames[id]),
+    unlockedLessonNames: unlockedStageIds.map(id => lessonNames[id]),
     students: state.teacherSections.selectedStudents
   };
 })(TeacherPanel);

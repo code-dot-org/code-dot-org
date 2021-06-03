@@ -95,7 +95,7 @@ cat <<JSON > $FIRST_BOOT
       "revision": "<%=commit%>",
     <% end -%>
     "branch": "${Branch}",
-    "sync": true
+    "sync": <%=!daemon%>
   },
   "cdo-secrets": {
 <% if frontends -%>

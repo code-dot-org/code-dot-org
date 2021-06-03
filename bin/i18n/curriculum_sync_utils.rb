@@ -188,7 +188,6 @@ module CurriculumSyncUtils
     Languages.get_locale.each do |prop|
       locale = prop[:locale_s]
       next if locale == 'en-US'
-      next unless locale == 'fr-FR'
       locale_dir = File.join('i18n/locales', locale, 'curriculum_content')
       next unless File.directory?(locale_dir)
 
@@ -200,7 +199,7 @@ module CurriculumSyncUtils
         script_objects[name] = data if data.present?
       end
 
-      # Then we recurisvely flatten all of our hashes of objects, and write
+      # Then we recursively flatten all of our hashes of objects, and write
       # each resulting collection of strings out to a rails i18n config file.
       result = flatten(script_objects, ScriptCrowdinSerializer, :scripts)
       result.each do |type, strings|

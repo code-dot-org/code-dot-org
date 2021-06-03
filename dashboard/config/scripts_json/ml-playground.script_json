@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:52 UTC",
+    "serialized_at": "2021-05-27 21:52:45 UTC",
     "seeding_key": {
       "script.name": "ml-playground"
     }
@@ -268,12 +268,27 @@
       }
     },
     {
-      "key": "bug-bash",
-      "name": "Bug Bash Playground",
+      "key": "videoLevels",
+      "name": "Video Recording Levels",
       "absolute_position": 17,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "bug-bash",
+      "name": "Bug Bash Playground",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -285,10 +300,10 @@
     {
       "key": "model-cards",
       "name": "Model Cards Playground",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -300,10 +315,10 @@
     {
       "key": "exemplars",
       "name": "Exemplars I Accidentally Made in LB",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -315,10 +330,10 @@
     {
       "key": "temp",
       "name": "TEMP LEVELS - DELETE LATER",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -330,10 +345,10 @@
     {
       "key": "USE Programs",
       "name": "USE Programs (AppLab Only)",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 21,
+      "relative_position": 22,
       "properties": {
       },
       "seeding_key": {
@@ -345,10 +360,10 @@
     {
       "key": "MODIFY Programs",
       "name": "MODIFY Programs (AppLab -> Widget -> AppLab)",
-      "absolute_position": 22,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 22,
+      "relative_position": 23,
       "properties": {
       },
       "seeding_key": {
@@ -360,10 +375,10 @@
     {
       "key": "dog",
       "name": "Does Code.org Like Your Dog?",
-      "absolute_position": 23,
+      "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 23,
+      "relative_position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -375,10 +390,10 @@
     {
       "key": "ailab-explore",
       "name": "Explore AI Lab",
-      "absolute_position": 24,
+      "absolute_position": 25,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 24,
+      "relative_position": 25,
       "properties": {
       },
       "seeding_key": {
@@ -1977,6 +1992,56 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "ml-video recording-import app 1"
+        ],
+        "progression": "Importing A Model + If Statements"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-video recording-import app 1"
+        ],
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-video recording-import app 1"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-video recording-custom design elts"
+        ],
+        "progression": "Custome Design Elts + Edit Code"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-video recording-custom design elts"
+        ],
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-video recording-custom design elts"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "ml-ai lab template"
         ],
         "progression": "AI Lab Bash"
@@ -1996,7 +2061,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2021,7 +2086,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2046,7 +2111,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2071,7 +2136,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2096,7 +2161,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2121,7 +2186,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2146,7 +2211,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2171,7 +2236,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2196,7 +2261,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2221,7 +2286,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2246,7 +2311,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2271,7 +2336,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2296,7 +2361,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2321,7 +2386,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2346,7 +2411,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2371,7 +2436,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2396,7 +2461,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2421,7 +2486,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 84,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2446,7 +2511,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 85,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -2471,7 +2536,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2496,7 +2561,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2521,7 +2586,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 88,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2546,7 +2611,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2571,7 +2636,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2596,7 +2661,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 91,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2621,7 +2686,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 92,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2646,7 +2711,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 93,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2671,7 +2736,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 94,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2696,7 +2761,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 95,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2721,7 +2786,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2746,7 +2811,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2771,7 +2836,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2796,7 +2861,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2821,7 +2886,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2846,7 +2911,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2871,7 +2936,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 102,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2896,7 +2961,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 103,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2921,7 +2986,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 104,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2946,7 +3011,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 105,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2971,7 +3036,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 106,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2996,7 +3061,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 107,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -3021,7 +3086,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 108,
       "position": 13,
       "activity_section_position": null,
       "assessment": false,
@@ -3046,7 +3111,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 109,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3070,7 +3135,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 110,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3094,7 +3159,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 111,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3118,7 +3183,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 112,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3143,7 +3208,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 113,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3168,7 +3233,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 114,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3193,7 +3258,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 115,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3908,6 +3973,28 @@
           "ml-final project-app lab"
         ],
         "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-video recording-import app 1",
+        "script_level.level_keys": [
+          "ml-video recording-import app 1"
+        ],
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-video recording-custom design elts",
+        "script_level.level_keys": [
+          "ml-video recording-custom design elts"
+        ],
+        "lesson.key": "videoLevels",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }

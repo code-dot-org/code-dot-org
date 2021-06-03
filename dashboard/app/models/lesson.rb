@@ -724,24 +724,29 @@ class Lesson < ApplicationRecord
     resources.any? {|r| r.audience == 'Verified Teacher'}
   end
 
-  # Makes a copy of original_lesson and adds it to the end last lesson group
+  # Makes a copy of the lesson and adds it to the end last lesson group
   # in destination_script. It does not clone levels.
-  # Both destination_script and the script original_lesson in must:
+  # Both destination_script and the script this lesson is in must:
   # - be migrated
   # - be in a course version
   # - be in course versions from the same version year
-  def self.copy_to_script(original_lesson, destination_script)
-    return if original_lesson.script == destination_script
-    raise 'Both lesson and script must be migrated' unless original_lesson.script.is_migrated? && destination_script.is_migrated?
-    raise 'Destination script and lesson must be in a course version' if destination_script.get_course_version.nil? || original_lesson.script.get_course_version.nil?
-    raise 'Destination script must have the same version year as the lesson' unless destination_script.get_course_version.version_year == original_lesson.script.get_course_version.version_year
-    raise 'Destination script must have at least one lesson group' if destination_script.lesson_groups.blank?
+  def copy_to_script(destination_script)
+    return if script == destination_script
+    raise 'Both lesson and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
+    raise 'Destination script and lesson must be in a course version' if destination_script.get_course_version.nil? || script.get_course_version.nil?
+    raise 'Destination script must have the same version year as the lesson' unless destination_script.get_course_version.version_year == script.get_course_version.version_year
 
     ActiveRecord::Base.transaction do
-      copied_lesson = original_lesson.dup
+      copied_lesson = dup
       copied_lesson.key = copied_lesson.name
       copied_lesson.script_id = destination_script.id
-      copied_lesson.lesson_group_id = destination_script.lesson_groups.last.id
+
+      destination_lesson_group = destination_script.lesson_groups.last
+      unless destination_lesson_group
+        destination_lesson_group = LessonGroup.create!(script: destination_script, position: 1, user_facing: false, key: 'new-lesson-group')
+        Script.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_script.name)
+      end
+      copied_lesson.lesson_group_id = destination_lesson_group.id
 
       copied_lesson.absolute_position = destination_script.lessons.count + 1
       copied_lesson.relative_position =
@@ -750,7 +755,7 @@ class Lesson < ApplicationRecord
       copied_lesson.save!
 
       # Copy lesson activities, activity sections, and script levels
-      copied_lesson.lesson_activities = original_lesson.lesson_activities.map do |original_lesson_activity|
+      copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
         copied_lesson_activity = original_lesson_activity.dup
         copied_lesson_activity.key = SecureRandom.uuid
         copied_lesson_activity.lesson_id = copied_lesson.id
@@ -768,20 +773,20 @@ class Lesson < ApplicationRecord
       end
 
       # Copy objectives
-      copied_lesson.objectives = original_lesson.objectives.map do |original_objective|
+      copied_lesson.objectives = objectives.map do |original_objective|
         copied_objective = original_objective.dup
         copied_objective.key = SecureRandom.uuid
         copied_objective
       end
 
       # Copy programming expressions and standards associations
-      copied_lesson.programming_expressions = original_lesson.programming_expressions
-      copied_lesson.standards = original_lesson.standards
-      copied_lesson.opportunity_standards = original_lesson.opportunity_standards
+      copied_lesson.programming_expressions = programming_expressions
+      copied_lesson.standards = standards
+      copied_lesson.opportunity_standards = opportunity_standards
 
       # Copy objects that require course version, i.e. resources and vocab
       course_version = destination_script.get_course_version
-      copied_lesson.resources = original_lesson.resources.map do |original_resource|
+      copied_lesson.resources = resources.map do |original_resource|
         persisted_resource = Resource.where(name: original_resource.name, url: original_resource.url, course_version_id: course_version.id).first
         if persisted_resource
           persisted_resource
@@ -791,7 +796,7 @@ class Lesson < ApplicationRecord
         end
       end.uniq
 
-      copied_lesson.vocabularies = original_lesson.vocabularies.map do |original_vocab|
+      copied_lesson.vocabularies = vocabularies.map do |original_vocab|
         persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
         if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
           persisted_vocab

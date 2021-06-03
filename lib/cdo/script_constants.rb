@@ -272,7 +272,8 @@ module ScriptConstants
     PIXELATION = 'pixelation'.freeze,
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
-    K5_ONLINEPD = 'K5-OnlinePD'.freeze
+    K5_ONLINEPD = 'K5-OnlinePD'.freeze,
+    KODEA_PD_2021 = 'kodea-pd-2021'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -438,6 +439,7 @@ module ScriptConstants
       ScriptConstants.script_in_category?(:csf_2018, script) ||
       ScriptConstants.script_in_category?(:csf_2019, script) ||
       ScriptConstants.script_in_category?(:csf_2020, script) ||
+      ScriptConstants.script_in_category?(:csf_2021, script) ||
       ScriptConstants.script_in_category?(:csd, script) ||
       ScriptConstants.script_in_category?(:csd_2018, script) ||
       ScriptConstants.script_in_category?(:csd_2019, script) ||

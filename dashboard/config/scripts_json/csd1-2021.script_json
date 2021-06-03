@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-25 17:10:37 UTC",
+    "serialized_at": "2021-05-28 15:54:31 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -599,19 +599,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "23c77bb1-85ea-4391-a235-0161f782c996",
-        "lesson.key": "What is a Computer?",
-        "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2021"
-      }
-    },
-    {
-      "key": "5e39abe9-8fa9-47ce-bef4-267b81499baf",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5e39abe9-8fa9-47ce-bef4-267b81499baf",
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-2021"

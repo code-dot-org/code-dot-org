@@ -209,7 +209,7 @@ class ScriptLevelsController < ApplicationController
     render json: []
   end
 
-  def stage_extras
+  def lesson_extras
     authorize! :read, ScriptLevel
 
     if current_user&.teacher?
@@ -223,7 +223,7 @@ class ScriptLevelsController < ApplicationController
       end
       # This errs on the side of showing the warning by only if the script we are in
       # is the assigned script for the section
-      @show_stage_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
+      @show_lesson_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
     # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
@@ -231,7 +231,7 @@ class ScriptLevelsController < ApplicationController
     return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
 
     @script = Script.get_from_cache(params[:script_id])
-    @stage = @script.lesson_by_relative_position(params[:lesson_position].to_i)
+    @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
@@ -247,13 +247,13 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    @stage = Script.get_from_cache(
+    @lesson = Script.get_from_cache(
       params[:script_id]
     ).lesson_by_relative_position(
       params[:lesson_position].to_i
       )
-    @script = @stage.script
-    script_bonus_levels_by_lesson = @script.get_bonus_script_levels(@stage)
+    @script = @lesson.script
+    script_bonus_levels_by_lesson = @script.get_bonus_script_levels(@lesson)
 
     user = @user || current_user
     unless user.nil?
@@ -269,17 +269,17 @@ class ScriptLevelsController < ApplicationController
       end
     end
 
-    @stage_extras = {
-      next_stage_number: @stage.next_level_number_for_lesson_extras(user),
-      stage_number: @stage.relative_position,
-      next_level_path: @stage.next_level_path_for_lesson_extras(user),
+    @lesson_extras = {
+      next_lesson_number: @lesson.next_level_number_for_lesson_extras(user),
+      lesson_number: @lesson.relative_position,
+      next_level_path: @lesson.next_level_path_for_lesson_extras(user),
       bonus_levels: script_bonus_levels_by_lesson,
     }.camelize_keys
-    @bonus_level_ids = @stage.script_levels.where(bonus: true).map(
+    @bonus_level_ids = @lesson.script_levels.where(bonus: true).map(
       &:level_ids
     ).flatten
 
-    render 'scripts/stage_extras'
+    render 'scripts/lesson_extras'
   end
 
   # Provides a JSON summary of a particular lesson, that is consumed by tools used to
@@ -469,7 +469,7 @@ class ScriptLevelsController < ApplicationController
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
     @game = @level.game
-    @stage ||= @script_level.lesson
+    @lesson ||= @script_level.lesson
 
     load_level_source
 

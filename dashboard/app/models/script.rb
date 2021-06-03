@@ -873,7 +873,7 @@ class Script < ApplicationRecord
     unless @all_bonus_script_levels
       @all_bonus_script_levels = lessons.map do |lesson|
         {
-          stageNumber: lesson.relative_position,
+          lessonNumber: lesson.relative_position,
           levels: lesson.script_levels.select(&:bonus)
         }
       end
@@ -881,13 +881,14 @@ class Script < ApplicationRecord
     end
 
     lesson_levels = @all_bonus_script_levels.select do |lesson|
-      lesson[:stageNumber] <= current_lesson.absolute_position
+      lesson[:lessonNumber] <= current_lesson.absolute_position
     end
 
     # we don't cache the level summaries because they include localized text
     summarized_lesson_levels = lesson_levels.map do |lesson|
       {
-        stageNumber: lesson[:stageNumber],
+        lessonNumber: lesson[:lessonNumber],
+        stageNumber: lesson[:lessonNumber], #TODO: remove once launched
         levels: lesson[:levels].map(&:summarize_as_bonus)
       }
     end
@@ -1510,7 +1511,7 @@ class Script < ApplicationRecord
   #   script ids for that section, filtered so that the only script id which appears
   #   is the current script id. This mirrors the output format of
   #   User#get_hidden_script_ids, and satisfies the input format of
-  #   initializeHiddenScripts in hiddenStageRedux.js.
+  #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
     return {} unless user&.teacher?
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
@@ -1845,8 +1846,8 @@ class Script < ApplicationRecord
         next unless temp_feedback
         feedback[temp_feedback.id] = {
           studentName: student.name,
-          stageNum: script_level.lesson.relative_position.to_s,
-          stageName: script_level.lesson.localized_title,
+          lessonNum: script_level.lesson.relative_position.to_s,
+          lessonName: script_level.lesson.localized_title,
           levelNum: script_level.position.to_s,
           keyConcept: (current_level.rubric_key_concept || ''),
           performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),

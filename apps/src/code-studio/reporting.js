@@ -413,9 +413,10 @@ function reportComplete(report, response) {
     lastServerResponse.report_error = report.error;
     lastServerResponse.nextRedirect = response.redirect;
     lastServerResponse.videoInfo = response.video_info;
-    lastServerResponse.endOfStageExperience = response.end_of_stage_experience;
+    lastServerResponse.endOfLessonExperience =
+      response.end_of_lesson_experience;
     lastServerResponse.previousStageInfo =
-      response.stage_changing && response.stage_changing.previous;
+      response.lesson_changing && response.lesson_changing.previous;
   }
   if (report.onComplete) {
     report.onComplete(response);
