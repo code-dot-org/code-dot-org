@@ -888,7 +888,6 @@ class Script < ApplicationRecord
     summarized_lesson_levels = lesson_levels.map do |lesson|
       {
         lessonNumber: lesson[:lessonNumber],
-        stageNumber: lesson[:lessonNumber], #TODO: remove once launched
         levels: lesson[:levels].map(&:summarize_as_bonus)
       }
     end
@@ -1846,8 +1845,8 @@ class Script < ApplicationRecord
         next unless temp_feedback
         feedback[temp_feedback.id] = {
           studentName: student.name,
-          stageNum: script_level.lesson.relative_position.to_s,
-          stageName: script_level.lesson.localized_title,
+          lessonNum: script_level.lesson.relative_position.to_s,
+          lessonName: script_level.lesson.localized_title,
           levelNum: script_level.position.to_s,
           keyConcept: (current_level.rubric_key_concept || ''),
           performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),

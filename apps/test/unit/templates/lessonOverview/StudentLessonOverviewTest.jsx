@@ -72,6 +72,7 @@ describe('StudentLessonOverview', () => {
         programmingExpressions: [
           {
             name: 'playSound',
+            syntax: 'playSound',
             link: '/docs/applab/playSound'
           }
         ],

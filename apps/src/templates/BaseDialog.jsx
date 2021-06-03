@@ -7,6 +7,9 @@ import {BASE_DIALOG_WIDTH} from '../constants';
  * A generic modal dialog that has an x-close in the upper right, and a
  * semi-transparent backdrop. Can be closed by clicking the x, clicking the
  * backdrop, or pressing esc.
+ *
+ * To use a styled version of this component that follows our style guide,
+ * use StylizedBaseDialog.jsx.
  */
 export default class BaseDialog extends React.Component {
   static propTypes = {
