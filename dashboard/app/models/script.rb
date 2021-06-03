@@ -888,7 +888,6 @@ class Script < ApplicationRecord
     summarized_lesson_levels = lesson_levels.map do |lesson|
       {
         lessonNumber: lesson[:lessonNumber],
-        stageNumber: lesson[:lessonNumber], #TODO: remove once launched
         levels: lesson[:levels].map(&:summarize_as_bonus)
       }
     end
