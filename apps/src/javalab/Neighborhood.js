@@ -84,7 +84,7 @@ export default class Neighborhood {
         return this.controller.addPegman(
           id,
           parseInt(x),
-          this.convertYCoordinate(parseInt(y)),
+          parseInt(y),
           Direction[direction.toUpperCase()]
         );
       }
@@ -130,13 +130,5 @@ export default class Neighborhood {
     // and return 8 to the power of that scaled value to get a multiplier between 2 (slowest) and
     // ~0.03 (fastest).
     return Math.pow(8, -2 * this.speedSlider.getValue() + 1 / 3);
-  }
-
-  // Convert y-coordinate from Neighborhood format to Maze format.
-  // In neighborhood (0,0) is the bottom-left grid square, in Maze
-  // it is the top left.
-  convertYCoordinate(y) {
-    // if we have 8 rows, y = 0 -> y = 7, y = 1 -> y = 6, and so on
-    return this.numRows - 1 - y;
   }
 }
