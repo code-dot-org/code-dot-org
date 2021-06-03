@@ -28,7 +28,7 @@ const defaultProps = {
     'those design decisions.',
   viewAs: ViewType.Teacher,
   selectedSectionId: 11,
-  hiddenStageState: unhiddenState,
+  hiddenLessonState: unhiddenState,
   hasNoSections: true,
   toggleHiddenScript: () => {},
   sectionsForDropdown: [
@@ -66,7 +66,7 @@ export default storybook => {
             {...defaultProps}
             selectedSectionId={sectionId}
             hasNoSections={false}
-            hiddenStageState={hiddenState}
+            hiddenLessonState={hiddenState}
           />
         )
       },
@@ -76,7 +76,7 @@ export default storybook => {
           <CourseScript
             {...defaultProps}
             hasNoSections={false}
-            hiddenStageState={hiddenState}
+            hiddenLessonState={hiddenState}
           />
         )
       }
