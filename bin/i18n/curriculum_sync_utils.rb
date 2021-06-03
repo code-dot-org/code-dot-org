@@ -176,7 +176,6 @@ module CurriculumSyncUtils
     Languages.get_locale.each do |prop|
       locale = prop[:locale_s]
       next if locale == 'en-US'
-      next unless locale == 'fr-FR'
       locale_dir = File.join('i18n/locales', locale, 'curriculum_content')
       next unless File.directory?(locale_dir)
 
