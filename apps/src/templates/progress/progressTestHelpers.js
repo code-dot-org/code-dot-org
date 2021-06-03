@@ -233,7 +233,7 @@ export const fakeProgressTableReduxInitialState = (
   return {
     progress: {
       lessonGroups: [],
-      stages: stages,
+      lessons: stages,
       focusAreaLessonIds: [],
       professionalLearningCourse: false
     },

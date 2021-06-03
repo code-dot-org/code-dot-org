@@ -106,7 +106,7 @@ export default storybook => {
         isLessonExtras: onLessonExtras,
         scriptName: 'csp1',
         saveAnswersBeforeNavigation: false,
-        stages: [
+        lessons: [
           {
             id: 123,
             lesson_extras_level_url: showLessonExtras && 'fakeurl',
