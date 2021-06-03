@@ -252,15 +252,16 @@ export const styles = {
   },
 
   selectDatasetItem: {
-    width: "calc(33.33% - 8px)",
-    padding: 20,
+    width: "calc(33.33% - 4px)",
+    padding: 10,
     float: "left",
     boxSizing: "border-box",
     border: "solid 4px #f2f2f2",
     borderRadius: 0,
     cursor: "pointer",
     backgroundColor: "white",
-    margin: 4
+    margin: 2,
+    position: "relative"
   },
 
   selectDatasetItemHighlighted: {
@@ -277,7 +278,15 @@ export const styles = {
 
   selectDatasetText: {
     fontSize: 14,
-    marginTop: 5
+    marginTop: 5,
+    marginRight: 20,
+    position: "absolute",
+    bottom: 23,
+    left: 20,
+    color: "white",
+    backgroundColor: "rgba(0,0,0,0.3)",
+    padding: "3px 5px",
+    borderRadius: 3
   },
 
   uploadCsvButton: {
@@ -714,7 +723,9 @@ export const styles = {
   },
   trainBot: {
     position: "relative",
-    width: 300
+    width: 300,
+    margin: "0 auto",
+    transformOrigin: "25%"
   },
   trainBotHead: {
     transition: "transform 500ms",
@@ -897,6 +908,10 @@ export const styles = {
     transform: "translateY(-50%)",
     left: "calc(35% - 185px)",
     width: "150px"
+  },
+
+  summaryScreenBotImage: {
+    width: "100%"
   },
 
   modelSaveMessage: {
