@@ -45,8 +45,13 @@ describe('TeacherFeedbackKeepWorking', () => {
   });
 
   it('displays a checked checkbox if reviewState is keepWorking and student is not awaiting review', () => {
-    const wrapper = setUp({reviewState: 'keepWorking'});
-    expect(wrapper.find('input').props().checked).to.be.true;
+    const wrapper = setUp({
+      latestFeedback: {
+        review_state: 'keepWorking',
+        student_updated_since_feedback: false
+      }
+    });
+    expect(wrapper.instance().checkbox.checked).to.be.true;
   });
 
   it('displays a indeterminate checkbox if reviewState is keepWorking and student is awaiting reivew', () => {
@@ -55,14 +60,14 @@ describe('TeacherFeedbackKeepWorking', () => {
     expect(wrapper.instance().checkbox.indeterminate).to.be.true;
   });
 
-  it('displays an unchecked checkbox if reviewState is null', () => {
-    const wrapper = setUp({reviewState: null});
-    expect(wrapper.find('input').props().checked).to.be.false;
+  it('displays an unchecked checkbox if no latestFeedback', () => {
+    const wrapper = setUp({latestFeedback: null});
+    expect(wrapper.instance().checkbox.checked).to.be.false;
   });
 
   it('displays an unchecked checkbox if reviewState is completed', () => {
-    const wrapper = setUp({reviewState: 'completed'});
-    expect(wrapper.find('input').props().checked).to.be.false;
+    const wrapper = setUp({latestFeedback: {review_state: 'completed'}});
+    expect(wrapper.instance().checkbox.checked).to.be.false;
   });
 
   describe('starting with an unchecked box', () => {
@@ -71,12 +76,9 @@ describe('TeacherFeedbackKeepWorking', () => {
       const setReviewStateChangedStub = sinon.stub();
 
       const wrapper = setUp({
-        reviewState: null,
         setReviewState: setReviewStateStub,
         setReviewStateChanged: setReviewStateChangedStub,
-        latestFeedback: {
-          review_state: null
-        }
+        latestFeedback: null
       });
 
       wrapper.instance().checkbox.checked = true;
@@ -91,15 +93,12 @@ describe('TeacherFeedbackKeepWorking', () => {
       const setReviewStateChangedStub = sinon.stub();
 
       const wrapper = setUp({
-        reviewState: null,
         setReviewState: setReviewStateStub,
         setReviewStateChanged: setReviewStateChangedStub,
-        latestFeedback: {
-          review_state: null
-        }
+        latestFeedback: null
       });
 
-      wrapper.instance().checkbox.checked = false; // two clicks puts at unchecked state
+      wrapper.find('input').simulate('change');
       wrapper.find('input').simulate('change');
 
       expect(setReviewStateStub).to.have.been.calledWith(null);
@@ -108,12 +107,11 @@ describe('TeacherFeedbackKeepWorking', () => {
   });
 
   describe('starting with a checked box', () => {
-    it('when checkbox is clicked, it calls setReviewState with value null and setReviewStateChanged true', () => {
+    it('when checkbox is clicked, it calls setReviewState with value completed and setReviewStateChanged true', () => {
       const setReviewStateStub = sinon.stub();
       const setReviewStateChangedStub = sinon.stub();
 
       const wrapper = setUp({
-        reviewState: 'keepWorking',
         setReviewState: setReviewStateStub,
         setReviewStateChanged: setReviewStateChangedStub,
         latestFeedback: {
@@ -121,10 +119,9 @@ describe('TeacherFeedbackKeepWorking', () => {
         }
       });
 
-      wrapper.instance().checkbox.checked = false;
       wrapper.find('input').simulate('change');
 
-      expect(setReviewStateStub).to.have.been.calledWith(null);
+      expect(setReviewStateStub).to.have.been.calledWith('completed');
       expect(setReviewStateChangedStub).to.have.been.calledWith(true);
     });
   });
@@ -152,13 +149,10 @@ describe('TeacherFeedbackKeepWorking', () => {
 
       const wrapper = setUp({
         latestFeedback: feedbackForIndeterminateState(),
-        reviewState: 'keepWorking',
         setReviewState: setReviewStateStub,
         setReviewStateChanged: setReviewStateChangedStub
       });
 
-      wrapper.instance().checkbox.checked = false;
-      wrapper.instance().checkbox.indeterminate = false;
       wrapper.find('input').simulate('change');
 
       expect(setReviewStateStub).to.have.been.calledWith('completed');
@@ -171,13 +165,11 @@ describe('TeacherFeedbackKeepWorking', () => {
 
       const wrapper = setUp({
         latestFeedback: feedbackForIndeterminateState(),
-        reviewState: 'keepWorking',
         setReviewState: setReviewStateStub,
         setReviewStateChanged: setReviewStateChangedStub
       });
 
-      wrapper.instance().checkbox.checked = true; // two clicks puts at checked state with indeterminate = false
-      wrapper.instance().checkbox.indeterminate = false;
+      wrapper.find('input').simulate('change');
       wrapper.find('input').simulate('change');
 
       expect(setReviewStateStub).to.have.been.calledWith('keepWorking');

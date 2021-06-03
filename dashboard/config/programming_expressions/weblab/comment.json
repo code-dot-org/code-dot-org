@@ -1,4 +1,5 @@
 {
   "func": "comment",
-  "category": "HTML Tags"
+  "category": "HTML Tags",
+  "syntax": "<!-- Your comment here-->"
 }

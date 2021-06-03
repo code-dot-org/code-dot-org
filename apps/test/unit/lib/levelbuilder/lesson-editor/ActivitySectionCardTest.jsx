@@ -107,7 +107,7 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).to.equal(
       1
     );
-    expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
+    expect(wrapper.find('Connect(UnconnectedLevelToken)').length).to.equal(2);
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.contains('Progression Title:')).to.be.true;
@@ -124,7 +124,7 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).to.equal(
       1
     );
-    expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
+    expect(wrapper.find('Connect(UnconnectedLevelToken)').length).to.equal(2);
     expect(wrapper.find('textarea').length).to.equal(0);
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.contains('Progression Title:')).to.be.true;
