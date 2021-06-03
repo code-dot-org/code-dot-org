@@ -150,7 +150,7 @@ export function processResults(onComplete, beforeHook) {
 
         if (lastServerResponse.videoInfo) {
           window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
-        } else if (lastServerResponse.endOfStageExperience) {
+        } else if (lastServerResponse.endOfLessonExperience) {
           const body = document.createElement('div');
           const lessonInfo = lastServerResponse.previousStageInfo;
           const lessonName = `${i18n.lesson()} ${lessonInfo.position}: ${

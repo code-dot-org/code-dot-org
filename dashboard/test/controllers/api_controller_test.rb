@@ -48,7 +48,7 @@ class ApiControllerTest < ActionController::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    lesson = create :lesson, name: 'Stage1', script: script, lockable: true, lesson_group: lesson_group
+    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
 
     # Create a ScriptLevel joining this level to the script.
     create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
