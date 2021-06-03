@@ -1,78 +1,34 @@
 name 'OPD-K5 LessonPlanning1'
 skip_dialog true
 markdown <<MARKDOWN
-# Lesson Planning Overview
+## Considerations for Lesson Planning
 **Total Suggested Time:**
 
 Are you familiar with Code.org's Hour of Code? CS Fundamentals courses and Hour of Code are not the same thing.  Hour of Code *introduces* students to CS while CS Fundamentals courses *build* CS knowledge and skills.
 
 Let's dive into the CS Fundamentals course structure, lessons, and resources available to use as you plan.  
 
-## What is CS Fundamentals?
+When planning a lesson consider the following:
 
-CS Fundamentals is:
-* Developed with Curriculum Values in mind with a Pedagogical Approach to Curriculum Values
-* Designed with K12 Computer Science Framework practices and CSTA K-12 standards
-* Courses for each K-5 grade level for both pre-readers and readers
+**CS Concepts and Skills**
+* What CS concept does the lesson introduce to students and how?
+* What CS skill does the lesson help students practice and how?
 
-**Task: Read the Curriculum Values and Pedagogical Approach to Curriculum Values**
+**Logistics**
+* What classroom rountines or procedures are needed for the lesson?
 
-## Course Structure
-* **Concept Chunks** - big ideas in each course which lessons are based on 
-	* the repetition throughout Courses A-F to strengthen students’ CS knowledge and skills 
-	* each course is designed to stand alone and does not require a student to take a course in sequence
-    * students can begin learning CS with any course
+**CS Teaching Practices**
+* When will any of the following CS teaching practices be used during the lesson?
+	* Role of the Teacher (lead learner)
+    * Discovery and Inquiry
+    * Debugging
+    * Pair Programming
+    * The Classroom Community (active learning, communication)
 
-* **Digital Citizenship** - lessons from Common Sense Media that are included in every course to teach students about online safety
+**Assessment**
+* How will students share their thinking and demonstrate what they learned?
 
-**Task 1: Take a look at the concept chunks within the curriculum**
-
- * You will take a deeper look at concept chunks in the "CS Fundamentals Concepts" section of the course.
-    
-**Task 2:  Explore this example of a Digital Citizenship lesson**
-
-* Add example lesson here
-
-## Lesson Types
-* **Unplugged/Introduction:** off the computer to introduce a new concept in a hands-on way
-* **Skill building:** on the computer to practice using a new tool or programming concept
-* **Application:** on the computer to apply learned concepts in creative ways
-* **Mini-projects and End of course projects:** on and off the computer, open-ended projects
-
-**Task:  Explore examples of lesson plans for each type of lesson**
-
-* Add example unplugged/introduction lesson plan
-* Add example skill building lesson plan
-* Add example application lesson plan
-* Add example mini-Projects
-* Add example End of Course project
-
-
-## Lesson Structure
-* **Lesson Progression:** typically follows a lesson sequence of a warm up, followed by a main activity (that may or may not be on the computer), and a warm up
-* **Lesson Resources:** student handouts and teacher prep resources
-* **Code Studio learning platform:** when students are on the computer they engage with the learning platform for skill building, making predictions, solving puzzles, lesson extras, watching videos, or creating mini-projects.  Note:  not all courses include what is listed here in order to provide age appropriate lessons.
-	* You will practice using Code Studio in the "CS Fundamentals Concepts" section of the course.
-
-**Task:  Explore examples of lesson resources**
-
-* Add example of student handout
-* Add example of student video
-* Add example of 
-
-## Flexible Implementation
-* Examples of common course implementations:
-	* Once a week in a general classroom
-	* Every class session in a tech classroom
-	* Once a month in a library setting
-	* Multiple periods a week for a few months as a “unit”
-	* Included during other content instruction
-	* lessons are mapped to Common Core ELA/Math Standards and Next Generation Science Standards
-
-
-<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
-
-
-    
+**Inclusion**
+* How will the lesson be inclusive for students?
 
 MARKDOWN
