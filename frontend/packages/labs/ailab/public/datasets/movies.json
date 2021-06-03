@@ -42,9 +42,21 @@
       "id": "Country",
       "description": "The movie's country of origin."
     },
-    { "type": "categorical", "id": "Director", "description": "" },
-    { "type": "categorical", "id": "Genre", "description": "" },
-    { "type": "categorical", "id": "Name", "description": "" },
+    {
+      "type": "categorical", 
+      "id": "Director", 
+      "description": "" 
+    },
+    { 
+      "type": "categorical",
+      "id": "Genre", 
+      "description": "" 
+    },
+    { 
+      "type": "categorical",
+      "id": "Name", 
+      "description": ""
+    },
     {
       "type": "categorical",
       "id": "Rating",
@@ -60,7 +72,16 @@
       "id": "Star",
       "description": "The lead actor or actress."
     },
-    { "type": "categorical", "id": "Writer", "description": "" },
+    {
+      "type": "numerical",
+      "id": "Votes",
+      "description": ""
+    },
+    {
+      "type": "categorical",
+      "id": "Writer",
+      "description": ""
+    },
     {
       "type": "categorical",
       "id": "Year",
