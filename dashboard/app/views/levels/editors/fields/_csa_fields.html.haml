@@ -3,5 +3,25 @@
 
 #csa_features.in.collapse
   .field
-    Select the desired CSA view:
-    = f.select :csa_view_mode, options_for_select([['Console', 'console'], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']])
+    = f.label :csa_view_mode, 'CSA view mode'
+    = f.select :csa_view_mode, options_for_select(@level.class.csa_view_modes, @level.csa_view_mode), {}, onchange: 'toggleFields(this.value);'
+
+  #neighborhood{class: ('collapse' if @level.csa_view_mode != 'neighborhood')}
+    .field
+      = f.label :start_direction
+      = f.select :start_direction, options_for_select(@level.class.start_directions, @level.start_direction)
+
+  .field
+    = f.label :serialized_maze
+    - maze_value = @level.serialized_maze ? JSON.pretty_generate(@level.serialized_maze) : ''
+    = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'input-block-level'
+
+:javascript
+  function toggleFields(val) {
+    const neighborhoodFields = document.getElementById('neighborhood');
+    if (val.toLowerCase() === 'neighborhood') {
+      neighborhoodFields.classList.remove('collapse');
+    } else {
+      neighborhoodFields.classList.add('collapse');
+    }
+  }
