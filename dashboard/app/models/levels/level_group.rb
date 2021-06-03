@@ -254,7 +254,7 @@ class LevelGroup < DSLDefined
   # answer to that sublevel question or not, which explains the empty hashes
   # intermingled with real results.
   # [ 23432:
-  #   { lesson_name: "Stage 30: Anonymous student survey",
+  #   { lesson_name: "Lesson 30: Anonymous student survey",
   #     levelgroup_results: [
   #       {
   #         type: "multi",
