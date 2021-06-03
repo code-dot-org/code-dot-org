@@ -82,6 +82,7 @@ class TopInstructions extends Component {
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
+    openReferenceLinksInNewTab: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     readOnlyWorkspace: PropTypes.bool,
     serverLevelId: PropTypes.number,
@@ -224,9 +225,14 @@ class TopInstructions extends Component {
         this.setState({fetchingData: false}, this.forceTabResizeToMaxHeight);
       })
       .catch(error => {
-        console.log(
-          'Promise Rejection while getting instructions: ' + error.responseText
-        );
+        if (error.responseText) {
+          console.log(
+            'Promise Rejection while getting instructions: ' +
+              error.responseText
+          );
+        } else {
+          console.log(error);
+        }
       });
   }
 
@@ -674,6 +680,9 @@ class TopInstructions extends Component {
                 videoData={levelVideos ? levelVideos[0] : []}
                 mapReference={mapReference}
                 referenceLinks={referenceLinks}
+                openReferenceLinksInNewTab={
+                  this.props.openReferenceLinksInNewTab
+                }
               />
             )}
             {displayFeedback && !fetchingData && (

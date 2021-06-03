@@ -987,7 +987,7 @@ export const getExportableData = state => {
 
 /**
  * @returns {array} of objects with keys corresponding to columns
- * of CSV to download. Columns are stage, questionNumber, questionText, answer, numberAnswered.
+ * of CSV to download. Columns are lesson, questionNumber, questionText, answer, numberAnswered.
  */
 export const getExportableSurveyData = state => {
   const currentAssessmentId = state.sectionAssessments.assessmentId;
@@ -1000,7 +1000,7 @@ export const getExportableSurveyData = state => {
   for (let i = 0; i < currentSurvey.levelgroup_results.length; i++) {
     const questionResults = currentSurvey.levelgroup_results[i];
     const rowBase = {
-      stage: currentSurvey.stage_name,
+      stage: currentSurvey.lesson_name,
       questionNumber: questionResults.question_index + 1,
       questionText: questionResults.question
     };
@@ -1035,7 +1035,7 @@ export const getExportableSurveyData = state => {
 
 /**
  * @returns {array} of objects with keys corresponding to columns
- * of CSV to download. Columns are studentName, stage, timestamp, question, response, and correct.
+ * of CSV to download. Columns are studentName, lesson, timestamp, question, response, and correct.
  */
 export const getExportableAssessmentData = state => {
   let responses = [];
@@ -1075,7 +1075,7 @@ export const getExportableAssessmentData = state => {
 
 /**
  * @returns {array} of objects with keys corresponding to columns
- * of CSV to download. Columns are studentName, stage, level, key concept, rubric, comment, timestamp, .
+ * of CSV to download. Columns are studentName, lesson, level, key concept, rubric, comment, timestamp, .
  */
 export const getExportableFeedbackData = state => {
   let feedback = [];
@@ -1169,7 +1169,7 @@ const computeScriptAssessmentList = (state, scriptId) => {
   const surveys = Object.keys(surveysStructure).map(surveyId => {
     return {
       id: parseInt(surveyId),
-      name: surveysStructure[surveyId].stage_name
+      name: surveysStructure[surveyId].lesson_name
     };
   });
 
