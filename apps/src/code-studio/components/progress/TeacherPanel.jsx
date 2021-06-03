@@ -256,8 +256,8 @@ export default connect(state => {
   const fullyLocked = fullyLockedLessonMapping(
     state.lessonLock.lessonsBySectionId[selectedSectionId]
   );
-  const unlockedStageIds = Object.keys(currentSection || {}).filter(
-    stageId => !fullyLocked[stageId]
+  const unlockedLessonIds = Object.keys(currentSection || {}).filter(
+    lessonId => !fullyLocked[lessonId]
   );
 
   let lessonNames = {};
@@ -275,7 +275,7 @@ export default connect(state => {
     sectionsAreLoaded,
     scriptHasLockableLessons,
     selectedSection: state.teacherSections.sections[selectedSectionId],
-    unlockedLessonNames: unlockedStageIds.map(id => lessonNames[id]),
+    unlockedLessonNames: unlockedLessonIds.map(id => lessonNames[id]),
     students: state.teacherSections.selectedStudents
   };
 })(TeacherPanel);
