@@ -339,7 +339,7 @@ Dashboard::Application.routes.draw do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
-    get 'hidden_stages', to: 'script_levels#hidden_lesson_ids'
+    get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     member do
