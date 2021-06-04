@@ -6,6 +6,7 @@ import { styles } from "../constants";
 import { UnconnectedStatement } from "./Statement";
 import { setShowResultsDetails, setResultsPhase } from "../redux";
 import ResultsDetails from "./ResultsDetails";
+import ScrollableContent from "./ScrollableContent";
 
 class Results extends Component {
   static propTypes = {
@@ -34,50 +35,48 @@ class Results extends Component {
         {showResultsDetails && <ResultsDetails />}
 
         <div id="results" style={styles.panel}>
-          <div style={styles.scrollableContents}>
-            <div style={styles.scrollingContents}>
-              <div style={styles.largeText}>Result</div>
-              {historicResults.map((historicResult, index) => {
-                return (
-                  <div key={index}>
-                    <div style={styles.resultsStatement}>
-                      <UnconnectedStatement
-                        shouldShow={true}
-                        smallFont={true}
-                        labelColumn={historicResult.label}
-                        selectedFeatures={historicResult.features}
-                      />
-                    </div>
-                    <div style={{ ...styles.resultsAccuracy, ...styles.bold }}>
-                      {historicResult.accuracy}%
-                    </div>
-                    {index === 0 && (
-                      <div style={styles.resultsDetailsButtonContainer}>
-                        <button
-                          type="button"
-                          onClick={this.showDetails}
-                          style={styles.resultsDetailsButton}
-                        >
-                          Details
-                        </button>
-                      </div>
-                    )}
-                    {index === 0 && historicResults.length > 1 && (
-                      <div
-                        style={{
-                          ...styles.largeText,
-                          clear: "both",
-                          paddingTop: 40
-                        }}
-                      >
-                        Previous results
-                      </div>
-                    )}
+          <ScrollableContent>
+            <div style={styles.largeText}>Result</div>
+            {historicResults.map((historicResult, index) => {
+              return (
+                <div key={index}>
+                  <div style={styles.resultsStatement}>
+                    <UnconnectedStatement
+                      shouldShow={true}
+                      smallFont={true}
+                      labelColumn={historicResult.label}
+                      selectedFeatures={historicResult.features}
+                    />
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                  <div style={{ ...styles.resultsAccuracy, ...styles.bold }}>
+                    {historicResult.accuracy}%
+                  </div>
+                  {index === 0 && (
+                    <div style={styles.resultsDetailsButtonContainer}>
+                      <button
+                        type="button"
+                        onClick={this.showDetails}
+                        style={styles.resultsDetailsButton}
+                      >
+                        Details
+                      </button>
+                    </div>
+                  )}
+                  {index === 0 && historicResults.length > 1 && (
+                    <div
+                      style={{
+                        ...styles.largeText,
+                        clear: "both",
+                        paddingTop: 40
+                      }}
+                    >
+                      Previous results
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </ScrollableContent>
         </div>
       </div>
     );

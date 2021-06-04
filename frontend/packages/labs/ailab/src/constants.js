@@ -178,14 +178,16 @@ export const styles = {
   },
 
   scrollableContents: {
-    overflow: "hidden"
+    overflow: "hidden",
+    position: "relative"
   },
 
   scrollableContentsTinted: {
     overflow: "hidden",
     borderRadius: 0,
     backgroundColor: colors.background,
-    padding: 10
+    padding: 10,
+    position: "relative"
   },
 
   scrollingContents: {
@@ -193,6 +195,26 @@ export const styles = {
     height: "100%",
     boxSizing: "border-box",
     overflowWrap: "break-word"
+  },
+
+  vignetteTinted: {
+    background:
+      "linear-gradient(to bottom, rgba(242, 242, 242, 0) calc(100% - 50px), rgba(242, 242, 242, 1) 100%)",
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    top: 0,
+    pointerEvents: "none"
+  },
+
+  vignette: {
+    background:
+      "linear-gradient(to bottom, rgba(255, 255, 255, 0) calc(100% - 50px), rgba(255, 255, 255, 1) 100%)",
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    top: 0,
+    pointerEvents: "none"
   },
 
   contents: {

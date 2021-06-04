@@ -7,6 +7,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getCrossTabData } from "../redux";
 import { styles } from "../constants.js";
+import ScrollableContent from "./ScrollableContent";
 
 class CrossTab extends Component {
   static propTypes = {
@@ -53,81 +54,79 @@ class CrossTab extends Component {
         {showTable && (
           <div>
             <div style={styles.bold}>Relationship information:</div>
-            <div style={styles.scrollableContents}>
-              <div style={styles.scrollingContents}>
-                <table style={styles.crossTabTable}>
-                  <thead>
-                    <tr>
-                      <th style={styles.crosssTabHeader} />
-                      <th
-                        style={styles.crosssTabHeader}
-                        colSpan={crossTabData.featureNames.length}
-                      >
-                        &nbsp;
-                      </th>
-                      <th
-                        colSpan={crossTabData.uniqueLabelValues.length}
-                        style={{ ...styles.crosssTabHeader, ...styles.bold }}
-                      >
-                        {crossTabData.labelName}
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td
-                        style={{
-                          ...styles.bold,
-                          ...styles.crossTabLeftColumn
-                        }}
-                        rowSpan={crossTabData.results.length + 1}
-                      >
-                        {crossTabData.featureNames[0]}
-                      </td>
-                      <td />
-                      {crossTabData.uniqueLabelValues.map(
-                        (uniqueLabelValue, index) => {
-                          return (
-                            <td key={index} style={styles.tableCell}>
-                              {uniqueLabelValue}
-                            </td>
-                          );
-                        }
-                      )}
-                    </tr>
-                    {crossTabData.results.map((result, resultIndex) => {
-                      return (
-                        <tr key={resultIndex}>
-                          {result.featureValues.map(
-                            (featureValue, featureIndex) => {
-                              return (
-                                <td key={featureIndex} style={styles.tableCell}>
-                                  {featureValue}
-                                </td>
-                              );
-                            }
-                          )}
-                          {crossTabData.uniqueLabelValues.map(
-                            (uniqueLabelValue, labelIndex) => {
-                              return (
-                                <td
-                                  key={labelIndex}
-                                  style={this.getCellStyle(
-                                    result.labelPercents[uniqueLabelValue]
-                                  )}
-                                >
-                                  {result.labelPercents[uniqueLabelValue] || 0}%
-                                </td>
-                              );
-                            }
-                          )}
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            </div>
+            <ScrollableContent>
+              <table style={styles.crossTabTable}>
+                <thead>
+                  <tr>
+                    <th style={styles.crosssTabHeader} />
+                    <th
+                      style={styles.crosssTabHeader}
+                      colSpan={crossTabData.featureNames.length}
+                    >
+                      &nbsp;
+                    </th>
+                    <th
+                      colSpan={crossTabData.uniqueLabelValues.length}
+                      style={{ ...styles.crosssTabHeader, ...styles.bold }}
+                    >
+                      {crossTabData.labelName}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      style={{
+                        ...styles.bold,
+                        ...styles.crossTabLeftColumn
+                      }}
+                      rowSpan={crossTabData.results.length + 1}
+                    >
+                      {crossTabData.featureNames[0]}
+                    </td>
+                    <td />
+                    {crossTabData.uniqueLabelValues.map(
+                      (uniqueLabelValue, index) => {
+                        return (
+                          <td key={index} style={styles.tableCell}>
+                            {uniqueLabelValue}
+                          </td>
+                        );
+                      }
+                    )}
+                  </tr>
+                  {crossTabData.results.map((result, resultIndex) => {
+                    return (
+                      <tr key={resultIndex}>
+                        {result.featureValues.map(
+                          (featureValue, featureIndex) => {
+                            return (
+                              <td key={featureIndex} style={styles.tableCell}>
+                                {featureValue}
+                              </td>
+                            );
+                          }
+                        )}
+                        {crossTabData.uniqueLabelValues.map(
+                          (uniqueLabelValue, labelIndex) => {
+                            return (
+                              <td
+                                key={labelIndex}
+                                style={this.getCellStyle(
+                                  result.labelPercents[uniqueLabelValue]
+                                )}
+                              >
+                                {result.labelPercents[uniqueLabelValue] || 0}%
+                              </td>
+                            );
+                          }
+                        )}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </ScrollableContent>
           </div>
         )}
       </div>
