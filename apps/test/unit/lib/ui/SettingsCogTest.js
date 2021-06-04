@@ -1,5 +1,5 @@
 import React from 'react';
-import Portal from 'react-portal';
+import {Portal} from 'react-portal';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import msg from '@cdo/locale';
@@ -12,66 +12,25 @@ import * as assets from '@cdo/apps/code-studio/assets';
 describe('SettingsCog', () => {
   it('renders as a FontAwesome icon', () => {
     const wrapper = mount(<SettingsCog />);
-    expect(wrapper.find(FontAwesome)).to.have.length(1);
+    expect(wrapper.find(FontAwesome)).to.have.lengthOf(1);
   });
 
   it('opens the menu when the cog is clicked', () => {
     const wrapper = mount(<SettingsCog />);
-    var portal = wrapper.find(Portal).first();
-    expect(portal).to.have.prop('isOpened', false);
+    expect(wrapper.find(Portal)).to.be.empty;
     wrapper.instance().open();
     wrapper.update();
-    portal = wrapper.find(Portal).first();
-    expect(portal).to.have.prop('isOpened', true);
+    expect(wrapper.find(Portal)).to.have.lengthOf(1);
   });
 
   it('can close the menu', () => {
-    // (It turns out testing the portal auto-close is difficult)
     const wrapper = mount(<SettingsCog />);
     wrapper.instance().open();
     wrapper.update();
-    var menu = wrapper.find(Portal).first();
-    expect(menu).to.have.prop('isOpened', true);
+    expect(wrapper.find(Portal)).to.have.lengthOf(1);
     wrapper.instance().close();
     wrapper.update();
-    menu = wrapper.find(Portal).first();
-    expect(menu).to.have.prop('isOpened', false);
-  });
-
-  it('works around buggy portal behavior', done => {
-    // This fragile test covers a workaround for an event-handling bug in
-    // react-portal that prevents closing the portal by clicking on the icon
-    // that opened it.
-    // @see https://github.com/tajo/react-portal/issues/140
-    // Can probably remove this test if that bug gets fixed and our code
-    // gets simplified.
-    const wrapper = mount(<SettingsCog />);
-    var cog = wrapper.find(FontAwesome).first();
-    var menu = wrapper.find(Portal).first();
-    expect(wrapper).to.have.state('canOpen', true);
-    expect(cog.prop('onClick')).to.be.a.function;
-
-    // Open the menu
-    cog.simulate('click');
-    wrapper.update();
-    cog = wrapper.find(FontAwesome).first();
-    expect(wrapper).to.have.state('canOpen', false);
-    expect(cog.prop('onClick')).to.be.undefined;
-
-    // Close the menu
-    wrapper.instance().close();
-    wrapper.update();
-    cog = wrapper.find(FontAwesome).first();
-    menu = wrapper.find(Portal).first();
-    // This doesn't happen right away - that's our workaround, so we don't
-    // re-open the menu in the same moment.
-    expect(menu).to.have.prop('isOpened', false);
-    expect(cog.prop('onClick')).to.be.undefined;
-    setTimeout(() => {
-      expect(wrapper).to.have.state('canOpen', true);
-      expect(cog.prop('onClick')).to.be.a.function;
-      done();
-    }, 0);
+    expect(wrapper.find(Portal)).to.be.empty;
   });
 
   it('does not show maker toggle when "showMakerToggle" is false', () => {
@@ -80,16 +39,12 @@ describe('SettingsCog', () => {
   });
 
   describe('menu items', () => {
-    let wrapper, portal;
+    let wrapper;
 
     beforeEach(() => {
       wrapper = mount(<SettingsCog showMakerToggle={true} />);
-      portal = wrapper.find(Portal).first();
-      expect(portal).to.have.prop('isOpened', false);
       wrapper.instance().open();
       wrapper.update();
-      portal = wrapper.find(Portal).first();
-      expect(portal).to.have.prop('isOpened', true);
     });
 
     describe('manage assets', () => {
@@ -111,8 +66,7 @@ describe('SettingsCog', () => {
       it('closes the menu when clicked', () => {
         wrapper.instance().manageAssets();
         wrapper.update();
-        portal = wrapper.find(Portal).first();
-        expect(portal).to.have.prop('isOpened', false);
+        expect(wrapper.find(Portal)).to.be.empty;
       });
     });
 
