@@ -926,7 +926,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     game = create(:game)
     (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
     script_dsl = ScriptDSL.parse(
-      "lesson 'Milestone Stage 1', display_name: 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Stage 2', display_name: 'Milestone Stage 2'; level 'Level 3'",
+      "lesson 'Milestone Lesson 1', display_name: 'Milestone Lesson 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Lesson 2', display_name: 'Milestone Lesson 2'; level 'Level 3'",
       "a filename"
     )
     script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
@@ -941,7 +941,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # find localized test strings for custom lesson names in script
     assert response.key?('lesson_changing'), "No key 'lesson_changing' in response #{response.inspect}"
-    assert_equal('milestone-stage-1', response['lesson_changing']['previous']['name'])
+    assert_equal('milestone-lesson-1', response['lesson_changing']['previous']['name'])
   end
 
   test 'milestone post respects level_id for active level' do
