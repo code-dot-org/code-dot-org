@@ -59,6 +59,7 @@ export default storybook => {
         story: () => (
           <UnconnectedFeedbackDownload
             sectionName={'Test Section'}
+            onClickDownload={() => {}}
             exportableFeedbackData={exampleExportableFeedbackData}
             isCurrentScriptCSD={true}
             scriptName={'csd8-2011'}
