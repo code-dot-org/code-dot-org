@@ -48,6 +48,9 @@ class Foorm::Library < ApplicationRecord
         library.published = published
         library.save! if library.changed?
 
+        # remove existing questions to catch any that were removed in the file
+        library.library_questions.destroy_all
+
         source_questions["pages"].map do |page|
           page["elements"].map do |element|
             question_name = element["name"]
