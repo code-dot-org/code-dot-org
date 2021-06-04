@@ -142,7 +142,7 @@ class ScriptEditor extends React.Component {
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
-      lessonDescriptions: this.props.i18nData.stageDescriptions,
+      lessonDescriptions: this.props.i18nData.lessonDescriptions,
       teacherResources: teacherResources,
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
@@ -711,7 +711,7 @@ class ScriptEditor extends React.Component {
           {!this.props.isMigrated && (
             <LessonDescriptions
               scriptName={this.props.name}
-              currentDescriptions={this.props.i18nData.stageDescriptions}
+              currentDescriptions={this.props.i18nData.lessonDescriptions}
               updateLessonDescriptions={(
                 lessonDescriptions,
                 hasImportedLessonDescriptions

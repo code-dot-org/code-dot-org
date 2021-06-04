@@ -63,7 +63,7 @@ describe('progressHelpers', () => {
       );
     });
 
-    it('returns true for a lockable stage as teacher', () => {
+    it('returns true for a lockable lesson as teacher', () => {
       const localState = {
         ...state,
         lessonLock: {
@@ -157,8 +157,8 @@ describe('progressHelpers', () => {
   });
 
   describe('lessonIsLockedForAllStudents', () => {
-    const unlockedStageId = 1000;
-    const lockedStageId = 1111;
+    const unlockedLessonId = 1000;
+    const lockedLessonId = 1111;
 
     const stateForSelectedSection = sectionId => ({
       teacherSections: {
@@ -167,7 +167,7 @@ describe('progressHelpers', () => {
       lessonLock: {
         lessonsBySectionId: {
           11: {
-            [lockedStageId]: [
+            [lockedLessonId]: [
               {
                 locked: true,
                 name: 'student1'
@@ -177,7 +177,7 @@ describe('progressHelpers', () => {
                 name: 'student2'
               }
             ],
-            [unlockedStageId]: [
+            [unlockedLessonId]: [
               {
                 locked: true,
                 name: 'student1'
@@ -195,11 +195,11 @@ describe('progressHelpers', () => {
     it('returns false when we have no selected section', () => {
       const state = stateForSelectedSection(null);
       assert.strictEqual(
-        lessonIsLockedForAllStudents(lockedStageId, state),
+        lessonIsLockedForAllStudents(lockedLessonId, state),
         false
       );
       assert.strictEqual(
-        lessonIsLockedForAllStudents(unlockedStageId, state),
+        lessonIsLockedForAllStudents(unlockedLessonId, state),
         false
       );
     });
@@ -207,7 +207,7 @@ describe('progressHelpers', () => {
     it('returns false when the selected section has an unlocked student', () => {
       const state = stateForSelectedSection(11);
       assert.strictEqual(
-        lessonIsLockedForAllStudents(unlockedStageId, state),
+        lessonIsLockedForAllStudents(unlockedLessonId, state),
         false
       );
     });
@@ -215,7 +215,7 @@ describe('progressHelpers', () => {
     it('returns true when the selected section has no unlocked students', () => {
       const state = stateForSelectedSection(11);
       assert.strictEqual(
-        lessonIsLockedForAllStudents(lockedStageId, state),
+        lessonIsLockedForAllStudents(lockedLessonId, state),
         true
       );
     });

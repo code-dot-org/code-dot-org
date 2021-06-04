@@ -24,7 +24,7 @@ describe('StandardsReportCurrentCourseInfo', () => {
         excludeCsfColumnInLegend: false,
         title: 'Express Course (2019)',
         path: '//localhost-studio.code.org:3000/s/express-2019',
-        stages: []
+        lessons: []
       },
       scriptDescription: 'This script teaches things',
       numStudentsInSection: 15,
