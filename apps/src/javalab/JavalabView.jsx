@@ -3,10 +3,8 @@ import JavalabConsole from './JavalabConsole';
 import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
 import JavalabSettings from './JavalabSettings';
-import JavalabButton from './JavalabButton';
 import {appendOutputLog, setIsDarkMode} from './javalabRedux';
 import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
@@ -30,6 +28,11 @@ class JavalabView extends React.Component {
     appendOutputLog: PropTypes.func,
     setIsDarkMode: PropTypes.func,
     channelId: PropTypes.string
+  };
+
+  state = {
+    isRunning: false,
+    isTesting: false
   };
 
   componentDidMount() {
@@ -65,8 +68,6 @@ class JavalabView extends React.Component {
     const {
       isDarkMode,
       onCommitCode,
-      onContinue,
-      onRun,
       onInputMessage,
       handleVersionHistory,
       visualization
@@ -107,33 +108,10 @@ class JavalabView extends React.Component {
               onCommitCode={onCommitCode}
               handleVersionHistory={handleVersionHistory}
             />
-            <div style={styles.consoleAndButtons}>
-              <div style={styles.buttons}>
-                <JavalabButton
-                  icon={<FontAwesome icon="stop" className="fa-2x" />}
-                  text="Stop"
-                  style={this.getButtonStyles()}
-                  onClick={() => {}}
-                />
-                <JavalabButton
-                  icon={<FontAwesome icon="check" className="fa-2x" />}
-                  text="Continue"
-                  style={this.getButtonStyles()}
-                  onClick={onContinue}
-                />
-              </div>
-              <div style={styles.buttons}>
-                <JavalabButton
-                  icon={<FontAwesome icon="play" className="fa-2x" />}
-                  text="Run"
-                  style={this.getButtonStyles()}
-                  onClick={onRun}
-                />
-              </div>
-              <div style={styles.consoleStyle}>
-                <JavalabConsole onInputMessage={onInputMessage} />
-              </div>
-            </div>
+            <JavalabConsole
+              onInputMessage={onInputMessage}
+              style={styles.console}
+            />
           </div>
         </div>
       </StudioAppWrapper>
@@ -171,23 +149,13 @@ const styles = {
     display: 'flex',
     margin: 15
   },
-  consoleAndButtons: {
-    marginTop: 15,
-    display: 'flex'
-  },
-  consoleStyle: {
-    flexGrow: 1
-  },
-  buttons: {
-    marginRight: 15,
-    height: 75,
-    display: 'flex',
-    flexDirection: 'column'
-  },
   button: {
     all: {width: 95},
     light: {backgroundColor: color.cyan},
     dark: {backgroundColor: color.darkest_gray}
+  },
+  console: {
+    marginTop: 15
   },
   clear: {
     clear: 'both'
