@@ -75,14 +75,15 @@ class CrossTab extends Component {
                   </thead>
                   <tbody>
                     <tr>
-                      <td
-                        style={{
-                          ...styles.bold,
-                          ...styles.crossTabLeftColumn
-                        }}
-                        rowSpan={crossTabData.results.length + 1}
-                      >
-                        {crossTabData.featureNames[0]}
+                      <td rowSpan={crossTabData.results.length + 1}>
+                        <div
+                          style={{
+                            ...styles.bold,
+                            ...styles.crossTabLeftColumn
+                          }}
+                        >
+                          {crossTabData.featureNames[0]}
+                        </div>
                       </td>
                       <td />
                       {crossTabData.uniqueLabelValues.map(
