@@ -8,15 +8,20 @@
   padding: 0;
 }
 
-.cm-content, .cm-gutter { 
+.cm-content,
+.cm-gutter {
   min-height: 390px;
 }
 
-.cm-gutters { margin: 1px; }
+.cm-gutters {
+  margin: 1px;
+}
 
-.cm-scroller { overflow: auto; }
+.cm-scroller {
+  overflow: auto;
+}
 
-.cm-wrap { 
+.cm-wrap {
   max-height: 100%;
 }
 
@@ -37,7 +42,9 @@
 }
 
 // Selected tab
-.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
   margin-right: 0px;
   color: black;
 }
@@ -55,7 +62,9 @@
 // This class is used in the editor tabs when we're in dark mode
 .darkmode {
   // The selected tab
-  .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+  .nav-tabs > .active > a,
+  .nav-tabs > .active > a:hover,
+  .nav-tabs > .active > a:focus {
     border-width: 0px;
     background-color: rgb(40, 44, 52);
     color: white;
@@ -73,7 +82,7 @@
 
 /* Slider. */
 .sliderContainer {
-  float: left
+  float: left;
 }
 .sliderTrack {
   stroke: #aaa;
@@ -88,4 +97,13 @@
 }
 .sliderKnob:hover {
   fill: #eee;
+}
+
+.noBorder {
+  border: none;
+
+  &:active {
+    // This is required because common.scss applies an !important border on all active button elements :(
+    border: none !important;
+  }
 }
