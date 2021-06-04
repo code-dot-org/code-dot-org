@@ -1,26 +1,34 @@
 name 'OPD-K5 Outline_copy_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Overview
+# Online Course Overview
 
-## Implementing and Teaching CS Fundamentals
+Below is an outline of the lessons included in this online course, along with a brief description of what to expect in each lesson.  Time to complete each lesson and part is suggested.  However, feel free to start and stop at your own pace and take more or less time to meet your needs.
 
-### Lesson 1: Introduction (15 minutes)
-- Review the course details
-- Get know Code.org, CS Fundamentals, and what computer science is about
-- Plan your participation in this course
+## Part I:  Implementing and Teaching CS Fundamentals (90 minutes total)
 
-### Lesson 2: Getting Started (15-20 minutes)
-- Become familiar with the content and organization of the Computer Science Fundamentals courses
-- Identify which course is most appropriate for your students
-- Understand the importance of the teacher in the Computer Science Fundamentals curriculum
-- Understand different types of Computer Science Fundamentals lessons
+Part I:  Implementing and Teaching Computer Science Fundamentals focuses on steps, practices, and strategies to help you get started creating and establishing an inclusive CS Fundamentals classroom. 
 
-### Lesson 3:  CS Teaching and Student Practices
+### **Lesson 1: Introduction** (15 minutes)
 
-### Lesson 4: Implementation Approaches and Barriers
+Lesson 1:  Introduction provides a brief overview of Code.org, Computer Science Fundamentals courses, and computer science.
 
-### Lesson 5:  Lesson Planning
+### **Lesson 2: Getting Started** (20 minutes)
+
+Lesson 2:  Getting Started includes instructions to help you get started using teacher tools and resources.  Lesson 2 also provides where to find help and support after completing this online course.  In addition, Lesson 2 introduces the organization and content of Computer Science Fundamentals courses.
+
+
+### **Lesson 3:  CS Teaching and Student Practices** (15 minutes) 
+
+Lesson 3: CS Teaching and Student Practices focuses on CS teaching and student practices that may be applied to any Computer Science Fundamentals lesson. Lesson 3 also introduces two CS teaching strategies Debugging and Pair Programming built into lessons.
+
+### **Lesson 4: Implementation Approaches and Barriers** (15 minutes) 
+
+Lesson 4:  Implementation Approaches and Barriers provides a strategy for applying an equity lens to consider when implementing CS Fundamentals courses with your students.  In addition, Lesson 4 identifies the most common implementation barriers to help you further prepare for implementing CS Fundamentals courses.
+
+### **Lesson 5:  Lesson Planning** (25 minutes)
+
+Lesson 5:  Lesson Planning guides you through preparing a Computer Science Fundamentals lesson to try out with your students.
 
 ## CS Fundamentals Concepts
 
