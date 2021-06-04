@@ -67,7 +67,7 @@ const createStore = ({
   store.dispatch(
     initProgress({
       scriptName: 'csp1',
-      stages: lessons
+      lessons: lessons
     })
   );
   if (teacherVerified) {
@@ -93,12 +93,12 @@ const createStore = ({
         studentCount: 4,
         code: 'TQGSJR',
         providerManaged: false,
-        stages: {},
+        lessons: {},
         tts_autoplay_enabled: false
       }
     };
     lessons.forEach(lesson => {
-      sections[11].stages[lesson.id] = [0, 1, 2].map(id => ({
+      sections[11].lessons[lesson.id] = [0, 1, 2].map(id => ({
         locked: true,
         name: `student${id}`,
         readonly_answers: false

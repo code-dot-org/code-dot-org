@@ -1,0 +1,116 @@
+name 'OPD-K5 CSFCourses_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Computer Science Fundamentals Courses
+
+CS Fundamentals is built for elementary school educators and students.  Teachers do not need previous computer science experience and we encourage you to learn along with your students. After completing this online course, you'll be ready to teach one or more of the following Code.org Computer Science Fundamentals courses in your classroom.
+
+The table below outlines the number of lessons and CS concepts within each course.  Which course or courses will you be implementing and teaching?
+
+<table style="width:100%; border-style:none;">
+  <tr>
+    <th style="background-color:#ff9900; text-align:center; border-style:none; font-weight:bold;""">
+      <b><a href="https://curriculum.code.org/csf-20/coursea/" target="blank" rel="noopener noreferrer" style="color: white">Course A</a></b><br/>
+      <i>Kindergarten</i>
+    </th>
+    <th style="background-color:#f1c232; text-align:center; border-style:none;""">
+        <a href="https://curriculum.code.org/csf-20/courseb/" target="blank" rel="noopener noreferrer" style="color: white">Course B</a><br/>
+        <i>1st Grade</i>
+    </th>
+    <th style="background-color:#b8bf0d; text-align:center; border-style:none;""">
+        <a href="https://curriculum.code.org/csf-20/coursec/" target="blank" rel="noopener noreferrer" style="color: white">Course C</a><br/>
+        <i>2nd Grade</i>
+    </th>
+    <th style="background-color:#53bac2; text-align:center; border-style:none;""">
+        <a href="https://curriculum.code.org/csf-20/coursed/" target="blank" rel="noopener noreferrer" style="color: white">Course D</a><br/>
+        <i>3rd Grade</i>
+    </th>
+    <th style="background-color:#0094ca; text-align:center; border-style:none;""">
+        <a href="https://curriculum.code.org/csf-20/coursee/" target="blank" rel="noopener noreferrer" style="color: white">Course E</a><br/>
+        <i>4th Grade</i>
+    </th>
+    <th style="background-color:#7664a0; text-align:center; border-style:none;""">
+        <a href="https://curriculum.code.org/csf-20/coursef/" target="blank" rel="noopener noreferrer" style="color: white">Course F</a><br/>
+        <i>5th Grade</i>
+    </th>
+  </tr>
+  <tr>
+    <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">13 lessons, ~13 hours to complete</td>
+    <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">13 lessons, ~13 hours to complete</td>
+    <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">16 lessons, ~16 hours to complete</td>
+    <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">17 lessons, ~17 hours to complete</td>
+    <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~18-20 hours to complete</td>
+    <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">20 lessons, ~20-22 hours to complete</td>
+  </tr>
+  <tr>
+    <td colspan="6" style="text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;">Concepts</td>
+  </tr>
+  <tr>
+    <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+        <li>Digital Citizenship</li>
+        <li>Sequencing</li>
+        <li>Loops</li>
+        <li>Events</li>
+        <li>End of Course Project</li>
+      </ul>
+    </td>
+    <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+        <li>Digital Citizenship</li>
+        <li>Sequencing</li>
+        <li>Loops</li>
+        <li>Impacts of Computing</li>
+        <li>Events</li>
+        <li>End of Course Project</li>
+      </ul>
+    </td>
+    <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+        <li>Digital Citizenship</li>
+        <li>Sequencing</li>
+        <li>Loops</li>
+        <li>Events</li>
+        <li>Data</li>
+        <li>End of Course Project</li>
+      </ul>
+    </td>
+    <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+        <li>Digital Citizenship</li>
+        <li>Sequencing</li>
+        <li>Events</li>
+        <li>Nest Loops</li>
+        <li>Conditionals</li>
+        <li>End of Course Project</li>
+      </ul>
+    </td>
+    <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+        <li>Sprites</li>
+        <li>Digital Citizenship</li>
+        <li>Nested Loops</li>
+        <li>Functions</li>
+        <li>Conditionals</li>
+        <li>Impacts of Computing</li>
+        <li>End of Course Project</li>
+      </ul>
+    </td>
+    <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+         <li>Sprites</li>
+        <li>Digital Citizenship</li>
+        <li>Variables</li>
+        <li>For Loops</li>
+         <li>Data & Simulations</li>
+        <li>End of Course Project</li>
+        </ul>
+    </td>
+</table>
+<br/>
+
+**For more information about what is in each course, check out the <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="blank" rel="noopener noreferrer">Computer Science Fundamentals Curriculum Guide</a>.**
+
+
+
+MARKDOWN
