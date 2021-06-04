@@ -47,7 +47,7 @@ export default function reducer(state = initialState, action) {
       ...state,
       lessonsBySectionId: _.mapValues(
         action.sections,
-        section => section.stages
+        section => section.lessons
       )
     };
   }

@@ -101,7 +101,7 @@ function getLessonsForCurrentScript(state) {
   ) {
     const lessons =
       state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-        .stages;
+        .lessons;
     return lessons;
   }
 }
