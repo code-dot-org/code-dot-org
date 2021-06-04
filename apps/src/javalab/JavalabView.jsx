@@ -10,6 +10,7 @@ import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import ControlButtons from './ControlButtons';
+import JavalabButton from './JavalabButton';
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -86,6 +87,7 @@ class JavalabView extends React.Component {
       isDarkMode,
       onCommitCode,
       onInputMessage,
+      onContinue,
       handleVersionHistory,
       visualization
     } = this.props;
@@ -105,7 +107,14 @@ class JavalabView extends React.Component {
             className="responsive"
             style={styles.instructionsAndPreview}
           >
-            <JavalabSettings>{this.renderSettings()}</JavalabSettings>
+            <div style={styles.buttons}>
+              <JavalabSettings>{this.renderSettings()}</JavalabSettings>
+              <JavalabButton
+                text="Continue"
+                onClick={onContinue}
+                style={styles.continue}
+              />
+            </div>
             <TopInstructions
               mainStyle={styles.instructions}
               standalone
@@ -181,6 +190,14 @@ const styles = {
   },
   clear: {
     clear: 'both'
+  },
+  buttons: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  continue: {
+    backgroundColor: color.orange,
+    fontSize: 15
   }
 };
 
