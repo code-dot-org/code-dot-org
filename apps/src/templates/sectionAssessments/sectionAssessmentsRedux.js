@@ -1000,7 +1000,7 @@ export const getExportableSurveyData = state => {
   for (let i = 0; i < currentSurvey.levelgroup_results.length; i++) {
     const questionResults = currentSurvey.levelgroup_results[i];
     const rowBase = {
-      stage: currentSurvey.lesson_name,
+      lesson: currentSurvey.lesson_name,
       questionNumber: questionResults.question_index + 1,
       questionText: questionResults.question
     };
