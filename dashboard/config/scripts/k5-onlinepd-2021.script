@@ -2,14 +2,13 @@ login_required true
 version_year '2021'
 
 lesson_group 'Implementing and Teaching CS', display_name: 'Part I:  Implementing and Teaching CS'
-lesson 'Welcome to "Teaching Computer Science Fundamentals"', display_name: 'Introduction', has_lesson_plan: false
+lesson 'Welcome to "Teaching Computer Science Fundamentals"', display_name: 'Welcome and Introduction', has_lesson_plan: false
+level 'OPD-K5 Participation_copy_2021'
+level 'OPD-K5 Outline_copy_2021'
 level 'OPD-K5 Why teach CS_copy_2021'
 level 'OPD-K5 WhatIsCSF_2021'
 level 'OPD-K5 About_copy_2021'
 level 'OPD-K5 WhatIsCS_2021'
-level 'OPD-K5 Outline_copy_2021'
-level 'OPD-K5 CS Tips_copy_2021'
-level 'OPD-K5 Participation_copy_2021'
 level 'OPD-K5 whats your plan_2021'
 
 lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
@@ -27,12 +26,10 @@ level 'OPD-K5 DebuggingPairProgramming', progression: 'CS Teaching and Student P
 level 'OPD-K5 DebuggingPairProgramming_Reflection', progression: 'CS Teaching and Student Practices'
 
 lesson 'Implementation Approaches and Barriers', display_name: 'Implementation Approaches and Barriers', has_lesson_plan: false
-level 'OPD-K5 AddressingImplementationBarriers', progression: 'Implementation Approaches and Barriers'
 level 'OPD-K5 AddressingImplementation1', progression: 'Implementation Approaches and Barriers'
 level 'OPD-K5 ImplementationApproach_Reflection', progression: 'Implementation Approaches and Barriers'
 level 'OPD-K5 ImplementationBarriers1_Reflection', progression: 'Implementation Approaches and Barriers'
 level 'OPD-K5 ImplementationBarriers2_Reflection', progression: 'Implementation Approaches and Barriers'
-level 'OPD-K5 ImplementationBarriers1', progression: 'Implementation Approaches and Barriers'
 
 lesson 'Lesson Planning', display_name: 'Lesson Planning', has_lesson_plan: false
 level 'OPD-K5 LessonPlanning1', progression: 'Lesson Planning'
