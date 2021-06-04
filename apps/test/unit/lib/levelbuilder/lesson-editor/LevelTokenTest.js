@@ -85,6 +85,7 @@ describe('LevelTokenContents', () => {
       .false;
     expect(wrapper.containsMatchingElement(<span>bonus</span>)).to.be.false;
     expect(wrapper.containsMatchingElement(<span>challenge</span>)).to.be.false;
+    expect(wrapper.containsMatchingElement(<span>variants</span>)).to.be.false;
   });
 
   it('shows assessment indicator when assessment', () => {
@@ -112,6 +113,20 @@ describe('LevelTokenContents', () => {
       <LevelTokenContents {...defaultProps} scriptLevel={tempScriptLevel} />
     );
     expect(wrapper.containsMatchingElement(<span>challenge</span>)).to.be.true;
+  });
+
+  it('shows variants indicator when level variants are present', () => {
+    let tempScriptLevel = _.cloneDeep(defaultScriptLevel);
+    tempScriptLevel.levels.push({
+      id: '2002',
+      name: 'Level Two',
+      url: '/path/to/edit/2'
+    });
+
+    const wrapper = shallow(
+      <LevelTokenContents {...defaultProps} scriptLevel={tempScriptLevel} />
+    );
+    expect(wrapper.containsMatchingElement(<span>variants</span>)).to.be.true;
   });
 
   it('calls toggleExpand when level name is clicked', () => {
