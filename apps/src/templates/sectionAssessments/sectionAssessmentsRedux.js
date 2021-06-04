@@ -1057,7 +1057,7 @@ export const getExportableAssessmentData = state => {
         const response = studentAssessment.level_results[questionIndex];
         responses.push({
           studentName: studentObject.student_name,
-          stage: studentAssessment.stage,
+          lesson: studentAssessment.lesson,
           timestamp: studentAssessment.timestamp,
           question: questionIndex + 1,
           response:
