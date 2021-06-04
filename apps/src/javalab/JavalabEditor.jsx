@@ -6,7 +6,8 @@ import {
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   renameFile,
-  removeFile
+  removeFile,
+  setRenderedHeight
 } from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {
@@ -34,14 +35,15 @@ import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 const RENAME_FILE = 'renameFile';
 const DELETE_FILE = 'deleteFile';
 const CREATE_FILE = 'createFile';
-const MIN_HEIGHT = 50;
-const MAX_HEIGHT = 600;
+const MIN_HEIGHT = 100;
+const MAX_HEIGHT = 500;
 
 class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
     // populated by redux
+    setRenderedHeight: PropTypes.func.isRequired,
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
@@ -50,6 +52,7 @@ class JavalabEditor extends React.Component {
     sources: PropTypes.object,
     validation: PropTypes.object,
     isDarkMode: PropTypes.bool,
+    height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
     handleVersionHistory: PropTypes.func.isRequired
   };
@@ -89,7 +92,6 @@ class JavalabEditor extends React.Component {
     this.state = {
       orderedTabKeys,
       fileMetadata,
-      height: styles.editor.height,
       showMenu: false,
       contextTarget: null,
       openDialog: null,
@@ -403,18 +405,12 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  setRenderedHeight(height) {
-    this.setState({
-      height: height
-    });
-  }
-
   /**
    * Returns the top Y coordinate of the instructions that are being resized
    * via a call to handleHeightResize from HeightResizer.
    */
   getItemTop = () => {
-    return this.div.getBoundingClientRect().top;
+    return this.javalabEditor.getBoundingClientRect().top;
   };
 
   /**
@@ -426,7 +422,7 @@ class JavalabEditor extends React.Component {
     let newHeight = Math.max(MIN_HEIGHT, desiredHeight);
     newHeight = Math.min(newHeight, MAX_HEIGHT);
 
-    this.setRenderedHeight(newHeight);
+    this.props.setRenderedHeight(newHeight);
   };
 
   render() {
@@ -445,7 +441,8 @@ class JavalabEditor extends React.Component {
       onCommitCode,
       isDarkMode,
       sources,
-      isEditingStartSources
+      isEditingStartSources,
+      height
     } = this.props;
 
     let menuStyle = {
@@ -456,7 +453,7 @@ class JavalabEditor extends React.Component {
       backgroundColor: '#F0F0F0'
     };
     return (
-      <div style={this.props.style}>
+      <div style={this.props.style} ref={ref => (this.javalabEditor = ref)}>
         <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
@@ -564,6 +561,11 @@ class JavalabEditor extends React.Component {
             </Tab.Content>
           </div>
         </Tab.Container>
+        <HeightResizer
+          resizeItemTop={this.getItemTop}
+          position={height}
+          onResize={this.handleHeightResize}
+        />
         <div style={menuStyle}>
           <JavalabEditorTabMenu
             cancelTabMenu={this.cancelTabMenu}
@@ -613,11 +615,6 @@ class JavalabEditor extends React.Component {
           saveButtonText="Create"
           errorMessage={newFileError}
         />
-        <HeightResizer
-          resizeItemTop={this.getItemTop}
-          position={this.state.height}
-          onResize={this.handleHeightResize}
-        />
       </div>
     );
   }
@@ -626,10 +623,10 @@ class JavalabEditor extends React.Component {
 const styles = {
   editor: {
     width: '100%',
-    height: 400,
     maxHeight: MAX_HEIGHT,
     minHeight: MIN_HEIGHT,
-    backgroundColor: color.white
+    backgroundColor: color.white,
+    overflowY: 'scroll'
   },
   darkBackground: {
     backgroundColor: color.dark_slate_gray
@@ -672,6 +669,7 @@ export default connect(
     sources: state.javalab.sources,
     validation: state.javalab.validation,
     isDarkMode: state.javalab.isDarkMode,
+    height: state.javalab.renderedEditorHeight,
     isEditingStartSources: state.pageConstants.isEditingStartSources
   }),
   dispatch => ({
@@ -682,6 +680,7 @@ export default connect(
       dispatch(sourceValidationUpdated(filename, isValidation)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
-    removeFile: filename => dispatch(removeFile(filename))
+    removeFile: filename => dispatch(removeFile(filename)),
+    setRenderedHeight: height => dispatch(setRenderedHeight(height))
   })
 )(Radium(JavalabEditor));
