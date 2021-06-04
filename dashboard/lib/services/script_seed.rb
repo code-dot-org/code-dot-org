@@ -227,6 +227,8 @@ module Services
         seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
         seed_context.lessons_opportunity_standards = import_lessons_opportunity_standards(lessons_opportunity_standards_data, seed_context)
 
+        seed_context.script.prevent_duplicate_levels
+
         seed_context.script
       end
     end
