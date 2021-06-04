@@ -93,7 +93,9 @@ export function getDetailCellFormatters(levelProgressByStudent, section) {
 // Formatter for the icons in the extra header on the detail view
 export function getLevelIconHeaderFormatter(scriptData) {
   return (_, {columnIndex}) => (
-    <ProgressTableLevelIconSet levels={scriptData.stages[columnIndex].levels} />
+    <ProgressTableLevelIconSet
+      levels={scriptData.lessons[columnIndex].levels}
+    />
   );
 }
 
