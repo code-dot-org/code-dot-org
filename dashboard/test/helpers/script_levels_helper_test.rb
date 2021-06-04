@@ -35,13 +35,13 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     assert_equal '//test.code.org/api/hour/finish/artist', Script.get_from_cache(Script::ARTIST_NAME).hoc_finish_url
   end
 
-  test 'script name instead of stage name in header for HOC' do
+  test 'script name instead of lesson name in header for HOC' do
     stubs(:current_user).returns(nil)
     script_level = Script.find_by_name(Script::HOC_NAME).get_script_level_by_chapter 1
     assert_equal 'Classic Maze', script_level.lesson.summarize[:title]
   end
 
-  test 'show stage name in header for multi-stage script' do
+  test 'show lesson name in header for multi-lesson script' do
     stubs(:current_user).returns(nil)
     script = Script.find_by_name(Script::COURSE4_NAME)
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 3, 1, false

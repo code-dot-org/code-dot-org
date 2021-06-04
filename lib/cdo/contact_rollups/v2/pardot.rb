@@ -270,7 +270,7 @@ class PardotV2
   # @param email [String]
   # @return [Array<String>]
   def self.retrieve_pardot_ids_by_email(email)
-    doc = post_with_auth_retry "#{PROSPECT_READ_URL}/#{email}"
+    doc = post_with_auth_retry "#{PROSPECT_READ_URL}/#{URI.escape(email)}"
     doc.xpath('//prospect/id').map(&:text)
   rescue StandardError => e
     # If the input email does not exist, Pardot will response with

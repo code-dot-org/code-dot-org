@@ -888,7 +888,6 @@ class Script < ApplicationRecord
     summarized_lesson_levels = lesson_levels.map do |lesson|
       {
         lessonNumber: lesson[:lessonNumber],
-        stageNumber: lesson[:lessonNumber], #TODO: remove once launched
         levels: lesson[:levels].map(&:summarize_as_bonus)
       }
     end
@@ -1570,7 +1569,7 @@ class Script < ApplicationRecord
     data[:student_description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
 
     if include_lessons
-      data[:stageDescriptions] = lessons.map do |lesson|
+      data[:lessonDescriptions] = lessons.map do |lesson|
         {
           key: lesson.key,
           name: lesson.name,
