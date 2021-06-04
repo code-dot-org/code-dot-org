@@ -711,7 +711,7 @@ class Blockly < Level
   end
 
   def shared_functions
-    Rails.cache.fetch("shared_functions/#{I18n.locale}/#{type}", force: !Script.should_cache?) do
+    Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
     end.join
   end
@@ -729,6 +729,12 @@ class Blockly < Level
         next unless arg["name"] == I18n.t('behaviors.this_sprite', locale: :en)
         arg["name"] = I18n.t('behaviors.this_sprite')
       end
+
+      behavior.xpath(".//title[@name=\"NAME\"]").each do |name|
+        localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
+        name.content = localized_name if localized_name
+      end
+
       behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
         next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
         parameter.content = I18n.t('behaviors.this_sprite')
