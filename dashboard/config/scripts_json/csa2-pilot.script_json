@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-28 15:29:25 UTC",
+    "serialized_at": "2021-06-04 15:13:02 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -1305,7 +1305,13 @@
       "key": "6aee9c96-125c-41c8-9285-de7cf3c0fc99",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 2 and 3 on Code Studio. Students independently complete the Check for Understanding on Level 2, then complete Level 3 with a partner, where they assign new values to existing variables and create another `Painter` object."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 2 and 3 on Code Studio. Students independently complete the Check for Understanding on Level 2, then complete Level 3 with a partner, where they assign new values to existing variables and create another `Painter` object.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Collect the Variables Manipulatives. These will be reused in Unit 3."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6aee9c96-125c-41c8-9285-de7cf3c0fc99",

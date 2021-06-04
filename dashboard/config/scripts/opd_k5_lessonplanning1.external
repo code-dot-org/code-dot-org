@@ -1,21 +1,22 @@
 name 'OPD-K5 LessonPlanning1'
 skip_dialog true
 markdown <<MARKDOWN
-## Considerations for Lesson Planning
-**Total Suggested Time:**
+# Planning a Lesson
 
-Are you familiar with Code.org's Hour of Code? CS Fundamentals courses and Hour of Code are not the same thing.  Hour of Code *introduces* students to CS while CS Fundamentals courses *build* CS knowledge and skills.
+Are you familiar with Code.org's <a href="https://code.org/learn" target="blank" rel="noopener noreferrer">Hour of Code</a>?
 
-Let's dive into the CS Fundamentals course structure, lessons, and resources available to use as you plan.  
+![](https://images.code.org/6057f944128903c31113372130cec800-image-1622827222543.png)
 
-When planning a lesson consider the following:
+Computer Science Fundamentals courses and Hour of Code are not the same thing.  Hour of Code *introduces* students to CS while Computer Science Fundamentals courses *build* CS knowledge and skills.
 
-**CS Concepts and Skills**
-* What CS concept does the lesson introduce to students and how?
-* What CS skill does the lesson help students practice and how?
+Take this time now as an opportunity to find a lesson to try out with your students. 
+
+## Guidance for lesson implementation
+
+When planning to try out a lesson with your students keep in mind the following:
 
 **Logistics**
-* What classroom rountines or procedures are needed for the lesson?
+* What classroom routines or procedures are needed for the lesson?
 
 **CS Teaching Practices**
 * When will any of the following CS teaching practices be used during the lesson?
@@ -25,10 +26,29 @@ When planning a lesson consider the following:
     * Pair Programming
     * The Classroom Community (active learning, communication)
 
-**Assessment**
-* How will students share their thinking and demonstrate what they learned?
-
 **Inclusion**
 * How will the lesson be inclusive for students?
+
+## Accessing curriculum resources
+
+Here is a reminder from Lesson 2: Getting Started for how to navigate to the Course Overview page and access lesson plans and resources.
+
+* <a href="https://code.org" target="blank" rel="noopener noreferrer">Sign-in to Code.org</a>
+* Click on “Course Catalog” link on the top left side
+* Scroll down to “Full Course Catalog”
+* Click on “Learn More” within the Elementary School tile
+* Scroll down to the courses and choose a course
+* Click on “View Course” to go to the course overview page
+* Choose the lesson to plan for
+* Click on “View Lesson Plan” on the right side
+
+## Try the lesson out!
+
+Find a time to try the lesson out with your students.  After implementing the lesson with your students, reflect on:
+
+* how much time a lesson really takes.
+* how students engage and respond to the lesson.
+* how fun lessons are!
+
 
 MARKDOWN
