@@ -169,6 +169,9 @@ export class LevelTokenContents extends Component {
             )}
             {scriptLevel.bonus && <span style={styles.tag}>bonus</span>}
             {scriptLevel.challenge && <span style={styles.tag}>challenge</span>}
+            {scriptLevel.levels.length > 1 && (
+              <span style={styles.tag}>variants</span>
+            )}
           </span>
         </span>
         <div
