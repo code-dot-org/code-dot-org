@@ -20,33 +20,24 @@ export default class StudentSections extends Component {
       action: null,
       result: null,
       resultName: null,
-      resultId: null,
-      sectionCapacity: null
+      resultId: null
     };
   }
 
   updateSections = sections => this.setState({sections});
 
-  updateSectionsResult = (action, result, name, id, sectionCapacity = null) => {
+  updateSectionsResult = (action, result, name, id) => {
     this.setState({
       action: action,
       result: result,
       resultName: name,
-      resultId: id,
-      sectionCapacity: sectionCapacity
+      resultId: id
     });
   };
 
   render() {
     const {isTeacher} = this.props;
-    const {
-      sections,
-      action,
-      result,
-      resultName,
-      resultId,
-      sectionCapacity
-    } = this.state;
+    const {sections, action, result, resultName, resultId} = this.state;
     const enrolledInASection = sections.length > 0;
     const heading = isTeacher ? i18n.sectionsJoined() : i18n.sectionsTitle();
     const description = isTeacher ? '' : i18n.enrollmentDescription();
@@ -58,7 +49,6 @@ export default class StudentSections extends Component {
           result={result}
           name={resultName}
           id={resultId}
-          sectionCapacity={sectionCapacity}
         />
         {enrolledInASection && (
           <SectionsAsStudentTable
