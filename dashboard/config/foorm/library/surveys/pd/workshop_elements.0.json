@@ -531,47 +531,9 @@
           ]
         },
         {
-          "type": "panel",
-          "name": "instructional_focus_panel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "instructional_focus_statements",
-              "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">Instruction and class activities should focus on maintaining high standards and rigor so that students reach the highest level of achievement, even if some students struggle with the material. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">Instruction and class activities should focus on ensuring that students with the least prior knowledge and preparation are not left behind, even if that means that less material can be covered. </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
-            },
-            {
-              "type": "rating",
-              "name": "instructional_focus",
-              "title": "Instructional focus. 1. more material,some students struggle --- 5. less material, leave fewer behind",
-              "titleLocation": "hidden",
-              "minRateDescription": "Strongly aligned with A",
-              "maxRateDescription": "Strongly aligned with B"
-            }
-          ]
-        },
-        {
           "type": "html",
           "name": "instructional_focus_statements",
           "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">Instruction and class activities should focus on maintaining high standards and rigor so that students reach the highest level of achievement, even if some students struggle with the material. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">Instruction and class activities should focus on ensuring that students with the least prior knowledge and preparation are not left behind, even if that means that less material can be covered. </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
-        },
-        {
-          "type": "panel",
-          "name": "lead_learner_panel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "lead_learner_statements",
-              "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">\"I do not need to have deep expertise in computer science in order to successfully teach it. I have expertise in how to learn, and I can model that for my students as we learn the content together.\" </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">\"As the teacher, I need to have deep content expertise so that I can properly answer students’ questions and guide instruction appropriately.\"</span>\n                    \n                  </td>\n                </tr>\n              </tbody>\n</table>"
-            },
-            {
-              "type": "rating",
-              "name": "lead_learner",
-              "title": "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
-              "titleLocation": "hidden",
-              "minRateDescription": "Strongly aligned with A",
-              "maxRateDescription": "Strongly aligned with B"
-            }
-          ]
         },
         {
           "type": "panel",
@@ -825,25 +787,6 @@
           ]
         },
         {
-          "type": "panel",
-          "name": "prioritize_time_panel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "prioritize_time_statements",
-              "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">It’s important that the teacher prioritize their time and resources for students who have the most need. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">  \tThe teacher should ensure that their time, and students’ access to resources are distributed equally for all. </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
-            },
-            {
-              "type": "rating",
-              "name": "prioritize_time",
-              "title": "Prioritize Time. 1. prioritize most need --- 5. distribute equally",
-              "titleLocation": "hidden",
-              "minRateDescription": "Strongly aligned with A",
-              "maxRateDescription": "Strongly aligned with B"
-            }
-          ]
-        },
-        {
           "type": "html",
           "name": "prioritize_time_statements",
           "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">It’s important that the teacher prioritize their time and resources for students who have the most need. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">  \tThe teacher should ensure that their time, and students’ access to resources are distributed equally for all. </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
@@ -857,25 +800,6 @@
           "type": "html",
           "name": "question2",
           "html": "<h2>Facilitator Feedback</h2>\n<p>Please be thoughtful in your responses for each individual.</p>"
-        },
-        {
-          "type": "panel",
-          "name": "recruit_responsibility_panel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "recruit_responsibility_statements",
-              "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">Computer science teachers’ responsibility is to promote their computer science classes broadly, to all students. The diversity of the class will reflect those most interested in taking a computer science class. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\"> Computer science teachers have a responsibility to recruit a set of students into their classrooms that are representative of the school’s population in terms of diversity (gender, racial, socio-economic, etc.) </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
-            },
-            {
-              "type": "rating",
-              "name": "recruit_responsibility",
-              "title": "Recruit Responsibility. 1. recruit students interested in CS  --- 5. recruit representative population",
-              "titleLocation": "hidden",
-              "minRateDescription": "Strongly aligned with A",
-              "maxRateDescription": "Strongly aligned with B"
-            }
-          ]
         },
         {
           "type": "panel",
