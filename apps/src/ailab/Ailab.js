@@ -183,7 +183,7 @@ Ailab.prototype.initMLActivities = function() {
         study: 'ai-ml',
         study_group: 'ai-lab',
         event: eventName,
-        data_json: JSON.stringify({details})
+        data_json: JSON.stringify(details)
       },
       {includeUserId: true}
     );
