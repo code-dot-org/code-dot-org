@@ -9,36 +9,41 @@ import FontAwesome from '../FontAwesome';
 
 const badgeTypes = ['assessment', 'keepWorking'];
 
-function BubbleBadge({type, isDiamond, positionedRelative}) {
-  let backgroundColor, icon;
+function BubbleBadge({type, isDiamond}) {
+  const position = isDiamond
+    ? styles.diamondBubblePosition
+    : styles.bubblePosition;
 
   if (type === 'assessment') {
-    backgroundColor = color.purple;
-    icon = 'check';
+    return <AssessmentBadge style={position} />;
   } else {
-    backgroundColor = color.red;
-    icon = 'exclamation';
+    return <KeepWorkingBadge showBorder={true} style={position} />;
   }
+}
 
-  let position;
-  if (!positionedRelative) {
-    position = isDiamond ? styles.diamondBubblePosition : styles.bubblePosition;
-  }
+BubbleBadge.propTypes = {
+  type: PropTypes.oneOf(badgeTypes).isRequired,
+  isDiamond: PropTypes.bool,
+  positionedRelative: PropTypes.bool
+};
 
+export function KeepWorkingBadge({showBorder, style}) {
   return (
-    <span className="fa-stack" style={{...styles.container, ...position}}>
+    <span className="fa-stack" style={{...styles.container, ...style}}>
       <FontAwesome
         icon="circle"
         className="fa-stack-2x"
-        style={{color: backgroundColor}}
+        style={{color: color.red}}
       />
+      {showBorder && (
+        <FontAwesome
+          icon="circle-thin"
+          className="fa-stack-2x"
+          style={styles.border}
+        />
+      )}
       <FontAwesome
-        icon="circle-thin"
-        className="fa-stack-2x"
-        style={styles.border}
-      />
-      <FontAwesome
-        icon={icon}
+        icon="exclamation"
         className="fa-stack-1x"
         style={styles.centerIcon}
       />
@@ -46,10 +51,35 @@ function BubbleBadge({type, isDiamond, positionedRelative}) {
   );
 }
 
-BubbleBadge.propTypes = {
-  type: PropTypes.oneOf(badgeTypes).isRequired,
-  isDiamond: PropTypes.bool,
-  positionedRelative: PropTypes.bool
+KeepWorkingBadge.propTypes = {
+  showBorder: PropTypes.bool,
+  style: PropTypes.object
+};
+
+function AssessmentBadge({style}) {
+  return (
+    <span className="fa-stack" style={{...styles.container, ...style}}>
+      <FontAwesome
+        icon="circle"
+        className="fa-stack-2x"
+        style={{color: color.purple}}
+      />
+      <FontAwesome
+        icon="circle-thin"
+        className="fa-stack-2x"
+        style={styles.border}
+      />
+      <FontAwesome
+        icon="check"
+        className="fa-stack-1x"
+        style={styles.centerIcon}
+      />
+    </span>
+  );
+}
+
+AssessmentBadge.propTypes = {
+  style: PropTypes.object
 };
 
 const styles = {

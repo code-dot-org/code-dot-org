@@ -16,18 +16,14 @@ const ReviewStates = makeEnum('completed', 'keepWorking', 'awaitingReview');
 class TeacherFeedbackKeepWorking extends Component {
   static propTypes = {
     latestFeedback: PropTypes.object,
+    isAwaitingTeacherReview: PropTypes.bool,
     setReviewState: PropTypes.func,
     setReviewStateChanged: PropTypes.func
   };
 
   checkbox = null;
 
-  isAwaitingTeacherReview =
-    this.props.latestFeedback &&
-    this.props.latestFeedback.review_state === ReviewStates.keepWorking &&
-    this.props.latestFeedback.student_updated_since_feedback;
-
-  initialReviewState = this.isAwaitingTeacherReview
+  initialReviewState = this.props.isAwaitingTeacherReview
     ? ReviewStates.awaitingReview
     : this.props.latestFeedback?.review_state || null;
 
@@ -95,7 +91,7 @@ class TeacherFeedbackKeepWorking extends Component {
             <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
             {this.initialReviewState === ReviewStates.awaitingReview && (
               <span style={styles.awaitingReviewText}>
-                &nbsp;-&nbsp;{i18n.awaitingTeacherReview()}
+                {i18n.waitingForTeacherReviewLabel()}
               </span>
             )}
           </label>
@@ -128,7 +124,8 @@ const styles = {
     fontWeight: 'bold'
   },
   awaitingReviewText: {
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    margin: '0 3px'
   },
   tooltipContent: {
     maxWidth: '250px'
