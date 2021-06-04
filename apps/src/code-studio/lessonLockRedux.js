@@ -117,7 +117,7 @@ export default function reducer(state = initialState, action) {
     // by our dialog.
     nextLesson.forEach((item, index) => {
       const update = nextLockStatus[index];
-      // We assume lockStatus is ordered the same as stageToUpdate. Let's
+      // We assume lockStatus is ordered the same as lessonToUpdate. Let's
       // validate that.
       if (item.user_level_id !== update.userLevelId) {
         throw new Error('Expect user ids be the same');
