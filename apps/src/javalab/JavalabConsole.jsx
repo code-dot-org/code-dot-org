@@ -35,6 +35,7 @@ function moveCaretToEndOfDiv(element) {
 class JavalabConsole extends React.Component {
   static propTypes = {
     onInputMessage: PropTypes.func.isRequired,
+    leftColumn: PropTypes.element,
     style: PropTypes.object,
 
     // populated by redux
@@ -94,7 +95,7 @@ class JavalabConsole extends React.Component {
   };
 
   render() {
-    const {isDarkMode, style} = this.props;
+    const {isDarkMode, style, leftColumn} = this.props;
 
     return (
       <div style={style}>
@@ -108,7 +109,10 @@ class JavalabConsole extends React.Component {
           <PaneSection>{javalabMsg.console()}</PaneSection>
         </PaneHeader>
         <div style={styles.container}>
-          {}
+          {leftColumn && [
+            {...leftColumn, key: 'left-col'},
+            <div style={styles.spacer} key="spacer" />
+          ]}
           <div
             style={{
               ...styles.console,
@@ -160,10 +164,6 @@ const styles = {
   container: {
     display: 'flex'
   },
-  buttons: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
   console: {
     height: 200,
     flexGrow: 2,
@@ -190,5 +190,8 @@ const styles = {
     boxShadow: 'none',
     border: 'none',
     padding: 0
+  },
+  spacer: {
+    width: 8
   }
 };
