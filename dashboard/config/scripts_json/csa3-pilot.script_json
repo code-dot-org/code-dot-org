@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-03 17:59:15 UTC",
+    "serialized_at": "2021-06-04 17:59:54 UTC",
     "seeding_key": {
       "script.name": "csa3-pilot"
     }
@@ -161,6 +161,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "Students implement static variables and constants to count the number of `Shape` objects created and set maximum and minimum values for the volume of sounds. Students explore source code for the `Math` class to connect real-world code and the concepts they have learned so far.",
+        "preparation": "* Print copies of the Math Class Source Code handout (one per student)",
+        "student_overview": "Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Theater. You examine the `Math` class source code to see additional examples of static variables and constants."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -176,6 +179,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "Students develop algorithms using one-dimensional arrays to find the minimum and maximum values, calculate sums and averages, and find elements that meet specific criteria. They look for patterns in the structure of the problems, and outline generic algorithms that can be used when answering questions about information contained in arrays.",
+        "preparation": "* Print copies of the Planning Array Algorithms handout (one per student)\n* Print copies of the Array Manipulatives (one set per student)\n* Gather scrap pieces of paper, sticky notes, and scissors\n* Gather the Variables Manipulatives (used in Unit 2)\n* (Optional) Cut out the Array Manipulatives and place in baggies",
+        "student_overview": "Today you develop algorithms to solve problems. These algorithms can be applied to finding the cheapest item on a menu, finding the highest or lowest note in a sound, or identifying the location of shapes on the stage. Each of these problems use similar structures in their solutions. You identify these patterns so you can apply the algorithms you develop today to problems you encounter in the future."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -191,6 +197,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "Standard algorithms can be applied to solving problems involving arrays. Students implement standard algorithms to manipulate one-dimensional arrays and discover the effect of the algorithms on sounds. Before writing Java code, students plan each algorithm using manipulatives and pseudocode to identify the process needed to solve each problem.",
+        "preparation": "* Print copies of the Planning Array Algorithms handout (one copy for each student)\n* Print copies of the Array Algorithms Manipulatives (one set per student)\n* Gather the Variables Manipulatives (used in Unit 2)\n* Gather the Array Manipulatives (used in the previous lesson)\n* Gather scissors, sticky notes, scrap pieces of paper and 18 paper clips for each student\n* (Optional) Cut out the Array Algorithms Manipulatives and place in baggies",
+        "student_overview": "Standard algorithms can be applied to solving problems involving arrays. You implement standard algorithms to manipulate one-dimensional arrays and discover the effect of the algorithms on sounds. Before writing Java code, you plan each algorithm using manipulatives and pseudocode to identify the process needed to solve each problem."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -206,6 +215,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "Students use nested loops and develop algorithms to perform manipulations on arrays to shift and reverse elements. Before writing Java code, students plan the algorithm using pseudocode to identify the process needed to solve the problem. Students participate in a code review to provide and receive feedback to refine their solutions before previewing the unit project.",
+        "preparation": "* Print one-sided copies of the Vocabulary Draw Activity Guide for each group of students\n* (Optional) Cut out the strips for the vocabulary game before class\n* Prepare necessary materials for each group: blank paper or a whiteboard and marker for each group, pair of scissors if not pre-cutting vocabulary strips\n* Print copies of the Planning Array Algorithms handout (one copy for each student)\n* Print copies of the Unit 3 Guide handout (one copy for each student)",
+        "student_overview": "You learn about nested loops, which is a loop inside a loop. You can use a nested loop to search values in an array more efficiently. You continue to develop algorithms to perform manipulations to shift and reverse the order of elements. Before writing Java code, you plan the algorithm using pseudocode to identify the process needed to solve the problem."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -215,12 +227,15 @@
     },
     {
       "key": "lesson-11",
-      "name": "Concert in the Theater Project Day 1",
+      "name": "Concert in the Theater Project - Day 1",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "For this project, students use one-dimensional arrays and standard algorithms to develop a concert in The Theater. Students begin by choosing a remix algorithm from a set of remix options and writing its pseudocode with a partner. They translate the pseudocode into code and combine their new algorithm with the algorithms they developed in earlier lessons to create their concert audio.",
+        "preparation": "* Review the project setup, requirements, and rubric\n* Print copies of the Concert in the Theater Project Planning Guide (one per student)",
+        "student_overview": "For this project, you design a concert in The Theater. With a partner, you choose a remix algorithm and write its pseudocode. You translate the pseudocode into code and combine it with the algorithms you developed in earlier lessons to create your concert audio."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -230,12 +245,14 @@
     },
     {
       "key": "lesson-12",
-      "name": "Concert in the Theater Project Day 2",
+      "name": "Concert in the Theater Project - Day 2",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "In the previous lesson, students wrote a remix algorithm and combined it with the algorithms they developed in earlier lessons. Students use static variables and constants to add constraints to the length of the concert. They add visuals to the concert using an array of `Shape`s, then participate in a code review to give and use feedback as they develop their program.",
+        "student_overview": "You continue designing your concert in The Theater by adding constraints to the length of the concert and adding visuals. You complete a code review to gain feedback to continue developing your program."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -245,12 +262,15 @@
     },
     {
       "key": "lesson-13",
-      "name": "Concert in the Theater Project Day 3",
+      "name": "Concert in the Theater Project - Day 3",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "In the previous lesson, students created a prioritized list of work to complete. In this lesson, students self-assess their work against the project rubric then review their prioritized list to inform their revisions to their concert. Students then share their final projects with their peers to celebrate their successes.",
+        "preparation": "* (Optional) Print copies of the Concert in the Theater Project Peer Interview Cards (one set for each project group)",
+        "student_overview": "In the previous lesson, you created a prioritized list of work to complete. Today, you self-assess your work against the project rubric then review your prioritized list to decide what revisions you need to make to your concert. You then share your final project with your peers to celebrate your success!"
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -266,6 +286,9 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "overview": "Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ work, they begin to work more independently, working through both annotating and completing an FRQ on their own. Students also work in small groups to identify inputs, processes, and outputs before answering the FRQ.\n\nThe goals of this lesson are:\n* Practice reading an FRQ\n* Practice writing a solution for an FRQ\n* Practice scoring an FRQ against a scoring rubric",
+        "preparation": "* Print one copy for each student of the following handouts:\n    * FRQ Writing\n    * FRQ Graphic Organizer\n    * FRQ Scoring Guide\n* Gather two sticky notes per student\n* (Optional) Gather a yellow, blue, orange, and pink colored pencil or marker for each student",
+        "student_overview": "Today you complete a Free Response Question (FRQ). You do this by first annotating the FRQ, then working with a group to plan how to solve the FRQ. You individually write your solution to the FRQ using your planning. Finally, you score your attempt against a scoring rubric and reflect on your experience."
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -542,6 +565,355 @@
         "lesson_activity.key": "e04b70d7-5282-4fa7-800f-72741b7284e8",
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "817aff1f-032f-4277-bf9b-6e7b67690932",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "817aff1f-032f-4277-bf9b-6e7b67690932",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "f0605d96-96c7-4e19-8771-9da43b91c60e",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f0605d96-96c7-4e19-8771-9da43b91c60e",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "de48e98a-9bb7-4043-a867-a81f892b5a17",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "de48e98a-9bb7-4043-a867-a81f892b5a17",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "3de3fac8-ea58-4197-9126-714982dab083",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3de3fac8-ea58-4197-9126-714982dab083",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "1c9d292b-1ae6-4b8c-b31e-8b3682c6809f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1c9d292b-1ae6-4b8c-b31e-8b3682c6809f",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "36c5a18f-2c5e-4dfa-b09e-719f556c585f",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "36c5a18f-2c5e-4dfa-b09e-719f556c585f",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "967bccb0-1196-4e55-be06-494d14e98e51",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "1c8a3175-1aab-4abc-9d7d-caee40d83372",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1c8a3175-1aab-4abc-9d7d-caee40d83372",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "a723251c-48e2-4cdf-9cbc-3e6589c8ffe1",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a723251c-48e2-4cdf-9cbc-3e6589c8ffe1",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "bfb26222-03b3-4754-a6f6-0c73a35e0785",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bfb26222-03b3-4754-a6f6-0c73a35e0785",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "e3062efa-438d-4726-ad97-a333242fee98",
+      "position": 1,
+      "properties": {
+        "name": "Project Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e3062efa-438d-4726-ad97-a333242fee98",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "aea3587e-7c92-4bbd-a277-7047602bd2a1",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aea3587e-7c92-4bbd-a277-7047602bd2a1",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "97bcb2a4-0a9b-4fbe-b68a-5f266343fe81",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97bcb2a4-0a9b-4fbe-b68a-5f266343fe81",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "7559a371-9411-4219-8e1d-e8d763edee26",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7559a371-9411-4219-8e1d-e8d763edee26",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "8609fa3e-3798-4b0c-957b-b1f89fb4c99d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8609fa3e-3798-4b0c-957b-b1f89fb4c99d",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "38bb9eab-0e9e-442e-88e8-fb5c99804a83",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "38bb9eab-0e9e-442e-88e8-fb5c99804a83",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "f65152d9-62ae-4fd7-a0b8-735dd7ca3438",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f65152d9-62ae-4fd7-a0b8-735dd7ca3438",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "c9ea0b14-dd10-46c9-8600-830896c6e953",
+      "position": 1,
+      "properties": {
+        "duration": 3,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9ea0b14-dd10-46c9-8600-830896c6e953",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "04711dbc-0430-4d30-bed3-d1541a3f54b9",
+      "position": 2,
+      "properties": {
+        "duration": 32,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04711dbc-0430-4d30-bed3-d1541a3f54b9",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "17c80791-ca4a-498e-b9ec-12671c404d69",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17c80791-ca4a-498e-b9ec-12671c404d69",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "018e2d64-0daa-475c-a60b-3bbce727697d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "018e2d64-0daa-475c-a60b-3bbce727697d",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "5f78f943-280e-438d-a25c-5c9cf9d08f4b",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f78f943-280e-438d-a25c-5c9cf9d08f4b",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "dac65f0f-bd8e-4cea-9d94-00c4a34cae44",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dac65f0f-bd8e-4cea-9d94-00c4a34cae44",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa3-pilot"
       }
     },
@@ -1746,6 +2118,1636 @@
       }
     },
     {
+      "key": "fbe08d11-48a0-4505-bbd1-cf2dc3bd9b4f",
+      "position": 1,
+      "properties": {
+        "description": "Objects are created from the same class blueprint, but they have their own distinct copies of instance variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In the case of the `Student` class, the instance variables are `name`, `grade`, and `favoriteClass`. Each `Student` object has its own values for these variables stored in different locations in memory.",
+        "name": "Instance Variables",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fbe08d11-48a0-4505-bbd1-cf2dc3bd9b4f",
+        "lesson_activity.key": "817aff1f-032f-4277-bf9b-6e7b67690932"
+      }
+    },
+    {
+      "key": "6390063b-a426-4e60-9b66-27db4802bbf9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we wanted to store a value that is shared by all instances of a class? For example, all of these `Student` objects attend the same school. How could we share a variable that stores the school's name with all `Student` objects?*\n\n**Discussion Goal:** Students share ideas for storing a value that is shared by all instances of a class, including creating an instance variable to store the value."
+      },
+      "seeding_key": {
+        "activity_section.key": "6390063b-a426-4e60-9b66-27db4802bbf9",
+        "lesson_activity.key": "817aff1f-032f-4277-bf9b-6e7b67690932"
+      }
+    },
+    {
+      "key": "f8852e60-cbb0-440d-b716-00c1774459c0",
+      "position": 3,
+      "properties": {
+        "description": "You may have considered initializing a private instance variable with the shared value. This seems like it would be a valid solution because when an object is created it will have a variable storing this shared value.\n\nHowever, this is not ideal. Each object has its own distinct copy of the instance variable. If we wanted to change this shared variable, we would need to update each object individually. \n\nTo solve this we need a new type of variable — a static variable!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f8852e60-cbb0-440d-b716-00c1774459c0",
+        "lesson_activity.key": "817aff1f-032f-4277-bf9b-6e7b67690932"
+      }
+    },
+    {
+      "key": "37f81f41-9bb1-4580-88c2-741f45d33a4d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Definition of static variable and the `static` keyword.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Static Variables video.\n\n**Do This:** Click through the three slides to discuss static variables:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Each instance of the class shares a static variable, which is in one fixed location in memory.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A static variable can be created by adding the static keyword before the variable during declaration.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Static variables belong to a class, not an object. To use a static variable, use the `ClassName` and the dot operator.",
+        "duration": "15",
+        "name": "Static Variables",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may note the `static` keyword being used in the `main` method. The `main` method is declared as a static method so that the Java Virtual Machine can call it without creating any instance of a class. \n\nThe `static` keyword can be used with a class, variable, or method. A static class, variable, or method belongs to a class and can be used without creating an object."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "37f81f41-9bb1-4580-88c2-741f45d33a4d",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "65ac2dd3-fab3-4363-85a7-c20af27195bf",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When we assign a value to an instance variable, it is only changed for the object that it belongs to. What happens if we assign a value to a static variable?*\n\n**Discussion Goal:** Students guess that updating static variables will change the value for all instances of the class."
+      },
+      "seeding_key": {
+        "activity_section.key": "65ac2dd3-fab3-4363-85a7-c20af27195bf",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "9e6443fd-87ba-4401-8eca-88d71aaa77b1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If we change the value of a static variable for one object, it changes it for all objects of the class.\n\nConsider the code segment on the left. In the `Forecast` class, we have a static variable called `lastTemp`.\n\nIn the constructor, `lastTemp` is updated to store the value passed in for `temp`, meaning it will be updated any time a new `Forecast` object is created.\n\nLet’s look at the code on the right to see this in action.\n\nAfter creating a `Forecast` object called `monday`, which passed in 78 as the temperature, `lastTemp` is now 78. \n\nIf we create another `Forecast` object, `tuesday`, which passes in 70 as the temperature, `lastTemp` is now 70 for both `monday` and `tuesday`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9e6443fd-87ba-4401-8eca-88d71aaa77b1",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "51169ca2-b333-4b2e-95bb-c1088ba805c2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that static variables are often used to count how many objects have been created."
+      },
+      "seeding_key": {
+        "activity_section.key": "51169ca2-b333-4b2e-95bb-c1088ba805c2",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "7b1f0297-f869-4193-868f-b75117b0e04d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1, then complete Level 2 in pairs. They create and use a static variable to count the number of `Circle` objects created."
+      },
+      "seeding_key": {
+        "activity_section.key": "7b1f0297-f869-4193-868f-b75117b0e04d",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "a5790267-9e0a-420c-9a8a-851642f925ea",
+      "position": 6,
+      "properties": {
+        "description": "A static variable is stored in one space in memory and can be updated for all instances of the class.\n\nThere are situations in our program where we may want a variable to be unchangeable or constant.",
+        "duration": "10",
+        "name": "Constants",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a5790267-9e0a-420c-9a8a-851642f925ea",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "18fd18e8-1e43-48d0-adbc-16ee386e8b2e",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Definition of a constant.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you used constants before? How were they useful?*\n\n**Discussion Goal:** Students share constants they have used, such as pi in math class."
+      },
+      "seeding_key": {
+        "activity_section.key": "18fd18e8-1e43-48d0-adbc-16ee386e8b2e",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "4c1c54ca-d643-449c-a9bb-c8b984ffbfee",
+      "position": 8,
+      "properties": {
+        "description": "In math, a constant is a value set by a mathematical definition. They are reusable and useful for solving multiple mathematical problems that share common patterns. In computer science, constants are similar.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4c1c54ca-d643-449c-a9bb-c8b984ffbfee",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "69a972fc-0b91-473d-9ba3-cecf0fbc89a4",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Constants video."
+      },
+      "seeding_key": {
+        "activity_section.key": "69a972fc-0b91-473d-9ba3-cecf0fbc89a4",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "2b0698fe-6829-4298-ab51-05d424a8edc9",
+      "position": 10,
+      "properties": {
+        "description": "In The Theater, a useful place to use a constant is to store the minimum and the maximum volume to control how loud or quiet our sounds play.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Sounds are waves. The higher the amplitude (height) of the wave, the louder the sound is at that instant. When the amplitude of the sound is shorter, the sound is quieter.\n\nAt certain amplitudes, the sound we want to create becomes hard to hear clearly. Let’s create constants for the minimum and maximum volume in the `SoundEffects` class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2b0698fe-6829-4298-ab51-05d424a8edc9",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "8937d0f7-ee73-415c-a145-23c5c8644e0b",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 4 and 5 on Code Studio. Students independently complete the Check for Understanding on Level 4 then complete Level 5 in pairs, where they create constants for the minimum and maximum volume."
+      },
+      "seeding_key": {
+        "activity_section.key": "8937d0f7-ee73-415c-a145-23c5c8644e0b",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "74fae15e-e0a5-4983-abda-147b2e5c26f1",
+      "position": 12,
+      "properties": {
+        "description": "Static and constant variables are used across the industry. Let’s explore an example.\n\nThe `Math` class contains variables and methods for performing mathematical tasks with numbers. You will learn more about the `Math` class in a later unit, but let’s inspect the code to see how static variables and constants are used in the `Math` class.",
+        "duration": "10",
+        "name": "Math Class Source Code",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "74fae15e-e0a5-4983-abda-147b2e5c26f1",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "63b8dddf-a55a-4ec2-9237-d22bfac998ba",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Math Class Source Code handout.\n\n**Do This:** Students complete the Math Class Source Code handout with a partner.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The next unit covers the `Math` class. If you do not have time to review the activity guide, have students write down questions about the `Math` class and address their questions in the next unit. \n\nIf time permits, review the activity guide as a class or in student pairs. Discuss observations based on notes collected."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "63b8dddf-a55a-4ec2-9237-d22bfac998ba",
+        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
+      }
+    },
+    {
+      "key": "3a131bbd-72c8-441b-ab5a-a70964b08a15",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Closing the Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a131bbd-72c8-441b-ab5a-a70964b08a15",
+        "lesson_activity.key": "f0605d96-96c7-4e19-8771-9da43b91c60e"
+      }
+    },
+    {
+      "key": "f21e0cce-2fe0-4ac8-a985-ce2f4fe8912d",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f21e0cce-2fe0-4ac8-a985-ce2f4fe8912d",
+        "lesson_activity.key": "f0605d96-96c7-4e19-8771-9da43b91c60e"
+      }
+    },
+    {
+      "key": "d4e3f4f6-d39a-4b20-9953-62dd03bbd18a",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Group students in pairs.\n\n**Do This:** Students work together to write pseudocode to determine the price of the cheapest item on a menu.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Give students four minutes to write their algorithm with their partner.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to join with another group to compare their algorithms. Students should identify similarities in their algorithms.",
+        "name": "Unplugged Algorithms",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may struggle to break down the process of finding the minimum value in a list. To help students think about the process, ask:\n* *Consider a menu with many pages and many items on each page. How would you find the cheapest item?*\n* *What if you could only look at two menu items at a time? What steps would you take to find the smallest value?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d4e3f4f6-d39a-4b20-9953-62dd03bbd18a",
+        "lesson_activity.key": "de48e98a-9bb7-4043-a867-a81f892b5a17"
+      }
+    },
+    {
+      "key": "5a328f09-7437-407e-8eb6-36efa960470e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Were there multiple ways to find the cheapest item? What is the most efficient solution?*\n\n**Discussion Goal:** Students recognize that while they may have slightly different variable names or create variables in different orders, their steps are generally the same. Student algorithms might include:\n* Storing the cheapest price they have seen so far\n* Checking every item on the menu\n* Comparing the current item and the lowest one they have seen so far\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Efficiency refers to the amount of time or resources needed to execute an algorithm. What is the most efficient solution?*\n\n**Discussion Goal:** Students choose algorithms that have the least number of steps to execute."
+      },
+      "seeding_key": {
+        "activity_section.key": "5a328f09-7437-407e-8eb6-36efa960470e",
+        "lesson_activity.key": "de48e98a-9bb7-4043-a867-a81f892b5a17"
+      }
+    },
+    {
+      "key": "d8b3c640-3fd9-4b3f-b82f-a9383479c184",
+      "position": 3,
+      "properties": {
+        "description": "The process of finding the cheapest item, or the smallest item in an array, is one of many algorithms used often by software engineers. Today we’re going to explore a few common algorithms that can be used to analyze information in an array.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d8b3c640-3fd9-4b3f-b82f-a9383479c184",
+        "lesson_activity.key": "de48e98a-9bb7-4043-a867-a81f892b5a17"
+      }
+    },
+    {
+      "key": "44d9becf-4255-4793-8aa1-5b12a110d721",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Planning Array Algorithms handout, a set of Array Manipulatives, int and double variable cups, sticky notes, scrap pieces of paper, and scissors to each student. Have students cut out the manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students write an algorithm to find the maximum value of an array. Encourage students to use their manipulatives to help work out the problem.",
+        "duration": "15",
+        "name": "Minimum and Maximum Algorithms",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to model this first algorithm for the class. Reinforce that the variable `maximum` can only hold one value at a time. The first iteration of the algorithm's loop would place the value 4 in `maximum`, then the next iteration of the algorithm's loop would place the value 5 in `maximum`, and so on.\n\nStudents may try to move the value from the array into the variable cup. Remind students that a copy of the value at the index location is being placed in the `maximum` variable, so they need to copy it onto a scrap piece of paper to place into the variable cup."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "44d9becf-4255-4793-8aa1-5b12a110d721",
+        "lesson_activity.key": "3de3fac8-ea58-4197-9126-714982dab083"
+      }
+    },
+    {
+      "key": "de96179c-e923-4f36-b309-8d0d29e38a58",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students implement the algorithm they wrote to find the highest note in a sound."
+      },
+      "seeding_key": {
+        "activity_section.key": "de96179c-e923-4f36-b309-8d0d29e38a58",
+        "lesson_activity.key": "3de3fac8-ea58-4197-9126-714982dab083"
+      }
+    },
+    {
+      "key": "6c9926e5-ba98-4510-90ec-fabf4e8d779c",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Introduce the structure of standard algorithms and demonstrate writing an algorithm to find the maximum value in an array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the structure of a standard algorithm.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A variable needs to be initialized before the loop to store a value from one iteration to the next.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Maximum should be initialized to the first element of the list.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Traverse the array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use a condition to update the variable as needed."
+      },
+      "seeding_key": {
+        "activity_section.key": "6c9926e5-ba98-4510-90ec-fabf4e8d779c",
+        "lesson_activity.key": "3de3fac8-ea58-4197-9126-714982dab083"
+      }
+    },
+    {
+      "key": "934d8729-ccdc-4238-bfc8-94b29a34b666",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students implement a modified version of their maximum algorithm to find the lowest note in a sound.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When creating the variable to store a value from a list, it is good practice to initialize it with an element of the list rather than initializing it to a value such as zero. This helps make the algorithm work for a larger number of cases and avoids unintentionally inserting bugs into the code.\n\nFor example, if the variable was initialized to zero and all the values in the array were negative, the algorithm would never find any of the values in the array to be larger than zero."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "934d8729-ccdc-4238-bfc8-94b29a34b666",
+        "lesson_activity.key": "3de3fac8-ea58-4197-9126-714982dab083"
+      }
+    },
+    {
+      "key": "62c4087a-f32f-4df5-be36-2248c3627f77",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Errors like the ones you saw in Level 2 are called off-by-one errors. They happen when we try to access an index value that is greater than the length of the array. This is a pretty common mistake since the indices for an array start at 0 and end at the number of elements - 1!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "62c4087a-f32f-4df5-be36-2248c3627f77",
+        "lesson_activity.key": "3de3fac8-ea58-4197-9126-714982dab083"
+      }
+    },
+    {
+      "key": "793e66d8-584a-46b6-a1bc-7159800b1dcb",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are strategies we can use when debugging off-by-one errors like the one we saw on Level 2?*\n\n**Discussion Goal:** Students identify steps to use when debugging off-by-one errors, including:\n* Debugging the method header by verifying that the control variable is initialized to a valid index value and the condition does not allow it to go past the largest index\n* Using print statements to print the index value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the debugging wall that describes bugs with scope."
+      },
+      "seeding_key": {
+        "activity_section.key": "793e66d8-584a-46b6-a1bc-7159800b1dcb",
+        "lesson_activity.key": "3de3fac8-ea58-4197-9126-714982dab083"
+      }
+    },
+    {
+      "key": "97ceed64-06d3-4501-ab5d-75062bf988fa",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose either the sum or mean algorithm on their Planning Array Algorithms. Have students use their Array Manipulatives to write pseudocode for their chosen algorithm.",
+        "duration": "15",
+        "name": "Implementing Standard Algorithms"
+      },
+      "seeding_key": {
+        "activity_section.key": "97ceed64-06d3-4501-ab5d-75062bf988fa",
+        "lesson_activity.key": "3de3fac8-ea58-4197-9126-714982dab083"
+      }
+    },
+    {
+      "key": "799c2677-55a8-4b8d-a870-11c149db98fd",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students translate their pseudocode to Java to calculate the sum or the mean of all elements in an array.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that integer division results in an integer, so the mean will not be an accurate average of the array. Students learn about casting in Unit 4."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "799c2677-55a8-4b8d-a870-11c149db98fd",
+        "lesson_activity.key": "3de3fac8-ea58-4197-9126-714982dab083"
+      }
+    },
+    {
+      "key": "8c6e89d7-3291-4f0c-973e-6be04ccfaf04",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Split students into two groups. Direct one group to stand on the left side of the room and the other group to stand on the right side of the room. Have students write their algorithm on their Planning Array Algorithms handout with their group using their Array Manipulatives to work out the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Share your algorithm with a partner from the other side of the room. How are the structures of your algorithms similar? How are they different?*\n\n**Discussion Goal:** Students identify similarities and differences in the algorithms."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c6e89d7-3291-4f0c-973e-6be04ccfaf04",
+        "lesson_activity.key": "3de3fac8-ea58-4197-9126-714982dab083"
+      }
+    },
+    {
+      "key": "4e7f0905-6134-43c5-8ff0-fecb4e0aa4fc",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 4 and 5 on Code Studio. Students translate their pseudocode to Java to find if any elements in an array are greater than 0 and if all elements in an array are greater than 0."
+      },
+      "seeding_key": {
+        "activity_section.key": "4e7f0905-6134-43c5-8ff0-fecb4e0aa4fc",
+        "lesson_activity.key": "3de3fac8-ea58-4197-9126-714982dab083"
+      }
+    },
+    {
+      "key": "c9f84124-56ed-4f1c-9abc-f521b178baa4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can the standard algorithms we looked at today support software engineers in developing more complex code?*\n\n**Discussion Goal:** Students should realize that they can leverage one algorithm inside another and do not need to start everything from scratch.",
+        "name": "Writing Standard Algorithms"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9f84124-56ed-4f1c-9abc-f521b178baa4",
+        "lesson_activity.key": "1c9d292b-1ae6-4b8c-b31e-8b3682c6809f"
+      }
+    },
+    {
+      "key": "d2d927d1-18f9-429e-a346-f9cdd1cd0684",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio. Students read through a summary of the array algorithms they developed in this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "d2d927d1-18f9-429e-a346-f9cdd1cd0684",
+        "lesson_activity.key": "1c9d292b-1ae6-4b8c-b31e-8b3682c6809f"
+      }
+    },
+    {
+      "key": "26dd0667-be4e-4671-b691-8585cd40b155",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "26dd0667-be4e-4671-b691-8585cd40b155",
+        "lesson_activity.key": "1c9d292b-1ae6-4b8c-b31e-8b3682c6809f"
+      }
+    },
+    {
+      "key": "3db56355-6e4c-4e90-b39b-c5be21e85ba6",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3db56355-6e4c-4e90-b39b-c5be21e85ba6",
+        "lesson_activity.key": "1c9d292b-1ae6-4b8c-b31e-8b3682c6809f"
+      }
+    },
+    {
+      "key": "57d476e0-d6ce-4e65-959c-2313cdea7098",
+      "position": 1,
+      "properties": {
+        "description": "We have seen how to use the `SoundMaster` class to import an audio file into our program as an array of `double`s.\n\nWe use `SoundMaster.read()` to read the audio file then store the samples into an array of `double`s that we declare and initialize.\n\nToday we will explore how to modify the contents of the array to see how it changes the way the audio sounds.",
+        "name": "Creating Sound Effects",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "57d476e0-d6ce-4e65-959c-2313cdea7098",
+        "lesson_activity.key": "36c5a18f-2c5e-4dfa-b09e-719f556c585f"
+      }
+    },
+    {
+      "key": "3326ef19-9e08-4da4-9034-e71e689c9c70",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the original sound then play the modified sound. Click through the animated slide to show the code that created the modified sound.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the original sound then play the modified sound.\n* **Discuss:** *How might the original array have been modified to create the new sound?*\n\n**Discussion Goal:** Students share ideas about modifications that might have been made to the array. Ideas might include skipping elements in the array or changing the values in the array by a specified amount. Students make the connection that modifying the elements stored in the array impacts the way the audio sounds when played."
+      },
+      "seeding_key": {
+        "activity_section.key": "3326ef19-9e08-4da4-9034-e71e689c9c70",
+        "lesson_activity.key": "36c5a18f-2c5e-4dfa-b09e-719f556c585f"
+      }
+    },
+    {
+      "key": "c737d8c6-36f0-4a45-a75f-543510ca7246",
+      "position": 1,
+      "properties": {
+        "description": "Developing more complex programs requires planning. Before writing code, software engineers first create diagrams, flowcharts, and algorithms to figure out how to tell the computer what to do. This process makes it much easier to write code using the plans they create.",
+        "duration": "13",
+        "name": "Swapping Elements in an Array",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c737d8c6-36f0-4a45-a75f-543510ca7246",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "fa830ac8-19b7-4450-bf09-be65b30c884e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the How Do Software Engineers Write Algorithms video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Planning Array Algorithms handout, a set of Array Algorithms Manipulatives, a double variable cup, an extra array from the previous lesson's Array Manipulatives, sticky notes, scrap pieces of paper, and 18 paper clips. Direct students to cut out the Array Algorithms Manipulatives and create 6 paper clip chains."
+      },
+      "seeding_key": {
+        "activity_section.key": "fa830ac8-19b7-4450-bf09-be65b30c884e",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "9aaf7768-162f-4f7a-86a4-026dd12182c9",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> For the first problem we will solve, we want to swap consecutive pairs of `Shape` objects.\n\nConsecutive means the elements that are next to each other. We need to swap the first pair of shapes, then the second pair of shapes, and so on until we reach the end of the array.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9aaf7768-162f-4f7a-86a4-026dd12182c9",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "06b724e7-1fc9-4fad-adda-aa81dd72fe86",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use their manipulatives to set up one of their array manipulatives to match the starting array shown on the slide. Click through this animated slide to show each phase of applying the algorithm and the end result.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we swap the first two shapes in the array?*\n\n**Discussion Goal:** Students suggest placing the shape at index 1 in index 0 or placing the shape at index 0 in index 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the error that results from attempting to set the next element to contain the value stored in the first element."
+      },
+      "seeding_key": {
+        "activity_section.key": "06b724e7-1fc9-4fad-adda-aa81dd72fe86",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "97e92dd0-435d-4128-9b6d-70858a99c012",
+      "position": 5,
+      "properties": {
+        "description": "When we tried to set index 1 to point to what is stored in index 0, we are not actually moving the shape over to this location. Instead, index 1 is now pointing to the same object that index 0 points to. The reference to the shape at index 0 is still there, and now there is also a reference to the same shape at index 1.\n\nThis also means that index 1 no longer points to the triangle object. Since the triangle object doesn't have anything else pointing to it, it is lost in memory.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "97e92dd0-435d-4128-9b6d-70858a99c012",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "bb1fd335-498c-44cc-879b-8420c98663d7",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we prevent losing the triangle?*\n\n**Discussion Goal:** Students suggest using a temporary variable to point to the triangle.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate creating a temporary reference variable and using it to point to the next element in the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Now that we have this temporary variable, what is the next step we should take?*\n\n**Discussion Goal:** Students suggest continuing with the swap by pointing index 1 to the element in index 0 then pointing index 0 to the element in the temporary variable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the temporary variable to perform the swap."
+      },
+      "seeding_key": {
+        "activity_section.key": "bb1fd335-498c-44cc-879b-8420c98663d7",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "ff4eb6fd-36d9-4361-a15d-6cb5e852c056",
+      "position": 7,
+      "properties": {
+        "description": "We need to repeat these steps for the rest of the array. For this particular array, you might think that we can just perform these steps again for indexes 2 and 3, but then our algorithm wouldn't be a standard algorithm that can be reused for other arrays of different sizes.\n\nTo repeat these steps for the rest of the array, we should use a loop. But we need to make some decisions about how to structure our loop.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ff4eb6fd-36d9-4361-a15d-6cb5e852c056",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "943294e7-1ba2-4ae6-8a1d-c099cde8a8d4",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to complete the rest of the algorithm so all elements in the array are swapped. Encourage students to use their manipulatives to work out their algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show a solution for students to compare and correct their work.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reinforce to students that this is one potential solution to the problem."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "943294e7-1ba2-4ae6-8a1d-c099cde8a8d4",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "fd18d979-c3d7-4e53-a709-061e19088f59",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio for students to write their solution."
+      },
+      "seeding_key": {
+        "activity_section.key": "fd18d979-c3d7-4e53-a709-061e19088f59",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "8d3216c6-1f72-44b5-9487-500b0b43efc1",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think will happen to the sound if we replaced all the duplicate samples with 0?*\n\n**Discussion Goal:** Students share ideas of potential effects, which may include muting parts of the sound or making parts of the sound louder or softer.\n\n**Group:** Put students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode on their Planning Array Algorithms handout for an algorithm to count the number of duplicate samples and modify the samples array to set the duplicates to 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.",
+        "duration": "8",
+        "name": "Finding and Replacing Duplicate Samples",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to test their algorithm by reading the steps for a group member to act out using the manipulatives."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8d3216c6-1f72-44b5-9487-500b0b43efc1",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "e0728cb0-dd6d-455d-8c55-72f57b4d29ee",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show a pseudocode solution. Give students time to check and correct their work."
+      },
+      "seeding_key": {
+        "activity_section.key": "e0728cb0-dd6d-455d-8c55-72f57b4d29ee",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students individually translate the pseudocode they wrote in their groups to Java. Students test it to hear the effect on the array."
+      },
+      "seeding_key": {
+        "activity_section.key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "929cf088-659e-4eb0-94f8-87ce7d3f2244",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did the modifications we made to the array of samples do to the sound?*\n\n**Discussion Goal:** Students note that while they can still hear the sound, some static can be heard that was not in the original sound."
+      },
+      "seeding_key": {
+        "activity_section.key": "929cf088-659e-4eb0-94f8-87ce7d3f2244",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "cf33b57b-0498-4f87-9630-dbdb0e222c20",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we wanted to find samples that were above or below a specific value, like 0? How could we do this?*\n\n**Discussion Goal:** Students share ideas to approach this problem, which may include using an `if` statement within the loop to check each element.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to find and count values that are greater than 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If we wanted to create a new sound using just those samples that are greater than 0, what do we need to add to our algorithm?*\n\n**Discussion Goal:** Students share ideas to approach this problem, which may include creating a new array and assigning the element to the new array within the `if` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to add pseudocode to create a new sound using the samples that are greater than 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.",
+        "duration": "14",
+        "name": "Finding Samples That Meet Specific Criteria"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf33b57b-0498-4f87-9630-dbdb0e222c20",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "701d3b4e-388b-4dda-ab36-331ea3727aab",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students individually translate the pseudocode they wrote in their groups to Java. Students test it to hear the effect on the array."
+      },
+      "seeding_key": {
+        "activity_section.key": "701d3b4e-388b-4dda-ab36-331ea3727aab",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "e9201e46-c5d3-4813-857b-03d46ec37af0",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did the modifications we made to the array of samples do to the sound?*\n\n**Discussion Goal:** Students share different ideas about what they hear, including that it sounds compressed, sped up, and that samples are missing."
+      },
+      "seeding_key": {
+        "activity_section.key": "e9201e46-c5d3-4813-857b-03d46ec37af0",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "bcd1fffb-65b0-4053-8237-345f644cbba7",
+      "position": 17,
+      "properties": {
+        "description": "This is a good opportunity to do a code review to make improvements. Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bcd1fffb-65b0-4053-8237-345f644cbba7",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "8340f623-1d23-4357-aeed-942658fd0c4c",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's `find()` method. Students request, receive, and review feedback on Level 3."
+      },
+      "seeding_key": {
+        "activity_section.key": "8340f623-1d23-4357-aeed-942658fd0c4c",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "773cea79-e2fc-4b89-88c8-42e9430c9647",
+      "position": 1,
+      "properties": {
+        "description": "The algorithms you wrote today are examples of standard algorithms, which means they can be applied to any type of data. Today we used standard algorithms to modify arrays of `double`s that represented sounds. When we played the modified arrays, we heard the changes in our sound.",
+        "name": "Glows, Grows, Want-to-Knows",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "773cea79-e2fc-4b89-88c8-42e9430c9647",
+        "lesson_activity.key": "1c8a3175-1aab-4abc-9d7d-caee40d83372"
+      }
+    },
+    {
+      "key": "4f2d8ecc-ab2a-4dc2-bac4-07dc9d6200e3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Students reflect on the following Glows, Grows, Want-to-Knows prompts:\n* Glow: *What is awesome about writing your code?*\n* Grow: *What is one action you can take to improve your code?*\n* Want-to-Know: *What is one question you have about an algorithm you worked on today?*\n\n**Discussion Goal:** Students share successes they experienced in writing their algorithms in today's activities as well as ideas for improvements they can make to their code. Students ask questions about the algorithms they wrote today and may even share wonders about the effects of potential modifications to the code they wrote."
+      },
+      "seeding_key": {
+        "activity_section.key": "4f2d8ecc-ab2a-4dc2-bac4-07dc9d6200e3",
+        "lesson_activity.key": "1c8a3175-1aab-4abc-9d7d-caee40d83372"
+      }
+    },
+    {
+      "key": "676245d7-79b1-4ae2-836c-6f91bd745a1a",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "676245d7-79b1-4ae2-836c-6f91bd745a1a",
+        "lesson_activity.key": "1c8a3175-1aab-4abc-9d7d-caee40d83372"
+      }
+    },
+    {
+      "key": "5e25b458-cd8d-4469-8952-045ed3f9ede0",
+      "position": 1,
+      "properties": {
+        "description": "We learned a lot of new vocabulary in this unit. Let’s play Vocabulary Draw to review all of the new terms.",
+        "duration": "8",
+        "name": "Vocabulary Draw",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5e25b458-cd8d-4469-8952-045ed3f9ede0",
+        "lesson_activity.key": "a723251c-48e2-4cdf-9cbc-3e6589c8ffe1"
+      }
+    },
+    {
+      "key": "39cf7500-c99d-4499-a49c-7a5d5112dd00",
+      "position": 2,
+      "properties": {
+        "description": "Group: Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Vocabulary Draw Activity Guide, which includes the rules, vocabulary bank, and a set of vocabulary strips. Distribute a pair of scissors and blank paper to each group. As you are passing out the activity guides, students should cut out their set of vocabulary strips.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** In their groups, students take turns choosing a random vocabulary slip and drawing it out. Other group members try to guess the vocabulary word while consulting the vocabulary bank. The student who guesses successfully keeps the slip of paper. The artist role rotates after each word so that all students have a chance to both draw and guess. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Running the Game:\n* To save time in class, you can choose to cut a set of the vocabulary strips for each group.\n* You can set an optional time limit for the artist to sketch out the vocabulary word.\n* Alternatively, you can choose to play this review game as a whole class. Group students into four different teams, and rotate which team provides the artist. Play following the rules, but award the slip to the team that guesses the word rather than an individual. Pause as needed to review the terms."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "39cf7500-c99d-4499-a49c-7a5d5112dd00",
+        "lesson_activity.key": "a723251c-48e2-4cdf-9cbc-3e6589c8ffe1"
+      }
+    },
+    {
+      "key": "18f50ffb-5dd1-4d56-b311-0222e8c37542",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which words were most difficult to remember from the unit? What additional clarity do you need?*\n\n**Discussion Goal:** Provide additional clarification around any words that students are struggling with. Make a note of any commonalities, and continue to use these vocabulary terms throughout instruction.",
+        "duration": "2",
+        "name": "Debrief"
+      },
+      "seeding_key": {
+        "activity_section.key": "18f50ffb-5dd1-4d56-b311-0222e8c37542",
+        "lesson_activity.key": "a723251c-48e2-4cdf-9cbc-3e6589c8ffe1"
+      }
+    },
+    {
+      "key": "7e0627b1-b681-4280-b15a-48fd499c48ba",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the definition and an example of a nested loop.",
+        "duration": "15",
+        "name": "Nested Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e0627b1-b681-4280-b15a-48fd499c48ba",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "a4e1604f-7695-4a42-955d-17ed4cec834d",
+      "position": 2,
+      "properties": {
+        "description": "When you have layers of tasks or data, you can use a nested loop to complete those tasks or process the data. A nested loop is a loop that exists in the body of another loop. In this example, we have a nested `for` loop. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a4e1604f-7695-4a42-955d-17ed4cec834d",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "2278dee0-5d83-49b8-939a-ec74ac214150",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Nested Loop video. "
+      },
+      "seeding_key": {
+        "activity_section.key": "2278dee0-5d83-49b8-939a-ec74ac214150",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "ef816599-aad7-49d8-9415-823c16d340fd",
+      "position": 4,
+      "properties": {
+        "description": "As stated in the video, the inner or outer loop can be any type: `while` or `for`. Of course, they can be the same kind of loops too.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ef816599-aad7-49d8-9415-823c16d340fd",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "09ec0807-8a56-4515-96e2-828e98b36c3a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the questions with a nearby partner. Bring the class back together and review:\n* The `for` loop is nested inside the `while` loop. \n* The loop control variable changes each time through the loop based on the increment or decrement specified in the header. The inner loop iterates two times, but after the full program runs, it will iterate four times.\n* The outer loop will iterate a total of two times.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the outer loop executes. Pause at each step to discuss what is happening. Highlight the following:\n* The variable declarations\n* The `while` loop iteration \n* The increment of i each time the loop iterates\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the nested loop executes. Pause at each step to discuss what is happening. Highlight the following:\n* The variable declaration of `j` and `weeks`\n* The `for` loop iteration \n* The compiler’s exit from the `for` loop\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Do This:* Click through the animated slide of what happens when the nested `for` loop inside the while loop executes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Trace this nested loop as a class. Use prior remarks to guide you through the slide. Tracing this code segment allows students to see how the nested loop iterates through code. As you trace the code, students see the inner loop finishing before incrementing the outside."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "09ec0807-8a56-4515-96e2-828e98b36c3a",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "e5f4bd6d-ae0d-4d3b-96da-e0d223d942e1",
+      "position": 6,
+      "properties": {
+        "description": "Now that we understand how nested loops are structured, we will apply our new knowledge first in Code Studio, then using The Theater.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e5f4bd6d-ae0d-4d3b-96da-e0d223d942e1",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "701a0a16-a929-4249-969d-8d078cfed67f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. In Level 1, students write a nested loop that counts down numbers 10-1 and prints out “I love CS!!”. In Level 2, students create a nested loop to repeat the animation of shapes for three verses."
+      },
+      "seeding_key": {
+        "activity_section.key": "701a0a16-a929-4249-969d-8d078cfed67f",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "640ba51a-fc16-4443-ab77-5ff1715296cd",
+      "position": 8,
+      "properties": {
+        "description": "In the previous lessons, you developed algorithms to manipulate arrays. Let’s look at a couple more that we can add to your program.",
+        "duration": "15",
+        "name": "Shifting and Reversing Elements in an Array",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "640ba51a-fc16-4443-ab77-5ff1715296cd",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "f43cea3a-bcc1-4e02-973d-01deddab6c5c",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Shift and Reverse Algorithm video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on previous written algorithms, how can you manipulate sound elements in an array algorithm to shift or reverse?*\n\n**Discussion Goal:** Students share in a shift algorithm you need an indexed `for` loop to change the array and access two elements at different indices. Students share a reverse algorithm you can write a `for` loop to start with the last element in the array. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Distribute: Give each student a copy of the Planning Array Algorithms.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to shift and reverse samples in the sound array.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to provide students the array manipulatives used in the previous two lessons to help them outline the steps needed to solve each problem."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f43cea3a-bcc1-4e02-973d-01deddab6c5c",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "fce07cb6-b698-4067-b240-b457002a0c77",
+      "position": 10,
+      "properties": {
+        "description": "Now we know how to write the shift and reverse algorithms in pseudocode, let’s translate them to Java.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fce07cb6-b698-4067-b240-b457002a0c77",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "7c28bf41-acc0-4796-82b3-d6466c1ff00c",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in the same pairs and translate the pseudocode they wrote to Java. Direct students to Level 3 on Code Studio. In each pair, one student does the first choice level to translate the pseudocode they wrote for `shiftSound()` to Java, while the other student does a different level to translate the pseudocode they wrote for `reverseSound()` to Java. "
+      },
+      "seeding_key": {
+        "activity_section.key": "7c28bf41-acc0-4796-82b3-d6466c1ff00c",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "0ccd1da3-f71b-48c4-a092-cb318d1f9dd5",
+      "position": 12,
+      "properties": {
+        "description": "This is a good opportunity to do a code review to make improvements . Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0ccd1da3-f71b-48c4-a092-cb318d1f9dd5",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "bf90130d-ab17-4599-809a-b9f25fc21240",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in the same pairs to review each other's `shiftSound()` and `reverseSound()` method. Students request, receive, and review feedback on Level 3. While reviewing students consider the following questions:\n* Am I able to understand the code easily?\n* Can you think of any inputs that could break the code?\n* Does the method shift or reverse the sound samples?"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf90130d-ab17-4599-809a-b9f25fc21240",
+        "lesson_activity.key": "aaf24b2f-b558-4b9b-9c80-1e9bee11df43"
+      }
+    },
+    {
+      "key": "e788d99a-4dd1-4cf0-83cd-3f8544fd50fb",
+      "position": 1,
+      "properties": {
+        "description": "You've learned a lot this unit, and now it’s time to Show What You Know! Like in previous units, we will begin with the unit project, then we will spend a day practicing how to answer AP-style free-response questions. We will then wrap up the unit with a multiple-choice assessment.",
+        "name": "Project Preview",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e788d99a-4dd1-4cf0-83cd-3f8544fd50fb",
+        "lesson_activity.key": "bfb26222-03b3-4754-a6f6-0c73a35e0785"
+      }
+    },
+    {
+      "key": "bb7dcf5e-04a9-42ec-a370-ab565e672fff",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Share an overview of the Concert in the Theater Project with the students:\n* Students create a concert in The Theater that plays audio and displays shapes in sync. \n* Students implement new and existing algorithms to perform manipulations on audio and shapes while incorporating object-oriented design principles.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What new or existing algorithms can you use in your concert to perform manipulations?*\n\n**Discussion Goal:** Students share algorithms they developed in the previous lessons and this lesson. Students suggest creating new algorithms to blend sounds together and perform other manipulations.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Suggest to students to write the prompt in their notebook. As students discuss algorithms, students can write the ideas down to create a bank. Students can use the ideas as they begin working on the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb7dcf5e-04a9-42ec-a370-ab565e672fff",
+        "lesson_activity.key": "bfb26222-03b3-4754-a6f6-0c73a35e0785"
+      }
+    },
+    {
+      "key": "2ecfe020-9375-44f0-8331-ee63ccf59708",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 3 Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "2ecfe020-9375-44f0-8331-ee63ccf59708",
+        "lesson_activity.key": "bfb26222-03b3-4754-a6f6-0c73a35e0785"
+      }
+    },
+    {
+      "key": "2d69f3e6-9214-470d-851c-760f5aa321c6",
+      "position": 4,
+      "properties": {
+        "description": "The Unit 3 Guide will help you remember what you have learned in this unit. Go over all of the lessons and think to yourself if you can say \"I can..\" with each lesson objective. Review the vocabulary. Look over the reference section for code. You don't need to memorize any particular class for the assessment, but it's helpful to remember how everything works together. ",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The unit guide provides a review of the objectives, vocabulary, and programming concepts to help students prepare for the assessment. If time permits, you can choose to quickly review any parts of the unit that are still confusing for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2d69f3e6-9214-470d-851c-760f5aa321c6",
+        "lesson_activity.key": "bfb26222-03b3-4754-a6f6-0c73a35e0785"
+      }
+    },
+    {
+      "key": "ae17c1b7-b253-49ba-be76-ff8c166e8106",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae17c1b7-b253-49ba-be76-ff8c166e8106",
+        "lesson_activity.key": "bfb26222-03b3-4754-a6f6-0c73a35e0785"
+      }
+    },
+    {
+      "key": "d292eb24-3202-440c-96ee-c47c28bf9d92",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "d292eb24-3202-440c-96ee-c47c28bf9d92",
+        "lesson_activity.key": "bfb26222-03b3-4754-a6f6-0c73a35e0785"
+      }
+    },
+    {
+      "key": "d116d7a6-476b-4de8-a982-9f8f6ec9aa40",
+      "position": 1,
+      "properties": {
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. Students will have three class periods to plan and create the program. Student participation in planning and feedback activities to improve their programs and solve problems. They will also reinforce software development practices and their self-image as a software engineer. Lessons 11, 12, and 13 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option is available that achieves the targeted learning objectives and goals. If using this option, refer to the [**Concert in the Theater Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1tZEF_Gg9Yq9sKKqMzx1m1HqU2yxUBCrkZ_TqLXVEO40/edit), which includes a one-day version of the [**Concert in the Theater Project Planning Guide**](https://docs.google.com/document/d/17ftt69lzdL_j0XYd1Sf175iHiD80vAnQLSoB7X6C9-M/edit#). Direct students to develop their program on Code Studio in Lesson 13 so they can submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+      },
+      "seeding_key": {
+        "activity_section.key": "d116d7a6-476b-4de8-a982-9f8f6ec9aa40",
+        "lesson_activity.key": "e3062efa-438d-4726-ad97-a333242fee98"
+      }
+    },
+    {
+      "key": "af96f42f-5f47-4fbb-a814-41b7ec2ce1b3",
+      "position": 1,
+      "properties": {
+        "description": "**Display:** Show the `main` method from the Lesson 11 Level 1 exemplar for this project.\n\n**Do This:**\n1. Describe to students that they will hear the original beat.\n2. Uncomment the line `SoundMaster.play(mainBeat);` and run the code to play the main beat.\n3. Comment out the line after playing it.\n4. Describe to students that the next remix algorithm will play only seconds 2-3.\n5. Uncomment the two lines that declare and play `cropBeat`, then run the code.\n6. Comment out the lines after playing.\n7. Repeat steps 4-6 to demonstrate `increaseSpeed`, `decreaseSpeed`, `combine`, and `blend`. Refer to the comments before each code segment to describe the corresponding algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which remix is your favorite? Why?*\n\n**Discussion Goal:** Students share their favorite remix and what they liked about it.",
+        "name": "Listen to Remixes"
+      },
+      "seeding_key": {
+        "activity_section.key": "af96f42f-5f47-4fbb-a814-41b7ec2ce1b3",
+        "lesson_activity.key": "aea3587e-7c92-4bbd-a277-7047602bd2a1"
+      }
+    },
+    {
+      "key": "af366bb7-a88b-47d6-931f-73c615f54f53",
+      "position": 2,
+      "properties": {
+        "description": "Yesterday, you brainstormed audio and visuals you might use in The Theater. Over the next three days, you will design your own concert in The Theater. Your goal today is to create the audio for the concert.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "af366bb7-a88b-47d6-931f-73c615f54f53",
+        "lesson_activity.key": "aea3587e-7c92-4bbd-a277-7047602bd2a1"
+      }
+    },
+    {
+      "key": "5d5bc913-9746-4652-b28e-4672d38b45be",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Pair students or allow students to choose their partners. If you have an odd number of students, a student may choose to work individually or form a group of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Concert in the Theater Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a class, read through the Project Description on the first page of the Concert in the Theater Project Planning Guide and review the rubric on the last page.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d5bc913-9746-4652-b28e-4672d38b45be",
+        "lesson_activity.key": "97bcb2a4-0a9b-4fbe-b68a-5f266343fe81"
+      }
+    },
+    {
+      "key": "31b04347-f3e5-4522-a47b-952b69e3e959",
+      "position": 2,
+      "properties": {
+        "description": "Before you begin writing your program, you will pick your remix algorithm and then write pseudocode for it.",
+        "duration": "5",
+        "name": "Remix Algorithm Pseudocode",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "31b04347-f3e5-4522-a47b-952b69e3e959",
+        "lesson_activity.key": "97bcb2a4-0a9b-4fbe-b68a-5f266343fe81"
+      }
+    },
+    {
+      "key": "3e73b63c-7f0c-405a-947f-0397b949698b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work with their partners to write pseudocode for their chosen remix algorithm. If students finish early, encourage them to check their pseudocode against the One-Dimensional Arrays rubric row.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to use their Array Manipulatives from previous lessons to work out the steps of their algorithm."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3e73b63c-7f0c-405a-947f-0397b949698b",
+        "lesson_activity.key": "97bcb2a4-0a9b-4fbe-b68a-5f266343fe81"
+      }
+    },
+    {
+      "key": "522d0a14-f68f-468f-a1ff-529b03df7f3e",
+      "position": 4,
+      "properties": {
+        "description": "Now that our pseudocode is complete, our next step is to translate it to code.",
+        "duration": "15",
+        "name": "Coding the Remix Algorithm",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "522d0a14-f68f-468f-a1ff-529b03df7f3e",
+        "lesson_activity.key": "97bcb2a4-0a9b-4fbe-b68a-5f266343fe81"
+      }
+    },
+    {
+      "key": "3a4e9a5d-c194-4820-b452-a790e7e8a862",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 in Code Studio to individually select an existing sound clip to use and write the code for their remix algorithm in the `SoundEffects` class. Students test their algorithm on the chosen sound clip.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may move at different speeds depending on their algorithm choice. You can introduce the next section before students have completed writing their remix algorithm, but do not rush students. Encourage them to spend more time on their remix than combining sounds. The remix is the core of the algorithmic development of this project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3a4e9a5d-c194-4820-b452-a790e7e8a862",
+        "lesson_activity.key": "97bcb2a4-0a9b-4fbe-b68a-5f266343fe81"
+      }
+    },
+    {
+      "key": "956d4799-81f5-40d8-911b-71d33d18e86a",
+      "position": 6,
+      "properties": {
+        "description": "Now that you have written your remix algorithm, you will combine it with the existing algorithms that you have written in this unit. Experiment with what happens when you call multiple algorithms in different orders!",
+        "duration": "10",
+        "name": "Audio Production",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "956d4799-81f5-40d8-911b-71d33d18e86a",
+        "lesson_activity.key": "97bcb2a4-0a9b-4fbe-b68a-5f266343fe81"
+      }
+    },
+    {
+      "key": "3db34289-57f2-4720-83f2-fb57554f47ed",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 in Code Studio to combine their remix algorithm with the algorithms they developed in earlier lessons."
+      },
+      "seeding_key": {
+        "activity_section.key": "3db34289-57f2-4720-83f2-fb57554f47ed",
+        "lesson_activity.key": "97bcb2a4-0a9b-4fbe-b68a-5f266343fe81"
+      }
+    },
+    {
+      "key": "fd1d6395-9e2c-4498-b32b-8d0ae46c917a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 1 Daily Reflection section in their Project Planning Guide.",
+        "name": "Daily Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd1d6395-9e2c-4498-b32b-8d0ae46c917a",
+        "lesson_activity.key": "7559a371-9411-4219-8e1d-e8d763edee26"
+      }
+    },
+    {
+      "key": "956b304b-d608-4512-9354-faa37544ef48",
+      "position": 2,
+      "properties": {
+        "description": "**Concert in the Theater Project Planning Guide:** You can use page 2 of the Concert in the Theater Project Planning Guide as an optional completion assessment. Additionally, you can review students’ daily reflections to check in on any obstacles that may need attention in the coming days.",
+        "name": "Assessment (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "956b304b-d608-4512-9354-faa37544ef48",
+        "lesson_activity.key": "7559a371-9411-4219-8e1d-e8d763edee26"
+      }
+    },
+    {
+      "key": "1a175696-fe3b-4a3c-9048-d97507d8357d",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in groups of four that do not include their partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students share their remix with their group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Did you hear any remixes that inspired you to update your code?*\n\n**Discussion Goal:** Students share examples of remixes they heard that they liked and that inspired them to make modifications to their own remixes.",
+        "name": "Listen to Remixes"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a175696-fe3b-4a3c-9048-d97507d8357d",
+        "lesson_activity.key": "8609fa3e-3798-4b0c-957b-b1f89fb4c99d"
+      }
+    },
+    {
+      "key": "12f7a0e0-416a-44e8-b086-77175c9d602b",
+      "position": 2,
+      "properties": {
+        "description": "Today you will continue to develop your Concert in the Theater project. Yesterday, we created our audio. Today you will add visualizations to your concert. Keep in mind what remixes inspired you as you work.\n\nOf course, as a software engineer, it is important to give and receive feedback on your programs, so we will be taking 10 minutes to do code reviews after about 20 minutes of development work.\n\nFirst, there is a new rule for concerts: the last song can only start playing if the current length of the concert is less than 10 seconds! The last song has to start within the first 10 seconds, otherwise the concert ends.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "12f7a0e0-416a-44e8-b086-77175c9d602b",
+        "lesson_activity.key": "8609fa3e-3798-4b0c-957b-b1f89fb4c99d"
+      }
+    },
+    {
+      "key": "9092c101-f65b-406d-a26e-9dbec5a61c08",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the concert length rule."
+      },
+      "seeding_key": {
+        "activity_section.key": "9092c101-f65b-406d-a26e-9dbec5a61c08",
+        "lesson_activity.key": "8609fa3e-3798-4b0c-957b-b1f89fb4c99d"
+      }
+    },
+    {
+      "key": "fe1e7220-0a3a-46cd-a1ed-3425d6948880",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work with their partners to complete step 5 in the Concert in the Theater Project Planning Guide. If students finish early, encourage them to check their pseudocode against the Static Variables/Constants rubric row.",
+        "duration": "10",
+        "name": "Static Variables and Constants"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe1e7220-0a3a-46cd-a1ed-3425d6948880",
+        "lesson_activity.key": "38bb9eab-0e9e-442e-88e8-fb5c99804a83"
+      }
+    },
+    {
+      "key": "a4430820-c5f8-4460-9b36-05a3fffbc7d9",
+      "position": 2,
+      "properties": {
+        "description": "Now that our pseudocode is complete, our next step is to translate it to code.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a4430820-c5f8-4460-9b36-05a3fffbc7d9",
+        "lesson_activity.key": "38bb9eab-0e9e-442e-88e8-fb5c99804a83"
+      }
+    },
+    {
+      "key": "918b9ad8-416f-404c-98ad-5245b8890864",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 in Code Studio to add their static variable or constant to the `SoundEffects` class and the code to constrain the length of the concert in their `main` method."
+      },
+      "seeding_key": {
+        "activity_section.key": "918b9ad8-416f-404c-98ad-5245b8890864",
+        "lesson_activity.key": "38bb9eab-0e9e-442e-88e8-fb5c99804a83"
+      }
+    },
+    {
+      "key": "9177f55e-5567-40ba-9053-51dc7f97ebaf",
+      "position": 4,
+      "properties": {
+        "description": "Now we’re going to add visuals! Open Lesson 10 Level 2 in a new tab and look at your code for inspiration on how you can use a nested loop with an array of `Shape`s. Copy and paste the code, then modify it to create the visuals for your concert.",
+        "duration": "10",
+        "name": "Visualize the Concert",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9177f55e-5567-40ba-9053-51dc7f97ebaf",
+        "lesson_activity.key": "38bb9eab-0e9e-442e-88e8-fb5c99804a83"
+      }
+    },
+    {
+      "key": "9f9f8885-ef4c-45d9-ba8d-b4e1bc9c4f20",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 in Code Studio to add their visuals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may move at different speeds depending on their visualization. If students finish early, encourage them to think back to the remixes that inspired them during the warm up to improve their audio."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f9f8885-ef4c-45d9-ba8d-b4e1bc9c4f20",
+        "lesson_activity.key": "38bb9eab-0e9e-442e-88e8-fb5c99804a83"
+      }
+    },
+    {
+      "key": "3e226818-6785-4bbf-8d65-fe47ecbb361e",
+      "position": 6,
+      "properties": {
+        "description": "Let's take a moment to provide feedback to each other through a code review. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code! ",
+        "duration": "10",
+        "name": "Code Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3e226818-6785-4bbf-8d65-fe47ecbb361e",
+        "lesson_activity.key": "38bb9eab-0e9e-442e-88e8-fb5c99804a83"
+      }
+    },
+    {
+      "key": "9827f4e4-2e10-4c64-b04f-706319df1eac",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's projects in Code Studio. Students request, receive, and review feedback on their Concert in the Theater Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ensure that partners are not in the same group for code review. Since partners wrote the pseudocode together, they should review different people in order to give more feedback."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9827f4e4-2e10-4c64-b04f-706319df1eac",
+        "lesson_activity.key": "38bb9eab-0e9e-442e-88e8-fb5c99804a83"
+      }
+    },
+    {
+      "key": "8c6fb153-807a-4af7-897b-4a5b9b4259a9",
+      "position": 8,
+      "properties": {
+        "description": "You have a lot of feedback to help improve your code! Software engineers are constantly making improvements to their code and often have to prioritize different updates.",
+        "duration": "5",
+        "name": "Revisions, Updates, and Reviews",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8c6fb153-807a-4af7-897b-4a5b9b4259a9",
+        "lesson_activity.key": "38bb9eab-0e9e-442e-88e8-fb5c99804a83"
+      }
+    },
+    {
+      "key": "15124a4d-ec69-4ad8-817d-69787d844327",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students review feedback from both the code review process to create a prioritized list of upgrades, changes, and things they still need to complete. They should complete this process on page 5 of the Project Planning Guide, which outlines steps for prioritizing their list.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students finish their prioritized list early, encourage them to start working on their first priority."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "15124a4d-ec69-4ad8-817d-69787d844327",
+        "lesson_activity.key": "38bb9eab-0e9e-442e-88e8-fb5c99804a83"
+      }
+    },
+    {
+      "key": "45290665-ff2a-438a-bfcd-42a19d4023df",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students should complete the Day 2 Daily Reflection section in their Project Planning Guide.",
+        "name": "Daily Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "45290665-ff2a-438a-bfcd-42a19d4023df",
+        "lesson_activity.key": "f65152d9-62ae-4fd7-a0b8-735dd7ca3438"
+      }
+    },
+    {
+      "key": "3956dd62-7e9d-495a-8fd5-6ace9b1b6f5f",
+      "position": 2,
+      "properties": {
+        "description": "Tomorrow you will finish writing your program. Think about the prioritized list you created as you decide how to finalize and submit your program.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3956dd62-7e9d-495a-8fd5-6ace9b1b6f5f",
+        "lesson_activity.key": "f65152d9-62ae-4fd7-a0b8-735dd7ca3438"
+      }
+    },
+    {
+      "key": "cb66bfa3-44c4-4944-bbe3-53661011532f",
+      "position": 3,
+      "properties": {
+        "description": "**Project Feedback:** You can collect the Daily Reflection and Prioritized Lists as an optional completion assessment.",
+        "name": "Assessment (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb66bfa3-44c4-4944-bbe3-53661011532f",
+        "lesson_activity.key": "f65152d9-62ae-4fd7-a0b8-735dd7ca3438"
+      }
+    },
+    {
+      "key": "bea44531-1fb8-43a0-8be3-512b391ec1be",
+      "position": 1,
+      "properties": {
+        "description": "While feedback from peers is important, software engineers always check to make sure they’ve met the requirements specified by their clients. Take the next three minutes to check the code you’ve written so far against the rubric in the project guide. If your project was scored now, which requirements have you met? Which still needs work?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bea44531-1fb8-43a0-8be3-512b391ec1be",
+        "lesson_activity.key": "c9ea0b14-dd10-46c9-8600-830896c6e953"
+      }
+    },
+    {
+      "key": "a4f33cd7-ee24-4dce-85db-f45ea4e92dfd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students assess their project against the rubric outlined in the Project Planning Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "a4f33cd7-ee24-4dce-85db-f45ea4e92dfd",
+        "lesson_activity.key": "c9ea0b14-dd10-46c9-8600-830896c6e953"
+      }
+    },
+    {
+      "key": "087e1bf0-29b3-401e-bb69-fe6289f11427",
+      "position": 3,
+      "properties": {
+        "description": "Yesterday, you created a prioritized list of changes and upgrades to make to your Concert in the Theater Project. Today, you reviewed the rubric. Work on those priorities to finish your concert!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "087e1bf0-29b3-401e-bb69-fe6289f11427",
+        "lesson_activity.key": "c9ea0b14-dd10-46c9-8600-830896c6e953"
+      }
+    },
+    {
+      "key": "bb0473c4-add1-40ee-ac06-75213b2301d9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to page 5 of their Project Planning Guide to review their priority list. Direct them to Level 1 on Code Studio to finish their concert.",
+        "name": "Development",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that they may not get to everything on their prioritized list, and that is okay! Software engineers have to make decisions all the time about which features are most important. We made a prioritized list to ensure that we complete the most important changes and upgrades first, resulting in some of the less important changes not being made at this point.\n\nIf students finish early, encourage them to consider code they reviewed for inspiration to improve their concert."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb0473c4-add1-40ee-ac06-75213b2301d9",
+        "lesson_activity.key": "04711dbc-0430-4d30-bed3-d1541a3f54b9"
+      }
+    },
+    {
+      "key": "f268019a-4a9d-408f-9fa5-4e9c3f9edabe",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations! You have completed your Concert in the Theater Project, and you should be proud of the work you have done. We will show off our work through peer presentations to share what you created with your classmates.",
+        "name": "Peer Presentations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f268019a-4a9d-408f-9fa5-4e9c3f9edabe",
+        "lesson_activity.key": "17c80791-ca4a-498e-b9ec-12671c404d69"
+      }
+    },
+    {
+      "key": "8d6f444e-039b-43d5-8f49-ef878c61a809",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students into groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students take turns demonstrating their program to the others in their group. After each demonstration, observers ask questions and share feedback with presenters.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider using the interview cards to provide structure to this feedback or if you have additional time."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8d6f444e-039b-43d5-8f49-ef878c61a809",
+        "lesson_activity.key": "17c80791-ca4a-498e-b9ec-12671c404d69"
+      }
+    },
+    {
+      "key": "946413b5-68e6-4dd3-8df4-547cac7132a9",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the End of Project Self-Reflection on page 6 of the Project Planning Guide. "
+      },
+      "seeding_key": {
+        "activity_section.key": "946413b5-68e6-4dd3-8df4-547cac7132a9",
+        "lesson_activity.key": "17c80791-ca4a-498e-b9ec-12671c404d69"
+      }
+    },
+    {
+      "key": "e6312421-7e0c-4ca1-8f8e-1807b48c49a9",
+      "position": 4,
+      "properties": {
+        "description": "**Concert in the Theater Project:** Use the rubric on the last page of the Concert in the Theater Project Planning Guide to assess student projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6312421-7e0c-4ca1-8f8e-1807b48c49a9",
+        "lesson_activity.key": "17c80791-ca4a-498e-b9ec-12671c404d69"
+      }
+    },
+    {
+      "key": "d815d629-8ed0-4134-a5f7-f5c90416be12",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think back to the FRQs we worked on in Units 1 and 2. What do you remember about how we annotate an FRQ?*\n\n**Discussion Goal:** Students recall the Close Reading Strategy. Points to bring out include:\n* Begin with a first read to understand the programming concepts and focus of the question.\n* Use highlighters or text markup to annotate different components of the FRQ.\n* Read through the scoring guidelines and then reread the FRQ. Use asterisks to indicate information specific to the scoring guide.\n* Construct a solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the overview of the annotation process.",
+        "name": "What Do We Know?"
+      },
+      "seeding_key": {
+        "activity_section.key": "d815d629-8ed0-4134-a5f7-f5c90416be12",
+        "lesson_activity.key": "018e2d64-0daa-475c-a60b-3bbce727697d"
+      }
+    },
+    {
+      "key": "b4f01e9f-3067-40a2-89fd-d2c0d9c78d9f",
+      "position": 2,
+      "properties": {
+        "description": "During previous FRQ days, we worked with our peers through the FRQ process. Today, you will still have an opportunity to collaborate with your peers, but you will work through most of the FRQ process on your own.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b4f01e9f-3067-40a2-89fd-d2c0d9c78d9f",
+        "lesson_activity.key": "018e2d64-0daa-475c-a60b-3bbce727697d"
+      }
+    },
+    {
+      "key": "89c54e2b-d836-4e83-ba8c-0efd9bcf27a8",
+      "position": 1,
+      "properties": {
+        "description": "Today, we will be working with a free response question called `TicketTracker`. You will begin by using the Close Reading Strategy to annotate this FRQ to assist you in answering the question.",
+        "duration": "7",
+        "name": "FRQ Annotate",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "89c54e2b-d836-4e83-ba8c-0efd9bcf27a8",
+        "lesson_activity.key": "5f78f943-280e-438d-a25c-5c9cf9d08f4b"
+      }
+    },
+    {
+      "key": "83b720c5-59bc-405f-9b81-c10a07213e5d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of FRQ Writing along with markers or colored pencils.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to annotate the question using the annotation guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you have about approaching this Free Response Question?*\n\n**Discussion Goal:** Students share any misunderstandings or points of confusion they have about the FRQ. Some questions students may ask include:\n* How do I start the problem?\n* What methods do I need to write?\n* Is there an example I can review?\n* How will this FRQ be graded?\n\n**Do This:** Describe the structure of today’s activity while moving through the slides. There are three parts:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Input, Process, Output\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Writing\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Scoring"
+      },
+      "seeding_key": {
+        "activity_section.key": "83b720c5-59bc-405f-9b81-c10a07213e5d",
+        "lesson_activity.key": "5f78f943-280e-438d-a25c-5c9cf9d08f4b"
+      }
+    },
+    {
+      "key": "2c5ee88a-25dd-4da4-949f-6d1e40810e27",
+      "position": 3,
+      "properties": {
+        "description": "**Group:** Place students in groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Distribute a copy of the FRQ Graphic Organizer to each student. Students should also have their FRQ Writing handout for use with this activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Each group will use the following protocol for this activity:\n1. Students work together to identify all of the input variables used/needed for the FRQ.\n2. Students determine what will be returned or the state of variables throughout the FRQ.\n3. Students work in a group to write pseudocode to get from the input to the output. Students should identify specific helper methods they need to accomplish the task.",
+        "duration": "10",
+        "name": "Input, Process, Output",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While students are brainstorming how to solve this FRQ together, they will be completing the FRQ writing on their own. While groups are working through FRQ Graphic Organizer, check in to ensure that all students individually complete their organizer."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c5ee88a-25dd-4da4-949f-6d1e40810e27",
+        "lesson_activity.key": "5f78f943-280e-438d-a25c-5c9cf9d08f4b"
+      }
+    },
+    {
+      "key": "cea4b012-2312-45df-93b2-31017f165d6c",
+      "position": 4,
+      "properties": {
+        "description": "Return to your seats and complete the FRQ. Use your FRQ Graphic Organizer as you write your solution. You will have ten minutes to complete this task.",
+        "duration": "10",
+        "name": "FRQ Writing",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cea4b012-2312-45df-93b2-31017f165d6c",
+        "lesson_activity.key": "5f78f943-280e-438d-a25c-5c9cf9d08f4b"
+      }
+    },
+    {
+      "key": "115247ec-434a-4808-b81c-a48b40f19a4d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students return to their seats and complete the FRQ Writing handout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students work, you may choose to use a ten-minute timer to help students pace themselves. At this point, the classroom should be quiet so students can focus on writing their solution to the FRQ. If students finish early, you may want to suggest:\n* Trace their code to ensure it is correct.\n* Check their graphic organizer to ensure it aligns with the pseudocode they wrote during Input, Process, Output earlier in the class period.\n\nDifferentiation Suggestions:\n* Students who need more time could choose one part to complete instead of both.\n* Though the goal is for students to complete this FRQ independently, you may choose to have some (or all) students complete in pairs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "115247ec-434a-4808-b81c-a48b40f19a4d",
+        "lesson_activity.key": "5f78f943-280e-438d-a25c-5c9cf9d08f4b"
+      }
+    },
+    {
+      "key": "d7baab0f-5c89-4e4c-aaf2-aa588bc8fde0",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Scoring Guide.\n\n**Group:** Place students in groups of two.\n\n**Do This:** Ask students to evaluate their work with their partners using the FRQ Scoring Guide and complete the reflection on the last page of the FRQ Writing handout.\n\n**Do This:** Discuss the possible solution. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `getFree()` method (Part (a))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `averagePrice()` method (Part (b))",
+        "duration": "8",
+        "name": "FRQ Scoring",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reinforce to students that there are multiple ways to solve each of these problems."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d7baab0f-5c89-4e4c-aaf2-aa588bc8fde0",
+        "lesson_activity.key": "5f78f943-280e-438d-a25c-5c9cf9d08f4b"
+      }
+    },
+    {
+      "key": "26b8f245-d6c9-4038-9cb1-891251701bc4",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What were you confident about? Are there some things you left out that could have brought up your score?*\n\n**Discussion Goal:** Students identify what they achieved in their FRQ solution and areas of improvement.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage those who finish early to write full responses in their reflections and share their reflection with their partner."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "26b8f245-d6c9-4038-9cb1-891251701bc4",
+        "lesson_activity.key": "5f78f943-280e-438d-a25c-5c9cf9d08f4b"
+      }
+    },
+    {
+      "key": "842ac788-a819-4904-b13a-6305cf10330c",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Write one thing you got from this FRQ on one sticky note and one thing you need after completing this FRQ on the other sticky note.*\n\n**Discussion Goal:** Students share what they did well or are confident about and what support or additional information they need to improve their skills.",
+        "name": "Gots and Needs"
+      },
+      "seeding_key": {
+        "activity_section.key": "842ac788-a819-4904-b13a-6305cf10330c",
+        "lesson_activity.key": "dac65f0f-bd8e-4cea-9d94-00c4a34cae44"
+      }
+    },
+    {
       "key": "216086d1-8d9e-4c36-a1bc-38de812c435b",
       "position": 1,
       "properties": {
@@ -1825,6 +3827,30 @@
       }
     },
     {
+      "name": "[KEY] FRQ Graphic Organizer",
+      "url": "https://docs.google.com/document/d/1JLFK5fWr3-ng5VJayYqmb5gig1bAjOCkV5pXOcQG6u8/edit?usp=sharing",
+      "key": "_key_frq_graphic_organizer_2",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_frq_graphic_organizer_2"
+      }
+    },
+    {
+      "name": "[KEY] FRQ Writing",
+      "url": "https://docs.google.com/document/d/1GM8qAK55bzt7e5CEwSI6UAwnkvZ-DAx0DuMjvQUqL9A/edit?usp=sharing",
+      "key": "_key_frq_writing_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_frq_writing_1"
+      }
+    },
+    {
       "name": "[KEY] Investigating Arrays",
       "url": "https://docs.google.com/document/u/0/d/16eDAaJDkUhlYixPOD3C4dJGyQVOM8Y7gfTKCSkS9Ljo/edit",
       "key": "_key_investigating_arrays",
@@ -1837,6 +3863,54 @@
       }
     },
     {
+      "name": "[KEY] Math Class Source Code",
+      "url": "https://docs.google.com/document/d/1GjGz_NLEbBYDX0_LfgvhEPLS6fVmeOEnSVuw-roOXpA/edit?usp=sharing",
+      "key": "_key_math_class_source_code",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_math_class_source_code"
+      }
+    },
+    {
+      "name": "[KEY] Planning Array Algorithms",
+      "url": "https://docs.google.com/document/d/1gnxgtXzU_zKbhH0C7ZtUh8h5ZD6ncGQI8NADMgddJNY/edit#",
+      "key": "_key_planning_array_algorithms",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_planning_array_algorithms"
+      }
+    },
+    {
+      "name": "[KEY] Planning Array Algorithms",
+      "url": "https://docs.google.com/document/d/1EsQtZSM-qYlUTuJAT1gUlEgspYw1xS6IKOZ64pGvgZ0/edit?usp=sharing",
+      "key": "_key_planning_array_algorithms_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_planning_array_algorithms_1"
+      }
+    },
+    {
+      "name": "[KEY] Planning Array Algorithms",
+      "url": "https://docs.google.com/document/d/1yzmGTtJR5VAW_eSaxKF8m3CGt_7wllV0jUn5kuBhctE/edit?usp=sharing",
+      "key": "_key_planning_array_algorithms_2",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_planning_array_algorithms_2"
+      }
+    },
+    {
       "name": "[KEY] Tracing Loops",
       "url": "https://docs.google.com/document/d/1yqaWn3qOsI2EL2BKG117Gsvs7lwYLTWcOcu2gv59tRs",
       "key": "_key_tracing_loops",
@@ -1846,6 +3920,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_tracing_loops"
+      }
+    },
+    {
+      "name": "[KEY] U3L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1-AKwZI_21cRKGc5WCSg6N-eqqLGqIAgB1lJDYVHn5Sk/edit?usp=sharing",
+      "key": "_key_u3l10_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u3l10_extra_practice"
       }
     },
     {
@@ -1921,6 +4007,54 @@
       }
     },
     {
+      "name": "[KEY] U3L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1fHfpb44AJ2vE6R2iA3OFAW7O1veBN2YKbzJyy_co94U/edit?usp=sharing",
+      "key": "_key_u3l7_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u3l7_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U3L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/190XBkLnhf9HKPY8L_yvA-j5GLGgCUpq7MrCrYNwF1a0/edit#",
+      "key": "_key_u3l8_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u3l8_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U3L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1NSICJ9lkZyV6Xv9zYYqQHnELGv2qe0GQUNNxAIdHCdY/edit?usp=sharing",
+      "key": "_key_u3l9_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u3l9_extra_practice"
+      }
+    },
+    {
+      "name": "Array Algorithms Manipulatives",
+      "url": "https://docs.google.com/presentation/d/1JULRjmbXUkjrnkC9Q42spIk3J6V-No6AUjvKBeqiDAo/edit?usp=sharing",
+      "key": "array_algorithms_manipulatives",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "array_algorithms_manipulatives"
+      }
+    },
+    {
       "name": "Array Manipulatives",
       "url": "https://docs.google.com/presentation/d/1rYOgAAhDzl7nI6Od73dmxaDdvWWYUFVBjpDwpo8Wh0U/edit?usp=sharing",
       "key": "array_manipulatives",
@@ -1930,6 +4064,54 @@
       },
       "seeding_key": {
         "resource.key": "array_manipulatives"
+      }
+    },
+    {
+      "name": "Array Manipulatives",
+      "url": "https://docs.google.com/presentation/d/1JDlyogJhjRYX4CgRynvgxamFcWfiLpNN4xTPoTuxM4o/edit?usp=sharing",
+      "key": "array_manipulatives_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "array_manipulatives_1"
+      }
+    },
+    {
+      "name": "Concert in the Theater Project Peer Interview Cards",
+      "url": "https://docs.google.com/document/d/1AJiEb-Bz6zBMWhzSjv7DNc3Y3RZLeyYUAxZtbhSDW_A/edit#",
+      "key": "concert_in_the_theater_project_peer_interview_cards",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "concert_in_the_theater_project_peer_interview_cards"
+      }
+    },
+    {
+      "name": "Concert in the Theater Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1WPZDZ4MqcYbuw2nfl0HSROQ8nVt1XQElSLENmEBUZ34/edit#",
+      "key": "concert_in_the_theater_project_planning_guide",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "concert_in_the_theater_project_planning_guide"
+      }
+    },
+    {
+      "name": "Concert in the Theater Project Planning Guide",
+      "url": "https://docs.google.com/document/d/11OiADxcZtRIPp9FB5HD-EcKvgCe3kKet9b7XnKJe9LY/edit#",
+      "key": "concert_in_the_theater_project_planning_guide_1",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "concert_in_the_theater_project_planning_guide_1"
       }
     },
     {
@@ -1957,6 +4139,42 @@
       }
     },
     {
+      "name": "FRQ Graphic Organizer",
+      "url": "https://docs.google.com/document/d/1_-RGlLcK15B4vyl0p96FLbB8POyzlr0-KYN81zGxD8U/edit?usp=sharing",
+      "key": "frq_graphic_organizer_1",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "frq_graphic_organizer_1"
+      }
+    },
+    {
+      "name": "FRQ Scoring Guide",
+      "url": "https://docs.google.com/document/d/17Jro74APbsrVcdw-eL3WxhBFGICfCjbYJgJjtMWQhEM/edit?usp=sharing",
+      "key": "frq_scoring_guide_1",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "frq_scoring_guide_1"
+      }
+    },
+    {
+      "name": "FRQ Writing",
+      "url": "https://docs.google.com/document/d/1HxwYD42JqvIr7WG-fHmg_gKdO2WYmWjiPnt8KrdPnr0/edit?usp=sharing",
+      "key": "frq_writing_1",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "frq_writing_1"
+      }
+    },
+    {
       "name": "Investigating Arrays",
       "url": "https://docs.google.com/document/u/0/d/1_CR2CMcBWjVLt8UipUguTdB-0E5W_xSJhHps_jfkS7g/edit",
       "key": "investigating_arrays",
@@ -1966,6 +4184,54 @@
       },
       "seeding_key": {
         "resource.key": "investigating_arrays"
+      }
+    },
+    {
+      "name": "Math Class Source Code",
+      "url": "https://docs.google.com/document/d/1BO5II-icxNOI-r_atrO7uS9tx6mDvHcDBNEYkZLxEgA/edit?usp=sharing",
+      "key": "math_class_source_code",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "math_class_source_code"
+      }
+    },
+    {
+      "name": "Planning Array Algorithms",
+      "url": "https://docs.google.com/document/d/1ze4jegr1hP13e6BhwWCS-tsIum0wi8FKjq96UkAyJ_0/edit#",
+      "key": "planning_array_algorithms",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "planning_array_algorithms"
+      }
+    },
+    {
+      "name": "Planning Array Algorithms",
+      "url": "https://docs.google.com/document/d/1W4D09mwNt_9ZNjwrLQsKkg8wAJr4uvzZb6TtwzGtudw/edit?usp=sharing",
+      "key": "planning_array_algorithms_1",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "planning_array_algorithms_1"
+      }
+    },
+    {
+      "name": "Planning Array Algorithms",
+      "url": "https://docs.google.com/document/d/1AFeIF3LORowBEEZxe-LjxMzVx2mUsIvu7BxVwpgXAM0/edit?usp=sharing",
+      "key": "planning_array_algorithms_2",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "planning_array_algorithms_2"
       }
     },
     {
@@ -1990,6 +4256,18 @@
       },
       "seeding_key": {
         "resource.key": "tracing_loops"
+      }
+    },
+    {
+      "name": "U3L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1vS3KvhbtvL8TqaQEocnSPXoRiLKTuvg7XwGOSr8LiTo/edit?usp=sharing",
+      "key": "u3l10_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u3l10_extra_practice"
       }
     },
     {
@@ -2065,6 +4343,54 @@
       }
     },
     {
+      "name": "U3L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1SgTy3e85y0kaTvXuLN_UVkChUsu78hW8hmbVJHO4-CU/edit?usp=sharing",
+      "key": "u3l7_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u3l7_extra_practice"
+      }
+    },
+    {
+      "name": "U3L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1lNcC17yYJRZ3Z3SAubXmgpvbsKCWUykLsATytPX9RWI/edit?usp=sharing",
+      "key": "u3l8_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u3l8_extra_practice"
+      }
+    },
+    {
+      "name": "U3L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1S1BxImy1sBKccID4_M1fyrz7WahG9kYYguDWiDcHA6E/edit?usp=sharing",
+      "key": "u3l9_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u3l9_extra_practice"
+      }
+    },
+    {
+      "name": "Unit 3 Guide",
+      "url": "https://docs.google.com/document/d/1enm_dTvSFD4UDFg1bY-mKynuBVi9_nUKKlQYv2U7ch8/edit?usp=sharing",
+      "key": "unit_3_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_guide"
+      }
+    },
+    {
       "name": "Unit 3 Presentation Slides",
       "url": "https://docs.google.com/presentation/d/1NRROUww6flqxv0sMrJFva8rTILBBEWzfSQmBl_28EDw/edit?usp=sharing",
       "key": "unit_3_presentation_slides",
@@ -2098,6 +4424,18 @@
       },
       "seeding_key": {
         "resource.key": "vocabulary_bingo_definitions"
+      }
+    },
+    {
+      "name": "Vocabulary Draw",
+      "url": "https://docs.google.com/document/d/1QCJ0XPOREoyflbYuxAjRT4wIsoHuzech35J5HmmaC5I/edit?usp=sharing",
+      "key": "vocabulary_draw_1",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_draw_1"
       }
     }
   ],
@@ -2280,6 +4618,246 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "u3l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_math_class_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_u3l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "math_class_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u3l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_planning_array_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_u3l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "planning_array_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "array_manipulatives_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "u3l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_key_planning_array_algorithms_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_key_u3l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "planning_array_algorithms_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "array_algorithms_manipulatives"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "u3l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_planning_array_algorithms_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_u3l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "vocabulary_draw_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "planning_array_algorithms_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u3l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_3_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "concert_in_the_theater_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "concert_in_the_theater_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "concert_in_the_theater_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "concert_in_the_theater_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "concert_in_the_theater_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "concert_in_the_theater_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "concert_in_the_theater_project_peer_interview_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_frq_graphic_organizer_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_frq_writing_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_graphic_organizer_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_writing_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_scoring_guide_1"
       }
     },
     {
@@ -2475,6 +5053,86 @@
       "seeding_key": {
         "vocabulary.key": "enhanced_for_loop_variable"
       }
+    },
+    {
+      "key": "static_variable",
+      "word": "Static Variable",
+      "definition": "A variable defined in a class that stores a shared value for all instances of the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "static_variable"
+      }
+    },
+    {
+      "key": "static_keyword",
+      "word": "static Keyword",
+      "definition": "The keyword used to specify that a variable or method belongs to a class instead of an instance of a class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "static_keyword"
+      }
+    },
+    {
+      "key": "constant",
+      "word": "Constant",
+      "definition": "A variable containing a value that cannot be changed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constant"
+      }
+    },
+    {
+      "key": "final_keyword",
+      "word": "final Keyword",
+      "definition": "The keyword used to specify that a value cannot be changed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "final_keyword"
+      }
+    },
+    {
+      "key": "efficiency",
+      "word": "Efficiency",
+      "definition": "The amount of time or resources needed to execute an algorithm",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A set of steps to complete a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "off_by_one_error",
+      "word": "Off-By-One Error",
+      "definition": "An error that occurs when attempting to access an index greater than or equal to the length of an array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "off_by_one_error"
+      }
+    },
+    {
+      "key": "nested_loop",
+      "word": "Nested Loop",
+      "definition": "A loop that exists in the body of another loop",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "nested_loop"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -2584,6 +5242,54 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "vocabulary.key": "enhanced_for_loop_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "static_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "static_keyword"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "constant"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "final_keyword"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "off_by_one_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "nested_loop"
       }
     }
   ],
@@ -2759,6 +5465,236 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "objective.key": "871ba35c-ac4a-43a6-92cb-4b7eba75ceda"
+      }
+    },
+    {
+      "key": "56973cf0-f6b5-4e56-84b4-f5a080a85839",
+      "properties": {
+        "description": "Define and use static variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "56973cf0-f6b5-4e56-84b4-f5a080a85839"
+      }
+    },
+    {
+      "key": "eb161259-a279-414e-97ef-6895c8ced620",
+      "properties": {
+        "description": "Define and use constants"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "eb161259-a279-414e-97ef-6895c8ced620"
+      }
+    },
+    {
+      "key": "12d31902-90f3-4c2e-ac46-9b0ef1255e56",
+      "properties": {
+        "description": "Examine source code for Java’s Math class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "12d31902-90f3-4c2e-ac46-9b0ef1255e56"
+      }
+    },
+    {
+      "key": "49d39301-b4c0-4382-a6b8-71492dc93b89",
+      "properties": {
+        "description": "Write algorithms using array traversals to find specific data"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "49d39301-b4c0-4382-a6b8-71492dc93b89"
+      }
+    },
+    {
+      "key": "fb6b98ed-e746-43c6-a4ee-562d127f544c",
+      "properties": {
+        "description": "Write code to implement traversal algorithms"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "fb6b98ed-e746-43c6-a4ee-562d127f544c"
+      }
+    },
+    {
+      "key": "b17e1d88-d20a-4697-8366-3478cd4a77ac",
+      "properties": {
+        "description": "Discuss debugging strategies to address off-by-one errors"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "b17e1d88-d20a-4697-8366-3478cd4a77ac"
+      }
+    },
+    {
+      "key": "7be17fc5-6be0-4fdf-90ec-47a361f1e278",
+      "properties": {
+        "description": "Swap consecutive pairs of elements in an array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "7be17fc5-6be0-4fdf-90ec-47a361f1e278"
+      }
+    },
+    {
+      "key": "45b23f27-344f-46ef-9fdd-40a7b2534afc",
+      "properties": {
+        "description": "Replace duplicate elements in an array with a new value"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "45b23f27-344f-46ef-9fdd-40a7b2534afc"
+      }
+    },
+    {
+      "key": "70d071df-1ee3-4210-8bd3-bba962095501",
+      "properties": {
+        "description": "Obtain elements from an array that meet specific criteria to create a new array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "70d071df-1ee3-4210-8bd3-bba962095501"
+      }
+    },
+    {
+      "key": "4e74fe99-78c6-4354-befb-63a60f136583",
+      "properties": {
+        "description": "Define a nested loop"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "4e74fe99-78c6-4354-befb-63a60f136583"
+      }
+    },
+    {
+      "key": "16cb3674-9465-4d1a-83b2-4baf464c17e5",
+      "properties": {
+        "description": "Create a nested loop and iteration statement"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "16cb3674-9465-4d1a-83b2-4baf464c17e5"
+      }
+    },
+    {
+      "key": "c8012446-8baa-4110-80b8-c9a45bf66309",
+      "properties": {
+        "description": "Shift elements in an array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "c8012446-8baa-4110-80b8-c9a45bf66309"
+      }
+    },
+    {
+      "key": "6c547387-653b-45a6-8666-06d692007f33",
+      "properties": {
+        "description": "Reverse elements in an array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "6c547387-653b-45a6-8666-06d692007f33"
+      }
+    },
+    {
+      "key": "ca9ab4a0-4305-4a06-aea3-1ffdd6d80c64",
+      "properties": {
+        "description": "Design a concert in The Theater"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "ca9ab4a0-4305-4a06-aea3-1ffdd6d80c64"
+      }
+    },
+    {
+      "key": "aae642d0-877f-4992-b56a-c133203926a8",
+      "properties": {
+        "description": "Implement a new remix algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "aae642d0-877f-4992-b56a-c133203926a8"
+      }
+    },
+    {
+      "key": "d68ae048-3b1c-4eb2-b0e2-6ee9f974e523",
+      "properties": {
+        "description": "Design a concert in The Theater"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "d68ae048-3b1c-4eb2-b0e2-6ee9f974e523"
+      }
+    },
+    {
+      "key": "eff333ec-e9f3-4332-93d2-5901d5b6b216",
+      "properties": {
+        "description": "Declare, initialize, and use static variables or constants"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "eff333ec-e9f3-4332-93d2-5901d5b6b216"
+      }
+    },
+    {
+      "key": "cb9055e7-f2a2-4e10-adb5-20d418b5d7a5",
+      "properties": {
+        "description": "Conduct a code review to give and receive feedback on program code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "cb9055e7-f2a2-4e10-adb5-20d418b5d7a5"
+      }
+    },
+    {
+      "key": "14c1aac9-9d23-4f4b-b507-74e2cf0d1482",
+      "properties": {
+        "description": "Design a concert in The Theater"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "14c1aac9-9d23-4f4b-b507-74e2cf0d1482"
+      }
+    },
+    {
+      "key": "ae7e4b86-e98c-44cb-a6b9-0ecbaab7a518",
+      "properties": {
+        "description": "Reflect on the development process"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "ae7e4b86-e98c-44cb-a6b9-0ecbaab7a518"
+      }
+    },
+    {
+      "key": "70b40a97-ca9b-411a-b13c-aec7d28ad881",
+      "properties": {
+        "description": "Traverse elements in a 1D array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "70b40a97-ca9b-411a-b13c-aec7d28ad881"
+      }
+    },
+    {
+      "key": "27ec822f-5b47-45a7-8f1b-16efbc93b123",
+      "properties": {
+        "description": "Implement methods based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "27ec822f-5b47-45a7-8f1b-16efbc93b123"
+      }
+    },
+    {
+      "key": "524299e3-f067-4a6f-a45c-7075a3718e03",
+      "properties": {
+        "description": "Write and validate code of peers"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "524299e3-f067-4a6f-a45c-7075a3718e03"
       }
     }
   ],
@@ -2950,6 +5886,76 @@
         "lesson.key": "lesson-6",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.H.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.H.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.E.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.I.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.I.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.G.2"
       }
     }
   ],
