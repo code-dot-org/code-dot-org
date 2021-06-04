@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'rake'
 
 class FollowersControllerTest < ActionController::TestCase
   setup do
@@ -128,6 +129,23 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal(expected, flash[:alert])
   end
 
+  test 'student_user_new errors when joing a section already at capacity' do
+    sign_in @student
+    section = create(:section, login_type: 'email')
+
+    500.times do
+      create(:follower, section: section)
+    end
+
+    assert_does_not_create(Follower) do
+      get :student_user_new, params: {section_code: section.code}
+    end
+
+    assert_redirected_to '/join'
+    expected = I18n.t('follower.error.full_section', section_code: section.code, section_capacity: section.capacity)
+    assert_equal(expected, flash[:inline_alert])
+  end
+
   test 'student_user_new errors when joining a restricted section' do
     sign_in @student
     section = create(:section, login_type: 'email', restrict_section: true)
@@ -137,6 +155,7 @@ class FollowersControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to '/join'
+
     expected = I18n.t('follower.error.restricted_section', section_code: section.code)
     assert_equal(expected, flash[:inline_alert])
   end
