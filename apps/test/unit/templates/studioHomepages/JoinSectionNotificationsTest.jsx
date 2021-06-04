@@ -40,13 +40,6 @@ const ALREADY_OWNED = {
   id: 'ABCDEF'
 };
 
-const AT_CAPACITY = {
-  action: 'join',
-  result: 'section_full',
-  id: 'ABCDEF',
-  sectionCapacity: 500
-};
-
 const RESTRICTED_SECTION = {
   action: 'join',
   result: 'section_restricted',
@@ -57,13 +50,11 @@ describe('JoinSectionNotifications', () => {
   it('renders correct component when successfully join a section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...SUCCESSFUL_JOIN} />);
     expect(wrapper.find('JoinSectionSuccessNotification')).to.have.lengthOf(1);
-    expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(0);
   });
 
   it('renders correct component when successfully leaving a section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...SUCCESSFUL_LEAVE} />);
     expect(wrapper.find('LeaveSectionSuccessNotification')).to.have.lengthOf(1);
-    expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(0);
   });
 
   it('renders correct component when section not found', () => {
@@ -71,30 +62,21 @@ describe('JoinSectionNotifications', () => {
       <JoinSectionNotifications {...SECTION_DOESNT_EXIST} />
     );
     expect(wrapper.find('JoinSectionNotFoundNotification')).to.have.lengthOf(1);
-    expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(0);
   });
 
   it('renders correct component when fail to join section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...FAILED_JOIN} />);
     expect(wrapper.find('JoinSectionFailNotification')).to.have.lengthOf(1);
-    expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(0);
   });
 
   it('renders correct component when already joined that section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...ALREADY_JOINED} />);
     expect(wrapper.find('JoinSectionExistsNotification')).to.have.lengthOf(1);
-    expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(0);
   });
 
   it('renders correct component when teacher already owns the section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...ALREADY_OWNED} />);
     expect(wrapper.find('JoinSectionOwnedNotification')).to.have.lengthOf(1);
-    expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(0);
-  });
-
-  it('renders correct component when section is at capacity (already has 500 students)', () => {
-    let wrapper = shallow(<JoinSectionNotifications {...AT_CAPACITY} />);
-    expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(1);
   });
 
   it('renders correct component when section is restricted to not allow new joiners', () => {
@@ -102,6 +84,5 @@ describe('JoinSectionNotifications', () => {
     expect(wrapper.find('JoinSectionRestrictedNotification')).to.have.lengthOf(
       1
     );
-    expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(0);
   });
 });
