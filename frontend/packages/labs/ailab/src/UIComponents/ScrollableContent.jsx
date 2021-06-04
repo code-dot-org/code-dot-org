@@ -28,31 +28,12 @@ export default class ScrollableContent extends Component {
       this.updateVignette.bind(this),
       1000 / 5
     );
-
-    /*this.updateLayoutListener = _.throttle(this.updateVignette, 200);
-    this.refs.scrollingContents.addEventListener(
-      "resize",
-      this.updateLayoutListener
-    );
-    this.refs.scrollingContents.addEventListener(
-      "scroll",
-      this.updateLayoutListener
-    );*/
   }
 
   componentWillUnmount() {
     if (this.animationTimer) {
       clearInterval(this.animationTimer);
     }
-    /*
-    this.refs.scrollingContents.removeEventListener(
-      "resize",
-      this.updateLayoutListener
-    );
-    this.refs.scrollingContents.removeEventListener(
-      "scroll",
-      this.updateLayoutListener
-    );*/
   }
 
   updateVignette = () => {
