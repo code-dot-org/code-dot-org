@@ -1,14 +1,15 @@
 import React from 'react';
-import JavalabConsole from './JavalabConsole';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import color from '@cdo/apps/util/color';
+import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
 import JavalabSettings from './JavalabSettings';
 import {appendOutputLog, setIsDarkMode} from './javalabRedux';
-import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import ControlButtons from './ControlButtons';
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -46,22 +47,38 @@ class JavalabView extends React.Component {
 
   // Sends redux call to update dark mode, which handles user preferences
   renderSettings = () => {
-    const {isDarkMode} = this.props;
+    const {isDarkMode, setIsDarkMode} = this.props;
     return [
-      <a
-        onClick={() => this.props.setIsDarkMode(!isDarkMode)}
-        key="theme-setting"
-      >
+      <a onClick={() => setIsDarkMode(!isDarkMode)} key="theme-setting">
         Switch to {isDarkMode ? 'light mode' : 'dark mode'}
       </a>
     ];
   };
 
-  getButtonStyles = () => {
-    return {
-      ...styles.button.all,
-      ...(this.props.isDarkMode ? styles.button.dark : styles.button.light)
-    };
+  // This controls the 'run' button state, but stopping program execution is not yet
+  // implemented and will need to be added here.
+  toggleRun = () => {
+    this.setState(
+      state => ({isRunning: !state.isRunning}),
+      () => {
+        if (this.state.isRunning) {
+          this.props.onRun();
+        } else {
+          // TODO: Stop program execution.
+        }
+      }
+    );
+  };
+
+  // This controls the 'test' button state, but running/stopping tests
+  // is not yet implemented and will need to be added here.
+  toggleTest = () => {
+    this.setState(
+      state => ({isTesting: !state.isTesting}),
+      () => {
+        // TODO: Run/stop tests.
+      }
+    );
   };
 
   render() {
@@ -72,6 +89,7 @@ class JavalabView extends React.Component {
       handleVersionHistory,
       visualization
     } = this.props;
+    const {isRunning, isTesting} = this.state;
 
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -110,6 +128,15 @@ class JavalabView extends React.Component {
             />
             <JavalabConsole
               onInputMessage={onInputMessage}
+              leftColumn={
+                <ControlButtons
+                  isDarkMode={isDarkMode}
+                  isRunning={isRunning}
+                  isTesting={isTesting}
+                  toggleRun={this.toggleRun}
+                  toggleTest={this.toggleTest}
+                />
+              }
               style={styles.console}
             />
           </div>
@@ -148,11 +175,6 @@ const styles = {
   javalab: {
     display: 'flex',
     margin: 15
-  },
-  button: {
-    all: {width: 95},
-    light: {backgroundColor: color.cyan},
-    dark: {backgroundColor: color.darkest_gray}
   },
   console: {
     marginTop: 15
