@@ -21,7 +21,10 @@ const defaultScriptLevel = {
       url: '/path/to/edit/1'
     }
   ],
-  kind: 'puzzle'
+  kind: 'puzzle',
+  assessment: false,
+  challenge: false,
+  bonus: false
 };
 
 describe('LevelToken', () => {
@@ -74,6 +77,41 @@ describe('LevelTokenContents', () => {
     expect(wrapper.find('ProgressBubble').length).to.equal(1);
     const nameWrapper = wrapper.find('.uitest-level-token-name');
     expect(nameWrapper.text()).to.include('level-one');
+  });
+
+  it('shows no purple indicators when not an assessment, challenge or bonus', () => {
+    const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
+    expect(wrapper.containsMatchingElement(<span>assessment</span>)).to.be
+      .false;
+    expect(wrapper.containsMatchingElement(<span>bonus</span>)).to.be.false;
+    expect(wrapper.containsMatchingElement(<span>challenge</span>)).to.be.false;
+  });
+
+  it('shows assessment indicator when assessment', () => {
+    let tempScriptLevel = _.cloneDeep(defaultScriptLevel);
+    tempScriptLevel.assessment = true;
+    const wrapper = shallow(
+      <LevelTokenContents {...defaultProps} scriptLevel={tempScriptLevel} />
+    );
+    expect(wrapper.containsMatchingElement(<span>assessment</span>)).to.be.true;
+  });
+
+  it('shows bonus indicator when bonus', () => {
+    let tempScriptLevel = _.cloneDeep(defaultScriptLevel);
+    tempScriptLevel.bonus = true;
+    const wrapper = shallow(
+      <LevelTokenContents {...defaultProps} scriptLevel={tempScriptLevel} />
+    );
+    expect(wrapper.containsMatchingElement(<span>bonus</span>)).to.be.true;
+  });
+
+  it('shows challenge indicator when challenge', () => {
+    let tempScriptLevel = _.cloneDeep(defaultScriptLevel);
+    tempScriptLevel.challenge = true;
+    const wrapper = shallow(
+      <LevelTokenContents {...defaultProps} scriptLevel={tempScriptLevel} />
+    );
+    expect(wrapper.containsMatchingElement(<span>challenge</span>)).to.be.true;
   });
 
   it('calls toggleExpand when level name is clicked', () => {

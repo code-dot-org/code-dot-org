@@ -37,7 +37,7 @@ class TeacherPanel extends React.Component {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired
     }),
-    scriptHasLockableStages: PropTypes.bool.isRequired,
+    scriptHasLockableLessons: PropTypes.bool.isRequired,
     unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape)
   };
@@ -70,7 +70,7 @@ class TeacherPanel extends React.Component {
       hasSections,
       sectionsAreLoaded,
       selectedSection,
-      scriptHasLockableStages,
+      scriptHasLockableLessons,
       unlockedLessonNames,
       students,
       scriptName
@@ -163,7 +163,7 @@ class TeacherPanel extends React.Component {
             </div>
           )}
           {hasSections &&
-            scriptHasLockableStages &&
+            scriptHasLockableLessons &&
             viewAs === ViewType.Teacher && (
               <div>
                 <div style={styles.text}>
@@ -256,26 +256,26 @@ export default connect(state => {
   const fullyLocked = fullyLockedLessonMapping(
     state.lessonLock.lessonsBySectionId[selectedSectionId]
   );
-  const unlockedStageIds = Object.keys(currentSection || {}).filter(
-    stageId => !fullyLocked[stageId]
+  const unlockedLessonIds = Object.keys(currentSection || {}).filter(
+    lessonId => !fullyLocked[lessonId]
   );
 
   let lessonNames = {};
-  state.progress.stages.forEach(lesson => {
+  state.progress.lessons.forEach(lesson => {
     lessonNames[lesson.id] = lesson.name;
   });
 
   // Pretend we don't have lockable lessons if we're not authorized to see them
-  const scriptHasLockableStages =
+  const scriptHasLockableLessons =
     lockableAuthorized && hasLockableLessons(state.progress);
 
   return {
     viewAs: state.viewAs,
     hasSections: sectionIds.length > 0,
     sectionsAreLoaded,
-    scriptHasLockableStages,
+    scriptHasLockableLessons,
     selectedSection: state.teacherSections.sections[selectedSectionId],
-    unlockedLessonNames: unlockedStageIds.map(id => lessonNames[id]),
+    unlockedLessonNames: unlockedLessonIds.map(id => lessonNames[id]),
     students: state.teacherSections.selectedStudents
   };
 })(TeacherPanel);
