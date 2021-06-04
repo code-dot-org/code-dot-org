@@ -68,7 +68,7 @@ export default class ProgressTableContentView extends React.Component {
   }
 
   lessonNumberFormatter(_, {columnIndex}) {
-    const lesson = this.props.scriptData.stages[columnIndex];
+    const lesson = this.props.scriptData.lessons[columnIndex];
     const includeArrow =
       this.props.includeHeaderArrows &&
       (lessonHasLevels(lesson) &&
@@ -94,7 +94,7 @@ export default class ProgressTableContentView extends React.Component {
 
   contentCellFormatter(_, {rowData, columnIndex}) {
     return this.props.lessonCellFormatters[rowData.expansionIndex](
-      this.props.scriptData.stages[columnIndex],
+      this.props.scriptData.lessons[columnIndex],
       rowData.student
     );
   }
@@ -118,7 +118,7 @@ export default class ProgressTableContentView extends React.Component {
     let width = null;
     if (columnWidths) {
       width = columnWidths[index];
-    } else if (!lessonHasLevels(scriptData.stages[index])) {
+    } else if (!lessonHasLevels(scriptData.lessons[index])) {
       width = parseInt(progressTableStyles.MIN_COLUMN_WIDTH);
     }
     return width ? {style: {minWidth: width, maxWidth: width}} : {};
@@ -139,7 +139,7 @@ export default class ProgressTableContentView extends React.Component {
     // Each iteration renders a lesson column in the table.
     // For summary view, it's a single header and summary cell.
     // For detail view, it's 2 headers and detail cell (bubbles for each level)
-    this.props.scriptData.stages.forEach((_, index) => {
+    this.props.scriptData.lessons.forEach((_, index) => {
       const widthProps = this.columnWidthStyle(index);
       columns.push({
         props: widthProps,

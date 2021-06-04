@@ -1147,7 +1147,7 @@ export function indexesToAnswerString(answerArr) {
  * @returns {number|undefined} The id of the first assessment or survey.
  */
 const getFirstAssessmentId = (state, scriptId) =>
-  computeScriptAssessmentList(state, scriptId).map(a => a.id)[0];
+  computeScriptAssessmentList(state, scriptId).map(a => parseInt(a.id))[0];
 
 /**
  * Returns a list of ids and names of assessments and surveys.

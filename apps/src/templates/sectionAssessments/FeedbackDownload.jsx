@@ -43,6 +43,7 @@ const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
 class FeedbackDownload extends Component {
   static propTypes = {
     sectionName: PropTypes.string.isRequired,
+    onClickDownload: PropTypes.func.isRequired,
     // provided by redux
     exportableFeedbackData: PropTypes.array.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -54,7 +55,8 @@ class FeedbackDownload extends Component {
       sectionName,
       exportableFeedbackData,
       scriptName,
-      isCurrentScriptCSD
+      isCurrentScriptCSD,
+      onClickDownload
     } = this.props;
 
     const HEADERS = isCurrentScriptCSD
@@ -71,6 +73,7 @@ class FeedbackDownload extends Component {
           })}
           data={exportableFeedbackData}
           headers={HEADERS}
+          onClick={onClickDownload}
         >
           <Button
             __useDeprecatedTag
