@@ -304,7 +304,8 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @platformization_partner
     post :create, params: {
       script: {name: 'test-script-create'},
-      script_text: ''
+      script_text: '',
+      is_migrated: true
     }
     assert_response :forbidden
   end
@@ -361,10 +362,9 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'create' do
-    expected_contents = ''
     script_name = 'test-script-create'
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with("#{Rails.root}/config/scripts/#{script_name}.script", expected_contents).once
+    File.stubs(:write).with("#{Rails.root}/config/scripts/#{script_name}.script", "is_migrated true\n").once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{script_name}.script_json" && JSON.parse(contents)['script']['name'] == script_name
     end
@@ -373,11 +373,26 @@ class ScriptsControllerTest < ActionController::TestCase
 
     post :create, params: {
       script: {name: script_name},
+      is_migrated: true
     }
     assert_redirected_to edit_script_path id: script_name
 
     script = Script.find_by_name(script_name)
     assert_equal script_name, script.name
+    assert script.is_migrated
+  end
+
+  test 'cannot create legacy script' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    script_name = 'legacy'
+    post :create, params: {
+      script: {name: script_name},
+    }
+
+    assert_response :bad_request
+    refute Script.find_by_name(script_name)
   end
 
   test 'destroy raises exception for evil filenames' do
@@ -837,7 +852,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_empty script.lessons
 
     script_text = <<~SCRIPT_TEXT
-      lesson 'stage 1', display_name: 'stage 1'
+      lesson 'lesson 1', display_name: 'lesson 1'
       level '#{level.name}'
     SCRIPT_TEXT
 
@@ -850,7 +865,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal level, script.lessons.first.script_levels.first.level
-    assert_equal 'stage 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
+    assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
     assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
   end
 
@@ -914,7 +929,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/dogs2"
   end
 
-  test "levelbuilder does not see visible after warning if stage does not have visible_after property" do
+  test "levelbuilder does not see visible after warning if lesson does not have visible_after property" do
     sign_in @levelbuilder
 
     get :show, params: {id: 'course1'}
@@ -922,7 +937,7 @@ class ScriptsControllerTest < ActionController::TestCase
     refute response.body.include? 'visible after'
   end
 
-  test "levelbuilder does not see visible after warning if stage has visible_after property that is in the past" do
+  test "levelbuilder does not see visible after warning if lesson has visible_after property that is in the past" do
     Timecop.freeze(Time.new(2020, 4, 2))
     sign_in @levelbuilder
 
@@ -936,7 +951,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Timecop.return
   end
 
-  test "levelbuilder sees visible after warning if stage has visible_after property that is in the future" do
+  test "levelbuilder sees visible after warning if lesson has visible_after property that is in the future" do
     Timecop.freeze(Time.new(2020, 3, 27))
     sign_in @levelbuilder
 
@@ -950,7 +965,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Timecop.return
   end
 
-  test "student does not see visible after warning if stage has visible_after property" do
+  test "student does not see visible after warning if lesson has visible_after property" do
     Timecop.freeze(Time.new(2020, 3, 27))
     sign_in create(:student)
 
@@ -964,7 +979,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Timecop.return
   end
 
-  test "teacher does not see visible after warning if stage has visible_after property" do
+  test "teacher does not see visible after warning if lesson has visible_after property" do
     Timecop.freeze(Time.new(2020, 3, 27))
     sign_in create(:teacher)
 

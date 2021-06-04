@@ -1,24 +1,25 @@
 name 'OPD-K5 LessonPlanning2'
 skip_dialog true
 markdown <<MARKDOWN
-# Lesson Planning Process
+# Plan a Lesson
 **Total Suggested Time:**
 
-Use the Lesson Planning Guide in the Curriculum Guide Appendix as part of your lesson planning process.  The Lesson Planning Guide encourages you to consider the following:
-* What CS concept does the lesson introduce to students and how?  
-* What skill does the lesson help students practice and how?
-* What classroom routine/procedure is needed for the lesson?
-* When will any of the following CS teaching practices be used during the lesson?
-	* Debugging
-	* Lead Learner
-	* Discovery and Inquiry
-	* Classroom Community
-* How will students share their thinking and demonstrate what they learned?
-* How will the lesson be inclusive and equitable for students?
+Plan a lesson that you would like to try out with your students.
 
-You will learn more about CS teaching practices in the "CS Teaching and Student Practices" lesson in the course.
+1.  Navigate to the a lesson plan for a course based on the grade level you will teach.
+2.  Use the Lesson Implementation Guide.
+3.  Try it out with your students.
+4.  Share with us how the lesson went!
 
-**Task: Take a look at the Lesson Planning Guide**
+Steps to navigating and locating lesson plans:
+* Sign-in to Code.org
+* Click on “Course Catalog” link on the top left side
+* Scroll down to “Full Course Catalog”
+* Click on “Learn More” within the Elementary School tile
+* Scroll down to the courses and choose a course
+* Click on “View Course” to go to the course overview page
+* Choose the lesson to plan for
+* Click on “View Lesson Plan” on the right side
 
 
 
