@@ -41,7 +41,6 @@ class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
-    height: style.editor.height,
     // populated by redux
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
@@ -90,6 +89,7 @@ class JavalabEditor extends React.Component {
     this.state = {
       orderedTabKeys,
       fileMetadata,
+      height: styles.editor.height,
       showMenu: false,
       contextTarget: null,
       openDialog: null,
@@ -404,7 +404,9 @@ class JavalabEditor extends React.Component {
   }
 
   setRenderedHeight(height) {
-    this.height = height;
+    this.setState({
+      height: height
+    });
   }
 
   /**
@@ -465,7 +467,7 @@ class JavalabEditor extends React.Component {
             label={javalabMsg.newFile()}
             leftJustified
           />
-          <PaneSection style={style.backpackSection}>
+          <PaneSection style={styles.backpackSection}>
             <Backpack isDarkMode={isDarkMode} />
           </PaneSection>
           <PaneButton
@@ -493,7 +495,7 @@ class JavalabEditor extends React.Component {
           className={isDarkMode ? 'darkmode' : ''}
         >
           <div>
-            <Nav bsStyle="tabs" style={style.tabs}>
+            <Nav bsStyle="tabs" style={styles.tabs}>
               <JavalabFileExplorer
                 fileMetadata={fileMetadata}
                 onSelectFile={this.onOpenFile}
@@ -504,7 +506,7 @@ class JavalabEditor extends React.Component {
                   <NavItem eventKey={tabKey} key={`${tabKey}-tab`}>
                     {isEditingStartSources && (
                       <FontAwesome
-                        style={style.fileTypeIcon}
+                        style={styles.fileTypeIcon}
                         icon={
                           sources[fileMetadata[tabKey]].isVisible
                             ? 'eye'
@@ -516,7 +518,7 @@ class JavalabEditor extends React.Component {
                     )}
                     {!isEditingStartSources && (
                       <FontAwesome
-                        style={style.fileTypeIcon}
+                        style={styles.fileTypeIcon}
                         icon={'file-text'}
                       />
                     )}
@@ -526,9 +528,9 @@ class JavalabEditor extends React.Component {
                       ref={`${tabKey}-file-toggle`}
                       type="button"
                       style={{
-                        ...style.fileMenuToggleButton,
+                        ...styles.fileMenuToggleButton,
                         ...(this.props.isDarkMode &&
-                          style.darkFileMenuToggleButton),
+                          styles.darkFileMenuToggleButton),
                         ...(activeTabKey !== tabKey && {visibility: 'hidden'})
                       }}
                       onClick={e => this.toggleTabMenu(tabKey, e)}
@@ -552,8 +554,8 @@ class JavalabEditor extends React.Component {
                     <div
                       ref={el => (this._codeMirrors[tabKey] = el)}
                       style={{
-                        ...style.editor,
-                        ...(isDarkMode && style.darkBackground)
+                        ...styles.editor,
+                        ...(isDarkMode && styles.darkBackground)
                       }}
                     />
                   </Tab.Pane>
@@ -613,7 +615,7 @@ class JavalabEditor extends React.Component {
         />
         <HeightResizer
           resizeItemTop={this.getItemTop}
-          position={this.props.height}
+          position={this.state.height}
           onResize={this.handleHeightResize}
         />
       </div>
@@ -621,10 +623,12 @@ class JavalabEditor extends React.Component {
   }
 }
 
-const style = {
+const styles = {
   editor: {
     width: '100%',
     height: 400,
+    maxHeight: MAX_HEIGHT,
+    minHeight: MIN_HEIGHT,
     backgroundColor: color.white
   },
   darkBackground: {
