@@ -261,7 +261,7 @@ export default connect(state => {
   );
 
   let lessonNames = {};
-  state.progress.stages.forEach(lesson => {
+  state.progress.lessons.forEach(lesson => {
     lessonNames[lesson.id] = lesson.name;
   });
 

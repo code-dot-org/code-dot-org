@@ -88,8 +88,8 @@ class TeacherContentToggle extends React.Component {
       contentStyle.display = 'none';
     }
 
-    const showLockedStageMessage = isLockedLesson && !isHiddenLesson;
-    const showHiddenStageMessage = isHiddenLesson;
+    const showLockedLessonMessage = isLockedLesson && !isHiddenLesson;
+    const showHiddenLessonMessage = isHiddenLesson;
 
     // Note: This component depends on the fact that the only thing we change about
     // our children as we rerender is their style.
@@ -97,11 +97,11 @@ class TeacherContentToggle extends React.Component {
       <div style={styles.container}>
         <div style={contentStyle} ref="content" />
         <div
-          style={[frameStyle, !showLockedStageMessage && styles.hidden]}
+          style={[frameStyle, !showLockedLessonMessage && styles.hidden]}
           ref="lockMessage"
         />
         <div
-          style={[frameStyle, !showHiddenStageMessage && styles.hidden]}
+          style={[frameStyle, !showHiddenLessonMessage && styles.hidden]}
           ref="hiddenMessage"
         />
       </div>
@@ -138,8 +138,8 @@ export const mapStateToProps = state => {
     );
   } else if (!state.verifiedTeacher.isVerified) {
     // if not-authorized teacher
-    isLockedLesson = state.progress.stages.some(
-      stage => stage.id === currentLessonId && stage.lockable
+    isLockedLesson = state.progress.lessons.some(
+      lesson => lesson.id === currentLessonId && lesson.lockable
     );
   }
 
