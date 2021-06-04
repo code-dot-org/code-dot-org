@@ -28,7 +28,7 @@ class LevelTokenDetails extends Component {
     scriptLevel: scriptLevelShape.isRequired,
     activitySectionPosition: PropTypes.number.isRequired,
     activityPosition: PropTypes.number.isRequired,
-    inactiveLevelNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    inactiveLevelNames: PropTypes.arrayOf(PropTypes.string),
 
     //redux
     setScriptLevelField: PropTypes.func.isRequired,
@@ -52,6 +52,7 @@ class LevelTokenDetails extends Component {
       tooltipIds[option] = _.uniqueId();
     });
     const scriptLevelOptions = ['bonus', 'assessment', 'challenge'];
+    const inactiveLevelNames = this.props.inactiveLevelNames || [];
 
     return (
       <div style={styles.levelTokenActive}>
@@ -89,10 +90,10 @@ class LevelTokenDetails extends Component {
             </label>
           ))}
         </span>
-        {this.props.inactiveLevelNames.length > 0 && (
+        {inactiveLevelNames.length > 0 && (
           <div>
             inactive variants:&nbsp;
-            {this.props.inactiveLevelNames.map(key => `"${key}"`).join(', ')}
+            {inactiveLevelNames.map(key => `"${key}"`).join(', ')}
           </div>
         )}
       </div>
