@@ -313,9 +313,9 @@ export const styles = {
 
   displayTable: {
     whiteSpace: "nowrap",
-    borderSpacing: 0,
+    borderSpacing: 0.5,
     width: "100%",
-    borderCollapse: "collapse"
+    borderCollapse: "initial"
   },
 
   tableParent: {
