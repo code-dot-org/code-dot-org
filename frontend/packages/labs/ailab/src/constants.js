@@ -313,7 +313,7 @@ export const styles = {
 
   displayTable: {
     whiteSpace: "nowrap",
-    borderSpacing: 0.5,
+    borderSpacing: 0,
     width: "100%",
     borderCollapse: "initial"
   },
