@@ -40,9 +40,7 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
     sign_in @owner
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new('profanity', 'damn'))
     post :save, params: {"ml_model" => {"name" => "Naughty Model"}}
-    assert_equal "failure", JSON.parse(@response.body)["status"]
-    assert_equal ShareFiltering::FailureType::PROFANITY,
-      JSON.parse(@response.body)["profanity_pii_type"]
+    assert_equal "piiProfanity", JSON.parse(@response.body)["status"]
   end
 
   test 'returns failure when model saves to database but not S3' do
