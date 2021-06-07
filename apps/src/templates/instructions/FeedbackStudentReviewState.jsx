@@ -7,7 +7,7 @@ import color from '@cdo/apps/util/color';
 
 class FeedbackStudentReviewState extends React.Component {
   static propTypes = {
-    latestReviewState: PropTypes.oneOf(ReviewStates),
+    latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
     isAwaitingTeacherReview: PropTypes.bool
   };
 
