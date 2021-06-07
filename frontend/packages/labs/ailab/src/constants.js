@@ -199,7 +199,7 @@ export const styles = {
 
   vignetteTinted: {
     background:
-      "linear-gradient(to bottom, rgba(242, 242, 242, 0) calc(100% - 20px), rgba(242, 242, 242, 1) 100%)",
+      "linear-gradient(to bottom, rgba(242, 242, 242, 0) calc(100% - 30px), rgba(242, 242, 242, 1) 100%)",
     position: "absolute",
     width: "100%",
     height: "100%",
@@ -209,7 +209,7 @@ export const styles = {
 
   vignette: {
     background:
-      "linear-gradient(to bottom, rgba(255, 255, 255, 0) calc(100% - 20px), rgba(255, 255, 255, 1) 100%)",
+      "linear-gradient(to bottom, rgba(255, 255, 255, 0) calc(100% - 30px), rgba(255, 255, 255, 1) 100%)",
     position: "absolute",
     width: "100%",
     height: "100%",
