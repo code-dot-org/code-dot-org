@@ -74,7 +74,6 @@ export default class AssignmentVersionSelector extends Component {
 
   state = {
     isMenuOpen: false,
-    canMenuOpen: true,
     targetPoint: {top: 0, left: 0}
   };
 
@@ -84,7 +83,7 @@ export default class AssignmentVersionSelector extends Component {
   };
 
   handleClick = () => {
-    if (!this.state.isMenuOpen && this.state.canMenuOpen) {
+    if (!this.state.isMenuOpen) {
       this.openMenu();
     }
   };
@@ -95,21 +94,13 @@ export default class AssignmentVersionSelector extends Component {
       top: rect.bottom + window.pageYOffset,
       left: rect.left + window.pageXOffset
     };
-    this.setState({isMenuOpen: true, canMenuOpen: false, targetPoint});
-  }
-
-  closeMenu() {
-    this.setState({isMenuOpen: false});
-  }
-
-  beforeClose = (node, resetPortalState) => {
-    resetPortalState();
-    this.closeMenu();
-    // Work around a bug in react-portal. see SettingsCog.jsx for details.
-    window.setTimeout(() => {
-      this.setState({canMenuOpen: true});
+    this.setState({
+      isMenuOpen: true,
+      targetPoint
     });
-  };
+  }
+
+  closeMenu = () => this.setState({isMenuOpen: false});
 
   handleNativeDropdownChange = event => {
     const versionYear = event.target.value;
@@ -128,7 +119,10 @@ export default class AssignmentVersionSelector extends Component {
     const popupMenuXOffset = this.props.rightJustifiedPopupMenu
       ? -menuWidth / 2
       : 0;
-    const menuOffset = {x: popupMenuXOffset, y: 0};
+    const menuOffset = {
+      x: popupMenuXOffset,
+      y: 0
+    };
 
     return (
       <span style={styles.version} id="uitest-version-selector">
@@ -158,7 +152,7 @@ export default class AssignmentVersionSelector extends Component {
           targetPoint={this.state.targetPoint}
           offset={menuOffset}
           style={styles.popUpMenuStyle}
-          beforeClose={this.beforeClose}
+          onClose={this.closeMenu}
         >
           <AssignmentVersionMenuHeader />
           {versions.map(version => (
