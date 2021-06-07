@@ -104,7 +104,6 @@ const styles = {
     color: color.darkest_gray,
     borderColor: color.darkest_gray,
     padding: 5,
-    margin: '0 0 10px 0',
     selected: {
       backgroundColor: color.cyan,
       color: color.white,
