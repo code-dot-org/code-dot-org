@@ -195,7 +195,7 @@ export function getHiddenLessons(scriptName, canHideLessons) {
   return dispatch => {
     $.ajax({
       type: 'GET',
-      url: `/s/${scriptName}/hidden_stages`,
+      url: `/s/${scriptName}/hidden_lessons`,
       dataType: 'json',
       contentType: 'application/json'
     })
