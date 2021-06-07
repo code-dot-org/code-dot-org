@@ -12,11 +12,13 @@ const defaultScriptLevel = {
   id: '11',
   position: 1,
   activeId: '2001',
+  key: 'level-one',
   levels: [
     {
-      id: '11',
-      name: 'My Level',
-      url: '/path/to/edit/url'
+      id: '2001',
+      name: 'Level One',
+      key: 'level-one',
+      url: '/path/to/edit/1'
     }
   ],
   kind: 'puzzle',
@@ -35,7 +37,7 @@ describe('LevelToken', () => {
     defaultProps = {
       activitySectionPosition: 1,
       activityPosition: 1,
-      scriptLevel: defaultScriptLevel,
+      scriptLevel: _.cloneDeep(defaultScriptLevel),
       dragging: false,
       delta: 0,
       handleDragStart,
@@ -70,9 +72,11 @@ describe('LevelTokenContents', () => {
     };
   });
 
-  it('renders a ProgressBubble', () => {
+  it('renders a ProgressBubble and level key', () => {
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
     expect(wrapper.find('ProgressBubble').length).to.equal(1);
+    const nameWrapper = wrapper.find('.uitest-level-token-name');
+    expect(nameWrapper.text()).to.include('level-one');
   });
 
   it('shows no purple indicators when not an assessment, challenge or bonus', () => {
@@ -81,6 +85,7 @@ describe('LevelTokenContents', () => {
       .false;
     expect(wrapper.containsMatchingElement(<span>bonus</span>)).to.be.false;
     expect(wrapper.containsMatchingElement(<span>challenge</span>)).to.be.false;
+    expect(wrapper.containsMatchingElement(<span>variants</span>)).to.be.false;
   });
 
   it('shows assessment indicator when assessment', () => {
@@ -110,6 +115,20 @@ describe('LevelTokenContents', () => {
     expect(wrapper.containsMatchingElement(<span>challenge</span>)).to.be.true;
   });
 
+  it('shows variants indicator when level variants are present', () => {
+    let tempScriptLevel = _.cloneDeep(defaultScriptLevel);
+    tempScriptLevel.levels.push({
+      id: '2002',
+      name: 'Level Two',
+      url: '/path/to/edit/2'
+    });
+
+    const wrapper = shallow(
+      <LevelTokenContents {...defaultProps} scriptLevel={tempScriptLevel} />
+    );
+    expect(wrapper.containsMatchingElement(<span>variants</span>)).to.be.true;
+  });
+
   it('calls toggleExpand when level name is clicked', () => {
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
     expect(wrapper.find('LevelTokenDetails').length).to.equal(0);
@@ -122,7 +141,24 @@ describe('LevelTokenContents', () => {
   it('shows LevelTokenDetails when expanded', () => {
     defaultProps.scriptLevel.expand = true;
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
-    console.log(wrapper.debug());
-    expect(wrapper.find('Connect(LevelTokenDetails)').length).to.equal(1);
+    const details = wrapper.find('Connect(LevelTokenDetails)');
+    expect(details.length).to.equal(1);
+    expect(details.props().inactiveLevelNames).to.have.length(0);
+  });
+
+  it('passes inactive level variants to LevelTokenDetails when present', () => {
+    defaultProps.scriptLevel.expand = true;
+    defaultProps.scriptLevel.activeId = '2002';
+    defaultProps.scriptLevel.key = 'level-two';
+    defaultProps.scriptLevel.levels.push({
+      id: '2002',
+      name: 'Level Two',
+      url: '/path/to/edit/2'
+    });
+    const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
+    const details = wrapper.find('Connect(LevelTokenDetails)');
+    expect(details.length).to.equal(1);
+    expect(details.props().inactiveLevelNames).to.have.length(1);
+    expect(details.props().inactiveLevelNames[0]).to.equal('Level One');
   });
 });

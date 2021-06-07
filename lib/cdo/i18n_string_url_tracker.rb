@@ -146,7 +146,7 @@ class I18nStringUrlTracker
     return true if parsed_url.path&.match(/\/projects\/.*/)
 
     # Allow script URLs
-    # Example: https://studio.code.org/s/dance-2019/stage/1/puzzle/1
+    # Example: https://studio.code.org/s/dance-2019/lessons/1/levels/1
     return true if parsed_url.path&.match(/\/s\/.*/)
 
     # Allow URLs where the path starts with anything in SIMPLE_PATHS
@@ -194,15 +194,15 @@ class I18nStringUrlTracker
     # motivation for this is to reduce the amount of data we are logging. There is a lot string reuse between levels
     # so we can reduce how much data we log by preemptively aggregating it. Strings which are unique to a particular
     # level usually have the specific level ID in the string key anyways.
-    # converts 'https://studio.code.org/s/dance-2019/stage/1/puzzle/1'
+    # converts 'https://studio.code.org/s/dance-2019/lessons/1/levels/1'
     # into 'https://studio.code.org/s/dance-2019'
     # Regex explanation:
     # (.*\/s\/) - The first major hint this this is a script URL is '/s/' in the URL. The parenthesis around
     # the expression make it a "capture group". Matches a string like "/s/"
     # .*?) - This matches the script name and year, and the '?' is included to make the matching is non-greedy.
     # Otherwise it would match to the end of the URL past the script year. Matches a string like "dance-2019"
-    # /\.* - This matches the specific level/puzzle/stage information. This is the part we want to omit. Matches a
-    # string like '/stage/1/puzzle/1'
+    # /\.* - This matches the specific level/lesson information. This is the part we want to omit. Matches a
+    # string like '/lessons/1/levels/1'
     script_regex = /(.*\/s\/.*?)\/.*/
     parsed_url.path&.match(script_regex) do |m|
       # capture group m[1] is the match in the first '()' group in the regex
