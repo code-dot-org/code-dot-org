@@ -315,7 +315,7 @@ export const styles = {
     whiteSpace: "nowrap",
     borderSpacing: 0,
     width: "100%",
-    borderCollapse: "collapse"
+    borderCollapse: "initial"
   },
 
   tableParent: {
