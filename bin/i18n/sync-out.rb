@@ -142,7 +142,7 @@ def restore_redacted_files
 
       if original_path == 'i18n/locales/original/dashboard/blocks.yml'
         # Blocks are text, not markdown
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins, 'txt')
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
       elsif original_path.starts_with? "i18n/locales/original/course_content"
         # Course content should be merged with existing content, so existing
         # data doesn't get lost
