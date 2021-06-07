@@ -66,7 +66,6 @@ const styles = {
     all: {
       fontSize: 16,
       width: 140,
-      justifyContent: 'center',
       backgroundColor: 'transparent',
       ':hover': {
         color: color.orange,
