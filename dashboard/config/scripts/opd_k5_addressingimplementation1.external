@@ -1,55 +1,49 @@
 name 'OPD-K5 AddressingImplementation1'
 skip_dialog true
 markdown <<MARKDOWN
-# Implementating CS Equitably
-**Total Suggested Time:**
+# Implementing Computer Science Fundamentals Equitably
 
-Code.org’s vision is “Every student in every school has the opportunity to learn computer science as part of their core K-12 education."  We recognize educators play a vital role in supporting equity in CS education.  Let's reflect on how we reach that vision begin with shared language and definitions to anchor your reflection about equity in CS.
+Code.org’s vision is **“Every student in every school has the opportunity to learn computer science as part of their core K-12 education."**  
 
-## Shared Language for Equity in CS
-* **Access:** Ensuring the right and opportunity for all students to learn and experience computer science.
-* **Diversity:** Ensuring the students who learn computer science reflect the demographics of the larger school or community population.
-* **Inclusion:** Creating learning environments that are accessible and welcoming of students’ identities, backgrounds, differences and perspectives without barriers or judgement.
+We recognize educators play a vital role in realizing this vision and this vision requires equity in CS education.  
 
 ## Making Meaning of Equity in CS
-Equity in CS includes access, diversity, and inclusion.
+Achieving equity in CS requires access, diversity, and inclusion working together.  What does this mean?
 
-* Equitable participation in computing education happens when
-	* CS is available to all students (access)
-	* Students participating in CS reflect the school’s demographics (diversity)
-	* All students are engaged and learning CS (inclusion)
-    
-Add adapted image from Microsoft's guide to inclusive CS education
+Equity in CS means computer science is available to **all** students *and* students participating in Computer Science Fundamentals courses reflect the school's demographics *and* **all** students are engaged and learning computer science. 
 
 
-## Applying an Equity Lens
+## Definitions for Equity in CS
+Here are definitions and a visual representation to anchor making meaning of equity in CS.  The definitions and visual representation are taken from <a href="https://drive.google.com/file/d/1NNS1M4aY4WpfJ8glZBUqIDPvhAimZRtr/view">Microsoft’s guide to inclusive CS education </a>.
 
-Let's go through an example of how to apply an equity lens to an approach to implementing CS with the following scenario.  Applying an equity lens helps examine and identify how to better support access, diversity, and inclusion when implementing CS in your school.
+**Access:** Ensuring the right and opportunity for all students to learn and experience computer science.
 
-### Scenario
+**Diversity:** Ensuring the students who learn computer science reflect the demographics of the larger school or community population.
+
+**Inclusion:** Creating learning environments that are accessible and welcoming of students’ identities, backgrounds, differences and perspectives without barriers or judgement.
+
+<img src="https://images.code.org/bfb51a6f0bdd2c7fcb6e950291e6c229-image-1622823808957.png" class="center" style="display: block; margin-left: auto; margin-right: auto; height:50%; width:50%">
+
+## Applying an Equity Lens to Implementation
+
+One of the first steps to bringing CS to all students involves overcoming barriers to implementing Computer Science Fundamentals courses equitably.  Working towards equity in CS is a journey that takes time and everyone is on a unique path.
+
+A strategy for implementing Computer Science Fundamentals courses equitably is to apply an equity lens to an implementation plan.  Applying an equity lens supports examining and identifying how to better support access, diversity, and inclusion for the intended implementation plan.  
+
+### Guiding questions for applying an equity lens
+
+* Who has access to CS with this implementation plan? Who does not?
+* Who benefits from this implementation?
+* What are the impacts of this implementation plan for those who have access and those who do not?
+* What are recommendations for this implementation plan to better support access, diversity, and/or inclusion?
+
+### Practice applying an equity lens
+
+Here is an example of an implementation plan for you to practice applying an equity lens to.  First, read through the context and implementation plan.  Then, use the guiding questions for applying an equity lens.
+
 * **Context**
 	* The school’s demographics include a majority of students who identify as African American/Black, followed by students who identify as White and Latinx/Hispanic. The school is in a low socioeconomic status community.
 
-* **Implementation Approach**
-	* Offering CS Fundamentals as a club only to students who like math, science, and gaming.
-
-**Reflect on the following questions as you apply an equity lens to the scenario presented.**
-
-### Questions for Applying an Equity Lens
-* Who has access to CS in this scenario? Who does not?
-* Who benefits from this implementation?
-* What are the impacts of this implementation for those who have access and those who do not?
-* What are recommendations for this scenario to better support access, diversity, and/or inclusion?
-
-### Your Turn
-Think about how you might implement CS and use the questions above to apply an equity lens to your implementation approach.
-
-
-
-
-<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
-
-
-    
-
+* **Implementation Plan**
+	* Computer Science Fundamentals will be offered as a club only to students who like math, science, and gaming.
 MARKDOWN

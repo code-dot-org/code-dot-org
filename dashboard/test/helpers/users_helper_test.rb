@@ -17,7 +17,7 @@ class UsersHelperTest < ActionView::TestCase
         lockableAuthorized: false,
         progress: {},
         # second lesson because first is unplugged
-        current_stage: script.lessons[1].id,
+        current_lesson: script.lessons[1].id,
         completed: false,
       },
       summarize_user_progress(script, user)
@@ -36,7 +36,7 @@ class UsersHelperTest < ActionView::TestCase
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
         },
-        current_stage: script.lessons[1].id,
+        current_lesson: script.lessons[1].id,
         completed: false,
       },
       summarize_user_progress(script, user)
@@ -114,7 +114,7 @@ class UsersHelperTest < ActionView::TestCase
           }
         },
         # second lesson because first is unplugged
-        current_stage: script_level.lesson.id,
+        current_lesson: script_level.lesson.id,
         completed: false
       },
       summarize_user_progress(script, user)
@@ -154,7 +154,7 @@ class UsersHelperTest < ActionView::TestCase
           result: 20
         }
       },
-      current_stage: script_level.lesson.id,
+      current_lesson: script_level.lesson.id,
       completed: false
     }
     assert_equal expected_summary, summarize_user_progress(script, user)

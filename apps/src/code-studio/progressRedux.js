@@ -386,8 +386,8 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
         dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
       }
 
-      if (data.current_stage) {
-        dispatch(setCurrentLessonId(data.current_stage));
+      if (data.current_lesson) {
+        dispatch(setCurrentLessonId(data.current_lesson));
       }
     }
   });
@@ -566,7 +566,7 @@ const peerReviewLevels = state =>
   }));
 
 /**
- * The level object passed down to use via the server (and stored in stage.lessons.levels)
+ * The level object passed down to use via the server (and stored in lesson.lessons.levels)
  * contains more data than we need. This (a) filters to the parts our views care
  * about and (b) determines current status based on the current state of
  * state.levelResults
@@ -670,7 +670,7 @@ export const isPerfect = (state, levelId) =>
  * @returns {Object[]}
  * {string} Object.name
  * {string[]} Object.lessonNames
- * {Object[]} Object.stageLevels
+ * {Object[]} Object.lessonLevels
  */
 export const groupedLessons = (state, includeBonusLevels = false) => {
   let byGroup = {};
