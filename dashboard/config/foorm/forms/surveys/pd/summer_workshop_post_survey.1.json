@@ -383,19 +383,19 @@
           "type": "library_item",
           "library_name": "surveys/pd/workshop_elements",
           "library_version": 0,
-          "name": "lead_learner"
+          "name": "lead_learner_panel"
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/workshop_elements",
           "library_version": 0,
-          "name": "prioritize_time"
+          "name": "prioritize_time_panel"
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/workshop_elements",
           "library_version": 0,
-          "name": "instructional_focus"
+          "name": "instructional_focus_panel"
         }
       ]
     },
