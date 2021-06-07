@@ -1659,6 +1659,17 @@ en:
         text: 'location x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1} {VAR} {TEXT2}"
+        options:
+          TEXT1:
+            '"Balancing on the "': '"Balancing on the"'
+            '"A chubby cat "': '"A chubby cat"'
+            '"The "': '"The "'
+          TEXT2:
+            '" fence"': '" fence"'
+            '""': '""'
+            '" breeze blows"': '" breeze blows"'
       Mikelab_randomColor:
         text: random color
       Mikelab_removeAllBehaviors:
