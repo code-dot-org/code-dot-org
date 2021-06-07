@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import JavalabConsole from './JavalabConsole';
@@ -110,7 +111,7 @@ class JavalabView extends React.Component {
             <div style={styles.buttons}>
               <JavalabSettings>{this.renderSettings()}</JavalabSettings>
               <JavalabButton
-                text="Continue"
+                text={i18n.continue()}
                 onClick={onContinue}
                 style={styles.continue}
               />

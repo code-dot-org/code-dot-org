@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from './JavalabButton';
@@ -27,7 +28,7 @@ export default function ControlButtons({
       }}
     >
       <JavalabButton
-        text={isRunning ? 'Stop' : 'Run'}
+        text={isRunning ? i18n.stop() : i18n.runProgram()}
         icon={
           <FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa-2x" />
         }
@@ -37,7 +38,7 @@ export default function ControlButtons({
         style={buttonStyles}
       />
       <JavalabButton
-        text={isTesting ? 'Stop Tests' : 'Test'}
+        text={isTesting ? i18n.stopTests() : i18n.test()}
         icon={<FontAwesome icon="flask" className="fa-2x" />}
         onClick={toggleTest}
         isHorizontal
