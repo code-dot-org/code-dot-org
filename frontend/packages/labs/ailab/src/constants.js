@@ -32,7 +32,7 @@ export const UNIQUE_OPTIONS_MAX = 50;
 export const saveMessages = {
   success: "Your model was saved!",
   failure: "There was an error. Your model did not save. Please try again.",
-  piiProfanity: "Your model could not be saved because it contains profanity or personally identifying information (e.g. email, address, phone number, etc). "
+  piiProfanity: "Your model could not be saved because it contains profanity or personally identifying information (e.g. email, address, phone number, etc)."
 };
 
 export function getFadeOpacity(animationProgress) {
