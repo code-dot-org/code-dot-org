@@ -124,6 +124,10 @@ class JavalabEditor extends React.Component {
       });
     }
 
+    if (prevProps.height !== this.props.height) {
+      styles.editor.height = `${this.props.height}px`;
+    }
+
     const {fileMetadata} = this.state;
     if (
       !_.isEqual(Object.keys(prevState.fileMetadata), Object.keys(fileMetadata))
@@ -410,7 +414,7 @@ class JavalabEditor extends React.Component {
    * via a call to handleHeightResize from HeightResizer.
    */
   getItemTop = () => {
-    return this.javalabEditor.getBoundingClientRect().top;
+    return this.tabContainer.getBoundingClientRect().top;
   };
 
   /**
@@ -453,7 +457,7 @@ class JavalabEditor extends React.Component {
       backgroundColor: '#F0F0F0'
     };
     return (
-      <div style={this.props.style} ref={ref => (this.javalabEditor = ref)}>
+      <div style={this.props.style} ref={ref => (this.tabContainer = ref)}>
         <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
@@ -544,7 +548,7 @@ class JavalabEditor extends React.Component {
                 );
               })}
             </Nav>
-            <Tab.Content animation={false}>
+            <Tab.Content animation={false} ref={ref => (this.tabContent = ref)}>
               {orderedTabKeys.map(tabKey => {
                 return (
                   <Tab.Pane eventKey={tabKey} key={`${tabKey}-content`}>
@@ -559,13 +563,13 @@ class JavalabEditor extends React.Component {
                 );
               })}
             </Tab.Content>
+            <HeightResizer
+              resizeItemTop={this.getItemTop}
+              position={height}
+              onResize={this.handleHeightResize}
+            />
           </div>
         </Tab.Container>
-        <HeightResizer
-          resizeItemTop={this.getItemTop}
-          position={height}
-          onResize={this.handleHeightResize}
-        />
         <div style={menuStyle}>
           <JavalabEditorTabMenu
             cancelTabMenu={this.cancelTabMenu}
