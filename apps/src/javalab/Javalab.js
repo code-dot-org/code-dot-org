@@ -242,7 +242,12 @@ Javalab.prototype.onRun = function() {
     getStore().getState().pageConstants.serverLevelId,
     options
   );
-  this.javabuilderConnection.connectJavabuilder();
+  // ensure autosave is called on first run by manually setting
+  // projectChanged to true.
+  project.projectChanged();
+  project.autosave(() => {
+    this.javabuilderConnection.connectJavabuilder();
+  });
 };
 
 // Called by Javalab console to send a message to Javabuilder.
