@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
-import {teacherFeedbackShape, ReviewStates} from '@cdo/apps/templates/types';
+import {ReviewStates} from '@cdo/apps/templates/types';
 import color from '@cdo/apps/util/color';
 
 class FeedbackStudentReviewState extends React.Component {
   static propTypes = {
-    latestFeedback: teacherFeedbackShape,
+    latestReviewState: PropTypes.oneOf(ReviewStates),
     isAwaitingTeacherReview: PropTypes.bool
   };
 
@@ -36,14 +36,16 @@ class FeedbackStudentReviewState extends React.Component {
   }
 
   render() {
-    const {latestFeedback, isAwaitingTeacherReview} = this.props;
+    const {latestReviewState, isAwaitingTeacherReview} = this.props;
 
-    if (latestFeedback?.review_state === ReviewStates.completed) {
+    if (latestReviewState === ReviewStates.completed) {
       return this.renderCompleted();
     } else if (isAwaitingTeacherReview) {
       return this.renderAwaitingReview();
-    } else if (latestFeedback?.review_state === ReviewStates.keepWorking) {
+    } else if (latestReviewState === ReviewStates.keepWorking) {
       return this.renderKeepWorking();
+    } else {
+      return null;
     }
   }
 }

@@ -592,14 +592,7 @@ class TopInstructions extends Component {
     const displayHelpTab =
       (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
 
-    const studentHasFeedback =
-      this.isViewingAsStudent &&
-      feedbacks.length > 0 &&
-      !!(
-        feedbacks[0].comment ||
-        feedbacks[0].performance ||
-        feedbacks[0].review_state
-      );
+    const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
 
     /*
      * The feedback tab will be the Key Concept tab if there is a mini rubric and:
@@ -643,8 +636,6 @@ class TopInstructions extends Component {
       dynamicInstructions,
       dynamicInstructionsKey
     };
-
-    console.log(tabSelected);
 
     return (
       <div

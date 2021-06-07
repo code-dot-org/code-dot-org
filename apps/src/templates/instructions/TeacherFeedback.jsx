@@ -182,7 +182,7 @@ export class TeacherFeedback extends Component {
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
         {keepWorkingEnabled && (
           <TeacherFeedbackKeepWorking
-            latestFeedback={latestFeedback}
+            latestReviewState={latestFeedback?.review_state || null}
             isAwaitingTeacherReview={this.isAwaitingTeacherReview}
             setReviewState={this.onReviewStateChange}
             setReviewStateChanged={this.onReviewStateUpdated}
@@ -199,7 +199,7 @@ export class TeacherFeedback extends Component {
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
         <FeedbackStudentReviewState
-          latestFeedback={latestFeedback}
+          latestReviewState={latestFeedback?.review_state || null}
           isAwaitingTeacherReview={this.isAwaitingTeacherReview}
         />
       </div>
