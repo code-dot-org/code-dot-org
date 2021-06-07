@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import ReactTooltip from 'react-tooltip';
-import {makeEnum} from '@cdo/apps/utils';
-
-const ReviewStates = makeEnum('completed', 'keepWorking', 'awaitingReview');
+import {ReviewStates} from '@cdo/apps/templates/types';
 
 // TeacherFeedbackKeepWorking displays a checkbox which can be in one of 3 states:
 // 1. Checked - meaning the teacher has requested the student to keep working

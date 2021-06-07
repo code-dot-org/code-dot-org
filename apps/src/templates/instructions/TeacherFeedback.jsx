@@ -11,10 +11,13 @@ import {CommentArea} from './CommentArea';
 import TeacherFeedbackKeepWorking from '@cdo/apps/templates/instructions/TeacherFeedbackKeepWorking';
 import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedbackStatus';
 import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedbackRubric';
-import {teacherFeedbackShape, rubricShape} from '@cdo/apps/templates/types';
+import {
+  teacherFeedbackShape,
+  rubricShape,
+  ReviewStates
+} from '@cdo/apps/templates/types';
 import experiments from '@cdo/apps/util/experiments';
-import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
-import {makeEnum} from '@cdo/apps/utils';
+import FeedbackStudentReviewState from '@cdo/apps/templates/instructions/FeedbackStudentReviewState';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -23,8 +26,6 @@ const ErrorType = {
 };
 
 const keepWorkingExperiment = 'teacher-feedback-review-state';
-
-const ReviewStates = makeEnum('completed', 'keepWorking');
 
 export class TeacherFeedback extends Component {
   static propTypes = {
@@ -170,26 +171,6 @@ export class TeacherFeedback extends Component {
     );
   }
 
-  renderStudentKeepWorking() {
-    return (
-      <div style={styles.studentReviewState}>
-        <KeepWorkingBadge style={{fontSize: 8}} />
-        <span style={{...styles.reviewState, ...styles.keepWorking}}>
-          {i18n.keepWorking()}
-        </span>
-      </div>
-    );
-  }
-
-  renderStudentAwaitingReview() {
-    return (
-      <div style={styles.studentReviewState}>
-        <KeepWorkingBadge style={{fontSize: 8}} />
-        <span style={styles.reviewState}>{i18n.waitingForTeacherReview()}</span>
-      </div>
-    );
-  }
-
   renderFeedbackTeacherHeader() {
     // Pilots which the user is enrolled in (such as keep working experiment) are stored on
     // window.appOptions.experiments, which is queried by experiments.js
@@ -217,10 +198,10 @@ export class TeacherFeedback extends Component {
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        {this.isAwaitingTeacherReview && this.renderStudentAwaitingReview()}
-        {!this.isAwaitingTeacherReview &&
-          latestFeedback?.review_state === ReviewStates.keepWorking &&
-          this.renderStudentKeepWorking()}
+        <FeedbackStudentReviewState
+          latestFeedback={latestFeedback}
+          isAwaitingTeacherReview={this.isAwaitingTeacherReview}
+        />
       </div>
     );
   }
@@ -358,21 +339,6 @@ const styles = {
   },
   commentAndFooter: {
     margin: '8px 16px 8px 16px'
-  },
-  studentReviewState: {
-    margin: '0 15px',
-    display: 'flex',
-    alignItems: 'center',
-    color: color.dimgray,
-    fontSize: 12
-  },
-  keepWorking: {
-    color: color.red
-  },
-  reviewState: {
-    margin: '0 5px',
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold'
   }
 };
 
