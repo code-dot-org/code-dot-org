@@ -13,7 +13,7 @@ import {ReviewStates} from '@cdo/apps/templates/types';
 // This checkbox is displayed to and controlled by the teacher.
 class TeacherFeedbackKeepWorking extends Component {
   static propTypes = {
-    latestFeedback: PropTypes.object,
+    latestReviewState: PropTypes.oneOf(ReviewStates),
     isAwaitingTeacherReview: PropTypes.bool,
     setReviewState: PropTypes.func,
     setReviewStateChanged: PropTypes.func
@@ -23,7 +23,7 @@ class TeacherFeedbackKeepWorking extends Component {
 
   initialReviewState = this.props.isAwaitingTeacherReview
     ? ReviewStates.awaitingReview
-    : this.props.latestFeedback?.review_state || null;
+    : this.props.latestReviewState;
 
   constructor(props) {
     super(props);
