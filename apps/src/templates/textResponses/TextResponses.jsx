@@ -18,7 +18,7 @@ import {
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
-  {label: i18n.lesson(), key: 'stage'},
+  {label: i18n.lesson(), key: 'lesson'},
   {label: i18n.puzzle(), key: 'puzzle'},
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'}
@@ -89,7 +89,7 @@ class TextResponses extends Component {
   };
 
   getLessons = () => {
-    const lessons = uniq(map(this.getResponsesByScript(), 'stage'));
+    const lessons = uniq(map(this.getResponsesByScript(), 'lesson'));
     return lessons;
   };
 
@@ -105,7 +105,7 @@ class TextResponses extends Component {
 
     if (filterByLessonName) {
       filteredResponses = filter(filteredResponses, [
-        'stage',
+        'lesson',
         filterByLessonName
       ]);
     }

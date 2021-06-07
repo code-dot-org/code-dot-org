@@ -24,8 +24,8 @@ class TeacherContentToggle extends React.Component {
     viewAs: PropTypes.string.isRequired,
     hiddenLessonsInitialized: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
-    isHiddenStage: PropTypes.bool.isRequired,
-    isLockedStage: PropTypes.bool.isRequired
+    isHiddenLesson: PropTypes.bool.isRequired,
+    isLockedLesson: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -53,8 +53,8 @@ class TeacherContentToggle extends React.Component {
       viewAs,
       hiddenLessonsInitialized,
       sectionsAreLoaded,
-      isLockedStage,
-      isHiddenStage,
+      isLockedLesson,
+      isHiddenLesson,
       isBlocklyOrDroplet
     } = this.props;
 
@@ -68,7 +68,7 @@ class TeacherContentToggle extends React.Component {
     let contentStyle = {
       height: '100%'
     };
-    let hasOverlayFrame = isLockedStage || isHiddenStage;
+    let hasOverlayFrame = isLockedLesson || isHiddenLesson;
 
     if (viewAs === ViewType.Student) {
       // Keep this hidden until we've made our async calls for hidden_lessons and
@@ -88,8 +88,8 @@ class TeacherContentToggle extends React.Component {
       contentStyle.display = 'none';
     }
 
-    const showLockedStageMessage = isLockedStage && !isHiddenStage;
-    const showHiddenStageMessage = isHiddenStage;
+    const showLockedLessonMessage = isLockedLesson && !isHiddenLesson;
+    const showHiddenLessonMessage = isHiddenLesson;
 
     // Note: This component depends on the fact that the only thing we change about
     // our children as we rerender is their style.
@@ -97,11 +97,11 @@ class TeacherContentToggle extends React.Component {
       <div style={styles.container}>
         <div style={contentStyle} ref="content" />
         <div
-          style={[frameStyle, !showLockedStageMessage && styles.hidden]}
+          style={[frameStyle, !showLockedLessonMessage && styles.hidden]}
           ref="lockMessage"
         />
         <div
-          style={[frameStyle, !showHiddenStageMessage && styles.hidden]}
+          style={[frameStyle, !showHiddenLessonMessage && styles.hidden]}
           ref="hiddenMessage"
         />
       </div>
@@ -124,22 +124,22 @@ export const UnconnectedTeacherContentToggle = Radium(TeacherContentToggle);
 export const mapStateToProps = state => {
   const viewAs = state.viewAs;
 
-  let isLockedStage = false;
-  let isHiddenStage = false;
+  let isLockedLesson = false;
+  let isHiddenLesson = false;
   const {currentLessonId} = state.progress;
   if (viewAs === ViewType.Student) {
     const {selectedSectionId} = state.teacherSections;
 
-    isLockedStage = lessonIsLockedForAllStudents(currentLessonId, state);
-    isHiddenStage = isLessonHiddenForSection(
+    isLockedLesson = lessonIsLockedForAllStudents(currentLessonId, state);
+    isHiddenLesson = isLessonHiddenForSection(
       state.hiddenLesson,
       selectedSectionId,
       currentLessonId
     );
   } else if (!state.verifiedTeacher.isVerified) {
     // if not-authorized teacher
-    isLockedStage = state.progress.stages.some(
-      stage => stage.id === currentLessonId && stage.lockable
+    isLockedLesson = state.progress.lessons.some(
+      lesson => lesson.id === currentLessonId && lesson.lockable
     );
   }
 
@@ -147,8 +147,8 @@ export const mapStateToProps = state => {
     viewAs,
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
     hiddenLessonsInitialized: state.hiddenLesson.hiddenLessonsInitialized,
-    isHiddenStage,
-    isLockedStage
+    isHiddenLesson,
+    isLockedLesson
   };
 };
 
