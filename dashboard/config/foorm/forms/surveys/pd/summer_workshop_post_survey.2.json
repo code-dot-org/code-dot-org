@@ -1,0 +1,459 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "name": "preamable_page",
+      "elements": [
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "pd_post_survey_preamble"
+        }
+      ]
+    },
+    {
+      "name": "workshop_experience_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "workshop_experience_header",
+          "html": "<p><strong><span style=\"font-size: 14pt;\">Your {workshop_course} Workshop Experience</span></strong></p>"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "overall_success"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "teacher_engagement"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "curriculum_impressions"
+        },
+        {
+          "type": "panel",
+          "name": "friday_institute_panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "friday_institute_which_tool",
+              "title": "Which video conferencing tool was primarily used for the synchronous (live meeting) portions of the workshop?",
+              "choices": [
+                {
+                  "value": "hangouts",
+                  "text": "Google Hangouts"
+                },
+                {
+                  "value": "zoom",
+                  "text": "Zoom"
+                },
+                {
+                  "value": "teams",
+                  "text": "Microsoft Teams"
+                },
+                {
+                  "value": "goto_meeting",
+                  "text": "GoToMeeting"
+                },
+                {
+                  "value": "skype",
+                  "text": "Skype"
+                },
+                {
+                  "value": "dont_know",
+                  "text": "Don't Know/Unsure"
+                }
+              ],
+              "hasOther": true,
+              "otherText": "Other"
+            },
+            {
+              "type": "matrix",
+              "name": "friday_institute_sync_tools",
+              "title": "Thinking about the video conferencing portions of the workshop, how much do you agree with the following?",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "smoothly_for_all",
+                  "text": "Overall the video conferencing technology seemed to work smoothly for all participants."
+                },
+                {
+                  "value": "personal_tech_adequate",
+                  "text": "My personal technology infrastructure - internet connection, bandwidth, screen size, software - was adequate for participating in the workshop."
+                },
+                {
+                  "value": "video_conf_engaging",
+                  "text": "I found the video conferencing portions of the workshop highly engaging."
+                }
+              ]
+            },
+            {
+              "type": "matrix",
+              "name": "friday_institute_async_tools",
+              "title": "This workshop also included activities you completed away from the larger group made available through your workshop website in the Friday Institute's Professional Learning and Collaboration Environment (PLACE) ",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "moodle_worked_well_for_all",
+                  "text": "Overall the PLACE site seemed to work well for all participants."
+                },
+                {
+                  "value": "async_activities_engaging",
+                  "text": "I found the activities I did on the PLACE site highly engaging."
+                },
+                {
+                  "value": "moodle_organized_positive_exp",
+                  "text": "The organization of the PLACE site made sense to me and made for a positive experience."
+                },
+                {
+                  "value": "moodle_content_activities",
+                  "text": "The content and activities on the PLACE site supported my professional learning and preparation to teach {workshop_course}"
+                }
+              ]
+            }
+          ],
+          "visibleIf": "{is_friday_institute} = 'true'"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "logistics_panel_in_person"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "logistics_panel_virtual"
+        }
+      ]
+    },
+    {
+      "name": "teaching_cs_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "teaching_cs_header",
+          "html": "<h2>Teaching Computer Science: Community and Classroom</h2>"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "cs_community"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "identity_and_dei"
+        },
+        {
+          "type": "html",
+          "name": "future_support_header",
+          "titleLocation": "hidden",
+          "html": "<h2>Future Support</h2>\nOur support doesn’t end with this workshop! We plan follow-up sessions and resources based on your needs."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "development_needs"
+        },
+        {
+          "type": "comment",
+          "name": "development_needs_FR",
+          "title": "Are there any other development needs or supports you would like to see in followup workshops?",
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "name": "teaching_practices_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "teaching_practices_page_header",
+          "html": "<h2>Teaching Practices</h2>"
+        },
+        {
+          "type": "panel",
+          "name": "csp_panel",
+          "visibleIf": "{workshop_course} = 'CS Principles'",
+          "elements": [
+            {
+              "type": "matrix",
+              "name": "csp_teaching_ap",
+              "title": "Please rate the extent to which you agree or disagree with the following statements about teaching an AP Computer Science course.",
+              "columns": [
+                {
+                  "value": "0",
+                  "text": "N/A"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "skills_to_teach_as_ap",
+                  "text": "I have the skills and knowledge that I need to teach this course as an AP course."
+                },
+                {
+                  "value": "confident_students_successful",
+                  "text": "I’m confident my students can be successful on the AP CS Principles exam."
+                },
+                {
+                  "value": "need_support_for_exam_prep",
+                  "text": "I’m going to need a lot of extra support to prepare students for the AP exam and performance tasks."
+                },
+                {
+                  "value": "workshop_increased_confidence",
+                  "text": "This workshop increased my confidence that I can teach CS Principles as an AP course."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "csd_panel",
+          "visibleIf": "{workshop_course} = 'CS Discoveries'",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "csd_which_units",
+              "title": "Which units of CS Discoveries do you plan to teach in the 2021-2022 school year? ",
+              "description": "Check all that apply",
+              "choices": [
+                {
+                  "value": "unit_1",
+                  "text": "Unit 1: Problem Solving and Computing"
+                },
+                {
+                  "value": "unit_2",
+                  "text": "Unit 2: Web Development"
+                },
+                {
+                  "value": "unit_3",
+                  "text": "Unit 3: Interactive Animations and Games"
+                },
+                {
+                  "value": "unit_4",
+                  "text": "Unit 4: The Design Process"
+                },
+                {
+                  "value": "unit_5",
+                  "text": "Unit 5: Data and Society"
+                },
+                {
+                  "value": "unit_6",
+                  "text": "Unit 6: Physical Computing"
+                },
+                {
+                  "value": "unit_7",
+                  "text": "Unit 7: AI and Machine Learning"
+                },
+                {
+                  "value": "none",
+                  "text": "None / I am not planning to teach any of these units in 2021-22"
+                }
+              ],
+              "hasOther": true
+            }
+          ]
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "true_of_me_now_scale_expl"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "codedotorg_teaching_strategies_csd"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "codedotorg_teaching_strategies_csp"
+        }
+      ]
+    },
+    {
+      "name": "page_teaching_philosophy",
+      "elements": [
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "pairs_of_statements_instructions"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "lead_learner_panel"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "prioritize_time_panel"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "instructional_focus_panel"
+        }
+      ]
+    },
+    {
+      "name": "facilitator_feedback_page",
+      "elements": [
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/facilitator_panel",
+          "library_version": 0,
+          "name": "facilitator_heading"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/facilitator_panel",
+          "library_version": 0,
+          "name": "facilitators"
+        }
+      ]
+    },
+    {
+      "name": "wrap_up_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "overall_header",
+          "html": "<h2>Overall Workshop Feedback</h2>\n<p>We’d like to hear your feedback about your experience this week overall, <Strong>especially how this professional development could better fit your learning needs, or how it could be improved</strong>.</p>\n"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "activities_you_liked"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "activities_youd_change"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "permission_to_quote"
+        },
+        {
+          "type": "html",
+          "name": "thank_you_header",
+          "html": "<img style='display: block; margin-left: auto; margin-right: auto;', src='/shared/images/foorm/codeheartyou.png'/>\n<p>Thanks from Code.org for your time, commitment and passion for teaching {workshop_course} this year.</p>\n<p><strong>You are making a difference for your students.</strong> We're looking forward to what's next. Onward!</p>"
+        }
+      ]
+    }
+  ],
+  "showTitle": false,
+  "showPageTitles": false
+}

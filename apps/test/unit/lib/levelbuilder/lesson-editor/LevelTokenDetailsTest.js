@@ -50,7 +50,8 @@ describe('LevelTokenDetails', () => {
       scriptLevel: defaultScriptLevel,
       activitySectionPosition: 5,
       activityPosition: 1,
-      lessonExtrasAvailableForScript: false
+      lessonExtrasAvailableForScript: false,
+      inactiveLevelNames: []
     };
   });
 
@@ -105,5 +106,21 @@ describe('LevelTokenDetails', () => {
     assertChecked(wrapper, 'bonus', true);
     assertChecked(wrapper, 'assessment', true);
     assertChecked(wrapper, 'challenge', true);
+  });
+
+  it('does not show variants by default', () => {
+    const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
+    expect(wrapper.text()).not.to.contain('inactive variants');
+  });
+
+  it('shows inactive variants when present', () => {
+    const wrapper = shallow(
+      <LevelTokenDetails
+        {...defaultProps}
+        inactiveLevelNames={['Inactive Level']}
+      />
+    );
+    expect(wrapper.text()).to.contain('inactive variants');
+    expect(wrapper.text()).to.contain('Inactive Level');
   });
 });

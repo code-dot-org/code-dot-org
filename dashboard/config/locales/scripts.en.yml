@@ -22517,20 +22517,42 @@ en:
               description_teacher: In this lesson, students use an enhanced `for` loop to traverse an array. Students identify the differences, advantages, and disadvantages of using an enhanced `for` loop instead of a traditional `for` or `while` loop to traverse an array.
             lesson-7:
               name: Using Static Variables and Constants
+              description_student: Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Theater. You examine the `Math` class source code to see additional examples of static variables and constants.
+              description_teacher: Students implement static variables and constants to count the number of `Shape` objects created and set maximum and minimum values for the volume of sounds. Students explore source code for the `Math` class to connect real-world code and the concepts they have learned so far.
             lesson-8:
               name: Answering Questions with Arrays
+              description_student: Today you develop algorithms to solve problems. These algorithms can be applied to finding the cheapest item on a menu, finding the highest or lowest note in a sound, or identifying the location of shapes on the stage. Each of these problems use similar structures in their solutions. You identify these patterns so you can apply the algorithms you develop today to problems you encounter in the future.
+              description_teacher: Students develop algorithms using one-dimensional arrays to find the minimum and maximum values, calculate sums and averages, and find elements that meet specific criteria. They look for patterns in the structure of the problems, and outline generic algorithms that can be used when answering questions about information contained in arrays.
             lesson-9:
               name: Solving Problems with Arrays
+              description_student: Standard algorithms can be applied to solving problems involving arrays. You implement standard algorithms to manipulate one-dimensional arrays and discover the effect of the algorithms on sounds. Before writing Java code, you plan each algorithm using manipulatives and pseudocode to identify the process needed to solve each problem.
+              description_teacher: Standard algorithms can be applied to solving problems involving arrays. Students implement standard algorithms to manipulate one-dimensional arrays and discover the effect of the algorithms on sounds. Before writing Java code, students plan each algorithm using manipulatives and pseudocode to identify the process needed to solve each problem.
             lesson-10:
               name: Manipulating Elements in an Array
+              description_student: You learn about nested loops, which is a loop inside a loop. You can use a nested loop to search values in an array more efficiently. You continue to develop algorithms to perform manipulations to shift and reverse the order of elements. Before writing Java code, you plan the algorithm using pseudocode to identify the process needed to solve the problem.
+              description_teacher: Students use nested loops and develop algorithms to perform manipulations on arrays to shift and reverse elements. Before writing Java code, students plan the algorithm using pseudocode to identify the process needed to solve the problem. Students participate in a code review to provide and receive feedback to refine their solutions before previewing the unit project.
             lesson-11:
-              name: Concert in the Theater Project Day 1
+              name: Concert in the Theater Project - Day 1
+              description_student: For this project, you design a concert in The Theater. With a partner, you choose a remix algorithm and write its pseudocode. You translate the pseudocode into code and combine it with the algorithms you developed in earlier lessons to create your concert audio.
+              description_teacher: For this project, students use one-dimensional arrays and standard algorithms to develop a concert in The Theater. Students begin by choosing a remix algorithm from a set of remix options and writing its pseudocode with a partner. They translate the pseudocode into code and combine their new algorithm with the algorithms they developed in earlier lessons to create their concert audio.
             lesson-12:
-              name: Concert in the Theater Project Day 2
+              name: Concert in the Theater Project - Day 2
+              description_student: You continue designing your concert in The Theater by adding constraints to the length of the concert and adding visuals. You complete a code review to gain feedback to continue developing your program.
+              description_teacher: In the previous lesson, students wrote a remix algorithm and combined it with the algorithms they developed in earlier lessons. Students use static variables and constants to add constraints to the length of the concert. They add visuals to the concert using an array of `Shape`s, then participate in a code review to give and use feedback as they develop their program.
             lesson-13:
-              name: Concert in the Theater Project Day 3
+              name: Concert in the Theater Project - Day 3
+              description_student: In the previous lesson, you created a prioritized list of work to complete. Today, you self-assess your work against the project rubric then review your prioritized list to decide what revisions you need to make to your concert. You then share your final project with your peers to celebrate your success!
+              description_teacher: In the previous lesson, students created a prioritized list of work to complete. In this lesson, students self-assess their work against the project rubric then review their prioritized list to inform their revisions to their concert. Students then share their final projects with their peers to celebrate their successes.
             lesson-14:
               name: FRQ Day
+              description_student: Today you complete a Free Response Question (FRQ). You do this by first annotating the FRQ, then working with a group to plan how to solve the FRQ. You individually write your solution to the FRQ using your planning. Finally, you score your attempt against a scoring rubric and reflect on your experience.
+              description_teacher: |-
+                Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ work, they begin to work more independently, working through both annotating and completing an FRQ on their own. Students also work in small groups to identify inputs, processes, and outputs before answering the FRQ.
+
+                The goals of this lesson are:
+                * Practice reading an FRQ
+                * Practice writing a solution for an FRQ
+                * Practice scoring an FRQ against a scoring rubric
             lesson-15:
               name: Assessment Day
               description_student: In this unit, you worked with one-dimensional arrays to store primitive values and object references in The Theater. You represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects.
@@ -22601,15 +22623,15 @@ en:
           description: ''
           student_description: ''
         k5-onlinepd-2021:
-          title: Implementing and Teaching CS Fundamentals
-          description: "Welcome to Code.org’s free online educator course for CS Fundamentals! \n"
+          title: Implementing and Teaching Computer Science Fundamentals '21-'22
+          description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
-          description_short: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
-          description_audience: 'Welcome to Code.org’s free online course for getting started with CS Fundamentals! '
+          description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: Welcome to "Teaching Computer Science Fundamentals"
-              name: Introduction
+              name: Welcome and Introduction
               description_student: ''
               description_teacher: ''
             Understanding the Computer Science Fundamentals Courses:
@@ -22669,7 +22691,7 @@ en:
               description_teacher: ''
             Next steps:
               key: Next steps
-              name: Next steps
+              name: 'Part III:  Next steps'
               description_student: ''
               description_teacher: ''
             Module 1:
@@ -22685,14 +22707,14 @@ en:
             CS Teaching and Learning Practices:
               name: CS Teaching and Learning Practices
             CS Teaching and Student Practices:
-              name: CS Teaching and Student Practices
+              name: CS Teaching Practices
             Implementation Approaches and Barriers:
               name: Implementation Approaches and Barriers
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduction
             k5_basic_concepts_1:
-              display_name: CS Fundamentals CS Concepts
+              display_name: 'Part II:  CS Fundamentals CS Concepts'
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
@@ -22700,7 +22722,7 @@ en:
             Introduction:
               display_name: Introduction
             Implementing and Teaching CS:
-              display_name: Implementing and Teaching CS
+              display_name: 'Part I:  Implementing and Teaching CS'
           name: k5-onlinepd-2021
         haikubot-pilot:
           lessons:
@@ -23141,7 +23163,24 @@ en:
               name: Module 8
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+          lesson_groups:
+            CSD_Module 1:
+              display_name: Module 1
+            CSD_Module 2:
+              display_name: Module 2
+            CSD_Module 3:
+              display_name: Module 3
+            CSD_Module 4:
+              display_name: Module 4
+            CSD_Module 5:
+              display_name: Module 5
+            CSD_Module 6:
+              display_name: Module 6
+            CSD_Module 7:
+              display_name: Module 7
+            CSD_Module 8:
+              display_name: Module 8
+          name: vpl-csd-2021
         vpl-csp-2021:
           title: CS Principles Virtual Professional Learning
           description: ''
@@ -23191,26 +23230,52 @@ en:
               description_teacher: ''
           lesson_groups: {}
         self-paced-pl-csd1-2021:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Welcome
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Creating a Class Section
+            lesson-3:
+              name: Accessing and Using Lesson Plans
+            lesson-4:
+              name: Welcome
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Navigating Code.org
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Overview of CS Discoveries
+            lesson-7:
+              name: Guidance for Teaching CS Discoveries
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+            lessonGroup-3:
+              display_name: Navigating Code.org
+            lessonGroup-5:
+              display_name: Preparing to Teach CS Discoveries
           name: self-paced-pl-csd1-2021
-          title: ''
+          title: 'Welcome '
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "This unit is a short introduction to both Code.org and this professional learning course. \n\n**You will learn:**\n* What Code.org is\n* How to engage in this professional learning course\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csd2-2021:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-csd2-2021
-          title: ''
+          title: Navigating Code.org
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "This unit is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**In this unit you will learn how to:**\n\n* Navigate the Code.org website and teacher tools \n* Locate and use course lesson plans and teacher resources \n* Access support while teaching the course \n\n**Suggested Time:**\n\n\n\n\n"
         self-paced-pl-csd3-2021:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-csd3-2021
-          title: ''
+          title: Overview of CS Discoveries
           description_audience: ''
           description_short: ''
           description: ''
@@ -23218,15 +23283,57 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-csd4-2021
-          title: ''
+          title: Guidance for Teaching CS Discoveries
           description_audience: ''
           description_short: ''
           description: ''
         self-paced-pl-csd5-2021:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Problem Solving and Computing
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Web Development
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Interactive Animations and Games
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: The Design Process
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Data and Society
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Physical Computing
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: AI and Machine Learning
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Preparing to Teach Unit 1 '
+            lessonGroup-3:
+              display_name: 'Preparing to Teach Unit 2 '
+            lessonGroup-4:
+              display_name: Preparing to Teach Unit 3
+            lessonGroup-5:
+              display_name: Preparing to Teach Unit 4
+            lessonGroup-6:
+              display_name: Preparing to Teach Unit 5
+            lessonGroup-7:
+              display_name: Preparing to Teach Unit 6
+            lessonGroup-8:
+              display_name: 'Preparing to Teach Unit 7 '
           name: self-paced-pl-csd5-2021
-          title: ''
+          title: Preparing to Teach CS Discoveries
           description_audience: ''
           description_short: ''
           description: ''
@@ -23234,7 +23341,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-csd6-2021
-          title: ''
+          title: Next Steps
           description_audience: ''
           description_short: ''
           description: ''

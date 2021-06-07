@@ -3,17 +3,46 @@ skip_dialog true
 markdown <<MARKDOWN
 # Curriculum Overview
 
-<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
-
-## Code.org Values and Philosophy
+<img src="https://images.code.org/835eab960f43b5a947d41450fcb488cf-image-1622754945281.png" class="level-image">
+Curriculum writers design learning experiences from a variety of teaching and learning strategies all with the goal of constructing an equitable and engaging learning environment.
 
 ## Course Structure
 
+All CS Fundamentals courses: 
+
+* include a lesson from Common Sense Media focused on Digital Citizenship to teach students about online safety.
+* are organized into Concept Chunks which are big ideas lessons are based on.
+
+**Each course is designed to stand alone and does not require a student to take a course in sequence.  This means students can begin learning CS with any age appropriate course.**
+
 ## Lesson Types
+
+**Context-setting Lessons** introduce students to concepts, usually in a hands-on way and often without computers.
+
+**Skill-building Lessons** typically involve programming on the computer and are designed to give students structured practice with a new tool or concept.
+
+**Mini-Project Lessons** are part of courses C-F (grades 2 - 5), on the computer for students to apply what they have learned by creating a more extensive program step-by-step.
+
+**Exploratory Lessons** introduce essential concepts on the computer, but may not be directly related to other lessons in the course.
+
+**End of Course Projects** are open-ended lessons found at the end of each course.
 
 ## Lesson Structure
 
+All lessons have the same components:  Warm Up, Main Activity, and Wrap Up.
 
-If you are a <a href="https://code.org/educate/csd" target="blank" rel="noopener noreferrer">middle school</a> or <a href="https://code.org/educate/csp" target="blank" rel="noopener noreferrer">high school</a> teacher interested in teaching our middle school or high school courses, we recommend you pursue more <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">in-depth, ongoing professional development opportunities</a>.
+Lesson have different types of levels which support students learning CS:
+
+* Online levels include Code.org tools - Artist, Play Lab, and Sprite Lab.  
+	* You will use and learn more about these tools during the second portion of this online course.
+* Video levels introduce new tools or explain new CS Concepts.
+* Lesson extras levels are at the end of each lesson and optional for students to revisit concepts.
+
+In addition, each type of level has a specific purpose such as:
+
+* engaging students to make predictions.
+* challenging students to test students' persistence.
+* free play to help students get creative.
+
 
 MARKDOWN

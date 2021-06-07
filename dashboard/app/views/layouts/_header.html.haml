@@ -4,6 +4,7 @@
   script = local_assigns[:script] || Script.twenty_hour_script
   script_level = local_assigns[:script_level]
   level = local_assigns[:level]
+  lesson = local_assigns[:lesson]
   full_width = local_assigns[:full_width]
 
   show_bug_links = script_level || (level && level.try(:is_project_level))
@@ -31,6 +32,7 @@
   hamburger_options = {}
   hamburger_options[:level] = level
   hamburger_options[:script_level] = script_level
+  hamburger_options[:lesson] = lesson
   hamburger_options[:user_type] = user_type
   hamburger_options[:language] = request.language
   hamburger_options[:show_gallery] = true

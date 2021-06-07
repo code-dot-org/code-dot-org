@@ -140,9 +140,6 @@ const styles = {
     padding: '0px 12px',
     fontFamily: '"Gotham 5r", sans-serif',
     lineHeight: '18px',
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
     ':hover': {
       backgroundColor: color.cyan
     }
@@ -175,7 +172,6 @@ const styles = {
   },
   backpackIcon: {
     height: 15,
-    paddingRight: 8,
     opacity: 1
   }
 };

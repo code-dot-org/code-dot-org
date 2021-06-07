@@ -1,0 +1,7 @@
+name 'levelgroup_test_for_nps'
+title 'title of the assessment here'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'Student_facing_nps'

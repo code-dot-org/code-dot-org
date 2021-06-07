@@ -48,7 +48,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     assert_equal 'Lesson 3: ' + I18n.t("data.script.name.#{script.name}.lessons.#{script_level.lesson.key}.name"), script_level.lesson.summarize[:title]
   end
 
-  test 'show stage position in header for default script' do
+  test 'show lesson position in header for default script' do
     stubs(:current_user).returns(nil)
     script_level = Script.twenty_hour_script.script_levels.fifth
     assert_equal 'Lesson 2: The Maze', script_level.lesson.summarize[:title]
@@ -78,7 +78,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     refute response[:redirect].end_with?('extras')
   end
 
-  test 'get End-of-Lesson experience only for end of stage' do
+  test 'get End-of-Lesson experience only for end of lesson' do
     stubs(:current_user).returns(@student)
     script = @section.script
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 8, false
