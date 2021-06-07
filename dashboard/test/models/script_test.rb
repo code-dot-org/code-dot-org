@@ -1008,11 +1008,11 @@ class ScriptTest < ActiveSupport::TestCase
 
       @script = create(:script, name: 'script-with-visible-after')
       @lesson_group = create(:lesson_group, key: 'key1', script: @script)
-      lesson_no_visible_after = create(:lesson, script: @script, name: 'Stage 1', lesson_group: @lesson_group)
+      lesson_no_visible_after = create(:lesson, script: @script, name: 'Lesson 1', lesson_group: @lesson_group)
       create(:script_level, script: @script, lesson: lesson_no_visible_after)
-      lesson_future_visible_after = create(:lesson, script: @script, name: 'Stage 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
+      lesson_future_visible_after = create(:lesson, script: @script, name: 'Lesson 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
       create(:script_level, script: @script, lesson: lesson_future_visible_after)
-      lesson_past_visible_after = create(:lesson, script: @script, name: 'Stage 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
+      lesson_past_visible_after = create(:lesson, script: @script, name: 'Lesson 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
       create(:script_level, script: @script, lesson: lesson_past_visible_after)
     end
 

@@ -23,6 +23,7 @@ import color from '@cdo/apps/util/color';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
 import NameFileDialog from './NameFileDialog';
 import DeleteConfirmationDialog from './DeleteConfirmationDialog';
+import CommitDialog from './CommitDialog';
 import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
 import Backpack from './Backpack';
@@ -31,14 +32,19 @@ import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
+import {CompileStatus} from './constants';
+import {makeEnum} from '@cdo/apps/utils';
 
-const RENAME_FILE = 'renameFile';
-const DELETE_FILE = 'deleteFile';
-const CREATE_FILE = 'createFile';
 const MIN_HEIGHT = 100;
 const MAX_HEIGHT = 500;
 // This is the height of the content between the top banner and the editor box
 const HEADER_OFFSET = 80;
+const Dialog = makeEnum(
+  'RENAME_FILE',
+  'DELETE_FILE',
+  'CREATE_FILE',
+  'COMMIT_FILES'
+);
 
 class JavalabEditor extends React.Component {
   static propTypes = {
@@ -72,6 +78,7 @@ class JavalabEditor extends React.Component {
     this.onCreateFile = this.onCreateFile.bind(this);
     this.onDeleteFile = this.onDeleteFile.bind(this);
     this.onOpenFile = this.onOpenFile.bind(this);
+    this.onOpenCommitDialog = this.onOpenCommitDialog.bind(this);
     this.updateVisibility = this.updateVisibility.bind(this);
     this.updateValidation = this.updateValidation.bind(this);
     this.updateFileType = this.updateFileType.bind(this);
@@ -103,7 +110,8 @@ class JavalabEditor extends React.Component {
       renameFileError: null,
       activeTabKey: firstTabKey,
       lastTabKeyIndex: orderedTabKeys.length - 1,
-      fileToDelete: null
+      fileToDelete: null,
+      compileStatus: CompileStatus.NONE
     };
   }
 
@@ -253,7 +261,7 @@ class JavalabEditor extends React.Component {
       showMenu: false,
       contextTarget: null,
       editTabKey: this.state.contextTarget,
-      openDialog: RENAME_FILE
+      openDialog: Dialog.RENAME_FILE
     });
   }
 
@@ -271,7 +279,7 @@ class JavalabEditor extends React.Component {
     this.setState({
       showMenu: false,
       contextTarget: null,
-      openDialog: DELETE_FILE,
+      openDialog: Dialog.DELETE_FILE,
       fileToDelete: this.state.contextTarget
     });
   }
@@ -438,6 +446,18 @@ class JavalabEditor extends React.Component {
     this.props.setRenderedHeight(newHeight);
   };
 
+  onOpenCommitDialog() {
+    // When the dialog opens, we will compile the user's files and notify them of success/errors.
+    // For now, this is mocked out to successfully compile after a set amount of time.
+    this.setState({
+      openDialog: Dialog.COMMIT_FILES,
+      compileStatus: CompileStatus.LOADING
+    });
+    setTimeout(() => {
+      this.setState({compileStatus: CompileStatus.SUCCESS});
+    }, 500);
+  }
+
   render() {
     const {
       orderedTabKeys,
@@ -448,7 +468,8 @@ class JavalabEditor extends React.Component {
       fileToDelete,
       contextTarget,
       renameFileError,
-      newFileError
+      newFileError,
+      compileStatus
     } = this.state;
     const {
       onCommitCode,
@@ -470,7 +491,7 @@ class JavalabEditor extends React.Component {
           <PaneButton
             id="javalab-editor-create-file"
             iconClass="fa fa-plus-circle"
-            onClick={() => this.setState({openDialog: CREATE_FILE})}
+            onClick={() => this.setState({openDialog: Dialog.CREATE_FILE})}
             headerHasFocus
             isRtl={false}
             label={javalabMsg.newFile()}
@@ -490,7 +511,7 @@ class JavalabEditor extends React.Component {
           <PaneButton
             id="javalab-editor-save"
             iconClass="fa fa-check-circle"
-            onClick={onCommitCode}
+            onClick={this.onOpenCommitDialog}
             headerHasFocus
             isRtl={false}
             label={javalabMsg.commitCode()}
@@ -598,14 +619,14 @@ class JavalabEditor extends React.Component {
           />
         </div>
         <DeleteConfirmationDialog
-          isOpen={openDialog === DELETE_FILE}
+          isOpen={openDialog === Dialog.DELETE_FILE}
           handleConfirm={this.onDeleteFile}
           handleClose={() => this.setState({openDialog: null})}
           filename={fileMetadata[fileToDelete]}
           isDarkMode={isDarkMode}
         />
         <NameFileDialog
-          isOpen={openDialog === RENAME_FILE}
+          isOpen={openDialog === Dialog.RENAME_FILE}
           handleClose={() =>
             this.setState({openDialog: null, renameFileError: null})
           }
@@ -617,7 +638,7 @@ class JavalabEditor extends React.Component {
           errorMessage={renameFileError}
         />
         <NameFileDialog
-          isOpen={openDialog === CREATE_FILE}
+          isOpen={openDialog === Dialog.CREATE_FILE}
           handleClose={() =>
             this.setState({openDialog: null, newFileError: null})
           }
@@ -626,6 +647,15 @@ class JavalabEditor extends React.Component {
           inputLabel="Create new file"
           saveButtonText="Create"
           errorMessage={newFileError}
+        />
+        <CommitDialog
+          isOpen={openDialog === Dialog.COMMIT_FILES}
+          files={Object.keys(sources)}
+          handleClose={() =>
+            this.setState({openDialog: null, compileStatus: CompileStatus.NONE})
+          }
+          handleCommit={onCommitCode}
+          compileStatus={compileStatus}
         />
       </div>
     );

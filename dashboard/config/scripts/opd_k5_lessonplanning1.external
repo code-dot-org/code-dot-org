@@ -1,78 +1,54 @@
 name 'OPD-K5 LessonPlanning1'
 skip_dialog true
 markdown <<MARKDOWN
-# Lesson Planning Overview
-**Total Suggested Time:**
+# Planning a Lesson
 
-Are you familiar with Code.org's Hour of Code? CS Fundamentals courses and Hour of Code are not the same thing.  Hour of Code *introduces* students to CS while CS Fundamentals courses *build* CS knowledge and skills.
+Are you familiar with Code.org's <a href="https://code.org/learn" target="blank" rel="noopener noreferrer">Hour of Code</a>?
 
-Let's dive into the CS Fundamentals course structure, lessons, and resources available to use as you plan.  
+![](https://images.code.org/6057f944128903c31113372130cec800-image-1622827222543.png)
 
-## What is CS Fundamentals?
+Computer Science Fundamentals courses and Hour of Code are not the same thing.  Hour of Code *introduces* students to CS while Computer Science Fundamentals courses *build* CS knowledge and skills.
 
-CS Fundamentals is:
-* Developed with Curriculum Values in mind with a Pedagogical Approach to Curriculum Values
-* Designed with K12 Computer Science Framework practices and CSTA K-12 standards
-* Courses for each K-5 grade level for both pre-readers and readers
+Take this time now as an opportunity to find a lesson to try out with your students. 
 
-**Task: Read the Curriculum Values and Pedagogical Approach to Curriculum Values**
+## Guidance for lesson implementation
 
-## Course Structure
-* **Concept Chunks** - big ideas in each course which lessons are based on 
-	* the repetition throughout Courses A-F to strengthen students’ CS knowledge and skills 
-	* each course is designed to stand alone and does not require a student to take a course in sequence
-    * students can begin learning CS with any course
+When planning to try out a lesson with your students keep in mind the following:
 
-* **Digital Citizenship** - lessons from Common Sense Media that are included in every course to teach students about online safety
+**Logistics**
+* What classroom routines or procedures are needed for the lesson?
 
-**Task 1: Take a look at the concept chunks within the curriculum**
+**CS Teaching Practices**
+* When will any of the following CS teaching practices be used during the lesson?
+	* Role of the Teacher (lead learner)
+    * Discovery and Inquiry
+    * Debugging
+    * Pair Programming
+    * The Classroom Community (active learning, communication)
 
- * You will take a deeper look at concept chunks in the "CS Fundamentals Concepts" section of the course.
-    
-**Task 2:  Explore this example of a Digital Citizenship lesson**
+**Inclusion**
+* How will the lesson be inclusive for students?
 
-* Add example lesson here
+## Accessing curriculum resources
 
-## Lesson Types
-* **Unplugged/Introduction:** off the computer to introduce a new concept in a hands-on way
-* **Skill building:** on the computer to practice using a new tool or programming concept
-* **Application:** on the computer to apply learned concepts in creative ways
-* **Mini-projects and End of course projects:** on and off the computer, open-ended projects
+Here is a reminder from Lesson 2: Getting Started for how to navigate to the Course Overview page and access lesson plans and resources.
 
-**Task:  Explore examples of lesson plans for each type of lesson**
+* <a href="https://code.org" target="blank" rel="noopener noreferrer">Sign-in to Code.org</a>
+* Click on “Course Catalog” link on the top left side
+* Scroll down to “Full Course Catalog”
+* Click on “Learn More” within the Elementary School tile
+* Scroll down to the courses and choose a course
+* Click on “View Course” to go to the course overview page
+* Choose the lesson to plan for
+* Click on “View Lesson Plan” on the right side
 
-* Add example unplugged/introduction lesson plan
-* Add example skill building lesson plan
-* Add example application lesson plan
-* Add example mini-Projects
-* Add example End of Course project
+## Try the lesson out!
 
+Find a time to try the lesson out with your students.  After implementing the lesson with your students, reflect on:
 
-## Lesson Structure
-* **Lesson Progression:** typically follows a lesson sequence of a warm up, followed by a main activity (that may or may not be on the computer), and a warm up
-* **Lesson Resources:** student handouts and teacher prep resources
-* **Code Studio learning platform:** when students are on the computer they engage with the learning platform for skill building, making predictions, solving puzzles, lesson extras, watching videos, or creating mini-projects.  Note:  not all courses include what is listed here in order to provide age appropriate lessons.
-	* You will practice using Code Studio in the "CS Fundamentals Concepts" section of the course.
+* how much time a lesson really takes.
+* how students engage and respond to the lesson.
+* how fun lessons are!
 
-**Task:  Explore examples of lesson resources**
-
-* Add example of student handout
-* Add example of student video
-* Add example of 
-
-## Flexible Implementation
-* Examples of common course implementations:
-	* Once a week in a general classroom
-	* Every class session in a tech classroom
-	* Once a month in a library setting
-	* Multiple periods a week for a few months as a “unit”
-	* Included during other content instruction
-	* lessons are mapped to Common Core ELA/Math Standards and Next Generation Science Standards
-
-
-<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
-
-
-    
 
 MARKDOWN

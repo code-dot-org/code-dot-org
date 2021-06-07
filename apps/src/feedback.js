@@ -613,7 +613,7 @@ FeedbackUtils.saveThumbnail = function(image) {
 };
 
 FeedbackUtils.isLastLevel = function() {
-  const lesson = getStore().getState().progress.stages[0];
+  const lesson = getStore().getState().progress.lessons[0];
   return (
     lesson.levels[lesson.levels.length - 1].ids.indexOf(
       window.appOptions.serverLevelId

@@ -12,7 +12,7 @@
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "long_instructions": "# Lesson Planning: Reflection\r\n\r\n**Prompt:**\r\n* What questions in the lesson planning guide do you predict will be the easiest to plan for?\r\n* What questions in the lesson planning guide do you predict will be the most challenging to plan for?\r\n* When will you implement CS Fundamentals?\r\n",
+    "long_instructions": "# Reflection: Lesson Planning\r\n\r\n**Prompts:**\r\n* What Computer Science Fundamentals lesson do you plan on trying out with your students?\r\n* What challenges, if any, do you anticipate for implementing the lesson?\r\n* How do you plan to move past the challenge you anticipate?\r\n",
     "parent_level_id": 27633,
     "name_suffix": "_2021"
   },
@@ -22,6 +22,8 @@
   "level_num": "custom",
   "user_id": 884,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-11-07 00:36:42 +0000\",\"changed\":[],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:37:20 +0000\",\"changed\":[\"name\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:39:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-08 17:52:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2021-03-05 19:35:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-05 22:37:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-11-07 00:36:42 +0000\",\"changed\":[],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:37:20 +0000\",\"changed\":[\"name\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:39:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-08 17:52:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2021-03-05 19:35:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-05 22:37:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-02 23:47:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-04 17:25:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>
