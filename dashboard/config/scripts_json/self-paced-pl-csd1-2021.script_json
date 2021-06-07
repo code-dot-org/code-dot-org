@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-04 16:58:14 UTC",
+    "serialized_at": "2021-06-07 15:58:27 UTC",
     "seeding_key": {
       "script.name": "self-paced-pl-csd1-2021"
     }
@@ -246,6 +246,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 Summer Review_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -268,6 +271,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L9_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -290,6 +296,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 Overview_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -312,6 +321,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U4 Chapter 2 Project_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -334,6 +346,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L1_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -356,6 +371,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - U4L8 CI_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -378,6 +396,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -400,6 +421,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Conditionals_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -422,6 +446,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 2 Project_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
