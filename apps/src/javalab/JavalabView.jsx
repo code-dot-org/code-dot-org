@@ -1,16 +1,17 @@
 import React from 'react';
-import JavalabConsole from './JavalabConsole';
+import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+import color from '@cdo/apps/util/color';
+import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
 import JavalabSettings from './JavalabSettings';
-import JavalabButton from './JavalabButton';
 import {appendOutputLog, setIsDarkMode} from './javalabRedux';
-import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import ControlButtons from './ControlButtons';
+import JavalabButton from './JavalabButton';
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -32,6 +33,11 @@ class JavalabView extends React.Component {
     channelId: PropTypes.string
   };
 
+  state = {
+    isRunning: false,
+    isTesting: false
+  };
+
   componentDidMount() {
     this.props.onMount();
   }
@@ -43,15 +49,38 @@ class JavalabView extends React.Component {
 
   // Sends redux call to update dark mode, which handles user preferences
   renderSettings = () => {
-    const {isDarkMode} = this.props;
+    const {isDarkMode, setIsDarkMode} = this.props;
     return [
-      <a
-        onClick={() => this.props.setIsDarkMode(!isDarkMode)}
-        key="theme-setting"
-      >
+      <a onClick={() => setIsDarkMode(!isDarkMode)} key="theme-setting">
         Switch to {isDarkMode ? 'light mode' : 'dark mode'}
       </a>
     ];
+  };
+
+  // This controls the 'run' button state, but stopping program execution is not yet
+  // implemented and will need to be added here.
+  toggleRun = () => {
+    this.setState(
+      state => ({isRunning: !state.isRunning}),
+      () => {
+        if (this.state.isRunning) {
+          this.props.onRun();
+        } else {
+          // TODO: Stop program execution.
+        }
+      }
+    );
+  };
+
+  // This controls the 'test' button state, but running/stopping tests
+  // is not yet implemented and will need to be added here.
+  toggleTest = () => {
+    this.setState(
+      state => ({isTesting: !state.isTesting}),
+      () => {
+        // TODO: Run/stop tests.
+      }
+    );
   };
 
   renderVisualization = () => {
@@ -65,22 +94,15 @@ class JavalabView extends React.Component {
     return <div id="visualization" />;
   };
 
-  getButtonStyles = () => {
-    return {
-      ...styles.button.all,
-      ...(this.props.isDarkMode ? styles.button.dark : styles.button.light)
-    };
-  };
-
   render() {
     const {
       isDarkMode,
       onCommitCode,
-      onContinue,
-      onRun,
       onInputMessage,
+      onContinue,
       handleVersionHistory
     } = this.props;
+    const {isRunning, isTesting} = this.state;
 
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -96,7 +118,14 @@ class JavalabView extends React.Component {
             className="responsive"
             style={styles.instructionsAndPreview}
           >
-            <JavalabSettings>{this.renderSettings()}</JavalabSettings>
+            <div style={styles.buttons}>
+              <JavalabSettings>{this.renderSettings()}</JavalabSettings>
+              <JavalabButton
+                text={i18n.continue()}
+                onClick={onContinue}
+                style={styles.continue}
+              />
+            </div>
             <TopInstructions
               mainStyle={styles.instructions}
               standalone
@@ -117,33 +146,19 @@ class JavalabView extends React.Component {
               onCommitCode={onCommitCode}
               handleVersionHistory={handleVersionHistory}
             />
-            <div style={styles.consoleAndButtons}>
-              <div style={styles.buttons}>
-                <JavalabButton
-                  icon={<FontAwesome icon="stop" className="fa-2x" />}
-                  text="Stop"
-                  style={this.getButtonStyles()}
-                  onClick={() => {}}
+            <JavalabConsole
+              onInputMessage={onInputMessage}
+              leftColumn={
+                <ControlButtons
+                  isDarkMode={isDarkMode}
+                  isRunning={isRunning}
+                  isTesting={isTesting}
+                  toggleRun={this.toggleRun}
+                  toggleTest={this.toggleTest}
                 />
-                <JavalabButton
-                  icon={<FontAwesome icon="check" className="fa-2x" />}
-                  text="Continue"
-                  style={this.getButtonStyles()}
-                  onClick={onContinue}
-                />
-              </div>
-              <div style={styles.buttons}>
-                <JavalabButton
-                  icon={<FontAwesome icon="play" className="fa-2x" />}
-                  text="Run"
-                  style={this.getButtonStyles()}
-                  onClick={onRun}
-                />
-              </div>
-              <div style={styles.consoleStyle}>
-                <JavalabConsole onInputMessage={onInputMessage} />
-              </div>
-            </div>
+              }
+              style={styles.console}
+            />
           </div>
         </div>
       </StudioAppWrapper>
@@ -181,26 +196,19 @@ const styles = {
     display: 'flex',
     margin: 15
   },
-  consoleAndButtons: {
-    marginTop: 15,
-    display: 'flex'
-  },
-  consoleStyle: {
-    flexGrow: 1
-  },
-  buttons: {
-    marginRight: 15,
-    height: 75,
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  button: {
-    all: {width: 95},
-    light: {backgroundColor: color.cyan},
-    dark: {backgroundColor: color.darkest_gray}
+  console: {
+    marginTop: 15
   },
   clear: {
     clear: 'both'
+  },
+  buttons: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  continue: {
+    backgroundColor: color.orange,
+    fontSize: 15
   }
 };
 
