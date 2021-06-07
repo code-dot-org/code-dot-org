@@ -37,6 +37,8 @@ const DELETE_FILE = 'deleteFile';
 const CREATE_FILE = 'createFile';
 const MIN_HEIGHT = 100;
 const MAX_HEIGHT = 500;
+// This is the height of the content between the top banner and the editor box
+const HEADER_OFFSET = 80;
 
 class JavalabEditor extends React.Component {
   static propTypes = {
@@ -414,7 +416,14 @@ class JavalabEditor extends React.Component {
    * via a call to handleHeightResize from HeightResizer.
    */
   getItemTop = () => {
-    return this.tabContainer.getBoundingClientRect().top;
+    return this.tabContainer.getBoundingClientRect().top + HEADER_OFFSET;
+  };
+
+  /**
+   * Returns the height of the container with the header incorporated.
+   */
+  getPosition = () => {
+    return this.props.height + HEADER_OFFSET;
   };
 
   /**
@@ -445,8 +454,7 @@ class JavalabEditor extends React.Component {
       onCommitCode,
       isDarkMode,
       sources,
-      isEditingStartSources,
-      height
+      isEditingStartSources
     } = this.props;
 
     let menuStyle = {
@@ -548,7 +556,7 @@ class JavalabEditor extends React.Component {
                 );
               })}
             </Nav>
-            <Tab.Content animation={false} ref={ref => (this.tabContent = ref)}>
+            <Tab.Content id="tab-content" animation={false}>
               {orderedTabKeys.map(tabKey => {
                 return (
                   <Tab.Pane eventKey={tabKey} key={`${tabKey}-content`}>
@@ -565,7 +573,7 @@ class JavalabEditor extends React.Component {
             </Tab.Content>
             <HeightResizer
               resizeItemTop={this.getItemTop}
-              position={height}
+              position={this.getPosition()}
               onResize={this.handleHeightResize}
             />
           </div>
@@ -627,6 +635,7 @@ class JavalabEditor extends React.Component {
 const styles = {
   editor: {
     width: '100%',
+    height: '400px',
     maxHeight: MAX_HEIGHT,
     minHeight: MIN_HEIGHT,
     backgroundColor: color.white,
