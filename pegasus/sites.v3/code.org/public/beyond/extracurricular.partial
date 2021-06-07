@@ -92,20 +92,6 @@ social:
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
 
-<div class="col-100" style="padding:25px; background-color: #0094ca; border-radius:15px">
-  <a class="linktag" id="local-clubs" href="https://code.org/learn/local" target="_blank">
-    <img style="width: 10%; float: left; margin-top: -1%; margin-right: 2%" src="/images/beyond/maps.png" alt="Map icon">
-  </a>
-  <div style="width: 87%; margin-top: 1%; float: left">
-    <a class="linktag" id="local-clubs" href="https://code.org/learn/local" target="_blank"><h3 style="margin-top:0; color:#ffffff"><strong>Find a local club</strong></h3></a>
-    <p style="color:#ffffff">Use our map to find a club or afterschool program in your area.</p>
-  </div>
-  <div style="clear:both"></div>
-</div>
-<div style="clear:both"></div>
-<br>
-<br>
-
 <a class="linktag" id="coderdojo" href="https://coderdojo.com/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/coderdojo.png" alt="CoderDojo logo">
 </a>
