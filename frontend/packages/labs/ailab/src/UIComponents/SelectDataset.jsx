@@ -98,15 +98,13 @@ class SelectDataset extends Component {
                 }
                 onMouseLeave={() => this.props.setHighlightDataset(undefined)}
               >
-                <div style={styles.selectDatasetItemContainer}>
-                  <img
-                    src={assetPath + dataset.imagePath}
-                    style={styles.selectDatasetImage}
-                    draggable={false}
-                    className="ailab-image-hover"
-                  />
-                  <div style={styles.selectDatasetText}>{dataset.name}</div>
-                </div>
+                <img
+                  src={assetPath + dataset.imagePath}
+                  style={styles.selectDatasetImage}
+                  draggable={false}
+                  className="ailab-image-hover"
+                />
+                <div style={styles.selectDatasetText}>{dataset.name}</div>
               </div>
             );
           })}
