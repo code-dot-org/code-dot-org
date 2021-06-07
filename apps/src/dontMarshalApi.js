@@ -27,6 +27,15 @@ import {
  * import * as dontMarshalApi from './dontMarshalApi'
  */
 
+function getJSInterpreter() {
+  if (window.Applab) {
+    return window.Applab.JSInterpreter;
+  }
+  if (window.__mostRecentGameLabInstance) {
+    return window.__mostRecentGameLabInstance.JSInterpreter;
+  }
+}
+
 function dmapiValidateType(_, funcName, varName, varValue, expectedType, opt) {
   var properType;
   if (typeof varValue !== 'undefined') {
@@ -35,9 +44,9 @@ function dmapiValidateType(_, funcName, varName, varValue, expectedType, opt) {
         typeof varValue.data === 'number' ||
         (typeof varValue.data === 'string' && !isNaN(varValue.data));
     } else if (expectedType === 'array') {
-      properType = window.Applab.JSInterpreter.interpreter.isa(
+      properType = getJSInterpreter().interpreter.isa(
         varValue.proto,
-        window.Applab.JSInterpreter.interpreter.ARRAY
+        getJSInterpreter().interpreter.ARRAY
       );
     } else {
       properType = typeof varValue.data === expectedType;
@@ -46,7 +55,7 @@ function dmapiValidateType(_, funcName, varName, varValue, expectedType, opt) {
   properType =
     properType ||
     (opt === OPTIONAL &&
-      (varValue === window.Applab.JSInterpreter.interpreter.UNDEFINED ||
+      (varValue === getJSInterpreter().interpreter.UNDEFINED ||
         typeof varValue === 'undefined'));
   if (!properType) {
     outputWarning(
@@ -174,7 +183,7 @@ export function appendItem(
     // In the interpreter, we must manually update the length property:
     array.length++;
     // And we must create an interpreter primitive to wrap the return value:
-    return window.Applab.JSInterpreter.createPrimitive(array.length);
+    return getJSInterpreter().createPrimitive(array.length);
   } else {
     return array.length;
   }
@@ -306,7 +315,7 @@ export function setRGB(imageData, x, y, r, g, b, a, calledWithinInterpreter) {
       // In the interpreter, we must create an interpreter primitive
       // to wrap the default value of 255:
       imageDataDataValues[pixelOffset + 3] = calledWithinInterpreter
-        ? window.Applab.JSInterpreter.createPrimitive(255)
+        ? getJSInterpreter().createPrimitive(255)
         : 255;
     } else {
       imageDataDataValues[pixelOffset + 3] = a;
