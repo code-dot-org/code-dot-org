@@ -447,7 +447,7 @@ class ApiController < ApplicationController
         next unless response
         {
           student: student_hash,
-          stage: level_hash[:script_level].lesson.localized_title,
+          lesson: level_hash[:script_level].lesson.localized_title,
           puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,

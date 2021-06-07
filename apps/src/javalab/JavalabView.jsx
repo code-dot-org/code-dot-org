@@ -21,7 +21,7 @@ class JavalabView extends React.Component {
     onCommitCode: PropTypes.func.isRequired,
     onInputMessage: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
-    visualization: PropTypes.object.isRequired,
+    visualization: PropTypes.object,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -54,6 +54,17 @@ class JavalabView extends React.Component {
     ];
   };
 
+  renderVisualization = () => {
+    const {visualization} = this.props;
+    if (visualization) {
+      return <div style={styles.preview}>{visualization}</div>;
+    }
+
+    // This workaround is necessary because <VisualizationResizeBar /> requires
+    // an element with ID 'visualization' or it will not resize.
+    return <div id="visualization" />;
+  };
+
   getButtonStyles = () => {
     return {
       ...styles.button.all,
@@ -68,8 +79,7 @@ class JavalabView extends React.Component {
       onContinue,
       onRun,
       onInputMessage,
-      handleVersionHistory,
-      visualization
+      handleVersionHistory
     } = this.props;
 
     if (isDarkMode) {
@@ -93,7 +103,7 @@ class JavalabView extends React.Component {
               displayDocumentationTab
               displayReviewTab
             />
-            <div style={styles.preview}>{visualization}</div>
+            {this.renderVisualization()}
           </div>
           <VisualizationResizeBar />
           <div

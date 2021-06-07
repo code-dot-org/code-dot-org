@@ -27,6 +27,8 @@ import {CsaViewMode} from './constants';
  */
 const MOBILE_PORTRAIT_WIDTH = 600;
 
+const ICON_PATH = '/blockly/media/turtle/';
+
 /**
  * An instantiable Javalab class
  */
@@ -85,17 +87,10 @@ Javalab.prototype.init = function(config) {
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
-  let visualization;
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     this.miniApp = new Neighborhood();
     config.afterInject = () =>
       this.miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
-    const iconPath = '/blockly/media/turtle/';
-    visualization = (
-      <NeighborhoodVisualizationColumn iconPath={iconPath} showSpeedSlider />
-    );
-  } else {
-    visualization = <DefaultVisualization />;
   }
 
   const onMount = () => {
@@ -196,13 +191,27 @@ Javalab.prototype.init = function(config) {
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
         handleVersionHistory={handleVersionHistory}
-        visualization={visualization}
+        visualization={this.getVisualization(this.level.csaViewMode)}
       />
     </Provider>,
     document.getElementById(config.containerId)
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
+};
+
+Javalab.prototype.getVisualization = function(csaViewMode) {
+  if (!csaViewMode || csaViewMode === CsaViewMode.CONSOLE) {
+    return null;
+  }
+
+  if (csaViewMode === CsaViewMode.NEIGHBORHOOD) {
+    return (
+      <NeighborhoodVisualizationColumn iconPath={ICON_PATH} showSpeedSlider />
+    );
+  }
+
+  return <DefaultVisualization />;
 };
 
 // Ensure project is saved before exiting

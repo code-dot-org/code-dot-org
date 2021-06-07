@@ -1373,28 +1373,28 @@ describe('sectionAssessmentsRedux', () => {
             numberAnswered: 1,
             questionNumber: 1,
             questionText: 'question1',
-            stage: 'name'
+            lesson: 'name'
           },
           {
             answer: 'disagree',
             numberAnswered: 0,
             questionNumber: 1,
             questionText: 'question1',
-            stage: 'name'
+            lesson: 'name'
           },
           {
             answer: 'agree',
             numberAnswered: 0,
             questionNumber: 2,
             questionText: 'question2',
-            stage: 'name'
+            lesson: 'name'
           },
           {
             answer: 'disagree',
             numberAnswered: 1,
             questionNumber: 2,
             questionText: 'question2',
-            stage: 'name'
+            lesson: 'name'
           }
         ]);
       });
@@ -1431,7 +1431,7 @@ describe('sectionAssessmentsRedux', () => {
                           type: 'Multi'
                         }
                       ],
-                      stage: 'lesson 1',
+                      lesson: 'lesson 1',
                       timestamp: '1'
                     }
                   }
@@ -1449,7 +1449,7 @@ describe('sectionAssessmentsRedux', () => {
                           type: 'Multi'
                         }
                       ],
-                      stage: 'lesson 1',
+                      lesson: 'lesson 1',
                       timestamp: '1'
                     }
                   }
@@ -1465,7 +1465,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 1,
             response: 'A',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Saira',
             timestamp: '1'
           },
@@ -1473,7 +1473,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 2,
             response: 'B',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Saira',
             timestamp: '1'
           },
@@ -1481,7 +1481,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'unsubmitted',
             question: 3,
             response: '',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Saira',
             timestamp: '1'
           },
@@ -1489,7 +1489,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 1,
             response: 'A',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Rebecca',
             timestamp: '1'
           },
@@ -1497,7 +1497,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 2,
             response: 'B',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Rebecca',
             timestamp: '1'
           },
@@ -1505,7 +1505,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'incorrect',
             question: 3,
             response: 'B',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Rebecca',
             timestamp: '1'
           }
