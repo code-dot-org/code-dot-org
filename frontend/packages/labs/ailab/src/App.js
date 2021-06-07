@@ -52,7 +52,6 @@ class PanelButtons extends Component {
 
   render() {
     const { panelButtons, saveStatus } = this.props;
-
     let loadSaveStatus= this.props.isSaveComplete(saveStatus)
       ? (saveMessages[saveStatus])
       : ( <FontAwesomeIcon icon={faSpinner} />);
