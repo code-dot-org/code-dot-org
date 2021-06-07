@@ -1,8 +1,9 @@
 /* global dashboard */
 import $ from 'jquery';
 import * as api from './api';
-import {dropletGlobalConfigBlocks} from '../dropletUtils';
 import dontMarshalApi from '../dontMarshalApi';
+import {dropletStringBlocks, dropletArrayBlocks} from '../dropletUtils';
+import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
@@ -845,6 +846,17 @@ export var blocks = [
   {...timeoutApi.dropletConfig.stopTimedLoop},
 
   {
+    func: 'console.log',
+    parent: consoleApi,
+    category: 'Variables',
+    paletteParams: ['message'],
+    params: ['"message"']
+  },
+
+  ...dropletStringBlocks,
+  ...dropletArrayBlocks,
+
+  {
     func: 'imageUploadButton',
     parent: api,
     category: 'Advanced',
@@ -1039,8 +1051,6 @@ export var blocks = [
     noAutocomplete: true
   }
 ];
-
-blocks.push(...dropletGlobalConfigBlocks);
 
 if (experiments.isEnabled(experiments.APPLAB_ML)) {
   blocks.push(

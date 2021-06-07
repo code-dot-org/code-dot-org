@@ -2,7 +2,6 @@ import _ from 'lodash';
 import color from './util/color';
 import {singleton as studioApp} from './StudioApp';
 import {globalFunctions} from './dropletUtilsGlobalFunctions';
-import consoleApi from './consoleApi';
 import dontMarshalApi from './dontMarshalApi';
 
 /**
@@ -85,15 +84,59 @@ export const dropletGlobalConfigBlocks = [
     category: 'Variables',
     type: 'value',
     params: ['__']
-  },
+  }
+];
 
+/**
+ * @type {DropletBlock[]}
+ */
+export const dropletBuiltinConfigBlocks = [
   {
-    func: 'console.log',
-    parent: consoleApi,
-    category: 'Variables',
-    paletteParams: ['message'],
-    params: ['"message"']
+    func: 'Math.round',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathRound'
   },
+  {
+    func: 'Math.abs',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathAbs'
+  },
+  {
+    func: 'Math.max',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathMax'
+  },
+  {
+    func: 'Math.min',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathMin'
+  },
+  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom'},
+  {
+    func: 'Math.pow',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathPow'
+  },
+  {
+    func: 'Math.sqrt',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathSqrt'
+  }
+];
+
+export const dropletStringBlocks = [
   {
     func: 'declareAssign_str_hello_world',
     block: 'var str = "Hello World";',
@@ -153,7 +196,10 @@ export const dropletGlobalConfigBlocks = [
     modeOptionName: '*.toLowerCase',
     tipPrefix: stringMethodPrefix,
     type: 'value'
-  },
+  }
+];
+
+export const dropletArrayBlocks = [
   {
     func: 'declareAssign_list_123',
     block: 'var list = [1, 2, 3];',
@@ -213,55 +259,6 @@ export const dropletGlobalConfigBlocks = [
     paletteParams: ['list', 'index'],
     params: ['list', '0'],
     dontMarshal: true
-  }
-];
-
-/**
- * @type {DropletBlock[]}
- */
-export const dropletBuiltinConfigBlocks = [
-  {
-    func: 'Math.round',
-    category: 'Math',
-    type: 'value',
-    params: ['__'],
-    docFunc: 'mathRound'
-  },
-  {
-    func: 'Math.abs',
-    category: 'Math',
-    type: 'value',
-    params: ['__'],
-    docFunc: 'mathAbs'
-  },
-  {
-    func: 'Math.max',
-    category: 'Math',
-    type: 'value',
-    params: ['__'],
-    docFunc: 'mathMax'
-  },
-  {
-    func: 'Math.min',
-    category: 'Math',
-    type: 'value',
-    params: ['__'],
-    docFunc: 'mathMin'
-  },
-  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom'},
-  {
-    func: 'Math.pow',
-    category: 'Math',
-    type: 'value',
-    params: ['__'],
-    docFunc: 'mathPow'
-  },
-  {
-    func: 'Math.sqrt',
-    category: 'Math',
-    type: 'value',
-    params: ['__'],
-    docFunc: 'mathSqrt'
   }
 ];
 
