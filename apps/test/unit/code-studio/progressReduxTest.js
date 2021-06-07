@@ -1361,7 +1361,7 @@ describe('progressReduxTest', () => {
         completed: true,
         progress: {},
         peerReviewsPerformed: true,
-        current_stage: 1
+        current_lesson: 1
       };
       serverResponse(responseData);
       const promise = userProgressFromServer(state, dispatch, 1);
