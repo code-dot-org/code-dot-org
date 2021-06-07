@@ -65,6 +65,10 @@ class JavalabEditor extends React.Component {
     handleVersionHistory: PropTypes.func.isRequired
   };
 
+  static defaultProps = {
+    height: 400
+  };
+
   constructor(props) {
     super(props);
 
@@ -132,10 +136,6 @@ class JavalabEditor extends React.Component {
           reconfigure: {style: newStyle}
         });
       });
-    }
-
-    if (prevProps.height !== this.props.height) {
-      styles.editor.height = `${this.props.height}px`;
     }
 
     const {fileMetadata} = this.state;
@@ -585,7 +585,8 @@ class JavalabEditor extends React.Component {
                       ref={el => (this._codeMirrors[tabKey] = el)}
                       style={{
                         ...styles.editor,
-                        ...(isDarkMode && styles.darkBackground)
+                        ...(isDarkMode && styles.darkBackground),
+                        ...{height: this.props.height}
                       }}
                     />
                   </Tab.Pane>
@@ -665,7 +666,6 @@ class JavalabEditor extends React.Component {
 const styles = {
   editor: {
     width: '100%',
-    height: '400px',
     maxHeight: MAX_HEIGHT,
     minHeight: MIN_HEIGHT,
     backgroundColor: color.white,
