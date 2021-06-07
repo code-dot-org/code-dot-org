@@ -108,7 +108,7 @@ class SaveModel extends Component {
     return (
       <div style={styles.panel}>
         <Statement />
-        <ScrollableContent>
+        <ScrollableContent tinted={true}>
           <div key={nameField.id} style={styles.cardRow}>
             <span style={styles.bold}>{nameField.text}</span>{" "}
             <span style={styles.italic}>(required)</span>

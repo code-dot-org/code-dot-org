@@ -4,14 +4,19 @@ import { styles } from "../constants";
 
 export default class ScrollableContent extends Component {
   static propTypes = {
+    tinted: PropTypes.bool,
     children: PropTypes.node
   };
 
   render() {
-    const { children } = this.props;
+    const { tinted, children } = this.props;
 
     return (
-      <div style={styles.scrollableContents}>
+      <div
+        style={
+          tinted ? styles.scrollableContentsTinted : styles.scrollableContents
+        }
+      >
         <div style={styles.scrollingContents}>{children}</div>
       </div>
     );

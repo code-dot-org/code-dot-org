@@ -79,7 +79,7 @@ class SelectDataset extends Component {
 
     return (
       <div id="select-dataset" style={styles.panel}>
-        <ScrollableContent>
+        <ScrollableContent tinted={true}>
           {datasets.map((dataset, index) => {
             return (
               <div

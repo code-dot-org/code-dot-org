@@ -178,8 +178,14 @@ export const styles = {
   },
 
   scrollableContents: {
+    overflow: "hidden"
+  },
+
+  scrollableContentsTinted: {
     overflow: "hidden",
-    position: "relative"
+    borderRadius: 0,
+    backgroundColor: colors.background,
+    padding: 10
   },
 
   scrollingContents: {
