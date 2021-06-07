@@ -1,7 +1,7 @@
 /* global dashboard */
 import $ from 'jquery';
 import * as api from './api';
-import dontMarshalApi from './dontMarshalApi';
+import dontMarshalApi from '../dontMarshalApi';
 import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';

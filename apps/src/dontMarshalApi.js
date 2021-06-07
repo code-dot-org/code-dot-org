@@ -2,7 +2,7 @@ import {
   OPTIONAL,
   apiValidateType,
   outputWarning
-} from '../lib/util/javascriptMode';
+} from './lib/util/javascriptMode';
 
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
