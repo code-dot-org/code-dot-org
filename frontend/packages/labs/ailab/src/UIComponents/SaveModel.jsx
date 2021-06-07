@@ -108,7 +108,7 @@ class SaveModel extends Component {
     return (
       <div style={styles.panel}>
         <Statement />
-        <ScrollableContent tinted={true}>
+        <ScrollableContent>
           <div key={nameField.id} style={styles.cardRow}>
             <span style={styles.bold}>{nameField.text}</span>{" "}
             <span style={styles.italic}>(required)</span>
@@ -163,11 +163,7 @@ class SaveModel extends Component {
                           <textarea
                             rows="1"
                             onChange={event =>
-                              this.handleChange(
-                                event,
-                                field.id,
-                                field.isColumn
-                              )
+                              this.handleChange(event, field.id, field.isColumn)
                             }
                             placeholder={field.placeholder}
                             value={field.answer || ""}
