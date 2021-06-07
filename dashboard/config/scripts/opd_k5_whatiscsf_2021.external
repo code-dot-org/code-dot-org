@@ -1,0 +1,17 @@
+name 'OPD-K5 WhatIsCSF_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# What is CS Fundamentals?
+
+<img src="https://images.code.org/054d81744bd44195c5a0320141470ac2-image-1622741859913.png" class="level-image" style="display: block; width:40%">
+
+## CS Fundamentals:
+*  support both pre-readers and readers. 
+* are courses for elementary students in grades K-5. 
+* is designed with K12 Computer Science Framework practices and CSTA K-12 standards.
+* includes cross-curricular activities mapped to ELA/Math Common Core State Standards and Next Generation Science Standards.
+* do not require teachers or students to have any prior CS knowledge or skills.
+
+Throughout "Implementing and Teaching CS Fundamentals" you will learn about the tools, teaching strategies, and resources built-in to the curriculum.
+
+MARKDOWN

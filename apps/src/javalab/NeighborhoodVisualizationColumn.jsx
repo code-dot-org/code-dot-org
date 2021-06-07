@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+import PreviewPaneHeader from './PreviewPaneHeader';
 import MazeVisualization from '@cdo/apps/maze/Visualization';
 
 class NeighborhoodVisualizationColumn extends React.Component {
@@ -11,13 +12,25 @@ class NeighborhoodVisualizationColumn extends React.Component {
     isDarkMode: PropTypes.bool
   };
 
+  state = {
+    isCollapsed: false,
+    isFullscreen: false
+  };
+
   render() {
     const {showSpeedSlider, iconPath, isDarkMode} = this.props;
+    const {isCollapsed, isFullscreen} = this.state;
+
     const fullIconPath = isDarkMode
       ? iconPath + 'icons_white.png'
       : iconPath + 'icons.png';
+
     return (
-      <span>
+      <div>
+        <PreviewPaneHeader
+          isCollapsed={isCollapsed}
+          isFullscreen={isFullscreen}
+        />
         <MazeVisualization />
         {showSpeedSlider && (
           <svg id="slider" version="1.1" width="150" height="50">
@@ -47,7 +60,7 @@ class NeighborhoodVisualizationColumn extends React.Component {
             />
           </svg>
         )}
-      </span>
+      </div>
     );
   }
 }

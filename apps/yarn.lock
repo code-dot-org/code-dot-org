@@ -1622,10 +1622,10 @@
   version "0.1.0-cdo.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-numbers/-/js-numbers-0.1.0-cdo.0.tgz#810092a993c3c75441f2e5a3282f1257d9670715"
 
-"@code-dot-org/maze@2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-2.4.0.tgz#59371335c2823d1c6e982cd61d13b05f9ada5922"
-  integrity sha512-kfTUvFpgvFbWSBOXi/C1JasBVNOAmofbRgAMz0nKXweow8jUUvZ7OU6mB6V0bCWaMFEk+vOrE1rcpRhCdRfJmw==
+"@code-dot-org/maze@2.10.0":
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-2.10.0.tgz#6540b8dfe6b12a1fc1e1dc88b131fb43f19b275d"
+  integrity sha512-aofnfNPy64AzLQeJ8adxtd/tmEdw4IGQVBG7DP1SO9xTZVrGO7WxAxitg/66mloh3D2LH+VPvgRrSeuZi1RfZA==
 
 "@code-dot-org/ml-activities@0.0.26":
   version "0.0.26"
@@ -1638,10 +1638,10 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.31":
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.31.tgz#5d3830fa0993b764c7e1c281ca986bbdf9df9830"
-  integrity sha512-aJaKgV2ZGVE6EnH0e0aMfYSaVOU/x42xPuUr3q4AZ8/OtsBGF8eY8aifo7hYZ+eKnEosw96c9YqUzqPe0dhNQw==
+"@code-dot-org/ml-playground@0.0.32":
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.32.tgz#e026a8c03dbd93bdf650640e280536e5febdb194"
+  integrity sha512-qsCMrQdzIatlHqKn5WgnyNWN+sVTsSZNLYmwqehBqOCwz44AOih7hiiq5pgoCN944S/DbNmJmtECwlOTR6EJVg==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"
@@ -12776,9 +12776,10 @@ react-color@^2.17.3:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
-react-csv@^1.0.14:
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/react-csv/-/react-csv-1.0.14.tgz#7c9e444fc4c3ca1e1cf73a81129b1ec032838a71"
+react-csv@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/react-csv/-/react-csv-2.0.3.tgz#f5d17a3c71107d9bcbe580049350200debdc042a"
+  integrity sha512-exyAdFLAxtuM4wNwLYrlKyPYLiJ7e0mv9tqPAd3kq+k1CiJFtznevR3yP0icv5q/y200w+lzNgi7TQn1Wrhu0w==
 
 react-datepicker@1.6.0:
   version "1.6.0"
@@ -13003,10 +13004,10 @@ react-popper@^0.9.1:
     popper.js "^1.14.1"
     prop-types "^15.6.1"
 
-react-portal@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-3.2.0.tgz#4224e19b2b05d5cbe730a7ba0e34ec7585de0043"
-  integrity sha512-avb1FreAZAVCvNNyS2dCpxZiPYPJnAasHYPxdVBTROgNFeI+KSb+OoMHNsC1GbDawESCriPwCX+qKua6WSPIFw==
+react-portal@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-4.2.1.tgz#12c1599238c06fb08a9800f3070bea2a3f78b1a6"
+  integrity sha512-fE9kOBagwmTXZ3YGRYb4gcMy+kSA+yLO0xnPankjRlfBv4uCpFXqKPfkpsGQQR15wkZ9EssnvTOl1yMzbkxhPQ==
   dependencies:
     prop-types "^15.5.8"
 

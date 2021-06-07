@@ -16,7 +16,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
   {label: i18n.lessonNumber(), key: 'lessonNum'},
-  {label: i18n.lessonName(), key: 'stageName'},
+  {label: i18n.lessonName(), key: 'lessonName'},
   {label: i18n.levelHeader(), key: 'levelNum'},
   {label: i18n.keyConcept(), key: 'keyConcept'},
   {label: i18n.performanceLevel(), key: 'performance'},
@@ -28,7 +28,7 @@ const CSV_FEEDBACK_RUBRIC_HEADERS = [
 const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
   {label: i18n.lessonNumber(), key: 'lessonNum'},
-  {label: i18n.lessonName(), key: 'stageName'},
+  {label: i18n.lessonName(), key: 'lessonName'},
   {label: i18n.levelHeader(), key: 'levelNum'},
   {label: i18n.feedback(), key: 'comment'},
   {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'}
@@ -43,6 +43,7 @@ const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
 class FeedbackDownload extends Component {
   static propTypes = {
     sectionName: PropTypes.string.isRequired,
+    onClickDownload: PropTypes.func.isRequired,
     // provided by redux
     exportableFeedbackData: PropTypes.array.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -54,7 +55,8 @@ class FeedbackDownload extends Component {
       sectionName,
       exportableFeedbackData,
       scriptName,
-      isCurrentScriptCSD
+      isCurrentScriptCSD,
+      onClickDownload
     } = this.props;
 
     const HEADERS = isCurrentScriptCSD
@@ -71,6 +73,7 @@ class FeedbackDownload extends Component {
           })}
           data={exportableFeedbackData}
           headers={HEADERS}
+          onClick={onClickDownload}
         >
           <Button
             __useDeprecatedTag

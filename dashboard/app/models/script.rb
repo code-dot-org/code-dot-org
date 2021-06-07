@@ -888,7 +888,6 @@ class Script < ApplicationRecord
     summarized_lesson_levels = lesson_levels.map do |lesson|
       {
         lessonNumber: lesson[:lessonNumber],
-        stageNumber: lesson[:lessonNumber], #TODO: remove once launched
         levels: lesson[:levels].map(&:summarize_as_bonus)
       }
     end
@@ -1570,7 +1569,7 @@ class Script < ApplicationRecord
     data[:student_description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
 
     if include_lessons
-      data[:stageDescriptions] = lessons.map do |lesson|
+      data[:lessonDescriptions] = lessons.map do |lesson|
         {
           key: lesson.key,
           name: lesson.name,
@@ -1847,7 +1846,7 @@ class Script < ApplicationRecord
         feedback[temp_feedback.id] = {
           studentName: student.name,
           lessonNum: script_level.lesson.relative_position.to_s,
-          stageName: script_level.lesson.localized_title,
+          lessonName: script_level.lesson.localized_title,
           levelNum: script_level.position.to_s,
           keyConcept: (current_level.rubric_key_concept || ''),
           performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),

@@ -78,9 +78,9 @@ en:
           description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
         csp-2021:
           title: Computer Science Principles ('21-'22)
-          description_short: ''
-          description_student: ''
-          description_teacher: Ken add course description and any links you may want here
+          description_short: Learn foundational computer science concepts.
+          description_student: CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+          description_teacher: CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
           version_title: "'21-'22"
         csd-2021:
           title: Computer Science Discoveries ('21-'22)
@@ -101,11 +101,11 @@ en:
           description_teacher: ''
           version_title: ''
         self-paced-pl-csd-2021:
-          title: self-paced-pl-csd-2021
+          title: 'Preparing to Teach CS Discoveries                      '
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: "'21 - '22"
         self-paced-pl-csp-2021:
           title: self-paced-pl-csp-2021
           description_short: ''
