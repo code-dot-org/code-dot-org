@@ -19,6 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:54:36 UTC",
     "seeding_key": {
       "script.name": "course2"
     }
@@ -42,8 +43,10 @@
       "name": "Graph Paper Programming",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Graph Paper Programming",
@@ -56,8 +59,10 @@
       "name": "Real-life Algorithms: Paper Planes",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Real-life Algorithms: Paper Planes",
@@ -70,6 +75,7 @@
       "name": "Maze: Sequence",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -84,6 +90,7 @@
       "name": "Artist: Sequence",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -98,8 +105,10 @@
       "name": "Getting Loopy",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Getting Loopy",
@@ -112,6 +121,7 @@
       "name": "Maze: Loops",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -126,6 +136,7 @@
       "name": "Artist: Loops",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -140,6 +151,7 @@
       "name": "Bee: Loops",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -154,8 +166,10 @@
       "name": "Relay programming",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Relay programming",
@@ -168,6 +182,7 @@
       "name": "Bee: Debugging",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -182,6 +197,7 @@
       "name": "Artist: Debugging",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -196,8 +212,10 @@
       "name": "Conditionals",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Conditionals",
@@ -210,6 +228,7 @@
       "name": "Bee: Conditionals",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
       },
@@ -224,8 +243,10 @@
       "name": "Binary Bracelets",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Binary Bracelets",
@@ -238,8 +259,10 @@
       "name": "The Big Event",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "The Big Event",
@@ -252,6 +275,7 @@
       "name": "Flappy",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
       },
@@ -266,6 +290,7 @@
       "name": "Play Lab: Create a Story",
       "absolute_position": 17,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
       },
@@ -280,8 +305,10 @@
       "name": "Your Digital Footprint",
       "absolute_position": 18,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Your Digital Footprint",
@@ -294,6 +321,7 @@
       "name": "Artist: Nested Loops",
       "absolute_position": 19,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
       },
@@ -304,15 +332,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "GraphPaperProgramming"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "GraphPaperProgramming"
@@ -328,11 +366,15 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Graph Paper Multi 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Graph Paper Multi 1"
@@ -348,11 +390,15 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Graph Paper Match 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Graph Paper Match 1"
@@ -368,11 +414,15 @@
     {
       "chapter": 4,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PaperPlanes"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PaperPlanes"
@@ -388,11 +438,15 @@
     {
       "chapter": 5,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Algorithms Multi 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Algorithms Multi 1"
@@ -408,11 +462,15 @@
     {
       "chapter": 6,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Algorithms Multi 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Algorithms Multi 2"
@@ -428,11 +486,15 @@
     {
       "chapter": 7,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 1"
@@ -448,11 +510,15 @@
     {
       "chapter": 8,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 2"
@@ -468,11 +534,15 @@
     {
       "chapter": 9,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 3"
@@ -488,11 +558,15 @@
     {
       "chapter": 10,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 4"
@@ -508,11 +582,15 @@
     {
       "chapter": 11,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 6"
@@ -528,11 +606,15 @@
     {
       "chapter": 12,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 7"
@@ -548,11 +630,15 @@
     {
       "chapter": 13,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 8"
@@ -568,11 +654,15 @@
     {
       "chapter": 14,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 9"
@@ -588,11 +678,15 @@
     {
       "chapter": 15,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 10"
@@ -608,11 +702,15 @@
     {
       "chapter": 16,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze Multi 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze Multi 2"
@@ -628,11 +726,15 @@
     {
       "chapter": 17,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze Match 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze Match 2"
@@ -648,10 +750,14 @@
     {
       "chapter": 18,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_maze_programming_challenge1"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -668,10 +774,14 @@
     {
       "chapter": 19,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_maze_programming_challenge2"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -688,11 +798,15 @@
     {
       "chapter": 20,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 1 new"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist 1 new"
@@ -708,11 +822,15 @@
     {
       "chapter": 21,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 2 new"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist 2 new"
@@ -728,11 +846,15 @@
     {
       "chapter": 22,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 3new"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist 3new"
@@ -748,11 +870,15 @@
     {
       "chapter": 23,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 3.4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist 3.4"
@@ -768,11 +894,15 @@
     {
       "chapter": 24,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist 4"
@@ -788,11 +918,15 @@
     {
       "chapter": 25,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist 6"
@@ -808,16 +942,21 @@
     {
       "chapter": 26,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 9",
+          "2-3 Artist 9 NEW"
+        ],
         "variants": {
           "2-3 Artist 9": {
             "active": false
           }
         }
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist 9",
@@ -835,11 +974,15 @@
     {
       "chapter": 27,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist 7"
@@ -855,11 +998,15 @@
     {
       "chapter": 28,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist 8"
@@ -875,11 +1022,15 @@
     {
       "chapter": 29,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Free Play"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Free Play"
@@ -895,11 +1046,15 @@
     {
       "chapter": 30,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Assessment 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Assessment 1"
@@ -915,11 +1070,15 @@
     {
       "chapter": 31,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 artist match 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 artist match 1"
@@ -935,10 +1094,14 @@
     {
       "chapter": 32,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_artist_prog_challenge1"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -955,10 +1118,14 @@
     {
       "chapter": 33,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_artist_prog_challenge2"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -975,11 +1142,15 @@
     {
       "chapter": 34,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "GettingLoopy"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "GettingLoopy"
@@ -995,11 +1166,15 @@
     {
       "chapter": 35,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Getting Loopy Multi 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Getting Loopy Multi 1"
@@ -1015,11 +1190,15 @@
     {
       "chapter": 36,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze Loops 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze Loops 1"
@@ -1035,11 +1214,15 @@
     {
       "chapter": 37,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 12"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 12"
@@ -1055,11 +1238,15 @@
     {
       "chapter": 38,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 13"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 13"
@@ -1075,11 +1262,15 @@
     {
       "chapter": 39,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 15"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 15"
@@ -1095,11 +1286,15 @@
     {
       "chapter": 40,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 16 before"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 16 before"
@@ -1115,11 +1310,15 @@
     {
       "chapter": 41,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 16"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze 16"
@@ -1135,11 +1334,15 @@
     {
       "chapter": 42,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze Loops 17"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze Loops 17"
@@ -1155,11 +1358,15 @@
     {
       "chapter": 43,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze Loops 18"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze Loops 18"
@@ -1175,11 +1382,15 @@
     {
       "chapter": 44,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze Loops 19"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze Loops 19"
@@ -1195,11 +1406,15 @@
     {
       "chapter": 45,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze Loops 20"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze Loops 20"
@@ -1215,11 +1430,15 @@
     {
       "chapter": 46,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze Loops 21"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze Loops 21"
@@ -1235,11 +1454,15 @@
     {
       "chapter": 47,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze Loops Assessment 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Maze Loops Assessment 1"
@@ -1255,11 +1478,15 @@
     {
       "chapter": 48,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 maze multi 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 maze multi 1"
@@ -1275,11 +1502,15 @@
     {
       "chapter": 49,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 maze match 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 maze match 1"
@@ -1295,10 +1526,14 @@
     {
       "chapter": 50,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_maze_loops_challenge1"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1315,10 +1550,14 @@
     {
       "chapter": 51,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_collector_loops_challenge2"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1335,11 +1574,15 @@
     {
       "chapter": 52,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Loops New 1"
@@ -1355,11 +1598,15 @@
     {
       "chapter": 53,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Loops New 2"
@@ -1375,11 +1622,15 @@
     {
       "chapter": 54,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Artist 3.5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "4-5 Artist 3.5"
@@ -1395,11 +1646,15 @@
     {
       "chapter": 55,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Artist 4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "4-5 Artist 4"
@@ -1415,11 +1670,15 @@
     {
       "chapter": 56,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 11"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist 11"
@@ -1435,11 +1694,15 @@
     {
       "chapter": 57,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 12"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist 12"
@@ -1455,11 +1718,15 @@
     {
       "chapter": 58,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Loops New 9"
@@ -1475,11 +1742,15 @@
     {
       "chapter": 59,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Loops New 10"
@@ -1495,11 +1766,15 @@
     {
       "chapter": 60,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 11"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Loops New 11"
@@ -1515,11 +1790,15 @@
     {
       "chapter": 61,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 12"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Loops New 12"
@@ -1535,11 +1814,15 @@
     {
       "chapter": 62,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 13"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Loops New 13"
@@ -1555,11 +1838,15 @@
     {
       "chapter": 63,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 14"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Loops New 14"
@@ -1575,11 +1862,15 @@
     {
       "chapter": 64,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 15"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Loops New 15"
@@ -1595,11 +1886,15 @@
     {
       "chapter": 65,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 artist loops match 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 artist loops match 1"
@@ -1615,11 +1910,15 @@
     {
       "chapter": 66,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 artist loops multi 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 artist loops multi 2"
@@ -1635,11 +1934,15 @@
     {
       "chapter": 67,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 artist loops multi 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 artist loops multi 1"
@@ -1655,11 +1958,15 @@
     {
       "chapter": 68,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 1A"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 1A"
@@ -1675,11 +1982,15 @@
     {
       "chapter": 69,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 2A"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 2A"
@@ -1695,11 +2006,15 @@
     {
       "chapter": 70,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 3A"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 3A"
@@ -1715,11 +2030,15 @@
     {
       "chapter": 71,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 3B"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 3B"
@@ -1735,11 +2054,15 @@
     {
       "chapter": 72,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 7"
@@ -1755,11 +2078,15 @@
     {
       "chapter": 73,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 4A"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 4A"
@@ -1775,11 +2102,15 @@
     {
       "chapter": 74,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 1"
@@ -1795,11 +2126,15 @@
     {
       "chapter": 75,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 2"
@@ -1815,11 +2150,15 @@
     {
       "chapter": 76,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 3"
@@ -1835,11 +2174,15 @@
     {
       "chapter": 77,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 4"
@@ -1855,11 +2198,15 @@
     {
       "chapter": 78,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 5"
@@ -1875,11 +2222,15 @@
     {
       "chapter": 79,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 6"
@@ -1895,11 +2246,15 @@
     {
       "chapter": 80,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 13"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Loops 13"
@@ -1915,11 +2270,15 @@
     {
       "chapter": 81,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 bee loops multi 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 bee loops multi 1"
@@ -1935,10 +2294,14 @@
     {
       "chapter": 82,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_harvester_loops_challenge1"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1955,10 +2318,14 @@
     {
       "chapter": 83,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_harvester_loops_challenge2"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1975,11 +2342,15 @@
     {
       "chapter": 84,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "RelayProgramming"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "RelayProgramming"
@@ -1995,11 +2366,15 @@
     {
       "chapter": 85,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Relay Programming Multi 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Relay Programming Multi 1"
@@ -2015,11 +2390,15 @@
     {
       "chapter": 86,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Relay Programming Multi 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Relay Programming Multi 2"
@@ -2035,11 +2414,15 @@
     {
       "chapter": 87,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Debugging 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Debugging 1"
@@ -2055,11 +2438,15 @@
     {
       "chapter": 88,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Debugging 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Debugging 2"
@@ -2075,11 +2462,15 @@
     {
       "chapter": 89,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Debugging 3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Debugging 3"
@@ -2095,11 +2486,15 @@
     {
       "chapter": 90,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Debugging 4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Debugging 4"
@@ -2115,11 +2510,15 @@
     {
       "chapter": 91,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Debugging 5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Debugging 5"
@@ -2135,11 +2534,15 @@
     {
       "chapter": 92,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Debugging 6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Debugging 6"
@@ -2155,11 +2558,15 @@
     {
       "chapter": 93,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Debugging 7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Debugging 7"
@@ -2175,11 +2582,15 @@
     {
       "chapter": 94,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Debugging 8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Debugging 8"
@@ -2195,11 +2606,15 @@
     {
       "chapter": 95,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Debugging 9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Debugging 9"
@@ -2215,11 +2630,15 @@
     {
       "chapter": 96,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Debugging 10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Debugging 10"
@@ -2235,11 +2654,15 @@
     {
       "chapter": 97,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Debugging Assessment 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Debugging Assessment 1"
@@ -2255,10 +2678,14 @@
     {
       "chapter": 98,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_collector_prog_challenge1"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2275,10 +2702,14 @@
     {
       "chapter": 99,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_collector_prog_challenge2"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2295,11 +2726,15 @@
     {
       "chapter": 100,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Debugging 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Debugging 1"
@@ -2315,11 +2750,15 @@
     {
       "chapter": 101,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Debugging 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Debugging 2"
@@ -2335,11 +2774,15 @@
     {
       "chapter": 102,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Debugging 3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Debugging 3"
@@ -2355,11 +2798,15 @@
     {
       "chapter": 103,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Debugging 5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Debugging 5"
@@ -2375,11 +2822,15 @@
     {
       "chapter": 104,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Debugging 6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Debugging 6"
@@ -2395,11 +2846,15 @@
     {
       "chapter": 105,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Debugging 7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Debugging 7"
@@ -2415,11 +2870,15 @@
     {
       "chapter": 106,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Debugging 8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Debugging 8"
@@ -2435,11 +2894,15 @@
     {
       "chapter": 107,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Debugging 9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Debugging 9"
@@ -2455,11 +2918,15 @@
     {
       "chapter": 108,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Debugging 10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Debugging 10"
@@ -2475,11 +2942,15 @@
     {
       "chapter": 109,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Debugging 11"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Debugging 11"
@@ -2495,11 +2966,15 @@
     {
       "chapter": 110,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Debugging Assessment 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Debugging Assessment 1"
@@ -2515,11 +2990,15 @@
     {
       "chapter": 111,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 artist debug multi 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 artist debug multi 1"
@@ -2535,11 +3014,15 @@
     {
       "chapter": 112,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Conditionals"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Conditionals"
@@ -2555,11 +3038,15 @@
     {
       "chapter": 113,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Conditionals Multi 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Conditionals Multi 1"
@@ -2575,11 +3062,15 @@
     {
       "chapter": 114,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 2"
@@ -2595,11 +3086,15 @@
     {
       "chapter": 115,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 3"
@@ -2615,11 +3110,15 @@
     {
       "chapter": 116,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 5"
@@ -2635,11 +3134,15 @@
     {
       "chapter": 117,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 6"
@@ -2655,11 +3158,15 @@
     {
       "chapter": 118,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 7"
@@ -2675,11 +3182,15 @@
     {
       "chapter": 119,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 8"
@@ -2695,11 +3206,15 @@
     {
       "chapter": 120,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 9"
@@ -2715,11 +3230,15 @@
     {
       "chapter": 121,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 11"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 11"
@@ -2735,11 +3254,15 @@
     {
       "chapter": 122,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 12"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 12"
@@ -2755,11 +3278,15 @@
     {
       "chapter": 123,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 13"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 13"
@@ -2775,11 +3302,15 @@
     {
       "chapter": 124,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 14"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 14"
@@ -2795,11 +3326,15 @@
     {
       "chapter": 125,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 15"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals 15"
@@ -2815,11 +3350,15 @@
     {
       "chapter": 126,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals Assessment 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Bee Conditionals Assessment 1"
@@ -2835,11 +3374,15 @@
     {
       "chapter": 127,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 bee conditionals multi 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 bee conditionals multi 1"
@@ -2855,11 +3398,15 @@
     {
       "chapter": 128,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 bee conditionals multi 3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 bee conditionals multi 3"
@@ -2875,10 +3422,14 @@
     {
       "chapter": 129,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_bee_conditionals_challenge2"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2895,10 +3446,14 @@
     {
       "chapter": 130,
       "position": 17,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_bee_conditionals_challenge1"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2915,11 +3470,15 @@
     {
       "chapter": 131,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "BinaryBracelets"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "BinaryBracelets"
@@ -2935,11 +3494,15 @@
     {
       "chapter": 132,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Binary Match 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Binary Match 1"
@@ -2955,11 +3518,15 @@
     {
       "chapter": 133,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "BigEvent"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "BigEvent"
@@ -2975,11 +3542,15 @@
     {
       "chapter": 134,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Big Event Match 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Big Event Match 1"
@@ -2995,11 +3566,15 @@
     {
       "chapter": 135,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_1"
@@ -3015,11 +3590,15 @@
     {
       "chapter": 136,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_2"
@@ -3035,11 +3614,15 @@
     {
       "chapter": 137,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_3"
@@ -3055,11 +3638,15 @@
     {
       "chapter": 138,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_4"
@@ -3075,11 +3662,15 @@
     {
       "chapter": 139,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_5"
@@ -3095,11 +3686,15 @@
     {
       "chapter": 140,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_6"
@@ -3115,11 +3710,15 @@
     {
       "chapter": 141,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_7"
@@ -3135,11 +3734,15 @@
     {
       "chapter": 142,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_8"
@@ -3155,11 +3758,15 @@
     {
       "chapter": 143,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_9"
@@ -3175,11 +3782,15 @@
     {
       "chapter": 144,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_11"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_11"
@@ -3195,11 +3806,15 @@
     {
       "chapter": 145,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Studio:c2_1"
@@ -3215,11 +3830,15 @@
     {
       "chapter": 146,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Studio:c2_2"
@@ -3235,11 +3854,15 @@
     {
       "chapter": 147,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Studio:c2_3"
@@ -3255,11 +3878,15 @@
     {
       "chapter": 148,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Studio:c2_4"
@@ -3275,11 +3902,15 @@
     {
       "chapter": 149,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Studio:c2_5"
@@ -3295,11 +3926,15 @@
     {
       "chapter": 150,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Studio:c2_6"
@@ -3315,11 +3950,15 @@
     {
       "chapter": 151,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Studio:c2_7"
@@ -3335,11 +3974,15 @@
     {
       "chapter": 152,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Studio:c2_8"
@@ -3355,11 +3998,15 @@
     {
       "chapter": 153,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Studio:c2_9"
@@ -3375,11 +4022,15 @@
     {
       "chapter": 154,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Studio:c2_10"
@@ -3395,11 +4046,15 @@
     {
       "chapter": 155,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_11"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Studio:c2_11"
@@ -3415,11 +4070,15 @@
     {
       "chapter": 156,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "DigitalFootprint"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "DigitalFootprint"
@@ -3435,11 +4094,15 @@
     {
       "chapter": 157,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Digital Footprint Multi 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "K-1 Digital Footprint Multi 1"
@@ -3455,11 +4118,15 @@
     {
       "chapter": 158,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 1"
@@ -3475,11 +4142,15 @@
     {
       "chapter": 159,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 2"
@@ -3495,11 +4166,15 @@
     {
       "chapter": 160,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 3"
@@ -3515,11 +4190,15 @@
     {
       "chapter": 161,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 4"
@@ -3535,11 +4214,15 @@
     {
       "chapter": 162,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 5"
@@ -3555,11 +4238,15 @@
     {
       "chapter": 163,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 6"
@@ -3575,11 +4262,15 @@
     {
       "chapter": 164,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 7"
@@ -3595,11 +4286,15 @@
     {
       "chapter": 165,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 8"
@@ -3615,11 +4310,15 @@
     {
       "chapter": 166,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 9"
@@ -3635,11 +4334,15 @@
     {
       "chapter": 167,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 10"
@@ -3655,11 +4358,15 @@
     {
       "chapter": 168,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 11"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 11"
@@ -3675,11 +4382,15 @@
     {
       "chapter": 169,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops 12"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops 12"
@@ -3695,11 +4406,15 @@
     {
       "chapter": 170,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Nested Loops Free Play"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "2-3 Artist Nested Loops Free Play"
@@ -3715,10 +4430,14 @@
     {
       "chapter": 171,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_artist_nestedLoops_challenge1"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3735,10 +4454,14 @@
     {
       "chapter": 172,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "course2_artist_nestedLoops_challenge2"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5659,5 +6382,35 @@
         "script.name": "course2"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

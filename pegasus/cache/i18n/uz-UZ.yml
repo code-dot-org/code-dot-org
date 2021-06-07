@@ -12,9 +12,9 @@ uz-UZ:
   upgrade_ie_link: Ko‘proq bilish
   en: Informatika
   computer_science_edweek: Informatika ta’limi haftaligi
-  csedweek_dates: 8-14 dekabr, 2014
+  csedweek_dates: 2018 yil 3-9-dekabr
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Dasturlash soati</a> yaqinlashmoqda. Barcha o''qituvchi va tashkilotchilarni
+    font-weight:bold">Dasturlash soati</a> yaqinlashmoqda. Barcha o‘qituvchi va tashkilotchilarni
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">o‘z Dasturlash soatlarini rejalashtirishga</a> chaqiramiz.'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
@@ -25,31 +25,31 @@ uz-UZ:
   n_have_learned_an_hoc: "<h1>Dasturlash soatini</h1><h2>sinab ko‘ring</h2><h3>o‘tganlar:
     #</h3>"
   try_hoc_num_served: "<h1>Dasturlash soatini</h1><h2>sinab ko‘ring</h2><h3>%{num}
-    o‘tganlar: #</h3>"
+    o‘tganlar</h3>"
   try_hoc_num_served_markdown: |-
-    # Try an
+    # Dasturlash soatini
 
-    ## Hour of Code
+    ## sinab ko‘ring
 
-    ### %{num} served #Try an #Try an #Try an
+    ### %{num} o‘tganlar  #Try an
   anybody_can_learn: Har kim o‘rganishi mumkin.
   learn_now: Hoziroq o‘rganing
   petition_message: Har bir maktabning har bir o‘quvchisida informatikani o‘rganish
     imkoniyati bo‘lishi kerak
-  petition_sign_message: 'Agar rozi bo‘lsangiz, ismingizni kiriting. Boshqalarga #
+  petition_sign_message: 'Agar rozi bo‘lsangiz, ismingizni kiriting. # obuna bo‘lganlarga
     qo‘shiling.'
-  petition_sign_message_num: Agar rozi bo‘lsangiz, ismingizni kiriting. Boshqalarga
-    %{num} qo‘shiling.
+  petition_sign_message_num: Agar rozi bo‘lsangiz, ismingizni kiriting va boshqa obuna
+    bo‘lganlarga %{num} qo‘shiling.
   petition_join_others: 'Boshqalarga # qo‘shiling'
   petition_join_others_num: " %{num} boshqalarga qo'shiling"
-  name: Ismi
+  name: Ismingiz
   email: E-mail
   zipcode: Pochta indeksi yoki mamlakat
   submit: Taqdim qilmoq
   twentyhours_heading: Informatika kursiga kirish darsini sinab ko‘ring
-  twentyhours_text: Ilk Dasturlash soatini tugatdingizmi? Quyidagi kurslar orqali
+  twentyhours_text: Ilk Dasturlash soatingizni tugatdingizmi? Quyidagi kurslar orqali
     informatika va dasturlash asoslarini o‘rganing.
-  og_title: Har bir bola imkoniyat uchun munosib
+  og_title: 'Code.org: Hamma o‘rgana oladi'
   og_title_soon: Dasturlash soati yaqinlashmoqda
   og_title_here: Kod yozish soati yetib keldi!
   og_description: Maktablardagi har bir o'quvchi Informatika o'rganishga munosib.
@@ -734,7 +734,7 @@ uz-UZ:
   volunteer_engineer_submission_update_information: Maʼlumotlarni yangilash
   volunteer_engineer_submission_header_shared: Ko‘ngillilar xaritasida o‘qituvchilar
     tomonidan keltirilgan ma'lumot
-  volunteer_engineer_submission_field_name: Ismi
+  volunteer_engineer_submission_field_name: Ismingiz
   volunteer_engineer_submission_field_name_placeholder: To‘liq ismingiz
   volunteer_engineer_submission_field_company: Kompaniya (yoki Universitet)
   volunteer_engineer_submission_field_company_placeholder: Kompaniya (yoki Universitet)
@@ -1292,10 +1292,10 @@ uz-UZ:
   coursef-2017_name: Kurs F (2017)
   coursea-2018_name: Kurs A (2018)
   courseb-2018_name: Kurs B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
+  coursec-2018_name: Kurs C (2018)
+  coursed-2018_name: Kurs D (2018)
   coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
+  coursef-2018_name: Kurs F (2018)
   coursea-2019_name: Kurs A (2019)
   courseb-2019_name: Kurs B (2019)
   coursec-2019_name: Kurs C (2019)
@@ -1312,11 +1312,12 @@ uz-UZ:
   pre-express-2018_name: Maktabgacha ekspress kurs (2018)
   express-2019_name: Ekspress Kurs (2019)
   pre-express-2019_name: Maktabgacha ekspress kurs (2019)
+  express-2020_name: Ekspress Kurs (2020)
   pre-express-2020_name: Maktabgacha ekspress kurs (2020)
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: Tezlashtirilgan kurs
-  express_name: Express Course
+  express_name: Ekspress Kurs
   pre-express_name: Maktabgacha ekspress kurs
   20-hour_name: Tezlashtirilgan kurs
   algebra_name: CS in Algebra Full Course
@@ -1389,7 +1390,7 @@ uz-UZ:
   course1_gradelevel: 'Yosh: 4-6'
   course2_gradelevel: 'Yosh: 6-18'
   course3_gradelevel: 'Yosh: 8-18'
-  course4_gradelevel: Ages 10-18
+  course4_gradelevel: 'Yosh: 10-18'
   coursea_gradelevel: 'Yosh: 4-7'
   courseb_gradelevel: 'Yosh: 5-8'
   coursec_gradelevel: 'Yosh: 6-10'
@@ -1414,7 +1415,13 @@ uz-UZ:
   coursed-2019_gradelevel: 'Yosh: 7-11'
   coursee-2019_gradelevel: 'Yosh: 8-12'
   coursef-2019_gradelevel: 'Yosh: 9-13'
-  accelerated_gradelevel: Ages 10-18
+  coursea-2020_gradelevel: 'Yosh: 4-7'
+  courseb-2020_gradelevel: 'Yosh: 5-8'
+  coursec-2020_gradelevel: 'Yosh: 6-10'
+  coursed-2020_gradelevel: 'Yosh: 7-11'
+  coursee-2020_gradelevel: 'Yosh: 8-12'
+  coursef-2020_gradelevel: 'Yosh: 9-13'
+  accelerated_gradelevel: 'Yosh: 10-18'
   codeorg_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
   codeintl_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
   thinkersmithspanish_platformtext: Kompyutersiz
@@ -1511,7 +1518,7 @@ uz-UZ:
   frozen_shortdescription: Anna va Elza muzning sehri va go‘zalligini o‘rganayapti,
     ularga koddan foydalanib qo‘shilaylik.
   starwars_shortdescription: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada
-    o'z Star Wars o‘yiningizni yarating.
+    o‘z Star Wars o‘yiningizni yarating.
   playlab_shortdescription: Play Lab yordamida hikoya yoki o‘yin yarating!
   infinity_shortdescription: Disney Infinity qahramonlari ishtirokidagi hikoya yoki
     o‘yin yaratish uchun Play Lab-dan foydalaning.
@@ -1597,6 +1604,27 @@ uz-UZ:
     o‘ting, so‘ng funksiyalar bilan davom eting.
   coursef-2019_shortdescription_congrats: Informatika asoslari kursidan barcha tushunchalarni
     o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+  coursea-2020_shortdescription_congrats: Kompyuter fanlari va Internet xavfsizligi
+    asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni
+    yarating.
+  courseb-2020_shortdescription_congrats: Kompyuter fanlari va Internet xavfsizligi
+    asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni
+    yarating.
+  coursec-2020_shortdescription_congrats: Create programs with sequencing, loops,
+    and events. Translate your initials into binary, investigate different problem-solving
+    techniques, and learn how to respond to cyberbullying. At the end of the course,
+    create your very own game or story you can share!
+  coursed-2020_shortdescription_congrats: Talabalar sikllar, shartli operatorlar va
+    hodisalar to'g'risida tushunchalarini rivojlantiradilar. Kodlashdan tashqari talabalar
+    raqamli fuqarolik to'g'risida ma'lumot olishadi.
+  coursee-2020_shortdescription_congrats: Start coding with algorithms, loops, conditionals,
+    and events and then you’ll move on functions. In the second part of this course,
+    design and create a capstone project you can share with your friends and family.
+  coursef-2020_shortdescription_congrats: Learn to use different kinds of loops, events,
+    functions, and conditionals. Investigate different problem-solving techniques
+    and discuss societal impacts of computing and the internet. In the second part
+    of this course, design and create a capstone project you can share with friends
+    and family.
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
@@ -1722,8 +1750,12 @@ uz-UZ:
     and simulation works by having a group of students play different versions of
     the Rock / Paper / Scissors game, and see the results as different modeling experiments.
   hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Anna va Elza muzning sehrlari va go‘zalligini o‘rganayotganda
+    ularga qo‘shilish uchun koddan foydalanamiz. Siz muzda uchish paytida qor parchalari
+    va naqshlarini yaratasiz va qishning ajoyib joyini yaratasiz, so‘ngra do‘stlaringiz
+    bilan baham ko‘rishingiz mumkin!
   starwars_longdescription: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada
-    o'z Star Wars o‘yiningizni yarating.
+    o‘z Star Wars o‘yiningizni yarating.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -2434,7 +2466,7 @@ uz-UZ:
     elektron pochtasiga murojaat qiling.
   page_not_available_button: Bosh sahifaga qaytish
   hoc2020_mc_available_code_org: Code.org saytida mavjud
-  hoc2020_mc_available_mee: 'Minecraft: Talimiy nashri (Education Edition)da mavjud'
+  hoc2020_mc_available_mee: 'Minecraft: Ta‘limiy nashri mavjud (Education Edition)'
   hoc2020_mc_mee_title: Minecraft ikkita qishloq haqida ertak
   hoc2020_mc_mee_description: 'Yangi Minecraft Dastulash soati o''quv qo''llanmasi
     endi Minecraft: Ta''limiy nashr (Education Edition)da Windows, Mac va iPad uchun
@@ -2453,3 +2485,17 @@ uz-UZ:
     ishtirok etishning ajoyib usuli!'
   codebytes_skinny_banner_english_only: Faqat ingliz tilida
   codebytes_skinny_banner_learn: 'Batafsil: [code.org/codebytes](%{code_bytes_url}).'
+  footer_privacy_policy: Maxfiylik siyosati
+  footer_about: Biz haqimizda
+  footer_partners: Hamkorlar
+  footer_donate: Xayriya qiling
+  footer_support: Qo‘llab-quvvatlash
+  footer_terms: Shartlar
+  ai_for_oceans: AI for Oceans
+  ai_in_partnership_with: 'Hamkor:'
+  ai_microsoft_thanks: Biz har bir bolaga 21-asrda informatika va muvaffaqiyatga erishish
+    uchun zarur ko'nikmalarni o'rganish imkoniyatini berishini ta'minlash bo'yicha
+    missiyamiz va ishlarimizni qo'llab-quvvatlaganligi uchun Microsoft-ga minnatdorchilik
+    bildiramiz.
+  ai_activity: Faoliyat
+  ai_description: Ta‘rif

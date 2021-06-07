@@ -1,6 +1,6 @@
 hidden false
 
-lesson 'Play Lab', display_name: 'Play Lab'
+lesson 'Play Lab', display_name: 'Play Lab', has_lesson_plan: false
 skin 'studio'
 video_key_for_next_level 'playlab_intro'
 level 'blockly:Studio:playlab_1'

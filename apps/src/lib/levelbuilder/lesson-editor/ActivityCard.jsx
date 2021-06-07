@@ -14,53 +14,6 @@ import {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  activityHeader: {
-    fontSize: 18,
-    color: 'white',
-    background: color.cyan,
-    borderTopLeftRadius: borderRadius,
-    borderTopRightRadius: borderRadius,
-    padding: 10,
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  activityBody: {
-    background: color.lightest_cyan,
-    borderBottomLeftRadius: borderRadius,
-    borderBottomRightRadius: borderRadius,
-    padding: 10,
-    marginBottom: 20
-  },
-  addButton: {
-    fontSize: 14,
-    color: '#5b6770',
-    background: 'white',
-    border: '1px solid #ccc',
-    boxShadow: 'none',
-    margin: '0 10px 10px 10px'
-  },
-  button: {
-    marginLeft: 10
-  },
-  label: {
-    fontSize: 18,
-    marginRight: 5
-  },
-  labelAndInput: {
-    marginLeft: 10,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-start'
-  },
-  inputsAndIcon: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-start'
-  }
-};
-
 /*
   Part of the Activity Editor GUI that allows you to edit all
   the details of an Activity.
@@ -80,6 +33,7 @@ class ActivityCard extends Component {
     updateActivitySectionMetrics: PropTypes.func.isRequired,
     handleCollapse: PropTypes.func.isRequired,
     collapsed: PropTypes.bool.isRequired,
+    hasLessonPlan: PropTypes.bool.isRequired,
 
     //redux
     addActivitySection: PropTypes.func.isRequired,
@@ -133,7 +87,8 @@ class ActivityCard extends Component {
       setActivitySectionRef,
       updateTargetActivitySection,
       clearTargetActivitySection,
-      updateActivitySectionMetrics
+      updateActivitySectionMetrics,
+      hasLessonPlan
     } = this.props;
 
     return (
@@ -144,38 +99,43 @@ class ActivityCard extends Component {
             ...(this.props.collapsed && {marginBottom: 10})
           }}
         >
-          <div style={styles.inputsAndIcon}>
-            <FontAwesome
-              icon={this.props.collapsed ? 'expand' : 'compress'}
-              onClick={this.props.handleCollapse}
-            />
-            <label style={styles.labelAndInput}>
-              <span style={styles.label}>{`Activity:`}</span>
-              <input
-                value={activity.displayName}
-                style={{width: 200}}
-                onChange={this.handleChangeDisplayName}
-                className="uitest-activity-name-input"
+          {hasLessonPlan && (
+            <div style={styles.activityHeaderComponents}>
+              <div style={styles.inputsAndIcon}>
+                <FontAwesome
+                  icon={this.props.collapsed ? 'expand' : 'compress'}
+                  onClick={this.props.handleCollapse}
+                />
+
+                <label style={styles.labelAndInput}>
+                  <span style={styles.label}>{`Activity:`}</span>
+                  <input
+                    value={activity.displayName}
+                    style={{width: 200}}
+                    onChange={this.handleChangeDisplayName}
+                    className="uitest-activity-name-input"
+                  />
+                </label>
+                <label style={styles.labelAndInput}>
+                  <span style={styles.label}>{`Duration:`}</span>
+                  <input
+                    value={activity.duration}
+                    style={{width: 35}}
+                    onChange={this.handleChangeDuration}
+                    className="uitest-activity-duration-input"
+                  />
+                  <span style={{fontSize: 10}}>{'(mins)'}</span>
+                </label>
+              </div>
+              <OrderControls
+                name={activity.displayName || 'Unnamed Activity'}
+                move={this.handleMoveActivity}
+                remove={this.handleRemoveActivity}
+                item={this.props.activity}
+                itemType={'activity'}
               />
-            </label>
-            <label style={styles.labelAndInput}>
-              <span style={styles.label}>{`Duration:`}</span>
-              <input
-                value={activity.duration}
-                style={{width: 35}}
-                onChange={this.handleChangeDuration}
-                className="uitest-activity-duration-input"
-              />
-              <span style={{fontSize: 10}}>{'(mins)'}</span>
-            </label>
-          </div>
-          <OrderControls
-            name={activity.displayName || 'Unnamed Activity'}
-            move={this.handleMoveActivity}
-            remove={this.handleRemoveActivity}
-            item={this.props.activity}
-            itemType={'activity'}
-          />
+            </div>
+          )}
         </div>
         <div style={styles.activityBody} hidden={this.props.collapsed}>
           {activity.activitySections.map(section => (
@@ -194,6 +154,7 @@ class ActivityCard extends Component {
               targetActivityPos={this.props.targetActivityPos}
               targetActivitySectionPos={this.props.targetActivitySectionPos}
               updateActivitySectionMetrics={updateActivitySectionMetrics}
+              hasLessonPlan={hasLessonPlan}
             />
           ))}
           <button
@@ -210,6 +171,59 @@ class ActivityCard extends Component {
     );
   }
 }
+
+const styles = {
+  activityHeader: {
+    fontSize: 18,
+    color: 'white',
+    background: color.cyan,
+    borderTopLeftRadius: borderRadius,
+    borderTopRightRadius: borderRadius,
+    padding: 10
+  },
+  activityHeaderComponents: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    overflow: 'hidden'
+  },
+  activityBody: {
+    background: color.lightest_cyan,
+    borderBottomLeftRadius: borderRadius,
+    borderBottomRightRadius: borderRadius,
+    padding: 10,
+    marginBottom: 20
+  },
+  addButton: {
+    fontSize: 14,
+    color: '#5b6770',
+    background: 'white',
+    border: '1px solid #ccc',
+    boxShadow: 'none',
+    margin: '0 10px 10px 10px'
+  },
+  button: {
+    marginLeft: 10
+  },
+  label: {
+    fontSize: 18,
+    marginRight: 5
+  },
+  labelAndInput: {
+    marginLeft: 10,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start'
+  },
+  inputsAndIcon: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexWrap: 'wrap',
+    flex: '1 1'
+  }
+};
 
 export const UnconnectedActivityCard = ActivityCard;
 

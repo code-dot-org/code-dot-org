@@ -1,4 +1,4 @@
-lesson 'Halloween Artist', display_name: 'Halloween Artist'
+lesson 'Halloween Artist', display_name: 'Halloween Artist', has_lesson_plan: false
 level 'October15 ghost 1'
 level 'October15 stars 1'
 level 'October15 JoL 1'

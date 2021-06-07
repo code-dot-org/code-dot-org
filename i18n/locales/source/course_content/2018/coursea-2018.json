@@ -1,16 +1,16 @@
 {
-  "https://studio.code.org/s/coursea-2018/stage/1/puzzle/1": {
+  "https://studio.code.org/s/coursea-2018/lessons/1/levels/1": {
     "display_name": "Unspotted Bugs",
     "teacher_markdown": "**IMPORTANT:**  This story is meant to be read aloud by a teacher interacting with the class.  Find the PDF at [https://goo.gl/q2BQ1a][0] .   \n\n* * *\n\nIf you are unable to read the story to your class, please be sure to ask students about this video. The intention is _not_ to have students passively watch!\n\nQ1) In this story, what do \"bugs\" do?\n\nQ2) In computer science, programmers talk about having \"bugs\" in their code.  What do you think that means?\n\nQ3) How did Jasmine and JD find the bugs that they were looking for?\n\nQ4) Can you remember this way of looking for bugs?\n\n-   Walk through step-by-step.\n-   Is everything good at the first step?\n-   Is everything good at the second step?\n-   The third?\n-   If you find something wrong, look around that place for the \"bug\".\n-   When you find the bug, give it a name, and say it out loud!"
   },
-  "https://studio.code.org/s/coursea-2018/stage/2/puzzle/1": {
+  "https://studio.code.org/s/coursea-2018/lessons/2/levels/1": {
     "display_name": "Stevie and the Big Project",
     "teacher_markdown": "**IMPORTANT:**  This story is meant to be read aloud by a teacher interacting with the class.  Find the PDF at [https://goo.gl/SZHo4z][0] .   \n\n* * *\n\nIf you are unable to read the story to your class, please be sure to ask students about this video. The intention is _not_ to have students passively watch! \n\nQ1) What two big words did Stevie learn in this story?\n\nQ2) What does it mean to be \"frustrated\"?\n\nQ3) Have you ever been frustrated?\n\nQ4) What are some things that you can do when you feel yourself getting frustrated?\n\nQ5)  What is \"persistence\"?\n\nQ6) Why is persistence a good thing?\n\nQ7) What are some things you can do to help yourself be persistent?"
   },
-  "https://studio.code.org/s/coursea-2018/stage/3/puzzle/1": {
+  "https://studio.code.org/s/coursea-2018/lessons/3/levels/1": {
     "title": "Real-life Algorithms: Plant a Seed"
   },
-  "https://studio.code.org/s/coursea-2018/stage/4/puzzle/2": {
+  "https://studio.code.org/s/coursea-2018/lessons/4/levels/2": {
     "short_instructions": "For this puzzle, snap the blocks together and click \"▶ Run\"!",
     "long_instructions": "To get the bird to the pig, snap the [blockly block][0] block to the bottom of the [blockly block][1] block, then press \"▶ Run\"!",
     "authored_hints": {
@@ -21,14 +21,14 @@
       "grade2_CaringForNewPet_0_1": "After snapping all the blocks together, press \"Run\" to start your program."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/4/puzzle/3": {
+  "https://studio.code.org/s/coursea-2018/lessons/4/levels/3": {
     "short_instructions": "Snap all blocks together to finish your code, then click \"Run\".",
     "long_instructions": "Attach both [blockly block][0] blocks to [blockly block][1] to finish your code, then click \"▶ Run\".",
     "authored_hints": {
       "1": "Your code should look like this:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/4/puzzle/4": {
+  "https://studio.code.org/s/coursea-2018/lessons/4/levels/4": {
     "short_instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
     "long_instructions": "Grab a [blockly block][0] from the toolbox and add it to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
     "authored_hints": {
@@ -38,31 +38,31 @@
       "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/4/puzzle/5": {
+  "https://studio.code.org/s/coursea-2018/lessons/4/levels/5": {
     "short_instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"Run\".",
     "long_instructions": "There's an extra block at the end of this code!  \n\nDrag it back to the toolbox to throw it away.",
     "authored_hints": {
       "1": "Your code should look like this:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/4/puzzle/6": {
+  "https://studio.code.org/s/coursea-2018/lessons/4/levels/6": {
     "short_instructions": "Can you figure out which block you need to add to the bottom of the other blocks to finish this code?",
     "long_instructions": "Can you figure out which block you need to add to the bottom of the other blocks to finish this code?",
     "authored_hints": {
       "1": "Your code should look like this:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/4/puzzle/7": {
+  "https://studio.code.org/s/coursea-2018/lessons/4/levels/7": {
     "short_instructions": "Get the bird to the pig!",
     "long_instructions": "Try this one all by yourself!",
     "authored_hints": {
       "1": "Your code should look like this:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/5/puzzle/1": {
+  "https://studio.code.org/s/coursea-2018/lessons/5/levels/1": {
     "title": "Happy Maps"
   },
-  "https://studio.code.org/s/coursea-2018/stage/6/puzzle/2": {
+  "https://studio.code.org/s/coursea-2018/lessons/6/levels/2": {
     "short_instructions": "Get the bird to the bad pig!",
     "long_instructions": "_\"Play with these blocks and try to get me to the bad pig!\"_",
     "authored_hints": {
@@ -73,7 +73,7 @@
       "courseA_maze_seq1_1": "Click the lightbulb when you need a hint!"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/6/puzzle/3": {
+  "https://studio.code.org/s/coursea-2018/lessons/6/levels/3": {
     "short_instructions": "Give this one a try.",
     "long_instructions": "Give this one a try.",
     "authored_hints": {
@@ -81,14 +81,14 @@
       "2": "You will need to use this block:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/6/puzzle/4": {
+  "https://studio.code.org/s/coursea-2018/lessons/6/levels/4": {
     "short_instructions": "What can you add to the end of this code to get the bird to the pig?",
     "long_instructions": "_\"Here piggy, piggy!\"_\n\nWhat can you add to the end of this code to get the bird to the pig?",
     "authored_hints": {
       "1": "Say the steps out loud and see if it helps you figure out the answer."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/6/puzzle/5": {
+  "https://studio.code.org/s/coursea-2018/lessons/6/levels/5": {
     "short_instructions": "Move one way, then another to get the bird to the pig!",
     "long_instructions": "Move one way, then another to get the bird to the pig!",
     "authored_hints": {
@@ -96,14 +96,14 @@
       "courseA_maze_seq6_b": "If you get stuck, try solving the puzzle in 2 parts, one part before the corner and one part after the corner."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/6/puzzle/6": {
+  "https://studio.code.org/s/coursea-2018/lessons/6/levels/6": {
     "short_instructions": "Solve this level and get the bird to the pig!",
     "long_instructions": "Solve this level and get the bird to the pig!",
     "authored_hints": {
       "courseA_maze_seq8_a": "If you're stuck, try drawing the image on paper to see how the bird should move."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/6/puzzle/7": {
+  "https://studio.code.org/s/coursea-2018/lessons/6/levels/7": {
     "short_instructions": "Challenge: Avoid the TNT to get the bird to the pig! ",
     "long_instructions": "**Challenge:** Avoid the TNT to get the bird to the pig!",
     "authored_hints": {
@@ -111,15 +111,15 @@
       "courseA_maze_seq10_b": "You will need to go 3 different directions to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/6/puzzle/8": {
+  "https://studio.code.org/s/coursea-2018/lessons/6/levels/8": {
     "short_instructions": "Move one way, then another to get the bird to the pig.",
     "long_instructions": "Time for a shorter puzzle!  Move one way, then another to get the bird to the pig."
   },
-  "https://studio.code.org/s/coursea-2018/stage/6/puzzle/9": {
+  "https://studio.code.org/s/coursea-2018/lessons/6/levels/9": {
     "short_instructions": "Get that pig! ",
     "long_instructions": "Get that pig!"
   },
-  "https://studio.code.org/s/coursea-2018/stage/6/puzzle/10": {
+  "https://studio.code.org/s/coursea-2018/lessons/6/levels/10": {
     "short_instructions": "Get the pig any way you can!",
     "authored_hints": {
       "courseA_maze_seq13_a": "If the path you need is unclear, use your finger to trace your way from the bird to the pig.",
@@ -127,20 +127,20 @@
       "courseA_maze_seq13_c": "These [blockly block][0][blockly block][1] blocks will help you move closer to the pig."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/6/extras?level_name=courseA_maze_seq_challenge1_2018": {
+  "https://studio.code.org/s/coursea-2018/lessons/6/extras?level_name=courseA_maze_seq_challenge1_2018": {
     "short_instructions": "Something is wrong here. Help fix the code to get the bird to the pig!",
     "long_instructions": "Debug this level. Remove the extra blocks, and add the missing blocks. Get the bird to the pig!",
     "authored_hints": {
       "courseA_maze_seq_challenge1_a": "There are two solutions to this puzzle."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/6/extras?level_name=courseA_maze_seq_challenge2_2018": {
+  "https://studio.code.org/s/coursea-2018/lessons/6/extras?level_name=courseA_maze_seq_challenge2_2018": {
     "short_instructions": "Trace the path to lead the bird to the pig. Avoid TNT or feathers will fly!",
     "authored_hints": {
       "courseA_maze_seq_challenge2_a": "Try counting the spaces with your finger. Remember not to count the space where you start!"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/2": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/2": {
     "short_instructions": "Play with these blocks to help the harvester pick the piece of corn.",
     "long_instructions": "Help the harvester pick the piece of corn!",
     "authored_hints": {
@@ -148,7 +148,7 @@
       "courseA_harvester_seq1_b": "The harvester will need to move East three times to get to the corn. Use this block:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/3": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/3": {
     "short_instructions": "Use three `move west` blocks and one `pick corn` block to solve this puzzle.",
     "long_instructions": "Use [blockly block][0] **three** times to get the harvester to the corn! ",
     "authored_hints": {
@@ -156,7 +156,7 @@
       "courseA_harvester_seq2_b": "Try writing down the steps on paper to find a solution!"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/4": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/4": {
     "short_instructions": "Use three `Move North` blocks and one `Pick Corn` block.",
     "long_instructions": "Use [blockly block][0] **three** times to get the harvester to the corn! Don't forget to pick the corn at the end.",
     "authored_hints": {
@@ -164,7 +164,7 @@
       "courseA_harvester_seq3_b": "Say the steps out loud and see if it helps you figure out the answer."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/6": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/6": {
     "short_instructions": "Add one block to help the harvester pick the corn.",
     "long_instructions": "Add _one_ block to help the harvester pick the corn.",
     "authored_hints": {
@@ -172,7 +172,7 @@
       "courseA_harvester_seq4_b": "You will need five `Move East` blocks and one `Pick Corn` block:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/7": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/7": {
     "short_instructions": "Find the bug and fix it!",
     "long_instructions": "Can you figure out what is wrong with this code? Help the harvester pick the corn!",
     "authored_hints": {
@@ -181,14 +181,14 @@
       "courseA_harvester_seq5_c": "Throw this block in the trash!\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/8": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/8": {
     "short_instructions": "Try it yourself!",
     "long_instructions": "Try it yourself!",
     "authored_hints": {
       "courseA_harvester_seq6_a": "If you're stuck, try saying the steps out loud. It could help you figure out the right path."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/9": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/9": {
     "short_instructions": "Try it yourself!",
     "long_instructions": "You have to move in two directions to get to the corn! Help the harvester pick the right direction.",
     "authored_hints": {
@@ -196,14 +196,14 @@
       "courseA_harvester_seq7_b": "Having trouble? This is the path the harvester should take."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/10": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/10": {
     "short_instructions": "Now the harvester needs to pick corn two times!",
     "long_instructions": "Now the harvester needs to pick corn two times!",
     "authored_hints": {
       "courseA_harvester_seq8_a": "Your final code should have **4** movement blocks and **2** pick blocks."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/11": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/11": {
     "short_instructions": "Add two blocks to finish this puzzle!",
     "long_instructions": "Add two blocks to finish this puzzle!",
     "authored_hints": {
@@ -212,7 +212,7 @@
       "courseA_harvester_seq9_c": "You should take this path to pick all the corn."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/12": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/12": {
     "short_instructions": "Make sure to pick all the corn!",
     "long_instructions": "The harvester needs to pick all the corn! Do you see a pattern?",
     "authored_hints": {
@@ -221,35 +221,35 @@
       "courseA_harvester_seq10_c": "Try using this path to pick all the corn."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/13": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/13": {
     "short_instructions": "Pick all the corn.",
     "long_instructions": "_Thank you for helping me!_ \n\nPick all the corn."
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/14": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/14": {
     "short_instructions": "Try it by yourself! Pick all the corn.",
     "long_instructions": "Try it by yourself! Pick all the corn."
   },
-  "https://studio.code.org/s/coursea-2018/stage/7/puzzle/15": {
+  "https://studio.code.org/s/coursea-2018/lessons/7/levels/15": {
     "short_instructions": "Play with these blocks to help the harvester pick corn.",
     "long_instructions": "Help the harvester pick corn!",
     "authored_hints": {
       "courseA_bee_seq1_a": "Use this block to pick corn once the harvester gets to it.\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/8/puzzle/1": {
+  "https://studio.code.org/s/coursea-2018/lessons/8/levels/1": {
     "title": "Going Places Safely"
   },
-  "https://studio.code.org/s/coursea-2018/stage/9/puzzle/1": {
+  "https://studio.code.org/s/coursea-2018/lessons/9/levels/1": {
     "title": "Loops Unplugged"
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/1": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/1": {
     "short_instructions": "Help the harvester pick all the corn!",
     "long_instructions": "Help the harvester pick all the corn!",
     "authored_hints": {
       "courseA_harvester_loops1_a": "Once you move to some corn, use this block to pick it!\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/2": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/2": {
     "short_instructions": "Make sure to pick all the corn!",
     "long_instructions": "The harvester needs to pick all the corn! Do you see a pattern?",
     "authored_hints": {
@@ -257,7 +257,7 @@
       "courseA_harvester_loops2_b": "If you're still having trouble, try saying the steps out loud. "
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/4": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/4": {
     "short_instructions": "Can you pick all the corn using only **one** move block?",
     "long_instructions": "Can you pick all the corn using only **one** move block?",
     "authored_hints": {
@@ -265,7 +265,7 @@
       "courseA_harvester_loops3_b": "To repeat code, drag out a `repeat` ([blockly block][0] )loop, then put the block you want inside of it. "
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/5": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/5": {
     "short_instructions": "Can you help the harvester find the bug in her code?",
     "long_instructions": "_\"I need help to find what's wrong!\"_\n\nCan you help the harvester find the bug in her code?",
     "authored_hints": {
@@ -273,7 +273,7 @@
       "courseA_harvester_loops4_b": "How many pieces of corn are there? How many times does your code repeat?"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/6": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/6": {
     "short_instructions": "Try it yourself! Can you pick the corn at the end too?",
     "long_instructions": "Try it yourself! Can you pick the corn at the end too?",
     "authored_hints": {
@@ -282,7 +282,7 @@
       "courseA_harvester_loops5_c": "Use this path to pick all the corn!"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/7": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/7": {
     "short_instructions": "Look at all this corn! Can you pick it all by yourself?",
     "long_instructions": "Look at all this corn? Can you pick it all by yourself?",
     "authored_hints": {
@@ -291,7 +291,7 @@
       "courseA_harvester_loops5a_c": "Use this path to move one way, and then the other."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/8": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/8": {
     "short_instructions": "Can you change your code to make the harvester pick all the corn?",
     "long_instructions": "Can you change your code to make the harvester pick all the corn?",
     "authored_hints": {
@@ -300,7 +300,7 @@
       "courseA_harvester_loops5b_c": "Move one way, then the other with this path."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/9": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/9": {
     "short_instructions": "You will need **one** `Move West` block and **one** `Move North` block.",
     "long_instructions": "You will need **one** [blockly block][0] block and **one** [blockly block][1] block to finish this puzzle!",
     "authored_hints": {
@@ -308,7 +308,7 @@
       "courseA_harvester_loops6_b": "This is the path you should take to pick all the corn."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/10": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/10": {
     "short_instructions": "Try it on your own! ",
     "long_instructions": "Try it on your own! ",
     "authored_hints": {
@@ -316,7 +316,7 @@
       "courseA_harvester_loops7_b": "Use two loops to follow this path."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/11": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/11": {
     "short_instructions": "Can you figure out how to pick all the corn?",
     "long_instructions": "Can you figure out how to pick _all_ this corn?",
     "authored_hints": {
@@ -325,15 +325,15 @@
       "courseA_harvester_loops9_c": "Follow this path to pick all the corn."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/12": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/12": {
     "short_instructions": "Help the harvester pick all five ears of corn!",
     "long_instructions": "Help the harvester pick all five ears of corn!"
   },
-  "https://studio.code.org/s/coursea-2018/stage/10/puzzle/13": {
+  "https://studio.code.org/s/coursea-2018/lessons/10/levels/13": {
     "short_instructions": "Try one more on your own! ",
     "long_instructions": "Try one more on your own! "
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/2": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/2": {
     "short_instructions": "Move Laurel around and get as much treasure as you can!",
     "long_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can.\n\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
     "authored_hints": {
@@ -341,7 +341,7 @@
       "courseA_collector_loops1_b": "A simple solution would be to move East 2 times, then get the treasure."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/3": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/3": {
     "short_instructions": "Get all three piles to pass this level.",
     "long_instructions": "Get all three piles! Move Laurel to each piece of treasure, then use this block: [blockly block][0]",
     "authored_hints": {
@@ -349,7 +349,7 @@
       "courseA_collector_loops2_b": "After you have moved to a square with treasure, use this block to pick it up.\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/5": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/5": {
     "long_instructions": "How can Laurel get all five piles of treasure using only one [blockly block][0] block?",
     "authored_hints": {
       "courseA_collector_loops3_a": "Try using a [blockly block][0] loop!",
@@ -359,14 +359,14 @@
       "gradek_adventurer_loops2_1": "This number tells you how many of these blocks you can use in this puzzle."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/6": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/6": {
     "short_instructions": "Fix Laurel's path to get all of this treasure.",
     "authored_hints": {
       "courseA_collector_loops4_a": "To change how far Laurel goes, change the number of times that the loop runs.",
       "courseA_collector_loops4_b": "Don't forget that Laurel needs to walk down and collect the treasure after she finishes the [blockly block][0] loop!"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/7": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/7": {
     "short_instructions": "Use what you learned to get all of the treasure.",
     "authored_hints": {
       "courseA_collector_loops5_a": "If you can't figure out the answer right away, try using a piece of paper to figure out what arrows you will need and look for a pattern.",
@@ -374,20 +374,20 @@
       "courseA_collector_loops5_c": "You'll want to start with a [blockly block][0] loop that moves Laurel west and collects treasure."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/8": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/8": {
     "short_instructions": "Add blocks to this code to get all of the treasure.",
     "authored_hints": {
       "courseA_collector_loops6_a": "Can't figure out what's wrong? Try running the code a couple of times to see what happens.",
       "courseA_collector_loops6_b": "The shortest solution has 2 [blockly block][0] loops, one after the other."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/9": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/9": {
     "short_instructions": "What should you add to this code to get all of the treasure?",
     "authored_hints": {
       "courseA_collector_loops7_a": "If you can't figure out what comes next, try running the code to see where Laurel ends up."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/10": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/10": {
     "short_instructions": "Write code to get all of this treasure.",
     "authored_hints": {
       "courseA_collector_loops8_a": "If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.",
@@ -395,31 +395,31 @@
       "courseA_collector_loops8_c": "Remember you can write one piece of the code at a time, then press \"Run\" to figure out where you need to go from there."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/11": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/11": {
     "short_instructions": "**Challenge:** The treasure goes all the way up these stairs!  Write the code to help Laurel get it all.",
     "authored_hints": {
       "courseA_collector_loops9_a": "If you can't spot the best places to use loops, try coding it out step-by-step and look for a pattern. ",
       "courseA_collector_loops9_b": "Try putting 2 of your [blockly block][0] loops inside of another loop to make your code shorter!"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/12": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/12": {
     "short_instructions": "Help Laurel get all of the treasure along this path."
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/13": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/13": {
     "short_instructions": "Help Laurel get all of the treasure from this cave."
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/puzzle/14": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/levels/14": {
     "short_instructions": "_\"Eureka!  Get as much treasure as you can!\"_",
     "long_instructions": "_\"Eureka!  Get as much treasure as you can!\"_\\\n(You do not have to get it all.)"
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/extras?level_name=courseA_collector_loops_challenge2kp_2018": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/extras?level_name=courseA_collector_loops_challenge2kp_2018": {
     "short_instructions": "Collect at least **3** pieces of treasure to pass this level.",
     "authored_hints": {
       "courseA_collector_loops_challenge2kp_b": "Try this path to get you to a solution.",
       "courseA_collector_loops_challenge2kp_a": "Can you use loops to solve this puzzle?"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/11/extras?level_name=courseA_collector_loops_challenge1_2018": {
+  "https://studio.code.org/s/coursea-2018/lessons/11/extras?level_name=courseA_collector_loops_challenge1_2018": {
     "short_instructions": "_\"Can you help me spot some bugs?\"_",
     "long_instructions": "_\"Can you help me spot some bugs? I know which way I want to go, but I'm not sure how many steps to take.\"_",
     "authored_hints": {
@@ -429,10 +429,10 @@
       "courseA_collector_loops_challenge1_d": "The starting program doesn't collect the last 2 gems. Try adding this code at the very end:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/2": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/2": {
     "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun."
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/3": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/3": {
     "short_instructions": "Help the artist draw this line two times forward.",
     "long_instructions": "Help the artist draw this line two times forward.\n\n[][0]",
     "authored_hints": {
@@ -440,7 +440,7 @@
       "courseA_artist_loops2_b": "Use this block [blockly block][0] to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/4": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/4": {
     "short_instructions": "Draw a line forward five times.",
     "long_instructions": "Our artist is trying to draw a line five times, but can't get it right. Can you help?\n\n[expandable][0]",
     "authored_hints": {
@@ -448,7 +448,7 @@
       "courseA_artist_loops3_b": "You will want to use a block like this to solve this puzzle.\n\n[][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/6": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/6": {
     "short_instructions": "Now, use a `repeat` loop to draw this line five times!",
     "long_instructions": "Now, use a [blockly block][0] loop to draw this line five times!\n\n[][1]",
     "authored_hints": {
@@ -459,7 +459,7 @@
       "courseA_artist_loops4_1": "This number tells you how many of these blocks you can use in this puzzle."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/7": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/7": {
     "short_instructions": "Draw a line seven steps long. This will become our horizon.",
     "long_instructions": "## Draw a line seven steps long. This will become our horizon.\n\n[expandable][0]",
     "authored_hints": {
@@ -468,7 +468,7 @@
       "courseA_artist_loops5_c": "Since you can only use one [blockly block][0] block, try putting it inside of the \n\n[blockly block][1]\n\nloop."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/8": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/8": {
     "short_instructions": "Let's put a nice hill in the back.",
     "long_instructions": "## Let's put a nice hill in the back.\n\n[expandable][0]",
     "authored_hints": {
@@ -476,7 +476,7 @@
       "courseA_artist_loops6_b": "You will need 2 blocks in 2 directions to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/9": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/9": {
     "short_instructions": "Use the `repeat` loop to add waves to the water.",
     "long_instructions": "## Use the [blockly block][0] loop to add waves to the water.\n\n[expandable][1]",
     "authored_hints": {
@@ -488,7 +488,7 @@
       "courseA_artist_loops7_1": "This number means that only one of this kind of block can be used in the final answer."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/10": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/10": {
     "short_instructions": "We need a ladder up to the boat.",
     "long_instructions": "## We need a ladder up to the boat.\n\n[expandable][0]",
     "authored_hints": {
@@ -500,7 +500,7 @@
       "courseA_artist_loops8_1": "Did you know that you can draw back over a line whenever you need to?"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/11": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/11": {
     "short_instructions": "Challenge: Fix the stairs.",
     "long_instructions": "## **Challenge:** The stairs down to the dock are broken.  Help me fix them.\n\n[expandable][0]",
     "authored_hints": {
@@ -509,19 +509,19 @@
       "courseA_artist_loops9_c": "If you can't figure out where to put the loop, try writing your code step-by-step and look for patterns."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/12": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/12": {
     "short_instructions": "Help me put down stones so I don't fall in!",
     "long_instructions": "## Time to head back to land. Help me put down stones so I don't fall in!\n\n[expandable][0]"
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/13": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/13": {
     "short_instructions": "Help me build steps to watch the ship sail away.",
     "long_instructions": "## Help me build steps to watch the ship sail away.\n\n[expandable][0]"
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/puzzle/14": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/levels/14": {
     "short_instructions": "The artist saw something funny in the distance.  Draw what you think he saw.",
     "long_instructions": "The artist saw something funny in the distance.  Draw what you think he saw.\n\n* * *\n\n### Ideas\n\n[][0]\n[][1]\n[][2]\n[][3]"
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/extras?level_name=courseA_artist_loops_challenge2a_2018": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/extras?level_name=courseA_artist_loops_challenge2a_2018": {
     "short_instructions": "_\"Help me get these three tents set up!\"_",
     "long_instructions": "_\"Help me get the camp site ready!\"_\n\nUse the blocks in the toolbox to draw these three tents.",
     "authored_hints": {
@@ -530,27 +530,27 @@
       "courseA_artist_loops_challenge2_c": "All of your blocks will need to be inside of a loop to finish this puzzle."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/12/extras?level_name=courseA_artist_loops_challenge1_2018": {
+  "https://studio.code.org/s/coursea-2018/lessons/12/extras?level_name=courseA_artist_loops_challenge1_2018": {
     "short_instructions": "Can you draw a house? Make it look just the way you like it!",
     "long_instructions": "You can use a loop to draw many lines in a row.\n\nCan you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!\n\nHere are some ideas:\n\n[][0]"
   },
-  "https://studio.code.org/s/coursea-2018/stage/13/puzzle/1": {
+  "https://studio.code.org/s/coursea-2018/lessons/13/levels/1": {
     "title": "The Big Event"
   },
-  "https://studio.code.org/s/coursea-2018/stage/14/puzzle/1": {
+  "https://studio.code.org/s/coursea-2018/lessons/14/levels/1": {
     "short_instructions": "Need a better playlab/events combo"
   },
-  "https://studio.code.org/s/coursea-2018/stage/14/puzzle/2": {
+  "https://studio.code.org/s/coursea-2018/lessons/14/levels/2": {
     "short_instructions": "This is a Play Lab level.  Move blocks to the workspace and see what happens!"
   },
-  "https://studio.code.org/s/coursea-2018/stage/14/puzzle/3": {
+  "https://studio.code.org/s/coursea-2018/lessons/14/levels/3": {
     "short_instructions": "Jorge the Dog wants to say \"Hi there.\"  Can you help him?",
     "authored_hints": {
       "courseA_playLab_events2_a": "Look for a block that makes the dog say something.",
       "courseA_playLab_events2_b": "This is the code you need to complete this puzzle:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/14/puzzle/4": {
+  "https://studio.code.org/s/coursea-2018/lessons/14/levels/4": {
     "short_instructions": "Connect the `move left` block to the `when left` event block that is already in the workspace.",
     "long_instructions": "Help Jorge the Dog get moving by connecting the [blockly block][0] block to the [blockly block][1] event block that is already in the workspace.\n\nGet Jorge to the flag to finish this level!",
     "authored_hints": {
@@ -558,7 +558,7 @@
       "courseA_playLab_events3_b": "Remember to use the left arrow key to move Jorge to the flag once you have written your program. When the flag turns green, you've finished!"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/14/puzzle/5": {
+  "https://studio.code.org/s/coursea-2018/lessons/14/levels/5": {
     "short_instructions": "Add another event block to get Jorge to move right when the `right` button is clicked.",
     "long_instructions": "Now, add another event block to get Jorge to move right when the right arrow button is clicked.",
     "authored_hints": {
@@ -569,7 +569,7 @@
       "courseA_playlab_events4_callout1": "This is a callout"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/14/puzzle/6": {
+  "https://studio.code.org/s/coursea-2018/lessons/14/levels/6": {
     "short_instructions": "Add events to have Jorge move up and down when the `up` and `down` buttons are pressed.",
     "long_instructions": "Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.",
     "authored_hints": {
@@ -580,7 +580,7 @@
       "courseA_playLab_events5_1": "Click here to change the direction of the event arrow."
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/14/puzzle/7": {
+  "https://studio.code.org/s/coursea-2018/lessons/14/levels/7": {
     "short_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked.",
     "authored_hints": {
       "courseA_playLab_events6_a": "Here is the event block that you would use to have Jorge do something when clicked:\n\n[blockly block][0]",
@@ -591,14 +591,14 @@
       "courseA_playLab_events6_1": "This let's you choose a \"random\" sound, which means that you don't know what you are going to get until you hear it!"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/14/puzzle/8": {
+  "https://studio.code.org/s/coursea-2018/lessons/14/levels/8": {
     "short_instructions": "_Freeplay:_ Add anything you want to this game.",
     "long_instructions": "_Freeplay:_ Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?",
     "authored_hints": {
       "courseA_playLab_events7_a": "Use this block to control what happens when the actors collide.\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/14/extras?level_name=courseA_playlab_events_challenge2_2018": {
+  "https://studio.code.org/s/coursea-2018/lessons/14/extras?level_name=courseA_playlab_events_challenge2_2018": {
     "short_instructions": "Give everyone something to do when you click on them.",
     "long_instructions": "Give everyone something to do when you click on them. What will the animals say? What else will happen?\n\nIn this puzzle, make sure to click for hints. The hints will give you fun things to try!\n\n[][0]",
     "authored_hints": {
@@ -607,7 +607,7 @@
       "courseA_playlab_events_challenge2_c": "You can make an angry monster growl.\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursea-2018/stage/14/extras?level_name=courseA_playlab_events_challenge1_2018": {
+  "https://studio.code.org/s/coursea-2018/lessons/14/extras?level_name=courseA_playlab_events_challenge1_2018": {
     "short_instructions": "Can you write code to show the rest of my friends? The hints will help you do this project step-by-step.",
     "long_instructions": "Clicking Olive will make Robin appear! Can you write code to show the rest of the characters too?\n\nIn this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!\n\n[][0]",
     "authored_hints": {

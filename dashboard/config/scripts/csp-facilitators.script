@@ -1,17 +1,17 @@
 professional_learning_course 'CS Principles Support'
 login_required true
 
-lesson 'Introduction to Text Compression', display_name: 'Introduction to Text Compression'
+lesson 'Introduction to Text Compression', display_name: 'Introduction to Text Compression', has_lesson_plan: false
 level 'text compression intro'
 level 'U1L13 Text Compression'
 
-lesson 'Turtle Programming', display_name: 'Turtle Programming'
+lesson 'Turtle Programming', display_name: 'Turtle Programming', has_lesson_plan: false
 level 'introduction to turtle'
 level 'U3L2 Using Simple Commands'
 level 'U3L2_TurtleSquare_right'
 level 'U3L2_Turtle3by3Grid'
 
-lesson 'Introduction to Events', display_name: 'Introduction to Events'
+lesson 'Introduction to Events', display_name: 'Introduction to Events', has_lesson_plan: false
 level 'introduction to events'
 level 'U3L13 - Turtle move with button'
 level 'U313 drag Two Buttons'

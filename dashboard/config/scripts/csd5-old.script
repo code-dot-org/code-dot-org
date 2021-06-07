@@ -2,16 +2,16 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'csd5_1', display_name: 'Chapter 1: Representing Information'
-lesson 'Representation Matters', display_name: 'Representation Matters'
+lesson 'Representation Matters', display_name: 'Representation Matters', has_lesson_plan: false
 level 'CSD-U5-SFLP Representation Matters', named: true
 
-lesson 'Patterns and Representation', display_name: 'Patterns and Representation'
+lesson 'Patterns and Representation', display_name: 'Patterns and Representation', has_lesson_plan: false
 level 'CSD-U5-SFLP Patterns and Representation', named: true
 
-lesson 'ASCII and Binary Representation', display_name: 'ASCII and Binary Representation'
+lesson 'ASCII and Binary Representation', display_name: 'ASCII and Binary Representation', has_lesson_plan: false
 level 'CSD-U5-SFLP ASCII and Binary Representation', named: true
 
-lesson 'Representing Images', display_name: 'Representing Images'
+lesson 'Representing Images', display_name: 'Representing Images', has_lesson_plan: false
 level 'CSD-U5-SFLP Representing Images', named: true
 level 'CSD U5 black white images pixelation', progression: 'Representing Images'
 level 'CSD U5 black white images pixelation 2', progression: 'Representing Images'
@@ -19,45 +19,45 @@ level 'CSD U5 black white images pixelation 3', progression: 'Representing Image
 level 'CSD U5 black white images pixelation 4', progression: 'Representing Images'
 level 'CSD U5 black white images pixelation 5', progression: 'Representing Images'
 
-lesson 'Representing Numbers', display_name: 'Representing Numbers'
+lesson 'Representing Numbers', display_name: 'Representing Numbers', has_lesson_plan: false
 level 'CSD-U5-SFLP Representing Numbers Part 1', named: true
 
-lesson '8-bit Numbers', display_name: '8-bit Numbers'
+lesson '8-bit Numbers', display_name: '8-bit Numbers', has_lesson_plan: false
 level 'CSD-U5-SFLP Representing Numbers Part 2', named: true
 level 'CSD U5 fixed-bits', progression: '8-bit Numbers'
 
-lesson 'Combining Representations', display_name: 'Combining Representations'
+lesson 'Combining Representations', display_name: 'Combining Representations', has_lesson_plan: false
 level 'CSD-U5-SFLP Combining Representations', named: true
 level 'CSD U3 combining rep', progression: 'Combining Representations'
 level 'CSD U5 student record', progression: 'Combining Representations'
 
-lesson 'Project - Create a Representation', display_name: 'Project - Create a Representation'
+lesson 'Project - Create a Representation', display_name: 'Project - Create a Representation', has_lesson_plan: false
 level 'CSD-U5-SFLP Create a Representation', named: true
 level 'csd-pulse-check-survey-1-levelgroup U5Ch1', progression: 'Reflection', assessment: true
 
 lesson_group 'csd5_2', display_name: 'Chapter 2: Solving Data Problems'
-lesson 'Problem Solving and Data', display_name: 'Problem Solving and Data'
+lesson 'Problem Solving and Data', display_name: 'Problem Solving and Data', has_lesson_plan: false
 level 'CSD-U5-SFLP Problem Solving and Data', named: true
 
-lesson 'Making Decisions with Data', display_name: 'Making Decisions with Data'
+lesson 'Making Decisions with Data', display_name: 'Making Decisions with Data', has_lesson_plan: false
 level 'CSD-U5-SFLP Making Decisions with Data', named: true
 
-lesson 'Interpreting Data', display_name: 'Interpreting Data'
+lesson 'Interpreting Data', display_name: 'Interpreting Data', has_lesson_plan: false
 level 'CSD-U5-SFLP Interpreting Data', named: true
 level 'CSD U5 data visualization', progression: 'Data Visualization'
 level 'CSD U5 Pizza', progression: 'Data Visualization'
 level 'CSD U5 Pizza 2', progression: 'Data Visualization'
 
-lesson 'Automating Data Decisions', display_name: 'Automating Data Decisions'
+lesson 'Automating Data Decisions', display_name: 'Automating Data Decisions', has_lesson_plan: false
 level 'CSD-U5-SFLP Automating Data Decisions', named: true
 
-lesson 'Problem Solving with Big Data', display_name: 'Problem Solving with Big Data'
+lesson 'Problem Solving with Big Data', display_name: 'Problem Solving with Big Data', has_lesson_plan: false
 level 'CSD-U5-SFLP Problem Solving with Big Data', named: true
 level 'CSD U5 video2', progression: 'Problem Solving'
 level 'CSD U5 collection UPS2', progression: 'Problem Solving'
 level 'CSD U5 collection ads2', progression: 'Problem Solving'
 
-lesson 'Project - Solve a Data Problem', display_name: 'Project - Solve a Data Problem'
+lesson 'Project - Solve a Data Problem', display_name: 'Project - Solve a Data Problem', has_lesson_plan: false
 level 'CSD-U5-SFLP Solve a Data Problem', named: true
 level 'csd-pulse-check-survey-1-levelgroup U5Ch2', progression: 'Reflection', assessment: true
 

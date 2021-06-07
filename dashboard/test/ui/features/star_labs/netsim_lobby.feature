@@ -38,7 +38,7 @@ Feature: Using the Internet Simulator Lobby
 
     # Make sure we can navigate to another page without getting an alert
     When I disable onBeforeUnload
-    And I am on "http://studio.code.org/s/20-hour/stage/11/puzzle/1?noautoplay=true"
+    And I am on "http://studio.code.org/s/20-hour/lessons/11/levels/1?noautoplay=true"
 
   Scenario: NetSim uses the instructions dialog
     # When the level loads, we see the instructions modal

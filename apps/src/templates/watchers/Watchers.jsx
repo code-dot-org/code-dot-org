@@ -27,65 +27,6 @@ const buttonSize = '28px';
 const valueAndInputWidth = 'calc(100% - 41px)';
 const inputElementHeight = 23;
 
-const styles = {
-  autocompleteDropdown: {
-    zIndex: 2 // Needed so the dropdown appears over the coding space (z-index 1)
-  },
-  watchContainer: {
-    width: '100%',
-    height: '100%'
-  },
-  watchRemoveButton: {
-    fontSize: 23,
-    float: 'right',
-    cursor: 'pointer',
-    width: buttonSize,
-    lineHeight: buttonSize,
-    height: buttonSize,
-    textAlign: 'center',
-    backgroundColor: '#be0712',
-    color: 'white',
-    margin: 0,
-    padding: 0
-  },
-  watchAddButton: {
-    fontSize: 20,
-    width: buttonSize,
-    lineHeight: buttonSize,
-    height: buttonSize,
-    textAlign: 'center',
-    float: 'right',
-    cursor: 'pointer',
-    backgroundColor: '#1e93cd',
-    color: 'white',
-    margin: 0,
-    padding: 0
-  },
-  watchItemDescription: {
-    whiteSpace: 'nowrap',
-    minHeight: buttonSize,
-    marginLeft: 3,
-    overflow: 'hidden',
-    width: valueAndInputWidth
-  },
-  watchValueArray: {
-    whiteSpace: 'normal'
-  },
-  watchValue: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    minHeight: '28px'
-  },
-  watchInputSection: {
-    clear: 'both'
-  },
-  watchInput: {
-    width: valueAndInputWidth,
-    marginTop: 0,
-    height: inputElementHeight
-  }
-};
-
 /**
  * A "watchers" window for our debugger.
  */
@@ -450,6 +391,65 @@ class Watchers extends React.Component {
     );
   }
 }
+
+const styles = {
+  autocompleteDropdown: {
+    zIndex: 2 // Needed so the dropdown appears over the coding space (z-index 1)
+  },
+  watchContainer: {
+    width: '100%',
+    height: '100%'
+  },
+  watchRemoveButton: {
+    fontSize: 23,
+    float: 'right',
+    cursor: 'pointer',
+    width: buttonSize,
+    lineHeight: buttonSize,
+    height: buttonSize,
+    textAlign: 'center',
+    backgroundColor: '#be0712',
+    color: 'white',
+    margin: 0,
+    padding: 0
+  },
+  watchAddButton: {
+    fontSize: 20,
+    width: buttonSize,
+    lineHeight: buttonSize,
+    height: buttonSize,
+    textAlign: 'center',
+    float: 'right',
+    cursor: 'pointer',
+    backgroundColor: '#1e93cd',
+    color: 'white',
+    margin: 0,
+    padding: 0
+  },
+  watchItemDescription: {
+    whiteSpace: 'nowrap',
+    minHeight: buttonSize,
+    marginLeft: 3,
+    overflow: 'hidden',
+    width: valueAndInputWidth
+  },
+  watchValueArray: {
+    whiteSpace: 'normal'
+  },
+  watchValue: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    minHeight: '28px'
+  },
+  watchInputSection: {
+    clear: 'both'
+  },
+  watchInput: {
+    width: valueAndInputWidth,
+    marginTop: 0,
+    height: inputElementHeight
+  }
+};
 
 export const UnconnectedWatchers = Watchers;
 export default connect(

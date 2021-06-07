@@ -5,15 +5,6 @@ import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
 import styleConstants from '../styleConstants';
 
-const styles = {
-  container: {
-    width: '100%',
-    maxWidth: styleConstants['content-width'],
-    marginLeft: 'auto',
-    marginRight: 'auto'
-  }
-};
-
 export default class Congrats extends Component {
   static propTypes = {
     certificateId: PropTypes.string,
@@ -73,3 +64,12 @@ export default class Congrats extends Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    width: '100%',
+    maxWidth: styleConstants['content-width'],
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  }
+};

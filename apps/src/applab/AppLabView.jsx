@@ -7,7 +7,7 @@ import ImportScreensDialog from './ImportScreensDialog';
 import ApplabVisualizationColumn from './ApplabVisualizationColumn';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
-import {ApplabInterfaceMode} from './constants';
+import {ApplabInterfaceMode, WIDGET_WIDTH} from './constants';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
@@ -20,6 +20,13 @@ import ExternalRedirectDialog from '@cdo/apps/applab/ExternalRedirectDialog';
 class AppLabView extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
+    autogenerateML: PropTypes.func.isRequired,
+    isEditingProject: PropTypes.bool.isRequired,
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onScreenCreate: PropTypes.func.isRequired,
+    onMount: PropTypes.func.isRequired,
+
+    // Provided by redux
     hasDataMode: PropTypes.bool.isRequired,
     hasDesignMode: PropTypes.bool.isRequired,
     interfaceMode: PropTypes.oneOf([
@@ -27,12 +34,8 @@ class AppLabView extends React.Component {
       ApplabInterfaceMode.DESIGN,
       ApplabInterfaceMode.DATA
     ]).isRequired,
-    isEditingProject: PropTypes.bool.isRequired,
-
-    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
-    onScreenCreate: PropTypes.func.isRequired,
-
-    onMount: PropTypes.func.isRequired
+    isRtl: PropTypes.bool,
+    widgetMode: PropTypes.bool
   };
 
   componentDidMount() {
@@ -40,29 +43,54 @@ class AppLabView extends React.Component {
   }
 
   render() {
-    const codeWorkspaceVisible =
-      ApplabInterfaceMode.CODE === this.props.interfaceMode;
+    const {
+      interfaceMode,
+      widgetMode,
+      isRtl,
+      isEditingProject,
+      screenIds,
+      onScreenCreate,
+      autogenerateML,
+      hasDesignMode,
+      hasDataMode,
+      handleVersionHistory
+    } = this.props;
+
+    const codeWorkspaceVisible = ApplabInterfaceMode.CODE === interfaceMode;
+
+    let instructionWorkspaceStyle = {};
+    if (widgetMode) {
+      instructionWorkspaceStyle = isRtl
+        ? styles.widgetInstructionsRtl
+        : styles.widgetInstructions;
+    }
+
     return (
       <StudioAppWrapper>
         <ImportProjectDialog />
         <ImportScreensDialog />
         <ExternalRedirectDialog />
         <ApplabVisualizationColumn
-          isEditingProject={this.props.isEditingProject}
-          screenIds={this.props.screenIds}
-          onScreenCreate={this.props.onScreenCreate}
+          isEditingProject={isEditingProject}
+          screenIds={screenIds}
+          onScreenCreate={onScreenCreate}
         />
         <VisualizationResizeBar />
-        <InstructionsWithWorkspace>
+        {/* Applying instructionWorkspaceStyle to both the instructions (using instructionsStyle) and the
+         *  workspace (using workspaceStyle) is necessary because both elements are absolutely positioned.
+         */}
+        <InstructionsWithWorkspace
+          workspaceStyle={instructionWorkspaceStyle}
+          instructionsStyle={instructionWorkspaceStyle}
+        >
           <CodeWorkspace
             withSettingsCog
             style={{display: codeWorkspaceVisible ? 'block' : 'none'}}
+            autogenerateML={autogenerateML}
           />
-          {this.props.hasDesignMode && <ProtectedDesignWorkspace />}
-          {this.props.hasDataMode && (
-            <DataWorkspace
-              handleVersionHistory={this.props.handleVersionHistory}
-            />
+          {hasDesignMode && <ProtectedDesignWorkspace />}
+          {hasDataMode && (
+            <DataWorkspace handleVersionHistory={handleVersionHistory} />
           )}
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
@@ -73,5 +101,16 @@ class AppLabView extends React.Component {
 export default connect(state => ({
   hasDataMode: state.pageConstants.hasDataMode || false,
   hasDesignMode: state.pageConstants.hasDesignMode || false,
-  interfaceMode: state.interfaceMode
+  interfaceMode: state.interfaceMode,
+  isRtl: state.isRtl,
+  widgetMode: state.pageConstants.widgetMode
 }))(AppLabView);
+
+const styles = {
+  widgetInstructions: {
+    left: WIDGET_WIDTH
+  },
+  widgetInstructionsRtl: {
+    right: WIDGET_WIDTH
+  }
+};

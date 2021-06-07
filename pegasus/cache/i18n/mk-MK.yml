@@ -52,19 +52,35 @@ mk-MK:
     на кодот, пријави се да одиш во училница и да им помогнеш на студентите да научат!'
   congrats_next_tutorials_title: Дипломиај за следното ниво
   homepage_action_text_try_it: Обидете се
+  homepage_action_text_learn: Започни со учење
   homepage_slot_text_link_hoc: Пробај еден час кодирање
   starwars_blocks_title: Блокови
   volunteer_engineer_submission_field_name: Име
   volunteer_engineer_submission_field_description: Опис
   volunteer_engineer_submission_submit: Поднеси
   dashboard_action_cancel: Откажи
+  dashboard_sections_close: затвори
   dashboard_students_name: Име
   blockly_name: Blockly
+  gamelab_name: Работилница за апликации
   lightbot_gradelevel: За сите возрасти
   thinkersmith_gradelevel: За сите возрасти
   lightbotintl_gradelevel: За сите возрасти
   blockly_gradelevel: За сите возрасти
   lightbot_beyond_gradelevel: За сите возрасти
   flappy_shortcode: Мафтање
+  header_course_catalog: Каталог на курсеви
+  header_project_gallery: Проекти
+  header_about: За нас
+  header_help_support: Помош и поддршка
+  header_report_bug: Пријави проблем
+  user_header_signin: Најави се
+  user_header_create: 'Креирај '
+  user_header_applab: Работилница за апликации
+  user_header_artist: Уметник
+  user_header_gamelab: Работилница за апликации
   hoc2018_creativity_create: Креирај
   hoc2018_mc_homepage_try_it: Обидете се
+  footer_about: За нас
+  ai_activity: Активност
+  ai_description: Опис

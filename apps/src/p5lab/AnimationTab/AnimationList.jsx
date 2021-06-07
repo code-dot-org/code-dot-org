@@ -4,24 +4,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import * as shapes from '../shapes';
-import {show, Goal} from '../AnimationPicker/animationPickerModule';
+import {show, Goal} from '../redux/animationPicker';
 import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
 import i18n from '@cdo/locale';
-
-const styles = {
-  root: {
-    flex: '1 0 0',
-    borderTop: 'solid thin ' + color.light_gray,
-    borderBottom: 'solid thin ' + color.light_gray,
-    borderLeft: 'solid thin ' + color.light_gray,
-    borderRight: 'none',
-    backgroundColor: color.lightest_gray,
-    paddingRight: 10,
-    paddingLeft: 10
-  }
-};
 
 /**
  * Vertical scrolling list of animations associated with the project.
@@ -68,6 +55,19 @@ class AnimationList extends React.Component {
     );
   }
 }
+
+const styles = {
+  root: {
+    flex: '1 0 0',
+    borderTop: 'solid thin ' + color.light_gray,
+    borderBottom: 'solid thin ' + color.light_gray,
+    borderLeft: 'solid thin ' + color.light_gray,
+    borderRight: 'none',
+    backgroundColor: color.lightest_gray,
+    paddingRight: 10,
+    paddingLeft: 10
+  }
+};
 export default connect(
   state => ({
     animationList: state.animationList,

@@ -5,27 +5,6 @@ import ProjectUpdatedAt from './ProjectUpdatedAt';
 import headerVignetteStyles from './HeaderVignette';
 import $ from 'jquery';
 
-const styles = {
-  headerContainer: {
-    position: 'relative',
-    overflow: 'hidden',
-    height: 40
-  },
-  headerInner: {
-    position: 'absolute'
-  },
-  scriptLinkWithUpdatedAt: {
-    display: 'block'
-  },
-  outerContainer: {
-    textAlign: 'right'
-  },
-  containerWithUpdatedAt: {
-    verticalAlign: 'bottom',
-    display: 'inline-block'
-  }
-};
-
 class ScriptName extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
@@ -131,6 +110,27 @@ class ScriptName extends React.Component {
     );
   }
 }
+
+const styles = {
+  headerContainer: {
+    position: 'relative',
+    overflow: 'hidden',
+    height: 40
+  },
+  headerInner: {
+    position: 'absolute'
+  },
+  scriptLinkWithUpdatedAt: {
+    display: 'block'
+  },
+  outerContainer: {
+    textAlign: 'right'
+  },
+  containerWithUpdatedAt: {
+    verticalAlign: 'bottom',
+    display: 'inline-block'
+  }
+};
 
 export default connect(state => ({
   showProjectUpdatedAt: state.header.showProjectUpdatedAt

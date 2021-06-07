@@ -892,6 +892,8 @@ he-IL:
   coursee-2018_gradelevel: גילאי 8-12
   coursed-2019_gradelevel: כיתות ח' ומעלה
   coursee-2019_gradelevel: גילאי 8-12
+  coursed-2020_gradelevel: כיתות ח' ומעלה
+  coursee-2020_gradelevel: גילאי 8-12
   accelerated_gradelevel: גילאי 10-18
   codeorg_platformtext: דפדפנים מודרנים, סמארטפונים, טאבלטים
   codeintl_platformtext: דפדפנים מודרנים, סמארטפונים, טאבלטים
@@ -985,6 +987,9 @@ he-IL:
   infinity_shortdescription: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות
     דמויות האינסוף של דיסני.
   artist_shortdescription: ציירו תמונות מגניבות ועיצובים עם האמן!
+  coursed-2020_shortdescription_congrats: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות
+    מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות
+    דיגיטלית.
   codeorg_longdescription: למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור
     ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק
     צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים.
@@ -1434,3 +1439,15 @@ he-IL:
   ! '': " "
   footer_powered_by_aws: ממונע ע"י Amazon Web Services
   codebytes_skinny_banner_english_only: אנגלית בלבד
+  footer_privacy_policy: הצהרת פרטיות
+  footer_about: אודות
+  footer_partners: שותפים
+  footer_donate: תרום
+  footer_support: עזרה וקהילה
+  footer_terms: תנאים
+  ai_in_partnership_with: 'בשיתוף עם: '
+  ai_microsoft_thanks: אנו מודים למיקרוסופט על תמיכתה בחזון ובמשימה שלנו – להבטיח
+    שלכל ילד תהיה ההזדמנות ללמוד מדעי המחשב ולרכוש את הכישורים הנדרשים כדי להצליח
+    במאה ה־21.
+  ai_activity: פעילות
+  ai_description: תיאור

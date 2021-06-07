@@ -2,7 +2,6 @@
   "published": true,
   "pages": [
     {
-      "name": "page1",
       "elements": [
         {
           "type": "panel",

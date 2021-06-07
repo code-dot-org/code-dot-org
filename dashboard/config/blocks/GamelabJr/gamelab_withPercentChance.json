@@ -1,5 +1,5 @@
 {
-  "category": "Logic",
+  "category": "Control",
   "config": {
     "func": "withPercentChance",
     "blockText": "if {NUM}% chance\n{STATEMENT}",

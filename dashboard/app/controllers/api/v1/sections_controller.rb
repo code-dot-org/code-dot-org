@@ -49,8 +49,10 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         script_id: script_to_assign ? script_to_assign.id : params[:script_id],
         course_id: params[:course_id] && UnitGroup.valid_course_id?(params[:course_id]) ?
           params[:course_id].to_i : nil,
-        stage_extras: params['lesson_extras'] || false,
-        pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed]
+        lesson_extras: params['lesson_extras'] || false,
+        pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
+        tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
+        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
       }
     )
     render head :bad_request unless section
@@ -93,9 +95,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
-    fields[:stage_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
+    fields[:lesson_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
+    fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
+    fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
 
     section.update!(fields)
     if script_id
@@ -125,6 +129,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       render json: {
         result: 'section_owned'
       }, status: :bad_request
+      return
+    end
+    # add_student returns 'restricted' when @section is flagged to restrict access
+    if result == 'restricted'
+      render json: {
+        result: 'section_restricted'
+      }, status: :forbidden
       return
     end
     render json: {

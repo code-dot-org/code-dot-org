@@ -1,13 +1,6 @@
 import React from 'react';
 import msg from '@cdo/locale';
 
-const styles = {
-  courseblockContainer: {
-    width: 720,
-    paddingTop: 20
-  }
-};
-
 export default class CreateSomething extends React.Component {
   constructor(props) {
     super(props);
@@ -64,3 +57,10 @@ export default class CreateSomething extends React.Component {
     );
   }
 }
+
+const styles = {
+  courseblockContainer: {
+    width: 720,
+    paddingTop: 20
+  }
+};

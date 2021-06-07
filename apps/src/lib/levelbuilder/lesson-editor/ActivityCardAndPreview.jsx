@@ -4,29 +4,6 @@ import ActivityCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard'
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  cardAndPreview: {
-    display: 'flex',
-    flexDirection: 'row',
-    margin: 10,
-    width: '100%'
-  },
-  editor: {
-    width: '55%'
-  },
-  preview: {
-    width: '45%',
-    marginLeft: 20
-  },
-  previewBox: {
-    border: '1px solid black',
-    padding: '0px 25px 10px 25px'
-  },
-  noPreview: {
-    fontStyle: 'italic'
-  }
-};
-
 export default class ActivityCardAndPreview extends Component {
   static propTypes = {
     activity: activityShape,
@@ -38,7 +15,8 @@ export default class ActivityCardAndPreview extends Component {
     targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     activitySectionMetrics: PropTypes.array.isRequired,
-    updateActivitySectionMetrics: PropTypes.func.isRequired
+    updateActivitySectionMetrics: PropTypes.func.isRequired,
+    hasLessonPlan: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -74,6 +52,7 @@ export default class ActivityCardAndPreview extends Component {
             }
             handleCollapse={this.handleCollapse}
             collapsed={this.state.collapsed}
+            hasLessonPlan={this.props.hasLessonPlan}
           />
         </div>
         <div style={styles.preview}>
@@ -92,3 +71,26 @@ export default class ActivityCardAndPreview extends Component {
     );
   }
 }
+
+const styles = {
+  cardAndPreview: {
+    display: 'flex',
+    flexDirection: 'row',
+    margin: 10,
+    width: '100%'
+  },
+  editor: {
+    width: '55%'
+  },
+  preview: {
+    width: '45%',
+    marginLeft: 20
+  },
+  previewBox: {
+    border: '1px solid black',
+    padding: '0px 25px 10px 25px'
+  },
+  noPreview: {
+    fontStyle: 'italic'
+  }
+};

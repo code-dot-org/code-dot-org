@@ -10,21 +10,6 @@ import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {reload} from '../../utils';
 import queryString from 'query-string';
 
-const styles = {
-  select: {
-    height: 34,
-    width: 300
-  },
-  addNewSection: {
-    borderTop: `1px solid ${color.charcoal}`,
-    paddingTop: 16,
-    paddingBottom: 8,
-    paddingLeft: 20,
-    paddingRight: 12,
-    width: 268
-  }
-};
-
 export default class TeacherSectionSelector extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -142,3 +127,19 @@ export default class TeacherSectionSelector extends Component {
     );
   }
 }
+
+const styles = {
+  select: {
+    height: 34,
+    width: 300,
+    marginBottom: 0
+  },
+  addNewSection: {
+    borderTop: `1px solid ${color.charcoal}`,
+    paddingTop: 16,
+    paddingBottom: 8,
+    paddingLeft: 20,
+    paddingRight: 12,
+    width: 268
+  }
+};

@@ -2,14 +2,18 @@ import * as coreLibrary from '../coreLibrary';
 import {commands as behaviorCommands} from './behaviorCommands';
 
 export const commands = {
-  addTarget(spriteArg, targetCostume) {
+  addTarget(spriteArg, targetCostume, targetType) {
+    if (!['follow', 'avoid'].includes(targetType)) {
+      console.warn(`unkknown targetType: ${targetType}`);
+      return;
+    }
     let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
       if (!sprite.targetSet) {
-        sprite.targetSet = [];
+        sprite.targetSet = {follow: [], avoid: []};
       }
-      if (!sprite.targetSet.includes(targetCostume)) {
-        sprite.targetSet.push(targetCostume);
+      if (!sprite.targetSet[targetType].includes(targetCostume)) {
+        sprite.targetSet[targetType].push(targetCostume);
       }
     });
   },
@@ -152,6 +156,14 @@ export const commands = {
     let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
       if (sprite && target) {
+        const distanceFromSpriteToTarget = Math.sqrt(
+          (sprite.x - target.x) ** 2 + (sprite.y - target.y) ** 2
+        );
+        if (distanceFromSpriteToTarget < distance) {
+          sprite.x = target.x;
+          sprite.y = target.y;
+          return;
+        }
         let angle = Math.atan2(target.y - sprite.y, target.x - sprite.x);
         if (!isNaN(angle)) {
           let dy = Math.sin(angle) * distance;

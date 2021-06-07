@@ -2,19 +2,26 @@
 .mobile {
   width: 100%;
 }
-
+div[dir='rtl'] .background-img{
+  transform: scaleX(-1);
+}
 .sea-creature {
   position: absolute;
   display: none;
 }
-
+div[dir='rtl'] .sea-creature{
+  left: 15px;
+}
 .crab {
   position: absolute;
   width: 60px;
   top: 245px;
   left: 200px;
 }
-
+div[dir='rtl'] .crab{
+  left: auto;
+  right: 200px;
+}
 .scanning-bot {
   position: absolute;
   margin-top: 0px;
@@ -22,7 +29,10 @@
   top: 20px;
   left: 670px;
 }
-
+div[dir='rtl'] .scanning-bot{
+  left: auto;
+  right: 670px;
+}
 .ai-bot {
   width: 150px;
 }
@@ -33,10 +43,17 @@
   top: 290px;
   position: absolute;
 }
-
+div[dir='rtl'] .ai-light{
+  left: auto;
+  right: 670px;
+}
 .ai-fish {
   position: absolute;
   width: 80px;
   top: 185px;
   left: 705px;
+}
+div[dir='rtl'] .ai-fish{
+  left: auto;
+  right: 705px;
 }

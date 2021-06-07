@@ -50,20 +50,47 @@ class SchoolStatsByYear < ApplicationRecord
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] Optional, the CSV file parsing options.
-  def self.merge_from_csv(filename, options = {col_sep: "\t", headers: true, quote_char: "\x00"})
-    CSV.read(filename, options).each do |row|
-      parsed = yield row
-      loaded = find_by(primary_keys.map(&:to_sym).map {|k| [k, parsed[k]]}.to_h)
-      if loaded.nil?
-        begin
-          SchoolStatsByYear.new(parsed).save!
-        rescue ActiveRecord::InvalidForeignKey
-          puts parsed[:school_id]
+  # @param dry_run [Boolean] Optional, roll back any db transactions after processing.
+  def self.merge_from_csv(filename, options = {col_sep: "\t", headers: true, quote_char: "\x00"}, dry_run: false)
+    new_schools = 0
+    updated_schools = 0
+    unchanged_schools = 0
+    errored_schools = []
+
+    ActiveRecord::Base.transaction do
+      CSV.read(filename, options).each do |row|
+        parsed = yield row
+        loaded = find_by(primary_keys.map(&:to_sym).map {|k| [k, parsed[k]]}.to_h)
+        if loaded.nil?
+          begin
+            SchoolStatsByYear.new(parsed).save!
+            new_schools += 1
+          rescue ActiveRecord::InvalidForeignKey
+            errored_schools << parsed[:school_id]
+          end
+        else
+          loaded.assign_attributes(parsed)
+          if loaded.changed?
+            loaded.update!(parsed)
+            updated_schools += 1
+          else
+            unchanged_schools += 1
+          end
         end
-      else
-        loaded.assign_attributes(parsed)
-        loaded.update!(parsed) if loaded.changed?
       end
+
+      # Raise an error so that the db transaction rolls back
+      raise "This was a dry run. No rows were modified or added. Set dry_run: false to modify db" if dry_run
+    ensure
+      future_tense_dry_run = dry_run ? ' to be' : ''
+      summary_message = "School stats seeding: done processing #{filename}.\n"\
+        "#{new_schools} new stats#{future_tense_dry_run} added.\n"\
+        "#{updated_schools} stats#{future_tense_dry_run} updated.\n"\
+        "#{unchanged_schools} stats#{future_tense_dry_run} unchanged.\n"\
+        "#{errored_schools.length} stats failed to be added:\n"\
+        "#{errored_schools.join("\n")}\n"
+
+      CDO.log.info summary_message
     end
   end
 

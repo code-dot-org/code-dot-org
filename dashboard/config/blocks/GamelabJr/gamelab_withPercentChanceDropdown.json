@@ -1,0 +1,43 @@
+{
+  "category": "Control",
+  "config": {
+    "func": "withPercentChanceDropdown",
+    "blockText": " {NUM} chance\n {STATEMENT}",
+    "args": [
+      {
+        "name": "NUM",
+        "options": [
+          [
+            "very high",
+            "90"
+          ],
+          [
+            "high",
+            "75"
+          ],
+          [
+            "50/50",
+            "50"
+          ],
+          [
+            "low",
+            "25"
+          ],
+          [
+            "very low",
+            "10"
+          ]
+        ]
+      },
+      {
+        "name": "STATEMENT",
+        "statement": true
+      }
+    ],
+    "color": [
+      197,
+      0.88,
+      0.78
+    ]
+  }
+}

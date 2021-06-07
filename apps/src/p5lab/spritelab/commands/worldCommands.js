@@ -1,11 +1,25 @@
 import * as coreLibrary from '../coreLibrary';
 import {getStore} from '@cdo/apps/redux';
-import {addConsoleMessage} from '../textConsoleModule';
-import {addTextPrompt, addMultipleChoicePrompt} from '../spritelabInputModule';
+import {addConsoleMessage} from '../../redux/textConsole';
+import {
+  addTextPrompt,
+  addMultipleChoicePrompt
+} from '../../redux/spritelabInput';
 
 export const commands = {
   comment(text) {
     /* no-op */
+  },
+
+  drawTitle() {
+    this.fill('black');
+    this.stroke('white');
+    this.strokeWeight(3);
+    this.textAlign(this.CENTER, this.CENTER);
+    this.textSize(50);
+    this.text(coreLibrary.screenText.title, 0, 0, 400, 200);
+    this.textSize(35);
+    this.text(coreLibrary.screenText.subtitle, 0, 200, 400, 200);
   },
 
   getTime(unit) {
@@ -18,10 +32,11 @@ export const commands = {
   },
 
   hideTitleScreen() {
-    coreLibrary.title = coreLibrary.subtitle = '';
+    coreLibrary.screenText = {};
   },
 
   printText(text) {
+    coreLibrary.printLog.push(text);
     getStore().dispatch(addConsoleMessage({text: text}));
   },
 
@@ -60,8 +75,7 @@ export const commands = {
   },
 
   showTitleScreen(title, subtitle) {
-    coreLibrary.title = title || '';
-    coreLibrary.subtitle = subtitle || '';
+    coreLibrary.screenText = {title: title || '', subtitle: subtitle || ''};
   },
 
   textJoin(text1, text2) {

@@ -42,7 +42,8 @@ const defaultProps = {
   versions: [],
   sectionsForDropdown: [],
   announcements: [],
-  isSignedIn: true
+  isSignedIn: true,
+  useMigratedResources: false
 };
 
 const fakeTeacherAnnouncement = {
@@ -117,13 +118,6 @@ describe('CourseOverview', () => {
       <CourseOverview {...defaultProps} isTeacher={true} />
     );
     assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
-  });
-
-  it('renders no top row for students', () => {
-    const wrapper = shallow(
-      <CourseOverview {...defaultProps} isTeacher={false} />
-    );
-    assert.equal(wrapper.find('CourseOverviewTopRow').length, 0);
   });
 
   it('renders a CourseScript for each script', () => {

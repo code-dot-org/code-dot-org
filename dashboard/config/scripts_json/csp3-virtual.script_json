@@ -12,6 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:55:47 UTC",
     "seeding_key": {
       "script.name": "csp3-virtual"
     }
@@ -36,6 +37,7 @@
       "name": "Using Simple Commands",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -50,6 +52,7 @@
       "name": "Creating Functions",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -64,6 +67,7 @@
       "name": "APIs and Function Parameters",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -78,6 +82,7 @@
       "name": "Creating functions with Parameters",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -92,6 +97,7 @@
       "name": "Looping and Random Numbers",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -106,6 +112,7 @@
       "name": "Make your own Digital Scene",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -116,15 +123,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_turtle_virtual"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_applab_turtle_virtual"
@@ -140,12 +157,16 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2 Using Simple Commands_virtual"
+        ],
         "progression": "Using Simple Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L2 Using Simple Commands_virtual"
@@ -161,12 +182,16 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2_TurtleSquare_right_virtual"
+        ],
         "progression": "Using Simple Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L2_TurtleSquare_right_virtual"
@@ -182,12 +207,16 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2_Turtle3by3Grid_virtual"
+        ],
         "progression": "Challenge: Draw a 3x3 Grid Using Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L2_Turtle3by3Grid_virtual"
@@ -203,12 +232,16 @@
     {
       "chapter": 5,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3L1 Virtual CFU"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L1 Virtual CFU"
@@ -224,12 +257,16 @@
     {
       "chapter": 6,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_functions_virtual"
+        ],
         "progression": "Defining and Calling Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_applab_functions_virtual"
@@ -245,12 +282,16 @@
     {
       "chapter": 7,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Define and use turnAround_virtual"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 Define and use turnAround_virtual"
@@ -266,12 +307,16 @@
     {
       "chapter": 8,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Draw a T using turnAround_virtual"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 Draw a T using turnAround_virtual"
@@ -287,12 +332,16 @@
     {
       "chapter": 9,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 define turnRight and draw a rectangle_virtual"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 define turnRight and draw a rectangle_virtual"
@@ -308,12 +357,16 @@
     {
       "chapter": 10,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 - draw rect function_virtual"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 - draw rect function_virtual"
@@ -329,12 +382,16 @@
     {
       "chapter": 11,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 - draw step_virtual"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 - draw step_virtual"
@@ -350,12 +407,16 @@
     {
       "chapter": 12,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Three Steps_virtual"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 Three Steps_virtual"
@@ -371,12 +432,16 @@
     {
       "chapter": 13,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 draw diamond_virtual"
+        ],
         "progression": "Challenge: Draw a Diamond Using Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 draw diamond_virtual"
@@ -392,12 +457,16 @@
     {
       "chapter": 14,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L04 - snowflake_virtual"
+        ],
         "progression": "Using Functions with Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L04 - snowflake_virtual"
@@ -413,12 +482,16 @@
     {
       "chapter": 15,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L04 - 3 by 3 with functions_virtual"
+        ],
         "progression": "Using Functions with Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L04 - 3 by 3 with functions_virtual"
@@ -434,12 +507,16 @@
     {
       "chapter": 16,
       "position": 11,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3L2 Virtual CFU"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L2 Virtual CFU"
@@ -455,12 +532,16 @@
     {
       "chapter": 17,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 - moveForwardwithParams_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 - moveForwardwithParams_virtual"
@@ -476,12 +557,16 @@
     {
       "chapter": 18,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 1 triangle_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 1 triangle_virtual"
@@ -497,12 +582,16 @@
     {
       "chapter": 19,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 2 purple square_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 2 purple square_virtual"
@@ -518,12 +607,16 @@
     {
       "chapter": 20,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 3 fill pink_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 3 fill pink_virtual"
@@ -539,12 +632,16 @@
     {
       "chapter": 21,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 4 bullseye_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 4 bullseye_virtual"
@@ -560,12 +657,16 @@
     {
       "chapter": 22,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 6 squiggles_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 6 squiggles_virtual"
@@ -581,12 +682,16 @@
     {
       "chapter": 23,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 5 overlapping circles_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 5 overlapping circles_virtual"
@@ -602,12 +707,16 @@
     {
       "chapter": 24,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 7 smiley face_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 7 smiley face_virtual"
@@ -623,12 +732,16 @@
     {
       "chapter": 25,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 8 make your own_virtual"
+        ],
         "progression": "Make Your Own Turtle Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 8 make your own_virtual"
@@ -644,12 +757,16 @@
     {
       "chapter": 26,
       "position": 10,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L06 Assessment2_2018_2019_virtual"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Assessment2_2018_2019_virtual"
@@ -665,12 +782,16 @@
     {
       "chapter": 27,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_functions_parameters_virtual"
+        ],
         "progression": "Functions with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_applab_functions_parameters_virtual"
@@ -686,12 +807,16 @@
     {
       "chapter": 28,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - drawSquareWithParam_virtual"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - drawSquareWithParam_virtual"
@@ -707,12 +832,16 @@
     {
       "chapter": 29,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - createTriangleParam_virtual"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - createTriangleParam_virtual"
@@ -728,12 +857,16 @@
     {
       "chapter": 30,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - squareTwoParams_virtual"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - squareTwoParams_virtual"
@@ -749,12 +882,16 @@
     {
       "chapter": 31,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - createTwoParamTriangle_virtual"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - createTwoParamTriangle_virtual"
@@ -770,12 +907,16 @@
     {
       "chapter": 32,
       "position": 6,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_turtle_subgoal_q3_mc_2018_2019_virtual"
+        ],
         "progression": "Check Your Understanding: Defining Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_U3_turtle_subgoal_q3_mc_2018_2019_virtual"
@@ -791,12 +932,16 @@
     {
       "chapter": 33,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 how to add comments_virtual"
+        ],
         "progression": "How to add comments to code"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 how to add comments_virtual"
@@ -812,12 +957,16 @@
     {
       "chapter": 34,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - introUnderTheSea_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - introUnderTheSea_virtual"
@@ -833,12 +982,16 @@
     {
       "chapter": 35,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - paramsToStarfish_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - paramsToStarfish_virtual"
@@ -854,12 +1007,16 @@
     {
       "chapter": 36,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - seaGrass_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - seaGrass_virtual"
@@ -875,12 +1032,16 @@
     {
       "chapter": 37,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - fish_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - fish_virtual"
@@ -896,12 +1057,16 @@
     {
       "chapter": 38,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - multiParamFish_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - multiParamFish_virtual"
@@ -917,12 +1082,16 @@
     {
       "chapter": 39,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - randomInput_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - randomInput_virtual"
@@ -938,12 +1107,16 @@
     {
       "chapter": 40,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - freePlay_virtual"
+        ],
         "progression": "Challenge: Continue Your Drawing With More Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - freePlay_virtual"
@@ -959,12 +1132,16 @@
     {
       "chapter": 41,
       "position": 15,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3L4 Virtual CFU"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L4 Virtual CFU"
@@ -980,12 +1157,16 @@
     {
       "chapter": 42,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_loops_virtual"
+        ],
         "progression": "Using Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_applab_loops_virtual"
@@ -1001,12 +1182,16 @@
     {
       "chapter": 43,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - introSquare_virtual"
+        ],
         "progression": "Introduction to Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - introSquare_virtual"
@@ -1022,12 +1207,16 @@
     {
       "chapter": 44,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - randomSquare_virtual"
+        ],
         "progression": "Introduction to Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - randomSquare_virtual"
@@ -1043,12 +1232,16 @@
     {
       "chapter": 45,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - randomDots1_virtual"
+        ],
         "progression": "Introduction to Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - randomDots1_virtual"
@@ -1064,12 +1257,16 @@
     {
       "chapter": 46,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - loopsWithRandom_virtual"
+        ],
         "progression": "Introduction to Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - loopsWithRandom_virtual"
@@ -1085,12 +1282,16 @@
     {
       "chapter": 47,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - topDownDesign_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - topDownDesign_virtual"
@@ -1106,12 +1307,16 @@
     {
       "chapter": 48,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - bubbles_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - bubbles_virtual"
@@ -1127,12 +1332,16 @@
     {
       "chapter": 49,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - fish_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - fish_virtual"
@@ -1148,12 +1357,16 @@
     {
       "chapter": 50,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - seaStar_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - seaStar_virtual"
@@ -1169,12 +1382,16 @@
     {
       "chapter": 51,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - seaGrass_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - seaGrass_virtual"
@@ -1190,12 +1407,16 @@
     {
       "chapter": 52,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - allSeaGrass_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - allSeaGrass_virtual"
@@ -1211,12 +1432,16 @@
     {
       "chapter": 53,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - sunBeams_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - sunBeams_virtual"
@@ -1232,12 +1457,16 @@
     {
       "chapter": 54,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - Free Play Loops and Random_virtual"
+        ],
         "progression": "Project: Under the Sea"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - Free Play Loops and Random_virtual"
@@ -1253,12 +1482,16 @@
     {
       "chapter": 55,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Free_play_digital_scene_virtual"
+        ],
         "progression": "Personal Digital Scene"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Free_play_digital_scene_virtual"
@@ -1878,5 +2111,35 @@
         "script.name": "csp3-virtual"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

@@ -19,6 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:55:51 UTC",
     "seeding_key": {
       "script.name": "csd3-virtual"
     }
@@ -42,6 +43,7 @@
       "name": "Drawing in Game Lab",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -56,6 +58,7 @@
       "name": "Shapes and Parameters",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -70,6 +73,7 @@
       "name": "Variables",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -84,6 +88,7 @@
       "name": "Random Numbers",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -98,6 +103,7 @@
       "name": "Sprites",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -112,6 +118,7 @@
       "name": "Sprite Properties",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -126,6 +133,7 @@
       "name": "Text",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -140,6 +148,7 @@
       "name": "The Draw Loop",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -154,6 +163,7 @@
       "name": "Sprite Movement",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
       },
@@ -168,6 +178,7 @@
       "name": "Conditionals",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
       },
@@ -182,6 +193,7 @@
       "name": "Keyboard Input",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 11,
       "properties": {
       },
@@ -196,6 +208,7 @@
       "name": "Mouse Input",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 12,
       "properties": {
       },
@@ -210,6 +223,7 @@
       "name": "Velocity",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 13,
       "properties": {
       },
@@ -224,6 +238,7 @@
       "name": "Collision Detection",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 14,
       "properties": {
       },
@@ -238,6 +253,7 @@
       "name": "Complex Sprite Movement",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 15,
       "properties": {
       },
@@ -252,6 +268,7 @@
       "name": "Collisions",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 16,
       "properties": {
       },
@@ -266,6 +283,7 @@
       "name": "Functions",
       "absolute_position": 17,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 17,
       "properties": {
       },
@@ -280,6 +298,7 @@
       "name": "Project - Design a Game",
       "absolute_position": 18,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 18,
       "properties": {
       },
@@ -290,16 +309,26 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 samples_virtual_2020"
+        ],
         "progression": "Sample Programs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 samples_virtual_2020"
@@ -315,12 +344,16 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 rect_virtual_2020"
+        ],
         "progression": "Introduction to Game Lab"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 rect_virtual_2020"
@@ -336,12 +369,16 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 1_virtual_2020"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 1"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 1_virtual_2020"
@@ -357,12 +394,16 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Drawing Squares to Corners_virtual_2020"
+        ],
         "progression": "Using the Grid"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Drawing Squares to Corners_virtual_2020"
@@ -378,12 +419,16 @@
     {
       "chapter": 5,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 2_virtual_2020"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD: Drawing in Game Lab 2_virtual_2020"
@@ -399,12 +444,16 @@
     {
       "chapter": 6,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 fill_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 fill_virtual_2020"
@@ -420,12 +469,16 @@
     {
       "chapter": 7,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 sequence_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 sequence_virtual_2020"
@@ -441,12 +494,16 @@
     {
       "chapter": 8,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 ellipse_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 ellipse_virtual_2020"
@@ -462,12 +519,16 @@
     {
       "chapter": 9,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice choice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 drawing practice choice_2020_virtual_2020"
@@ -483,12 +544,16 @@
     {
       "chapter": 10,
       "position": 10,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 debug_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 debug_virtual_2020"
@@ -504,12 +569,16 @@
     {
       "chapter": 11,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing challenges_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 drawing challenges_2020_virtual_2020"
@@ -525,12 +594,16 @@
     {
       "chapter": 12,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Taller Rectangle_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Random Taller Rectangle_virtual_2020"
@@ -546,12 +619,16 @@
     {
       "chapter": 13,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Ellipse Behind_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Random Ellipse Behind_2018_virtual_2020"
@@ -567,12 +644,16 @@
     {
       "chapter": 14,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random background_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Random background_virtual_2020"
@@ -588,12 +669,16 @@
     {
       "chapter": 15,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random background2_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Random background2_virtual_2020"
@@ -609,12 +694,16 @@
     {
       "chapter": 16,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Debug Grass_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Random Debug Grass_virtual_2020"
@@ -630,12 +719,16 @@
     {
       "chapter": 17,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games parameters practice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games parameters practice_2020_virtual_2020"
@@ -651,12 +744,16 @@
     {
       "chapter": 18,
       "position": 7,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Debug Cloud_2018_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Random Debug Cloud_2018_virtual_2020"
@@ -672,12 +769,16 @@
     {
       "chapter": 19,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Parameters challenge_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games Parameters challenge_2020_virtual_2020"
@@ -693,12 +794,16 @@
     {
       "chapter": 20,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where X_virtual_2020"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Variables Predict Where X_virtual_2020"
@@ -714,12 +819,16 @@
     {
       "chapter": 21,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 1_virtual_2020"
+        ],
         "progression": "Video: Introduction to Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Introduction to Variables - Part 1_virtual_2020"
@@ -735,12 +844,16 @@
     {
       "chapter": 22,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where XY_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Variables Predict Where XY_virtual_2020"
@@ -756,12 +869,16 @@
     {
       "chapter": 23,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 naming md_virtual"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 naming md_virtual"
@@ -777,12 +894,16 @@
     {
       "chapter": 24,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables naming rules v2_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Variables naming rules v2_2018_virtual_2020"
@@ -798,12 +919,16 @@
     {
       "chapter": 25,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Draw Poppy_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Variables Draw Poppy_virtual_2020"
@@ -819,12 +944,16 @@
     {
       "chapter": 26,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables practice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games variables practice_2020_virtual_2020"
@@ -840,12 +969,16 @@
     {
       "chapter": 27,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Variables assessment_virtual_2020"
@@ -861,12 +994,16 @@
     {
       "chapter": 28,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables challenge_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games variables challenge_2020_virtual_2020"
@@ -882,12 +1019,16 @@
     {
       "chapter": 29,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse_2018_virtual_2020"
+        ],
         "progression": "Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Random random ellipse_2018_virtual_2020"
@@ -903,12 +1044,16 @@
     {
       "chapter": 30,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Random random ellipse2_2018_virtual_2020"
@@ -924,12 +1069,16 @@
     {
       "chapter": 31,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Variables random with assignment_virtual_2020"
@@ -945,12 +1094,16 @@
     {
       "chapter": 32,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random reassign_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Variables random reassign_virtual_2020"
@@ -966,12 +1119,16 @@
     {
       "chapter": 33,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random practice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games random practice_2020_virtual_2020"
@@ -987,12 +1144,16 @@
     {
       "chapter": 34,
       "position": 6,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake_2018_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Random rainbow snake_2018_virtual_2020"
@@ -1008,12 +1169,16 @@
     {
       "chapter": 35,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random challenge_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games random challenge_2020_virtual_2020"
@@ -1029,12 +1194,16 @@
     {
       "chapter": 36,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_virtual_2020"
+        ],
         "progression": "Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Sprites Exploration_virtual_2020"
@@ -1050,12 +1219,16 @@
     {
       "chapter": 37,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprites in Game Lab_virtual_2020"
+        ],
         "progression": "Video: Introduction to Sprites"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD: Sprites in Game Lab_virtual_2020"
@@ -1071,12 +1244,16 @@
     {
       "chapter": 38,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Sprites intro sprites_virtual_2020"
@@ -1092,12 +1269,16 @@
     {
       "chapter": 39,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Sprites intro debug_virtual_2020"
@@ -1113,12 +1294,16 @@
     {
       "chapter": 40,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Sprites anitab 1_virtual_2020"
@@ -1134,12 +1319,16 @@
     {
       "chapter": 41,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animation Tab_virtual_2020"
+        ],
         "progression": "Video: The Animation Tab"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD: Animation Tab_virtual_2020"
@@ -1155,12 +1344,16 @@
     {
       "chapter": 42,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Sprites sequencing_virtual_2020"
@@ -1176,12 +1369,16 @@
     {
       "chapter": 43,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_2019_pilot_2020_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 drawSprites placement match_2019_pilot_2020_virtual_2020"
@@ -1197,12 +1394,16 @@
     {
       "chapter": 44,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games Sprites practice_2020_virtual_2020"
@@ -1218,12 +1419,16 @@
     {
       "chapter": 45,
       "position": 10,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Sprites assessment_virtual_2020"
@@ -1239,12 +1444,16 @@
     {
       "chapter": 46,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games Sprites Challenges_2020_virtual_2020"
@@ -1260,12 +1469,16 @@
     {
       "chapter": 47,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties predict_virtual_2020"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games properties predict_virtual_2020"
@@ -1281,12 +1494,16 @@
     {
       "chapter": 48,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties xy_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games properties xy_virtual_2020"
@@ -1302,12 +1519,16 @@
     {
       "chapter": 49,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties new_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games properties new_virtual_2020"
@@ -1323,12 +1544,16 @@
     {
       "chapter": 50,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties practice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games Properties practice_2020_virtual_2020"
@@ -1344,12 +1569,16 @@
     {
       "chapter": 51,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Games properties assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games properties assessment_virtual_2020"
@@ -1365,12 +1594,16 @@
     {
       "chapter": 52,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties challenge_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Games Properties challenge_2020_virtual_2020"
@@ -1386,12 +1619,16 @@
     {
       "chapter": 53,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text explore_virtual_2020"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web text explore_virtual_2020"
@@ -1407,12 +1644,16 @@
     {
       "chapter": 54,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites text_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Sprites text_virtual_2020"
@@ -1428,12 +1669,16 @@
     {
       "chapter": 55,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text size_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web text size_virtual_2020"
@@ -1449,12 +1694,16 @@
     {
       "chapter": 56,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text practice choice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web text practice choice_2020_virtual_2020"
@@ -1470,12 +1719,16 @@
     {
       "chapter": 57,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web text assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web text assessment_virtual_2020"
@@ -1491,12 +1744,16 @@
     {
       "chapter": 58,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text challenge choice_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web text challenge choice_2020_virtual_2020"
@@ -1512,12 +1769,16 @@
     {
       "chapter": 59,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Introduction to the Draw Loop_virtual_2020"
+        ],
         "progression": "Video: Introduction to the Draw Loop"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD: Introduction to the Draw Loop_virtual_2020"
@@ -1533,12 +1794,16 @@
     {
       "chapter": 60,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged orange and green_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged orange and green_virtual_2020"
@@ -1554,12 +1819,16 @@
     {
       "chapter": 61,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged predict 2_virtual_2020"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged predict 2_virtual_2020"
@@ -1575,12 +1844,16 @@
     {
       "chapter": 62,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 dancing alien_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 dancing alien_virtual_2020"
@@ -1596,12 +1869,16 @@
     {
       "chapter": 63,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite x_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite x_virtual_2020"
@@ -1617,12 +1894,16 @@
     {
       "chapter": 64,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web draw loop practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web draw loop practice choice_virtual_2020"
@@ -1638,12 +1919,16 @@
     {
       "chapter": 65,
       "position": 7,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite y_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged wiggle sprite y_virtual_2020"
@@ -1659,12 +1944,16 @@
     {
       "chapter": 66,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web draw loop challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web draw loop challenge choice_virtual_2020"
@@ -1680,12 +1969,16 @@
     {
       "chapter": 67,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Simple Counter Predict_virtual_2020"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 - Simple Counter Predict_virtual_2020"
@@ -1701,12 +1994,16 @@
     {
       "chapter": 68,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animating Sprite Movement_virtual_2020"
+        ],
         "progression": "Video: Sprite Movement"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD: Animating Sprite Movement_virtual_2020"
@@ -1722,12 +2019,16 @@
     {
       "chapter": 69,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Right_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Right_virtual_2020"
@@ -1743,12 +2044,16 @@
     {
       "chapter": 70,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Left_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Left_virtual_2020"
@@ -1764,12 +2069,16 @@
     {
       "chapter": 71,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Diagonal Movement_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Diagonal Movement_virtual_2020"
@@ -1785,12 +2094,16 @@
     {
       "chapter": 72,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Predict_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Sprite Movement Predict_virtual_2020"
@@ -1806,12 +2119,16 @@
     {
       "chapter": 73,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web movement practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web movement practice choice_virtual_2020"
@@ -1827,12 +2144,16 @@
     {
       "chapter": 74,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Movement Fish_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Movement Fish_virtual_2020"
@@ -1848,12 +2169,16 @@
     {
       "chapter": 75,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web movement challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web movement challenge choice_virtual_2020"
@@ -1869,12 +2194,16 @@
     {
       "chapter": 76,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Boolean Predict_virtual_2020"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Boolean Predict_virtual_2020"
@@ -1890,12 +2219,16 @@
     {
       "chapter": 77,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Booleans Video_virtual_2020"
+        ],
         "progression": "Video: Booleans"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 - Booleans Video_virtual_2020"
@@ -1911,12 +2244,16 @@
     {
       "chapter": 78,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - Matching_2018_2019_pilot_2020_virtual_2020"
+        ],
         "progression": "Quick Check"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 - conditionals - Matching_2018_2019_pilot_2020_virtual_2020"
@@ -1932,12 +2269,16 @@
     {
       "chapter": 79,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - transition_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 - conditionals - transition_virtual_2020"
@@ -1953,12 +2294,16 @@
     {
       "chapter": 80,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - first conditional_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 - conditionals - first conditional_virtual_2020"
@@ -1974,12 +2319,16 @@
     {
       "chapter": 81,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd U3 conditional statements video_virtual_2020"
+        ],
         "progression": "Video: Conditional Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd U3 conditional statements video_virtual_2020"
@@ -1995,12 +2344,16 @@
     {
       "chapter": 82,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Conditionals Apple 2_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Conditionals Apple 2_2018_virtual_2020"
@@ -2016,12 +2369,16 @@
     {
       "chapter": 83,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web conditionals practice choice_virtual_2020"
@@ -2037,12 +2394,16 @@
     {
       "chapter": 84,
       "position": 9,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web conditionals assessment_virtual_2020"
@@ -2058,12 +2419,16 @@
     {
       "chapter": 85,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web conditionals challenge choice_virtual_2020"
@@ -2079,12 +2444,16 @@
     {
       "chapter": 86,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Boolean_2018_virtual_2020"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Keypress Boolean_2018_virtual_2020"
@@ -2100,12 +2469,16 @@
     {
       "chapter": 87,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 keydown conditional_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 keydown conditional_2018_virtual_2020"
@@ -2121,12 +2494,16 @@
     {
       "chapter": 88,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 UP_ARROW_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 UP_ARROW_2018_virtual_2020"
@@ -2142,12 +2519,16 @@
     {
       "chapter": 89,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Input Gears_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Input Gears_virtual_2020"
@@ -2163,12 +2544,16 @@
     {
       "chapter": 90,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web keyboard practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web keyboard practice choice_virtual_2020"
@@ -2184,12 +2569,16 @@
     {
       "chapter": 91,
       "position": 6,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Direction Arrows_2018_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Direction Arrows_2018_virtual_2020"
@@ -2205,12 +2594,16 @@
     {
       "chapter": 92,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web keyboard challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web keyboard challenge choice_virtual_2020"
@@ -2226,12 +2619,16 @@
     {
       "chapter": 93,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 if else predict_virtual_2020"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 if else predict_virtual_2020"
@@ -2247,12 +2644,16 @@
     {
       "chapter": 94,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Conditionals Video_virtual_2020"
+        ],
         "progression": "Video: If/Else Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 - Conditionals Video_virtual_2020"
@@ -2268,12 +2669,16 @@
     {
       "chapter": 95,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Else_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Else_virtual_2020"
@@ -2289,12 +2694,16 @@
     {
       "chapter": 96,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games mousedown intro_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games mousedown intro_virtual_2020"
@@ -2310,12 +2719,16 @@
     {
       "chapter": 97,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - complex - mouse down_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 - complex - mouse down_virtual_2020"
@@ -2331,12 +2744,16 @@
     {
       "chapter": 98,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 If Else_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 If Else_virtual_2020"
@@ -2352,12 +2769,16 @@
     {
       "chapter": 99,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web mouse practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web mouse practice choice_virtual_2020"
@@ -2373,12 +2794,16 @@
     {
       "chapter": 100,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web mouse assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web mouse assessment_virtual_2020"
@@ -2394,12 +2819,16 @@
     {
       "chapter": 101,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web mouse challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD web mouse challenge choice_virtual_2020"
@@ -2415,12 +2844,16 @@
     {
       "chapter": 102,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX_virtual_2020"
@@ -2436,12 +2869,16 @@
     {
       "chapter": 103,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprite Velocity_virtual_2020"
+        ],
         "progression": "Video: Velocity"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD: Sprite Velocity_virtual_2020"
@@ -2457,12 +2894,16 @@
     {
       "chapter": 104,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityY_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction velocityY_virtual_2020"
@@ -2478,12 +2919,16 @@
     {
       "chapter": 105,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction rotation_virtual_2020"
@@ -2499,12 +2944,16 @@
     {
       "chapter": 106,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation control_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction rotation control_virtual_2020"
@@ -2520,12 +2969,16 @@
     {
       "chapter": 107,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX if-statements_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX if-statements_virtual_2020"
@@ -2541,12 +2994,16 @@
     {
       "chapter": 108,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity tennis_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games velocity tennis_virtual_2020"
@@ -2562,12 +3019,16 @@
     {
       "chapter": 109,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games velocity practice choice_virtual_2020"
@@ -2583,12 +3044,16 @@
     {
       "chapter": 110,
       "position": 9,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX control_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX control_virtual_2020"
@@ -2604,12 +3069,16 @@
     {
       "chapter": 111,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games velocity challenge choice_virtual_2020"
@@ -2625,12 +3094,16 @@
     {
       "chapter": 112,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions car intro_virtual_2020"
+        ],
         "progression": "Sample Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions car intro_virtual_2020"
@@ -2646,12 +3119,16 @@
     {
       "chapter": 113,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions build isTouching_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions build isTouching_virtual_2020"
@@ -2667,12 +3144,16 @@
     {
       "chapter": 114,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions isTouching intro_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions isTouching intro_virtual_2020"
@@ -2688,12 +3169,16 @@
     {
       "chapter": 115,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions egg_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions egg_virtual_2020"
@@ -2709,12 +3194,16 @@
     {
       "chapter": 116,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions debug isTouching_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions debug isTouching_virtual_2020"
@@ -2730,12 +3219,16 @@
     {
       "chapter": 117,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games istouching practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games istouching practice choice_virtual_2020"
@@ -2751,12 +3244,16 @@
     {
       "chapter": 118,
       "position": 7,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions horse_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions horse_virtual_2020"
@@ -2772,12 +3269,16 @@
     {
       "chapter": 119,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games istouching challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games istouching challenge choice_virtual_2020"
@@ -2793,12 +3294,16 @@
     {
       "chapter": 120,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Complex Movement counter prediction gamelab_virtual_2020"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Complex Movement counter prediction gamelab_virtual_2020"
@@ -2814,12 +3319,16 @@
     {
       "chapter": 121,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateX_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateX_virtual_2020"
@@ -2835,12 +3344,16 @@
     {
       "chapter": 122,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateY_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateY_virtual_2020"
@@ -2856,12 +3369,16 @@
     {
       "chapter": 123,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateX_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateX_virtual_2020"
@@ -2877,12 +3394,16 @@
     {
       "chapter": 124,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games movement2 practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games movement2 practice choice_virtual_2020"
@@ -2898,12 +3419,16 @@
     {
       "chapter": 125,
       "position": 6,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateY_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateY_virtual_2020"
@@ -2919,12 +3444,16 @@
     {
       "chapter": 126,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games movement2 challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games movement2 challenge choice_virtual_2020"
@@ -2940,12 +3469,16 @@
     {
       "chapter": 127,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace intro_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions displace intro_virtual_2020"
@@ -2961,12 +3494,16 @@
     {
       "chapter": 128,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions try blocks_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions try blocks_virtual_2020"
@@ -2982,12 +3519,16 @@
     {
       "chapter": 129,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games collisions practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games collisions practice choice_virtual_2020"
@@ -3003,12 +3544,16 @@
     {
       "chapter": 130,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD games collisions assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games collisions assessment_virtual_2020"
@@ -3024,12 +3569,16 @@
     {
       "chapter": 131,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games collisions challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games collisions challenge choice_virtual_2020"
@@ -3045,12 +3594,16 @@
     {
       "chapter": 132,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 function video_virtual_2020"
+        ],
         "progression": "Video: Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 function video_virtual_2020"
@@ -3066,12 +3619,16 @@
     {
       "chapter": 133,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Call Function_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Call Function_virtual_2020"
@@ -3087,12 +3644,16 @@
     {
       "chapter": 134,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Order Functions_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Order Functions_virtual_2020"
@@ -3108,12 +3669,16 @@
     {
       "chapter": 135,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Prediction Order of Create_virtual_2020"
+        ],
         "progression": "Predict"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Prediction Order of Create_virtual_2020"
@@ -3129,12 +3694,16 @@
     {
       "chapter": 136,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games functions practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games functions practice choice_virtual_2020"
@@ -3150,12 +3719,16 @@
     {
       "chapter": 137,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Write Reset_virtual_2020"
+        ],
         "progression": "Collector Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Write Reset_virtual_2020"
@@ -3171,12 +3744,16 @@
     {
       "chapter": 138,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add IsTouching_virtual_2020"
+        ],
         "progression": "Collector Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Add IsTouching_virtual_2020"
@@ -3192,12 +3769,16 @@
     {
       "chapter": 139,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add Change Background_virtual_2020"
+        ],
         "progression": "Collector Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Add Change Background_virtual_2020"
@@ -3213,12 +3794,16 @@
     {
       "chapter": 140,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games functions challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games functions challenge choice_virtual_2020"
@@ -3234,12 +3819,16 @@
     {
       "chapter": 141,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game intro_2018_2019_pilot_2020_virtual_2020"
+        ],
         "progression": "Design Your Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game intro_2018_2019_pilot_2020_virtual_2020"
@@ -3255,12 +3844,16 @@
     {
       "chapter": 142,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game variables_virtual_2020"
+        ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game variables_virtual_2020"
@@ -3276,12 +3869,16 @@
     {
       "chapter": 143,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game backgrounds_virtual_2020"
+        ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game backgrounds_virtual_2020"
@@ -3297,12 +3894,16 @@
     {
       "chapter": 144,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game display boards_virtual_2020"
+        ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game display boards_virtual_2020"
@@ -3318,12 +3919,16 @@
     {
       "chapter": 145,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game choose background_virtual_2020"
+        ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game choose background_virtual_2020"
@@ -3339,12 +3944,16 @@
     {
       "chapter": 146,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game animations_virtual_2020"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game animations_virtual_2020"
@@ -3360,12 +3969,16 @@
     {
       "chapter": 147,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game create sprites_virtual_2020"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game create sprites_virtual_2020"
@@ -3381,12 +3994,16 @@
     {
       "chapter": 148,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game sprite movement_virtual_2020"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game sprite movement_virtual_2020"
@@ -3402,12 +4019,16 @@
     {
       "chapter": 149,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game user controls_virtual_2020"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game user controls_virtual_2020"
@@ -3423,12 +4044,16 @@
     {
       "chapter": 150,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game interactions_virtual_2020"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game interactions_virtual_2020"
@@ -3444,12 +4069,16 @@
     {
       "chapter": 151,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games project review_virtual_2020"
+        ],
         "progression": "Review Your Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games project review_virtual_2020"
@@ -3465,12 +4094,16 @@
     {
       "chapter": 152,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games project share_virtual_2020"
+        ],
         "progression": "Congratulations!"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD games project share_virtual_2020"
@@ -5157,5 +5790,35 @@
         "script.name": "csd3-virtual"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

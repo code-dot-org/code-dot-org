@@ -4,13 +4,6 @@ import ProgressBox from '../ProgressBox';
 import firehoseClient from '../../../lib/util/firehose';
 import {connect} from 'react-redux';
 
-const styles = {
-  lessonBox: {
-    marginRight: 5,
-    marginLeft: 5
-  }
-};
-
 class ProgressBoxForLessonNumber extends Component {
   static propTypes = {
     completed: PropTypes.bool,
@@ -78,6 +71,13 @@ class ProgressBoxForLessonNumber extends Component {
     }
   }
 }
+
+const styles = {
+  lessonBox: {
+    marginRight: 5,
+    marginLeft: 5
+  }
+};
 
 export const UnconnectedProgressBoxForLessonNumber = ProgressBoxForLessonNumber;
 

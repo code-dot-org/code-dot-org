@@ -10,20 +10,6 @@ import {connect} from 'react-redux';
 import {setCurrentUserHasSeenStandardsReportInfo} from '@cdo/apps/templates/currentUserRedux';
 import {cstaStandardsURL} from './standardsConstants';
 
-const styles = {
-  description: {
-    color: color.dark_charcoal
-  },
-  boldText: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  }
-};
-
 /*
 Dialog that show the first time a teacher goes to the
 Standards view of the Progress Tab in Teacher Dashboard
@@ -106,6 +92,20 @@ class StandardsIntroDialog extends Component {
     );
   }
 }
+
+const styles = {
+  description: {
+    color: color.dark_charcoal
+  },
+  boldText: {
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  }
+};
 
 export const UnconnectedStandardsIntroDialog = StandardsIntroDialog;
 

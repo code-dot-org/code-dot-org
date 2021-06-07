@@ -5,17 +5,6 @@ import ScriptOverview from './ScriptOverview';
 import MiniViewTopRow from './MiniViewTopRow';
 import {hasGroups} from '@cdo/apps/code-studio/progressRedux';
 
-const styles = {
-  // For the detail view (without groups) we want some margins
-  detailView: {
-    margin: 10
-  },
-  // For group view, we want larger margins to match the gap between groups
-  groupView: {
-    margin: 20
-  }
-};
-
 /**
  * The course progress dropdown you get when you click the arrow in the header.
  */
@@ -52,6 +41,7 @@ class MiniView extends React.Component {
     } else {
       body = (
         <div
+          className="mini-view"
           style={{
             ...(!hasGroups && !isSummaryView && styles.detailView),
             ...(hasGroups && styles.groupView)
@@ -81,6 +71,17 @@ class MiniView extends React.Component {
     );
   }
 }
+
+const styles = {
+  // For the detail view (without groups) we want some margins
+  detailView: {
+    margin: 10
+  },
+  // For group view, we want larger margins to match the gap between groups
+  groupView: {
+    margin: 20
+  }
+};
 
 export const UnconnectedMiniView = MiniView;
 

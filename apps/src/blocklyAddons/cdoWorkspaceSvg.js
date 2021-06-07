@@ -12,6 +12,13 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     this.trashcan = new Blockly.Trashcan(this);
     var svgTrashcan = this.trashcan.createDom();
     this.flyout_.svgGroup_.appendChild(svgTrashcan);
+    this.pluginManager_.addPlugin({
+      id: 'trashcan',
+      plugin: this.trashcan,
+      weight: 1,
+      types: [Blockly.PluginManager.Type.POSITIONABLE]
+    });
+
     this.hideTrashcan();
   }
   addUnusedBlocksHelpListener(helpClickFunc) {
@@ -64,9 +71,9 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   }
 
   isReadOnly() {
-    return false; // TODO
+    return false; // TODO - used for feedback
   }
-  setEnableToolbox() {} // TODO
+  setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
   showTrashcan() {
     /**
      * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
@@ -101,29 +108,6 @@ WorkspaceSvg.prototype.blockSpaceEditor = {
   svgResize: () => {} // TODO
 };
 
-/** Force content to start in top-left corner, not scroll in all directions.
- * @override
- */
-WorkspaceSvg.getContentDimensionsBounded_ = function(ws, svgSize) {
-  const content = Blockly.WorkspaceSvg.getContentDimensionsExact_(ws);
-
-  // View height and width are both in pixels, and are the same as the SVG size.
-  const containerWidth = svgSize.width;
-  const containerHeight = svgSize.height;
-
-  // Add extra vertical space beneath the last block
-  const extraVerticalSpace = 100;
-  content.bottom += extraVerticalSpace;
-
-  // Workspace height is either the length of the blocks or the height of the container,
-  // whichever is greater.
-  const height = Math.max(content.bottom, containerHeight);
-
-  const dimensions = {
-    left: 0,
-    top: 0,
-    height: height,
-    width: containerWidth // No horizontal scroll
-  };
-  return dimensions;
+WorkspaceSvg.prototype.events = {
+  dispatchEvent: () => {} // TODO
 };

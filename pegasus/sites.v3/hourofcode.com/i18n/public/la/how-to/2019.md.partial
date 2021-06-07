@@ -6,7 +6,7 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# Cómo planificar tu Hora del Código
+# Cómo planificar tu Hora de Código
 
 ### Únete al movimiento e introduce a un grupo de estudiantes a su primer hora de ciencias de la computación con estos pasos. La Hora del Código es sencilla, ¡incluso para principiantes! Si quieres ayuda adicional, puedes encontrar un [voluntario local]({{ urls/volunteer_local }}) que te ayudará a organizar una Hora del Código en tu clase.
 
@@ -16,17 +16,18 @@ nav: how_to_nav
 
 ## 1. Mira este video explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## 2. Explora actividades y tutoriales
+## 2. Explorar Actividades y Tutoriales
 
 Ofrecemos divertidos [tutoriales guiados por estudiantes]({{ urls/learn }}) para todas las edades y niveles de experiencia. Es habitual que los estudiantes prueben tutoriales autodirigidos, aunque muchas actividades incluyen planes de lecciones para que los docentes guíen la discusión o también extiendan la actividad.
 
 Explora las actividades y decide con anticipación si deseas elegir un solo tutorial para todos tus estudiantes, o que cada niño elija el suyo.
 
-[<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
+[<img src="/images/fit-700/tutorials.png
+" />]({{ urls/learn }})
 
-## 3. Crea tu plan para el día
+## 3. Elabora tu Plan para el Día
 
-### Considera tus necesidades tecnológicas. ¡Las computadoras son opcionales!
+### Piensa en tus necesidades tecnológicas. ¡Las computadoras son opcionales!
 
 - Para tener una mejor experiencia con la Hora del Código, se recomienda contar con computadoras con conexión a Internet. Pero no necesitas una computadora para cada niño; incluso, puedes llevar adelante la Hora del Código sin computadoras. Para las [actividades sin conexión](/learn), solo tienes que filtrar la sección Tecnología en el aula para mostrar las opciones para “Sin computadoras o dispositivos”.
 - Asegúrate de probar los tutoriales en las computadoras o los dispositivos de los estudiantes para garantizar que el sonido y el video funcionen bien en los navegadores. ¿Tienes ancho de banda limitado? Muestra los videos a toda la clase para que los estudiantes no tengan que descargarlos. También puedes probar los tutoriales sin conexión.
@@ -118,6 +119,6 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 ## ¿Qué viene después de la Hora del Código?
 
-¡Las ciencias de la computación no tienen que terminar con la Hora del Código! Nuestro plan de estudios está en Internet y todos lo pueden usar, siempre.  [Descubre cómo](/beyond) llevar las ciencias de la computación a tu escuela y tus estudiantes.
+¡Las ciencias de la computación no tienen que terminar con la Hora del Código! Nuestro plan de estudios está en Internet y es de uso gratuito, para siempre.  [Descubre cómo](/beyond) llevar las ciencias de la computación a tu escuela y a tus estudiantes.
 
 {{ signup_button }}

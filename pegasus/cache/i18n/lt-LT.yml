@@ -662,6 +662,7 @@ lt-LT:
   coursee-2017_gradelevel: Amžius 8-12
   coursee-2018_gradelevel: Amžius 8-12
   coursee-2019_gradelevel: Amžius 8-12
+  coursee-2020_gradelevel: Amžius 8-12
   accelerated_gradelevel: Amžius 10-18
   codeorg_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   codeintl_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
@@ -946,3 +947,9 @@ lt-LT:
   hoc2018_dance_teacher_resources_tile2_button: Veikla be kompiuterių
   hoc2018_dance_amazon_about_future_engineer_button: Sužinok daugiau
   footer_powered_by_aws: 'Rėmėjas: Amazon Web Services'
+  footer_privacy_policy: Privatumo politika
+  footer_donate: Paremkite
+  footer_support: Pagalba
+  footer_terms: Sąlygos
+  ai_activity: Veikla
+  ai_description: Aprašymas

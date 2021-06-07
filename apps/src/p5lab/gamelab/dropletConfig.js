@@ -653,6 +653,14 @@ module.exports.blocks = [
     type: 'property'
   },
   {
+    func: 'alpha',
+    blockPrefix: spriteBlockPrefix,
+    category: 'Sprites',
+    tipPrefix: spriteMethodPrefix,
+    modeOptionName: '*.alpha',
+    type: 'property'
+  },
+  {
     func: 'setVelocity',
     blockPrefix: spriteBlockPrefix,
     category: 'Sprites',
@@ -1968,7 +1976,7 @@ module.exports.categories = {
   Advanced: {
     id: 'advanced',
     color: 'blue',
-    rgb: color.droplet_blue,
+    rgb: color.droplet_bright_blue,
     blocks: []
   }
 };

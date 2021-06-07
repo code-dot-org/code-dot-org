@@ -17,22 +17,7 @@ describe('LessonGroupInfoDialog', () => {
 
     expect(wrapper.find('h2')).to.have.lengthOf(1);
     expect(wrapper.contains('Lesson Group Name')).to.equal(true);
-
-    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(2);
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .at(0)
-        .props().markdown
-    ).to.equal('This is an awesome Lesson Group.');
-
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .at(1)
-        .props().markdown
-    ).to.equal('Who? What?');
-
+    expect(wrapper.find('LessonGroupInfo')).to.have.lengthOf(1);
     expect(wrapper.find('Button')).to.have.lengthOf(1);
   });
 });

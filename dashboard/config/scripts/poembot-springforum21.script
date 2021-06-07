@@ -1,0 +1,5 @@
+lesson_group 'lesson group', display_name: 'Poem Bot - Spring Forum 2021'
+lesson 'Programming Poem Bot', display_name: 'Programming Poem Bot', has_lesson_plan: false
+level 'haiku_prototype_choice1', progression: 'Poem Bot Prototype'
+level 'Poem Bot_Choice1_Background', progression: 'Build a Poem Bot'
+

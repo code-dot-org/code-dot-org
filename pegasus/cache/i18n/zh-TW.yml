@@ -170,7 +170,7 @@ zh-TW:
   personalize_certificate: 在證書上留下你的姓名（可以用中文喲）
   print_batch_certificates: 列印證書
   print_certificates: 列印所有證書
-  certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮品，以贊助你學習課程。"
+  certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮物，以贊助你學習課程。"
   print_ice_art_from_frozen: 列印冰雪奇緣教程的冰雕藝術
   want_a_blank_certificate_template: 你是否需要空白的證書範本，以寫下你的學生姓名？
   landscape_recommended_certificates: 列印證書時，建議你選擇**水平**列印。
@@ -538,7 +538,7 @@ zh-TW:
   volunteer_engineer_submission_intro_signup_markdown: 如果你是學習電腦科學的學生，或是軟體專業人士，請填寫下列資訊。必須年滿
     18 歲才能申請為志工。在本節填寫的所有訊息都會在[志工地圖](/volunteer/local)上公開顯示。_*_為必填。
   volunteer_engineer_submission_intro_links: 需要些志工嗎？在我們的<a href="%{volunteer_local}">志工地圖</a>上尋找本地有哪些志願者。
-  volunteer_engineer_submission_intro_links_markdown: 你是需要些志工的教師嗎？在我們的[志工地圖](%{volunteer_local})上尋找本地有哪些志願者。
+  volunteer_engineer_submission_intro_links_markdown: 你是需要些志工的教師嗎？在我們的[志工地圖](%{volunteer_local})上尋找在地有哪些志願者。
   volunteer_engineer_submission_update_information: 更新你的個人資訊
   volunteer_engineer_submission_header_shared: 在志工地圖上分享給老師的資訊
   volunteer_engineer_submission_field_name: 名稱
@@ -998,7 +998,7 @@ zh-TW:
   pre-express-2019_name: 學前兒童的速學課程（2019）
   express-2020_name: 速學課程（2019）
   pre-express-2020_name: 學前兒童的速學課程（2020）
-  csd2_name: 單元 2：Web 開發
+  csd2_name: 單元 2：網頁開發
   csd3_name: 單元 3：動畫與遊戲
   accelerated_name: 速成課程
   express_name: 速學課程
@@ -1098,6 +1098,12 @@ zh-TW:
   coursed-2019_gradelevel: 年級 8+
   coursee-2019_gradelevel: 年齡 8-12
   coursef-2019_gradelevel: 年齡 9-13
+  coursea-2020_gradelevel: 年齡 4-7
+  courseb-2020_gradelevel: 年齡 5-8
+  coursec-2020_gradelevel: 年齡 6-10
+  coursed-2020_gradelevel: 年級 8+
+  coursee-2020_gradelevel: 年齡 8-12
+  coursef-2020_gradelevel: 年齡 9-13
   accelerated_gradelevel: 年齡 10-18
   codeorg_platformtext: 主流的瀏覽器、手機、平板
   codeintl_platformtext: 主流的瀏覽器、手機、平板
@@ -1226,6 +1232,14 @@ zh-TW:
   coursed-2019_shortdescription_congrats: 快速地導覽在課程 C 的概念，進一步的介紹演算法、巢狀迴圈、條件判斷式…等的使用。
   coursee-2019_shortdescription_congrats: 快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。
   coursef-2019_shortdescription_congrats: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+  coursea-2020_shortdescription_congrats: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+  courseb-2020_shortdescription_congrats: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+  coursec-2020_shortdescription_congrats: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
+  coursed-2020_shortdescription_congrats: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
+  coursee-2020_shortdescription_congrats: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
+    2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
+  coursef-2020_shortdescription_congrats: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
+    2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
   codeorg_longdescription: 使用拖曳程式積木的方式來學習計算機科學的基本概念。這是一個遊戲式、自學式的教程，由比爾 · 蓋茨、馬克 · 佐柏克、憤怒鳥和植物大戰僵屍所主演。在這個課程中您將學到重複迴圈、條件判斷、基礎的演算法。共有
     34 種語言可用。
   codeintl_longdescription: 使用拖曳程式積木的方式來學習計算機科學的基本概念。這是一個遊戲式、自學式的教程，由比爾 · 蓋茨、馬克 ·
@@ -1540,6 +1554,8 @@ zh-TW:
   header_legal_privacy: 隱私政策
   header_legal_tos: 服務條款
   header_tutorials: 所有教程
+  header_screen_reader_hamburger: 選單
+  header_screen_reader_help: 說明選單
   app_lab_documentation: App Lab 說明文件
   app_lab_tutorials: App Lab 教程
   game_lab_documentation: Game Lab 說明文件
@@ -1725,6 +1741,8 @@ zh-TW:
     target='_blank'>了解更多</a>
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
     Future Engineer* 是一項由童年到職業的全面計畫，旨在鼓勵、教育和培養低收入或弱勢的兒童和青少年投身電腦科學事業。[瞭解更多](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: 如果你是法國的學生或教師，請瀏覽 [Amazon
+    Future Engineer - France](%{amazon_future_engineer_france_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: 進一步瞭解亞馬遜未來工程師（Amazon
     Future Engineer）
   hoc2018_dance_amazon_about_future_engineer_title: 有關亞馬遜未來工程師計畫 (Amazon Future Engineer)
@@ -1777,7 +1795,30 @@ zh-TW:
   homepage_slot_text_link_do_hoc: 試試「一小時玩程式」！
   homepage_slot_text_link_express_course: 嘗試速學課程吧！
   page_not_available_title: 沒有可用的頁面
-  page_not_available_description: 我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎mail 給我們[support@code.org](%{support_email_link})，告知您的需求
+  page_not_available_description: 我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎寄信給我們[support@code.org](%{support_email_link})，告知您的需求
   page_not_available_button: 返回主頁
+  hoc2020_mc_available_code_org: 可於 Code.org 取得
+  hoc2020_mc_available_mee: 可於 Minecraft 教育版取得
+  hoc2020_mc_mee_description: 現在可於 Windows、Mac、Chromebook 及 iPad 的 Minecraft 教育版取得全新
+    Minecraft 一小時玩程式教程。學習基本編程，與學生探討多樣性和包容性。取得免費資源，包括教學計劃、影片、計算機科學課程、公平課程和教師培訓。
   footer_powered_by_aws: Powered by Amazon Web Services
+  footer_built_on_github: 構建於 Microsoft 的 Github
+  codebytes_skinny_banner_title: 12 月 7–11 日，加入我們 CodeBytes 的迷你課程直播。
+  codebytes_skinny_banner_description: '每天加入我們 CS 教育週的 CodeBytes，20 分鐘的計算機科學互動課程。每天兩次直播，CodeBytes
+    是學生參與虛擬 #HourOfCode 的好方法！'
   codebytes_skinny_banner_english_only: 僅有英語版本
+  codebytes_skinny_banner_learn: 前往 [code.org/codebytes](%{code_bytes_url}) 了解更多。
+  footer_privacy_policy: 隱私政策
+  footer_privacy_policy_updated: 隱私政策（更新）
+  footer_about: 關於
+  footer_partners: 合作夥伴
+  footer_blog: 網誌
+  footer_donate: 贊助
+  footer_store: 商店
+  footer_support: 支援
+  footer_terms: 條款
+  ai_for_oceans: 在海洋中使用的 AI
+  ai_in_partnership_with: 合作夥伴
+  ai_microsoft_thanks: 感謝Microsoft支持我們的願景與使命，以確保每位孩童都有機會學習電腦科學及掌握在21世紀獲得成功的技能。
+  ai_activity: 活動
+  ai_description: 描述

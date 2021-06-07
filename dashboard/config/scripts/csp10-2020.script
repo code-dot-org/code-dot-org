@@ -4,66 +4,69 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit10/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit10/standards/"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit10/{LESSON}'
-announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"", "details"=>"Are your students planning to take the AP Exam? This unit covers content that will be assessed on the exam. Check out the standards covered in this unit.", "link"=>"https://curriculum.code.org/csp-20/unit10/standards/", "type"=>"information", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Student-only"}]
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_unit10_2020', display_name: 'Unit 10: Cybersecurity and Global Impacts'
-lesson 'Project - Innovation Simulation Part 1', display_name: 'Project - Innovation Simulation Part 1'
+lesson 'Project - Innovation Simulation Part 1', display_name: 'Project - Innovation Simulation Part 1', has_lesson_plan: true
 level 'CSP U10L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10 L01 CFU innovations', progression: 'Check For Understanding', assessment: true
 
-lesson 'Project - Innovation Simulation Part 2', display_name: 'Project - Innovation Simulation Part 2'
+lesson 'Project - Innovation Simulation Part 2', display_name: 'Project - Innovation Simulation Part 2', has_lesson_plan: true
 level 'CSP U10L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10 L02 CFU innovations part 2', progression: 'Check For Understanding', assessment: true
 
-lesson 'Data Policies and Privacy', display_name: 'Data Policies and Privacy'
+lesson 'Data Policies and Privacy', display_name: 'Data Policies and Privacy', has_lesson_plan: true
 level 'CSP U10L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10L3 CFU Why Collect PII', progression: 'Check For Understanding', assessment: true
 
-lesson 'The Value of Privacy', display_name: 'The Value of Privacy'
+lesson 'The Value of Privacy', display_name: 'The Value of Privacy', has_lesson_plan: true
 level 'CSP U10L4 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Project - Innovation Simulation Part 3', display_name: 'Project - Innovation Simulation Part 3'
+lesson 'Project - Innovation Simulation Part 3', display_name: 'Project - Innovation Simulation Part 3', has_lesson_plan: true
 level 'CSP U10L5 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Security Risks Part 1', display_name: 'Security Risks Part 1'
+lesson 'Security Risks Part 1', display_name: 'Security Risks Part 1', has_lesson_plan: true
 level 'CSP U10L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP 20-21 Keylogging', progression: 'Keylogging'
 level 'CSP 20-21 Phishing', progression: 'Phishing'
 level 'CSP 20-21 Rogue Access Points', progression: 'Malware'
 level 'U10 L07 CFU security risks', progression: 'Check For Understanding', assessment: true
 
-lesson 'Security Risks Part 2', display_name: 'Security Risks Part 2'
+lesson 'Security Risks Part 2', display_name: 'Security Risks Part 2', has_lesson_plan: true
 level 'CSP U10L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10 L08 CFU security risks', progression: 'Check For Understanding', assessment: true
 
-lesson 'Project: Innovation Simulation Part 4', display_name: 'Project: Innovation Simulation Part 4'
+lesson 'Project: Innovation Simulation Part 4', display_name: 'Project: Innovation Simulation Part 4', has_lesson_plan: true
 level 'CSP U10L8 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Protecting Data Part 1', display_name: 'Protecting Data Part 1'
+lesson 'Protecting Data Part 1', display_name: 'Protecting Data Part 1', has_lesson_plan: true
 level 'CSP U10L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'Crack a Caesar Cipher_2020', progression: 'Encryption Widgets'
 level 'Crack Random Substitution_2020', progression: 'Encryption Widgets'
 level 'U10L9 CFU public key', progression: 'Check For Understanding', assessment: true
 
-lesson 'Protecting Data Part 2', display_name: 'Protecting Data Part 2'
+lesson 'Protecting Data Part 2', display_name: 'Protecting Data Part 2', has_lesson_plan: true
 level 'CSP U10L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10L10 CFU MFA', progression: 'Check For Understanding', assessment: true
 
-lesson 'Project: Innovation Simulation Part 5', display_name: 'Project: Innovation Simulation Part 5'
+lesson 'Project: Innovation Simulation Part 5', display_name: 'Project: Innovation Simulation Part 5', has_lesson_plan: true
 level 'CSP U10L11 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Project: Innovation Simulation Part 6', display_name: 'Project: Innovation Simulation Part 6'
+lesson 'Project: Innovation Simulation Part 6', display_name: 'Project: Innovation Simulation Part 6', has_lesson_plan: true
 level 'CSP U10L12 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Project: Innovation Simulation Part 7', display_name: 'Project: Innovation Simulation Part 7'
+lesson 'Project: Innovation Simulation Part 7', display_name: 'Project: Innovation Simulation Part 7', has_lesson_plan: true
 level 'CSP U10L13 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Lesson 14: Unit Assessment Day', display_name: 'Lesson 14: Unit Assessment Day', lockable: true
+lesson 'Lesson 14: Unit Assessment Day', display_name: 'Unit Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP U10L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP 20-21 Unit 10 Assessment', progression: 'Unit 10 Exam', assessment: true
+
+lesson_group 'cspSurvey2020', display_name: 'Post-Course Survey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: false
+level 'csp-post-survey-2020-markdown-with-link-to-survey', progression: 'Post-Course Survey Instructions', assessment: true
 

@@ -8,6 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:54:53 UTC",
     "seeding_key": {
       "script.name": "csp-online-test"
     }
@@ -56,6 +57,7 @@
       "name": "Unit 5 Overview",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -70,6 +72,7 @@
       "name": "Event Driven Programming",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -84,6 +87,7 @@
       "name": "Variables and Strings",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -98,6 +102,7 @@
       "name": "Conditionals and Boolean Logic",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -112,6 +117,7 @@
       "name": "While Loops and Introduction to Arrays",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -126,6 +132,7 @@
       "name": "Processing Arrays and Functions with Return Values",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -140,6 +147,7 @@
       "name": "Group Work and Peer Learning",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -154,6 +162,7 @@
       "name": "Balancing Teachers and Tools",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -168,6 +177,7 @@
       "name": "Discovery Learning",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
       },
@@ -182,6 +192,7 @@
       "name": "Measuring Student Learning",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
       },
@@ -192,15 +203,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "What's inside and how is it organized?"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "What's inside and how is it organized?"
@@ -216,11 +237,15 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Unit 5"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Introduction to Unit 5"
@@ -236,11 +261,15 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 5 Teaching Philosophy and Commentary"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Unit 5 Teaching Philosophy and Commentary"
@@ -256,11 +285,15 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 5 Concepts and AP Assessments"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Unit 5 Concepts and AP Assessments"
@@ -276,11 +309,15 @@
     {
       "chapter": 5,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Practice Performance Task in Unit 5"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Practice Performance Task in Unit 5"
@@ -296,11 +333,15 @@
     {
       "chapter": 6,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "5.1 - 5.3 Lesson Connections"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "5.1 - 5.3 Lesson Connections"
@@ -316,11 +357,15 @@
     {
       "chapter": 7,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design Mode Overview"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Design Mode Overview"
@@ -336,11 +381,15 @@
     {
       "chapter": 8,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Events Overview"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Events Overview"
@@ -356,11 +405,15 @@
     {
       "chapter": 9,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Project Breakdown: Multi-Screen App"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Project Breakdown: Multi-Screen App"
@@ -376,11 +429,15 @@
     {
       "chapter": 10,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L1 - 3: Teaching and Student Support Plan"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L1 - 3: Teaching and Student Support Plan"
@@ -396,11 +453,15 @@
     {
       "chapter": 11,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "5.4 - 5.6 Lesson Connections"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "5.4 - 5.6 Lesson Connections"
@@ -416,11 +477,15 @@
     {
       "chapter": 12,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Variables Overview"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Variables Overview"
@@ -436,11 +501,15 @@
     {
       "chapter": 13,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Project Breakdown: Clicker Game"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Project Breakdown: Clicker Game"
@@ -456,11 +525,15 @@
     {
       "chapter": 14,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Strings Overview"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Strings Overview"
@@ -476,11 +549,15 @@
     {
       "chapter": 15,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L4 - 6: Teaching and Student Support Plan"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L4 - 6: Teaching and Student Support Plan"
@@ -496,11 +573,15 @@
     {
       "chapter": 16,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "5.7- 5.10 Lesson Connections"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "5.7- 5.10 Lesson Connections"
@@ -516,11 +597,15 @@
     {
       "chapter": 17,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Boolean Logic and Expression Overview"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Boolean Logic and Expression Overview"
@@ -536,11 +621,15 @@
     {
       "chapter": 18,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Conditionals Overview"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Conditionals Overview"
@@ -556,11 +645,15 @@
     {
       "chapter": 19,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Project Breakdown: Color Sleuth"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Project Breakdown: Color Sleuth"
@@ -576,11 +669,15 @@
     {
       "chapter": 20,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L7 - 10: Teaching and Student Support Plan"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L7 - 10: Teaching and Student Support Plan"
@@ -596,11 +693,15 @@
     {
       "chapter": 21,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "5.11 - 5.14 Lesson Connections"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "5.11 - 5.14 Lesson Connections"
@@ -616,11 +717,15 @@
     {
       "chapter": 22,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "While Loops Overview"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "While Loops Overview"
@@ -636,11 +741,15 @@
     {
       "chapter": 23,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Arrays Overview"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Arrays Overview"
@@ -656,11 +765,15 @@
     {
       "chapter": 24,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Project Breakdown: Image Scroller"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Project Breakdown: Image Scroller"
@@ -676,11 +789,15 @@
     {
       "chapter": 25,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L11 - 14: Teaching and Student Support Plan"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L11 - 14: Teaching and Student Support Plan"
@@ -696,11 +813,15 @@
     {
       "chapter": 26,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "5.15 - 5.17 Lesson Connections"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "5.15 - 5.17 Lesson Connections"
@@ -716,11 +837,15 @@
     {
       "chapter": 27,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Processing Arrays"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Processing Arrays"
@@ -736,11 +861,15 @@
     {
       "chapter": 28,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Functions that Return Values"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Functions that Return Values"
@@ -756,11 +885,15 @@
     {
       "chapter": 29,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Project Breakdown: Building a Canvas Painter"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Project Breakdown: Building a Canvas Painter"
@@ -776,11 +909,15 @@
     {
       "chapter": 30,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L15 - 17: Teaching and Student Support Plan"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L15 - 17: Teaching and Student Support Plan"
@@ -796,11 +933,15 @@
     {
       "chapter": 31,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Overview: Group Work and Peer Learning"
@@ -816,11 +957,15 @@
     {
       "chapter": 32,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Collaborative Learning and Group Work: Description and Strategies"
@@ -836,11 +981,15 @@
     {
       "chapter": 33,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Official Peer Instruction Blog"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "The Official Peer Instruction Blog"
@@ -856,11 +1005,15 @@
     {
       "chapter": 34,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "the Journal of Peer Learning"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "the Journal of Peer Learning"
@@ -876,11 +1029,15 @@
     {
       "chapter": 35,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 5 Teaching Practice Plan: Group Work and Peer Learning"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Group Work and Peer Learning"
@@ -896,11 +1053,15 @@
     {
       "chapter": 36,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Overview: Balancing Teachers and Tools"
@@ -916,11 +1077,15 @@
     {
       "chapter": 37,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Classroom Management Tips for School Computer Labs"
@@ -936,11 +1101,15 @@
     {
       "chapter": 38,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Considerations for the 1-to-1 Classroom"
@@ -956,11 +1125,15 @@
     {
       "chapter": 39,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 5 Teaching Practice Plan: Balancing Teacher and Tools"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Balancing Teacher and Tools"
@@ -976,11 +1149,15 @@
     {
       "chapter": 40,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Discovery Learning"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Overview: Discovery Learning"
@@ -996,11 +1173,15 @@
     {
       "chapter": 41,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Discovery learning definition and history"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Discovery learning definition and history"
@@ -1016,11 +1197,15 @@
     {
       "chapter": 42,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Discovery learning techniques"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Discovery learning techniques"
@@ -1036,11 +1221,15 @@
     {
       "chapter": 43,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 5 Teaching Practice Plan: Discovery Learning"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Discovery Learning"
@@ -1056,11 +1245,15 @@
     {
       "chapter": 44,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Capturing Student Learning"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Overview: Capturing Student Learning"
@@ -1076,11 +1269,15 @@
     {
       "chapter": 45,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "What is the difference between formative and summative assessment?"
@@ -1096,11 +1293,15 @@
     {
       "chapter": 46,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Designing Assessment Questions"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Designing Assessment Questions"
@@ -1116,11 +1317,15 @@
     {
       "chapter": 47,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Classroom Assessment Techniques"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Classroom Assessment Techniques"
@@ -1136,11 +1341,15 @@
     {
       "chapter": 48,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 5 Teaching Practice Plan: Assessing Student Learning"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Unit 5 Teaching Practice Plan: Assessing Student Learning"
@@ -1683,5 +1892,35 @@
         "script.name": "csp-online-test"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

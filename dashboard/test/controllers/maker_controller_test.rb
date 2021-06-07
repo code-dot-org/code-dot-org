@@ -3,6 +3,8 @@ require 'test_helper'
 class MakerControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     @student = create :student
     @teacher = create :teacher
@@ -295,6 +297,28 @@ class MakerControllerTest < ActionController::TestCase
     application = CircuitPlaygroundDiscountApplication.find_by(user_id: @teacher)
 
     refute application.full_discount
+  end
+
+  test "display_code: does not display secret code if no current_user" do
+    get :display_code
+    assert_select "#maker_code", count: 1, value: nil
+  end
+
+  test "display_code: does not display secret code if no matching credential is found" do
+    user = create :user, :clever_sso_provider
+    sign_in user
+
+    get :display_code
+    assert_select "#maker_code", count: 1, value: nil
+  end
+
+  test "display_code: displays secret code if matching credential is found" do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    user = create :user, :google_sso_provider
+    sign_in user
+
+    get :display_code
+    assert_select "#maker_code", count: 1, value: /.+/
   end
 
   test "complete: fails if not given a signature" do

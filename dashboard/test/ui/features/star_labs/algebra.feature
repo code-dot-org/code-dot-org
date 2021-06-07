@@ -7,7 +7,7 @@ Background:
 Scenario:
   Given I am a student
   And I open my eyes to test "embedded ninjacat"
-  When I am on "http://studio.code.org/s/algebra/stage/1/puzzle/2?noautoplay=true"
+  When I am on "http://studio.code.org/s/algebra/lessons/1/levels/2?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element "#runButton" is visible
@@ -23,7 +23,7 @@ Scenario:
 Scenario:
   Given I am a student
   And I open my eyes to test "calc expression evaluation"
-  When I am on "http://studio.code.org/s/algebra/stage/2/puzzle/6?noautoplay=true"
+  When I am on "http://studio.code.org/s/algebra/lessons/2/levels/6?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And I've initialized the workspace with the solution blocks
@@ -38,7 +38,7 @@ Scenario:
 Scenario:
   Given I am a student
   And I open my eyes to test "calc variable"
-  When I am on "http://studio.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true"
+  When I am on "http://studio.code.org/s/algebra/lessons/6/levels/4?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And I press the first "#modalEditorClose > .blocklyText" element

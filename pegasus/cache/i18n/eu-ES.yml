@@ -886,6 +886,7 @@ eu-ES:
   coursee-2017_gradelevel: 8 eta 12 urte bitartean
   coursee-2018_gradelevel: 8 eta 12 urte bitartean
   coursee-2019_gradelevel: 8 eta 12 urte bitartean
+  coursee-2020_gradelevel: 8 eta 12 urte bitartean
   accelerated_gradelevel: 10-18 bitarteko adina
   codeorg_platformtext: Nabigatzaile modernoak, smatphoneak, tabletak
   codeintl_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
@@ -1506,3 +1507,10 @@ eu-ES:
   hoc2018_dance_teacher_resources_tile2_button: Lineaz kanpoko ekintza
   hoc2018_dance_amazon_about_future_engineer_button: Ikasi gehiago
   footer_powered_by_aws: Amazon Web Servicesek sostengatua
+  footer_privacy_policy: Pribatutasun politika
+  footer_about: Code.org-i buruz
+  footer_donate: Diruz lagundu
+  footer_support: Laguntza
+  footer_terms: Baldintzak
+  ai_activity: Aktibitatea
+  ai_description: Deskribapena

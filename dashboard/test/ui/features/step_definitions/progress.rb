@@ -9,7 +9,12 @@ def color_string(key)
   }[key.to_sym]
 end
 
-def verify_progress(selector, test_result)
+# Verifies that the given selector (which should be a progress bubble) is visible
+# and displays the expected test_result. This function accounts for the asynchronous
+# nature of progress bubbles and can be slow, especially when verifying that a bubble
+# displays 'not_tried'. Passing no_wait=true skips all waits and immediately verifies
+# the bubble.
+def verify_progress(selector, test_result, no_wait=false)
   if test_result == 'perfect'
     background_color = color_string('perfect')
     border_color = color_string('perfect')
@@ -26,11 +31,39 @@ def verify_progress(selector, test_result)
     background_color = color_string('not_tried')
     border_color = color_string('assessment')
   end
-  steps %{
-    And I wait until element "#{selector}" is in the DOM
-    And element "#{selector}" has css property "background-color" equal to "#{background_color}"
-    And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
-  }
+
+  if no_wait
+    steps %{
+      And element "#{selector}" is visible
+      And element "#{selector}" has css property "background-color" equal to "#{background_color}"
+      And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
+    }
+  else
+    # The data for progress bubbles can be loaded synchronously or asynchronously.
+    # For 'not_tried', it is difficult to tell whether the bubble is just in its
+    # default state or if progress data was loaded and the bubble was explicitly
+    # set to 'not_tried'. In this case, we'll just wait a bit before checking to
+    # reduce the likelihood of false positives.
+    # For all other test_result values, we know that progress has been loaded if
+    # the bubble changes color so we can just poll for the expected color.
+    if test_result == 'not_tried'
+      steps %{
+        And I wait for 2 seconds
+        And I wait until jQuery Ajax requests are finished
+        And I wait until element "#{selector}" is visible
+        And element "#{selector}" has css property "background-color" equal to "#{background_color}"
+        And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
+      }
+    else
+      steps %{ And I wait until element "#{selector}" is visible }
+      wait_short_until do
+        steps %{
+          And element "#{selector}" has css property "background-color" equal to "#{background_color}"
+          And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
+        }
+      end
+    end
+  end
 end
 
 def verify_bubble_type(selector, type)
@@ -48,13 +81,7 @@ def verify_bubble_type(selector, type)
 end
 
 def header_bubble_selector(level_num)
-  ".header_level .react_stage a:nth(#{level_num - 1}) .uitest-bubble"
-end
-
-Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
-  wait_short_until do
-    verify_progress(header_bubble_selector(level.to_i), test_result)
-  end
+  ".header_level .react_stage a:nth(#{level_num - 1}) .progress-bubble"
 end
 
 Then /^I verify the bubble for level (\d+) is an? (concept|activity) bubble/ do |level, type|
@@ -70,20 +97,25 @@ Then /^I open the progress drop down of the current page$/ do
   }
 end
 
-Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
-  selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) .uitest-bubble"
+Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
+  selector = header_bubble_selector(level.to_i)
   verify_progress(selector, test_result)
 end
 
-Then /^I verify progress for stage (\d+) level (\d+) is "([^"]*)"/ do |stage, level, test_result|
-  selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) .uitest-bubble"
+Then /^I verify progress in the drop down of the current page is "([^"]*)" for lesson (\d+) level (\d+)/ do |test_result, lesson, level|
+  selector = "tbody tr:nth(#{lesson.to_i - 1}) a:contains(#{level.to_i}) .progress-bubble"
   verify_progress(selector, test_result)
+end
+
+Then /^I verify progress for lesson (\d+) level (\d+)( in detail view)? is "([^"]*)"( without waiting)?/ do |lesson, level, detail_view, test_result, without_waiting|
+  selector = detail_view.nil? ?
+    ".uitest-summary-progress-table .uitest-summary-progress-row:nth(#{lesson.to_i - 1}) .progress-bubble:nth(#{level.to_i - 1})" :
+    ".uitest-detail-progress-table .uitest-progress-lesson:nth(#{lesson.to_i - 1}) .progress-bubble:nth(#{level.to_i - 1})"
+  verify_progress(selector, test_result, !!without_waiting)
 end
 
 Then /^I verify progress for the sublevel with selector "([^"]*)" is "([^"]*)"/ do |selector, test_result|
-  wait_short_until do
-    verify_progress(selector, test_result)
-  end
+  verify_progress(selector, test_result)
 end
 
 # PLC Progress

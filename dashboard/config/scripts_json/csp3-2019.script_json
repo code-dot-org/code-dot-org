@@ -46,6 +46,7 @@
     },
     "new_name": null,
     "family_name": "csp3",
+    "serialized_at": "2021-05-03 23:55:33 UTC",
     "seeding_key": {
       "script.name": "csp3-2019"
     }
@@ -94,6 +95,7 @@
       "name": "The Need For Programming Languages",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -108,6 +110,7 @@
       "name": "The Need for Algorithms",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -122,6 +125,7 @@
       "name": "Creativity in Algorithms",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -136,6 +140,7 @@
       "name": "Using Simple Commands",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -150,6 +155,7 @@
       "name": "Creating Functions",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -164,6 +170,7 @@
       "name": "Functions and Top-Down Design",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -178,6 +185,7 @@
       "name": "APIs and Function Parameters",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -192,6 +200,7 @@
       "name": "Creating functions with Parameters",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -206,6 +215,7 @@
       "name": "Looping and Random Numbers",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -220,6 +230,7 @@
       "name": "Practice PT - Design a Digital Scene",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -234,6 +245,7 @@
       "name": "Unit 3 Chapter 1 Assessment",
       "absolute_position": 11,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -248,6 +260,7 @@
       "name": "CS Principles Post Course survey",
       "absolute_position": 12,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -258,15 +271,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L01 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L01 SFLP_2019"
@@ -282,12 +305,16 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L01 Assessment1_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L01 Assessment1_2019"
@@ -303,12 +330,16 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L01 Assessment3_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L01 Assessment3_2019"
@@ -324,12 +355,16 @@
     {
       "chapter": 4,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-4-levelgroup-U3Ch1_2018_2019"
+        ],
         "progression": "Quick Check-In"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pulse-check-survey-4-levelgroup-U3Ch1_2018_2019"
@@ -345,11 +380,15 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L02 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L02 SFLP_2019"
@@ -365,11 +404,15 @@
     {
       "chapter": 6,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L03 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L03 SFLP_2019"
@@ -385,11 +428,15 @@
     {
       "chapter": 7,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L04 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L04 SFLP_2019"
@@ -405,11 +452,15 @@
     {
       "chapter": 8,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_turtle_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_applab_turtle_2019"
@@ -425,12 +476,16 @@
     {
       "chapter": 9,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2 Using Simple Commands_2019"
+        ],
         "progression": "Using Simple Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L2 Using Simple Commands_2019"
@@ -446,12 +501,16 @@
     {
       "chapter": 10,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2_TurtleSquare_right_2019"
+        ],
         "progression": "Using Simple Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L2_TurtleSquare_right_2019"
@@ -467,12 +526,16 @@
     {
       "chapter": 11,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2_Turtle3by3Grid_2019"
+        ],
         "progression": "Challenge: Draw a 3x3 Grid Using Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L2_Turtle3by3Grid_2019"
@@ -488,12 +551,16 @@
     {
       "chapter": 12,
       "position": 6,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L02 Assessment_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L02 Assessment_2019"
@@ -509,12 +576,16 @@
     {
       "chapter": 13,
       "position": 7,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L02 Free Response Getting Started_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L02 Free Response Getting Started_2019"
@@ -530,12 +601,16 @@
     {
       "chapter": 14,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_square_v_rect_FR_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_U3_square_v_rect_FR_2019"
@@ -551,12 +626,16 @@
     {
       "chapter": 15,
       "position": 9,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L02 Free Response Wrap Up_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L02 Free Response Wrap Up_2019"
@@ -572,11 +651,15 @@
     {
       "chapter": 16,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L05 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L05 SFLP_2019"
@@ -592,12 +675,16 @@
     {
       "chapter": 17,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_functions_2019"
+        ],
         "progression": "Defining and Calling Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_applab_functions_2019"
@@ -613,12 +700,16 @@
     {
       "chapter": 18,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Define and use turnAround_2019"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 Define and use turnAround_2019"
@@ -634,12 +725,16 @@
     {
       "chapter": 19,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Draw a T using turnAround_2019"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 Draw a T using turnAround_2019"
@@ -655,12 +750,16 @@
     {
       "chapter": 20,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 define turnRight and draw a rectangle_2019"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 define turnRight and draw a rectangle_2019"
@@ -676,12 +775,16 @@
     {
       "chapter": 21,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Abstraction in Programming 2_2018_2019"
+        ],
         "progression": "Abstraction in Programming"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Abstraction in Programming 2_2018_2019"
@@ -697,12 +800,16 @@
     {
       "chapter": 22,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 - draw rect function_2019"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 - draw rect function_2019"
@@ -718,12 +825,16 @@
     {
       "chapter": 23,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 - draw step_2019"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 - draw step_2019"
@@ -739,12 +850,16 @@
     {
       "chapter": 24,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Three Steps_2019"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 Three Steps_2019"
@@ -760,12 +875,16 @@
     {
       "chapter": 25,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 draw diamond_2019"
+        ],
         "progression": "Challenge: Draw a Diamond Using Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 draw diamond_2019"
@@ -781,12 +900,16 @@
     {
       "chapter": 26,
       "position": 11,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L03 - multiselect - properties of functions_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 - multiselect - properties of functions_2018_2019"
@@ -802,12 +925,16 @@
     {
       "chapter": 27,
       "position": 12,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L03 Assessment_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 Assessment_2018_2019"
@@ -823,12 +950,16 @@
     {
       "chapter": 28,
       "position": 13,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L03 Free Response Wrap Up_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L03 Free Response Wrap Up_2019"
@@ -844,12 +975,16 @@
     {
       "chapter": 29,
       "position": 14,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_plan_code_FR_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_U3_plan_code_FR_2019"
@@ -865,11 +1000,15 @@
     {
       "chapter": 30,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L06 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L06 SFLP_2019"
@@ -885,12 +1024,16 @@
     {
       "chapter": 31,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L04 - snowflake_2019"
+        ],
         "progression": "Using Functions with Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L04 - snowflake_2019"
@@ -906,12 +1049,16 @@
     {
       "chapter": 32,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L04 - 3 by 3 with functions_2019"
+        ],
         "progression": "Using Functions with Turtle Commands"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L04 - 3 by 3 with functions_2019"
@@ -927,12 +1074,16 @@
     {
       "chapter": 33,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3-AP-Practice-FR-design-process_2019"
+        ],
         "progression": "AP Practice Response - Design Process"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3-AP-Practice-FR-design-process_2019"
@@ -948,12 +1099,16 @@
     {
       "chapter": 34,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L04 Assessment1_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L04 Assessment1_2019"
@@ -969,12 +1124,16 @@
     {
       "chapter": 35,
       "position": 6,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L04 Assessment2_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L04 Assessment2_2018_2019"
@@ -990,12 +1149,16 @@
     {
       "chapter": 36,
       "position": 7,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L04 Free Response Wrap Up_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L04 Free Response Wrap Up_2019"
@@ -1011,11 +1174,15 @@
     {
       "chapter": 37,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L07 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L07 SFLP_2019"
@@ -1031,12 +1198,16 @@
     {
       "chapter": 38,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 - moveForwardwithParams_2019"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 - moveForwardwithParams_2019"
@@ -1052,12 +1223,16 @@
     {
       "chapter": 39,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 1 triangle_2019"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 1 triangle_2019"
@@ -1073,12 +1248,16 @@
     {
       "chapter": 40,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 2 purple square_2019"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 2 purple square_2019"
@@ -1094,12 +1273,16 @@
     {
       "chapter": 41,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 3 fill pink_2019"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 3 fill pink_2019"
@@ -1115,12 +1298,16 @@
     {
       "chapter": 42,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 4 bullseye_2019"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 4 bullseye_2019"
@@ -1136,12 +1323,16 @@
     {
       "chapter": 43,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 6 squiggles_2019"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 6 squiggles_2019"
@@ -1157,12 +1348,16 @@
     {
       "chapter": 44,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 5 overlapping circles_2019"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 5 overlapping circles_2019"
@@ -1178,12 +1373,16 @@
     {
       "chapter": 45,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 7 smiley face_2019"
+        ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 7 smiley face_2019"
@@ -1199,12 +1398,16 @@
     {
       "chapter": 46,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 8 make your own_2019"
+        ],
         "progression": "Make Your Own Turtle Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Challenge 8 make your own_2019"
@@ -1220,12 +1423,16 @@
     {
       "chapter": 47,
       "position": 11,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3-AP-Practice-FR-score-abstraction-response_2019"
+        ],
         "progression": "AP Practice Response - Score a student response"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3-AP-Practice-FR-score-abstraction-response_2019"
@@ -1241,12 +1448,16 @@
     {
       "chapter": 48,
       "position": 12,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L06 Assessment2_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Assessment2_2018_2019"
@@ -1262,12 +1473,16 @@
     {
       "chapter": 49,
       "position": 13,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L06-API-multichoice_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06-API-multichoice_2018_2019"
@@ -1283,12 +1498,16 @@
     {
       "chapter": 50,
       "position": 14,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L06 Assessment_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L06 Assessment_2019"
@@ -1304,12 +1523,16 @@
     {
       "chapter": 51,
       "position": 15,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp3_U3_turtle_subgoal_mc_levelgroup_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp3_U3_turtle_subgoal_mc_levelgroup_2018_2019"
@@ -1325,11 +1548,15 @@
     {
       "chapter": 52,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L08 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L08 SFLP_2019"
@@ -1345,12 +1572,16 @@
     {
       "chapter": 53,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_functions_parameters_2019"
+        ],
         "progression": "Functions with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_applab_functions_parameters_2019"
@@ -1366,12 +1597,16 @@
     {
       "chapter": 54,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - drawSquareWithParam_2019"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - drawSquareWithParam_2019"
@@ -1387,12 +1622,16 @@
     {
       "chapter": 55,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - createTriangleParam_2019"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - createTriangleParam_2019"
@@ -1408,12 +1647,16 @@
     {
       "chapter": 56,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - squareTwoParams_2019"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - squareTwoParams_2019"
@@ -1429,12 +1672,16 @@
     {
       "chapter": 57,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - createTwoParamTriangle_2019"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - createTwoParamTriangle_2019"
@@ -1450,12 +1697,16 @@
     {
       "chapter": 58,
       "position": 7,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_turtle_subgoal_q3_mc_2018_2019"
+        ],
         "progression": "Check Your Understanding: Defining Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_U3_turtle_subgoal_q3_mc_2018_2019"
@@ -1471,12 +1722,16 @@
     {
       "chapter": 59,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 whats a comment_2018_2019"
+        ],
         "progression": "How to add comments to code"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 whats a comment_2018_2019"
@@ -1492,12 +1747,16 @@
     {
       "chapter": 60,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 how to add comments_2019"
+        ],
         "progression": "How to add comments to code"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 how to add comments_2019"
@@ -1513,12 +1772,16 @@
     {
       "chapter": 61,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - introUnderTheSea_2019"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - introUnderTheSea_2019"
@@ -1534,12 +1797,16 @@
     {
       "chapter": 62,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - paramsToStarfish_2019"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - paramsToStarfish_2019"
@@ -1555,12 +1822,16 @@
     {
       "chapter": 63,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - seaGrass_2019"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - seaGrass_2019"
@@ -1576,12 +1847,16 @@
     {
       "chapter": 64,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - fish_2019"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - fish_2019"
@@ -1597,12 +1872,16 @@
     {
       "chapter": 65,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - multiParamFish_2019"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - multiParamFish_2019"
@@ -1618,12 +1897,16 @@
     {
       "chapter": 66,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - randomInput_2019"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - randomInput_2019"
@@ -1639,12 +1922,16 @@
     {
       "chapter": 67,
       "position": 16,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_subgoal_q4_mc_2018_2019"
+        ],
         "progression": "Check Your Understanding: Using Random Numbers"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_U3_subgoal_q4_mc_2018_2019"
@@ -1660,12 +1947,16 @@
     {
       "chapter": 68,
       "position": 17,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - freePlay_2019"
+        ],
         "progression": "Challenge: Continue Your Drawing With More Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - freePlay_2019"
@@ -1681,12 +1972,16 @@
     {
       "chapter": 69,
       "position": 18,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3-AP-Practice-FR-manage-complexity_2019"
+        ],
         "progression": "AP Practice Response - Managing Complexity"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3-AP-Practice-FR-manage-complexity_2019"
@@ -1702,12 +1997,16 @@
     {
       "chapter": 70,
       "position": 19,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L08 Assessment1_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 Assessment1_2018_2019"
@@ -1723,12 +2022,16 @@
     {
       "chapter": 71,
       "position": 20,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L08 Assessment2_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 Assessment2_2019"
@@ -1744,11 +2047,15 @@
     {
       "chapter": 72,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L09 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L09 SFLP_2019"
@@ -1764,12 +2071,16 @@
     {
       "chapter": 73,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_loops_2019"
+        ],
         "progression": "Using Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_applab_loops_2019"
@@ -1785,12 +2096,16 @@
     {
       "chapter": 74,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - introSquare_2019"
+        ],
         "progression": "Introduction to Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - introSquare_2019"
@@ -1806,12 +2121,16 @@
     {
       "chapter": 75,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - randomSquare_2019"
+        ],
         "progression": "Introduction to Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - randomSquare_2019"
@@ -1827,12 +2146,16 @@
     {
       "chapter": 76,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "subgoals_U3_turtle_prediction_FR_2019"
+        ],
         "progression": "Introduction to Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "subgoals_U3_turtle_prediction_FR_2019"
@@ -1848,12 +2171,16 @@
     {
       "chapter": 77,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - randomDots1_2019"
+        ],
         "progression": "Introduction to Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - randomDots1_2019"
@@ -1869,12 +2196,16 @@
     {
       "chapter": 78,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - loopsWithRandom_2019"
+        ],
         "progression": "Introduction to Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - loopsWithRandom_2019"
@@ -1890,12 +2221,16 @@
     {
       "chapter": 79,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - topDownDesign_2019"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - topDownDesign_2019"
@@ -1911,12 +2246,16 @@
     {
       "chapter": 80,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - bubbles_2019"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - bubbles_2019"
@@ -1932,12 +2271,16 @@
     {
       "chapter": 81,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - fish_2019"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - fish_2019"
@@ -1953,12 +2296,16 @@
     {
       "chapter": 82,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - seaStar_2019"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - seaStar_2019"
@@ -1974,12 +2321,16 @@
     {
       "chapter": 83,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - seaGrass_2019"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - seaGrass_2019"
@@ -1995,12 +2346,16 @@
     {
       "chapter": 84,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - allSeaGrass_2019"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - allSeaGrass_2019"
@@ -2016,12 +2371,16 @@
     {
       "chapter": 85,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - sunBeams_2019"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - sunBeams_2019"
@@ -2037,12 +2396,16 @@
     {
       "chapter": 86,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - Free Play Loops and Random_2019"
+        ],
         "progression": "Project: Under the Sea"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - Free Play Loops and Random_2019"
@@ -2058,12 +2421,16 @@
     {
       "chapter": 87,
       "position": 16,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3-AP-Practice-Choose-The-Abstraction_2019"
+        ],
         "progression": "AP Practice Response - Identify the Abstraction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3-AP-Practice-Choose-The-Abstraction_2019"
@@ -2079,12 +2446,16 @@
     {
       "chapter": 88,
       "position": 17,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L07 - MC remove line of code loops_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 - MC remove line of code loops_2018_2019"
@@ -2100,12 +2471,16 @@
     {
       "chapter": 89,
       "position": 18,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L07 Free Response Reflection_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L07 Free Response Reflection_2019"
@@ -2121,12 +2496,16 @@
     {
       "chapter": 90,
       "position": 19,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "subgoals_u3_top_down_FR_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "subgoals_u3_top_down_FR_2019"
@@ -2142,11 +2521,15 @@
     {
       "chapter": 91,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L10 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3L10 SFLP_2019"
@@ -2162,12 +2545,16 @@
     {
       "chapter": 92,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - individualCode_2019"
+        ],
         "progression": "Design Your Components"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - individualCode_2019"
@@ -2183,12 +2570,16 @@
     {
       "chapter": 93,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "How To: Share Code with Teammates_2018_2019"
+        ],
         "progression": "How to Share Code with Teammates"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "How To: Share Code with Teammates_2018_2019"
@@ -2204,12 +2595,16 @@
     {
       "chapter": 94,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L08 - digitalScene_2019"
+        ],
         "progression": "Challenge: Design Your Digital Scene"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L08 - digitalScene_2019"
@@ -2225,11 +2620,15 @@
     {
       "chapter": 95,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018_2019"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018_2019"
@@ -2245,11 +2644,15 @@
     {
       "chapter": 96,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-intro-2019"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-post-survey-intro-2019"
@@ -2265,11 +2668,15 @@
     {
       "chapter": 97,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup-2019.2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-post-survey-levelgroup-2019.2"
@@ -3351,5 +3758,35 @@
         "script.name": "csp3-2019"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

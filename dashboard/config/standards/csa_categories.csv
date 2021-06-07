@@ -1,0 +1,72 @@
+framework,parent,category,type,description
+csa,,MOD-1,Enduring Understanding,"Some objects or concepts are so frequently represented that programmers can draw upon existing code that has already been tested, enabling them to write solutions more quickly and with a greater degree of confidence"
+csa,,MOD-2,Enduring Understanding,"Programmers use code to represent a physical object or nonphysical concept, real or imagined, by defining a class based on the attirbutes and/or behaviors of the object or concept"
+csa,,MOD-3,Enduring Understanding,"When mulitple classes contain common attributes and behaviors, programmers create a new class containing the shared attributes and behaviors forming a hierachy. Modifications made at the highest level of the hierarchy apply to the subclasses."
+csa,,VAR-1,Enduring Understanding,"To find specific solutions to generalizable problems, programmers include variables in their code so that the same algorithm runs using different input values"
+csa,,VAR-2,Enduring Understanding,"To manage large amounts of data or complex relationships in data, programmers write code that groups the data together into a single data structure wihtout creating individual variables for each value."
+csa,,CON-1,Enduring Understanding,The way variables and operators are sequenced and combined in an expression determines the computed result.
+csa,,CON-2,Enduring Understanding,Programmers incorporate iteration and selection into code as a way of providing instructions for the computer to process each of the many possible input values
+csa,,IOC-1,Enduring Understanding,"While programs are typically designed to achieve a specific purpose, they may have unintended consequences"
+csa,MOD-1,MOD-1.A,Learning Objective,Call System class methods to generate output to the console.
+csa,MOD-1,MOD-1.B,Learning Objective,Explain the relationship between a class and an object.
+csa,MOD-1,MOD-1.C,Learning Objective,"Identify, using its signature, the correct constructor being called."
+csa,MOD-1,MOD-1.D,Learning Objective,For creating object: a. Create objects by calling constructors without parameters. b. Create objects by calling constructors with parameters.
+csa,MOD-1,MOD-1.E,Learning Objective,Call non-static void methods without parameters.
+csa,MOD-1,MOD-1.F,Learning Objective,Call non-static void methods with parameters
+csa,MOD-1,MOD-1.G,Learning Objective,Call non-static non-void methods with or without parameters
+csa,MOD-1,MOD-1.H,Learning Objective,Call static methods.
+csa,MOD-2,MOD-2.A,Learning Objective,"Designate access and visibility constraints to classes, data, constructors, and methods."
+csa,MOD-2,MOD-2.B,Learning Objective,Define instance variables for the attributes to be initialized through the constructors of a class.
+csa,MOD-2,MOD-2.C,Learning Objective,Desribe the functionality and use of program code thorugh comments.
+csa,MOD-2,MOD-2.D,Learning Objective,Define behaviors of an object through non-void methods without prameters written in a class.
+csa,MOD-2,MOD-2.E,Learning Objective,Define behaviors of an object through void methods with or without parameters written in a class.
+csa,MOD-2,MOD-2.F,Learning Objective,Define behaviors of an object through non-void methods with parameters written in a class.
+csa,MOD-2,MOD-2.G,Learning Objective,Define behaviors of a class through static methods.
+csa,MOD-2,MOD-2.H,Learning Objective,Define the static variables that belong to the class.
+csa,MOD-3,MOD-3.A,Learning Objective,Designate private visibility of instance variables to encapsulate the attributes of an object.
+csa,MOD-3,MOD-3.B,Learning Objective,Create an inheritance relationship from a subclass to the superclass.
+csa,MOD-3,MOD-3.C,Learning Objective,Define reference variables of a superclass to be assigned to an object of a subclass in the same hierarchy.
+csa,MOD-3,MOD-3.D,Learning Objective,Call methods in an inheritance relationship.
+csa,MOD-3,MOD-3.E,Learning Objective,Call Object class methods through inheritance.
+csa,VAR-1,VAR-1.A,Learning Objective,Create string literals
+csa,VAR-1,VAR-1.B,Learning Objective,Identify the most appropriate data type category for a particular specification
+csa,VAR-1,VAR-1.C,Learning Objective,Declare variables of the correct types to represent primitive data
+csa,VAR-1,VAR-1.D,Learning Objective,Define variables of the correct types to represent reference data.
+csa,VAR-1,VAR-1.E,Learning Objective,For String class: a. Create String objects. b. Call String methods.
+csa,VAR-1,VAR-1.F,Learning Objective,For wrapper classes: a. Create Integer objects. b. Call Integer methods. c. Create Double objects. d. Call Double methods.
+csa,VAR-1,VAR-1.G,Learning Objective,Explain where variables can be used in the program code.
+csa,VAR-1,VAR-1.H,Learning Objective,Evaluate object reference expressions that use the keyword this.
+csa,VAR-2,VAR-2.A,Learning Objective,Represent collections of related primitive or object reference data using one-dimensional (1D) array objects.
+csa,VAR-2,VAR-2.B,Learning Objective,Traverse the elements in a 1D array.
+csa,VAR-2,VAR-2.C,Learning Objective,Traverse the elements in a 1D array object using an enhanced for loop.
+csa,VAR-2,VAR-2.D,Learning Objective,Represent collections of related object reference datat using ArrayList objects.
+csa,VAR-2,VAR-2.E,Learning Objective,For ArrayList objects: • Traverse using a for or while loop. • Traverse using an enhanced for loop.
+csa,VAR-2,VAR-2.F,Learning Objective,Represent collections of related primitive or object reference data using two-dimensional (2D) array objects.
+csa,VAR-2,VAR-2.G,Learning Objective,For 2D array objects: • Traverse using nested for loops. • Traverse using nested enhanced for loops.
+csa,CON-1,CON-1.A,Learning Objective,Evaluate arithmetic expressions in a program code
+csa,CON-1,CON-1.B,Learning Objective,Evaluate what is stored in a variable as a result of an expression with an assignment statement
+csa,CON-1,CON-1.C,Learning Objective,Evaluate arithmetic expressions that use casting.
+csa,CON-1,CON-1.D,Learning Objective,Evaluate expressions that use the Math class methods.
+csa,CON-1,CON-1.E,Learning Objective,Evaluate Boolean expressions that use relational operators in program code.
+csa,CON-1,CON-1.F,Learning Objective,Evaluate compoudn Boolean expressions in program code.
+csa,CON-1,CON-1.G,Learning Objective,Compare and contrast equivalent Boolean expressions.
+csa,CON-1,CON-1.H,Learning Objective,Compare object references using Boolean expressions in program code.
+csa,CON-2,CON-2.A,Learning Objective,Represent branching logical processes by using conditional statements.
+csa,CON-2,CON-2.B,Learning Objective,Represent branching logical processes by using nested conditional statements.
+csa,CON-2,CON-2.C,Learning Objective,Represent iterative processes using a whileloop.
+csa,CON-2,CON-2.D,Learning Objective,For algorithms in the context of a particular specification that does not require the use of traversals: • Identify standard algorithms. • Modify standard algorithms. • Develop an algorithm.
+csa,CON-2,CON-2.E,Learning Objective,Represent iterative processes using a for loop.
+csa,CON-2,CON-2.F,Learning Objective,For algorithms in the context of a particular specification that involves String objects • Identify standard algorithms. • Modify standard algorithms. • Develop an algorithm.
+csa,CON-2,CON-2.G,Learning Objective,Represent nested iterative processes
+csa,CON-2,CON-2.H,Learning Objective,Compute statement execution counts and informal run-time comparison of iterative statements.
+csa,CON-2,CON-2.I,Learning Objective,For algorithms in the context of a particular specification that requires the use of array traversals: • Identify standard algorithms. • Modify standard algorithms. • Develop an algorithm.
+csa,CON-2,CON-2.J,Learning Objective,For algorithms in the context of a particular specification that requires the use of ArrayList traversals: • Identify standard algorithms. • Modify standard algorithms. • Develop an algorithm.
+csa,CON-2,CON-2.K,Learning Objective,Apply sequential/linear search algorithms to search for specific information in array or ArrayList objects.
+csa,CON-2,CON-2.L,Learning Objective,Apply selection sort and insertion sort algorithms to sort the elements of array or ArrayList objects.
+csa,CON-2,CON-2.M,Learning Objective,Compute statement execution counts and informal run-time comparison of sorting algorithms.
+csa,CON-2,CON-2.N,Learning Objective,For Algorithms in the context of a particular specification that requires the use of 2D array traversals: • Identify standard algorithms. • Modify standard algorithms. • Develop an algorithm.
+csa,CON-2,CON-2.O,Learning Objective,Determine the result of executing recursive methods.
+csa,CON-2,CON-2.P,Learning Objective,"Apply recursive search algorithms to information in String, 1D array, or ArrayList objects."
+csa,CON-2,CON-2.Q,Learning Objective,Apply recursive algorithms to sort elements of array or ArrayList objects.
+csa,IOC-1,IOC-1.A,Learning Objective,Explain the ethical and social implications of computing systems
+csa,IOC-1,IOC-1.B,Learning Objective,Explain the risks to privacy from collecting and storing personal data on computer systems.

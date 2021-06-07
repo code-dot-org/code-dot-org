@@ -1302,6 +1302,12 @@ nn-NO:
   coursed-2019_gradelevel: 8.+ klasse
   coursee-2019_gradelevel: Alder 8–12 år
   coursef-2019_gradelevel: Alder 9-13 år
+  coursea-2020_gradelevel: Alder 4-7 år
+  courseb-2020_gradelevel: Alder 5-8 år
+  coursec-2020_gradelevel: Alder 6-10 år
+  coursed-2020_gradelevel: 8.+ klasse
+  coursee-2020_gradelevel: Alder 8–12 år
+  coursef-2020_gradelevel: Alder 9-13 år
   accelerated_gradelevel: Frå 10+ år (etter Kurs 3)
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
   codeintl_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
@@ -2286,3 +2292,15 @@ nn-NO:
   page_not_available_button: Gå heim
   footer_powered_by_aws: Drive av Amazon Web Services
   codebytes_skinny_banner_english_only: Berre på engelsk
+  footer_privacy_policy: Personvern
+  footer_about: Om
+  footer_partners: Partnarar
+  footer_donate: Gi eit bidrag
+  footer_support: Brukarstøtte
+  footer_terms: Vilkår for bruk
+  ai_in_partnership_with: I samarbeid med
+  ai_microsoft_thanks: Vi takkar Microsoft for å støtte visjonen og målet vårt om
+    å sikre at kvar barn har høvet til å lære programmering og dei ferdigheitene for
+    å lukkast i det 21. århundre.
+  ai_activity: Aktivitet
+  ai_description: Beskrivelse

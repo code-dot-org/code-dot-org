@@ -1,5 +1,5 @@
 {
-  "https://studio.code.org/s/hero/stage/1/puzzle/1": {
+  "https://studio.code.org/s/hero/lessons/1/levels/1": {
     "display_name": "Homestead",
     "short_instructions": "Write code to get the Agent to the pressure plate, then press \"Run\" and use the arrow keys to move the player out of the house to collect the chest. ",
     "long_instructions": "The door is locked, but the Agent is here to help!\n\nSnap a `move forward` block to the bottom of the `when run` block in the workspace to get the Agent to the pressure plate [PressurePlate_Up], then press \"Run\" and use the arrow keys to move out of the house to collect the **chest** [chest].",
@@ -9,7 +9,7 @@
       "MC_HOC_2017_01_RETRY_c": "Once the Agent has run all of its code, you can move the player with the arrow keys!"
     }
   },
-  "https://studio.code.org/s/hero/stage/1/puzzle/2": {
+  "https://studio.code.org/s/hero/lessons/1/levels/2": {
     "display_name": "The Farm",
     "short_instructions": "Move the Agent to the pressure plate so that {currentPlayerName} can get to the map. ",
     "long_instructions": "{currentPlayerName} is headed on an adventure! To help, get the **map** [map_empty] behind the locked door on the right. \n\nSnap the code into the workspace to move the Agent to the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get through. ",
@@ -20,7 +20,7 @@
       "MC_HOC_2017_02_Cole_d": "Make sure the Agent is following the path outlined on the map!"
     }
   },
-  "https://studio.code.org/s/hero/stage/1/puzzle/3": {
+  "https://studio.code.org/s/hero/lessons/1/levels/3": {
     "display_name": "The Woods",
     "short_instructions": "Code the Agent to open the gate. ",
     "long_instructions": "{currentPlayerName} continues on the adventure and needs the **compass** [compass] to prepare for the trip.  \n\nCode the Agent to open the gate. ",
@@ -32,7 +32,7 @@
       "MC_HOC_2017_03_Cole_1": "This is a `repeat` loop!  Click it into the workspace and add code that you want to run over and over."
     }
   },
-  "https://studio.code.org/s/hero/stage/1/puzzle/4": {
+  "https://studio.code.org/s/hero/lessons/1/levels/4": {
     "display_name": "The Swamp",
     "short_instructions": "Get the Agent to the pressure plate.",
     "long_instructions": "The Agent can move across water!  \n\nUse a `repeat` loop to solve this puzzle and help {currentPlayerName} get to the **bucket** [bucket_empty] behind the door. ",
@@ -45,7 +45,7 @@
       "MC_HOC_2017_04_Cole_a": "The Agent can hover over water, but the player can't!"
     }
   },
-  "https://studio.code.org/s/hero/stage/1/puzzle/5": {
+  "https://studio.code.org/s/hero/lessons/1/levels/5": {
     "display_name": "The Desert",
     "short_instructions": "Get the Agent to the pressure plate.",
     "long_instructions": "You made it across! \n\nNow, get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]",
@@ -54,7 +54,7 @@
       "MC_HOC_2017_04POINT5_RYAN_a": "The Agent only needs to get to the first pressure plate to let Alex or Steve through to the axe."
     }
   },
-  "https://studio.code.org/s/hero/stage/1/puzzle/6": {
+  "https://studio.code.org/s/hero/lessons/1/levels/6": {
     "display_name": "The River",
     "short_instructions": "Get the player to the shovel.",
     "long_instructions": "Oh no, the bridge is out! \n\nCode the Agent to rebuild the bridge using the [blockly block][0] block so that {currentPlayerName} can get to the **shovel** [diamond_shovel].",
@@ -63,7 +63,7 @@
       "MC_HOC_2017_05_Cole_b": "Get the Agent across the river, building a bridge as you go."
     }
   },
-  "https://studio.code.org/s/hero/stage/1/puzzle/7": {
+  "https://studio.code.org/s/hero/lessons/1/levels/7": {
     "display_name": "High Tide",
     "short_instructions": "Fix this code to get the Agent to build a bridge across this river.",
     "long_instructions": "Another river, but this one is much wider! \n\nFix this code to help the Agent build a bridge so that {currentPlayerName} can get to the **pickaxe** [diamond_pickaxe]. ",
@@ -75,7 +75,7 @@
       "MC_HOC_2017_06_Cole_1": "You cannot throw these blocks away, but you can edit them!"
     }
   },
-  "https://studio.code.org/s/hero/stage/1/puzzle/8": {
+  "https://studio.code.org/s/hero/lessons/1/levels/8": {
     "short_instructions": "Use the `build bridge` function twice to make a path to the Redstone Torch.",
     "long_instructions": "A **function** named `build bridge` is in your workspace.  All of the code you need to cross the river is built right in! \n\nSnap the small, green [blockly block][0] block into your workspace twice to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].",
     "authored_hints": {
@@ -91,7 +91,7 @@
       }
     }
   },
-  "https://studio.code.org/s/hero/stage/1/puzzle/9": {
+  "https://studio.code.org/s/hero/lessons/1/levels/9": {
     "display_name": "Snowy Pass",
     "short_instructions": "Destroy the ice and get {currentPlayerName} to the Minecart.",
     "long_instructions": "There's ice in the way!  \n\nThe `clear path` function can help you destroy the ice and get {currentPlayerName} to the Minecart [minecart_normal]! ",
@@ -106,7 +106,7 @@
       }
     }
   },
-  "https://studio.code.org/s/hero/stage/1/puzzle/10": {
+  "https://studio.code.org/s/hero/lessons/1/levels/10": {
     "display_name": "The Cave",
     "short_instructions": "Use the functions to finish this minecart track.",
     "long_instructions": "Can you spot the difference between the two functions in your workspace? \n\nUse these functions with other code from the toolbox to clear a path for the Minecart, then collect the **Flint and Steel** [flint_and_steel]. \n ",
@@ -123,7 +123,7 @@
       }
     }
   },
-  "https://studio.code.org/s/hero/stage/1/puzzle/11": {
+  "https://studio.code.org/s/hero/lessons/1/levels/11": {
     "display_name": "The Nether Fortress",
     "short_instructions": "Use the functions to find a way across the lava.",
     "long_instructions": "Look at the functions below.  How can you use them to avoid the Ghasts and help {currentPlayerName} make it safely to the **Enchanted Book** [book_enchanted]?  ",
@@ -144,7 +144,7 @@
       }
     }
   },
-  "https://studio.code.org/s/hero/stage/1/puzzle/12": {
+  "https://studio.code.org/s/hero/lessons/1/levels/12": {
     "display_name": "Freeplay",
     "short_instructions": "**Freeplay:**  Time to explore on your own!",
     "long_instructions": "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world.",

@@ -1349,6 +1349,12 @@ is-IS:
   coursed-2019_gradelevel: 14 ára og eldri
   coursee-2019_gradelevel: 8 - 12 ára
   coursef-2019_gradelevel: Bekkur 10+
+  coursea-2020_gradelevel: Bekkur 5+
+  courseb-2020_gradelevel: Bekkur 6+
+  coursec-2020_gradelevel: Bekkur 7+
+  coursed-2020_gradelevel: 14 ára og eldri
+  coursee-2020_gradelevel: 8 - 12 ára
+  coursef-2020_gradelevel: Bekkur 10+
   accelerated_gradelevel: Fyrir 10-18 ára
   codeorg_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   codeintl_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
@@ -1524,6 +1530,12 @@ is-IS:
     C og D og síðan haldið lengra með föllum.
   coursef-2019_shortdescription_congrats: Lærðu öll hugtökin í Grunnatriði tölvunarfræði
     og búðu til eigin myndir, sögur og leiki.
+  coursea-2020_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og
+    öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt
+    með öðrum.
+  courseb-2020_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og
+    öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt
+    með öðrum.
   codeorg_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta
     er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem
     koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies.
@@ -2315,3 +2327,15 @@ is-IS:
   homepage_slot_text_link_express_course: Prófaðu hraðnámskeið
   page_not_available_button: Aftur á heimasíðu
   footer_powered_by_aws: Knúið af Amazon Web Services
+  footer_privacy_policy: Persónuverndarstefna
+  footer_about: Um okkur
+  footer_partners: Samstarfsaðilar
+  footer_donate: Styrkja
+  footer_support: Stuðningur
+  footer_terms: Skilmálar
+  ai_in_partnership_with: Í samstarfi við
+  ai_microsoft_thanks: Við þökkum Microsoft fyrir að styðja við hugsjón og stefnumið
+    okkar sem er að tryggja að hvert barn hafi tækifæri til að læra tölvunarfræði
+    og öðlast þá færni sem þarf til að ná árangri á 21. öldinni.
+  ai_activity: Verkefni
+  ai_description: Lýsing

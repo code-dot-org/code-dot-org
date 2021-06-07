@@ -36,23 +36,15 @@ class UserLevel < ApplicationRecord
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
 
-  validate :readonly_requires_submitted
-
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
   scope :attempted, -> {where.not(best_result: nil)}
   scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
   scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
 
-  def self.by_stage(stage)
-    levels = stage.script_levels.map(&:level_ids).flatten
-    where(script: stage.script, level: levels)
-  end
-
-  def readonly_requires_submitted
-    if readonly_answers? && !submitted?
-      errors.add(:readonly_answers, 'readonly_answers only valid on submitted UserLevel')
-    end
+  def self.by_lesson(lesson)
+    levels = lesson.script_levels.map(&:level_ids).flatten
+    where(script: lesson.script, level: levels)
   end
 
   def attempted?
@@ -138,15 +130,29 @@ class UserLevel < ApplicationRecord
     end
   end
 
-  def has_autolocked?(stage)
-    return false unless stage.lockable?
-    unlocked_at && unlocked_at < AUTOLOCK_PERIOD.ago
+  # `locked` is a virtual attribute because it relies on `unlocked_at` to
+  # automatically return `true` after `AUTOLOCK_PERIOD`, so the following
+  # are its getter and setter
+  def locked
+    unlocked_at.nil? || unlocked_at < AUTOLOCK_PERIOD.ago
   end
 
-  def locked?(stage)
-    return false unless stage.lockable?
-    return false if user.authorized_teacher?
-    submitted? && !readonly_answers? || has_autolocked?(stage)
+  def locked=(is_locked)
+    self.unlocked_at = is_locked ? nil : Time.now
+  end
+
+  # this is the "locked" value we return to the client.
+  # if the lesson isn't lockable, we always return `false`.
+  def show_as_locked?(lesson)
+    return false unless lesson.lockable?
+    locked
+  end
+
+  # `readonly` and `locked` are mutually exclusive on the client, so we use
+  # this helper to override the value of `readonly_answers` when we're supposed
+  # to show as locked.
+  def show_as_readonly?(lesson)
+    readonly_answers? && !show_as_locked?(lesson)
   end
 
   # First ScriptLevel in this Script containing this Level.
@@ -156,6 +162,8 @@ class UserLevel < ApplicationRecord
     s.script_levels.detect {|sl| sl.level_ids.include? level_id}
   end
 
+  # This is called when a teacher updates the lock or readonly status for each student.
+  # As such, one of locked or readonly will be populated, and the other nil.
   def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
     user_level = UserLevel.find_or_initialize_by(
       user_id: user_id,
@@ -166,13 +174,13 @@ class UserLevel < ApplicationRecord
     # no need to create a level if it's just going to be locked
     return if !user_level.persisted? && locked
 
-    user_level.assign_attributes(
-      submitted: locked || readonly_answers,
-      readonly_answers: !locked && readonly_answers,
-      unlocked_at: locked ? nil : Time.now,
-      # level_group, which is the only levels that we lock, always sets best_result to 100 when complete
-      best_result: (locked || readonly_answers) ? ActivityConstants::BEST_PASS_RESULT : user_level.best_result
-    )
+    # Explicitly set `locked=false` if `readonly_answers=true` to start
+    # the autolock clock so that the mutually-exclusive `show_as_locked` and
+    # `show_as_readonly` will flip from `false/true` to `true/false`
+    # after AUTOLOCK_PERIOD has passed.
+    # Otherwise, update according to new status given
+    user_level.locked = readonly_answers ? false : locked
+    user_level.readonly_answers = readonly_answers
 
     # preserve updated_at, which represents the user's submission timestamp.
     user_level.save!(touch: false)
@@ -183,5 +191,18 @@ class UserLevel < ApplicationRecord
   # @return [Hash<Integer, Integer>] user_id => passed_level_count
   def self.count_passed_levels_for_users(users)
     joins(:user).merge(users).passing.group(:user_id).count
+  end
+
+  # Making unlocked_at private ensures future updates will use the locked
+  # virtual attribute directly, avoiding the need to recalculate a value
+  # for locked based on the 'unlocked_at' field in the db.
+  private
+
+  def unlocked_at
+    self[:unlocked_at]
+  end
+
+  def unlocked_at=(val)
+    write_attribute :unlocked_at, val
   end
 end

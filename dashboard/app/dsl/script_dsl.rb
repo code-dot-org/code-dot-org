@@ -15,7 +15,6 @@ class ScriptDSL < BaseDSL
     @lesson_extras_available = false
     @project_widget_visible = false
     @has_verified_resources = false
-    @has_lesson_plan = false
     @curriculum_path = nil
     @project_widget_types = []
     @wrapup_video = nil
@@ -30,13 +29,16 @@ class ScriptDSL < BaseDSL
     @project_sharing = nil
     @curriculum_umbrella = nil
     @tts = false
+    @deprecated = false
     @is_course = false
     @background = nil
     @is_migrated = false
   end
 
   integer :id
+
   string :professional_learning_course
+  boolean :only_instructor_review_required
   integer :peer_reviews_to_complete
 
   boolean :hidden
@@ -46,10 +48,10 @@ class ScriptDSL < BaseDSL
   boolean :lesson_extras_available
   boolean :project_widget_visible
   boolean :has_verified_resources
-  boolean :has_lesson_plan
   boolean :is_stable
   boolean :project_sharing
   boolean :tts
+  boolean :deprecated
   boolean :is_course
   boolean :is_migrated
 
@@ -114,6 +116,8 @@ class ScriptDSL < BaseDSL
         key: key,
         name: properties[:display_name],
         lockable: properties[:lockable],
+        has_lesson_plan: properties[:has_lesson_plan],
+        unplugged: properties[:unplugged],
         visible_after: determine_visible_after_time(properties[:visible_after]),
         script_levels: []
       }.compact
@@ -145,11 +149,11 @@ class ScriptDSL < BaseDSL
       hideable_lessons: @hideable_lessons,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
+      only_instructor_review_required: @only_instructor_review_required,
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
       lesson_extras_available: @lesson_extras_available,
       has_verified_resources: @has_verified_resources,
-      has_lesson_plan: @has_lesson_plan,
       curriculum_path: @curriculum_path,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
@@ -164,6 +168,7 @@ class ScriptDSL < BaseDSL
       project_sharing: @project_sharing,
       curriculum_umbrella: @curriculum_umbrella,
       tts: @tts,
+      deprecated: @deprecated,
       lesson_groups: @lesson_groups,
       is_course: @is_course,
       background: @background,
@@ -315,6 +320,9 @@ class ScriptDSL < BaseDSL
   end
 
   def self.serialize_to_string(script)
+    # the serialized data for migrated scripts lives in the .script_json file
+    return "is_migrated true\n" if script.is_migrated
+
     s = []
     # Legacy script IDs
     legacy_script_ids = {
@@ -328,6 +336,7 @@ class ScriptDSL < BaseDSL
     s << "id '#{legacy_script_ids[script.name]}'" if legacy_script_ids[script.name]
 
     s << "professional_learning_course '#{script.professional_learning_course}'" if script.professional_learning_course
+    s << "only_instructor_review_required #{script.only_instructor_review_required}" if script.only_instructor_review_required
     s << "peer_reviews_to_complete #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete.try(:>, 0)
 
     s << 'hidden false' unless script.hidden
@@ -338,7 +347,6 @@ class ScriptDSL < BaseDSL
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
     s << 'lesson_extras_available true' if script.lesson_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
-    s << 'has_lesson_plan true' if script.has_lesson_plan
     s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
@@ -353,9 +361,9 @@ class ScriptDSL < BaseDSL
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
     s << 'tts true' if script.tts
+    s << 'deprecated true' if script.deprecated
     s << 'is_course true' if script.is_course
     s << "background '#{script.background}'" if script.background
-    s << 'is_migrated true' if script.is_migrated
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)
@@ -386,7 +394,9 @@ class ScriptDSL < BaseDSL
     t = "lesson '#{escape(lesson.key)}'"
     t += ", display_name: '#{escape(lesson.name)}'" if lesson.name
     t += ', lockable: true' if lesson.lockable
+    t += ", has_lesson_plan: #{!!lesson.has_lesson_plan}"
     t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
+    t += ', unplugged: true' if lesson.unplugged
     s << t
     lesson.script_levels.each do |sl|
       type = 'level'

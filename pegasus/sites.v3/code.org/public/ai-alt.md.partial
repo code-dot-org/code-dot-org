@@ -23,8 +23,8 @@ style_min: true
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px"><strong>AI for Oceans</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left">Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</div>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>AI for Oceans</strong></h3>
+        <div class="smalltext" style="color: dimgray;">Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</div>
         <a href="/oceans"><button>Try now</button></a>
     </span>
   </div>
@@ -38,8 +38,8 @@ style_min: true
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px"><strong>How AI Works</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left">Learn about how artificial intelligence works and why it matters with this series of five short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of AI experts.</div>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>How AI Works</strong></h3>
+        <div class="smalltext" style="color: dimgray; ">Learn about how artificial intelligence works and why it matters with this series of five short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of AI experts.</div>
         <a href="#ai-videos"><button>Watch the videos</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ style_min: true
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px"><strong>AI and Ethics</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left">Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</div>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>AI and Ethics</strong></h3>
+        <div class="smalltext" style="color: dimgray; ">Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</div>
         <a href="/oceans"><button>View lesson plan</button></a>
     </span>
   </div>

@@ -5,7 +5,6 @@
     "hidden": true,
     "login_required": true,
     "properties": {
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/cspilot/unit2/{LESSON}",
       "pilot_experiment": "csp-piloters",
       "hideable_lessons": true

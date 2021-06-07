@@ -4,14 +4,6 @@ import SoundListEntry from './SoundListEntry';
 import {searchAssets} from '../assets/searchAssets';
 import soundLibrary from '../soundLibrary.json';
 
-const styles = {
-  root: {
-    height: 315,
-    overflowY: 'scroll',
-    clear: 'both'
-  }
-};
-
 /**
  * A component for managing sounds from soundLibrary.json.
  */
@@ -61,3 +53,11 @@ export default class SoundList extends React.Component {
     );
   }
 }
+
+const styles = {
+  root: {
+    height: 315,
+    overflowY: 'scroll',
+    clear: 'both'
+  }
+};

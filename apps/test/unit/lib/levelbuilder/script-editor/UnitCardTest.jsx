@@ -109,25 +109,11 @@ describe('UnitCard', () => {
     expect(wrapper.find('LessonToken')).to.have.lengthOf(4);
     expect(wrapper.find('textarea')).to.have.lengthOf(4);
 
-    expect(wrapper.find('button')).to.have.lengthOf(3);
-    expect(
-      wrapper
-        .find('button')
-        .at(0)
-        .text()
-    ).to.include('Lesson');
-    expect(
-      wrapper
-        .find('button')
-        .at(1)
-        .text()
-    ).to.include('Lesson');
-    expect(
-      wrapper
-        .find('button')
-        .at(2)
-        .text()
-    ).to.include('Add Lesson Group');
+    expect(wrapper.find('button').map(b => b.text())).to.eql([
+      'Lesson',
+      'Lesson',
+      'Add Lesson Group'
+    ]);
   });
 
   it('displays UnitCard correctly when single user facing lesson groups', () => {

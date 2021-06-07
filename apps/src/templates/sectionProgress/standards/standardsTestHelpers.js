@@ -1,4 +1,5 @@
 import {TeacherScores} from '@cdo/apps/templates/sectionProgress/standards/standardsConstants';
+import {levelProgressFromResult} from '@cdo/apps/templates/progress/progressHelpers';
 
 export const unpluggedLessonList = [
   {
@@ -70,7 +71,7 @@ const teacherSections = {
       loginType: 'picture',
       grade: '9',
       providerManaged: false,
-      stageExtras: true,
+      lessonExtras: true,
       pairingAllowed: true,
       sharingDisabled: false,
       studentCount: 4,
@@ -85,27 +86,24 @@ const teacherSections = {
 export const standardsData = [
   {
     id: 16,
-    organization: 'CSTA',
-    organization_id: '1A-IC-17',
+    shortcode: '1A-IC-17',
     description: 'Work respectfully and responsibly with others online.',
-    concept: 'Impacts of Computing',
+    category_description: 'Impacts of Computing',
     lesson_ids: [662, 663]
   },
   {
     id: 17,
-    organization: 'CSTA',
-    organization_id: '1A-IC-18',
+    shortcode: '1A-IC-18',
     description: '"Keep login information private',
-    concept: 'Impacts of Computing',
+    category_description: 'Impacts of Computing',
     lesson_ids: [662, 663]
   },
   {
     id: 4,
-    organization: 'CSTA',
-    organization_id: '1A-AP-11',
+    shortcode: '1A-AP-11',
     description:
       'Decompose (break down) the steps needed to solve a problem into a precise sequence of instructions.',
-    concept: 'Algorithms & Programming',
+    category_description: 'Algorithms & Programming',
     lesson_ids: [663, 664, 665, 666, 667, 669, 670, 671, 672, 673]
   }
 ];
@@ -120,7 +118,7 @@ const scriptDataByScript = {
     id: scriptId,
     path: '//localhost-studio.code.org:3000/s/coursea-2019',
     title: 'Course A (2019)',
-    stages: [
+    lessons: [
       {
         script_id: 92,
         script_name: 'coursea-2019',
@@ -141,7 +139,7 @@ const scriptDataByScript = {
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/1/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/stage/1/extras'
+          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/1/extras'
       },
       {
         script_id: scriptId,
@@ -154,7 +152,7 @@ const scriptDataByScript = {
         title: 'Lesson 2: Learn to Drag and Drop',
         lesson_group_display_name: 'Sequencing',
         lockable: false,
-        levels: [{activeId: 10001}, {activeId: 10002}, {activeId: 10003}],
+        levels: [{id: '10001'}, {id: '10002'}, {id: '10003'}],
         description_student: 'Click and drag to finish the puzzles.',
         description_teacher:
           'This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.',
@@ -163,7 +161,7 @@ const scriptDataByScript = {
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/2/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/stage/2/extras'
+          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/2/extras'
       },
       {
         script_id: scriptId,
@@ -186,33 +184,35 @@ const scriptDataByScript = {
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/3/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/stage/3/extras'
+          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/3/extras'
       }
     ]
   }
 };
 
-export const pluggedLesson = scriptDataByScript[scriptId].stages[1];
+export const pluggedLesson = scriptDataByScript[scriptId].lessons[1];
+
+const progress20 = levelProgressFromResult(20);
 
 const sectionCompletedLesson = {
   92: {
     100001: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: progress20,
+      10002: progress20,
+      10003: progress20
     },
     100002: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: progress20,
+      10002: progress20,
+      10003: progress20
     },
     100003: {
-      10001: 20,
-      10002: 20
+      10001: progress20,
+      10002: progress20
     },
     100004: {
-      10001: 20,
-      10002: 20
+      10001: progress20,
+      10002: progress20
     }
   }
 };
@@ -220,14 +220,14 @@ const sectionCompletedLesson = {
 const sectionPartialCompletedLesson = {
   92: {
     100001: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: progress20,
+      10002: progress20,
+      10003: progress20
     },
     100002: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: progress20,
+      10002: progress20,
+      10003: progress20
     }
   }
 };

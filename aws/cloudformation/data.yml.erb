@@ -60,6 +60,9 @@ Resources:
       MasterUsername: {Ref: RedshiftUsername}
       MasterUserPassword: {Ref: RedshiftPassword}
       NodeType: dc1.large
+      # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
+      # to start at least 1 hour before the export begins (it typically takes 15 minutes).
+      PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
   TableauSync:
@@ -74,6 +77,23 @@ Resources:
       ReplicationInstanceIdentifier: !Ref AWS::StackName
       ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
       VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
+  # Note that this is an incomplete set of Policies attached to the
+  # redshift-s3 Role. The Role itself and other Policies were generated manually
+  # in the AWS Console, and we should continue to move these Resources here over time.
+  RedshiftS3Policy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: RedshiftS3Policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: RedshiftS3ImportExportBucket
+            Effect: Allow
+            Action:
+              - 's3:*'
+            Resource:
+              - 'arn:aws:s3:::cdo-data-sharing-internal/*'
+              - 'arn:aws:s3:::cdo-data-sharing-internal'
   RDSEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:

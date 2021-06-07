@@ -4,7 +4,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit2/"], ["teacherForum", "https://forum.code.org/c/csp2"], ["vocabulary", "https://curriculum.code.org/csp-19/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit2/standards/"], ["professionalLearning", "https://code.org/educate/professional-learning/middle-high"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit2/{LESSON}'
 family_name 'csp2'
 version_year '2019'
@@ -13,13 +12,13 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp2_1_2018', display_name: 'Unit 2: Digital Information'
-lesson 'Bytes and File Sizes', display_name: 'Bytes and File Sizes'
+lesson 'Bytes and File Sizes', display_name: 'Bytes and File Sizes', has_lesson_plan: true
 level 'CSP U2L01 SFLP_2019', named: true
 level 'U1L12 Reflection Free Response_2019', progression: 'Check Your Understanding', assessment: true
 level 'CSP_U2_Shakespeare_Question_2019', progression: 'Check Your Understanding', assessment: true
 level 'csp-pulse-check-survey-2-levelgroup-U2Ch1_2018_2019', progression: 'Quick Check-In', assessment: true
 
-lesson 'Text Compression', display_name: 'Text Compression'
+lesson 'Text Compression', display_name: 'Text Compression', has_lesson_plan: true
 level 'CSP U2L02 SFLP_2019', named: true
 level 'Text Compression_2019', progression: 'Text Compression', named: true
 level 'Widget: Text Compression_2019', progression: 'Widget: Text Compression', named: true
@@ -28,7 +27,7 @@ level 'U1L13 Assess Text Compression amount_2019', progression: 'Check Your Unde
 level 'U1L13 Assessment 1_2019', progression: 'Check Your Understanding', assessment: true
 level 'U1L13 Assessment 2_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Encoding B&W Images', display_name: 'Encoding B&W Images'
+lesson 'Encoding B&W Images', display_name: 'Encoding B&W Images', has_lesson_plan: true
 level 'CSP U2L03 SFLP_2019', named: true
 level 'Pixelation - Lesson 14 - Make the Letter A_2019', progression: 'Pixelation Widget: Black and White Pixelation'
 level 'Pixelation - Lesson 14 - Fix bit offset_2019', progression: 'Pixelation Widget: Black and White Pixelation'
@@ -36,7 +35,7 @@ level 'Widget: Black and White Pixelation_2019', progression: 'Pixelation Widget
 level 'U1L14 Assessment 1_2019', progression: 'Check Your Understanding', assessment: true
 level 'U1L14 - Assessment 2_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Encoding Color Images', display_name: 'Encoding Color Images'
+lesson 'Encoding Color Images', display_name: 'Encoding Color Images', has_lesson_plan: true
 level 'CSP U2L04 SFLP_2019', named: true
 level 'Images, Pixels, and RGB_2019', progression: 'Images, Pixels, and RGB', named: true
 level 'Pixelation - Lesson 15 - Complete 3-bit color_2019', progression: 'Pixelation'
@@ -49,21 +48,21 @@ level 'Widget: Color Pixelation_2019', progression: 'Widget: Color Pixelation', 
 level 'U2L5 Color Pixel MC Question_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'U2L5 FR brighten darken image_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Lossy vs Lossless Compression', display_name: 'Lossy vs Lossless Compression'
+lesson 'Lossy vs Lossless Compression', display_name: 'Lossy vs Lossless Compression', has_lesson_plan: true
 level 'CSP U2L05 SFLP_2019', named: true
 level 'U2L05 Lossy Lossless MC 1_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'U2L05 Lossy Lossless MC 2_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'U2L05 Lossy vs. Lossless FR 1_2018_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Rapid Research - Format Showdown', display_name: 'Rapid Research - Format Showdown'
+lesson 'Rapid Research - Format Showdown', display_name: 'Rapid Research - Format Showdown', has_lesson_plan: true
 level 'CSP U2L06 SFLP_2019', named: true
 
 lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
-lesson 'Unit 2 Assessment', display_name: 'Unit 2 Assessment', lockable: true
+lesson 'Unit 2 Assessment', display_name: 'Unit 2 Assessment', lockable: true, has_lesson_plan: false
 level 'CSP Unit 2 Ch1 Cumulative Assessment MC_2018_2019', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Principles Post Course survey', display_name: 'CS Principles Post Course survey', lockable: true
+lesson 'CS Principles Post Course survey', display_name: 'CS Principles Post Course survey', lockable: true, has_lesson_plan: false
 level 'csp-post-survey-intro-2019'
 level 'csp-post-survey-levelgroup-2019.2', assessment: true
 

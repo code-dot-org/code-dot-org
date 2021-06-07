@@ -26,3 +26,18 @@ Which column is data will likely be most difficult to visualize or analyze?
 
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** The “Biggest Challenge” column has incomplete data and the data that it does contain is not at all standardized in its format. Both of these factors will make it difficult to visualize and analyze the data from this column.
+
+Students discovered some of the challenges in working with incomplete and messy data in [Lesson - Cleaning and Filtering Data](https://curriculum.code.org/csp-20/unit9/3/) 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+
+* DAT-2.C: Identify the challenges associated with processing data.
+:::
+
+
+MARKDOWN

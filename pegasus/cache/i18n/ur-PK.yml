@@ -379,6 +379,7 @@ ur-PK:
   dashboard_action_delete_yes: جی
   dashboard_action_delete_no: نہيں
   dashboard_navigation_home_page: ٹیچر ہوم پیج
+  dashboard_sections_close: بند
   dashboard_students_name: نام
   dashboard_grade_other: دیگر
   dashboard_login_none: Email
@@ -485,3 +486,11 @@ ur-PK:
   hoc2018_mc_thank_microsoft: ہم Microsoft کا شکریہ ادا کرتے ہیں کہ انہوں نے ہماری
     بصیرت اور مشن کہ ہر بچے کو کمپیوٹر سائنس اور 21ویں صدی میں کامیابی کی مہارتیں
     سیکھنے کا موقع فراہم ہو کی حمایت کی.
+  footer_privacy_policy: رازداری کی پالیسی
+  footer_about: متعلق
+  footer_donate: عطیہ کریں
+  ai_microsoft_thanks: ہم Microsoft کا شکریہ ادا کرتے ہیں کہ انہوں نے ہماری بصیرت
+    اور مشن کہ ہر بچے کو کمپیوٹر سائنس اور 21ویں صدی میں کامیابی کی مہارتیں سیکھنے
+    کا موقع فراہم ہو کی حمایت کی.
+  ai_activity: سرگرمی
+  ai_description: تفصیل

@@ -33,10 +33,17 @@ export const NEW_LEVEL_ID = '-1';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
-export const init = (activities, searchOptions) => ({
+export const init = (
+  activities,
+  searchOptions,
+  programmingEnvironments,
+  lessonExtrasAvailableForScript
+) => ({
   type: INIT,
   activities,
-  searchOptions
+  searchOptions,
+  programmingEnvironments,
+  lessonExtrasAvailableForScript
 });
 
 export const initActivities = activities => ({
@@ -472,6 +479,22 @@ function searchOptions(state = {}, action) {
   return state;
 }
 
+function programmingEnvironments(state = {}, action) {
+  switch (action.type) {
+    case INIT:
+      return action.programmingEnvironments;
+  }
+  return state;
+}
+
+function lessonExtrasAvailableForScript(state = {}, action) {
+  switch (action.type) {
+    case INIT:
+      return action.lessonExtrasAvailableForScript;
+  }
+  return state;
+}
+
 // Serialize the activities into JSON, renaming any keys which are different
 // on the backend.
 export const getSerializedActivities = rawActivities => {
@@ -543,6 +566,10 @@ export const mapActivityDataForEditor = rawActivities => {
       activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
+      activitySection.duration = activitySection.duration || '';
+
+      activitySection.progressionName = activitySection.progressionName || '';
+
       activitySection.scriptLevels = activitySection.scriptLevels || [];
       activitySection.scriptLevels.forEach(scriptLevel => {
         scriptLevel.status = LevelStatus.not_tried;
@@ -595,24 +622,28 @@ function validateScriptLevel(scriptLevel, location) {
 
 export default {
   activities,
-  searchOptions
+  searchOptions,
+  programmingEnvironments,
+  lessonExtrasAvailableForScript
 };
 
 export const emptyActivitySection = {
   key: 'activitySection-1',
   displayName: '',
+  duration: '',
   levels: [],
   tips: [],
   remarks: false,
   text: '',
   scriptLevels: [],
-  position: 1
+  position: 1,
+  progressionName: ''
 };
 
 export const emptyActivity = {
   key: 'activity-1',
   displayName: '',
   position: 1,
-  duration: 0,
+  duration: '',
   activitySections: [emptyActivitySection]
 };

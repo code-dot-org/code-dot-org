@@ -1,0 +1,7 @@
+{
+  "category": "Logic",
+  "config": {
+    "docFunc": "codestudio_trueFalse",
+    "func": "logic_boolean"
+  }
+}

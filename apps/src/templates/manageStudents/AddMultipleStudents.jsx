@@ -8,17 +8,6 @@ import BaseDialog from '../BaseDialog';
 import DialogFooter from '../teacherDashboard/DialogFooter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  },
-  textarea: {
-    width: '75%'
-  }
-};
-
 class AddMultipleStudents extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
@@ -109,6 +98,17 @@ class AddMultipleStudents extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  },
+  textarea: {
+    width: '75%'
+  }
+};
 
 export default connect(
   state => ({}),

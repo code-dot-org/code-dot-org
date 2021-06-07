@@ -5,30 +5,6 @@ import color from '../../util/color';
 import FontAwesome from '../../templates/FontAwesome';
 import LibraryTable from './LibraryTable';
 
-const styles = {
-  categoryName: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    cursor: 'pointer',
-    color: color.dark_charcoal
-  },
-  tableNumber: {
-    float: 'right',
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.light_gray
-  },
-  categoryDescription: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.dark_charcoal
-  },
-  tableName: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.cyan
-  },
-  collapsibleContainer: {
-    paddingLeft: '16px'
-  }
-};
-
 class LibraryCategory extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
@@ -92,5 +68,29 @@ class LibraryCategory extends React.Component {
     );
   }
 }
+
+const styles = {
+  categoryName: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'pointer',
+    color: color.dark_charcoal
+  },
+  tableNumber: {
+    float: 'right',
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.light_gray
+  },
+  categoryDescription: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.dark_charcoal
+  },
+  tableName: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.cyan
+  },
+  collapsibleContainer: {
+    paddingLeft: '16px'
+  }
+};
 
 export default Radium(LibraryCategory);

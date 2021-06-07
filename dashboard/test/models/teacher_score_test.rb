@@ -13,11 +13,11 @@ class TeacherScoreTest < ActiveSupport::TestCase
     @section.add_student(@student_3)
     @script = create :script
     @lesson_group = create :lesson_group, script: @script
-    @stage = create :lesson, script: @script, lesson_group: @lesson_group
+    @lesson = create :lesson, script: @script, lesson_group: @lesson_group, unplugged: true
     @script_level = create(
       :script_level,
       script: @script,
-      lesson: @stage,
+      lesson: @lesson,
       levels: [
         create(:unplugged, name: 'test level 1')
       ]
@@ -78,13 +78,13 @@ class TeacherScoreTest < ActiveSupport::TestCase
     assert_equal(newly_created_teacher_score.user_level_id, user_level.id)
   end
 
-  test 'score stage for section' do
+  test 'score lesson for section' do
     teacher_scores_count_before = TeacherScore.all.count
     user_level_count_before = UserLevel.all.count
     student_count = @section.students.count
 
-    TeacherScore.score_stage_for_section(
-      @section.id, @stage.id, @score
+    TeacherScore.score_lesson_for_section(
+      @section.id, @lesson.id, @score
     )
 
     teacher_scores_count_after = TeacherScore.all.count
@@ -95,7 +95,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
     assert_equal(teacher_scores_count_after, teacher_scores_count_before + student_count)
   end
 
-  test 'get scores for stage looks at most recent score' do
+  test 'get scores for lesson looks at most recent score' do
     Timecop.freeze do
       TeacherScore.score_level_for_student(
         @teacher.id, @student_1.id, @level_1.id, @script.id, @score
@@ -108,17 +108,17 @@ class TeacherScoreTest < ActiveSupport::TestCase
       )
     end
 
-    assert_equal(TeacherScore.get_level_scores_for_stage_for_students(@stage, @section.students.pluck(:id)), {@student_1.id => {@level_1.id => @score_2}})
+    assert_equal(TeacherScore.get_level_scores_for_lesson_for_students(@lesson, @section.students.pluck(:id)), {@student_1.id => {@level_1.id => @score_2}})
   end
 
-  test 'get scores for stage for students' do
-    TeacherScore.score_stage_for_section(
-      @section.id, @stage.id, @score
+  test 'get scores for lesson for students' do
+    TeacherScore.score_lesson_for_section(
+      @section.id, @lesson.id, @score
     )
 
     assert_equal(
-      TeacherScore.get_level_scores_for_stage_for_students(
-        @stage,
+      TeacherScore.get_level_scores_for_lesson_for_students(
+        @lesson,
         @section.students.pluck(:id)
       ),
       {
@@ -130,8 +130,8 @@ class TeacherScoreTest < ActiveSupport::TestCase
   end
 
   test 'get scores for script for section' do
-    TeacherScore.score_stage_for_section(
-      @section.id, @stage.id, @score
+    TeacherScore.score_lesson_for_section(
+      @section.id, @lesson.id, @score
     )
     page = 1
     assert_equal(
@@ -142,7 +142,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
       ),
       {
         @script.id => {
-          @stage.id => {
+          @lesson.id => {
             @student_1.id => {@level_1.id => @score},
             @student_2.id => {@level_1.id => @score},
             @student_3.id => {@level_1.id => @score}

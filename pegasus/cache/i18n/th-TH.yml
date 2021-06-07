@@ -91,7 +91,7 @@ th-TH:
   congratulations_volunteer: 'ยินดีด้วย: หลังจากที่คุณได้ลองชั่วโมงแห่งการโค้ด <a
     href="https://code.org/volunteer">ลงทะเบียนเป็นอาสาสมัครในห้องเรียน</a>และช่วยนักเรียนเรียนรู้เป็นชั่วโมงแห่งการโค้ด'
   congratulations_on_completing_course: ยินดีด้วยกับที่คุณทำบทเรียนได้ %{course}
-  congrats_next_tutorials_title: ลองการแนะนำการสอยอื่นต่อ
+  congrats_next_tutorials_title: " ลองการแนะนำการสอนอื่นต่อ"
   congrats_next_tutorials_desc: ลองแบบสั้นกว่านี้ 1 ชั่วโมงสำหรับการทบทวน หรือลอง<a
     href="%{current_path}/next">บททบทวนที่ใกล้เคียง</a>
   get_a_certificate_of_achievement: รับใบประกาศนียบัตร
@@ -196,6 +196,7 @@ th-TH:
   learn_classes: ค้นหาชั้นเรียนในท้องถิ่น
   learn_back_to_minecraft: เรียนรู้ไปด้วยกันกับ Minecraft
   just_did_hoc: 'ฉันเพิ่งเรียน #HourOfCode - เข้าร่วมเรียน! @codeorg'
+  just_did_accelerated: ฉันเพิ่งเรียนหลักสูตรเร่งรัดเสร็จ - ดูผลงานได้ที่ @codeorg
   learn_hoc: เข้าร่วมเรียน Hour of Code
   beyond_hoc: เกินหนึ่งชั่วโมง
   what_gender: คุณเพศอะไร
@@ -554,7 +555,7 @@ th-TH:
   dashboard_navigation_home_page: หน้าแรกของคุณครู
   dashboard_navigation_section_student_progress: บัญชีผู้ใช้ของนักเรียนและความคืบหน้า
   dashboard_navigation_section_teacher_progress: ความคืบหน้าของคุณ
-  dashboard_navigation_section_lesson_plans: แผนการเรียนและแหล่งข้อมูล
+  dashboard_navigation_section_lesson_plans: แผนการเรียนการสอนและแหล่งข้อมูล
   dashboard_navigation_section_community: ศูนย์ช่วยเหลือและชุมชน
   dashboard_navigation_section_pd: การพัฒนาอย่างมืออาชีพ
   dashboard_navigation_section_speakers: วิทยาการคอมพิวเตอร์ <br/> วิทยากรรับเชิญ
@@ -621,12 +622,13 @@ th-TH:
   dashboard_curriculum_k5_title: แหล่งเครื่องมือสำหรับผู้สอน ประถม5(K-5)
   dashboard_curriculum_middle_title: แหล่งเครื่องมือสำหรับผู้สอน Middle School
   dashboard_curriculum_high_title: แหล่งเครื่องมือสำหรับผู้สอน High School
-  dashboard_lesson_plans: แผนการสอน
+  dashboard_lesson_plans: แผนการเรียนการสอน
   dashboard_view_all_lesson_plans: ดูแผนการสอนทั้งหมด
   dashboard_course1: 'หลักสูตรที่ 1:'
   dashboard_course2: 'หลักสูตรที่ 2:'
   dashboard_course3: 'หลักสูตรที่ 3:'
   dashboard_course4: 'คอร์ส4 (รุ่นทดลอง): '
+  dashboard_pre-express: 'หลักสูตร Express สำหรับเด็กวัยเรียนรู้:'
   dashboard_curriculum: หลักสูตร
   dashboard_curriculum_overview: ภาพรวมของหลักสูตรประถมศึกษา
   dashboard_overview: ภาพรวม
@@ -743,18 +745,48 @@ th-TH:
   course2_name: คอร์ส 2
   course3_name: คอร์ส 3
   course4_name: คอร์ส 4
-  coursea-draft_name: คอร์ส A
+  coursea-draft_name: หลักสูตร A
   coursea_name: คอร์ส A
-  courseb-draft_name: คอร์ส B
-  courseb_name: คอร์ส B
-  coursec-draft_name: คอร์ส C
+  courseb-draft_name: หลักสูตร B
+  courseb_name: หลักสูตร B
+  coursec-draft_name: หลักสูตร C
   coursec_name: คอร์ส C
-  coursed-draft_name: คอร์ส D
+  coursed-draft_name: หลักสูตร D
   coursed_name: คอร์ส D
-  coursee-draft_name: คอร์ส E
+  coursee-draft_name: หลักสูตร E
   coursee_name: คอร์ส E
-  coursef-draft_name: คอร์ส F
+  coursef-draft_name: หลักสูตร F
   coursef_name: คอร์ส F
+  coursea-2017_name: หลักสูตร A (2017)
+  coursec-2017_name: หลักสูตร C (2017)
+  coursed-2017_name: หลักสูตร D (2017)
+  coursee-2017_name: หลักสูตร E (2017)
+  coursef-2017_name: หลักสูตร F (2017)
+  coursea-2018_name: หลักสูตร A (2018)
+  courseb-2018_name: หลักสูตร B (2018)
+  coursec-2018_name: หลักสูตร C (2018)
+  coursed-2018_name: หลักสูตร D (2018)
+  coursee-2018_name: หลักสูตร E (2018)
+  coursef-2018_name: หลักสูตร F (2018)
+  coursea-2019_name: หลักสูตร A (2019)
+  courseb-2019_name: หลักสูตร B (2019)
+  coursec-2019_name: หลักสูตร C (2019)
+  coursed-2019_name: หลักสูตร D (2019)
+  coursee-2019_name: หลักสูตร E (2019)
+  coursef-2019_name: หลักสูตร F (2019)
+  coursea-2020_name: หลักสูตร A (2020)
+  courseb-2020_name: หลักสูตร B (2020)
+  coursec-2020_name: หลักสูตร C (2020)
+  coursed-2020_name: หลักสูตร D (2020)
+  coursee-2020_name: หลักสูตร E (2020)
+  coursef-2020_name: หลักสูตร F (2020)
+  pre-express-2018_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2018)
+  express-2019_name: หลักสูตร Express (2019)
+  pre-express-2019_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2019)
+  pre-express-2020_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2020)
+  accelerated_name: หลักสูตรเร่งรัด
+  pre-express_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้
+  20-hour_name: หลักสูตรเร่งรัด
   iceage_name: ยุคน้ำแข็ง (Ice Age)
   minecraft_name: ไมน์คราฟท์
   starwarsblocks_name: สตาร์วอร์ส (บล็อก)
@@ -822,6 +854,8 @@ th-TH:
   coursee-2018_gradelevel: อายุ 8-12 ปี
   coursed-2019_gradelevel: เกรด 8 +
   coursee-2019_gradelevel: อายุ 8-12 ปี
+  coursed-2020_gradelevel: เกรด 8 +
+  coursee-2020_gradelevel: อายุ 8-12 ปี
   accelerated_gradelevel: อายุ 10-18 ปี
   codeorg_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   codeintl_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
@@ -908,9 +942,67 @@ th-TH:
   projguts_shortdescription: สร้างแบบจำลองและลองเล่น ด้วยเกมเป่ายิ้งฉุบ
   hourofcode_shortdescription: เรียนรู้การเขียนโค้ดกับ Mark Zuckerberg และเกม Angry
     Birds!
-  frozen_shortdescription: ลองใช้โค้ด เพื่อเข้าช่วย Anna และ Elsa สำรวจความมหัศจรรย์แห่งเมืองน้ำแข็ง
+  frozen_shortdescription: ลองใช้โค้ดเพื่อเข้าช่วยแอนนาและเอลซ่าสำรวจความมหัศจรรย์และความงามของเมืองน้ำแข็ง
   starwars_shortdescription: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
   artist_shortdescription: Draw cool pictures and designs with the ศิลปิน!
+  coursea_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+  courseb_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+    (คล้ายกับหลักสูตร A แต่เด็กนักเรียนจะมีอายุมากขึ้น)
+  coursec_shortdescription_congrats: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+    เรื่องราวและเกมของคุณเอง
+  coursed_shortdescription_congrats: สรุปพอสังเขปถึงแนวคิดในหลักสูตร C ก่อนจะเน้นไปที่เรื่องอัลกอริทึม
+    ลูปซ้อนลูป เงื่อนไข และอีกมากมาย
+  coursee_shortdescription_congrats: สรุปพอสังเขปถึงแนวคิดในหลักสูตร C และ D ก่อนจะเน้นไปที่เรื่องฟังก์ชั่น
+  coursef_shortdescription_congrats: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+    ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+  coursea-2017_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+  courseb-2017_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+    (คล้ายกับหลักสูตร A แต่เด็กนักเรียนจะมีอายุมากขึ้น)
+  coursec-2017_shortdescription_congrats: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+    เรื่องราวและเกมของคุณเอง
+  coursed-2017_shortdescription_congrats: สรุปพอสังเขปถึงแนวคิดในหลักสูตร C ก่อนจะเน้นไปที่เรื่องอัลกอริทึม
+    ลูปซ้อนลูป เงื่อนไข และอีกมากมาย
+  coursee-2017_shortdescription_congrats: สรุปพอสังเขปถึงแนวคิดในหลักสูตร C และ D
+    ก่อนจะเน้นไปที่เรื่องฟังก์ชั่น
+  coursef-2017_shortdescription_congrats: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+    ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+  coursea-2018_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+  courseb-2018_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+    (คล้ายกับหลักสูตร A แต่เด็กนักเรียนจะมีอายุมากขึ้น)
+  coursec-2018_shortdescription_congrats: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+    เรื่องราวและเกมของคุณเอง
+  coursed-2018_shortdescription_congrats: สรุปพอสังเขปถึงแนวคิดในหลักสูตร C ก่อนจะเน้นไปที่เรื่องอัลกอริทึม
+    ลูปซ้อนลูป เงื่อนไข และอีกมากมาย
+  coursee-2018_shortdescription_congrats: สรุปพอสังเขปถึงแนวคิดในหลักสูตร C และ D
+    ก่อนจะเน้นไปที่เรื่องฟังก์ชั่น
+  coursef-2018_shortdescription_congrats: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+    ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+  coursea-2019_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+  courseb-2019_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+    (คล้ายกับหลักสูตร A แต่เด็กนักเรียนจะมีอายุมากขึ้น)
+  coursec-2019_shortdescription_congrats: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+    เรื่องราวและเกมของคุณเอง
+  coursed-2019_shortdescription_congrats: สรุปพอสังเขปถึงแนวคิดในหลักสูตร C ก่อนจะเน้นไปที่เรื่องอัลกอริทึม
+    ลูปซ้อนลูป เงื่อนไข และอีกมากมาย
+  coursee-2019_shortdescription_congrats: สรุปพอสังเขปถึงแนวคิดในหลักสูตร C และ D
+    ก่อนจะเน้นไปที่เรื่องฟังก์ชั่น
+  coursef-2019_shortdescription_congrats: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+    ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+  coursea-2020_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
+    ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+  courseb-2020_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
+    ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+  coursec-2020_shortdescription_congrats: ใช้การจัดลำดับ ลูปและเหตุการณ์สร้างโปรแกรม
+    แปลความคิดสร้างสรรเป็นไบนารี สำรวจเทคนิคการแก้ไขปัญหาในแบบต่าง ๆ และศึกษาวิธีตอบโต้การเหยียดบนโลกไซเบอร์
+    และในตอนท้ายของหลักสูตร คุณจะได้สร้างเกมหรือเรื่องราวของคุณก่อนนำมาแชร์!
+  coursed-2020_shortdescription_congrats: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป
+    (nested loops) ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events)
+    นอกเหนือจากการเขียนโค้ดแล้ว ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
+  coursee-2020_shortdescription_congrats: เริ่มต้นเขียนโค้ดด้วยอัลกอริทึม ลูป เงื่อนไขและเหตุการณ์
+    ก่อนดูรายละเอียดของฟังก์ชั่น และในส่วนที่สองของหลักสูตรนี้ คุณจะได้ออกแบบและสร้างโปรเจกต์รวบยอดเพื่อแชร์กับเพื่อนและครอบครัว
+  coursef-2020_shortdescription_congrats: ศึกษาวิธีการใช้รูปแบบต่างๆ ของลูป เหตุการณ์
+    ฟังก์ชั่นและเงื่อนไข ทำความเข้าใจเทคนิคการแก้ไขปัญหาแบบต่าง ๆ และพูดถึงผลกระทบของการใช้คอมพิวเตอร์และอินเทอร์เน็ตที่มีต่อสังคม
+    สำหรับส่วนที่สองของหลักสูตรนี้ คุณจะได้ออกแบบและสร้างโปรเจกต์รวบยอดที่นำมาแชร์กับเพื่อนและครอบครัวได้
   codeorg_longdescription: เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน
     โดย Bill Gates, Mark Zuckerberg, Angry Birds และ Plants vs. Zombies เรียนรู้เรื่อง
     Loop เงื่อนไข และอัลกอริทึมพื้นฐาน ซึ่งมีให้เรียนมากถึง 34 ภาษา
@@ -1232,6 +1324,8 @@ th-TH:
   hoc_overview_view_teacher_guide: ดูคำแนะนำสำหรับครู
   hoc2018_creativity_create: สร้าง
   hoc2018_creativity_what_will_you_create: คุณจะสร้างอะไร
+  hoc2018_creativity_courses_link: ก้าวไปอีกขั้นด้วย<a href="https://studio.code.org/courses">หลักสูตรต่าง
+    ๆ ของ Code.org</a>
   hoc2018_mc_page_title: สอนชั่วโมงแห่งโค้ดด้วย Minecraft
   hoc2018_mc_details: หลากหลายภาษา | บราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2+
   hoc2018_mc_aquatic_description: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด
@@ -1290,3 +1384,13 @@ th-TH:
     21  "
   page_not_available_button: กลับไปที่หน้าแรก
   footer_powered_by_aws: ขับเคลื่อนระบบด้วย Amazon Web Services
+  footer_privacy_policy: นโยบายความเป็นส่วนตัว
+  footer_about: เกี่ยวกับ
+  footer_donate: ร่วมบริจาค
+  footer_support: ศูนย์ช่วยเหลือและชุมชน
+  footer_terms: เงื่อนไข
+  ai_in_partnership_with: 'ด้วยความร่วมมือกับ: '
+  ai_microsoft_thanks: "  เราขอขอบคุณ Microsoft ที่ให้การสนับสนุนวิสัยทัศน์และภารกิจของเราที่มีขึ้นเพื่อสร้างหลักประกันว่าเด็กทุกคนจะมีโอกาสได้ทำความรู้จักกับวิทยาการคอมพิวเตอร์และทักษะเพื่อความสำเร็จในศตวรรษที่
+    21  "
+  ai_activity: กิจกรรม
+  ai_description: รายละเอียด

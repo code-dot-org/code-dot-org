@@ -6,19 +6,6 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const styles = {
-  input: {
-    width: '90%',
-    height: 29,
-    marginRight: 10,
-    marginLeft: 5,
-    padding: 5
-  },
-  button: {
-    margin: 5
-  }
-};
-
 class PasswordReset extends Component {
   static propTypes = {
     initialIsResetting: PropTypes.bool,
@@ -142,5 +129,18 @@ class PasswordReset extends Component {
     );
   }
 }
+
+const styles = {
+  input: {
+    width: '90%',
+    height: 29,
+    marginRight: 10,
+    marginLeft: 5,
+    padding: 5
+  },
+  button: {
+    margin: 5
+  }
+};
 
 export default PasswordReset;

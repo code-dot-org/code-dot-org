@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import onClickOutside from 'react-onclickoutside';
 import color from '@cdo/apps/util/color';
+import {lessonEditorTableStyles} from './TableConstants';
 
 const styles = {
   actionButtons: {
@@ -47,8 +48,7 @@ export default onClickOutside(
       onSave: PropTypes.func.isRequired,
       onEditCancel: PropTypes.func.isRequired,
       onEditClick: PropTypes.func.isRequired,
-      onRemove: PropTypes.func.isRequired,
-      lineStyle: PropTypes.object
+      onRemove: PropTypes.func.isRequired
     };
 
     constructor(props) {
@@ -72,8 +72,8 @@ export default onClickOutside(
 
     render() {
       return (
-        <tr style={this.props.lineStyle}>
-          <td style={{height: 30}}>
+        <tr>
+          <td style={lessonEditorTableStyles.cell}>
             {this.props.editing ? (
               <input
                 value={this.state.description}
@@ -97,7 +97,12 @@ export default onClickOutside(
             )}
           </td>
           {this.props.editing ? (
-            <td style={styles.actionButtons}>
+            <td
+              style={{
+                ...lessonEditorTableStyles.actionsCell,
+                ...styles.actionButtons
+              }}
+            >
               <div
                 style={styles.save}
                 onMouseDown={() => this.props.onSave(this.state.description)}
@@ -113,7 +118,12 @@ export default onClickOutside(
               </div>
             </td>
           ) : (
-            <td style={styles.actionButtons}>
+            <td
+              style={{
+                ...lessonEditorTableStyles.actionsCell,
+                ...styles.actionButtons
+              }}
+            >
               <div style={styles.edit} onMouseDown={this.props.onEditClick}>
                 <i className="fa fa-edit" />
               </div>

@@ -1,0 +1,19 @@
+name 'OPD-K5 GettingStarted2'
+skip_dialog true
+markdown <<MARKDOWN
+# Curriculum Overview
+
+<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+## Code.org Values and Philosophy
+
+## Course Structure
+
+## Lesson Types
+
+## Lesson Structure
+
+
+If you are a <a href="https://code.org/educate/csd" target="blank" rel="noopener noreferrer">middle school</a> or <a href="https://code.org/educate/csp" target="blank" rel="noopener noreferrer">high school</a> teacher interested in teaching our middle school or high school courses, we recommend you pursue more <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">in-depth, ongoing professional development opportunities</a>.
+
+MARKDOWN

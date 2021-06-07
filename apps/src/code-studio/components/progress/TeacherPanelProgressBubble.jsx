@@ -75,7 +75,7 @@ export class TeacherPanelProgressBubble extends React.Component {
     const style = {
       ...styles.main,
       ...(userLevel.isConceptLevel && styles.diamond),
-      ...levelProgressStyle(userLevel, false)
+      ...levelProgressStyle(userLevel.status, userLevel.kind)
     };
 
     // Outer div here is used to make sure our bubbles all take up equivalent

@@ -1,0 +1,11 @@
+{
+  "func": "mouseWentDown",
+  "paletteParams": [
+    "button"
+  ],
+  "params": [
+    "\"leftButton\""
+  ],
+  "category": "World",
+  "type": "value"
+}

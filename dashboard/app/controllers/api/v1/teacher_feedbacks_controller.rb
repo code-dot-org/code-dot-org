@@ -8,7 +8,8 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     @feedback = TeacherFeedback.get_student_level_feedback(
       params.require(:student_id),
       params.require(:level_id),
-      params.require(:teacher_id)
+      params.require(:teacher_id),
+      params.require(:script_id)
     )
 
     # Setting custom header here allows us to access the csrf-token and manually use for create
@@ -17,7 +18,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     if @feedback.nil?
       head :no_content
     else
-      render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
+      render json: @feedback.summarize
     end
   end
 
@@ -29,10 +30,11 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
 
     @level_feedbacks = TeacherFeedback.where(
       student_id: params.require(:student_id),
-      level_id: params.require(:level_id)
-    ).latest_per_teacher
+      level_id: params.require(:level_id),
+      script_id: params.require(:script_id)
+    ).latest_per_teacher.map(&:summarize)
 
-    render json: @level_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
+    render json: @level_feedbacks
   end
 
   # Determine how many not yet seen feedback entries from any verified teacher
@@ -55,8 +57,10 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   # POST /teacher_feedbacks
   def create
     @teacher_feedback.teacher_id = current_user.id
+
     if @teacher_feedback.save
-      render json: @teacher_feedback, serializer: Api::V1::TeacherFeedbackSerializer, status: :created
+      # reload is called so that the correct created_at date is sent back
+      render json: @teacher_feedback.reload.summarize, status: :created
     else
       head :bad_request
     end
@@ -78,6 +82,6 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def teacher_feedback_params
-    params.require(:teacher_feedback).permit(:student_id, :script_id, :level_id, :script_level_id, :comment, :teacher_id, :performance)
+    params.require(:teacher_feedback).permit(:student_id, :script_id, :level_id, :comment, :teacher_id, :performance, :analytics_section_id, :review_state)
   end
 end

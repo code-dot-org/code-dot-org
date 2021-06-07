@@ -1,0 +1,18 @@
+{
+  "func": "drawImageURL",
+  "category": "Canvas",
+  "paramButtons": {
+    "minArgs": 1,
+    "maxArgs": 6
+  },
+  "paletteParams": [
+    "url"
+  ],
+  "params": [
+    "\"https://code.org/images/logo.png\""
+  ],
+  "allowFunctionDrop": {
+    "1": true,
+    "5": true
+  }
+}

@@ -43,7 +43,7 @@ describe('AddLevelDialogTop', () => {
       loadingLevels: false
     });
 
-    expect(wrapper.find('ToggleGroup').length).to.equal(1);
+    expect(wrapper.find('Connect(ToggleGroup)').length).to.equal(1);
     expect(wrapper.find('Connect(AddLevelFilters)').length).to.equal(1);
     expect(wrapper.find('AddLevelTable').length).to.equal(1);
     expect(wrapper.find('.fa-spin').length).to.equal(0); // no spinner

@@ -6,11 +6,137 @@
     "csd3-2021",
     "csd4-2021",
     "csd5-2021",
-    "csd6-2021"
+    "csd6-2021",
+    "csd7-2021"
   ],
   "properties": {
     "has_numbered_units": true,
     "version_year": "2021",
-    "family_name": "csd"
-  }
+    "family_name": "csd",
+    "has_verified_resources": true,
+    "visible": true
+  },
+  "resources": [
+    {
+      "name": "All Code",
+      "url": "/courses/csd-2021/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/csd-2021/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/csd-2021/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csd-2021/vocab",
+      "key": "all_vocabulary_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1"
+      }
+    },
+    {
+      "name": "Getting Started with CSD",
+      "url": "https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview",
+      "key": "getting_started_with_csd",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "getting_started_with_csd"
+      }
+    },
+    {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "key": "csd_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Assessment",
+      "url": "https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview",
+      "key": "csd_guide_to_assessment",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview",
+      "key": "csd_guide_to_using_resources",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    }
+  ],
+  "student_resources": [
+
+  ]
 }

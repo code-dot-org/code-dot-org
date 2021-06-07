@@ -8,7 +8,6 @@
       "exclude_csf_column_in_legend": true,
       "student_detail_progress_view": true,
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/csd-20/unit1/{LESSON}",
       "project_sharing": true,
       "pilot_experiment": "csd-piloters",

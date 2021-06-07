@@ -3,87 +3,27 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '../../../util/color';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
-import LessonTrophyProgressBubble from '@cdo/apps/templates/progress/LessonTrophyProgressBubble';
 import {
   levelsForLessonId,
-  lessonExtrasUrl,
-  getPercentPerfect
+  lessonExtrasUrl
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import {levelType} from '@cdo/apps/templates/progress/progressTypes';
-import {LevelKind} from '@cdo/apps/util/sharedConstants';
+import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
+import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 import $ from 'jquery';
-
-const styles = {
-  container: {
-    backgroundColor: color.lightest_gray,
-    border: `1px solid ${color.lighter_gray}`,
-    borderRadius: 5,
-    height: 40,
-    position: 'relative',
-    overflow: 'hidden'
-  },
-  outer: {
-    position: 'absolute',
-    paddingLeft: 4,
-    paddingRight: 4,
-    height: '100%',
-    whiteSpace: 'nowrap'
-  },
-  inner: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100%'
-  },
-  headerVignette: {
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none'
-  },
-  headerVignetteLeftRight: {
-    background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
-  },
-  headerVignetteLeft: {
-    background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px'
-  },
-  headerVignetteRight: {
-    background:
-      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
-  },
-  spacer: {
-    marginRight: 'auto'
-  },
-  lessonTrophyContainer: {
-    border: 0,
-    borderRadius: 20,
-    paddingLeft: 8,
-    paddingRight: 0,
-    minWidth: 350,
-    marginLeft: 48
-  },
-  pillContainer: {
-    // Vertical padding is so that this lines up with other bubbles
-    paddingTop: 4,
-    paddingBottom: 4
-  }
-};
 
 /**
  * Lesson progress component used in level header and course overview.
  */
 class LessonProgress extends Component {
   static propTypes = {
-    levels: PropTypes.arrayOf(levelType).isRequired,
+    levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     lessonExtrasUrl: PropTypes.string,
     isLessonExtras: PropTypes.bool,
-    lessonTrophyEnabled: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
-    currentPageNumber: PropTypes.number
+    currentPageNumber: PropTypes.number,
+    currentLevelId: PropTypes.string
   };
 
   getFullWidth() {
@@ -161,19 +101,30 @@ class LessonProgress extends Component {
     return {headerFullProgressOffset: 0, vignetteStyle: null};
   }
 
-  render() {
-    const {
-      currentPageNumber,
-      lessonExtrasUrl,
-      isLessonExtras,
-      lessonTrophyEnabled
-    } = this.props;
-    let levels = this.props.levels;
+  isBonusComplete() {
+    return this.props.levels.some(
+      level => level.bonus && level.status === LevelStatus.perfect
+    );
+  }
 
-    // Only puzzle levels (non-concept levels) should count towards mastery.
-    if (lessonTrophyEnabled) {
-      levels = levels.filter(level => !level.isConceptLevel);
-    }
+  /**
+   * Determines if we're on a bonus level page, in which case we want to pass
+   * `isSelected=true` into our `LessonExtrasProgressBubble` component.
+   * `isLessonExtras` indicates whether we're on the bonus level selection
+   * page, and `currentLevel.bonus` indicates whether we're on an actual
+   * bonus level page.
+   */
+  isOnBonusLevel() {
+    const {isLessonExtras, levels, currentLevelId} = this.props;
+    return (
+      isLessonExtras ||
+      levels.some(level => level.id === currentLevelId && level.bonus)
+    );
+  }
+
+  render() {
+    const {currentPageNumber, lessonExtrasUrl} = this.props;
+    let levels = this.props.levels;
 
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
@@ -183,14 +134,10 @@ class LessonProgress extends Component {
       vignetteStyle
     } = this.getFullProgressOffset();
 
+    const onBonusLevel = this.isOnBonusLevel();
+
     return (
-      <div
-        className="react_stage"
-        style={{
-          ...styles.container,
-          ...(lessonTrophyEnabled && styles.lessonTrophyContainer)
-        }}
-      >
+      <div className="react_stage" style={styles.container}>
         <div
           className="full_progress_outer"
           style={{...styles.outer, left: headerFullProgressOffset}}
@@ -200,7 +147,6 @@ class LessonProgress extends Component {
             ref="fullProgressInner"
             style={styles.inner}
           >
-            {lessonTrophyEnabled && <div style={styles.spacer} />}
             {levels.map((level, index) => {
               let isCurrent = level.isCurrentLevel;
               if (isCurrent && level.kind === LevelKind.assessment) {
@@ -211,6 +157,7 @@ class LessonProgress extends Component {
                   key={index}
                   ref={isCurrent ? 'currentLevel' : null}
                   style={{
+                    ...styles.inner,
                     ...(level.isUnplugged && isCurrent && styles.pillContainer)
                   }}
                 >
@@ -218,23 +165,18 @@ class LessonProgress extends Component {
                     level={level}
                     disabled={false}
                     smallBubble={!isCurrent}
-                    lessonTrophyEnabled={lessonTrophyEnabled}
                   />
                 </div>
               );
             })}
-            {lessonExtrasUrl && !lessonTrophyEnabled && (
-              <div ref={isLessonExtras ? 'currentLevel' : null}>
+            {lessonExtrasUrl && (
+              <div ref={onBonusLevel ? 'currentLevel' : null}>
                 <LessonExtrasProgressBubble
                   lessonExtrasUrl={lessonExtrasUrl}
-                  perfect={isLessonExtras}
+                  isPerfect={this.isBonusComplete()}
+                  isSelected={onBonusLevel}
                 />
               </div>
-            )}
-            {lessonTrophyEnabled && (
-              <LessonTrophyProgressBubble
-                percentPerfect={getPercentPerfect(levels)}
-              />
             )}
           </div>
         </div>
@@ -244,14 +186,73 @@ class LessonProgress extends Component {
   }
 }
 
+const styles = {
+  container: {
+    backgroundColor: color.lightest_gray,
+    border: `1px solid ${color.lighter_gray}`,
+    borderRadius: 5,
+    height: 40,
+    position: 'relative',
+    overflow: 'hidden'
+  },
+  outer: {
+    position: 'absolute',
+    paddingLeft: 4,
+    paddingRight: 4,
+    height: '100%',
+    whiteSpace: 'nowrap'
+  },
+  inner: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%'
+  },
+  headerVignette: {
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none'
+  },
+  headerVignetteLeftRight: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
+  },
+  headerVignetteLeft: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px'
+  },
+  headerVignetteRight: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
+  },
+  spacer: {
+    marginRight: 'auto'
+  },
+  lessonTrophyContainer: {
+    border: 0,
+    borderRadius: 20,
+    paddingLeft: 8,
+    paddingRight: 0,
+    minWidth: 350,
+    marginLeft: 48
+  },
+  pillContainer: {
+    // Vertical padding is so that this lines up with other bubbles
+    paddingTop: 4,
+    paddingBottom: 4
+  }
+};
+
 export const UnconnectedLessonProgress = LessonProgress;
 
 export default connect(state => ({
-  levels: levelsForLessonId(state.progress, state.progress.currentStageId),
+  levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
   lessonExtrasUrl: lessonExtrasUrl(
     state.progress,
-    state.progress.currentStageId
+    state.progress.currentLessonId
   ),
   isLessonExtras: state.progress.isLessonExtras,
-  currentPageNumber: state.progress.currentPageNumber
+  currentPageNumber: state.progress.currentPageNumber,
+  currentLevelId: state.progress.currentLevelId
 }))(LessonProgress);

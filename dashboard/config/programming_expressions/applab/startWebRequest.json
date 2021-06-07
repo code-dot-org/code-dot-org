@@ -1,0 +1,15 @@
+{
+  "func": "startWebRequest",
+  "category": "Data",
+  "paletteParams": [
+    "url",
+    "callback"
+  ],
+  "params": [
+    "\"https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true\"",
+    "function(status, type, content) {\n  \n}"
+  ],
+  "allowFunctionDrop": {
+    "1": true
+  }
+}

@@ -118,13 +118,10 @@ Resources:
             Condition:
               StringNotEquals:
                 cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
-            # Read-only access to current secrets.
+          # Read-only access to secrets.
           - Effect: Allow
             Action: secretsmanager:GetSecretValue
             Resource: '*'
-            Condition:
-              StringEquals:
-                secretsmanager:VersionStage: AWSCURRENT
   # Permissions which grant the CurriculumBuilder project read-only acces to
   # the DCDO database, so select configuration variables can be shared between
   # the two projects.
@@ -201,6 +198,43 @@ Resources:
             Action: logs:*
             Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*'
       ManagedPolicyArns: [!Ref DevPermissions]
+  DataAnalystRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: DataAnalyst
+      Path: /dataanalyst/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+      ManagedPolicyArns: [!Ref DataAnalystPolicy]
+  DataAnalystPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: DataAnalystPolicy
+      Path: /dataanalyst/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: DataAnalystTools
+            Effect: Allow
+            Action:
+              - 's3:ListAllMyBuckets'
+              - 'redshift:*'
+              - 'dms:*'
+            Resource: '*'
+          - Sid: DataAnalystS3ImportExportBucket
+            Effect: Allow
+            Action:
+              - 's3:*'
+            Resource:
+              - 'arn:aws:s3:::cdo-data-sharing-internal/*'
+              - 'arn:aws:s3:::cdo-data-sharing-internal'
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
   FirehoseLambdaRole:

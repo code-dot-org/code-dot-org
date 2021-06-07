@@ -1,24 +1,23 @@
 hidden false
 hideable_lessons true
 lesson_extras_available true
-has_lesson_plan true
 curriculum_path 'https://code.org/curriculum/course2/{LESSON}/Teacher'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 curriculum_umbrella 'CSF'
 tts true
 
-lesson 'Graph Paper Programming', display_name: 'Graph Paper Programming'
+lesson 'Graph Paper Programming', display_name: 'Graph Paper Programming', has_lesson_plan: true, unplugged: true
 level 'GraphPaperProgramming'
 level '2-3 Graph Paper Multi 1'
 level '2-3 Graph Paper Match 1'
 
-lesson 'Real-life Algorithms: Paper Planes', display_name: 'Real-life Algorithms: Paper Planes'
+lesson 'Real-life Algorithms: Paper Planes', display_name: 'Real-life Algorithms: Paper Planes', has_lesson_plan: true, unplugged: true
 level 'PaperPlanes'
 level '2-3 Algorithms Multi 1'
 level '2-3 Algorithms Multi 2'
 
-lesson 'Maze: Sequence', display_name: 'Maze: Sequence'
+lesson 'Maze: Sequence', display_name: 'Maze: Sequence', has_lesson_plan: true
 level '2-3 Maze 1'
 level '2-3 Maze 2'
 level '2-3 Maze 3'
@@ -33,7 +32,7 @@ level '2-3 Maze Match 2'
 bonus 'course2_maze_programming_challenge1'
 bonus 'course2_maze_programming_challenge2'
 
-lesson 'Artist: Sequence', display_name: 'Artist: Sequence'
+lesson 'Artist: Sequence', display_name: 'Artist: Sequence', has_lesson_plan: true
 level '2-3 Artist 1 new'
 level '2-3 Artist 2 new'
 level '2-3 Artist 3new'
@@ -41,8 +40,8 @@ level '2-3 Artist 3.4'
 level '2-3 Artist 4'
 level '2-3 Artist 6'
 variants
-  level '2-3 Artist 9', active: false
   level '2-3 Artist 9 NEW'
+  level '2-3 Artist 9', active: false
 endvariants
 level '2-3 Artist 7'
 level '2-3 Artist 8'
@@ -52,11 +51,11 @@ level '2-3 artist match 1'
 bonus 'course2_artist_prog_challenge1'
 bonus 'course2_artist_prog_challenge2'
 
-lesson 'Getting Loopy', display_name: 'Getting Loopy'
+lesson 'Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true, unplugged: true
 level 'GettingLoopy'
 level '2-3 Getting Loopy Multi 1'
 
-lesson 'Maze: Loops', display_name: 'Maze: Loops'
+lesson 'Maze: Loops', display_name: 'Maze: Loops', has_lesson_plan: true
 level '2-3 Maze Loops 1'
 level '2-3 Maze 12'
 level '2-3 Maze 13'
@@ -74,7 +73,7 @@ level '2-3 maze match 1'
 bonus 'course2_maze_loops_challenge1'
 bonus 'course2_collector_loops_challenge2'
 
-lesson 'Artist: Loops', display_name: 'Artist: Loops'
+lesson 'Artist: Loops', display_name: 'Artist: Loops', has_lesson_plan: true
 level '2-3 Artist Loops New 1'
 level '2-3 Artist Loops New 2'
 level '4-5 Artist 3.5'
@@ -92,7 +91,7 @@ level '2-3 artist loops match 1'
 level '2-3 artist loops multi 2'
 level '2-3 artist loops multi 1'
 
-lesson 'Bee: Loops', display_name: 'Bee: Loops'
+lesson 'Bee: Loops', display_name: 'Bee: Loops', has_lesson_plan: true
 level '2-3 Bee Loops 1A'
 level '2-3 Bee Loops 2A'
 level '2-3 Bee Loops 3A'
@@ -110,12 +109,12 @@ level '2-3 bee loops multi 1'
 bonus 'course2_harvester_loops_challenge1'
 bonus 'course2_harvester_loops_challenge2'
 
-lesson 'Relay programming', display_name: 'Relay programming'
+lesson 'Relay programming', display_name: 'Relay programming', has_lesson_plan: true, unplugged: true
 level 'RelayProgramming'
 level '2-3 Relay Programming Multi 1'
 level '2-3 Relay Programming Multi 2'
 
-lesson 'Bee: Debugging', display_name: 'Bee: Debugging'
+lesson 'Bee: Debugging', display_name: 'Bee: Debugging', has_lesson_plan: true
 level '2-3 Bee Debugging 1'
 level '2-3 Bee Debugging 2'
 level '2-3 Bee Debugging 3'
@@ -130,7 +129,7 @@ level '2-3 Bee Debugging Assessment 1'
 bonus 'course2_collector_prog_challenge1'
 bonus 'course2_collector_prog_challenge2'
 
-lesson 'Artist: Debugging', display_name: 'Artist: Debugging'
+lesson 'Artist: Debugging', display_name: 'Artist: Debugging', has_lesson_plan: true
 level '2-3 Artist Debugging 1'
 level '2-3 Artist Debugging 2'
 level '2-3 Artist Debugging 3'
@@ -144,11 +143,11 @@ level '2-3 Artist Debugging 11'
 level '2-3 Artist Debugging Assessment 1'
 level '2-3 artist debug multi 1'
 
-lesson 'Conditionals', display_name: 'Conditionals'
+lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: true, unplugged: true
 level 'Conditionals'
 level '2-3 Conditionals Multi 1'
 
-lesson 'Bee: Conditionals', display_name: 'Bee: Conditionals'
+lesson 'Bee: Conditionals', display_name: 'Bee: Conditionals', has_lesson_plan: true
 level '2-3 Bee Conditionals 2'
 level '2-3 Bee Conditionals 3'
 level '2-3 Bee Conditionals 5'
@@ -167,15 +166,15 @@ level '2-3 bee conditionals multi 3'
 bonus 'course2_bee_conditionals_challenge2'
 bonus 'course2_bee_conditionals_challenge1'
 
-lesson 'Binary Bracelets', display_name: 'Binary Bracelets'
+lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true, unplugged: true
 level 'BinaryBracelets'
 level '2-3 Binary Match 1'
 
-lesson 'The Big Event', display_name: 'The Big Event'
+lesson 'The Big Event', display_name: 'The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent'
 level '2-3 Big Event Match 1'
 
-lesson 'Flappy', display_name: 'Flappy'
+lesson 'Flappy', display_name: 'Flappy', has_lesson_plan: true
 level 'flappy_1'
 level 'flappy_2'
 level 'flappy_3'
@@ -187,7 +186,7 @@ level 'flappy_8'
 level 'flappy_9'
 level 'flappy_11'
 
-lesson 'Studio: Create a Story', display_name: 'Play Lab: Create a Story'
+lesson 'Studio: Create a Story', display_name: 'Play Lab: Create a Story', has_lesson_plan: true
 skin 'studio'
 video_key_for_next_level 'C2_playlab_createstory'
 level_concept_difficulty '{"sequencing":1}'
@@ -223,11 +222,11 @@ skin 'studio'
 level_concept_difficulty '{"sequencing":1,"repeat_until_while":1,"events":1}'
 level 'blockly:Studio:c2_11'
 
-lesson 'Your Digital Footprint', display_name: 'Your Digital Footprint'
+lesson 'Your Digital Footprint', display_name: 'Your Digital Footprint', has_lesson_plan: true, unplugged: true
 level 'DigitalFootprint'
 level 'K-1 Digital Footprint Multi 1'
 
-lesson 'Artist: Nested Loops', display_name: 'Artist: Nested Loops'
+lesson 'Artist: Nested Loops', display_name: 'Artist: Nested Loops', has_lesson_plan: true
 level '2-3 Artist Nested Loops 1'
 level '2-3 Artist Nested Loops 2'
 level '2-3 Artist Nested Loops 3'

@@ -27,8 +27,9 @@ export default storybook => {
           loginType: loginType
         }}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechScriptIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -48,8 +49,9 @@ export default storybook => {
           studentCount: 0
         }}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechScriptIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -66,8 +68,9 @@ export default storybook => {
         sections={{}}
         section={testSection}
         isSaveInProgress={true}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechScriptIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />

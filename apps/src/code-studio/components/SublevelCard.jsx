@@ -7,86 +7,12 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
 import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
 import queryString from 'query-string';
-import {levelTypeWithoutStatus} from '@cdo/apps/templates/progress/progressTypes';
-
-const THUMBNAIL_IMAGE_SIZE = 200;
-const MARGIN = 10;
-const WIDTH = 435;
-
-const styles = {
-  row: {
-    display: 'flex',
-    width: WIDTH,
-    marginBottom: MARGIN,
-    marginRight: MARGIN,
-    backgroundColor: color.white,
-    border: '1px solid rgb(187, 187, 187)',
-    borderRadius: 2
-  },
-  thumbnail: {
-    minWidth: THUMBNAIL_IMAGE_SIZE,
-    width: THUMBNAIL_IMAGE_SIZE,
-    height: THUMBNAIL_IMAGE_SIZE,
-    border: '1px solid rgb(187, 187, 187)',
-    borderRadius: 2
-  },
-  placeholderThumbnail: {
-    minWidth: THUMBNAIL_IMAGE_SIZE,
-    width: THUMBNAIL_IMAGE_SIZE,
-    height: THUMBNAIL_IMAGE_SIZE,
-    backgroundColor: color.lighter_gray,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    border: '1px solid rgb(187, 187, 187)',
-    borderRadius: 2
-  },
-  icon: {
-    fontSize: THUMBNAIL_IMAGE_SIZE - 50,
-    color: color.white,
-    opacity: 0.8
-  },
-  flagBubble: {
-    fontSize: 30,
-    height: 30,
-    width: 30
-  },
-  column: {
-    marginLeft: MARGIN * 2,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    margin: MARGIN
-  },
-  bubbleAndTitle: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-start'
-  },
-  title: {
-    minHeight: 30,
-    fontSize: 16,
-    lineHeight: '25px',
-    fontFamily: '"Gotham 5r"',
-    color: color.teal,
-    marginBottom: 10,
-    marginLeft: MARGIN,
-    overflowWrap: 'break-word',
-    wordWrap: 'break-word',
-    hyphens: 'auto',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  description: {
-    marginTop: 5
-  }
-};
-
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 export default class SublevelCard extends React.Component {
   static propTypes = {
     isLessonExtra: PropTypes.bool,
     // sublevels generally use "perfect" instead of status
-    sublevel: levelTypeWithoutStatus,
+    sublevel: levelType,
     sectionId: PropTypes.number,
     userId: PropTypes.number
   };
@@ -158,11 +84,8 @@ export default class SublevelCard extends React.Component {
 
     if (isLessonExtra) {
       return (
-        <a style={styles.flagBubble} href={this.getSublevelUrl()}>
-          <LessonExtrasFlagIcon
-            perfect={sublevel.perfect}
-            style={styles.flagBubble}
-          />
+        <a href={this.getSublevelUrl()}>
+          <LessonExtrasFlagIcon isPerfect={sublevel.perfect} size={30} />
         </a>
       );
     }
@@ -211,3 +134,71 @@ export default class SublevelCard extends React.Component {
     );
   }
 }
+
+const THUMBNAIL_IMAGE_SIZE = 200;
+const MARGIN = 10;
+const WIDTH = 435;
+
+const styles = {
+  row: {
+    display: 'flex',
+    width: WIDTH,
+    marginBottom: MARGIN,
+    marginRight: MARGIN,
+    backgroundColor: color.white,
+    border: '1px solid rgb(187, 187, 187)',
+    borderRadius: 2
+  },
+  thumbnail: {
+    minWidth: THUMBNAIL_IMAGE_SIZE,
+    width: THUMBNAIL_IMAGE_SIZE,
+    height: THUMBNAIL_IMAGE_SIZE,
+    border: '1px solid rgb(187, 187, 187)',
+    borderRadius: 2
+  },
+  placeholderThumbnail: {
+    minWidth: THUMBNAIL_IMAGE_SIZE,
+    width: THUMBNAIL_IMAGE_SIZE,
+    height: THUMBNAIL_IMAGE_SIZE,
+    backgroundColor: color.lighter_gray,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    border: '1px solid rgb(187, 187, 187)',
+    borderRadius: 2
+  },
+  icon: {
+    fontSize: THUMBNAIL_IMAGE_SIZE - 50,
+    color: color.white,
+    opacity: 0.8
+  },
+  column: {
+    marginLeft: MARGIN * 2,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    margin: MARGIN
+  },
+  bubbleAndTitle: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'flex-start'
+  },
+  title: {
+    minHeight: 30,
+    fontSize: 16,
+    lineHeight: '25px',
+    fontFamily: '"Gotham 5r"',
+    color: color.teal,
+    marginBottom: 10,
+    marginLeft: MARGIN,
+    overflowWrap: 'break-word',
+    wordWrap: 'break-word',
+    hyphens: 'auto',
+    display: 'flex',
+    alignItems: 'center'
+  },
+  description: {
+    marginTop: 5
+  }
+};

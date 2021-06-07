@@ -872,6 +872,7 @@ gl-ES:
   coursee-2017_gradelevel: De 8 a 12 anos
   coursee-2018_gradelevel: De 8 a 12 anos
   coursee-2019_gradelevel: De 8 a 12 anos
+  coursee-2020_gradelevel: De 8 a 12 anos
   accelerated_gradelevel: Idades de 10 a 18 anos
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
   codeintl_platformtext: Navegadores Web modernos, smartphones, tablets
@@ -1557,3 +1558,11 @@ gl-ES:
   hoc2018_dance_teacher_resources_tile2_button: Actividade off-line
   hoc2018_dance_amazon_about_future_engineer_button: Aprender máis
   footer_powered_by_aws: Sostido por Amazon Web Services
+  footer_privacy_policy: Política de Privacidade
+  footer_about: Sobre
+  footer_partners: Socios
+  footer_donate: Fai unha doazón
+  footer_support: Axuda e Comunidade
+  footer_terms: Termos
+  ai_activity: Actividade
+  ai_description: Rango

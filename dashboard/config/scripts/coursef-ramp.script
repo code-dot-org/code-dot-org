@@ -1,7 +1,7 @@
-lesson 'Algorithms: Tangrams', display_name: 'Algorithms: Tangrams'
+lesson 'Algorithms: Tangrams', display_name: 'Algorithms: Tangrams', has_lesson_plan: false, unplugged: true
 level 'TangramAlgorithms'
 
-lesson 'Introduction', display_name: 'Introduction'
+lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: false
 level 'courseE_video_ramp1'
 level 'courseF_maze_ramp1'
 level 'courseF_maze_ramp2'
@@ -20,7 +20,7 @@ level 'courseF_maze_ramp13'
 level 'courseF_maze_ramp7', challenge: true
 level 'courseF_external_ramp14'
 
-lesson 'Ice Age Play Lab', display_name: 'Ice Age Play Lab'
+lesson 'Ice Age Play Lab', display_name: 'Ice Age Play Lab', has_lesson_plan: false
 level 'iceage_hello1'
 level 'iceage_hello2'
 level 'iceage_move_to_flag'
@@ -33,7 +33,7 @@ level 'iceage_warn_ice_age'
 level 'iceage_throw_hearts'
 level 'iceage_free_play'
 
-lesson 'Conditionals and Functions in Bee', display_name: 'Conditionals and Functions in Bee'
+lesson 'Conditionals and Functions in Bee', display_name: 'Conditionals and Functions in Bee', has_lesson_plan: false
 level 'courseD_bee_conditionalsVid1'
 level 'courseF_bee_conditionals1_predict1'
 level 'courseF_bee_conditionals2'

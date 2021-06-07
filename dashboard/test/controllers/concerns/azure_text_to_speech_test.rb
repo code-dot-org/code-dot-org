@@ -10,11 +10,6 @@ class AzureTextToSpeechTest < ActionController::TestCase
     CDO.stubs(:azure_speech_service_region).returns(@region)
   end
 
-  teardown do
-    # Some tests access and store data in the cache, so clear between tests to avoid state leakage
-    Rails.cache.clear
-  end
-
   test 'get_token: returns token on success' do
     stub_request(:post, "https://#{@region}.api.cognitive.microsoft.com/sts/v1.0/issueToken").
       with(headers: {'Ocp-Apim-Subscription-Key' => @api_key}).

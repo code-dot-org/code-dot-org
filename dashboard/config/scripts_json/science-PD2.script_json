@@ -10,6 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:54:43 UTC",
     "seeding_key": {
       "script.name": "science-PD2"
     }
@@ -33,6 +34,7 @@
       "name": "Welcome!",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -47,6 +49,7 @@
       "name": "Review StarLogo Nova",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -61,6 +64,7 @@
       "name": "Reviewing the Modules",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -75,6 +79,7 @@
       "name": "Advanced StarLogo Nova",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -89,6 +94,7 @@
       "name": "Remixing Phases 1 and 2",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -103,6 +109,7 @@
       "name": "Thinking Ahead to Implementation",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -117,6 +124,7 @@
       "name": "Wrap-Up",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -127,15 +135,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2b intro"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2b intro"
@@ -151,11 +169,15 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PDECS tour"
@@ -171,11 +193,15 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 timeline"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 timeline"
@@ -191,11 +217,15 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD PD details"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD PD details"
@@ -211,11 +241,15 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 StarLogoNova"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 StarLogoNova"
@@ -231,11 +265,15 @@
     {
       "chapter": 6,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD StarLogo intro 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD StarLogo intro 1"
@@ -251,11 +289,15 @@
     {
       "chapter": 7,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD StarLogo intro 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD StarLogo intro 2"
@@ -271,11 +313,15 @@
     {
       "chapter": 8,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD StarLogo intro 3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD StarLogo intro 3"
@@ -291,11 +337,15 @@
     {
       "chapter": 9,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD StarLogo intro 4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD StarLogo intro 4"
@@ -311,11 +361,15 @@
     {
       "chapter": 10,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciencePD2b remixing"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciencePD2b remixing"
@@ -331,11 +385,15 @@
     {
       "chapter": 11,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 mods"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 mods"
@@ -351,11 +409,15 @@
     {
       "chapter": 12,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 remember"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 remember"
@@ -371,11 +433,15 @@
     {
       "chapter": 13,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 challenge"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 challenge"
@@ -391,11 +457,15 @@
     {
       "chapter": 14,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 SLN explore"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 SLN explore"
@@ -411,11 +481,15 @@
     {
       "chapter": 15,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 sliders"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 sliders"
@@ -431,11 +505,15 @@
     {
       "chapter": 16,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD breeds"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD breeds"
@@ -451,11 +529,15 @@
     {
       "chapter": 17,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 camera"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 camera"
@@ -471,11 +553,15 @@
     {
       "chapter": 18,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 wiggle"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 wiggle"
@@ -491,11 +577,15 @@
     {
       "chapter": 19,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 color"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 color"
@@ -511,11 +601,15 @@
     {
       "chapter": 20,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 procedures"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 procedures"
@@ -531,11 +625,15 @@
     {
       "chapter": 21,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 conditionals"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 conditionals"
@@ -551,11 +649,15 @@
     {
       "chapter": 22,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 remix1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 remix1"
@@ -571,11 +673,15 @@
     {
       "chapter": 23,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 implement1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 implement1"
@@ -591,11 +697,15 @@
     {
       "chapter": 24,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 implement2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 implement2"
@@ -611,11 +721,15 @@
     {
       "chapter": 25,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 thanks"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 thanks"
@@ -631,11 +745,15 @@
     {
       "chapter": 26,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2b reflection"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2b reflection"
@@ -651,11 +769,15 @@
     {
       "chapter": 27,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2b end"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2b end"
@@ -967,5 +1089,35 @@
         "script.name": "science-PD2"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

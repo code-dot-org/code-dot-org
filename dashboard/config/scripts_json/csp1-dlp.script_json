@@ -8,10 +8,12 @@
       "professional_learning_course": "CS Principles Facilitator in Training",
       "peer_reviews_to_complete": 6,
       "student_detail_progress_view": true,
-      "exclude_csf_column_in_legend": true
+      "exclude_csf_column_in_legend": true,
+      "deprecated": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-10 15:35:28 UTC",
     "seeding_key": {
       "script.name": "csp1-dlp"
     }
@@ -48,6 +50,7 @@
       "name": "Deeper Learning Overview",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -62,6 +65,7 @@
       "name": "Complete Unit 1 Deeper Learning Reflections",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -72,16 +76,26 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "deeper learning"
+        ],
         "progression": "Background"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "deeper learning"
@@ -97,12 +111,16 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp deeper learning timeline"
+        ],
         "progression": "Deadlines and Payment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp deeper learning timeline"
@@ -118,12 +136,16 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "deeper learning recommendations- csp"
+        ],
         "progression": "Resource Recommendations"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "deeper learning recommendations- csp"
@@ -139,12 +161,16 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "peer review recommendations"
+        ],
         "progression": "Guidelines For Peer Review"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "peer review recommendations"
@@ -160,12 +186,16 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp1dlp-lessons"
+        ],
         "progression": "Lesson Connections and Philosophy"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp1dlp-lessons"
@@ -181,12 +211,16 @@
     {
       "chapter": 6,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp1dlp-tools"
+        ],
         "progression": "Tool Philosophy and Use"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp1dlp-tools"
@@ -202,12 +236,16 @@
     {
       "chapter": 7,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp1dlp-assessment"
+        ],
         "progression": "Assessment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp1dlp-assessment"
@@ -299,5 +337,35 @@
         "script.name": "csp1-dlp"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

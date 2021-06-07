@@ -1,51 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import Button from '@cdo/apps/templates/Button';
-import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
+
 import AddLevelDialogTop from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
+import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
+import i18n from '@cdo/locale';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    width: 970,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
-    marginLeft: -500
-  },
-  dialogContent: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  topArea: {
-    display: 'flex',
-    flexDirection: 'column',
-    margin: 15
-  },
-  bottomArea: {
-    display: 'flex',
-    flexDirection: 'column',
-    margin: 15
-  },
-  textArea: {
-    width: '95%'
-  },
-  levelsBox: {
-    border: '1px solid black',
-    width: '95%',
-    height: '100%',
-    padding: 10
-  },
-  filtersAndLevels: {
-    display: 'flex',
-    flexDirection: 'column'
-  }
-};
+import LessonEditorDialog from './LessonEditorDialog';
 
 export default class AddLevelDialog extends Component {
   static propTypes = {
@@ -70,10 +34,9 @@ export default class AddLevelDialog extends Component {
 
   render() {
     return (
-      <BaseDialog
+      <LessonEditorDialog
         isOpen={this.props.isOpen}
         handleClose={this.props.handleConfirm}
-        useUpdatedStyles
         style={styles.dialog}
       >
         <h2>Add Levels</h2>
@@ -111,7 +74,41 @@ export default class AddLevelDialog extends Component {
             className="save-add-levels-button"
           />
         </DialogFooter>
-      </BaseDialog>
+      </LessonEditorDialog>
     );
   }
 }
+
+const styles = {
+  dialog: {
+    width: 970,
+    marginLeft: -500
+  },
+  dialogContent: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  topArea: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 15
+  },
+  bottomArea: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 15
+  },
+  textArea: {
+    width: '95%'
+  },
+  levelsBox: {
+    border: '1px solid black',
+    width: '95%',
+    height: '100%',
+    padding: 10
+  },
+  filtersAndLevels: {
+    display: 'flex',
+    flexDirection: 'column'
+  }
+};

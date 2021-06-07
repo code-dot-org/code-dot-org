@@ -491,6 +491,14 @@ When /^I click "([^"]*)"( once it exists)?(?: to load a new (page|tab))?$/ do |s
   page_load(load) {element.click}
 end
 
+When /^I click "([^"]*)" if it is visible$/ do |selector|
+  if @browser.execute_script(jquery_is_element_visible(selector))
+    find = -> {@browser.find_element(:css, selector)}
+    element = find.call
+    element.click
+  end
+end
+
 When /^I select the end of "([^"]*)"$/ do |selector|
   @browser.execute_script("document.querySelector(\"#{selector}\").setSelectionRange(9999, 9999);")
 end
@@ -509,8 +517,9 @@ When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
 end
 
 When /^I click selector "([^"]*)" once I see it(?: to load a new (page|tab))?$/ do |selector, load|
+  wait_for_jquery
   wait_until do
-    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
+    @browser.execute_script(jquery_is_element_visible(selector))
   end
   page_load(load) do
     @browser.execute_script("$(\"#{selector}\")[0].click();")
@@ -889,13 +898,13 @@ Then(/^I slow down execution speed$/) do
 end
 
 # Note: only works for levels other than the current one
-Then(/^check that level (\d+) on this stage is done$/) do |level|
+Then(/^check that level (\d+) on this lesson is done$/) do |level|
   undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
   !undone
 end
 
 # Note: only works for levels other than the current one
-Then(/^check that level (\d+) on this stage is not done$/) do |level|
+Then(/^check that level (\d+) on this lesson is not done$/) do |level|
   undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
   undone
 end
@@ -1014,10 +1023,9 @@ Given(/^I create a temp script and lesson$/) do
   data = JSON.parse(response)
   @temp_script_name = data['script_name']
   @temp_lesson_id = data['lesson_id']
-  puts "created temp script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
 end
 
-Given(/^I create a temp migrated script and lesson$/) do
+Given(/^I create a temp migrated script with lessons$/) do
   response = browser_request(
     url: '/api/test/create_migrated_script',
     method: 'POST'
@@ -1025,7 +1033,7 @@ Given(/^I create a temp migrated script and lesson$/) do
   data = JSON.parse(response)
   @temp_script_name = data['script_name']
   @temp_lesson_id = data['lesson_id']
-  puts "created temp migrated script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
+  @temp_lesson_without_lesson_plan_id = data['lesson_without_lesson_plan_id']
 end
 
 Given(/^I view the temp script overview page$/) do
@@ -1055,6 +1063,13 @@ Given(/^I view the temp lesson edit page$/) do
   }
 end
 
+Given(/^I view the temp lesson edit page for lesson without lesson plan$/) do
+  steps %{
+    Given I am on "http://studio.code.org/lessons/#{@temp_lesson_without_lesson_plan_id}/edit"
+    And I wait until element "#edit-container" is visible
+  }
+end
+
 Given (/^I remove the temp script from the cache$/) do
   browser_request(
     url: '/api/test/invalidate_script',
@@ -1062,8 +1077,7 @@ Given (/^I remove the temp script from the cache$/) do
     body: {script_name: @temp_script_name}
   )
 end
-
-Given(/^I delete the temp script and lesson$/) do
+Given(/^I delete the temp script with lessons$/) do
   browser_request(
     url: '/api/test/destroy_script',
     method: 'POST',
@@ -1206,6 +1220,13 @@ And /^I dismiss the language selector$/ do
   steps %Q{
     And I click selector ".close" if I see it
     And I wait until I don't see selector ".close"
+  }
+end
+
+And /^I dismiss the login reminder$/ do
+  steps %Q{
+    And I click selector ".modal-backdrop" if I see it
+    And I wait until I don't see selector ".uitest-login-callout"
   }
 end
 
@@ -1448,6 +1469,13 @@ And(/I type the section code into "([^"]*)"$/) do |selector|
   }
 end
 
+# press keys allows React to pick up on the changes
+And(/I enter the section code into "([^"]*)"$/) do |selector|
+  element = @browser.find_element(:css, selector)
+  section_code = @section_url.split('/').last
+  press_keys(element, section_code)
+end
+
 When(/^I sign out$/) do
   if @browser.current_url.include?('studio')
     browser_request(url: replace_hostname('/users/sign_out.json'), code: 204)
@@ -1465,6 +1493,10 @@ And(/^I delete the cookie named "([^"]*)"$/) do |cookie_name|
   if @browser.manage.all_cookies.any? {|cookie| cookie[:name] == cookie_name}
     @browser.manage.delete_cookie cookie_name
   end
+end
+
+And(/^I clear session storage/) do
+  @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
 end
 
 When(/^I debug cookies$/) do
@@ -1671,13 +1703,15 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
   end
 end
 
-Then /^I scroll our lockable stage into view$/ do
+Then /^I scroll our lockable lesson into view$/ do
   # use visible pseudo selector as we also have lock icons in (hidden) summary view
-  wait_short_until {@browser.execute_script('return $(".fa-lock:visible").length') > 0}
-  @browser.execute_script('$(".fa-lock:visible")[0].scrollIntoView(true)')
+  # and filter out lock icons in the header
+
+  wait_short_until {@browser.execute_script('return $(".fa-lock:visible").not($(".full_progress_inner .fa-lock")).length') > 0}
+  @browser.execute_script('$(".fa-lock:visible").not($(".full_progress_inner .fa-lock"))[0].scrollIntoView(true)')
 end
 
-Then /^I open the stage lock dialog$/ do
+Then /^I open the lesson lock dialog$/ do
   wait_for_jquery
   wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
   @browser.execute_script("$('.uitest-locksettings').children().first().click()")
@@ -1691,14 +1725,21 @@ Then /^I open the send lesson dialog for lesson (\d+)$/ do |lesson_num|
   wait_short_until {jquery_is_element_visible('.modal')}
 end
 
-Then /^I unlock the stage for students$/ do
+Then /^I unlock the lesson for students$/ do
   # allow editing
   @browser.execute_script("$('.modal-body button').first().click()")
   # save
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
 
-Then /^I show stage answers for students$/ do
+Then /^I lock the lesson for students$/ do
+  # lock assessment
+  @browser.execute_script('$(".modal-body button:contains(Lock)").click()')
+  # save
+  @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
+end
+
+Then /^I show lesson answers for students$/ do
   @browser.execute_script("$('.modal-body button:contains(Show answers)').click()")
   @browser.execute_script('$(".modal-body button:contains(Save)").click()')
 end
@@ -1844,10 +1885,10 @@ Then /^I navigate to teacher dashboard for the section I saved with experiment "
   }
 end
 
-Then /^I navigate to the script "([^"]*)" stage (\d+) lesson extras page for the section I saved$/ do |script_name, stage_num|
+Then /^I navigate to the script "([^"]*)" lesson (\d+) lesson extras page for the section I saved$/ do |script_name, lesson_num|
   expect(@section_id).to be > 0
   steps %{
-    Then I am on "http://studio.code.org/s/#{script_name}/stage/#{stage_num}/extras?section_id=#{@section_id}"
+    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{lesson_num}/extras?section_id=#{@section_id}"
   }
 end
 

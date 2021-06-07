@@ -39,12 +39,26 @@
           "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
           "type": "bullhorn",
           "visibility": "Teacher-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2020",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2020",
+          "type": "information",
+          "visibility": "Student-only"
         }
-      ],
-      "peer_reviews_to_complete": 0
+      ]
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:55:47 UTC",
     "seeding_key": {
       "script.name": "csp6-2020"
     }
@@ -61,6 +75,18 @@
         "lesson_group.key": "csp_unit6_2020",
         "script.name": "csp6-2020"
       }
+    },
+    {
+      "key": "cspSurvey2020",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp6-2020"
+      }
     }
   ],
   "lessons": [
@@ -69,6 +95,7 @@
       "name": "Algorithms Solve Problems",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -83,6 +110,7 @@
       "name": "Algorithm Efficiency",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -97,6 +125,7 @@
       "name": "Unreasonable Time",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -111,6 +140,7 @@
       "name": "The Limits of Algorithms",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -125,6 +155,7 @@
       "name": "Parallel and Distributed Algorithms",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -136,15 +167,31 @@
     },
     {
       "key": "Lesson 6: Assessment Day",
-      "name": "Lesson 6: Assessment Day",
+      "name": "Assessment Day",
       "absolute_position": 6,
       "lockable": true,
-      "relative_position": 1,
+      "has_lesson_plan": true,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "Lesson 6: Assessment Day",
         "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2020"
+      }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
         "script.name": "csp6-2020"
       }
     }
@@ -160,12 +207,15 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L1 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L1 SFLP 20-21"
@@ -184,10 +234,13 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L01 Algorithms vs Problems"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 L01 Algorithms vs Problems"
@@ -204,12 +257,15 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L2 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L2 SFLP 20-21"
@@ -226,12 +282,15 @@
       "chapter": 4,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L2 Ticket Generator"
+        ],
         "progression": "Widget: Ticket Generator"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L2 Ticket Generator"
@@ -250,10 +309,13 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L2 CFU Binary Search Steps"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6L2 CFU Binary Search Steps"
@@ -272,10 +334,13 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L2 CFU Efficiency and Algorithms"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6L2 CFU Efficiency and Algorithms"
@@ -292,12 +357,15 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L3 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L3 SFLP 20-21"
@@ -314,12 +382,15 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L2 Ticket Generator"
+        ],
         "progression": "Widget: Ticket Generator"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L2 Ticket Generator"
@@ -338,10 +409,13 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L3 CFU Reasonable vs Unreasonable"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6L3 CFU Reasonable vs Unreasonable"
@@ -360,10 +434,13 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L03 Evaluate Reasonable or Not"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 L03 Evaluate Reasonable or Not"
@@ -380,12 +457,15 @@
       "chapter": 11,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L4 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L4 SFLP 20-21"
@@ -402,12 +482,15 @@
       "chapter": 12,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L4 Traveling Salesman"
+        ],
         "progression": "Widget: Traveling Salesman"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L4 Traveling Salesman"
@@ -424,12 +507,15 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L4 Random Traveling Salesman"
+        ],
         "progression": "Widget: Traveling Salesman - Random Nodes"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L4 Random Traveling Salesman"
@@ -448,10 +534,13 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L4 CFU Reason for Heuristics"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6L4 CFU Reason for Heuristics"
@@ -470,10 +559,13 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L04 Unreasonable vs Undecidable"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 L04 Unreasonable vs Undecidable"
@@ -490,12 +582,15 @@
       "chapter": 16,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L5 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L5 SFLP 20-21"
@@ -514,10 +609,13 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L5 CFU Calculate Speedup"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6L5 CFU Calculate Speedup"
@@ -536,10 +634,13 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L05 Speedup Forever"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 L05 Speedup Forever"
@@ -556,12 +657,15 @@
       "chapter": 19,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L6 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L6 SFLP 20-21"
@@ -580,10 +684,13 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 6 AP-Style Assessment _2020"
+        ],
         "progression": "Unit 6 Exam"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 6 AP-Style Assessment _2020"
@@ -594,6 +701,31 @@
       },
       "level_keys": [
         "CSP Unit 6 AP-Style Assessment _2020"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp6-2020"
+      },
+      "level_keys": [
+        "csp-post-survey-2020-markdown-with-link-to-survey"
       ]
     }
   ],
@@ -817,6 +949,17 @@
         "lesson_group.key": "csp_unit6_2020",
         "script.name": "csp6-2020"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2020-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp6-2020"
+      }
     }
   ],
   "resources": [
@@ -825,7 +968,28 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

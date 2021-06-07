@@ -8,20 +8,6 @@ import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from './AssignmentVersionSelector';
 
-const styles = {
-  family: {
-    display: 'inline-block',
-    marginTop: 4,
-    marginRight: 6
-  },
-  secondary: {
-    marginTop: 6
-  },
-  dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
-};
-
 const noAssignment = assignmentId(null, null);
 //Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
@@ -356,3 +342,17 @@ export default class AssignmentSelector extends Component {
     );
   }
 }
+
+const styles = {
+  family: {
+    display: 'inline-block',
+    marginTop: 4,
+    marginRight: 6
+  },
+  secondary: {
+    marginTop: 6
+  },
+  dropdownLabel: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  }
+};

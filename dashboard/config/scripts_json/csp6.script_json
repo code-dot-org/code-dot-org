@@ -13,6 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:54:49 UTC",
     "seeding_key": {
       "script.name": "csp6"
     }
@@ -36,6 +37,7 @@
       "name": "Tech Setup - Your AP Digital Portfolio and Other Tools",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -50,6 +52,7 @@
       "name": "Create PT Prep - Reviewing the Task",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -64,6 +67,7 @@
       "name": "Create PT Prep - Making a Plan",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -78,6 +82,7 @@
       "name": "Create PT - Complete the Task",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -92,6 +97,7 @@
       "name": "Explore PT Prep - Reviewing the Task",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -106,6 +112,7 @@
       "name": "Explore PT - Making a Plan",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -120,6 +127,7 @@
       "name": "Explore PT - Complete the Task",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -134,6 +142,7 @@
       "name": "Participate in a longitudinal study!",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -144,16 +153,26 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 AP Performance Task Tech Setup - Student Links"
+        ],
         "progression": "U6 AP Performance Task Tech Setup - Student Links"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 AP Performance Task Tech Setup - Student Links"
@@ -169,12 +188,16 @@
     {
       "chapter": 2,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Create PT Review - Student Links"
+        ],
         "progression": "U6 Create PT Review - Student Links"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 Create PT Review - Student Links"
@@ -190,12 +213,16 @@
     {
       "chapter": 3,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Create PT - Make a Plan - Student Links"
+        ],
         "progression": "U6 Create PT - Make a Plan - Student Links"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 Create PT - Make a Plan - Student Links"
@@ -211,12 +238,16 @@
     {
       "chapter": 4,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Create PT - Complete the Task - Student Links"
+        ],
         "progression": "U6 Create PT - Complete the Task - Student Links"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 Create PT - Complete the Task - Student Links"
@@ -232,12 +263,16 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Explore PT Review - Student Links"
+        ],
         "progression": "U6 Explore PT Review - Student Links"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 Explore PT Review - Student Links"
@@ -253,12 +288,16 @@
     {
       "chapter": 6,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Explore PT - Make a Plan - Student Links"
+        ],
         "progression": "U6 Explore PT - Make a Plan - Student Links"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 Explore PT - Make a Plan - Student Links"
@@ -274,12 +313,16 @@
     {
       "chapter": 7,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Explore PT - Complete the Task - Student Links"
+        ],
         "progression": "U6 Explore PT - Complete the Task - Student Links"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 Explore PT - Complete the Task - Student Links"
@@ -295,12 +338,16 @@
     {
       "chapter": 8,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Click Here!"
+        ],
         "progression": "Click Here!"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Click Here!"
@@ -403,5 +450,35 @@
         "script.name": "csp6"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

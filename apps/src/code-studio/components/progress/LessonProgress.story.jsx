@@ -2,11 +2,11 @@ import React from 'react';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import LessonProgress from './LessonProgress';
-import stageLock from '../../stageLockRedux';
+import lessonLock from '../../lessonLockRedux';
 import progress, {
   initProgress,
-  mergeProgress,
-  setStageExtrasEnabled
+  mergeResults,
+  setLessonExtrasEnabled
 } from '../../progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 
@@ -17,7 +17,7 @@ const activityPuzzle = {
   kind: 'puzzle',
   icon: '',
   title: 1,
-  url: 'http://studio.code.org/s/course1/stage/3/puzzle/2',
+  url: 'http://studio.code.org/s/course1/lessons/3/levels/2',
   freePlay: false,
   is_concept_level: false
 };
@@ -29,7 +29,7 @@ const conceptPuzzle = {
   kind: 'puzzle',
   icon: 'fa-file-text',
   title: 2,
-  url: 'http://studio.code.org/s/csp1-2019/stage/2/puzzle/1',
+  url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/1',
   freePlay: false,
   progression: 'Lesson Vocabulary & Resources',
   is_concept_level: true
@@ -42,7 +42,7 @@ const assessment1 = {
   kind: 'assessment',
   icon: 'fa-check-square-o',
   title: 3,
-  url: 'http://studio.code.org/s/csp1-2019/stage/2/puzzle/3',
+  url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/3',
   freePlay: false,
   progression: 'Check Your Understanding'
 };
@@ -54,7 +54,7 @@ const assessment2 = {
   kind: 'assessment',
   icon: 'fa-check-square-o',
   title: 4,
-  url: 'http://studio.code.org/s/csp1-2019/stage/2/puzzle/4',
+  url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/4',
   freePlay: false,
   progression: 'Check Your Understanding'
 };
@@ -66,7 +66,7 @@ const assessment3 = {
   kind: 'assessment',
   icon: 'fa-check-square-o',
   title: 5,
-  url: 'http://studio.code.org/s/csp1-2019/stage/2/puzzle/5',
+  url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/5',
   freePlay: false,
   progression: 'Check Your Understanding'
 };
@@ -76,37 +76,51 @@ const unplugged = {
   activeId: '2093',
   is_concept_level: false,
   kind: 'unplugged',
+  isUnplugged: true,
   position: 1,
   title: 1,
-  url: 'http://studio.code.org/s/course1/stage/1/puzzle/1'
+  url: 'http://studio.code.org/s/course1/lessons/1/levels/1'
+};
+
+const bonus = {
+  ids: ['100'],
+  activeId: '100',
+  title: 1,
+  bonus: true
 };
 
 export default storybook => {
   const createStoreForLevels = (
     levels,
     currentLevelIndex,
-    showStageExtras,
-    onStageExtras
+    showLessonExtras,
+    onLessonExtras,
+    bonusCompleted
   ) => {
-    const store = createStore(combineReducers({progress, stageLock}));
+    const store = createStore(combineReducers({progress, lessonLock}));
     store.dispatch(
       initProgress({
-        currentLevelId: onStageExtras
-          ? 'stage_extras'
-          : levels[currentLevelIndex].ids[0].toString(),
+        currentLevelId: currentLevelIndex
+          ? levels[currentLevelIndex].ids[0].toString()
+          : null,
+        isLessonExtras: onLessonExtras,
         scriptName: 'csp1',
         saveAnswersBeforeNavigation: false,
-        stages: [
+        lessons: [
           {
             id: 123,
-            lesson_extras_level_url: showStageExtras && 'fakeurl',
+            lesson_extras_level_url: showLessonExtras && 'fakeurl',
             levels
           }
         ]
       })
     );
-    store.dispatch(mergeProgress({123: TestResults.ALL_PASS}));
-    store.dispatch(setStageExtrasEnabled(showStageExtras));
+    const results = {123: TestResults.ALL_PASS};
+    if (bonusCompleted) {
+      results[100] = TestResults.ALL_PASS;
+    }
+    store.dispatch(mergeResults(results));
+    store.dispatch(setLessonExtrasEnabled(showLessonExtras));
     return store;
   };
 
@@ -169,14 +183,15 @@ export default storybook => {
     },
 
     {
-      name: 'with lesson extras',
+      name: 'with lesson extras not started',
       // Provide an outer div to simulate some of the CSS that gets leaked into
       // this component
       story: () => {
         const store = createStoreForLevels(
           [activityPuzzle, conceptPuzzle],
           1,
-          true /* showStageExtras */
+          true /* showLessonExtras */,
+          false /* onLessonExtras */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">
@@ -189,15 +204,59 @@ export default storybook => {
     },
 
     {
-      name: 'with lesson extras as current level',
+      name: 'with lesson extras completed',
+      // Provide an outer div to simulate some of the CSS that gets leaked into
+      // this component
+      story: () => {
+        const store = createStoreForLevels(
+          [activityPuzzle, conceptPuzzle, bonus],
+          1,
+          true /* showLessonExtras */,
+          false /* onLessonExtras */,
+          true /* bonusCompleted */
+        );
+        return (
+          <div style={{display: 'inline-block'}} className="header_level">
+            <Provider store={store}>
+              <LessonProgress />
+            </Provider>
+          </div>
+        );
+      }
+    },
+
+    {
+      name: 'with lesson extras as current level, not started',
       // Provide an outer div to simulate some of the CSS that gets leaked into
       // this component
       story: () => {
         const store = createStoreForLevels(
           [activityPuzzle, conceptPuzzle],
-          1,
-          true /* showStageExtras */,
-          true /* onStageExtras */
+          null,
+          true /* showLessonExtras */,
+          true /* onLessonExtras */
+        );
+        return (
+          <div style={{display: 'inline-block'}} className="header_level">
+            <Provider store={store}>
+              <LessonProgress />
+            </Provider>
+          </div>
+        );
+      }
+    },
+
+    {
+      name: 'with lesson extras as current level, completed',
+      // Provide an outer div to simulate some of the CSS that gets leaked into
+      // this component
+      story: () => {
+        const store = createStoreForLevels(
+          [activityPuzzle, conceptPuzzle, bonus],
+          null,
+          true /* showLessonExtras */,
+          true /* onLessonExtras */,
+          true /* bonusCompleted */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">
@@ -217,8 +276,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [assessment1, assessment1],
           0,
-          false /* showStageExtras */,
-          true /* onStageExtras */
+          false /* showLessonExtras */,
+          true /* onLessonExtras */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">
@@ -238,8 +297,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [activityPuzzle, assessment1, assessment1, assessment1, assessment1],
           0,
-          false /* showStageExtras */,
-          true /* onStageExtras */
+          false /* showLessonExtras */,
+          true /* onLessonExtras */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">
@@ -259,8 +318,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [activityPuzzle, activityPuzzle, assessment1],
           0,
-          false /* showStageExtras */,
-          true /* onStageExtras */
+          false /* showLessonExtras */,
+          true /* onLessonExtras */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">
@@ -280,8 +339,8 @@ export default storybook => {
         const store = createStoreForLevels(
           [activityPuzzle, activityPuzzle, activityPuzzle],
           0,
-          false /* showStageExtras */,
-          true /* onStageExtras */
+          false /* showLessonExtras */,
+          true /* onLessonExtras */
         );
         return (
           <div style={{display: 'inline-block'}} className="header_level">

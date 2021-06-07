@@ -1,9 +1,10 @@
 Feature: Playing the Farmer Game
 
 Background:
-  Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
+  And I dismiss the login reminder
   And element ".instructions-markdown p" has text "Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the \"remove\" block to remove it."
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -26,7 +27,7 @@ Scenario: Winning the first level
   And element ".congrats" has text "Congratulations! You completed Puzzle 1."
   And there's 0 dirt at (4, 4)
   And I press "continue-button"
-  Then I wait until I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/2"
+  Then I wait until I am on "http://studio.code.org/s/20-hour/lessons/9/levels/2"
 
 @no_mobile
 Scenario: Losing the first level

@@ -6,39 +6,6 @@ import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {LessonIcons} from './standardsConstants';
 
-const styles = {
-  main: {
-    display: 'flex',
-    flexDirection: 'column',
-    height: '100%'
-  },
-  description: {
-    marginBottom: 10
-  },
-  lessonsArea: {
-    display: 'flex',
-    flexDirection: 'row'
-  },
-  lessonBoxes: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap'
-  },
-  lessonBox: {
-    marginBottom: 10
-  },
-  lessonsAreaTitle: {
-    marginRight: 10,
-    width: '30%'
-  },
-  tooltip: {
-    textAlign: 'center'
-  },
-  tooltipLessonName: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  }
-};
-
 class StandardDescriptionCell extends Component {
   static propTypes = {
     description: PropTypes.string,
@@ -115,5 +82,38 @@ class StandardDescriptionCell extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%'
+  },
+  description: {
+    marginBottom: 10
+  },
+  lessonsArea: {
+    display: 'flex',
+    flexDirection: 'row'
+  },
+  lessonBoxes: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  },
+  lessonBox: {
+    marginBottom: 10
+  },
+  lessonsAreaTitle: {
+    marginRight: 10,
+    width: '30%'
+  },
+  tooltip: {
+    textAlign: 'center'
+  },
+  tooltipLessonName: {
+    fontFamily: '"Gotham 7r", sans-serif'
+  }
+};
 
 export default StandardDescriptionCell;

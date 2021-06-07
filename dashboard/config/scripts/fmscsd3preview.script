@@ -1,11 +1,11 @@
 login_required true
 student_detail_progress_view true
 
-lesson 'Plotting Shapes', display_name: 'Plotting Shapes'
+lesson 'Plotting Shapes', display_name: 'Plotting Shapes', has_lesson_plan: false
 level 'CSD U3 Lesson Overview 2', named: true
 level 'CSD U3 Describe the Picture', named: true
 
-lesson 'Drawing in Game Lab', display_name: 'Drawing in Game Lab'
+lesson 'Drawing in Game Lab', display_name: 'Drawing in Game Lab', has_lesson_plan: false
 level 'CSD-U3-SFLP Simple Drawing', named: true
 level 'CSD: Drawing in Game Lab 1', named: true
 level 'U3 - Simple Drawing - Rectangle'

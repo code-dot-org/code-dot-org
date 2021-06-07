@@ -1,0 +1,13 @@
+name 'ml-use model card-pet model card'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+# Pet Recommender Model Card
+
+**With a Partner:** How can you tell the difference between categorical features and numerical features in the model card?
+
+<a href="https://images.code.org/220a5d64d0f8993b3db0a48eb28cd4e2-image-1616285880567.png" target="_blank"><img src="https://images.code.org/220a5d64d0f8993b3db0a48eb28cd4e2-image-1616285880567.png" width="45%" style="float:left; margin: 2px;"></a>
+
+<a href="https://images.code.org/b3b1e99958c7cc28e05e347179bef816-image-1616285941977.png" target="_blank"><img src="https://images.code.org/b3b1e99958c7cc28e05e347179bef816-image-1616285941977.png" width="45%" style="float:right; margin: 2px"></a>
+MARKDOWN

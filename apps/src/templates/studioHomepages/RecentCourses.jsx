@@ -12,15 +12,6 @@ import shapes from './shapes';
 
 const contentWidth = styleConstants['content-width'];
 
-const styles = {
-  container: {
-    width: contentWidth,
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap'
-  }
-};
-
 export default class RecentCourses extends Component {
   static propTypes = {
     courses: shapes.courses,
@@ -73,3 +64,12 @@ export default class RecentCourses extends Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    width: contentWidth,
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
+  }
+};

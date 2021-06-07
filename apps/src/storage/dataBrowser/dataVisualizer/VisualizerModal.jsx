@@ -15,43 +15,6 @@ import DataVisualizer from './DataVisualizer';
 import Snapshot from './Snapshot';
 import placeholderImage from './placeholder.png';
 
-const styles = {
-  container: {
-    display: 'inline-block'
-  },
-  modalBody: {
-    display: 'flex',
-    flexDirection: 'column',
-    height: '100%'
-  },
-  h2: {
-    margin: '0 0 10px 0'
-  },
-  input: {
-    ...rowStyle.container,
-    float: 'left'
-  },
-  chartArea: {
-    flexGrow: 1
-  },
-  placeholderContainer: {
-    position: 'relative',
-    height: '100%',
-    textAlign: 'center',
-    backgroundImage: `url('${placeholderImage}')`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
-  },
-  placeholderText: {
-    position: 'absolute',
-    width: '100%',
-    bottom: '50%',
-    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
-    fontSize: 20,
-    color: color.dark_charcoal
-  }
-};
-
 export const OperatorType = {
   EQUAL: 0,
   LESS_THAN: 1,
@@ -118,9 +81,14 @@ class VisualizerModal extends React.Component {
     return columns.filter(column => isColumnNumeric(records, column));
   });
 
-  getValuesForFilterColumn = memoize((records, column) => {
+  getValuesForFilterColumn = memoize((records, column, isNumeric) => {
     let values = [];
     values = Array.from(new Set(records.map(record => record[column])));
+    if (isNumeric) {
+      values.sort((a, b) => a - b); // Sort numerically
+    } else {
+      values.sort(); // Sort alphabetically
+    }
     values = values.map(x => (typeof x === 'string' ? `"${x}"` : `${x}`));
 
     return values;
@@ -252,7 +220,7 @@ class VisualizerModal extends React.Component {
       ChartType.SCATTER_PLOT,
       ChartType.CROSS_TAB
     ].includes(this.state.chartType);
-    const displayNumericFilters = numericColumns.includes(
+    const isFilterColumnNumeric = numericColumns.includes(
       this.state.filterColumn
     );
     return (
@@ -400,7 +368,7 @@ class VisualizerModal extends React.Component {
                 }
                 inlineLabel
               />
-              {displayNumericFilters && (
+              {isFilterColumnNumeric && (
                 <DropdownField
                   displayName={msg.by()}
                   options={[
@@ -422,10 +390,11 @@ class VisualizerModal extends React.Component {
                 />
               )}
               <DropdownField
-                displayName={displayNumericFilters ? '' : msg.by()}
+                displayName={isFilterColumnNumeric ? '' : msg.by()}
                 options={this.getValuesForFilterColumn(
                   parsedRecords,
-                  this.state.filterColumn
+                  this.state.filterColumn,
+                  isFilterColumnNumeric
                 )}
                 disabledOptions={[]}
                 value={this.state.filterValue}
@@ -446,6 +415,43 @@ class VisualizerModal extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'inline-block'
+  },
+  modalBody: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%'
+  },
+  h2: {
+    margin: '0 0 10px 0'
+  },
+  input: {
+    ...rowStyle.container,
+    float: 'left'
+  },
+  chartArea: {
+    flexGrow: 1
+  },
+  placeholderContainer: {
+    position: 'relative',
+    height: '100%',
+    textAlign: 'center',
+    backgroundImage: `url('${placeholderImage}')`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center'
+  },
+  placeholderText: {
+    position: 'absolute',
+    width: '100%',
+    bottom: '50%',
+    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
+    fontSize: 20,
+    color: color.dark_charcoal
+  }
+};
 
 export const UnconnectedVisualizerModal = VisualizerModal;
 export default connect(state => ({

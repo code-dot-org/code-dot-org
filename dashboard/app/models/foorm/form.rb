@@ -22,9 +22,10 @@ class Foorm::Form < ApplicationRecord
   class InvalidFoormConfigurationError < StandardError; end
 
   has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
+
   validate :validate_questions, :validate_published
 
-  after_save :write_form_to_file
+  after_commit :write_form_to_file
 
   # We have a uniqueness constraint on form name and version for this table.
   # This key format is used elsewhere in Foorm to uniquely identify a form.
@@ -33,27 +34,33 @@ class Foorm::Form < ApplicationRecord
   end
 
   def self.setup
-    Dir.glob('config/foorm/forms/**/*.json').each do |path|
-      # Given: "config/foorm/forms/surveys/pd/pre_workshop_survey.0.json"
-      # we get full_name: "surveys/pd/pre_workshop_survey"
-      #      and version: 0
-      unique_path = path.partition("config/foorm/forms/")[2]
-      filename_and_version = File.basename(unique_path, ".json")
-      filename, version = filename_and_version.split(".")
-      version = version.to_i
-      full_name = File.dirname(unique_path) + "/" + filename
+    # Seed all forms inside of a transaction, such that all forms are imported/updated successfully
+    # or none at all.
+    ActiveRecord::Base.transaction do
+      Dir.glob('config/foorm/forms/**/*.json').each do |path|
+        # Given: "config/foorm/forms/surveys/pd/pre_workshop_survey.0.json"
+        # we get full_name: "surveys/pd/pre_workshop_survey"
+        #      and version: 0
+        unique_path = path.partition("config/foorm/forms/")[2]
+        filename_and_version = File.basename(unique_path, ".json")
+        filename, version = filename_and_version.split(".")
+        version = version.to_i
+        full_name = File.dirname(unique_path) + "/" + filename
 
-      # Let's load the JSON text.
-      questions = File.read(path)
+        # Let's load the JSON text.
+        questions = File.read(path)
 
-      # if published is not provided, default to true
-      questions_parsed = JSON.parse(questions)
-      published = questions_parsed['published'].nil? ? true : questions_parsed['published']
+        # if published is not provided, default to true
+        questions_parsed = JSON.parse(questions)
+        published = questions_parsed['published'].nil? ? true : questions_parsed['published']
 
-      form = Foorm::Form.find_or_initialize_by(name: full_name, version: version)
-      form.questions = questions
-      form.published = published
-      form.save! if form.changed?
+        form = Foorm::Form.find_or_initialize_by(name: full_name, version: version)
+        form.questions = questions
+        form.published = published
+        form.save! if form.changed?
+      rescue JSON::ParserError
+        raise format('failed to parse %s', full_name)
+      end
     end
   end
 
@@ -84,12 +91,12 @@ class Foorm::Form < ApplicationRecord
   end
 
   def self.get_questions_and_latest_version_for_name(form_name)
-    latest_version = Foorm::Form.where(name: form_name).maximum(:version)
-    return nil if latest_version.nil?
+    latest_published_version = Foorm::Form.where(name: form_name, published: true).maximum(:version)
+    return nil if latest_published_version.nil?
 
-    questions = get_questions_for_name_and_version(form_name, latest_version)
+    questions = get_questions_for_name_and_version(form_name, latest_published_version)
 
-    return questions, latest_version
+    return questions, latest_published_version
   end
 
   def self.get_questions_for_name_and_version(form_name, form_version)
@@ -149,6 +156,7 @@ class Foorm::Form < ApplicationRecord
 
   # Checks that the element name is not in element_names and the choices/rows/columns are unique and all have
   # value/text parameters. If any of the above are not true, will raise an InvalidFoormConfigurationError.
+  # Note that this method is also used to validate library_questions.
   def self.validate_element(element_data, element_names)
     return unless PANEL_TYPES.include?(element_data[:type]) || QUESTION_TYPES.include?(element_data[:type])
     unless element_data[:name]
@@ -308,9 +316,22 @@ class Foorm::Form < ApplicationRecord
     csv_result
   end
 
-  def parsed_questions
-    @parsed_questions ||= Pd::Foorm::FoormParser.parse_forms([self])
-    @parsed_questions
+  # For a given question_id, gets information about the question (eg, type, choices, question text).
+  # @param [String] question_id
+  # @return [Hash]
+  def get_question_details(question_id)
+    parsed_questions(true)[question_id]
+  end
+
+  # Returns a readable version of the questions asked in a Form.
+  # @param [Boolean] should_flatten
+  # @return [Hash] Hash with two keys (:general and :facilitator), or those two hashes merged if the should_flatten parameter is true.
+  def parsed_questions(should_flatten = false)
+    @parsed_questions ||= Pd::Foorm::FoormParser.parse_form_questions(questions)
+
+    should_flatten ?
+      @parsed_questions[:general].merge!(@parsed_questions[:facilitator]) :
+      @parsed_questions
   end
 
   # Returns a hash with keys matching what is produced by parsed_questions.
@@ -324,8 +345,8 @@ class Foorm::Form < ApplicationRecord
       questions[questions_section] = {}
       next if questions_content.nil_or_empty?
 
-      questions_content[key].each do |question_id, question_details|
-        if question_details[:type] == 'matrix'
+      questions_content.each do |question_id, question_details|
+        if question_details[:type] == ANSWER_MATRIX
           matrix_questions = question_details[:rows]
           matrix_questions.each do |matrix_question_id, matrix_question_text|
             matrix_key = self.class.get_matrix_question_id(question_id, matrix_question_id)

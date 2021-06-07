@@ -84,6 +84,13 @@ class ActiveSupport::TestCase
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
 
+    # A list of keys used by our shared cache that should be cleared between every test.
+    [
+      ProfanityHelper::PROFANITY_PREFIX,
+      AzureTextToSpeech::AZURE_SERVICE_PREFIX,
+      AzureTextToSpeech::AZURE_TTS_PREFIX
+    ].each {|cache_prefix| CDO.shared_cache.delete_matched(cache_prefix)}
+
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
 
@@ -372,7 +379,8 @@ class ActionController::TestCase
     @html_document ||= if @response.content_type === Mime[:xml]
                          Nokogiri::XML::Document.parse(@response.body, &:strict)
                        else
-                         Nokogiri::HTML::Document.parse(@response.body, &:strict)
+                         # TODO: Enable strict parsing after fixing html errors (FND-1573)
+                         Nokogiri::HTML::Document.parse(@response.body)
                        end
   end
 

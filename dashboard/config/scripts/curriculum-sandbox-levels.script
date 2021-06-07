@@ -1,22 +1,52 @@
-lesson_group 'lesson group', display_name: 'display name'
-lesson 'Course A', display_name: 'Course A'
-level 'courseB_maze_seq10_predict1_2018'
-level 'courseB_maze_seq1_predict1_2018'
-level 'courseA_collector_loops3_predict1'
-level 'courseA_collector_loops11_predict2'
-level 'courseA_artist_loops11_predict2'
+lesson_group 'lesson group', display_name: 'Teacher Levels'
+lesson_group_description 'These are teaching-facing levels that are linked to lesson plans. The levels do not appear in other scripts.'
+lesson 'csf', display_name: 'CS Fundamentals', has_lesson_plan: false
+level 'courseB_maze_seq10_predict1_2018', progression: 'Course A'
+level 'courseB_maze_seq1_predict1_2018', progression: 'Course A'
+level 'courseA_collector_loops3_predict1', progression: 'Course A'
+level 'courseA_collector_loops11_predict2', progression: 'Course A'
+level 'courseA_artist_loops11_predict2', progression: 'Course A'
+level 'courseA_maze_seq2_predict1', progression: 'Course B'
+level 'courseA_maze_seq12_predict2', progression: 'Course B'
+level 'courseB_collector_loops3_predict1', progression: 'Course B'
+level 'courseB_artist_loops8_predict1', progression: 'Course B'
+level 'teacherSandboxFish', progression: 'Course E'
+level 'Swimming Fish Teacher Sandbox', progression: 'Course E'
+level 'courseF_label_predict_sandbox2', progression: 'Course F'
 
-lesson 'Course B', display_name: 'Course B'
-level 'courseA_maze_seq2_predict1'
-level 'courseA_maze_seq12_predict2'
-level 'courseB_collector_loops3_predict1'
-level 'courseB_artist_loops8_predict1'
+lesson 'CS Discoveries', display_name: 'CS Discoveries', has_lesson_plan: false
+level 'csd digital unplugged PSP word search big', progression: 'Problem Solving Widgets'
+level 'csd digital unplugged PSP seating big', progression: 'Problem Solving Widgets'
 
-lesson 'Course E/F', display_name: 'Course E/F'
-level 'teacherSandboxFish'
-level 'Swimming Fish Teacher Sandbox'
+lesson 'contagions', display_name: 'CS Connections', has_lesson_plan: false
+level 'contagion_teachers', progression: 'Contagion - Guided Practice'
+level '6sidedDie', progression: 'Contagion - Guided Practice'
+level 'contagion_teachers2', progression: 'Contagion - Guided Practice'
 
-lesson 'CS Discoveries', display_name: 'CS Discoveries'
-level 'csd digital unplugged PSP word search big'
-level 'csd digital unplugged PSP seating big'
+lesson_group 'video', display_name: 'Video Capture Levels'
+lesson_group_description 'These levels are for use by video creators.'
+lesson 'sprites_in_action_2021', display_name: 'Sprite Lab: Sprites in Action', has_lesson_plan: false
+level 'courseF_text_events_loom', progression: 'Events/Insects'
+level 'courseF_events_loom_sandbox', progression: 'Events/Creatures'
+level 'Sprites in Action Video Projects', progression: ' Project Links'
+
+lesson 'text_and_prompts_2021', display_name: 'Sprite Lab: Text and Prompts', has_lesson_plan: false
+level 'courseF_text_concat_loom', progression: 'Prompts/Concatenation'
+level 'Text and Prompts Video Projects', progression: 'Project Links'
+
+lesson 'minitoolbox_2021', display_name: 'Sprite Lab: Lots of Sprites', has_lesson_plan: false
+level 'courseF_apps_card', progression: 'Birthday card'
+level 'Lots of Sprites Video Projects', progression: 'Project Links'
+
+lesson 'playlab_2021', display_name: 'Play Lab Intro', has_lesson_plan: false
+level 'PlayLab Video Projects', progression: 'Project Links'
+
+lesson 'csp_functions_2021', display_name: 'CS Principles: Functions', has_lesson_plan: false
+level 'CS Principles: Functions', progression: 'CS Principles: Functions'
+
+lesson_group 'slides', display_name: 'Translator Levels'
+lesson_group_description 'These levels contain editable start code that aligns to curriculum slide decks.'
+lesson 'csf_slides', display_name: 'CS Fundamentals Slides', has_lesson_plan: false
+level 'translation_prompt_name', progression: 'Course F: Text and Prompts'
+level 'translation_prompt_username', progression: 'Course F: Text and Prompts'
 

@@ -28,7 +28,7 @@ describe('MicroBitAccelerometer', function() {
     attributes.forEach(attr => {
       desc = Object.getOwnPropertyDescriptor(accelerometer, attr);
       expect(desc.set).to.be.undefined;
-      expect(desc.get).to.be.defined;
+      expect(desc.get).to.not.be.undefined;
     });
   });
 

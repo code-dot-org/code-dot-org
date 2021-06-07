@@ -2,6 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "moveForward",
+    "docFunc": "gamelab_moveForward",
     "blockText": "move {SPRITE} {DISTANCE} pixels forward",
     "args": [
       {

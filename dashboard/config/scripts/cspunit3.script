@@ -1,12 +1,11 @@
 login_required true
-has_lesson_plan true
 
-lesson 'The Need For Programming Languages', display_name: 'The Need For Programming Languages'
+lesson 'The Need For Programming Languages', display_name: 'The Need For Programming Languages', has_lesson_plan: true
 level 'U3L01 Student Lesson Introduction'
 level 'U3L01 Assessment1', assessment: true
 level 'U3L01 Assessment3', assessment: true
 
-lesson 'Using Simple Commands', display_name: 'Using Simple Commands'
+lesson 'Using Simple Commands', display_name: 'Using Simple Commands', has_lesson_plan: true
 level 'U3L02 Student Lesson Introduction'
 level 'U3L2 Using Simple Commands'
 level 'U3L2_TurtleSquare_right'
@@ -15,7 +14,7 @@ level 'U3L02 Assessment', assessment: true
 level 'U3L02 Free Response Getting Started', assessment: true
 level 'U3L02 Free Response Wrap Up', assessment: true
 
-lesson 'Creating Functions', display_name: 'Creating Functions'
+lesson 'Creating Functions', display_name: 'Creating Functions', has_lesson_plan: true
 level 'U3L03 Student Lesson Introduction'
 level 'U3L03 Define and use turnAround'
 level 'U3L03 Draw a T using turnAround'
@@ -28,7 +27,7 @@ level 'U3L03 - multiselect - properties of functions', assessment: true
 level 'U3L03 Assessment', assessment: true
 level 'U3L03 Free Response Wrap Up', assessment: true
 
-lesson 'Functions and Top-Down Design', display_name: 'Functions and Top-Down Design'
+lesson 'Functions and Top-Down Design', display_name: 'Functions and Top-Down Design', has_lesson_plan: true
 level 'u3L04 Student Lesson Introduction'
 level 'U3L04 - snowflake'
 level 'U3L04 - 3 by 3 with functions'
@@ -36,7 +35,7 @@ level 'U3L04 Assessment1', assessment: true
 level 'U3L04 Assessment2', assessment: true
 level 'U3L04 Free Response Wrap Up', assessment: true
 
-lesson 'APIs and Function Parameters', display_name: 'APIs and Function Parameters'
+lesson 'APIs and Function Parameters', display_name: 'APIs and Function Parameters', has_lesson_plan: true
 level 'U3L06 Student Lesson Introduction'
 level 'U3L06 - moveForwardwithParams'
 level 'U3L06 Challenge 1 triangle'
@@ -51,7 +50,7 @@ level 'U3L06 Assessment2', assessment: true
 level 'U3L06-API-multichoice', assessment: true
 level 'U3L06 Assessment', assessment: true
 
-lesson 'Creating Functions with Parameters', display_name: 'Creating Functions with Parameters'
+lesson 'Creating Functions with Parameters', display_name: 'Creating Functions with Parameters', has_lesson_plan: true
 level 'U3L08 Student Lesson Introduction'
 level 'U3L08 - drawSquareWithParam'
 level 'U3L07 - createTriangleParam'
@@ -67,7 +66,7 @@ level 'U3L08 - freePlay'
 level 'U3L08 Assessment1', assessment: true
 level 'U3L08 Assessment2', assessment: true
 
-lesson 'Looping and Random Numbers', display_name: 'Looping and Random Numbers'
+lesson 'Looping and Random Numbers', display_name: 'Looping and Random Numbers', has_lesson_plan: true
 level 'U3L07 Student Lesson Introduction'
 level 'U3L07 - introSquare'
 level 'U3L07 - randomSquare'
@@ -84,15 +83,15 @@ level 'U3L07 - Free Play Loops and Random'
 level 'U3L07 - MC remove line of code loops', assessment: true
 level 'U3L07 Free Response Reflection', assessment: true
 
-lesson 'Practice PT - Design a Digital Scene', display_name: 'Practice PT - Design a Digital Scene'
+lesson 'Practice PT - Design a Digital Scene', display_name: 'Practice PT - Design a Digital Scene', has_lesson_plan: true
 level 'U3L09 Student Lesson Introduction'
 level 'U3L08 - individualCode'
 level 'U3L08 - digitalScene'
 
-lesson 'Events Unplugged', display_name: 'Events Unplugged'
+lesson 'Events Unplugged', display_name: 'Events Unplugged', has_lesson_plan: true
 level 'U3L12 - Student Introduction 1'
 
-lesson 'Event-Driven Programming and Debugging', display_name: 'Event-Driven Programming and Debugging'
+lesson 'Event-Driven Programming and Debugging', display_name: 'Event-Driven Programming and Debugging', has_lesson_plan: true
 level 'U3L13 Student Lesson Introduction'
 level 'U3L13 - Turtle move with button'
 level 'U313 drag Two Buttons'
@@ -108,7 +107,7 @@ level 'U3L13 Free Response Reflection', assessment: true
 level 'U3L14 - MC order of button and onEvent', assessment: true
 level 'U3L14 - MC Duplicate Ids', assessment: true
 
-lesson 'Beyond Buttons Toward Apps', display_name: 'Beyond Buttons Toward Apps'
+lesson 'Beyond Buttons Toward Apps', display_name: 'Beyond Buttons Toward Apps', has_lesson_plan: true
 level 'U3L16 Student Lesson Introduction'
 level 'U3L16 - singleSetPosition'
 level 'U3L16 - introSetPosition'
@@ -120,7 +119,7 @@ level 'U3L16 - use images'
 level 'U3L16 - chooseImages'
 level 'U3L16 - chaserApp'
 
-lesson 'Introducing Design Mode', display_name: 'Introducing Design Mode'
+lesson 'Introducing Design Mode', display_name: 'Introducing Design Mode', has_lesson_plan: true
 level 'U3- L12 -Design Mode SFLP'
 level 'U3 - Design Mode 1'
 level 'U3-Design Mode-ID and Event Handler'
@@ -132,11 +131,11 @@ level 'U3 - Design Mode - Multi Screens 2'
 level 'U3-Design Mode-Image'
 level 'U3 - Design Mode -Recreate Beyond Buttons'
 
-lesson 'Multi-screen Apps', display_name: 'Multi-screen Apps'
+lesson 'Multi-screen Apps', display_name: 'Multi-screen Apps', has_lesson_plan: true
 level 'U3L13 Student Facing Lesson Plan'
 level 'U3L13 - Project'
 
-lesson 'Controlling Memory with Variables', display_name: 'Controlling Memory with Variables'
+lesson 'Controlling Memory with Variables', display_name: 'Controlling Memory with Variables', has_lesson_plan: true
 level 'U3L19 Student Lesson Intro'
 level 'U3L14 - Message - basic mechanics of variables'
 level 'U3L19 - three basic ops of variables'
@@ -163,7 +162,7 @@ level 'U3L14 - moving memory challenge6'
 level 'U3L19 - variable reassignment challenge pt2'
 level 'U3L14 - MC variable reassignment', assessment: true
 
-lesson 'Using Variables in Apps', display_name: 'Using Variables in Apps'
+lesson 'Using Variables in Apps', display_name: 'Using Variables in Apps', has_lesson_plan: true
 level 'U3L15 Student Lesson Intro - new'
 level 'U3 full clicker demo'
 level 'U3L15 - practice with setText'
@@ -186,7 +185,7 @@ level 'U3L15 - Debug forget to update var on reset in UpDown app'
 level 'U3L15 - Debug if never triggers in UpDown app'
 level 'U3L15 full clicker app'
 
-lesson 'User Input and Strings', display_name: 'User Input and Strings'
+lesson 'User Input and Strings', display_name: 'User Input and Strings', has_lesson_plan: true
 level 'U3L26 Student Lesson Introduction'
 level 'U3L16 Mad Lib Demo'
 level 'U3L16 - introStrings'
@@ -203,7 +202,7 @@ level 'U3L16 Mad Lib toUpper'
 level 'U3L16 Mad Lib Clear Input'
 level 'U3L25 Free Response 3', assessment: true
 
-lesson 'Introduction to Digital Assistants', display_name: 'Introduction to Digital Assistants'
+lesson 'Introduction to Digital Assistants', display_name: 'Introduction to Digital Assistants', has_lesson_plan: true
 level 'U3L23 Student Lesson Introduction'
 level 'U3L23 Free Response Getting Started', assessment: true
 level 'U3 Digital Assistant Target'
@@ -212,7 +211,7 @@ level 'U3 Digital Assistant Design'
 level 'U3 Digital Assistant Set Text'
 level 'U3L23 Free Response Wrap Up', assessment: true
 
-lesson 'Understanding Program Flow and Logic', display_name: 'Understanding Program Flow and Logic'
+lesson 'Understanding Program Flow and Logic', display_name: 'Understanding Program Flow and Logic', has_lesson_plan: true
 level 'U3L20 Student Lesson Introduction'
 level 'U3 - Conditionals - Boolean Expressions and Operators'
 level 'U3L18 comparison operators'
@@ -231,7 +230,7 @@ level 'U3 - Dice - Dropdown and Score'
 level 'U3 - Dice - Dropdown with Strings'
 level 'U3 - Dice - Nested'
 
-lesson 'Introduction to Conditional Logic', display_name: 'Introduction to Conditional Logic'
+lesson 'Introduction to Conditional Logic', display_name: 'Introduction to Conditional Logic', has_lesson_plan: true
 level 'U3L24 Student Lesson Introduction'
 level 'U3L23 Chatbot Conditionals 1'
 level 'U3 - Movie Bot - toLowerCase'
@@ -240,7 +239,7 @@ level 'U3L24 Nested Conditionals 1'
 level 'U3 - Movie Bot - Nested Motivation'
 level 'U3L24 Nested Conditionals 2'
 
-lesson 'Compound Conditional Logic', display_name: 'Compound Conditional Logic'
+lesson 'Compound Conditional Logic', display_name: 'Compound Conditional Logic', has_lesson_plan: true
 level 'U3L25 Student Lesson Introduction'
 level 'U3 - Conditionals - Simple OR'
 level 'U3 - Conditionals - Simple AND'
@@ -252,11 +251,11 @@ level 'U3 - Movie Bot - Multiple If Sequences'
 level 'U3L26 AND operator'
 level 'U3 - Movie Bot - When Multiple If Statements'
 
-lesson 'Digital Assistant Project', display_name: 'Digital Assistant Project'
+lesson 'Digital Assistant Project', display_name: 'Digital Assistant Project', has_lesson_plan: true
 level 'U3L21 Student Lesson Introduction v2'
 level 'U3L24 Chatbot Basic Conditionals'
 
-lesson 'While Loops', display_name: 'While Loops'
+lesson 'While Loops', display_name: 'While Loops', has_lesson_plan: true
 level 'U3L28 Student Lesson Introduction'
 level 'U3 - Loops - 1'
 level 'U3 - Loops - 2'
@@ -279,7 +278,7 @@ level 'U3 - Loops - minus = operator'
 level 'U3 - Loops - 14'
 level 'U3 - Loops - 15'
 
-lesson 'Loops and Simulations', display_name: 'Loops and Simulations'
+lesson 'Loops and Simulations', display_name: 'Loops and Simulations', has_lesson_plan: true
 level 'U3L29 Student Lesson Introduction'
 level 'U3 - Simulation - Intro'
 level 'U3 - Simulation - 1'
@@ -293,7 +292,7 @@ level 'U3 - Simulation - 5'
 level 'U3 Simulations Hypotheses Reflections'
 level 'U3 - Simulation - 6'
 
-lesson 'Introduction to Arrays', display_name: 'Introduction to Arrays'
+lesson 'Introduction to Arrays', display_name: 'Introduction to Arrays', has_lesson_plan: true
 level 'U3L30 Student Lesson Introduction'
 level 'U3 - Arrays - createFirstArray'
 level 'U3 - Arrays - appendItem'
@@ -322,7 +321,7 @@ level 'U3 - Arrays - favThings keepPlaying'
 level 'U3 - Arrays - Wrap Up 1', assessment: true
 level 'U3 - Arrays - Wrap Up 2', assessment: true
 
-lesson 'Image Scroller with Key Events', display_name: 'Image Scroller with Key Events'
+lesson 'Image Scroller with Key Events', display_name: 'Image Scroller with Key Events', has_lesson_plan: true
 level 'U3L31 Student Lesson Introduction'
 level 'U3 - Keys - Demo App'
 level 'U3L25 - drag out key event'
@@ -335,7 +334,7 @@ level 'U3 - Keys - Add Image URLs'
 level 'U3 - Keys - Final Image Scroller'
 level 'U3- Keys - Code Refactoring Exit Ticket', assessment: true
 
-lesson 'Processing Arrays', display_name: 'Processing Arrays'
+lesson 'Processing Arrays', display_name: 'Processing Arrays', has_lesson_plan: true
 level 'U3L32 Student Lesson Introduction'
 level 'U3 - Loops And Arrays - Intro For Loop'
 level 'U3 - Loops And Arrays - Print Array'
@@ -351,7 +350,7 @@ level 'U3 - Loops And Arrays - Make it a Function - add list parameter'
 level 'U3 - Loops And Arrays - General Search Param'
 level 'U3 - Loops And Arrays - Find Min'
 
-lesson 'Functions with Return Values', display_name: 'Functions with Return Values'
+lesson 'Functions with Return Values', display_name: 'Functions with Return Values', has_lesson_plan: true
 level 'U3L27 Student Lesson Introduction'
 level 'U3 - Arrays and Loops - Explain Functions with Returns'
 level 'U3 - Return Values - useMinVal'
@@ -361,7 +360,7 @@ level 'U3 - Return Values - debuggingConstrain'
 level 'U3 - Return Values - constrainTurtle'
 level 'U3 - Return Values - wrapTurtle'
 
-lesson 'Canvas and Arrays in Apps', display_name: 'Canvas and Arrays in Apps'
+lesson 'Canvas and Arrays in Apps', display_name: 'Canvas and Arrays in Apps', has_lesson_plan: true
 level 'U3L33 Student Lesson Introduction'
 level 'U3 - Canvas - introCanvas'
 level 'U3 - Canvas - 200dots'
@@ -383,7 +382,7 @@ level 'U3 - Canvas - sprayPaint'
 level 'U3 - Canvas - sketch'
 level 'U3 - Canvas - freePlay'
 
-lesson 'Practice PT: Create', display_name: 'Practice PT: Create'
+lesson 'Practice PT: Create', display_name: 'Practice PT: Create', has_lesson_plan: true
 level 'U3L34 Student Lesson Introduction'
 level 'U3 - Practice Create Performance Task'
 

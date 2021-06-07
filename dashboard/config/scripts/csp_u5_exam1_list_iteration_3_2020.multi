@@ -26,3 +26,27 @@ console.log(“The minimum is” + minimum);
 Which of the following can be used to replace `<MISSING CODE>` so that the program works as intended for every possible list of positive numbers?
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** The initial value inside the "minimum" variable should always be set to a value that is in the list.  For example, if you set minimum to 0 to start, and all the numbers inside numList are greater than 0 (say numList = [15, 20, 22, 23, 1] ), when the code evaluates this if statement:
+
+````
+if (numList[i] < minimum) {
+  minimum = numList[i];
+}
+````
+
+`numList[i]` will always be greater than the value stored in minimum (in this case 0).   So "minimum" will never be updated and at the end of the program the computer will say `"The minimum is 0"`
+however, 0 is not in numList at all, so it is not the minimum of the list.
+
+[Lesson 11 - Traversals Practice](https://curriculum.code.org/csp-20/unit5/11/) gave students an opportunity to write programs meant to find both the minimum and maximum values in a list.
+
+::: details [**Essential Knowledge Connected 
+To This Question**]
+
+* AAP-2.O: For algorithms involving elements of a list:
+a. Write iteration statements to traverse a list.
+b. Determine the result of an algorithm that includes list traversals.
+:::
+
+MARKDOWN

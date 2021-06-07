@@ -8,10 +8,11 @@ const defaultProps = {
   onOverviewPage: true,
   excludeCsfColumnInLegend: true,
   teacherResources: [],
+  studentResources: [],
   isSignedIn: true,
   isVerifiedTeacher: true,
   hasVerifiedResources: true,
-  perLevelProgress: {},
+  perLevelResults: {},
   scriptCompleted: false,
   scriptId: 123,
   scriptName: 'csp1',
@@ -20,8 +21,8 @@ const defaultProps = {
   viewAs: ViewType.Teacher,
   isRtl: false,
   sectionsForDropdown: [],
-  scriptHasLockableStages: false,
-  scriptAllowsHiddenStages: false,
+  scriptHasLockableLessons: false,
+  scriptAllowsHiddenLessons: false,
   versions: []
 };
 
@@ -29,7 +30,7 @@ describe('ScriptOverview', () => {
   it('includes a ScriptOverviewTopRow/ProgressLegend on overview page', () => {
     const wrapper = shallow(<ScriptOverview {...defaultProps} />);
     assert.equal(wrapper.find('Connect(ScriptOverviewTopRow)').length, 1);
-    assert.equal(wrapper.find('ProgressLegend').length, 1);
+    assert.equal(wrapper.find('Connect(ProgressLegend)').length, 1);
   });
 
   it('includes no ScriptOverviewTopRow/ProgressLegend if not on overview page', () => {

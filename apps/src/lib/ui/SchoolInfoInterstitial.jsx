@@ -14,43 +14,6 @@ import firehoseClient from '../util/firehose';
 import {combineReducers, createStore} from 'redux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal,
-    fontSize: 13
-  },
-  heading: {
-    fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif"
-  },
-  middle: {
-    marginTop: 20,
-    marginBottom: 20,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray
-  },
-  bottom: {
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
-  error: {
-    color: color.red
-  },
-  button: {
-    marginLeft: 7,
-    marginRight: 7,
-    marginTop: 15,
-    marginBottom: 15
-  }
-};
-
 const FIREHOSE_EVENTS = {
   // Interstitial is displayed to the teacher.
   SHOW: 'show',
@@ -412,3 +375,40 @@ export default class SchoolInfoInterstitial extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    margin: 20,
+    color: color.charcoal,
+    fontSize: 13
+  },
+  heading: {
+    fontSize: 16,
+    fontFamily: "'Gotham 5r', sans-serif"
+  },
+  middle: {
+    marginTop: 20,
+    marginBottom: 20,
+    paddingBottom: 20,
+    paddingTop: 20,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderRightWidth: 0,
+    borderLeftWidth: 0,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray
+  },
+  bottom: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  error: {
+    color: color.red
+  },
+  button: {
+    marginLeft: 7,
+    marginRight: 7,
+    marginTop: 15,
+    marginBottom: 15
+  }
+};

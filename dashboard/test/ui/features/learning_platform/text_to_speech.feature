@@ -5,7 +5,7 @@ Feature: Text To Speech
 
 Scenario: Check that TTS player is displayed
   Given I am a student
-  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/1"
+  And I am on "http://studio.code.org/s/allthettsthings/lessons/1/levels/1"
   And I wait for the page to fully load
 
   Then I wait until element ".inline-audio" is visible
@@ -13,7 +13,7 @@ Scenario: Check that TTS player is displayed
 
 @chrome
 Scenario: Listen to TTS Audio in CSF
-  Given I am on "http://studio.code.org/s/allthethings/stage/6/puzzle/3?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/6/levels/3?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
 
@@ -48,7 +48,7 @@ Scenario: Listen to TTS Audio in CSF
 @chrome
 Scenario: Listen to TTS Audio in CSF contained level
   Given I am a student
-  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/1"
+  And I am on "http://studio.code.org/s/allthettsthings/lessons/1/levels/1"
   And I wait for the page to fully load
 
   # note: we expect audio for csf instructions
@@ -60,7 +60,7 @@ Scenario: Listen to TTS Audio in CSF contained level
 @chrome
 Scenario: Listen to TTS Audio in CSD
   Given I am a student
-  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/2"
+  And I am on "http://studio.code.org/s/allthettsthings/lessons/1/levels/2"
   And I wait for the page to fully load
 
   # note: we expect audio for csd instructions
@@ -72,7 +72,7 @@ Scenario: Listen to TTS Audio in CSD
 @chrome
 Scenario: Listen to TTS Audio in CSP and CSP contained level
   Given I am a student
-  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/4"
+  And I am on "http://studio.code.org/s/allthettsthings/lessons/1/levels/4"
   And I wait for the page to fully load
 
   # note: we expect audio for csp instructions
@@ -81,7 +81,7 @@ Scenario: Listen to TTS Audio in CSP and CSP contained level
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 0th inline audio element
 
-  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/3"
+  And I am on "http://studio.code.org/s/allthettsthings/lessons/1/levels/3"
   And I wait for the page to fully load
 
   # note: we expect audio for csp instructions

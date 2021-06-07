@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Looping and Random Numbers: Getting Started",
-    "long_instructions": "Run the program: <a href=\"http://studio.code.org/p/applab#eUmMCRRJNxJk9EheYznD6w\" target=\"_blank\">\n Starry Night </a> several times. \n \n* What's \"weird\" or \"different\" about this program from previous ones we've seen?\n* How do you think this effect is produced?\n\n\n",
+    "long_instructions": "Run the program: <a href=\"http://studio.code.org/p/applab#eUmMCRRJNxJk9EheYznD6w\" target=\"_blank\" rel=\"noopener noreferrer\">\n Starry Night </a> several times. \n \n* What's \"weird\" or \"different\" about this program from previous ones we've seen?\n* How do you think this effect is produced?\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

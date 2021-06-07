@@ -17,7 +17,11 @@ class GoogleClassroomAttributionLabel extends React.Component {
 
   render() {
     if (this.props.visible) {
-      return <p style={style}>{i18n.googleClassroomAttribution()}</p>;
+      return (
+        <p style={style} className="google-classroom-attribution">
+          {i18n.googleClassroomAttribution()}
+        </p>
+      );
     } else {
       return null;
     }

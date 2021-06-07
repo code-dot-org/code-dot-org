@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
 import sinon from 'sinon';
-import HiddenForSectionToggle from '@cdo/apps/templates/progress/HiddenForSectionToggle';
+import {UnconnectedHiddenForSectionToggle as HiddenForSectionToggle} from '@cdo/apps/templates/progress/HiddenForSectionToggle';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 

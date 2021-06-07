@@ -1,7 +1,7 @@
-lesson 'Algorithms: Graph Paper Programming', display_name: 'Algorithms: Graph Paper Programming'
+lesson 'Algorithms: Graph Paper Programming', display_name: 'Algorithms: Graph Paper Programming', has_lesson_plan: false, unplugged: true
 level 'GraphPaperProgramming'
 
-lesson 'Introduction', display_name: 'Introduction'
+lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: false
 level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'
@@ -13,10 +13,10 @@ level 'courseD_maze_ramp5b', challenge: true
 level 'courseD_maze_ramp5c'
 level 'courseD_maze_ramp5d'
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation'
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: false, unplugged: true
 level 'BuildingAFoundation'
 
-lesson 'Debugging in Collector', display_name: 'Debugging in Collector'
+lesson 'Debugging in Collector', display_name: 'Debugging in Collector', has_lesson_plan: false
 level 'courseD_video_debugging'
 level 'courseD_collector_debugging1a'
 level 'courseD_collector_debugging2a'
@@ -27,41 +27,41 @@ level 'courseD_collector_debugging6a', challenge: true
 level 'courseD_collector_debugging8a'
 level 'courseD_collector_debugging9a'
 
-lesson 'Events in Bounce', display_name: 'Events in Bounce'
+lesson 'Events in Bounce', display_name: 'Events in Bounce', has_lesson_plan: false
 variants
-  level 'courseD_bounce_events1s'
   level 'bounce_1'
+  level 'courseD_bounce_events1s'
 endvariants
 variants
-  level 'courseD_bounce_events2s'
   level 'bounce_2'
+  level 'courseD_bounce_events2s'
 endvariants
 variants
-  level 'courseD_bounce_events5s'
   level 'bounce_5'
+  level 'courseD_bounce_events5s'
 endvariants
 variants
-  level 'courseD_bounce_events6s'
   level 'bounce_6'
+  level 'courseD_bounce_events6s'
 endvariants
 variants
-  level 'courseD_bounce_events7s'
   level 'bounce_7'
+  level 'courseD_bounce_events7s'
 endvariants
 variants
-  level 'courseD_bounce_events10s'
   level 'bounce_10'
+  level 'courseD_bounce_events10s'
 endvariants
 variants
-  level 'courseD_bounce_events11s'
   level 'bounce_11'
+  level 'courseD_bounce_events11s'
 endvariants
 variants
-  level 'courseD_bounce_events12s'
   level 'bounce_12'
+  level 'courseD_bounce_events12s'
 endvariants
 
-lesson 'Loops in Ice Age', display_name: 'Loops in Ice Age'
+lesson 'Loops in Ice Age', display_name: 'Loops in Ice Age', has_lesson_plan: false
 level 'courseD_iceage_loops1'
 level 'courseD_iceage_loops2'
 level 'courseD_iceage_loops_video'
@@ -75,7 +75,7 @@ level 'courseD_iceage_loops10', challenge: true
 level 'courseD_iceage_loops11'
 level 'courseD_iceage_loops12'
 
-lesson 'Loops in Artist', display_name: 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: false
 level 'ramp_video_artistIntro'
 level 'ramp_artist_loops1'
 level 'ramp_artist_loops2'
@@ -88,7 +88,7 @@ level 'ramp_artist_loops7'
 level 'ramp_artist_loops8', challenge: true
 level 'ramp_artist_loops9'
 
-lesson 'Nested Loops in Bee', display_name: 'Nested Loops in Bee'
+lesson 'Nested Loops in Bee', display_name: 'Nested Loops in Bee', has_lesson_plan: false
 level 'courseD_bee_nestedLoops1a'
 level 'courseD_bee_nestedLoops1'
 level 'courseD_video_nestedLoops'
@@ -105,7 +105,7 @@ level 'courseD_bee_nestedLoops9_predict2', assessment: true
 bonus 'courseD_harvester_nested_loops_challenge1'
 bonus 'courseD_collector_nested_loops_challenge2'
 
-lesson 'Nested Loops in Artist', display_name: 'Nested Loops in Artist'
+lesson 'Nested Loops in Artist', display_name: 'Nested Loops in Artist', has_lesson_plan: false
 level 'courseD_artist_nestedLoops1'
 level 'courseD_artist_nestedLoops1a'
 level 'courseD_video_nestedLoopsArtist'
@@ -122,7 +122,7 @@ level 'courseD_artist_nestedLoopsFP'
 bonus 'courseD_artist_nestedLoops_challenge1'
 bonus 'courseD_artist_nestedLoops_challenge2'
 
-lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer'
+lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer', has_lesson_plan: false
 level 'courseD_farmer_while1'
 level 'courseD_farmer_while2'
 level 'courseD_farmer_while3'
@@ -139,10 +139,10 @@ level 'courseD_farmer_while10_predict2', assessment: true
 bonus 'courseD_farmer_while_challenge1'
 bonus 'courseD_farmer_while_challenge2'
 
-lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards'
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: false, unplugged: true
 level 'Conditionals'
 
-lesson 'Conditionals in Bee', display_name: 'Conditionals in Bee'
+lesson 'Conditionals in Bee', display_name: 'Conditionals in Bee', has_lesson_plan: false
 level 'courseD_bee_conditionalsVid1'
 level 'courseD_bee_conditionals1_predict1'
 level 'courseD_bee_conditionals2'
@@ -159,7 +159,7 @@ level 'courseD_bee_conditionals10'
 bonus 'courseD_bee_conditionals_challenge1'
 bonus 'courseD_bee_conditionals_challenge2'
 
-lesson 'Conditionals & Loops in Maze', display_name: 'Conditionals & Loops in Maze'
+lesson 'Conditionals & Loops in Maze', display_name: 'Conditionals & Loops in Maze', has_lesson_plan: false
 level 'courseD_maze_until1'
 level 'courseD_video_repeatUntil'
 level 'courseD_maze_until2_predict1'
@@ -176,7 +176,7 @@ level 'courseD_maze_until10_predict2', assessment: true
 bonus 'courseD_maze_until_challenge1'
 bonus 'courseD_farmer_until_challenge2'
 
-lesson 'Conditionals & Loops in Farmer', display_name: 'Conditionals & Loops in Farmer'
+lesson 'Conditionals & Loops in Farmer', display_name: 'Conditionals & Loops in Farmer', has_lesson_plan: false
 level 'courseD_farmer_condLoops1'
 level 'courseD_farmer_condLoops2'
 level 'courseD_farmer_condLoops3'
@@ -190,10 +190,10 @@ level 'courseD_farmer_condLoops9_predict1', assessment: true
 bonus 'courseD_farmer_condLoops_challenge1'
 bonus 'courseD_farmer_condLoops_challenge2'
 
-lesson 'Digital Citizenship', display_name: 'Digital Citizenship'
+lesson 'Digital Citizenship', display_name: 'Digital Citizenship', has_lesson_plan: false, unplugged: true
 level 'courseD_unplugged_digitalCitizenship'
 
-lesson 'Build a Play Lab Game', display_name: 'Build a Play Lab Game'
+lesson 'Build a Play Lab Game', display_name: 'Build a Play Lab Game', has_lesson_plan: false
 level 'courseD_playLab_cond1'
 level 'courseD_playLab_cond2'
 level 'courseD_playLab_cond3'
@@ -204,10 +204,10 @@ level 'courseD_playLab_cond6'
 level 'courseD_playLab_cond6a'
 level 'courseD_playLab_condFP'
 
-lesson 'Unplugged: Binary', display_name: 'Unplugged: Binary'
+lesson 'Unplugged: Binary', display_name: 'Unplugged: Binary', has_lesson_plan: false, unplugged: true
 level 'BinaryImages'
 
-lesson 'Artist Binary', display_name: 'Artist Binary'
+lesson 'Artist Binary', display_name: 'Artist Binary', has_lesson_plan: false
 level 'courseD_external_binary1'
 level 'courseD_artist_binary1'
 level 'courseD_artist_binary2'

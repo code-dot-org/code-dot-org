@@ -1,0 +1,12 @@
+{
+  "func": "group.overlap",
+  "category": "Groups",
+  "paletteParams": [
+    "target"
+  ],
+  "params": [
+    "target"
+  ],
+  "modeOptionName": "group_overlap",
+  "noAutocomplete": true
+}

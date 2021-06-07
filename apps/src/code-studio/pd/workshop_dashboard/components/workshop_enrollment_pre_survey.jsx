@@ -6,13 +6,6 @@ import {Chart} from 'react-google-charts';
 import {workshopEnrollmentStyles} from '../workshop_enrollment_styles';
 import {enrollmentShape} from '../types';
 
-const styles = {
-  ...workshopEnrollmentStyles,
-  containerDiv: {
-    overflowY: 'hidden'
-  }
-};
-
 export default class WorkshopEnrollmentPreSurvey extends React.Component {
   constructor(props) {
     super(props);
@@ -122,6 +115,13 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
     );
   }
 }
+
+const styles = {
+  ...workshopEnrollmentStyles,
+  containerDiv: {
+    overflowY: 'hidden'
+  }
+};
 
 WorkshopEnrollmentPreSurvey.propTypes = {
   enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,

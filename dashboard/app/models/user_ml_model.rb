@@ -10,6 +10,7 @@
 #  purged_at  :datetime
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  metadata   :text(65535)
 #
 # Indexes
 #
@@ -18,4 +19,5 @@
 #
 class UserMlModel < ApplicationRecord
   belongs_to :user
+  validates :name, presence: true
 end

@@ -53,8 +53,7 @@ const styles = {
     color: color.white
   },
   clear: {
-    clear: 'both',
-    marginBottom: 60
+    clear: 'both'
   },
   container: {
     width: '100%',
@@ -81,7 +80,8 @@ export class UnconnectedTwoColumnActionBlock extends Component {
         id: PropTypes.string
       })
     ),
-    backgroundColor: PropTypes.string
+    backgroundColor: PropTypes.string,
+    marginBottom: PropTypes.string
   };
 
   render() {
@@ -96,7 +96,8 @@ export class UnconnectedTwoColumnActionBlock extends Component {
       subHeadingSmallFont,
       description,
       buttons,
-      backgroundColor
+      backgroundColor,
+      marginBottom = '60px'
     } = this.props;
     const float = isRtl ? 'right' : 'left';
     const width = responsiveSize === 'lg' ? '50%' : '100%';
@@ -146,7 +147,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
             </div>
           </div>
         </div>
-        <div style={styles.clear} />
+        <div style={{...styles.clear, marginBottom: marginBottom}} />
       </div>
     );
   }
@@ -213,7 +214,8 @@ export class AdministratorResourcesActionBlock extends Component {
 
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
-    announcement: shapes.specialAnnouncement
+    announcement: shapes.specialAnnouncement,
+    marginBottom: PropTypes.string
   };
 
   state = {
@@ -251,6 +253,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         description={announcement.body}
         buttons={this.state.buttonList}
         backgroundColor={announcement.backgroundColor}
+        marginBottom={this.props.marginBottom}
       />
     );
   }

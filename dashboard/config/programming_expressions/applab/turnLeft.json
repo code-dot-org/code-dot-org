@@ -1,0 +1,22 @@
+{
+  "func": "turnLeft",
+  "category": "Turtle",
+  "paramButtons": {
+    "minArgs": 0,
+    "maxArgs": 1
+  },
+  "paletteParams": [
+    "angle"
+  ],
+  "params": [
+    "90"
+  ],
+  "dropdown": {
+    "0": [
+      "30",
+      "45",
+      "60",
+      "90"
+    ]
+  }
+}

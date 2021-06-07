@@ -1,19 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import Button from '@cdo/apps/templates/Button';
 import {connect} from 'react-redux';
+
+import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  }
-};
+import LessonEditorDialog from './LessonEditorDialog';
 
 class FindResourceDialog extends Component {
   static propTypes = {
@@ -27,7 +20,9 @@ class FindResourceDialog extends Component {
     super(props);
     this.state = {
       selectedResourceKey:
-        this.props.resources.length > 0 ? this.props.resources[0].key : ''
+        this.props.resources.length > 0
+          ? this.props.resources[0].markdownKey
+          : ''
     };
   }
 
@@ -45,11 +40,9 @@ class FindResourceDialog extends Component {
 
   render() {
     return (
-      <BaseDialog
+      <LessonEditorDialog
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
-        useUpdatedStyles
-        style={styles.dialog}
       >
         <h2>Add Resource</h2>
         <label>
@@ -59,12 +52,18 @@ class FindResourceDialog extends Component {
             value={this.state.selectedResourceKey}
           >
             {this.props.resources.map(resource => (
-              <option key={resource.key} value={resource.key}>
+              <option key={resource.key} value={resource.markdownKey}>
                 {this.formatResourceName(resource)}
               </option>
             ))}
           </select>
         </label>
+        <p>
+          <strong>Note:</strong> Resource Links render as raw syntax (ie,{' '}
+          <code>[r resource-key/course_offering_key/course_version_key]</code>)
+          in the markdown preview here in the editor, but will render as
+          fully-realized links in the actual lesson view.
+        </p>
         <DialogFooter rightAlign>
           <Button
             text={'Close and Add'}
@@ -75,7 +74,7 @@ class FindResourceDialog extends Component {
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>
-      </BaseDialog>
+      </LessonEditorDialog>
     );
   }
 }

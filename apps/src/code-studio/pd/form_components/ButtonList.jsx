@@ -13,13 +13,6 @@ import utils from './utils';
 
 const otherString = 'Other:';
 
-const styles = {
-  inputLabel: {
-    verticalAlign: 'top',
-    marginRight: 15
-  }
-};
-
 class ButtonList extends React.Component {
   static propTypes = {
     type: PropTypes.oneOf(['radio', 'check']).isRequired,
@@ -175,6 +168,13 @@ class ButtonList extends React.Component {
     );
   }
 }
+
+const styles = {
+  inputLabel: {
+    verticalAlign: 'top',
+    marginRight: 15
+  }
+};
 
 export default ButtonList;
 export {ButtonList, otherString};

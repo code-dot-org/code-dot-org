@@ -1,7 +1,7 @@
 class ResourcesController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show]
 
-  # GET /resourcesearch
+  # GET /resources/search
   def search
     render json: ResourcesAutocomplete.get_search_matches(params[:query], params[:limit], params[:courseVersionId])
   end
@@ -26,6 +26,7 @@ class ResourcesController < ApplicationController
       resource.course_version = course_version if course_version
     end
     if resource.save
+      resource.serialize_scripts
       render json: resource.summarize_for_lesson_edit
     else
       render status: 400, json: {error: resource.errors.full_message.to_json}
@@ -37,6 +38,7 @@ class ResourcesController < ApplicationController
     resource = Resource.find_by_id(resource_params[:id])
     if resource
       resource.update!(resource_params)
+      resource.serialize_scripts
       render json: resource.summarize_for_lesson_edit
     else
       render json: {status: 404, error: "Resource #{resource_params[:id]} not found"}

@@ -23,16 +23,28 @@ class LevelLoader
   def self.import_levels(level_file_glob)
     level_file_paths = file_paths_from_glob(level_file_glob)
 
+    # This is only expected to happen when LEVEL_NAME is set and the
+    # filename is not found
+    unless level_file_paths.count > 0
+      raise 'no matching level names found. '\
+        'please check level name for exact case and spelling. '\
+        'the level name is the level filename without the .level suffix.'
+    end
+
     # Use a transaction because loading levels requires two separate imports.
     Level.transaction do
       level_md5s_by_name = Hash[Level.pluck(:name, :md5)]
       existing_level_names = level_md5s_by_name.keys.to_set
 
+      level_file_names = level_file_paths.map {|path| level_name_from_path path}
+      if level_file_names.include? 'blockly'
+        raise 'custom levels must not be named "blockly"'
+      end
+
       # First, save stubs of any new levels - they'll need to have ids in
       # order to create certain associations (in particular
       # level_concept_difficulty) when we bulk-load the level properties.
-      new_level_names = level_file_paths.
-        map {|path| level_name_from_path path}.
+      new_level_names = level_file_names.
         reject {|name| existing_level_names.include? name}
       Level.import! new_level_names.map {|name| {name: name}}
 

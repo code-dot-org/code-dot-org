@@ -1,21 +1,21 @@
 professional_learning_course 'CS in Science Support'
 login_required true
 
-lesson 'Welcome!', display_name: 'Welcome!'
+lesson 'Welcome!', display_name: 'Welcome!', has_lesson_plan: false
 level 'sciPD3OLP32 intro'
 level 'sciPD2 timeline'
 level 'PD check your progress'
 level 'sciPD3 mods2'
 
-lesson 'Revisiting Complex Adaptive Systems', display_name: 'Revisiting Complex Adaptive Systems'
+lesson 'Revisiting Complex Adaptive Systems', display_name: 'Revisiting Complex Adaptive Systems', has_lesson_plan: false
 level 'sciPD33 refresh'
 level 'sciPD33 refresh2'
 
-lesson 'Thinking About Implementation', display_name: 'Thinking About Implementation'
+lesson 'Thinking About Implementation', display_name: 'Thinking About Implementation', has_lesson_plan: false
 level 'sciPD3 implement1'
 level 'sciPD3 implement2'
 
-lesson 'Wrap-Up', display_name: 'Wrap-Up'
+lesson 'Wrap-Up', display_name: 'Wrap-Up', has_lesson_plan: false
 level 'sciPD3 thanks'
 level 'sciPD3 end'
 

@@ -4,21 +4,20 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit5/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit5/standards/"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit5/{LESSON}'
-announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Student-only"}]
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_lists', display_name: 'Lists'
-lesson 'Lists Explore', display_name: 'Lists Explore'
+lesson 'Lists Explore', display_name: 'Lists Explore', has_lesson_plan: true
 level 'CSP U5L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 L01 Introduction to Lists', progression: 'Introduction to Lists'
 level 'Introduction to Lists - Part 2_2018', progression: 'Introduction to Lists'
 level 'csp-20-21-u5-assess-lists', progression: 'Check For Understanding', assessment: true
 
-lesson 'Lists Investigate', display_name: 'Lists Investigate'
+lesson 'Lists Investigate', display_name: 'Lists Investigate', has_lesson_plan: true
 level 'CSP U5L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'Introduction to Lists - Part 4_2018', progression: 'Accessing Lists'
 level 'U5 Lists Investigate Outfitly Code', progression: 'Accessing Lists'
@@ -28,7 +27,7 @@ level 'U5 Lists Investigate Partnersly Code', progression: 'Changing Lists'
 level 'Random List Access Pattern', progression: 'List Patterns'
 level 'List Scrolling Pattern', progression: 'List Patterns'
 
-lesson 'Lists Practice', display_name: 'Lists Practice'
+lesson 'Lists Practice', display_name: 'Lists Practice', has_lesson_plan: true
 level 'CSP U5L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 L03 Lists Practice 1', progression: 'Setting up Lists'
 level 'U5 L03 Lists Practice 2', progression: 'Setting up Lists'
@@ -44,25 +43,25 @@ level 'U5 L03 Lists Practice 6', progression: 'List Operations'
 level 'U5L3 CFU Lists Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 level 'U5L3 CFU Lists Psuedocode 2', progression: 'Check For Understanding: AP Practice', assessment: true
 
-lesson 'Lists Make', display_name: 'Lists Make'
+lesson 'Lists Make', display_name: 'Lists Make', has_lesson_plan: true
 level 'CSP U5L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Lists Make Project Sample App 2020', progression: 'Try the Reminders App'
 level 'U5 Lists Make Project 2020', progression: 'Make the Reminders App', assessment: true
 
 lesson_group 'csp_loops', display_name: 'Loops'
-lesson 'Loops Explore', display_name: 'Loops Explore'
+lesson 'Loops Explore', display_name: 'Loops Explore', has_lesson_plan: true
 level 'CSP U5L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'csp_applab_loops_2018', progression: 'Introduction to Loops'
 level 'U3L5 CSP CFU Looping', progression: 'Check For Understanding', assessment: true
 
-lesson 'Loops Investigate', display_name: 'Loops Investigate'
+lesson 'Loops Investigate', display_name: 'Loops Investigate', has_lesson_plan: true
 level 'CSP U5L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Loops Investigate Coin Flipper Predict', progression: 'Coin Flipper App'
 level 'U5 Loops Investigate Coin Flipper', progression: 'Coin Flipper App'
 level 'U5 Loops Investigate Font Tester', progression: 'Font Tester App'
 level 'U3L6 CSP CFU Element Looping', progression: 'Check For Understanding', assessment: true
 
-lesson 'Loops Practice', display_name: 'Loops Practice'
+lesson 'Loops Practice', display_name: 'Loops Practice', has_lesson_plan: true
 level 'CSP U5L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Loops Practice Part 1', progression: 'While Loop Practice'
 level 'U5 Loops Practice Part 2', progression: 'While Loop Practice'
@@ -75,18 +74,18 @@ level 'U5 Loops Practice Dice Roller', progression: 'Loops and Screen Elements'
 level 'U5L7 CFU Loops Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 level 'U5L7 CFU Loops Psuedocode 2', progression: 'Check For Understanding: AP Practice', assessment: true
 
-lesson 'Loops Make', display_name: 'Loops Make'
+lesson 'Loops Make', display_name: 'Loops Make', has_lesson_plan: true
 level 'CSP U5L8 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Loops Make Wallpaper App Example 2020', progression: 'Try the Lock Screen Maker'
 level 'U5 Loops Make Wallpaper App 2020', progression: 'Make the Lock Screen Maker', assessment: true
 
 lesson_group 'csp_traversals', display_name: 'Traversals'
-lesson 'Traversals Explore', display_name: 'Traversals Explore'
+lesson 'Traversals Explore', display_name: 'Traversals Explore', has_lesson_plan: true
 level 'CSP U5L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'Processing Lists with Loops_2018', progression: 'Introduction to Traversal'
 level 'U5 L09 Traversals Exit Ticket', progression: 'Check For Understanding', assessment: true
 
-lesson 'Traversals Investigate', display_name: 'Traversals Investigate'
+lesson 'Traversals Investigate', display_name: 'Traversals Investigate', has_lesson_plan: true
 level 'CSP U5L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Traversals Investigate Mile Tracker Modify', progression: 'Mile Tracker Investigation'
 level 'CSP U5L10 Traversals Investigate', progression: 'Intro to Datasets'
@@ -95,7 +94,7 @@ level 'List Filter Pattern', progression: 'Traversal Patterns'
 level 'List Reduce Pattern', progression: 'Traversal Patterns'
 level 'CSP U5L10 CFU Traversals', progression: 'Check For Understanding', assessment: true
 
-lesson 'Traversals Practice', display_name: 'Traversals Practice'
+lesson 'Traversals Practice', display_name: 'Traversals Practice', has_lesson_plan: true
 level 'CSP U5L11 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Traversals Practice Part 1', progression: 'Traversal Practice'
 level 'U5 Traversals Practice Part 2', progression: 'Traversal Practice'
@@ -106,32 +105,36 @@ level 'U5 Traversals Practice Part 6', progression: 'Filter and Reduce Practice'
 level 'U5 Traversals Practice Part 7', progression: 'App Practice'
 level 'U5L11 CFU For Each Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
-lesson 'Traversals Make', display_name: 'Traversals Make'
+lesson 'Traversals Make', display_name: 'Traversals Make', has_lesson_plan: true
 level 'CSP U5L12 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Traversals Make Project Sample App 2020', progression: 'Try the Random Forecaster App'
 level 'U5 Traversals Make Project 2020', progression: 'Make the Random Forecaster App', assessment: true
 
 lesson_group 'csp_project', display_name: 'Project'
-lesson 'Semester Hackathon Part 1', display_name: 'Semester Hackathon Part 1'
+lesson 'Semester Hackathon Part 1', display_name: 'Semester Hackathon Part 1', has_lesson_plan: true
 level 'CSP U5L13 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Semester Hackathon Part 2', display_name: 'Semester Hackathon Part 2'
+lesson 'Semester Hackathon Part 2', display_name: 'Semester Hackathon Part 2', has_lesson_plan: true
 level 'CSP U5L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Hackathon Project Day 2', progression: 'Hackathon Project'
 
-lesson 'Semester Hackathon Part 3', display_name: 'Semester Hackathon Part 3'
+lesson 'Semester Hackathon Part 3', display_name: 'Semester Hackathon Part 3', has_lesson_plan: true
 level 'CSP U5L15 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Hackathon Project Day 3', progression: 'Hackathon Project'
 
-lesson 'Semester Hackathon Part 4', display_name: 'Semester Hackathon Part 4'
+lesson 'Semester Hackathon Part 4', display_name: 'Semester Hackathon Part 4', has_lesson_plan: true
 level 'CSP U5L16 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Hackathon Project Day 4', progression: 'Hackathon Project'
 
-lesson 'Semester Hackathon Part 5', display_name: 'Semester Hackathon Part 5'
+lesson 'Semester Hackathon Part 5', display_name: 'Semester Hackathon Part 5', has_lesson_plan: true
 level 'CSP U5L17 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Hackathon Project Day 5', progression: 'Hackathon Project', assessment: true
 
-lesson 'Lesson 18: Assessment Day', display_name: 'Lesson 18: Assessment Day', lockable: true
+lesson 'Lesson 18: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 5 AP-Style Assessment _2020', progression: 'Unit 5 Exam', assessment: true
+
+lesson_group 'cspSurvey2020', display_name: 'Post-Course Survey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: false
+level 'csp-post-survey-2020-markdown-with-link-to-survey', progression: 'Post-Course Survey Instructions', assessment: true
 

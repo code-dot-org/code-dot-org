@@ -19,6 +19,14 @@ class CoursesControllerTest < ActionController::TestCase
 
     @unit_group_regular = create :unit_group, name: 'non-plc-course'
 
+    @migrated_script = create :script, is_migrated: true
+    @unit_group_migrated = create :unit_group
+    create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_script, position: 1
+
+    @unmigrated_script = create :script
+    @unit_group_unmigrated = create :unit_group
+    create :unit_group_unit, unit_group: @unit_group_unmigrated, script: @unmigrated_script, position: 1
+
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
   end
@@ -236,7 +244,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 2, default_unit_group_units.length
     assert_equal ['script1', 'script2'], default_unit_group_units.map(&:script).map(&:name)
 
-    assert_redirected_to '/courses/csp'
+    assert_response :success
   end
 
   test "update: persists changes to alternate_unit_group_units" do
@@ -274,7 +282,53 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal expected_position, alternate_unit_group_unit.position,
       'an alternate script must have the same position as the default script it replaces'
 
-    assert_redirected_to '/courses/csp'
+    assert_response :success
+  end
+
+  test "update: sets visible and is_stable on units in unit group" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    course = create :unit_group, name: 'course'
+    unit1 = create :script, name: 'unit1'
+    unit2 = create :script, name: 'unit2'
+
+    post :update, params: {
+      course_name: 'course',
+      scripts: ['unit1', 'unit2'],
+      visible: true,
+      is_stable: true
+    }
+    course.reload
+    unit1.reload
+    unit2.reload
+
+    assert course.visible?
+    assert course.is_stable?
+    refute unit1.hidden?
+    assert unit1.is_stable?
+    refute unit2.hidden?
+    assert unit2.is_stable?
+  end
+
+  test "update: sets pilot_experiment on units in unit group" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    course = create :unit_group, name: 'course'
+    unit1 = create :script, name: 'unit1'
+    unit2 = create :script, name: 'unit2'
+
+    post :update, params: {
+      course_name: 'course',
+      scripts: ['unit1', 'unit2'],
+      pilot_experiment: 'my-pilot'
+    }
+    course.reload
+    unit1.reload
+    unit2.reload
+
+    assert_equal course.pilot_experiment, 'my-pilot'
+    assert_equal unit1.pilot_experiment, 'my-pilot'
+    assert_equal unit2.pilot_experiment, 'my-pilot'
   end
 
   test "update: persists changes localizeable strings" do
@@ -302,8 +356,8 @@ class CoursesControllerTest < ActionController::TestCase
       version_year: '2019',
       family_name: 'csp',
       has_verified_resources: 'on',
-      visible: 'on',
-      is_stable: 'on'
+      visible: true,
+      is_stable: true
     }
     unit_group.reload
 
@@ -313,6 +367,50 @@ class CoursesControllerTest < ActionController::TestCase
     assert unit_group.visible?
     assert unit_group.is_stable?
   end
+
+  test "update: persists teacher resources for migrated unit groups" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    course_version = create :course_version, :with_unit_group
+    unit_group = course_version.content_root
+    unit_group.update!(name: 'csp-2017')
+    script = create :script, hidden: true, is_migrated: true
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+    resource1 = create :resource, course_version: course_version
+    resource2 = create :resource, course_version: course_version
+
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: [resource1.id, resource2.id]}
+    unit_group.reload
+    assert_equal 2, unit_group.resources.length
+  end
+
+  test "update: persists student resources for migrated unit groups" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    course_version = create :course_version, :with_unit_group
+    unit_group = course_version.content_root
+    unit_group.update!(name: 'csp-2017')
+    script = create :script, hidden: true, is_migrated: true
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+    resource1 = create :resource, course_version: course_version
+    resource2 = create :resource, course_version: course_version
+
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: [resource1.id, resource2.id]}
+    unit_group.reload
+    assert_equal 2, unit_group.student_resources.length
+  end
+
+  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
+
+  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :resources, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
+
+  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :standards, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
+
+  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :code, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
   # tests for edit
 
@@ -333,5 +431,44 @@ class CoursesControllerTest < ActionController::TestCase
 
     get :edit, params: {course_name: 'csp'}
     assert_template 'courses/edit'
+  end
+
+  # tests for get_rollup_resources
+
+  test "get_rollup_resources return rollups for a script with code, resources, standards, and vocab" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    course_version = create :course_version, content_root: @unit_group_migrated
+    lesson_group = create :lesson_group, script: @migrated_script
+    lesson = create :lesson, lesson_group: lesson_group
+    lesson.programming_expressions = [create(:programming_expression)]
+    lesson.resources = [create(:resource, course_version_id: course_version.id)]
+    lesson.standards = [create(:standard)]
+    lesson.vocabularies = [create(:vocabulary, course_version_id: course_version.id)]
+
+    get :get_rollup_resources, params: {course_name: @unit_group_migrated.name}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal 4, response_body.length
+    assert_equal ['All Code', 'All Resources', 'All Standards', 'All Vocabulary'], response_body.map {|r| r['name']}
+  end
+
+  test "get_rollup_resources doesn't return rollups if no lesson in a script has the associated object" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    course_version = create :course_version, content_root: @unit_group_migrated
+    lesson_group = create :lesson_group, script: @migrated_script
+    lesson = create :lesson, lesson_group: lesson_group
+    # Only add resources and standards, not programming expressions and vocab
+    lesson.resources = [create(:resource, course_version_id: course_version.id)]
+    lesson.standards = [create(:standard)]
+
+    get :get_rollup_resources, params: {course_name: @unit_group_migrated.name}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal 2, response_body.length
+    assert_equal ['All Resources', 'All Standards'], response_body.map {|r| r['name']}
   end
 end

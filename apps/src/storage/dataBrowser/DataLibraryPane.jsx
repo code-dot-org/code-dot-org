@@ -15,23 +15,6 @@ import {WarningType} from '../constants';
 import experiments from '../../util/experiments';
 import _ from 'lodash';
 
-const styles = {
-  container: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    width: 270,
-    boxSizing: 'border-box',
-    borderRight: '1px solid gray',
-    overflowY: 'auto',
-    padding: 10
-  },
-  divider: {
-    borderColor: color.light_gray,
-    margin: '5px 0px 10px 0px'
-  }
-};
-
 class DataLibraryPane extends React.Component {
   static propTypes = {
     // Provided via redux
@@ -133,6 +116,23 @@ class DataLibraryPane extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    width: 270,
+    boxSizing: 'border-box',
+    borderRight: '1px solid gray',
+    overflowY: 'auto',
+    padding: 10
+  },
+  divider: {
+    borderColor: color.light_gray,
+    margin: '5px 0px 10px 0px'
+  }
+};
 
 export default connect(
   state => ({

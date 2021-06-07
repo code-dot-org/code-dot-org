@@ -8,6 +8,7 @@ export const fakeTeacherAnnouncement = {
   type: NotificationType.information,
   visibility: VisibilityType.teacher
 };
+
 export const fakeStudentAnnouncement = {
   notice: 'Notice - Student',
   details: 'Students are the best',
@@ -15,6 +16,7 @@ export const fakeStudentAnnouncement = {
   type: NotificationType.information,
   visibility: VisibilityType.student
 };
+
 export const fakeTeacherAndStudentAnnouncement = {
   notice: 'Notice - Teacher And Student',
   details: 'More detail here',
@@ -22,6 +24,7 @@ export const fakeTeacherAndStudentAnnouncement = {
   type: NotificationType.information,
   visibility: VisibilityType.teacherAndStudent
 };
+
 export const fakeOldTeacherAnnouncement = {
   notice: 'Notice - Teacher',
   details: 'Teachers are the best',

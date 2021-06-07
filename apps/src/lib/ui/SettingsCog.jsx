@@ -13,6 +13,8 @@ import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
+import experiments from '@cdo/apps/util/experiments';
+import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 
 const style = {
   iconContainer: {
@@ -43,9 +45,13 @@ class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
-    showMakerToggle: PropTypes.bool
+    showMakerToggle: PropTypes.bool,
+    autogenerateML: PropTypes.func
   };
 
+  componentDidMount() {
+    this.setState({isAIEnabled: experiments.isEnabled(experiments.APPLAB_ML)});
+  }
   // This ugly two-flag state is a workaround for an event-handling bug in
   // react-portal that prevents closing the portal by clicking on the icon
   // that opened it.  For now we're just disabling the cog when the menu is
@@ -55,7 +61,9 @@ class SettingsCog extends Component {
     open: false,
     canOpen: true,
     confirmingEnableMaker: false,
-    managingLibraries: false
+    managingLibraries: false,
+    managingModels: false,
+    isAIEnabled: false
   };
 
   open = () => this.setState({open: true, canOpen: false});
@@ -75,6 +83,11 @@ class SettingsCog extends Component {
   manageLibraries = () => {
     this.close();
     this.setState({managingLibraries: true});
+  };
+
+  manageModels = () => {
+    this.close();
+    this.setState({managingModels: true});
   };
 
   toggleMakerToolkit = () => {
@@ -97,6 +110,7 @@ class SettingsCog extends Component {
   showConfirmation = () => this.setState({confirmingEnableMaker: true});
   hideConfirmation = () => this.setState({confirmingEnableMaker: false});
   closeLibraryManager = () => this.setState({managingLibraries: false});
+  closeModelManager = () => this.setState({managingModels: false});
 
   setTargetPoint(icon) {
     if (!icon) {
@@ -116,6 +130,21 @@ class SettingsCog extends Component {
     return pageConstants && pageConstants.librariesEnabled;
   }
 
+  areAIToolsEnabled() {
+    let pageConstants = getStore().getState().pageConstants;
+    return pageConstants && pageConstants.aiEnabled;
+  }
+
+  levelbuilderModel() {
+    let model = {};
+    let pageConstants = getStore().getState().pageConstants;
+    if (pageConstants?.aiModelId && pageConstants?.aiModelName) {
+      model.id = pageConstants.aiModelId;
+      model.name = pageConstants.aiModelName;
+    }
+    return model;
+  }
+
   render() {
     const {isRunning, runModeIndicators} = this.props;
 
@@ -124,6 +153,8 @@ class SettingsCog extends Component {
     if (runModeIndicators && isRunning) {
       rootStyle.color = color.dark_charcoal;
     }
+
+    const aiEnabled = this.state.isAIEnabled && this.areAIToolsEnabled();
 
     return (
       <span style={rootStyle} ref={icon => this.setTargetPoint(icon)}>
@@ -145,10 +176,19 @@ class SettingsCog extends Component {
           {this.areLibrariesEnabled() && (
             <ManageLibraries onClick={this.manageLibraries} />
           )}
+          {aiEnabled && <ManageModels onClick={this.manageModels} />}
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
         </PopUpMenu>
+        {aiEnabled && (
+          <ModelManagerDialog
+            isOpen={this.state.managingModels}
+            onClose={this.closeModelManager}
+            autogenerateML={this.props.autogenerateML}
+            levelbuilderModel={this.levelbuilderModel()}
+          />
+        )}
         <ConfirmEnableMakerDialog
           isOpen={this.state.confirmingEnableMaker}
           handleConfirm={this.confirmEnableMaker}
@@ -172,6 +212,10 @@ ManageAssets.propTypes = {
   first: PropTypes.bool,
   last: PropTypes.bool
 };
+
+export function ManageModels(props) {
+  return <PopUpMenu.Item {...props}>{msg.manageAIModels()}</PopUpMenu.Item>;
+}
 
 export function ManageLibraries(props) {
   return <PopUpMenu.Item {...props}>{msg.manageLibraries()}</PopUpMenu.Item>;

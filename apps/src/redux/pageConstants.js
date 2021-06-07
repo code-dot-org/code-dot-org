@@ -16,14 +16,14 @@ var ALLOWED_KEYS = new Set([
   'isResponsive',
   'isIframeEmbed',
   'isReadOnlyWorkspace',
-  'isNotStartedLevel',
+  'displayNotStartedBanner',
   'isShareView',
   'isProjectLevel',
   'isSubmittable',
   'isSubmitted',
   'noInstructionsWhenCollapsed',
   'puzzleNumber',
-  'stageTotal',
+  'lessonTotal',
   'showDebugButtons',
   'showDebugConsole',
   'showDebugWatch',
@@ -55,6 +55,7 @@ var ALLOWED_KEYS = new Set([
   'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
   'isSignedIn',
+  'isEditingStartSources',
   'userId',
   'verifiedTeacher',
   'isK1',
@@ -65,7 +66,6 @@ var ALLOWED_KEYS = new Set([
   'showProjectTemplateWorkspaceIcon',
   'serverLevelId',
   'serverScriptId',
-  'serverScriptLevelId',
   'exportApp',
   'expoGenerateApk',
   'expoCheckApkBuild',
@@ -73,7 +73,10 @@ var ALLOWED_KEYS = new Set([
   'allowExportExpo',
   'widgetMode',
   'librariesEnabled',
-  'validationEnabled'
+  'validationEnabled',
+  'aiEnabled',
+  'aiModelId',
+  'aiModelName'
 ]);
 
 const initialState = {

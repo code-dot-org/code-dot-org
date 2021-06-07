@@ -12,6 +12,7 @@ class Ability
     cannot :read, [
       TeacherFeedback,
       Script, # see override below
+      Lesson, # see override below
       ScriptLevel, # see override below
       :reports,
       User,
@@ -52,12 +53,15 @@ class Ability
       :update_manifest,
       :foorm_editor,
       :pd_foorm,
-      Foorm::Form
+      Foorm::Form,
+      Foorm::Library,
+      Foorm::LibraryQuestion,
+      :javabuilder_session
     ]
     cannot :index, Level
 
     # If you can see a level, you can also do these things:
-    can [:embed_level, :get_rubric], Level do |level|
+    can [:embed_level, :get_rubric, :get_serialized_maze], Level do |level|
       can? :read, level
     end
 
@@ -109,7 +113,7 @@ class Ability
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
-        can [:score_stages_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
+        can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
       end
 
       if user.facilitator?
@@ -188,14 +192,19 @@ class Ability
       end
     end
 
+    can [:vocab, :resources, :code, :standards], UnitGroup do
+      true
+    end
+
     # Override Script and ScriptLevel.
     can :read, Script do |script|
       if script.pilot?
         script.has_pilot_access?(user)
       else
-        user.persisted? || !script.login_required?
+        true
       end
     end
+
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
       if script.pilot?
@@ -205,6 +214,19 @@ class Ability
         # params were passed to authorize! and includes login_required=true
         login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
         user.persisted? || !login_required
+      end
+    end
+
+    can [:vocab, :resources, :code, :standards], Script do |script|
+      !!script.is_migrated
+    end
+
+    can [:read, :student_lesson_plan], Lesson do |lesson|
+      script = lesson.script
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        true
       end
     end
 
@@ -238,7 +260,10 @@ class Ability
         ScriptLevel,
         Video,
         :foorm_editor,
-        Foorm::Form
+        Foorm::Form,
+        Foorm::Library,
+        Foorm::LibraryQuestion,
+        :javabuilder_session
       ]
 
       # Only custom levels are editable.
@@ -252,7 +277,7 @@ class Ability
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
 
-      can :validate_form, :pd_foorm
+      can [:validate_form, :validate_library_question], :pd_foorm
     end
 
     if user.persisted?
@@ -262,6 +287,13 @@ class Ability
         can :clone, Level, &:custom?
         can :manage, Level, editor_experiment: editor_experiment
         can [:edit, :update], Script, editor_experiment: editor_experiment
+        can [:edit, :update], Lesson, editor_experiment: editor_experiment
+      end
+    end
+
+    if user.persisted?
+      if Experiment.enabled?(user: user, experiment_name: 'csa-pilot')
+        can :get_access_token, :javabuilder_session
       end
     end
 
@@ -283,11 +315,14 @@ class Ability
         Level,
         UnitGroup,
         Script,
+        Lesson,
         ScriptLevel,
         UserLevel,
         UserScript,
         :pd_foorm,
-        Foorm::Form
+        Foorm::Form,
+        Foorm::Library,
+        Foorm::LibraryQuestion
       ]
     end
   end

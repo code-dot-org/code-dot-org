@@ -1,7 +1,6 @@
 login_required true
-has_lesson_plan true
 
-lesson 'Introduction', display_name: 'Introduction'
+lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: true
 level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'
@@ -19,10 +18,10 @@ level 'courseC_video_angles'
 level 'courseD_artist_ramp12'
 level 'courseD_farmer_ramp13'
 
-lesson 'Algorithms: Graph Paper Programming', display_name: 'Algorithms: Graph Paper Programming'
+lesson 'Algorithms: Graph Paper Programming', display_name: 'Algorithms: Graph Paper Programming', has_lesson_plan: true, unplugged: true
 level 'GraphPaperProgramming'
 
-lesson 'Events in Bounce', display_name: 'Events in Bounce'
+lesson 'Events in Bounce', display_name: 'Events in Bounce', has_lesson_plan: true
 level 'elementary_video_pairProgramming'
 level 'bounce_1'
 level 'bounce_2'
@@ -35,7 +34,7 @@ level 'bounce_10'
 level 'bounce_11'
 level 'bounce_12'
 
-lesson 'Nested Loops', display_name: 'Nested Loops'
+lesson 'Nested Loops', display_name: 'Nested Loops', has_lesson_plan: true
 level 'courseD_bee_nestedLoops1'
 level 'courseD_video_nestedLoops'
 level 'courseD_bee_nestedLoops2_predict1'
@@ -49,7 +48,7 @@ level 'courseD_bee_nestedLoops8'
 level 'courseD_bee_nestedLoops9'
 level 'courseD_bee_nestedLoops9_predict2', assessment: true
 
-lesson 'Nested Loops in Artist', display_name: 'Nested Loops in Artist'
+lesson 'Nested Loops in Artist', display_name: 'Nested Loops in Artist', has_lesson_plan: true
 level 'courseD_artist_nestedLoops1'
 level 'courseD_artist_nestedLoops1a'
 level 'courseD_video_nestedLoopsArtist'
@@ -64,10 +63,10 @@ level 'courseD_artist_nestedLoops10'
 level 'courseD_artist_nestedLoops9_predict1', assessment: true
 level 'courseD_artist_nestedLoopsFP'
 
-lesson 'Algorithms: Relay Programming', display_name: 'Algorithms: Relay Programming'
+lesson 'Algorithms: Relay Programming', display_name: 'Algorithms: Relay Programming', has_lesson_plan: true, unplugged: true
 level 'RelayProgramming'
 
-lesson 'Debugging in Bee', display_name: 'Debugging in Bee'
+lesson 'Debugging in Bee', display_name: 'Debugging in Bee', has_lesson_plan: true
 level 'courseC_video_debugging'
 level 'courseD_bee_debugging1'
 level 'courseD_bee_debugging2'
@@ -80,7 +79,7 @@ level 'courseD_bee_debugging8'
 level 'courseD_bee_debugging9'
 level 'courseD_bee_debugging9_predict1', assessment: true
 
-lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer'
+lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer', has_lesson_plan: true
 level 'courseD_farmer_while1'
 level 'courseD_farmer_while2'
 level 'courseD_farmer_while3'
@@ -95,10 +94,10 @@ level 'courseD_farmer_while9'
 level 'courseD_farmer_while10'
 level 'courseD_farmer_while10_predict2', assessment: true
 
-lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards'
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true, unplugged: true
 level 'Conditionals'
 
-lesson 'Conditionals in Bee', display_name: 'Conditionals in Bee'
+lesson 'Conditionals in Bee', display_name: 'Conditionals in Bee', has_lesson_plan: true
 level 'courseD_bee_conditionalsVid1'
 level 'courseD_bee_conditionals1_predict1'
 level 'courseD_bee_conditionals2'
@@ -113,7 +112,7 @@ level 'courseD_bee_conditionals8', challenge: true
 level 'courseD_bee_conditionals9'
 level 'courseD_bee_conditionals10'
 
-lesson 'Conditionals & Loops in Maze', display_name: 'Conditionals & Loops in Maze'
+lesson 'Conditionals & Loops in Maze', display_name: 'Conditionals & Loops in Maze', has_lesson_plan: true
 level 'courseD_maze_until1'
 level 'courseD_video_repeatUntil'
 level 'courseD_maze_until2_predict1'
@@ -128,7 +127,7 @@ level 'courseD_maze_until9', challenge: true
 level 'courseD_maze_until10'
 level 'courseD_maze_until10_predict2', assessment: true
 
-lesson 'Conditionals & Loops in Farmer', display_name: 'Conditionals & Loops in Harvester'
+lesson 'Conditionals & Loops in Farmer', display_name: 'Conditionals & Loops in Harvester', has_lesson_plan: true
 level 'courseD_farmer_condLoops1'
 level 'courseD_farmer_condLoops2'
 level 'courseD_farmer_condLoops3'
@@ -140,10 +139,10 @@ level 'courseD_farmer_condLoops8'
 level 'courseD_farmer_condLoops9'
 level 'courseD_farmer_condLoops9_predict1', assessment: true
 
-lesson 'Digital Citizenship', display_name: 'Digital Citizenship'
+lesson 'Digital Citizenship', display_name: 'Digital Citizenship', has_lesson_plan: true, unplugged: true
 level 'courseD_unplugged_digitalCitizenship'
 
-lesson 'Build a Play Lab Game', display_name: 'Build a Play Lab Game'
+lesson 'Build a Play Lab Game', display_name: 'Build a Play Lab Game', has_lesson_plan: true
 level 'courseD_playLab_cond1'
 level 'courseD_playLab_cond2'
 level 'courseD_playLab_cond3'
@@ -152,10 +151,10 @@ level 'courseD_playLab_cond5'
 level 'courseD_playLab_cond6'
 level 'courseD_playLab_condFP'
 
-lesson 'Unplugged: Binary', display_name: 'Unplugged: Binary'
+lesson 'Unplugged: Binary', display_name: 'Unplugged: Binary', has_lesson_plan: true, unplugged: true
 level 'BinaryImages'
 
-lesson 'Artist Binary', display_name: 'Artist Binary'
+lesson 'Artist Binary', display_name: 'Artist Binary', has_lesson_plan: true
 level 'courseD_external_binary1'
 level 'courseD_artist_binary1'
 level 'courseD_artist_binary2'

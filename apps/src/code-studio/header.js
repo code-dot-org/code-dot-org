@@ -12,8 +12,6 @@ import {
   refreshProjectName,
   setShowTryAgainDialog
 } from './headerRedux';
-import {useDbProgress} from './progressRedux';
-import clientState from './clientState';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -24,6 +22,7 @@ import {getStore} from '../redux';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -59,8 +58,8 @@ var header = {};
  *   page level.
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
- * @param {boolean} stageExtrasEnabled Whether this user is in a section with
- *   stageExtras enabled for this script
+ * @param {boolean} lessonExtrasEnabled Whether this user is in a section with
+ *   lessonExtras enabled for this script
  * @param {boolean} isLessonExtras Boolean indicating we are not on a script
  *   level and therefore are on lesson extras
  */
@@ -72,15 +71,10 @@ header.build = function(
   currentLevelId,
   currentPageNumber,
   signedIn,
-  stageExtrasEnabled,
+  lessonExtrasEnabled,
   scriptNameData,
   isLessonExtras
 ) {
-  const store = getStore();
-  if (progressData) {
-    store.dispatch(useDbProgress());
-    clientState.clearProgress();
-  }
   scriptData = scriptData || {};
   lessonGroupData = lessonGroupData || {};
   lessonData = lessonData || {};
@@ -89,8 +83,9 @@ header.build = function(
   const linesOfCodeText = progressData.linesOfCodeText;
   let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
-  // Set up the store immediately.
-  progress.generateStageProgress(
+  // Set up the store immediately. Note that some progress values are populated
+  // asynchronously.
+  progress.generateLessonProgress(
     scriptData,
     lessonGroupData,
     lessonData,
@@ -98,7 +93,7 @@ header.build = function(
     currentLevelId,
     saveAnswersBeforeNavigation,
     signedIn,
-    stageExtrasEnabled,
+    lessonExtrasEnabled,
     isLessonExtras,
     currentPageNumber
   );
@@ -106,6 +101,7 @@ header.build = function(
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
+  const store = getStore();
   $(document).ready(function() {
     ReactDOM.render(
       <Provider store={store}>
@@ -119,6 +115,14 @@ header.build = function(
       </Provider>,
       document.querySelector('.header_level')
     );
+    // Only render sign in callout if the course is CSF and the user is
+    // not signed in
+    if (scriptData.is_csf && signedIn === false) {
+      ReactDOM.render(
+        <SignInCalloutWrapper />,
+        document.querySelector('.signin_callout_wrapper')
+      );
+    }
   });
 };
 

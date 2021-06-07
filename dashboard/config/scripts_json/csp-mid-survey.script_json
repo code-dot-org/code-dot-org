@@ -9,6 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:55:29 UTC",
     "seeding_key": {
       "script.name": "csp-mid-survey"
     }
@@ -33,6 +34,7 @@
       "name": "CSP Mid-year survey",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -43,16 +45,26 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2017-levelgroup_2018"
+        ],
         "progression": "CS Principles Mid-year Survey"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-post-survey-2017-levelgroup_2018"
@@ -78,5 +90,35 @@
         "script.name": "csp-mid-survey"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

@@ -1,57 +1,57 @@
 {
-  "https://studio.code.org/s/csd1-2019/lockable/1/puzzle/1": {
+  "https://studio.code.org/s/csd1-2019/lockable/1/levels/1": {
     "dsls": {
       "title": "CS Discoveries Student Pre-Course Survey"
     }
   },
-  "https://studio.code.org/s/csd1-2019/stage/1/puzzle/1": {
+  "https://studio.code.org/s/csd1-2019/lessons/1/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n-   [Aluminum Boats - Exemplar][1] - Activity Guide ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2019/stage/2/puzzle/1": {
+  "https://studio.code.org/s/csd1-2019/lessons/2/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "-   [The Problem Solving Process][0] - Activity Guide ([PDF][1] \\| [DOCX][2])"
   },
-  "https://studio.code.org/s/csd1-2019/stage/2/puzzle/2": {
+  "https://studio.code.org/s/csd1-2019/lessons/2/levels/2": {
     "display_name": "Video: Problem Solving Process",
     "long_instructions": "## Questions to consider\n\n-   How did you follow the problem solving process in the last lesson?\n-   How could you use this process on a problem in your everyday life?",
     "teacher_markdown": "## Discussion Goals\n\nThe first discussion question is part of the core activity in the rest of the lesson.  Students should take time working in their groups to think of specific things that they did that follow each step of the process.   The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity.\n\nThe second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains.  The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems, since the process will be used throughout the course in various domains."
   },
-  "https://studio.code.org/s/csd1-2019/stage/3/puzzle/1": {
+  "https://studio.code.org/s/csd1-2019/lessons/3/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n[Solving Problems KEY][1] - Activity Guide ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2019/stage/4/puzzle/1": {
+  "https://studio.code.org/s/csd1-2019/lessons/4/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n[What is a Computer - Exemplar][1] - Activity Guide ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2019/stage/4/puzzle/2": {
+  "https://studio.code.org/s/csd1-2019/lessons/4/levels/2": {
     "display_name": "Video: What Makes a Computer, a Computer?",
     "long_instructions": "## Questions to think about\n\n-   What made computers different from machines that came before them?\n-   Think of something you do on the computer. What sort of input, output, storage, and processing are happening?",
     "teacher_markdown": "## Discussion Goals\n\nAfter watching the video, students should understand that computers are machines designed to help people with thinking work, as opposed to physical work.  Within a problem solving context, computers are designed to solve information problems.  Subtleties may come up in the discussion around computers that have output mechanisms that allow them to do physical work (e.g. robots).  It's okay if students do not come to a particular conclusion about every device they can think of.\n\nStudents may not have had time to sufficiently reflect on the nature of input, output, storage, and processing, so their answers here may be vague, especially around processing.  They will be able to dig into these concepts more later in the unit.  Focus on input and output for now, and allow students to disagree on particulars of storage and processing, letting them know that they will have more opportunities to explore the subject.   For example, one common source of controversy around processing is whether some devices are processing information themselves, or whether the user is processing the information, while the device simply stores information (e.g. the abacus)."
   },
-  "https://studio.code.org/s/csd1-2019/stage/5/puzzle/1": {
+  "https://studio.code.org/s/csd1-2019/lessons/5/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n[Input and Output - Version A Exemplar][1] - Activity Guide ([PDF][2] \\| [DOCX][3])\n\n[Input and Output - Version B Exemplar][4] - Activity Guide ([PDF][5] \\| [DOCX][6])\n\n[Input and Output - Version C Exemplar][7] - Activity Guide ([PDF][8] \\| [DOCX][9])\n\n[Input and Output - Version D Exemplar][10] - Activity Guide ([PDF][11] \\| [DOCX][12])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2019/stage/6/puzzle/1": {
+  "https://studio.code.org/s/csd1-2019/lessons/6/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n-   [Card Sorting Algorithm][1] - Exemplar ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2019/stage/7/puzzle/1": {
+  "https://studio.code.org/s/csd1-2019/lessons/7/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n-   [App Exploration][1] - Exemplar ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2019/stage/8/puzzle/1": {
+  "https://studio.code.org/s/csd1-2019/lessons/8/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[KEY]\n\n-   [Apps and Problem Solving][0] - Project Guide Exemplar ([PDF][1] \\| [DOCX][2])\n-   [Apps and Problem Solving][3] - Sample Marked Rubrics ([PDF][4] \\| [DOCX][5])\n-   [Apps and Problem Solving][6] - Peer Review Exemplar ([PDF][7] \\| [DOCX][8])\n    [/KEY]"
   },
-  "https://studio.code.org/s/csd1-2019/stage/8/puzzle/2": {
+  "https://studio.code.org/s/csd1-2019/lessons/8/levels/2": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
     }
   },
-  "https://studio.code.org/s/csd1-2019/lockable/2/puzzle/1": {
+  "https://studio.code.org/s/csd1-2019/lockable/2/levels/1": {
     "dsls": {
       "title": "Computers and Problem Solving Post-Project Test"
     }

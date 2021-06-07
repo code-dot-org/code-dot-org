@@ -5,12 +5,6 @@ import {RegionalPartnerValuePropType} from '../components/regional_partner_dropd
 import {CohortCalculatorStatuses} from '@cdo/apps/generated/pd/sharedApplicationConstants';
 import $ from 'jquery';
 
-const styles = {
-  tableWrapper: {
-    float: 'right'
-  }
-};
-
 export function countAcceptedApplications(applications) {
   return (applications || []).filter(app =>
     CohortCalculatorStatuses.includes(app.status)
@@ -92,3 +86,9 @@ export default class CohortCalculator extends React.Component {
     );
   }
 }
+
+const styles = {
+  tableWrapper: {
+    float: 'right'
+  }
+};

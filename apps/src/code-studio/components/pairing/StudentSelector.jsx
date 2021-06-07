@@ -4,30 +4,6 @@ import {studentsShape} from './types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 
-// see pairing.scss for general button styling
-const styles = {
-  buttonLeft: {
-    marginLeft: 0
-  },
-  enabled: {
-    backgroundColor: 'white',
-    fontSize: '13px'
-  },
-  warning: {
-    color: 'red',
-    fontFamily: "'Gotham 4r', sans-serif",
-    fontSize: '12px',
-    paddingTop: '5px'
-  },
-  disabled: {
-    opacity: 0.5
-  },
-  selected: {
-    backgroundColor: color.cyan,
-    color: 'white'
-  }
-};
-
 /**
  * A component for selecting one or more students in a section.
  */
@@ -121,3 +97,27 @@ export default class StudentSelector extends React.Component {
     );
   }
 }
+
+// see pairing.scss for general button styling
+const styles = {
+  buttonLeft: {
+    marginLeft: 0
+  },
+  enabled: {
+    backgroundColor: 'white',
+    fontSize: '13px'
+  },
+  warning: {
+    color: 'red',
+    fontFamily: "'Gotham 4r', sans-serif",
+    fontSize: '12px',
+    paddingTop: '5px'
+  },
+  disabled: {
+    opacity: 0.5
+  },
+  selected: {
+    backgroundColor: color.cyan,
+    color: 'white'
+  }
+};

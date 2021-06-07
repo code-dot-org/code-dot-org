@@ -1145,6 +1145,8 @@ ne-NP:
   coursee-2018_gradelevel: Ages 8-12
   coursed-2019_gradelevel: Grade 8+
   coursee-2019_gradelevel: Ages 8-12
+  coursed-2020_gradelevel: Grade 8+
+  coursee-2020_gradelevel: Ages 8-12
   accelerated_gradelevel: Ages 10-18
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
@@ -1789,3 +1791,9 @@ ne-NP:
   hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
   hoc2018_dance_amazon_about_future_engineer_button: थप जान्नुहोस्
   footer_powered_by_aws: Powered by Amazon Web Services
+  footer_privacy_policy: Privacy Policy
+  footer_donate: Make a donation
+  footer_support: Support
+  footer_terms: Terms
+  ai_activity: गतिविधि
+  ai_description: वर्णन

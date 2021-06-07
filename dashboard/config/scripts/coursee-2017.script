@@ -1,7 +1,6 @@
 hidden false
 hideable_lessons true
 lesson_extras_available true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-1718/coursee/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
@@ -9,16 +8,16 @@ new_name 'coursee-2017'
 family_name 'coursee'
 version_year '2017'
 is_stable true
-supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ru-RU", "sk-SK", "tr-TR", "uz-UZ", "zh-CN", "zh-TW"]
+supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fil-PH", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "ta-IN", "th-TH", "tr-TR", "ur-PK", "uz-UZ", "vi-VN", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
 tts true
 is_course true
 
 lesson_group 'csf_e_1', display_name: 'Ramp Up to Course E (Optional)'
-lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends'
+lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_MRF'
 
-lesson 'Sequence in Maze', display_name: 'Sequence in Maze'
+lesson 'Sequence in Maze', display_name: 'Sequence in Maze', has_lesson_plan: true
 level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'
@@ -30,10 +29,10 @@ level 'courseD_maze_ramp5b', challenge: true
 level 'courseD_maze_ramp5c'
 level 'courseD_maze_ramp5d'
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation'
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation'
 
-lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat'
+lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat', has_lesson_plan: true
 level 'courseC_video_debugging'
 level 'courseC_maze_debugging1'
 level 'courseC_maze_debugging2'
@@ -45,7 +44,7 @@ level 'courseC_maze_debugging7', challenge: true
 level 'courseC_maze_debugging8_predict1'
 level 'courseC_maze_debugging9'
 
-lesson 'Programming in Artist', display_name: 'Programming in Artist'
+lesson 'Programming in Artist', display_name: 'Programming in Artist', has_lesson_plan: true
 level 'courseC_video_artist'
 level 'courseC_artist_prog1'
 level 'courseC_artist_prog2'
@@ -59,10 +58,10 @@ level 'courseC_artist_prog6_predict1'
 bonus 'courseC_artist_prog_challenge1'
 bonus 'courseC_artist_prog_challenge2a'
 
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends'
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_loopyMRF'
 
-lesson 'Loops in Artist', display_name: 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: true
 level 'ramp_video_artistIntro'
 level 'ramp_artist_loops1'
 level 'ramp_artist_loops2'
@@ -75,7 +74,7 @@ level 'ramp_artist_loops7'
 level 'ramp_artist_loops8', challenge: true
 level 'ramp_artist_loops9'
 
-lesson 'Nested Loops', display_name: 'Nested Loops'
+lesson 'Nested Loops', display_name: 'Nested Loops', has_lesson_plan: true
 level 'courseD_bee_nestedLoops1a'
 level 'courseD_bee_nestedLoops1'
 level 'courseD_video_nestedLoops'
@@ -90,7 +89,7 @@ level 'courseD_bee_nestedLoops8'
 level 'courseD_bee_nestedLoops9'
 level 'courseD_bee_nestedLoops9_predict2'
 
-lesson 'Nested Loops with Frozen', display_name: 'Nested Loops with Frozen'
+lesson 'Nested Loops with Frozen', display_name: 'Nested Loops with Frozen', has_lesson_plan: true
 level 'courseD_artist_project1'
 level 'courseD_artist_project2'
 level 'courseD_artist_project3'
@@ -102,10 +101,10 @@ level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
 lesson_group 'csf_e_2', display_name: 'Course E Content'
-lesson 'Algorithms: Dice Race', display_name: 'Algorithms: Dice Race'
+lesson 'Algorithms: Dice Race', display_name: 'Algorithms: Dice Race', has_lesson_plan: true, unplugged: true
 level 'DiceRace'
 
-lesson 'Introduction', display_name: 'Introduction to Online Puzzles'
+lesson 'Introduction', display_name: 'Introduction to Online Puzzles', has_lesson_plan: true
 level 'courseE_video_ramp1'
 variants
   level 'courseE_maze_ramp1', active: false
@@ -149,7 +148,7 @@ level 'courseE_artist_ramp8'
 level 'courseC_video_angles'
 level 'courseE_artist_ramp9'
 
-lesson 'Conditionals', display_name: 'Conditionals in Farmer'
+lesson 'Conditionals', display_name: 'Conditionals in Farmer', has_lesson_plan: true
 level 'courseD_video_whileIntro'
 level 'courseE_farmer_ramp11a'
 variants
@@ -187,10 +186,10 @@ variants
 endvariants
 level 'courseE_farmer_ramp12g'
 
-lesson 'Private and Personal Information', display_name: 'Digital Citizenship: Private and Personal Information'
+lesson 'Private and Personal Information', display_name: 'Digital Citizenship: Private and Personal Information', has_lesson_plan: true, unplugged: true
 level 'courseE_unplugged_privateInformation'
 
-lesson 'Build a Star Wars Game', display_name: 'Build a Star Wars Game'
+lesson 'Build a Star Wars Game', display_name: 'Build a Star Wars Game', has_lesson_plan: true
 skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_7_no_video'
 skin 'hoc2015'
@@ -219,10 +218,10 @@ video_key_for_next_level 'starwars_blocks_congrats'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_15'
 
-lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting'
+lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting', has_lesson_plan: true, unplugged: true
 level 'SongwritingParameters'
 
-lesson 'Functions in Artist', display_name: 'Functions in Artist'
+lesson 'Functions in Artist', display_name: 'Functions in Artist', has_lesson_plan: true
 level 'courseE_artist_functions1'
 level 'courseE_video_functionsArtist'
 level 'courseE_artist_functions_predict1'
@@ -239,7 +238,7 @@ level 'courseE_artist_functions_predict2'
 bonus 'courseE_artist_functions_challenge1'
 bonus 'courseE_artist_functions_challenge2'
 
-lesson 'Functions in Bee', display_name: 'Functions in Bee'
+lesson 'Functions in Bee', display_name: 'Functions in Bee', has_lesson_plan: true
 level 'courseE_bee_functions1'
 level 'courseE_video_functionsBee'
 level 'courseE_bee_functions2'
@@ -256,7 +255,7 @@ level 'courseE_bee_functions11_predict1'
 bonus 'courseE_bee_functions_challenge1'
 bonus 'courseE_bee_functions_challenge2'
 
-lesson 'Functions in Harvester', display_name: 'Functions in Harvester'
+lesson 'Functions in Harvester', display_name: 'Functions in Harvester', has_lesson_plan: true
 level 'courseE_farmer_functions1'
 level 'courseE_farmer_functions1a'
 level 'courseE_farmer_functions2b'
@@ -272,7 +271,7 @@ level 'courseE_farmer_functions9b'
 level 'courseE_farmer_functions10b'
 level 'courseE_farmer_functions11_predict'
 
-lesson 'Determine the Concept', display_name: 'Determine the Concept'
+lesson 'Determine the Concept', display_name: 'Determine the Concept', has_lesson_plan: true
 level 'courseE_bee_concept1'
 level 'courseE_farmer_concept1'
 level 'courseE_bee_concept2'
@@ -286,7 +285,7 @@ level 'courseE_artist_concept4'
 bonus 'courseE_artist_concept_challenge1'
 bonus 'courseE_artist_concept_challenge2'
 
-lesson 'Build a Play Lab Game', display_name: 'Build a Play Lab Game'
+lesson 'Build a Play Lab Game', display_name: 'Build a Play Lab Game', has_lesson_plan: true
 level 'courseE_playLab_scaffold1'
 level 'courseE_playLab_scaffold2'
 level 'courseE_playLab_scaffold3'
@@ -296,27 +295,27 @@ level 'courseE_playLab_scaffold6'
 bonus 'courseE_playLab_challenge1'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas'
+lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas', has_lesson_plan: true
 level 'courseF_video_csMatters', named: true
 level 'Geometric Sun', named: true
 level 'Robot Doodle', named: true
 level 'Alien Defender', named: true
 level 'Find the Wizard', named: true
 
-lesson 'The Design Process', display_name: 'The Design Process'
+lesson 'The Design Process', display_name: 'The Design Process', has_lesson_plan: true
 level 'Begin planning your project', named: true
 
-lesson 'Build Your Project', display_name: 'Build Your Project'
+lesson 'Build Your Project', display_name: 'Build Your Project', has_lesson_plan: true
 level 'Course E: Play Lab Project', named: true
 level 'Course E: Artist Project', named: true
 
-lesson 'Present Your Project', display_name: 'Present Your Project'
+lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_plan: true
 level 'Prepare for your presentation', named: true
 
 lesson_group 'extra_course_content', display_name: 'Extra Course Content'
-lesson 'Internet', display_name: 'Beyond Programming: The Internet'
+lesson 'Internet', display_name: 'Beyond Programming: The Internet', has_lesson_plan: true, unplugged: true
 level 'Internet'
 
-lesson 'Crowdsourcing', display_name: 'Beyond Programming: Crowdsourcing'
+lesson 'Crowdsourcing', display_name: 'Beyond Programming: Crowdsourcing', has_lesson_plan: true, unplugged: true
 level 'Crowdsourcing'
 

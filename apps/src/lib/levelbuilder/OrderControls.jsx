@@ -7,31 +7,6 @@ import Button from '@cdo/apps/templates/Button';
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  controls: {
-    float: 'right'
-  },
-  controlIcon: {
-    margin: '0 5px',
-    cursor: 'pointer'
-  },
-  previewContainer: {
-    color: color.default_text
-  },
-  preview: {
-    border: '1px solid #ccc',
-    padding: '5px 25px'
-  },
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    width: 970,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
-    marginLeft: -500
-  }
-};
-
 export default class OrderControls extends Component {
   static propTypes = {
     move: PropTypes.func.isRequired,
@@ -122,3 +97,28 @@ export default class OrderControls extends Component {
     );
   }
 }
+
+const styles = {
+  controls: {
+    display: 'flex'
+  },
+  controlIcon: {
+    margin: '0 5px',
+    cursor: 'pointer'
+  },
+  previewContainer: {
+    color: color.default_text
+  },
+  preview: {
+    border: '1px solid #ccc',
+    padding: '5px 25px'
+  },
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20,
+    width: 970,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+    marginLeft: -500
+  }
+};

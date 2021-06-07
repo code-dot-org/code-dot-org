@@ -1,9 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
-  "created_at": "2020-12-04T22:36:00.000Z",
-  "level_num": "custom",
-  "user_id": 285,
   "properties": {
     "skin": "artist",
     "embed": "false",
@@ -40,11 +36,16 @@
     "name_suffix": "_2021",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 21570,
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/431552230199b0094d259b69946e62f6=levelbuilder/119437.png",
     "preload_asset_list": null
   },
+  "user_id": 285,
+  "game_id": 23,
+  "created_at": "2020-12-04T22:36:00.000Z",
+  "level_num": "custom",
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 22:42:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 15:54:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-01 20:15:13 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 20:22:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 20:25:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 20:26:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 20:45:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:01:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:16:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:16:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:17:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 21:22:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-20 22:42:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 15:54:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-01 20:15:13 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 20:22:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 20:25:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 20:26:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 20:45:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:01:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:16:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:16:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:17:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 21:22:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-04-29 15:29:35 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -114,21 +115,21 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
-              <mutation name="draw a house"/>
+              <mutation name="draw a window"/>
               <next>
                 <block type="jump_by_constant">
                   <title name="DIR">jumpForward</title>
                   <title name="VALUE">100</title>
                   <next>
                     <block type="procedures_callnoreturn">
-                      <mutation name="draw a house"/>
+                      <mutation name="draw a window"/>
                       <next>
                         <block type="jump_by_constant">
                           <title name="DIR">jumpForward</title>
                           <title name="VALUE">100</title>
                           <next>
                             <block type="procedures_callnoreturn">
-                              <mutation name="draw a house"/>
+                              <mutation name="draw a window"/>
                               <next>
                                 <block type="draw_turn_by_constant">
                                   <title name="DIR">turnRight</title>
@@ -143,14 +144,14 @@
                                           <title name="VALUE">90</title>
                                           <next>
                                             <block type="procedures_callnoreturn">
-                                              <mutation name="draw a house"/>
+                                              <mutation name="draw a window"/>
                                               <next>
                                                 <block type="jump_by_constant">
                                                   <title name="DIR">jumpForward</title>
                                                   <title name="VALUE">200</title>
                                                   <next>
                                                     <block type="procedures_callnoreturn">
-                                                      <mutation name="draw a house"/>
+                                                      <mutation name="draw a window"/>
                                                     </block>
                                                   </next>
                                                 </block>
@@ -176,7 +177,7 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
-          <title name="NAME">draw a house</title>
+          <title name="NAME">draw a window</title>
           <statement name="STACK">
             <block type="controls_repeat">
               <title name="TIMES">4</title>

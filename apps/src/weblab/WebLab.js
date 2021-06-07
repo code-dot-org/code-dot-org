@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import {Provider} from 'react-redux';
-import weblabMsg from '@cdo/weblab/locale';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
 import reducers from './reducers';
@@ -16,8 +15,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {makeEnum, reload} from '../utils';
-import logToCloud from '../logToCloud';
+import {reload} from '../utils';
 import firehoseClient from '../lib/util/firehose';
 import {getCurrentId} from '../code-studio/initApp/project';
 
@@ -29,6 +27,9 @@ export const WEBLAB_FOOTER_HEIGHT = 30;
 
 // Global singleton
 let webLab_ = null;
+
+// The max size in bytes for a WebLab project. 20 megabytes == 20971520 bytes
+const MAX_PROJECT_CAPACITY = 20971520;
 
 const WebLab = function() {
   this.skin = null;
@@ -79,6 +80,8 @@ WebLab.prototype.init = function(config) {
   this.level = config.level;
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
+  this.disallowedHtmlTags = config.disallowedHtmlTags;
+  getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
 
   this.brambleHost = null;
 
@@ -146,42 +149,6 @@ WebLab.prototype.init = function(config) {
 
   this.loadFileEntries();
 
-  const onMount = () => {
-    this.setupReduxSubscribers(getStore());
-
-    // TODO: understand if we need to call studioApp
-    // Other apps call studioApp.init(). That sets up UI that is not present Web Lab (run, show code, etc) and blows up
-    // if we call it. It's not clear there's anything in there we need, although we may discover there is and need to refactor it
-    // this.studioApp_.init(config);
-
-    this.studioApp_.setConfigValues_(config);
-
-    // NOTE: if we called studioApp_.init(), the code here would be executed
-    // automatically since pinWorkspaceToBottom is true...
-    var container = document.getElementById(config.containerId);
-    var bodyElement = document.body;
-    bodyElement.style.overflow = 'hidden';
-    bodyElement.className = bodyElement.className + ' pin_bottom';
-    container.className = container.className + ' pin_bottom';
-
-    // NOTE: if we called studioApp_.init(), these calls would not be needed...
-    this.studioApp_.initProjectTemplateWorkspaceIconCallout();
-    this.studioApp_.alertIfCompletedWhilePairing(config);
-    this.studioApp_.initVersionHistoryUI(config);
-    this.studioApp_.initTimeSpent();
-
-    let finishButton = document.getElementById('finishButton');
-    if (finishButton) {
-      dom.addClickTouchEvent(finishButton, this.onFinish.bind(this, false));
-    }
-
-    initializeSubmitHelper({
-      studioApp: this.studioApp_,
-      onPuzzleComplete: this.onFinish.bind(this),
-      unsubmitUrl: this.level.unsubmitUrl
-    });
-  };
-
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
@@ -244,34 +211,11 @@ WebLab.prototype.init = function(config) {
     });
   }
 
-  function onStartFullScreenPreview() {
-    if (this.brambleHost) {
-      this.brambleHost.enableFullscreenPreview(() => {
-        // We always want to disable the inspector as we enter fullscreen preview,
-        // as it interferes with the preview display...
-        if (getStore().getState().inspectorOn) {
-          this.brambleHost.disableInspector();
-        }
-        getStore().dispatch(actions.changeFullScreenPreviewOn(true));
-      });
-    }
-  }
-
   function onEndFullScreenPreview() {
     if (this.brambleHost) {
       this.brambleHost.disableFullscreenPreview(() => {
         getStore().dispatch(actions.changeFullScreenPreviewOn(false));
       });
-    }
-  }
-
-  function onToggleInspector() {
-    if (this.brambleHost) {
-      if (getStore().getState().inspectorOn) {
-        this.brambleHost.disableInspector();
-      } else {
-        this.brambleHost.enableInspector();
-      }
     }
   }
 
@@ -284,20 +228,87 @@ WebLab.prototype.init = function(config) {
         onUndo={onUndo.bind(this)}
         onRedo={onRedo.bind(this)}
         onRefreshPreview={onRefreshPreview.bind(this)}
-        onStartFullScreenPreview={onStartFullScreenPreview.bind(this)}
+        onStartFullScreenPreview={this.onStartFullScreenPreview.bind(this)}
         onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
-        onToggleInspector={onToggleInspector.bind(this)}
-        onMount={onMount}
+        onToggleInspector={this.onToggleInspector.bind(this)}
+        onMount={() => this.onMount(config)}
       />
     </Provider>,
     document.getElementById(config.containerId)
   );
 
-  window.onbeforeunload = evt => {
-    if (project.hasOwnerChangedProject()) {
-      return weblabMsg.confirmExitWithUnsavedChanges();
+  window.addEventListener('beforeunload', this.beforeUnload.bind(this));
+};
+
+WebLab.prototype.onMount = function(config) {
+  this.setupReduxSubscribers(getStore());
+
+  // TODO: understand if we need to call studioApp
+  // Other apps call studioApp.init(). That sets up UI that is not present Web Lab (run, show code, etc) and blows up
+  // if we call it. It's not clear there's anything in there we need, although we may discover there is and need to refactor it
+  // this.studioApp_.init(config);
+
+  this.studioApp_.setConfigValues_(config);
+
+  // NOTE: if we called studioApp_.init(), the code here would be executed
+  // automatically since pinWorkspaceToBottom is true...
+  var container = document.getElementById(config.containerId);
+  var bodyElement = document.body;
+  bodyElement.style.overflow = 'hidden';
+  bodyElement.className = bodyElement.className + ' pin_bottom';
+  container.className = container.className + ' pin_bottom';
+
+  // NOTE: if we called studioApp_.init(), these calls would not be needed...
+  this.studioApp_.initProjectTemplateWorkspaceIconCallout();
+  this.studioApp_.alertIfCompletedWhilePairing(config);
+  this.studioApp_.initVersionHistoryUI(config);
+  this.studioApp_.initTimeSpent();
+
+  let finishButton = document.getElementById('finishButton');
+  if (finishButton) {
+    dom.addClickTouchEvent(finishButton, this.onFinish.bind(this, false));
+  }
+
+  initializeSubmitHelper({
+    studioApp: this.studioApp_,
+    onPuzzleComplete: this.onFinish.bind(this),
+    unsubmitUrl: this.level.unsubmitUrl
+  });
+};
+
+WebLab.prototype.onToggleInspector = function() {
+  if (this.brambleHost) {
+    if (getStore().getState().inspectorOn) {
+      this.brambleHost.disableInspector();
+    } else {
+      this.brambleHost.enableInspector();
     }
-  };
+  }
+};
+
+WebLab.prototype.onStartFullScreenPreview = function() {
+  if (this.brambleHost) {
+    this.brambleHost.enableFullscreenPreview(() => {
+      // We always want to disable the inspector as we enter fullscreen preview,
+      // as it interferes with the preview display...
+      if (getStore().getState().inspectorOn) {
+        this.brambleHost.disableInspector();
+      }
+      getStore().dispatch(actions.changeFullScreenPreviewOn(true));
+    });
+  }
+};
+
+WebLab.prototype.beforeUnload = function(event) {
+  if (project.hasOwnerChangedProject()) {
+    // Manually trigger an autosave instead of waiting for the next autosave.
+    project.autosave();
+
+    event.preventDefault();
+    event.returnValue = '';
+  } else {
+    delete event.returnValue;
+  }
 };
 
 WebLab.prototype.reportResult = function(submit, validated) {
@@ -345,10 +356,14 @@ WebLab.prototype.onFinish = function(submit) {
 
 WebLab.prototype.getCodeAsync = function() {
   return new Promise((resolve, reject) => {
-    if (this.brambleHost !== null) {
-      this.brambleHost.syncFiles(err => {
-        // store our filesVersionId as the "sources"
-        resolve(this.getCurrentFilesVersionId() || '');
+    if (this.brambleHost) {
+      this.syncBrambleFiles(err => {
+        if (err) {
+          reject(err);
+        } else {
+          // store our filesVersionId as the "sources"
+          resolve(this.getCurrentFilesVersionId() || '');
+        }
       });
     } else {
       // Bramble not installed yet - we have no code to return
@@ -420,7 +435,7 @@ WebLab.prototype.changeProjectFile = function(
       callback(null, project.filesVersionId);
     },
     xhr => {
-      console.warn(`WebLab: error file ${filename} not renamed`);
+      console.warn(`WebLab: error file ${filename} not saved`);
       callback(new Error(xhr.status));
     },
     skipPreWriteHook
@@ -448,46 +463,15 @@ WebLab.prototype.onProjectChanged = function() {
   }
 };
 
-// Called by Bramble when the inspector mode has changed
-WebLab.prototype.onInspectorChanged = function(inspectorOn) {
-  getStore().dispatch(actions.changeInspectorOn(inspectorOn));
-};
-
-/*
- * Called by Bramble host to set our reference to its interfaces
- * @param {!Object} brambleHost host interfaces
- * @return {String} current project path (project id plus initial version)
+/**
+ * @returns {String} current project path (project id plus initial version)
  */
-WebLab.prototype.setBrambleHost = function(brambleHost) {
-  // Make brambleHost available for file sync operations as soon as it's
-  // initialized far enough to start building its UI.
-  // This makes operations like "Start Over" available even in cases where
-  // the mount operation throws an uncaught exception (like the missing
-  // index.html error).
-  brambleHost.onBrambleMountable(() => {
-    this.brambleHost = brambleHost;
-  });
-
-  brambleHost.onBrambleReady(() => {
-    brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
-    brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
-    // Enable the Finish/Submit/Unsubmit button if it is present:
-    let shareCell = document.getElementById('share-cell');
-    if (shareCell) {
-      shareCell.className = 'share-cell-enabled';
-    }
-    this.brambleHost.syncFiles(() => {});
-  });
+WebLab.prototype.getProjectId = function() {
   if (this.suppliedFilesVersionId) {
     return `${project.getCurrentId()}-${this.suppliedFilesVersionId}`;
   } else {
     return project.getCurrentId();
   }
-};
-
-// Called by Bramble host to get page constants
-WebLab.prototype.getPageConstants = function() {
-  return getStore().getState().pageConstants;
 };
 
 /**
@@ -511,51 +495,49 @@ WebLab.prototype.setupReduxSubscribers = function(store) {
 
 WebLab.prototype.onIsRunningChange = function() {};
 
+WebLab.prototype.onFilesReady = function(files, filesVersionId) {
+  // Gather information when the weblab manifest is empty but should
+  // contain references to files (i.e. after changes have been made to the project)
+  if (filesVersionId && files && files.length === 0) {
+    firehoseClient.putRecord(
+      {
+        study: 'weblab_loading_investigation',
+        study_group: 'empty_manifest',
+        event: 'get_empty_manifest',
+        project_id: getCurrentId()
+      },
+      {includeUserId: true}
+    );
+  }
+  assetListStore.reset(files);
+  this.fileEntries = assetListStore.list().map(fileEntry => ({
+    name: fileEntry.filename,
+    url: filesApi.basePath(fileEntry.filename),
+    versionId: fileEntry.versionId
+  }));
+  this.initialFilesVersionId = this.initialFilesVersionId || filesVersionId;
+
+  if (filesVersionId !== this.initialFilesVersionId) {
+    // After we've detected the first change to the version, we store this
+    // version id so that subsequent writes will continue to replace the
+    // current version (until the browser page reloads)
+    project.filesVersionId = filesVersionId;
+  }
+
+  this.syncBrambleFiles(this.brambleHost?.fileRefresh);
+};
+
 /**
  * Load the file entry list and store it as this.fileEntries
  */
 WebLab.prototype.loadFileEntries = function() {
-  const onFilesReady = (files, filesVersionId) => {
-    // Gather information when the weblab manifest is empty but should
-    // contain references to files (i.e. after changes have been made to the project)
-    if (filesVersionId && files && files.length === 0) {
-      firehoseClient.putRecord(
-        {
-          study: 'weblab_loading_investigation',
-          study_group: 'empty_manifest',
-          event: 'get_empty_manifest',
-          project_id: getCurrentId()
-        },
-        {includeUserId: true}
-      );
-    }
-    assetListStore.reset(files);
-    this.fileEntries = assetListStore.list().map(fileEntry => ({
-      name: fileEntry.filename,
-      url: filesApi.basePath(fileEntry.filename),
-      versionId: fileEntry.versionId
-    }));
-    this.initialFilesVersionId = this.initialFilesVersionId || filesVersionId;
-
-    if (filesVersionId !== this.initialFilesVersionId) {
-      // After we've detected the first change to the version, we store this
-      // version id so that subsequent writes will continue to replace the
-      // current version (until the browser page reloads)
-      project.filesVersionId = filesVersionId;
-    }
-    if (this.brambleHost) {
-      // Refresh the file tree after files have been synced with Bramble.
-      this.brambleHost.syncFiles(this.brambleHost.fileRefresh);
-    }
-  };
-
   filesApi.getFiles(
-    result => onFilesReady(result.files, result.filesVersionId),
+    result => this.onFilesReady(result.files, result.filesVersionId),
     xhr => {
       if (xhr.status === 404) {
         // No files in this project yet, proceed with an empty file
         // list and no start version id
-        onFilesReady([], null);
+        this.onFilesReady([], null);
       } else {
         console.error('files API failed, status: ' + xhr.status);
         this.fileEntries = null;
@@ -578,17 +560,63 @@ WebLab.prototype.getAppReducers = function() {
   return reducers;
 };
 
-/**
- * Expose New Relic page action hook for use by the enclosed Bramble application.
- */
-WebLab.prototype.addPageAction = function(...args) {
-  logToCloud.addPageAction(...args);
+WebLab.prototype.redux = function() {
+  return {
+    getStore,
+    reducers,
+    actions
+  };
 };
 
-WebLab.prototype.PageAction = makeEnum(
-  logToCloud.PageAction.BrambleError,
-  logToCloud.PageAction.BrambleFilesystemResetSuccess,
-  logToCloud.PageAction.BrambleFilesystemResetFailed
-);
+WebLab.prototype.syncBrambleFiles = function(callback = () => {}) {
+  this.brambleHost?.syncFiles(
+    this.getCurrentFileEntries(),
+    this.getCurrentFilesVersionId(),
+    callback
+  );
+};
+
+/**
+ * Make brambleHost available for file sync operations as soon as it's initialized far
+ * enough to start building its UI. This makes operations like "Start Over" available
+ * even in cases where the mount operation throws an uncaught exception (like the missing
+ * index.html error).
+ * @param {Object} brambleHost
+ */
+WebLab.prototype.onBrambleMountable = function(brambleHost) {
+  this.brambleHost = brambleHost;
+};
+
+WebLab.prototype.onBrambleReady = function() {
+  if (!this.brambleHost) {
+    console.error(`No brambleHost set in WebLab.`);
+    return;
+  }
+
+  // Enable the Finish/Submit/Unsubmit button if it is present.
+  let shareCell = document.getElementById('share-cell');
+  if (shareCell) {
+    shareCell.className = 'share-cell-enabled';
+  }
+
+  this.syncBrambleFiles();
+};
+
+WebLab.prototype.brambleApi = function() {
+  return {
+    changeProjectFile: this.changeProjectFile.bind(this),
+    deleteProjectFile: this.deleteProjectFile.bind(this),
+    getCurrentFileEntries: this.getCurrentFileEntries.bind(this),
+    getCurrentFilesVersionId: this.getCurrentFilesVersionId.bind(this),
+    getProjectId: this.getProjectId.bind(this),
+    getStartSources: this.getStartSources.bind(this),
+    onBrambleMountable: this.onBrambleMountable.bind(this),
+    onBrambleReady: this.onBrambleReady.bind(this),
+    onProjectChanged: this.onProjectChanged.bind(this),
+    registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
+    redux: this.redux.bind(this),
+    renameProjectFile: this.renameProjectFile.bind(this)
+  };
+};
 
 export default WebLab;

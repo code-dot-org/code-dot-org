@@ -46,6 +46,17 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal Set[nil, 'escalated'], PeerReview.where(submitter: @user, level: @level).map(&:status).to_set
   end
 
+  test 'submitting a peer reviewed level in instructor review only script should create one escalated PeerReview object' do
+    script_only_instructor_review = create :script, only_instructor_review_required: true
+    script_level_only_instructor_review = create :script_level, levels: [@level], script: script_only_instructor_review
+
+    assert_difference('PeerReview.count', 1) do
+      track_progress @level_source.id, @user, script_level_only_instructor_review
+    end
+
+    assert_equal ['escalated'], PeerReview.where(submitter: @user, level: @level).map(&:status)
+  end
+
   test 'submitting a non peer reviewable level should not create Peer Review objects' do
     @level.peer_reviewable = 'false'
     @level.save
@@ -458,7 +469,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     standalone_level = create :level
     peer_review_with_standalone_level = create :peer_review, level: standalone_level
 
-    assert_equal "/s/#{script_level.script.name}/stage/1/puzzle/1", peer_review_with_script_level.submission_path
+    assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", peer_review_with_script_level.submission_path
     assert_equal "/levels/#{standalone_level.id}", peer_review_with_standalone_level.submission_path
   end
 

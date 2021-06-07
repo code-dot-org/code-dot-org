@@ -23,3 +23,19 @@ var filteredNames = [];
 
 Which of the following programs will result in filteredNames only containing the names of students who are 17 or older? 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Options A and B have a conditional statement that will filter for students who are younger than 17. Option C adds the student ages to the `filteredNames` list instead of the student names.
+
+[Lesson 9 - Traversals Explore](https://curriculum.code.org/csp-20/unit5/9/) showed students all the elements of a traversal. 
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.O: For algorithms involving elements of a list:
+a. Write iteration statements to traverse a list.
+b. Determine the result of an algorithm that includes list traversals.
+:::
+
+
+MARKDOWN

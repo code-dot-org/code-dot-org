@@ -44,6 +44,8 @@ module LessonImportHelper
         lesson.creative_commons_license = cb_lesson_data['creative_commons_license']
         lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
         lesson.save!
+
+        Script.merge_and_write_i18n(lesson.i18n_hash, lesson.script.name)
       end
       if models_to_import.include?('Objective')
         lesson.objectives = cb_lesson_data['objectives'].map do |o|
@@ -60,6 +62,12 @@ module LessonImportHelper
       if models_to_import.include?('Vocabulary')
         lesson.vocabularies = create_lesson_vocabularies(cb_lesson_data['vocab'], course_version_id)
       end
+      if models_to_import.include?('ProgrammingExpression')
+        lesson.programming_expressions = find_lesson_programming_expressions(cb_lesson_data['blocks'])
+      end
+      if models_to_import.include?('Standard')
+        lesson.standards = find_lesson_standards(cb_lesson_data['standards'])
+      end
     end
   end
 
@@ -74,7 +82,7 @@ module LessonImportHelper
       raise unless cb_resource['slug']
       resource = Resource.find_or_initialize_by(
         course_version_id: course_version_id,
-        key: cb_resource['slug']
+        key: cb_resource['slug'].downcase.tr(" ", "_")
       )
       resource.name = cb_resource['name']
       resource.url = cb_resource['url']
@@ -92,9 +100,10 @@ module LessonImportHelper
     return [] if cb_vocab.blank?
     cb_vocab.map do |cb_vocabulary|
       raise unless cb_vocabulary['word']
+      key = cb_vocabulary['word'].downcase.tr(" ", "_")
       vocab = Vocabulary.find_or_initialize_by(
         course_version_id: course_version_id,
-        key: cb_vocabulary['word']
+        key: key
       )
       vocab.word = cb_vocabulary['word']
       vocab.definition =
@@ -108,8 +117,32 @@ module LessonImportHelper
     end
   end
 
+  def self.find_lesson_programming_expressions(cb_blocks)
+    return [] if cb_blocks.blank?
+    cb_blocks.map do |cb_block|
+      raise unless cb_block['slug'] && cb_block['parent_slug']
+      programming_environment = ProgrammingEnvironment.find_by(name: cb_block['parent_slug'])
+      block = ProgrammingExpression.find_by(
+        programming_environment_id: programming_environment.id,
+        key: cb_block['slug']
+      )
+      block
+    end
+  end
+
+  def self.find_lesson_standards(cb_standards)
+    return [] if cb_standards.blank?
+    cb_standards.map do |cb_standard|
+      raise unless cb_standard['framework'] && cb_standard['shortcode']
+      framework = Framework.find_by!(shortcode: cb_standard['framework'].downcase)
+      Standard.find_by!(framework: framework, shortcode: cb_standard['shortcode'])
+    rescue ActiveRecord::RecordNotFound
+      puts "Could not find Standard: #{cb_standard}"
+    end
+  end
+
   def self.create_activity_sections(activity_markdown, lesson_activity_id, levels)
-    activity_markdown.gsub!(/slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/, "[slide]")
+    activity_markdown.gsub!(/slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/, '<i class="fa fa-list-alt" aria-hidden="true"></i>')
     activity_markdown.gsub!(/\[\/?guide\]/, '')
     tip_matches = find_tips(activity_markdown).select {|m| m[1] != 'say'}.map {|m| {index: activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
     name_matches = find_activity_section_names(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'name', match: m, substring: m[0]}}
@@ -295,7 +328,7 @@ module LessonImportHelper
   def self.create_activity_section_with_levels(script_levels, lesson_activity_id, progression_name="")
     return nil if script_levels.empty?
     activity_section = ActivitySection.new
-    activity_section.name = progression_name
+    activity_section.progression_name = progression_name
     activity_section.key ||= SecureRandom.uuid
     activity_section.position = 0
     activity_section.lesson_activity_id = lesson_activity_id

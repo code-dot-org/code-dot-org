@@ -4,12 +4,6 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import Spinner from '../components/spinner';
 
-const styles = {
-  statusMessage: {
-    textAlign: 'center'
-  }
-};
-
 const SPINNER_WAIT_MS = 2000;
 
 export default class Foorm extends React.Component {
@@ -21,7 +15,8 @@ export default class Foorm extends React.Component {
     surveyData: PropTypes.object,
     submitParams: PropTypes.object,
     customCssClasses: PropTypes.object,
-    onComplete: PropTypes.func
+    onComplete: PropTypes.func,
+    inEditorMode: PropTypes.bool
   };
 
   static defaultProps = {
@@ -71,6 +66,20 @@ export default class Foorm extends React.Component {
     Survey.StylesManager.applyTheme('default');
 
     this.surveyModel = new Survey.Model(this.props.formQuestions);
+
+    // Settings to avoid jumping around the page
+    // when SurveyJS produces changes in focus/scrolling
+    // while editing a Foorm configuration.
+    if (this.props.inEditorMode) {
+      // Prevents focus from moving from codemirror in Foorm Editor
+      // to the first question of the rendered SurveyJS Survey.
+      this.surveyModel.focusFirstQuestionAutomatic = false;
+
+      // Prevents automatic scrolling to top of rendered SurveyJS Survey while editing a long configuration file.
+      this.surveyModel.onScrollingElementToTop.add((unused, options) => {
+        options.cancel = true;
+      });
+    }
   }
 
   onComplete = (survey, options) => {
@@ -167,3 +176,9 @@ export default class Foorm extends React.Component {
     );
   }
 }
+
+const styles = {
+  statusMessage: {
+    textAlign: 'center'
+  }
+};

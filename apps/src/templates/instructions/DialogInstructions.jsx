@@ -11,13 +11,15 @@ class DialogInstructions extends React.Component {
   static propTypes = {
     // redux
     puzzleNumber: PropTypes.number.isRequired,
-    stageTotal: PropTypes.number.isRequired,
+    lessonTotal: PropTypes.number.isRequired,
     shortInstructions: PropTypes.string.isRequired,
     shortInstructions2: PropTypes.string,
     longInstructions: PropTypes.string,
     imgURL: PropTypes.string,
     imgOnly: PropTypes.bool,
-    hintsOnly: PropTypes.bool
+    hintsOnly: PropTypes.bool,
+    isBlockly: PropTypes.bool,
+    noInstructionsWhenCollapsed: PropTypes.bool
   };
 
   render() {
@@ -26,7 +28,7 @@ class DialogInstructions extends React.Component {
     return (
       <Instructions
         puzzleTitle={msg.puzzleTitle({
-          stage_total: this.props.stageTotal,
+          stage_total: this.props.lessonTotal,
           puzzle_number: this.props.puzzleNumber
         })}
         shortInstructions={
@@ -39,6 +41,8 @@ class DialogInstructions extends React.Component {
           showInstructions ? this.props.longInstructions : undefined
         }
         imgURL={showImg ? this.props.imgURL : undefined}
+        isBlockly={this.props.isBlockly}
+        noInstructionsWhenCollapsed={this.props.noInstructionsWhenCollapsed}
       />
     );
   }
@@ -47,11 +51,13 @@ class DialogInstructions extends React.Component {
 export const UnconnectedDialogInstructions = DialogInstructions;
 export default connect(state => ({
   puzzleNumber: state.pageConstants.puzzleNumber,
-  stageTotal: state.pageConstants.stageTotal,
+  lessonTotal: state.pageConstants.lessonTotal,
   shortInstructions: state.instructions.shortInstructions,
   shortInstructions2: state.instructions.shortInstructions2,
   longInstructions: state.instructions.longInstructions,
   imgURL: state.instructionsDialog.imgUrl || state.pageConstants.aniGifURL,
   imgOnly: state.instructionsDialog.imgOnly,
-  hintsOnly: state.instructionsDialog.hintsOnly
+  hintsOnly: state.instructionsDialog.hintsOnly,
+  isBlockly: state.pageConstants.isBlockly,
+  noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed
 }))(DialogInstructions);

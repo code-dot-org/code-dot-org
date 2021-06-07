@@ -2,12 +2,6 @@ import React from 'react';
 import Alert from '@cdo/apps/templates/alert';
 import i18n from '@cdo/locale';
 
-const styles = {
-  bold: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
-};
-
 /**
  * Component that displays a small notification at the top of the page when
  * postMilestone is disabled (and thus progress is disabled)
@@ -52,3 +46,9 @@ export default class DisabledBubblesAlert extends React.Component {
     );
   }
 }
+
+const styles = {
+  bold: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  }
+};

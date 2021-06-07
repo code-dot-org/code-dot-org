@@ -1,0 +1,6 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#dynamic_instructions"}}
+  Dynamic Instructions
+
+#dynamic_instructions.in.collapse
+  = f.label :ailab_dynamic_instructions, 'Dynamic instructions'
+  = f.text_area :dynamic_instructions, placeholder: 'Insert JSON Data', rows: 10, style: 'width: 50%', value: @level.dynamic_instructions

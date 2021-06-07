@@ -10,12 +10,6 @@ import styleConstants from '@cdo/apps/styleConstants';
 import {allowAnimationMode} from './stateQueries';
 import * as utils from '../utils';
 
-const styles = {
-  main: {
-    height: styleConstants['workspace-headers-height']
-  }
-};
-
 /**
  * Controls above the visualization header, including the code/animation toggle.
  */
@@ -31,13 +25,15 @@ class P5LabVisualizationHeader extends React.Component {
   };
 
   changeInterfaceMode = mode => {
-    if (!this.props.spriteLab) {
-      // Add a resize event to Gamelab (i.e. droplet) to ensure code is rendered
-      // correctly if it was in the middle of a transition from code to block mode
-      // when the interface mode was changed. Blockly already fires resize events
-      // so this is not needed for spriteLab - too many resize events seem to
-      // conflict with each other.
-      setTimeout(() => utils.fireResizeEvent(), 0);
+    // Make sure code workspace is rendered properly after switching from the Animation Tab.
+    if (mode === 'CODE') {
+      if (this.props.spriteLab) {
+        // Sprite Lab (Blockly) doesn't need a window resize event, but it does need to rerender.
+        setTimeout(() => Blockly.mainBlockSpace.render(), 0);
+      } else {
+        // Fire a window resize event to tell Game Lab (Droplet) to rerender.
+        setTimeout(() => utils.fireResizeEvent(), 0);
+      }
     }
 
     this.props.onInterfaceModeChange(mode);
@@ -68,6 +64,12 @@ class P5LabVisualizationHeader extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    height: styleConstants['workspace-headers-height']
+  }
+};
 export default connect(
   state => ({
     interfaceMode: state.interfaceMode,

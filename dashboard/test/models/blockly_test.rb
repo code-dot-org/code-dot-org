@@ -510,7 +510,7 @@ XML
     assert_equal localized_hints[1]["tts_url"], "https://tts.code.org/sharon22k/180/100/62885e459602efbd236f324c4796acc9/test_localize_authored_hints.mp3"
   end
 
-  test 'localized_text_blocks' do
+  test 'localized_blocks_with_placeholder_texts' do
     test_locale = 'vi-VN'
     original_str = 'Hello'
     localized_str = 'Xin Chao'
@@ -545,17 +545,24 @@ XML
                   </block>
                 </value>
               </block>
+              <block type="studio_ask">
+                <title name="TEXT">#{original_str}</title>
+              </block>
+              <block type="studio_showTitleScreen">
+                <title name="TITLE">#{original_str}</title>
+                <title name="TEXT">#{original_str}</title>
+              </block>
             </xml>
           </start_blocks>
         </blocks>
       </GamelabJr>
     XML
-    localized_block_xml = level.localized_text_blocks(block_xml)
+    localized_block_xml = level.localized_blocks_with_placeholder_texts(block_xml)
 
     # Expected result is an one-line XML, in which the original string
     # has been replaced by a localized string.
     block_xml_cleaned = block_xml.strip.gsub(/\s*\n\s*/, '')
-    expected_localized_block_xml = block_xml_cleaned.sub(original_str, localized_str)
+    expected_localized_block_xml = block_xml_cleaned.gsub(original_str, localized_str)
 
     assert_equal expected_localized_block_xml, localized_block_xml
   end
@@ -611,5 +618,32 @@ XML
     )
 
     refute level.uses_droplet?
+  end
+
+  test 'summarize_for_lesson_show uses translated instructions' do
+    custom_i18n = {
+      "data" => {
+        "short_instructions" => {
+          "TestLevel" => "translated short instructions"
+        },
+        "long_instructions" => {
+          "TestLevel" => "translated long instructions"
+        }
+      }
+    }
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    level = create(
+      :level,
+      name: 'TestLevel',
+      type: 'Maze',
+      long_instructions: 'long instructions',
+      short_instructions: 'short instructions',
+      game_id: Game.by_name('Maze')
+    )
+    I18n.backend.store_translations test_locale, custom_i18n
+    summary = level.summarize_for_lesson_show(false)
+    assert_equal 'translated long instructions', summary[:longInstructions]
+    assert_equal 'translated short instructions', summary[:shortInstructions]
   end
 end

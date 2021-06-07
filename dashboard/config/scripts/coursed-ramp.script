@@ -1,6 +1,6 @@
 hideable_lessons true
 
-lesson 'Introduction', display_name: 'Introduction'
+lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: false
 level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'

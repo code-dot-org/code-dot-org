@@ -14,6 +14,12 @@ import {changeShowError} from './actions';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import {getStore} from '../redux';
+import Meter from '@cdo/apps/templates/Meter';
+
+// Helper for converting bytes to megabytes.
+const bytesToMegabytes = bytes => {
+  return bytes * 0.000000954;
+};
 
 /**
  * Top-level React wrapper for WebLab
@@ -37,7 +43,9 @@ class WebLabView extends React.Component {
     isInspectorOn: PropTypes.bool.isRequired,
     isFullScreenPreviewOn: PropTypes.bool.isRequired,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
-    shouldShowError: PropTypes.bool.isRequired
+    shouldShowError: PropTypes.bool.isRequired,
+    maxProjectCapacity: PropTypes.number.isRequired,
+    projectSize: PropTypes.number.isRequired
   };
 
   componentDidMount() {
@@ -48,7 +56,27 @@ class WebLabView extends React.Component {
     getStore().dispatch(changeShowError(false));
   }
 
+  projectCapacityLabel = () => {
+    let totalMegabytes = Math.round(
+      bytesToMegabytes(this.props.maxProjectCapacity)
+    );
+    let currentMegabytes = bytesToMegabytes(this.props.projectSize);
+    // If using 75%+ capacity, display a decimal with 2 digits.
+    // Otherwise, round the capacity.
+    currentMegabytes =
+      currentMegabytes / totalMegabytes >= 0.75
+        ? currentMegabytes.toFixed(2)
+        : Math.round(currentMegabytes);
+
+    return weblabMsg.currentProjectCapacity({
+      currentMegabytes,
+      totalMegabytes
+    });
+  };
+
   render() {
+    const {maxProjectCapacity, projectSize} = this.props;
+
     let headersHeight = styleConstants['workspace-headers-height'];
     let iframeHeightOffset =
       headersHeight + (this.props.isProjectLevel ? 0 : 70);
@@ -121,6 +149,18 @@ class WebLabView extends React.Component {
                         isRtl={false}
                         label={msg.showVersionsHeader()}
                       />
+                      {maxProjectCapacity > 0 && projectSize > 0 && (
+                        <Meter
+                          id="weblab-project-capacity"
+                          label={this.projectCapacityLabel()}
+                          value={projectSize}
+                          max={maxProjectCapacity}
+                          containerStyle={{
+                            float: 'left',
+                            height: styleConstants['workspace-headers-height']
+                          }}
+                        />
+                      )}
                       <PaneButton
                         iconClass="fa fa-repeat"
                         leftJustified={false}
@@ -201,5 +241,7 @@ export default connect(state => ({
   isInspectorOn: state.inspectorOn,
   isFullScreenPreviewOn: state.fullScreenPreviewOn,
   showProjectTemplateWorkspaceIcon: !!state.pageConstants
-    .showProjectTemplateWorkspaceIcon
+    .showProjectTemplateWorkspaceIcon,
+  maxProjectCapacity: state.maxProjectCapacity,
+  projectSize: state.projectSize
 }))(WebLabView);

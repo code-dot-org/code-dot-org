@@ -16,15 +16,18 @@ describe('LessonAgenda', () => {
             {
               key: 'section-1',
               displayName: 'Making programs',
+              duration: 20,
               scriptLevels: []
             },
             {
               key: 'section-2',
               displayName: '',
+              duration: 0,
               scriptLevels: [{id: 10}]
             },
             {
               key: 'section-3',
+              duration: 10,
               displayName: 'Non Programming Progression',
               scriptLevels: []
             }
@@ -37,16 +40,19 @@ describe('LessonAgenda', () => {
           activitySections: [
             {
               key: 'section-4',
+              duration: 0,
               displayName: 'Section 4',
               scriptLevels: [{id: 11}]
             },
             {
               key: 'section-5',
+              duration: 0,
               displayName: '',
               scriptLevels: []
             },
             {
               key: 'section-6',
+              duration: 0,
               displayName: 'Section 6',
               scriptLevels: []
             }
@@ -56,61 +62,12 @@ describe('LessonAgenda', () => {
     };
   });
 
-  it('renders default props', () => {
+  it('Display correct information for agenda', () => {
     const wrapper = shallow(<LessonAgenda {...defaultProps} />);
-    expect(wrapper.find('a').length).to.equal(6);
 
-    expect(
-      wrapper
-        .find('a')
-        .at(0)
-        .props().href
-    ).to.equal('#activity-activity-1');
-    expect(
-      wrapper
-        .find('a')
-        .at(0)
-        .contains('Main Activity (20 minutes)')
-    ).to.be.true;
-
-    expect(
-      wrapper
-        .find('a')
-        .at(1)
-        .props().href
-    ).to.equal('#activity-section-section-1');
-    expect(
-      wrapper
-        .find('a')
-        .at(2)
-        .props().href
-    ).to.equal('#activity-section-section-3');
-
-    expect(
-      wrapper
-        .find('a')
-        .at(3)
-        .props().href
-    ).to.equal('#activity-activity-2');
-    expect(
-      wrapper
-        .find('a')
-        .at(3)
-        .contains('2nd Activity (30 minutes)')
-    ).to.be.true;
-
-    expect(
-      wrapper
-        .find('a')
-        .at(4)
-        .props().href
-    ).to.equal('#activity-section-section-4');
-
-    expect(
-      wrapper
-        .find('a')
-        .at(5)
-        .props().href
-    ).to.equal('#activity-section-section-6');
+    expect(wrapper.text()).to.include('Main Activity (20 minutes)');
+    expect(wrapper.text()).to.include('Making programs (20 minutes)');
+    expect(wrapper.text()).to.include('Non Programming Progression');
+    expect(wrapper.text()).to.include('2nd Activity (30 minutes)');
   });
 });

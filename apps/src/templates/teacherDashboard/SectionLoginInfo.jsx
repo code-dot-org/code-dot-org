@@ -170,36 +170,6 @@ class EmailLogins extends React.Component {
   }
 }
 
-const styles = {
-  container: {
-    width: 840
-  },
-  card: {
-    border: '1px dashed black',
-    width: 378,
-    padding: 10,
-    margin: 8,
-    float: 'left',
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: 'dimgray',
-    pageBreakInside: 'avoid'
-  },
-  text: {
-    fontSize: 14
-  },
-  bold: {
-    fontWeight: 'bold'
-  },
-  img: {
-    width: 150,
-    marginTop: 10
-  },
-  heading: {
-    color: color.purple,
-    marginTop: 0
-  }
-};
-
 class WordOrPictureLogins extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
@@ -362,3 +332,33 @@ class LoginCard extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    width: 840
+  },
+  card: {
+    border: '1px dashed black',
+    width: 378,
+    padding: 10,
+    margin: 8,
+    float: 'left',
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: 'dimgray',
+    pageBreakInside: 'avoid'
+  },
+  text: {
+    fontSize: 14
+  },
+  bold: {
+    fontWeight: 'bold'
+  },
+  img: {
+    width: 150,
+    marginTop: 10
+  },
+  heading: {
+    color: color.purple,
+    marginTop: 0
+  }
+};

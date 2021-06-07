@@ -1,7 +1,7 @@
 id '7'
 hidden false
 
-lesson 'Jigsaw', display_name: 'Jigsaw'
+lesson 'Jigsaw', display_name: 'Jigsaw', has_lesson_plan: false
 skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:1'

@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Contact Screen Import\r\n\r\nYet another student created a Contact screen that you can import into your app. Their share link is **<a href =\"https://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/\" target=\"_blank\">https://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/</a>**\r\n\r\n# Do This\r\n\r\n* **Select \"Import Screen...** from the screens dropdown.\r\n* **Copy and paste the above url** into the import screens dialog.\r\n* **Select the screen** you wish to import.\r\n* **Click Import** to import the screen.\r\n* **Use the screens dropdown** to make sure your app has Home, About, Contact, and Search screens.",
+    "long_instructions": "# Contact Screen Import\r\n\r\nYet another student created a Contact screen that you can import into your app. Their share link is **<a href =\"https://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/\" target=\"_blank\" rel=\"noopener noreferrer\">https://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/</a>**\r\n\r\n# Do This\r\n\r\n* **Select \"Import Screen...** from the screens dropdown.\r\n* **Copy and paste the above url** into the import screens dialog.\r\n* **Select the screen** you wish to import.\r\n* **Click Import** to import the screen.\r\n* **Use the screens dropdown** to make sure your app has Home, About, Contact, and Search screens.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

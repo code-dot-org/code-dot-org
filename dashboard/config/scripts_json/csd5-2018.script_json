@@ -54,6 +54,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
+    "serialized_at": "2021-05-03 23:55:22 UTC",
     "seeding_key": {
       "script.name": "csd5-2018"
     }
@@ -102,6 +103,7 @@
       "name": "Representation Matters",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -116,6 +118,7 @@
       "name": "Patterns and Representation",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -130,6 +133,7 @@
       "name": "ASCII and Binary Representation",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -144,6 +148,7 @@
       "name": "Representing Images",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -158,6 +163,7 @@
       "name": "Representing Numbers",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -172,6 +178,7 @@
       "name": "Keeping Data Secret",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -186,6 +193,7 @@
       "name": "Combining Representations",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -200,6 +208,7 @@
       "name": "Project - Create a Representation",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -214,6 +223,7 @@
       "name": "Problem Solving and Data",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -228,6 +238,7 @@
       "name": "Problem Solving with Big Data",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -242,6 +253,7 @@
       "name": "Structuring Data",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -256,6 +268,7 @@
       "name": "Making Decisions with Data",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
       },
@@ -270,6 +283,7 @@
       "name": "Interpreting Data",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
       },
@@ -284,6 +298,7 @@
       "name": "Automating Data Decisions",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
       },
@@ -298,6 +313,7 @@
       "name": "Project - Solve a Data Problem",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
       },
@@ -312,6 +328,7 @@
       "name": "CS Discoveries Post-Course Survey",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
       },
@@ -322,15 +339,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L01 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L01 autoSFLP_2018"
@@ -346,11 +373,15 @@
     {
       "chapter": 2,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L02 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L02 autoSFLP_2018"
@@ -366,11 +397,15 @@
     {
       "chapter": 3,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L03 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L03 autoSFLP_2018"
@@ -386,11 +421,15 @@
     {
       "chapter": 4,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L04 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L04 autoSFLP_2018"
@@ -406,12 +445,16 @@
     {
       "chapter": 5,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation_2018"
+        ],
         "progression": "Representing Images"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 black white images pixelation_2018"
@@ -427,12 +470,16 @@
     {
       "chapter": 6,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 2_2018"
+        ],
         "progression": "Representing Images"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 2_2018"
@@ -448,12 +495,16 @@
     {
       "chapter": 7,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 3_2018"
+        ],
         "progression": "Representing Images"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 3_2018"
@@ -469,12 +520,16 @@
     {
       "chapter": 8,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 4_2018"
+        ],
         "progression": "Representing Images"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 4_2018"
@@ -490,12 +545,16 @@
     {
       "chapter": 9,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 5_2018"
+        ],
         "progression": "Representing Images"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 5_2018"
@@ -511,11 +570,15 @@
     {
       "chapter": 10,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L05 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L05 autoSFLP_2018"
@@ -531,12 +594,16 @@
     {
       "chapter": 11,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 1_2018"
+        ],
         "progression": "Binary Numbers"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 1_2018"
@@ -552,12 +619,16 @@
     {
       "chapter": 12,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 2_2018"
+        ],
         "progression": "Binary Numbers"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 2_2018"
@@ -573,12 +644,16 @@
     {
       "chapter": 13,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 4-new_2018"
+        ],
         "progression": "Binary Numbers"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 4-new_2018"
@@ -594,12 +669,16 @@
     {
       "chapter": 14,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 5-new_2018"
+        ],
         "progression": "Binary Numbers"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 5-new_2018"
@@ -615,12 +694,16 @@
     {
       "chapter": 15,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 6-new_2018"
+        ],
         "progression": "Binary Numbers"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 6-new_2018"
@@ -636,12 +719,16 @@
     {
       "chapter": 16,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 7-new_2018"
+        ],
         "progression": "Binary Numbers"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 7-new_2018"
@@ -657,11 +744,15 @@
     {
       "chapter": 17,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary video_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary video_2018"
@@ -677,11 +768,15 @@
     {
       "chapter": 18,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L06 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L06 autoSFLP_2018"
@@ -697,12 +792,16 @@
     {
       "chapter": 19,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Encryption 2_2018"
+        ],
         "progression": "Keeping Data Secret"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Encryption 2_2018"
@@ -718,12 +817,16 @@
     {
       "chapter": 20,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Encryption 1_2018"
+        ],
         "progression": "Keeping Data Secret"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Encryption 1_2018"
@@ -739,11 +842,15 @@
     {
       "chapter": 21,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L07 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L07 autoSFLP_2018"
@@ -759,12 +866,16 @@
     {
       "chapter": 22,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 combining rep_2018"
+        ],
         "progression": "Combining Representations"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 combining rep_2018"
@@ -780,12 +891,16 @@
     {
       "chapter": 23,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 student record_2018"
+        ],
         "progression": "Combining Representations"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 student record_2018"
@@ -801,11 +916,15 @@
     {
       "chapter": 24,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L08 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L08 autoSFLP_2018"
@@ -821,12 +940,16 @@
     {
       "chapter": 25,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch1_2018"
+        ],
         "progression": "Reflection"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U5Ch1_2018"
@@ -842,11 +965,15 @@
     {
       "chapter": 26,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L09 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L09 autoSFLP_2018"
@@ -862,11 +989,15 @@
     {
       "chapter": 27,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L10 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L10 autoSFLP_2018"
@@ -882,12 +1013,16 @@
     {
       "chapter": 28,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Netflix Data Video_2018"
+        ],
         "progression": "Problem Solving"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Netflix Data Video_2018"
@@ -903,12 +1038,16 @@
     {
       "chapter": 29,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Waze Data Video_2018"
+        ],
         "progression": "Problem Solving"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Waze Data Video_2018"
@@ -924,12 +1063,16 @@
     {
       "chapter": 30,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Amazon Data Video_2018"
+        ],
         "progression": "Problem Solving"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Amazon Data Video_2018"
@@ -945,11 +1088,15 @@
     {
       "chapter": 31,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L11 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L11 autoSFLP_2018"
@@ -965,12 +1112,16 @@
     {
       "chapter": 32,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 data visualization_2018"
+        ],
         "progression": "Data Visualization"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 data visualization_2018"
@@ -986,12 +1137,16 @@
     {
       "chapter": 33,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Pizza_2018"
+        ],
         "progression": "Data Visualization"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Pizza_2018"
@@ -1007,12 +1162,16 @@
     {
       "chapter": 34,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Pizza 2_2018"
+        ],
         "progression": "Data Visualization"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Pizza 2_2018"
@@ -1028,11 +1187,15 @@
     {
       "chapter": 35,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L12 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L12 autoSFLP_2018"
@@ -1048,11 +1211,15 @@
     {
       "chapter": 36,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L13 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L13 autoSFLP_2018"
@@ -1068,11 +1235,15 @@
     {
       "chapter": 37,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 crosstab warmup_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 crosstab warmup_2018"
@@ -1088,11 +1259,15 @@
     {
       "chapter": 38,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L14 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L14 autoSFLP_2018"
@@ -1108,11 +1283,15 @@
     {
       "chapter": 39,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L15 autoSFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5L15 autoSFLP_2018"
@@ -1128,11 +1307,15 @@
     {
       "chapter": 40,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd u5 recommender sample"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd u5 recommender sample"
@@ -1148,12 +1331,16 @@
     {
       "chapter": 41,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch2_2018"
+        ],
         "progression": "Reflection"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U5Ch2_2018"
@@ -1169,12 +1356,16 @@
     {
       "chapter": 42,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-post-survey-2018-markdown-with-link-to-survey_v2"
@@ -1651,5 +1842,35 @@
         "script.name": "csd5-2018"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

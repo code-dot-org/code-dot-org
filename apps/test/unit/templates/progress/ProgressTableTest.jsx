@@ -12,15 +12,22 @@ import LessonGroup from '@cdo/apps/templates/progress/LessonGroup';
 const FAKE_LESSONS = [];
 const FAKE_LEVELS = [];
 const FAKE_LESSON_1 = {
-  lessonGroup: {displayName: 'jazz'},
+  lessonGroup: {displayName: 'jazz', userFacing: false},
   lessons: FAKE_LESSONS,
-  levels: FAKE_LEVELS
+  levelsByLesson: FAKE_LEVELS
 };
 const FAKE_LESSON_2 = {
-  lessonGroup: {displayName: 'samba'},
+  lessonGroup: {displayName: 'samba', userFacing: true},
   lessons: FAKE_LESSONS,
-  levels: FAKE_LEVELS
+  levelsByLesson: FAKE_LEVELS
 };
+
+const FAKE_LESSON_3 = {
+  lessonGroup: {displayName: 'dance', userFacing: true},
+  lessons: FAKE_LESSONS,
+  levelsByLesson: FAKE_LEVELS
+};
+
 const DEFAULT_PROPS = {
   isPlc: false,
   isSummaryView: false,
@@ -28,7 +35,26 @@ const DEFAULT_PROPS = {
 };
 
 describe('ProgressTable', () => {
-  it('renders a single lesson in full view', () => {
+  it('renders a single lesson with user facing lesson group in full view', () => {
+    const wrapper = shallow(
+      <ProgressTable {...DEFAULT_PROPS} groupedLessons={[FAKE_LESSON_3]} />,
+      {
+        disableLifecycleMethods: true
+      }
+    );
+    expect(wrapper).to.containMatchingElement(
+      <div>
+        <LessonGroup
+          key={FAKE_LESSON_3.lessonGroup.displayName}
+          isPlc={DEFAULT_PROPS.isPlc}
+          groupedLesson={FAKE_LESSON_3}
+          isSummaryView={DEFAULT_PROPS.isSummaryView}
+        />
+      </div>
+    );
+  });
+
+  it('renders a single lesson without user facing lesson group in full view', () => {
     const wrapper = shallow(
       <ProgressTable {...DEFAULT_PROPS} isSummaryView={false} />,
       {disableLifecycleMethods: true}
@@ -36,22 +62,16 @@ describe('ProgressTable', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <div style={styles.hidden}>
-          <SummaryProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
+          <SummaryProgressTable groupedLesson={FAKE_LESSON_1} />
         </div>
         <div style={{}}>
-          <DetailProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
+          <DetailProgressTable groupedLesson={FAKE_LESSON_1} />
         </div>
       </div>
     );
   });
 
-  it('renders a single lesson in summary view', () => {
+  it('renders a single lesson without user facing lesson group in summary view', () => {
     const wrapper = shallow(
       <ProgressTable {...DEFAULT_PROPS} isSummaryView={true} />,
       {disableLifecycleMethods: true}
@@ -59,16 +79,10 @@ describe('ProgressTable', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <div style={{}}>
-          <SummaryProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
+          <SummaryProgressTable groupedLesson={FAKE_LESSON_1} />
         </div>
         <div style={styles.hidden}>
-          <DetailProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
+          <DetailProgressTable groupedLesson={FAKE_LESSON_1} />
         </div>
       </div>
     );
@@ -78,27 +92,23 @@ describe('ProgressTable', () => {
     const wrapper = shallow(
       <ProgressTable
         {...DEFAULT_PROPS}
-        groupedLessons={[FAKE_LESSON_1, FAKE_LESSON_2]}
+        groupedLessons={[FAKE_LESSON_3, FAKE_LESSON_2]}
       />,
       {disableLifecycleMethods: true}
     );
     expect(wrapper).to.containMatchingElement(
       <div>
         <LessonGroup
-          key={FAKE_LESSON_1.lessonGroup.displayName}
+          key={FAKE_LESSON_3.lessonGroup.displayName}
           isPlc={DEFAULT_PROPS.isPlc}
-          lessonGroup={FAKE_LESSON_1.lessonGroup}
+          groupedLesson={FAKE_LESSON_3}
           isSummaryView={DEFAULT_PROPS.isSummaryView}
-          lessons={FAKE_LESSON_1.lessons}
-          levelsByLesson={FAKE_LESSON_1.levels}
         />
         <LessonGroup
           key={FAKE_LESSON_2.lessonGroup.displayName}
           isPlc={DEFAULT_PROPS.isPlc}
-          lessonGroup={FAKE_LESSON_2.lessonGroup}
+          groupedLesson={FAKE_LESSON_2}
           isSummaryView={DEFAULT_PROPS.isSummaryView}
-          lessons={FAKE_LESSON_2.lessons}
-          levelsByLesson={FAKE_LESSON_2.levels}
         />
       </div>
     );

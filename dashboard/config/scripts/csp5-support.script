@@ -1,8 +1,9 @@
 professional_learning_course 'CSP Support'
 student_detail_progress_view true
+announcements [{"notice"=>"This professional learning course is associated with a version of the CS Principles course that is no longer supported.  Please visit our Courses Overview page (https://studio.code.org/courses) to see our most current curricula.", "details"=>"", "link"=>"https://studio.code.org/courses", "type"=>"warning", "visibility"=>"Teacher-only"}]
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Unit 5 Overview', display_name: 'Unit 5 Overview'
+lesson 'Unit 5 Overview', display_name: 'Unit 5 Overview', has_lesson_plan: false
 level 'What\'s inside and how is it organized?', named: true
 level 'Introduction to Unit 5', named: true
 level 'Unit 5 Teaching Philosophy and Commentary', named: true
@@ -11,35 +12,35 @@ level 'Practice Performance Task in Unit 5', named: true
 level 'Unit 5 Self-Assessment', named: true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Event Driven Programming', display_name: 'Event Driven Programming'
+lesson 'Event Driven Programming', display_name: 'Event Driven Programming', has_lesson_plan: false
 level '5.1 - 5.3 Lesson Connections', named: true
 level 'Design Mode Overview', named: true
 level 'Events Overview', named: true
 level 'Project Breakdown: Multi-Screen App', named: true
 level 'U5 L1 - 3: Teaching and Student Support Plan', named: true
 
-lesson 'Variables and Strings', display_name: 'Variables and Strings'
+lesson 'Variables and Strings', display_name: 'Variables and Strings', has_lesson_plan: false
 level '5.4 - 5.6 Lesson Connections', named: true
 level 'Variables Overview', named: true
 level 'Project Breakdown: Clicker Game', named: true
 level 'Strings Overview', named: true
 level 'U5 L4 - 6: Teaching and Student Support Plan', named: true
 
-lesson 'Conditionals and Boolean Logic', display_name: 'Conditionals and Boolean Logic'
+lesson 'Conditionals and Boolean Logic', display_name: 'Conditionals and Boolean Logic', has_lesson_plan: false
 level '5.7- 5.10 Lesson Connections', named: true
 level 'Boolean Logic and Expression Overview', named: true
 level 'Conditionals Overview', named: true
 level 'Project Breakdown: Color Sleuth', named: true
 level 'U5 L7 - 10: Teaching and Student Support Plan', named: true
 
-lesson 'While Loops and Introduction to Arrays', display_name: 'While Loops and Introduction to Arrays'
+lesson 'While Loops and Introduction to Arrays', display_name: 'While Loops and Introduction to Arrays', has_lesson_plan: false
 level '5.11 - 5.14 Lesson Connections', named: true
 level 'While Loops Overview', named: true
 level 'Arrays Overview', named: true
 level 'Project Breakdown: Image Scroller', named: true
 level 'U5 L11 - 14: Teaching and Student Support Plan', named: true
 
-lesson 'Processing Arrays and Functions with Return Values', display_name: 'Processing Arrays and Functions with Return Values'
+lesson 'Processing Arrays and Functions with Return Values', display_name: 'Processing Arrays and Functions with Return Values', has_lesson_plan: false
 level '5.15 - 5.17 Lesson Connections', named: true
 level 'Processing Arrays', named: true
 level 'Functions that Return Values', named: true
@@ -47,26 +48,26 @@ level 'Project Breakdown: Building a Canvas Painter', named: true
 level 'U5 L15 - 17: Teaching and Student Support Plan', named: true
 
 lesson_group 'practice', display_name: 'Teaching Practices'
-lesson 'Group Work and Peer Learning', display_name: 'Group Work and Peer Learning'
+lesson 'Group Work and Peer Learning', display_name: 'Group Work and Peer Learning', has_lesson_plan: false
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Collaborative Learning and Group Work: Description and Strategies', named: true
 level 'The Official Peer Instruction Blog', named: true
 level 'the Journal of Peer Learning', named: true
 level 'Unit 5 Teaching Practice Plan: Group Work and Peer Learning', named: true
 
-lesson 'Balancing Teachers and Tools', display_name: 'Balancing Teachers and Tools'
+lesson 'Balancing Teachers and Tools', display_name: 'Balancing Teachers and Tools', has_lesson_plan: false
 level 'Overview: Balancing Teachers and Tools', named: true
 level 'Classroom Management Tips for School Computer Labs', named: true
 level 'Considerations for the 1-to-1 Classroom', named: true
 level 'Unit 5 Teaching Practice Plan: Balancing Teacher and Tools', named: true
 
-lesson 'Discovery Learning', display_name: 'Discovery Learning'
+lesson 'Discovery Learning', display_name: 'Discovery Learning', has_lesson_plan: false
 level 'Overview: Discovery Learning', named: true
 level 'Discovery learning definition and history', named: true
 level 'Discovery learning techniques', named: true
 level 'Unit 5 Teaching Practice Plan: Discovery Learning', named: true
 
-lesson 'Measuring Student Learning', display_name: 'Measuring Student Learning'
+lesson 'Measuring Student Learning', display_name: 'Measuring Student Learning', has_lesson_plan: false
 level 'Overview: Capturing Student Learning', named: true
 level 'What is the difference between formative and summative assessment?', named: true
 level 'Designing Assessment Questions', named: true

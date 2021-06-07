@@ -54,11 +54,16 @@ class FilesApi < Sinatra::Base
 
   def codeprojects_can_view?(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+
+    # Attempt to find active project in database. This will raise StorageApps::NotFound if
+    # no active project exists, which is handled below.
+    StorageApps.new(owner_storage_id).get(encrypted_channel_id)
+
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
     !get_user_sharing_disabled(owner_user_id)
 
   # Default to cannot view if there is an error
-  rescue ArgumentError, OpenSSL::Cipher::CipherError
+  rescue StorageApps::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
     false
   end
 
@@ -304,6 +309,45 @@ class FilesApi < Sinatra::Base
     headers[CONTENT_TYPE] && headers[CONTENT_TYPE].include?(TEXT_HTML)
   end
 
+  def html_file?(filename)
+    File.extname(filename&.downcase) == '.html'
+  end
+
+  def valid_html_content?(body)
+    disallowed_tags = DCDO.get('disallowed_html_tags', [])
+
+    # Applicable Nokogiri selector rules:
+    #   Element selectors must start with //
+    #   Attribute selectors must start with @
+    #   (Example: "//div[@name]" will return all <div>s that have a 'name' attribute.)
+    disallowed_tag_selectors = disallowed_tags.map do |tag|
+      tag_dup = tag.dup
+      attr_selector_index = tag_dup.index('[')
+      tag_dup.insert(attr_selector_index + 1, '@') if attr_selector_index
+      '//' + tag_dup
+    end
+
+    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+  end
+
+  # Determine whether or not a file is a valid HTML file.
+  # Returns true if:
+  #   1. It does not belong to a WebLab project.
+  #   2. It belongs to a WebLab project and does not contain disallowed HTML tags.
+  # Returns false if the file is not an HTML file, does not belong to a project, or
+  # is a WebLab HTML file that contains disallowed HTML tags.
+  def valid_html_file?(encrypted_channel_id, filename, body)
+    return false unless html_file?(filename)
+
+    # Only validate WebLab HTML files. We need to get the project from the database
+    # in order to check whether or not the file belongs to a WebLab project.
+    project = StorageApps.new(get_storage_id).get(encrypted_channel_id)
+    return false unless project
+    return true unless project[:projectType]&.downcase == 'weblab'
+
+    valid_html_content?(body)
+  end
+
   #
   # Set appropriate cache headers for making the retrieved object cached
   # for the given number of seconds
@@ -339,7 +383,11 @@ class FilesApi < Sinatra::Base
 
     # Block libraries with PII/profanity from being published.
     if endpoint == 'libraries'
-      share_failure = ShareFiltering.find_failure(body, request.locale)
+      begin
+        share_failure = ShareFiltering.find_failure(body, request.locale)
+      rescue OpenURI::HTTPError => e
+        return file_too_large(endpoint) if e.message == "414 Request-URI Too Large"
+      end
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
@@ -612,6 +660,7 @@ class FilesApi < Sinatra::Base
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
+    bad_request if html_file?(unescaped_filename) && !valid_html_file?(encrypted_channel_id, unescaped_filename, body)
 
     bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)

@@ -30,21 +30,21 @@ Scenario: Applab visualization scaling
 
 Scenario: Applab embedded level
   When I open my eyes to test "Applab embedded level"
-  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/12"
+  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/12"
   And I rotate to landscape
   And I see no difference for "embedded level"
   Then I close my eyes
 
 Scenario: Applab widget mode
   When I open my eyes to test "Applab widget mode"
-  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/22"
+  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/22"
   And I wait until element "#start_over_button" is visible
   And I see no difference for "widget mode level"
   Then I close my eyes
 
 Scenario: Applab Instructions in Top Pane
   When I open my eyes to test "Applab Instructions in top pane"
-  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9"
+  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/9"
   And I wait for the page to fully load
   And I see no difference for "top instructions enabled on standard level"
   Then I click selector ".fa-chevron-circle-up"
@@ -54,11 +54,11 @@ Scenario: Applab Instructions in Top Pane
   Then I press "hide-toolbox-icon"
   And I see no difference for "toolbox collapsed"
 
-  When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10"
+  When I am on "http://studio.code.org/s/allthethings/lessons/18/levels/10"
   And I wait for the page to fully load
   And I see no difference for "top instructions enabled on instructionless level"
 
-  When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/12"
+  When I am on "http://studio.code.org/s/allthethings/lessons/18/levels/12"
   And I wait for the page to fully load
   And I see no difference for "top instructions enabled on embed level"
   Then I close my eyes

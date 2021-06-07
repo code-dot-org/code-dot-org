@@ -1,5 +1,8 @@
+%link{href: asset_path('css/lessons.css'), rel: 'stylesheet', type: 'text/css'}
 %script{src: webpack_asset_path('js/lessons/show.js'),
         data: {lesson: @lesson_data.to_json}}
+
+= render partial: 'shared/emulate_print_media'
 
 #show-container
 
@@ -9,3 +12,6 @@
     %ul
       - if Rails.application.config.levelbuilder_mode
         %li= link_to "Edit", edit_lesson_path({id: @lesson.id})
+      - else
+        %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", script_lesson_path(@lesson.script, @lesson)).to_s
+

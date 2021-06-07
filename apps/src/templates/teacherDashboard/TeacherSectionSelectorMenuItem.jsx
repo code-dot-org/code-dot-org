@@ -5,20 +5,6 @@ import FontAwesome from './../FontAwesome';
 import color from '../../util/color';
 import {sectionForDropdownShape} from './shapes';
 
-const styles = {
-  item: {
-    height: 28,
-    lineHeight: '28px',
-    width: 270,
-    fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    paddingLeft: 10
-  }
-};
-
 export default class TeacherSectionSelectorMenuItem extends Component {
   static propTypes = {
     section: sectionForDropdownShape,
@@ -43,3 +29,17 @@ export default class TeacherSectionSelectorMenuItem extends Component {
     );
   }
 }
+
+const styles = {
+  item: {
+    height: 28,
+    lineHeight: '28px',
+    width: 270,
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: 10
+  }
+};

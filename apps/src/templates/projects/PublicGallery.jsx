@@ -5,20 +5,6 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import ProjectCardGrid from './ProjectCardGrid';
 
-const styles = {
-  clear: {
-    clear: 'both'
-  },
-  linkBox: {
-    textAlign: 'center',
-    width: '100%',
-    marginTop: 10
-  },
-  link: {
-    display: 'inline-block'
-  }
-};
-
 export const publishedProjectPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
   name: PropTypes.string,
@@ -37,6 +23,7 @@ class PublicGallery extends Component {
 
     // Provided by Redux
     projectLists: PropTypes.shape({
+      special_topic: PropTypes.arrayOf(publishedProjectPropType),
       applab: PropTypes.arrayOf(publishedProjectPropType),
       spritelab: PropTypes.arrayOf(publishedProjectPropType),
       gamelab: PropTypes.arrayOf(publishedProjectPropType),
@@ -91,6 +78,20 @@ class PublicGallery extends Component {
     );
   }
 }
+
+const styles = {
+  clear: {
+    clear: 'both'
+  },
+  linkBox: {
+    textAlign: 'center',
+    width: '100%',
+    marginTop: 10
+  },
+  link: {
+    display: 'inline-block'
+  }
+};
 export default connect(state => ({
   projectLists: state.projects.projectLists
 }))(PublicGallery);

@@ -7,6 +7,46 @@ import styleConstants from '../../styleConstants';
 
 const contentWidth = styleConstants['content-width'];
 
+export default class TeacherResources extends Component {
+  render() {
+    return (
+      <ContentContainer heading={i18n.resources()}>
+        <div style={styles.container}>
+          <ImageResourceCard
+            title={i18n.teacherCommunity()}
+            description={i18n.teacherCommunityDescription()}
+            image="teachercommunity.png"
+            buttonText={i18n.joinCommunity()}
+            link="https://forum.code.org"
+          />
+          <ImageResourceCard
+            title={i18n.professionalLearning()}
+            description={i18n.professionalLearningDescription()}
+            image="professionallearning.png"
+            buttonText={i18n.learnMore()}
+            link="/my-professional-learning"
+          />
+          <ImageResourceCard
+            title={i18n.csJourneys()}
+            callout={i18n.newExclame()}
+            description={i18n.csJourneysDescription()}
+            image="csjourneys.png"
+            buttonText={i18n.learnMore()}
+            link={pegasus('/csjourneys')}
+          />
+          <ImageResourceCard
+            title={i18n.standardsAndFramework()}
+            description={i18n.standardsAndFrameworkDescription()}
+            image="standardsandframework.png"
+            buttonText={i18n.reviewDocuments()}
+            link={pegasus('/lesson_plans')}
+          />
+        </div>
+      </ContentContainer>
+    );
+  }
+}
+
 const styles = {
   container: {
     width: contentWidth,
@@ -15,44 +55,3 @@ const styles = {
     flexWrap: 'wrap'
   }
 };
-
-export default class TeacherResources extends Component {
-  render() {
-    const volunteerUrl = pegasus('/volunteer/local');
-
-    return (
-      <ContentContainer heading={i18n.resources()}>
-        <div style={styles.container}>
-          <ImageResourceCard
-            title={i18n.teacherCommunity()}
-            description={i18n.teacherCommunityDescription()}
-            image="teacher-community"
-            buttonText={i18n.joinCommunity()}
-            link="https://forum.code.org"
-          />
-          <ImageResourceCard
-            title={i18n.professionalLearning()}
-            description={i18n.professionalLearningDescription()}
-            image="professional-learning"
-            buttonText={i18n.learnMore()}
-            link="/my-professional-learning"
-          />
-          <ImageResourceCard
-            title={i18n.standardsAndFramework()}
-            description={i18n.standardsAndFrameworkDescription()}
-            image="standards-framework"
-            buttonText={i18n.reviewDocuments()}
-            link={pegasus('/lesson_plans')}
-          />
-          <ImageResourceCard
-            title={i18n.findGuestSpeaker()}
-            description={i18n.findGuestSpeakerDescription()}
-            image="guest-speaker"
-            buttonText={i18n.inspireStudents()}
-            link={volunteerUrl}
-          />
-        </div>
-      </ContentContainer>
-    );
-  }
-}

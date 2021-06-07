@@ -11,16 +11,26 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    .rtl & {
+      float: right;
+      padding-left: 3px;
+    }
   }
 
   .user_menu_arrow_down,
   .user_menu_arrow_up,
   .create_menu_arrow_down,
-  .create_menu_arrow_up, {
+  .create_menu_arrow_up {
     font-size: 25px;
     margin-top: -3px;
+    .rtl & {
+      float: left;
+    }
+    html[dir='rtl'] & {
+      float: left; 
+      
+    }
   }
-
   .user_options, .create_options, .help_contents {
     position: absolute;
     top: 55px;
@@ -53,7 +63,9 @@
     text-align: left;
     white-space: nowrap;
     padding: 0;
-
+    &[dir = 'rtl']  a {
+      text-align: right;
+    }
     .display_name {
       font-family: $gotham-bold;
       background-color: $charcoal;
@@ -112,7 +124,9 @@
     white-space: nowrap;
     padding: 0;
     right: 0px;
-
+    &[dir = 'rtl']  a {
+      text-align: right;
+    }
     a {
       display: block;
       padding: 10px;
@@ -131,7 +145,7 @@
     .hide-mobile {
       display: none;
     }
-                                                                                              }
+  }
 }
 
 .create_menu {
@@ -154,11 +168,12 @@
     }
     .project_link_box {
       display: block;
-    }
-    .project_link {
-      display: inline-block;
-      padding: 0 10px 0 4px;
-      line-height: 67px;
+    
+      .project_link {
+        display: inline-block;
+        padding: 0 10px 0 4px;
+        line-height: 67px;
+      }
     }
     #view_all_projects {
       height: 70px;

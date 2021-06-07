@@ -5,15 +5,6 @@ import Button from '../Button';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import BaseDialog from '../BaseDialog';
 
-const styles = {
-  buttonStyle: {
-    float: 'right'
-  },
-  dialog: {
-    padding: '20px'
-  }
-};
-
 export default class NoSectionCodeDialog extends React.Component {
   static propTypes = {
     typeClassroom: PropTypes.string,
@@ -59,3 +50,12 @@ export default class NoSectionCodeDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  buttonStyle: {
+    float: 'right'
+  },
+  dialog: {
+    padding: '20px'
+  }
+};

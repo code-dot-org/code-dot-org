@@ -100,6 +100,7 @@ class User < ApplicationRecord
     ops_school
     ops_gender
     using_text_mode
+    using_dark_mode
     last_seen_school_info_interstitial
     has_seen_standards_report_info_dialog
     oauth_refresh_token
@@ -114,6 +115,8 @@ class User < ApplicationRecord
     data_transfer_agreement_kind
     data_transfer_agreement_at
     parent_email_banner_dismissed
+    section_attempts
+    section_attempts_last_reset
   )
 
   # Include default devise modules. Others available are:
@@ -620,6 +623,19 @@ class User < ApplicationRecord
       authentication_id: id,
       data: data
     )
+  end
+
+  # Get information for an SSO provider.
+  # @param [String] type A credential type / provider type.
+  # @returns [AuthenticationOption|Hash|nil] Returns an AuthenticationOption for migrated
+  #   users, a Hash for non-migrated users, or nil if there is no matching credential.
+  def find_credential(type)
+    if migrated?
+      authentication_options.find_by(credential_type: type)
+    else
+      return nil unless provider == type
+      {authentication_id: uid, credential_type: provider}
+    end
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -1232,11 +1248,11 @@ class User < ApplicationRecord
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
 
     if !script_sections.empty?
-      # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
-      # hides the stage
+      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
+      # hides the lesson
       script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
     else
-      # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
+      # if we have no sections matching this script id, we consider a lesson hidden if any of the sections we're in
       # hide it
       sections.any? {|s| script_level.hidden_for_section?(s.id)}
     end
@@ -1263,9 +1279,9 @@ class User < ApplicationRecord
 
   # @return {Hash<string,number[]>|number[]}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
-  #   stage ids for that section.
-  #   For students this will just be a list of stage ids that are hidden for them.
-  def get_hidden_stage_ids(script_name)
+  #   lesson ids for that section.
+  #   For students this will just be a list of lesson ids that are hidden for them.
+  def get_hidden_lesson_ids(script_name)
     script = Script.get_from_cache(script_name)
     return [] if script.nil?
 
@@ -1764,7 +1780,15 @@ class User < ApplicationRecord
       user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
+
       user_level.submitted = submitted
+      # We only lock levels of type LevelGroup
+      # When the student submits an assessment, lock the level so they no
+      # longer have access for the remainder of the autolock period
+      is_level_group = user_level.level.type === 'LevelGroup'
+      if submitted && is_level_group
+        user_level.locked = true
+      end
       if level_source_id && !is_navigator
         user_level.level_source_id = level_source_id
       end
@@ -2261,9 +2285,43 @@ class User < ApplicationRecord
     end
   end
 
+  # Returns number of times a user has attempted to join a section in the last 24 hours
+  # Returns 0 if no section join attempts
+  def num_section_attempts
+    section_attempts || 0
+  end
+
+  # There are two possible states in which we would want to reset section attempts
+  # 1) Initialize for the first time 2) 24 hours have passed since last reset
+  def reset_section_attempts?
+    # subtracting DateTimes returns the difference of days as a floating point number
+    # By casting to an int, we can check whether at least a full day has passed.
+    !section_attempts_last_reset || num_section_attempts == 0 || (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
+  end
+
+  def display_captcha?
+    # If 24 hours has passed since last reset, return false.
+    if section_attempts_last_reset && (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
+      return false
+    else
+      return num_section_attempts >= 3
+    end
+  end
+
+  def increment_section_attempts
+    if reset_section_attempts?
+      self.section_attempts = 0
+      self.section_attempts_last_reset = DateTime.now.to_s
+    end
+    self.section_attempts += 1
+    # users can register while joining a section,
+    # so we should not save section attempts if new user hasn't been persisted
+    save! if persisted?
+  end
+
   private
 
-  def hidden_stage_ids(sections)
+  def hidden_lesson_ids(sections)
     return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
@@ -2272,45 +2330,45 @@ class User < ApplicationRecord
   end
 
   # This method will extract a list of hidden ids by section. The type of ids depends
-  # on the input. If hidden_stages is true, id is expected to be a script id and
-  # we look for stages that are hidden. If hidden_stages is false, id is expected
+  # on the input. If hidden_lessons is true, id is expected to be a script id and
+  # we look for lessons that are hidden. If hidden_lessons is false, id is expected
   # to be a course_id, and we look for hidden scripts.
-  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden scripts.
   # @return {Hash<string,number[]>
-  def get_teacher_hidden_ids(hidden_stages)
+  def get_teacher_hidden_ids(hidden_lessons)
     # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden stages/scripts in that section
+    # a mapping from section id to hidden lessons/scripts in that section
     hidden_by_section = {}
     sections.each do |section|
-      hidden_by_section[section.id] = hidden_stages ? hidden_stage_ids([section]) : hidden_script_ids([section])
+      hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_script_ids([section])
     end
     hidden_by_section
   end
 
   # This method method will go through each of the sections in which we're a member
-  # and determine which stages/scripts should be hidden
-  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  # and determine which lessons/scripts should be hidden
+  # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden scripts.
-  # @return {number[]} Set of stage/script ids that should be hidden
-  def get_student_hidden_ids(assign_id, hidden_stages)
+  # @return {number[]} Set of lesson/script ids that should be hidden
+  def get_student_hidden_ids(assign_id, hidden_lessons)
     sections = sections_as_student
     return [] if sections.empty?
 
     sections = sections.reject(&:hidden)
     assigned_sections = sections.select do |section|
-      hidden_stages ? section.script_id == assign_id : section.course_id == assign_id
+      hidden_lessons ? section.script_id == assign_id : section.course_id == assign_id
     end
 
     if assigned_sections.empty?
-      # if we have no sections matching this assignment, we consider a stage/script
+      # if we have no sections matching this assignment, we consider a lesson/script
       # hidden if any of our sections hides it
-      return (hidden_stages ? hidden_stage_ids(sections) : hidden_script_ids(sections)).uniq
+      return (hidden_lessons ? hidden_lesson_ids(sections) : hidden_script_ids(sections)).uniq
     else
-      # if we do have sections matching this assignment, we consider a stage/script
+      # if we do have sections matching this assignment, we consider a lesson/script
       # hidden only if it is hidden in every one of the sections the student belongs
       # to that match this assignment
-      all_ids = hidden_stages ? hidden_stage_ids(assigned_sections) : hidden_script_ids(assigned_sections)
+      all_ids = hidden_lessons ? hidden_lesson_ids(assigned_sections) : hidden_script_ids(assigned_sections)
 
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys

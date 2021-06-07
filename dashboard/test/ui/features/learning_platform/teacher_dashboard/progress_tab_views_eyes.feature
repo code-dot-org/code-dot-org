@@ -10,9 +10,9 @@ Feature: Using the progress tab of the teacher dashboard
     Given I am assigned to script "coursea-2019"
     Given I am assigned to script "allthethings"
 
-    And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
-    And I complete the free response on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
-    And I submit the assessment on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+    And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
+    And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
 
     # Navigate to Progress tab As Teacher
     When I sign in as "Teacher_Sally" and go home

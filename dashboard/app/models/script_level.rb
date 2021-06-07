@@ -209,7 +209,7 @@ class ScriptLevel < ApplicationRecord
 
   def has_another_level_to_go_to?
     if script.professional_learning_course?
-      !end_of_stage?
+      !end_of_lesson?
     else
       next_progression_level
     end
@@ -256,7 +256,7 @@ class ScriptLevel < ApplicationRecord
     elsif bonus
       # If we got to this bonus level from another lesson's lesson extras, go back
       # to that lesson
-      script_stage_extras_path(script.name, (extras_lesson || lesson).relative_position)
+      script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
     else
       level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
     end
@@ -311,7 +311,7 @@ class ScriptLevel < ApplicationRecord
     # There will initially be no user_level for the assessment level, at which
     # point it is considered locked. As soon as it gets unlocked, we will always
     # have a user_level
-    user_level.nil? || user_level.locked?(lesson)
+    user_level.nil? || user_level.show_as_locked?(lesson)
   end
 
   def previous_level
@@ -320,7 +320,7 @@ class ScriptLevel < ApplicationRecord
     script.script_levels[i - 1]
   end
 
-  def end_of_stage?
+  def end_of_lesson?
     lesson.script_levels.to_a.last == self
   end
 
@@ -435,7 +435,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       # Add a next pointer if it's not the obvious (level+1)
-      if end_of_stage?
+      if end_of_lesson?
         if next_level
           summary[:next] = [next_level.lesson.absolute_position, next_level.position]
         else
@@ -451,17 +451,11 @@ class ScriptLevel < ApplicationRecord
     summary
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(can_view_teacher_markdown)
     summary = summarize
     summary[:id] = id.to_s
-    summary[:levels] = levels.map do |level|
-      {
-        name: level.name,
-        id: level.id.to_s,
-        icon: level.icon,
-        isConceptLevel: level.concept_level?
-      }
-    end
+    summary[:scriptId] = script_id
+    summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
 
@@ -499,16 +493,17 @@ class ScriptLevel < ApplicationRecord
     extra_levels
   end
 
-  def summarize_as_bonus(user_id = nil)
-    perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
+  def summarize_as_bonus
+    localized_level_description = I18n.t(level.name, scope: [:data, :bubble_choice_description], default: level.bubble_choice_description)
+    localized_level_display_name = I18n.t(level.name, scope: [:data, :display_name], default: level.display_name)
     {
       id: id.to_s,
+      level_id: level.id.to_s,
       type: level.type,
-      description: level.try(:bubble_choice_description),
-      display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
+      description: localized_level_description,
+      display_name: localized_level_display_name || I18n.t('lesson_extras.bonus_level'),
       thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
       url: build_script_level_url(self),
-      perfect: perfect,
       maze_summary: {
         map: JSON.parse(level.try(:maze) || '[]'),
         serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
@@ -533,7 +528,7 @@ class ScriptLevel < ApplicationRecord
       {
         # Some lessons have a lesson extras option without any bonus levels. In
         # these cases, they just display previous lesson challenges. These should
-        # be displayed as "perfect." Example level: /s/express-2020/stage/28/extras
+        # be displayed as "perfect." Example level: /s/express-2020/lessons/28/extras
         id: '-1',
         bonus: true,
         user_id: student.id,
@@ -557,7 +552,7 @@ class ScriptLevel < ApplicationRecord
     contained = contained_levels.any?
 
     levels = if bubble_choice?
-               [level.best_result_sublevel(student) || level]
+               [level.best_result_sublevel(student, script) || level]
              elsif contained
                contained_levels
              else
@@ -602,7 +597,7 @@ class ScriptLevel < ApplicationRecord
   end
 
   def summary_for_feedback
-    lesson_num = lesson.lockable ? lesson.absolute_position : lesson.relative_position
+    lesson_num = lesson.numbered_lesson? ? lesson.relative_position : lesson.absolute_position
 
     {
       lessonName: lesson.name,
@@ -641,7 +636,7 @@ class ScriptLevel < ApplicationRecord
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
-  # See comments on ScriptSeed.seed_from_json for more context.
+  # See comments on ScriptSeed.seed_from_hash for more context.
   #
   # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
   # @param [boolean] use_existing_level_keys - If true, use existing information in the level_keys property if available
@@ -709,5 +704,24 @@ class ScriptLevel < ApplicationRecord
       save! if changed?
     end
     self.levels = levels
+  end
+
+  def add_variant(new_level)
+    raise "can only be used on migrated scripts" unless script.is_migrated
+    raise "expected 1 existing level but found: #{levels.map(&:key)}" unless levels.count == 1
+    raise "expected empty variants property but found #{variants}" if variants
+    raise "cannot add variant to non-custom level" unless levels.first.level_num == 'custom'
+    existing_level = levels.first
+
+    levels << new_level
+    update!(
+      level_keys: levels.map(&:key),
+      variants: {
+        existing_level.name => {"active" => false}
+      }
+    )
+    if Rails.application.config.levelbuilder_mode
+      script.write_script_json
+    end
   end
 end

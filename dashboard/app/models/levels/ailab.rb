@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -31,6 +31,7 @@ class Ailab < Level
     is_project_level
     submittable
     mode
+    dynamic_instructions
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -75,6 +76,7 @@ class Ailab < Level
   def self.json_object_attrs
     %w(
       mode
+      dynamic_instructions
     ).map {|x| x.camelize(:lower)}
   end
 end

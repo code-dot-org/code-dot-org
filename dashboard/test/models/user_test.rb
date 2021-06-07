@@ -3608,11 +3608,11 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
 
-    section1 = create :section, stage_extras: true, script_id: script.id, user: teacher
+    section1 = create :section, lesson_extras: true, script_id: script.id, user: teacher
     section1.add_student(student)
-    section2 = create :section, stage_extras: true, script_id: script.id, user: teacher
+    section2 = create :section, lesson_extras: true, script_id: script.id, user: teacher
     section2.add_student(student)
-    section3 = create :section, stage_extras: true, script_id: other_script.id
+    section3 = create :section, lesson_extras: true, script_id: other_script.id
     section3.add_student(teacher)
 
     assert student.lesson_extras_enabled?(script)
@@ -3758,7 +3758,7 @@ class UserTest < ActiveSupport::TestCase
       hide_lessons_in_sections(section1, section2)
 
       # when attached to script, we should hide only if hidden in every section
-      assert_equal [@lesson1.id], student.get_hidden_stage_ids(@script.name)
+      assert_equal [@lesson1.id], student.get_hidden_lesson_ids(@script.name)
 
       # validate script_level_hidden? gives same result
       assert_equal true, student.script_level_hidden?(@lesson1.script_levels.first)
@@ -3820,7 +3820,7 @@ class UserTest < ActiveSupport::TestCase
       hide_lessons_in_sections(section1, section2)
 
       # when not attached to script, we should hide when hidden in any section
-      assert_equal [@lesson1.id, @lesson2.id, @lesson3.id], student.get_hidden_stage_ids(@script.name)
+      assert_equal [@lesson1.id, @lesson2.id, @lesson3.id], student.get_hidden_lesson_ids(@script.name)
 
       # validate script_level_hidden? gives same result
       assert_equal true, student.script_level_hidden?(@lesson1.script_levels.first)
@@ -3850,7 +3850,7 @@ class UserTest < ActiveSupport::TestCase
       hide_lessons_in_sections(attached_section, unattached_section)
 
       # only the lessons hidden in the attached section are considered hidden
-      assert_equal [@lesson1.id, @lesson2.id], student.get_hidden_stage_ids(@script.name)
+      assert_equal [@lesson1.id, @lesson2.id], student.get_hidden_lesson_ids(@script.name)
 
       # validate script_level_hidden? gives same result
       assert_equal true, student.script_level_hidden?(@lesson1.script_levels.first)
@@ -3873,7 +3873,7 @@ class UserTest < ActiveSupport::TestCase
     test "user in no sections" do
       student = create :student
 
-      assert_equal [], student.get_hidden_stage_ids(@script.name)
+      assert_equal [], student.get_hidden_lesson_ids(@script.name)
     end
 
     test "teacher gets hidden lessons for sections they own" do
@@ -3900,7 +3900,7 @@ class UserTest < ActiveSupport::TestCase
         teacher_owner_section.id => [@lesson1.id],
         teacher_owner_section2.id => [@lesson1.id, @lesson2.id]
       }
-      assert_equal expected, teacher.get_hidden_stage_ids(@script.id)
+      assert_equal expected, teacher.get_hidden_lesson_ids(@script.id)
     end
 
     test "teacher gets hidden scripts for sections they own" do
@@ -4195,6 +4195,27 @@ class UserTest < ActiveSupport::TestCase
       )
   end
 
+  test 'find_credential returns matching AuthenticationOption if one exists for migrated user' do
+    user = create :user, :google_sso_provider
+    assert_equal user.authentication_options.first, user.find_credential(AuthenticationOption::GOOGLE)
+  end
+
+  test 'find_credential returns nil if no matching AuthenticationOption for migrated user' do
+    user = create :user, :clever_sso_provider
+    assert_nil user.find_credential(AuthenticationOption::GOOGLE)
+  end
+
+  test 'find_credential returns matching hash for non-migrated user if provider matches' do
+    user = create :user, :google_sso_provider, :demigrated
+    expected_cred = {credential_type: AuthenticationOption::GOOGLE, authentication_id: user.uid}
+    assert_equal expected_cred, user.find_credential(AuthenticationOption::GOOGLE)
+  end
+
+  test 'find_credential returns nil for non-migrated user if provider does not match' do
+    user = create :user, :demigrated
+    assert_nil user.find_credential(AuthenticationOption::GOOGLE)
+  end
+
   test 'not depended_upon_for_login? for student' do
     student = create :student
     refute student.depended_upon_for_login?
@@ -4441,5 +4462,27 @@ class UserTest < ActiveSupport::TestCase
 
       assert migrated_teacher.reload.admin?
     end
+  end
+
+  test 'display_captcha returns false for new user with uninitialized section attempts hash' do
+    user = create :user
+    assert_equal false, user.display_captcha?
+  end
+
+  test 'section attempts last reset value resets if more than 24 hours has passed' do
+    user = create :user
+    user.properties = {'section_attempts': 5, 'section_attempts_last_reset': DateTime.now - 1}
+    # invoking display_captcha? will return false without causing section_attempts values to be reset
+    assert_equal false, user.display_captcha?
+    # now we mimic joining a section, which should reset attempts and then increment
+    user.increment_section_attempts
+    user.reload
+    assert_equal 1, user.num_section_attempts
+  end
+
+  test 'section attempts value increments if less than 24 hours has passed' do
+    user = create :user
+    user.increment_section_attempts
+    assert_equal 1, user.properties['section_attempts']
   end
 end

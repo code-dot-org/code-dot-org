@@ -63,7 +63,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
           gender: student["gender"],
           sharing_disabled: !!student["sharing_disabled"],
         )
-        @section.add_student(new_student)
+        @section.add_student(new_student, current_user)
         new_students.push(new_student.summarize)
       rescue ActiveRecord::RecordInvalid => e
         errors << e.message

@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -64,5 +64,13 @@ class Multi < Match
       question_text = properties['markdown']
     end
     return question_text
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        questionText: get_question_text
+      }
+    )
   end
 end

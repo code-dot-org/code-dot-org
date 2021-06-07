@@ -1254,6 +1254,12 @@ pt-PT:
   coursed-2019_gradelevel: Notas 8+
   coursee-2019_gradelevel: Dos 8 aos 12 anos
   coursef-2019_gradelevel: Idades 9-13
+  coursea-2020_gradelevel: Idades 4-7
+  courseb-2020_gradelevel: Idades 5-8
+  coursec-2020_gradelevel: Idades 6-10
+  coursed-2020_gradelevel: Notas 8+
+  coursee-2020_gradelevel: Dos 8 aos 12 anos
+  coursef-2020_gradelevel: Idades 9-13
   accelerated_gradelevel: Dos 10 aos 18 anos
   codeorg_platformtext: Navegadores modernos, smartphones e tablets
   codeintl_platformtext: Navegadores modernos, smartphones e tablets
@@ -1958,3 +1964,11 @@ pt-PT:
     inicial.
   footer_powered_by_aws: Powered by Amazon Web Services
   codebytes_skinny_banner_english_only: Apenas em inglês
+  footer_privacy_policy: Política de privacidade
+  footer_about: Sobre
+  footer_partners: Parceiros
+  footer_donate: Doar
+  footer_support: Suporte
+  footer_terms: Termos
+  ai_activity: Actividade
+  ai_description: Descrição

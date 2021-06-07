@@ -14,22 +14,6 @@ const menuItemWidth = _(columnWidths)
   .reduce(_.add);
 const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
 
-const styles = {
-  version: {
-    display: 'inline-block',
-    marginTop: 4
-  },
-  dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  popUpMenuStyle: {
-    // must appear in front of .modal from application.scss
-    zIndex: 1051,
-    maxWidth: null,
-    width: menuWidth
-  }
-};
-
 /**
  * Given an array of versions, return that array with the same versions, plus
  * isRecommended and isSelected properties set on the recommended and selected version(s).
@@ -189,3 +173,19 @@ export default class AssignmentVersionSelector extends Component {
     );
   }
 }
+
+const styles = {
+  version: {
+    display: 'inline-block',
+    marginTop: 4
+  },
+  dropdownLabel: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  popUpMenuStyle: {
+    // must appear in front of .modal from application.scss
+    zIndex: 1051,
+    maxWidth: null,
+    width: menuWidth
+  }
+};

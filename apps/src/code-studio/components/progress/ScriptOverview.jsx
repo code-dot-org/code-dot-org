@@ -14,8 +14,9 @@ import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherS
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
-import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
   onDismissRedirectDialog,
   dismissedRedirectDialog
@@ -24,10 +25,12 @@ import {
   assignmentVersionShape,
   sectionForDropdownShape
 } from '@cdo/apps/templates/teacherDashboard/shapes';
+import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
+import UnitCalendar from './UnitCalendar';
 
 /**
- * Stage progress component used in level header and script overview.
+ * Lesson progress component used in level header and script overview.
  */
 class ScriptOverview extends React.Component {
   static propTypes = {
@@ -35,7 +38,9 @@ class ScriptOverview extends React.Component {
     courseId: PropTypes.number,
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
-    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(migratedResourceShape),
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
     redirectScriptUrl: PropTypes.string,
@@ -45,9 +50,15 @@ class ScriptOverview extends React.Component {
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
     minimal: PropTypes.bool,
+    unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
+    weeklyInstructionalMinutes: PropTypes.number,
+    showCalendar: PropTypes.bool,
+    isMigrated: PropTypes.bool,
+    scriptOverviewPdfUrl: PropTypes.string,
+    scriptResourcesPdfUrl: PropTypes.string,
 
     // redux provided
-    perLevelProgress: PropTypes.object.isRequired,
+    perLevelResults: PropTypes.object.isRequired,
     scriptCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -57,7 +68,7 @@ class ScriptOverview extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     currentCourseId: PropTypes.number,
-    hiddenStageState: PropTypes.object,
+    hiddenLessonState: PropTypes.object,
     selectedSectionId: PropTypes.number,
     userId: PropTypes.number
   };
@@ -83,7 +94,9 @@ class ScriptOverview extends React.Component {
       onOverviewPage,
       excludeCsfColumnInLegend,
       teacherResources,
-      perLevelProgress,
+      migratedTeacherResources,
+      studentResources,
+      perLevelResults,
       scriptCompleted,
       scriptId,
       scriptName,
@@ -98,13 +111,19 @@ class ScriptOverview extends React.Component {
       showRedirectWarning,
       redirectScriptUrl,
       versions,
-      hiddenStageState,
+      hiddenLessonState,
       selectedSectionId,
       courseName,
       showAssignButton,
       userId,
       assignedSectionId,
-      minimal
+      minimal,
+      showCalendar,
+      weeklyInstructionalMinutes,
+      unitCalendarLessons,
+      isMigrated,
+      scriptOverviewPdfUrl,
+      scriptResourcesPdfUrl
     } = this.props;
 
     const displayRedirectDialog =
@@ -113,14 +132,14 @@ class ScriptOverview extends React.Component {
     let scriptProgress = NOT_STARTED;
     if (scriptCompleted) {
       scriptProgress = COMPLETED;
-    } else if (Object.keys(perLevelProgress).length > 0) {
+    } else if (Object.keys(perLevelResults).length > 0) {
       scriptProgress = IN_PROGRESS;
     }
 
     const isHiddenUnit =
       !!selectedSectionId &&
       !!scriptId &&
-      isScriptHiddenForSection(hiddenStageState, selectedSectionId, scriptId);
+      isScriptHiddenForSection(hiddenLessonState, selectedSectionId, scriptId);
 
     return (
       <div>
@@ -144,6 +163,15 @@ class ScriptOverview extends React.Component {
               courseName={courseName}
               userId={userId}
             />
+            {showCalendar && viewAs === ViewType.Teacher && (
+              <div className="unit-calendar-for-printing print-only">
+                <UnitCalendar
+                  lessons={unitCalendarLessons}
+                  weeklyInstructionalMinutes={weeklyInstructionalMinutes || 225}
+                  weekWidth={550}
+                />
+              </div>
+            )}
             <ScriptOverviewTopRow
               sectionsForDropdown={sectionsForDropdown}
               selectedSectionId={parseInt(selectedSectionId)}
@@ -155,9 +183,17 @@ class ScriptOverview extends React.Component {
               currentCourseId={currentCourseId}
               viewAs={viewAs}
               isRtl={isRtl}
-              resources={teacherResources}
+              teacherResources={teacherResources}
+              migratedTeacherResources={migratedTeacherResources}
+              studentResources={studentResources}
               showAssignButton={showAssignButton}
               assignedSectionId={assignedSectionId}
+              showCalendar={showCalendar}
+              weeklyInstructionalMinutes={weeklyInstructionalMinutes}
+              unitCalendarLessons={unitCalendarLessons}
+              isMigrated={isMigrated}
+              scriptOverviewPdfUrl={scriptOverviewPdfUrl}
+              scriptResourcesPdfUrl={scriptResourcesPdfUrl}
             />
           </div>
         )}
@@ -173,7 +209,7 @@ class ScriptOverview extends React.Component {
 
 export const UnconnectedScriptOverview = Radium(ScriptOverview);
 export default connect((state, ownProps) => ({
-  perLevelProgress: state.progress.levelProgress,
+  perLevelResults: state.progress.levelResults,
   scriptCompleted: !!state.progress.scriptCompleted,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
@@ -182,7 +218,7 @@ export default connect((state, ownProps) => ({
   viewAs: state.viewAs,
   isRtl: state.isRtl,
   currentCourseId: state.progress.courseId,
-  hiddenStageState: state.hiddenStage,
+  hiddenLessonState: state.hiddenLesson,
   selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,

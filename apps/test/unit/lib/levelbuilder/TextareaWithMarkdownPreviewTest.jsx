@@ -1,6 +1,6 @@
 import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import sinon from 'sinon';
 
@@ -18,25 +18,22 @@ describe('TextareaWithMarkdownPreview', () => {
   });
 
   it('has correct markdown for preview of unit description', () => {
-    const wrapper = mount(<TextareaWithMarkdownPreview {...defaultProps} />);
+    const wrapper = shallow(<TextareaWithMarkdownPreview {...defaultProps} />);
     expect(wrapper.contains('Section Name')).to.be.true;
-    expect(wrapper.find('textarea').length).to.equal(1);
-    expect(wrapper.find('textarea').prop('value')).to.equal(
+    expect(wrapper.find('MarkdownEnabledTextarea').length).to.equal(1);
+    expect(wrapper.find('MarkdownEnabledTextarea').props().markdown).to.equal(
       '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
-    expect(wrapper.find('SafeMarkdown').length).to.equal(1);
-    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+    expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(1);
+    expect(wrapper.find('EnhancedSafeMarkdown').prop('markdown')).to.equal(
       '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
 
     expect(wrapper.find('HelpTip').length).to.equal(1);
-
-    wrapper.find('textarea').simulate('change', {target: {value: '## Title'}});
-    expect(handleMarkdownChange).to.have.been.calledOnce;
   });
 
   it('has no HelpTip if none passed in to props', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <TextareaWithMarkdownPreview {...defaultProps} helpTip={null} />
     );
 

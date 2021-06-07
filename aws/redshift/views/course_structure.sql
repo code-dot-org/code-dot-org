@@ -12,7 +12,7 @@ select
   sc.name script_name, 
   st.id stage_id, 
   st.name stage_name, 
-  case when lockable = 1 then st.absolute_position else st.relative_position end stage_number, 
+  case when lockable = 1 AND has_lesson_plan = 0 then st.absolute_position else st.relative_position end stage_number,
   lsl.level_id, 
   le.name level_name, 
   sl.position as level_number,

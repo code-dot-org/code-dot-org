@@ -1,61 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import _ from 'lodash';
+
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import color from '@cdo/apps/util/color';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import _ from 'lodash';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  },
-  container: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  dropdownRow: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  inputAndLabel: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  textInput: {
-    width: '98%'
-  },
-  selectAndLabel: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '45%'
-  },
-  selectInput: {
-    width: '100%'
-  },
-  checkboxInput: {
-    marginTop: 0,
-    marginLeft: 10
-  },
-  submitButton: {
-    color: 'white',
-    backgroundColor: color.orange,
-    borderColor: color.orange,
-    borderRadius: 3,
-    fontSize: 12,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 5,
-    paddingBottom: 5
-  }
-};
+import LessonEditorDialog from './LessonEditorDialog';
 
 const TYPE_OPTIONS = [
   'Activity Guide',
@@ -171,11 +123,9 @@ export default class AddResourceDialog extends Component {
 
   render() {
     return (
-      <BaseDialog
+      <LessonEditorDialog
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
-        useUpdatedStyles
-        style={styles.dialog}
       >
         <h2>
           {this.props.existingResource ? 'Edit Resource' : 'Add Resource'}
@@ -291,7 +241,51 @@ export default class AddResourceDialog extends Component {
             />
           </DialogFooter>
         </form>
-      </BaseDialog>
+      </LessonEditorDialog>
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  dropdownRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  inputAndLabel: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  textInput: {
+    width: '98%'
+  },
+  selectAndLabel: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '45%'
+  },
+  selectInput: {
+    width: '100%'
+  },
+  checkboxInput: {
+    marginTop: 0,
+    marginLeft: 10
+  },
+  submitButton: {
+    color: 'white',
+    backgroundColor: color.orange,
+    borderColor: color.orange,
+    borderRadius: 3,
+    fontSize: 12,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontWeight: 'bold',
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 5,
+    paddingBottom: 5
+  }
+};

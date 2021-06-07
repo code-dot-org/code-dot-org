@@ -1,4 +1,4 @@
-lesson 'reference', display_name: 'reference'
+lesson 'reference', display_name: 'reference', has_lesson_plan: false
 level 'PDK5 Intro C'
 level '2-3'
 level 'PDK5 Visual Languages'

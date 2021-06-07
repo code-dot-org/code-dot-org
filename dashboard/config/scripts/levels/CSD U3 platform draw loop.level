@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Draw Loop\r\n\r\nOnce you have functions that can draw what you want, you can put them inside a draw loop.\r\n\r\n# Do This\r\n\r\n* Add the `function draw() {}` (draw loop) block into the workspace.\r\n* Inside the draw loop, use an `if` block to choose the correct background function to use [Remind me how](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/13/puzzle/10)\r\n* After the if statement, use the function you wrote to display the current information\r\n* Test your code by changing the starting value of your variables and running it to see whether the correct information and background are drawn.",
+    "long_instructions": "# Draw Loop\r\n\r\nOnce you have functions that can draw what you want, you can put them inside a draw loop.\r\n\r\n# Do This\r\n\r\n* Add the `function draw() {}` (draw loop) block into the workspace.\r\n* Inside the draw loop, use an `if` block to choose the correct background function to use [Remind me how](https://levelbuilder-studio.code.org/s/CSDU3-Draft/lessons/13/levels/10)\r\n* After the if statement, use the function you wrote to display the current information\r\n* Test your code by changing the starting value of your variables and running it to see whether the correct information and background are drawn.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

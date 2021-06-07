@@ -66,6 +66,7 @@ import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import * as makerToolkitRedux from '../lib/kits/maker/redux';
 import project from '../code-studio/initApp/project';
@@ -86,6 +87,7 @@ import {setExportGeneratedProperties} from '../code-studio/components/exportDial
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
+import autogenerateML from '@cdo/apps/applab/ai';
 
 /**
  * Create a namespace for the application.
@@ -147,15 +149,7 @@ function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
-
-  // Historically, appWidth and appHeight were customizable on a per level basis.
-  // This led to lots of hackery in the code to properly scale the visualization
-  // area. Width/height are now constant, but much of the hackery still remains
-  // since I don't understand it well enough.
-  Applab.appWidth = level.widgetMode
-    ? applabConstants.WIDGET_WIDTH
-    : applabConstants.APP_WIDTH;
-
+  Applab.appWidth = applabConstants.getAppWidth(level);
   Applab.appHeight = applabConstants.APP_HEIGHT;
 
   // In share mode we need to reserve some number of pixels for our in-app
@@ -467,9 +461,17 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
-  var showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
-  var breakpointsEnabled = !config.level.debuggerDisabled;
-  var showDebugConsole = !config.hideSource;
+  const showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
+  const breakpointsEnabled = !config.level.debuggerDisabled;
+  const showDebugConsole = !config.hideSource;
+  const nonLevelbuilderWidgetMode =
+    config.level.widgetMode && !config.isStartMode;
+  const hasDesignMode = !(
+    config.level.hideDesignMode || nonLevelbuilderWidgetMode
+  );
+  const hasDataMode = !(
+    config.level.hideViewDataButton || config.level.widgetMode
+  );
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
@@ -611,6 +613,12 @@ Applab.init = function(config) {
 
   Applab.handleVersionHistory = studioApp().getVersionHistoryHandler(config);
 
+  // Skip onAttempt for levelbuilders in start mode. This method sends a progress report
+  // to the server and breaks the levelbuilder's start code in AppLab.
+  if (config.isStartMode) {
+    delete config.onAttempt;
+  }
+
   var onMount = function() {
     studioApp().init(config);
 
@@ -669,13 +677,16 @@ Applab.init = function(config) {
     ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: !(config.level.hideViewDataButton || config.level.widgetMode),
-    hasDesignMode: !(config.level.hideDesignMode || config.level.widgetMode),
+    hasDataMode,
+    hasDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
     librariesEnabled: !!config.level.librariesEnabled,
+    aiEnabled: !!config.level.aiEnabled,
+    aiModelId: config.level.aiModelId,
+    aiModelName: config.level.aiModelName,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
@@ -689,6 +700,13 @@ Applab.init = function(config) {
   });
 
   config.dropletConfig = dropletConfig;
+
+  if (config.level.aiEnabled && experiments.isEnabled(experiments.APPLAB_ML)) {
+    config.dropletConfig = utils.deepMergeConcatArrays(
+      config.dropletConfig,
+      aiConfig
+    );
+  }
 
   if (config.level.makerlabEnabled) {
     makerToolkit.enable();
@@ -973,7 +991,8 @@ Applab.render = function() {
     isEditingProject: project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen,
-    handleVersionHistory: Applab.handleVersionHistory
+    handleVersionHistory: Applab.handleVersionHistory,
+    autogenerateML: autogenerateML
   });
   ReactDOM.render(
     <Provider store={getStore()}>

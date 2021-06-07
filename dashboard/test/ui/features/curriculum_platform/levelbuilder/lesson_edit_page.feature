@@ -3,9 +3,29 @@
 @no_mobile
 
 Feature: Using the Lesson Edit Page
+  Scenario: Save changes using the lesson edit page for lesson without lesson plan
+    Given I create a levelbuilder named "Levi"
+    And I create a temp migrated script with lessons
+    And I view the temp lesson edit page for lesson without lesson plan
+
+    # Match the text 'Editing Lesson "Temp Lesson"'
+    And element "h1" contains text "Editing Lesson"
+    And element "h1" contains text "Temp Lesson Without Lesson Plan"
+
+    And I wait until element ".uitest-activity-card" is visible
+    And element ".uitest-open-add-level-button" is visible
+    And element ".progress-bubble" is not visible
+
+    And I click "button[type='submit']" to load a new page
+
+    # Navigates to script overview page
+    And I wait until element "#script-title" is visible
+
+    And I delete the temp script with lessons
+
   Scenario: Save changes using the lesson edit page
     Given I create a levelbuilder named "Levi"
-    And I create a temp migrated script and lesson
+    And I create a temp migrated script with lessons
     And I view the temp lesson edit page
 
     # Match the text 'Editing Lesson "Temp Lesson"'
@@ -28,16 +48,16 @@ Feature: Using the Lesson Edit Page
     And element ".uitest-activity-name-input" has value "Temp Activity"
     And element ".uitest-activity-duration-input" has value "15"
 
-    And I delete the temp script and lesson
+    And I delete the temp script with lessons
 
   Scenario: Add a level using the lesson edit page
     Given I create a levelbuilder named "Levi"
-    And I create a temp migrated script and lesson
+    And I create a temp migrated script with lessons
     And I view the temp lesson edit page
     And I wait until element ".uitest-activity-card" is visible
     And element ".uitest-open-add-level-button" is visible
-    And element ".uitest-bubble" contains text "1"
-    And element ".uitest-bubble" does not contain text "2"
+    And element ".progress-bubble" contains text "1"
+    And element ".progress-bubble" does not contain text "2"
 
     # Open the Add Level dialog, search for an artist level and add the first one
 
@@ -60,20 +80,20 @@ Feature: Using the Lesson Edit Page
     And I wait until element "h2" does not contain text "Add Levels"
 
     # Verify lesson editor updated
-    Then element ".uitest-bubble" contains text "1"
-    And element ".uitest-bubble" contains text "2"
+    Then element ".progress-bubble" contains text "1"
+    And element ".progress-bubble" contains text "2"
     And element ".uitest-level-token-name" contains text "Standalone_Artist_1"
 
     # Verify lesson overview updated
     When I click "button[type='submit']" to load a new page
     And I wait until element "#show-container" is visible
-    And I wait until element ".uitest-bubble" contains text "1"
-    Then element ".uitest-bubble" contains text "2"
+    And I wait until element ".progress-bubble" contains text "1"
+    Then element ".progress-bubble" contains text "2"
 
   @no_firefox
   Scenario: Update script level properties
     Given I create a levelbuilder named "Levi"
-    And I create a temp migrated script and lesson
+    And I create a temp migrated script with lessons
     And I view the temp lesson edit page
     And I wait until element ".uitest-activity-card" is visible
     And element ".uitest-level-token-name" is visible

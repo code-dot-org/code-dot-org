@@ -128,6 +128,15 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal "section_notfound", returned_json['result']
   end
 
+  test "join with a restricted section code" do
+    student = create :student
+    sign_in student
+    section = create(:section, login_type: 'email', restrict_section: true)
+    post :join, params: {id: section.code}
+    assert_response :forbidden
+    assert_equal "section_restricted", returned_json['result']
+  end
+
   test "join with nobody signed in" do
     post :join, params: {id: @section.code}
     assert_response 404

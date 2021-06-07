@@ -826,6 +826,8 @@ ca-ES:
   coursee-2018_gradelevel: Edats 8-12
   coursed-2019_gradelevel: Qualificacions 8+
   coursee-2019_gradelevel: Edats 8-12
+  coursed-2020_gradelevel: Qualificacions 8+
+  coursee-2020_gradelevel: Edats 8-12
   accelerated_gradelevel: Edat 10 + (després del curs 3)
   codeorg_platformtext: Navegadors moderns, mòbils i tablets
   codeintl_platformtext: Navegadors moderns, mòbils i tablets
@@ -1573,3 +1575,12 @@ ca-ES:
   hoc2018_dance_measure_colon: 'Mesure:'
   hoc2018_mc_with_microsoft: En associació amb
   footer_powered_by_aws: Funciona amb Amazon Web Services
+  footer_privacy_policy: Política de privadesa
+  footer_about: Quant a
+  footer_partners: Socis
+  footer_donate: Feu una donació
+  footer_support: Suport
+  footer_terms: Condicions
+  ai_in_partnership_with: En associació amb
+  ai_activity: Activitat
+  ai_description: Descripció

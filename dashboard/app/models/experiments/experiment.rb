@@ -47,64 +47,6 @@ class Experiment < ApplicationRecord
     platformization-partners
   )
 
-  PILOT_EXPERIMENTS = [
-    {
-      name: 'csd-piloters',
-      label: 'CSD Pilot',
-      allow_joining_via_url: true
-    },
-    {
-      name: 'csp-piloters',
-      label: 'CSP Pilot',
-      allow_joining_via_url: false
-    },
-    {
-      name: '20-21-virtual-AYW-CSD',
-      label: 'For facilitators in virtual academic year workshops for CSD',
-      allow_joining_via_url: true
-    },
-    {
-      name: '20-21-virtual-AYW-CSP',
-      label: 'For facilitators in virtual academic year workshops for CSP',
-      allow_joining_via_url: true
-    },
-    {
-      name: 'csp-preview',
-      label: 'CSP Preview',
-      allow_joining_via_url: true
-    },
-    {
-      name: 'csp-2020-access',
-      label: 'CSP 2020 Access',
-      allow_joining_via_url: true
-    },
-    {
-      name: 'denny-science-piloters',
-      label: 'Denny Science Pilot',
-      allow_joining_via_url: true
-    },
-    {
-      name: 'time4cs-control',
-      label: 'Broward Time4CS control group',
-      allow_joining_via_url: true
-    },
-    {
-      name: 'time4cs-experiment',
-      label: 'Broward Time4CS experiment group',
-      allow_joining_via_url: true
-    },
-    {
-      name: 'csf-2021-pilot',
-      label: 'CSF 2021 Pilot',
-      allow_joining_via_url: false
-    },
-    {
-      name: 'csd-2021-preview',
-      label: 'CSD 2021 Preview',
-      allow_joining_via_url: true
-    }
-  ]
-
   def self.get_editor_experiment(user)
     LEVEL_EDITOR_EXPERIMENTS.find do |experiment|
       Experiment.enabled?(user: user, experiment_name: experiment)

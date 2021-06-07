@@ -7,7 +7,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script, name: 'unit-1'
+    @script = create :script, name: 'unit-1', is_migrated: true
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
@@ -16,11 +16,16 @@ class LessonsTest < ActionDispatch::IntegrationTest
       name: 'lesson display name',
       relative_position: 1,
       absolute_position: 1,
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
       }
     )
+    standard = create :standard, description: 'Standard Description'
+    @lesson.standards = [standard]
+    standard = create :standard, description: 'Opportunity Standard Description'
+    @lesson.opportunity_standards = [standard]
 
     @lesson2 = create(
       :lesson,
@@ -28,7 +33,8 @@ class LessonsTest < ActionDispatch::IntegrationTest
       lesson_group: lesson_group,
       name: 'second lesson',
       relative_position: 2,
-      absolute_position: 2
+      absolute_position: 2,
+      has_lesson_plan: true
     )
 
     @activity = create(
@@ -68,14 +74,16 @@ class LessonsTest < ActionDispatch::IntegrationTest
   end
 
   test 'lesson show page contains expected data' do
-    get lesson_path(id: @lesson.id)
+    get script_lesson_path(@lesson.script, @lesson)
     assert_response :success
     assert_select 'script[data-lesson]', 1
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
     assert_equal 'lesson overview', lesson_data['overview']
     assert_equal '/s/unit-1', lesson_data['unit']['link']
-    assert_equal lesson_path(id: @lesson.id), lesson_data['unit']['lessons'][0]['link']
-    assert_equal lesson_path(id: @lesson2.id), lesson_data['unit']['lessons'][1]['link']
+    assert_equal script_lesson_path(@lesson.script, @lesson), lesson_data['unit']['lessonGroups'][0]['lessons'][0]['link']
+    assert_equal script_lesson_path(@lesson2.script, @lesson2), lesson_data['unit']['lessonGroups'][0]['lessons'][1]['link']
+    assert_equal 'Standard Description', lesson_data['standards'][0]['description']
+    assert_equal 'Opportunity Standard Description', lesson_data['opportunityStandards'][0]['description']
   end
 
   test 'lesson edit page contains expected data' do

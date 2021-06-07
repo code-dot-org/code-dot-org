@@ -185,6 +185,7 @@ ta-IN:
   coursed-2017_gradelevel: தரம் 8+
   coursed-2018_gradelevel: தரம் 8+
   coursed-2019_gradelevel: தரம் 8+
+  coursed-2020_gradelevel: தரம் 8+
   lightbot_beyond_gradelevel: அனைத்து வயதினரும்
   flappy_shortcode: flap
   header_courses: பாடங்கள்
@@ -213,3 +214,7 @@ ta-IN:
   hoc2018_dance_party_button: தொடங்குக
   hoc2018_dance_video2: நடன விருந்து - நிகழ்வுகள்
   hoc2018_dance_video3: நடன விருந்து - பண்புகள்
+  footer_privacy_policy: தனியுரிமை கொள்கை
+  footer_about: பற்றி
+  ai_activity: செயல்பாடுகள்
+  ai_description: விளக்கம்

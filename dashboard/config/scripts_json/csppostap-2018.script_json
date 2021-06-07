@@ -91,6 +91,7 @@
     },
     "new_name": null,
     "family_name": "csppostap",
+    "serialized_at": "2021-05-03 23:55:24 UTC",
     "seeding_key": {
       "script.name": "csppostap-2018"
     }
@@ -139,6 +140,7 @@
       "name": "Intro to Data",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -153,6 +155,7 @@
       "name": "Good and Bad Data Visualizations",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -167,6 +170,7 @@
       "name": "Making Data Visualizations",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -181,6 +185,7 @@
       "name": "Discover a Data Story",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -195,6 +200,7 @@
       "name": "Cleaning Data",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -209,6 +215,7 @@
       "name": "Creating Summary Tables",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -223,6 +230,7 @@
       "name": "Project - Tell a Data Story",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -237,6 +245,7 @@
       "name": "Chapter 1 Assessment",
       "absolute_position": 8,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -251,6 +260,7 @@
       "name": "Creating Javascript Objects",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -265,6 +275,7 @@
       "name": "Permanent Data Storage",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -279,6 +290,7 @@
       "name": "Reading Records",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -293,6 +305,7 @@
       "name": "Deleting Records",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -307,6 +320,7 @@
       "name": "Updating Records",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
       },
@@ -321,6 +335,7 @@
       "name": "Importing and Exporting Data",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
       },
@@ -335,6 +350,7 @@
       "name": "Visualizing Data",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
       },
@@ -349,6 +365,7 @@
       "name": "Sample Apps",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
       },
@@ -363,6 +380,7 @@
       "name": "Final Project",
       "absolute_position": 17,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
       },
@@ -377,6 +395,7 @@
       "name": "CS Principles Post-Course Survey",
       "absolute_position": 18,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
       },
@@ -387,15 +406,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L07 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L07 SFLP"
@@ -411,12 +440,16 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-3-levelgroup-U2Ch2_2018"
+        ],
         "progression": "Quick Check-In"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pulse-check-survey-3-levelgroup-U2Ch2_2018"
@@ -432,11 +465,15 @@
     {
       "chapter": 3,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L10 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L10 SFLP"
@@ -452,12 +489,16 @@
     {
       "chapter": 4,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collection A: Good and Bad Visualizations_2018"
+        ],
         "progression": "Collection A: Good and Bad Visualizations"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Collection A: Good and Bad Visualizations_2018"
@@ -473,12 +514,16 @@
     {
       "chapter": 5,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collection B: Good and Bad Visualizations_2018"
+        ],
         "progression": "Collection B: Good and Bad Visualizations"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Collection B: Good and Bad Visualizations_2018"
@@ -494,12 +539,16 @@
     {
       "chapter": 6,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L10 FR why best worst viz_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L10 FR why best worst viz_2018"
@@ -515,11 +564,15 @@
     {
       "chapter": 7,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L11 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L11 SFLP"
@@ -535,12 +588,16 @@
     {
       "chapter": 8,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Downloading the Data Set_2018"
+        ],
         "progression": "Downloading the Data Set"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Downloading the Data Set_2018"
@@ -556,12 +613,16 @@
     {
       "chapter": 9,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Scatter Plot_2018"
+        ],
         "progression": "Making a Scatter Plot"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Making a Scatter Plot_2018"
@@ -577,12 +638,16 @@
     {
       "chapter": 10,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Line Chart_2018"
+        ],
         "progression": "Making a Line Chart"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Making a Line Chart_2018"
@@ -598,12 +663,16 @@
     {
       "chapter": 11,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Bar Chart_2018"
+        ],
         "progression": "Making a Bar Chart"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Making a Bar Chart_2018"
@@ -619,12 +688,16 @@
     {
       "chapter": 12,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Editing Chart Appearance_2018"
+        ],
         "progression": "Editing Chart Appearance"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Editing Chart Appearance_2018"
@@ -640,12 +713,16 @@
     {
       "chapter": 13,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Free Play_2018"
+        ],
         "progression": "Making Data Visualizations - Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Free Play_2018"
@@ -661,12 +738,16 @@
     {
       "chapter": 14,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L10 FR describe what you made from lesson prompt_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L10 FR describe what you made from lesson prompt_2018"
@@ -682,11 +763,15 @@
     {
       "chapter": 15,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L12 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L12 SFLP"
@@ -702,12 +787,16 @@
     {
       "chapter": 16,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L12 FR reflection on collaboration_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L12 FR reflection on collaboration_2018"
@@ -723,11 +812,15 @@
     {
       "chapter": 17,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L13 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L13 SFLP"
@@ -743,12 +836,16 @@
     {
       "chapter": 18,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Getting to Know Your Data_2018"
+        ],
         "progression": "Getting to Know Your Data"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Getting to Know Your Data_2018"
@@ -764,12 +861,16 @@
     {
       "chapter": 19,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Cleaning Data_2018"
+        ],
         "progression": "Cleaning Data"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Cleaning Data_2018"
@@ -785,12 +886,16 @@
     {
       "chapter": 20,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Categorizing Data_2018"
+        ],
         "progression": "Categorizing Data"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Categorizing Data_2018"
@@ -806,12 +911,16 @@
     {
       "chapter": 21,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Cleaning Data MC_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Cleaning Data MC_2018"
@@ -827,12 +936,16 @@
     {
       "chapter": 22,
       "position": 6,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 FR Reflection data analysis objective_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 FR Reflection data analysis objective_2018"
@@ -848,11 +961,15 @@
     {
       "chapter": 23,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L14 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L14 SFLP"
@@ -868,12 +985,16 @@
     {
       "chapter": 24,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making Pivot Tables Part 1 - The Basics_2018"
+        ],
         "progression": "Making Pivot Tables Part 1 - The Basics"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Making Pivot Tables Part 1 - The Basics_2018"
@@ -889,12 +1010,16 @@
     {
       "chapter": 25,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making Pivot Tables Part 2 - Manipulation and Visualization_2018"
+        ],
         "progression": "Making Pivot Tables Part 2 - Manipulation and Visualizations"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Making Pivot Tables Part 2 - Manipulation and Visualization_2018"
@@ -910,12 +1035,16 @@
     {
       "chapter": 26,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables Part 3_2018"
+        ],
         "progression": "Making Pivot Tables Part 3"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables Part 3_2018"
@@ -931,12 +1060,16 @@
     {
       "chapter": 27,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Summary Tables MC_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Summary Tables MC_2018"
@@ -952,11 +1085,15 @@
     {
       "chapter": 28,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L15 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L15 SFLP"
@@ -972,8 +1109,14 @@
     {
       "chapter": 29,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_affirmation_control_2_2018",
+          "csp_affirmation_intervention_2_2018"
+        ],
+        "progression": "Pre-test reflection",
         "variants": {
           "csp_affirmation_control_2_2018": {
             "experiments": [
@@ -988,11 +1131,10 @@
               "rene-belonging-affirmation"
             ]
           }
-        },
-        "progression": "Pre-test reflection"
+        }
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_affirmation_control_2_2018",
@@ -1010,11 +1152,15 @@
     {
       "chapter": 30,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 Ch2 Cumulative Assessment MC_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 2 Ch2 Cumulative Assessment MC_2018"
@@ -1030,11 +1176,15 @@
     {
       "chapter": 31,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L02 Student Lesson Introduction Video_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L02 Student Lesson Introduction Video_2018"
@@ -1050,11 +1200,15 @@
     {
       "chapter": 32,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - eventParameter_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - eventParameter_2018"
@@ -1070,11 +1224,15 @@
     {
       "chapter": 33,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - dotNotation_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - dotNotation_2018"
@@ -1090,11 +1248,15 @@
     {
       "chapter": 34,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - createDotNotation_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - createDotNotation_2018"
@@ -1110,11 +1272,15 @@
     {
       "chapter": 35,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - arraysOfObjects_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - arraysOfObjects_2018"
@@ -1130,11 +1296,15 @@
     {
       "chapter": 36,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - accessingPropertiesInArray_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - accessingPropertiesInArray_2018"
@@ -1150,11 +1320,15 @@
     {
       "chapter": 37,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - exemplarContactsApp_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - exemplarContactsApp_2018"
@@ -1170,11 +1344,15 @@
     {
       "chapter": 38,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - readStarterCode_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - readStarterCode_2018"
@@ -1190,11 +1368,15 @@
     {
       "chapter": 39,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - createContactsData_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - createContactsData_2018"
@@ -1210,11 +1392,15 @@
     {
       "chapter": 40,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - showContact1_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - showContact1_2018"
@@ -1230,11 +1416,15 @@
     {
       "chapter": 41,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - showContact2_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - showContact2_2018"
@@ -1250,11 +1440,15 @@
     {
       "chapter": 42,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - showContact3_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - showContact3_2018"
@@ -1270,11 +1464,15 @@
     {
       "chapter": 43,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - pullValues_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - pullValues_2018"
@@ -1290,11 +1488,15 @@
     {
       "chapter": 44,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - createContactObject_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - createContactObject_2018"
@@ -1310,11 +1512,15 @@
     {
       "chapter": 45,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - resetIndexAndShow_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - resetIndexAndShow_2018"
@@ -1330,11 +1536,15 @@
     {
       "chapter": 46,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - showSampleImage_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Objects - showSampleImage_2018"
@@ -1350,11 +1560,15 @@
     {
       "chapter": 47,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L03 Student Lesson Introduction_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L03 Student Lesson Introduction_2018"
@@ -1370,11 +1584,15 @@
     {
       "chapter": 48,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 1_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - CreateRecord - 1_2018"
@@ -1390,11 +1608,15 @@
     {
       "chapter": 49,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 2_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - CreateRecord - 2_2018"
@@ -1410,11 +1632,15 @@
     {
       "chapter": 50,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 2.5_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - CreateRecord - 2.5_2018"
@@ -1430,11 +1656,15 @@
     {
       "chapter": 51,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 3_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - CreateRecord - 3_2018"
@@ -1450,11 +1680,15 @@
     {
       "chapter": 52,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 4_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - CreateRecord - 4_2018"
@@ -1470,11 +1704,15 @@
     {
       "chapter": 53,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 5_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - CreateRecord - 5_2018"
@@ -1490,11 +1728,15 @@
     {
       "chapter": 54,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Edit Data Table by Hand_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Edit Data Table by Hand_2018"
@@ -1510,11 +1752,15 @@
     {
       "chapter": 55,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - debug column names are case sensitive_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - debug column names are case sensitive_2018"
@@ -1530,11 +1776,15 @@
     {
       "chapter": 56,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Add Row By Hand_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Add Row By Hand_2018"
@@ -1550,11 +1800,15 @@
     {
       "chapter": 57,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - add createRecord to contacts App_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - add createRecord to contacts App_2018"
@@ -1570,11 +1824,15 @@
     {
       "chapter": 58,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - fix contacts by hand in data table_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - fix contacts by hand in data table_2018"
@@ -1590,11 +1848,15 @@
     {
       "chapter": 59,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - last stage test adding contcts_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - last stage test adding contcts_2018"
@@ -1610,11 +1872,15 @@
     {
       "chapter": 60,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L04 Student Lesson Introduction_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L04 Student Lesson Introduction_2018"
@@ -1630,11 +1896,15 @@
     {
       "chapter": 61,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 1_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Read Record - 1_2018"
@@ -1650,11 +1920,15 @@
     {
       "chapter": 62,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 1.2_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Read Record - 1.2_2018"
@@ -1670,11 +1944,15 @@
     {
       "chapter": 63,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 1.3_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Read Record - 1.3_2018"
@@ -1690,11 +1968,15 @@
     {
       "chapter": 64,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 2_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Read Record - 2_2018"
@@ -1710,11 +1992,15 @@
     {
       "chapter": 65,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 3_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Read Record - 3_2018"
@@ -1730,11 +2016,15 @@
     {
       "chapter": 66,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 4.1_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Read Record - 4.1_2018"
@@ -1750,11 +2040,15 @@
     {
       "chapter": 67,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 5_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Read Record - 5_2018"
@@ -1770,11 +2064,15 @@
     {
       "chapter": 68,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - ReadRecords - Contacts App 1_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 1_2018"
@@ -1790,11 +2088,15 @@
     {
       "chapter": 69,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - Local vs Remote Data External_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Read Record - Local vs Remote Data External_2018"
@@ -1810,11 +2112,15 @@
     {
       "chapter": 70,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - ReadRecords - Contacts App 2_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 2_2018"
@@ -1830,11 +2136,15 @@
     {
       "chapter": 71,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - ReadRecords - Contacts App 3_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 3_2018"
@@ -1850,11 +2160,15 @@
     {
       "chapter": 72,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - deleteRecord - Student Introduction_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - deleteRecord - Student Introduction_2018"
@@ -1870,11 +2184,15 @@
     {
       "chapter": 73,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Unique Ids Explanation_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Unique Ids Explanation_2018"
@@ -1890,11 +2208,15 @@
     {
       "chapter": 74,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - deleteRecords 0_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - deleteRecords 0_2018"
@@ -1910,11 +2232,15 @@
     {
       "chapter": 75,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - deleteRecords 1_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - deleteRecords 1_2018"
@@ -1930,11 +2256,15 @@
     {
       "chapter": 76,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - deleteRecords 2 delete object_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - deleteRecords 2 delete object_2018"
@@ -1950,11 +2280,15 @@
     {
       "chapter": 77,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - ReadRecords - Contacts App 4_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 4_2018"
@@ -1970,11 +2304,15 @@
     {
       "chapter": 78,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - ReadRecords - Contacts App 5 make delete work_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - ReadRecords - Contacts App 5 make delete work_2018"
@@ -1990,11 +2328,15 @@
     {
       "chapter": 79,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - updateRecord - Student Introduction_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - updateRecord - Student Introduction_2018"
@@ -2010,11 +2352,15 @@
     {
       "chapter": 80,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - updateRecord - Default Block_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - updateRecord - Default Block_2018"
@@ -2030,11 +2376,15 @@
     {
       "chapter": 81,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - updateRecord - Callback Success Parameter_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - updateRecord - Callback Success Parameter_2018"
@@ -2050,11 +2400,15 @@
     {
       "chapter": 82,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - updateRecord - Update Nonexistent Record_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - updateRecord - Update Nonexistent Record_2018"
@@ -2070,11 +2424,15 @@
     {
       "chapter": 83,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - updateRecord - Contacts - Edit UI_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Edit UI_2018"
@@ -2090,11 +2448,15 @@
     {
       "chapter": 84,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - updateRecord - Contacts - Edit event handler_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Edit event handler_2018"
@@ -2110,11 +2472,15 @@
     {
       "chapter": 85,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - updateRecord - Contacts - Save edited contact_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - updateRecord - Contacts - Save edited contact_2018"
@@ -2130,11 +2496,15 @@
     {
       "chapter": 86,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - ImportExport - Student Introduction_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - ImportExport - Student Introduction_2018"
@@ -2150,11 +2520,15 @@
     {
       "chapter": 87,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Import Data 1_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Charts - Import Data 1_2018"
@@ -2170,11 +2544,15 @@
     {
       "chapter": 88,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Import Data 2_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Charts - Import Data 2_2018"
@@ -2190,11 +2568,15 @@
     {
       "chapter": 89,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Remixing Apps with Data_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Charts - Remixing Apps with Data_2018"
@@ -2210,11 +2592,15 @@
     {
       "chapter": 90,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Export Data_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Charts - Export Data_2018"
@@ -2230,11 +2616,15 @@
     {
       "chapter": 91,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - Charts - Student Introduction_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - Charts - Student Introduction_2018"
@@ -2250,11 +2640,15 @@
     {
       "chapter": 92,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - drawChartFromRecords 1_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords 1_2018"
@@ -2270,11 +2664,15 @@
     {
       "chapter": 93,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Scatter Chart_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Charts - Scatter Chart_2018"
@@ -2290,11 +2688,15 @@
     {
       "chapter": 94,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Line Chart 1_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 1_2018"
@@ -2310,11 +2712,15 @@
     {
       "chapter": 95,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Line Chart 2_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Charts - Line Chart 2_2018"
@@ -2330,11 +2736,15 @@
     {
       "chapter": 96,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - drawChartFromRecords Options 1_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 1_2018"
@@ -2350,11 +2760,15 @@
     {
       "chapter": 97,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - drawChartFromRecords Options 2_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Charts - drawChartFromRecords Options 2_2018"
@@ -2370,11 +2784,15 @@
     {
       "chapter": 98,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - Sample Apps - Student Introduction_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - Sample Apps - Student Introduction_2018"
@@ -2390,11 +2808,15 @@
     {
       "chapter": 99,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - Sample Apps - User Login_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - Sample Apps - User Login_2018"
@@ -2410,11 +2832,15 @@
     {
       "chapter": 100,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - Sample Apps - Class Survey_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - Sample Apps - Class Survey_2018"
@@ -2430,11 +2856,15 @@
     {
       "chapter": 101,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - Sample Apps - Clicker Game_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - Sample Apps - Clicker Game_2018"
@@ -2450,11 +2880,15 @@
     {
       "chapter": 102,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - Sample Apps - Flashcards_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - Sample Apps - Flashcards_2018"
@@ -2470,11 +2904,15 @@
     {
       "chapter": 103,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - Final Project - Student Introduction_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - Final Project - Student Introduction_2018"
@@ -2490,11 +2928,15 @@
     {
       "chapter": 104,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 - Final Project - Project Level_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 - Final Project - Project Level_2018"
@@ -2510,12 +2952,16 @@
     {
       "chapter": 105,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey_v2"
@@ -3698,5 +4144,35 @@
         "script.name": "csppostap-2018"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

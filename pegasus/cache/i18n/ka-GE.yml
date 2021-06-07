@@ -1233,6 +1233,12 @@ ka-GE:
   coursed-2019_gradelevel: კლასები 8+
   coursee-2019_gradelevel: ასაკი 8-12
   coursef-2019_gradelevel: 9-13 წელი
+  coursea-2020_gradelevel: 4-7 წელი
+  courseb-2020_gradelevel: 5-8 წელი
+  coursec-2020_gradelevel: 6-10 წელი
+  coursed-2020_gradelevel: კლასები 8+
+  coursee-2020_gradelevel: ასაკი 8-12
+  coursef-2020_gradelevel: 9-13 წელი
   accelerated_gradelevel: 'ასაკი: 10-18'
   codeorg_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   codeintl_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
@@ -1388,6 +1394,16 @@ ka-GE:
     ვინც ჯერ კითხვა არ იცის.
   courseb-2019_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ
     მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
+  coursea-2020_shortdescription_congrats: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ
+    უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია,
+    რომლის გაზიარებასაც შეძლებთ.
+  courseb-2020_shortdescription_congrats: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ
+    უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია,
+    რომლის გაზიარებასაც შეძლებთ.
+  coursec-2020_shortdescription_congrats: შექმენით პროგრამები ციკლებით, მოვლენებით
+    და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ
+    პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას.
+    კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
   codeorg_longdescription: ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
     ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი,
     Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები,
@@ -1969,3 +1985,11 @@ ka-GE:
   hoc2018_dance_amazon_about_future_engineer_button: გაიგეთ მეტი
   hoc2018_dance_amazon_scholarship_programs_button: მიიღეთ მონაწილეობა ახლავე
   footer_powered_by_aws: შექმნილია Amazon Web Services დახმარებით
+  footer_privacy_policy: კონფიდენციალურობის პოლიტიკა
+  footer_about: გაიცანით
+  footer_partners: პარტნიორები
+  footer_donate: შემოწირულობა
+  footer_support: დახმარება და თემი
+  footer_terms: პირობები
+  ai_activity: აქტივობა
+  ai_description: აღწერა

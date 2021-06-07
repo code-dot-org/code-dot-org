@@ -1,12 +1,10 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {assert, expect} from '../../util/deprecatedChai';
+import {assert, expect} from '../../util/reconfiguredChai';
 import project from '@cdo/apps/code-studio/initApp/project';
 import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
-
-var testUtils = require('../../util/testUtils');
-
+import * as testUtils from '../../util/testUtils';
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
   getStore,
@@ -15,11 +13,12 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import {reducers} from '@cdo/apps/applab/redux/applab';
-var Applab = require('@cdo/apps/applab/applab');
-var designMode = require('@cdo/apps/applab/designMode');
-var applabCommands = require('@cdo/apps/applab/commands');
-var constants = require('@cdo/apps/applab/constants');
-var shareWarnings = require('@cdo/apps/shareWarnings');
+import pageConstantsReducer from '@cdo/apps/redux/pageConstants';
+import Applab from '@cdo/apps/applab/applab';
+import designMode from '@cdo/apps/applab/designMode';
+import applabCommands from '@cdo/apps/applab/commands';
+import * as constants from '@cdo/apps/applab/constants';
+import shareWarnings from '@cdo/apps/shareWarnings';
 
 function setupVizDom() {
   // Create a sample DOM to test against
@@ -40,11 +39,12 @@ function setupVizDom() {
     '</div>';
   return $(sampleDom);
 }
-describe('applab', () => {
+
+describe('Applab', () => {
   testUtils.sandboxDocumentBody();
   testUtils.setExternalGlobals();
 
-  describe('applab: designMode.addScreenIfNecessary', function() {
+  describe('designMode.addScreenIfNecessary', function() {
     it('adds a screen if we dont have one', function() {
       var html =
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" tabindex="1" style="width: 320px; height: 480px;">' +
@@ -80,7 +80,7 @@ describe('applab', () => {
     });
   });
 
-  describe('applab: getIdDropdown filtering modes', function() {
+  describe('getIdDropdown filtering modes', function() {
     var documentRoot;
 
     beforeEach(function() {
@@ -127,7 +127,7 @@ describe('applab', () => {
     });
   });
 
-  describe('applab: getIdDropdownForCurrentScreen ordering', function() {
+  describe('getIdDropdownForCurrentScreen ordering', function() {
     var documentRoot;
 
     beforeEach(function() {
@@ -537,12 +537,16 @@ describe('applab', () => {
     before(() => sinon.stub(Applab, 'render'));
     after(() => Applab.render.restore());
 
-    beforeEach(stubRedux);
+    beforeEach(() => {
+      stubRedux();
+      registerReducers({...reducers, pageConstants: pageConstantsReducer});
+    });
+
     afterEach(restoreRedux);
 
-    beforeEach(() => registerReducers(reducers));
-    describe('the expandDebugger level option', () => {
+    describe('configuration options', () => {
       let config;
+
       beforeEach(() => {
         config = {
           channel: 'bar',
@@ -553,26 +557,87 @@ describe('applab', () => {
           }
         };
       });
-      it('will leave the debugger closed when false', () => {
-        expect(config.level.expandDebugger).not.to.be.true;
-        Applab.init(config);
-        expect(isDebuggerOpen(getStore().getState())).to.be.false;
-      });
-      it('will open the debugger when true', () => {
-        expect(config.level.expandDebugger).not.to.be.true;
-        Applab.init({
-          ...config,
-          level: {
-            ...config.level,
-            expandDebugger: true
-          }
+
+      describe('expandDebugger', () => {
+        it('leaves debugger closed when false', () => {
+          expect(config.level.expandDebugger).not.to.be.true;
+          Applab.init(config);
+          expect(isDebuggerOpen(getStore().getState())).to.be.false;
         });
-        expect(isDebuggerOpen(getStore().getState())).to.be.true;
+
+        it('opens debugger when true', () => {
+          expect(config.level.expandDebugger).not.to.be.true;
+          Applab.init({
+            ...config,
+            level: {
+              ...config.level,
+              expandDebugger: true
+            }
+          });
+          expect(isDebuggerOpen(getStore().getState())).to.be.true;
+        });
+      });
+
+      describe('hasDesignMode page constant', () => {
+        it('is true if design mode is not hidden and not in start or widget mode', () => {
+          config.level.hideDesignMode = false;
+          config.level.widgetMode = false;
+          config.isStartMode = false;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDesignMode).to.be.true;
+        });
+
+        it('is false if design mode is hidden for level', () => {
+          config.level.hideDesignMode = true;
+          config.level.widgetMode = false;
+          config.isStartMode = false;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDesignMode).to.be.false;
+        });
+
+        it('is false in widget mode', () => {
+          config.level.hideDesignMode = false;
+          config.level.widgetMode = true;
+          config.isStartMode = false;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDesignMode).to.be.false;
+        });
+
+        it('is true in levelbuilder widget mode', () => {
+          config.level.hideDesignMode = false;
+          config.level.widgetMode = true;
+          config.isStartMode = true;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDesignMode).to.be.true;
+        });
+      });
+
+      describe('hasDataMode page constant', () => {
+        it('is true if data button is not hidden and not in widget mode', () => {
+          config.level.hideViewDataButton = false;
+          config.level.widgetMode = false;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDataMode).to.be.true;
+        });
+
+        it('is false if data button is hidden for level', () => {
+          config.level.hideViewDataButton = true;
+          config.level.widgetMode = false;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDataMode).to.be.false;
+        });
+
+        it('is false in widget mode', () => {
+          config.level.hideViewDataButton = false;
+          config.level.widgetMode = true;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDataMode).to.be.false;
+        });
       });
     });
   });
 
-  describe('The applab.makeFooterMenuItems ', () => {
+  describe('makeFooterMenuItems ', () => {
     beforeEach(() => {
       sinon.stub(project, 'getUrl');
     });

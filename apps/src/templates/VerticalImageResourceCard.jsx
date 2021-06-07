@@ -5,73 +5,6 @@ import {connect} from 'react-redux';
 import color from '../util/color';
 import Button from './Button';
 
-const styles = {
-  card: {
-    overflow: 'hidden',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    height: 440,
-    width: 308,
-    backgroundColor: color.white
-  },
-  jumboCard: {
-    overflow: 'hidden',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    height: 440,
-    width: 473,
-    marginBottom: 20,
-    backgroundColor: color.white
-  },
-  image: {
-    width: 310,
-    height: 220
-  },
-  jumboImage: {
-    width: 473,
-    height: 220
-  },
-  text: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal
-  },
-  title: {
-    paddingTop: 20,
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 15,
-    fontSize: 20
-  },
-  button: {
-    margin: 20
-  },
-  description: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    fontSize: 14,
-    lineHeight: 1.5,
-    height: 89
-  },
-  shareLink: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    fontSize: 14,
-    marginTop: 5,
-    padding: 5,
-    width: 258
-  },
-  ltr: {
-    float: 'left'
-  },
-  rtl: {
-    float: 'right',
-    textAlign: 'right'
-  }
-};
-
 /**
  * A card used on /congrats to display information about a particular course or
  * HoC follow-up activity. Not to be confused with CourseCard, the larger
@@ -163,6 +96,73 @@ class VerticalImageResourceCard extends Component {
     );
   }
 }
+
+const styles = {
+  card: {
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
+    height: 440,
+    width: 308,
+    backgroundColor: color.white
+  },
+  jumboCard: {
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
+    height: 440,
+    width: 473,
+    marginBottom: 20,
+    backgroundColor: color.white
+  },
+  image: {
+    width: 310,
+    height: 220
+  },
+  jumboImage: {
+    width: 473,
+    height: 220
+  },
+  text: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal
+  },
+  title: {
+    paddingTop: 20,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 15,
+    fontSize: 20
+  },
+  button: {
+    margin: 20
+  },
+  description: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    fontSize: 14,
+    lineHeight: 1.5,
+    height: 89
+  },
+  shareLink: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
+    fontSize: 14,
+    marginTop: 5,
+    padding: 5,
+    width: 258
+  },
+  ltr: {
+    float: 'left'
+  },
+  rtl: {
+    float: 'right',
+    textAlign: 'right'
+  }
+};
 
 export default connect(state => ({
   isRtl: state.isRtl

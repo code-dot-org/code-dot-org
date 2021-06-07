@@ -53,93 +53,6 @@ function select(event) {
   event.target.select();
 }
 
-const styles = {
-  modal: {
-    width: 720,
-    marginLeft: -360
-  },
-  abuseStyle: {
-    border: '1px solid',
-    borderRadius: 10,
-    padding: 10,
-    marginBottom: 20
-  },
-  abuseTextStyle: {
-    color: '#b94a48',
-    fontSize: 14
-  },
-  shareWarning: {
-    color: color.red,
-    fontSize: 13,
-    fontWeight: 'bold'
-  },
-  button: {
-    backgroundColor: color.purple,
-    borderWidth: 0,
-    color: color.white,
-    fontSize: 'larger',
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 0,
-    marginRight: 8,
-    verticalAlign: 'top'
-  },
-  buttonDisabled: {
-    backgroundColor: color.gray,
-    borderWidth: 0,
-    color: color.white,
-    fontSize: 'larger',
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 0,
-    marginRight: 8,
-    verticalAlign: 'top'
-  },
-  thumbnail: {
-    float: 'left',
-    marginRight: 10,
-    width: 125,
-    height: 125,
-    overflow: 'hidden',
-    borderRadius: 2,
-    border: '1px solid rgb(187,187,187)',
-    backgroundColor: color.white,
-    position: 'relative'
-  },
-  thumbnailImg: {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    width: '100%',
-    height: 'auto',
-    transform: 'translate(-50%,-50%)',
-    msTransform: 'translate(-50%,-50%)',
-    WebkitTransform: 'translate(-50%,-50%)'
-  },
-  sendToPhoneContainer: {
-    width: '100%',
-    marginTop: 15
-  },
-  sendToPhoneLeft: {
-    float: 'left',
-    width: '70%',
-    paddingRight: 20,
-    boxSizing: 'border-box'
-  },
-  sendToPhoneRight: {
-    float: 'right',
-    width: '30%'
-  }
-};
-
 function checkImageReachability(imageUrl, callback) {
   const img = new Image();
   img.onabort = () => callback(false);
@@ -518,6 +431,93 @@ class ShareAllowedDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  modal: {
+    width: 720,
+    marginLeft: -360
+  },
+  abuseStyle: {
+    border: '1px solid',
+    borderRadius: 10,
+    padding: 10,
+    marginBottom: 20
+  },
+  abuseTextStyle: {
+    color: '#b94a48',
+    fontSize: 14
+  },
+  shareWarning: {
+    color: color.red,
+    fontSize: 13,
+    fontWeight: 'bold'
+  },
+  button: {
+    backgroundColor: color.purple,
+    borderWidth: 0,
+    color: color.white,
+    fontSize: 'larger',
+    paddingTop: 12.5,
+    paddingBottom: 12.5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    marginRight: 8,
+    verticalAlign: 'top'
+  },
+  buttonDisabled: {
+    backgroundColor: color.gray,
+    borderWidth: 0,
+    color: color.white,
+    fontSize: 'larger',
+    paddingTop: 12.5,
+    paddingBottom: 12.5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    marginRight: 8,
+    verticalAlign: 'top'
+  },
+  thumbnail: {
+    float: 'left',
+    marginRight: 10,
+    width: 125,
+    height: 125,
+    overflow: 'hidden',
+    borderRadius: 2,
+    border: '1px solid rgb(187,187,187)',
+    backgroundColor: color.white,
+    position: 'relative'
+  },
+  thumbnailImg: {
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    width: '100%',
+    height: 'auto',
+    transform: 'translate(-50%,-50%)',
+    msTransform: 'translate(-50%,-50%)',
+    WebkitTransform: 'translate(-50%,-50%)'
+  },
+  sendToPhoneContainer: {
+    width: '100%',
+    marginTop: 15
+  },
+  sendToPhoneLeft: {
+    float: 'left',
+    width: '70%',
+    paddingRight: 20,
+    boxSizing: 'border-box'
+  },
+  sendToPhoneRight: {
+    float: 'right',
+    width: '30%'
+  }
+};
 
 export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 

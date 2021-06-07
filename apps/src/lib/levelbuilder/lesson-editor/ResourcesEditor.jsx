@@ -4,7 +4,6 @@ import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 import AddResourceDialog from './AddResourceDialog';
 import SearchBox from './SearchBox';
-import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {
@@ -12,49 +11,18 @@ import {
   editResource,
   removeResource
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-
-const styles = {
-  resourceSearch: {
-    paddingBottom: 10
-  },
-  resourceBox: {
-    border: '1px solid ' + color.light_gray,
-    padding: 10,
-    marginTop: 10,
-    marginBottom: 10
-  },
-  oddRow: {
-    backgroundColor: color.lightest_gray
-  },
-  actionsColumn: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    backgroundColor: 'white'
-  },
-  remove: {
-    fontSize: 14,
-    color: 'white',
-    background: color.dark_red,
-    cursor: 'pointer',
-    textAlign: 'center',
-    width: '48%'
-  },
-  edit: {
-    fontSize: 14,
-    color: 'white',
-    background: color.default_blue,
-    cursor: 'pointer',
-    textAlign: 'center',
-    width: '48%'
-  }
-};
+import * as Table from 'reactabular-table';
+import {lessonEditorTableStyles} from './TableConstants';
+import $ from 'jquery';
 
 class ResourcesEditor extends Component {
   static propTypes = {
     courseVersionId: PropTypes.number,
+    resourceContext: PropTypes.string.isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    getRollupsUrl: PropTypes.string,
 
     // Provided by redux
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
     addResource: PropTypes.func.isRequired,
     editResource: PropTypes.func.isRequired,
     removeResource: PropTypes.func.isRequired
@@ -67,12 +35,132 @@ class ResourcesEditor extends Component {
       resourceInput: '',
       searchValue: '',
       newResourceDialogOpen: false,
-      confirmRemovalDialogOpen: false
+      confirmRemovalDialogOpen: false,
+      error: ''
     };
   }
 
+  actionsCellFormatter = (actions, {rowData}) => {
+    return (
+      <div style={styles.actionsColumn}>
+        <div style={styles.edit} onMouseDown={() => this.handleEdit(rowData)}>
+          <i className="fa fa-edit" />
+        </div>
+        <div
+          style={styles.remove}
+          className="unit-test-remove-resource"
+          onMouseDown={() => this.handleRemoveResourceDialogOpen(rowData)}
+        >
+          <i className="fa fa-trash" />
+        </div>
+      </div>
+    );
+  };
+
+  getColumns() {
+    return [
+      {
+        property: 'key',
+        header: {
+          label: 'Key',
+          props: {
+            style: {width: '20%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'name',
+        header: {
+          label: 'Name',
+          props: {
+            style: {width: '15%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'type',
+        header: {
+          label: 'Type',
+          props: {
+            style: {width: '10%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'audience',
+        header: {
+          label: 'Audience',
+          props: {
+            style: {width: '7%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'url',
+        header: {
+          label: 'URL',
+          props: {
+            style: {width: '35%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'actions',
+        header: {
+          label: 'Actions',
+          props: {
+            style: {width: '10%'}
+          }
+        },
+        cell: {
+          formatters: [this.actionsCellFormatter],
+          props: {
+            style: {
+              ...lessonEditorTableStyles.actionsCell
+            }
+          }
+        }
+      }
+    ];
+  }
+
   onSearchSelect = e => {
-    this.props.addResource(e.resource);
+    this.props.addResource(this.props.resourceContext, e.resource);
   };
 
   constructResourceOption = resource => ({
@@ -82,11 +170,11 @@ class ResourcesEditor extends Component {
   });
 
   addResource = resource => {
-    this.props.addResource(resource);
+    this.props.addResource(this.props.resourceContext, resource);
   };
 
   saveEditResource = resource => {
-    this.props.editResource(resource);
+    this.props.editResource(this.props.resourceContext, resource);
   };
 
   handleRemoveResourceDialogOpen = resource => {
@@ -98,7 +186,10 @@ class ResourcesEditor extends Component {
   };
 
   removeResource = () => {
-    this.props.removeResource(this.state.resourceToRemove.key);
+    this.props.removeResource(
+      this.props.resourceContext,
+      this.state.resourceToRemove.key
+    );
     this.handleRemoveResourceDialogClose();
   };
 
@@ -126,7 +217,34 @@ class ResourcesEditor extends Component {
     return {options: resources};
   };
 
+  addRollupPages = () => {
+    $.ajax({
+      url: this.props.getRollupsUrl,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8'
+    })
+      .done(data => {
+        this.props.resources
+          .filter(resource => resource.isRollup)
+          .filter(resource => !data.find(r => r.key === resource.key))
+          .forEach(resource =>
+            this.props.removeResource(this.props.resourceContext, resource)
+          );
+        data
+          .filter(
+            resource => !this.props.resources.find(r => r.key === resource.key)
+          )
+          .forEach(resource =>
+            this.props.addResource(this.props.resourceContext, resource)
+          );
+      })
+      .fail(error => {
+        this.setState({error: 'Could not add rollup resources'});
+      });
+  };
+
   render() {
+    const columns = this.getColumns();
     return (
       <div>
         {this.state.newResourceDialogOpen && (
@@ -156,84 +274,92 @@ class ResourcesEditor extends Component {
             onConfirm={this.removeResource}
           />
         )}
-        Resources
-        <input
-          type="hidden"
-          name="resources"
-          value={JSON.stringify(this.props.resources.map(r => r.key))}
-        />
-        <div style={styles.resourceBox}>
+        <div>
           <div style={styles.resourceSearch}>
-            <label>Select a resource to add</label>
+            <label>
+              <strong>Select a resource to add</strong>
+            </label>
             <SearchBox
               onSearchSelect={this.onSearchSelect}
-              searchUrl={'resourcesearch'}
+              searchUrl={'resources/search'}
               constructOptions={this.constructSearchOptions}
               additionalQueryParams={{
                 courseVersionId: this.props.courseVersionId
               }}
             />
           </div>
-          <table style={{width: '100%'}}>
-            <thead>
-              <tr>
-                <th style={{width: '20%'}}>Key</th>
-                <th style={{width: '20%'}}>Name</th>
-                <th style={{width: '10%'}}>Type</th>
-                <th style={{width: '10%'}}>Audience</th>
-                <th style={{width: '30%'}}>URL</th>
-                <th style={{width: '10%'}}>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.props.resources.map((resource, index) => (
-                <tr
-                  key={resource.key}
-                  style={index % 2 === 1 ? styles.oddRow : {}}
-                >
-                  <td>{resource.key}</td>
-                  <td>{resource.name}</td>
-                  <td>{resource.type}</td>
-                  <td>{resource.audience}</td>
-                  <td>{resource.url}</td>
-                  <td style={styles.actionsColumn}>
-                    <div
-                      style={styles.edit}
-                      onMouseDown={() => this.handleEdit(resource)}
-                    >
-                      <i className="fa fa-edit" />
-                    </div>
-                    <div
-                      style={styles.remove}
-                      className="unit-test-remove-resource"
-                      onMouseDown={() =>
-                        this.handleRemoveResourceDialogOpen(resource)
-                      }
-                    >
-                      <i className="fa fa-times" />
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <Button
+          <Table.Provider columns={columns}>
+            <Table.Header />
+            <Table.Body rows={this.props.resources} rowKey="key" />
+          </Table.Provider>
+          <button
             onClick={this.handleAddResourceClick}
-            text={'Add New Resource'}
-            color={color.blue}
-          />
+            style={styles.addButton}
+            type="button"
+          >
+            <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
+            Resource
+          </button>
+          {this.props.getRollupsUrl && (
+            <button
+              onClick={this.addRollupPages}
+              style={styles.addButton}
+              type="button"
+            >
+              Add rollup pages
+            </button>
+          )}
+          {this.state.error && <h3>{this.state.error}</h3>}
         </div>
       </div>
     );
   }
 }
 
+const styles = {
+  resourceSearch: {
+    paddingBottom: 10
+  },
+  actionsColumn: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'white'
+  },
+  remove: {
+    fontSize: 14,
+    color: 'white',
+    background: color.dark_red,
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: '50%',
+    lineHeight: '30px'
+  },
+  edit: {
+    fontSize: 14,
+    color: 'white',
+    background: color.default_blue,
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: '50%',
+    lineHeight: '30px'
+  },
+  addButton: {
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
+    borderRadius: 3,
+    fontSize: 14,
+    padding: 7,
+    textAlign: 'center',
+    marginTop: 10,
+    marginLeft: 0
+  }
+};
+
 export const UnconnectedResourcesEditor = ResourcesEditor;
 
 export default connect(
-  state => ({
-    resources: state.resources
-  }),
+  state => ({}),
   {
     addResource,
     editResource,

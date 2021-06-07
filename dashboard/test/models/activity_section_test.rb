@@ -39,6 +39,19 @@ class ActivitySectionTest < ActiveSupport::TestCase
     assert_includes error.message, 'activity_section_position is required'
   end
 
+  test 'lesson edit summary does not preprocess markdown' do
+    activity_section = create :activity_section
+    Services::MarkdownPreprocessor.expects(:process!).never
+    activity_section.summarize_for_lesson_edit
+  end
+
+  test 'lesson show summary preprocesses markdown' do
+    activity_section = create :activity_section
+    Services::MarkdownPreprocessor.expects(:process!).
+      with(activity_section.description)
+    activity_section.summarize_for_lesson_show(false)
+  end
+
   test 'seeding_key' do
     lesson_group = create :lesson_group
     script = lesson_group.script

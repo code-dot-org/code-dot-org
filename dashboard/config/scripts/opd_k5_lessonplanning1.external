@@ -1,0 +1,34 @@
+name 'OPD-K5 LessonPlanning1'
+skip_dialog true
+markdown <<MARKDOWN
+## Considerations for Lesson Planning
+**Total Suggested Time:**
+
+Are you familiar with Code.org's Hour of Code? CS Fundamentals courses and Hour of Code are not the same thing.  Hour of Code *introduces* students to CS while CS Fundamentals courses *build* CS knowledge and skills.
+
+Let's dive into the CS Fundamentals course structure, lessons, and resources available to use as you plan.  
+
+When planning a lesson consider the following:
+
+**CS Concepts and Skills**
+* What CS concept does the lesson introduce to students and how?
+* What CS skill does the lesson help students practice and how?
+
+**Logistics**
+* What classroom rountines or procedures are needed for the lesson?
+
+**CS Teaching Practices**
+* When will any of the following CS teaching practices be used during the lesson?
+	* Role of the Teacher (lead learner)
+    * Discovery and Inquiry
+    * Debugging
+    * Pair Programming
+    * The Classroom Community (active learning, communication)
+
+**Assessment**
+* How will students share their thinking and demonstrate what they learned?
+
+**Inclusion**
+* How will the lesson be inclusive for students?
+
+MARKDOWN

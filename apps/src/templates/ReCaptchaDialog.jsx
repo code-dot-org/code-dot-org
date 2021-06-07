@@ -6,14 +6,6 @@ import BaseDialog from './BaseDialog';
 import DialogFooter from './teacherDashboard/DialogFooter';
 import Spinner from '../code-studio/pd/components/spinner';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  }
-};
-
 /*
 Note that the version of reCAPTCHA supported by this dialog (v2 - I am not a robot)
 can be difficult for young users to solve. Thus, it should be used sparingly across the site.
@@ -110,3 +102,11 @@ export default class ReCaptchaDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  }
+};

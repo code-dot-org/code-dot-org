@@ -30,22 +30,6 @@ const imageSets = {
   }
 };
 
-const styles = {
-  whiteBorder: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.white
-  },
-  icon: {
-    fontSize: 20,
-    paddingLeft: 3,
-    paddingRight: 3,
-    paddingTop: 6,
-    paddingBottom: 3,
-    // If not set explicitly, css sets "button > img" to 0.6
-    opacity: 1
-  }
-};
 /**
  * A toggle that provides a way to switch between detail and summary views of
  * our course progress.
@@ -107,6 +91,23 @@ class ProgressDetailToggle extends React.Component {
     );
   }
 }
+
+const styles = {
+  whiteBorder: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.white
+  },
+  icon: {
+    fontSize: 20,
+    paddingLeft: 3,
+    paddingRight: 3,
+    paddingTop: 6,
+    paddingBottom: 3,
+    // If not set explicitly, css sets "button > img" to 0.6
+    opacity: 1
+  }
+};
 
 export default connect(
   state => ({

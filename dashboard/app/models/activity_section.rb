@@ -35,9 +35,11 @@ class ActivitySection < ApplicationRecord
 
   serialized_attrs %w(
     name
+    duration
     remarks
     description
     tips
+    progression_name
   )
 
   def summarize
@@ -45,15 +47,21 @@ class ActivitySection < ApplicationRecord
       id: id,
       position: position,
       name: name,
+      duration: duration,
       remarks: remarks,
       description: description,
       tips: tips,
+      progressionName: progression_name
     }
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(can_view_teacher_markdown)
     summary = summarize
-    summary[:scriptLevels] = script_levels.map(&:summarize_for_lesson_show)
+    summary[:scriptLevels] = script_levels.map {|sl| sl.summarize_for_lesson_show(can_view_teacher_markdown)}
+    Services::MarkdownPreprocessor.process!(summary[:description])
+    summary[:tips]&.each do |tip|
+      Services::MarkdownPreprocessor.process!(tip["markdown"])
+    end
     summary
   end
 
@@ -76,7 +84,7 @@ class ActivitySection < ApplicationRecord
         assessment: sl_data['assessment'] || sl.anonymous?,
         bonus: sl_data['bonus'],
         challenge: !!sl_data['challenge'],
-        progression: name.present? && name
+        progression: progression_name.present? && progression_name
       )
       # TODO(dave): check and update script level variants
       sl.update_levels(sl_data['levels'] || [])
@@ -89,7 +97,7 @@ class ActivitySection < ApplicationRecord
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
-  # See comments on ScriptSeed.seed_from_json for more context.
+  # See comments on ScriptSeed.seed_from_hash for more context.
   #
   # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.

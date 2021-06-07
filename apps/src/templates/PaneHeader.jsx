@@ -10,6 +10,35 @@ import commonStyles from '../commonStyles';
 import styleConstants from '../styleConstants';
 import color from '../util/color';
 
+/**
+ * A purple pane header that can have be focused (purple) or unfocused (light purple).
+ */
+class PaneHeader extends React.Component {
+  static propTypes = {
+    hasFocus: PropTypes.bool.isRequired,
+    style: PropTypes.object,
+    teacherOnly: PropTypes.bool,
+    isMinecraft: PropTypes.bool
+  };
+
+  render() {
+    let {hasFocus, teacherOnly, style, isMinecraft, ...props} = this.props;
+
+    // TODO: AnimationTab should likely use components from PaneHeader, at
+    // which point purpleHeader style should move in here.
+    const composedStyle = {
+      ...style,
+      ...commonStyles.purpleHeader,
+      ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
+      ...(teacherOnly && commonStyles.teacherBlueHeader),
+      ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused),
+      ...(isMinecraft && commonStyles.minecraftHeader)
+    };
+
+    return <div {...props} style={composedStyle} />;
+  }
+}
+
 const styles = {
   paneSection: {
     textAlign: 'center',
@@ -75,40 +104,15 @@ const styles = {
     paddingRight: 0,
     paddingLeft: 8
   },
+  headerButtonIconHidden: {
+    paddingRight: 0,
+    paddingLeft: 0
+  },
   headerButtonNoLabel: {
     paddingRight: 0,
     paddingLeft: 0
   }
 };
-
-/**
- * A purple pane header that can have be focused (purple) or unfocused (light purple).
- */
-class PaneHeader extends React.Component {
-  static propTypes = {
-    hasFocus: PropTypes.bool.isRequired,
-    style: PropTypes.object,
-    teacherOnly: PropTypes.bool,
-    isMinecraft: PropTypes.bool
-  };
-
-  render() {
-    let {hasFocus, teacherOnly, style, isMinecraft, ...props} = this.props;
-
-    // TODO: AnimationTab should likely use components from PaneHeader, at
-    // which point purpleHeader style should move in here.
-    const composedStyle = {
-      ...style,
-      ...commonStyles.purpleHeader,
-      ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
-      ...(teacherOnly && commonStyles.teacherBlueHeader),
-      ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused),
-      ...(isMinecraft && commonStyles.minecraftHeader)
-    };
-
-    return <div {...props} style={composedStyle} />;
-  }
-}
 
 /**
  * A section of our Pane Header. Essentially this is just a div with some
@@ -148,7 +152,8 @@ export const PaneButton = Radium(function(props) {
 
   let iconStyle = {
     ...styles.headerButtonIcon,
-    ...(props.isRtl && styles.headerButtonIconRtl)
+    ...(props.isRtl && styles.headerButtonIconRtl),
+    ...(!props.iconClass && !props.hiddenImage && styles.headerButtonIconHidden)
   };
 
   const label = props.isPressed ? props.pressedLabel : props.label;
@@ -169,7 +174,7 @@ export const PaneButton = Radium(function(props) {
 });
 PaneButton.propTypes = {
   headerHasFocus: PropTypes.bool.isRequired,
-  iconClass: PropTypes.string.isRequired,
+  iconClass: PropTypes.string,
   label: PropTypes.string.isRequired,
   isRtl: PropTypes.bool.isRequired,
   leftJustified: PropTypes.bool,

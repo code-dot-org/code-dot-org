@@ -5,7 +5,6 @@ import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonD
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/script-editor/LessonExtrasEditor';
 import color from '@cdo/apps/util/color';
@@ -15,43 +14,23 @@ import ResourceType, {
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import $ from 'jquery';
-import {navigateToHref} from '@cdo/apps/utils';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import {
   getSerializedLessonGroups,
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
-import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {
+  lessonGroupShape,
+  resourceShape as migratedResourceShape
+} from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-
-const styles = {
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: '1px solid #ccc',
-    borderRadius: 4,
-    margin: 0
-  },
-  checkbox: {
-    margin: '0 0 0 7px'
-  },
-  dropdown: {
-    margin: '0 6px'
-  },
-  box: {
-    marginTop: 10,
-    marginBottom: 10,
-    border: '1px solid ' + color.light_gray,
-    padding: 10
-  }
-};
+import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', ''];
+const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', ''];
 
 /**
  * Component for editing course scripts.
@@ -63,11 +42,13 @@ class ScriptEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialHidden: PropTypes.bool,
     initialIsStable: PropTypes.bool,
+    initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
     initialStudentDetailProgressView: PropTypes.bool,
     initialProfessionalLearningCourse: PropTypes.string,
     initialPeerReviewsRequired: PropTypes.number,
+    initialOnlyInstructorReviewRequired: PropTypes.bool,
     initialWrapupVideo: PropTypes.string,
     initialProjectWidgetVisible: PropTypes.bool,
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
@@ -75,7 +56,6 @@ class ScriptEditor extends React.Component {
     initialLessonExtrasAvailable: PropTypes.bool,
     initialLessonLevelData: PropTypes.string,
     initialHasVerifiedResources: PropTypes.bool,
-    initialHasLessonPlan: PropTypes.bool,
     initialCurriculumPath: PropTypes.string,
     initialPilotExperiment: PropTypes.string,
     initialEditorExperiment: PropTypes.string,
@@ -94,21 +74,31 @@ class ScriptEditor extends React.Component {
     hasCourse: PropTypes.bool,
     initialIsCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
+    initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
+    initialIncludeStudentLessonPlans: PropTypes.bool,
+    initialCourseVersionId: PropTypes.number,
+    scriptPath: PropTypes.string.isRequired,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     levelKeyList: PropTypes.object.isRequired,
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
+      .isRequired,
+    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     init: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
-    const resources = [...props.initialTeacherResources];
-    // add empty entries to get to max
-    while (resources.length < Object.keys(ResourceType).length) {
-      resources.push({type: '', link: ''});
+    const teacherResources = [...props.initialTeacherResources];
+
+    if (!props.isMigrated) {
+      // add empty entries to get to max
+      while (teacherResources.length < Object.keys(ResourceType).length) {
+        teacherResources.push({type: '', link: ''});
+      }
     }
 
     this.state = {
@@ -118,6 +108,8 @@ class ScriptEditor extends React.Component {
       familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
+      weeklyInstructionalMinutes:
+        this.props.initialWeeklyInstructionalMinutes || '',
       description: this.props.i18nData.description,
       studentDescription: this.props.i18nData.studentDescription,
       announcements: this.props.initialAnnouncements,
@@ -127,6 +119,8 @@ class ScriptEditor extends React.Component {
       hideableLessons: this.props.initialHideableLessons,
       studentDetailProgressView: this.props.initialStudentDetailProgressView,
       professionalLearningCourse: this.props.initialProfessionalLearningCourse,
+      onlyInstructorReviewRequired: this.props
+        .initialOnlyInstructorReviewRequired,
       peerReviewsRequired: this.props.initialPeerReviewsRequired,
       wrapupVideo: this.props.initialWrapupVideo,
       projectWidgetVisible: this.props.initialProjectWidgetVisible,
@@ -134,9 +128,8 @@ class ScriptEditor extends React.Component {
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
       lessonLevelData:
         this.props.initialLessonLevelData ||
-        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name'\n",
+        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n",
       hasVerifiedResources: this.props.initialHasVerifiedResources,
-      hasLessonPlan: this.props.initialHasLessonPlan,
       curriculumPath: this.props.initialCurriculumPath,
       pilotExperiment: this.props.initialPilotExperiment,
       editorExperiment: this.props.initialEditorExperiment,
@@ -149,10 +142,19 @@ class ScriptEditor extends React.Component {
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
-      lessonDescriptions: this.props.i18nData.stageDescriptions,
-      teacherResources: resources,
+      lessonDescriptions: this.props.i18nData.lessonDescriptions,
+      teacherResources: teacherResources,
       hasImportedLessonDescriptions: false,
-      oldScriptText: this.props.initialLessonLevelData
+      oldScriptText: this.props.initialLessonLevelData,
+      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
+      deprecated: this.props.initialDeprecated,
+      publishedState: !this.props.initialHidden
+        ? this.props.initialIsStable
+          ? 'Recommended'
+          : 'Preview'
+        : this.props.initialPilotExperiment
+        ? 'Pilot'
+        : 'Beta'
     };
   }
 
@@ -181,6 +183,21 @@ class ScriptEditor extends React.Component {
 
   handleStandaloneCourseChange = () => {
     this.setState({isCourse: !this.state.isCourse});
+  };
+
+  handleShowCalendarChange = () => {
+    if (!this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
+      this.setState({
+        showCalendar: !this.state.showCalendar,
+        weeklyInstructionalMinutes: '225'
+      });
+    } else {
+      this.setState({showCalendar: !this.state.showCalendar});
+    }
+  };
+
+  handleView = () => {
+    navigateToHref(linkWithQueryParams(this.props.scriptPath));
   };
 
   handleSave = (event, shouldCloseAfterSave) => {
@@ -218,20 +235,55 @@ class ScriptEditor extends React.Component {
       shouldCloseAfterSave = false;
     }
 
+    if (this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide instructional minutes per week in Unit Calendar Settings.'
+      });
+      return;
+    } else if (
+      this.state.showCalendar &&
+      (parseInt(this.state.weeklyInstructionalMinutes) <= 0 ||
+        isNaN(parseInt(this.state.weeklyInstructionalMinutes)))
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
+      });
+      return;
+    } else if (
+      this.state.publishedState === 'Pilot' &&
+      this.state.pilotExperiment === ''
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide a pilot experiment in order to save with published state as pilot.'
+      });
+      return;
+    }
+
     let dataToSave = {
       name: this.props.name,
       family_name: this.state.familyName,
       is_course: this.state.isCourse,
       show_calendar: this.state.showCalendar,
+      weekly_instructional_minutes: parseInt(
+        this.state.weeklyInstructionalMinutes
+      ),
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
-      visible_to_teachers: !this.state.hidden,
+      hidden: this.state.hidden,
       is_stable: this.state.isStable,
+      deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
       professional_learning_course: this.state.professionalLearningCourse,
+      only_instructor_review_required: this.state.onlyInstructorReviewRequired,
       peer_reviews_to_complete: this.state.peerReviewsRequired,
       wrapup_video: this.state.wrapupVideo,
       project_widget_visible: this.state.projectWidgetVisible,
@@ -245,7 +297,6 @@ class ScriptEditor extends React.Component {
         : this.state.lessonLevelData,
       old_script_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
-      has_lesson_plan: this.state.hasLessonPlan,
       curriculum_path: this.state.curriculumPath,
       pilot_experiment: this.state.pilotExperiment,
       editor_experiment: this.state.editorExperiment,
@@ -260,7 +311,14 @@ class ScriptEditor extends React.Component {
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
-      is_migrated: this.props.isMigrated
+      resourceIds: this.props.migratedTeacherResources.map(
+        resource => resource.id
+      ),
+      studentResourceIds: this.props.studentResources.map(
+        resource => resource.id
+      ),
+      is_migrated: this.props.isMigrated,
+      include_student_lesson_plans: this.state.includeStudentLessonPlans
     };
 
     if (this.state.hasImportedLessonDescriptions) {
@@ -276,7 +334,7 @@ class ScriptEditor extends React.Component {
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(`${data.scriptPath}${window.location.search}`);
+          navigateToHref(linkWithQueryParams(data.scriptPath));
         } else {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
@@ -348,6 +406,10 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({description: e.target.value})
             }
+            features={{
+              imageUpload: true,
+              resourceLink: true
+            }}
           />
           <TextareaWithMarkdownPreview
             markdown={this.state.studentDescription}
@@ -357,6 +419,10 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({studentDescription: e.target.value})
             }
+            features={{
+              imageUpload: true,
+              resourceLink: true
+            }}
           />
         </CollapsibleEditorSection>
 
@@ -425,25 +491,6 @@ class ScriptEditor extends React.Component {
             />
             <HelpTip>
               <p>Check to enable text-to-speech for this script.</p>
-            </HelpTip>
-          </label>
-          <label>
-            Show Calendar
-            <input
-              type="checkbox"
-              checked={this.state.showCalendar}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({showCalendar: !this.state.showCalendar})
-              }
-            />
-            <HelpTip>
-              <p>
-                Check to enable the calendar view on the Unit Overview Page. The
-                calendar displays each lesson and generally how long it will
-                take as well how many weeks the unit is expected to take in
-                general. (Actual calendar UI coming soon!)
-              </p>
             </HelpTip>
           </label>
           <label>
@@ -550,163 +597,72 @@ class ScriptEditor extends React.Component {
                   </p>
                 </HelpTip>
               </label>
-              <label>
-                Family Name
-                <select
-                  className="familyNameSelector"
-                  value={this.state.familyName}
-                  style={styles.dropdown}
-                  disabled={this.props.hasCourse}
-                  onChange={this.handleFamilyNameChange}
-                >
-                  {!this.state.isCourse && <option value="">(None)</option>}
-                  {this.props.scriptFamilies.map(familyOption => (
-                    <option key={familyOption} value={familyOption}>
-                      {familyOption}
-                    </option>
-                  ))}
-                </select>
-                {this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      This field cannot be edited because this script belongs to
-                      a course, and redirecting to the latest version of a
-                      specific unit within a course is deprecated. Please go to
-                      the course page to edit this field.
-                    </p>
-                  </HelpTip>
-                )}
-                {!this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      The family name is used to group together scripts that are
-                      different version years of the same standalone course so
-                      that users can be redirected between different version
-                      years.
-                    </p>
-                  </HelpTip>
-                )}
-                {this.state.isCourse && (
-                  <HelpTip>
-                    <p>
-                      If you want to clear the family name you need to uncheck
-                      standalone course.
-                    </p>
-                  </HelpTip>
-                )}
-              </label>
-              <label>
-                Version Year
-                <select
-                  value={this.state.versionYear}
-                  style={styles.dropdown}
-                  disabled={this.props.hasCourse}
-                  onChange={e => this.setState({versionYear: e.target.value})}
-                >
-                  <option value="">(None)</option>
-                  {this.props.versionYearOptions.map(year => (
-                    <option key={year} value={year}>
-                      {year}
-                    </option>
-                  ))}
-                </select>
-                {this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      This field cannot be edited because this script belongs to
-                      a course, and redirecting to the latest version of a
-                      specific unit within a course is deprecated. Please go to
-                      the course page to edit this field.
-                    </p>
-                  </HelpTip>
-                )}
-              </label>
-              <label>
-                Is a Standalone Course
-                <input
-                  className="isCourseCheckbox"
-                  type="checkbox"
-                  checked={this.state.isCourse}
-                  disabled={!this.state.familyName}
-                  style={styles.checkbox}
-                  onChange={this.handleStandaloneCourseChange}
-                />
-                {this.state.familyName && !this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      (Still in development) If checked, indicates that this
-                      Unit represents a standalone course. Examples of such
-                      Units include CourseA-F, Express, and Pre-Express.
-                    </p>
-                  </HelpTip>
-                )}
-                {!this.state.familyName && !this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      You must select a family name in order to mark something
-                      as a standalone course.
-                    </p>
-                  </HelpTip>
-                )}
-                {this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      This unit is already part of a course so it can not be a
-                      standalone course.
-                    </p>
-                  </HelpTip>
-                )}
-              </label>
-              <label>
-                Can be recommended (aka stable)
-                <input
-                  type="checkbox"
-                  checked={this.state.isStable}
-                  style={styles.checkbox}
-                  onChange={() =>
-                    this.setState({isStable: !this.state.isStable})
-                  }
-                />
-                <HelpTip>
-                  <p>
-                    If checked, this unit will be eligible to be the recommended
-                    version of the unit. The most recent eligible version will
-                    be the recommended version.
-                  </p>
-                </HelpTip>
-              </label>
-              <VisibleAndPilotExperiment
-                visible={!this.state.hidden}
-                updateVisible={() =>
-                  this.setState({hidden: !this.state.hidden})
-                }
-                pilotExperiment={this.state.pilotExperiment}
-                updatePilotExperiment={pilotExperiment =>
-                  this.setState({pilotExperiment})
-                }
-              />
+              {this.props.hasCourse && (
+                <p>
+                  This unit is part of a course. Go to the course edit page to
+                  publish the course and its units.
+                </p>
+              )}
+              {!this.props.hasCourse && (
+                <div>
+                  <label>
+                    Is a Standalone Course
+                    <input
+                      className="isCourseCheckbox"
+                      type="checkbox"
+                      checked={this.state.isCourse}
+                      disabled={!this.state.familyName}
+                      style={styles.checkbox}
+                      onChange={this.handleStandaloneCourseChange}
+                    />
+                    {this.state.familyName && (
+                      <HelpTip>
+                        <p>
+                          If checked, indicates that this Unit represents a
+                          standalone course. Examples of such Units include
+                          CourseA-F, Express, and Pre-Express.
+                        </p>
+                      </HelpTip>
+                    )}
+                    {!this.state.familyName && (
+                      <HelpTip>
+                        <p>
+                          You must select a family name in order to mark
+                          something as a standalone course.
+                        </p>
+                      </HelpTip>
+                    )}
+                  </label>
+                  <CourseVersionPublishingEditor
+                    visible={!this.state.hidden}
+                    isStable={this.state.isStable}
+                    pilotExperiment={this.state.pilotExperiment}
+                    versionYear={this.state.versionYear}
+                    familyName={this.state.familyName}
+                    updateVisible={visible => this.setState({hidden: !visible})}
+                    updateIsStable={isStable => this.setState({isStable})}
+                    updatePilotExperiment={pilotExperiment =>
+                      this.setState({pilotExperiment})
+                    }
+                    updateFamilyName={familyName => this.setState({familyName})}
+                    updateVersionYear={versionYear =>
+                      this.setState({versionYear})
+                    }
+                    families={this.props.scriptFamilies}
+                    versionYearOptions={this.props.versionYearOptions}
+                    isCourse={this.state.isCourse}
+                    publishedState={this.state.publishedState}
+                    updatePublishedState={publishedState =>
+                      this.setState({publishedState})
+                    }
+                  />
+                </div>
+              )}
             </div>
           )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
-          <label>
-            Show Lesson Plan Links
-            <input
-              type="checkbox"
-              checked={this.state.hasLessonPlan}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({hasLessonPlan: !this.state.hasLessonPlan})
-              }
-            />
-            <HelpTip>
-              <p>
-                Check if this script has lesson plans (on Curriculum Builder or
-                in PDF form) that we should provide links to.
-              </p>
-            </HelpTip>
-          </label>
           {!this.props.isMigrated && (
             <label>
               Curriculum Path
@@ -755,7 +711,7 @@ class ScriptEditor extends React.Component {
           {!this.props.isMigrated && (
             <LessonDescriptions
               scriptName={this.props.name}
-              currentDescriptions={this.props.i18nData.stageDescriptions}
+              currentDescriptions={this.props.i18nData.lessonDescriptions}
               updateLessonDescriptions={(
                 lessonDescriptions,
                 hasImportedLessonDescriptions
@@ -767,9 +723,32 @@ class ScriptEditor extends React.Component {
               }
             />
           )}
+          {this.props.isMigrated && (
+            <label>
+              Include student-facing lesson plans
+              <input
+                type="checkbox"
+                checked={this.state.includeStudentLessonPlans}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({
+                    includeStudentLessonPlans: !this.state
+                      .includeStudentLessonPlans
+                  })
+                }
+              />
+              <HelpTip>
+                <p>
+                  Checking this will automatically generate student-facing
+                  lesson plans for any lesson that is marked as “Has Lesson
+                  Plan”
+                </p>
+              </HelpTip>
+            </label>
+          )}
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Teacher Resources Settings">
+        <CollapsibleEditorSection title="Resources Dropdowns">
           <label>
             Has Resources for Verified Teachers
             <input
@@ -789,24 +768,104 @@ class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
+          Select the resources you'd like to have show up in the dropdown at the
+          top of the script overview page:
           <div>
             <h4>Teacher Resources</h4>
             <div>
-              Select the Teacher Resources buttons you'd like to have show up on
-              the top of the script overview page
+              <div />
+              <ResourcesEditor
+                inputStyle={styles.input}
+                resources={this.state.teacherResources}
+                updateResources={teacherResources =>
+                  this.setState({teacherResources})
+                }
+                useMigratedResources={this.props.isMigrated}
+                courseVersionId={this.props.initialCourseVersionId}
+                migratedResources={this.props.migratedTeacherResources}
+                getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
+              />
             </div>
-            <ResourcesEditor
-              inputStyle={styles.input}
-              resources={this.state.teacherResources}
-              updateTeacherResources={teacherResources =>
-                this.setState({teacherResources})
-              }
-            />
+            {this.props.isMigrated && (
+              <div>
+                <h4>Student Resources</h4>
+                <div>
+                  Select the Student Resources buttons you'd like to have show
+                  up on the top of the script overview page
+                </div>
+                <ResourcesEditor
+                  inputStyle={styles.input}
+                  useMigratedResources
+                  courseVersionId={this.props.initialCourseVersionId}
+                  migratedResources={this.props.studentResources}
+                  studentFacing
+                />
+              </div>
+            )}
           </div>
         </CollapsibleEditorSection>
+        {this.props.isMigrated && (
+          <CollapsibleEditorSection title="Unit Calendar Settings">
+            <label>
+              Show Calendar
+              <input
+                type="checkbox"
+                checked={this.state.showCalendar}
+                style={styles.checkbox}
+                onChange={this.handleShowCalendarChange}
+              />
+              <HelpTip>
+                <p>
+                  Check to enable the calendar view on the Unit Overview Page.
+                  The calendar displays each lesson and generally how long it
+                  will take as well how many weeks the unit is expected to take
+                  in general. (Actual calendar UI coming soon!)
+                </p>
+              </HelpTip>
+            </label>
+            <label>
+              Instructional Minutes Per Week
+              <HelpTip>
+                <p>
+                  Number of instructional minutes to allocate to each week in
+                  the calendar. Lessons will be divided across the days/weeks in
+                  the calendar based on their length of time.
+                </p>
+              </HelpTip>
+              <input
+                value={this.state.weeklyInstructionalMinutes}
+                style={styles.input}
+                disabled={!this.state.showCalendar}
+                onChange={e =>
+                  this.setState({
+                    weeklyInstructionalMinutes: e.target.value
+                  })
+                }
+              />
+            </label>
+          </CollapsibleEditorSection>
+        )}
 
-        <CollapsibleEditorSection title="Professional Learning Settings">
-          {this.props.isLevelbuilder && (
+        {this.props.isLevelbuilder && (
+          <CollapsibleEditorSection title="Professional Learning Settings">
+            <label>
+              Deprecated
+              <input
+                type="checkbox"
+                checked={this.state.deprecated}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({deprecated: !this.state.deprecated})
+                }
+              />
+              <HelpTip>
+                <p>
+                  Used only for Professional Learning Courses. Deprecation
+                  prevents Peer Reviews conducted as part of this Script from
+                  being displayed in the admin-only Peer Review Dashboard.
+                </p>
+              </HelpTip>
+            </label>
             <label>
               Professional Learning Course
               <HelpTip>
@@ -825,21 +884,57 @@ class ScriptEditor extends React.Component {
                 }
               />
             </label>
-          )}
-          <label>
-            Number of Peer Reviews to Complete
-            <HelpTip>
-              <p>Currently only supported for professional learning courses</p>
-            </HelpTip>
-            <input
-              value={this.state.peerReviewsRequired}
-              style={styles.input}
-              onChange={e =>
-                this.setState({peerReviewsRequired: e.target.value})
-              }
-            />
-          </label>
-        </CollapsibleEditorSection>
+            <h4>Peer Reviews</h4>
+            <label>
+              Only Require Review from Instructor (no Peer Reviews)
+              <input
+                id="only_instructor_review_checkbox"
+                type="checkbox"
+                checked={this.state.onlyInstructorReviewRequired}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({
+                    onlyInstructorReviewRequired: !this.state
+                      .onlyInstructorReviewRequired,
+                    peerReviewsRequired: 0
+                  })
+                }
+              />
+              <HelpTip>
+                <p>
+                  Our Professional Learning Courses solicit self-reflections
+                  from participants, which are then typically shown to other
+                  participants enrolled in the course for feedback. This is
+                  known as "peer review". The instructor of the course also sees
+                  these self-reflections and can provide feedback as well.
+                  <br />
+                  <br />
+                  This setting allows you to collect those same reflections from
+                  from workshop participants and have the workshop instructor
+                  review them <strong>without</strong> soliciting peer reviews
+                  of those reflections by other participants in the workshop.
+                </p>
+              </HelpTip>
+            </label>
+            <label>
+              Number of Peer Reviews to Complete
+              <HelpTip>
+                <p>
+                  Currently only supported for professional learning courses
+                </p>
+              </HelpTip>
+              <input
+                id={'number_peer_reviews_input'}
+                value={this.state.peerReviewsRequired}
+                style={styles.input}
+                onChange={e =>
+                  this.setState({peerReviewsRequired: e.target.value})
+                }
+                disabled={this.state.onlyInstructorReviewRequired}
+              />
+            </label>
+          </CollapsibleEditorSection>
+        )}
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">
           {this.props.isMigrated ? (
@@ -858,6 +953,7 @@ class ScriptEditor extends React.Component {
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
+          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}
@@ -867,12 +963,38 @@ class ScriptEditor extends React.Component {
   }
 }
 
+const styles = {
+  input: {
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    margin: 0
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
+  },
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
+  }
+};
+
 export const UnconnectedScriptEditor = ScriptEditor;
 
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    levelKeyList: state.levelKeyList
+    levelKeyList: state.levelKeyList,
+    migratedTeacherResources: state.resources,
+    studentResources: state.studentResources
   }),
   {
     init

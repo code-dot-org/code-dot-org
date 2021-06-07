@@ -3,7 +3,7 @@
 Feature: Submittable free response
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
@@ -17,7 +17,7 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
   And I press ".submitButton" using jQuery to load a new page
 
   # Reload the page to see that unsubmit is the option.
-  And I am on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
+  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
   And I wait to see ".unsubmitButton"
   And element ".free-response > textarea" contains text "sample response"
   And element ".unsubmitButton" is visible

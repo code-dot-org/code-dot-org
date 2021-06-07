@@ -3,7 +3,7 @@
 Feature: Minecraft dialog levels
 
   Scenario: Playing level 1, seeing character select dialog and re-playing
-    Given I am on "http://studio.code.org/s/mc/stage/1/puzzle/1?noautoplay=true&customSlowMotion=0.1"
+    Given I am on "http://studio.code.org/s/mc/lessons/1/levels/1?noautoplay=true&customSlowMotion=0.1"
 #    And I open my eyes to test "Minecraft Level 1 dialogs"
     And "when run" refers to block "4"
     And "move forward" refers to block "1"
@@ -38,7 +38,7 @@ Feature: Minecraft dialog levels
 #  @eyes
   @skip
   Scenario: Playing level 6, seeing house select dialog
-    Given I am on "http://studio.code.org/s/mc/stage/1/puzzle/6?noautoplay=true&customSlowMotion=0.1"
+    Given I am on "http://studio.code.org/s/mc/lessons/1/levels/6?noautoplay=true&customSlowMotion=0.1"
 #    And I open my eyes to test "Minecraft Level 6 dialogs"
     And "when run" refers to block "12"
     And "toolbox repeat" refers to block "6"

@@ -4,53 +4,56 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit2/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit2/standards/"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit2/{LESSON}'
-announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Student-only"}]
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_unit2_2020', display_name: 'Unit 2: The Internet'
-lesson 'Welcome to the Internet', display_name: 'Welcome to the Internet'
+lesson 'Welcome to the Internet', display_name: 'Welcome to the Internet', has_lesson_plan: true
 level 'CSP U2L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U2L1 Internet Simulator: Sending Text', progression: 'Widget: Internet Simulator'
 level 'U2L1 CFU how use internet', progression: 'Check For Understanding', assessment: true
 
-lesson 'Building a Network', display_name: 'Building a Network'
+lesson 'Building a Network', display_name: 'Building a Network', has_lesson_plan: true
 level 'CSP U2L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U2L1 CFU paths', progression: 'Check For Understanding', assessment: true
 
-lesson 'The Need for Addressing', display_name: 'The Need for Addressing'
+lesson 'The Need for Addressing', display_name: 'The Need for Addressing', has_lesson_plan: true
 level 'CSP U2L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U2L2 CSP Internet Simulator Broadcast', progression: 'Internet Simulator: Broadcast Mode'
 level 'U2L2 CSP CFU IP Addresses', progression: 'Check For Understanding', assessment: true
 level 'U2L2 CSP CFU IP works', progression: 'Check For Understanding', assessment: true
 
-lesson 'Routers and Redundancy', display_name: 'Routers and Redundancy'
+lesson 'Routers and Redundancy', display_name: 'Routers and Redundancy', has_lesson_plan: true
 level 'CSP U2L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L3 CSP Internet Simulator Routers', progression: 'Internet Simulator: Routers'
 level 'U2L3 CSP CFU Routers', progression: 'Check For Understanding', assessment: true
 level 'U2L3 CSP CFU Redundancy', progression: 'Check For Understanding', assessment: true
 
-lesson 'Packets', display_name: 'Packets'
+lesson 'Packets', display_name: 'Packets', has_lesson_plan: true
 level 'CSP U2L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L4 CSP Internet Simulator Packets 2', progression: 'Internet Simulator: Packets'
 level 'U2L4 Multiple Choice packets', progression: 'Check For Understanding', assessment: true
 level 'U2L4 CSP CFU terms', progression: 'Check For Understanding', assessment: true
 
-lesson 'DNS and HTTP', display_name: 'DNS and HTTP'
+lesson 'DNS and HTTP', display_name: 'DNS and HTTP', has_lesson_plan: true
 level 'CSP U2L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L5 CSP Internet Simulator DNS', progression: 'Internet Simulator: DNS'
 level 'U2L4 CSP CFU scale', progression: 'Check For Understanding', assessment: true
 level 'U2L5 CSP CFU subgroups', progression: 'Check For Understanding', assessment: true
 
-lesson 'Project - Internet Dilemmas Part 1', display_name: 'Project - Internet Dilemmas Part 1'
+lesson 'Project - Internet Dilemmas Part 1', display_name: 'Project - Internet Dilemmas Part 1', has_lesson_plan: true
 level 'CSP U2L7 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Project - Internet Dilemmas Part 2', display_name: 'Project - Internet Dilemmas Part 2'
+lesson 'Project - Internet Dilemmas Part 2', display_name: 'Project - Internet Dilemmas Part 2', has_lesson_plan: true
 level 'CSP U2L9 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Lesson 9: Assessment Day', display_name: 'Lesson 9: Assessment Day', lockable: true
+lesson 'Lesson 9: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP Unit 2 MC Assessment _2020', progression: 'Unit 2 Exam', assessment: true
+
+lesson_group 'cspSurvey2020', display_name: 'Post-Course Survey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: false
+level 'csp-post-survey-2020-markdown-with-link-to-survey', progression: 'Post-Course Survey Instructions', assessment: true
 

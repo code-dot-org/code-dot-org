@@ -11,27 +11,6 @@ import color from '../../util/color';
 import * as dataStyles from './dataStyles';
 import {valueOr} from '../../utils';
 
-const styles = {
-  columnName: {
-    display: 'inline-block',
-    maxWidth: dataStyles.maxCellWidth,
-    overflow: 'hidden',
-    whiteSpace: 'nowrap'
-  },
-  container: {
-    justifyContent: 'space-between',
-    padding: '6px 0'
-  },
-  iconWrapper: {
-    alignSelf: 'flex-end',
-    paddingLeft: 5
-  },
-  icon: {
-    color: 'white',
-    cursor: 'pointer'
-  }
-};
-
 const INITIAL_STATE = {
   newName: undefined,
   hasEnteredText: false,
@@ -198,5 +177,26 @@ class ColumnHeader extends React.Component {
     );
   }
 }
+
+const styles = {
+  columnName: {
+    display: 'inline-block',
+    maxWidth: dataStyles.maxCellWidth,
+    overflow: 'hidden',
+    whiteSpace: 'nowrap'
+  },
+  container: {
+    justifyContent: 'space-between',
+    padding: '6px 0'
+  },
+  iconWrapper: {
+    alignSelf: 'flex-end',
+    paddingLeft: 5
+  },
+  icon: {
+    color: 'white',
+    cursor: 'pointer'
+  }
+};
 
 export default Radium(ColumnHeader);

@@ -219,9 +219,9 @@ class ApiController < ApplicationController
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
-        stages: script.lessons.each_with_object({}) do |stage, stage_hash|
-          stage_state = stage.lockable_state(section.students)
-          stage_hash[stage.id] = stage_state unless stage_state.nil?
+        lessons: script.lessons.each_with_object({}) do |lesson, lesson_hash|
+          lesson_state = lesson.lockable_state(section.students)
+          lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
         end
       }
     end
@@ -235,11 +235,11 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
-    # stage data
-    stages = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:lesson).map do |stage, levels|
+    # lesson data
+    lessons = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:lesson).map do |lesson, levels|
       {
         length: levels.length,
-        title: ActionController::Base.helpers.strip_tags(stage.localized_title)
+        title: ActionController::Base.helpers.strip_tags(lesson.localized_title)
       }
     end
 
@@ -298,7 +298,7 @@ class ApiController < ApplicationController
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
         levels_count: script_levels.length,
-        stages: stages,
+        lessons: lessons,
       }
     }
 
@@ -332,55 +332,14 @@ class ApiController < ApplicationController
 
     # Get the level progress for each student
     render json: {
-      students: student_progress,
-      student_timestamps: student_timestamps,
+      student_progress: student_progress,
+      student_last_updates: student_timestamps,
       pagination: {
         total_pages: paged_students.total_pages,
         page: page,
         per: per,
       }
     }
-  end
-
-  # Get level progress for a set of users within this script.
-  # @param [Enumerable<User>] users
-  # @param [Script] script
-  # @return [Hash]
-  # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
-  #   {
-  #     "1": {
-  #       "135": {"status": "perfect", "result": 100}
-  #       "136": {"status": "perfect", "result": 100}
-  #     },
-  #     "2": {
-  #       "135": {"status": "perfect", "result": 100}
-  #       "136": {"status": "perfect", "result": 100}
-  #     }
-  #   }
-  private def script_progress_for_users(users, script)
-    user_levels = User.user_levels_by_user_by_level(users, script)
-    paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
-    progress_by_user = users.inject({}) do |progress, user|
-      progress[user.id] = merge_user_progress_by_level(
-        script: script,
-        user: user,
-        user_levels_by_level: user_levels[user.id],
-        paired_user_levels: paired_user_levels_by_user[user.id],
-        include_timestamp: true
-      )
-      progress
-    end
-    timestamp_by_user = progress_by_user.transform_values do |user|
-      user.values.map {|level| level[:last_progress_at]}.compact.max
-    end
-    # Remove last_progress_at from the return value, to keep the data sent to
-    # the client to a minimum.
-    progress_by_user.values.each do |user|
-      user.values.each do |level|
-        level.delete(:last_progress_at)
-      end
-    end
-    [progress_by_user, timestamp_by_user]
   end
 
   def script_structure
@@ -405,25 +364,31 @@ class ApiController < ApplicationController
       script = Script.get_from_cache(params[:script])
       user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
       teacher_viewing_student = current_user.students.include?(user)
-      render json: summarize_user_progress(script, user).merge({teacherViewingStudent: teacher_viewing_student})
+      render json: summarize_user_progress(script, user).merge(
+        {
+          signedIn: true,
+          teacherViewingStudent: teacher_viewing_student,
+        }
+      )
     else
-      render json: {}
+      render json: {signedIn: false}
     end
   end
 
-  use_database_pool user_progress_for_stage: :persistent
+  use_database_pool user_progress_for_lesson: :persistent
 
   # Return the JSON details of the users progress on a particular script
   # level and marks the user as having started that level. (Because of the
   # latter side effect, this should only be called when the user sees the level,
   # to avoid spurious activity monitor warnings about the level being started
   # but not completed.)
-  def user_progress_for_stage
+  def user_progress_for_lesson
     response = user_summary(current_user)
+    response[:signedIn] = !current_user.nil?
 
     script = Script.get_from_cache(params[:script])
-    stage = script.lessons[params[:stage_position].to_i - 1]
-    script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
+    lesson = script.lessons[params[:lesson_position].to_i - 1]
+    script_level = lesson.cached_script_levels[params[:level_position].to_i - 1]
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
@@ -431,7 +396,7 @@ class ApiController < ApplicationController
       level_source = user_level.try(:level_source).try(:data)
 
       # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
-      response[:progress] = summarize_user_progress(script, current_user)[:levels]
+      response[:progress] = summarize_user_progress(script, current_user)[:progress]
 
       if user_level
         response[:lastAttempt] = {

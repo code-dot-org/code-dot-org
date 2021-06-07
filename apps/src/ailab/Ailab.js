@@ -8,15 +8,37 @@ import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
 import $ from 'jquery';
 
+import {
+  setDynamicInstructionsDefaults,
+  setDynamicInstructionsKey,
+  setDynamicInstructionsOverlayDismissCallback
+} from '../redux/instructions';
+
 /**
- * On small mobile devices, when in portrait orientation, we show an overlay
- * image telling the user to rotate their device to landscape mode.  Because
- * the ailab app is able to render at a minimum width of 480px, we set this
- * width to be somewhat larger.  We will use this width to set the viewport
- * on the mobile device, and correspondingly to scale up the overlay image to
- * properly fit on the mobile device for that viewport.
+ * This is used to set the viewport width in portrait mode, and will become
+ * the viewport height in landscape mode.  On a 1024x768 screen in landscape
+ * it will set the same viewport scale as Applab (which does it by requesting
+ * 1200 pixels' width), which is roughly 0.85, since 1200 / 1024 * 768 = 900.
  */
-const MOBILE_PORTRAIT_WIDTH = 600;
+const MOBILE_PORTRAIT_WIDTH = 900;
+
+function getInstructionsDefaults() {
+  var instructions = {
+    selectDataset: 'Select the data set you would like to use.',
+    dataDisplayLabel: 'Choose one column to predict.',
+    dataDisplayFeatures:
+      'Choose one or more columns as inputs to help make the prediction.',
+    trainModel: 'Your model is being trained.',
+    generateResults: 'Your model is being tested.',
+    results: 'Review the results.',
+    saveModel: 'Save the trained model for use in App Lab.',
+    modelSummary:
+      "You've successfully trained and saved your model. Review your model \
+      details and click Finish to use your trained model in App Lab."
+  };
+
+  return instructions;
+}
 
 /**
  * An instantiable Ailab class
@@ -96,6 +118,10 @@ Ailab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel
   });
 
+  getStore().dispatch(
+    setDynamicInstructionsDefaults(getInstructionsDefaults())
+  );
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <AilabView onMount={onMount} />
@@ -122,30 +148,55 @@ Ailab.prototype.onContinue = function() {
   });
 };
 
+Ailab.prototype.setInstructionsKey = function(instructionsKey, options) {
+  getStore().dispatch(setDynamicInstructionsKey(instructionsKey, options));
+};
+
 Ailab.prototype.initMLActivities = function() {
   const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
-  const saveTrainedModel = dataToSave => {
-    $.ajax({
-      method: 'POST',
-      url: '/api/v1/ml_models/save',
-      type: 'json',
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToSave)
+  const setInstructionsKey = this.setInstructionsKey.bind(this);
+  const saveTrainedModel = (dataToSave, callback) => {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        method: 'POST',
+        url: '/api/v1/ml_models/save',
+        type: 'json',
+        contentType: 'application/json;charset=UTF-8',
+        data: JSON.stringify(dataToSave)
+      })
+        .then(response => {
+          callback(response);
+          return resolve();
+        })
+        .fail((jqHXhr, status) => {
+          callback({status: 'failure'});
+          return reject();
+        });
     });
   };
 
   setAssetPath('/blockly/media/skins/ailab/');
 
-  const {initAll} = require('@code-dot-org/ml-playground');
+  const {
+    initAll,
+    instructionsDismissed
+  } = require('@code-dot-org/ml-playground');
 
   // Set initial state for UI elements.
   initAll({
     mode,
     onContinue,
+    setInstructionsKey,
     i18n: ailabMsg,
     saveTrainedModel
   });
+
+  if (instructionsDismissed) {
+    getStore().dispatch(
+      setDynamicInstructionsOverlayDismissCallback(instructionsDismissed)
+    );
+  }
 };
 
 export default Ailab;

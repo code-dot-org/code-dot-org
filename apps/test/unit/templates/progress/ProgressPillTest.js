@@ -1,7 +1,7 @@
 import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
+import {UnconnectedProgressPill as ProgressPill} from '@cdo/apps/templates/progress/ProgressPill';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import ReactTooltip from 'react-tooltip';
 
@@ -9,14 +9,16 @@ const unpluggedLevel = {
   id: '1',
   kind: LevelKind.unplugged,
   isUnplugged: true,
-  status: LevelStatus.perfect
+  status: LevelStatus.perfect,
+  isLocked: false
 };
 
 const assessmentLevel = {
   id: '2',
   kind: LevelKind.assessment,
   isUnplugged: false,
-  status: LevelStatus.perfect
+  status: LevelStatus.perfect,
+  isLocked: false
 };
 
 const levelWithUrl = {
@@ -88,14 +90,15 @@ describe('ProgressPill', () => {
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[assessmentLevel]} />
     );
-    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(1);
+    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(1);
+    expect(wrapper.find('BubbleBadge').props().type).to.equal('assessment');
   });
 
   it('does not have an assessment icon when single level is not assessment', () => {
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[unpluggedLevel]} />
     );
-    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
+    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(0);
   });
 
   it('does not have an assessment icon when multiple assessment levels', () => {
@@ -105,6 +108,6 @@ describe('ProgressPill', () => {
         levels={[assessmentLevel, assessmentLevel]}
       />
     );
-    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
+    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(0);
   });
 });

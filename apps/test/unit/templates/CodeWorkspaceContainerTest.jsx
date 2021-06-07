@@ -11,8 +11,7 @@ describe('CodeWorkspaceContainer', () => {
   const MINIMUM_PROPS = {
     hidden: false,
     isRtl: false,
-    noVisualization: false,
-    topMargin: 100
+    noVisualization: false
   };
 
   beforeEach(() => {
@@ -28,23 +27,24 @@ describe('CodeWorkspaceContainer', () => {
     utils.fireResizeEvent.restore();
   });
 
-  it('fires a resize event on update if topMargin changed', () => {
-    wrapper = mount(
-      <CodeWorkspaceContainer {...MINIMUM_PROPS} topMargin={100} />
-    );
+  it('fires a resize event on update if style.top changed', () => {
+    wrapper = mount(<CodeWorkspaceContainer {...MINIMUM_PROPS} />);
     expect(utils.fireResizeEvent).not.to.have.been.called;
 
-    wrapper.setProps({topMargin: 200});
+    wrapper.setProps({style: {top: 200}});
     expect(utils.fireResizeEvent).to.have.been.calledOnce;
   });
 
-  it('does not fire a resize event on update if topMargin is the same', () => {
+  it('does not fire a resize event on update if style.top does not change', () => {
     wrapper = mount(
       <CodeWorkspaceContainer {...MINIMUM_PROPS} isRtl={false} />
     );
     expect(utils.fireResizeEvent).not.to.have.been.called;
 
     wrapper.setProps({isRtl: true});
+    expect(utils.fireResizeEvent).not.to.have.been.called;
+
+    wrapper.setProps({style: {left: 100}});
     expect(utils.fireResizeEvent).not.to.have.been.called;
   });
 

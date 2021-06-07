@@ -9,6 +9,13 @@ wrong ‘Comments help document how code was written for other programmers to us
 wrong ‘Comments enable programmers to track their work throughout the development process’
 
 teacher_markdown <<MARKDOWN
+**Explanation:** [Lesson 7 - Intro to Debugging](https://curriculum.code.org/csp-20/unit3/7/) introduced students to comments and their usefulness.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+CRD-2.G.2: Comments are a form of program documentation written into the program to be read by people and do not affect how a program runs. 
+:::
 
 MARKDOWN
 

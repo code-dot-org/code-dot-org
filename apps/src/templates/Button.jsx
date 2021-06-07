@@ -32,6 +32,123 @@ const ButtonHeight = {
   narrow: 40
 };
 
+class Button extends React.Component {
+  static propTypes = {
+    className: PropTypes.string,
+    href: PropTypes.string,
+    text: PropTypes.string.isRequired,
+    size: PropTypes.oneOf(Object.keys(ButtonSize)),
+    color: PropTypes.oneOf(Object.keys(ButtonColor)),
+    icon: PropTypes.string,
+    iconClassName: PropTypes.string,
+    iconStyle: PropTypes.object,
+    target: PropTypes.string,
+    style: PropTypes.object,
+    disabled: PropTypes.bool,
+    download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+    onClick: PropTypes.func,
+    id: PropTypes.string,
+    tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    isPending: PropTypes.bool,
+    pendingText: PropTypes.string,
+    __useDeprecatedTag: PropTypes.bool
+  };
+
+  onKeyDown = event => {
+    const {href, disabled, onClick} = this.props;
+    if (event.key === 'Enter' && !disabled && !href) {
+      event.preventDefault();
+      event.stopPropagation();
+      onClick();
+    }
+  };
+
+  render() {
+    const {
+      className,
+      href,
+      text,
+      icon,
+      iconClassName,
+      iconStyle,
+      target,
+      style,
+      onClick,
+      disabled,
+      download,
+      id,
+      tabIndex,
+      isPending,
+      pendingText,
+      __useDeprecatedTag
+    } = this.props;
+
+    const color = this.props.color || ButtonColor.orange;
+    const size = this.props.size || ButtonSize.default;
+
+    if (!href && !onClick) {
+      throw new Error('Expect at least one of href/onClick');
+    }
+
+    let Tag = 'button';
+    if (__useDeprecatedTag) {
+      Tag = href ? 'a' : 'div';
+    }
+
+    if (download && Tag !== 'a') {
+      // <button> and <div> elements do not support the download attribute, so
+      // don't let this component attempt to do that.
+      throw new Error(
+        'Attempted to use the download attribute with a non-anchor tag'
+      );
+    }
+
+    const sizeStyle = __useDeprecatedTag
+      ? styles.sizes[size]
+      : {...styles.sizes[size], ...styles.updated};
+
+    // Opening links in new tabs with 'target=_blank' is inherently insecure.
+    // Unfortunately, we depend on this functionality in a couple of place.
+    // Fortunately, it is possible to partially mitigate some of the insecurity
+    // of this functionality by using the `rel` tag to block some of the
+    // potential exploits. Therefore, we do so here.
+    const rel = target === '_blank' ? 'noopener noreferrer' : undefined;
+
+    return (
+      <Tag
+        className={className}
+        style={[styles.main, styles.colors[color], sizeStyle, style]}
+        href={disabled ? 'javascript:void(0);' : href}
+        target={target}
+        rel={rel}
+        disabled={disabled}
+        download={download}
+        onClick={disabled ? null : onClick}
+        onKeyDown={this.onKeyDown}
+        tabIndex={tabIndex}
+        id={id}
+      >
+        <div style={_.pick(style, ['textAlign'])}>
+          {icon && (
+            <FontAwesome
+              icon={icon}
+              className={iconClassName}
+              style={{...styles.icon, ...iconStyle}}
+            />
+          )}
+          {isPending && pendingText && (
+            <span>
+              {pendingText}&nbsp;
+              <FontAwesome icon="spinner" className="fa-spin" />
+            </span>
+          )}
+          <span style={styles.textSpan}>{!isPending && text}</span>
+        </div>
+      </Tag>
+    );
+  }
+}
+
 const styles = {
   main: {
     display: 'inline-block',
@@ -55,7 +172,12 @@ const styles = {
   },
   updated: {lineHeight: '12px'},
   icon: {
-    marginRight: 5
+    marginRight: 2.5,
+    marginLeft: 2.5
+  },
+  textSpan: {
+    marginRight: 2.5,
+    marginLeft: 2.5
   },
   colors: {
     [ButtonColor.orange]: {
@@ -183,104 +305,6 @@ const styles = {
     }
   }
 };
-
-class Button extends React.Component {
-  static propTypes = {
-    className: PropTypes.string,
-    href: PropTypes.string,
-    text: PropTypes.string.isRequired,
-    size: PropTypes.oneOf(Object.keys(ButtonSize)),
-    color: PropTypes.oneOf(Object.keys(ButtonColor)),
-    icon: PropTypes.string,
-    iconClassName: PropTypes.string,
-    iconStyle: PropTypes.object,
-    target: PropTypes.string,
-    style: PropTypes.object,
-    disabled: PropTypes.bool,
-    onClick: PropTypes.func,
-    id: PropTypes.string,
-    tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    isPending: PropTypes.bool,
-    pendingText: PropTypes.string,
-    __useDeprecatedTag: PropTypes.bool
-  };
-
-  onKeyDown = event => {
-    const {href, disabled, onClick} = this.props;
-    if (event.key === 'Enter' && !disabled && !href) {
-      event.preventDefault();
-      event.stopPropagation();
-      onClick();
-    }
-  };
-
-  render() {
-    const {
-      className,
-      href,
-      text,
-      icon,
-      iconClassName,
-      iconStyle,
-      target,
-      style,
-      onClick,
-      disabled,
-      id,
-      tabIndex,
-      isPending,
-      pendingText,
-      __useDeprecatedTag
-    } = this.props;
-
-    const color = this.props.color || ButtonColor.orange;
-    const size = this.props.size || ButtonSize.default;
-
-    if (!href && !onClick) {
-      throw new Error('Expect at least one of href/onClick');
-    }
-
-    let Tag = 'button';
-    if (__useDeprecatedTag) {
-      Tag = href ? 'a' : 'div';
-    }
-
-    const sizeStyle = __useDeprecatedTag
-      ? styles.sizes[size]
-      : {...styles.sizes[size], ...styles.updated};
-
-    return (
-      <Tag
-        className={className}
-        style={[styles.main, styles.colors[color], sizeStyle, style]}
-        href={disabled ? 'javascript:void(0);' : href}
-        target={target}
-        disabled={disabled}
-        onClick={disabled ? null : onClick}
-        onKeyDown={this.onKeyDown}
-        tabIndex={tabIndex}
-        id={id}
-      >
-        <div style={_.pick(style, ['textAlign'])}>
-          {icon && (
-            <FontAwesome
-              icon={icon}
-              className={iconClassName}
-              style={{...styles.icon, ...iconStyle}}
-            />
-          )}
-          {isPending && pendingText && (
-            <span>
-              {pendingText}&nbsp;
-              <FontAwesome icon="spinner" className="fa-spin" />
-            </span>
-          )}
-          {!isPending && text}
-        </div>
-      </Tag>
-    );
-  }
-}
 
 Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;

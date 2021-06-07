@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Events",
   "config": {
     "color": [
       140,
@@ -7,7 +7,7 @@
       0.74
     ],
     "func": "whenPromptAnswered",
-    "blockText": "when {VAR} is answered",
+    "blockText": "when {VAR} answered",
     "args": [
       {
         "name": "VAR",

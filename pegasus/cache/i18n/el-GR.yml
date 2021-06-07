@@ -1279,6 +1279,11 @@ el-GR:
   coursed-2019_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2019_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2019_gradelevel: Τάξεις Α' Λυκείου +
+  coursea-2020_gradelevel: Τάξεις Ε' Δημοτικού +
+  coursec-2020_gradelevel: Τάξεις Α' Γυμνασίου +
+  coursed-2020_gradelevel: Τάξεις Β' Γυμνασίου +
+  coursee-2020_gradelevel: Τάξεις Γ' Γυμνασίου +
+  coursef-2020_gradelevel: Τάξεις Α' Λυκείου +
   accelerated_gradelevel: Ηλικίες 10+ (μετά το Μάθημα 3)
   codeorg_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   codeintl_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
@@ -2163,3 +2168,16 @@ el-GR:
     μαθαίνει την Επιστήμη της Πληροφορικής και να έχει τις δεξιότητες να επιτυγχάνει
     στον 21ο αιώνα.
   footer_powered_by_aws: Με την υποστήριξη των Amazon Web Services
+  footer_privacy_policy: Πολιτική Απορρήτου
+  footer_about: Σχετικά
+  footer_partners: Συνεργάτες
+  footer_donate: Κάντε μια δωρεά
+  footer_support: Βοήθεια και Κοινότητα
+  footer_terms: Όροι
+  ai_in_partnership_with: Σε συνεργασία με
+  ai_microsoft_thanks: Ευχαριστούμε πολύ την Microsoft για την υποστήριξη του οράματός
+    και της αποστολής μας για εξασφάλιση της ευκαιρίας για κάθε παιδί να μαθαίνει
+    την Επιστήμη της Πληροφορικής και να έχει τις δεξιότητες να επιτυγχάνει στον 21ο
+    αιώνα.
+  ai_activity: Δραστηριότητα
+  ai_description: Περιγραφή

@@ -1,0 +1,1013 @@
+{
+  "script": {
+    "name": "haikubot-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "pilot_experiment": "haikubot-pilot",
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:56:13 UTC",
+    "seeding_key": {
+      "script.name": "haikubot-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "Peom Bot",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Poem Bot"
+      },
+      "seeding_key": {
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introducing Sprite Lab",
+      "name": "Programming Ramp Up for Poem Bot",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "key": "write a haiku",
+      "name": "Write a Haiku",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "write a haiku",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "key": "Plan Your Haiku Poem",
+      "name": "Plan Your Haiku Poem",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Plan Your Haiku Poem",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "key": "Programming Poem Bot",
+      "name": "Programming Poem Bot",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "key": "poetry circle",
+      "name": "Poetry Circle",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "poetry circle",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_video_sprites"
+        ],
+        "progression": "Video: Making Sprites"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_video_sprites"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_video_sprites"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_sprites_make"
+        ],
+        "progression": "Sprites"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_sprites_make"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_sprites_make"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_sprites_positioning"
+        ],
+        "progression": "Sprites"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_sprites_positioning"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_sprites_positioning"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_sprites_properties"
+        ],
+        "progression": "Sprites"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_sprites_properties"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_sprites_properties"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_sprites_behaviors"
+        ],
+        "progression": "Sprites"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_sprites_behaviors"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_sprites_behaviors"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_sprites_behaviors_freeplay"
+        ],
+        "progression": "Sprites"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_sprites_behaviors_freeplay"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_sprites_behaviors_freeplay"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_video_text"
+        ],
+        "progression": "Video: Storing Text"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_video_text"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_video_text"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_text_print"
+        ],
+        "progression": "Text and Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_text_print"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_text_print"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_text_prompts"
+        ],
+        "progression": "Text and Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_text_prompts"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_text_prompts"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_text_answer"
+        ],
+        "progression": "Text and Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_text_answer"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_text_answer"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_text_concat"
+        ],
+        "progression": "Text and Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_text_concat"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_text_concat"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_text_concat_freeplay"
+        ],
+        "progression": "Text and Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_text_concat_freeplay"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_text_concat_freeplay"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_lesson 2_markdown"
+        ],
+        "progression": "Poem Bot Prototype"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_lesson 2_markdown"
+        ],
+        "lesson.key": "write a haiku",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_lesson 2_markdown"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_lesson 3_markdown"
+        ],
+        "progression": "Poem Bot Prototype"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_lesson 3_markdown"
+        ],
+        "lesson.key": "Plan Your Haiku Poem",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_lesson 3_markdown"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "haiku_prototype_choice1"
+        ],
+        "progression": "Poem Bot Prototype"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "haiku_prototype_choice1"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "haiku_prototype_choice1"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_video_choices"
+        ],
+        "progression": "Video: Prompt with Choices"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_video_choices"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_video_choices"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Poem Bot_Prompt 1 Mike"
+        ],
+        "progression": "Code Your Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Poem Bot_Prompt 1 Mike"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "Poem Bot_Prompt 1 Mike"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Poem Bot_Prompt 2"
+        ],
+        "progression": "Code Your Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Poem Bot_Prompt 2"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "Poem Bot_Prompt 2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Poem Bot_Prompt 3 Mike"
+        ],
+        "progression": "Code Your Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Poem Bot_Prompt 3 Mike"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "Poem Bot_Prompt 3 Mike"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Poem Bot_Prompt 4 Mike"
+        ],
+        "progression": "Code Your Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Poem Bot_Prompt 4 Mike"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "Poem Bot_Prompt 4 Mike"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_video_haiku"
+        ],
+        "progression": "Video: Finish your Haiku"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_video_haiku"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_video_haiku"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Poem Bot_Fat Level_2"
+        ],
+        "progression": "Finish your Haiku"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Poem Bot_Fat Level_2"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "Poem Bot_Fat Level_2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Poem Bot Choice Home"
+        ],
+        "progression": "Customize Your Program"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Poem Bot Choice Home"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "Poem Bot Choice Home"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Poem Bot_Choice1_Background"
+        ],
+        "progression": "Poem Bot Prototype"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Poem Bot_Choice1_Background"
+        ],
+        "lesson.key": "poetry circle",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "Poem Bot_Choice1_Background"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "poembot_video_sprites",
+        "script_level.level_keys": [
+          "poembot_video_sprites"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_sprites_make",
+        "script_level.level_keys": [
+          "poembot_sprites_make"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_sprites_positioning",
+        "script_level.level_keys": [
+          "poembot_sprites_positioning"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_sprites_properties",
+        "script_level.level_keys": [
+          "poembot_sprites_properties"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_sprites_behaviors",
+        "script_level.level_keys": [
+          "poembot_sprites_behaviors"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_sprites_behaviors_freeplay",
+        "script_level.level_keys": [
+          "poembot_sprites_behaviors_freeplay"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_video_text",
+        "script_level.level_keys": [
+          "poembot_video_text"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_text_print",
+        "script_level.level_keys": [
+          "poembot_text_print"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_text_prompts",
+        "script_level.level_keys": [
+          "poembot_text_prompts"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_text_answer",
+        "script_level.level_keys": [
+          "poembot_text_answer"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_text_concat",
+        "script_level.level_keys": [
+          "poembot_text_concat"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_text_concat_freeplay",
+        "script_level.level_keys": [
+          "poembot_text_concat_freeplay"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_lesson 2_markdown",
+        "script_level.level_keys": [
+          "poembot_lesson 2_markdown"
+        ],
+        "lesson.key": "write a haiku",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_lesson 3_markdown",
+        "script_level.level_keys": [
+          "poembot_lesson 3_markdown"
+        ],
+        "lesson.key": "Plan Your Haiku Poem",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "haiku_prototype_choice1",
+        "script_level.level_keys": [
+          "haiku_prototype_choice1"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_video_choices",
+        "script_level.level_keys": [
+          "poembot_video_choices"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Poem Bot_Prompt 1 Mike",
+        "script_level.level_keys": [
+          "Poem Bot_Prompt 1 Mike"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Poem Bot_Prompt 2",
+        "script_level.level_keys": [
+          "Poem Bot_Prompt 2"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Poem Bot_Prompt 3 Mike",
+        "script_level.level_keys": [
+          "Poem Bot_Prompt 3 Mike"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Poem Bot_Prompt 4 Mike",
+        "script_level.level_keys": [
+          "Poem Bot_Prompt 4 Mike"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_video_haiku",
+        "script_level.level_keys": [
+          "poembot_video_haiku"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Poem Bot_Fat Level_2",
+        "script_level.level_keys": [
+          "Poem Bot_Fat Level_2"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Poem Bot Choice Home",
+        "script_level.level_keys": [
+          "Poem Bot Choice Home"
+        ],
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Poem Bot_Choice1_Background",
+        "script_level.level_keys": [
+          "Poem Bot_Choice1_Background"
+        ],
+        "lesson.key": "poetry circle",
+        "lesson_group.key": "Peom Bot",
+        "script.name": "haikubot-pilot"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -991,6 +991,12 @@ en:
             '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
+      gamelab_addTarget:
+        text: "[SPRITE][0] gets target [TARGET][1] to [OPT][2]"
+        options:
+          OPT:
+            '"follow"': follow
+            '"avoid"': avoid
       gamelab_allSpritesWithAnimation:
         text: "[ANIMATION][0]"
       gamelab_atTime:
@@ -999,6 +1005,10 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_avoidingTargets:
+        text: avoiding targets
+      gamelab_beginCollectingData:
+        text: begin collecting data [BREAK][0] value [VALUE][1] with label [LABEL][2]
       gamelab_bounceOff:
         text: "[SPRITE][0] bounces off [TARGET][1]"
       gamelab_changePropBy:
@@ -1010,6 +1020,7 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+            '"speed"': speed
       gamelab_checkTouching:
         text: "[CONDITION][0] [SPRITE1][1] touches [SPRITE2][2]"
         options:
@@ -1032,8 +1043,12 @@ en:
         text: remove [THIS][0]
       gamelab_draggable:
         text: being draggable
+      gamelab_drawLine:
+        text: draw line [COLOR][0]  [LOC1][1]  [LOC2][2]
       gamelab_edgesDisplace:
         text: edges block [SPRITE][0] from moving
+      gamelab_followingTargets:
+        text: following targets
       gamelab_getAllSprites:
         text: all sprites
       gamelab_getProp:
@@ -1046,6 +1061,7 @@ en:
             '"y"': y position
             '"direction"': movement direction
             '"tint"': tint
+            '"speed"': speed
       gamelab_getThisSprite:
         text: "[CHOICE][0] sprite"
         options:
@@ -1058,6 +1074,8 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_hideHaiku:
+        text: hide haiku
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_ifVarEquals:
@@ -1187,6 +1205,8 @@ en:
             '"West"': West
       gamelab_moveToward:
         text: move [SPRITE][0] pixels [DISTANCE][1] toward [TARGET][2]
+      gamelab_newSpritePointer:
+        text: "[SPRITE][0]"
       gamelab_objectSpritePointer:
         text: "[SPRITE][0]"
       gamelab_patrollingUpDown:
@@ -1201,6 +1221,8 @@ en:
             '"East"': East
             '"South"': South
             '"West"': West
+      gamelab_printHaiku:
+        text: show haiku [BREAK][0] poem title [TITLE][1] poem author [AUTHOR][2] line 1 [LINE1][3] line 2 [LINE2][4] line 3 [LINE3][5]
       gamelab_printText:
         text: print [TEXT][0]
       gamelab_randColor:
@@ -1257,6 +1279,14 @@ en:
             undefined: none
       gamelab_setBackgroundImageAs:
         text: set background to [IMG][0]
+      gamelab_setDefaultSpriteSize:
+        text: set new sprite default size to [SIZE][0]
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medium
+            '100': large
       gamelab_setPrompt:
         text: prompt user [QUESTION][0] for variable [VAR][1]
       gamelab_setPromptWithChoices:
@@ -1270,6 +1300,17 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+            '"speed"': speed
+      gamelab_setProp_dropdown:
+        text: set [SPRITE][0] [PROPERTY][1] to [SIZE][2]
+        options:
+          PROPERTY:
+            '"scale"': size
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medium
+            '100': large
       gamelab_setSizes:
         text: set [SPRITE][0] [PROPERTY][1] to [N][2]%
         options:
@@ -1279,6 +1320,8 @@ en:
             '"height"': height
       gamelab_setTint:
         text: change color of [THIS][0] to [COLOR][1]
+      gamelab_setupScoreboard:
+        text: "draw scoreboard \n[SPRITE1COSTUME][0]score[VAR1][1][SPRITE2COSTUME][2]score[VAR2][3]target[SPRITE3COSTUME][4]"
       gamelab_setupSim:
         text: |-
           setup simulation with
@@ -1294,8 +1337,24 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_spriteSay:
+        text: "[SPRITE][0] say [SPEECH][1]"
+      gamelab_startAvoiding:
+        text: "[SPRITE][0] begins avoiding [TARGET][1]"
+      gamelab_startFollowing:
+        text: "[SPRITE][0] begins following [TARGET][1]"
+      gamelab_stopAvoiding:
+        text: "[SPRITE][0] stops avoiding other sprites"
+      gamelab_stopCollectingData:
+        text: stop collecting data
+      gamelab_stopFollowing:
+        text: "[SPRITE][0] stops following other sprites"
       gamelab_subjectSpritePointer:
         text: "[SPRITE][0]"
+      gamelab_textJoin:
+        text: "[LEFT_QUOTE][0][TEXT1][1][RIGHT_QUOTE][2][TEXT2][3]"
+      gamelab_textVariableJoin:
+        text: "[VAR][0][TEXT2][1]"
       gamelab_tumbling:
         text: tumbling
       gamelab_turn:
@@ -1306,6 +1365,8 @@ en:
             '"left"': left
       gamelab_updateTitleWithColor:
         text: show title screen [BREAK][0] title [TITLE][1] color [COLOR][2]
+      gamelab_whenAllPromptsAnswered:
+        text: when all prompts answered
       gamelab_whenDownArrow:
         text: when down arrow pressed
       gamelab_whenKey:
@@ -1324,9 +1385,11 @@ en:
       gamelab_whenLeftArrow:
         text: when left arrow pressed
       gamelab_whenPromptAnswered:
-        text: when [VAR][0] is answered
+        text: when [VAR][0] answered
       gamelab_whenRightArrow:
         text: when right arrow pressed
+      gamelab_whenSpriteCreated:
+        text: when [SPRITE][0] created
       gamelab_whenTouching:
         text: when [SPRITE1][0] touches [SPRITE2][1]
       gamelab_whenUpArrow:
@@ -1358,6 +1421,17 @@ en:
         text: |-
           if [NUM][0]% chance
           [STATEMENT][1]
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           [NUM][0] chance
+           [STATEMENT][1]
+        options:
+          NUM:
+            '10': very low
+            '25': low
+            '50': 50/50
+            '75': high
+            '90': very high
       gamelab_xLocationOf:
         text: x coordinate of [SPRITE][0]
       gamelab_yLocationOf:
@@ -1631,6 +1705,25 @@ en:
             '"direction"': movement direction
       Mikelab_setTint:
         text: change color of [SPRITE][0] to [COLOR][1]
+      Mikelab_setupLevel:
+        text: |-
+          setup level with
+          [A1][0][A2][1][A3][2][A4][3]
+          [A5][4][A6][5][A7][6][A8][7]
+          [B1][8][B2][9][B3][10][B4][11]
+          [B5][12][B6][13][B7][14][B8][15]
+      Mikelab_setupOutbreak:
+        text: |-
+          outbreak setup
+          population:[SPRITE2N][0]
+          [TOGGLE][1]virus
+      Mikelab_setupSim:
+        text: |-
+          setup simulation with
+          [SPRITE1N][0][SPRITE1COSTUME][1]speed[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]speed[SPRITE2SPEED][5]
+          collecting
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       Mikelab_showScoreboard:
         text: scoreboard label [LABEL][0] text color [TEXTCOLOR][1] color [COLOR][2] value [VALUE][3] corner [CORNER][4]
         options:
@@ -1718,6 +1811,30 @@ en:
         text: x coordinate of [SPRITE][0]
       Mikelab_yLocationOf:
         text: y coordinate of [SPRITE][0]
+      Outbreak_beginCongregating:
+        text: monsters begin congregating
+      Outbreak_beginQuarantining:
+        text: monsters begin quarantining when sick
+      Outbreak_beginSocialDistancing:
+        text: monsters begin social distancing
+      Outbreak_beginWandering:
+        text: monsters begin wandering
+      Outbreak_beginWearingMasks:
+        text: monsters begin wearing masks
+      Outbreak_layoutBorder:
+        text: layout monsters in a border
+      Outbreak_layoutClusters:
+        text: layout monsters in clusters of [NUM][0]
+      Outbreak_layoutGrid:
+        text: layout monsters as a grid
+      Outbreak_layoutRandom:
+        text: layout monsters randomly
+      Outbreak_setSpeed:
+        text: set monster speed to [VAL][0]
+      Outbreak_setupOutbreak:
+        text: setup Monster Town with[COUNT][0]monsters
+      Outbreak_stopMoving:
+        text: monsters stop moving
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:
@@ -1755,49 +1872,60 @@ en:
         options:
           PROPERTY:
             "'shapeColor'": color
-      aalab_addBehaviorForDuration:
-        text: aalab sprite [SPRITE][0] begins [BEHAVIOR][1] for [SECONDS][2] seconds
-      aalab_addBehaviorUntilBoolean:
-        text: sprite [SPRITE][0] begins [BEHAVIOR][1] until [CONDITION][2]
-      aalab_createNewSpriteAnonReturn2:
-        text: new sprite named[SPRITE_NAME][0] with costume[ANIMATION_NAME][1] at location[LOCATION][2]
-      aalab_goToScene:
-        text: go to scene [SCENE][0]
+      aalab_layoutSprites:
+        text: layout monsters as a [FORMAT][0]
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: move [SPRITE][0] [DISTANCE][1] pixels [DIRECTION][2]
-        options:
-          DIRECTION:
-            '"North"': North
-            '"East"': East
-            '"South"': South
-            '"West"': West
-      aalab_prompt:
-        text: ask question [MESSAGE][0]
-      aalab_scene:
-        text: scene [SCENE][0]
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: setup story
-      aalab_starwars_playSound:
-        text: play[OPTION][0]sound
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': grid
+            '"border"': border
+            '"row"': row
             '"random"': random
-            '"R2-D2 random"': R2-D2 random
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_setSpeed:
+        text: set monster speed to [VAL][0]
+      aalab_setupSim:
+        text: setup Monster Town with[COUNT][0]monsters
+      aalab_someGraduallyStartIntervention:
+        text: "[PORTION][0] monsters [RATE][1] begin [BEHAVIOR][2]"
+        options:
+          PORTION:
+            '1': all
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+          RATE:
+            '"immediately"': immediately
+            '"quickly"': quickly
+            '"gradually"': gradually
+            '"slowly"': slowly
+          BEHAVIOR:
+            '"wandering"': wandering randomly
+            '"congregating"': congregating
+            '"quarantining"': quarantining when sick
+            '"avoiding"': social distancing
+            '"none"': staying still
+      aalab_someStartIntervention:
+        text: "[PORTION][0] monsters begin [BEHAVIOR][1]"
+        options:
+          PORTION:
+            '1': all
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+          BEHAVIOR:
+            '"wandering"': wandering randomly
+            '"congregating"': congregating
+            '"quarantining"': quarantining when sick
+            '"avoiding"': social distancing
+            '"none"': staying still
+      aalab_startIntervention:
+        text: monsters begin [BEHAVIOR][0]
+        options:
+          BEHAVIOR:
+            wandering: wandering randomly
+            '"congregating"': congregating
+            '"quarantining"': quarantining when sick
+            '"avoiding"': social distancing
+            '"none"': staying still
       binary_drawBin:
         text: draw binary [BIN][0]
       binary_drawBinScreen:

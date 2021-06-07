@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2021-02-18T20:09:10.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you explain the concept of conditionals to your students? What is the benefit of journaling as a teaching practice for comptuer science?",
+    "tts_long_instructions_override": "In this lesson, we explored how conditionals help programmers add logic to their code.\r\n\r\nNow take a moment to reflect. How would you explain the concept of conditionals to your students? What is the benefit of journaling as a teaching practice for comptuer science?",
+    "instructions_important": "false",
+    "long_instructions": "# Reflect on Conditionals\r\n\r\nIn this lesson, we explored how conditionals help programmers add logic to their code.\r\n\r\nNow take a moment to reflect. How would you explain the concept of conditionals to your students? What is the benefit of journaling as a teaching practice for comptuer science?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 23392,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

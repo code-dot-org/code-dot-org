@@ -5,13 +5,6 @@ import Button from '@cdo/apps/templates/Button';
 import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import LibraryIdCopier from './LibraryIdCopier';
 
-const styles = {
-  centerContent: {
-    display: 'flex',
-    justifyContent: 'center'
-  }
-};
-
 export default class PublishSuccessDisplay extends React.Component {
   static propTypes = {
     libraryName: PropTypes.string.isRequired,
@@ -44,3 +37,10 @@ export default class PublishSuccessDisplay extends React.Component {
     );
   };
 }
+
+const styles = {
+  centerContent: {
+    display: 'flex',
+    justifyContent: 'center'
+  }
+};

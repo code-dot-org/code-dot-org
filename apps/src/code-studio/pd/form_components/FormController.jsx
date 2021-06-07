@@ -5,13 +5,6 @@ import {Button, Alert, FormGroup} from 'react-bootstrap';
 import {Pagination} from '@react-bootstrap/pagination';
 import i18n from '@cdo/locale';
 
-const styles = {
-  pageButtons: {
-    verticalAlign: 'middle',
-    margin: '0 10px'
-  }
-};
-
 /**
  * Helper class for dashboard forms. Expects to be extended by a class which
  * will implement the getPageComponents method, which is expected to return an
@@ -530,6 +523,13 @@ export default class FormController extends React.Component {
     );
   }
 }
+
+const styles = {
+  pageButtons: {
+    verticalAlign: 'middle',
+    margin: '0 10px'
+  }
+};
 
 FormController.propTypes = {
   apiEndpoint: PropTypes.string.isRequired,

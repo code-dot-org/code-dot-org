@@ -2,7 +2,7 @@ login_required true
 hideable_lessons true
 student_detail_progress_view true
 
-lesson 'Drawing in Game Lab', display_name: 'Drawing in Game Lab'
+lesson 'Drawing in Game Lab', display_name: 'Drawing in Game Lab', has_lesson_plan: false
 level 'CSD-U3-SFLP Simple Drawing', named: true
 level 'CSD: Drawing in Game Lab 1', named: true
 level 'U3 - Simple Drawing - Rectangle'
@@ -24,7 +24,7 @@ level 'U3 - Simple Drawing - text'
 level 'U3 - Simple Drawing - Plan Personal Drawing', named: true
 level 'U3 - Simple Drawing - Personal Drawing'
 
-lesson 'Draw Loop and Randomization', display_name: 'Draw Loop and Randomization'
+lesson 'Draw Loop and Randomization', display_name: 'Draw Loop and Randomization', has_lesson_plan: false
 level 'CSD-U3-SFLP Draw Loop', named: true
 level 'CSD U3 Random Intro'
 level 'CSD U3 Random Choice'
@@ -44,10 +44,10 @@ level 'CSD U3 Simple Drawing - Animation'
 level 'CSD U3 Simple Drawing - Animation 2'
 level 'CSD U3 Simple Drawing - Personal Animation'
 
-lesson 'Variables Unplugged', display_name: 'Variables Unplugged'
+lesson 'Variables Unplugged', display_name: 'Variables Unplugged', has_lesson_plan: false
 level 'CSD U3 Variables2 SFLP', named: true
 
-lesson 'Variables and Animation', display_name: 'Variables and Animation'
+lesson 'Variables and Animation', display_name: 'Variables and Animation', has_lesson_plan: false
 level 'CSD-U3-SFLP Variables', named: true
 level 'CSD Variables Video 1', named: true
 level 'CSD U3 Variables make a square'
@@ -66,7 +66,7 @@ level 'CSD U3 Counters counters sunset'
 level 'CSD U3 Counters match outputs', named: true
 level 'Challenge: Sunset with Counters', named: true
 
-lesson 'Sprites and Properties', display_name: 'Sprites and Properties'
+lesson 'Sprites and Properties', display_name: 'Sprites and Properties', has_lesson_plan: false
 level 'CSD-U3-SFLP Sprites and Mod', named: true
 level 'CSD U3 Sprites motivation'
 level 'CSD: Sprites in Game Lab', named: true
@@ -88,7 +88,7 @@ level 'CSD U3 Sprites race movement'
 level 'CSD U3 Sprites race random'
 level 'CSD U3 Sprites race finish'
 
-lesson 'Sprites and Images', display_name: 'Sprites and Images'
+lesson 'Sprites and Images', display_name: 'Sprites and Images', has_lesson_plan: false
 level 'CSD U3 SFLP Sprites and Images', named: true
 level 'CSD: Animation Tab', named: true
 level 'CSD U3 - images - first sprite with image'
@@ -110,10 +110,10 @@ level 'U3 - images - gears free play'
 level 'U3 - images - bee free play'
 level 'CSD U3 - images - kite free play'
 
-lesson 'Booleans and Conditionals', display_name: 'Booleans and Conditionals'
+lesson 'Booleans and Conditionals', display_name: 'Booleans and Conditionals', has_lesson_plan: false
 level 'CSD U3 - Booleans - 1', named: true
 
-lesson 'Conditionals and Keyboard Input', display_name: 'Conditionals and Keyboard Input'
+lesson 'Conditionals and Keyboard Input', display_name: 'Conditionals and Keyboard Input', has_lesson_plan: false
 level 'CSD U3 SFLP Conditionals', named: true
 level 'CSD U3 Boolean Predict'
 level 'CSD U3 - Booleans Video', named: true
@@ -131,7 +131,7 @@ level 'CSD U3 - conditionals - arrows and gears'
 level 'CSD U3 Direction Arrows'
 level 'CSD U3 Direction Animations'
 
-lesson 'Complex Conditionals', display_name: 'Complex Conditionals'
+lesson 'Complex Conditionals', display_name: 'Complex Conditionals', has_lesson_plan: false
 level 'CSD U3 - complex conditionals - SFLP', named: true
 level 'CSD U3 - Conditionals Video', named: true
 level 'CSD U3 Else'
@@ -148,7 +148,7 @@ level 'CSD U3 - complex - compound conditionals'
 level 'CSD U3 Conditional Predict'
 level 'CSD U3 Conditional Project'
 
-lesson 'Project: Interactive Card', display_name: 'Project: Interactive Card'
+lesson 'Project: Interactive Card', display_name: 'Project: Interactive Card', has_lesson_plan: false
 level 'CSD U3 SFLP Card Project', named: true
 level 'CSD U3 Interactive Card Exemplar', named: true
 level 'CSD U3 Interactive Card Background'
@@ -157,7 +157,7 @@ level 'CSD U3 Interactive Card User Input'
 level 'CSD U3 Interactive Card Other Conditionals'
 level 'CSD U3 Interactive Card Final'
 
-lesson 'Velocity', display_name: 'Velocity'
+lesson 'Velocity', display_name: 'Velocity', has_lesson_plan: false
 level 'CSD U3 SFLP Velocity', named: true
 level 'CSD: Sprite Velocity', named: true
 level 'CSD U3 abstraction velocityX'
@@ -171,7 +171,7 @@ level 'CSD U3 abstraction jump'
 level 'CSD U3 abstraction tumbleweed'
 level 'CSD U3 abstraction looping'
 
-lesson 'Collision Detection', display_name: 'Collision Detection'
+lesson 'Collision Detection', display_name: 'Collision Detection', has_lesson_plan: false
 level 'CSD U3 Collision Detection', named: true
 level 'CSD U3 collisions car intro'
 level 'CSD U3 collisions build isTouching'
@@ -183,7 +183,7 @@ level 'CSD U3 collisions debug isTouching'
 level 'CSD U3 collisions scoreboard'
 level 'CSD U3 collisions sidescroll2'
 
-lesson 'Complex Sprite Movement', display_name: 'Complex Sprite Movement'
+lesson 'Complex Sprite Movement', display_name: 'Complex Sprite Movement', has_lesson_plan: false
 level 'CSD U3 complex sprite movement SFLP', named: true
 level 'CSD U3 Complex Movement counter prediction gamelab'
 level 'CSD U3 abstraction accelerateX'
@@ -198,7 +198,7 @@ level 'CSD U3 abstraction add coin'
 level 'CSD U3 abstraction reset coin'
 level 'CSD U3 abstraction make it your own'
 
-lesson 'Collisions', display_name: 'Collisions'
+lesson 'Collisions', display_name: 'Collisions', has_lesson_plan: false
 level 'CSD U3 Collisions SFLP', named: true
 level 'CSD U3 collisions predict set velocity code'
 level 'CSD U3 collisions displace x'
@@ -216,7 +216,7 @@ level 'CSD U3 collisions flyman displace coin'
 level 'CSD U3 collisions flyman change colliders'
 level 'CSD U3 collisions flyman make it your own'
 
-lesson 'Functions', display_name: 'Functions'
+lesson 'Functions', display_name: 'Functions', has_lesson_plan: false
 level 'CSD U3 Functions SFLP', named: true
 level 'CSD U3 Functions Call Function'
 level 'CSD U3 Functions Order Functions'
@@ -230,7 +230,7 @@ level 'CSD U3 Functions Add IsTouching'
 level 'CSD U3 Functions Add Change Background'
 level 'CSD U3 Functions Introduction', named: true
 
-lesson 'The Game Design Process', display_name: 'The Game Design Process'
+lesson 'The Game Design Process', display_name: 'The Game Design Process', has_lesson_plan: false
 level 'CSD U3 Defender SFLP', named: true
 level 'CSD U3 AnimationsMulti Play Defender', named: true
 level 'CSD U3 AnimationsMulti STOP project guide', named: true
@@ -249,7 +249,7 @@ level 'CSD U3 AnimationsMulti defender displace enemies'
 level 'CSD U3 AnimationsMulti defender touch water'
 level 'CSD U3 AnimationsMulti defender make it your own'
 
-lesson 'Using the Game Design Process', display_name: 'Using the Game Design Process'
+lesson 'Using the Game Design Process', display_name: 'Using the Game Design Process', has_lesson_plan: false
 level 'CSD U3 Using the Game Design Process SLFP', named: true
 level 'CSD U3 platform sample1', named: true
 level 'CSD U3 platform intro'
@@ -271,7 +271,7 @@ level 'CSD U3 platform sample2'
 level 'CSD U3 platform sample3'
 level 'CSD U3 platform challenge'
 
-lesson 'Project: Design a Game', display_name: 'Project: Design a Game'
+lesson 'Project: Design a Game', display_name: 'Project: Design a Game', has_lesson_plan: false
 level 'CSD U3 Project Build a Game SFLP', named: true
 level 'CSD U3 game intro', named: true
 level 'CSD U3 game variables'

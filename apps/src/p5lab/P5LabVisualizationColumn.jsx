@@ -21,6 +21,7 @@ import TooltipOverlay, {
 import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './gamelab/GridOverlay';
+import PoemBank from './spritelab/PoemBank';
 import TextConsole from './spritelab/TextConsole';
 import SpritelabInput from './spritelab/SpritelabInput';
 import {
@@ -28,24 +29,19 @@ import {
   selectLocation,
   updateLocation,
   isPickingLocation
-} from './spritelab/locationPickerModule';
+} from './redux/locationPicker';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MODAL_Z_INDEX = 1050;
 
-const styles = {
-  containedInstructions: {
-    marginTop: 10
-  },
-  selectStyle: {
-    width: APP_WIDTH
-  }
-};
-
 class P5LabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
+    pauseHandler: PropTypes.func.isRequired,
+    hidePauseButton: PropTypes.bool.isRequired,
+
+    // From redux
     isResponsive: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
     isProjectLevel: PropTypes.bool.isRequired,
@@ -58,16 +54,13 @@ class P5LabVisualizationColumn extends React.Component {
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
     consoleMessages: PropTypes.array.isRequired,
-    pauseHandler: PropTypes.func.isRequired
+    isRtl: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
-    this.spritelabPauseExperiment = experiments.isEnabled(
-      experiments.SPRITELAB_PAUSE
-    );
-    this.spritelabInputExperiment = experiments.isEnabled(
-      experiments.SPRITELAB_INPUT
+    this.spritelabPoemBotExperiment = experiments.isEnabled(
+      experiments.POEM_BOT
     );
   }
 
@@ -164,7 +157,7 @@ class P5LabVisualizationColumn extends React.Component {
   }
 
   render() {
-    const {isResponsive, isShareView} = this.props;
+    const {isResponsive, isShareView, isRtl} = this.props;
     const divGameLabStyle = {
       touchAction: 'none',
       width: APP_WIDTH,
@@ -173,10 +166,11 @@ class P5LabVisualizationColumn extends React.Component {
     if (this.props.pickingLocation) {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
     }
-    const spriteLab = this.props.spriteLab;
+    const isSpritelab = this.props.spriteLab;
+    const showPauseButton = isSpritelab && !this.props.hidePauseButton;
 
     return (
-      <div style={{position: 'relative'}}>
+      <div>
         <div style={{position: 'relative'}}>
           <ProtectedVisualizationDiv>
             <Pointable
@@ -193,25 +187,31 @@ class P5LabVisualizationColumn extends React.Component {
               onMouseMove={this.onMouseMove}
             >
               <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
-              <CrosshairOverlay flip={spriteLab} />
-              <TooltipOverlay providers={[coordinatesProvider(spriteLab)]} />
+              <CrosshairOverlay flip={isSpritelab} />
+              <TooltipOverlay
+                providers={[coordinatesProvider(isSpritelab, isRtl)]}
+              />
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
-          {this.spritelabInputExperiment && <SpritelabInput />}
+          {isSpritelab && <SpritelabInput />}
         </div>
 
         <GameButtons>
-          {this.spritelabPauseExperiment && (
-            <PauseButton pauseHandler={this.props.pauseHandler} />
+          {showPauseButton && (
+            <PauseButton
+              pauseHandler={this.props.pauseHandler}
+              marginRight={isShareView ? 10 : 0}
+            />
           )}
           <ArrowButtons />
 
           <CompletionButton />
 
-          {!spriteLab && !isShareView && this.renderGridCheckbox()}
+          {!isSpritelab && !isShareView && this.renderGridCheckbox()}
         </GameButtons>
-        {!spriteLab && this.renderAppSpaceCoordinates()}
+        {isSpritelab && this.spritelabPoemBotExperiment && <PoemBank />}
+        {!isSpritelab && this.renderAppSpaceCoordinates()}
         <ProtectedStatefulDiv
           id={GAMELAB_DPAD_CONTAINER_ID}
           className={classNames({responsive: isResponsive})}
@@ -233,6 +233,15 @@ class P5LabVisualizationColumn extends React.Component {
   }
 }
 
+const styles = {
+  containedInstructions: {
+    marginTop: 10
+  },
+  selectStyle: {
+    width: APP_WIDTH
+  }
+};
+
 export default connect(
   state => ({
     isResponsive: state.pageConstants.isResponsive,
@@ -242,7 +251,8 @@ export default connect(
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     showGrid: state.gridOverlay,
     pickingLocation: isPickingLocation(state.locationPicker),
-    consoleMessages: state.textConsole
+    consoleMessages: state.textConsole,
+    isRtl: state.isRtl
   }),
   dispatch => ({
     toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),

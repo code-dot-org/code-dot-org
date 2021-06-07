@@ -1,0 +1,18 @@
+{
+  "func": "text",
+  "category": "Drawing",
+  "paletteParams": [
+    "str",
+    "x",
+    "y"
+  ],
+  "params": [
+    "\"text\"",
+    "0",
+    "15"
+  ],
+  "paramButtons": {
+    "minArgs": 3,
+    "maxArgs": 5
+  }
+}

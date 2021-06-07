@@ -1,0 +1,7 @@
+{
+  "func": "sprite.y",
+  "category": "Sprites",
+  "modeOptionName": "sprite_position_y",
+  "type": "property",
+  "noAutocomplete": true
+}

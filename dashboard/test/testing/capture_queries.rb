@@ -51,14 +51,6 @@ module CaptureQueries
     query = lambda do |_name, start, finish, _id, payload|
       duration = finish - start
 
-      # Accomodate both Rails 5.0 and 5.1 methods for determining payload caching.
-      #
-      # payload[:cached] was added in Rails 5.1, and the naming scheme was
-      # changed to prepend "CACHE" to the name rather than overwriting the
-      # whole name.
-      #
-      # Once we update to Rails 5.1, we can remove the `include?` line.
-      next if payload[:name] == "CACHE"
       next if payload.fetch(:cached, false)
 
       cleaner = Rails::BacktraceCleaner.new
@@ -69,7 +61,11 @@ module CaptureQueries
       next if ignore_filters.any? {|filter| backtrace.any? {|line| line =~ filter}}
       next unless capture_filters.all? {|filter| backtrace.any? {|line| line =~ filter}}
 
-      queries << "#{QueryLogger.log(duration, payload)}\n#{backtrace.join("\n")}"
+      query_log = QueryLogger.log(duration, payload)
+
+      # Note: the QueryLogger sql method will not return logged queries if they are SCHEMA
+      # or EXPLAIN queries, we also don't want to include these in our captured queries
+      queries << "#{query_log}\n#{backtrace.join("\n")}" unless query_log.empty?
     end
     ActiveRecord::Base.cache do
       ActiveSupport::Notifications.subscribed(query, "sql.active_record", &block)

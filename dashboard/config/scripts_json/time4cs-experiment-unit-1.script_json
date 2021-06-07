@@ -11,6 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:55:39 UTC",
     "seeding_key": {
       "script.name": "time4cs-experiment-unit-1"
     }
@@ -119,6 +120,7 @@
       "name": "Sequencing in Maze",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -133,6 +135,7 @@
       "name": "Programming and Loops with the Artist",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -147,6 +150,7 @@
       "name": "Conditionals in Minecraft: Voyage Aquatic",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -161,6 +165,7 @@
       "name": "Conditionals",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -175,8 +180,10 @@
       "name": "Events: The Big Event",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
@@ -189,8 +196,10 @@
       "name": "Simon Says",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Simon Says",
@@ -203,6 +212,7 @@
       "name": "Learning Sprites with Sprite Lab",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -217,6 +227,7 @@
       "name": "Alien Dance Party with Sprite Lab",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -231,8 +242,10 @@
       "name": "Private and Personal Information",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Private and Personal Information",
@@ -245,6 +258,7 @@
       "name": "About Me",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
       },
@@ -259,8 +273,10 @@
       "name": "Access Ability",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 11,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Access Ability",
@@ -273,6 +289,7 @@
       "name": "Conditionals Review",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 12,
       "properties": {
       },
@@ -283,16 +300,26 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_ramp1_experiment"
+        ],
         "progression": "Maze Intro: Programming with Blocks"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_video_ramp1_experiment"
@@ -308,12 +335,16 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp1_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp1_experiment"
@@ -329,12 +360,16 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging9_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging9_experiment"
@@ -350,12 +385,16 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp3_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp3_experiment"
@@ -371,12 +410,16 @@
     {
       "chapter": 5,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_debugging_experiment"
+        ],
         "progression": "Debugging with the Step Button"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_video_debugging_experiment"
@@ -392,12 +435,16 @@
     {
       "chapter": 6,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging2_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging2_experiment"
@@ -413,12 +460,16 @@
     {
       "chapter": 7,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp4_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp4_experiment"
@@ -434,12 +485,16 @@
     {
       "chapter": 8,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging4_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging4_experiment"
@@ -455,12 +510,16 @@
     {
       "chapter": 9,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging6_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging6_experiment"
@@ -476,13 +535,17 @@
     {
       "chapter": 10,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging7_experiment"
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging7_experiment"
@@ -498,12 +561,16 @@
     {
       "chapter": 11,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5a_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp5a_experiment"
@@ -519,12 +586,16 @@
     {
       "chapter": 12,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5c_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp5c_experiment"
@@ -540,12 +611,16 @@
     {
       "chapter": 13,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_artist_experiment"
+        ],
         "progression": "Artist Intro with JR Hildebrande"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_video_artist_experiment"
@@ -561,12 +636,16 @@
     {
       "chapter": 14,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog1_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog1_experiment"
@@ -582,12 +661,16 @@
     {
       "chapter": 15,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog2_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog2_experiment"
@@ -603,12 +686,16 @@
     {
       "chapter": 16,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_video_loopsArtist_experiment"
+        ],
         "progression": "Loops with the Artist"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ramp_video_loopsArtist_experiment"
@@ -624,12 +711,16 @@
     {
       "chapter": 17,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog3_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog3_experiment"
@@ -645,12 +736,16 @@
     {
       "chapter": 18,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog4_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog4_experiment"
@@ -666,13 +761,17 @@
     {
       "chapter": 19,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_artist_prog7_experiment"
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog7_experiment"
@@ -688,12 +787,16 @@
     {
       "chapter": 20,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops4_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ramp_artist_loops4_experiment"
@@ -709,12 +812,16 @@
     {
       "chapter": 21,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops5_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ramp_artist_loops5_experiment"
@@ -730,12 +837,16 @@
     {
       "chapter": 22,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops6_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ramp_artist_loops6_experiment"
@@ -751,13 +862,17 @@
     {
       "chapter": 23,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "ramp_artist_loops8_experiment"
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ramp_artist_loops8_experiment"
@@ -773,10 +888,14 @@
     {
       "chapter": 24,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge1_experiment"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -793,10 +912,14 @@
     {
       "chapter": 25,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge2a_experiment"
+        ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -813,12 +936,16 @@
     {
       "chapter": 26,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_1_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_1_experiment"
@@ -834,12 +961,16 @@
     {
       "chapter": 27,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_2_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_2_experiment"
@@ -855,12 +986,16 @@
     {
       "chapter": 28,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_3_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_3_experiment"
@@ -876,12 +1011,16 @@
     {
       "chapter": 29,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_4_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_4_experiment"
@@ -897,12 +1036,16 @@
     {
       "chapter": 30,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_5_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_5_experiment"
@@ -918,12 +1061,16 @@
     {
       "chapter": 31,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_6_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_6_experiment"
@@ -939,12 +1086,16 @@
     {
       "chapter": 32,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_7a_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_7a_experiment"
@@ -960,12 +1111,16 @@
     {
       "chapter": 33,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_8_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_8_experiment"
@@ -981,12 +1136,16 @@
     {
       "chapter": 34,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_9b_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_9b_experiment"
@@ -1002,12 +1161,16 @@
     {
       "chapter": 35,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_10_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_10_experiment"
@@ -1023,12 +1186,16 @@
     {
       "chapter": 36,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_11_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_11_experiment"
@@ -1044,12 +1211,16 @@
     {
       "chapter": 37,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro_experiment"
+        ],
         "progression": "While Loops with the Farmer"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_video_whileIntro_experiment"
@@ -1065,12 +1236,16 @@
     {
       "chapter": 38,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict1_experiment"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1_experiment"
@@ -1086,12 +1261,16 @@
     {
       "chapter": 39,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11a_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp11a_experiment"
@@ -1107,12 +1286,16 @@
     {
       "chapter": 40,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11b_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp11b_experiment"
@@ -1128,12 +1311,16 @@
     {
       "chapter": 41,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12b_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12b_experiment"
@@ -1149,12 +1336,16 @@
     {
       "chapter": 42,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12_forswap_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12_forswap_experiment"
@@ -1170,12 +1361,16 @@
     {
       "chapter": 43,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil_experiment"
+        ],
         "progression": "Repeat Unit Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_video_repeatUntil_experiment"
@@ -1191,12 +1386,16 @@
     {
       "chapter": 44,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12c_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12c_experiment"
@@ -1212,12 +1411,16 @@
     {
       "chapter": 45,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12d_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12d_experiment"
@@ -1233,12 +1436,16 @@
     {
       "chapter": 46,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12e_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12e_experiment"
@@ -1254,12 +1461,16 @@
     {
       "chapter": 47,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_video_BeeifElse_experiment"
+        ],
         "progression": "\"If/Else\" with the Bee"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_video_BeeifElse_experiment"
@@ -1275,13 +1486,17 @@
     {
       "chapter": 48,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseE_farmer_ramp12f_experiment"
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12f_experiment"
@@ -1297,12 +1512,16 @@
     {
       "chapter": 49,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12g_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12g_experiment"
@@ -1318,11 +1537,15 @@
     {
       "chapter": 50,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "BigEvent-Unplugged_experiment"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "BigEvent-Unplugged_experiment"
@@ -1338,11 +1561,15 @@
     {
       "chapter": 51,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "SimonSays-Unplugged_experiment"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "SimonSays-Unplugged_experiment"
@@ -1358,12 +1585,16 @@
     {
       "chapter": 52,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_IntroSpriteLab_experiment"
+        ],
         "progression": "Introducing Sprite Lab"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseEF_video_IntroSpriteLab_experiment"
@@ -1379,12 +1610,16 @@
     {
       "chapter": 53,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 1-validated_experiment"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 1-validated_experiment"
@@ -1400,12 +1635,16 @@
     {
       "chapter": 54,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 2-validated_experiment"
+        ],
         "progression": "Mini-Project: Swimming Fish"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 2-validated_experiment"
@@ -1421,12 +1660,16 @@
     {
       "chapter": 55,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 3-validated_experiment"
+        ],
         "progression": "Mini-Project: Swimming Fish"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 3-validated_experiment"
@@ -1442,12 +1685,16 @@
     {
       "chapter": 56,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 4-validated_experiment"
+        ],
         "progression": "Mini-Project: Swimming Fish"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 4-validated_experiment"
@@ -1463,12 +1710,16 @@
     {
       "chapter": 57,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_experiment"
+        ],
         "progression": "How to Make a Sprite"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseEF_video_MakeSprite_experiment"
@@ -1484,12 +1735,16 @@
     {
       "chapter": 58,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 5-validated_experiment"
+        ],
         "progression": "Mini-Project: Swimming Fish (continued)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 5-validated_experiment"
@@ -1505,12 +1760,16 @@
     {
       "chapter": 59,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 6-validated_experiment"
+        ],
         "progression": "Mini-Project: Swimming Fish (continued)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 6-validated_experiment"
@@ -1526,12 +1785,16 @@
     {
       "chapter": 60,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 7-validated_experiment"
+        ],
         "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 7-validated_experiment"
@@ -1547,12 +1810,16 @@
     {
       "chapter": 61,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 1-validated_experiment"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 1-validated_experiment"
@@ -1568,12 +1835,16 @@
     {
       "chapter": 62,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CDEF_video_SpritesInAction_experiment"
+        ],
         "progression": "Video"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CDEF_video_SpritesInAction_experiment"
@@ -1589,12 +1860,16 @@
     {
       "chapter": 63,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 2_experiment"
+        ],
         "progression": "Mini-Project: Alien Dance Moves"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 2_experiment"
@@ -1610,12 +1885,16 @@
     {
       "chapter": 64,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 3_experiment"
+        ],
         "progression": "Mini-Project: Alien Dance Moves"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 3_experiment"
@@ -1631,12 +1910,16 @@
     {
       "chapter": 65,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 4_experiment"
+        ],
         "progression": "Mini-Project: Alien Dance Moves"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 4_experiment"
@@ -1652,12 +1935,16 @@
     {
       "chapter": 66,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 5_experiment"
+        ],
         "progression": "Mini-Project: Alien Dance Moves"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 5_experiment"
@@ -1673,12 +1960,16 @@
     {
       "chapter": 67,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 6_experiment"
+        ],
         "progression": "Mini-Project: Alien Dance Party"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 6_experiment"
@@ -1694,12 +1985,16 @@
     {
       "chapter": 68,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 7_experiment"
+        ],
         "progression": "Mini-Project: Alien Dance Party"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 7_experiment"
@@ -1715,12 +2010,16 @@
     {
       "chapter": 69,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party Freeplay_experiment"
+        ],
         "progression": "Mini-Project: Alien Dance Party"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party Freeplay_experiment"
@@ -1736,11 +2035,15 @@
     {
       "chapter": 70,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PrivatePersonalInformation-Unplugged_experiment"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PrivatePersonalInformation-Unplugged_experiment"
@@ -1756,12 +2059,16 @@
     {
       "chapter": 71,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_1_experiment"
+        ],
         "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_aboutme_1_experiment"
@@ -1777,12 +2084,16 @@
     {
       "chapter": 72,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_2_experiment"
+        ],
         "progression": "Mini-project: Interactive Poster"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_aboutme_2_experiment"
@@ -1798,12 +2109,16 @@
     {
       "chapter": 73,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_3_experiment"
+        ],
         "progression": "Mini-project: Interactive Poster"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_aboutme_3_experiment"
@@ -1819,12 +2134,16 @@
     {
       "chapter": 74,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_4_experiment"
+        ],
         "progression": "Mini-project: Interactive Poster"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_aboutme_4_experiment"
@@ -1840,12 +2159,16 @@
     {
       "chapter": 75,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_5_experiment"
+        ],
         "progression": "Mini-project: Interactive Poster"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_aboutme_5_experiment"
@@ -1861,12 +2184,16 @@
     {
       "chapter": 76,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_6_experiment"
+        ],
         "progression": "Mini-project: Interactive Poster"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_aboutme_6_experiment"
@@ -1882,11 +2209,15 @@
     {
       "chapter": 77,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "DesigningForAccessibilityMarkdownLevel_2019_experiment"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "DesigningForAccessibilityMarkdownLevel_2019_experiment"
@@ -1902,12 +2233,16 @@
     {
       "chapter": 78,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro_experiment"
+        ],
         "progression": "While Loops with the Farmer"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_video_whileIntro_experiment"
@@ -1923,12 +2258,16 @@
     {
       "chapter": 79,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict1_experiment"
+        ],
         "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_farmer_while4_predict1_experiment"
@@ -1944,12 +2283,16 @@
     {
       "chapter": 80,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11a_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp11a_experiment"
@@ -1965,12 +2308,16 @@
     {
       "chapter": 81,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11b_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp11b_experiment"
@@ -1986,12 +2333,16 @@
     {
       "chapter": 82,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12b_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12b_experiment"
@@ -2007,12 +2358,16 @@
     {
       "chapter": 83,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12_forswap_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12_forswap_experiment"
@@ -2028,12 +2383,16 @@
     {
       "chapter": 84,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil_experiment"
+        ],
         "progression": "Repeat Unit Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_video_repeatUntil_experiment"
@@ -2049,12 +2408,16 @@
     {
       "chapter": 85,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12c_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12c_experiment"
@@ -2070,12 +2433,16 @@
     {
       "chapter": 86,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12d_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12d_experiment"
@@ -2091,12 +2458,16 @@
     {
       "chapter": 87,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12e_experiment"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12e_experiment"
@@ -2112,12 +2483,16 @@
     {
       "chapter": 88,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_video_BeeifElse_experiment"
+        ],
         "progression": "\"If/Else\" with the Bee"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_video_BeeifElse_experiment"
@@ -2133,13 +2508,17 @@
     {
       "chapter": 89,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseE_farmer_ramp12f_experiment"
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12f_experiment"
@@ -2155,12 +2534,16 @@
     {
       "chapter": 90,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12g_experiment"
+        ],
         "progression": "Updated"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_farmer_ramp12g_experiment"
@@ -3165,5 +3548,35 @@
         "script.name": "time4cs-experiment-unit-1"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

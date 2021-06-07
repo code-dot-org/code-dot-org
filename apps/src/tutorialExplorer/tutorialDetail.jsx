@@ -9,102 +9,6 @@ import Image from './image';
 import i18n from '@cdo/tutorialExplorer/locale';
 /* global ga */
 
-const styles = {
-  tutorialDetailModalHeader: {
-    borderBottomWidth: 0,
-    paddingTop: 0,
-    paddingBottom: 4,
-    height: 48
-  },
-  tutorialDetailModalBody: {
-    paddingTop: 0,
-    overflow: 'hidden',
-    textAlign: 'left',
-    maxHeight: 'calc(100vh - 100px)',
-    overflowY: 'auto'
-  },
-  popupFullWidth: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    width: '100%'
-  },
-  tutorialDetailImageOuterContainer: {
-    float: 'left',
-    paddingBottom: 10
-  },
-  tutorialDetailImageContainer: {
-    position: 'relative',
-    width: '100%',
-    height: 0,
-    paddingTop: '75%'
-  },
-  tutorialDetailImageBackground: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-    backgroundColor: '#f1f1f1',
-    border: 'solid 1px #cecece'
-  },
-  tutorialDetailImage: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%'
-  },
-  tutorialDetailInfoContainer: {
-    float: 'left',
-    paddingLeft: 20
-  },
-  tutorialDetailName: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 22,
-    paddingBottom: 4
-  },
-  tutorialDetailPublisher: {
-    fontFamily: '"Gotham 3r", sans-serif',
-    fontSize: 16
-  },
-  tutorialDetailSub: {
-    fontFamily: '"Gotham 3r", sans-serif',
-    fontSize: 12,
-    paddingBottom: 20
-  },
-  tutorialDetailDescription: {
-    fontFamily: '"Gotham 3r", sans-serif',
-    fontSize: 14
-  },
-  tutorialDetailDisabled: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 16,
-    paddingTop: 40
-  },
-  tutorialDetailDisabledIcon: {
-    color: '#d9534f'
-  },
-  tutorialDetailsTable: {
-    marginTop: 20,
-    width: '100%'
-  },
-  tutorialDetailsTableTitle: {
-    padding: 5,
-    width: '40%',
-    fontFamily: '"Gotham 5r", sans-serif',
-    border: '1px solid lightgrey'
-  },
-  tutorialDetailsTableBody: {
-    padding: 5,
-    border: '1px solid lightgrey'
-  },
-  tutorialDetailsTableBodyNoWrap: {
-    padding: 5,
-    border: '1px solid lightgrey',
-    whiteSpace: 'pre-wrap'
-  }
-};
-
 export default class TutorialDetail extends React.Component {
   static propTypes = {
     showing: PropTypes.bool.isRequired,
@@ -375,3 +279,99 @@ export default class TutorialDetail extends React.Component {
     );
   }
 }
+
+const styles = {
+  tutorialDetailModalHeader: {
+    borderBottomWidth: 0,
+    paddingTop: 0,
+    paddingBottom: 4,
+    height: 48
+  },
+  tutorialDetailModalBody: {
+    paddingTop: 0,
+    overflow: 'hidden',
+    textAlign: 'left',
+    maxHeight: 'calc(100vh - 100px)',
+    overflowY: 'auto'
+  },
+  popupFullWidth: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    width: '100%'
+  },
+  tutorialDetailImageOuterContainer: {
+    float: 'left',
+    paddingBottom: 10
+  },
+  tutorialDetailImageContainer: {
+    position: 'relative',
+    width: '100%',
+    height: 0,
+    paddingTop: '75%'
+  },
+  tutorialDetailImageBackground: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    backgroundColor: '#f1f1f1',
+    border: 'solid 1px #cecece'
+  },
+  tutorialDetailImage: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%'
+  },
+  tutorialDetailInfoContainer: {
+    float: 'left',
+    paddingLeft: 20
+  },
+  tutorialDetailName: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 22,
+    paddingBottom: 4
+  },
+  tutorialDetailPublisher: {
+    fontFamily: '"Gotham 3r", sans-serif',
+    fontSize: 16
+  },
+  tutorialDetailSub: {
+    fontFamily: '"Gotham 3r", sans-serif',
+    fontSize: 12,
+    paddingBottom: 20
+  },
+  tutorialDetailDescription: {
+    fontFamily: '"Gotham 3r", sans-serif',
+    fontSize: 14
+  },
+  tutorialDetailDisabled: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 16,
+    paddingTop: 40
+  },
+  tutorialDetailDisabledIcon: {
+    color: '#d9534f'
+  },
+  tutorialDetailsTable: {
+    marginTop: 20,
+    width: '100%'
+  },
+  tutorialDetailsTableTitle: {
+    padding: 5,
+    width: '40%',
+    fontFamily: '"Gotham 5r", sans-serif',
+    border: '1px solid lightgrey'
+  },
+  tutorialDetailsTableBody: {
+    padding: 5,
+    border: '1px solid lightgrey'
+  },
+  tutorialDetailsTableBodyNoWrap: {
+    padding: 5,
+    border: '1px solid lightgrey',
+    whiteSpace: 'pre-wrap'
+  }
+};

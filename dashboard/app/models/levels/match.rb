@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -75,5 +75,13 @@ class Match < DSLDefined
 
   def icon
     'fa fa-list-ul'
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        question: question
+      }
+    )
   end
 end

@@ -1300,6 +1300,12 @@ no-NO:
   coursed-2019_gradelevel: 8.+ klasse
   coursee-2019_gradelevel: Alder 8–12
   coursef-2019_gradelevel: Alder 9-13
+  coursea-2020_gradelevel: Alder 4-7
+  courseb-2020_gradelevel: Alder 5-8
+  coursec-2020_gradelevel: Alder 6-10
+  coursed-2020_gradelevel: 8.+ klasse
+  coursee-2020_gradelevel: Alder 8–12
+  coursef-2020_gradelevel: Alder 9-13
   accelerated_gradelevel: Alder 10+ (etter kurs 3)
   codeorg_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   codeintl_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
@@ -2172,3 +2178,11 @@ no-NO:
   page_not_available_button: Returner hjem
   footer_powered_by_aws: Drevet av Amazon Web Services
   codebytes_skinny_banner_english_only: Kun engelsk
+  footer_privacy_policy: Personvern
+  footer_about: Om
+  footer_partners: Partnere
+  footer_donate: Gi bidrag
+  footer_support: Brukerstøtte
+  footer_terms: Vilkår
+  ai_activity: Aktivitet
+  ai_description: Beskrivelse

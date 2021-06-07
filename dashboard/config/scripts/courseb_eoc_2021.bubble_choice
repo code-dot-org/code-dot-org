@@ -1,0 +1,8 @@
+name 'courseB_EOC_2021'
+display_name 'End of Course Project'
+description 'You have reached the last lesson! Choose a project to create.'
+
+sublevels
+level 'courseA_EOC_playlab_animals'
+level 'courseA_EOC_playlab_people'
+level 'courseA_EOC_playlab_fantasy'

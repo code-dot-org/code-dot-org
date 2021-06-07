@@ -2,53 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../util/color';
 
-const styles = {
-  card: {
-    overflow: 'hidden',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    boxSizing: 'border-box',
-    // Set width to form a three-column layout on 970px teacher dashboard.
-    width: 312,
-    // Uniform height, even in different rows
-    flex: '0 0 auto',
-    minHeight: 150,
-    padding: 16,
-    marginBottom: 5,
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: color.border_gray,
-    borderRadius: 5,
-    background: color.white
-  },
-  title: {
-    paddingBottom: 6,
-    fontSize: 24,
-    lineHeight: '18px',
-    fontFamily: '"Gotham 5r", sans-serif',
-    zIndex: 2,
-    color: color.charcoal
-  },
-  subtitle: {
-    paddingBottom: 12,
-    fontSize: 14,
-    lineHeight: '18px',
-    fontFamily: '"Gotham 4r", sans-serif',
-    zIndex: 2,
-    color: color.charcoal
-  },
-  description: {
-    paddingTop: 10,
-    paddingBottom: 5,
-    fontSize: 13,
-    lineHeight: '18px',
-    fontFamily: '"Gotham 4r", sans-serif',
-    zIndex: 2,
-    color: color.charcoal
-  }
-};
-
 class LoginTypeCard extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
@@ -98,4 +51,52 @@ class LoginTypeCard extends Component {
     );
   }
 }
+
+const styles = {
+  card: {
+    overflow: 'hidden',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    boxSizing: 'border-box',
+    // Set width to form a three-column layout on 970px teacher dashboard.
+    width: 312,
+    // Uniform height, even in different rows
+    flex: '0 0 auto',
+    minHeight: 150,
+    padding: 16,
+    marginBottom: 5,
+    marginLeft: 5,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: color.border_gray,
+    borderRadius: 5,
+    background: color.white
+  },
+  title: {
+    paddingBottom: 6,
+    fontSize: 24,
+    lineHeight: '18px',
+    fontFamily: '"Gotham 5r", sans-serif',
+    zIndex: 2,
+    color: color.charcoal
+  },
+  subtitle: {
+    paddingBottom: 12,
+    fontSize: 14,
+    lineHeight: '18px',
+    fontFamily: '"Gotham 4r", sans-serif',
+    zIndex: 2,
+    color: color.charcoal
+  },
+  description: {
+    paddingTop: 10,
+    paddingBottom: 5,
+    fontSize: 13,
+    lineHeight: '18px',
+    fontFamily: '"Gotham 4r", sans-serif',
+    zIndex: 2,
+    color: color.charcoal
+  }
+};
 export default LoginTypeCard;

@@ -2,17 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 
-const styles = {
-  readOnlyInput: {
-    backgroundColor: 'inherit',
-    cursor: 'default',
-    border: 'none'
-  },
-  error: {
-    color: 'red'
-  }
-};
-
 export default class OrganizerFormPart extends React.Component {
   static propTypes = {
     workshopId: PropTypes.number,
@@ -101,3 +90,14 @@ export default class OrganizerFormPart extends React.Component {
     );
   }
 }
+
+const styles = {
+  readOnlyInput: {
+    backgroundColor: 'inherit',
+    cursor: 'default',
+    border: 'none'
+  },
+  error: {
+    color: 'red'
+  }
+};

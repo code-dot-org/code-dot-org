@@ -12,28 +12,6 @@ import {h3Style} from '../../lib/ui/Headings';
 import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const styles = {
-  heading: {
-    marginBottom: 0
-  },
-  tableHeader: {
-    marginBottom: 10,
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    justifyContent: 'space-between'
-  },
-  scriptLink: {
-    color: color.teal
-  },
-  refreshing: {
-    color: color.orange
-  },
-  refreshSpinner: {
-    marginRight: 5
-  }
-};
-
 class ProgressViewHeader extends Component {
   static propTypes = {
     scriptId: PropTypes.number,
@@ -103,6 +81,28 @@ class ProgressViewHeader extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    marginBottom: 0
+  },
+  tableHeader: {
+    marginBottom: 10,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between'
+  },
+  scriptLink: {
+    color: color.teal
+  },
+  refreshing: {
+    color: color.orange
+  },
+  refreshSpinner: {
+    marginRight: 5
+  }
+};
 
 export const UnconnectedProgressViewHeader = ProgressViewHeader;
 

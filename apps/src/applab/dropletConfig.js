@@ -18,6 +18,7 @@ import {
 } from './setPropertyDropdown';
 import {getStore} from '../redux';
 import * as applabConstants from './constants';
+import experiments from '../util/experiments';
 
 var DEFAULT_WIDTH = applabConstants.APP_WIDTH.toString();
 var DEFAULT_HEIGHT = (
@@ -558,6 +559,9 @@ export var blocks = [
     parent: api,
     category: 'Data',
     paletteParams: ['url'],
+    params: [
+      '"https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"'
+    ],
     nativeIsAsync: true,
     noAutocomplete: true
   },
@@ -605,6 +609,16 @@ export var blocks = [
     allowFunctionDrop: {2: true, 3: true}
   },
   {
+    func: 'createRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', "{name:'Alice'}"],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
+  },
+  {
     func: 'readRecords',
     parent: api,
     category: 'Data',
@@ -615,6 +629,15 @@ export var blocks = [
       "function(records) {\n  for (var i =0; i < records.length; i++) {\n    console.log(records[i].id + ': ' + records[i].name);\n  }\n}"
     ],
     allowFunctionDrop: {2: true, 3: true}
+  },
+  {
+    func: 'readRecordsSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table'],
+    params: ['"mytable"'],
+    nativeIsAsync: true,
+    type: 'either'
   },
   {
     func: 'updateRecord',
@@ -629,12 +652,32 @@ export var blocks = [
     allowFunctionDrop: {2: true, 3: true}
   },
   {
+    func: 'updateRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', "{id:1, name:'Bob'}"],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
+  },
+  {
     func: 'deleteRecord',
     parent: api,
     category: 'Data',
     paletteParams: ['table', 'record', 'callback'],
     params: ['"mytable"', '{id:1}', 'function(success) {\n  \n}'],
     allowFunctionDrop: {2: true, 3: true}
+  },
+  {
+    func: 'deleteRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', '{id:1}'],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
   },
   {
     func: 'onRecordEvent',
@@ -1130,6 +1173,40 @@ export var blocks = [
     noAutocomplete: true
   }
 ];
+
+if (experiments.isEnabled(experiments.APPLAB_ML)) {
+  blocks.push(
+    {
+      func: 'getPrediction',
+      parent: api,
+      category: 'Data',
+      paletteParams: ['name', 'id', 'data', 'callback'],
+      params: ['"name"', '"id"', 'data', 'function (value) {\n \n}']
+    },
+    {
+      func: 'declareAssign_object',
+      block: `var object = {"key": "value"};`,
+      category: 'Variables',
+      noAutocomplete: true
+    },
+    {
+      func: 'getValue',
+      parent: dontMarshalApi,
+      category: 'Variables',
+      paletteParams: ['object', '"key"'],
+      params: ['{"key": "value"}', '"key"'],
+      dontMarshal: true
+    },
+    {
+      func: 'addPair',
+      parent: dontMarshalApi,
+      category: 'Variables',
+      paletteParams: ['object', '"key"', '"value"'],
+      params: ['object', '"key"', '"value"'],
+      dontMarshal: true
+    }
+  );
+}
 
 export const categories = {
   'UI controls': {

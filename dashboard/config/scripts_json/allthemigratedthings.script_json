@@ -1,0 +1,454 @@
+{
+  "script": {
+    "name": "allthemigratedthings",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "student_detail_progress_view": true,
+      "version_year": "2020",
+      "is_course": true,
+      "is_migrated": true,
+      "weekly_instructional_minutes": 225,
+      "show_calendar": true,
+      "include_student_lesson_plans": true
+    },
+    "new_name": null,
+    "family_name": "ui-test-versioned-script",
+    "serialized_at": "2021-05-03 23:56:13 UTC",
+    "seeding_key": {
+      "script.name": "allthemigratedthings"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Lesson Group 1",
+        "description": "Lesson group 1 description",
+        "big_questions": "* Who?\n* What?\n* Where?"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "allthemigratedthings"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Lesson Group 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthemigratedthings"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "UI/Eyes Test Content",
+        "description": "All lessons which are examined by automated UI or Eyes tests."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "First Lesson",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "announcements": [
+          {
+            "notice": "Teacher Notice",
+            "details": "Information for Teachers",
+            "link": "",
+            "type": "information",
+            "visibility": "Teacher-only"
+          },
+          {
+            "notice": "Student Notice",
+            "details": "Information for Students",
+            "link": "",
+            "type": "information",
+            "visibility": "Student-only"
+          },
+          {
+            "notice": "Student and Teacher",
+            "details": "Information for Students and Teachers",
+            "link": "",
+            "type": "information",
+            "visibility": "Teacher and student"
+          }
+        ],
+        "assessment_opportunities": "Assessment opportunities are everywhere",
+        "overview": "Teacher overview of the lesson",
+        "preparation": "* Do this\n* Now do this",
+        "purpose": "Purpose of this lesson is learning",
+        "student_overview": "Student overview of the lesson"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "allthemigratedthings"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Second Lesson",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthemigratedthings"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Third Lesson",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthemigratedthings"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Printable Lesson Plans",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "announcements": [
+          {
+            "notice": "Announcements should not show up",
+            "details": "If this is visible in print mode, something is wrong.",
+            "link": "",
+            "type": "information",
+            "visibility": "Teacher and student"
+          }
+        ],
+        "assessment_opportunities": "assessment opp",
+        "overview": "This lesson should contain examples of all the kinds of content that we want to be able to print, to confirm that changes made to that content don't end up working weird when printed. Things like collapsible or interactable stuff in particular is a good candidate for this page.",
+        "preparation": "prep",
+        "purpose": "purpose"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "fc27dc07-873f-49a3-bed6-9bf30a76a84b",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Activity 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc27dc07-873f-49a3-bed6-9bf30a76a84b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "allthemigratedthings"
+      }
+    },
+    {
+      "key": "bb1ad307-6de0-4aef-b458-be687c15b23d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bb1ad307-6de0-4aef-b458-be687c15b23d",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthemigratedthings"
+      }
+    },
+    {
+      "key": "b4638094-9212-48f6-8725-7f1f7aa7b13b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4638094-9212-48f6-8725-7f1f7aa7b13b",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthemigratedthings"
+      }
+    },
+    {
+      "key": "e406b746-2b7f-4631-b8fe-9df85984bf1e",
+      "position": 1,
+      "properties": {
+        "name": "Basic Example"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e406b746-2b7f-4631-b8fe-9df85984bf1e",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "f48d977f-0ba1-42c5-9af1-9e7205c45bfb",
+      "position": 1,
+      "properties": {
+        "duration": "5",
+        "name": "Do Levels",
+        "progression_name": "Levels are Cool"
+      },
+      "seeding_key": {
+        "activity_section.key": "f48d977f-0ba1-42c5-9af1-9e7205c45bfb",
+        "lesson_activity.key": "fc27dc07-873f-49a3-bed6-9bf30a76a84b"
+      }
+    },
+    {
+      "key": "5679a26c-e149-40a6-899e-3291cc8cf6a1",
+      "position": 2,
+      "properties": {
+        "description": "Discuss the levels you just did",
+        "duration": "5",
+        "name": "Discuss",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Get students to talk"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5679a26c-e149-40a6-899e-3291cc8cf6a1",
+        "lesson_activity.key": "fc27dc07-873f-49a3-bed6-9bf30a76a84b"
+      }
+    },
+    {
+      "key": "91fb2b2f-039e-4ffd-b67e-51a0fd08652c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "91fb2b2f-039e-4ffd-b67e-51a0fd08652c",
+        "lesson_activity.key": "bb1ad307-6de0-4aef-b458-be687c15b23d"
+      }
+    },
+    {
+      "key": "6c23550a-7e5d-448f-8af6-120183a59c20",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6c23550a-7e5d-448f-8af6-120183a59c20",
+        "lesson_activity.key": "b4638094-9212-48f6-8725-7f1f7aa7b13b"
+      }
+    },
+    {
+      "key": "5fe8f5c7-49ff-4274-be32-731fad0dda5a",
+      "position": 1,
+      "properties": {
+        "description": "We've just got in here examples of a bunch of the stuff you can include on the page.",
+        "name": "This is a basic example of UI content"
+      },
+      "seeding_key": {
+        "activity_section.key": "5fe8f5c7-49ff-4274-be32-731fad0dda5a",
+        "lesson_activity.key": "e406b746-2b7f-4631-b8fe-9df85984bf1e"
+      }
+    },
+    {
+      "key": "436888cd-47e2-4a63-8a63-12ee0273eb42",
+      "position": 2,
+      "properties": {
+        "name": "callout",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A basic callout"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "436888cd-47e2-4a63-8a63-12ee0273eb42",
+        "lesson_activity.key": "e406b746-2b7f-4631-b8fe-9df85984bf1e"
+      }
+    },
+    {
+      "key": "a85c218f-7269-4b2f-b29b-91da44794ace",
+      "position": 3,
+      "properties": {
+        "description": "![](https://images.code.org/d6f923cd0dac99c974331cd458d6684b-lorem-ipsum.jpg)",
+        "name": "image"
+      },
+      "seeding_key": {
+        "activity_section.key": "a85c218f-7269-4b2f-b29b-91da44794ace",
+        "lesson_activity.key": "e406b746-2b7f-4631-b8fe-9df85984bf1e"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L2 Using Simple Commands"
+        ],
+        "progression": "Levels are Cool"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L2 Using Simple Commands"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "allthemigratedthings",
+        "activity_section.key": "f48d977f-0ba1-42c5-9af1-9e7205c45bfb"
+      },
+      "level_keys": [
+        "U3L2 Using Simple Commands"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U3L2 Using Simple Commands",
+        "script_level.level_keys": [
+          "U3L2 Using Simple Commands"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "allthemigratedthings",
+        "activity_section.key": "f48d977f-0ba1-42c5-9af1-9e7205c45bfb"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Student Resource",
+      "url": "fake/url/",
+      "key": "student_resource",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "student_resource"
+      }
+    },
+    {
+      "name": "Teacher Resource",
+      "url": "fake/url/",
+      "key": "teacher_resource",
+      "properties": {
+        "assessment": true,
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_resource"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "teacher_resource"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "student_resource"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "word",
+      "word": "Word",
+      "definition": "This is a definition of the word word",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "word"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "word"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "playSound"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "key": "a1419708-f12c-4bc0-ab6b-827dd9136255",
+      "properties": {
+        "description": "Learn lots of stuff"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "a1419708-f12c-4bc0-ab6b-827dd9136255"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -9,6 +9,8 @@
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 $defaultWidth: 320px;
 $defaultFooterlessHeight: 450px;
+$widgetWidth: 600px; // Note: This constant is also maintained in applab/constants.js.
+$widgetHeight: $defaultFooterlessHeight;
 
 div#visualization {
   height: 562.5px;
@@ -231,16 +233,6 @@ div#visualizationResizeBar {
   }
 }
 
-.widgetWidth {
-  width: 600px !important;
-  max-width: 600px !important;
-}
-
-.widgetHeight {
-  height: 450px !important;
-  max-height: 450px !important;
-}
-
 #visualizationColumn.wireframeShare {
   max-width: none !important;
   // If you change this width and height,
@@ -271,6 +263,18 @@ div#visualizationResizeBar {
 #visualizationColumn.chromelessShare {
   #playSpaceHeader, #gameButtons {
     display: none;
+  }
+}
+
+#visualizationColumn, #visualization {
+  &.widgetWidth {
+    width: $widgetWidth;
+    max-width: $widgetWidth;
+  }
+
+  &.widgetHeight {
+    height: $widgetHeight;
+    max-height: $widgetHeight;
   }
 }
 

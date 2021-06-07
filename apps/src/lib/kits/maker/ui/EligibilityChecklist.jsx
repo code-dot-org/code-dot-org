@@ -15,12 +15,6 @@ import Unit6ValidationStep from './Unit6ValidationStep';
 import EligibilityConfirmDialog from './EligibilityConfirmDialog';
 import DiscountCodeInstructions from './DiscountCodeInstructions';
 
-const styles = {
-  main: {
-    color: color.charcoal
-  }
-};
-
 export default class EligibilityChecklist extends React.Component {
   static propTypes = {
     statusPD: PropTypes.oneOf(Object.values(Status)).isRequired,
@@ -235,6 +229,12 @@ export default class EligibilityChecklist extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    color: color.charcoal
+  }
+};
 
 const discountPageHeader = `Subsidized Circuit Playground Kits`;
 const discountPageDescriptionMd = `

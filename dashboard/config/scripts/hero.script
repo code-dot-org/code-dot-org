@@ -1,6 +1,6 @@
 hidden false
 
-lesson 'Minecraft Hour of Code', display_name: 'Minecraft Hour of Code'
+lesson 'Minecraft Hour of Code', display_name: 'Minecraft Hour of Code', has_lesson_plan: false
 level 'MC_HOC_2017_01_RETRY'
 level 'MC_HOC_2017_02_Cole'
 level 'MC_HOC_2017_03_Cole'

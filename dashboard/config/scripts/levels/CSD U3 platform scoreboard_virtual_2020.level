@@ -43,7 +43,7 @@
     "expand_debugger": "false",
     "parent_level_id": 20904,
     "name_suffix": "_virtual_2020",
-    "long_instructions": "# Make the Scoreboard\r\n\r\n<img src=\"https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png\" style=\"float:right;\">\r\n\r\nYou'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text \"Score\" and not the actual score. ([Show me where](#triggercallout=code_triggered))  You can see an example of a working scoreboard in [Lesson 24 Level 10](../../24/puzzle/10).\r\n\r\n# Do This\r\n\r\n* Read the code in the `showScore` function.\r\n* Call the function inside the draw loop, right after you draw the backgrounds.\r\n* Use the `text` block to display the score at the top of the screen.",
+    "long_instructions": "# Make the Scoreboard\r\n\r\n<img src=\"https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png\" style=\"float:right;\">\r\n\r\nYou'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text \"Score\" and not the actual score. ([Show me where](#triggercallout=code_triggered))  You can see an example of a working scoreboard in [Lesson 24 Level 10](../../24/levels/10).\r\n\r\n# Do This\r\n\r\n* Read the code in the `showScore` function.\r\n* Call the function inside the draw loop, right after you draw the backgrounds.\r\n* Use the `text` block to display the score at the top of the screen.",
     "reference_links": [
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
       "/docs/concepts/javascript/if-statements/",

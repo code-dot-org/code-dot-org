@@ -5,17 +5,6 @@ import i18n from '@cdo/locale';
 import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const styles = {
-  container: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  dropdown: {
-    marginLeft: 10,
-    marginBottom: 0
-  }
-};
-
 class SelectSectionDropdown extends React.Component {
   static propTypes = {
     // Provided by redux.
@@ -51,6 +40,17 @@ class SelectSectionDropdown extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  dropdown: {
+    marginLeft: 10,
+    marginBottom: 0
+  }
+};
 
 export const UnconnectedSelectSectionDropdown = SelectSectionDropdown;
 

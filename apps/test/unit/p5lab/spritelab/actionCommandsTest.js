@@ -1,5 +1,7 @@
 /* global p5 */
+import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
+import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
@@ -10,6 +12,59 @@ describe('Action Commands', () => {
   beforeEach(function() {
     p5Wrapper = createP5Wrapper();
     makeSprite = spriteCommands.makeSprite.bind(p5Wrapper.p5);
+  });
+
+  describe('addTarget', () => {
+    it('adds targets to follow', () => {
+      makeSprite({name: spriteName});
+      const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
+      expect(sprite.targetSet).to.be.undefined;
+      commands.addTarget({name: spriteName}, 'costume1', 'follow');
+      expect(sprite.targetSet).to.deep.equal({follow: ['costume1'], avoid: []});
+      commands.addTarget({name: spriteName}, 'costume2', 'follow');
+      expect(sprite.targetSet).to.deep.equal({
+        follow: ['costume1', 'costume2'],
+        avoid: []
+      });
+    });
+
+    it('adds targets to avoid', () => {
+      makeSprite({name: spriteName});
+      const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
+      expect(sprite.targetSet).to.be.undefined;
+      commands.addTarget({name: spriteName}, 'costume1', 'avoid');
+      expect(sprite.targetSet).to.deep.equal({follow: [], avoid: ['costume1']});
+      commands.addTarget({name: spriteName}, 'costume2', 'avoid');
+      expect(sprite.targetSet).to.deep.equal({
+        follow: [],
+        avoid: ['costume1', 'costume2']
+      });
+    });
+
+    it('can follow and avoid at the same time', () => {
+      makeSprite({name: spriteName});
+      const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
+      expect(sprite.targetSet).to.be.undefined;
+      commands.addTarget({name: spriteName}, 'costume1', 'follow');
+      commands.addTarget({name: spriteName}, 'costume2', 'avoid');
+      expect(sprite.targetSet).to.deep.equal({
+        follow: ['costume1'],
+        avoid: ['costume2']
+      });
+    });
+
+    it('console.warn on unknown target types', () => {
+      sinon.stub(console, 'warn');
+      makeSprite({name: spriteName});
+      const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
+      expect(sprite.targetSet).to.be.undefined;
+      commands.addTarget({name: spriteName}, 'costume1', 'other');
+      expect(console.warn).to.have.been.calledOnceWith(
+        'unkknown targetType: other'
+      );
+      expect(sprite.targetSet).to.be.undefined;
+      console.warn.restore();
+    });
   });
 
   describe('bounceOff', () => {
@@ -139,19 +194,32 @@ describe('Action Commands', () => {
     expect(spriteCommands.getProp({name: spriteName}, 'y')).to.equal(400);
   });
 
-  it('moveToward', () => {
-    makeSprite({name: spriteName, location: {x: 0, y: 50}});
+  describe('moveToward', () => {
+    it('moves the sprite towards the target', () => {
+      makeSprite({name: spriteName, location: {x: 0, y: 50}});
 
-    commands.moveToward({name: spriteName}, 100, {x: 123, y: 321});
-    expect(spriteCommands.getProp({name: spriteName}, 'x')).to.be.within(
-      41.3,
-      41.4
-    );
-    let expectedY = 400 - (50 + 91.1);
-    expect(spriteCommands.getProp({name: spriteName}, 'y')).to.be.within(
-      expectedY,
-      expectedY + 0.1
-    );
+      commands.moveToward({name: spriteName}, 100, {x: 123, y: 321});
+      expect(spriteCommands.getProp({name: spriteName}, 'x')).to.be.within(
+        41.3,
+        41.4
+      );
+      let expectedY = 400 - (50 + 91.1);
+      expect(spriteCommands.getProp({name: spriteName}, 'y')).to.be.within(
+        expectedY,
+        expectedY + 0.1
+      );
+    });
+
+    it('does not overshoot the target', () => {
+      makeSprite({name: spriteName, location: {x: 100, y: 100}});
+      const target = {x: 110, y: 120};
+      commands.moveToward({name: spriteName}, 100, target);
+      expect(spriteCommands.getProp({name: spriteName}, 'x')).to.equal(110);
+      const expectedY = 400 - target.y;
+      expect(spriteCommands.getProp({name: spriteName}, 'y')).to.equal(
+        expectedY
+      );
+    });
   });
 
   describe('setProp', () => {

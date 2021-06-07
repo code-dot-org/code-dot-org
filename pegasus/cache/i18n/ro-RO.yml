@@ -1249,8 +1249,30 @@ ro-RO:
   coursed-2017_name: Curs D (2017)
   coursee-2017_name: Curs E (2017)
   coursef-2017_name: Curs F (2017)
+  coursea-2018_name: "\t\nCurs A (2018)"
+  courseb-2018_name: Curs B (2018)
+  coursec-2018_name: Curs C (2018)
+  coursed-2018_name: Curs D (2018)
+  coursee-2018_name: Curs E (2018)
+  coursef-2018_name: Curs F (2018)
+  coursea-2019_name: Curs A (2019)
+  courseb-2019_name: Curs B (2019)
+  coursec-2019_name: Curs C (2019)
+  coursed-2019_name: Curs D (2019)
+  coursee-2019_name: Curs E (2019)
+  coursef-2019_name: Curs F (2019)
+  coursea-2020_name: Curs A (2020)
+  courseb-2020_name: Curs B (2020)
+  coursec-2020_name: Curs C (2020)
+  coursed-2020_name: Curs D (2020)
+  coursee-2020_name: Curs E (2020)
+  coursef-2020_name: Curs F (2020)
   pre-express-2018_name: Curs Expres pentru preșcolari (2018)
+  express-2019_name: Curs expres (2019)
+  pre-express-2019_name: Curs expres pentru preșcolari 2019)
+  pre-express-2020_name: Curs expres pentru preșcolari 2020)
   accelerated_name: Curs intensiv
+  pre-express_name: Curs expres pentru preșcolari
   20-hour_name: Curs intensiv
   algebra_name: CS în Algebră
   AlgebraA_name: CS în algebră Curs A
@@ -1346,6 +1368,12 @@ ro-RO:
   coursed-2019_gradelevel: Gradele 8+
   coursee-2019_gradelevel: Vârste 8-12 ani
   coursef-2019_gradelevel: Clasele 10+
+  coursea-2020_gradelevel: Clasele 5+
+  courseb-2020_gradelevel: Clasele 6+
+  coursec-2020_gradelevel: Clasele 7+
+  coursed-2020_gradelevel: Gradele 8+
+  coursee-2020_gradelevel: Vârste 8-12 ani
+  coursef-2020_gradelevel: Clasele 10+
   accelerated_gradelevel: Vârste 10 - 18 ani
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeintl_platformtext: Browsere web moderne, smartphone-uri, tablete
@@ -1484,6 +1512,8 @@ ro-RO:
   coursea_shortdescription_congrats: O introducere în informatică pentru preșcolari.
   courseb_shortdescription_congrats: O introducere în informatică pentru preșcolari.
     (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursec_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor
+    și creează desene, povești și jocuri.
   coursed_shortdescription_congrats: Acoperiți rapid conceptele din cursul C, apoi
     mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe altele.
   coursee_shortdescription_congrats: Acoperiți rapid concepte în cursul C & D şi apoi
@@ -1493,6 +1523,8 @@ ro-RO:
   coursea-2017_shortdescription_congrats: O introducere în informatică pentru preșcolari.
   courseb-2017_shortdescription_congrats: O introducere în informatică pentru preșcolari.
     (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursec-2017_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor
+    și creează desene, povești și jocuri.
   coursed-2017_shortdescription_congrats: Acoperiți rapid conceptele din cursul C,
     apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe
     altele.
@@ -1503,6 +1535,8 @@ ro-RO:
   coursea-2018_shortdescription_congrats: O introducere în informatică pentru preșcolari.
   courseb-2018_shortdescription_congrats: O introducere în informatică pentru preșcolari.
     (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursec-2018_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor
+    și creează desene, povești și jocuri.
   coursed-2018_shortdescription_congrats: Acoperiți rapid conceptele din cursul C,
     apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe
     altele.
@@ -1513,6 +1547,8 @@ ro-RO:
   coursea-2019_shortdescription_congrats: O introducere în informatică pentru preșcolari.
   courseb-2019_shortdescription_congrats: O introducere în informatică pentru preșcolari.
     (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursec-2019_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor
+    și creează desene, povești și jocuri.
   coursed-2019_shortdescription_congrats: Acoperiți rapid conceptele din cursul C,
     apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe
     altele.
@@ -1520,6 +1556,28 @@ ro-RO:
     şi apoi mergeți mai departe cu funcţii.
   coursef-2019_shortdescription_congrats: Învățați toate conceptele din fundamentele
     informaticii şi creați propria dvs. artă, poveste sau joc.
+  coursea-2020_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor
+    și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau
+    propria poveste pe care să le partajezi cu ceilalți.
+  courseb-2020_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor
+    și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau
+    propria poveste pe care să le partajezi cu ceilalți.
+  coursec-2020_shortdescription_congrats: Creează programe cu secvențiere, bucle și
+    evenimente. Scrie-ți inițialele în format binar, studiază diferite tehnici de
+    rezolvare a problemelor și învață cum să reacționezi la cyberbullying. La sfârșitul
+    cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi
+    cu ceilalți!
+  coursed-2020_shortdescription_congrats: Elevii învață despre bucle, relații de condiționalitate
+    și evenimente. În afară de cod, elevii vor învăța și despre Cetățenia digitală.
+  coursee-2020_shortdescription_congrats: Începe să scrii cod cu algoritmi, bucle,
+    relații de condiționalitate și evenimente, după care vei trece la funcții. În
+    a doua parte a acestui curs, concepe și creează un proiect de final de curs pe
+    care să-l partajezi cu prietenii și familia.
+  coursef-2020_shortdescription_congrats: Învață să folosești diferite tipuri de bucle,
+    evenimente, funcții și relații de condiționalitate. Analizează diverse tehnici
+    de rezolvare a problemelor și discută despre impactul social al computerelor și
+    al Internetului. În a doua parte a acestui curs, concepe și creează un proiect
+    de final de curs pe care să-l partajezi cu prietenii și familia.
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă
     simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat
     ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs.
@@ -2166,6 +2224,8 @@ ro-RO:
   hoc2018_creativity: creativitate
   hoc2018_creativity_create: Crează
   hoc2018_creativity_what_will_you_create: Ce vei creea?
+  hoc2018_creativity_courses_link: Mergeți mai departe cu <a href="https://studio.code.org/courses">cursurile
+    Code.org</a>
   hoc2018_mc_page_title: Tutoriale Hour of Code Minecraft
   hoc2018_mc_details: Mai multe limbi | Browsere moderne și tablete | Clasele 2+
   hoc2018_mc_aquatic_announcement: Înregistrează-ţi clasa pentru a încerca peste 150
@@ -2291,3 +2351,15 @@ ro-RO:
   ! '': "[șir gol]"
   footer_powered_by_aws: Susținut de Amazon Web Services
   codebytes_skinny_banner_english_only: Doar în engleză
+  footer_privacy_policy: Politică de confidențialitate
+  footer_about: Despre
+  footer_partners: Parteneri
+  footer_donate: Donează
+  footer_support: Ajutor şi comunitate
+  footer_terms: Termeni
+  ai_in_partnership_with: În parteneriat cu â
+  ai_microsoft_thanks: Mulțumim Microsoft pentru că ne susține viziunea și misiunea
+    de a ne asigura că fiecare copil are oportunitatea să învețe informatică și aptitudinile
+    să reușească în secolul 21.
+  ai_activity: Activitate
+  ai_description: Descriere

@@ -13,3 +13,16 @@ markdown <<MARKDOWN
 In which of the following situations would parallel systems MOST likely be used to help analyze data?
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Since parallel systems are easily scalable, they lend themselves to handing data sets too big to be processed on one computer.
+
+ [Lesson 5 - Big, Open, and Crowdsourced Data](https://curriculum.code.org/csp-20/unit9/5/) included a synthesis of all the topics from the jigsaw activity in the wrap up.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+
+* DAT-2.C: Identify the challenges associated with processing data.
+:::
+
+MARKDOWN

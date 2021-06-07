@@ -1,5 +1,5 @@
 {
-  "https://studio.code.org/s/dance/stage/1/puzzle/1": {
+  "https://studio.code.org/s/dance/lessons/1/levels/1": {
     "short_instructions": "Drag the `make a new` block into the workspace, and connect it inside the `setup` block.",
     "long_instructions": "_Let's have a dance party!_\n\nDrag the `make a new` block into the workspace, and connect it inside the `setup` block to create your first dancer.\n\n-   _You can also click the lightbulb to the left if you want more information or extra challenges._",
     "authored_hints": {
@@ -10,7 +10,7 @@
       "dance_callout_01": "Add this block to your program!"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/2": {
+  "https://studio.code.org/s/dance/lessons/1/levels/2": {
     "short_instructions": "Make the moose start a new move after 4 measures!",
     "long_instructions": "Let's get this moose dancing!\n\nDrag out the [blockly block][0] block onto the workspace. Connect it underneath the [blockly block][1] block. Your dancer should start a new move after the fourth measure.\n\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
     "authored_hints": {
@@ -20,14 +20,14 @@
       "dance_callout_02": "Add this block to your program!"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/3": {
+  "https://studio.code.org/s/dance/lessons/1/levels/3": {
     "short_instructions": "Now make the dancer start a new move after 6 measures!",
     "long_instructions": "_Now we're grooving!_ \n\nAdd an [blockly block][0] block to your workspace. Make the dancer start a new move after 6 measures.",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   After 6 measures, your dancer needs to be doing a different dance than it was after 4 measures.\n\n_The level ends after 11 measures._"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/4": {
+  "https://studio.code.org/s/dance/lessons/1/levels/4": {
     "short_instructions": "Add a background effect to your program.",
     "long_instructions": "_This dance needs some flash!_\n\nLook for a new block in your toolbox that adds a background effect behind your dancer. Watch the effects change in time with the music!",
     "authored_hints": {
@@ -38,14 +38,14 @@
       "dance_callout_04": "Add this block to your program!"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/5": {
+  "https://studio.code.org/s/dance/lessons/1/levels/5": {
     "short_instructions": "Use another new block to make the dancer change moves every 2 measures.",
     "long_instructions": "Use another new block to make the dancer change moves **every 2 measures**!\n\n-   Choosing `(Next)`, `(Previous)`, or `(Random)` tells the dancer to perform a different move every time the code is run.",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Your dancer needs to cycle through at least 4 different dance moves before the level ends.\n\n_This level ends after 12 measures._"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/6": {
+  "https://studio.code.org/s/dance/lessons/1/levels/6": {
     "short_instructions": "Create a backup dancer called `backup_dancer1` to dance with the cat.",
     "long_instructions": "_We need more dancers!_\n\nCreate a backup dancer called `backup_dancer1` to dance with the cat.",
     "authored_hints": {
@@ -56,7 +56,7 @@
       "dance_callout_06": "Add your new dancer here"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/7": {
+  "https://studio.code.org/s/dance/lessons/1/levels/7": {
     "short_instructions": "Can you make both backup dancers the same size?",
     "long_instructions": "Every dancer has a set of _properties_ that control what it looks like.\n\nYou can make it look like a dancer is in the background by making their _size_ smaller. Can you make both backup dancers the same size?",
     "authored_hints": {
@@ -64,21 +64,21 @@
       "challenges": "**Optional Challenge**\n\n-   Experiment by changing other properties (width, height, rotation, etc.)"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/8": {
+  "https://studio.code.org/s/dance/lessons/1/levels/8": {
     "short_instructions": "Use the `set tint` block to change the color of a dancer.",
     "long_instructions": "Dancers have a \"tint\" property that can add a layer of color. Try changing the tint of one of your dancers.\n\n-   Tints will mix the color you choose with the colors of the dancer.",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Change the tint of at least one dancer.\n\n_This level ends after 7 measures._"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/9": {
+  "https://studio.code.org/s/dance/lessons/1/levels/9": {
     "short_instructions": "Make the other dancer respond to the music using the `begins following` block, too.",
     "long_instructions": "Now we know how to change a dancer's properties. We can also make the same properties automatically respond to the music using this block:\n[blockly block][0]\n\nThis program uses the music's \"bass\" volume (the low sounds) to control one dancer's height. Can you make the other dancer respond to the music too?",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Properties for two or more dancers must change.\n\n_This level ends after 7 measures._"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/10": {
+  "https://studio.code.org/s/dance/lessons/1/levels/10": {
     "short_instructions": "The `when up pressed` block lets you run code when the up arrow is pressed. Try to make the dancer do a quick move when you press up.",
     "long_instructions": "The [blockly block][0] block lets you run code when the up arrow is pressed. \n\nYou might change the dance move, change a dancer's properties, or do a quick move just once. Be creative and look out for new blocks!",
     "authored_hints": {
@@ -89,14 +89,14 @@
       "dance_callout_11_b": "New block!"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/11": {
+  "https://studio.code.org/s/dance/lessons/1/levels/11": {
     "short_instructions": "Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key. Do the drop-clap as fast as you can!",
     "long_instructions": "It's time for a dance-off! The Cat dabs when you press the left arrow key. Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key.\n\n**Use the keys to get the Robot to do the drop-clap-drop-clap as fast as you can!**",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Use the `when left arrow pressed` block to make the Robot do a dance move when you press it.\n\n_This level ends after 7 measures._"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/12": {
+  "https://studio.code.org/s/dance/lessons/1/levels/12": {
     "short_instructions": "Use the \"all ducks\" blocks to make the ducks dance together.",
     "long_instructions": "Check out this block:\n\n[blockly block][0]\n\nNow you can create a bunch of dancers at once!\n\nTry using some of the \"all ducks\" blocks to write code that will make all of the ducks dance together.",
     "authored_hints": {
@@ -106,7 +106,7 @@
       "dance_party_11_5_groups": "Look here for \"all ducks\" blocks"
     }
   },
-  "https://studio.code.org/s/dance/stage/1/puzzle/13": {
+  "https://studio.code.org/s/dance/lessons/1/levels/13": {
     "short_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
     "long_instructions": "Get your groove on! Create a dance of your own to share with your friends."
   }

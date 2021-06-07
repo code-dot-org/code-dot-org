@@ -1,25 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const styles = {
-  row: {
-    clear: 'both'
-  },
-  caption: {
-    float: 'left',
-    width: 300
-  },
-  input: {
-    float: 'left'
-  },
-  linkContainer: {
-    marginBottom: 7
-  },
-  link: {
-    fontSize: 15
-  }
-};
-
 export default class FoormPreviewIndex extends React.Component {
   static propTypes = {
     forms: PropTypes.arrayOf(PropTypes.object)
@@ -110,3 +91,22 @@ export default class FoormPreviewIndex extends React.Component {
     );
   }
 }
+
+const styles = {
+  row: {
+    clear: 'both'
+  },
+  caption: {
+    float: 'left',
+    width: 300
+  },
+  input: {
+    float: 'left'
+  },
+  linkContainer: {
+    marginBottom: 7
+  },
+  link: {
+    fontSize: 15
+  }
+};

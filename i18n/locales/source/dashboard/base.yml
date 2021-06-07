@@ -145,12 +145,12 @@ en:
     email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
-    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    overview_markdown: 'Sign up for an account to track your progress or your child’s progress or manage your classroom. [You can browse the various stages and puzzles](/) without an account, but you will need to sign up to save your progress and projects.'
+    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various lessons and levels</a> without an account, but you will need to sign up to save your progress and projects.'
+    overview_markdown: 'Sign up for an account to track your progress or your child’s progress or manage your classroom. [You can browse the various lessons and levels](/) without an account, but you will need to sign up to save your progress and projects.'
     hoc_already_signed_up_heading: 'Get started without logging in'
     hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
-    hoc_already_signed_up_content_post_hoc_markdown: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. [You can also continue to browse the various stages and puzzles](%{studio_url}) without creating an account.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various lessons and levels</a> without creating an account.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. [You can also continue to browse the various lessons and levels](%{studio_url}) without creating an account.'
     teacher_educator_guide: 'See educator guide'
     title: "Sign up for Code.org"
     school_name: 'School Name (optional)'
@@ -280,7 +280,9 @@ en:
   follower:
     invite_sent: 'Invite sent'
     added_teacher: '%{name} added as your teacher'
-    registered:  "You've registered for %{section_name}."
+    registered:  "You have successfully joined %{section_name}."
+    captcha_required: 'Please fill out the CAPTCHA to join this section.'
+    already_exists: 'You have already joined section %{section_name}.'
     error:
       signed_in: 'Please signout before proceeding'
       username_not_found: 'Username %{username} not found'
@@ -290,6 +292,8 @@ en:
       blank_code: "Please enter a section code"
       cant_join_own_section: "Sorry, you can't join your own section."
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
+      restricted_section: "We couldn't add you to section %{section_code} because it is locked. Please contact your teacher for help."
+      full_section: "We couldn't add you to section %{section_code} because there are already %{section_capacity} students in it. Please contact your teacher for help."
     mail:
       student_disassociated:
         subject: "Code.org notification: %{student_name} is no longer associated as your student."
@@ -580,6 +584,7 @@ en:
     tos_short: 'Terms'
     tos: 'Terms of Service'
     privacy: 'Privacy Policy'
+    privacy_updated: 'Privacy Policy (updated)'
     secure: 'Secure Version'
     report_abuse: 'Report Abuse'
     built_on_code_studio: 'Built on Code Studio'
@@ -614,7 +619,7 @@ en:
       weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'This is taking longer than usual...'
   try_reloading: 'Try reloading the page'
-  next_stage: 'Finished! Continue to next stage'
+  next_stage: 'Finished! Continue to next lesson'
   download_pdf: 'Open Lesson Plan'
   lesson_plan: 'Lesson Plan'
   view_lesson_plan: 'View Lesson Plan'
@@ -787,7 +792,7 @@ en:
   dialog:
     ok: "OK"
     startover_title: "Are you sure you want to start over?"
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: "This will reset the level to its start state and reset all the data you've added or changed."
     startover_ok: "Start Over"
     startover_cancel: "Cancel"
   time:
@@ -831,7 +836,7 @@ en:
     save: "Save"
   race_interstitial:
     title: "Optional: Help us track our progress toward improving diversity in computer science"
-    message: "Please tell us your race (check all that apply)"
+    message: "Please tell us your race or ethnicity (check all that apply)"
     races:
       white: "White"
       black: "Black or African American"
@@ -994,7 +999,7 @@ en:
       choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
       other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
       confirm_focus_areas: 'Confirm Focus Areas'
-  locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
+  locked_stage: 'The contents of this lesson are not visible because this lesson is currently locked. Your teacher can unlock this lesson when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
   no_course_access_student: "You don't have access to this course. Please ask your teacher which course you should be on."
@@ -1072,6 +1077,7 @@ en:
         malaysia: 'Malaysia'
         mexico: 'Mexico'
         thailand: 'Thailand'
+        uzbekistan: 'Uzbekistan'
       ages:
         ages_under_6: '< 6 years old'
         ages_7_8: '7-8 years old'
@@ -1165,3 +1171,4 @@ en:
   behaviors:
     this_sprite: "this sprite"
   unit_prefix: "Unit %{n}"
+  code_org_logo_alt: "Code.org Home"

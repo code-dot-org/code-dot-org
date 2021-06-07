@@ -68,3 +68,4 @@ npm-debug.log
 /rebuild-shared
 /rebuild-code-studio
 /tools/scripts/brokenLinkChecker/node_modules/
+/i18n/locales/*/codeorg-markdown/

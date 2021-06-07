@@ -6,35 +6,6 @@ import StudioAppWrapper from '../templates/StudioAppWrapper';
 import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
 import _ from 'lodash';
 
-const styles = {
-  container: {
-    position: 'relative',
-    margin: '0 auto',
-    userSelect: 'none'
-  },
-  containerReact: {
-    position: 'absolute',
-    width: '100%',
-    margin: '0 auto',
-    userSelect: 'none',
-    fontFamily: '"Gotham 4r", arial, sans-serif',
-    color: 'rgb(30,30,30)',
-    lineHeight: 1.3
-  },
-  backgroundCanvas: {
-    position: 'absolute',
-    left: 0,
-    width: '100%',
-    zIndex: -1,
-    borderRadius: '10px'
-  },
-  activityCanvas: {
-    width: '100%',
-    borderRadius: '10px',
-    border: 'none'
-  }
-};
-
 /**
  * Top-level React wrapper for Fish
  */
@@ -154,7 +125,7 @@ class FishView extends React.Component {
 
     return (
       <StudioAppWrapper>
-        <CodeWorkspaceContainer topMargin={0}>
+        <CodeWorkspaceContainer>
           <div
             id="oceans-container"
             style={{
@@ -175,6 +146,35 @@ class FishView extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    position: 'relative',
+    margin: '0 auto',
+    userSelect: 'none'
+  },
+  containerReact: {
+    position: 'absolute',
+    width: '100%',
+    margin: '0 auto',
+    userSelect: 'none',
+    fontFamily: '"Gotham 4r", arial, sans-serif',
+    color: 'rgb(30,30,30)',
+    lineHeight: 1.3
+  },
+  backgroundCanvas: {
+    position: 'absolute',
+    left: 0,
+    width: '100%',
+    zIndex: -1,
+    borderRadius: '10px'
+  },
+  activityCanvas: {
+    width: '100%',
+    borderRadius: '10px',
+    border: 'none'
+  }
+};
 
 export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,

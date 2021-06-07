@@ -1413,6 +1413,12 @@ ru-RU:
   coursed-2019_gradelevel: Класс 8 и выше
   coursee-2019_gradelevel: Возраст 8-12
   coursef-2019_gradelevel: Возраст 9-13
+  coursea-2020_gradelevel: Возраст 4-7
+  courseb-2020_gradelevel: Возраст 5-8
+  coursec-2020_gradelevel: Возраст 6-10
+  coursed-2020_gradelevel: Класс 8 и выше
+  coursee-2020_gradelevel: Возраст 8-12
+  coursef-2020_gradelevel: Возраст 9-13
   accelerated_gradelevel: Возраст 10-18 лет
   codeorg_platformtext: Современные браузеры, смартфоны, планшеты
   codeintl_platformtext: Современные браузеры, смартфоны, планшеты
@@ -1597,6 +1603,10 @@ ru-RU:
     а затем перейди к функциям.
   coursef-2019_shortdescription_congrats: Изучи все понятия в Основах компьютерных
     наук и создай собственную картинку, игру или историю!
+  coursea-2020_shortdescription_congrats: Изучите основы информатики и интернет-безопасности.
+    В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
+  courseb-2020_shortdescription_congrats: Изучите основы информатики и интернет-безопасности.
+    В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
   codeorg_longdescription: Изучите основные понятия информатики, написав программу
     путем перетаскивания блоков. Это уроки для самостоятельного изучения в игровой
     форме, состоящие из видеолекций с участием Билла Гейтса, Марка Цукерберга, персонажей
@@ -2481,3 +2491,16 @@ ru-RU:
   page_not_available_button: Вернуться на домашнюю страницу
   footer_powered_by_aws: Создано с помощью Amazon Web Services
   codebytes_skinny_banner_english_only: Только на английском языке
+  footer_privacy_policy: Политика конфиденциальности
+  footer_about: О разработчике
+  footer_partners: Партнеры
+  footer_donate: Пожертвовать
+  footer_support: Поддержка
+  footer_terms: Условия использования
+  ai_for_oceans: AI для океанов
+  ai_in_partnership_with: В партнерстве с
+  ai_microsoft_thanks: Благодарим компанию Microsoft за поддержку нашего видения и
+    миссии предоставить каждому ребенку возможность изучить компьютерные науки и приобрести
+    навыки, необходимые для преуспевания в XXI веке.
+  ai_activity: Занятие
+  ai_description: Описание

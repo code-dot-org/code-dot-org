@@ -1,7 +1,6 @@
 hidden false
 hideable_lessons true
 lesson_extras_available true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-1718/express/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
@@ -9,16 +8,16 @@ new_name 'express-2017'
 family_name 'express'
 version_year '2017'
 is_stable true
-supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ru-RU", "sk-SK", "tr-TR", "ur-PK", "uz-UZ", "vi-VN", "zh-CN", "zh-TW"]
+supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fil-PH", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "ta-IN", "th-TH", "tr-TR", "ur-PK", "uz-UZ", "vi-VN", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
 tts true
 is_course true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Algorithms: Graph Paper Programming', display_name: 'Programming: Graph Paper Programming'
+lesson 'Algorithms: Graph Paper Programming', display_name: 'Programming: Graph Paper Programming', has_lesson_plan: true, unplugged: true
 level 'GraphPaperProgramming'
 
-lesson 'Introduction', display_name: 'Introduction'
+lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: true
 level 'courseE_video_ramp1'
 variants
   level 'courseE_maze_ramp1', active: false
@@ -77,10 +76,10 @@ variants
   level 'courseE_artist_ramp9_2'
 endvariants
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation'
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation'
 
-lesson 'Debugging in Collector', display_name: 'Introduction to Debugging'
+lesson 'Debugging in Collector', display_name: 'Introduction to Debugging', has_lesson_plan: true
 variants
   level 'courseC_video_debugging'
   level 'courseD_video_debugging', active: false
@@ -126,10 +125,10 @@ bonus 'courseC_maze_debugging_challenge2'
 bonus 'courseD_bee_debugging_challenge1'
 bonus 'courseD_collector_debugging_challenge2'
 
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends'
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_loopyMRF'
 
-lesson 'Loops in Artist', display_name: 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: true
 level 'ramp_video_artistIntro2'
 level 'ramp_artist_loops1'
 level 'ramp_artist_loops2'
@@ -148,7 +147,7 @@ level 'courseC_artist_loops4a'
 level 'courseC_artist_loops5b'
 level 'courseC_artist_loops8a'
 
-lesson 'Nested Loops', display_name: 'Nested Loops'
+lesson 'Nested Loops', display_name: 'Nested Loops', has_lesson_plan: true
 level 'courseD_bee_nestedLoops1a'
 level 'courseD_bee_nestedLoops1'
 level 'courseD_video_nestedLoops'
@@ -165,7 +164,7 @@ level 'courseD_bee_nestedLoops9_predict2'
 bonus 'courseD_harvester_nested_loops_challenge1'
 bonus 'courseD_collector_nested_loops_challenge2'
 
-lesson 'Nested Loops Project in Frozen', display_name: 'Nested Loops in Frozen'
+lesson 'Nested Loops Project in Frozen', display_name: 'Nested Loops in Frozen', has_lesson_plan: true
 level 'courseD_artist_project1'
 level 'courseD_artist_project2'
 level 'courseD_artist_project3'
@@ -176,19 +175,19 @@ level 'courseD_artist_project2a'
 level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
-lesson 'How it Works: The Internet', display_name: 'Beyond Programming: The Internet'
+lesson 'How it Works: The Internet', display_name: 'Beyond Programming: The Internet', has_lesson_plan: true, unplugged: true
 level 'Internet'
 
-lesson 'Common Sense Education: Digital Citizenship', display_name: 'Digital Citizenship: Practicing Digital Citizenship'
+lesson 'Common Sense Education: Digital Citizenship', display_name: 'Digital Citizenship: Practicing Digital Citizenship', has_lesson_plan: true, unplugged: true
 level 'courseD_unplugged_digitalCitizenship'
 
-lesson 'Common Sense Education: Screen Out the Mean', display_name: 'Digital Citizenship: Screen Out the Mean'
+lesson 'Common Sense Education: Screen Out the Mean', display_name: 'Digital Citizenship: Screen Out the Mean', has_lesson_plan: true, unplugged: true
 level 'courseC_Unplugged_ScreenOutTheMean'
 
-lesson 'Events: The Big Event', display_name: 'Events: The Big Event'
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent'
 
-lesson 'Events in Star Wars', display_name: 'Events in Star Wars'
+lesson 'Events in Star Wars', display_name: 'Events in Star Wars', has_lesson_plan: true
 level 'elementary_video_pairProgramming'
 skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_7_no_video'
@@ -218,7 +217,7 @@ video_key_for_next_level 'starwars_blocks_congrats'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_15'
 
-lesson 'Events with Flappy', display_name: 'Events with Flappy'
+lesson 'Events with Flappy', display_name: 'Events with Flappy', has_lesson_plan: true
 level 'flappy_1'
 level 'flappy_2'
 level 'flappy_3'
@@ -230,7 +229,7 @@ level 'flappy_8'
 level 'flappy_9'
 level 'flappy_11'
 
-lesson 'Events in Bounce', display_name: 'Events in Bounce'
+lesson 'Events in Bounce', display_name: 'Events in Bounce', has_lesson_plan: true
 level 'bounce_1'
 level 'bounce_2'
 level 'bounce_3'
@@ -242,10 +241,10 @@ level 'bounce_10'
 level 'bounce_11'
 level 'bounce_12'
 
-lesson 'Conditionals: Conditionals with Cards', display_name: 'Conditionals: Conditionals with Cards'
+lesson 'Conditionals: Conditionals with Cards', display_name: 'Conditionals: Conditionals with Cards', has_lesson_plan: true, unplugged: true
 level 'Conditionals'
 
-lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer'
+lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer', has_lesson_plan: true
 level 'courseD_farmer_while1'
 level 'courseD_farmer_while2'
 level 'courseD_farmer_while3'
@@ -262,7 +261,7 @@ level 'courseD_farmer_while10_predict2'
 bonus 'courseD_farmer_while_challenge1'
 bonus 'courseD_farmer_while_challenge2'
 
-lesson 'Until Loops in Maze', display_name: 'Until Loops in Maze'
+lesson 'Until Loops in Maze', display_name: 'Until Loops in Maze', has_lesson_plan: true
 level 'courseD_maze_until1'
 level 'courseD_video_repeatUntil'
 level 'courseD_maze_until2_predict1'
@@ -279,7 +278,7 @@ level 'courseD_maze_until10_predict2'
 bonus 'courseD_maze_until_challenge1'
 bonus 'courseD_farmer_until_challenge2'
 
-lesson 'Conditionals in Minecraft', display_name: 'Conditionals in Minecraft'
+lesson 'Conditionals in Minecraft', display_name: 'Conditionals in Minecraft', has_lesson_plan: true
 level 'Overworld Move to Sheep'
 level 'Overworld Chop Tree'
 level 'Overworld Shear Sheep'
@@ -295,7 +294,7 @@ level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
 
-lesson 'Conditionals & Loops in Harvester', display_name: 'Conditionals & Loops in Harvester'
+lesson 'Conditionals & Loops in Harvester', display_name: 'Conditionals & Loops in Harvester', has_lesson_plan: true
 level 'courseD_farmer_condLoops1'
 level 'courseD_farmer_condLoops2'
 level 'courseD_farmer_condLoops3'
@@ -309,10 +308,10 @@ level 'courseD_farmer_condLoops9_predict1'
 bonus 'courseD_farmer_condLoops_challenge1'
 bonus 'courseD_farmer_condLoops_challenge2'
 
-lesson 'Variables: Envelope Variables', display_name: 'Variables: Envelope Variables'
+lesson 'Variables: Envelope Variables', display_name: 'Variables: Envelope Variables', has_lesson_plan: true, unplugged: true
 level 'EnvelopeVariables'
 
-lesson 'Variables in Artist', display_name: 'Variables in Artist'
+lesson 'Variables in Artist', display_name: 'Variables in Artist', has_lesson_plan: true
 level 'grade5_artist_variables_triangles1'
 level 'courseF_artist_variables2'
 level 'courseF_video_artistVariables'
@@ -331,7 +330,7 @@ level 'courseF_artist_variablesFP'
 bonus 'courseF_artist_variables_challenge1'
 bonus 'courseF_artist_variables_challenge2'
 
-lesson 'Variables in Play Lab', display_name: 'Variables in Play Lab'
+lesson 'Variables in Play Lab', display_name: 'Variables in Play Lab', has_lesson_plan: true
 level 'courseF_playlab_variables1a'
 level 'courseF_playlab_variables2b'
 level 'courseF_playlab_variables3b_josh'
@@ -345,10 +344,10 @@ level 'courseF_playlab_variables7b'
 bonus 'courseF_playlab_variables_challenge1'
 bonus 'courseF_playlab_variables_challenge2'
 
-lesson 'For Loops: For Loop Fun', display_name: 'For Loops: For Loop Fun'
+lesson 'For Loops: For Loop Fun', display_name: 'For Loops: For Loop Fun', has_lesson_plan: true, unplugged: true
 level 'ForLoopFun'
 
-lesson 'For Loops in Bee', display_name: 'For Loops in Bee'
+lesson 'For Loops in Bee', display_name: 'For Loops in Bee', has_lesson_plan: true
 level 'courseF_bee_for1'
 level 'courseF_bee_for2'
 level 'courseF_video_forBee'
@@ -364,7 +363,7 @@ level 'courseF_bee_for11'
 bonus 'courseF_bee_for_challenge1'
 bonus 'courseF_bee_for_challenge2'
 
-lesson 'For Loops in Artist', display_name: 'For Loops in Artist'
+lesson 'For Loops in Artist', display_name: 'For Loops in Artist', has_lesson_plan: true
 level 'courseF_video_forArtist'
 level 'courseF_artist_for1'
 level 'courseF_artist_for2'
@@ -380,10 +379,10 @@ level 'courseF_artist_for10'
 bonus 'courseF_artist_for_challenge1'
 bonus 'courseF_artist_for_challenge2'
 
-lesson 'Functions: Songwriting with Parameters', display_name: 'Functions: Songwriting with Parameters'
+lesson 'Functions: Songwriting with Parameters', display_name: 'Functions: Songwriting with Parameters', has_lesson_plan: true, unplugged: true
 level 'SongwritingWithParameters'
 
-lesson 'Functions in Bee', display_name: 'Functions in Bee'
+lesson 'Functions in Bee', display_name: 'Functions in Bee', has_lesson_plan: true
 level 'courseD_bee_conditionalsVid1'
 level 'courseF_bee_conditionals1_predict1'
 level 'courseF_bee_conditionals2'
@@ -408,7 +407,7 @@ level 'courseF_bee_functions8a'
 bonus 'courseF_bee_functions_challenge1'
 bonus 'courseF_bee_functions_challenge2'
 
-lesson 'Functions with Parameters in Artist', display_name: 'Functions with Parameters in Artist'
+lesson 'Functions with Parameters in Artist', display_name: 'Functions with Parameters in Artist', has_lesson_plan: true
 level 'courseF_video_artistFunctions'
 level 'courseF_artist_fwp1'
 level 'gradeF_video_artistParameters'
@@ -425,7 +424,7 @@ level 'courseF_artist_fwp9'
 bonus 'courseF_artist_fwp_challenge1'
 bonus 'courseF_artist_fwp_challenge2'
 
-lesson 'Functions with Parameters in Bee', display_name: 'Functions with Parameters in Bee'
+lesson 'Functions with Parameters in Bee', display_name: 'Functions with Parameters in Bee', has_lesson_plan: true
 level 'courseF_bee_fwp1'
 level 'courseF_bee_fwp2'
 level 'courseF_bee_fwp3'
@@ -439,24 +438,24 @@ bonus 'courseF_bee_fwp_challenge1'
 bonus 'courseF_bee_fwp_challenge2'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas'
+lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas', has_lesson_plan: true
 level 'courseF_video_csMatters', named: true
 level 'InspirationalArtwork', named: true
 level 'FoodFight', named: true
 level 'Guess The Number', named: true
 level 'Choose Your Own Adventure', named: true
 
-lesson 'The Design Process', display_name: 'The Design Process'
+lesson 'The Design Process', display_name: 'The Design Process', has_lesson_plan: true
 level 'Begin planning your project', named: true
 
-lesson 'Build Your Project', display_name: 'Build Your Project'
+lesson 'Build Your Project', display_name: 'Build Your Project', has_lesson_plan: true
 level 'Course F: Artist Project', named: true
 level 'Course F: Play Lab Project', named: true
 
-lesson 'Revise Your Project', display_name: 'Revise Your Project'
+lesson 'Revise Your Project', display_name: 'Revise Your Project', has_lesson_plan: true
 level 'Course F: Artist Project - Revise', named: true
 level 'Course F: Play Lab Project - Revise', named: true
 
-lesson 'Present Your Project', display_name: 'Present Your Project'
+lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_plan: true
 level 'Prepare for your presentation', named: true
 

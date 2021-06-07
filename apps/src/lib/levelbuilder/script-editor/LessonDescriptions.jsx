@@ -5,39 +5,6 @@ import color from '@cdo/apps/util/color';
 
 const NBSP = '\u00a0';
 
-const styles = {
-  main: {
-    border: '1px solid ' + color.light_gray,
-    padding: 10
-  },
-  lesson: {
-    paddingTop: 10,
-    paddingBottom: 10
-  },
-  lessonName: {
-    fontSize: 16,
-    textDecoration: 'underline'
-  },
-  original: {
-    backgroundColor: color.lightest_gray
-  },
-  update: {
-    backgroundColor: 'lightgreen'
-  },
-  diff: {
-    backgroundColor: color.realyellow
-  },
-  expander: {
-    paddingLeft: 10
-  },
-  collapsed: {
-    display: 'none'
-  },
-  mismatch: {
-    backgroundColor: color.realyellow
-  }
-};
-
 /**
  * Shows a list of lessons that have descriptions, along with those descriptions.
  * If you click the import button, it grabs new descriptions from curriculum
@@ -221,3 +188,36 @@ export default class LessonDescriptions extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    border: '1px solid ' + color.light_gray,
+    padding: 10
+  },
+  lesson: {
+    paddingTop: 10,
+    paddingBottom: 10
+  },
+  lessonName: {
+    fontSize: 16,
+    textDecoration: 'underline'
+  },
+  original: {
+    backgroundColor: color.lightest_gray
+  },
+  update: {
+    backgroundColor: 'lightgreen'
+  },
+  diff: {
+    backgroundColor: color.realyellow
+  },
+  expander: {
+    paddingLeft: 10
+  },
+  collapsed: {
+    display: 'none'
+  },
+  mismatch: {
+    backgroundColor: color.realyellow
+  }
+};

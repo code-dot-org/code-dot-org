@@ -25,76 +25,6 @@ const SCALE = 0.1;
 const MARGIN = 10;
 const ICON_HEIGHT = applabConstants.APP_HEIGHT * SCALE;
 
-// TODO: ditch color and fontSize in favor of more unified style components when they exist.
-const styles = {
-  section: {
-    marginTop: MARGIN * 2
-  },
-  warning: {
-    color: color.red,
-    fontSize: 'smaller',
-    margin: 0
-  },
-  subtext: {
-    color: color.black
-  },
-  screenListItem: {
-    display: 'flex',
-    alignItems: 'center',
-    color: color.black
-  },
-  disabledScreenListItem: {
-    color: color.light_gray
-  },
-  assetListItem: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  assetThumbnail: {
-    margin: 0,
-    height: ICON_HEIGHT,
-    width: ICON_HEIGHT,
-    color: color.black
-  },
-  assetThumbnailIcon: {
-    fontSize: 25,
-    margin: 0,
-    lineHeight: '' + ICON_HEIGHT + 'px'
-  },
-  assetListItemText: {
-    marginLeft: MARGIN
-  },
-  miniScreenWrapper: {
-    display: 'inline-block',
-    width: applabConstants.APP_WIDTH * SCALE,
-    height: ICON_HEIGHT,
-    border: assetThumbnailStyles.wrapper.border,
-    position: 'relative',
-    marginRight: MARGIN
-  },
-  miniScreen: {
-    display: 'inline-block',
-    position: 'absolute',
-    left: 0,
-    transform: `scale(${SCALE})`,
-    transformOrigin: 'top left',
-    width: applabConstants.APP_WIDTH
-  },
-  checkbox: {
-    marginRight: MARGIN
-  },
-  selectAllCheckbox: {
-    marginRight: MARGIN,
-    position: 'relative',
-    bottom: 4
-  },
-  scrollable: {
-    overflow: 'hidden',
-    overflowY: 'scroll',
-    maxHeight: '400px'
-  }
-};
-
 // TODO: possibly refactor AssetRow to make it work here instead of
 // or with this component
 class AssetListItemUnwrapped extends React.Component {
@@ -299,6 +229,76 @@ export class ImportScreensDialog extends React.Component {
     );
   }
 }
+
+// TODO: ditch color and fontSize in favor of more unified style components when they exist.
+const styles = {
+  section: {
+    marginTop: MARGIN * 2
+  },
+  warning: {
+    color: color.red,
+    fontSize: 'smaller',
+    margin: 0
+  },
+  subtext: {
+    color: color.black
+  },
+  screenListItem: {
+    display: 'flex',
+    alignItems: 'center',
+    color: color.black
+  },
+  disabledScreenListItem: {
+    color: color.light_gray
+  },
+  assetListItem: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  assetThumbnail: {
+    margin: 0,
+    height: ICON_HEIGHT,
+    width: ICON_HEIGHT,
+    color: color.black
+  },
+  assetThumbnailIcon: {
+    fontSize: 25,
+    margin: 0,
+    lineHeight: '' + ICON_HEIGHT + 'px'
+  },
+  assetListItemText: {
+    marginLeft: MARGIN
+  },
+  miniScreenWrapper: {
+    display: 'inline-block',
+    width: applabConstants.APP_WIDTH * SCALE,
+    height: ICON_HEIGHT,
+    border: assetThumbnailStyles.wrapper.border,
+    position: 'relative',
+    marginRight: MARGIN
+  },
+  miniScreen: {
+    display: 'inline-block',
+    position: 'absolute',
+    left: 0,
+    transform: `scale(${SCALE})`,
+    transformOrigin: 'top left',
+    width: applabConstants.APP_WIDTH
+  },
+  checkbox: {
+    marginRight: MARGIN
+  },
+  selectAllCheckbox: {
+    marginRight: MARGIN,
+    position: 'relative',
+    bottom: 4
+  },
+  scrollable: {
+    overflow: 'hidden',
+    overflowY: 'scroll',
+    maxHeight: '400px'
+  }
+};
 
 export default connect(
   state => ({

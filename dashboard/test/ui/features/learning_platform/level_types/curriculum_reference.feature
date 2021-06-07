@@ -14,5 +14,5 @@ Feature: Looking at curriculum reference levels Applitools Eyes
     And I sign out
     Examples:
       | url                                                                     | test_name                  |
-      | http://studio.code.org/s/allthethings/stage/35/puzzle/1?noautoplay=true | curriculum reference level |
-      | http://studio.code.org/s/allthethings/stage/35/puzzle/2?noautoplay=true | map level                  |
+      | http://studio.code.org/s/allthethings/lessons/35/levels/1?noautoplay=true | curriculum reference level |
+      | http://studio.code.org/s/allthethings/lessons/35/levels/2?noautoplay=true | map level                  |

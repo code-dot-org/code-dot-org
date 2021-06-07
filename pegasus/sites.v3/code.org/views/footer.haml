@@ -1,21 +1,33 @@
 %footer#pagefooter
   .content
     .left{:style=>"float:left; max-width: 80%;"}
-      %a.whitefooterlink{:href=>"/privacy", :style=>"color: #ffa400;"} Privacy Policy
-      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
-      %a.whitefooterlink{:href=>"/about"} About
-      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
-      %a.whitefooterlink{:href=>"/partners"} Partners
-      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
-      %a.whitefooterlink{:href=>"https://medium.com/@codeorg", :target=>"_blank"} Blog
-      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
-      %a.whitefooterlink{:href=>"/donate"} Donate
-      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
-      %a.whitefooterlink{:href=>"/shop"} Store
-      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
-      %a#support.whitefooterlink{:href=>"http://support.code.org/", :target=>"_blank"} Support
-      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
-      %a.whitefooterlink{:href=>"/tos"} Terms
+      %a.whitefooterlink{:href=>"/privacy", :style=>"color: #ffa400;"}
+        - @privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
+        - if @privacy_updated
+          !=I18n.t(:footer_privacy_policy_updated)
+        - else
+          !=I18n.t(:footer_privacy_policy)
+      .dim &nbsp; | &nbsp;
+      %a.whitefooterlink{:href=>"/about"}
+        !=I18n.t(:footer_about)
+      .dim &nbsp; | &nbsp;
+      %a.whitefooterlink{:href=>"/partners"}
+        !=I18n.t(:footer_partners)
+      .dim &nbsp; | &nbsp;
+      %a.whitefooterlink{:href=>"https://medium.com/@codeorg", :target=>"_blank"}
+        !=I18n.t(:footer_blog)
+      .dim &nbsp; | &nbsp;
+      %a.whitefooterlink{:href=>"/donate"}
+        !=I18n.t(:footer_donate)
+      .dim &nbsp; | &nbsp;
+      %a.whitefooterlink{:href=>"/shop"}
+        !=I18n.t(:footer_store)
+      .dim &nbsp; | &nbsp;
+      %a#support.whitefooterlink{:href=>"http://support.code.org/", :target=>"_blank"}
+        !=I18n.t(:footer_support)
+      .dim &nbsp; | &nbsp;
+      %a.whitefooterlink{:href=>"/tos"}
+        !=I18n.t(:footer_terms)
       %small.dim
         !="&copy; Code.org, #{Time.now.year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org."
         !=I18n.t(:footer_powered_by_aws)

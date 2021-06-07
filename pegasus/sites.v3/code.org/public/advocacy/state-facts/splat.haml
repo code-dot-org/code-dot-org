@@ -13,6 +13,7 @@ state-facts: true
 %script{src:'https://www.google.com/jsapi'}
 %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-facts-print.css'}
 %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-facts.css'}
+%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/font-awesome.min.css'}
 
 // Generates custom state fact sheets based on the data in cdo-state-promote Google Sheet.
 
@@ -23,15 +24,6 @@ state-facts: true
 - state_info = DB[:cdo_state_promote].where(state_code_s: state_param).first
 - pass unless STATE_ABBR_WITH_DC_HASH.key? state_param.to_sym
 
-:css
-  .together {
-    display: inline-block;
-  }
-  .together:after {
-    display: block;
-    height: 0px;
-    visibility: hidden;
-  }
 
 .state-fact-sheet
   %h1
@@ -45,72 +37,34 @@ state-facts: true
         number 1 source of all new wages in the U.S.
       and make up over half of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. Only 45% of U.S. high schools teach any computer science courses and only 11% of bachelor's degrees are in Computer Science. We need to improve access for all students, including groups who have traditionally been underrepresented.
 
-    %img.chart{src: "/images/charts/jobs_degrees.png"}
-
   .clear
-  #top-stats{style: "margin-top: 20px;"}
+  #top-stats{style: "margin-top: 20px; margin-bottom: -20px;"}
     %center
       %img{src: "/images/charts/facts-sheet-top-stats.png", width: "100%"}
+
+  %div
+    %h2.open-jobs
+      In 
+      = succeed "," do
+        = state_info[:state_name_s]
+      there are currently 
+      = format_integer_with_commas(state_info[:cs_jobs_i])
+      open computing jobs with an average salary of 
+      = surround "$", "." do
+        = format_integer_with_commas(state_info[:avg_sal_computing_i])
+    %h3.graduates
+      Yet, there were only 
+      = format_integer_with_commas(state_info[:cs_graduates_i])
+      graduates in computer science in 2018 and only 
+      = succeed "%" do
+        = state_info[:count_schools_teach_cs_i]
+      of all public high schools teach a foundational course. 
 
   %div
     %h2.together
       Computer science in
       = state_info[:state_name_s]
     %ul
-      %li
-        = state_info[:state_name_s]
-        currently has
-        %b
-          = format_integer_with_commas(state_info[:cs_jobs_i])
-          open computing jobs
-        = precede "(" do
-          = state_info[:growth_vs_average_f]
-        times the average demand rate in
-        = succeed ")." do
-          = state_info[:state_name_s]
-      %li
-        The average salary for a computing occupation in
-        = state_info[:state_code_s]
-        is
-        %b
-          = surround "$", "," do
-            = format_integer_with_commas(state_info[:avg_sal_computing_i])
-        which is significantly higher than the average salary in the state
-        = surround "($", ")." do
-          = format_integer_with_commas(state_info[:avg_sal_all_i])
-        The existing open jobs alone represent a
-        %b
-          = precede "$" do
-            = format_integer_with_commas(state_info[:sal_x_jobs_bi])
-          opportunity
-        in terms of annual salaries.
-      %li
-        = state_info[:state_name_s]
-        had only
-        %b
-          = format_integer_with_commas(state_info[:cs_graduates_i])
-          - if state_info[:cs_graduates_i] == 1
-            bachelor's degrees in Computer Science
-          - else
-            bachelor's degrees in Computer Science
-        in 2018;
-        - if state_info[:percent_female_cs_grad_i] == 0
-          %b none
-        - else
-          only
-          = succeed "%" do
-            %b= state_info[:percent_female_cs_grad_i]
-        were female.
-      - unless state_info[:count_schools_teach_cs_i] == 0
-        %li
-          In
-          = succeed "," do
-            = state_info[:state_name_s]
-          only
-          %b
-            = succeed "%" do
-              = state_info[:count_schools_teach_cs_i]
-            of all public high schools teach a foundational computer science course.
       %li
         - if state_info[:ap_cs_exams_i] == 0
           %b
@@ -268,16 +222,11 @@ state-facts: true
             And one of their biggest barriers to offering computer science is the lack of funds for hiring and training teachers.
 
 
-  .chart-text-group
-    .improve-edu
-      %h2.improve-edu-h2.together
-        What can you do to support K-12 CS education in
-        = succeed "?" do
-          = state_info[:state_name_s]
-
-    %img.chart{src: "/images/charts/learn_teach.png"}
-
-  .clear
+  .improve-edu
+    %h2.improve-edu-h2.together
+      What can you do to support K-12 CS education in
+      = succeed "?" do
+        = state_info[:state_name_s]
 
   %div
     %ul
@@ -303,38 +252,6 @@ state-facts: true
         Visit
         %a{href:"https://code.org/educate/3rdparty"} www.code.org/educate/3rdparty
         to find out about courses and curriculum from a variety of providers, including Code.org.
-     
-
-
-  %h2.together
-    Who can you connect with locally to talk about K-12 CS education policy?
-  %ul
-    %li
-      You can reach Code.org’s policy contact for your state,
-      = succeed "," do
-        = state_info[:code_name_s]
-      at
-      = succeed "." do
-        = state_info[:code_email_s]
-    - if state_info[:ecep_name_s] != "NA"
-      %li
-        The Expanding Computing Education Pathways (ECEP) Alliance
-        = precede "(" do
-          = succeed ")," do
-            %a{href: "https://www.ecepalliance.org"} www.ecepalliance.org
-        an NSF funded Broadening Participation in Computing Alliance, seeks to increase the number and diversity of students in computing and computing-intensive degrees by promoting state-level computer science education reform. ECEP supports 22 states and the territory of Puerto Rico to develop effective and replicable interventions to broaden participation in computing and to create state-level infrastructure to foster equitable computing education policies. You can reach your ECEP point of contact
-        = succeed "." do
-          = state_info[:ecep_name_s]
-          at
-          = state_info[:ecep_email_s]
-          - if state_info[:ecep_name_2_s] != "NA"
-            or
-            = state_info[:ecep_name_2_s]
-            at
-            = state_info[:ecep_email_2_s]
-          - if state_info[:ecep_url_s] != "NA"
-            and see your state ECEP project at
-            %a{href: state_info[:ecep_url_s]}= state_info[:ecep_url_s]
 
   %div.clear-both
     %h2.no-margin-bottom.together
@@ -386,8 +303,32 @@ state-facts: true
             are female students
           %li
             = succeed "%" do
-              = state_info[:urm_codeorg_i]
-            are students from marginalized racial and ethnic groups underrepresented in computer science (Black/African American, Hispanic/Latino/Latina, Native American/Alaskan, or Native Hawaiian/Pacific Islander)
+              = state_info[:black_codeorg_i]
+            are Black/African American students
+          %li
+            = succeed "%" do
+              = state_info[:hispanic_codeorg_i]
+            are Hispanic/Latino/Latina students
+          %li
+            = succeed "%" do
+              = state_info[:native_american_codeorg_i]
+            are Native American/Alaskan students
+          %li
+            = succeed "%" do
+              = state_info[:hawaiian_codeorg_i]
+            are Native Hawaiian/Pacific Islander students
+          %li
+            = succeed "%" do
+              = state_info[:white_codeorg_i]
+            are white students
+          %li
+            = succeed "%" do
+              = state_info[:asian_codeorg_i]
+            are Asian students
+          %li
+            = succeed "%" do
+              = state_info[:two_codeorg_i]
+            are students who identify as two or more races
       %li
         - if state_info[:professional_learning_partners_t] == 'none' && state_info[:num_affiliates_i] == 0
           Code.org has
@@ -462,10 +403,6 @@ state-facts: true
         = state_info[:other_partners_t]
         to help spread K-5 computer science to its schools.
 
-  .quote-center
-    %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.”
-    %p — Steve Jobs
-
   %div
     %p
       %h2.together What can your state do to improve computer science education?
@@ -479,7 +416,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:state_plan_s] == 'Yes'
           %div
-            <i class="far fa-check-square"></i>
+            <i class="fa fa-check-square-o"></i>
             %b State Plan - 
             = state_info[:state_plan_t]
         - elsif state_info[:state_plan_s] == 'No'
@@ -498,7 +435,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:cs_standards_s] == 'Yes'
           %div
-            %i.far.fa-check-square
+            %i.fa.fa-check-square-o
             %b K-12 Standards - 
             = state_info[:standards_t]
         - elsif state_info[:cs_standards_s] == 'No'
@@ -519,7 +456,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:pd_funding_s] == 'Yes'
           %div
-            %i.far.fa-check-square
+            %i.fa.fa-check-square-o
             %b Funding - 
             = state_info[:funding_t]
         - elsif state_info[:pd_funding_s] == 'No'
@@ -538,7 +475,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:cs_teacher_cert_s] == 'Yes'
           %div
-            <i class="far fa-check-square"></i>
+            <i class="fa fa-check-square-o"></i>
             %b Certification - 
             = state_info[:certification_t]
         - elsif state_info[:cs_teacher_cert_s] == 'No'
@@ -557,7 +494,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:pre_service_s] == 'Yes'
           %div
-            %i.far.fa-check-square
+            %i.fa.fa-check-square-o
             %b Pre-Service Programs - 
             = state_info[:preservice_t]
         - elsif state_info[:pre_service_s] == 'No'
@@ -576,7 +513,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:state_position_s] == 'Yes'
           %div
-            %i.far.fa-check-square
+            %i.fa.fa-check-square-o
             %b Dedicated State Position - 
             = state_info[:state_cs_t]
         - elsif state_info[:state_position_s] == 'No'
@@ -595,7 +532,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:require_hs_s] == 'Yes'
           %div
-            %i.far.fa-check-square
+            %i.fa.fa-check-square-o
             %b Require High Schools to Offer - 
             = state_info[:hs_t]
         - elsif state_info[:require_hs_s] == 'No'
@@ -614,7 +551,7 @@ state-facts: true
       %div.policy-item
         - if state_info[:cs_counts_t] == 'Yes'
           %div
-            %i.far.fa-check-square
+            %i.fa.fa-check-square-o
             %b Count Towards Graduation - 
             = state_info[:count_t]
         - elsif state_info[:cs_counts_t] == 'No'
@@ -635,7 +572,7 @@ state-facts: true
       .policy-item
         - if state_info[:higher_ed_entrance_s] == 'Yes'
           %div
-            %i.far.fa-check-square
+            %i.fa.fa-check-square-o
             %b IHE Admission - 
             = state_info[:higher_ed_t]
         - elsif state_info[:higher_ed_entrance_s] == 'No'
@@ -664,4 +601,39 @@ state-facts: true
         %a{href: "https://twitter.com/codeorg"} Twitter
     %div
       %p Launched in 2013, Code.org® is a nonprofit dedicated to expanding access to computer science, and increasing participation by women and underrepresented youth. Our vision is that every student in every school should have the opportunity to learn computer science.
+    %hr
+    %h3.footer-header
+      Who can you connect with locally to talk about K-12 CS education policy?
+    %ul.footer-list
+      %li
+        You can reach Code.org’s policy contact for your state,
+        = succeed "," do
+          = state_info[:code_name_s]
+        at
+        = succeed "." do
+          = state_info[:code_email_s]
+      - if state_info[:ecep_name_s] != "NA"
+        %li
+          The Expanding Computing Education Pathways (ECEP) Alliance
+          = precede "(" do
+            = succeed ")," do
+              %a{href: "https://www.ecepalliance.org", target: "_blank"} www.ecepalliance.org
+          an NSF funded Broadening Participation in Computing Alliance, seeks to increase the number and diversity 
+          of students in computing and computing-intensive degrees by promoting state-level computer science education. 
+          ECEP supports 22 states and the territory of Puerto Rico to develop effective and replicable interventions to 
+          broaden participation in computing and to create state-level infrastructure to foster equitable computing 
+          education policies. You can reach your ECEP point of contact
+          = succeed "." do
+            = state_info[:ecep_name_s]
+            at
+            = state_info[:ecep_email_s]
+            - if state_info[:ecep_name_2_s] != "NA"
+              or
+              = state_info[:ecep_name_2_s]
+              at
+              = state_info[:ecep_email_2_s]
+            - if state_info[:ecep_url_s] != "NA"
+              and see your state ECEP project at
+              %a{href: state_info[:ecep_url_s]}= state_info[:ecep_url_s]
+
     %p.clear-both.sources Data is from the Conference Board for job demand, the Bureau of Labor Statistics for state salary and national job projections data, the College Board for AP exam data, the National Center for Education Statistics for university graduate data, the Gallup and Google research study Education Trends in the State of Computer Science in U.S. K-12 Schools for parent demand, the 2018 Computer Science Access Report for schools that offer computer science, and Code.org for its own courses, professional learning programs, and participation data.

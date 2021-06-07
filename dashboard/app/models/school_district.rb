@@ -105,7 +105,7 @@ class SchoolDistrict < ApplicationRecord
       # Used table generator here to get columns of interest:
       # https://nces.ed.gov/ccd/elsi/tableGenerator.aspx
       AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/ELSI_csv_export_6374544705259568713496.csv") do |filename|
-        SchoolDistrict.merge_from_csv(filename, import_options_1819, true, new_attributes: ['last_known_school_year_open']) do |row|
+        SchoolDistrict.merge_from_csv(filename, import_options_1819, true, ignore_attributes: ['last_known_school_year_open']) do |row|
           {
             id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
             name:                         row['Agency Name'].upcase,
@@ -113,6 +113,21 @@ class SchoolDistrict < ApplicationRecord
             state:                        row['Location State Abbr [District] 2018-19'].strip.to_s.upcase.presence,
             zip:                          row['Location ZIP [District] 2018-19'].tr('"=', ''),
             last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2018-19']) ? '2018-2019' : nil
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2019-2020 school district data"
+      import_options_1920 = {col_sep: ",", headers: true, quote_char: "\x00"}
+      AWS::S3.seed_from_file('cdo-nces', "2019-2020/ccd/districts.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_1920, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          {
+            id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
+            name:                         row['Agency Name'].upcase,
+            city:                         row['Location City [District] 2019-20'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [District] 2019-20'].strip.to_s.upcase.presence,
+            zip:                          row['Location ZIP [District] 2019-20'].tr('"=', ''),
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2019-20']) ? '2019-2020' : nil
           }
         end
       end
@@ -127,16 +142,16 @@ class SchoolDistrict < ApplicationRecord
   # @param filepath [String] Filepath for S3 object.
   # @param import_options [Hash] The CSV file parsing options.
   # @param is_dry_run [Boolean] Allows a "dry run" of seeding a CSV without making database writes.
-  # @param new_attributes  [Array] List of attributes included in a given import that are new to the model, and thus should not be used to determine whether a record is being "updated" or "unchanged"
+  # @param ignore_attributes [Array] List of attributes included in a given import that should not be used to determine whether a record is being "updated" or "unchanged". Allows us to more clearly identify which schools have real changes to existing data.
   # @param parse_row [Block] A block to parse a row of new data -- see School.seed_from_s3 for examples.
-  def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, new_attributes: [], &parse_row)
+  def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, ignore_attributes: [], &parse_row)
     AWS::S3.seed_from_file(bucket, filepath, is_dry_run) do |filename|
       merge_from_csv(
         filename,
         import_options,
         true,
         is_dry_run: is_dry_run,
-        new_attributes: new_attributes,
+        ignore_attributes: ignore_attributes,
         &parse_row
       )
     end
@@ -148,8 +163,8 @@ class SchoolDistrict < ApplicationRecord
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT school districts.
   # @param is_dry_run [Boolean] Specify that this is a dry run, and no writes to the database should be conducted. Gives more detailed output of expected changes from importing the given CSV.
-  # @param new_attributes  [Array] List of attributes included in a given import that are new to the model, and thus should not be used to determine whether a record is being "updated" or "unchanged"
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, new_attributes: [])
+  # @param ignore_attributes [Array] List of attributes included in a given import that should not be used to determine whether a record is being "updated" or "unchanged". Allows us to more clearly identify which schools have real changes to existing data.
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, ignore_attributes: [])
     districts = nil
     new_districts = []
     updated_districts = 0
@@ -160,38 +175,40 @@ class SchoolDistrict < ApplicationRecord
         parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
         loaded = find_by_id(parsed[:id])
         if loaded.nil?
-          SchoolDistrict.new(parsed).save! unless is_dry_run
+          SchoolDistrict.new(parsed).save!
           new_districts << parsed
         elsif write_updates
           loaded.assign_attributes(parsed)
           if loaded.changed?
-            loaded.changed.sort == new_attributes.sort ?
+            loaded.changed.sort == ignore_attributes.sort ?
               unchanged_districts += 1 :
               updated_districts += 1
 
-            loaded.update!(parsed) unless is_dry_run
+            loaded.update!(parsed)
           else
             unchanged_districts += 1
           end
         end
       end
+
+      # Raise an error so that the db transaction rolls back
+      raise "This was a dry run. No rows were modified or added. Set dry_run: false to modify db" if is_dry_run
+    ensure
+      future_tense_dry_run = is_dry_run ? ' to be' : ''
+      summary_message = "School District seeding: done processing #{filename}.\n"\
+        "#{new_districts.length} new districts#{future_tense_dry_run} added.\n"\
+        "#{updated_districts} districts#{future_tense_dry_run} updated.\n"\
+        "#{unchanged_districts} districts#{future_tense_dry_run} unchanged (district considered changed if only update was adding new columns included in this import).\n"
+
+      # More detailed logging in dry run mode
+      if !new_districts.empty? && is_dry_run
+        summary_message <<
+          "Districts#{future_tense_dry_run} added:\n"\
+          "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
+      end
+
+      CDO.log.info summary_message
     end
-
-    future_tense_dry_run = is_dry_run ? ' to be' : ''
-    summary_message = "School District seeding: done processing #{filename}.\n"\
-      "#{new_districts.length} new districts#{future_tense_dry_run} added.\n"\
-      "#{updated_districts} districts#{future_tense_dry_run} updated.\n"\
-      "#{unchanged_districts} districts#{future_tense_dry_run} unchanged (district considered changed if only update was adding new columns included in this import).\n"
-
-    # More detailed logging in dry run mode
-    if !new_districts.empty? && is_dry_run
-      summary_message <<
-        "Districts#{future_tense_dry_run} added:\n"\
-        "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
-    end
-
-    CDO.log.info summary_message
-    CDO.log.info "This is a dry run. No data written to the database." if is_dry_run
 
     districts
   end

@@ -78,6 +78,8 @@
   .tile-container-responsive { display: flex; flex-direction: row; justify-content: space-between; }
   .tile-container-responsive > * { margin-right: 20px; }
   .tile-container-responsive > :last-child { margin-right: 0; }
+  div[dir= 'rtl'] .tile-container-responsive > :first-child{margin-right: 0;}
+  div[dir= 'rtl'] .tile-container-responsive > :last-child{margin-right: 20px;}
 
   .mobile-show-medium { display: none }
 

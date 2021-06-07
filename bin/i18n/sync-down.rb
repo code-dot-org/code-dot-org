@@ -18,8 +18,7 @@ end
 
 def sync_down
   I18nScriptUtils.with_synchronous_stdout do
-    puts "Beginning sync down"
-
+    puts "Sync down starting"
     logger = Logger.new(STDOUT)
     logger.level = Logger::INFO
 
@@ -53,7 +52,10 @@ def sync_down
       puts "Files downloaded in #{elapsed}"
     end
 
-    puts "Sync down complete"
+    puts "Sync down completed successfully"
+  rescue => e
+    puts "Sync down failed from the error: #{e}"
+    raise e
   end
 end
 

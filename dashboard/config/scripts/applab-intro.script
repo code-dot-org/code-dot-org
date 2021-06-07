@@ -1,9 +1,8 @@
 hidden false
 student_detail_progress_view true
-has_lesson_plan true
 tts true
 
-lesson 'Intro to App Lab', display_name: 'Intro to App Lab'
+lesson 'Intro to App Lab', display_name: 'Intro to App Lab', has_lesson_plan: true
 level 'App Lab Intro 8 - Video Getting Started', progression: 'Setting Properties'
 level 'AppLab Intro 7 - Change Screen Color', progression: 'Setting Properties'
 level 'AppLab Intro 7 - Change Text 2', progression: 'Setting Properties'

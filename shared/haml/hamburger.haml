@@ -2,13 +2,13 @@
   options = { level: level, script_level: script_level, language: language, user_type: user_type, loc_prefix: loc_prefix, request: request }
   contents = Hamburger.get_hamburger_contents(options)
 
-#hamburger{class: contents[:visibility]}
+#hamburger{class: contents[:visibility], tabindex: "0", 'aria-label': I18n.t('header_screen_reader_hamburger')}
   #hamburger-contents.hide-responsive-menu
     - contents[:entries].each do |entry|
       - if entry[:type] == "divider"
         .divider{id: entry[:id], class: entry[:class]}
       - elsif entry[:type] == "expander"
-        .hamburger-expandable-item.item{id: entry[:id]}
+        .hamburger-expandable-item.item{id: entry[:id], tabindex: "0"}
           .text= entry[:title]
           %i.arrow-down{class: "fa fa-caret-down"}
           %i.arrow-up{class: "fa fa-caret-up"}

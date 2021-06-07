@@ -7,7 +7,6 @@
     "properties": {
       "pilot_experiment": "csp-piloters",
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/cspilot/unit1/{LESSON}",
       "hideable_lessons": true
     },

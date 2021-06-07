@@ -1,7 +1,7 @@
 professional_learning_course 'ECS Support Legacy'
 login_required true
 
-lesson 'Getting Started', display_name: 'Getting Started'
+lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
 level 'ECS Phase 3 Unit4 Welcome'
 level 'ECS Phase 3 Unit 4 Overview'
 level 'PDECS tour'
@@ -9,11 +9,11 @@ level 'PD check your progress'
 level 'ECSPD Unit 4 Outline'
 level 'ECSPD P3 Plan'
 
-lesson 'Intro to Unit 4', display_name: 'Intro to Unit 4'
+lesson 'Intro to Unit 4', display_name: 'Intro to Unit 4', has_lesson_plan: false
 level 'ECSPD Unit4 Connections'
 level 'ECSPD Unit 4 Lesson Overview'
 
-lesson 'Teaching Strategies', display_name: 'Teaching Strategies'
+lesson 'Teaching Strategies', display_name: 'Teaching Strategies', has_lesson_plan: false
 level 'Forum-ECSPD-Unit 4-Teaching Practice'
 level 'ECSPD Unit 4 Manage'
 level 'ECSPD Phase 3 - Unit 4 - Teaching Practice'
@@ -21,7 +21,7 @@ level 'ECSPD scratch'
 level 'ECSPD Unit 4 Strategy Review'
 level 'ECSPD strategies'
 
-lesson 'Unit 4 Day-by-Day', display_name: 'Unit 4 Day-by-Day'
+lesson 'Unit 4 Day-by-Day', display_name: 'Unit 4 Day-by-Day', has_lesson_plan: false
 level 'ECSPD U4 D 1 Intro'
 level 'ECSPD U4 D 2-3 Intro'
 level 'ECSPD U4 D 4 Intro'
@@ -38,13 +38,13 @@ level 'ECSPD U4 D 20-23 Intro'
 level 'ECSPD U4 D 24 Intro'
 level 'ECSPD U4 D 25-30 Intro'
 
-lesson 'Unit 4 Challenge', display_name: 'Unit 4 Challenge'
+lesson 'Unit 4 Challenge', display_name: 'Unit 4 Challenge', has_lesson_plan: false
 level 'ECSPD U4 Challenges'
 level 'ECSPD U4 Challenge Decision'
 level 'ECSPD unit 4 Pick Challenge'
 level 'ECSU4 Challenge Submission fin'
 
-lesson 'Close & Next Steps', display_name: 'Close & Next Steps'
+lesson 'Close & Next Steps', display_name: 'Close & Next Steps', has_lesson_plan: false
 level 'ECSPD Challenge Reflection'
 level 'ECSPD Unit 3 Survey'
 

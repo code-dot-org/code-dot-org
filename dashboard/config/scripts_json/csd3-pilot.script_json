@@ -35,7 +35,6 @@
         ]
       ],
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "project_sharing": true,
       "pilot_experiment": "csd-piloters",
       "curriculum_path": "https://curriculum.code.org/csd-20/unit3/{LESSON}",

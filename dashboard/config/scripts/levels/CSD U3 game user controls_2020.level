@@ -43,7 +43,7 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 18732,
     "name_suffix": "_2020",
-    "long_instructions": "# User Controls\r\n\r\nNext, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide.  You can use the function in in [Lesson 26 Puzzle 13](../../26/puzzle/13) as an example.",
+    "long_instructions": "# User Controls\r\n\r\nNext, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide.  You can use the function in in [Lesson 26 Puzzle 13](../../26/levels/13) as an example.",
     "reference_links": [
       "/docs/concepts/game-lab/drawing-shapes/",
       "/docs/concepts/game-lab/shapes-and-parameters/",

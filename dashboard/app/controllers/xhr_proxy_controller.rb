@@ -26,22 +26,27 @@ class XhrProxyController < ApplicationController
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
-    allrecipes.com
     apex.oracle.com
-    api.data.gov
+    api.blizzard.com
+    api.coinlayer.com
     api.datamuse.com
+    api.duckduckgo.com
     api.energidataservice.dk
     api.exchangeratesapi.io
     api.football-data.org
     api.foursquare.com
-    api.fungenerators.com
+    api.github.com
+    api.mojang.com
     api.nasa.gov
+    api.nookipedia.com
     api.opencagedata.com
     api.open-notify.org
+    api.openrouteservice.org
     api.openweathermap.org
     api.pegelalarm.at
     api.randomuser.me
     api.rebrandly.com
+    api.scryfall.com
     api.si.edu
     api.spacexdata.com
     api.spotify.com
@@ -49,59 +54,51 @@ class XhrProxyController < ApplicationController
     api.thingspeak.com
     api.uclassify.com
     api.waqi.info
+    api.weather.gov
     api.zippopotam.us
-    atlas.media.mit.edu
     bible-api.com
     code.org
-    compete.hsctf.com
     covidtracking.com
     cryptonator.com
     data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
-    developer.accuweather.com
-    developers.zomato.com
-    donordrive.com
+    dataservice.accuweather.com
+    distanza.org
     dweet.io
     enclout.com
-    githubusercontent.com
-    hamlin.myschoolapp.com
     herokuapp.com
     hubblesite.org
     images-api.nasa.gov
     isenseproject.org
     lakeside-cs.org
-    maps.googleapis.com
+    maker.ifttt.com
+    myschoolapp.com
+    noaa.gov
+    numbersapi.com
     opentdb.com
+    pastebin.com
     pixabay.com
     pokeapi.co
     qrng.anu.edu.au
     quandl.com
-    quizlet.com
-    rejseplanen.dk
-    maker.ifttt.com
-    maps.googleapis.com
-    noaa.gov
-    numbersapi.com
-    pastebin.com
     random.org
+    rejseplanen.dk
     restcountries.eu
-    rhcloud.com
     runescape.com
-    samples.openweathermap.org
-    sheets.googleapis.com
+    sessionserver.mojang.com
     spreadsheets.google.com
     stats.minecraftservers.org
-    swapi.co
+    swapi.dev
+    textures.minecraft.net
     thecatapi.com
     thedogapi.com
     theunitedstates.io
     transitchicago.com
-    translate.yandex.net
     vpic.nhtsa.dot.gov
     wikipedia.org
-    words.bighugelabs.com
+    worldclockapi.com
   ).freeze
 
   # How long the content is allowed to be cached
@@ -113,12 +110,6 @@ class XhrProxyController < ApplicationController
   def get
     channel_id = params[:c]
     url = params[:u]
-
-    headers = {}
-    ALLOWED_WEB_REQUEST_HEADERS.each do |header|
-      headers[header] = request.headers[header]
-    end
-    headers.compact!
 
     begin
       owner_storage_id, _ = storage_decrypt_channel_id(channel_id)
@@ -141,7 +132,6 @@ class XhrProxyController < ApplicationController
       allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
       expiry_time: EXPIRY_TIME,
       infer_content_type: false,
-      headers: headers,
     )
   end
 end

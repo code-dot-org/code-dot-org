@@ -3,6 +3,9 @@
 
 #artist.in.collapse
   .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :enable_download_image, description: "Enable Download Image"}
+    %p If checked, there will be a button to download the final image as a PNG.
+  .field
     = f.label :slider_speed, 'Slider speed (artist only)'
     %p Number from 0.0 to 1.0 for how fast artist runs. If not set, default is 1.0
     = f.number_field :slider_speed, :step => 0.1

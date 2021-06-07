@@ -25,37 +25,10 @@ import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo
 import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
 import _ from 'lodash';
-import {loadScript} from '../sectionProgressLoader';
+import {loadScriptProgress} from '../sectionProgressLoader';
 import PrintReportButton from './PrintReportButton';
 import {cstaStandardsURL} from './standardsConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-
-const styles = {
-  printView: {
-    width: 1000,
-    backgroundColor: color.white
-  },
-  headerColor: {
-    color: color.purple
-  },
-  footer: {
-    backgroundColor: color.purple,
-    color: color.white
-  },
-  reportContent: {
-    margin: '0px 50px'
-  },
-  mission: {
-    padding: '10px 25px',
-    fontSize: 11
-  },
-  table: {
-    width: '100%'
-  },
-  currentCourse: {
-    marginBottom: 0
-  }
-};
 
 class StandardsReport extends Component {
   static propTypes = {
@@ -83,7 +56,7 @@ class StandardsReport extends Component {
     const scriptIdFromTD =
       window.opener.teacherDashboardStoreInformation.scriptId;
     this.props.setScriptId(scriptIdFromTD);
-    loadScript(scriptIdFromTD, this.props.section.id);
+    loadScriptProgress(scriptIdFromTD, this.props.section.id);
   }
 
   getLinkToOverview() {
@@ -202,6 +175,33 @@ class StandardsReport extends Component {
     );
   }
 }
+
+const styles = {
+  printView: {
+    width: 1000,
+    backgroundColor: color.white
+  },
+  headerColor: {
+    color: color.purple
+  },
+  footer: {
+    backgroundColor: color.purple,
+    color: color.white
+  },
+  reportContent: {
+    margin: '0px 50px'
+  },
+  mission: {
+    padding: '10px 25px',
+    fontSize: 11
+  },
+  table: {
+    width: '100%'
+  },
+  currentCourse: {
+    marginBottom: 0
+  }
+};
 
 export const UnconnectedStandardsReport = StandardsReport;
 

@@ -10,7 +10,7 @@ describe('StandardsReport', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    sinon.stub(progressLoader, 'loadScript');
+    sinon.stub(progressLoader, 'loadScriptProgress');
     DEFAULT_PROPS = {
       scriptId: 2,
       teacherName: 'Awesome Teacher',
@@ -34,14 +34,14 @@ describe('StandardsReport', () => {
           project_sharing: true
         },
         students: [],
-        stageExtras: false
+        lessonExtras: false
       },
       scriptData: {
         id: 1163,
         excludeCsfColumnInLegend: false,
         title: 'Express Course (2019)',
         path: '//localhost-studio.code.org:3000/s/express-2019',
-        stages: []
+        lessons: []
       },
       scriptFriendlyName: 'Express Course (2019)'
     };
@@ -49,7 +49,7 @@ describe('StandardsReport', () => {
 
   afterEach(() => {
     restoreOnWindow('opener');
-    progressLoader.loadScript.restore();
+    progressLoader.loadScriptProgress.restore();
   });
 
   it('report shows print buttons', () => {

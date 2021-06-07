@@ -2,7 +2,6 @@ hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursef/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursef/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursef/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 lesson_extras_available true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursef/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
@@ -14,7 +13,7 @@ tts true
 is_course true
 
 lesson_group 'ramp_up', display_name: 'Ramp-Up'
-lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft'
+lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft', has_lesson_plan: true
 level 'MC_HOC_2017_01_RETRY_2020', progression: 'Practice'
 level 'MC_HOC_2017_02_Cole_2020', progression: 'Practice'
 level 'MC_HOC_2017_03_Cole_2020', progression: 'Practice'
@@ -28,7 +27,7 @@ level 'MC_HOC_2017_10_RETRY_2020', progression: 'Practice'
 level 'MC_HOC_2017_Ali_2020', progression: 'Practice'
 level 'MC_HOC_2017_FP20x20_2020', progression: 'Free Play'
 
-lesson 'Learning Sprites with Sprite Lab', display_name: 'Swimming Fish with Sprite Lab'
+lesson 'Learning Sprites with Sprite Lab', display_name: 'Swimming Fish with Sprite Lab', has_lesson_plan: true
 level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Introducing Sprite Lab'
 level 'Fish Tank 1-validated_2020', progression: 'Prediction'
 level 'Fish Tank 2-validated_2020', progression: 'Mini-Project: Swimming Fish'
@@ -40,7 +39,7 @@ level 'Fish Tank 6-validated_2020', progression: 'Mini-Project: Swimming Fish (c
 level 'Fish Tank 7-validated_2020', progression: 'Free Play'
 bonus 'spritelab_extras_repeat'
 
-lesson 'Events with Sprite Lab', display_name: 'Alien Dance Party with Sprite Lab'
+lesson 'Events with Sprite Lab', display_name: 'Alien Dance Party with Sprite Lab', has_lesson_plan: true
 level 'Dance Party 1-validated_2020', progression: 'Prediction'
 level 'CDEF_video_SpritesInAction_2020', progression: 'Video'
 level 'Dance Party 2_2020', progression: 'Mini-Project: Alien Dance Moves'
@@ -51,7 +50,7 @@ level 'Dance Party 6_2020', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party 7_2020', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party Freeplay_2020', progression: 'Mini-Project: Alien Dance Party'
 
-lesson 'Loops with the Artist', display_name: 'Drawing with Loops'
+lesson 'Loops with the Artist', display_name: 'Drawing with Loops', has_lesson_plan: true
 level 'courseC_video_artist_2020', progression: 'Artist Intro with JR Hildebrande'
 level 'courseC_artist_prog1_2020', progression: 'Practice'
 level 'courseC_artist_prog2_2020', progression: 'Practice'
@@ -66,7 +65,7 @@ level 'ramp_artist_loops8_2020', progression: 'Challenge', challenge: true
 bonus 'courseC_artist_prog_challenge1_2020'
 bonus 'courseC_artist_prog_challenge2a_2020'
 
-lesson 'Nested Loops in the Maze', display_name: 'Nested Loops in Maze'
+lesson 'Nested Loops in the Maze', display_name: 'Nested Loops in Maze', has_lesson_plan: true
 level 'courseD_bee_nestedLoops1a_2020', progression: 'Practice'
 level 'courseD_bee_nestedLoops1_2020', progression: 'Practice'
 level 'courseD_video_nestedLoops_2020', progression: 'Nested Loops with the Bee'
@@ -82,14 +81,14 @@ level 'courseD_bee_nestedLoops9_2020', progression: 'Practice'
 level 'courseD_bee_nestedLoops9_predict2_2020', progression: 'Prediction'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'The Power of Words', display_name: 'The Power of Words'
+lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: true, unplugged: true
 level 'PowerOfWords-Unplugged_2020'
 
 lesson_group 'csf_variables', display_name: 'Variables'
-lesson 'Envelope Variables', display_name: 'Envelope Variables'
+lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true, unplugged: true
 level 'EnvelopeVariables-Unplugged_2020'
 
-lesson 'Variables as Constant in Artist', display_name: 'Variables with Artist'
+lesson 'Variables as Constant in Artist', display_name: 'Variables with Artist', has_lesson_plan: true
 level 'grade5_artist_variables_triangles1_2020', progression: 'Practice'
 level 'courseF_artist_variables2_2020', progression: 'Practice'
 level 'courseF_video_artistVariables_2020', progression: 'Artist: Variables'
@@ -100,7 +99,7 @@ level 'courseF_artist_variables5_2020', progression: 'Practice'
 level 'courseF_artist_variables6_2020', progression: 'Practice'
 level 'courseF_artist_variables6a_2020', progression: 'Practice'
 
-lesson 'Variables that Change in Bee', display_name: 'Changing Variables with Bee'
+lesson 'Variables that Change in Bee', display_name: 'Changing Variables with Bee', has_lesson_plan: true
 level 'courseF_bee_variables_1_2020', progression: 'Practice'
 level 'courseF_bee_variables_2_2020', progression: 'Practice'
 level 'courseF_bee_variables_3_2020', progression: 'Practice'
@@ -109,7 +108,7 @@ level 'courseF_bee_variables_5_2020', progression: 'Practice'
 level 'courseF_bee_variables_6_2020', progression: 'Challenge', challenge: true
 level 'courseF_bee_variables_7_2020', progression: 'Practice'
 
-lesson 'Variables that Change in Artist', display_name: 'Changing Variables with Artist'
+lesson 'Variables that Change in Artist', display_name: 'Changing Variables with Artist', has_lesson_plan: true
 level 'courseF_artist_variables7_2020', progression: 'Practice'
 level 'courseF_artist_variables8_2020', progression: 'Practice'
 level 'courseF_artist_variables9_2020', progression: 'Practice'
@@ -119,12 +118,12 @@ bonus 'courseF_artist_variables_challenge1_2020'
 bonus 'courseF_artist_variables_challenge2_2020'
 
 lesson_group 'csf_data', display_name: 'Data'
-lesson 'Simulating Experiments', display_name: 'Simulating Experiments'
+lesson 'Simulating Experiments', display_name: 'Simulating Experiments', has_lesson_plan: true
 level 'simstarter_2020', progression: 'Run a simulation'
 level 'simconfig_2020', progression: 'Modify simulation variables'
 bonus 'courseF_extras_sim'
 
-lesson 'AI for Oceans', display_name: 'AI for Oceans'
+lesson 'AI for Oceans', display_name: 'AI for Oceans', has_lesson_plan: true
 level 'CourseF_Oceans_Video_Machine_Learning'
 level 'CourseF_Oceans_FishVTrash'
 level 'CourseF_Oceans_CreaturesVTrashDemo'
@@ -134,14 +133,14 @@ level 'CourseF_Oceans_Short'
 level 'CourseF_Oceans_Video_Societal_Implications'
 level 'CourseF_Oceans_Long'
 
-lesson 'Internet', display_name: 'The Internet'
+lesson 'Internet', display_name: 'The Internet', has_lesson_plan: true, unplugged: true
 level 'Internet-Unplugged_2020'
 
 lesson_group 'csf_for_loops', display_name: 'For Loops'
-lesson 'For Loop Fun', display_name: 'For Loop Fun'
+lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: true, unplugged: true
 level 'ForLoopFun-Unplugged_2020'
 
-lesson 'For Loops in Bee', display_name: 'For Loops with Bee'
+lesson 'For Loops in Bee', display_name: 'For Loops with Bee', has_lesson_plan: true
 level 'courseF_bee_for1_2020', progression: 'Practice'
 level 'courseF_bee_for2_2020', progression: 'Practice'
 level 'courseF_video_forBee_2020', progression: 'For Loops and Repeat Blocks'
@@ -157,7 +156,7 @@ level 'courseF_bee_for11_2020', progression: 'Practice'
 bonus 'courseF_bee_for_challenge1_2020'
 bonus 'courseF_bee_for_challenge2_2020'
 
-lesson 'For Loops in Artist', display_name: 'For Loops with Artist'
+lesson 'For Loops in Artist', display_name: 'For Loops with Artist', has_lesson_plan: true
 level 'courseF_video_forArtist_2020', progression: 'Intro to For Loops'
 level 'courseF_artist_for1_2020', progression: 'Free Play'
 level 'courseF_artist_for2_2020', progression: 'Practice'
@@ -174,7 +173,7 @@ bonus 'courseF_artist_for_challenge1_2020'
 bonus 'courseF_artist_for_challenge2_2020'
 
 lesson_group 'csf_sprites', display_name: 'Sprites'
-lesson 'Editing Behaviors', display_name: 'Behaviors in Sprite Lab'
+lesson 'Editing Behaviors', display_name: 'Behaviors in Sprite Lab', has_lesson_plan: true
 level 'behaviors 1_2020', progression: 'Prediction'
 level 'behaviors 2_2020', progression: 'Practice'
 level 'behaviors 3_2020', progression: 'Practice'
@@ -185,7 +184,7 @@ level 'behaviors free play_2020', progression: 'Free Play'
 bonus 'behaviors 6_2020'
 bonus 'behaviors 7_2020'
 
-lesson 'Virtual Pet', display_name: 'Virtual Pet with Sprite Lab'
+lesson 'Virtual Pet', display_name: 'Virtual Pet with Sprite Lab', has_lesson_plan: true
 level 'Virtual Pet 1_2020', progression: 'Free Play'
 level 'Virtual Pet 2_2020', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 3_2020', progression: 'Mini-Project: Virtual Pet'
@@ -196,7 +195,7 @@ level 'Virtual Pet 7_2020', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 8_2020', progression: 'Mini-Project: Virtual Pet'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-lesson 'End of Course Project', display_name: 'End of Course Project'
+lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: true
 level 'courseF_project_exemplars_2019_2020', progression: 'Example projects'
 level 'courseF_EOC_2020', progression: 'Create your project'
 

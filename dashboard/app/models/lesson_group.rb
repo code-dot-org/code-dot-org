@@ -40,7 +40,7 @@ class LessonGroup < ApplicationRecord
     big_questions
   )
 
-  Counters = Struct.new(:lockable_count, :non_lockable_count, :lesson_position, :chapter)
+  Counters = Struct.new(:numbered_lesson_count, :unnumbered_lesson_count, :lesson_position, :chapter)
 
   # Finds or creates Lesson Groups with the correct position.
   # In addition it check for 3 things:
@@ -152,12 +152,21 @@ class LessonGroup < ApplicationRecord
     summary
   end
 
+  def summarize_for_lesson_dropdown(is_student = false)
+    {
+      key: key,
+      displayName: localized_display_name,
+      userFacing: user_facing,
+      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
+    }
+  end
+
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
-  # See comments on ScriptSeed.seed_from_json for more context.
+  # See comments on ScriptSeed.seed_from_hash for more context.
   #
   # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
   # @return [Hash<String, String] all information needed to uniquely identify this object across environments.
@@ -201,5 +210,21 @@ class LessonGroup < ApplicationRecord
     changed = changed?
     save! if changed?
     changed
+  end
+
+  def i18n_hash
+    if display_name
+      {
+        script.name => {
+          'lesson_groups' => {
+            key => {
+              'display_name' => display_name
+            }
+          }
+        }
+      }
+    else
+      {}
+    end
   end
 end

@@ -940,6 +940,23 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
   end
 
+  test 'clone with suffix copies level concept difficulty' do
+    level_1 = create :level, name: 'level 1'
+    level_1.assign_attributes(
+      'level_concept_difficulty' => {'sequencing' => 3, 'debugging' => 5}
+    )
+
+    refute_nil level_1.level_concept_difficulty
+    assert_equal 3, level_1.level_concept_difficulty.sequencing
+    assert_equal 5, level_1.level_concept_difficulty.debugging
+
+    level_1_copy = level_1.clone_with_suffix(' copy')
+
+    refute_nil level_1_copy.level_concept_difficulty
+    assert_equal 3, level_1_copy.level_concept_difficulty.sequencing
+    assert_equal 5, level_1_copy.level_concept_difficulty.debugging
+  end
+
   test 'clone with suffix sets editor experiment' do
     old_level = create :level, name: 'old level'
     new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')
@@ -1124,7 +1141,7 @@ class LevelTest < ActiveSupport::TestCase
       "All types", "Ailab", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
-      "GamelabJr", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
+      "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
       "Odometer", "Pixelation", "PublicKeyCryptography", "StandaloneVideo",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
       "Vigenere", "Weblab"
@@ -1137,5 +1154,10 @@ class LevelTest < ActiveSupport::TestCase
     ]
     assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
     assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
+  end
+
+  test "summarize_for_lesson_show does not include teacher markdown if can_view_teacher_markdown is false" do
+    summary = @custom_level.summarize_for_lesson_show(false)
+    refute summary.key?('teacherMarkdown')
   end
 end

@@ -229,7 +229,7 @@ https://github.com/airbnb/javascript/tree/master/react#spacing We're okay with n
 self-closing tags, i.e. `<MyComponent/>` and `<MyComponent />` are both valid.
 
 * <a name="js-react-inline-styles"></a>
-Prefer single object for all styles vs. inlined style objects.  Define static styles outside the component, and only dynamic styles in the render method.
+Prefer single object for all styles vs. inlined style objects.  Define static styles below the component, and only dynamic styles in the render method.
 ```jsx
 // Bad
 var component = (
@@ -239,6 +239,12 @@ var component = (
 );
 
 // Good
+var component = (
+  <div style={styles.root}>
+    <div style={styles.child}>I'm a child</div>
+  </div>
+);
+...
 var styles = {
   root: {
     color: 'red',
@@ -249,23 +255,8 @@ var styles = {
     fontSize: 10
   }
 };
-...
-var component = (
-  <div style={styles.root}>
-    <div style={styles.child}>I'm a child</div>
-  </div>
-);
 
 // Example of defining static and dynamic styles separately
-var staticStyles = {
-  root: {
-    display: 'block'
-  },
-  child: {
-    color: 'blue',
-    fontSize: 10
-  }
-};
 var Component = function (props) {
   var styles = _.merge({}, staticStyles, {
     root: {
@@ -277,6 +268,15 @@ var Component = function (props) {
       <div style={styles.child}>I'm a child</div>
     </div>
   );
+};
+var staticStyles = {
+  root: {
+    display: 'block'
+  },
+  child: {
+    color: 'blue',
+    fontSize: 10
+  }
 };
 ```
 * <a name="js-react-pixel-numbers"></a>

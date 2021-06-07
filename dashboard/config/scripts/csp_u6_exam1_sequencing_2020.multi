@@ -18,3 +18,20 @@ The following algorithm is followed by a person every morning when they get up f
 
 Which concept does this algorithm BEST demonstrate?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** This is an example of sequencing because the steps of getting ready in the morning are being put in order.
+
+[Lesson 1 - Algorithms Solve Problems](https://curriculum.code.org/csp-20/unit6/1/) defined the terms sequencing, selection, and iteration.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.A.4: Every algorithm can be constructed using combinations of sequencing, selection, and iteration.
+* AAP-2.B.1: Sequencing is the application of each step of an algorithm in the order in which the code statements are given.
+* AAP-2.G.1: Selection determines which parts of an algorithm are executed based on a condition being true or false.
+* AAP-2.J.1: Iteration is a repeating portion of an algorithm. Iteration repeats a specified number of times or until a given condition is met.
+
+:::
+
+
+MARKDOWN

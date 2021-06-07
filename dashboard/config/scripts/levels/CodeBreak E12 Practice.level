@@ -42,7 +42,7 @@
     "parent_level_id": 23323,
     "display_name": "Beg: Functions Game",
     "block_pool": "gamelab",
-    "include_shared_functions": "true",
+    "include_shared_functions": "false",
     "name_suffix": "_2019",
     "encrypted": "false",
     "mini_rubric": "false",
@@ -58,15 +58,20 @@
     "long_instructions": "**Do This:** Code along with Sofia as she finishes the Build a Computer game during the episode. ",
     "bubble_choice_description": "Build your own game in Sprite Lab! Use functions to check if the player won or to reset the game. Look at the code in the samples on the previous level if you need some help. ",
     "thumbnail_url": "https://images.code.org/d09b82d362286316f90236ffb214f95f-image-1591111691238.gif",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "validation_enabled": "false",
+    "mini_toolbox": "false"
   },
   "game_id": 64,
+  "published": true,
   "created_at": "2020-06-08T19:52:44.000Z",
   "level_num": "custom",
   "user_id": 63,
-  "published": true,
   "notes": "",
-  "audit_log": "[]",
+  "audit_log": "[{\"changed_at\":\"2021-01-21 20:04:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

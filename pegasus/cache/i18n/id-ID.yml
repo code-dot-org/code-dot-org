@@ -1437,6 +1437,12 @@ id-ID:
   coursed-2019_gradelevel: Kelas 8+
   coursee-2019_gradelevel: Usia 8-12
   coursef-2019_gradelevel: Usia 9-13
+  coursea-2020_gradelevel: Usia 4-7
+  courseb-2020_gradelevel: Usia 5-8
+  coursec-2020_gradelevel: Usia 6-10
+  coursed-2020_gradelevel: Kelas 8+
+  coursee-2020_gradelevel: Usia 8-12
+  coursef-2020_gradelevel: Usia 9-13
   accelerated_gradelevel: Usia 10 + (setelah Kursus 3)
   codeorg_platformtext: Browser modern, smartphone, tablet
   codeintl_platformtext: Browser modern, smartphone, tablet
@@ -1619,6 +1625,26 @@ id-ID:
     lanjutkan dengan fungsi.
   coursef-2019_shortdescription_congrats: Pelajari seluruh konsep dalam dasar dasar
     ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+  coursea-2020_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan
+    internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda
+    bagikan.
+  courseb-2020_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan
+    internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda
+    bagikan.
+  coursec-2020_shortdescription_congrats: Buat program dengan pengurutan, loop, dan
+    event. Terjemahkan inisial Anda menjadi binary, selidiki berbagai teknik pemecahan
+    masalah, dan pelajari cara menanggapi perundungan maya (cyberbullying). Pada akhir
+    kursus, buat permainan atau cerita Anda sendiri yang dapat dibagikan!
+  coursed-2020_shortdescription_congrats: Murid mengembangkan pemahaman tentang loop,
+    conditional, dan event. Selain coding, murid belajar tentang kewarganegaraan digital.
+  coursee-2020_shortdescription_congrats: Mulai coding dengan algorithm, loop, conditional,
+    event, dan barulah Anda beralih ke function. Di bagian kedua kursus ini, rancang
+    dan buat proyek capstone yang dapat dibagikan kepada teman dan keluarga.
+  coursef-2020_shortdescription_congrats: Pelajari cara menggunakan berbagai jenis
+    loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah
+    dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua
+    kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman
+    dan keluarga.
   codeorg_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman
     tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah
     video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari
@@ -2521,3 +2547,16 @@ id-ID:
   page_not_available_button: Pulang ke rumah
   footer_powered_by_aws: Didukung oleh Amazon Web Services
   codebytes_skinny_banner_english_only: Bahasa Inggris saja
+  footer_privacy_policy: Kebijakan privasi
+  footer_about: Tentang
+  footer_partners: Mitra-Mitra
+  footer_donate: Donasi
+  footer_support: Bantuan dan komunitas
+  footer_terms: Ketentuan
+  ai_for_oceans: AI for Oceans
+  ai_in_partnership_with: Bermitra dengan
+  ai_microsoft_thanks: Kami berterima kasih kepada Mikrosoft atas dukungan visi dan
+    misi kami untuk memastikan setiap anak memiliki kesempatan untuk belajar ilmu
+    komputer dan keterampilan untuk sukses di abad ke 21.
+  ai_activity: Kegiatan
+  ai_description: Deskripsi

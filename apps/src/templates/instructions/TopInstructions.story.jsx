@@ -9,6 +9,9 @@ import {
 import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import sectionData, {
+  setTtsAutoplayEnabled
+} from '@cdo/apps/redux/sectionDataRedux';
 import TopInstructions from './TopInstructions';
 
 /**
@@ -21,7 +24,9 @@ import TopInstructions from './TopInstructions';
  * @param {boolean} options.tts
  */
 const createCommonStore = function(options = {}) {
-  const store = createStore(combineReducers({...commonReducers, isRtl}));
+  const store = createStore(
+    combineReducers({...commonReducers, isRtl, sectionData})
+  );
   const pageConstants = {};
   const instructionsConstants = {};
 
@@ -110,6 +115,7 @@ const createCommonStore = function(options = {}) {
 
   store.dispatch(setPageConstants(pageConstants));
   store.dispatch(setInstructionsConstants(instructionsConstants));
+  store.dispatch(setTtsAutoplayEnabled(false));
 
   return store;
 };

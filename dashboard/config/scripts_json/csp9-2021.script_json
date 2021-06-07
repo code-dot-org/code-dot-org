@@ -2,7 +2,7 @@
   "script": {
     "name": "csp9-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -12,10 +12,14 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-27 17:32:03 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -26,7 +30,8 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 9: Data"
+        "display_name": "Unit 9: Data",
+        "description": "### Unit Philosophy and Pedagogy\n\n\n* **The Data Analysis Process:** This unit is built around a data analysis process that helps students break down how data is turned into new information about the world. Some lessons are designed around different steps of this process, like cleaning data or building visualizations. Other lessons focus on ways this process is applied in real-world contexts like citizen science or machine learning. The data analysis process helps provide a consistent reference point as students explore the importance of data analysis in computing. \n\n* **Exploring Data with the Data Visualizer:** The Data Visualizer is a tool built into App Lab that allows students to quickly create visualizations of the data they've added to their projects. The set of possible visualizations is intentionally limited to a few ways to change or modify the chart. This tool aims to encourage exploring the different kinds of questions that can be answered with data visualizations, with a greater emphasis on students' ability to create a variety of visualizations quickly.\n\n\n### Major Assessment and Projects\n\nStudents use the data visualizer to find and present a data story. Using what they've learned about the data analysis process, students either choose a dataset inside the data library or upload one of their own and create visualizations that find interesting patterns that may reveal new insights and knowledge. Students complete an activity guide describing their findings and the process they used in identifying them. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the \"Standards\" page for this unit.\n\n* DAT-2: Programs can be used to process data, which allows users to discover information and create new knowledge.\n* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.\n\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 2.3 Extracting Information from Data\n* 2.4 Using Programs with Data\n* 5.3 Computing Bias\n* 5.4 Crowdsourcing"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit9_2020",
@@ -40,22 +45,14 @@
       "name": "Learning from Data",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this lesson students explore the Google Trends tool in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab. ",
-        "student_overview": "Explore the Google Trends tool in order to tell a \"data story\".",
-        "purpose": "The three main purposes of this lesson are:\r\n\r\n1. Navigating and using a real data tool (Google Trends, see below) that is external to the course\r\n2. Getting acquainted with talking and writing about data. In particular we want to:\r\n\t* Draw a distinction between describing what the data shows and describing why it might be that way\r\n\t* In other words: describe connections and trends in data separate from drawing conclusions.\r\n\t* We want students to get in the habit of separating the what from the why when it comes to talking and writing about data\r\n3. Introduce the concept of metadata. We want students to understand the value of data about data, that can be used to find, organize, and manage information. It also increases effective use of data by providing extra information. \r\n",
-        "preparation": "* Preview Google Trends and prepare for the demo",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1UwzCdBnV1Qx6lIYhpFb58COwDBSMZtmq1xUAIkD2L_w/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "overview": "In this lesson students explore the Google Trends tool in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab. ",
+        "preparation": "* Preview Google Trends and prepare for the demo",
+        "purpose": "The three main purposes of this lesson are:\r\n\r\n1. Navigating and using a real data tool (Google Trends, see below) that is external to the course\r\n2. Getting acquainted with talking and writing about data. In particular we want to:\r\n\t* Draw a distinction between describing what the data shows and describing why it might be that way\r\n\t* In other words: describe connections and trends in data separate from drawing conclusions.\r\n\t* We want students to get in the habit of separating the what from the why when it comes to talking and writing about data\r\n3. Introduce the concept of metadata. We want students to understand the value of data about data, that can be used to find, organize, and manage information. It also increases effective use of data by providing extra information. \r\n",
+        "student_overview": "Explore the Google Trends tool in order to tell a \"data story\"."
       },
       "seeding_key": {
         "lesson.key": "Learning From Data",
@@ -68,22 +65,14 @@
       "name": "Exploring One Column",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts a bar chart, and a histogram. The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice reading a bar chart and review the kinds of questions it is and is not useful for answering. Afterwards they build different bar charts in the Data Visualizer and discuss why some are or are not useful. Afterwards they learn how to make histograms for building charts in instances where bar charts may not be useful. Students record their work on an activity guide. The lesson concludes with a brief review of what they learned.",
-        "student_overview": "Create a bar chart and a histogram in App Lab's Data Visualizer.",
-        "purpose": "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types, a bar chart, and a histogram. Students will build skills in using this tool and reading data that they will continue to develop throughout the unit.\r\n\r\nIn the Wrap Up of this lesson students are introduced to the Data Analysis Process, a set of steps that can be used to use data to answer questions. Students will continue to refer to this process throughout the remainder of the unit.",
-        "preparation": "* Try using the Data Visualizer yourself to make some of the charts students will create as part of completing the lesson",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1Ftkd3XfkO-J-f5BN8SHRPpJiR29gAk2jGlD7GtOt3Vo/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts a bar chart, and a histogram. The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice reading a bar chart and review the kinds of questions it is and is not useful for answering. Afterwards they build different bar charts in the Data Visualizer and discuss why some are or are not useful. Afterwards they learn how to make histograms for building charts in instances where bar charts may not be useful. Students record their work on an activity guide. The lesson concludes with a brief review of what they learned.",
+        "preparation": "* Try using the Data Visualizer yourself to make some of the charts students will create as part of completing the lesson",
+        "purpose": "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types, a bar chart, and a histogram. Students will build skills in using this tool and reading data that they will continue to develop throughout the unit.\r\n\r\nIn the Wrap Up of this lesson students are introduced to the Data Analysis Process, a set of steps that can be used to use data to answer questions. Students will continue to refer to this process throughout the remainder of the unit.",
+        "student_overview": "Create a bar chart and a histogram in App Lab's Data Visualizer."
       },
       "seeding_key": {
         "lesson.key": "Exploring One Column",
@@ -96,22 +85,14 @@
       "name": "Filtering and Cleaning Data",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this lesson, student explore the challenges of working with a messy dataset. First students learn how to identify issues using the Data Visualizer, and then manually clean the data. Following this, students learn about the filtering tools in the Data Visualizer, and use a guided activity to answer data questions that require filtering a dataset. ",
-        "student_overview": "Clean data and use the filtering tools in the Data Visualizer to be able to analyze data.",
-        "purpose": "The goal of this lesson is to introduce two crucial concepts when working with data: cleaning and filtering. The datasets in App Lab are generally clean, so a \"messy\" dataset is imported to a level for students to explore. After discovering why datsets need to be cleaned, students manually clean the dataset. \r\n\r\nWhen working with a dataset to answer a question, the user may want to focus on a subset of the data. In this lesson, students are introduced to the filtering tools in the Data Visualizer so they can accurately filter for the information they are looking for. ",
-        "preparation": "* Preview the filter tool in the Data Visualizer\r\n* Prepare for the demo in the Activity",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1lBfEl10nK2EnmHMxuBsqtiIsNAF1t-bFqpFfeAYBp00/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "overview": "In this lesson, student explore the challenges of working with a messy dataset. First students learn how to identify issues using the Data Visualizer, and then manually clean the data. Following this, students learn about the filtering tools in the Data Visualizer, and use a guided activity to answer data questions that require filtering a dataset. ",
+        "preparation": "* Preview the filter tool in the Data Visualizer\r\n* Prepare for the demo in the Activity",
+        "purpose": "The goal of this lesson is to introduce two crucial concepts when working with data: cleaning and filtering. The datasets in App Lab are generally clean, so a \"messy\" dataset is imported to a level for students to explore. After discovering why datsets need to be cleaned, students manually clean the dataset. \r\n\r\nWhen working with a dataset to answer a question, the user may want to focus on a subset of the data. In this lesson, students are introduced to the filtering tools in the Data Visualizer so they can accurately filter for the information they are looking for. ",
+        "student_overview": "Clean data and use the filtering tools in the Data Visualizer to be able to analyze data."
       },
       "seeding_key": {
         "lesson.key": "Filtering and Cleaning Data",
@@ -124,22 +105,14 @@
       "name": "Exploring Two Columns",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts, a cross tab, and a scatterplot. Students will practice reading each type of chart before learning to make them in the Data Visualizer. Students will track their work using a provided activity guide. The lesson concludes with a review of key takeaways.",
-        "student_overview": "Create and analyze crosstab and scatter charts in App Lab's Data Visualizer.",
-        "purpose": "This lesson introduces students to two new ways of make visualizations in the Data Visualizer. The crosstab and scatter chart are new in that they allow students to see patterns across multiple variables, noticing how one might seem to change (or correlate) with another. This is good preparation for their unit project in which they'll need to make and interpret a data visualization of their own.",
-        "preparation": "* Review how to make crosstab and scatter charts in the Data Visualizer",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1rR93ofDtDKZM7yYuwDZOBdAx7qBeqfYlqsb3LVINWk0/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts, a cross tab, and a scatterplot. Students will practice reading each type of chart before learning to make them in the Data Visualizer. Students will track their work using a provided activity guide. The lesson concludes with a review of key takeaways.",
+        "preparation": "* Review how to make crosstab and scatter charts in the Data Visualizer",
+        "purpose": "This lesson introduces students to two new ways of make visualizations in the Data Visualizer. The crosstab and scatter chart are new in that they allow students to see patterns across multiple variables, noticing how one might seem to change (or correlate) with another. This is good preparation for their unit project in which they'll need to make and interpret a data visualization of their own.",
+        "student_overview": "Create and analyze crosstab and scatter charts in App Lab's Data Visualizer."
       },
       "seeding_key": {
         "lesson.key": "Exploring Two Columns",
@@ -152,22 +125,15 @@
       "name": "Big, Open, and Crowdsourced Data",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "Students will complete a jigsaw of three different topics at the intersection of data, computing, and global impacts. These are topics, big data, crowdsourcing, and open data. Students will watch videos or listen to audio recordings about the different topics. Groups will each complete an activity guide about their topic before having individuals from each group share out their findings. The lesson concludes with a review of key points.",
-        "student_overview": "Learn how big data, open data, and crowdsourcing apply the data analysis process in real world context to solve problems that matter.",
-        "purpose": "This lesson zooms back out from the data analysis process to the ways that is applied in a wide variety of contexts. Students learn how big data, open data, and crowdsourcing apply this process in interesting ways that cleverly modify this process. For a summary of key points of this lesson review the key takeaways in the slides. In short however:\r\n\r\n* Big data: \"Collect huge amounts of data so we can learn even more from it\"\r\n* Open data: \"sharing data with others so they can can analyze it\"\r\n* Crowdsourcing: \"collecting data from others so you can analyze it\"\r\n\r\nThis lesson further builds towards the following lesson on machine learning which explores a different application of the data analysis process.",
-        "preparation": "* Ensure students will be able to access all of the videos / articles linked in the lesson.\r\n* Review at least the key takeaways and ideally some of the content from each topic to ensure you understand how these topics relate to what students have studied in previous lessons.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/15DLAmMWSu4i73kmCNWd10CnMMGCr-IkF_JI0YXaDo00/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "overview": "Students will complete a jigsaw of three different topics at the intersection of data, computing, and global impacts. These are topics, big data, crowdsourcing, and open data. Students will watch videos or listen to audio recordings about the different topics. Groups will each complete an activity guide about their topic before having individuals from each group share out their findings. The lesson concludes with a review of key points.",
+        "preparation": "* Ensure students will be able to access all of the videos / articles linked in the lesson.\r\n* Review at least the key takeaways and ideally some of the content from each topic to ensure you understand how these topics relate to what students have studied in previous lessons.",
+        "purpose": "This lesson zooms back out from the data analysis process to the ways that is applied in a wide variety of contexts. Students learn how big data, open data, and crowdsourcing apply this process in interesting ways that cleverly modify this process. For a summary of key points of this lesson review the key takeaways in the slides. In short however:\r\n\r\n* Big data: \"Collect huge amounts of data so we can learn even more from it\"\r\n* Open data: \"sharing data with others so they can can analyze it\"\r\n* Crowdsourcing: \"collecting data from others so you can analyze it\"\r\n\r\nThis lesson further builds towards the following lesson on machine learning which explores a different application of the data analysis process.",
+        "student_overview": "Learn how big data, open data, and crowdsourcing apply the data analysis process in real world context to solve problems that matter.",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
@@ -177,25 +143,17 @@
     },
     {
       "key": "Machine Learning and Bias",
-      "name": "Machine Learning and Bias",
+      "name": "Machine Learning",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
-        "student_overview": "In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
-        "purpose": "This tutorial is designed to quickly introduce students to machine learning, a type of artificial intelligence. Students will explore how training data is used to enable a machine learning model to classify new data. ",
-        "preparation": "* Review and complete the online tutorial yourself. If you are not going to use AI for Oceans, explore the other options listed below. ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1CDkUeEZNOrbgvulr-ZTJpWglC8yAfHSdBl1PVvNWE0g/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "overview": "In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
+        "preparation": "* Review and complete the online tutorial yourself. If you are not going to use AI for Oceans, explore the other options listed below. ",
+        "purpose": "This tutorial is designed to quickly introduce students to machine learning, a type of artificial intelligence. Students will explore how training data is used to enable a machine learning model to classify new data. ",
+        "student_overview": "In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own."
       },
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
@@ -204,26 +162,36 @@
       }
     },
     {
-      "key": "Project - Tell a Data Story - Part 1",
-      "name": "Project   Tell a Data Story Part 1",
+      "key": "lesson-10",
+      "name": "Algorithmic Bias",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "This is the first day of a project where students use the Data Analysis Process to tell a data story.  Students complete the first page of the Activity Guide for this project during this lesson.",
-        "student_overview": "You will create an effective visualization that you will use to tell a data story.",
-        "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit.",
-        "preparation": "* Preview the Project Guide",
+        "overview": "In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.",
+        "student_overview": "In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "Project - Tell a Data Story - Part 1",
+      "name": "Project   Tell a Data Story Part 1",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1WHmX4Fese0cJg8o560m9hFykkftUn2aQ7KDA5A6cYYM/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "overview": "This is the first day of a project where students use the Data Analysis Process to tell a data story.  Students complete the first page of the Activity Guide for this project during this lesson.",
+        "preparation": "* Preview the Project Guide",
+        "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit.",
+        "student_overview": "You will create an effective visualization that you will use to tell a data story."
       },
       "seeding_key": {
         "lesson.key": "Project - Tell a Data Story - Part 1",
@@ -234,24 +202,17 @@
     {
       "key": "Project - Tell a Data Story - Part 2",
       "name": "Project   Tell a Data Story Part 2",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
-      "relative_position": 8,
+      "has_lesson_plan": true,
+      "relative_position": 9,
       "properties": {
-        "overview": "This is the second day of a project where students use the Data Analysis Process to tell a data story.  Students complete the second page of the Activity Guide for this project during this lesson.",
-        "student_overview": "Finish the task you started in the previous lesson by using the Data Analysis Process to tell a data story with the visualization you created.",
-        "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit. ",
-        "preparation": "* Review the rubric in the Project Guide",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1l3s2pBrv1raHIFXWq8zfGS7olo0BW9t2icZq3kpjLeo/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "overview": "This is the second day of a project where students use the Data Analysis Process to tell a data story.  Students complete the second page of the Activity Guide for this project during this lesson.",
+        "preparation": "* Review the rubric in the Project Guide",
+        "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit. ",
+        "student_overview": "Finish the task you started in the previous lesson by using the Data Analysis Process to tell a data story with the visualization you created."
       },
       "seeding_key": {
         "lesson.key": "Project - Tell a Data Story - Part 2",
@@ -262,23 +223,16 @@
     {
       "key": "Lesson 9: Assessment Day",
       "name": "Assessment Day",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": true,
-      "relative_position": 1,
+      "has_lesson_plan": true,
+      "relative_position": 10,
       "properties": {
-        "overview": "Students complete a multiple choice assessment which covers the unit topics. ",
-        "student_overview": "Students complete a multiple choice assessment which covers the unit topics. ",
-        "preparation": "Preview the assessment questions",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1uECaXPB9ykBuFupiRywH4gvf6VRyOPaFlFkUJAfIJX8/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "overview": "Students complete a multiple choice assessment which covers the unit topics. ",
+        "preparation": "Preview the assessment questions",
+        "student_overview": "Students complete a multiple choice assessment which covers the unit topics. "
       },
       "seeding_key": {
         "lesson.key": "Lesson 9: Assessment Day",
@@ -292,8 +246,8 @@
       "key": "31102638-cc23-4656-8c44-55fae1b07ae9",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "31102638-cc23-4656-8c44-55fae1b07ae9",
@@ -306,8 +260,8 @@
       "key": "23a43089-7330-4740-9e47-fd34fc48126b",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "23a43089-7330-4740-9e47-fd34fc48126b",
@@ -320,8 +274,8 @@
       "key": "02db382c-034b-4139-be03-1d767e151bbf",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "02db382c-034b-4139-be03-1d767e151bbf",
@@ -334,7 +288,6 @@
       "key": "def071fc-c626-4322-8c14-78c879c4f922",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "def071fc-c626-4322-8c14-78c879c4f922",
@@ -347,8 +300,8 @@
       "key": "8fdb3aa2-685e-4200-ba20-3a5606def2bb",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "8fdb3aa2-685e-4200-ba20-3a5606def2bb",
@@ -361,8 +314,8 @@
       "key": "4763bec6-f01e-480a-bde1-6c8a9b86f6c1",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "4763bec6-f01e-480a-bde1-6c8a9b86f6c1",
@@ -375,8 +328,8 @@
       "key": "940303aa-4a8c-407c-823b-13ed37d11302",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "940303aa-4a8c-407c-823b-13ed37d11302",
@@ -389,7 +342,6 @@
       "key": "10f73d60-9046-4a41-b4e3-2fe73968e07d",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "10f73d60-9046-4a41-b4e3-2fe73968e07d",
@@ -402,8 +354,8 @@
       "key": "7dbe999c-5917-4876-8316-3585d76863c4",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 2
+        "duration": 2,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "7dbe999c-5917-4876-8316-3585d76863c4",
@@ -416,8 +368,8 @@
       "key": "3a7e77ee-a98f-4859-9d07-f807f269f500",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 33
+        "duration": 33,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "3a7e77ee-a98f-4859-9d07-f807f269f500",
@@ -430,8 +382,8 @@
       "key": "730cf276-e9f2-4b83-a51f-3a21479516fe",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "730cf276-e9f2-4b83-a51f-3a21479516fe",
@@ -444,7 +396,6 @@
       "key": "389ca2d3-4c24-4b12-8ee3-3225fb921db1",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "389ca2d3-4c24-4b12-8ee3-3225fb921db1",
@@ -457,8 +408,8 @@
       "key": "1c02fe3c-45cd-4b8e-a4d9-0061a274a5f0",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "1c02fe3c-45cd-4b8e-a4d9-0061a274a5f0",
@@ -471,8 +422,8 @@
       "key": "74dda196-fc01-4d4a-9e30-72a8125cb29a",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "74dda196-fc01-4d4a-9e30-72a8125cb29a",
@@ -485,8 +436,8 @@
       "key": "95dfefe4-7e4f-4dab-ba87-b630a13e6bca",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "95dfefe4-7e4f-4dab-ba87-b630a13e6bca",
@@ -499,7 +450,6 @@
       "key": "c290da99-dfab-486a-8b26-bb6283554efb",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "c290da99-dfab-486a-8b26-bb6283554efb",
@@ -512,8 +462,8 @@
       "key": "c36ba380-66ba-4b06-afc9-a41a7bf27cce",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c36ba380-66ba-4b06-afc9-a41a7bf27cce",
@@ -526,8 +476,8 @@
       "key": "0dc73a48-c036-40ca-aa9f-bcd3bd7a7989",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "0dc73a48-c036-40ca-aa9f-bcd3bd7a7989",
@@ -540,8 +490,8 @@
       "key": "3662b5ca-6227-4ae5-abc8-11588582ef56",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "3662b5ca-6227-4ae5-abc8-11588582ef56",
@@ -554,8 +504,8 @@
       "key": "41a6f82e-64c8-4835-9183-1b9d6b9f690f",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "41a6f82e-64c8-4835-9183-1b9d6b9f690f",
@@ -568,8 +518,8 @@
       "key": "86b19247-d04b-4df6-b4fc-c19ac7866b85",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "86b19247-d04b-4df6-b4fc-c19ac7866b85",
@@ -582,8 +532,8 @@
       "key": "4b3ca207-6a48-4b65-85af-cf4fecbc9af9",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "4b3ca207-6a48-4b65-85af-cf4fecbc9af9",
@@ -593,14 +543,43 @@
       }
     },
     {
-      "key": "4a3a3a9c-a651-4c5c-bd6a-f3c2a8ee5a41",
-      "position": 4,
+      "key": "e6f736cd-954c-422a-83a5-310441497fc2",
+      "position": 1,
       "properties": {
-        "name": "Levels"
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "4a3a3a9c-a651-4c5c-bd6a-f3c2a8ee5a41",
-        "lesson.key": "Machine Learning and Bias",
+        "lesson_activity.key": "e6f736cd-954c-422a-83a5-310441497fc2",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021"
       }
@@ -609,8 +588,8 @@
       "key": "476677e0-b2c8-4536-811e-a2bf1bac7c1d",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 2
+        "duration": 2,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "476677e0-b2c8-4536-811e-a2bf1bac7c1d",
@@ -623,8 +602,8 @@
       "key": "1e3de5bc-ad14-4f7b-bc57-6433b21816a4",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 43
+        "duration": 43,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "1e3de5bc-ad14-4f7b-bc57-6433b21816a4",
@@ -637,8 +616,7 @@
       "key": "2d34931c-6043-4a25-bb95-5cdb15e3cc72",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 0
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "2d34931c-6043-4a25-bb95-5cdb15e3cc72",
@@ -648,24 +626,10 @@
       }
     },
     {
-      "key": "e9cc7b9b-55bc-4155-a831-23d41e2b2747",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e9cc7b9b-55bc-4155-a831-23d41e2b2747",
-        "lesson.key": "Project - Tell a Data Story - Part 1",
-        "lesson_group.key": "csp_unit9_2020",
-        "script.name": "csp9-2021"
-      }
-    },
-    {
       "key": "9f5c5816-4346-4db2-a48f-3cf487a96364",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 0
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "9f5c5816-4346-4db2-a48f-3cf487a96364",
@@ -678,8 +642,8 @@
       "key": "2af3dcfd-56c1-4c16-907e-4104ef11df4f",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "2af3dcfd-56c1-4c16-907e-4104ef11df4f",
@@ -692,8 +656,8 @@
       "key": "818b1d71-71d0-490b-a212-b2d56a50b8d1",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "818b1d71-71d0-490b-a212-b2d56a50b8d1",
@@ -703,24 +667,11 @@
       }
     },
     {
-      "key": "7e506a5b-e1bd-464f-b51f-f6c973dde98d",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7e506a5b-e1bd-464f-b51f-f6c973dde98d",
-        "lesson.key": "Project - Tell a Data Story - Part 2",
-        "lesson_group.key": "csp_unit9_2020",
-        "script.name": "csp9-2021"
-      }
-    },
-    {
       "key": "35d6ee41-93ec-4ab7-81a9-e49a2d163a90",
       "position": 1,
       "properties": {
-        "name": "Assessment (25 mins)",
-        "duration": 0
+        "duration": 25,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "35d6ee41-93ec-4ab7-81a9-e49a2d163a90",
@@ -733,24 +684,11 @@
       "key": "5d7a4065-cee8-449f-b1b6-4c6bab3780c2",
       "position": 2,
       "properties": {
-        "name": "Assessment Review",
-        "duration": 20
+        "duration": 20,
+        "name": "Assessment Review"
       },
       "seeding_key": {
         "lesson_activity.key": "5d7a4065-cee8-449f-b1b6-4c6bab3780c2",
-        "lesson.key": "Lesson 9: Assessment Day",
-        "lesson_group.key": "csp_unit9_2020",
-        "script.name": "csp9-2021"
-      }
-    },
-    {
-      "key": "154709b5-5080-4438-be50-703000560091",
-      "position": 3,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "154709b5-5080-4438-be50-703000560091",
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021"
@@ -774,14 +712,7 @@
       "key": "d99c8fd8-3e58-4552-bff8-47fc0161571f",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:** What time of year do people tend to search online for chocolate? How could you check your guess?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Student answers will vary, but they may include major holidays like Valentine's Day. Students may also have several different ideas for how those answers could be checked, and ultimately you will want to guide your students towards the idea of using a search tool. \r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What time of year do people tend to search online for chocolate? How could you check your guess?*\n\n**Discussion Goal:** Student answers will vary, but they may include major holidays like Valentine's Day. Students may also have several different ideas for how those answers could be checked, and ultimately you will want to guide your students towards the idea of using a search tool. \n"
       },
       "seeding_key": {
         "activity_section.key": "d99c8fd8-3e58-4552-bff8-47fc0161571f",
@@ -816,7 +747,7 @@
       "key": "4f2ff903-c95e-4c77-bfc9-99b66a8a2f31",
       "position": 2,
       "properties": {
-        "description": "[slide] **Display:** The chart relates to the warm-up question and shows searches for chocolate over the past 5 years.\r\n\r\n[slide] **Prompt:** What pattern do you notice? What could be the reason for that pattern? Does this data support your earlier guesses?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** The chart relates to the warm-up question and shows searches for chocolate over the past 5 years.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What pattern do you notice? What could be the reason for that pattern? Does this data support your earlier guesses?*"
       },
       "seeding_key": {
         "activity_section.key": "4f2ff903-c95e-4c77-bfc9-99b66a8a2f31",
@@ -827,7 +758,7 @@
       "key": "3b856a9f-01e5-43ef-b3c2-86f9d335a576",
       "position": 3,
       "properties": {
-        "description": "This chart gives us information: a collection of facts and patterns extracted from data. We can use this information to identify trends, make connections and address problems. \r\n\r\n[slide] There are two distinctions we need to make when looking at a chart or visualization:\r\n\r\n* What does the data show?\r\n* Why might that be the case?\r\n\r\nThe \"what\" is the facts of the matter. Chocolate searches spike in December. The \"why\" is an informed opinion. Chocolate searches spike around the time of the winter holidays because it's a common gift.",
+        "description": "This chart gives us information: a collection of facts and patterns extracted from data. We can use this information to identify trends, make connections and address problems. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> There are two distinctions we need to make when looking at a chart or visualization:\r\n\r\n* What does the data show?\r\n* Why might that be the case?\r\n\r\nThe \"what\" is the facts of the matter. Chocolate searches spike in December. The \"why\" is an informed opinion. Chocolate searches spike around the time of the winter holidays because it's a common gift.",
         "remarks": true
       },
       "seeding_key": {
@@ -839,7 +770,7 @@
       "key": "2f2debc2-5b96-4dc0-b262-f149521183de",
       "position": 4,
       "properties": {
-        "description": "[slide] **Do This:** Demonstrate how to use Google Trends in front of the class. Add several search items (for example: streaming, mp3, cd) or take suggestions from the class. Demonstrate usage of the dropdowns to narrow focus. As a class look for patterns in the data. Practice stating the *What* and the *Why* as you make charts with the class. \r\n\r\n[slide] **Do This:** Now students use Google Trends themselves to look for \"data stories\". Depending on class time, allow students to share their data stories with partners or with the class as a whole."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to use Google Trends in front of the class. Add several search items (for example: streaming, mp3, cd) or take suggestions from the class. Demonstrate usage of the dropdowns to narrow focus. As a class look for patterns in the data. Practice stating the *What* and the *Why* as you make charts with the class. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Now students use Google Trends themselves to look for \"data stories\". Depending on class time, allow students to share their data stories with partners or with the class as a whole."
       },
       "seeding_key": {
         "activity_section.key": "2f2debc2-5b96-4dc0-b262-f149521183de",
@@ -850,7 +781,7 @@
       "key": "654401e1-26af-4933-a234-4e3537c352ea",
       "position": 5,
       "properties": {
-        "description": "Using Google Trends to find patterns represents an important concept in understanding how programs are used to gain insight and knowledge from data. When you worked with the tool, there were elements of both interaction and iteration. You interacted with the tool trying out several different options, and repeated the process (iteration) until you came to a possible conclusion. \r\n\r\n[slide] As you were determining the **Why** in your data stories, you may have been tempted to draw concrete connections. However, it's important to remember that correlation (similarities, patterns) does not equal causation (this thing caused that thing). There can be any number of reasons why a pattern or interesting data point may appear in a chart - and our job is to make an informed decision while recognizing that there may be multiple factors at play.  Usually additional research with several data sets is necessary to understand the exact nature of the relationship between data. Did this one thing cause another thing to happen? Do more people search for chocolate because they want to give it as a gift, or could there perhaps be another reason?\r\n\r\n[slide] In this unit we will be making charts to help answer questions:\r\n\r\n* *\"I think this visualization tells me this…\"*\r\n\t* Something is more popular than something else\r\n\t* Something is more important than something else\r\n\t* Something has become more or less searched over time\r\n\r\n* *\"... but I'm not sure because…\"*\r\n\t* I don't know exactly how the data was collected\r\n\t* This might tell me people searched for green more than red, but it doesn't tell me why they do that or that green is a better color\r\n\t* We need more data!\r\n\r\nWhen we consider datasets, it's helpful to know as much about those datasets as possible. Where did the data come from? How much data is included? When was it collected?\r\n\r\nAll of this information is considered **metadata** which is defined as \"data about data\". \r\n\r\nWe can have metadata about any digital data. For example, this picture contains metatdata that tells us the when the picture was created, what the resolution is, and how many people have downloaded it. Datasets can also have metadata that explains more about the information in the dataset. You've seen this in App Lab!",
+        "description": "Using Google Trends to find patterns represents an important concept in understanding how programs are used to gain insight and knowledge from data. When you worked with the tool, there were elements of both interaction and iteration. You interacted with the tool trying out several different options, and repeated the process (iteration) until you came to a possible conclusion. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As you were determining the **Why** in your data stories, you may have been tempted to draw concrete connections. However, it's important to remember that correlation (similarities, patterns) does not equal causation (this thing caused that thing). There can be any number of reasons why a pattern or interesting data point may appear in a chart - and our job is to make an informed decision while recognizing that there may be multiple factors at play.  Usually additional research with several data sets is necessary to understand the exact nature of the relationship between data. Did this one thing cause another thing to happen? Do more people search for chocolate because they want to give it as a gift, or could there perhaps be another reason?\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In this unit we will be making charts to help answer questions:\r\n\r\n* *\"I think this visualization tells me this…\"*\r\n\t* Something is more popular than something else\r\n\t* Something is more important than something else\r\n\t* Something has become more or less searched over time\r\n\r\n* *\"... but I'm not sure because…\"*\r\n\t* I don't know exactly how the data was collected\r\n\t* This might tell me people searched for green more than red, but it doesn't tell me why they do that or that green is a better color\r\n\t* We need more data!\r\n\r\nWhen we consider datasets, it's helpful to know as much about those datasets as possible. Where did the data come from? How much data is included? When was it collected?\r\n\r\nAll of this information is considered **metadata** which is defined as \"data about data\". \r\n\r\nWe can have metadata about any digital data. For example, this picture contains metatdata that tells us the when the picture was created, what the resolution is, and how many people have downloaded it. Datasets can also have metadata that explains more about the information in the dataset. You've seen this in App Lab!",
         "remarks": true
       },
       "seeding_key": {
@@ -862,14 +793,7 @@
       "key": "af5231ee-f66b-495e-856e-4faa8c87ad15",
       "position": 6,
       "properties": {
-        "description": "[slide]  **Prompt:** What is the metadata for the chart you created in Google Trends?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students may bring up the sources of the data (Google Searches) or the dropdowns that control how the chart is built. If students want to dig deeper into the metadata, consider pointing them to the [Google Trends Help Page](https://support.google.com/trends/answer/4355213?hl=en&ref_topic=4365599). \r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is the metadata for the chart you created in Google Trends?*\n\n**Discussion Goal:** Students may bring up the sources of the data (Google Searches) or the dropdowns that control how the chart is built. If students want to dig deeper into the metadata, consider pointing them to the [Google Trends Help Page](https://support.google.com/trends/answer/4355213?hl=en&ref_topic=4365599). \n"
       },
       "seeding_key": {
         "activity_section.key": "af5231ee-f66b-495e-856e-4faa8c87ad15",
@@ -892,7 +816,8 @@
       "key": "e09762df-c895-4667-bbdd-9cc8482f16db",
       "position": 8,
       "properties": {
-        "description": "[slide] **Do This:** Students navigate to Level 2 on Code Studio where they open the data tab and look at the metadata for a table. Then they should share with a partner where the data comes from and what they can learn from the metadata."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 2 on Code Studio where they open the data tab and look at the metadata for a table. Then they should share with a partner where the data comes from and what they can learn from the metadata.",
+        "progression_name": "Exploring Metadata"
       },
       "seeding_key": {
         "activity_section.key": "e09762df-c895-4667-bbdd-9cc8482f16db",
@@ -903,7 +828,7 @@
       "key": "02d4cdd5-11d2-4933-bd89-932312dd0bc2",
       "position": 1,
       "properties": {
-        "description": "[slide] **Review:** Review key takeaways on the slide. Students may want to jot down notes in their journals. \r\n\r\n[slide] **Journal:** Students add the following word and definition to their journal: metadata. \r\n\r\n---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Below is an image from Google Trends that plots Cats and Dogs. Choose the most accurate description of what this data is actually showing based on what you know about how Google Trends works."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slide. Students may want to jot down notes in their journals. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following word and definition to their journal: metadata. \r\n\r\n---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Below is an image from Google Trends that plots Cats and Dogs. Choose the most accurate description of what this data is actually showing based on what you know about how Google Trends works."
       },
       "seeding_key": {
         "activity_section.key": "02d4cdd5-11d2-4933-bd89-932312dd0bc2",
@@ -914,7 +839,7 @@
       "key": "fd1b4c8a-4e7d-47fd-8193-31abffdebe89",
       "position": 1,
       "properties": {
-        "name": "Exploring Metadata"
+        "progression_name": "Exploring Metadata"
       },
       "seeding_key": {
         "activity_section.key": "fd1b4c8a-4e7d-47fd-8193-31abffdebe89",
@@ -925,7 +850,7 @@
       "key": "0d0f2b60-cb65-44f8-9d2b-bcf27d68d86d",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0d0f2b60-cb65-44f8-9d2b-bcf27d68d86d",
@@ -936,14 +861,7 @@
       "key": "ffeddc34-db9a-4586-9fe2-0f2c22cd8472",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Why do people make visualizations out of data?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion should be a quick prompt to kick off today's activity. Students spent the previous class making visualizations and looking at data sets, but they didn't think about how to make visualizations with the data. Try to quickly guide conversation towards some of the takeaways on the following slide, then move on to the day's activity. \r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why do people make visualizations out of data?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This discussion should be quick to kick off today's activity. Students spent the previous class making visualizations and looking at data sets, but they didn't think about how to make visualizations with the data. Try to quickly guide conversation towards some of the takeaways on the following slide, then move on to the day's activity. \n"
       },
       "seeding_key": {
         "activity_section.key": "ffeddc34-db9a-4586-9fe2-0f2c22cd8472",
@@ -954,7 +872,6 @@
       "key": "013ca7f4-a88a-4de7-a1e0-0bcfb42a755c",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room."
       },
       "seeding_key": {
         "activity_section.key": "013ca7f4-a88a-4de7-a1e0-0bcfb42a755c",
@@ -965,7 +882,7 @@
       "key": "eee267fe-6f77-4259-9cbb-0f53bf90a481",
       "position": 3,
       "properties": {
-        "description": "[slide] When looking at the datasets on App Lab, the table format may be familiar to you. You may have seen data layed out and organized in a spreadsheet. Once the data is organized, we can now find trends and patterns. This is where visualizations are useful!\r\n\r\nPeople make visualizations for a number of reasons. They help humans see lots of data at once and help us find patterns that might otherwise be \"invisible\". Today we're going to learn how to make two new types of visualizations.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When looking at the datasets on App Lab, the table format may be familiar to you. You may have seen data layed out and organized in a spreadsheet. Once the data is organized, we can now find trends and patterns. This is where visualizations are useful!\r\n\r\nPeople make visualizations for a number of reasons. They help humans see lots of data at once and help us find patterns that might otherwise be \"invisible\". Today we're going to learn how to make two new types of visualizations.",
         "remarks": true
       },
       "seeding_key": {
@@ -977,7 +894,7 @@
       "key": "289c45bd-4e1f-4097-a40b-529127c61e95",
       "position": 4,
       "properties": {
-        "description": "[slide] **Display:** Display the slide showing the Data Analysis Process. Students will continue to refer to this throughout the unit, including at the end of today's lesson. Simply make students aware of it as a framework and then quickly move on to the main activity."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide showing the Data Analysis Process. Students will continue to refer to this throughout the unit, including at the end of today's lesson. Simply make students aware of it as a framework and then quickly move on to the main activity."
       },
       "seeding_key": {
         "activity_section.key": "289c45bd-4e1f-4097-a40b-529127c61e95",
@@ -988,7 +905,7 @@
       "key": "537ad5e1-aa16-480a-a686-36dae685fdf5",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Which of these questions does this chart answer? Be ready to discuss with a classmate.\r\n\r\n**Discuss:** Run a short discussion, asking students to share which of the five questions they believe could be answered with the chart. Students should hopefully notice:\r\n\r\n* Only question 1 and 3 could be answered by the chart\r\n* They may have additional questions about how the chart was created or what it means. Hold those questions for the following slide\r\n\r\n[slide] **Display:** Show the following slide introducing bar charts and how they are used",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions does this chart answer? Be ready to discuss with a classmate.*\n\nRun a short discussion, asking students to share which of the five questions they believe could be answered with the chart. Students should hopefully notice:\n\n* Only question 1 and 3 could be answered by the chart\n* They may have additional questions about how the chart was created or what it means. Hold those questions for the following slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the following slide introducing bar charts and how they are used",
         "name": "Reading a Bar Chart\r"
       },
       "seeding_key": {
@@ -1000,15 +917,13 @@
       "key": "fb39478c-63a0-46b0-8aa4-dd68c61917ee",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Distribute: ** Give students access to [r exploring-one-column-activity-guide], ideally in digital form.",
+        "name": "Making Bar Charts\r",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Fill Out the Activity Guide Digitally:** The Data Visualizer allows students to quickly copy and paste visuals into documents and slide shows. If at all possible in your classroom environment, have students complete this activity guide digitally.\r\n"
           }
-        ],
-        "name": "Making Bar Charts\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fb39478c-63a0-46b0-8aa4-dd68c61917ee",
@@ -1019,7 +934,7 @@
       "key": "d281781e-c673-4ba4-a6d1-f224ef255a1f",
       "position": 3,
       "properties": {
-        "description": "[slide] **Do This:** Have students go to the data visualizer and recreate the chart they just examined together. Use this as an opportunity to make sure every student understands how to use the visualizer.\r\n\r\n[slide] **Do This:** Have students complete side one of the activity guide, making a bar chart for each column in the Dogs table and deciding if it is useful or not. They will also need to paste in one chart they find is useful and answer a pair of prompts."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute: ** Give students access to [Exploring One Column](\thttps://docs.google.com/document/d/11X6ythWM_CSVlE0XrqrMAfHK63QMS8VCysCUiuIfQjw/edit?usp=sharing), ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students go to the data visualizer and recreate the chart they just examined together. Use this as an opportunity to make sure every student understands how to use the visualizer.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete side one of the activity guide, making a bar chart for each column in the Dogs table and deciding if it is useful or not. They will also need to paste in one chart they find is useful and answer a pair of discusssions."
       },
       "seeding_key": {
         "activity_section.key": "d281781e-c673-4ba4-a6d1-f224ef255a1f",
@@ -1030,14 +945,8 @@
       "key": "6e279210-ae72-46e2-b9ab-81866203550d",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** Optionally discuss the different columns that students chose as useful.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this discussion for two purposes. First, use it to build a shared comfort with what a bar chart shows. Have students share out which charts they think are useful and what pieces of information they read from them. Remind students that bar charts are particularly good at finding how common a value is in a column. The second goal is to prepare students to see the value of a histogram. Many bar charts are not at all useful because they have too many unique values. Using a histogram to group these values can help make more useful charts.\r\n"
-          }
-        ]
+        "description": "**Discuss:** *Optionally discuss the different columns that students chose as useful.*\n\n**Discussion Goal:** Use this discussion for two purposes. First, use it to build a shared comfort with what a bar chart shows. Have students share out which charts they think are useful and what pieces of information they read from them. Remind students that bar charts are particularly good at finding how common a value is in a column. The second goal is to prepare students to see the value of a histogram. Many bar charts are not at all useful because they have too many unique values. Using a histogram to group these values can help make more useful charts.\n",
+        "progression_name": "Making Bar Charts and Histograms"
       },
       "seeding_key": {
         "activity_section.key": "6e279210-ae72-46e2-b9ab-81866203550d",
@@ -1048,7 +957,7 @@
       "key": "1647b824-48c7-4f01-8a38-30287439d4cb",
       "position": 5,
       "properties": {
-        "description": "[slide] **Display:** Show the slide explaining why some bar charts are not useful.\r\n\r\n[slide] **Prompt:** In the Visualizer make a \"Histogram\" for \"Max Weight\" with a \"Bucket Size\" of 20. \r\n\r\n* Which of these makes it easier to understand the data? \r\n* What do you think the \"histogram\" is doing to visualize the data differently?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide explaining why some bar charts are not useful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In the Visualizer make a \"Histogram\" for \"Max Weight\" with a \"Bucket Size\" of 20.*\n\n* Which of these makes it easier to understand the data? \n* What do you think the \"histogram\" is doing to visualize the data differently?",
         "name": "Reading a Histogram\r"
       },
       "seeding_key": {
@@ -1060,14 +969,7 @@
       "key": "406d4303-b933-4860-a1b0-fc0bf5d4d0db",
       "position": 6,
       "properties": {
-        "description": "**Discuss:** Discuss how the histogram seems to be displaying the data differently from the bar chart.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this discussion to start exploring the differences between a bar chart and a histogram. For example, students should note that there seem to be \"fewer but wider\" bars in the histogram. They should also notice that values are sorted correctly. This makes the chart overall easier to read.\r\n"
-          }
-        ]
+        "description": "Discuss how the histogram seems to be displaying the data differently from the bar chart.\n\n**Discussion Goal:** Use this discussion to start exploring the differences between a bar chart and a histogram. For example, students should note that there seem to be \"fewer but wider\" bars in the histogram. They should also notice that values are sorted correctly. This makes the chart overall easier to read.\n"
       },
       "seeding_key": {
         "activity_section.key": "406d4303-b933-4860-a1b0-fc0bf5d4d0db",
@@ -1078,7 +980,7 @@
       "key": "17ca6b30-8228-4126-9b04-5aa5e8324dca",
       "position": 7,
       "properties": {
-        "description": "[slide] **Display:** Show the slide explaining what a histogram is useful for\r\n\r\n[slide] **Prompt:** Have students complete side 2 of their activity guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide explaining what a histogram is useful for\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Have students complete side 2 of their activity guide.*"
       },
       "seeding_key": {
         "activity_section.key": "17ca6b30-8228-4126-9b04-5aa5e8324dca",
@@ -1089,14 +991,7 @@
       "key": "89beaab5-da12-44b9-9b4b-841b17b671d7",
       "position": 8,
       "properties": {
-        "description": "**Discuss:** Optionally have students share out the results of their work on side 2 of the activity guide.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this discussion to have students share out how they are designing histograms based on the columns in the dogs data set. Things to look for:\r\n\r\n* Students are only creating histograms for numeric columns\r\n* Students are picking columns that have a number of unique values\r\n* Students are picking good bucket sizes to group their data in a way that makes it possible to interpret\r\n* Students are correctly reading charts to understand what they are showing\r\n"
-          }
-        ]
+        "description": "Optionally have students share out the results of their work on side 2 of the activity guide.\n\n**Discussion Goal:** Use this discussion to have students share out how they are designing histograms based on the columns in the dogs data set. Things to look for:\n\n* Students are only creating histograms for numeric columns\n* Students are picking columns that have a number of unique values\n* Students are picking good bucket sizes to group their data in a way that makes it possible to interpret\n* Students are correctly reading charts to understand what they are showing\n"
       },
       "seeding_key": {
         "activity_section.key": "89beaab5-da12-44b9-9b4b-841b17b671d7",
@@ -1107,7 +1002,7 @@
       "key": "747e4eac-14d2-4382-bb32-cd39e2db7080",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Which steps of the Data Analysis Process did you see in today's activity? Where did you see them?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which steps of the Data Analysis Process did you see in today's activity? Where did you see them?*"
       },
       "seeding_key": {
         "activity_section.key": "747e4eac-14d2-4382-bb32-cd39e2db7080",
@@ -1118,14 +1013,7 @@
       "key": "99735004-9d97-415f-a043-1963d95db0f1",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share their reflections and lead a quick discussion about where they saw each step.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is the first opportunity for students to talk through the Data Analysis Process, a framework they will return to many times throughout this course. Use this discussion to review some key points\r\n\r\n* Students in today's lesson may not have \"cleaned and processed\" data but they should've seen every other step.\r\n* Students answered questions and carefully made conclusions\r\n* Students created visualization and used them to find patterns.\r\n* Students chose the datasets that would best answer their question. In other instances they might've gone off to find the data themselves but the Data Library in App Lab helps avoid them needing to do that.\r\n"
-          }
-        ]
+        "description": "Have students share their reflections and lead a quick discussion about where they saw each step.\n\n**Discussion Goal:** This is the first opportunity for students to talk through the Data Analysis Process, a framework they will return to many times throughout this course. Use this discussion to review some key points\n\n* Students in today's lesson may not have \"cleaned and processed\" data but they should've seen every other step.\n* Students answered questions and carefully made conclusions\n* Students created visualization and used them to find patterns.\n* Students chose the datasets that would best answer their question. In other instances they might've gone off to find the data themselves but the Data Library in App Lab helps avoid them needing to do that.\n"
       },
       "seeding_key": {
         "activity_section.key": "99735004-9d97-415f-a043-1963d95db0f1",
@@ -1136,7 +1024,7 @@
       "key": "9e96f650-967b-4785-bf31-0365c716236b",
       "position": 3,
       "properties": {
-        "description": "[slide] **Review:** Review the key takeaways from the lesson\r\n\r\n---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Why would someone make a histogram instead of a bar chart?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the key takeaways from the lesson\r\n\r\n---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Why would someone make a histogram instead of a bar chart?"
       },
       "seeding_key": {
         "activity_section.key": "9e96f650-967b-4785-bf31-0365c716236b",
@@ -1147,7 +1035,7 @@
       "key": "68b25eb9-47d6-4f47-ad5c-75346126e09e",
       "position": 1,
       "properties": {
-        "name": "Making Bar Charts and Histograms"
+        "progression_name": "Making Bar Charts and Histograms"
       },
       "seeding_key": {
         "activity_section.key": "68b25eb9-47d6-4f47-ad5c-75346126e09e",
@@ -1158,7 +1046,7 @@
       "key": "4d45aa0c-a442-491c-8b23-2c846e8aa6fe",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "4d45aa0c-a442-491c-8b23-2c846e8aa6fe",
@@ -1181,7 +1069,7 @@
       "key": "df5144a4-266c-4af4-8df0-6a81f1f443eb",
       "position": 2,
       "properties": {
-        "description": "[slide] **Display:** Set the scene for the first activity."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Set the scene for the first activity."
       },
       "seeding_key": {
         "activity_section.key": "df5144a4-266c-4af4-8df0-6a81f1f443eb",
@@ -1204,7 +1092,7 @@
       "key": "3aa597ea-e332-4f04-9923-0d061c7be85a",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Instruct students to navigate to Level 2 on Code Studio. \n\n* Open the data tab\n* Familiarize yourself with the imported table\n* Open the Data Visualizer\n* Make Charts:\n\t* Average Hours of Sleep\n\t* Favorite Subject"
+        "description": "**Do This:** Instruct students to navigate to Level 1 on Code Studio. \n\n* Open the data tab\n* Familiarize yourself with the imported table\n* Open the Data Visualizer\n* Make Charts:\n\t* Average Hours of Sleep\n\t* Favorite Subject"
       },
       "seeding_key": {
         "activity_section.key": "3aa597ea-e332-4f04-9923-0d061c7be85a",
@@ -1215,14 +1103,8 @@
       "key": "c43ef4e6-224b-4a32-b4dd-7e0684e15f91",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Discuss:** With partners, students discuss the following prompts:",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should point out some issues like `4` and `\"four\"` being charted as different values. \n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *With partners, students discuss the following prompts:*\n\n* What problems came up when trying to create these charts?\n* What problems do you see in the data?\n\n**Discussion Goal:** Students should point out some issues like `4` and `\"four\"` being charted as different values. \n",
+        "progression_name": "Cleaning Data"
       },
       "seeding_key": {
         "activity_section.key": "c43ef4e6-224b-4a32-b4dd-7e0684e15f91",
@@ -1233,7 +1115,6 @@
       "key": "fec14414-c2af-4d46-ba45-1aed3feec5f9",
       "position": 3,
       "properties": {
-        "description": "* What problems came up when trying to create these charts?\n* What problems do you see in the data?"
       },
       "seeding_key": {
         "activity_section.key": "fec14414-c2af-4d46-ba45-1aed3feec5f9",
@@ -1244,7 +1125,7 @@
       "key": "76cf59ef-7435-43fe-8531-47740af3d638",
       "position": 4,
       "properties": {
-        "description": "Datasets can bring about challenges, no matter what their size. There can be incomplete data and invalid data. You might want to combine two tables, with inconsistent data. All of this requires data to be cleaned. \n\n[slide] When does data need to be cleaned?\n\n* Data is incomplete\n* Data is invalid\n* Multiple tables combined into one\n\nWhat leads to \"messy data\"?\n\n* Users enter in different types of data (\"two\", 2)\n* Users use different abbreviations to represent the same information (\"February\", \"Feb\", \"Febr\")\n* Data may have different spellings (\"color\", \"colour\") or inconsistent capitalization (\"spring\", \"Spring\")\n\n[slide] When we clean data, the goal is to make it uniform without changing meaning. \n\nFor example: \"two\" can be changed to 2",
+        "description": "Datasets can bring about challenges, no matter what their size. There can be incomplete data and invalid data. You might want to combine two tables, with inconsistent data. All of this requires data to be cleaned. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When does data need to be cleaned?\n\n* Data is incomplete\n* Data is invalid\n* Multiple tables combined into one\n\nWhat leads to \"messy data\"?\n\n* Users enter in different types of data (\"two\", 2)\n* Users use different abbreviations to represent the same information (\"February\", \"Feb\", \"Febr\")\n* Data may have different spellings (\"color\", \"colour\") or inconsistent capitalization (\"spring\", \"Spring\")\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When we clean data, the goal is to make it uniform without changing meaning. \n\nFor example: \"two\" can be changed to 2",
         "remarks": true
       },
       "seeding_key": {
@@ -1256,7 +1137,7 @@
       "key": "8482dbcf-22a1-4a8e-b181-409a041fb080",
       "position": 5,
       "properties": {
-        "description": "[slide] **Do This:** With a partner:\n\n* Clean the Student Info table\n* Look for:\n\t* Different types of data (\"two\", 2)\n\t* Different abbreviations to represent the same information (\"February\", \"Feb\", \"Febr\")\n\t* Different spellings (\"color\", \"colour\") \n\t* Inconsistent capitalization (\"spring\", \"Spring\")\n* Manually update cells with messy data so they are consistent with other cells, while not changing the meaning of the data. \n\n[slide] **Do This:** Once students have finished cleaning their data, they should remake the original charts and compare with others."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With a partner:\n\n* Clean the Student Info table\n* Look for:\n\t* Different types of data (\"two\", 2)\n\t* Different abbreviations to represent the same information (\"February\", \"Feb\", \"Febr\")\n\t* Different spellings (\"color\", \"colour\") \n\t* Inconsistent capitalization (\"spring\", \"Spring\")\n* Manually update cells with messy data so they are consistent with other cells, while not changing the meaning of the data. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Once students have finished cleaning their data, they should remake the original charts and compare with others."
       },
       "seeding_key": {
         "activity_section.key": "8482dbcf-22a1-4a8e-b181-409a041fb080",
@@ -1279,14 +1160,7 @@
       "key": "02e6793e-4a3f-4316-a6ed-34e0c5b11daf",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Prompt:** What if I only wanted to look at a subset of my data? How could I do this? For example: I only want to investigate dogs with low shedding.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "Goal: We are building towards the idea of filtering data. Students filtered programmatically in previous units, but don't yet know how to use the Data Visualizer tool to accomplish the same goal. \n\nIn the discussion, students may suggest deleting unwanted rows or creating new tables. Challenge students by asking what they would do if they wanted to look at several different subsets in the same data? Is it reasonable to create a new table for each subset?\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What if I only wanted to look at a subset of my data? How could I do this? For example: I only want to investigate dogs with long lifespans.*\n\nDiscussion Goal: We are building towards the idea of filtering data. Students filtered programmatically in previous units, but don't yet know how to use the Data Visualizer tool to accomplish the same goal. \n\nIn the discussion, students may suggest deleting unwanted rows or creating new tables. Challenge students by asking what they would do if they wanted to look at several different subsets in the same data? Is it reasonable to create a new table for each subset?\n"
       },
       "seeding_key": {
         "activity_section.key": "02e6793e-4a3f-4316-a6ed-34e0c5b11daf",
@@ -1298,6 +1172,7 @@
       "position": 8,
       "properties": {
         "description": "&fa-desktop; The best way to look at a subset of data is to use a filter. In Unit 5, we filtered data programmatically using traversals in order to gain insight into knowledge from that data. \n\nSoftware programs with built-in tools (like the Data Visualizer) can also be used to filter data. These tools help us find specific information in the data and look for patterns.",
+        "name": "Filtering Data",
         "remarks": true
       },
       "seeding_key": {
@@ -1309,7 +1184,8 @@
       "key": "aceacc82-c532-439d-a85f-55c0e04a63df",
       "position": 9,
       "properties": {
-        "description": "[slide] **Do This:** Demonstrate how to filter data for the class. \n\n1. Open up Level 3. \n2. Discuss that you want to find out about the peak level of female representation in your states legislature. What will you filter by? Percentage of Females in Legislature or State? \n3. We will filter by state. This means the data for female state legislators who are from your home state are the only data that will be shown. \n4. Select \"Bar Chart\" and \"Percentage of Females in Legislators\" from the dropdowns. \n5. Discuss what the chart displays: the bar farthest to the right represents the year(s) when female representation in the legislature was at its highest in your states history."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to filter data for the class. \n\n1. Open up Level 2.\n2. Discuss that you want to find out about the peak level of female representation in your state's legislature. What will you filter by? Percentage of Females in Legislature or State? \n3. We will filter by state. This means the data for female state legislators who are from your home state are the only data that will be shown. \n4. Select \"Bar Chart\" and \"Percentage of Females in Legislators\" from the dropdowns. \n5. Discuss what the chart displays: the bar farthest to the right represents the year(s) when female representation in the legislature was at its highest in your state's history.",
+        "progression_name": "Filtering Data"
       },
       "seeding_key": {
         "activity_section.key": "aceacc82-c532-439d-a85f-55c0e04a63df",
@@ -1320,7 +1196,7 @@
       "key": "07d0bc61-4546-421b-8478-d4c4055baec4",
       "position": 10,
       "properties": {
-        "description": "When filtering, the most challenging part is deciding what value you will filter by. Think to yourself: what's the limiting factor? What do I want to make sure all cats, dogs, etc. have to be included in this subset?\n\nIt's time for you to play around in the tool yourself!",
+        "description": "When filtering, the most challenging part is deciding what value you will filter by. Think to yourself: what's the limiting factor? What do I want to make sure all these percentages have in common to be included in this subset?\n\nIt's time for you to play around in the tool yourself!",
         "remarks": true
       },
       "seeding_key": {
@@ -1332,7 +1208,7 @@
       "key": "e2b3e630-f44e-4627-bcb4-d3183120254d",
       "position": 11,
       "properties": {
-        "description": "[slide] **Distribute:** Share the Activity Guide with students. Alternatively, they can click on the link in Level 1. This Activity Guide is designed to be used digitally - do not print. \n\n[slide] **Do This:** For the rest of the activity time, students work through the Activity Guide filtering two datasets and answering questions. Students need to copy/paste their charts into the Activity Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Share the Activity Guide with students. Alternatively, they can click on the link in Level 1. This Activity Guide is designed to be used digitally - do not print. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** For the rest of the activity time, students work through the Activity Guide filtering two datasets and answering questions. Students need to copy/paste their charts into the Activity Guide."
       },
       "seeding_key": {
         "activity_section.key": "e2b3e630-f44e-4627-bcb4-d3183120254d",
@@ -1343,14 +1219,7 @@
       "key": "e1299f88-aee3-4792-bd41-37a32ec1b5a0",
       "position": 12,
       "properties": {
-        "description": "**Discuss:** Have students share their answers from the Activity Guide and reactions to those findings.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this discussion to help students practice the skill covered in lesson 1, distinguishing between:\n\n- What the data shows\n- Why that might be the case\n"
-          }
-        ]
+        "description": "**Discuss:** *Have students share their answers from the Activity Guide and reactions to those findings.*\n\n**Discussion Goal:** Use this discussion to help students practice the skill covered in lesson 1, distinguishing between:\n\n- What the data shows\n- Why that might be the case\n"
       },
       "seeding_key": {
         "activity_section.key": "e1299f88-aee3-4792-bd41-37a32ec1b5a0",
@@ -1361,14 +1230,7 @@
       "key": "287a0685-4752-42f0-877c-cdbdc5dcec96",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Why is \"Clean and/or Filter\" an important part of the Data Analysis Process? What are situations when you would filter vs. clean your data?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Messy data can lead to confusing charts that could be misinterpreted. Data should be filtered when you want to focus on a subset of the data. Filtering allows you to return to the full dataset if you have unanswered questions. \r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why is \"Clean and/or Filter\" an important part of the Data Analysis Process? What are situations when you would filter vs. clean your data?*\n\n**Discussion Goal:** Messy data can lead to confusing charts that could be misinterpreted. Data should be filtered when you want to focus on a subset of the data. Filtering allows you to return to the full dataset if you have unanswered questions. \n"
       },
       "seeding_key": {
         "activity_section.key": "287a0685-4752-42f0-877c-cdbdc5dcec96",
@@ -1399,21 +1261,10 @@
       }
     },
     {
-      "key": "fe9a381b-81b2-415c-8777-98a8364c734a",
+      "key": "7d80aaf7-7424-4a35-a412-4945116208e2",
       "position": 1,
       "properties": {
-        "name": "Cleaning Data"
-      },
-      "seeding_key": {
-        "activity_section.key": "fe9a381b-81b2-415c-8777-98a8364c734a",
-        "lesson_activity.key": "389ca2d3-4c24-4b12-8ee3-3225fb921db1"
-      }
-    },
-    {
-      "key": "7d80aaf7-7424-4a35-a412-4945116208e2",
-      "position": 2,
-      "properties": {
-        "name": "Filtering Data"
+        "progression_name": "Filtering Data"
       },
       "seeding_key": {
         "activity_section.key": "7d80aaf7-7424-4a35-a412-4945116208e2",
@@ -1422,9 +1273,9 @@
     },
     {
       "key": "5c45128e-4ab3-4f67-8a0a-4392fc26a5b8",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "5c45128e-4ab3-4f67-8a0a-4392fc26a5b8",
@@ -1435,14 +1286,7 @@
       "key": "db4a0963-2b66-4b7b-b2c8-04047556f867",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Imagine you wanted to know which hour of the day you and your classmates are happiest. What kind of data would you collect? How do you think you'd analyze it?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion should preview the idea that students will need to collect multiple pieces of information about both the time of day and how happy people are. Beyond highlighting that fact there's no particular direction this conversation needs to go. \r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you wanted to know which hour of the day you and your classmates are happiest. What kind of data would you collect? How do you think you'd analyze it?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This discussion should preview the idea that students will need to collect multiple pieces of information about both the time of day and how happy people are. Beyond highlighting that fact there's no particular direction this conversation needs to go. \n"
       },
       "seeding_key": {
         "activity_section.key": "db4a0963-2b66-4b7b-b2c8-04047556f867",
@@ -1453,7 +1297,6 @@
       "key": "3155611c-298f-437e-8f05-4e2f4496b155",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room."
       },
       "seeding_key": {
         "activity_section.key": "3155611c-298f-437e-8f05-4e2f4496b155",
@@ -1464,7 +1307,7 @@
       "key": "d1d9c876-3c79-4a64-a22c-97f29f8d16ba",
       "position": 3,
       "properties": {
-        "description": "[slide] We just heard a lot of really interesting ideas here and they should make for some fascinating analysis. The main thing I noticed though, is that we need at least two different pieces of information. The time of day, and how happy people are. That means we're going to need to start thinking about ways to analyze more than one column of data. Today we're going to start looking at two different ways to do that",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We just heard a lot of really interesting ideas here and they should make for some fascinating analysis. The main thing I noticed though, is that we need at least two different pieces of information. The time of day, and how happy people are. That means we're going to need to start thinking about ways to analyze more than one column of data. Today we're going to start looking at two different ways to do that",
         "remarks": true
       },
       "seeding_key": {
@@ -1476,7 +1319,7 @@
       "key": "412cc3ac-8a29-49d3-82c2-27dbfcc96941",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** How many \"Herding\" breeds live a maximum of 12 years? What is the most common maximum life span for \"Working\" breeds? Which breed group lives the shortest? Which breed group lives the longest? How do you know? How confident are you in your answers?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many \"Herding\" breeds live a maximum of 12 years? What is the most common maximum life span for \"Working\" breeds? Which breed group lives the shortest? Which breed group lives the longest? How do you know? How confident are you in your answers?*",
         "name": "Reading Crosstab Charts"
       },
       "seeding_key": {
@@ -1488,7 +1331,8 @@
       "key": "c842367d-d914-4637-bd45-22e134a47bea",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Run a short discussion and help students read the chart together. They will hopefully note the following:\n\n* 4 herding breeds live a maximum of 12 years\n* The most common maximum lifespan of working breeds is 12 years\n* Toy breeds seem to live the longest\n* Working breeds seem to be the shortest\n* Students can see the spread of life expectancies for different breeds but it's not cut and dry."
+        "description": "Also, run a short discussion and help students read the chart together. They will hopefully note the following:\n\n* 4 herding breeds live a maximum of 12 years\n* The most common maximum lifespan of working breeds is 12 years\n* Toy breeds seem to live the longest\n* Working breeds seem to be the shortest\n* Students can see the spread of life expectancies for different breeds but it's not cut and dry.",
+        "progression_name": "Crosstab and Scatter Charts"
       },
       "seeding_key": {
         "activity_section.key": "c842367d-d914-4637-bd45-22e134a47bea",
@@ -1499,10 +1343,9 @@
       "key": "36e5f4a0-89ce-4cee-8acf-06d3d09a6b29",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Display:** Show the following slide introducing cross tab charts and how they work.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show the following slide introducing cross tab charts and how they work.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Understanding Crosstab:** Give students some time to think and discuss why a crosstab chart might be a good choice for finding patterns like the ones indicated on this slide. Further reinforce the fact that if either column has too many values you may end up with an enormous chart.\n"
           }
@@ -1517,15 +1360,14 @@
       "key": "c63b470f-2dc5-491c-93db-84a7213dd4f2",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Distribute: ** Give students access to [r exploring-two-columns-activity-guide], ideally in digital form.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute: ** Give students access to [Exploring Two Columns](https://docs.google.com/document/d/12GkfXmELZiGPppfigSKRlgbPuizaYpXniW0lAFu8A08/edit), ideally in digital form.",
+        "name": "Making Crosstab Charts",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Fill Out the Activity Guide Digitally:** The Data Visualizer allows students to quickly copy and paste visuals into documents and slide shows. If at all possible in your classroom environment, have students complete this activity guide digitally.\n"
           }
-        ],
-        "name": "Making Crosstab Charts"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c63b470f-2dc5-491c-93db-84a7213dd4f2",
@@ -1536,7 +1378,7 @@
       "key": "3f26bfbd-4c34-4c02-a348-e3b03c4d62f7",
       "position": 5,
       "properties": {
-        "description": "[slide] **Do This:** Have students go to the data visualizer and use both the \"Words\" and the \"Favorite Classes\" data sets to complete page 1 of the Activity Guide.\n\n**Discuss:** Optionally have students share their progress and discuss the conclusions they reached on side one of the activity guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students go to the data visualizer and use both the \"Words\" and the \"Favorite Classes\" data sets to complete page 1 of the Activity Guide.\n\n**Discuss:** Optionally have students share their progress and discuss the conclusions they reached on side one of the activity guide."
       },
       "seeding_key": {
         "activity_section.key": "3f26bfbd-4c34-4c02-a348-e3b03c4d62f7",
@@ -1547,7 +1389,7 @@
       "key": "02d1de20-a9a6-4bc1-ac7d-c2057f226ce5",
       "position": 6,
       "properties": {
-        "description": "[slide] **Prompt:** Is there a pattern? How can you tell?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Is there a pattern? How can you tell?*",
         "name": "Reading Scatter Charts"
       },
       "seeding_key": {
@@ -1559,14 +1401,7 @@
       "key": "4444a045-6b6b-4290-883b-f9776277afb4",
       "position": 7,
       "properties": {
-        "description": "**Discuss:** Have students share whether they think there's pattern between the order in which states were admitted and their size.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students will hopefully notice later states are relatively larger than earlier added ones. The trend does not necessarily reflect any causation, but there is a slight uptick in state size as more are added.\n"
-          }
-        ]
+        "description": "Have students share whether they think there's pattern between the order in which states were admitted and their size.\n\n**Discussion Goal:** Students will hopefully notice later states are relatively larger than earlier added ones. The trend does not necessarily reflect any causation, but there is a slight uptick in state size as more are added.\n"
       },
       "seeding_key": {
         "activity_section.key": "4444a045-6b6b-4290-883b-f9776277afb4",
@@ -1577,7 +1412,7 @@
       "key": "12c5de70-6368-451a-a7e1-3a51cb795f8d",
       "position": 8,
       "properties": {
-        "description": "[slide] **Display:** Show the following slide introducing scatter charts and how they work."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the following slide introducing scatter charts and how they work."
       },
       "seeding_key": {
         "activity_section.key": "12c5de70-6368-451a-a7e1-3a51cb795f8d",
@@ -1588,8 +1423,9 @@
       "key": "a70e7635-ab8c-4670-b577-5dfe72bdb555",
       "position": 9,
       "properties": {
-        "description": "[slide] **Prompt:** Have students fill in page 2 of their activity guides practicing making scatter charts.\n\n**Discuss:** Have students share our their responses and talk through their conclusions.",
-        "name": "Making Scatter Charts"
+        "description": "Have students fill in page 2 of their activity guides practicing making scatter charts.\n\n**Discuss:** *Have students share our their responses and talk through their conclusions*.",
+        "name": "Making Scatter Charts",
+        "progression_name": "Crosstab and Scatter Charts"
       },
       "seeding_key": {
         "activity_section.key": "a70e7635-ab8c-4670-b577-5dfe72bdb555",
@@ -1597,10 +1433,21 @@
       }
     },
     {
+      "key": "9807741d-eebd-4f1d-89ea-58b522a4a4dd",
+      "position": 10,
+      "properties": {
+        "progression_name": "What Type of Chart?"
+      },
+      "seeding_key": {
+        "activity_section.key": "9807741d-eebd-4f1d-89ea-58b522a4a4dd",
+        "lesson_activity.key": "74dda196-fc01-4d4a-9e30-72a8125cb29a"
+      }
+    },
+    {
       "key": "bd25f379-8a43-4a1b-9f79-ece102c5bc70",
       "position": 1,
       "properties": {
-        "description": "[slide] **Review:** Review the three slides of the key takeaways and hit on the following points.\r\n\r\n* Students know a lot of different ways to find patterns in data\r\n* Review the chart showing how the can decide the type of visualization to create\r\n* Have students record key takeaways in their journal\r\n\r\n---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How are the questions you can investigate with scatter or crosstab charts different from the ones you can investigate with bar charts or histograms?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the three slides of the key takeaways and hit on the following points.\r\n\r\n* Students know a lot of different ways to find patterns in data\r\n* Review the chart showing how the can decide the type of visualization to create\r\n* Have students record key takeaways in their journal\r\n\r\n---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How are the questions you can investigate with scatter or crosstab charts different from the ones you can investigate with bar charts or histograms?"
       },
       "seeding_key": {
         "activity_section.key": "bd25f379-8a43-4a1b-9f79-ece102c5bc70",
@@ -1608,32 +1455,10 @@
       }
     },
     {
-      "key": "15416f54-0958-443c-a6a9-78ec30eacc14",
+      "key": "7d22238f-29c6-4c55-b16e-ca2f296de0fb",
       "position": 1,
       "properties": {
-        "name": "Crosstab and Scatter Charts"
-      },
-      "seeding_key": {
-        "activity_section.key": "15416f54-0958-443c-a6a9-78ec30eacc14",
-        "lesson_activity.key": "c290da99-dfab-486a-8b26-bb6283554efb"
-      }
-    },
-    {
-      "key": "84ec5f15-f8df-44d7-a219-cbba3b2a450b",
-      "position": 2,
-      "properties": {
-        "name": "What Type of Chart?"
-      },
-      "seeding_key": {
-        "activity_section.key": "84ec5f15-f8df-44d7-a219-cbba3b2a450b",
-        "lesson_activity.key": "c290da99-dfab-486a-8b26-bb6283554efb"
-      }
-    },
-    {
-      "key": "7d22238f-29c6-4c55-b16e-ca2f296de0fb",
-      "position": 3,
-      "properties": {
-        "name": "Check For Understanding"
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "7d22238f-29c6-4c55-b16e-ca2f296de0fb",
@@ -1644,14 +1469,7 @@
       "key": "8db3ee4a-4d99-4d03-a852-4ab788d9ebcd",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** With a partner review the data analysis process and for each step talk through:",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is designed entirely to be a review of concepts students have previously covered and doesn't foreshadow the lesson of the day. If you feel confident your students are comfortable with this process already then quickly move on to the main activity of the day.\r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *With a partner review the data analysis process and for each step talk through:*\n\n"
       },
       "seeding_key": {
         "activity_section.key": "8db3ee4a-4d99-4d03-a852-4ab788d9ebcd",
@@ -1662,7 +1480,7 @@
       "key": "69f2d8b6-9edd-45d5-bc6f-e7d7d6d0ff0f",
       "position": 2,
       "properties": {
-        "description": "* What is this step and why is it important?\r\n* Where have we done this step together?\r\n* What could go wrong if you do this step poorly.\r\n\r\n**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room."
+        "description": "* What is this step and why is it important?\n* Where have we done this step together?\n* What could go wrong if you do this step poorly.\n\n\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This is designed entirely to be a review of concepts students have previously covered and doesn't foreshadow the lesson of the day. If you feel confident your students are comfortable with this process already then quickly move on to the main activity of the day.\n"
       },
       "seeding_key": {
         "activity_section.key": "69f2d8b6-9edd-45d5-bc6f-e7d7d6d0ff0f",
@@ -1696,10 +1514,9 @@
       "key": "6782e4c9-60f9-44fa-ab5a-ca9ebb38b021",
       "position": 2,
       "properties": {
-        "description": "**Distribute: ** Give each pair a copy of the [r big-data-citizen-science-machine-learning-activity-guide]",
+        "description": "**Distribute:** Give each pair a copy of the [Big, Open, and Crowdsourced Data](https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit)",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Complete the Activity Digitally:** Students will have a much easier time accessing articles and videos if they complete the activity digitally. Alternately students can complete printed versions of the activity guide but still access links through the digital versions.\r\n\r\n**Supporting the Jigsaw:** In this lesson students do a jigsaw of a number of different topics. Students will need access to computers and should spend roughly 10 minutes in each group listening to audio / video content. During this period circulate the room encouraging them to focus on the questions they've been asked to respond to. This will also help you anticipate or even specifically ask different students to participate during the discussion.\r\n"
           }
@@ -1714,7 +1531,7 @@
       "key": "3541aa8a-3c4c-4f57-aa10-f423bb64a577",
       "position": 3,
       "properties": {
-        "description": "[slide] **Prompt:** With a partner\r\n* Choose one of the topics\r\n* Watch the related videos / listen to the podcasts\r\n* Take notes and be ready to share responses to the questions on your activity guide\r\n\r\n[slide] **Discuss:** Have members from each topic share the conclusions from their watching and research. Make sure that students from each group have time to share\r\n\r\n* What the topic is\r\n* The key vocabulary they were responsible for researching\r\n* How this concept uses or modifies the data analysis process\r\n* Examples of the problems this technique is being used to solve"
+        "description": "With a partner:\n\n* Choose one of the topics\n* Watch the related videos / listen to the podcasts\n* Take notes and be ready to share responses to the questions on your activity guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Have members from each topic share the conclusions from their watching and research. Make sure that students from each group have time to share*\n\n* What the topic is\n* The key vocabulary they were responsible for researching\n* How this concept uses or modifies the data analysis process\n* Examples of the problems this technique is being used to solve"
       },
       "seeding_key": {
         "activity_section.key": "3541aa8a-3c4c-4f57-aa10-f423bb64a577",
@@ -1725,7 +1542,8 @@
       "key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7",
       "position": 1,
       "properties": {
-        "description": "[slide] **Review:** Review key takeaways on the slides\r\n\r\n---\r\n\r\n## Assessment\r\n    \r\n**Assess:** You can collect and evaluate students' activity guides"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slides\r\n\r\n---\r\n\r\n## Assessment\r\n    \r\n**Assess:** You can collect and evaluate students' activity guides",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7",
@@ -1736,14 +1554,7 @@
       "key": "f2e93754-964e-4305-bc2c-85fa0acb1253",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** How can machines \"learn\"?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Based on yesterdays conversations, answers may vary. Stear the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How can machines \"learn\"?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** Based on yesterdays conversations, answers may vary. Steer the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \n"
       },
       "seeding_key": {
         "activity_section.key": "f2e93754-964e-4305-bc2c-85fa0acb1253",
@@ -1754,7 +1565,6 @@
       "key": "e5dbaca4-455d-4a44-a62f-c98c52447330",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room."
       },
       "seeding_key": {
         "activity_section.key": "e5dbaca4-455d-4a44-a62f-c98c52447330",
@@ -1777,10 +1587,9 @@
       "key": "cd3685d5-eec1-4411-b331-ca042d50a42e",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Video:** Play the video \"What is Machine Learning\".",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Video:** Play the video \"What is Machine Learning\".",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\r\n\r\n* [Teachable Machines](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \r\n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\r\n\r\n\r\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\r\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \r\n"
           }
@@ -1807,10 +1616,9 @@
       "key": "0350df9f-7a76-4204-bd55-326abfe01bd4",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Do This:** Direct students to Levels 3-5 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Levels 2-4 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Every image in this part of the tutorial is fed into a neural network that has been pre-trained on a huge set of data called [ImageNet](http://www.image-net.org/). The database contains over 14 million hand-annotated images. ImageNet contains more than 20,000 categories with a typical category, such as \"balloon\" or \"strawberry\", consisting of several hundred images. When A.I. is scanning new images and making its own predictions in the tutorial, it is actually comparing the possible categories for the new image with the patterns it found in the training dataset.\r\n"
           }
@@ -1825,7 +1633,7 @@
       "key": "d34af807-f5e0-49e7-b500-402ee7ddc465",
       "position": 4,
       "properties": {
-        "description": "[slide] **Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\r\n\r\n[slide] **Video:** Play the video \"Training Data & Bias\"."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How well did A.I. do? How do you think it decided what to include in the ocean?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play the video \"Training Data & Bias\"."
       },
       "seeding_key": {
         "activity_section.key": "d34af807-f5e0-49e7-b500-402ee7ddc465",
@@ -1836,14 +1644,7 @@
       "key": "9fd8c76e-c097-4d0c-b02b-34225e2f7be8",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Prompt:** How do you think your training data influenced the results that A.I. produced?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How do you think your training data influenced the results that A.I. produced?*\n\n**Discussion Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n"
       },
       "seeding_key": {
         "activity_section.key": "9fd8c76e-c097-4d0c-b02b-34225e2f7be8",
@@ -1855,14 +1656,13 @@
       "position": 6,
       "properties": {
         "description": "In the second half of the activity, you will teach A.I. about a word of your choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that you will end up with different results based on their training data. You might even intentionally train A.I. incorrectly to see what happens!",
+        "remarks": true,
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "The fish in this tutorial are randomly generated based on some pre-defined components, including mouths, tails, eyes, scales, and fins, with a randomly chosen body color, shape, and size. Rather than looking at the actual image data, A.I. is now looking for patterns in these components based on how the student classifies each fish. It will be more likely to label a fish the same way the student would have if it has matching traits.\r\n"
           }
-        ],
-        "remarks": true
+        ]
       },
       "seeding_key": {
         "activity_section.key": "16918e23-98d7-4602-b588-27e1644ea7e3",
@@ -1873,7 +1673,7 @@
       "key": "53797bb9-ffd5-434e-b2d9-241ec7f6004e",
       "position": 7,
       "properties": {
-        "description": "[slide] **Do This:** Direct students to Levels 7-8 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. Here, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 6-7 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. Here, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed."
       },
       "seeding_key": {
         "activity_section.key": "53797bb9-ffd5-434e-b2d9-241ec7f6004e",
@@ -1884,14 +1684,7 @@
       "key": "d0696799-b401-4952-bbb8-a83f2a40cddc",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Prompt:** How could biased data result in problems for artificial intelligence? What are ways to address this?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** At this point, students should have some preliminary thoughts on how biased data leads to problems for artificial intelligence. They may bring up that if the data sets are trained incorrectly, there will be incorrect or misinterpreted conclusions. It can be addressed through diverse training sets. The following video dives into this subject further. \r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How could biased data result in problems for artificial intelligence? What are ways to address this?*\n\n**Discussion Goal:** At this point, students should have some preliminary thoughts on how biased data leads to problems for artificial intelligence. They may bring up that if the data sets are trained incorrectly, there will be incorrect or misinterpreted conclusions. It can be addressed through diverse training sets. The following video dives into this subject further. \n"
       },
       "seeding_key": {
         "activity_section.key": "d0696799-b401-4952-bbb8-a83f2a40cddc",
@@ -1902,7 +1695,7 @@
       "key": "6deb3f7e-1aae-489c-9435-c2522bb87da1",
       "position": 9,
       "properties": {
-        "description": "[slide] **Video:** Play the video \"How I'm fighting bias in algorithms\" with Joy Buolamwini. \r\n\r\n[slide] **Prompts:** \r\n\r\n* How can computing innovations which make use of Machine Learning reflect existing human bias?\r\n* How could it be used to discriminate against groups of individuals?\r\n* How can that bias be minimized?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play the video \"How I'm fighting bias in algorithms\" with Joy Buolamwini. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discussions:** \n\n* How can computing innovations which make use of Machine Learning reflect existing human bias?\n* How could it be used to discriminate against groups of individuals?\n* How can that bias be minimized?"
       },
       "seeding_key": {
         "activity_section.key": "6deb3f7e-1aae-489c-9435-c2522bb87da1",
@@ -1925,7 +1718,7 @@
       "key": "41dbdb82-2576-4587-98be-f43acbfb2e6a",
       "position": 11,
       "properties": {
-        "description": "[slide] **Review:** Play the video \"Impact on Society\" which recaps the concepts discussed today."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Play the video \"Impact on Society\" which recaps the concepts discussed today."
       },
       "seeding_key": {
         "activity_section.key": "41dbdb82-2576-4587-98be-f43acbfb2e6a",
@@ -1933,13 +1726,23 @@
       }
     },
     {
+      "key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7",
+      "position": 12,
+      "properties": {
+        "progression_name": "AI for Oceans - Machine Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7",
+        "lesson_activity.key": "86b19247-d04b-4df6-b4fc-c19ac7866b85"
+      }
+    },
+    {
       "key": "973186fb-7622-4f93-8823-9ee1fd5899d6",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Which steps of this process to you think have to be done by humans? Would you be concerned if any of them were automated?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which steps of this process to you think have to be done by humans? Would you be concerned if any of them were automated?*\n\nTime may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "You can share these stories with your class to help them see how AI will impact the future.\r\n\r\n* [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\r\n* [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\r\n* [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\r\n* [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\r\n* [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\r\n* [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\r\n* [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)\r\n"
           }
@@ -1954,7 +1757,6 @@
       "key": "abe49b9f-c689-4cc3-8fc8-d4d75a99b8cc",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Time may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias."
       },
       "seeding_key": {
         "activity_section.key": "abe49b9f-c689-4cc3-8fc8-d4d75a99b8cc",
@@ -1977,7 +1779,8 @@
       "key": "aac56f17-a865-49d1-b23b-68e766ef2de4",
       "position": 4,
       "properties": {
-        "description": "---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Think about examples of Machine Learning you may have encountered in the past such as a website that recommends what video you may be interested in watching next. Are the recommendations ever wrong or unfair? Give an example and explain how this could be addressed."
+        "description": "---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Think about examples of Machine Learning you may have encountered in the past such as a website that recommends what video you may be interested in watching next. Are the recommendations ever wrong or unfair? Give an example and explain how this could be addressed.",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "aac56f17-a865-49d1-b23b-68e766ef2de4",
@@ -1985,25 +1788,36 @@
       }
     },
     {
-      "key": "e950a605-e656-4940-890b-6e3c5ad5ccaa",
+      "key": "200309df-e5c8-410f-8eb4-9732bf012fde",
       "position": 1,
       "properties": {
-        "name": "AI for Oceans - Machine Learning"
+        "description": "This lesson is In-Development"
       },
       "seeding_key": {
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa",
-        "lesson_activity.key": "4a3a3a9c-a651-4c5c-bd6a-f3c2a8ee5a41"
+        "activity_section.key": "200309df-e5c8-410f-8eb4-9732bf012fde",
+        "lesson_activity.key": "e6f736cd-954c-422a-83a5-310441497fc2"
       }
     },
     {
-      "key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7",
-      "position": 2,
+      "key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb",
+      "position": 1,
       "properties": {
-        "name": "Check for Understanding"
+        "progression_name": "Cropping Widget"
       },
       "seeding_key": {
-        "activity_section.key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7",
-        "lesson_activity.key": "4a3a3a9c-a651-4c5c-bd6a-f3c2a8ee5a41"
+        "activity_section.key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "afe0db45-8027-437b-96d7-fb438dd6c70b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b",
+        "lesson_activity.key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471"
       }
     },
     {
@@ -2033,10 +1847,10 @@
       "key": "3dc3ae3e-d972-464d-90be-2272743b453d",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Do This:** Read through the Project Guide as a class. Students are focusing on Page 1 of the guide today, which covers the first three parts of the Data Analysis Process.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Read through the Project Guide as a class. Students are focusing on Page 1 of the guide today, which covers the first three parts of the Data Analysis Process.",
+        "progression_name": "Data Story Workspace",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Choosing a dataset for the project and creating the visualization may be a cyclical process. Encourage students to explore the datasets using the Data Visualizer before making a firm decision. Allow a good amount of time for this exploration.\r\n\r\nStudents should look for visualizations that lead to a compelling narrative. This will result in a more compelling and insightful written response. \r\n\r\nStudent answers on the Project Guide will vary. You might ask students to write full paragraphs or allow bullet points. You are encouraged to modify for your classroom environment. \r\n"
           }
@@ -2059,17 +1873,6 @@
       }
     },
     {
-      "key": "b010e276-ad46-497c-86d7-6c7a1f437e8e",
-      "position": 1,
-      "properties": {
-        "name": "Data Story Workspace"
-      },
-      "seeding_key": {
-        "activity_section.key": "b010e276-ad46-497c-86d7-6c7a1f437e8e",
-        "lesson_activity.key": "e9cc7b9b-55bc-4155-a831-23d41e2b2747"
-      }
-    },
-    {
       "key": "b561c5ce-1f5e-4e3b-ae2c-e2c0c766a1e3",
       "position": 1,
       "properties": {
@@ -2084,7 +1887,8 @@
       "key": "59260dd6-72ec-43c9-8505-e857078ebdf1",
       "position": 1,
       "properties": {
-        "description": "[slide] **Do This:** Students work on Page 2 of the Project Guide that covers the \"New Information\" step of the Data Analysis Process. Encourage students to be thorough in their answers. If they are struggling to answer the prompts, they may want to reconsider their visualization."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work on Page 2 of the Project Guide that covers the \"New Information\" step of the Data Analysis Process. Encourage students to be thorough in their answers. If they are struggling to answer the prompts, they may want to reconsider their visualization.",
+        "progression_name": "Data Story Workspace"
       },
       "seeding_key": {
         "activity_section.key": "59260dd6-72ec-43c9-8505-e857078ebdf1",
@@ -2095,7 +1899,7 @@
       "key": "0c20a2e5-8308-4192-860c-4e6246e92b5b",
       "position": 1,
       "properties": {
-        "description": "[slide] **Review:** Review the rubric\r\n\r\n**Do This:** Collected completed Project Guides from students. \r\n\r\n---\r\n\r\n## Assessment: Project\r\n    \r\nAssess using the rubric on the final page of the Project Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the rubric\r\n\r\n**Do This:** Collected completed Project Guides from students. \r\n\r\n---\r\n\r\n## Assessment: Project\r\n    \r\nAssess using the rubric on the final page of the Project Guide."
       },
       "seeding_key": {
         "activity_section.key": "0c20a2e5-8308-4192-860c-4e6246e92b5b",
@@ -2103,24 +1907,12 @@
       }
     },
     {
-      "key": "b94cfd0b-2256-41c8-b38f-e435a0239c86",
-      "position": 1,
-      "properties": {
-        "name": "Data Story Workspace"
-      },
-      "seeding_key": {
-        "activity_section.key": "b94cfd0b-2256-41c8-b38f-e435a0239c86",
-        "lesson_activity.key": "7e506a5b-e1bd-464f-b51f-f6c973dde98d"
-      }
-    },
-    {
       "key": "93c15cc1-b99c-493f-aa20-05ba7a7da8bc",
       "position": 1,
       "properties": {
-        "description": "[slide]  Administer the Unit 9 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 9 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2020-03-06-at-7.39.15-PM.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n"
           }
@@ -2141,17 +1933,6 @@
         "activity_section.key": "86943e09-9f9c-4d9a-8a72-2b1d222ea784",
         "lesson_activity.key": "5d7a4065-cee8-449f-b1b6-4c6bab3780c2"
       }
-    },
-    {
-      "key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8",
-      "position": 1,
-      "properties": {
-        "name": "Unit 9 Exam"
-      },
-      "seeding_key": {
-        "activity_section.key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8",
-        "lesson_activity.key": "154709b5-5080-4438-be50-703000560091"
-      }
     }
   ],
   "script_levels": [
@@ -2161,12 +1942,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Exploring Metadata",
         "level_keys": [
           "CSP U9L1 Metadata_2021"
-        ]
+        ],
+        "progression": "Exploring Metadata"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2175,7 +1956,7 @@
         "lesson.key": "Learning From Data",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "fd1b4c8a-4e7d-47fd-8193-31abffdebe89"
+        "activity_section.key": "e09762df-c895-4667-bbdd-9cc8482f16db"
       },
       "level_keys": [
         "CSP U9L1 Metadata_2021"
@@ -2187,12 +1968,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U9L1 google trends CFU_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2213,12 +1994,38 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Making Bar Charts and Histograms",
+        "level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
+        "progression": "Making Bar Charts and Histograms"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "6e279210-ae72-46e2-b9ab-81866203550d"
+      },
+      "level_keys": [
+        "App Lab Data Viz Tool 1_2021"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSP U9L2 Making Bar Charts and Histograms_2021"
-        ]
+        ],
+        "progression": "Making Bar Charts and Histograms"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2227,24 +2034,24 @@
         "lesson.key": "Exploring One Column",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "68b25eb9-47d6-4f47-ad5c-75346126e09e"
+        "activity_section.key": "6e279210-ae72-46e2-b9ab-81866203550d"
       },
       "level_keys": [
         "CSP U9L2 Making Bar Charts and Histograms_2021"
       ]
     },
     {
-      "chapter": 4,
-      "position": 2,
+      "chapter": 5,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U9L2 CFU Histogram vs Bar Chart_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2260,17 +2067,17 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Cleaning Data",
         "level_keys": [
           "CSP U9L3 Data Cleaning_2021"
-        ]
+        ],
+        "progression": "Cleaning Data"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2279,24 +2086,24 @@
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "fe9a381b-81b2-415c-8777-98a8364c734a"
+        "activity_section.key": "c43ef4e6-224b-4a32-b4dd-7e0684e15f91"
       },
       "level_keys": [
         "CSP U9L3 Data Cleaning_2021"
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Filtering Data",
         "level_keys": [
           "CSP U9L3 Data Filtering_2021"
-        ]
+        ],
+        "progression": "Filtering Data"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2305,24 +2112,24 @@
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "7d80aaf7-7424-4a35-a412-4945116208e2"
+        "activity_section.key": "aceacc82-c532-439d-a85f-55c0e04a63df"
       },
       "level_keys": [
         "CSP U9L3 Data Filtering_2021"
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U9L3 CFU manually cleaning data_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2338,17 +2145,43 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Crosstab and Scatter Charts",
+        "level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
+        "progression": "Crosstab and Scatter Charts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "a70e7635-ab8c-4670-b577-5dfe72bdb555"
+      },
+      "level_keys": [
+        "App Lab Data Viz Tool 2_2021"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSP U9L4 Making Crosstabs and Scatter Plots_2021"
-        ]
+        ],
+        "progression": "Crosstab and Scatter Charts"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2357,24 +2190,24 @@
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "15416f54-0958-443c-a6a9-78ec30eacc14"
+        "activity_section.key": "a70e7635-ab8c-4670-b577-5dfe72bdb555"
       },
       "level_keys": [
         "CSP U9L4 Making Crosstabs and Scatter Plots_2021"
       ]
     },
     {
-      "chapter": 9,
-      "position": 2,
+      "chapter": 11,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "What Type of Chart?",
         "level_keys": [
           "Which Type of Chart_2021"
-        ]
+        ],
+        "progression": "What Type of Chart?"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2383,24 +2216,24 @@
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "84ec5f15-f8df-44d7-a219-cbba3b2a450b"
+        "activity_section.key": "9807741d-eebd-4f1d-89ea-58b522a4a4dd"
       },
       "level_keys": [
         "Which Type of Chart_2021"
       ]
     },
     {
-      "chapter": 10,
-      "position": 3,
+      "chapter": 12,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U9L4 CFU Two Column vs One_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2416,17 +2249,43 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
+        "level_keys": [
+          "U9L5 CSP CFU Terms_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L5 CSP CFU Terms_2021"
+        ],
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7"
+      },
+      "level_keys": [
+        "U9L5 CSP CFU Terms_2021"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "Oceans_Video_Machine_Learning_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2435,24 +2294,24 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       },
       "level_keys": [
         "Oceans_Video_Machine_Learning_2021"
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_FishVTrash_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2461,24 +2320,24 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       },
       "level_keys": [
         "Oceans_FishVTrash_2021"
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_CreaturesVTrashDemo_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2487,24 +2346,24 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       },
       "level_keys": [
         "Oceans_CreaturesVTrashDemo_2021"
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_CreaturesVTrash_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2513,24 +2372,24 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       },
       "level_keys": [
         "Oceans_CreaturesVTrash_2021"
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_Video_Training_Data_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2539,24 +2398,24 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       },
       "level_keys": [
         "Oceans_Video_Training_Data_2021"
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_Short_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2565,24 +2424,24 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       },
       "level_keys": [
         "Oceans_Short_2021"
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_Long_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2591,24 +2450,24 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       },
       "level_keys": [
         "Oceans_Long_2021"
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding",
         "level_keys": [
           "U9L6 CFU ML Bias_2021"
-        ]
+        ],
+        "progression": "Check for Understanding"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2617,24 +2476,76 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7"
+        "activity_section.key": "aac56f17-a865-49d1-b23b-68e766ef2de4"
       },
       "level_keys": [
         "U9L6 CFU ML Bias_2021"
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Data Story Workspace",
+        "level_keys": [
+          "U9L5 Cropping Widget"
+        ],
+        "progression": "Cropping Widget"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L5 Cropping Widget"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb"
+      },
+      "level_keys": [
+        "U9L5 Cropping Widget"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U9L7 Free Response"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L7 Free Response"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b"
+      },
+      "level_keys": [
+        "U9L7 Free Response"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSP U9 Data Story Day 1_2021"
-        ]
+        ],
+        "progression": "Data Story Workspace"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2643,24 +2554,24 @@
         "lesson.key": "Project - Tell a Data Story - Part 1",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "b010e276-ad46-497c-86d7-6c7a1f437e8e"
+        "activity_section.key": "3dc3ae3e-d972-464d-90be-2272743b453d"
       },
       "level_keys": [
         "CSP U9 Data Story Day 1_2021"
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Data Story Workspace",
         "level_keys": [
           "CSP U9 Data Story Day 2_2021"
-        ]
+        ],
+        "progression": "Data Story Workspace"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2669,24 +2580,23 @@
         "lesson.key": "Project - Tell a Data Story - Part 2",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "b94cfd0b-2256-41c8-b38f-e435a0239c86"
+        "activity_section.key": "59260dd6-72ec-43c9-8505-e857078ebdf1"
       },
       "level_keys": [
         "CSP U9 Data Story Day 2_2021"
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 9 Exam",
         "level_keys": [
           "CSP Unit 9 AP-Style Assessment _2021"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2695,7 +2605,7 @@
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8"
+        "activity_section.key": "93c15cc1-b99c-493f-aa20-05ba7a7da8bc"
       },
       "level_keys": [
         "CSP Unit 9 AP-Style Assessment _2021"
@@ -2712,7 +2622,7 @@
         "lesson.key": "Learning From Data",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "fd1b4c8a-4e7d-47fd-8193-31abffdebe89"
+        "activity_section.key": "e09762df-c895-4667-bbdd-9cc8482f16db"
       }
     },
     {
@@ -2729,6 +2639,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "App Lab Data Viz Tool 1_2021",
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "6e279210-ae72-46e2-b9ab-81866203550d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSP U9L2 Making Bar Charts and Histograms_2021",
         "script_level.level_keys": [
           "CSP U9L2 Making Bar Charts and Histograms_2021"
@@ -2736,7 +2658,7 @@
         "lesson.key": "Exploring One Column",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "68b25eb9-47d6-4f47-ad5c-75346126e09e"
+        "activity_section.key": "6e279210-ae72-46e2-b9ab-81866203550d"
       }
     },
     {
@@ -2760,7 +2682,7 @@
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "fe9a381b-81b2-415c-8777-98a8364c734a"
+        "activity_section.key": "c43ef4e6-224b-4a32-b4dd-7e0684e15f91"
       }
     },
     {
@@ -2772,7 +2694,7 @@
         "lesson.key": "Filtering and Cleaning Data",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "7d80aaf7-7424-4a35-a412-4945116208e2"
+        "activity_section.key": "aceacc82-c532-439d-a85f-55c0e04a63df"
       }
     },
     {
@@ -2789,6 +2711,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "App Lab Data Viz Tool 2_2021",
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "a70e7635-ab8c-4670-b577-5dfe72bdb555"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSP U9L4 Making Crosstabs and Scatter Plots_2021",
         "script_level.level_keys": [
           "CSP U9L4 Making Crosstabs and Scatter Plots_2021"
@@ -2796,7 +2730,7 @@
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "15416f54-0958-443c-a6a9-78ec30eacc14"
+        "activity_section.key": "a70e7635-ab8c-4670-b577-5dfe72bdb555"
       }
     },
     {
@@ -2808,7 +2742,7 @@
         "lesson.key": "Exploring Two Columns",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "84ec5f15-f8df-44d7-a219-cbba3b2a450b"
+        "activity_section.key": "9807741d-eebd-4f1d-89ea-58b522a4a4dd"
       }
     },
     {
@@ -2825,6 +2759,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "U9L5 CSP CFU Terms_2021",
+        "script_level.level_keys": [
+          "U9L5 CSP CFU Terms_2021"
+        ],
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Oceans_Video_Machine_Learning_2021",
         "script_level.level_keys": [
           "Oceans_Video_Machine_Learning_2021"
@@ -2832,7 +2778,7 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       }
     },
     {
@@ -2844,7 +2790,7 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       }
     },
     {
@@ -2856,7 +2802,7 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       }
     },
     {
@@ -2868,7 +2814,7 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       }
     },
     {
@@ -2880,7 +2826,7 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       }
     },
     {
@@ -2892,7 +2838,7 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       }
     },
     {
@@ -2904,7 +2850,7 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa"
+        "activity_section.key": "dbd71c53-52a2-49f4-892a-8bd48fcdf1d7"
       }
     },
     {
@@ -2916,7 +2862,31 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7"
+        "activity_section.key": "aac56f17-a865-49d1-b23b-68e766ef2de4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L5 Cropping Widget",
+        "script_level.level_keys": [
+          "U9L5 Cropping Widget"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L7 Free Response",
+        "script_level.level_keys": [
+          "U9L7 Free Response"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b"
       }
     },
     {
@@ -2928,7 +2898,7 @@
         "lesson.key": "Project - Tell a Data Story - Part 1",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "b010e276-ad46-497c-86d7-6c7a1f437e8e"
+        "activity_section.key": "3dc3ae3e-d972-464d-90be-2272743b453d"
       }
     },
     {
@@ -2940,7 +2910,7 @@
         "lesson.key": "Project - Tell a Data Story - Part 2",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "b94cfd0b-2256-41c8-b38f-e435a0239c86"
+        "activity_section.key": "59260dd6-72ec-43c9-8505-e857078ebdf1"
       }
     },
     {
@@ -2952,29 +2922,42 @@
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8"
+        "activity_section.key": "93c15cc1-b99c-493f-aa20-05ba7a7da8bc"
       }
     }
   ],
   "resources": [
     {
-      "name": "Google Trends",
-      "url": "https://www.google.com/trends/",
-      "key": "google-trends",
+      "name": "Big, Open, and Crowdsourced Data",
+      "url": "https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit",
+      "key": "big-data-citizen-science-machine-learning-activity-guide",
       "properties": {
-        "type": "Link",
-        "audience": "Student"
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "google-trends"
+        "resource.key": "big-data-citizen-science-machine-learning-activity-guide"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
       }
     },
     {
       "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1MhiMuy55XgoRgKCTk6vS_ZXoCVH_Qr2soOVBuipc3eU/copy",
+      "url": "https://docs.google.com/presentation/d/1z00nnZbPBrVkJ_iFoGYx722LbYhBD1qmap2dNt7HuCE/edit?usp=sharing",
       "key": "csp-u9-presentation",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {
@@ -2982,15 +2965,16 @@
       }
     },
     {
-      "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1MhiMuy55XgoRgKCTk6vS_ZXoCVH_Qr2soOVBuipc3eU/copy",
-      "key": "csp-u9-presentation",
+      "name": "CSP U9 Project Guide - Tell a Data Story",
+      "url": "https://docs.google.com/document/d/1my-xp5mA5le05dcPp7kVawrK0-68flRifUZcqCRjltA/edit?usp=sharing",
+      "key": "csp-u9-project-guide-tell-a-data-story",
       "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp-u9-presentation"
+        "resource.key": "csp-u9-project-guide-tell-a-data-story"
       }
     },
     {
@@ -3007,43 +2991,6 @@
       }
     },
     {
-      "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1MhiMuy55XgoRgKCTk6vS_ZXoCVH_Qr2soOVBuipc3eU/copy",
-      "key": "csp-u9-presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp-u9-presentation"
-      }
-    },
-    {
-      "name": "Filtering Data Unit 9 Lesson 3",
-      "url": "https://docs.google.com/document/d/1AVWPKZcB_FqB0O_MtH6URDPAqnbcdTElmV9V1UJIH38/edit?usp=sharing",
-      "key": "csp filtering data",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp filtering data"
-      }
-    },
-    {
-      "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1MhiMuy55XgoRgKCTk6vS_ZXoCVH_Qr2soOVBuipc3eU/copy",
-      "key": "csp-u9-presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp-u9-presentation"
-      }
-    },
-    {
       "name": "Exploring Two Columns",
       "url": "https://docs.google.com/document/d/12GkfXmELZiGPppfigSKRlgbPuizaYpXniW0lAFu8A08/edit",
       "key": "exploring-two-columns-activity-guide",
@@ -3057,102 +3004,52 @@
       }
     },
     {
-      "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1MhiMuy55XgoRgKCTk6vS_ZXoCVH_Qr2soOVBuipc3eU/copy",
-      "key": "csp-u9-presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp-u9-presentation"
-      }
-    },
-    {
-      "name": "Big, Open, and Crowdsourced Data",
-      "url": "https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit",
-      "key": "big-data-citizen-science-machine-learning-activity-guide",
+      "name": "Filtering Data Unit 9 Lesson 3",
+      "url": "https://docs.google.com/document/d/1AVWPKZcB_FqB0O_MtH6URDPAqnbcdTElmV9V1UJIH38/edit?usp=sharing",
+      "key": "filtering_data_unit_9_lesson_3",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "big-data-citizen-science-machine-learning-activity-guide"
+        "resource.key": "filtering_data_unit_9_lesson_3"
       }
     },
     {
-      "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1MhiMuy55XgoRgKCTk6vS_ZXoCVH_Qr2soOVBuipc3eU/copy",
-      "key": "csp-u9-presentation",
+      "name": "Google Trends",
+      "url": "https://www.google.com/trends/",
+      "key": "google-trends",
       "properties": {
-        "type": "Presentation",
+        "type": "Link",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "google-trends"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp-u9-presentation"
+        "resource.key": "teacher_forum"
       }
     },
     {
-      "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1MhiMuy55XgoRgKCTk6vS_ZXoCVH_Qr2soOVBuipc3eU/copy",
-      "key": "csp-u9-presentation",
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
       "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
+        "type": "Resource",
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp-u9-presentation"
-      }
-    },
-    {
-      "name": "CSP U9 Project Guide - Tell a Data Story",
-      "url": "https://docs.google.com/document/d/1my-xp5mA5le05dcPp7kVawrK0-68flRifUZcqCRjltA/edit?usp=sharing",
-      "key": "csp-u9-project-guide-tell-a-data-story",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp-u9-project-guide-tell-a-data-story"
-      }
-    },
-    {
-      "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1MhiMuy55XgoRgKCTk6vS_ZXoCVH_Qr2soOVBuipc3eU/copy",
-      "key": "csp-u9-presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp-u9-presentation"
-      }
-    },
-    {
-      "name": "CSP U9 Project Guide - Tell a Data Story",
-      "url": "https://docs.google.com/document/d/1my-xp5mA5le05dcPp7kVawrK0-68flRifUZcqCRjltA/edit?usp=sharing",
-      "key": "csp-u9-project-guide-tell-a-data-story",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp-u9-project-guide-tell-a-data-story"
-      }
-    },
-    {
-      "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1MhiMuy55XgoRgKCTk6vS_ZXoCVH_Qr2soOVBuipc3eU/copy",
-      "key": "csp-u9-presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp-u9-presentation"
+        "resource.key": "virtual_modification_resources"
       }
     }
   ],
@@ -3190,7 +3087,7 @@
     {
       "seeding_key": {
         "lesson.key": "Filtering and Cleaning Data",
-        "resource.key": "csp filtering data"
+        "resource.key": "filtering_data_unit_9_lesson_3"
       }
     },
     {
@@ -3254,10 +3151,36 @@
       }
     }
   ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
+        "script.name": "csp9-2021"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
 
   ],
   "objectives": [
@@ -3414,7 +3337,7 @@
     {
       "key": "2fd17c05-a211-4dc4-af2b-6f615c74e59b",
       "properties": {
-        "description": "Train and test a machine learning model."
+        "description": "Explain ways that designers and developers can consider the potential effects of their programs"
       },
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
@@ -3429,6 +3352,16 @@
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
         "objective.key": "c4a5c79f-cfb6-4824-98f9-7f88df009c68"
+      }
+    },
+    {
+      "key": "8531ab58-eb6e-4041-923c-8fa9eddcb13a",
+      "properties": {
+        "description": "Reason about which types of tasks are should not be completed by an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "8531ab58-eb6e-4041-923c-8fa9eddcb13a"
       }
     },
     {
@@ -3501,5 +3434,458 @@
         "objective.key": "923cb922-4718-43ed-a135-f3bd078fd3db"
       }
     }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.E.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.E.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

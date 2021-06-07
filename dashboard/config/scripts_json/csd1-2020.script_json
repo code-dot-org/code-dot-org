@@ -34,6 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:55:40 UTC",
     "seeding_key": {
       "script.name": "csd1-2020"
     }
@@ -94,6 +95,7 @@
       "name": "CS Discoveries Pre-survey",
       "absolute_position": 1,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA"
@@ -109,6 +111,7 @@
       "name": "Intro to Problem Solving",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -123,6 +126,7 @@
       "name": "The Problem Solving Process",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -137,6 +141,7 @@
       "name": "Exploring Problem Solving",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -151,6 +156,7 @@
       "name": "What is a Computer?",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -165,6 +171,7 @@
       "name": "Input and Output",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -179,6 +186,7 @@
       "name": "Processing",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -193,6 +201,7 @@
       "name": "Storage",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -207,6 +216,7 @@
       "name": "Project - Propose an App",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -221,6 +231,7 @@
       "name": "Post-Project Test",
       "absolute_position": 10,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -235,6 +246,7 @@
       "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -249,6 +261,7 @@
       "name": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -263,6 +276,7 @@
       "name": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -277,6 +291,7 @@
       "name": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
       },
@@ -291,6 +306,7 @@
       "name": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
       },
@@ -301,15 +317,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pre-survey-levelgroup_2019_2020"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pre-survey-levelgroup_2019_2020"
@@ -325,12 +351,16 @@
     {
       "chapter": 2,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L01 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L01 TFMD_2020"
@@ -346,12 +376,16 @@
     {
       "chapter": 3,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L02 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L02 TFMD_2020"
@@ -367,12 +401,16 @@
     {
       "chapter": 4,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Problem Solving Process Video_2020"
+        ],
         "progression": "Video: Problem Solving Process"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Problem Solving Process Video_2020"
@@ -388,12 +426,16 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L03 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L03 TFMD_2020"
@@ -409,12 +451,16 @@
     {
       "chapter": 6,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L04 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L04 TFMD_2020"
@@ -430,12 +476,16 @@
     {
       "chapter": 7,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD What Makes a Computer a Computer Video_2020"
+        ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD What Makes a Computer a Computer Video_2020"
@@ -451,12 +501,16 @@
     {
       "chapter": 8,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L05 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L05 TFMD_2020"
@@ -472,12 +526,16 @@
     {
       "chapter": 9,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser"
+        ],
         "progression": "App: Pet Chooser"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 IO Pet Chooser"
@@ -493,12 +551,16 @@
     {
       "chapter": 10,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Story"
+        ],
         "progression": "App: Story Creator"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 IO Story"
@@ -514,12 +576,16 @@
     {
       "chapter": 11,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser 2"
+        ],
         "progression": "App: Improved Pet Chooser"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 IO Pet Chooser 2"
@@ -535,12 +601,16 @@
     {
       "chapter": 12,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L06 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L06 TFMD_2020"
@@ -556,12 +626,16 @@
     {
       "chapter": 13,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing bday"
+        ],
         "progression": "App: Is It Your Birthday?"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 processing bday"
@@ -577,12 +651,16 @@
     {
       "chapter": 14,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing npark"
+        ],
         "progression": "App: National Park Quiz"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 processing npark"
@@ -598,12 +676,16 @@
     {
       "chapter": 15,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing countries"
+        ],
         "progression": "App: How Many Countries..."
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 processing countries"
@@ -619,12 +701,16 @@
     {
       "chapter": 16,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing writers"
+        ],
         "progression": "App: My Famous Birthday"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 processing writers"
@@ -640,12 +726,16 @@
     {
       "chapter": 17,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing notebook"
+        ],
         "progression": "App: Stamp Notebook"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 processing notebook"
@@ -661,12 +751,16 @@
     {
       "chapter": 18,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing fastest"
+        ],
         "progression": "App: The Fastest Finger"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 processing fastest"
@@ -682,12 +776,16 @@
     {
       "chapter": 19,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing guess"
+        ],
         "progression": "App: Guess the Number"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 processing guess"
@@ -703,12 +801,16 @@
     {
       "chapter": 20,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing live"
+        ],
         "progression": "App: Where Should I Live?"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 processing live"
@@ -724,12 +826,16 @@
     {
       "chapter": 21,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L07 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L07 TFMD_2020"
@@ -745,12 +851,16 @@
     {
       "chapter": 22,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage outfit"
+        ],
         "progression": "App: Outfit Picker"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage outfit"
@@ -766,12 +876,16 @@
     {
       "chapter": 23,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage friends"
+        ],
         "progression": "App: Friend Finder"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage friends"
@@ -787,12 +901,16 @@
     {
       "chapter": 24,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage movies"
+        ],
         "progression": "App: Kids Movie Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage movies"
@@ -808,12 +926,16 @@
     {
       "chapter": 25,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage video"
+        ],
         "progression": "Video: IOSP Model"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage video"
@@ -829,12 +951,16 @@
     {
       "chapter": 26,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L09 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L09 TFMD_2020"
@@ -850,12 +976,16 @@
     {
       "chapter": 27,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_2020"
+        ],
         "progression": "Reflection"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_2020"
@@ -871,11 +1001,15 @@
     {
       "chapter": 28,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U1 Test_2020"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 Test_2020"
@@ -891,12 +1025,16 @@
     {
       "chapter": 29,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L01.1 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L01.1 TFMD_2020"
@@ -912,12 +1050,16 @@
     {
       "chapter": 30,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L01.2 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L01.2 TFMD_2020"
@@ -933,12 +1075,16 @@
     {
       "chapter": 31,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L01.3 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L01.3 TFMD_2020"
@@ -954,12 +1100,16 @@
     {
       "chapter": 32,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L12 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L12 TFMD_2020"
@@ -975,12 +1125,16 @@
     {
       "chapter": 33,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L13 TFMD_2020"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1L13 TFMD_2020"
@@ -1358,5 +1512,35 @@
         "script.name": "csd1-2020"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

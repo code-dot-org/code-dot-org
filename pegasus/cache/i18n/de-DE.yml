@@ -1415,6 +1415,12 @@ de-DE:
   coursed-2019_gradelevel: Ab 8. Klasse
   coursee-2019_gradelevel: Alter 8-12
   coursef-2019_gradelevel: Alter 9-13
+  coursea-2020_gradelevel: Alter 4-7
+  courseb-2020_gradelevel: Alter 5-8
+  coursec-2020_gradelevel: Alter 6-10
+  coursed-2020_gradelevel: Ab 8. Klasse
+  coursee-2020_gradelevel: Alter 8-12
+  coursef-2020_gradelevel: Alter 9-13
   accelerated_gradelevel: 'Alter: 10-18'
   codeorg_platformtext: Moderne Browser, Smartphones, Tablets
   codeintl_platformtext: Moderne Browser, Smartphones, Tablets
@@ -1597,6 +1603,29 @@ de-DE:
   coursef-2019_shortdescription_congrats: Lernen Sie alle Konzepte in den Grundlagen
     der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes
     Spiel.
+  coursea-2020_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  courseb-2020_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  coursec-2020_shortdescription_congrats: Erstellen Sie Programme mit Sequenzen, Schleifen
+    und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie
+    verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing
+    umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre
+    eigene Geschichte, die Sie mit anderen teilen können!
+  coursed-2020_shortdescription_congrats: Die SchülerInnen entwickeln ihr Verständnis
+    für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen
+    auch etwas über digitale Bürgerschaft.
+  coursee-2020_shortdescription_congrats: Beginne mit der Programmierung von Algorithmen,
+    Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen.
+    Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt,
+    das du mit deinen Freunden und deiner Familie teilen kannst.
+  coursef-2020_shortdescription_congrats: Lerne die Verwendung verschiedener Arten
+    von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene
+    Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von
+    Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein
+    Capstone Projekt, das du mit Freunden und Familie teilen kannst.
   codeorg_longdescription: Lerne die Grundlagen der Informatik mit Programmierbausteinen.
     Dies ist eine spielerische, selbstgesteuerte Einführung mit Videolektionen von
     Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies. Lerne Wiederholungsschleifen,
@@ -2473,6 +2502,19 @@ de-DE:
     Codes")
   homepage_slot_text_link_express_course: Versuche einen Express-Kurs
   page_not_available_button: Zurück zur Homepage
-  ! '': "[empty string]"
+  ! '': " "
   footer_powered_by_aws: Betrieben von Amazon Web Services
   codebytes_skinny_banner_english_only: Nur Englisch
+  footer_privacy_policy: Datenschutzerklärung
+  footer_about: Über
+  footer_partners: Partner
+  footer_donate: Spenden
+  footer_support: Unterstützung
+  footer_terms: Bedingungen
+  ai_for_oceans: KI für Meere
+  ai_in_partnership_with: In Zusammenarbeit mit
+  ai_microsoft_thanks: Wir danken Microsoft für die Unterstützung unserer Vision und
+    Mission, sicherzustellen, dass jedes Kind die Möglichkeit hat, Informatik und
+    die Fähigkeiten zu erlernen, um im 21. Jahrhundert erfolgreich zu sein.
+  ai_activity: Aufgabe
+  ai_description: Beschreibung

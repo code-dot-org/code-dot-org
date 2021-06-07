@@ -14,12 +14,6 @@ import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
 import shapes from './shapes';
 
-const styles = {
-  content: {
-    maxWidth: styleConstants['content-width']
-  }
-};
-
 class Courses extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
@@ -143,5 +137,11 @@ class Courses extends Component {
     );
   }
 }
+
+const styles = {
+  content: {
+    maxWidth: styleConstants['content-width']
+  }
+};
 
 export default Courses;

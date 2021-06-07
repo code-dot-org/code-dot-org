@@ -1,10 +1,11 @@
+import * as utils from '@cdo/apps/utils';
 import P5Lab from '../P5Lab';
 import {commands} from './commands';
 import * as coreLibrary from './coreLibrary';
 import Sounds from '@cdo/apps/Sounds';
 import {getStore} from '@cdo/apps/redux';
-import {clearConsole} from './textConsoleModule';
-import {clearPrompts} from './spritelabInputModule';
+import {clearConsole} from '../redux/textConsole';
+import {clearPrompts} from '../redux/spritelabInput';
 
 var SpriteLab = function() {
   P5Lab.call(this);
@@ -58,4 +59,24 @@ SpriteLab.prototype.onPause = function(isPaused) {
   } else {
     coreLibrary.startPause(current);
   }
+};
+
+SpriteLab.prototype.setupReduxSubscribers = function(store) {
+  P5Lab.prototype.setupReduxSubscribers.call(this, store);
+  let state = {};
+  store.subscribe(function() {
+    const lastState = state;
+    state = store.getState();
+
+    if (
+      lastState.animationList?.propsByKey !== state.animationList?.propsByKey
+    ) {
+      if (window.Blockly && Blockly.mainBlockSpace) {
+        const customEvent = utils.createEvent(
+          Blockly.BlockSpace.EVENTS.ANIMATIONS_CHANGED
+        );
+        Blockly.mainBlockSpace.events.dispatchEvent(customEvent);
+      }
+    }
+  });
 };

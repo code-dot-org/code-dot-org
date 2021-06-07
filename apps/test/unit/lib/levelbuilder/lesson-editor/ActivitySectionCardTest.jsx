@@ -15,9 +15,12 @@ import {sampleActivities, searchOptions} from './activitiesTestData';
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import vocabulariesEditor, {
+  initVocabularies
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 
 describe('ActivitySectionCard', () => {
   let defaultProps,
@@ -34,11 +37,16 @@ describe('ActivitySectionCard', () => {
     addLevel;
   beforeEach(() => {
     stubRedux();
-    registerReducers({...reducers, resources: resourcesEditor});
+    registerReducers({
+      ...reducers,
+      resources: createResourcesReducer('lessonResource'),
+      vocabularies: vocabulariesEditor
+    });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions));
-    store.dispatch(initResources(resourceTestData));
+    store.dispatch(init(sampleActivities, searchOptions, [], false));
+    store.dispatch(initResources('lessonResource', resourceTestData));
+    store.dispatch(initVocabularies([]));
 
     setTargetActivitySection = sinon.spy();
     updateTargetActivitySection = sinon.spy();
@@ -61,6 +69,7 @@ describe('ActivitySectionCard', () => {
       updateActivitySectionMetrics,
       setTargetActivitySection,
       targetActivitySectionPos: 1,
+      hasLessonPlan: true,
 
       //redux
       moveActivitySection,
@@ -85,6 +94,7 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.contains('Remarks')).to.be.true;
+    expect(wrapper.contains('Progression Title:')).to.be.false;
   });
 
   it('renders activity section with levels', () => {
@@ -97,9 +107,27 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).to.equal(
       1
     );
-    expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
+    expect(wrapper.find('Connect(UnconnectedLevelToken)').length).to.equal(2);
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.contains('Progression Title:')).to.be.true;
+  });
+
+  it('renders activity section with levels for lesson with lesson plan', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        activitySection={sampleActivities[0].activitySections[2]}
+        hasLessonPlan={false}
+      />
+    );
+    expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).to.equal(
+      1
+    );
+    expect(wrapper.find('Connect(UnconnectedLevelToken)').length).to.equal(2);
+    expect(wrapper.find('textarea').length).to.equal(0);
+    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.contains('Progression Title:')).to.be.true;
   });
 
   it('edit activity section title', () => {
@@ -115,16 +143,47 @@ describe('ActivitySectionCard', () => {
     );
   });
 
+  it('edit activity section duration', () => {
+    const wrapper = shallow(<ActivitySectionCard {...defaultProps} />);
+
+    const durationInput = wrapper.find('input').at(1);
+    durationInput.simulate('change', {target: {value: '5'}});
+    expect(updateActivitySectionField).to.have.been.calledWith(
+      1,
+      1,
+      'duration',
+      '5'
+    );
+  });
+
   it('edit activity section remarks', () => {
     const wrapper = shallow(<ActivitySectionCard {...defaultProps} />);
 
-    const titleInput = wrapper.find('input').at(1);
-    titleInput.simulate('change', {target: {value: ''}});
+    const remarksInput = wrapper.find('input').at(2);
+    remarksInput.simulate('change', {target: {value: ''}});
     expect(updateActivitySectionField).to.have.been.calledWith(
       1,
       1,
       'remarks',
       false
+    );
+  });
+
+  it('edit activity section progressionName', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        activitySection={sampleActivities[0].activitySections[2]}
+      />
+    );
+
+    const progressionInput = wrapper.find('input').at(3);
+    progressionInput.simulate('change', {target: {value: 'Progression Name'}});
+    expect(updateActivitySectionField).to.have.been.calledWith(
+      1,
+      3,
+      'progressionName',
+      'Progression Name'
     );
   });
 
@@ -212,5 +271,49 @@ describe('ActivitySectionCard', () => {
     down.simulate('mouseDown');
 
     expect(moveActivitySection).to.not.have.been.called;
+  });
+
+  it('can insert at text cusor positon with insertMarkdownSyntaxAtSelection', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <ActivitySectionCard {...defaultProps} />
+      </Provider>
+    );
+    const instance = wrapper.find('ActivitySectionCard').instance();
+
+    // inserting without a cursor position will insert at the beginning
+    instance.insertMarkdownSyntaxAtSelection('new syntax ');
+    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
+      'new syntax Simple text'
+    );
+
+    // inserting with a cursor position will insert at that position
+    instance.editorTextAreaRef.selectionStart = 6;
+    instance.insertMarkdownSyntaxAtSelection(' new syntax');
+    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
+      'Simple new syntax text'
+    );
+  });
+
+  it('can replace selected text with insertMarkdownSyntaxAtSelection', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <ActivitySectionCard {...defaultProps} />
+      </Provider>
+    );
+    const instance = wrapper.find('ActivitySectionCard').instance();
+    instance.editorTextAreaRef.selectionStart = 0;
+    instance.editorTextAreaRef.selectionEnd = 6;
+    instance.insertMarkdownSyntaxAtSelection('Basic insertion');
+    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
+      'Basic insertion text'
+    );
+
+    instance.editorTextAreaRef.selectionStart = 7;
+    instance.editorTextAreaRef.selectionEnd = 11;
+    instance.insertMarkdownSyntaxAtSelection('example');
+    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
+      'Simple example'
+    );
   });
 });

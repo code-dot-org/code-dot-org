@@ -1,7 +1,8 @@
 {
-  "category": "Actions",
+  "category": "Sprites",
   "config": {
     "func": "jumpTo",
+    "docFunc": "gamelab_jumpTo",
     "blockText": "{SPRITE} jump to {LOCATION}",
     "args": [
       {

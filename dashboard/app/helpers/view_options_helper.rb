@@ -25,7 +25,7 @@ module ViewOptionsHelper
     :server_project_level_id,
     :game_display_name,
     :script_name,
-    :stage_position,
+    :lesson_position,
     :level_position,
     :public_caching,
     :is_13_plus,
@@ -37,7 +37,8 @@ module ViewOptionsHelper
     :signed_replay_log_url,
     :azure_speech_service_voices,
     :authenticity_token,
-    :useGoogleBlockly
+    :useGoogleBlockly,
+    :disallowed_html_tags
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

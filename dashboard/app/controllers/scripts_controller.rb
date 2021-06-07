@@ -1,11 +1,11 @@
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
 
-  before_action :require_levelbuilder_mode, except: [:show, :edit, :update]
+  before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update]
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update]
-  before_action :authenticate_user!, except: :show
+  before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_script, only: [:show, :edit, :update, :destroy]
+  before_action :set_script, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
   before_action :set_script_file, only: [:edit, :update]
@@ -50,12 +50,12 @@ class ScriptsController < ApplicationController
     # Warn levelbuilder if a lesson will not be visible to users because 'visible_after' is set to a future day
     if current_user && current_user.levelbuilder?
       notice_text = ""
-      @script.lessons.each do |stage|
-        next unless stage.visible_after && Time.parse(stage.visible_after) > Time.now
+      @script.lessons.each do |lesson|
+        next unless lesson.visible_after && Time.parse(lesson.visible_after) > Time.now
 
-        formatted_time = Time.parse(stage.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
-        num_days_away = ((Time.parse(stage.visible_after) - Time.now) / 1.day).ceil.to_s
-        lesson_visible_after_message = "The lesson #{stage.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
+        formatted_time = Time.parse(lesson.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
+        num_days_away = ((Time.parse(lesson.visible_after) - Time.now) / 1.day).ceil.to_s
+        lesson_visible_after_message = "The lesson #{lesson.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
         notice_text = notice_text.empty? ? lesson_visible_after_message : "#{notice_text} <br/> #{lesson_visible_after_message}"
       end
       flash[:notice] = notice_text.html_safe
@@ -73,6 +73,7 @@ class ScriptsController < ApplicationController
   end
 
   def create
+    return head :bad_request unless general_params[:is_migrated]
     @script = Script.new(script_params)
     if @script.save && @script.update_text(script_params, params[:script_text], i18n_params, general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
@@ -95,6 +96,8 @@ class ScriptsController < ApplicationController
     if Rails.application.config.levelbuilder_mode
       filename = "config/scripts/#{@script.name}.script"
       File.delete(filename) if File.exist?(filename)
+      filename = "config/scripts_json/#{@script.name}.script_json"
+      File.delete(filename) if File.exist?(filename)
     end
     redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Script.model_name.human)
   end
@@ -107,7 +110,7 @@ class ScriptsController < ApplicationController
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       levelKeyList: @script.is_migrated ? Level.key_list : {},
-      lessonLevelData: @script_file,
+      lessonLevelData: @script_dsl_text,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
       version_year_options: Script.get_version_year_options,
@@ -129,22 +132,66 @@ class ScriptsController < ApplicationController
       @script.reload
       render json: @script.summarize_for_script_edit
     else
-      render json: @script.errors
+      render(status: :not_acceptable, json: @script.errors)
     end
   end
 
   def instructions
     require_levelbuilder_mode
 
-    script = Script.get_from_cache(params[:script_id])
+    script = Script.get_from_cache(params[:id])
 
-    render 'levels/instructions', locals: {stages: script.lessons}
+    render 'levels/instructions', locals: {lessons: script.lessons}
+  end
+
+  def vocab
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def resources
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def code
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def standards
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def get_rollup_resources
+    script = Script.get_from_cache(params[:id])
+    course_version = script.get_course_version
+    return render status: 400, json: {error: 'Script does not have course version'} unless course_version
+    rollup_pages = []
+    if script.lessons.any? {|l| !l.programming_expressions.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(script), course_version_id: course_version.id))
+    end
+    if script.lessons.any? {|l| !l.resources.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_script_path(script), course_version_id: course_version.id))
+    end
+    if script.lessons.any? {|l| !l.standards.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_script_path(script), course_version_id: course_version.id))
+    end
+    if script.lessons.any? {|l| !l.vocabularies.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_script_path(script), course_version_id: course_version.id))
+    end
+    rollup_pages.each do |r|
+      r.is_rollup = true
+      r.save! if r.changed?
+    end
+    render json: rollup_pages.map(&:summarize_for_lesson_edit).to_json
   end
 
   private
 
   def set_script_file
-    @script_file = ScriptDSL.serialize_lesson_groups(@script)
+    @script_dsl_text = ScriptDSL.serialize_lesson_groups(@script)
   end
 
   def rake
@@ -180,7 +227,8 @@ class ScriptsController < ApplicationController
 
   def general_params
     h = params.permit(
-      :visible_to_teachers,
+      :hidden,
+      :deprecated,
       :curriculum_umbrella,
       :family_name,
       :version_year,
@@ -189,31 +237,33 @@ class ScriptsController < ApplicationController
       :hideable_lessons,
       :curriculum_path,
       :professional_learning_course,
+      :only_instructor_review_required,
       :peer_reviews_to_complete,
       :wrapup_video,
       :student_detail_progress_view,
       :project_widget_visible,
       :lesson_extras_available,
       :has_verified_resources,
-      :has_lesson_plan,
       :tts,
       :is_stable,
       :is_course,
       :show_calendar,
+      :weekly_instructional_minutes,
       :is_migrated,
       :announcements,
       :pilot_experiment,
       :editor_experiment,
       :background,
+      :include_student_lesson_plans,
       resourceTypes: [],
       resourceLinks: [],
+      resourceIds: [],
+      studentResourceIds: [],
       project_widget_types: [],
       supported_locales: [],
     ).to_h
-    h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
-    h[:hidden] = !h[:visible_to_teachers]
+    h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
-    h.delete(:visible_to_teachers)
     h
   end
 

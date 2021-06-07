@@ -6,7 +6,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OS X](#os-x-catalina), [Ubuntu](#ubuntu-1604-download-iso), [Windows](#windows)
+   - See the appropriate section below: [OS X](#os-x-catalina), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```
@@ -50,6 +50,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
 1. Run the website `bin/dashboard-server`
 1. Visit http://localhost-studio.code.org:3000/ to verify it is running.
+1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
@@ -165,7 +166,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
 1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
-### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) 
+### Ubuntu 18.04 ([Download iso][ubuntu-iso-url])
 
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
@@ -217,12 +218,16 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     1. `wsl --set-default-version 2`
         1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
 1. [Install Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) (Windows Store link)
-    * If you want to follow the Ubuntu setup exactly, Ubuntu 16.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
+    * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. Make sure virtualization is turned on your BIOS settings.
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
 
 From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso), _with the following observations_...
 * In step 2, you may run into the error `E: Unable to locate package openjdk-9-jre-headless`. This is because openjdk-9 has been superseded by openjdk-11. Replace `openjdk-9-jre-headless` with `openjdk-11-jre-headless`. If you want, you can first check to see if this replacement package is available on your distro using `sudo apt-cache search openjdk` as per [this StackOverflow thread](https://stackoverflow.com/questions/51141224/how-to-install-openjdk-9-jdk-on-ubuntu-18-04/51141421).
+* `chromium-browser` might not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`. You can instead install chrome by running the following:
+   1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+   2. `sudo apt install ./google-chrome-stable_current_amd64.deb`
+   3. modify step 8 of the Ubuntu instructions to read `export CHROME_BIN=$(which google-chrome)`
 * Before step 9, you may have to restart MySQL using `sudo /etc/init.d/mysql restart`
 
 ...followed by the [overview instructions](#overview), _with the following observation_:
@@ -230,7 +235,7 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
 
 ### Alternative: Use an Ubuntu VM
 
-* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 16.04 iso image][ubuntu-iso-url]
+* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 18.04 iso image][ubuntu-iso-url]
   1. Maximum Disk Size should be set to at least 35.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 8 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
@@ -242,7 +247,7 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * **Step 1: Choose AMI**: Select Ubuntu Server 16.04
+     * **Step 1: Choose AMI**: Select Ubuntu Server 18.04
      * **Step 2: Choose instance type**: Choose at least 8GiB memory (e.g. `t2.large`)
      * **Step 3: Configure Instance**: Set IAM Role to `DeveloperEC2`
      * **Step 4: Storage**: Increase storage to 100GiB
@@ -263,6 +268,24 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
   1. Once you have successfully completed `bundle exec rake build`, you can connect to it as follows:
      * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2` and then `~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your ssh connection is open.
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
+
+## Piskel
+### Local Development Between code-dot-org and forked piskel repo
+If you want the Code.org repo to point to the local version of the Piskel you are working on, your apps package must be linked to a local development copy of the Piskel repository with a complete dev build. 
+
+**[You can also find the steps below in apps/Gruntfile.js of the code-dot-org repo](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/Gruntfile.js)**
+
+#### The Steps:
+1. `git clone https://github.com/code-dot-org/piskel.git <new-directory>`
+2. `cd <new-directory>`
+3. `npm install && grunt build-dev`
+4. `npm link`
+5. `cd <code-dot-org apps directory>`
+6. `npm link @code-dot-org/piskel`
+7. rerun `yarn start` in the `<code-dot-org apps directory>`
+
+#### Note: Using `grunt serve --force`
+- If you try grunt serve and it is aborted due to warnings do `grunt serve --force`
 
 ## Enabling JavaScript builds
 **Note:** the installation process now enables this by default, which is recommended. You can manually edit these values later if you want to disable local JS builds.
@@ -295,7 +318,7 @@ Our lint configuration uses formatting rules provided by [Prettier](https://pret
 
 ### Ruby
 
-We use [RuboCop](https://docs.rubocop.org/en/latest/) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/en/latest/integration_with_other_tools/) for instructions for your editor of choice.
+We use [RuboCop](https://docs.rubocop.org/rubocop/index) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/rubocop/integration_with_other_tools) for instructions for your editor of choice.
 
 ## More Information
 Please also see our other documentation, including our:
@@ -318,7 +341,7 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 - `brew link imagemagick@6 --force`
 If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
 - `gem uninstall rmagick`
-- `gem install rmagick -v 2.15.4`
+- `gem install rmagick -v 2.16.0`
 
 ### ImageMagick with Pango
 
@@ -422,6 +445,14 @@ If you run into error messages about `implicit declaration of function thin_xxx`
 
 (More info [here](https://github.com/macournoyer/thin/pull/364))
 
+#### mimemagic
+
+If you run into an error message about `Could not find MIME type database in the following locations...` while installing the `mimemagic` gem, try:
+
+- `brew install shared-mime-info`
+
+(More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies), including help for OSes that don't support Homebrew.)
+
 #### Xcode Set Up
 
 OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, step 9 in the overview will not run correctly. In that case run the following command in the Terminal (found from
@@ -434,4 +465,4 @@ While it's possible to run the server locally without these, we've found the fol
 - Storage: The repository takes up 20GB
 
 
-[ubuntu-iso-url]: http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso
+[ubuntu-iso-url]: http://releases.ubuntu.com/bionic/ubuntu-18.04.5-desktop-amd64.iso

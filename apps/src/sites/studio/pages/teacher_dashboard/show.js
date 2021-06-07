@@ -13,13 +13,19 @@ import teacherSections, {
   selectSection,
   setRosterProvider,
   setValidAssignments,
-  setValidGrades
+  setValidGrades,
+  setTextToSpeechScriptIds,
+  setPreReaderScriptIds,
+  setLessonExtrasScriptIds,
+  setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import textResponses from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionProgress, {
+  setShowSectionProgressDetails
+} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
@@ -33,15 +39,21 @@ import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
-const section = scriptData.section;
-const sections = scriptData.sections;
-const validGrades = scriptData.validGrades;
-const validScripts = scriptData.validScripts;
-const studentScriptIds = scriptData.studentScriptIds;
-const validCourses = scriptData.validCourses;
-const currentUserId = scriptData.currentUserId;
-const hasSeenStandardsReportInfo = scriptData.hasSeenStandardsReportInfo;
-const localeCode = scriptData.localeCode;
+const {
+  section,
+  sections,
+  validGrades,
+  validScripts,
+  studentScriptIds,
+  validCourses,
+  currentUserId,
+  hasSeenStandardsReportInfo,
+  localeCode,
+  textToSpeechScriptIds,
+  preReaderScriptIds,
+  lessonExtrasScriptIds,
+  showSectionProgressDetails
+} = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
@@ -73,6 +85,13 @@ $(document).ready(function() {
   store.dispatch(setValidAssignments(validCourses, validScripts));
   store.dispatch(setValidGrades(validGrades));
   store.dispatch(setLocaleCode(localeCode));
+  store.dispatch(setLessonExtrasScriptIds(lessonExtrasScriptIds));
+  store.dispatch(setTextToSpeechScriptIds(textToSpeechScriptIds));
+  store.dispatch(setPreReaderScriptIds(preReaderScriptIds));
+  store.dispatch(setShowSectionProgressDetails(showSectionProgressDetails));
+
+  // DCDO Flag - show/hide Lock Section field
+  store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
 
   if (!section.sharing_disabled && section.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));

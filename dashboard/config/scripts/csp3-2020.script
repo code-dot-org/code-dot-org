@@ -4,15 +4,14 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit3/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit3/standards/"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit3/{LESSON}'
-announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"Looking for the Lesson Activities?", "details"=>"Teachers, some lessons in this unit contain activities that are not located on Code Studio. Make sure to read the Lesson Plans and check out the unit slides. ", "link"=>"https://curriculum.code.org/csp-20/unit3/", "type"=>"information", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"Looking for the Lesson Activities?", "details"=>"Teachers, some lessons in this unit contain activities that are not located on Code Studio. Make sure to read the Lesson Plans and check out the unit slides. ", "link"=>"https://curriculum.code.org/csp-20/unit3/", "type"=>"information", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Student-only"}]
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_unit3_2020', display_name: 'Unit 3: Intro to App Design'
-lesson 'Introduction to Apps', display_name: 'Introduction to Apps'
+lesson 'Introduction to Apps', display_name: 'Introduction to Apps', has_lesson_plan: true
 level 'CSP U3L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 Water Conservation Sample App', progression: 'App Exploration'
 level 'CSP U3 Bird Quiz App', progression: 'App Exploration'
@@ -27,7 +26,7 @@ level 'CSP U3 Four Square App Investigation', progression: 'App Investigation'
 level 'CSP U3 Monarch Butterfly App Investigation', progression: 'App Investigation'
 level 'CSP U3 L1 Input Output Matching', progression: 'Check For Understanding', assessment: true
 
-lesson 'Introduction to Design Mode', display_name: 'Introduction to Design Mode'
+lesson 'Introduction to Design Mode', display_name: 'Introduction to Design Mode', has_lesson_plan: true
 level 'CSP U3L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 Hamilton Township Design Mode', progression: 'Design Mode Exploration'
 level 'CSP U3 L2 Design Mode Themes', progression: 'Design Mode Exploration'
@@ -38,19 +37,19 @@ level 'CSP U3 L2 Design Mode ids', progression: 'Design Mode Exploration'
 level 'CSP U3 L2 Copy an App', progression: 'Copy an App'
 level 'U3L2 CSP CFU ID names', progression: 'Check For Understanding', assessment: true
 
-lesson 'Project - Designing an App Part 1', display_name: 'Project - Designing an App Part 1'
+lesson 'Project - Designing an App Part 1', display_name: 'Project - Designing an App Part 1', has_lesson_plan: true
 level 'CSP U3L3 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Project - Designing an App Part 2', display_name: 'Project - Designing an App Part 2'
+lesson 'Project - Designing an App Part 2', display_name: 'Project - Designing an App Part 2', has_lesson_plan: true
 level 'CSP U3L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 Bird Quiz Storyboard', progression: 'Sample Prototype'
 level 'CSP U3 L4 Design Screens', progression: 'Build Your Screens'
 
-lesson 'The Need for Programming Languages', display_name: 'The Need for Programming Languages'
+lesson 'The Need for Programming Languages', display_name: 'The Need for Programming Languages', has_lesson_plan: true
 level 'CSP U3L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U3L5 CSP CFU natural language', progression: 'Check For Understanding', assessment: true
 
-lesson 'Intro to Programming', display_name: 'Intro to Programming'
+lesson 'Intro to Programming', display_name: 'Intro to Programming', has_lesson_plan: true
 level 'CSP U3L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U3 Program Investigate Sequential 1', progression: 'Code Investigation'
 level 'U3 Program Investigate Sequential 2', progression: 'Code Investigation'
@@ -59,7 +58,7 @@ level 'U3 Program Investigate Event-Driven 2', progression: 'Code Investigation'
 level 'U3 Program Investigate Event-Driven 3', progression: 'Code Investigation'
 level 'U3L6 CSP CFU Sequential vs Event Driven', progression: 'Check for Understanding', assessment: true
 
-lesson 'Debugging', display_name: 'Debugging'
+lesson 'Debugging', display_name: 'Debugging', has_lesson_plan: true
 level 'CSP U3L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'U3 Program Practice Pt 1', progression: 'Debugging'
 level 'U3 Program Practice Pt 2', progression: 'Debugging'
@@ -70,19 +69,23 @@ level 'U3 Program Practice Pt 6', progression: 'Debugging'
 level 'U3 Program Practice Pt 8', progression: 'Debugging'
 level 'U3L7 CSP CFU What was confusing', progression: 'Check for Understanding', assessment: true
 
-lesson 'Project - Designing an App Part 3', display_name: 'Project - Designing an App Part 3'
+lesson 'Project - Designing an App Part 3', display_name: 'Project - Designing an App Part 3', has_lesson_plan: true
 level 'CSP U3L8 SFLP 20-21', progression: 'Lesson Overview'
 level 'U3 L08 Pair Programming Video', progression: 'Pair Programming'
 level 'CSP U3 L4 Add Code', progression: 'Add Code'
 
-lesson 'Project - Designing an App Part 4', display_name: 'Project - Designing an App Part 4'
+lesson 'Project - Designing an App Part 4', display_name: 'Project - Designing an App Part 4', has_lesson_plan: true
 level 'CSP U3L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 L9 Add More Code', progression: 'Add More Code'
 
-lesson 'Project - Designing an App Part 5', display_name: 'Project - Designing an App Part 5'
+lesson 'Project - Designing an App Part 5', display_name: 'Project - Designing an App Part 5', has_lesson_plan: true
 level 'CSP U3L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 L10 Submit App', progression: 'Submit Your App', assessment: true
 
-lesson 'Lesson 11: Assessment Day', display_name: 'Lesson 11: Assessment Day', lockable: true
+lesson 'Lesson 11: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP Unit 3 MC Assessment _2020', progression: 'Unit 3 Exam', assessment: true
+
+lesson_group 'cspSurvey2020', display_name: 'Post-Course Survey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: false
+level 'csp-post-survey-2020-markdown-with-link-to-survey', progression: 'Post-Course Survey Instructions', assessment: true
 

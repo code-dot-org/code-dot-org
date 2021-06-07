@@ -10,44 +10,6 @@ import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
 
-const styles = {
-  container: {
-    marginBottom: 20,
-    backgroundColor: color.lightest_gray,
-    borderRadius: 5,
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: color.lighter_gray,
-    padding: 10,
-    height: 36
-  },
-  pill: {
-    ':hover': {
-      color: color.teal
-    },
-    border: 'none',
-    borderRadius: 50,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 20,
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
-    margin: '0 0 0 20px',
-    boxShadow: 'none',
-    outline: 'none',
-    padding: '8px 18px',
-    float: 'left',
-    cursor: 'pointer'
-  },
-  selectedPill: {
-    ':hover': {
-      color: color.white
-    },
-    backgroundColor: color.teal,
-    color: color.white,
-    border: 'none'
-  }
-};
-
 const galleryTabs = [
   {
     key: Galleries.PRIVATE,
@@ -109,6 +71,44 @@ class ProjectsGallery extends Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    marginBottom: 20,
+    backgroundColor: color.lightest_gray,
+    borderRadius: 5,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: color.lighter_gray,
+    padding: 10,
+    height: 36
+  },
+  pill: {
+    ':hover': {
+      color: color.teal
+    },
+    border: 'none',
+    borderRadius: 50,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 20,
+    backgroundColor: color.lightest_gray,
+    color: color.charcoal,
+    margin: '0 0 0 20px',
+    boxShadow: 'none',
+    outline: 'none',
+    padding: '8px 18px',
+    float: 'left',
+    cursor: 'pointer'
+  },
+  selectedPill: {
+    ':hover': {
+      color: color.white
+    },
+    backgroundColor: color.teal,
+    color: color.white,
+    border: 'none'
+  }
+};
 
 export default connect(
   state => ({

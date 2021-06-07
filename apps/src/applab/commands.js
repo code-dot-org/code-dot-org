@@ -19,9 +19,9 @@ import {
 } from '../lib/util/javascriptMode';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
+import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
-import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {getStore} from '../redux';
 import $ from 'jquery';
@@ -1668,14 +1668,6 @@ function logWebRequest(url) {
 applabCommands.startWebRequest = function(opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
-  apiValidateType(
-    opts,
-    'startWebRequest',
-    'headers',
-    opts.headers,
-    'object',
-    OPTIONAL
-  );
   logWebRequest(opts.url);
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
@@ -1694,22 +1686,7 @@ applabCommands.startWebRequest = function(opts) {
     encodeURIComponent(Applab.channelId);
   const {isExported} = getAppOptions() || {};
   req.open('GET', isExported ? opts.url : url, true);
-  const headers = opts.headers || {};
-  Object.keys(headers).forEach(key => {
-    if (AllowedWebRequestHeaders.includes(key)) {
-      req.setRequestHeader(key, headers[key]);
-    }
-  });
   req.send();
-};
-
-applabCommands.startWebRequestSync = function(opts) {
-  applabCommands.startWebRequest({
-    ...opts,
-    func: (status, contentType, responseText) => {
-      opts.func(responseText);
-    }
-  });
 };
 
 applabCommands.createRecord = function(opts) {
@@ -2291,4 +2268,5 @@ function stopLoadingSpinnerFor(elementId) {
 // Include playSound, stopSound, etc.
 Object.assign(applabCommands, audioCommands);
 Object.assign(applabCommands, timeoutCommands);
+Object.assign(applabCommands, mlCommands);
 Object.assign(applabCommands, makerCommands);

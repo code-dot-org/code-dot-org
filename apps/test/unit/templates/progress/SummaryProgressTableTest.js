@@ -1,4 +1,4 @@
-import {assert} from '../../../util/deprecatedChai';
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedSummaryProgressTable as SummaryProgressTable} from '@cdo/apps/templates/progress/SummaryProgressTable';
@@ -23,13 +23,13 @@ describe('SummaryProgressTable', () => {
     fakeLevels(3)
   ];
 
+  const groupedLesson = {lessons, levelsByLesson};
+
   it('has every other row be light and dark', () => {
     const wrapper = shallow(
       <SummaryProgressTable
-        lessons={lessons}
-        levelsByLesson={levelsByLesson}
+        groupedLesson={groupedLesson}
         lessonIsVisible={() => true}
-        lessonLockedForSection={() => false}
       />
     );
     const rows = wrapper.find('tbody').props().children;
@@ -46,12 +46,10 @@ describe('SummaryProgressTable', () => {
   it('does not show hidden rows when viewing as student', () => {
     const wrapper = shallow(
       <SummaryProgressTable
-        lessons={lessons}
-        levelsByLesson={levelsByLesson}
+        groupedLesson={groupedLesson}
         lessonIsVisible={(lesson, viewAs) =>
           lesson.id !== 2 || viewAs === ViewType.Teacher
         }
-        lessonLockedForSection={() => false}
       />
     );
 
@@ -65,12 +63,10 @@ describe('SummaryProgressTable', () => {
   it('marks hidden rows as hidden when viewing as teacher', () => {
     const wrapper = shallow(
       <SummaryProgressTable
-        lessons={lessons}
-        levelsByLesson={levelsByLesson}
+        groupedLesson={groupedLesson}
         lessonIsVisible={(lesson, viewAs) =>
           lesson.id !== 2 || viewAs !== ViewType.Student
         }
-        lessonLockedForSection={() => false}
       />
     );
 

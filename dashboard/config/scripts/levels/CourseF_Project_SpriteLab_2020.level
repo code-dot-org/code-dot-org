@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2020-02-25T15:56:42.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -64,9 +60,13 @@
     "mini_toolbox": "true",
     "preload_asset_list": null
   },
+  "user_id": 63,
+  "game_id": 64,
+  "created_at": "2020-02-25T15:56:42.000Z",
+  "level_num": "custom",
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-06-18 20:22:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:24:00 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:27:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:29:21 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:30:14 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:30:37 +0000\",\"changed\":[\"free_play\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:32:43 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:33:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:35:42 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:39:01 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"display_name\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 21:02:26 +0000\",\"changed\":[\"hide_custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-10-03 16:02:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:02:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:06:54 +0000\",\"changed\":[\"toolbox_blocks\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:07:10 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"include_shared_functions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-24 17:51:16 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-04-26 17:44:53 +0000\",\"changed\":[\"toolbox_blocks\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"start_in_animation_tab\",\"all_animations_single_frame\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 17:47:58 +0000\",\"changed\":[\"toolbox_blocks\",\"start_in_animation_tab\",\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 18:34:01 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 18:35:13 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\",\"start_animations\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-02 15:59:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-06 14:58:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-08-23 16:04:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-12-09 13:17:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-12 15:13:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 15:20:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 15:20:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-24 21:34:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-08-24 19:49:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-06-18 20:22:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:24:00 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:27:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:29:21 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:30:14 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:30:37 +0000\",\"changed\":[\"free_play\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:32:43 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:33:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:35:42 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:39:01 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"display_name\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 21:02:26 +0000\",\"changed\":[\"hide_custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-10-03 16:02:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:02:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:06:54 +0000\",\"changed\":[\"toolbox_blocks\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:07:10 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"include_shared_functions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-24 17:51:16 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-04-26 17:44:53 +0000\",\"changed\":[\"toolbox_blocks\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"start_in_animation_tab\",\"all_animations_single_frame\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 17:47:58 +0000\",\"changed\":[\"toolbox_blocks\",\"start_in_animation_tab\",\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 18:34:01 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 18:35:13 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\",\"start_animations\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-02 15:59:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-06 14:58:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-08-23 16:04:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-12-09 13:17:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-12 15:13:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 15:20:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 15:20:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-24 21:34:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-08-24 19:49:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-16 17:22:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-17 13:17:56 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -656,6 +656,13 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_countByAnimation">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"bear"</title>
+              </block>
+            </value>
+          </block>
         </category>
         <category name="Locations">
           <block type="gamelab_randomLocation"/>
@@ -928,6 +935,31 @@
           </block>
         </category>
         <category name="Logic">
+          <block type="controls_repeat_ext">
+            <value name="TIMES">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="controls_for">
+            <title name="VAR">counter</title>
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
           <block type="controls_if">
             <value name="IF0">
               <block type="logic_compare">

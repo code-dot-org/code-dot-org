@@ -1,4 +1,4 @@
-lesson 'Puzzles', display_name: 'Puzzles'
+lesson 'Puzzles', display_name: 'Puzzles', has_lesson_plan: false
 level 'Code Studio Puzzle Challenge 5 - Bee'
 level 'Code Studio Puzzle Challenge 6 - Bee'
 level 'Code Studio Puzzle Challenge 7 - Bee'

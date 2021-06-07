@@ -1,7 +1,6 @@
 hidden false
 hideable_lessons true
 lesson_extras_available true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
@@ -14,16 +13,16 @@ curriculum_umbrella 'CSF'
 tts true
 is_course true
 
-lesson 'Debugging: Unspotted Bugs', display_name: 'Unspotted Bugs'
+lesson 'Debugging: Unspotted Bugs', display_name: 'Unspotted Bugs', has_lesson_plan: true
 level 'courseB_video_Unspotted_2018'
 
-lesson 'Persistence & Frustration: Stevie and the Big Project', display_name: 'Stevie and the Big Project'
+lesson 'Persistence & Frustration: Stevie and the Big Project', display_name: 'Stevie and the Big Project', has_lesson_plan: true
 level 'courseA_video_Stevie_2018'
 
-lesson 'Move It, Move It', display_name: 'Move It, Move It'
+lesson 'Move It, Move It', display_name: 'Move It, Move It', has_lesson_plan: true, unplugged: true
 level 'MoveItMoveIt_2018'
 
-lesson 'Sequencing with Scrat', display_name: 'Sequencing with Scrat'
+lesson 'Sequencing with Scrat', display_name: 'Sequencing with Scrat', has_lesson_plan: true
 level 'courseAB_video_NewIntro_2018'
 level 'courseB_Scrat_ramp1_2018'
 level 'courseB_Scrat_ramp2_2018'
@@ -32,13 +31,13 @@ level 'courseB_Scrat_ramp3b_2018'
 level 'courseB_Scrat_ramp4a_2018'
 level 'courseB_Scrat_ramp5a_2018'
 
-lesson 'Your Digital Footprint', display_name: 'Your Digital Footprint'
+lesson 'Your Digital Footprint', display_name: 'Your Digital Footprint', has_lesson_plan: true, unplugged: true
 level 'DigitalFootprint_2018'
 
-lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends Jr.'
+lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends Jr.', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_MRF_2018'
 
-lesson 'Programming in Ice Age', display_name: 'Programming with Scrat'
+lesson 'Programming in Ice Age', display_name: 'Programming with Scrat', has_lesson_plan: true
 level 'elementary_video_pairProgramming_2018'
 level 'courseB_maze_seq1_2018'
 level 'courseB_maze_seq4_2018'
@@ -54,10 +53,10 @@ level 'courseB_maze_seq12_2018'
 bonus 'courseB_maze_seq_challenge1_2018'
 bonus 'courseB_maze_seq_challenge2_2018'
 
-lesson 'Copyright and Creativity', display_name: 'It\'s Great to Create and Play Fair'
+lesson 'Copyright and Creativity', display_name: 'It\'s Great to Create and Play Fair', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_CnC_2018'
 
-lesson 'Programming with Rey and BB-8', display_name: 'Programming with Rey and BB-8'
+lesson 'Programming with Rey and BB-8', display_name: 'Programming with Rey and BB-8', has_lesson_plan: true
 level 'bb8_skinOverview_K-1_video'
 level 'courseB_starWars_prog1_2018'
 level 'courseB_starWars_prog2_2018'
@@ -71,10 +70,10 @@ level 'courseB_starWars_prog9_2018'
 level 'courseB_starWars_prog10_2018'
 level 'courseB_starWars_prog11_2018'
 
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'My Loopy Robotic Friends Jr.'
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'My Loopy Robotic Friends Jr.', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_loopyMRF_2018'
 
-lesson 'Loops in Ice Age', display_name: 'Loops with Scrat'
+lesson 'Loops in Ice Age', display_name: 'Loops with Scrat', has_lesson_plan: true
 level 'courseB_iceage_loops1'
 level 'courseB_iceage_loops2'
 level 'courseB_iceage_loops_video'
@@ -88,7 +87,7 @@ level 'courseB_iceage_loops10', challenge: true
 level 'courseB_iceage_loops11'
 level 'courseB_iceage_loops12'
 
-lesson 'Loops in Collector', display_name: 'Loops with Laurel'
+lesson 'Loops in Collector', display_name: 'Loops with Laurel', has_lesson_plan: true
 level 'courseAB_video_collector_2018'
 level 'courseB_collector_loops1_2018'
 level 'courseB_collector_loops2_2018'
@@ -105,7 +104,7 @@ level 'courseB_collector_loops11_2018'
 bonus 'courseB_collector_loops_challenge1_2018'
 bonus 'courseB_collector_loops_challenge2a_2018'
 
-lesson 'Loops in Artist', display_name: 'Drawing Gardens with Loops'
+lesson 'Loops in Artist', display_name: 'Drawing Gardens with Loops', has_lesson_plan: true
 level 'courseB_video_ArtistIntro_2018'
 level 'courseB_artist_loops1_2018'
 level 'courseB_video_artistLoops_2018'
@@ -121,10 +120,10 @@ level 'courseB_artist_loops10_2018'
 bonus 'courseB_artist_loops_challenge1_2018'
 bonus 'courseB_artist_loops_challenge2_2018'
 
-lesson 'Events: The Big Event', display_name: 'The Big Event Jr.'
+lesson 'Events: The Big Event', display_name: 'The Big Event Jr.', has_lesson_plan: true, unplugged: true
 level 'BigEvent_2018'
 
-lesson 'Events in Play Lab', display_name: 'A Royal Battle with Events'
+lesson 'Events in Play Lab', display_name: 'A Royal Battle with Events', has_lesson_plan: true
 level 'courseA_video_events_2018'
 level 'courseB_playLab_events1_2018'
 level 'courseB_playlab_events2_2018'
@@ -137,7 +136,7 @@ level 'courseB_playlab_eventsFP_2018'
 bonus 'courseB_playlab_events_challenge1_2018'
 bonus 'courseB_playlab_events_challenge2_2018'
 
-lesson 'Spelling Bee', display_name: 'Spelling Bee'
+lesson 'Spelling Bee', display_name: 'Spelling Bee', has_lesson_plan: true
 skin 'letters'
 video_key_for_next_level 'C1_spelling_bee_intro'
 level_concept_difficulty '{"sequencing":2}'

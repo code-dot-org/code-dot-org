@@ -1,3 +1,5 @@
+%link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
+
 -# This variable will get any data we need to pass along to scripts/show.js
 - script_data = @script.summarize(true, current_user)
 - additional_script_data = {course_name: @script.unit_group&.name,
@@ -17,11 +19,11 @@
 - content_for(:head) do
   %script{ src: webpack_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
 
-
 - if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 
 = render partial: 'shared/check_admin'
+= render partial: 'shared/emulate_print_media'
 
 - if @current_user.try(:script_hidden?, @script)
   = render partial: 'hidden_script'
@@ -71,33 +73,9 @@
         - else
           - lb_path = "https://levelbuilder-studio.code.org#{script_path(@script)}"
           %li= link_to "View on levelbuilder", lb_path
+        %li= link_to "All Instructions", instructions_script_path(@script)
       - unless @script.unit_groups.empty?
         = "This script is in #{@script.unit_groups.length} course#{'s' unless @script.unit_groups.length == 1}:"
         %ul
           - @script.unit_groups.each do |course|
             %li= link_to course_path(course)
-      -# use a heuristic to infer whether lesson plans are present for all lessons
-      - if @script.lessons.first&.lesson_activities.present?
-        Lessons:
-        - @script.lessons.map do |lesson|
-          %li= link_to lesson.localized_title, lesson_path(id: lesson.id)
-      - levels = Script.get_from_cache(@script.name).lessons.map{ |stage| stage.script_levels.map{ |sl| sl.level }}.flatten
-      .row
-        .span1
-          = "Index"
-        .span3
-          = "Level name"
-        .span3
-          = "Template level"
-        .span3
-          = "Contained levels"
-      - levels.each_with_index do |level, index|
-        .row
-          .span1
-            = index + 1
-          .span3
-            = level.name
-          .span3
-            = level.properties['project_template_level_name']
-          .span3
-            = level.properties['contained_level_names'].try {|names| names.join(", ")}

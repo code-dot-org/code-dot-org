@@ -30,6 +30,24 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
   end
 
+  def teacher_enrollment_receipt__csd_summer_workshop_virtual
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_receipt__csp_summer_workshop_virtual
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
   def teacher_enrollment_receipt__csp_1
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
   end
@@ -96,6 +114,86 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   def teacher_enrollment_reminder__csp_summer_workshop_3_day
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
       options: {days_before: 3}
+  end
+
+  def teacher_enrollment_reminder__csf_intro_10_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      options: {days_before: 10},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csf_intro_3_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      options: {days_before: 3},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csf_deepdive_10_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201,
+      options: {days_before: 10},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csf_deepdive_3_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201,
+      options: {days_before: 3},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csd_summer_workshop_10_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
+      options: {days_before: 10},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csd_summer_workshop_3_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
+      options: {days_before: 3},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csp_summer_workshop_10_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      options: {days_before: 10},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csp_summer_workshop_3_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      options: {days_before: 3},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
   end
 
   def teacher_enrollment_reminder__csp_1_10_day

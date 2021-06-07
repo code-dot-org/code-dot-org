@@ -417,7 +417,10 @@ levelbuilder_mode:
 default_hoc_mode:   post-hoc # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''       # overridden by 'hoc_launch' DCDO param, except in :test
 
-default_teacher_applications_active: false # overridden by 'teacher_applications_active' DCDO param, except in :test
+# teacher_application_mode values: 'open', 'closing-soon', 'closed'
+default_teacher_application_mode: 'closed' # overridden by 'teacher_application_mode' DCDO param, except in :test
+
+default_courses_show_csa: true # overridden by 'courses_show_csa' DCDO param, except in :test
 
 localize_apps: false
 
@@ -455,6 +458,7 @@ image_optim: <%=chef_managed && !ci_test%>
 applications_2020_2021_gsheet_key: !Secret
 enrollments_summer_2020_gsheet_key:
 applications_2021_2022_gsheet_key: !Secret
+csf_workshop_attendance_gsheet_key: !Secret
 
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.
@@ -539,3 +543,6 @@ imm_reader_tenant_id:     '01521c57-6696-4ac9-b8ba-d2f2955893bd'
 imm_reader_client_id:
 imm_reader_client_secret: !Secret
 imm_reader_subdomain:     cdo-immersive-reader-<%=env%>
+
+javabuilder_private_key: !Secret
+javabuilder_key_password: !Secret

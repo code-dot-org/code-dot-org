@@ -1,0 +1,9 @@
+name 'ml-import ai-import video'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+## [Click Here](https://www.loom.com/share/8cdac6670881438688862190bfc75b68) to watch the video showing how to import a model into App Lab
+
+(as of 2/17)
+MARKDOWN

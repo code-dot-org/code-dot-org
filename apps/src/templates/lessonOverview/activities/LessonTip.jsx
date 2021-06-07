@@ -4,28 +4,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-
-const styles = {
-  tab: {
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-    color: color.white,
-    padding: '5px 10px',
-    width: 200
-  },
-  box: {
-    borderStyle: 'solid',
-    borderWidth: 1,
-    padding: 10
-  },
-  icon: {
-    marginLeft: 7,
-    marginRight: 5
-  },
-  tip: {
-    marginBottom: 5
-  }
-};
+import Radium from 'radium';
 
 export const tipTypes = {
   teachingTip: {
@@ -54,36 +33,90 @@ export const tipTypes = {
   }
 };
 
-export default class LessonTip extends Component {
+class LessonTip extends Component {
   static propTypes = {
     tip: PropTypes.object
   };
 
+  state = {
+    expanded: true
+  };
+
+  getTabStyle = () => {
+    const {expanded} = this.state;
+    const tipColor = tipTypes[this.props.tip.type].color;
+    const expandedColors = {color: color.white, backgroundColor: tipColor};
+    const collapsedColors = {color: tipColor, backgroundColor: color.white};
+    const defaultStyle = expanded ? expandedColors : collapsedColors;
+    const hoverStyle = expanded ? collapsedColors : expandedColors;
+    return {
+      ...styles.tab,
+      ...defaultStyle,
+      borderColor: tipColor,
+      ':hover': hoverStyle
+    };
+  };
+
   render() {
+    const {expanded} = this.state;
+    const caretIcon = expanded ? 'caret-up' : 'caret-down';
     return (
       <div style={styles.tip}>
         <div
-          style={{
-            ...styles.tab,
-            ...{backgroundColor: tipTypes[this.props.tip.type].color}
-          }}
+          style={this.getTabStyle()}
+          onClick={() => this.setState({expanded: !expanded})}
+          className={'unit-test-tip-tab'}
         >
           <FontAwesome
             icon={tipTypes[this.props.tip.type].icon}
             style={styles.icon}
           />
           <span>{tipTypes[this.props.tip.type].displayName}</span>
+          <FontAwesome icon={caretIcon} style={styles.caret} />
         </div>
-        <div
-          style={{
-            ...styles.box,
-            ...{borderColor: tipTypes[this.props.tip.type].color},
-            ...{backgroundColor: tipTypes[this.props.tip.type].backgroundColor}
-          }}
-        >
-          <SafeMarkdown markdown={this.props.tip.markdown} />
-        </div>
+        {expanded && (
+          <div
+            style={{
+              ...styles.box,
+              ...{borderColor: tipTypes[this.props.tip.type].color},
+              ...{
+                backgroundColor: tipTypes[this.props.tip.type].backgroundColor
+              }
+            }}
+          >
+            <SafeMarkdown markdown={this.props.tip.markdown} />
+          </div>
+        )}
       </div>
     );
   }
 }
+
+const styles = {
+  tab: {
+    // borders everywhere except the bottom
+    borderStyle: 'solid solid none solid',
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    borderWidth: 1,
+    padding: '5px 10px',
+    width: 200
+  },
+  box: {
+    borderStyle: 'solid',
+    borderWidth: 1,
+    padding: 10
+  },
+  icon: {
+    marginLeft: 7,
+    marginRight: 5
+  },
+  caret: {
+    float: 'right'
+  },
+  tip: {
+    marginBottom: 5
+  }
+};
+
+export default Radium(LessonTip);

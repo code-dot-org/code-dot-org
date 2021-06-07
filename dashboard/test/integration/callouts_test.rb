@@ -13,7 +13,7 @@ class CalloutsTest < ActionDispatch::IntegrationTest
     @level.save!
     @script_level = create(:script_level, levels: [@level], lesson: @lesson, script: @script)
     @level_path = "/levels/#{@level.id}"
-    @script_level_path = "/s/#{@script.name}/stage/1/puzzle/1"
+    @script_level_path = "/s/#{@script.name}/lessons/1/levels/1"
     Script.script_cache.delete @script.name
     Script.script_cache.delete @script.id.to_s
 

@@ -29,11 +29,18 @@ experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
   'teacher-dashboard-section-buttons-alternate-text';
 experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
 experiments.I18N_TRACKING = 'i18n-tracking';
-experiments.SPRITELAB_INPUT = 'spritelabInput';
 experiments.TIME_SPENT = 'time-spent';
 experiments.APPLAB_ML = 'applab-ml';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
-experiments.SPRITELAB_PAUSE = 'spritelabPause';
+experiments.SPECIAL_TOPIC = 'special-topic';
+experiments.POEM_BOT = 'poemBot';
+
+/**
+ * This was a gamified version of the finish dialog, built in 2018,
+ * but never fully shipped.
+ * See github.com/code-dot-org/code-dot-org/pull/19557
+ */
+experiments.BUBBLE_DIALOG = 'bubbleDialog';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

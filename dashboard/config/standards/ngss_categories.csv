@@ -1,0 +1,17 @@
+framework,parent,category,type,description
+ngss,,ESS,Discipline,Earth and Space Science
+ngss,,ETS,Discipline,Engineering in the Sciences
+ngss,,LS,Discipline,Life Science
+ngss,,PS,Discipline,Physical Science
+ngss,ESS,ESS1,Sub-discipline,Earth's Place in the Universe
+ngss,ESS,ESS2,Sub-discipline,Earth's Systems
+ngss,ESS,ESS3,Sub-discipline,Earth and Human Activity
+ngss,ETS,ETS1,Sub-discipline,Engineering Design
+ngss,LS,LS1,Sub-discipline,From Molecules to Organisms: Structures and Processes
+ngss,LS,LS2,Sub-discipline,"Ecosystems: Interactions, Energy, and Dynamics"
+ngss,LS,LS3,Sub-discipline,Heredity: Inheritance and Variation of Traits
+ngss,LS,LS4,Sub-discipline,Biological Evolution: Unity and Diversity
+ngss,PS,PS1,Sub-discipline,Matter and its Interactions
+ngss,PS,PS2,Sub-discipline,Motion and Stability:  Forces and Interactions
+ngss,PS,PS3,Sub-discipline,Energy
+ngss,PS,PS4,Sub-discipline,Waves and their Applications in Technologies in Information Transfer

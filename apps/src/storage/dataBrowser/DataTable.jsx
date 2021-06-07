@@ -21,29 +21,6 @@ import {WarningType} from '../constants';
 const MIN_TABLE_WIDTH = 600;
 const MAX_ROWS_PER_PAGE = 500;
 
-const styles = {
-  addColumnHeader: [
-    dataStyles.headerCell,
-    {
-      width: 19
-    }
-  ],
-  table: {
-    minWidth: MIN_TABLE_WIDTH
-  },
-  plusIcon: {
-    alignItems: 'center',
-    borderRadius: 2,
-    backgroundColor: 'white',
-    color: color.teal,
-    cursor: 'pointer',
-    display: 'inline-flex',
-    height: 18,
-    justifyContent: 'center',
-    width: 18
-  }
-};
-
 const INITIAL_STATE = {
   editingColumn: null,
   pendingAdd: false,
@@ -302,6 +279,29 @@ class DataTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  addColumnHeader: [
+    dataStyles.headerCell,
+    {
+      width: 19
+    }
+  ],
+  table: {
+    minWidth: MIN_TABLE_WIDTH
+  },
+  plusIcon: {
+    alignItems: 'center',
+    borderRadius: 2,
+    backgroundColor: 'white',
+    color: color.teal,
+    cursor: 'pointer',
+    display: 'inline-flex',
+    height: 18,
+    justifyContent: 'center',
+    width: 18
+  }
+};
 
 export default connect(
   state => ({

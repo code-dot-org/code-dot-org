@@ -1,6 +1,6 @@
 login_required true
 
-lesson 'Room Escape', display_name: 'Room Escape'
+lesson 'Room Escape', display_name: 'Room Escape', has_lesson_plan: false
 level 'Escape Room Example', named: true
 level 'Overview: Design Mode', named: true
 level 'Overview: Images', named: true

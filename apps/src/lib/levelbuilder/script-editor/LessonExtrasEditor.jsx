@@ -2,12 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
-const styles = {
-  checkbox: {
-    margin: '0 0 0 7px'
-  }
-};
-
 /**
  * Component for editing lesson extras settings on scripts
  */
@@ -116,3 +110,9 @@ export default class LessonExtrasEditor extends React.Component {
     );
   }
 }
+
+const styles = {
+  checkbox: {
+    margin: '0 0 0 7px'
+  }
+};

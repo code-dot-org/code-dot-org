@@ -21,6 +21,7 @@ require_relative 'hoc_sync_utils'
 require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_out(upload_manifests=false)
+  puts "Sync out starting"
   rename_from_crowdin_name_to_locale
   restore_redacted_files
   distribute_translations(upload_manifests)
@@ -32,6 +33,10 @@ def sync_out(upload_manifests=false)
   I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
   end
+  puts "Sync out completed successfully"
+rescue => e
+  puts "Sync out failed from the error: #{e}"
+  raise e
 end
 
 # Return true iff the specified file in the specified locale had changes
@@ -85,7 +90,9 @@ def rename_from_crowdin_name_to_locale
   # Now, any remaining directories named after the language name (rather than
   # the four-letter language code) represent languages downloaded from crowdin
   # that aren't in our system. Remove them.
-  FileUtils.rm_r Dir.glob("i18n/locales/[A-Z]*")
+  # A regex is used in the .select rather than Dir.glob because Dir.glob will ignore
+  # character case on file systems which are case insensitive by default, such as OSX.
+  FileUtils.rm_r Dir.glob("i18n/locales/*").select {|path| path =~ /i18n\/locales\/[A-Z].*/}
 end
 
 def find_malformed_links_images(locale, file_path)
@@ -138,11 +145,20 @@ def restore_redacted_files
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
         end
-      elsif original_path == 'i18n/locales/original/dashboard/blocks.yml'
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
       else
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path)
+        plugins = []
+        if original_path == 'i18n/locales/original/dashboard/blocks.yml'
+          plugins << 'blockfield'
+        elsif [
+          'i18n/locales/original/dashboard/scripts.yml',
+          'i18n/locales/original/dashboard/courses.yml'
+        ].include? original_path
+          plugins << 'resourceLink'
+          plugins << 'vocabularyDefinition'
+        end
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins, 'txt')
       end
+
       find_malformed_links_images(locale, translated_path)
     end
     I18nScriptUtils.upload_malformed_restorations(locale)
@@ -211,6 +227,14 @@ end
 
 def serialize_i18n_strings(level, strings)
   result = Hash.new
+
+  if strings.key? "sublevels"
+    sublevel_content = strings.delete("sublevels")
+    sublevel_content.each do |sublevel_name, sublevel_strings|
+      sublevel = Level.find_by_name sublevel_name
+      result.deep_merge! serialize_i18n_strings(sublevel, sublevel_strings)
+    end
+  end
 
   if strings.key? "contained levels"
     contained_strings = strings.delete("contained levels")
@@ -414,8 +438,18 @@ def restore_markdown_headers
       # that extension unless we check both with and without.
       source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
     end
-    source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
-    header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+    begin
+      source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
+    rescue Exception => err
+      puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"
+      raise err
+    end
+    begin
+      header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+    rescue Exception => err
+      puts "Error parsing yaml header path=#{path}"
+      raise err
+    end
     I18nScriptUtils.sanitize_header!(header)
     restored_header = source_header.merge(header)
     I18nScriptUtils.write_markdown_with_header(content, restored_header, path)

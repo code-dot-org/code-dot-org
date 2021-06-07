@@ -1,7 +1,7 @@
-lesson 'Real Life Algorithms: Dice Race', display_name: 'Real Life Algorithms: Dice Race'
+lesson 'Real Life Algorithms: Dice Race', display_name: 'Real Life Algorithms: Dice Race', has_lesson_plan: false, unplugged: true
 level 'DiceRace'
 
-lesson 'Introduction', display_name: 'Introduction'
+lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: false
 level 'courseE_video_ramp1'
 level 'courseE_maze_ramp1'
 level 'courseE_maze_ramp2'
@@ -22,7 +22,7 @@ level 'courseE_farmer_ramp11'
 level 'courseE_maze_ramp13'
 level 'courseE_external_ramp14'
 
-lesson 'Conditionals', display_name: 'Conditionals'
+lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: false
 level 'courseD_video_whileIntro'
 level 'courseE_farmer_ramp11a'
 level 'courseE_farmer_ramp12'

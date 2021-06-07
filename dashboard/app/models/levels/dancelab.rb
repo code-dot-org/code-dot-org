@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -58,7 +58,7 @@ class Dancelab < GamelabJr
 
   # Used by levelbuilders to set a default song on a Dance Party level.
   def self.hoc_songs
-    manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: 'hoc_song_meta/songManifest2020_v2.json')[:body].read
+    manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: 'hoc_song_meta/songManifest2021.json')[:body].read
     manifest = JSON.parse(manifest_json)
     manifest['songs'].map do |song|
       name = song['text']

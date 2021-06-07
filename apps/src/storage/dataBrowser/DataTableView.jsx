@@ -16,41 +16,6 @@ import {connect} from 'react-redux';
 
 const MIN_TABLE_WIDTH = 600;
 
-const styles = {
-  addColumnHeader: [
-    dataStyles.headerCell,
-    {
-      width: 19
-    }
-  ],
-  container: {
-    flexDirection: 'column',
-    height: '99%',
-    minWidth: MIN_TABLE_WIDTH,
-    maxWidth: '99%',
-    paddingLeft: 8
-  },
-  table: {
-    minWidth: MIN_TABLE_WIDTH
-  },
-  pagination: {
-    float: 'right',
-    display: 'inline',
-    marginTop: 10
-  },
-  plusIcon: {
-    alignItems: 'center',
-    borderRadius: 2,
-    backgroundColor: 'white',
-    color: color.teal,
-    cursor: 'pointer',
-    display: 'inline-flex',
-    height: 18,
-    justifyContent: 'center',
-    width: 18
-  }
-};
-
 const INITIAL_STATE = {
   showDebugView: false
 };
@@ -178,6 +143,41 @@ class DataTableView extends React.Component {
     );
   }
 }
+
+const styles = {
+  addColumnHeader: [
+    dataStyles.headerCell,
+    {
+      width: 19
+    }
+  ],
+  container: {
+    flexDirection: 'column',
+    height: '99%',
+    minWidth: MIN_TABLE_WIDTH,
+    maxWidth: '99%',
+    paddingLeft: 8
+  },
+  table: {
+    minWidth: MIN_TABLE_WIDTH
+  },
+  pagination: {
+    float: 'right',
+    display: 'inline',
+    marginTop: 10
+  },
+  plusIcon: {
+    alignItems: 'center',
+    borderRadius: 2,
+    backgroundColor: 'white',
+    color: color.teal,
+    cursor: 'pointer',
+    display: 'inline-flex',
+    height: 18,
+    justifyContent: 'center',
+    width: 18
+  }
+};
 
 export const UnconnectedDataTableView = DataTableView;
 export default connect(

@@ -12,40 +12,6 @@ import {
 import ReactDOM from 'react-dom';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  unitHeader: {
-    fontSize: 18,
-    color: 'white',
-    background: color.cyan,
-    borderTopLeftRadius: borderRadius,
-    borderTopRightRadius: borderRadius,
-    padding: 10
-  },
-  unitBody: {
-    background: color.lightest_cyan,
-    borderBottomLeftRadius: borderRadius,
-    borderBottomRightRadius: borderRadius,
-    padding: 10,
-    marginBottom: 20
-  },
-  addLesson: {
-    fontSize: 14,
-    color: '#5b6770',
-    background: 'white',
-    border: '1px solid #ccc',
-    boxShadow: 'none',
-    margin: '0 10px 10px 10px'
-  },
-  addGroupWithWarning: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  displayNameWarning: {
-    marginLeft: 5,
-    marginTop: 5
-  }
-};
-
 class UnitCard extends Component {
   static propTypes = {
     // from redux
@@ -187,6 +153,40 @@ class UnitCard extends Component {
     );
   }
 }
+
+const styles = {
+  unitHeader: {
+    fontSize: 18,
+    color: 'white',
+    background: color.cyan,
+    borderTopLeftRadius: borderRadius,
+    borderTopRightRadius: borderRadius,
+    padding: 10
+  },
+  unitBody: {
+    background: color.lightest_cyan,
+    borderBottomLeftRadius: borderRadius,
+    borderBottomRightRadius: borderRadius,
+    padding: 10,
+    marginBottom: 20
+  },
+  addLesson: {
+    fontSize: 14,
+    color: '#5b6770',
+    background: 'white',
+    border: '1px solid #ccc',
+    boxShadow: 'none',
+    margin: '0 10px 10px 10px'
+  },
+  addGroupWithWarning: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  displayNameWarning: {
+    marginLeft: 5,
+    marginTop: 5
+  }
+};
 
 export const UnconnectedUnitCard = UnitCard;
 

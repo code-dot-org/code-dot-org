@@ -19,6 +19,7 @@ en:
       Games/Score: Games/Score
       Groups: Groups
       Input: Input
+      Location: Location
       Locations: Locations
       Logic: Logic
       Loops: Loops
@@ -29,4 +30,5 @@ en:
       Text: Text
       Variables: Variables
       'Variables ': 'Variables '
+      'Variables  ': 'Variables  '
       World: World

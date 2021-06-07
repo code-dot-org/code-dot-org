@@ -7,7 +7,7 @@
       0.74
     ],
     "func": "addTarget",
-    "blockText": "{SPRITE} gets target {TARGET}",
+    "blockText": "{SPRITE} gets target {TARGET} to {OPT}",
     "args": [
       {
         "name": "SPRITE",
@@ -16,6 +16,19 @@
       {
         "name": "TARGET",
         "customInput": "costumePicker"
+      },
+      {
+        "name": "OPT",
+        "options": [
+          [
+            "follow",
+            "\"follow\""
+          ],
+          [
+            "avoid",
+            "\"avoid\""
+          ]
+        ]
       }
     ]
   }

@@ -3,12 +3,6 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 
-const styles = {
-  hidden: {
-    display: 'none'
-  }
-};
-
 class ContainedLevelAnswer extends Component {
   // Note: This component modifies portions of the DOM outside of itself upon
   // mounting. This is generally considered a bad practice, and should not be
@@ -33,5 +27,11 @@ class ContainedLevelAnswer extends Component {
     );
   }
 }
+
+const styles = {
+  hidden: {
+    display: 'none'
+  }
+};
 
 export default ContainedLevelAnswer;

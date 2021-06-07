@@ -1,7 +1,6 @@
 hidden false
 hideable_lessons true
 lesson_extras_available true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-1718/courseb/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
@@ -9,21 +8,21 @@ new_name 'courseb-2017'
 family_name 'courseb'
 version_year '2017'
 is_stable true
-supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ru-RU", "sk-SK", "tr-TR", "uz-UZ", "zh-CN", "zh-TW"]
+supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "ta-IN", "th-TH", "tr-TR", "ur-PK", "uz-UZ", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
 tts true
 is_course true
 
-lesson 'Debugging: Unspotted Bugs', display_name: 'Debugging: Unspotted Bugs'
+lesson 'Debugging: Unspotted Bugs', display_name: 'Debugging: Unspotted Bugs', has_lesson_plan: true
 level 'courseB_video_Unspotted'
 
-lesson 'Persistence & Frustration: Stevie and the Marbles', display_name: 'Persistence: Stevie and the Big Project'
+lesson 'Persistence & Frustration: Stevie and the Marbles', display_name: 'Persistence: Stevie and the Big Project', has_lesson_plan: true
 level 'courseA_video_Stevie'
 
-lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Real-life Algorithms: Plant a Seed'
+lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Real-life Algorithms: Plant a Seed', has_lesson_plan: true, unplugged: true
 level 'PlantASeed'
 
-lesson 'Learn to Drag and Drop', display_name: 'Sequencing with Drag and Drop'
+lesson 'Learn to Drag and Drop', display_name: 'Sequencing with Drag and Drop', has_lesson_plan: true
 level 'elementary_video_pairProgramming'
 skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
@@ -62,13 +61,13 @@ skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:13'
 
-lesson 'Your Digital Footprint', display_name: 'Digital Citizenship: My Digital Footprint'
+lesson 'Your Digital Footprint', display_name: 'Digital Citizenship: My Digital Footprint', has_lesson_plan: true, unplugged: true
 level 'DigitalFootprint'
 
-lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends'
+lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_MRF'
 
-lesson 'Programming in Maze', display_name: 'Programming in Maze'
+lesson 'Programming in Maze', display_name: 'Programming in Maze', has_lesson_plan: true
 level 'courseAB_video_NewIntro'
 level 'courseB_maze_seq1'
 level 'courseB_video_debuggingOrg'
@@ -86,7 +85,7 @@ level 'courseB_maze_seq12'
 bonus 'courseB_maze_seq_challenge1'
 bonus 'courseB_maze_seq_challenge2'
 
-lesson 'Programming with Rey and BB-8', display_name: 'Programming with Rey and BB-8'
+lesson 'Programming with Rey and BB-8', display_name: 'Programming with Rey and BB-8', has_lesson_plan: true
 level 'courseB_starWars_prog1'
 level 'courseB_starWars_prog2'
 level 'courseB_starWars_prog3'
@@ -99,10 +98,10 @@ level 'courseB_starWars_prog9'
 level 'courseB_starWars_prog10'
 level 'courseB_starWars_prog11'
 
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends'
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_loopyMRF'
 
-lesson 'Loops in Collector', display_name: 'Loops in Collector'
+lesson 'Loops in Collector', display_name: 'Loops in Collector', has_lesson_plan: true
 level 'courseAB_video_collector'
 level 'courseB_collector_loops1'
 level 'courseB_collector_loops2'
@@ -119,7 +118,7 @@ level 'courseB_collector_loops11'
 bonus 'courseB_collector_loops_challenge1'
 bonus 'courseB_collector_loops_challenge2a'
 
-lesson 'Loops in Artist', display_name: 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: true
 level 'courseB_video_ArtistIntro'
 level 'courseB_artist_loops1'
 level 'courseB_video_artistLoops'
@@ -135,10 +134,10 @@ level 'courseB_artist_loops10'
 bonus 'courseB_artist_loops_challenge1'
 bonus 'courseB_artist_loops_challenge2'
 
-lesson 'Events: The Big Event', display_name: 'Events: The Big Event'
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent'
 
-lesson 'Events in Play Lab', display_name: 'Events in Play Lab'
+lesson 'Events in Play Lab', display_name: 'Events in Play Lab', has_lesson_plan: true
 level 'courseA_video_events'
 level 'courseB_playLab_events1'
 level 'courseB_playlab_events2'

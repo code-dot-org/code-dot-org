@@ -3,6 +3,7 @@ require 'rack/csrf'
 require_relative '../shared/middleware/helpers/storage_id'
 require 'cdo/asset_helper'
 require 'cdo/cookie_helpers'
+require 'cdo/language_dir'
 
 def avatar_image(name, width=320, square_photo=false)
   basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
@@ -99,15 +100,6 @@ end
 
 def csrf_tag
   Rack::Csrf.csrf_tag(env)
-end
-
-def language_dir_class(locale=request.locale)
-  # This list of RTL languages matches those in dashboard/config/locales.yml
-  if ["ar-SA", "fa-IR", "he-IL", "ur-PK"].include? locale
-    "rtl"
-  else
-    "ltr"
-  end
 end
 
 def curriculum_url(resource)

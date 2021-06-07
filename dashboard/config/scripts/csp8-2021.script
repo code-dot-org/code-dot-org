@@ -1,17 +1,1 @@
-login_required true
-hideable_lessons true
-student_detail_progress_view true
-has_verified_resources true
-version_year '2021'
-project_sharing true
-curriculum_umbrella 'CSP'
 is_migrated true
-
-lesson 'Create PT - Review the Task', display_name: 'Create PT   Review the Task'
-
-lesson 'Create PT - Make a Plan', display_name: 'Create PT   Make a Plan'
-
-lesson 'Create PT - Complete the Task', display_name: 'Create PT - Complete the Task (12 hrs)'
-level 'csp-pt-tech-setup-and-tools_2021', progression: 'Tech Setup and Tools for Create PT'
-level 'Create PT Workspace 2020_2021', progression: 'Create PT Coding Workspace'
-

@@ -15,8 +15,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
-  {label: i18n.lessonNumber(), key: 'stageNum'},
-  {label: i18n.lessonName(), key: 'stageName'},
+  {label: i18n.lessonNumber(), key: 'lessonNum'},
+  {label: i18n.lessonName(), key: 'lessonName'},
   {label: i18n.levelHeader(), key: 'levelNum'},
   {label: i18n.keyConcept(), key: 'keyConcept'},
   {label: i18n.performanceLevel(), key: 'performance'},
@@ -27,19 +27,12 @@ const CSV_FEEDBACK_RUBRIC_HEADERS = [
 
 const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
-  {label: i18n.lessonNumber(), key: 'stageNum'},
-  {label: i18n.lessonName(), key: 'stageName'},
+  {label: i18n.lessonNumber(), key: 'lessonNum'},
+  {label: i18n.lessonName(), key: 'lessonName'},
   {label: i18n.levelHeader(), key: 'levelNum'},
   {label: i18n.feedback(), key: 'comment'},
   {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'}
 ];
-
-const styles = {
-  icon: {
-    color: color.purple,
-    paddingRight: 5
-  }
-};
 
 /*
  * Part of the Assessment Tab of Teacher Dashboard.
@@ -102,6 +95,13 @@ class FeedbackDownload extends Component {
     );
   }
 }
+
+const styles = {
+  icon: {
+    color: color.purple,
+    paddingRight: 5
+  }
+};
 
 export const UnconnectedFeedbackDownload = FeedbackDownload;
 

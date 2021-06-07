@@ -40,6 +40,10 @@ class Script < ApplicationRecord
   has_many :script_levels, through: :lessons
   has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
+  has_and_belongs_to_many :resources, join_table: :scripts_resources
+  has_many :scripts_resources
+  has_many :scripts_student_resources, dependent: :destroy
+  has_many :student_resources, through: :scripts_student_resources, source: :resource
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -84,11 +88,16 @@ class Script < ApplicationRecord
             {lesson_activities: :activity_sections},
             :resources,
             :vocabularies,
-            :objectives
+            :programming_expressions,
+            :objectives,
+            :standards,
+            :opportunity_standards
           ]
         },
         :script_levels,
-        :levels
+        :levels,
+        :resources,
+        :student_resources
       ]
     )
   end
@@ -112,7 +121,15 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
-  validate :set_is_migrated_only_for_migrated_scripts
+  def prevent_duplicate_levels
+    reload
+
+    unless levels.count == levels.uniq.count
+      levels_by_key = levels.map(&:key).group_by {|key| key}
+      duplicate_keys = levels_by_key.select {|_key, values| values.count > 1}.keys
+      raise "duplicate levels detected: #{duplicate_keys.to_json}"
+    end
+  end
 
   include SerializedProperties
 
@@ -120,10 +137,8 @@ class Script < ApplicationRecord
 
   SCRIPT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
-  def set_is_migrated_only_for_migrated_scripts
-    if !!is_migrated && !hidden
-      errors.add(:is_migrated, "Can't be set on a course that is visible")
-    end
+  def prevent_course_version_change?
+    lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
   end
 
   def self.script_directory
@@ -163,13 +178,20 @@ class Script < ApplicationRecord
     end
   end
 
-  # is_course - true if this Script/Unit is intended to be the root of a CourseOffering version. Used during seeding
-  #   to create the appropriate CourseVersion and CourseOffering objects. For example, this should be true for
-  #   CourseA-CourseF .script files.
+  # is_course - true if this Script/Unit is intended to be the root of a
+  #   CourseOffering version.  Used during seeding to create the appropriate
+  #   CourseVersion and CourseOffering objects. For example, this should be
+  #   true for CourseA-CourseF .script files.
+  # seeded_from - a timestamp indicating when this object was seeded from
+  #   its script_json file, as determined by the serialized_at value within
+  #   said json.  Expect this to be nil on levelbulider, since those objects
+  #   are created, not seeded. Used by the staging build to identify when a
+  #   script is being updated, so we can regenerate PDFs.
   serialized_attrs %w(
     hideable_lessons
-    peer_reviews_to_complete
     professional_learning_course
+    only_instructor_review_required
+    peer_reviews_to_complete
     redirect_to
     student_detail_progress_view
     project_widget_visible
@@ -177,7 +199,6 @@ class Script < ApplicationRecord
     teacher_resources
     lesson_extras_available
     has_verified_resources
-    has_lesson_plan
     curriculum_path
     announcements
     version_year
@@ -188,10 +209,14 @@ class Script < ApplicationRecord
     project_sharing
     curriculum_umbrella
     tts
+    deprecated
     is_course
     background
     show_calendar
+    weekly_instructional_minutes
+    include_student_lesson_plans
     is_migrated
+    seeded_from
   )
 
   def self.twenty_hour_script
@@ -256,6 +281,14 @@ class Script < ApplicationRecord
 
   def self.maker_unit_scripts
     visible_scripts.select {|s| s.family_name == 'csd6'}
+  end
+
+  def self.text_to_speech_script_ids
+    all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
+  end
+
+  def self.pre_reader_script_ids
+    all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
   end
 
   # Get the set of scripts that are valid for the current user, ignoring those
@@ -336,10 +369,14 @@ class Script < ApplicationRecord
     candidate_level
   end
 
-  # Find the lockable or non-locakble stage based on its relative position.
-  # Raises `ActiveRecord::RecordNotFound` if no matching stage is found.
-  def stage_by_relative_position(position, lockable = false)
-    lessons.where(lockable: lockable).find_by!(relative_position: position)
+  # Find the lesson based on its relative position, lockable value, and if it has a lesson plan.
+  # Raises `ActiveRecord::RecordNotFound` if no matching lesson is found.
+  def lesson_by_relative_position(position, unnumbered_lesson = false)
+    if unnumbered_lesson
+      lessons.where(lockable: true, has_lesson_plan: false).find_by!(relative_position: position)
+    else
+      lessons.where(lockable: false).or(lessons.where(has_lesson_plan: true)).find_by!(relative_position: position)
+    end
   end
 
   # For all scripts, cache all related information (levels, etc),
@@ -784,6 +821,10 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('CSP')
   end
 
+  def csa?
+    under_curriculum_umbrella?('CSA')
+  end
+
   def cs_in_a?
     name.match(Regexp.union('algebra', 'Algebra'))
   end
@@ -798,19 +839,6 @@ class Script < ApplicationRecord
     ].include?(name)
   end
 
-  def localize_long_instructions?
-    # Don't ever show non-English markdown instructions for Course 1 - 4, the
-    # 20-hour course, or the pre-2017 minecraft courses.
-    !(
-      csf_international? ||
-      twenty_hour? ||
-      [
-        ScriptConstants::MINECRAFT_NAME,
-        ScriptConstants::MINECRAFT_DESIGNER_NAME
-      ].include?(name)
-    )
-  end
-
   def beta?
     Script.beta? name
   end
@@ -823,7 +851,7 @@ class Script < ApplicationRecord
     script_levels.find(id: script_level_id.to_i)
   end
 
-  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
+  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, unnumbered_lesson)
     relative_position ||= 1
     script_levels.find do |sl|
       # make sure we are checking the native properties of the script level
@@ -831,7 +859,7 @@ class Script < ApplicationRecord
       sl.position == puzzle_position.to_i &&
         !sl.bonus &&
         sl.lesson.relative_position == relative_position.to_i &&
-        sl.lesson.lockable? == lockable
+        (unnumbered_lesson == !sl.lesson.numbered_lesson?)
     end
   end
 
@@ -841,18 +869,48 @@ class Script < ApplicationRecord
     script_levels[chapter - 1] # order is by chapter
   end
 
-  def get_bonus_script_levels(current_stage, current_user)
+  def get_bonus_script_levels(current_lesson)
     unless @all_bonus_script_levels
-      @all_bonus_script_levels = lessons.map do |stage|
+      @all_bonus_script_levels = lessons.map do |lesson|
         {
-          stageNumber: stage.relative_position,
-          levels: stage.script_levels.select(&:bonus).map {|bonus_level| bonus_level.summarize_as_bonus(current_user&.id)}
+          lessonNumber: lesson.relative_position,
+          levels: lesson.script_levels.select(&:bonus)
         }
       end
-      @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
+      @all_bonus_script_levels.select! {|lesson| lesson[:levels].any?}
     end
 
-    @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
+    lesson_levels = @all_bonus_script_levels.select do |lesson|
+      lesson[:lessonNumber] <= current_lesson.absolute_position
+    end
+
+    # we don't cache the level summaries because they include localized text
+    summarized_lesson_levels = lesson_levels.map do |lesson|
+      {
+        lessonNumber: lesson[:lessonNumber],
+        levels: lesson[:levels].map(&:summarize_as_bonus)
+      }
+    end
+    summarized_lesson_levels
+  end
+
+  def pre_reader_tts_level?
+    [
+      Script::COURSEA_DRAFT_NAME,
+      Script::COURSEB_DRAFT_NAME,
+      Script::COURSEA_NAME,
+      Script::COURSEB_NAME,
+      Script::PRE_READER_EXPRESS_NAME,
+      Script::COURSEA_2018_NAME,
+      Script::COURSEB_2018_NAME,
+      Script::PRE_READER_EXPRESS_2018_NAME,
+      Script::COURSEA_2019_NAME,
+      Script::COURSEB_2019_NAME,
+      Script::PRE_READER_EXPRESS_2019_NAME,
+      Script::COURSEA_2020_NAME,
+      Script::COURSEB_2020_NAME,
+      Script::PRE_READER_EXPRESS_2020_NAME,
+    ].include?(name)
   end
 
   def text_to_speech_enabled?
@@ -876,12 +934,6 @@ class Script < ApplicationRecord
     if has_banner?
       "banner_#{name}.jpg"
     end
-  end
-
-  def has_lesson_pdf?
-    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
-
-    has_lesson_plan?
   end
 
   def has_banner?
@@ -994,10 +1046,25 @@ class Script < ApplicationRecord
       script.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
+      # More all lessons into a temporary lesson group so that we do not delete
+      # the lesson entries unless the lesson has been entirely removed from the
+      # script
+      temp_lg = LessonGroup.create!(
+        key: 'temp-will-be-deleted',
+        script: script,
+        user_facing: false,
+        position: script.lesson_groups.length + 1
+      )
+      script.lessons.each do |l|
+        l.lesson_group = temp_lg
+        l.save!
+      end
+
       temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
       script.reload
       script.lesson_groups = temp_lgs
       script.save!
+      script.prevent_legacy_script_levels_in_migrated_scripts
 
       script.generate_plc_objects
 
@@ -1031,6 +1098,13 @@ class Script < ApplicationRecord
     end
   end
 
+  def prevent_legacy_script_levels_in_migrated_scripts
+    if is_migrated && script_levels.reject(&:activity_section).any?
+      lesson_names = lessons.all.select {|l| l.script_levels.reject(&:activity_section).any?}.map(&:name)
+      raise "Legacy script levels are not allowed in migrated scripts. Problem lessons: #{lesson_names.to_json}"
+    end
+  end
+
   # Script levels unfortunately have 3 position values:
   # 1. chapter: position within the Script
   # 2. position: position within the Lesson
@@ -1039,9 +1113,8 @@ class Script < ApplicationRecord
   # values of position and chapter on all script levels in the script.
   def fix_script_level_positions
     reload
-    if script_levels.reject(&:activity_section).any?
-      raise "cannot fix position of legacy script levels"
-    end
+    raise 'cannot fix script level positions on non-migrated scripts' unless is_migrated
+    prevent_legacy_script_levels_in_migrated_scripts
 
     chapter = 0
     lessons.each do |lesson|
@@ -1055,6 +1128,27 @@ class Script < ApplicationRecord
           end
         end
       end
+    end
+  end
+
+  # Lessons unfortunately have 2 position values:
+  # 1. absolute_position: position within the script (used to order lessons with in lesson groups in correct order)
+  # 2. relative_position: position within the Script relative other numbered/unnumbered lessons
+  # This method updates the position values for all lessons in a script after
+  # a lesson is saved
+  def fix_lesson_positions
+    reload
+
+    total_count = 1
+    numbered_lesson_count = 1
+    unnumbered_lesson_count = 1
+    lessons.each do |lesson|
+      lesson.absolute_position = total_count
+      lesson.relative_position = lesson.numbered_lesson? ? numbered_lesson_count : unnumbered_lesson_count
+      lesson.save!
+
+      total_count += 1
+      lesson.numbered_lesson? ? (numbered_lesson_count += 1) : (unnumbered_lesson_count += 1)
     end
   end
 
@@ -1142,37 +1236,39 @@ class Script < ApplicationRecord
   def update_text(script_params, script_text, metadata_i18n, general_params)
     script_name = script_params[:name]
     begin
-      transaction do
-        script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
-        Script.add_script(
-          {
-            name: script_name,
-            hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
-            login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
-            wrapup_video: general_params[:wrapup_video],
-            family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-            properties: Script.build_property_hash(general_params)
-          },
-          script_data[:lesson_groups]
-        )
-        if Rails.application.config.levelbuilder_mode
-          Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
-        end
+      script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
+      Script.add_script(
+        {
+          name: script_name,
+          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
+          login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
+          wrapup_video: general_params[:wrapup_video],
+          family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
+          properties: Script.build_property_hash(general_params)
+        },
+        script_data[:lesson_groups]
+      )
+      if Rails.application.config.levelbuilder_mode
+        Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
       return false
     end
-    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
+    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks]) unless general_params[:is_migrated]
+    update_migrated_teacher_resources(general_params[:resourceIds]) if general_params[:is_migrated]
+    update_student_resources(general_params[:studentResourceIds]) if general_params[:is_migrated]
     begin
       if Rails.application.config.levelbuilder_mode
         script = Script.find_by_name(script_name)
-        # Save in our custom Script DSL format. This is still what we're using currently to sync data
-        # across environments. The CPlat team is working on replacing it a new JSON-based approach.
+        # Save in our custom Script DSL format. This is how we currently sync
+        # data across environments for non-migrated scripts.
         script.write_script_dsl
 
-        # Also save in JSON format for "new seeding". This has not been launched yet, but as part of
-        # pre-launch testing, we'll start generating these files in addition to the old .script files.
+        # Also save in JSON format for "new seeding". This is how we currently
+        # sync data across environments for migrated scripts. As part of
+        # pre-launch testing, we also generate these files for legacy scripts in
+        # addition to the old .script files.
         script.write_script_json
       end
       true
@@ -1206,6 +1302,15 @@ class Script < ApplicationRecord
     )
   end
 
+  def update_migrated_teacher_resources(resource_ids)
+    teacher_resources = (resource_ids || []).map {|id| Resource.find(id)}
+    self.resources = teacher_resources
+  end
+
+  def update_student_resources(resource_ids)
+    self.student_resources = (resource_ids || []).map {|id| Resource.find(id)}
+  end
+
   def self.rake
     # cf. http://stackoverflow.com/a/9943895
     require 'rake'
@@ -1216,9 +1321,9 @@ class Script < ApplicationRecord
 
   # This method updates scripts.en.yml with i18n data from the scripts.
   # There are three types of i18n data
-  # 1. Stage names, which we get from the script DSL, and is passed in as lessons_i18n here
+  # 1. Lesson names, which we get from the script DSL, and is passed in as lessons_i18n here
   # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
-  # 3. Stage descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
+  # 3. Lesson descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
   def self.merge_and_write_i18n(lessons_i18n, script_name = '', metadata_i18n = {})
     scripts_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
@@ -1229,16 +1334,16 @@ class Script < ApplicationRecord
 
   def self.update_i18n(existing_i18n, lessons_i18n, script_name = '', metadata_i18n = {})
     if metadata_i18n != {}
-      stage_descriptions = metadata_i18n.delete(:stage_descriptions)
+      lesson_descriptions = metadata_i18n.delete(:stage_descriptions)
       metadata_i18n['lessons'] = {}
-      unless stage_descriptions.nil?
-        JSON.parse(stage_descriptions).each do |stage|
-          stage_name = stage['name']
-          stage_data = {
-            'description_student' => stage['descriptionStudent'],
-            'description_teacher' => stage['descriptionTeacher']
+      unless lesson_descriptions.nil?
+        JSON.parse(lesson_descriptions).each do |lesson|
+          lesson_name = lesson['name']
+          lesson_data = {
+            'description_student' => lesson['descriptionStudent'],
+            'description_teacher' => lesson['descriptionTeacher']
           }
-          metadata_i18n['lessons'][stage_name] = stage_data
+          metadata_i18n['lessons'][lesson_name] = lesson_data
         end
       end
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
@@ -1275,7 +1380,7 @@ class Script < ApplicationRecord
     # TODO: Set up peer reviews to be more consistent with the rest of the system
     # so that they don't need a bunch of one off cases (example peer reviews
     # don't have a lesson group in the database right now)
-    if has_peer_reviews?
+    if has_peer_reviews? && !only_instructor_review_required?
       levels = []
       peer_reviews_to_complete.times do |x|
         levels << {
@@ -1309,27 +1414,29 @@ class Script < ApplicationRecord
       id: id,
       name: name,
       title: title_for_display,
-      description: localized_description,
-      studentDescription: localized_student_description,
+      description: Services::MarkdownPreprocessor.process(localized_description),
+      studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       hidden: hidden,
-      is_stable: is_stable,
+      is_stable: !!is_stable,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       csf: csf?,
+      only_instructor_review_required: only_instructor_review_required?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewLessonInfo: peer_review_lesson_info,
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       teacher_resources: teacher_resources,
+      migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.map(&:summarize_for_resources_dropdown),
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
-      has_lesson_plan: has_lesson_plan?,
       curriculum_path: curriculum_path,
       announcements: announcements,
       age_13_required: logged_out_age_13_required?,
@@ -1348,21 +1455,44 @@ class Script < ApplicationRecord
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
+      deprecated: deprecated?,
       is_course: is_course?,
       background: background,
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
-      showCalendar: show_calendar
+      showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated scripts for now
+      weeklyInstructionalMinutes: weekly_instructional_minutes,
+      includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
+      courseVersionId: get_course_version&.id,
+      scriptOverviewPdfUrl: get_script_overview_pdf_url,
+      scriptResourcesPdfUrl: get_script_resources_pdf_url
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
     summary[:lessonGroups] = lesson_groups.map(&:summarize)
 
-    # Filter out stages that have a visible_after date in the future
+    # Filter out lessons that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
+    summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
+
+    summary
+  end
+
+  def summarize_for_rollup(user = nil)
+    summary = {
+      title: title_for_display,
+      name: name,
+      link: script_path(self)
+    }
+
+    # Filter out lessons that have a visible_after date in the future
+    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
+    # Only get lessons with lesson plans
+    filtered_lessons = filtered_lessons.select(&:has_lesson_plan)
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user)}
 
     summary
   end
@@ -1380,7 +1510,7 @@ class Script < ApplicationRecord
   #   script ids for that section, filtered so that the only script id which appears
   #   is the current script id. This mirrors the output format of
   #   User#get_hidden_script_ids, and satisfies the input format of
-  #   initializeHiddenScripts in hiddenStageRedux.js.
+  #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
     return {} unless user&.teacher?
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
@@ -1395,15 +1525,16 @@ class Script < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
-      age_13_required: logged_out_age_13_required?
+      age_13_required: logged_out_age_13_required?,
+      is_csf: csf?
     }
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(is_student = false)
     {
-      displayName: localized_title,
+      displayName: title_for_display,
       link: link,
-      lessons: lessons.map(&:summarize_for_lesson_dropdown)
+      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)}
     }
   end
 
@@ -1430,12 +1561,15 @@ class Script < ApplicationRecord
   end
 
   def summarize_i18n_for_edit(include_lessons=true)
-    data = %w(title description student_description description_short description_audience).map do |key|
+    data = %w(title description_short description_audience).map do |key|
       [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
+    data[:description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.description", default: ''))
+    data[:student_description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
+
     if include_lessons
-      data[:stageDescriptions] = lessons.map do |lesson|
+      data[:lessonDescriptions] = lessons.map do |lesson|
         {
           key: lesson.key,
           name: lesson.name,
@@ -1469,7 +1603,7 @@ class Script < ApplicationRecord
           version_year: s.version_year,
           version_title: s.version_year,
           can_view_version: s.can_view_version?(user),
-          is_stable: s.is_stable,
+          is_stable: !!s.is_stable,
           locales: s.supported_locale_names
         }
       end
@@ -1486,7 +1620,12 @@ class Script < ApplicationRecord
   end
 
   def localized_title
-    I18n.t "data.script.name.#{name}.title"
+    I18n.t(
+      "title",
+      default: name,
+      scope: [:data, :script, :name, name],
+      smart: true
+    )
   end
 
   def title_for_display
@@ -1524,6 +1663,7 @@ class Script < ApplicationRecord
     nonboolean_keys = [
       :hideable_lessons,
       :professional_learning_course,
+      :only_instructor_review_required,
       :peer_reviews_to_complete,
       :student_detail_progress_view,
       :project_widget_visible,
@@ -1537,16 +1677,18 @@ class Script < ApplicationRecord
       :editor_experiment,
       :curriculum_umbrella,
       :background,
+      :weekly_instructional_minutes,
     ]
     boolean_keys = [
       :has_verified_resources,
-      :has_lesson_plan,
       :is_stable,
       :project_sharing,
       :tts,
+      :deprecated,
       :is_course,
       :show_calendar,
-      :is_migrated
+      :is_migrated,
+      :include_student_lesson_plans
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path
@@ -1618,11 +1760,11 @@ class Script < ApplicationRecord
       info[:version_title] = version_year
     end
     if localized_description
-      info[:description] = localized_description
+      info[:description] = Services::MarkdownPreprocessor.process(localized_description)
     end
 
     if localized_student_description
-      info[:student_description] = localized_student_description
+      info[:student_description] = Services::MarkdownPreprocessor.process(localized_student_description)
     end
 
     info[:is_stable] = true if is_stable
@@ -1703,8 +1845,8 @@ class Script < ApplicationRecord
         next unless temp_feedback
         feedback[temp_feedback.id] = {
           studentName: student.name,
-          stageNum: script_level.lesson.relative_position.to_s,
-          stageName: script_level.lesson.localized_title,
+          lessonNum: script_level.lesson.relative_position.to_s,
+          lessonName: script_level.lesson.localized_title,
           levelNum: script_level.position.to_s,
           keyConcept: (current_level.rubric_key_concept || ''),
           performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),
@@ -1772,7 +1914,7 @@ class Script < ApplicationRecord
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
-  # See comments on ScriptSeed.seed_from_json for more context.
+  # See comments on ScriptSeed.seed_from_hash for more context.
   #
   # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
@@ -1794,5 +1936,17 @@ class Script < ApplicationRecord
 
   def self.script_json_filepath(script_name)
     "#{script_json_directory}/#{script_name}.script_json"
+  end
+
+  def get_script_overview_pdf_url
+    if is_migrated?
+      Services::CurriculumPdfs.get_script_overview_url(self)
+    end
+  end
+
+  def get_script_resources_pdf_url
+    if is_migrated?
+      Services::CurriculumPdfs.get_script_resources_url(self)
+    end
   end
 end

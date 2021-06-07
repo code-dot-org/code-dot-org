@@ -23,77 +23,6 @@ const baseTabStyle = {
   height: tabHeight,
   padding: '0 10px'
 };
-const styles = {
-  activeTab: Object.assign({}, baseTabStyle, {
-    backgroundColor: bgColor,
-    borderTopWidth: 1,
-    borderRightWidth: 1,
-    borderBottomWidth: 0,
-    borderLeftWidth: 0,
-    float: 'left'
-  }),
-  inactiveTab: Object.assign({}, baseTabStyle, {
-    borderTopWidth: 1,
-    borderRightWidth: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 0,
-    float: 'left'
-  }),
-  // This tab should fill the remaining horizontal space.
-  emptyTab: Object.assign({}, baseTabStyle, {
-    borderTopWidth: 0,
-    borderRightWidth: 0,
-    borderBottomWidth: 1,
-    borderLeftWidth: 0,
-    width: '100%'
-  }),
-  workspaceDescription: {
-    height: 28,
-    overflow: 'hidden'
-  },
-  workspaceDescriptionText: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
-  },
-  workspaceTabs: {
-    borderColor: borderColor,
-    borderStyle: 'solid',
-    borderTopWidth: 0,
-    borderRightWidth: 0,
-    borderBottomWidth: 0,
-    borderLeftWidth: 1
-  },
-  tabLabel: {
-    lineHeight: tabHeight + 'px',
-    WebkitUserSelect: 'none',
-    MozUserSelect: 'none',
-    msUserSelect: 'none',
-    userSelect: 'none'
-  },
-  workspaceBody: {
-    height: 'calc(100% - 83px)',
-    padding: '10px 10px 10px 0',
-    borderColor: borderColor,
-    borderStyle: 'solid',
-    borderTopWidth: 0,
-    borderRightWidth: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 1,
-    backgroundColor: bgColor
-  },
-  activeBody: {
-    height: '100%',
-    overflowY: 'auto',
-    padding: '10px',
-    width: '100%'
-  },
-  inactiveBody: {
-    display: 'none',
-    height: '100%',
-    overflowY: 'auto'
-  }
-};
 
 class DataBrowser extends React.Component {
   static propTypes = {
@@ -207,6 +136,78 @@ class DataBrowser extends React.Component {
     );
   }
 }
+
+const styles = {
+  activeTab: Object.assign({}, baseTabStyle, {
+    backgroundColor: bgColor,
+    borderTopWidth: 1,
+    borderRightWidth: 1,
+    borderBottomWidth: 0,
+    borderLeftWidth: 0,
+    float: 'left'
+  }),
+  inactiveTab: Object.assign({}, baseTabStyle, {
+    borderTopWidth: 1,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    borderLeftWidth: 0,
+    float: 'left'
+  }),
+  // This tab should fill the remaining horizontal space.
+  emptyTab: Object.assign({}, baseTabStyle, {
+    borderTopWidth: 0,
+    borderRightWidth: 0,
+    borderBottomWidth: 1,
+    borderLeftWidth: 0,
+    width: '100%'
+  }),
+  workspaceDescription: {
+    height: 28,
+    overflow: 'hidden'
+  },
+  workspaceDescriptionText: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap'
+  },
+  workspaceTabs: {
+    borderColor: borderColor,
+    borderStyle: 'solid',
+    borderTopWidth: 0,
+    borderRightWidth: 0,
+    borderBottomWidth: 0,
+    borderLeftWidth: 1
+  },
+  tabLabel: {
+    lineHeight: tabHeight + 'px',
+    WebkitUserSelect: 'none',
+    MozUserSelect: 'none',
+    msUserSelect: 'none',
+    userSelect: 'none'
+  },
+  workspaceBody: {
+    height: 'calc(100% - 83px)',
+    padding: '10px 10px 10px 0',
+    borderColor: borderColor,
+    borderStyle: 'solid',
+    borderTopWidth: 0,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    borderLeftWidth: 1,
+    backgroundColor: bgColor
+  },
+  activeBody: {
+    height: '100%',
+    overflowY: 'auto',
+    padding: '10px',
+    width: '100%'
+  },
+  inactiveBody: {
+    display: 'none',
+    height: '100%',
+    overflowY: 'auto'
+  }
+};
 
 /**
  * @readonly

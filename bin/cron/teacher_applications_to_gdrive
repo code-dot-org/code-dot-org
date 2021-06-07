@@ -12,7 +12,7 @@ require 'honeybadger/ruby'
 def get_rows
   applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at
                      meets_minimum_requirements meets_scholarship_criteria registered_for_workshop rural_status
-                     free_reduced_lunch_percent urm_percent accepted_at accepted race community_type)]
+                     free_reduced_lunch_percent urm_percent accepted_at accepted race community_type two_or_more_races)]
   Pd::Application::Teacher2122Application.find_each do |app|
     stats = app.get_latest_school_stats(app.school_id)
     pay_fee = app.sanitize_form_data_hash[:principal_pay_fee] || app.sanitize_form_data_hash[:pay_fee]
@@ -27,6 +27,9 @@ def get_rows
     end
     accepted_statuses = %w(accepted_no_cost_registration accepted_notified_by_partner registration_sent paid accepted_not_notified)
     accepted = accepted_statuses.include?(app.status) ? 1 : 0
+
+    races = app.sanitize_form_data_hash[:race]
+    two_or_more_races = races.length > 1 ? 1 : 0
 
     applications << [
       app.course,
@@ -45,8 +48,9 @@ def get_rows
       urm_percent,
       app.accepted_at,
       accepted,
-      app.sanitize_form_data_hash[:race],
-      stats&.community_type
+      races,
+      stats&.community_type,
+      two_or_more_races
     ]
   end
 

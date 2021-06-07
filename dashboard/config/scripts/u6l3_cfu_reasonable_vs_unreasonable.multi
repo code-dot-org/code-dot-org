@@ -1,5 +1,5 @@
 name 'U6L3 CFU Reasonable vs Unreasonable'
-question 'Which of the follow efficiencies would be considered unreasonable?'
+question 'Which of the following efficiencies would be considered unreasonable?'
 right '2^n'
 wrong '2n'
 wrong 'n^2'

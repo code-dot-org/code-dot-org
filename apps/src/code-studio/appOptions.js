@@ -6,7 +6,7 @@
  * @typedef {Object} AppOptionsConfig
  * @property {boolean} embedded
  * @property {string} scriptName
- * @property {string} stagePosition
+ * @property {string} lessonPosition
  * @property {string} levelPosition
  * @property {AutoplayVideo} autoplayVideo
  * @property {SerializedAnimationList} initialAnimationList
@@ -37,7 +37,6 @@
  * @property {?} authoredHintsUsedIds
  * @property {number} serverLevelId
  * @property {number} serverProjectLevelId
- * @property {number} serverScriptLevelId
  * @property {string} gameDisplayName
  * @property {boolean} publicCaching
  * @property {?boolean} is13Plus - Will be true if the user is 13 or older,
@@ -113,7 +112,7 @@
  * @property {boolean} beginnerMode
  * @property {string} levelId
  * @property {number} puzzle_number
- * @property {number} stage_total
+ * @property {number} lesson_total
  * @property {boolean} iframeEmbed
  * @property {boolean} iframeEmbedAppAndCode
  * @property {?} lastAttempt
@@ -225,9 +224,9 @@
  * @property {?} level_id
  * @property {?} total_lines
  * @property {AutoplayVideo} video_info
- * @property {string} redirect - path to 'next' level in the stage/script sequence.
- * @property {{previous: {position: number, name: string}}} stage_changing
- * @property {boolean} end_of_stage_experience
+ * @property {string} redirect - path to 'next' level in the lesson/script sequence.
+ * @property {{previous: {position: number, name: string}}} lesson_changing
+ * @property {boolean} end_of_lesson_experience
  * @property {HintViewRequest[]} hint_view_requests
  * @property {string} hint_view_request_url
  * @property {string} message

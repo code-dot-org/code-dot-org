@@ -6,13 +6,13 @@ hu-HU:
   'no': Nem
   select_language: Válassz nyelvet
   upgrade_ie_message: Code.org hamarosan megszünteti az Internet Explorer 8, 9 és
-    10. támogatását. Kérjük, frissítsen egy modernebb böngészőre.
+    10. támogatását. Kérjük, frissíts egy modernebb böngészőre.
   upgrade_ie_message_csedweek: CSEdWeek.org hamarosan megszünteti az Internet Explorer
-    8, 9 és 10. támogatását. Kérjük, frissítsen egy modernebb böngészőre.
+    8, 9 és 10. támogatását. Kérjük, frissíts egy modernebb böngészőre.
   upgrade_ie_link: Tudj meg többet
   en: Számítógép-tudomány
   computer_science_edweek: Számítógép Tudomány Oktatási Hét
-  csedweek_dates: 2014. december 8-14
+  csedweek_dates: 2018. december 3-9
   csedweek_banner_hoc: 'Hamarosan itt a <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Kódolás Órája</a>. Kérünk
     minden tanárt és szervezőt, hogy tervezze meg a <a href="http://hourofcode.com"
@@ -29,11 +29,12 @@ hu-HU:
   learn_now: Tanulj most
   petition_message: Minden diáknak, minden iskolában meg kellene adni a lehetőséget,
     hogy számítástechnikát tanuljon
-  petition_sign_message: 'Ha elfogadod, írd be a nevedet. Csatlakozz # másokhoz.'
+  petition_sign_message: 'Ha elfogadod, írd be a nevedet és csatlakozz a levelező
+    listánkhoz # másik emberrel együtt.'
   petition_join_others: "# ember vár, hogy csatlakozz"
   name: Név
   email: Email
-  zipcode: Irányítószám vagy ország
+  zipcode: Irányítószám (USA) vagy ország
   submit: Elküldés
   twentyhours_heading: Próbáld ki a Bevezetés a számítástechnikába tanfolyamunkat
   twentyhours_text: Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról
@@ -806,9 +807,9 @@ hu-HU:
   learn_inspirational_videos: Inspiráld diákjaidat <a href="https://code.org/educate/inspire">ezekkel
     a videókkal</a>
   hoc2014_try_new_tutorials: Próbáld ki az új Kódolás Órája anyagainkat
-  hoc2014_try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
+  hoc2014_try_new_tutorial: Próbáld ki az új Kódolás Órája oktató anyagunk béta változatát
   hoc2014_try_scrat: Angry Birds, PvZ és Motkány
-  hoc2014_try_frozen: Művészkedj Annával és  Elzával a Jégvarázsból
+  hoc2014_try_frozen: Művészkedj Annával és Elzával a Jégvarázsból
   carousel_heading_codeorg: Tutorialok a Code.org jóvoltából
   carousel_heading_codeorg_any_device: Tutorialok a Code.org jóvoltából (minden készülékre)
   carousel_heading_3rd_party: Külső személyek tutorialjai
@@ -847,8 +848,8 @@ hu-HU:
   mobile_devices: Oktatóanyagok mobile eszközökre
   frozen_name: Kódolás Annával és Elsával
   starwars_name: 'Star Wars: A galaxis építése kódolássa'
-  codeorg_name: Hagyományos Útvesztö
-  codeintl_name: Hagyományos Útvesztö
+  codeorg_name: Hagyományos labirintus
+  codeintl_name: Hagyományos labirintus
   khan_name: Bevezetés a JavaScriptbe
   khanes_name: Bevezetés a JavaScriptbe
   khanpt_name: Bevezetés a JavaScriptbe
@@ -876,7 +877,7 @@ hu-HU:
   appinventor_name: AppInventor Kódolás Órája
   blockly_name: Blockly
   projguts_name: Kő, papír, olló
-  hourofcode_name: Hagyományos Útvesztö
+  hourofcode_name: Hagyományos labirintus
   playlab_name: Játéklabor
   infinity_name: Infinity játéklabor
   artist_name: Művész
@@ -892,13 +893,13 @@ hu-HU:
   course4_name: 4. tanfolyam
   accelerated_name: Gyorsított tanfolyam
   20-hour_name: Gyorsított tanfolyam
-  classicmaze_name: Hagyományos Útvesztö
+  classicmaze_name: Hagyományos labirintus
   iceage_name: Jégkorszak
   minecraft_name: Minecraft
   applab_name: App Lab
   gamelab_name: Játék Labor
   sports_name: Kódold le a saját sportjátékodat
-  applab_gradelevel: Kor 13+
+  applab_gradelevel: 13 éves kor felett
   codeorg_gradelevel: 4-től 104 éves korig
   codeintl_gradelevel: 4-től 104 éves korig
   khan_gradelevel: Felső tagozattól felfelé
@@ -960,6 +961,8 @@ hu-HU:
   coursee-2018_gradelevel: 8-tól 12 éves korig
   coursed-2019_gradelevel: 8+ évfolyam
   coursee-2019_gradelevel: 8-tól 12 éves korig
+  coursed-2020_gradelevel: 8+ évfolyam
+  coursee-2020_gradelevel: 8-tól 12 éves korig
   accelerated_gradelevel: 10-től 18 éves korig
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
@@ -1566,7 +1569,7 @@ hu-HU:
   header_courses: tanfolyamok
   header_course_catalog: Tanfolyamaink
   header_project_gallery: Projektek
-  header_sections: Csoportok
+  header_sections: Szakaszok
   header_professional_learning: Professzionális tanulás
   header_educate_overview: Áttekintés oktatóknak
   header_educate_elementary: Alsó tagozat
@@ -1583,7 +1586,7 @@ hu-HU:
   header_about_donors: Adományozók
   header_about_partners: Partnerek
   header_about_team: Teljes csapat
-  header_about_news: Sajtósarok
+  header_about_news: Hírszoba
   header_about_evaluation: Értékelés
   header_about_jobs: Állás
   header_about_contact: Kapcsolat
@@ -1597,11 +1600,11 @@ hu-HU:
   header_report_bug: Hiba jelentése
   header_legal_privacy: Adatvédelmi Elvek
   header_legal_tos: Feltételek
-  header_tutorials: Gyakorlatok
+  header_tutorials: Útmutatók
   header_documentation: Dokumentáció
   user_header_label: Üdv %{username}
   user_header_team: Csapat
-  user_header_settings: Profilom
+  user_header_settings: Fiók beállítások
   user_header_logout: Kijelentkezés
   user_header_signin: Bejelentkezés
   user_header_create: 'Alkoss '
@@ -1719,5 +1722,17 @@ hu-HU:
   hoc2018_mc_thank_microsoft: Köszönjük a Microsoftnak, hogy támogat bennünket elképzelésünk
     és küldetésünk valóra váltásában, abban, hogy minden gyermeknek legyen lehetősége
     számítástechnikát tanulni és a 21. században szükséges készségeket elsajátítani.
-  footer_powered_by_aws: Az Amazon Web Services működteti
+  footer_powered_by_aws: 'Az Amazon Web Services és a  “Powered by AWS” logo az Amazon.com,
+    Inc. és leányvállalatainak védjegyei az Egyesült Államokban és/vagy más országokban. '
   codebytes_skinny_banner_english_only: Csak angol
+  footer_privacy_policy: Adatvédelmi Elvek
+  footer_about: Rólunk
+  footer_partners: Partnerek
+  footer_donate: Adományozz
+  footer_support: Segítség
+  footer_terms: Felhasználási feltételek
+  ai_microsoft_thanks: Köszönjük a Microsoftnak, hogy támogat bennünket elképzelésünk
+    és küldetésünk valóra váltásában, abban, hogy minden gyermeknek legyen lehetősége
+    számítástechnikát tanulni és a 21. században szükséges készségeket elsajátítani.
+  ai_activity: Tevékenység
+  ai_description: Leírás

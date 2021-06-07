@@ -11,7 +11,8 @@
     ["@babel/plugin-transform-regenerator", {"async": true, "asyncGenerators": true}],
     // needed for IE 9/10 support
     ["@babel/plugin-transform-classes", {"loose": true}],
-    "@babel/plugin-transform-modules-commonjs"
+    "@babel/plugin-transform-modules-commonjs",
+    "@babel/plugin-proposal-optional-chaining"
   ],
   "sourceType": "unambiguous",
   "env": {

@@ -15,17 +15,17 @@
 #
 
 class TeacherScore < ApplicationRecord
-  def self.score_stage_for_section(
+  def self.score_lesson_for_section(
     section_id,
-    stage_id,
+    lesson_id,
     score
   )
     section = Section.find(section_id)
     student_ids = section.students.pluck(:id)
     teacher_id = section.user_id
-    stage = Lesson.find(stage_id)
-    script_id = stage.script.id
-    level_ids = stage.script_levels.map(&:level_id)
+    lesson = Lesson.find(lesson_id)
+    script_id = lesson.script.id
+    level_ids = lesson.script_levels.map(&:level_id)
 
     student_ids.each do |student_id|
       level_ids.each do |level_id|
@@ -57,24 +57,24 @@ class TeacherScore < ApplicationRecord
   end
 
   def self.get_level_scores_for_script_for_section(script_id, section_id, page)
-    level_scores_by_student_by_stage_by_script = {}
+    level_scores_by_student_by_lesson_by_script = {}
     # Teacher scores are currently only relevant for unplugged lessons
-    stages = Script.find(script_id).lessons.select(&:display_as_unplugged)
+    lessons = Script.find(script_id).lessons.select(&:unplugged)
     student_ids = Section.find(section_id).students.page(page).per(50).pluck(:id)
-    stage_student_level_scores = {}
-    stages.each do |stage|
-      level_scores = get_level_scores_for_stage_for_students(stage, student_ids)
+    lesson_student_level_scores = {}
+    lessons.each do |lesson|
+      level_scores = get_level_scores_for_lesson_for_students(lesson, student_ids)
       unless level_scores.empty?
-        stage_student_level_scores[stage.id] = level_scores
+        lesson_student_level_scores[lesson.id] = level_scores
       end
     end
-    level_scores_by_student_by_stage_by_script[script_id] = stage_student_level_scores
-    level_scores_by_student_by_stage_by_script
+    level_scores_by_student_by_lesson_by_script[script_id] = lesson_student_level_scores
+    level_scores_by_student_by_lesson_by_script
   end
 
-  def self.get_level_scores_for_stage_for_students(stage, student_ids)
-    script_id = stage.script_id
-    level_ids = stage.script_levels.map(&:level_id)
+  def self.get_level_scores_for_lesson_for_students(lesson, student_ids)
+    script_id = lesson.script_id
+    level_ids = lesson.script_levels.map(&:level_id)
     user_levels = UserLevel.select(:id, :level_id, :user_id).where(user_id: student_ids, level_id: level_ids, script_id: script_id)
 
     teacher_scores = TeacherScore.select(:score, :created_at, :user_level_id).where(

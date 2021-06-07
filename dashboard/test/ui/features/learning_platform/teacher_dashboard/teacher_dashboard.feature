@@ -3,7 +3,7 @@ Feature: Using the teacher dashboard
 
   Scenario: Visiting student name URLs in teacher dashboard
     Given I create an authorized teacher-associated student named "Sally"
-    And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get hidden script access
@@ -19,9 +19,9 @@ Feature: Using the teacher dashboard
 
   Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"
-    And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
-    And I complete the free response on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
-    And I submit the assessment on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+    And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
+    And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
 
     # Progress tab
     When I sign in as "Teacher_Sally" and go home
@@ -93,9 +93,9 @@ Feature: Using the teacher dashboard
 
   Scenario: Toggling student progress
     Given I create an authorized teacher-associated student named "Sally"
-    And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
-    And I complete the free response on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
-    And I submit the assessment on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+    And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
+    And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
 
     # Progress tab
     When I sign in as "Teacher_Sally" and go home
@@ -152,7 +152,7 @@ Feature: Using the teacher dashboard
     # Whether losing the predraw layer on remix is ok is a different issue, and
     # until it is resolved we want to make sure thumbnails include predraw.
 
-    When I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/8"
+    When I am on "http://studio.code.org/s/allthethings/lessons/3/levels/8"
     And I wait for the page to fully load
     And I press "runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
@@ -165,7 +165,7 @@ Feature: Using the teacher dashboard
     # We don't want to have to write the code by dragging blocks, so just remix
     # an existing project-backed level, and then run the project.
 
-    When I am on "http://studio.code.org/s/allthethings/stage/5/puzzle/5"
+    When I am on "http://studio.code.org/s/allthethings/lessons/5/levels/5"
     And I wait for the page to fully load
     And I press the first ".project_remix" element to load a new page
     And I wait for the page to fully load
@@ -182,7 +182,7 @@ Feature: Using the teacher dashboard
     # We don't want to have to write the code by dragging blocks, so just remix
     # an existing project-backed level, and then run the project.
 
-    When I am on "http://studio.code.org/s/dance/stage/1/puzzle/13"
+    When I am on "http://studio.code.org/s/dance/lessons/1/levels/13"
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -214,3 +214,30 @@ Feature: Using the teacher dashboard
 
     Then I see no difference for "projects list view"
     And I close my eyes
+
+  Scenario: Attempt to join a section you own redirects to dashboard with error message
+    Given I am a teacher
+    And I create a new section and go home
+    And I attempt to join the section
+    Then I wait until element "#flashes" is visible
+    And element "div.alert" contains text matching "Sorry, you can't join your own section"
+
+  # Omit IE because it does not respond to press keys step for React forms
+  @no_ie
+  Scenario: Attempt to join an invalid section through the homepage
+    Given I am a teacher and go home
+    And I wait until element "div.ui-test-join-section" is visible
+    And I press keys "INVALID" for element "input.ui-test-join-section"
+    And I click selector "div.ui-test-join-section"
+    Then I wait until element ".announcement-notification" is visible
+    And element ".announcement-notification" contains text matching "Section INVALID doesn't exist"
+
+  @no_ie
+  Scenario: Attempt to join a section you own from teacher dashboard provides notification
+    Given I am a teacher
+    And I create a new section and go home
+    And I wait until element "div.ui-test-join-section" is visible
+    And I enter the section code into "input.ui-test-join-section"
+    And I click selector "div.ui-test-join-section"
+    Then I wait until element ".announcement-notification" is visible
+    And element ".announcement-notification" contains text matching "You are already the owner of section"

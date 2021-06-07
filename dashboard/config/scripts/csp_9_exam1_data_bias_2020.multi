@@ -12,3 +12,17 @@ markdown <<MARKDOWN
 The mayor of a city is interested in learning what goals are most important for residents of the city. Members of her staff visit one of the many neighborhoods in the city and ask 20 residents to fill out a survey.
 The mayor is concerned that the survey may be biased and not accurately reflect the overall interests in her town. Which of the following strategies is MOST likely to address concerns about the data being biased or inaccurate
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Compared with all the other options, visiting multiple new neighborhoods will allow the mayor to collect a set of responses more representative of her town as a whole.
+
+Students discussed strategies for minimizing bias in [Lesson 6 - Machine Learning and Bias](https://curriculum.code.org/csp-20/unit9/6/) 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+
+* DAT-2.C.5 - Problems of bias are often created by the type or source of data being collected. Bias is not eliminated by simply collecting more data.
+
+:::
+
+MARKDOWN

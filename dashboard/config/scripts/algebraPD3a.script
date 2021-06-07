@@ -1,25 +1,25 @@
 professional_learning_course 'CS in Algebra Legacy'
 login_required true
 
-lesson 'Updates - Tweaks and Polish', display_name: 'Updates - Tweaks and Polish'
+lesson 'Updates - Tweaks and Polish', display_name: 'Updates - Tweaks and Polish', has_lesson_plan: false
 level 'PDAlg Updates Tweaks'
 level 'PDAlg Updates Space'
 level 'PDAlg Updates Errors'
 level 'PDAlg Updates Cond'
 
-lesson 'Updates - The Big Game and Projects', display_name: 'Updates - The Big Game and Projects'
+lesson 'Updates - The Big Game and Projects', display_name: 'Updates - The Big Game and Projects', has_lesson_plan: false
 level 'PDAlg Big Game'
 level 'PDAlg Big Game Remix'
 level 'PDAlg Big Game History'
 level 'PDAlg Projects'
 
-lesson 'Updates - The Design Recipe', display_name: 'Updates - The Design Recipe'
+lesson 'Updates - The Design Recipe', display_name: 'Updates - The Design Recipe', has_lesson_plan: false
 level 'PDAlg Design Recipe Updates'
 level 'PDAlg Design Recipe Examples'
 level 'PDAlg Design Recipe Required'
 level 'PDAlg Design Recipe Delete'
 
-lesson 'Lesson Prep', display_name: 'Lesson Prep'
+lesson 'Lesson Prep', display_name: 'Lesson Prep', has_lesson_plan: false
 level 'PDAlg Prep a Lesson'
 level 'PDAlg Prep on Paper'
 level 'PDAlg Prep Sandbox'

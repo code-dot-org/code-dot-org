@@ -119,7 +119,7 @@ Scenario: Save Project After Signing Out
 Scenario: Save Script Level After Signing Out
   Given I create a student named "Sally Student"
   Given I am assigned to script "csp3-2017"
-  And I am on "http://studio.code.org/s/csp3-2017/stage/5/puzzle/3"
+  And I am on "http://studio.code.org/s/csp3-2017/lessons/5/levels/3"
   And I wait for the page to fully load
   And I wait for initial project save to complete
   And I ensure droplet is in block mode
@@ -136,7 +136,7 @@ Scenario: Save Script Level After Signing Out
   Then I get redirected to "/users/sign_in" via "dashboard"
 
   When I sign in as "Sally Student" from the sign in page
-  And I get redirected to "/s/csp3-2017/stage/5/puzzle/3" via "dashboard"
+  And I get redirected to "/s/csp3-2017/lessons/5/levels/3" via "dashboard"
   And I wait for the page to fully load
   And I ensure droplet is in text mode
   Then ace editor code is equal to "// turtle 1"

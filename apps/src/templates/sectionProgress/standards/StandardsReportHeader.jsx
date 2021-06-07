@@ -3,6 +3,38 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 
+export default class StandardsReportHeader extends Component {
+  static propTypes = {
+    teacherName: PropTypes.string,
+    sectionName: PropTypes.string
+  };
+
+  render() {
+    return (
+      <div style={styles.header}>
+        <div style={styles.imageAndTitle}>
+          <img src="/shared/images/CodeLogo_White.png" style={styles.logo} />
+          <div style={styles.headerName}>{i18n.standardsReportHeader()}</div>
+        </div>
+        <div style={styles.headerRightColumn}>
+          <div style={styles.headerRightColumnTitles}>
+            <div>{i18n.teacherWithColon()}</div>
+            <div>{i18n.sectionWithColon()}</div>
+            <div>{i18n.dateWithColon()}</div>
+          </div>
+          <div style={styles.headerRightColumnItems}>
+            <span style={styles.infoStrings}>{this.props.teacherName}</span>
+            <span style={styles.infoStrings}>{this.props.sectionName}</span>
+            <span style={styles.infoStrings}>
+              {new Date().toLocaleDateString()}
+            </span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
 const styles = {
   header: {
     display: 'flex',
@@ -50,35 +82,3 @@ const styles = {
     textOverflow: 'ellipsis'
   }
 };
-
-export default class StandardsReportHeader extends Component {
-  static propTypes = {
-    teacherName: PropTypes.string,
-    sectionName: PropTypes.string
-  };
-
-  render() {
-    return (
-      <div style={styles.header}>
-        <div style={styles.imageAndTitle}>
-          <img src="/shared/images/CodeLogo_White.png" style={styles.logo} />
-          <div style={styles.headerName}>{i18n.standardsReportHeader()}</div>
-        </div>
-        <div style={styles.headerRightColumn}>
-          <div style={styles.headerRightColumnTitles}>
-            <div>{i18n.teacherWithColon()}</div>
-            <div>{i18n.sectionWithColon()}</div>
-            <div>{i18n.dateWithColon()}</div>
-          </div>
-          <div style={styles.headerRightColumnItems}>
-            <span style={styles.infoStrings}>{this.props.teacherName}</span>
-            <span style={styles.infoStrings}>{this.props.sectionName}</span>
-            <span style={styles.infoStrings}>
-              {new Date().toLocaleDateString()}
-            </span>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}

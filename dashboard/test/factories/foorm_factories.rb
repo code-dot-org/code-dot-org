@@ -1135,4 +1135,43 @@ FactoryGirl.define do
     ]
   }'
   end
+
+  factory :foorm_library_question, class: 'Foorm::LibraryQuestion' do
+    sequence(:library_name) {|n| "surveys/pd/library_name#{n}"}
+    library_version 0
+    sequence(:question_name) {|n| "library_question_name#{n}"}
+    sequence(:question) do |n|
+      "{
+        \"type\": \"comment\",
+        \"name\": \"what_supported#{n}\",
+        \"title\": \"What supported your learning the most today and why?\"
+      }"
+    end
+  end
+
+  factory :foorm_library, class: 'Foorm::Library' do
+    sequence(:name) {|n| "surveys/pd/library_name#{n}"}
+    version 0
+    published true
+
+    trait :with_questions do
+      transient do
+        number_of_questions 1
+      end
+
+      after(:create) do |library, evaluator|
+        library.library_questions = create_list(
+          :foorm_library_question,
+          evaluator.number_of_questions,
+          library_name: library.name
+        )
+      end
+    end
+  end
+
+  factory :foorm_simple_survey_form, class: 'Foorm::SimpleSurveyForm' do
+    sequence(:path) {|n| "test_path_#{n}"}
+    form_name 'A form that does not actually exist'
+    form_version 0
+  end
 end

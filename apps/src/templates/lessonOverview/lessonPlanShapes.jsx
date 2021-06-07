@@ -50,7 +50,9 @@ export const activitySectionShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   position: PropTypes.number.isRequired,
   displayName: PropTypes.string.isRequired,
+  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])]),
   remarks: PropTypes.bool,
+  progressionName: PropTypes.string,
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape).isRequired
@@ -67,20 +69,24 @@ export const activityShape = PropTypes.shape({
 
 export const lessonShape = PropTypes.shape({
   unit: PropTypes.shape({
-    displayName: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    lessons: PropTypes.arrayOf(
+    lessonGroups: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,
-        position: PropTypes.number.isRequired,
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        lockable: PropTypes.bool.isRequired
+        userFacing: PropTypes.bool.isRequired,
+        lessons: PropTypes.arrayOf(
+          PropTypes.shape({
+            key: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            displayName: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired
+          })
+        ).isRequired
       })
     ).isRequired
   }).isRequired,
+  id: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
-  lockable: PropTypes.bool.isRequired,
   key: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
@@ -88,6 +94,70 @@ export const lessonShape = PropTypes.shape({
   preparation: PropTypes.string.isRequired,
   resources: PropTypes.object,
   vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired,
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
-  assessmentOpportunities: PropTypes.string
+  assessmentOpportunities: PropTypes.string,
+  lessonPlanPdfUrl: PropTypes.string,
+  courseVersionStandardsUrl: PropTypes.string
+});
+
+export const studentLessonShape = PropTypes.shape({
+  unit: PropTypes.shape({
+    lessonGroups: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.string.isRequired,
+        displayName: PropTypes.string.isRequired,
+        userFacing: PropTypes.bool.isRequired,
+        lessons: PropTypes.arrayOf(
+          PropTypes.shape({
+            key: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            displayName: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired
+          })
+        ).isRequired
+      })
+    ).isRequired
+  }).isRequired,
+  id: PropTypes.number.isRequired,
+  position: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
+  displayName: PropTypes.string.isRequired,
+  overview: PropTypes.string.isRequired,
+  resources: PropTypes.arrayOf(PropTypes.object),
+  vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired,
+  studentLessonPlanPdfUrl: PropTypes.string
+});
+
+export const navigationLessonShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
+  unit: PropTypes.shape({
+    lessonGroups: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.string.isRequired,
+        displayName: PropTypes.string.isRequired,
+        userFacing: PropTypes.bool.isRequired,
+        lessons: PropTypes.arrayOf(
+          PropTypes.shape({
+            key: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            displayName: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired
+          })
+        ).isRequired
+      })
+    ).isRequired
+  }).isRequired
+});
+
+export const standardShape = PropTypes.shape({
+  frameworkName: PropTypes.string.isRequired,
+  parentCategoryShortcode: PropTypes.string,
+  parentCategoryDescription: PropTypes.string,
+  categoryShortcode: PropTypes.string.isRequired,
+  categoryDescription: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 });

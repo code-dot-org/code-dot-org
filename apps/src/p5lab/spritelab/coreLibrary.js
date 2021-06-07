@@ -6,11 +6,14 @@ var userInputEventCallbacks = {};
 var newSprites = {};
 var totalPauseTime = 0;
 var currentPauseStartTime = 0;
+var numActivePrompts = 0;
 
 export var background;
-export var title = '';
-export var subtitle = '';
+export var screenText = {};
 export var defaultSpriteSize = 100;
+export var printLog = [];
+export var promptVars = {};
+export var eventLog = [];
 
 export function reset() {
   spriteId = 0;
@@ -18,10 +21,14 @@ export function reset() {
   inputEvents = [];
   behaviors = [];
   background = 'white';
-  title = subtitle = '';
   userInputEventCallbacks = {};
   defaultSpriteSize = 100;
   totalPauseTime = 0;
+  printLog = [];
+  promptVars = {};
+  screenText = {};
+  eventLog = [];
+  numActivePrompts = 0;
 }
 
 export function startPause(time) {
@@ -181,6 +188,16 @@ export function deleteSprite(spriteId) {
 }
 
 export function registerPrompt(promptText, variableName, setterCallback) {
+  numActivePrompts++;
+  if (!variableName) {
+    return;
+  }
+  if (promptVars[variableName] === undefined) {
+    // Set explicitly to null so that we can tell that there *is* a prompt
+    // for this variable name, it just hasn't been answered yet.
+    promptVars[variableName] = null;
+  }
+
   if (!userInputEventCallbacks[variableName]) {
     userInputEventCallbacks[variableName] = {
       setterCallbacks: [],
@@ -191,6 +208,9 @@ export function registerPrompt(promptText, variableName, setterCallback) {
 }
 
 export function registerPromptAnswerCallback(variableName, userCallback) {
+  if (!variableName) {
+    return;
+  }
   if (!userInputEventCallbacks[variableName]) {
     userInputEventCallbacks[variableName] = {
       setterCallbacks: [],
@@ -201,6 +221,8 @@ export function registerPromptAnswerCallback(variableName, userCallback) {
 }
 
 export function onPromptAnswer(variableName, userInput) {
+  numActivePrompts--;
+  promptVars[variableName] = userInput;
   const callbacks = userInputEventCallbacks[variableName];
   if (callbacks) {
     // Make sure to call the setter callback to set the variable
@@ -231,11 +253,13 @@ function atTimeEvent(inputEvent, p5Inst) {
     // the time matches the event argument)
     if (worldTime === inputEvent.args.n && previousTime !== inputEvent.args.n) {
       // Call callback with no extra args
+      eventLog.push(`atTime: ${inputEvent.args.n}`);
       return [{}];
     }
   } else if (inputEvent.args.unit === 'frames') {
     if (p5Inst.frameCount === inputEvent.args.n) {
       // Call callback with no extra args
+      eventLog.push(`atTime: ${inputEvent.args.n}`);
       return [{}];
     }
   }
@@ -265,6 +289,7 @@ function repeatForeverEvent(inputEvent, p5Inst) {
 
 function whenPressEvent(inputEvent, p5Inst) {
   if (p5Inst.keyWentDown(inputEvent.args.key)) {
+    eventLog.push(`whenPress: ${inputEvent.args.key}`);
     // Call callback with no extra args
     return [{}];
   } else {
@@ -275,6 +300,10 @@ function whenPressEvent(inputEvent, p5Inst) {
 
 function whilePressEvent(inputEvent, p5Inst) {
   if (p5Inst.keyDown(inputEvent.args.key)) {
+    // Prevent spamming the event log with repeated events
+    if (!eventLog[eventLog.length - 1]?.includes('whilePress')) {
+      eventLog.push(`whilePress: ${inputEvent.args.key}`);
+    }
     // Call callback with no extra args
     return [{}];
   } else {
@@ -315,6 +344,7 @@ function whenTouchEvent(inputEvent) {
         if (!firedOnce) {
           // Sprites are overlapping, and we haven't fired yet for this collision,
           // so we should fire the callback
+          eventLog.push(`whenTouch: ${sprite.id} ${target.id}`);
           callbackArgList.push({
             subjectSprite: sprite.id,
             objectSprite: target.id
@@ -341,6 +371,10 @@ function whileTouchEvent(inputEvent) {
   sprites.forEach(sprite => {
     targets.forEach(target => {
       if (sprite.overlap(target)) {
+        // Prevent spamming the event log with repeated events
+        if (!eventLog[eventLog.length - 1]?.includes('whileTouch')) {
+          eventLog.push(`whileTouch: ${sprite.id} ${target.id}`);
+        }
         callbackArgList.push({
           subjectSprite: sprite.id,
           objectSprite: target.id
@@ -357,6 +391,7 @@ function whenClickEvent(inputEvent, p5Inst) {
     let sprites = getSpriteArray(inputEvent.args.sprite);
     sprites.forEach(sprite => {
       if (p5Inst.mouseIsOver(sprite)) {
+        eventLog.push(`whenClick: ${sprite.id}`);
         callbackArgList.push({clickedSprite: sprite.id});
       }
     });
@@ -369,6 +404,10 @@ function whileClickEvent(inputEvent, p5Inst) {
   let sprites = getSpriteArray(inputEvent.args.sprite);
   sprites.forEach(sprite => {
     if (p5Inst.mousePressedOver(sprite)) {
+      // Prevent spamming the event log with repeated events
+      if (!eventLog[eventLog.length - 1]?.includes('whileClick')) {
+        eventLog.push(`whileClick: ${sprite.id}`);
+      }
       callbackArgList.push({clickedSprite: sprite.id});
     }
   });
@@ -379,9 +418,21 @@ function whenSpriteCreatedEvent(inputEvent, p5Inst) {
   let callbackArgList = [];
   let sprites = newSprites[inputEvent.args.costume] || [];
   sprites.forEach(sprite => {
+    eventLog.push(`spriteCreated: ${sprite.id}`);
     callbackArgList.push({newSprite: sprite.id});
   });
   return callbackArgList;
+}
+
+function whenAllPromptsAnswered(inputEvent, p5Inst) {
+  const previous = inputEvent.previous;
+  inputEvent.previous = numActivePrompts;
+  if (previous !== numActivePrompts && numActivePrompts === 0) {
+    // Call callback with no extra args
+    return [{}];
+  }
+  // Don't call callback.
+  return [];
 }
 
 /**
@@ -415,6 +466,8 @@ function getCallbackArgListForEvent(inputEvent, p5Inst) {
       return whileClickEvent(inputEvent, p5Inst);
     case 'whenSpriteCreated':
       return whenSpriteCreatedEvent(inputEvent, p5Inst);
+    case 'whenAllPromptsAnswered':
+      return whenAllPromptsAnswered(inputEvent, p5Inst);
   }
 }
 

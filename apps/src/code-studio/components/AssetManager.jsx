@@ -43,14 +43,6 @@ function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
 
-const styles = {
-  emptyText: {
-    margin: '1em 0',
-    fontSize: '16px',
-    lineHeight: '20px'
-  }
-};
-
 /**
  * A component for managing hosted assets.
  */
@@ -390,3 +382,11 @@ export default class AssetManager extends React.Component {
     return assetList;
   }
 }
+
+const styles = {
+  emptyText: {
+    margin: '1em 0',
+    fontSize: '16px',
+    lineHeight: '20px'
+  }
+};

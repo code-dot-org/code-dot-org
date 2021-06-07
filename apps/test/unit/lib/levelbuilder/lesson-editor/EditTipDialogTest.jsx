@@ -26,8 +26,8 @@ describe('EditTipDialog', () => {
     expect(wrapper.contains('Add Callout')).to.be.true;
     expect(wrapper.find('LessonTip').length).to.equal(1);
     expect(wrapper.find('select').length).to.equal(1);
-    expect(wrapper.find('textarea').length).to.equal(1);
-    expect(wrapper.find('BaseDialog').length).to.equal(1);
+    expect(wrapper.find('MarkdownEnabledTextarea').length).to.equal(1);
+    expect(wrapper.find('LessonEditorDialog').length).to.equal(1);
   });
 
   it('edit tip values', () => {
@@ -37,15 +37,9 @@ describe('EditTipDialog', () => {
     expect(dropdown.props().value).to.equal('teachingTip');
     dropdown.simulate('change', {target: {value: 'contentCorner'}});
 
-    const textarea = wrapper.find('textarea');
-    expect(textarea.props().defaultValue).to.include('');
-    textarea.simulate('change', {
-      target: {value: 'Be careful when you teach this lesson'}
-    });
+    const textarea = wrapper.find('MarkdownEnabledTextarea');
+    expect(textarea.props().markdown).to.include('');
 
-    expect(wrapper.state().tip.markdown).to.equal(
-      'Be careful when you teach this lesson'
-    );
     expect(wrapper.state().tip.type).to.equal('contentCorner');
   });
 });

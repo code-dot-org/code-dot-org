@@ -4,7 +4,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit4/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-19/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit4/code/"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-19/unit4/{LESSON}'
 family_name 'csd4'
 version_year '2019'
@@ -14,36 +13,36 @@ curriculum_umbrella 'CSD'
 tts true
 
 lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
-lesson 'Analysis of Design', display_name: 'Analysis of Design'
+lesson 'Analysis of Design', display_name: 'Analysis of Design', has_lesson_plan: true
 level 'CSD U4L01 autoSFLP_2019', named: true
 
-lesson 'Understanding Your User', display_name: 'Understanding Your User'
+lesson 'Understanding Your User', display_name: 'Understanding Your User', has_lesson_plan: true
 level 'CSD U4L02 autoSFLP_2019', named: true
 
-lesson 'User-Centered Design Micro Activity', display_name: 'User-Centered Design Micro Activity'
+lesson 'User-Centered Design Micro Activity', display_name: 'User-Centered Design Micro Activity', has_lesson_plan: true
 level 'CSD U4L03 autoSFLP_2019', named: true
 
-lesson 'User Interfaces', display_name: 'User Interfaces'
+lesson 'User Interfaces', display_name: 'User Interfaces', has_lesson_plan: true
 level 'CSD U4L04 autoSFLP_2019', named: true
 
-lesson 'Feedback and Testing', display_name: 'Feedback and Testing'
+lesson 'Feedback and Testing', display_name: 'Feedback and Testing', has_lesson_plan: true
 level 'CSD U4L05 autoSFLP_2019', named: true
 
-lesson 'Identifying User Needs', display_name: 'Identifying User Needs'
+lesson 'Identifying User Needs', display_name: 'Identifying User Needs', has_lesson_plan: true
 level 'CSD U4L06 autoSFLP_2019', named: true
 
-lesson 'Project - Paper Prototype', display_name: 'Project - Paper Prototype'
+lesson 'Project - Paper Prototype', display_name: 'Project - Paper Prototype', has_lesson_plan: true
 level 'CSD U4L07 autoSFLP_2019', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019', progression: 'Reflection', assessment: true
 
 lesson_group 'csd4_2', display_name: 'Chapter 2: App Prototyping'
-lesson 'Designing Apps for Good', display_name: 'Designing Apps for Good'
+lesson 'Designing Apps for Good', display_name: 'Designing Apps for Good', has_lesson_plan: true
 level 'CSD U4L08 autoSFLP_2019', named: true
 
-lesson 'Market Research', display_name: 'Market Research'
+lesson 'Market Research', display_name: 'Market Research', has_lesson_plan: true
 level 'CSD U4L09 autoSFLP_2019', named: true
 
-lesson 'Paper Prototypes', display_name: 'Paper Prototypes'
+lesson 'Paper Prototypes', display_name: 'Paper Prototypes', has_lesson_plan: true
 level 'CSD U4L10 autoSFLP_2019', named: true
 level 'Example App Types_2018_2019', named: true
 level 'CSDU4 Quiz App Demo_2019', progression: 'Demo Apps'
@@ -51,10 +50,10 @@ level 'CSDU4 Decision App Demo_2019', progression: 'Demo Apps'
 level 'CSDU4 List App Demo_2019', progression: 'Demo Apps'
 level 'CSDU4 Crowdsource App Demo_2019', progression: 'Demo Apps'
 
-lesson 'Prototype Testing', display_name: 'Prototype Testing'
+lesson 'Prototype Testing', display_name: 'Prototype Testing', has_lesson_plan: true
 level 'CSD U4L11 autoSFLP_2019', named: true
 
-lesson 'Digital Design', display_name: 'Digital Design'
+lesson 'Digital Design', display_name: 'Digital Design', has_lesson_plan: true
 level 'CSD U4L12 autoSFLP_2019', named: true
 level 'CSDU4 Design Mode Video_2019', named: true
 level 'U4 Model Design 1_2019', progression: 'Build a Screen'
@@ -69,7 +68,7 @@ level 'CSD U4 Design Elements Map_2019', named: true
 level 'Design a Screen for your App_2018_2019', named: true
 level 'CSD U4 - Design Mode Project_2019', progression: 'App Project: Screen Design', assessment: true
 
-lesson 'Linking Screens', display_name: 'Linking Screens'
+lesson 'Linking Screens', display_name: 'Linking Screens', has_lesson_plan: true
 level 'CSD U4L13 autoSFLP_2019', named: true
 level 'U4 Model Program 1_2019', progression: 'Adding Screens'
 level 'U4 Model Program 1.5_2019', progression: 'Adding Screens'
@@ -85,23 +84,23 @@ level 'CSD U4 Change Screen Map_2019', named: true
 level 'CSDU4 Project Import_2019', progression: 'Combining Projects'
 level 'CSDU4 Project Events_2019', progression: 'Combining Projects', assessment: true
 
-lesson 'Testing the App', display_name: 'Testing the App'
+lesson 'Testing the App', display_name: 'Testing the App', has_lesson_plan: true
 level 'CSD U4L14 autoSFLP_2019', named: true
 
-lesson 'Improving and Iterating', display_name: 'Improving and Iterating'
+lesson 'Improving and Iterating', display_name: 'Improving and Iterating', has_lesson_plan: true
 level 'CSD U4L15 autoSFLP_2019', named: true
 level 'CSDU4 Project Bug Feature_2019', named: true
 
-lesson 'Project - App Presentation', display_name: 'Project - App Presentation'
+lesson 'Project - App Presentation', display_name: 'Project - App Presentation', has_lesson_plan: true
 level 'CSD U4L16 autoSFLP_2019', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019', progression: 'Reflection', assessment: true
 
 lesson_group 'csd5_2', display_name: 'Chapter 2: Solving Data Problems'
-lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD User Centered Design Post-Project Test', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true, has_lesson_plan: false
 level 'csd-post-survey-intro-2019'
 level 'csd-post-survey-levelgroup_2019', assessment: true
 

@@ -5,6 +5,7 @@ import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/Se
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import sinon from 'sinon';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -16,7 +17,7 @@ describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    sinon.stub(progressLoader, 'loadScript');
+    sinon.stub(progressLoader, 'loadScriptProgress');
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
       setCurrentView: () => {},
@@ -32,10 +33,10 @@ describe('SectionProgress', () => {
       scriptData: {
         id: 123,
         path: '/scripts/myscript',
-        stages: [
+        lessons: [
           {
             id: 456,
-            levels: [{id: 789}]
+            levels: [{id: '789'}]
           }
         ],
         csf: true,
@@ -44,61 +45,52 @@ describe('SectionProgress', () => {
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
       showStandardsIntroDialog: false,
-      studentTimestamps: {
+      studentLastUpdateByScript: {
         1: Date.now()
       }
     };
   });
 
   afterEach(() => {
-    progressLoader.loadScript.restore();
+    progressLoader.loadScriptProgress.restore();
   });
 
-  it('loading data shows loading icon', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress {...DEFAULT_PROPS} isLoadingProgress={true} />
+  const setUp = (overrideProps = {}) => {
+    return shallow(
+      <UnconnectedSectionProgress {...DEFAULT_PROPS} {...overrideProps} />
     );
+  };
+
+  it('loading data shows loading icon', () => {
+    const wrapper = setUp({isLoadingProgress: true});
     expect(wrapper.find('#uitest-spinner').exists()).to.be.true;
   });
 
   it('done loading data does not show loading icon', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
+    const wrapper = setUp();
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
-  it('shows summary view', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
-    expect(wrapper.find('#uitest-summary-view').exists()).to.be.true;
+  it('renders ProgressTableView for detail and summary view only', () => {
+    let wrapper = setUp({currentView: ViewType.DETAIL});
+    expect(wrapper.find(ProgressTableView)).to.have.length(1);
+
+    wrapper = setUp({currentView: ViewType.SUMMARY});
+    expect(wrapper.find(ProgressTableView)).to.have.length(1);
+
+    wrapper = setUp({currentView: ViewType.STANDARDS});
+    expect(wrapper.find(ProgressTableView)).to.have.length(0);
   });
 
-  it('shows detail view', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress
-        {...DEFAULT_PROPS}
-        currentView={ViewType.DETAIL}
-      />
+  it('passes currentView to ProgressTableView', () => {
+    const wrapper = setUp({currentView: ViewType.DETAIL});
+    expect(wrapper.find(ProgressTableView).props().currentView).to.equal(
+      ViewType.DETAIL
     );
-    expect(wrapper.find('#uitest-detail-view').exists()).to.be.true;
   });
 
   it('shows standards view', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress
-        {...DEFAULT_PROPS}
-        currentView={ViewType.STANDARDS}
-      />
-    );
+    const wrapper = setUp({currentView: ViewType.STANDARDS});
     expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
-  });
-
-  it('shows student timestamps', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
-    const tooltip = wrapper.find('#tooltipIdForStudent1');
-    expect(
-      tooltip
-        .children()
-        .first()
-        .text()
-    ).to.contain('Today');
   });
 });

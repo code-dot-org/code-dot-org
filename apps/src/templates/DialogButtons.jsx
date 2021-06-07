@@ -5,24 +5,6 @@ import msg from '@cdo/locale';
 import Lightbulb from './Lightbulb';
 import {getStore} from '@cdo/apps/redux';
 
-const styles = {
-  confirmButton: {
-    float: 'right'
-  },
-  nextButton: {
-    float: 'right'
-  },
-  nextButtonRtl: {
-    float: 'left'
-  },
-  lightbulb: {
-    margin: '-9px 0px -9px -5px'
-  },
-  hintButton: {
-    marginRight: 10
-  }
-};
-
 export default class DialogButtons extends Component {
   static propTypes = {
     assetUrl: PropTypes.func,
@@ -154,3 +136,21 @@ export default class DialogButtons extends Component {
     );
   }
 }
+
+const styles = {
+  confirmButton: {
+    float: 'right'
+  },
+  nextButton: {
+    float: 'right'
+  },
+  nextButtonRtl: {
+    float: 'left'
+  },
+  lightbulb: {
+    margin: '-9px 0px -9px -5px'
+  },
+  hintButton: {
+    marginRight: 10
+  }
+};

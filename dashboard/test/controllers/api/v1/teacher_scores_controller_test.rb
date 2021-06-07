@@ -11,29 +11,29 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     @script = create :script
   end
 
-  test 'score_stage_for_section is forbidden if signed out' do
+  test 'score_lesson_for_section is forbidden if signed out' do
     post '/dashboardapi/v1/teacher_scores', params: {
-      section_id: @section.id, stage_scores: [{stage_id: @lesson.id, score: 100}]
+      section_id: @section.id, lesson_scores: [{lesson_id: @lesson.id, score: 100}]
     }
     assert_response 302
   end
 
-  test 'score_stage_for_section is forbidden if student' do
+  test 'score_lesson_for_section is forbidden if student' do
     sign_in @student
     post '/dashboardapi/v1/teacher_scores', params: {
-      section_id: @section.id, stage_scores: [{stage_id: @lesson.id, score: 100}]
+      section_id: @section.id, lesson_scores: [{lesson_id: @lesson.id, score: 100}]
     }
     assert_response :forbidden
   end
 
-  test 'score_stage_for_section is forbidden for teacher who does not own section' do
+  test 'score_lesson_for_section is forbidden for teacher who does not own section' do
     sign_in @teacher
     section_2 = create :section
-    post '/dashboardapi/v1/teacher_scores', params: {section_id: section_2.id, stage_scores: [{stage_id: @lesson.id, score: 100}]}
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section_2.id, lesson_scores: [{lesson_id: @lesson.id, score: 100}]}
     assert_response :forbidden
   end
 
-  test 'score_stages_for_section succeeds with only one lesson' do
+  test 'score_lessons_for_section succeeds with only one lesson' do
     teacher = create :teacher
     section = create :section, teacher: teacher
     section.students << create(:student)
@@ -50,12 +50,12 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     lesson = script_level.lesson
 
     sign_in teacher
-    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: lesson.id, score: 100}]}
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, lesson_scores: [{lesson_id: lesson.id, score: 100}]}
     assert TeacherScore.where(teacher_id: teacher.id).exists?
     assert_response :no_content
   end
 
-  test 'score_stages_for_section fails if lesson is not found' do
+  test 'score_lessons_for_section fails if lesson is not found' do
     teacher = create :teacher
     section = create :section, teacher: teacher
     section.students << create(:student)
@@ -74,7 +74,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     )
     destroyed_lesson = create :lesson
     destroyed_lesson.destroy
-    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: lesson.id, score: 100}, {stage_id: destroyed_lesson.id, score: 0}]}
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, lesson_scores: [{lesson_id: lesson.id, score: 100}, {lesson_id: destroyed_lesson.id, score: 0}]}
     refute TeacherScore.where(teacher_id: teacher.id).exists?
     assert_response :forbidden
   end
@@ -99,7 +99,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
 
     script = create :script
     lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson = create :lesson, script: script, lesson_group: lesson_group, unplugged: true
     script_level = create(
       :script_level,
       script: script,
@@ -111,7 +111,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     level = script_level.levels[0]
     score = 100
 
-    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: lesson.id, score: score}]}
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, lesson_scores: [{lesson_id: lesson.id, score: score}]}
 
     get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
 
@@ -145,9 +145,9 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
       create :user_level, user: student, level: level, script: script
     end
 
-    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: lesson.id, score: score}]}
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, lesson_scores: [{lesson_id: lesson.id, score: score}]}
 
-    assert_queries 14 do
+    assert_queries 6 do
       get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
     end
 
@@ -159,7 +159,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal section.students.count, 11
 
-    assert_queries 14 do
+    assert_queries 6 do
       get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
     end
   end

@@ -85,6 +85,10 @@
           "speed": "speed"
         }
       }
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/p/iceage": {

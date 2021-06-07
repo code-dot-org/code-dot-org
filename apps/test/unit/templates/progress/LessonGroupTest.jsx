@@ -9,13 +9,15 @@ const DEFAULT_PROPS = {
   isPlc: false,
   isSummaryView: false,
   scriptId: 1,
-  lessonGroup: {
-    displayName: 'jazz',
-    description: 'A chapter about conditionals',
-    bigQuestions: 'Why is the earth round? Can pigs fly?'
+  groupedLesson: {
+    lessonGroup: {
+      displayName: 'jazz',
+      description: 'A chapter about conditionals',
+      bigQuestions: 'Why is the earth round? Can pigs fly?'
+    },
+    lessons: [fakeLesson('lesson1', 1)],
+    levelsByLesson: []
   },
-  lessons: [fakeLesson('lesson1', 1)],
-  levelsByLesson: [],
   lessonIsVisible: () => true,
   viewAs: ViewType.Teacher
 };
@@ -35,10 +37,13 @@ describe('LessonGroup', () => {
   it('renders without lesson group info button when there is no description or big questions', () => {
     const props = {
       ...DEFAULT_PROPS,
-      lessonGroup: {
-        displayName: 'jazz',
-        description: null,
-        bigQuestions: null
+      groupedLesson: {
+        ...DEFAULT_PROPS.groupedLesson,
+        lessonGroup: {
+          displayName: 'jazz',
+          description: null,
+          bigQuestions: null
+        }
       }
     };
     const wrapper = shallow(<LessonGroup {...props} />);
@@ -57,8 +62,11 @@ describe('LessonGroup', () => {
   it('does not render in student view if there are no lessons', () => {
     const props = {
       ...DEFAULT_PROPS,
+      groupedLesson: {
+        ...DEFAULT_PROPS.groupedLesson,
+        lessons: []
+      },
       isSummaryView: true,
-      lessons: [],
       viewAs: ViewType.Student
     };
     const wrapper = shallow(<LessonGroup {...props} />);
@@ -67,8 +75,11 @@ describe('LessonGroup', () => {
   it('does render in teacher view if there are no lessons', () => {
     const props = {
       ...DEFAULT_PROPS,
+      groupedLesson: {
+        ...DEFAULT_PROPS.groupedLesson,
+        lessons: []
+      },
       isSummaryView: true,
-      lessons: [],
       viewAs: ViewType.Teacher
     };
     const wrapper = shallow(<LessonGroup {...props} />);

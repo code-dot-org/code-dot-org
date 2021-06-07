@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -286,11 +286,7 @@ class Blockly < Level
         set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
         set_unless_nil(level_options, 'sharedFunctions', localized_shared_functions(level_options['sharedFunctions']))
 
-        if script && !script.localize_long_instructions?
-          level_options.delete('longInstructions')
-        else
-          set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
-        end
+        set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
 
         # Unintuitively, it is completely possible for a Blockly level to use
@@ -309,7 +305,8 @@ class Blockly < Level
           ).each do |xml_block_prop|
             next unless level_options.key? xml_block_prop
             set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
-            set_unless_nil(level_options, xml_block_prop, localized_text_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_blocks_with_placeholder_texts(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_variable_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -388,7 +385,7 @@ class Blockly < Level
       level_prop['editCode'] = uses_droplet?
 
       # Blockly requires these fields to be objects not strings
-      %w(map initialDirt serializedMaze goal softButtons inputOutputTable).
+      %w(map initialDirt serializedMaze goal softButtons inputOutputTable scale).
           concat(NetSim.json_object_attrs).
           concat(Craft.json_object_attrs).
           each do |x|
@@ -593,27 +590,80 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  # Localize placeholder texts in text blocks
-  def localized_text_blocks(blocks)
-    return if blocks.nil?
-    block_xml = Nokogiri::XML(blocks, &:noblanks)
-    block_xml.xpath("//block[@type=\"text\"]").each do |text_block|
-      text_title = text_block.at_xpath('./title[@name="TEXT"]')
-      next unless text_title&.content&.present?
+  # Localizing variable names in "variables_get" and "parameters_get" block types
+  def localized_variable_blocks(blocks)
+    return nil if blocks.nil?
 
-      # Must generate text_key in the same way it is created in
-      # the get_i18n_strings function in sync-in.rb script.
-      text_key = Digest::MD5.hexdigest text_title.content
-      localized_text = I18n.t(
-        text_key,
-        scope: [:data, :placeholder_texts, name],
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    variables_get = block_xml.xpath("//block[@type=\"variables_get\"]")
+    variables_set = block_xml.xpath("//block[@type=\"variables_set\"]")
+    variables = variables_get + variables_set
+    variables.each do |variable|
+      variable_name = variable.at_xpath('./title[@name="VAR"]')
+      next unless variable_name
+      localized_name = I18n.t(
+        variable_name.content,
+        scope: [:data, :variable_names],
         default: nil,
         smart: true
       )
-      text_title.content = localized_text if localized_text
+      variable_name.content = localized_name if localized_name
     end
 
+    block_xml.xpath("//block[@type=\"parameters_get\"]").each do |parameter|
+      parameter_name = parameter.at_xpath('./title[@name="VAR"]')
+      next unless parameter_name
+      localized_name = I18n.t(
+        parameter_name.content,
+        scope: [:data, :parameter_names],
+        default: nil,
+        smart: true
+      )
+      parameter_name.content = localized_name if localized_name
+    end
+
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing placeholder texts in all possible block types.
+  # @param blocks [String]
+  # @return [String]
+  # @see unit test for an example of blocks that contain placeholder texts.
+  def localized_blocks_with_placeholder_texts(blocks)
+    return if blocks.nil?
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+
+    localize_placeholder_texts(block_xml, 'text', ['TEXT'])
+    localize_placeholder_texts(block_xml, 'studio_ask', ['TEXT'])
+    localize_placeholder_texts(block_xml, 'studio_showTitleScreen', %w(TEXT TITLE))
+
     block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing placeholder texts in one block type.
+  # @param block_xml [Nokogiri::XML::Document]
+  # @param block_type [String]
+  # @param title_names [Array<String>]
+  # @return [Nokogiri::XML::Document]
+  def localize_placeholder_texts(block_xml, block_type, title_names)
+    block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+      title_names.each do |title_name|
+        title = block.at_xpath("./title[@name=\"#{title_name}\"]")
+        next unless title&.content&.present?
+
+        # Must generate text_key in the same way it is created in
+        # the get_i18n_strings function in sync-in.rb script.
+        text_key = Digest::MD5.hexdigest title.content
+        localized_text = I18n.t(
+          text_key,
+          scope: [:data, :placeholder_texts, name],
+          default: nil,
+          smart: true
+        )
+        title.content = localized_text if localized_text
+      end
+    end
+    block_xml
   end
 
   def self.base_url
@@ -661,7 +711,7 @@ class Blockly < Level
   end
 
   def shared_functions
-    Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
+    Rails.cache.fetch("shared_functions/#{I18n.locale}/#{type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
     end.join
   end
@@ -739,5 +789,15 @@ class Blockly < Level
     if goal_override&.is_a?(String)
       self.goal_override = JSON.parse(goal_override)
     end
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        longInstructions: localized_long_instructions || long_instructions,
+        shortInstructions: localized_short_instructions || short_instructions,
+        skin: skin
+      }
+    )
   end
 end

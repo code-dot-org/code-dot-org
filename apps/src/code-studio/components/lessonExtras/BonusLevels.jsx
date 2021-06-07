@@ -10,6 +10,98 @@ import SublevelCard from '../SublevelCard';
 const CARD_AREA_SIZE = 900;
 const RadiumFontAwesome = Radium(FontAwesome);
 
+class BonusLevels extends React.Component {
+  static propTypes = {
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(lessonOfBonusLevels)),
+    sectionId: PropTypes.number,
+    userId: PropTypes.number
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      lessonIndex: props.bonusLevels.length - 1
+    };
+  }
+
+  nextLesson = () => {
+    if (this.state.lessonIndex < this.props.bonusLevels.length - 1) {
+      this.setState({lessonIndex: this.state.lessonIndex + 1});
+    }
+  };
+
+  previousLesson = () => {
+    if (this.state.lessonIndex > 0) {
+      this.setState({lessonIndex: this.state.lessonIndex - 1});
+    }
+  };
+
+  render() {
+    const previousNumLessons = this.props.bonusLevels.filter(
+      lesson =>
+        lesson.lessonNumber <
+        this.props.bonusLevels[this.state.lessonIndex].lessonNumber
+    ).length;
+    const scrollAmount = -1 * previousNumLessons * CARD_AREA_SIZE;
+
+    const leftDisabled = this.state.lessonIndex === 0;
+    const rightDisabled =
+      this.state.lessonIndex === this.props.bonusLevels.length - 1;
+
+    return (
+      <div>
+        <div style={styles.lessonNumberHeading}>
+          {i18n.extrasStageNChallenges({
+            lessonNumber: this.props.bonusLevels[this.state.lessonIndex]
+              .lessonNumber
+          })}
+        </div>
+        <div style={styles.scroller}>
+          <RadiumFontAwesome
+            icon="caret-left"
+            onClick={this.previousLesson}
+            style={[styles.arrow, leftDisabled && styles.arrowDisabled]}
+          />
+          <div
+            style={{
+              ...styles.challenges,
+              width: CARD_AREA_SIZE
+            }}
+          >
+            {this.props.bonusLevels.map(lesson => (
+              <div
+                key={lesson.lessonNumber}
+                style={{
+                  ...styles.challengeRow,
+                  left: scrollAmount,
+                  width: CARD_AREA_SIZE
+                }}
+              >
+                <div style={styles.cards}>
+                  {lesson.levels.map(level => (
+                    <SublevelCard
+                      isLessonExtra={true}
+                      sublevel={level}
+                      key={level.id}
+                      sectionId={this.props.sectionId}
+                      userId={this.props.userId}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <RadiumFontAwesome
+            icon="caret-right"
+            onClick={this.nextLesson}
+            style={[styles.arrow, rightDisabled && styles.arrowDisabled]}
+          />
+        </div>
+      </div>
+    );
+  }
+}
+
 const styles = {
   challengeRow: {
     clear: 'both',
@@ -60,97 +152,5 @@ const styles = {
     alignItems: 'center'
   }
 };
-
-class BonusLevels extends React.Component {
-  static propTypes = {
-    bonusLevels: PropTypes.arrayOf(PropTypes.shape(lessonOfBonusLevels)),
-    sectionId: PropTypes.number,
-    userId: PropTypes.number
-  };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      lessonIndex: props.bonusLevels.length - 1
-    };
-  }
-
-  nextLesson = () => {
-    if (this.state.lessonIndex < this.props.bonusLevels.length - 1) {
-      this.setState({lessonIndex: this.state.lessonIndex + 1});
-    }
-  };
-
-  previousLesson = () => {
-    if (this.state.lessonIndex > 0) {
-      this.setState({lessonIndex: this.state.lessonIndex - 1});
-    }
-  };
-
-  render() {
-    const previousNumLessons = this.props.bonusLevels.filter(
-      lesson =>
-        lesson.stageNumber <
-        this.props.bonusLevels[this.state.lessonIndex].stageNumber
-    ).length;
-    const scrollAmount = -1 * previousNumLessons * CARD_AREA_SIZE;
-
-    const leftDisabled = this.state.lessonIndex === 0;
-    const rightDisabled =
-      this.state.lessonIndex === this.props.bonusLevels.length - 1;
-
-    return (
-      <div>
-        <div style={styles.lessonNumberHeading}>
-          {i18n.extrasStageNChallenges({
-            stageNumber: this.props.bonusLevels[this.state.lessonIndex]
-              .stageNumber
-          })}
-        </div>
-        <div style={styles.scroller}>
-          <RadiumFontAwesome
-            icon="caret-left"
-            onClick={this.previousLesson}
-            style={[styles.arrow, leftDisabled && styles.arrowDisabled]}
-          />
-          <div
-            style={{
-              ...styles.challenges,
-              width: CARD_AREA_SIZE
-            }}
-          >
-            {this.props.bonusLevels.map(lesson => (
-              <div
-                key={lesson.stageNumber}
-                style={{
-                  ...styles.challengeRow,
-                  left: scrollAmount,
-                  width: CARD_AREA_SIZE
-                }}
-              >
-                <div style={styles.cards}>
-                  {lesson.levels.map(level => (
-                    <SublevelCard
-                      isLessonExtra={true}
-                      sublevel={level}
-                      key={level.id}
-                      sectionId={this.props.sectionId}
-                      userId={this.props.userId}
-                    />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-          <RadiumFontAwesome
-            icon="caret-right"
-            onClick={this.nextLesson}
-            style={[styles.arrow, rightDisabled && styles.arrowDisabled]}
-          />
-        </div>
-      </div>
-    );
-  }
-}
 
 export default Radium(BonusLevels);

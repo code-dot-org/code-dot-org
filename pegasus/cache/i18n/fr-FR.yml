@@ -1424,6 +1424,12 @@ fr-FR:
   coursed-2019_gradelevel: 4ème ou plus
   coursee-2019_gradelevel: De 8 à 12 ans
   coursef-2019_gradelevel: Seconde ou plus
+  coursea-2020_gradelevel: CM2 ou plus
+  courseb-2020_gradelevel: 6ème ou plus
+  coursec-2020_gradelevel: 5ème ou plus
+  coursed-2020_gradelevel: 4ème ou plus
+  coursee-2020_gradelevel: De 8 à 12 ans
+  coursef-2020_gradelevel: Seconde ou plus
   accelerated_gradelevel: De 10 à 18 ans
   codeorg_platformtext: Navigateurs récents, smartphones, tablettes
   codeintl_platformtext: Navigateurs récents, smartphones, tablettes
@@ -1623,6 +1629,28 @@ fr-FR:
   coursef-2019_shortdescription_congrats: Apprends toutes les notions dans les Concepts
     Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou
     jeux.
+  coursea-2020_shortdescription_congrats: Apprends les bases de l'informatique et
+    de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre
+    histoire que tu peux partager.
+  courseb-2020_shortdescription_congrats: Apprends les bases de l'informatique et
+    de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre
+    histoire que tu peux partager.
+  coursec-2020_shortdescription_congrats: Crée des programmes avec séquençage, boucles
+    et événements. Traduis tes initiales en binaire, étudie différentes techniques
+    de résolution de problèmes et apprends à réagir au cyberharcèlement. À la fin
+    du cours, crée ton propre jeu ou ta propre histoire que tu peux partager !
+  coursed-2020_shortdescription_congrats: Les élèves développent leur compréhension
+    des boucles, des conditions et des événements. Au-delà du codage, les élèves apprennent
+    la citoyenneté numérique.
+  coursee-2020_shortdescription_congrats: Commence à coder avec des algorithmes, des
+    boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans
+    la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux
+    partager avec tes amis et ta famille.
+  coursef-2020_shortdescription_congrats: Apprends à utiliser différents types de
+    boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques
+    de résolution de problèmes et discute des impacts sociétaux de l'informatique
+    et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet
+    de synthèse que tu peux partager avec tes amis et ta famille.
   codeorg_longdescription: Apprends les concepts de base de l'informatique avec la
     programmation, en glissant et en déposant. Il s'agit d'un didacticiel ludique
     auto-dirigé mettant en vedette des conférences vidéo de Bill Gates, Mark Zuckerberg,
@@ -2203,6 +2231,7 @@ fr-FR:
   header_legal_privacy: Politique de confidentialité
   header_legal_tos: Conditions Générales d'Utilisation
   header_tutorials: Didacticiels
+  header_screen_reader_hamburger: Menu
   app_lab_documentation: Documentation sur le Labo des Applis
   app_lab_tutorials: Tutoriels du Labo des Applis
   game_lab_documentation: Documentation sur le Labo des Jeux
@@ -2534,3 +2563,16 @@ fr-FR:
   page_not_available_button: Retourner à la page d’accueil
   footer_powered_by_aws: Fourni par Amazon Web Services
   codebytes_skinny_banner_english_only: Seulement en anglais
+  footer_privacy_policy: Politique de confidentialité
+  footer_about: À propos
+  footer_partners: Partenaires
+  footer_donate: Donner
+  footer_support: Assistance
+  footer_terms: Conditions Générales
+  ai_for_oceans: IA pour les Océans
+  ai_in_partnership_with: En partenariat avec
+  ai_microsoft_thanks: Nous remercions Microsoft du soutien accordé à notre vision
+    et notre mission d'offrir à chaque enfant la possibilité d’apprendre l’informatique
+    et d’obtenir les compétences nécessaires pour réussir au XXIe siècle.
+  ai_activity: Activité
+  ai_description: Description 

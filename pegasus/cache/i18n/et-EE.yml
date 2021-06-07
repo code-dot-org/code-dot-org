@@ -919,6 +919,8 @@ et-EE:
   coursee-2018_gradelevel: Vanusele 8-12
   coursed-2019_gradelevel: 8.+ klassid
   coursee-2019_gradelevel: Vanusele 8-12
+  coursed-2020_gradelevel: 8.+ klassid
+  coursee-2020_gradelevel: Vanusele 8-12
   accelerated_gradelevel: Vanustele 10-18
   codeorg_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   codeintl_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
@@ -1656,3 +1658,11 @@ et-EE:
   hoc2018_mc_with_microsoft: 'Koostöös: '
   footer_powered_by_aws: Amazoni poolt toetatud
   codebytes_skinny_banner_english_only: Ainult inglise keeles
+  footer_privacy_policy: Privaatsuspoliitika
+  footer_about: Info
+  footer_donate: Anneta
+  footer_support: Abi ja kogukond
+  footer_terms: Tingimused
+  ai_in_partnership_with: 'Koostöös: '
+  ai_activity: Tegevus
+  ai_description: Kirjeldus

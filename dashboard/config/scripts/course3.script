@@ -1,19 +1,18 @@
 hidden false
 hideable_lessons true
 lesson_extras_available true
-has_lesson_plan true
 curriculum_path 'https://code.org/curriculum/course3/{LESSON}/Teacher'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 curriculum_umbrella 'CSF'
 tts true
 
-lesson 'Computational Thinking', display_name: 'Computational Thinking'
+lesson 'Computational Thinking', display_name: 'Computational Thinking', has_lesson_plan: true, unplugged: true
 level 'ComputationalThinking'
 level '4-5 Computational Thinking Multi 1'
 level '4-5 Computational Thinking Match 1'
 
-lesson 'Maze', display_name: 'Maze'
+lesson 'Maze', display_name: 'Maze', has_lesson_plan: true
 level '4-5 Maze 1'
 level '4-5 Maze 2'
 level '4-5 Maze 3'
@@ -32,7 +31,7 @@ level '4-5 maze multi 1'
 bonus 'course3_maze_debugging_challenge1'
 bonus 'course3_maze_debugging_challenge2'
 
-lesson 'Artist', display_name: 'Artist'
+lesson 'Artist', display_name: 'Artist', has_lesson_plan: true
 level '4-5 Artist 1'
 level '4-5 Artist 2'
 level '4-5 Artist 3'
@@ -49,12 +48,12 @@ level '4-5 artist multi 1'
 level '4-5 artist multi 2'
 level '4-5 Artist Free Draw 1'
 
-lesson 'Functional Suncatchers', display_name: 'Functional Suncatchers'
+lesson 'Functional Suncatchers', display_name: 'Functional Suncatchers', has_lesson_plan: true, unplugged: true
 level 'FunctionalSuncatchers'
 level '4-5 Suncatchers Multi 1'
 level '4-5 Suncatchers Match 1'
 
-lesson 'Artist: Functions', display_name: 'Artist: Functions'
+lesson 'Artist: Functions', display_name: 'Artist: Functions', has_lesson_plan: true
 level '2-3 Artist Functions 1'
 level '2-3 Artist Functions 2'
 level '2-3 Artist Functions 3'
@@ -68,7 +67,7 @@ level '2-3 artist functions multi 1'
 bonus 'course3_artist_functions_challenge1'
 bonus 'course3_artist_functions_challenge2'
 
-lesson 'Bee: Functions', display_name: 'Bee: Functions'
+lesson 'Bee: Functions', display_name: 'Bee: Functions', has_lesson_plan: true
 level '2-3 Bee Functions 3'
 level '2-3 Bee Functions 1'
 level '2-3 Bee Functions 2'
@@ -83,7 +82,7 @@ level '2-3 Bee Functions Assessment 2'
 bonus 'course3_bee_functions_challenge1'
 bonus 'course3_bee_functions_challenge2'
 
-lesson 'Bee: Conditionals', display_name: 'Bee: Conditionals'
+lesson 'Bee: Conditionals', display_name: 'Bee: Conditionals', has_lesson_plan: true
 level '4-5 Bee Conditionals 1'
 level '4-5 Bee Conditionals 2'
 level '4-5 Bee Conditionals 3'
@@ -97,7 +96,7 @@ level '4-5 bee conditionals multi 1'
 bonus 'course3_farmer_condLoops_challenge1'
 bonus 'course3_farmer_condLoops_challenge2'
 
-lesson 'Maze: Conditionals', display_name: 'Maze: Conditionals'
+lesson 'Maze: Conditionals', display_name: 'Maze: Conditionals', has_lesson_plan: true
 level '4-5 Maze Conditionals 1'
 level '4-5 Maze Conditionals 2'
 level '4-5 Maze Conditionals 3'
@@ -113,16 +112,16 @@ level '4-5 maze conditionals multi 1'
 bonus 'course3_maze_until_challenge1'
 bonus 'course3_farmer_until_challenge2'
 
-lesson 'Songwriting', display_name: 'Songwriting'
+lesson 'Songwriting', display_name: 'Songwriting', has_lesson_plan: true, unplugged: true
 level 'SongwritingParameters'
 level '4-5 Songwriting Multi 1'
 
-lesson 'Dice Race', display_name: 'Dice Race'
+lesson 'Dice Race', display_name: 'Dice Race', has_lesson_plan: true, unplugged: true
 level 'DiceRace'
 level '4-5 Algorithms Match 1'
 level '4-5 Algorithms Multi 1'
 
-lesson 'Artist: Nested Loops', display_name: 'Artist: Nested Loops'
+lesson 'Artist: Nested Loops', display_name: 'Artist: Nested Loops', has_lesson_plan: true
 level '4-5 Nested Loops 1'
 level '4-5 Nested Loops 2'
 level '4-5 Nested Loops 6'
@@ -138,7 +137,7 @@ level '4-5 artist loops multi 1'
 bonus 'course2_artist_nestedLoops_challenge1'
 bonus 'course2_artist_nestedLoops_challenge2'
 
-lesson 'Farmer: While Loops', display_name: 'Farmer: While Loops'
+lesson 'Farmer: While Loops', display_name: 'Farmer: While Loops', has_lesson_plan: true
 level '4-5 While Loops 1'
 level '4-5 While Loops 2'
 level '4-5 While Loops 3'
@@ -151,7 +150,7 @@ level '4-5 While Loops Assessment 1'
 bonus 'course3_bee_functions_challenge3'
 bonus 'course3_bee_functions_challenge4'
 
-lesson 'Bee: Nested Loops', display_name: 'Bee: Nested Loops'
+lesson 'Bee: Nested Loops', display_name: 'Bee: Nested Loops', has_lesson_plan: true
 level '4-5 Bee Nested Loops 1'
 level '4-5 Bee Nested Loops 2'
 level '4-5 Bee Nested Loops 3'
@@ -168,7 +167,7 @@ level '4-5 bee loops multi 1'
 bonus 'course3_bee_debugging_challenge1'
 bonus 'course3_collector_debugging_challenge2'
 
-lesson 'Bee: Debugging', display_name: 'Bee: Debugging'
+lesson 'Bee: Debugging', display_name: 'Bee: Debugging', has_lesson_plan: true
 level '4-5 Bee Debugging 1'
 level '4-5 Bee Debugging 2'
 level '4-5 Bee Debugging 3'
@@ -183,7 +182,7 @@ level '4-5 Bee Debugging 11'
 level '4-5 Bee Debugging Assessment 1'
 level '4-5 bee debug multi 1'
 
-lesson 'Bounce', display_name: 'Bounce'
+lesson 'Bounce', display_name: 'Bounce', has_lesson_plan: true
 level 'bounce_1'
 level 'bounce_2'
 level 'bounce_3'
@@ -195,7 +194,7 @@ level 'bounce_10'
 level 'bounce_11'
 level 'bounce_12'
 
-lesson 'Studio: Create a Story', display_name: 'Play Lab: Create a Story'
+lesson 'Studio: Create a Story', display_name: 'Play Lab: Create a Story', has_lesson_plan: true
 skin 'studio'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:c3_story_1'
@@ -216,7 +215,7 @@ level_concept_difficulty '{"sequencing":1,"repeat_until_while":1,"events":1}'
 level 'blockly:Studio:c3_story_6'
 bonus 'course3_playLab_challenge1'
 
-lesson 'Studio: Create a Game', display_name: 'Play Lab: Create a Game'
+lesson 'Studio: Create a Game', display_name: 'Play Lab: Create a Game', has_lesson_plan: true
 skin 'studio'
 video_key_for_next_level 'C3_playlab_create_game'
 level_concept_difficulty '{"sequencing":1,"events":3}'
@@ -240,21 +239,21 @@ skin 'studio'
 level_concept_difficulty '{"sequencing":1,"repeat_until_while":1,"events":1}'
 level 'blockly:Studio:c3_game_7'
 
-lesson 'Internet', display_name: 'Internet'
+lesson 'Internet', display_name: 'Internet', has_lesson_plan: true, unplugged: true
 level 'Internet'
 level '4-5 Internet Multi 1'
 level '4-5 Internet Multi 2'
 
-lesson 'Crowdsourcing', display_name: 'Crowdsourcing'
+lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true, unplugged: true
 level 'Crowdsourcing'
 level '4-5 Crowdsourcing Multi 1'
 level '4-5 Crowdsourcing Multi 2'
 
-lesson 'Digital Citizenship', display_name: 'Digital Citizenship'
+lesson 'Digital Citizenship', display_name: 'Digital Citizenship', has_lesson_plan: true, unplugged: true
 level 'DigitalCitizenship'
 level '4-5 Digital Footprint Multi 1'
 
-lesson 'Artist: Patterns', display_name: 'Artist: Patterns'
+lesson 'Artist: Patterns', display_name: 'Artist: Patterns', has_lesson_plan: true
 level '4-5 Artist Patterns 1'
 level '4-5 Artist Patterns 2'
 level '4-5 Artist Patterns 3'

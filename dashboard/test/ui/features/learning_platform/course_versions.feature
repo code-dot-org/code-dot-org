@@ -26,7 +26,7 @@ Scenario: Version warning announcement on course and script overview pages
   # generate some progress in csp-2017
 
   Given I am on "http://studio.code.org/s/ui-test-script-in-course-2017/next"
-  And I wait until current URL contains "/s/ui-test-script-in-course-2017/stage/1/puzzle/1"
+  And I wait until current URL contains "/s/ui-test-script-in-course-2017/lessons/1/levels/1"
 
   # course and unit pages now show version warning
 
@@ -70,7 +70,7 @@ Scenario: Versions warning announcement on script overview page
 
   Given I am assigned to script "ui-test-versioned-script-2017"
   When I am on "http://studio.code.org/s/ui-test-versioned-script-2017/next"
-  And I wait until current URL contains "/s/ui-test-versioned-script-2017/stage/1/puzzle/1"
+  And I wait until current URL contains "/s/ui-test-versioned-script-2017/lessons/1/levels/1"
 
   When I am on "http://studio.code.org/s/ui-test-versioned-script-2019"
   And I wait until element "#script-title" is visible
@@ -89,9 +89,9 @@ Scenario: Versions warning announcement on script overview page
   Then element ".announcement-notification:contains(newer version)" is not visible
 
   # Generate progress in course 2
-  When I am on "http://studio.code.org/s/course2/stage/1/puzzle/1"
-  And I click selector ".next-stage" once I see it
-  And I wait until current URL contains "/s/course2/stage/1/puzzle/2"
+  When I am on "http://studio.code.org/s/course2/lessons/1/levels/1"
+  And I click selector ".next-lesson" once I see it
+  And I wait until current URL contains "/s/course2/lessons/1/levels/2"
 
   When I am on "http://studio.code.org/s/course1"
   And I wait until element "#script-title" is visible
@@ -116,7 +116,9 @@ Scenario: Switch versions using dropdown on script overview page
   And I click selector ".assignment-version-title:contains(2019)" once I see it
   Then I wait until I am on "http://studio.code.org/s/ui-test-versioned-script-2019"
 
-  When I wait until element "#script-title" is visible
+  # On Safari, the 2017 page may still be visible (even though the url has been changed)
+  # so we need to wait until we are looking at the 2019 page.
+  And I wait until element "#script-title" contains text "2019"
   And element "#uitest-version-selector" is visible
   And I click selector "#assignment-version-year" once I see it
   And element ".assignment-version-title:contains(2018)" is not visible

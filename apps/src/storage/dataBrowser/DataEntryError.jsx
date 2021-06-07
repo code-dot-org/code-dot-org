@@ -4,22 +4,6 @@ import msg from '@cdo/locale';
 import color from '../../util/color';
 import SafeMarkdown from '../../templates/SafeMarkdown';
 
-const styles = {
-  container: {
-    height: 40,
-    paddingTop: 12
-  },
-  visible: {
-    background: color.lighter_yellow,
-    paddingLeft: 12,
-    paddingRight: 12,
-    paddingBottom: 0
-  },
-  bottom: {
-    paddingBottom: 8
-  }
-};
-
 class DataEntryError extends React.Component {
   static propTypes = {
     isVisible: PropTypes.bool.isRequired
@@ -38,5 +22,21 @@ class DataEntryError extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    height: 40,
+    paddingTop: 12
+  },
+  visible: {
+    background: color.lighter_yellow,
+    paddingLeft: 12,
+    paddingRight: 12,
+    paddingBottom: 0
+  },
+  bottom: {
+    paddingBottom: 8
+  }
+};
 
 export default DataEntryError;

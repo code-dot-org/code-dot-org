@@ -168,6 +168,7 @@ function projectLists(state = initialProjectListState, action) {
 // Whether there are more projects of each type on the server which are
 // older than the ones we have on the client.
 const initialHasOlderProjects = {
+  special_topic: false,
   dance: true,
   applab: true,
   spritelab: true,

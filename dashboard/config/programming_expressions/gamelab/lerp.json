@@ -1,0 +1,15 @@
+{
+  "func": "lerp",
+  "category": "Math",
+  "paletteParams": [
+    "start",
+    "stop",
+    "amt"
+  ],
+  "params": [
+    "0",
+    "100",
+    "0.1"
+  ],
+  "type": "value"
+}

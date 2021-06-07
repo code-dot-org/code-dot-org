@@ -5,15 +5,6 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import trackEvent from '../util/trackEvent';
 import _ from 'lodash';
 
-const styles = {
-  closeX: {
-    position: 'absolute',
-    top: 5,
-    right: 5,
-    fontSize: 13
-  }
-};
-
 // Note that additional styling can be found in apps/style/HideToolbarHelper.scss.
 
 const HideToolbarHelperCookieName = 'hide_toolbar_helper';
@@ -139,3 +130,12 @@ export default class HideToolbarHelper extends React.Component {
     }
   }
 }
+
+const styles = {
+  closeX: {
+    position: 'absolute',
+    top: 5,
+    right: 5,
+    fontSize: 13
+  }
+};

@@ -9,18 +9,6 @@ import HeaderFinish from './HeaderFinish';
 import _ from 'lodash';
 import $ from 'jquery';
 
-const styles = {
-  headerMiddleContent: {
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    animation: 'header_fadein 0.4s'
-  },
-  finishedLink: {
-    width: '100%'
-  }
-};
-
 // These components will be given additional width beyond what they desire.
 const scriptNameExtraWidth = 10;
 const lessonProgressExtraWidth = 10;
@@ -333,6 +321,18 @@ class HeaderMiddle extends React.Component {
     }
   }
 }
+
+const styles = {
+  headerMiddleContent: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    animation: 'header_fadein 0.4s'
+  },
+  finishedLink: {
+    width: '100%'
+  }
+};
 
 export default connect(state => ({
   isRtl: state.isRtl,

@@ -1,26 +1,14 @@
 - if current_user && current_user.admin?
   = render layout: 'shared/extra_links' do
-    %li
-      Support tools
-      %ul
-        %li= link_to 'Assume Identity', assume_identity_form_path
-        %li= link_to 'Reset Password', new_user_password_path
-        %li= link_to 'Account Repair', account_repair_form_path
-        %li= link_to 'Look up section', lookup_section_path
-        %li= link_to 'Find Users', find_students_path
-    %li= link_to 'Gatekeeper', gatekeeper_show_path
-    %li= link_to 'Grant Permissions/Privileges', permissions_form_path
-    %li= link_to 'Videos', videos_path
-    %li
-      = link_to('Scripts', scripts_path)
-      = link_to('(Update all)', scripts_path(rake: '1'))
-      %ul
-        - Script.all.each do |script|
-          %li
-            = link_to("(#{t 'crud.edit'})", edit_script_path(script))
-            = link_to(data_t_suffix('script.name', script.name, 'title'), script_next_path(script))
-            - if script.has_standards_associations?
-              = link_to "(Import Standards)", admin_standards_import_path
-    %li= link_to t('builder.manage'), new_level_path
-    %li= link_to 'Admin Page Directory', admin_directory_path
-    %li= link_to 'Gallery', 'projects/public'
+    %div
+      = link_to 'Admin Page Directory', admin_directory_path
+    %div{style: "margin-top: 10px;"} Support tools
+    %ul
+      %li= link_to 'Assume Identity', assume_identity_form_path
+      %li= link_to 'Reset Password', new_user_password_path
+      %li= link_to 'Account Repair', account_repair_form_path
+      %li= link_to 'Look up section', lookup_section_path
+      %li= link_to 'Find Users', find_students_path
+      %li= link_to 'Gatekeeper', gatekeeper_show_path
+      %li= link_to 'Grant Permissions/Privileges', permissions_form_path
+      %li= link_to 'Videos', videos_path

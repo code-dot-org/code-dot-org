@@ -1,9 +1,6 @@
 import $ from 'jquery';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {
-  postMilestoneForPageLoad,
-  onContinue
-} from '@cdo/apps/code-studio/levels/postOnLoad';
+import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-external]');
@@ -16,9 +13,6 @@ $(document).ready(() => {
   }
 
   registerGetResult();
-
-  // make milestone post
-  postMilestoneForPageLoad();
 
   // Handle click on the continue button (results in navigating to next puzzle)
   // Note: We're using this pattern instead of

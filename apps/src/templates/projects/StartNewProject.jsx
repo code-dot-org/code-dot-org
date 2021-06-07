@@ -5,26 +5,6 @@ import i18n from '@cdo/locale';
 import Button from '../Button';
 import color from '../../util/color';
 
-const styles = {
-  button: {
-    float: 'right',
-    marginRight: 1
-  },
-  headingStartNew: {
-    paddingRight: 10,
-    paddingBottom: 10,
-    fontSize: 16,
-    fontFamily: '"Gotham 4r"',
-    color: color.charcoal,
-    marginBottom: -10
-  },
-  spacer: {
-    paddingTop: 10,
-    clear: 'both',
-    width: '100%'
-  }
-};
-
 export default class StartNewProject extends React.Component {
   static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
@@ -140,3 +120,23 @@ export default class StartNewProject extends React.Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    float: 'right',
+    marginRight: 1
+  },
+  headingStartNew: {
+    paddingRight: 10,
+    paddingBottom: 10,
+    fontSize: 16,
+    fontFamily: '"Gotham 4r"',
+    color: color.charcoal,
+    marginBottom: -10
+  },
+  spacer: {
+    paddingTop: 10,
+    clear: 'both',
+    width: '100%'
+  }
+};

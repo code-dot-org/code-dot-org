@@ -64,6 +64,7 @@
     },
     "new_name": null,
     "family_name": "csp-explore",
+    "serialized_at": "2021-05-03 23:55:22 UTC",
     "seeding_key": {
       "script.name": "csp-explore-2018"
     }
@@ -100,6 +101,7 @@
       "name": "Explore PT Prep - Reviewing the Task",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -114,6 +116,7 @@
       "name": "Explore PT - Making a Plan",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -128,6 +131,7 @@
       "name": "Explore PT - Complete the Task",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -142,6 +146,7 @@
       "name": "CS Principles Post-Course Survey",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -152,15 +157,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP ExploreL01 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP ExploreL01 SFLP"
@@ -176,12 +191,16 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-pt-tech-setup-and-tools_2018"
+        ],
         "progression": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pt-tech-setup-and-tools_2018"
@@ -197,11 +216,15 @@
     {
       "chapter": 3,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP ExploreL02 SFLP_2018"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP ExploreL02 SFLP_2018"
@@ -217,11 +240,15 @@
     {
       "chapter": 4,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP ExploreL03 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP ExploreL03 SFLP"
@@ -237,12 +264,16 @@
     {
       "chapter": 5,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey_v2"
@@ -312,5 +343,35 @@
         "script.name": "csp-explore-2018"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

@@ -8,6 +8,7 @@ module.exports.SpritelabReservedWords = [
   'CENTER',
   'World',
   'background',
+  'color',
   'createEdgeSprites',
   'createGroup',
   'createSprite',

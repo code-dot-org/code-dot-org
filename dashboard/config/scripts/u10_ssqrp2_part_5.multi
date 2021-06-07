@@ -20,3 +20,17 @@ wrong 'Use of emojis to rate "Happiness Moments". '
 markdown <<MARKDOWN
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** A photo that contains identifiable information and is tagged with a location could be used to track someone’s movements.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+* IOC-2.A - Describe the risks to privacy from collecting and storing personal data on a computer system.
+* IOC-2.A.1: Personally identifiable information (PII) is information about an individual that identifies, links, relates, or describes them. Examples of PII include- * Social Security number * age * race * phone number(s) * medical information * financial information * biometric data
+* IOC-2.A.5: Technology enables the collection, use, and exploitation of information about, by, and for individuals, groups, and institutions.
+
+:::
+
+
+MARKDOWN

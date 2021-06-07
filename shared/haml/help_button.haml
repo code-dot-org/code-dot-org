@@ -5,8 +5,8 @@
 
   help_items = HelpHeader.get_help_contents(options)
 
-.help_button{class: "hide-mobile", id: "help-button"}
-  .help_contents{style: 'display: none', id: "help-contents"}
+.help_button{class: "hide-mobile", id: "help-button", tabindex: "0", 'aria-label': I18n.t('header_screen_reader_help')}
+  .help_contents{style: 'display: none', id: "help-contents", dir: language_dir_class}
     - help_items.each do |entry|
       %a.linktag{id: entry[:id], href: entry[:url], target: entry[:target], rel: entry[:rel]}=entry[:title]
 

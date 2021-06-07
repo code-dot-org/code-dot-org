@@ -18,7 +18,7 @@ module Api::V1::Pd
       workshop_id = params[:workshop_id]
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop_id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
-      form = Foorm::Form.where(name: form_name, version: form_version).first
+      form = ::Foorm::Form.where(name: form_name, version: form_version).first
       foorm_submissions = submission_ids.empty? ?
                             ::Foorm::Submission.none :
                             ::Foorm::Submission.where(id: submission_ids, form_name: form_name, form_version: form_version)

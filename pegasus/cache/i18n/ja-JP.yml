@@ -184,7 +184,7 @@ ja-JP:
   personalize_certificate: 証明書のカスタマイズする
   print_batch_certificates: 証明書のバッチを印刷する
   print_certificates: 証明書を印刷する
-  certificate_sponsor_message: "%{Sponsor_name} は学習をサポートするために多大な支援をしてくれました。"
+  certificate_sponsor_message: "%{sponsor_name} は学習をサポートするために多大な支援をしてくれました。"
   print_ice_art_from_frozen: フローズンのチュートリアルからアイスアートを印刷する
   want_a_blank_certificate_template: 生徒の名前を書き込むための空欄の証明書テンプレートが必要ですか？
   landscape_recommended_certificates: 証明書を印刷するときは、**横向き** を選択することをお勧めします。
@@ -391,7 +391,7 @@ ja-JP:
   homepage_slot_text_link_donate: 寄付します
   homepage_slot_text_link_shop: T シャツ、帽子、その他
   homepage_slot_text_link_administrators: あなたの学校にコンピューター サイエンスを取り入れましょう
-  homepage_gallery_header: これまでに %{Project_count} 百万以上のCode.orgプロジェクトが作成されました
+  homepage_gallery_header: これまでに %{project_count} 百万以上のCode.orgプロジェクトが作成されました
   homepage_header_donors: Code.orgは支援者の皆様に感謝します。
   homepage_donors_seall: すべてを見る
   homepage_donors_donate: 寄付する
@@ -1029,11 +1029,16 @@ ja-JP:
   coursed-2017_name: コース D (2017)
   coursee-2017_name: コース E (2017)
   coursef-2017_name: コース F (2017)
+  coursea-2018_name: コース A (2018)
   courseb-2018_name: コース B (2018)
+  coursec-2018_name: コース C (2018)
+  coursed-2018_name: コース D (2018)
+  coursee-2018_name: コース E (2018)
   coursef-2018_name: コース F (2018)
   coursea-2019_name: コース A (2019)
   courseb-2019_name: コース B (2019)
   coursec-2019_name: コース C (2019)
+  coursed-2019_name: コース D (2019)
   coursee-2019_name: コース E (2019)
   coursef-2019_name: コース F (2019)
   coursea-2020_name: コース A (2020)
@@ -1044,6 +1049,7 @@ ja-JP:
   coursef-2020_name: コース F (2020)
   express-2018_name: エクスプレスコース (2018)
   pre-express-2018_name: 就学前エクスプレスコース (2018)
+  express-2019_name: エクスプレスコース (2019)
   pre-express-2019_name: 就学前エクスプレスコース (2019)
   express-2020_name: エクスプレスコース (2020)
   pre-express-2020_name: 就学前エクスプレスコース (2020)
@@ -1147,6 +1153,12 @@ ja-JP:
   coursed-2019_gradelevel: 中学2年生以上向け
   coursee-2019_gradelevel: 8才-12才
   coursef-2019_gradelevel: 9～13 歳
+  coursea-2020_gradelevel: 4～7 歳
+  courseb-2020_gradelevel: 5～8 歳
+  coursec-2020_gradelevel: 6～10 歳
+  coursed-2020_gradelevel: 中学2年生以上向け
+  coursee-2020_gradelevel: 8才-12才
+  coursef-2020_gradelevel: 9～13 歳
   accelerated_gradelevel: 10-18 才
   codeorg_platformtext: 最新ブラウザ、スマート フォン、タブレット
   codeintl_platformtext: 最新ブラウザ、スマート フォン、タブレット
@@ -1278,6 +1290,13 @@ ja-JP:
   coursed-2019_shortdescription_congrats: コースCのおさらいを簡単にした後に、アルゴリズム、入れ子のループ、条件文などへ進みましょう。
   coursee-2019_shortdescription_congrats: コースCとDのおさらいを簡単にした後、関数へと進みましょう。
   coursef-2019_shortdescription_congrats: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+  coursea-2020_shortdescription_congrats: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+  courseb-2020_shortdescription_congrats: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+  coursec-2020_shortdescription_congrats: シーケンス、ループ、イベントを含むプログラムを作成します。イニシャルをバイナリに変換し、さまざまな問題解決手法を調査し、ネット上のいじめに対処する方法を学びます。コースの最後に、独自のゲームやストーリーを作成して共有しましょう！
+  coursed-2020_shortdescription_congrats: 生徒はループ、条件、イベントについての理解を深めます。プログラミング以外に、生徒はデジタル
+    シティズンシップについて学びます。
+  coursee-2020_shortdescription_congrats: アルゴリズム、ループ、条件文、イベントを使ってプログラミングから始めて、関数に移ります。このコースの後半では、友だちや家族と共有できるキャップストーンプロジェクトを設計して作成します。
+  coursef-2020_shortdescription_congrats: このコースでは、さまざまな種類のループ、イベント、関数、条件文を使用する方法を学びます。さまざまな問題解決手法を調査し、コンピューティングとインターネットの社会的影響について話し合います。このコースの後半では、友人や家族と共有できるキャップストーンプロジェクトを設計して作成します。
   codeorg_longdescription: ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています
   codeintl_longdescription: ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています
   thinkersmithspanish_longdescription: '"ロボット語"を使用して、事前に打ち合わせすることなく、お互いに課題を解決する方法を探ります。このレッスンでは、デバッグという非常に重要なスキルと同時に、シンボルとアクションの関連について学びます。'
@@ -1639,6 +1658,7 @@ ja-JP:
   syncing_students_instructions: 'Code.orgセクションで使うGoogle Classroomの生徒リストを更新したい場合は、[生徒を管理]
     タブの [Google Classroomから生徒を同期] ボタンをクリックしてください:'
   google_sign_in_instruct: ここでは、[Googleアカウントでサインイン] のオプションを選ぶ必要があります。
+  hero_name: 'マインクラフト: ヒーローの旅'
   applab-intro_name: アプリラボの紹介
   applab_tile_title: アプリラボの紹介 (13歳以上)
   applab_tile_subtitle: ブロックベースのプログラミングを使ってJavaScriptで自分のアプリを作成しましょう。または、テキストベースのプログラミングで能力を向上させましょう。
@@ -1813,3 +1833,14 @@ ja-JP:
   page_not_available_button: ホームへ戻る
   footer_powered_by_aws: Powered by Amazon Web Services
   codebytes_skinny_banner_english_only: 英語のみ
+  footer_privacy_policy: プライバシー ポリシー
+  footer_about: 概要
+  footer_partners: パートナー
+  footer_donate: 寄付する
+  footer_support: ヘルプとコミュニティ
+  footer_terms: 利用規約
+  ai_for_oceans: 海洋のためのAI
+  ai_in_partnership_with: '協力者:'
+  ai_microsoft_thanks: 21世紀で成功するためにすべての子供たちにコンピューター サイエンスとスキルを学ぶ機会を確実に与えるという私たちのビジョンと使命をサポートしてくれたMicrosoftに感謝します。
+  ai_activity: アクティビティ
+  ai_description: 説明

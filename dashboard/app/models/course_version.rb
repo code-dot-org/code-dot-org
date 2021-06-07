@@ -20,9 +20,17 @@
 #
 
 class CourseVersion < ApplicationRecord
+  include Rails.application.routes.url_helpers
+
   belongs_to :course_offering
   has_many :resources
   has_many :vocabularies
+
+  KEY_CHAR_RE = /\d/
+  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
+  validates_format_of :key,
+    with: KEY_RE,
+    message: "must contain only digits; got \"%{value}\"."
 
   def units
     content_root_type == 'UnitGroup' ? content_root.default_scripts : [content_root]
@@ -36,6 +44,12 @@ class CourseVersion < ApplicationRecord
   belongs_to :content_root, polymorphic: true
 
   alias_attribute :version_year, :key
+
+  # For now, delegate any fields stored on the content root so that we can start
+  # accessing them via course version. In the future, these fields will be moved
+  # into the course version itself.
+
+  delegate :name, to: :content_root
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -78,5 +92,13 @@ class CourseVersion < ApplicationRecord
   def destroy_and_destroy_parent_if_empty
     destroy!
     course_offering.destroy if course_offering && course_offering.course_versions.empty?
+  end
+
+  def contained_lessons
+    units.map(&:lessons).flatten
+  end
+
+  def all_standards_url
+    content_root_type == 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
   end
 end

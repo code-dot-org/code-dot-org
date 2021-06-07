@@ -40,6 +40,7 @@
     },
     "new_name": "csp2-2017",
     "family_name": "csp2",
+    "serialized_at": "2021-05-03 23:54:48 UTC",
     "seeding_key": {
       "script.name": "csp2-2017"
     }
@@ -88,6 +89,7 @@
       "name": "Bytes and File Sizes",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -102,6 +104,7 @@
       "name": "Text Compression",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -116,6 +119,7 @@
       "name": "Encoding B&W Images",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -130,6 +134,7 @@
       "name": "Encoding Color Images",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -144,6 +149,7 @@
       "name": "Lossy Compression and File Formats",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -158,6 +164,7 @@
       "name": "Practice PT - Encode an Experience",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -172,6 +179,7 @@
       "name": "Unit 2 Chapter 1 Assessment",
       "absolute_position": 7,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -186,6 +194,7 @@
       "name": "Intro to Data",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -200,6 +209,7 @@
       "name": "Finding Trends with Visualizations",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -214,6 +224,7 @@
       "name": "Check Your Assumptions",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -228,6 +239,7 @@
       "name": "Good and Bad Data Visualizations",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -242,6 +254,7 @@
       "name": "Making Data Visualizations",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -256,6 +269,7 @@
       "name": "Discover a Data Story",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
       },
@@ -270,6 +284,7 @@
       "name": "Cleaning Data",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
       },
@@ -284,6 +299,7 @@
       "name": "Creating Summary Tables",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
       },
@@ -298,6 +314,7 @@
       "name": "Practice PT - Tell a Data Story",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
       },
@@ -312,6 +329,7 @@
       "name": "Unit 2 Chapter 2 Assessment",
       "absolute_position": 17,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -326,6 +344,7 @@
       "name": "Post-Course Survey",
       "absolute_position": 18,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
       },
@@ -336,16 +355,26 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L1 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L1 Student Lesson Introduction"
@@ -361,12 +390,16 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 Reflection Free Response"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L12 Reflection Free Response"
@@ -382,12 +415,16 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP_U2_Shakespeare_Question"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP_U2_Shakespeare_Question"
@@ -403,12 +440,16 @@
     {
       "chapter": 4,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-2-levelgroup-U2Ch1"
+        ],
         "progression": "Quick Check-In"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pulse-check-survey-2-levelgroup-U2Ch1"
@@ -424,12 +465,16 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L2 Student Lesson Summary"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L2 Student Lesson Summary"
@@ -445,12 +490,16 @@
     {
       "chapter": 6,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Text Compression"
+        ],
         "progression": "Text Compression"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Text Compression"
@@ -466,12 +515,16 @@
     {
       "chapter": 7,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Text Compression"
+        ],
         "progression": "Widget: Text Compression"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Widget: Text Compression"
@@ -487,12 +540,16 @@
     {
       "chapter": 8,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 - Assess Text Compression reverse process"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L13 - Assess Text Compression reverse process"
@@ -508,12 +565,16 @@
     {
       "chapter": 9,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assess Text Compression amount"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L13 Assess Text Compression amount"
@@ -529,12 +590,16 @@
     {
       "chapter": 10,
       "position": 6,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assessment 1"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L13 Assessment 1"
@@ -550,12 +615,16 @@
     {
       "chapter": 11,
       "position": 7,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assessment 2"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L13 Assessment 2"
@@ -571,12 +640,16 @@
     {
       "chapter": 12,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L3 Student Lesson Summary"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L3 Student Lesson Summary"
@@ -592,12 +665,16 @@
     {
       "chapter": 13,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A"
+        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Make the Letter A"
@@ -613,12 +690,16 @@
     {
       "chapter": 14,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset"
+        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Pixelation - Lesson 14 - Fix bit offset"
@@ -634,12 +715,16 @@
     {
       "chapter": 15,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Black and White Pixelation"
+        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Widget: Black and White Pixelation"
@@ -655,12 +740,16 @@
     {
       "chapter": 16,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 Assessment 1"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L14 Assessment 1"
@@ -676,12 +765,16 @@
     {
       "chapter": 17,
       "position": 6,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 - Assessment 2"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L14 - Assessment 2"
@@ -697,12 +790,16 @@
     {
       "chapter": 18,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L4 Student Lesson Summary"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L4 Student Lesson Summary"
@@ -718,12 +815,16 @@
     {
       "chapter": 19,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Images, Pixels, and RGB"
+        ],
         "progression": "Images, Pixels, and RGB"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Images, Pixels, and RGB"
@@ -739,12 +840,16 @@
     {
       "chapter": 20,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ],
         "progression": "Pixelation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Complete 3-bit color"
@@ -760,12 +865,16 @@
     {
       "chapter": 21,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades"
+        ],
         "progression": "Pixelation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades"
@@ -781,12 +890,16 @@
     {
       "chapter": 22,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4"
+        ],
         "progression": "Pixelation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Pixelation - Lesson 15 - Color Shades 4x4"
@@ -802,12 +915,16 @@
     {
       "chapter": 23,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Flappy"
+        ],
         "progression": "Pixelation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Pixelation Flappy"
@@ -823,12 +940,16 @@
     {
       "chapter": 24,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Bee"
+        ],
         "progression": "Pixelation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Pixelation Bee"
@@ -844,12 +965,16 @@
     {
       "chapter": 25,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Favicon Instructions"
+        ],
         "progression": "Favicon Instructions"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Favicon Instructions"
@@ -865,12 +990,16 @@
     {
       "chapter": 26,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Color Pixelation"
+        ],
         "progression": "Widget: Color Pixelation"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Widget: Color Pixelation"
@@ -886,12 +1015,16 @@
     {
       "chapter": 27,
       "position": 10,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 Color Pixel MC Question"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L5 Color Pixel MC Question"
@@ -907,12 +1040,16 @@
     {
       "chapter": 28,
       "position": 11,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 FR brighten darken image"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L5 FR brighten darken image"
@@ -928,12 +1065,16 @@
     {
       "chapter": 29,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L5 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L5 Student Lesson Introduction"
@@ -949,12 +1090,16 @@
     {
       "chapter": 30,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L16 - Matching File Compression Types"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L16 - Matching File Compression Types"
@@ -970,12 +1115,16 @@
     {
       "chapter": 31,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L6 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L6 Student Lesson Introduction"
@@ -991,11 +1140,15 @@
     {
       "chapter": 32,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 Ch1 Cumulative Assessment MC"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 2 Ch1 Cumulative Assessment MC"
@@ -1011,12 +1164,16 @@
     {
       "chapter": 33,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L7 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L7 Student Lesson Introduction"
@@ -1032,12 +1189,16 @@
     {
       "chapter": 34,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-3-levelgroup-U2Ch2"
+        ],
         "progression": "Quick Check-In"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pulse-check-survey-3-levelgroup-U2Ch2"
@@ -1053,12 +1214,16 @@
     {
       "chapter": 35,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L8 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L8 Student Lesson Introduction"
@@ -1074,12 +1239,16 @@
     {
       "chapter": 36,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L8 google trends MC"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L8 google trends MC"
@@ -1095,12 +1264,16 @@
     {
       "chapter": 37,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L8 google trends hypothesis"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L8 google trends hypothesis"
@@ -1116,12 +1289,16 @@
     {
       "chapter": 38,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L9 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L9 Student Lesson Introduction"
@@ -1137,12 +1314,16 @@
     {
       "chapter": 39,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L9 What is digital divide MC"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L9 What is digital divide MC"
@@ -1158,12 +1339,16 @@
     {
       "chapter": 40,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L9 FR digital divide issue"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L9 FR digital divide issue"
@@ -1179,12 +1364,16 @@
     {
       "chapter": 41,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L10 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L10 Student Lesson Introduction"
@@ -1200,12 +1389,16 @@
     {
       "chapter": 42,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collection A: Good and Bad Visualizations"
+        ],
         "progression": "Collection A: Good and Bad Visualizations"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Collection A: Good and Bad Visualizations"
@@ -1221,12 +1414,16 @@
     {
       "chapter": 43,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collection B: Good and Bad Visualizations"
+        ],
         "progression": "Collection B: Good and Bad Visualizations"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Collection B: Good and Bad Visualizations"
@@ -1242,12 +1439,16 @@
     {
       "chapter": 44,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L10 FR why best worst viz"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L10 FR why best worst viz"
@@ -1263,12 +1464,16 @@
     {
       "chapter": 45,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L11 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L11 Student Lesson Introduction"
@@ -1284,12 +1489,16 @@
     {
       "chapter": 46,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Downloading the Data Set"
+        ],
         "progression": "Downloading the Data Set"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Downloading the Data Set"
@@ -1305,12 +1514,16 @@
     {
       "chapter": 47,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Scatter Plot"
+        ],
         "progression": "Making a Scatter Plot"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Making a Scatter Plot"
@@ -1326,12 +1539,16 @@
     {
       "chapter": 48,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Line Chart"
+        ],
         "progression": "Making a Line Chart"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Making a Line Chart"
@@ -1347,12 +1564,16 @@
     {
       "chapter": 49,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Bar Chart"
+        ],
         "progression": "Making a Bar Chart"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Making a Bar Chart"
@@ -1368,12 +1589,16 @@
     {
       "chapter": 50,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Editing Chart Appearance"
+        ],
         "progression": "Editing Chart Appearance"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Editing Chart Appearance"
@@ -1389,12 +1614,16 @@
     {
       "chapter": 51,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Free Play"
+        ],
         "progression": "Making Data Visualizations - Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 - Making Data Visualizations - Free Play"
@@ -1410,12 +1639,16 @@
     {
       "chapter": 52,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L10 FR describe what you made from lesson prompt"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L10 FR describe what you made from lesson prompt"
@@ -1431,12 +1664,16 @@
     {
       "chapter": 53,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L12 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L12 Student Lesson Introduction"
@@ -1452,12 +1689,16 @@
     {
       "chapter": 54,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L12 FR reflection on collaboration"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L12 FR reflection on collaboration"
@@ -1473,12 +1714,16 @@
     {
       "chapter": 55,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L13 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L13 Student Lesson Introduction"
@@ -1494,12 +1739,16 @@
     {
       "chapter": 56,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Getting to Know Your Data"
+        ],
         "progression": "Getting to Know Your Data"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Getting to Know Your Data"
@@ -1515,12 +1764,16 @@
     {
       "chapter": 57,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Cleaning Data"
+        ],
         "progression": "Cleaning Data"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Cleaning Data"
@@ -1536,12 +1789,16 @@
     {
       "chapter": 58,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Categorizing Data"
+        ],
         "progression": "Categorizing Data"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Categorizing Data"
@@ -1557,12 +1814,16 @@
     {
       "chapter": 59,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Cleaning Data MC"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Cleaning Data MC"
@@ -1578,12 +1839,16 @@
     {
       "chapter": 60,
       "position": 6,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 FR Reflection data analysis objective"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 FR Reflection data analysis objective"
@@ -1599,12 +1864,16 @@
     {
       "chapter": 61,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L14 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L14 Student Lesson Introduction"
@@ -1620,12 +1889,16 @@
     {
       "chapter": 62,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making Pivot Tables Part 1 - The Basics"
+        ],
         "progression": "Making Pivot Tables Part 1 - The Basics"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Making Pivot Tables Part 1 - The Basics"
@@ -1641,12 +1914,16 @@
     {
       "chapter": 63,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making Pivot Tables Part 2 - Manipulation and Visualization"
+        ],
         "progression": "Making Pivot Tables Part 2 - Manipulation and Visualizations"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Making Pivot Tables Part 2 - Manipulation and Visualization"
@@ -1662,12 +1939,16 @@
     {
       "chapter": 64,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables Part 3"
+        ],
         "progression": "Making Pivot Tables Part 3"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L08v2 Making Pivot Tables Part 3"
@@ -1683,12 +1964,16 @@
     {
       "chapter": 65,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Summary Tables MC"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Summary Tables MC"
@@ -1704,12 +1989,16 @@
     {
       "chapter": 66,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L15 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "v2 U2L15 Student Lesson Introduction"
@@ -1725,8 +2014,14 @@
     {
       "chapter": 67,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_affirmation_intervention_2",
+          "csp_affirmation_control_2"
+        ],
+        "progression": "Pre-test reflection",
         "variants": {
           "csp_affirmation_control_2": {
             "experiments": [
@@ -1741,11 +2036,10 @@
               "rene-belonging-affirmation"
             ]
           }
-        },
-        "progression": "Pre-test reflection"
+        }
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_affirmation_intervention_2",
@@ -1763,11 +2057,15 @@
     {
       "chapter": 68,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 Ch2 Cumulative Assessment MC"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 2 Ch2 Cumulative Assessment MC"
@@ -1783,12 +2081,16 @@
     {
       "chapter": 69,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey"
+        ],
         "progression": "Click here! Complete the CS Principles post-course survey"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey"
@@ -1804,12 +2106,16 @@
     {
       "chapter": 70,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Click Here!"
+        ],
         "progression": "Participate in a longitudinal study!"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Click Here!"
@@ -2607,5 +2913,35 @@
         "script.name": "csp2-2017"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

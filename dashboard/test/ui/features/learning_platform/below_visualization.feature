@@ -2,7 +2,7 @@ Feature: Ensure correct #belowVisualization position
 
   @eyes @as_student
   Scenario: Check correct position of video thumbnails
-    Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?noautoplay=true"
+    Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1?noautoplay=true"
     And I wait for the page to fully load
 
     When I open my eyes to test "Video thumbnail position"

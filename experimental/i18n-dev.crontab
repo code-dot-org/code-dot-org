@@ -40,8 +40,11 @@ HOME=/home/ubuntu
 # - Run it every day except Monday. This is done so we don't conflict with the
 #   full sync, and also because we expect to spend Monday verifiying the
 #   results of the full sync.
-30 */2 * * SUN,TUE-SAT cd /home/ubuntu/code-dot-org && ((bundle exec ./bin/i18n/sync-all -c down && bundle exec ./bin/i18n/sync-all -c out) | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error
+30 */2 * * SUN,TUE-SAT cd /home/ubuntu/code-dot-org && ((bundle exec ./bin/i18n/sync-all.rb -c down && bundle exec ./bin/i18n/sync-all.rb -c out) | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error
 
 # Periodically check to see if the I18n Sync PRs have been merged and attempt
 # to return to staging.
-0 */1 * * * cd /home/ubuntu/code-dot-org && git fetch && (bundle exec ./bin/i18n/sync-all.rb -c return-to-staging | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error
+0 */1 * * * cd /home/ubuntu/code-dot-org && git fetch && (bundle exec ./bin/i18n/sync-all.rb -y -c return-to-staging | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error
+
+# Update string translation status to Redshift
+0 0 * * * cd /home/ubuntu/code-dot-org && bundle exec .bin/i18n/translation_status/update_translation_status.rb

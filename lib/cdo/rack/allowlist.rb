@@ -23,6 +23,13 @@ module Rack
         path = request.path
         behavior = behavior_for_path((config[:behaviors] + [config[:default]]), path)
 
+        # Filter query string.
+        if behavior[:query] == false
+          env[Rack::RACK_REQUEST_QUERY_STRING] = ''
+          env[Rack::QUERY_STRING] = ''
+          env[Rack::RACK_REQUEST_QUERY_HASH]&.clear
+        end
+
         # Filter allowlisted request headers.
         headers = behavior[:headers]
         REMOVED_HEADERS.each do |remove_header|

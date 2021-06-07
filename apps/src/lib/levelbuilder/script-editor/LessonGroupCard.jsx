@@ -16,51 +16,9 @@ import {
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/CloneLessonDialog';
 import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/RemoveLessonDialog';
-
-const styles = {
-  checkbox: {
-    margin: '0 0 0 7px'
-  },
-  lessonGroupCard: {
-    fontSize: 18,
-    background: 'white',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: '#ccc',
-    borderRadius: borderRadius,
-    padding: 20,
-    margin: 10
-  },
-  lessonGroupCardHeader: {
-    color: '#5b6770',
-    marginBottom: 15,
-    minHeight: 10
-  },
-  bottomControls: {
-    height: 30
-  },
-  addButton: {
-    fontSize: 14,
-    background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    margin: '0 5px 0 0'
-  },
-  input: {
-    width: '100%'
-  },
-  title: {
-    marginRight: 5
-  }
-};
-
-styles.targetLessonGroupCard = {
-  ...styles.lessonGroupCard,
-  borderWidth: 5,
-  borderColor: color.cyan,
-  padding: 16
-};
+import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
 class LessonGroupCard extends Component {
   static propTypes = {
@@ -213,6 +171,10 @@ class LessonGroupCard extends Component {
     this.setState({lessonPosToRemove: lessonPosition});
   };
 
+  handleCloneLesson = lessonPosition => {
+    this.setState({lessonPosToClone: lessonPosition});
+  };
+
   handleCloseRemoveLesson = () => {
     this.setState({lessonPosToRemove: null});
   };
@@ -291,28 +253,30 @@ class LessonGroupCard extends Component {
             <div>
               <label>
                 Description
-                <textarea
-                  value={this.props.lessonGroup.description}
-                  rows={Math.max(
+                <MarkdownEnabledTextarea
+                  markdown={this.props.lessonGroup.description}
+                  name={'description'}
+                  inputRows={Math.max(
                     this.props.lessonGroup.description.split(/\r\n|\r|\n/)
                       .length + 1,
                     2
                   )}
-                  style={styles.input}
-                  onChange={this.handleChangeDescription}
+                  handleMarkdownChange={this.handleChangeDescription}
+                  features={{imageUpload: true}}
                 />
               </label>
               <label>
                 Big Questions
-                <textarea
-                  value={this.props.lessonGroup.bigQuestions}
-                  rows={Math.max(
+                <MarkdownEnabledTextarea
+                  markdown={this.props.lessonGroup.bigQuestions}
+                  name={'big_questions'}
+                  inputRows={Math.max(
                     this.props.lessonGroup.bigQuestions.split(/\r\n|\r|\n/)
                       .length + 1,
                     2
                   )}
-                  style={styles.input}
-                  onChange={this.handleChangeBigQuestions}
+                  handleMarkdownChange={this.handleChangeBigQuestions}
+                  features={{imageUpload: true}}
                 />
               </label>
             </div>
@@ -329,13 +293,13 @@ class LessonGroupCard extends Component {
               }
             }}
             key={lesson.key}
-            lessonGroupPosition={this.props.lessonGroup.position}
             lesson={lesson}
             dragging={!!draggedLessonPos}
             draggedLessonPos={lesson.position === draggedLessonPos}
             delta={this.state.currentPositions[lesson.position - 1] || 0}
             handleDragStart={this.handleDragStart}
             removeLesson={this.handleRemoveLesson}
+            cloneLesson={this.handleCloneLesson}
           />
         ))}
         <div style={styles.bottomControls}>
@@ -362,10 +326,69 @@ class LessonGroupCard extends Component {
           lessonPosToRemove={this.state.lessonPosToRemove}
           handleClose={this.handleCloseRemoveLesson}
         />
+        <CloneLessonDialog
+          lessonId={
+            this.state.lessonPosToClone
+              ? this.props.lessonGroup.lessons[this.state.lessonPosToClone - 1]
+                  .id
+              : null
+          }
+          lessonName={
+            this.state.lessonPosToClone
+              ? this.props.lessonGroup.lessons[this.state.lessonPosToClone - 1]
+                  .name
+              : null
+          }
+          handleClose={() => this.setState({lessonPosToClone: null})}
+        />
       </div>
     );
   }
 }
+
+const styles = {
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  lessonGroupCard: {
+    fontSize: 18,
+    background: 'white',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: '#ccc',
+    borderRadius: borderRadius,
+    padding: 20,
+    margin: 10
+  },
+  lessonGroupCardHeader: {
+    color: '#5b6770',
+    marginBottom: 15,
+    minHeight: 10
+  },
+  bottomControls: {
+    height: 30
+  },
+  addButton: {
+    fontSize: 14,
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
+    margin: '0 5px 0 0'
+  },
+  input: {
+    width: '100%'
+  },
+  title: {
+    marginRight: 5
+  }
+};
+
+styles.targetLessonGroupCard = {
+  ...styles.lessonGroupCard,
+  borderWidth: 5,
+  borderColor: color.cyan,
+  padding: 16
+};
 
 export const UnconnectedLessonGroupCard = LessonGroupCard;
 

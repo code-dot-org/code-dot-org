@@ -14,8 +14,12 @@ import {
   getStore,
   registerReducers
 } from '@cdo/apps/redux';
+import createResourcesReducer, {
+  initResources
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import $ from 'jquery';
 
 describe('ScriptEditor', () => {
   let defaultProps, store;
@@ -23,7 +27,12 @@ describe('ScriptEditor', () => {
     sinon.stub(utils, 'navigateToHref');
     stubRedux();
 
-    registerReducers({...reducers, isRtl});
+    registerReducers({
+      ...reducers,
+      isRtl,
+      resources: createResourcesReducer('teacherResource'),
+      studentResources: createResourcesReducer('studentResource')
+    });
     store = getStore();
     store.dispatch(
       init(
@@ -41,13 +50,14 @@ describe('ScriptEditor', () => {
         {}
       )
     );
+    store.dispatch(initResources([]));
 
     defaultProps = {
       id: 1,
       initialAnnouncements: [],
       curriculumUmbrella: 'CSF',
       i18nData: {
-        stageDescriptions: [],
+        lessonDescriptions: [],
         description:
           '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
         studentDescription:
@@ -64,8 +74,12 @@ describe('ScriptEditor', () => {
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
+      initialIsStable: false,
+      initialHidden: true,
+      hasCourse: false,
+      scriptPath: '/s/test-script',
       initialLessonLevelData:
-        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name'\n"
+        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n"
     };
   });
 
@@ -84,13 +98,23 @@ describe('ScriptEditor', () => {
   };
 
   describe('Script Editor', () => {
+    it('does not show publishing editor if hasCourse is true', () => {
+      const wrapper = createWrapper({initialHidden: false, hasCourse: true});
+      assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 0);
+    });
+
+    it('shows publishing editor if hasCourse is false', () => {
+      const wrapper = createWrapper({initialHidden: false, hasCourse: false});
+      assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
+    });
+
     it('uses old script editor for non migrated script', () => {
       const wrapper = createWrapper({initialHidden: false});
 
-      expect(wrapper.find('input').length).to.equal(24);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
+      expect(wrapper.find('input').length).to.equal(21);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
       expect(wrapper.find('textarea').length).to.equal(3);
-      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('select').length).to.equal(6);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
@@ -99,13 +123,17 @@ describe('ScriptEditor', () => {
     });
 
     it('uses new script editor for migrated script', () => {
-      const wrapper = createWrapper({initialHidden: false, isMigrated: true});
+      const wrapper = createWrapper({
+        initialHidden: false,
+        isMigrated: true,
+        initialCourseVersionId: 1
+      });
 
-      expect(wrapper.find('input').length).to.equal(24);
+      expect(wrapper.find('input').length).to.equal(25);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(5);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
@@ -155,6 +183,18 @@ describe('ScriptEditor', () => {
           ]
         );
       });
+
+      it('uses new resource editor for migrated scripts', () => {
+        const wrapper = createWrapper({
+          isMigrated: true
+        });
+        expect(
+          wrapper
+            .find('ResourcesEditor')
+            .first()
+            .props().useMigratedResources
+        ).to.be.true;
+      });
     });
 
     it('has correct markdown for preview of unit description', () => {
@@ -182,22 +222,65 @@ describe('ScriptEditor', () => {
 
     it('must set family name in order to check standalone course', () => {
       const wrapper = createWrapper({
-        initialHidden: false
+        initialHidden: false,
+        initialFamilyName: 'family1'
       });
       let courseCheckbox = wrapper.find('.isCourseCheckbox');
-      let familyNameSelect = wrapper.find('.familyNameSelector');
 
-      expect(courseCheckbox.props().disabled).to.be.true;
-      expect(familyNameSelect.props().value).to.equal('');
-
-      familyNameSelect.simulate('change', {target: {value: 'Family'}});
-
-      // have to re-find the items inorder to see updates
-      courseCheckbox = wrapper.find('.isCourseCheckbox');
-      familyNameSelect = wrapper.find('.familyNameSelector');
-
-      expect(familyNameSelect.props().value).to.equal('Family');
       expect(courseCheckbox.props().disabled).to.be.false;
+    });
+  });
+
+  it('disables peer review count when instructor review only selected', () => {
+    const wrapper = createWrapper({
+      initialOnlyInstructorReviewRequired: false,
+      initialPeerReviewsRequired: 2
+    });
+
+    let peerReviewCountInput = wrapper.find('#number_peer_reviews_input');
+
+    expect(peerReviewCountInput.props().disabled).to.be.false;
+    expect(peerReviewCountInput.props().value).to.equal(2);
+
+    const instructorReviewOnlyCheckbox = wrapper.find(
+      '#only_instructor_review_checkbox'
+    );
+    instructorReviewOnlyCheckbox.simulate('change', {
+      target: {checked: true}
+    });
+
+    peerReviewCountInput = wrapper.find('#number_peer_reviews_input');
+
+    expect(peerReviewCountInput.props().disabled).to.be.true;
+    expect(peerReviewCountInput.props().value).to.equal(0);
+  });
+
+  describe('Publish State', () => {
+    it('published state is beta when visible and isStable are false and there is no pilot experiment', () => {
+      const wrapper = createWrapper({});
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Beta');
+    });
+
+    it('published state is pilot if there is a pilot experiment', () => {
+      const wrapper = createWrapper({initialPilotExperiment: 'my-pilot'});
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Pilot');
+    });
+
+    it('published state is preview if visible is true but isStable is false', () => {
+      const wrapper = createWrapper({initialHidden: false});
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Preview');
+    });
+
+    it('published state is recommended if visible and isStable are true', () => {
+      const wrapper = createWrapper({
+        initialHidden: false,
+        initialIsStable: true
+      });
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Recommended');
     });
   });
 
@@ -227,7 +310,7 @@ describe('ScriptEditor', () => {
 
       const saveBar = wrapper.find('SaveBar');
 
-      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
       saveAndKeepEditingButton.simulate('click');
@@ -264,7 +347,7 @@ describe('ScriptEditor', () => {
 
       const saveBar = wrapper.find('SaveBar');
 
-      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
       saveAndKeepEditingButton.simulate('click');
@@ -286,6 +369,99 @@ describe('ScriptEditor', () => {
       server.restore();
     });
 
+    it('shows error when showCalendar is true and weeklyInstructionalMinutes not provided', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({initialShowCalendar: true});
+      const scriptEditor = wrapper.find('ScriptEditor');
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(scriptEditor.state().isSaving).to.equal(false);
+      expect(scriptEditor.state().error).to.equal(
+        'Please provide instructional minutes per week in Unit Calendar Settings.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please provide instructional minutes per week in Unit Calendar Settings.'
+          )
+      ).to.be.true;
+      $.ajax.restore();
+    });
+
+    it('shows error when showCalendar is true and weeklyInstructionalMinutes is invalid', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({
+        initialShowCalendar: true,
+        initialWeeklyInstructionalMinutes: -100
+      });
+      const scriptEditor = wrapper.find('ScriptEditor');
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(scriptEditor.state().isSaving).to.equal(false);
+      expect(scriptEditor.state().error).to.equal(
+        'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
+          )
+      ).to.be.true;
+      $.ajax.restore();
+    });
+
+    it('shows error when published state is pilot but no pilot experiment given', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({});
+
+      const scriptEditor = wrapper.find('ScriptEditor');
+      scriptEditor.setState({publishedState: 'Pilot', pilotExperiment: ''});
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(scriptEditor.state().isSaving).to.equal(false);
+      expect(scriptEditor.state().error).to.equal(
+        'Please provide a pilot experiment in order to save with published state as pilot.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please provide a pilot experiment in order to save with published state as pilot.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
+    });
+
     it('can save and close', () => {
       const wrapper = createWrapper({});
       const scriptEditor = wrapper.find('ScriptEditor');
@@ -302,7 +478,7 @@ describe('ScriptEditor', () => {
 
       const saveBar = wrapper.find('SaveBar');
 
-      const saveAndCloseButton = saveBar.find('button').at(1);
+      const saveAndCloseButton = saveBar.find('button').at(2);
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
@@ -333,7 +509,7 @@ describe('ScriptEditor', () => {
 
       const saveBar = wrapper.find('SaveBar');
 
-      const saveAndCloseButton = saveBar.find('button').at(1);
+      const saveAndCloseButton = saveBar.find('button').at(2);
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
@@ -354,24 +530,6 @@ describe('ScriptEditor', () => {
       ).to.be.true;
 
       server.restore();
-    });
-  });
-
-  describe('VisibleInTeacherDashboard', () => {
-    it('is checked when hidden is false', () => {
-      const wrapper = createWrapper({
-        initialHidden: false
-      });
-      const checkbox = wrapper.find('input[name="visible_to_teachers"]');
-      expect(checkbox.prop('checked')).to.be.true;
-    });
-
-    it('is unchecked when hidden is true', () => {
-      const wrapper = createWrapper({
-        initialHidden: true
-      });
-      const checkbox = wrapper.find('input[name="visible_to_teachers"]');
-      expect(checkbox.prop('checked')).to.be.false;
     });
   });
 });

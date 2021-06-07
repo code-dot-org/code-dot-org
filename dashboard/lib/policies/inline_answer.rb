@@ -20,7 +20,7 @@ class Policies::InlineAnswer
     # even if they are not authorized
     return true if user.try(:teacher?) && script && (script.k5_course? || script.k5_draft_course?)
 
-    # Teachers can also put stages into a readonly mode in which students are
+    # Teachers can also put lessons into a readonly mode in which students are
     # able to view the answers
     user_level = UserLevel.find_by(user: user, level: script_level.level)
     return true if user_level.try(:readonly_answers)

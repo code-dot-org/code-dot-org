@@ -41,6 +41,7 @@
     },
     "new_name": null,
     "family_name": "csp4",
+    "serialized_at": "2021-05-03 23:55:33 UTC",
     "seeding_key": {
       "script.name": "csp4-2019"
     }
@@ -101,6 +102,7 @@
       "name": "What is Big Data?",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -115,6 +117,7 @@
       "name": "Finding Trends with Visualizations",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -129,6 +132,7 @@
       "name": "Check Your Assumptions",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -143,6 +147,7 @@
       "name": "Rapid Research - Data Innovations",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -157,6 +162,7 @@
       "name": "Identifying People with Data",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -171,6 +177,7 @@
       "name": "The Cost of Free",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -185,6 +192,7 @@
       "name": "Simple Encryption",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -199,6 +207,7 @@
       "name": "Encryption with Keys and Passwords",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -213,6 +222,7 @@
       "name": "Public Key Crypto",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -227,6 +237,7 @@
       "name": "Rapid Research - Cybercrime",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -241,6 +252,7 @@
       "name": "Unit 4 Assessment",
       "absolute_position": 11,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -255,6 +267,7 @@
       "name": "Optional: Data Questions",
       "absolute_position": 12,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -269,6 +282,7 @@
       "name": "CS Principles Post Course survey",
       "absolute_position": 13,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -279,15 +293,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L01 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L01 SFLP_2019"
@@ -303,12 +327,16 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L1 - MC moores law_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L1 - MC moores law_2018_2019"
@@ -324,12 +352,16 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L1 - MC big data def_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L1 - MC big data def_2018_2019"
@@ -345,12 +377,16 @@
     {
       "chapter": 4,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-5-levelgroup-U4Ch1_2018_2019"
+        ],
         "progression": "Quick Check-In"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pulse-check-survey-5-levelgroup-U4Ch1_2018_2019"
@@ -366,11 +402,15 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L08 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L08 SFLP_2019"
@@ -386,12 +426,16 @@
     {
       "chapter": 6,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L8 google trends MC_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L8 google trends MC_2018_2019"
@@ -407,12 +451,16 @@
     {
       "chapter": 7,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L8 google trends hypothesis_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L8 google trends hypothesis_2019"
@@ -428,12 +476,16 @@
     {
       "chapter": 8,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 google trends MC_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 4 google trends MC_2018_2019"
@@ -449,12 +501,16 @@
     {
       "chapter": 9,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 trends as predictors_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 4 trends as predictors_2018_2019"
@@ -470,11 +526,15 @@
     {
       "chapter": 10,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L09 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L09 SFLP_2019"
@@ -490,12 +550,16 @@
     {
       "chapter": 11,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L9 What is digital divide MC_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L9 What is digital divide MC_2018_2019"
@@ -511,12 +575,16 @@
     {
       "chapter": 12,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L9 FR digital divide issue_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L9 FR digital divide issue_2019"
@@ -532,12 +600,16 @@
     {
       "chapter": 13,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 MC data bias_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 4 MC data bias_2018_2019"
@@ -553,11 +625,15 @@
     {
       "chapter": 14,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L02 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L02 SFLP_2019"
@@ -573,12 +649,16 @@
     {
       "chapter": 15,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Data and Medicine_2019"
+        ],
         "progression": "Data and Medicine"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Video - Data and Medicine_2019"
@@ -594,12 +674,16 @@
     {
       "chapter": 16,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - CS is Changing Everything_2019"
+        ],
         "progression": "CS is Changing Everything"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Video - CS is Changing Everything_2019"
@@ -615,12 +699,16 @@
     {
       "chapter": 17,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L2 - FR Practice AP response about data_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L2 - FR Practice AP response about data_2019"
@@ -636,11 +724,15 @@
     {
       "chapter": 18,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L03 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L03 SFLP_2019"
@@ -656,11 +748,15 @@
     {
       "chapter": 19,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4-AP-Practice-Choose-The-Data-Concern_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4-AP-Practice-Choose-The-Data-Concern_2019"
@@ -676,12 +772,16 @@
     {
       "chapter": 20,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L3 - FR Identifying people_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L3 - FR Identifying people_2019"
@@ -697,11 +797,15 @@
     {
       "chapter": 21,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L04 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L04 SFLP_2019"
@@ -717,11 +821,15 @@
     {
       "chapter": 22,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4-AP-Practice-Justify-the-Score_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4-AP-Practice-Justify-the-Score_2019"
@@ -737,12 +845,16 @@
     {
       "chapter": 23,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L4 - MC cost of free_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L4 - MC cost of free_2018_2019"
@@ -758,12 +870,16 @@
     {
       "chapter": 24,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L4 - FR cost of free_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L4 - FR cost of free_2019"
@@ -779,11 +895,15 @@
     {
       "chapter": 25,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L05 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L05 SFLP_2019"
@@ -799,12 +919,16 @@
     {
       "chapter": 26,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher_2019"
+        ],
         "progression": "Crack a Caesar Cipher"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Crack a Caesar Cipher_2019"
@@ -820,12 +944,16 @@
     {
       "chapter": 27,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Terminology Recap_2018_2019"
+        ],
         "progression": "Terminology Recap"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Terminology Recap_2018_2019"
@@ -841,12 +969,16 @@
     {
       "chapter": 28,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Challenge Introduction_2018_2019"
+        ],
         "progression": "New Challenge Introduction"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "New Challenge Introduction_2018_2019"
@@ -862,12 +994,16 @@
     {
       "chapter": 29,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack Random Substitution_2019"
+        ],
         "progression": "Crack Random Substitution"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Crack Random Substitution_2019"
@@ -883,12 +1019,16 @@
     {
       "chapter": 30,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Technique: Frequency Analysis_2018_2019"
+        ],
         "progression": "Technique: Frequency Analysis"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Technique: Frequency Analysis_2018_2019"
@@ -904,12 +1044,16 @@
     {
       "chapter": 31,
       "position": 7,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Free Response Getting Started_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Free Response Getting Started_2019"
@@ -925,12 +1069,16 @@
     {
       "chapter": 32,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Assessment1_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Assessment1_2019"
@@ -946,12 +1094,16 @@
     {
       "chapter": 33,
       "position": 9,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Assessment3_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Assessment3_2018_2019"
@@ -967,12 +1119,16 @@
     {
       "chapter": 34,
       "position": 10,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Assessment4_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Assessment4_2018_2019"
@@ -988,12 +1144,16 @@
     {
       "chapter": 35,
       "position": 11,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Free Response Wrap Up_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Free Response Wrap Up_2019"
@@ -1009,12 +1169,16 @@
     {
       "chapter": 36,
       "position": 12,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Free Response Wrap Up_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Free Response Wrap Up_2019"
@@ -1030,11 +1194,15 @@
     {
       "chapter": 37,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L06 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L06 SFLP_2019"
@@ -1050,12 +1218,16 @@
     {
       "chapter": 38,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Vigenere Cipher Widget_2019"
+        ],
         "progression": "The Vigenere Cipher Widget"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "The Vigenere Cipher Widget_2019"
@@ -1071,12 +1243,16 @@
     {
       "chapter": 39,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Secure Is Your Password?_2018_2019"
+        ],
         "progression": "How Secure Is Your Password?"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "How Secure Is Your Password?_2018_2019"
@@ -1092,12 +1268,16 @@
     {
       "chapter": 40,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Encryption and Public Keys_2019"
+        ],
         "progression": "Encryption and Public Keys"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Video - Encryption and Public Keys_2019"
@@ -1113,12 +1293,16 @@
     {
       "chapter": 41,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Free Response Getting Started_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Free Response Getting Started_2019"
@@ -1134,12 +1318,16 @@
     {
       "chapter": 42,
       "position": 6,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Assessment_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Assessment_2018_2019"
@@ -1155,12 +1343,16 @@
     {
       "chapter": 43,
       "position": 7,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Free Response Wrap Up_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Free Response Wrap Up_2019"
@@ -1176,12 +1368,16 @@
     {
       "chapter": 44,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Assessment2_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Assessment2_2019"
@@ -1197,12 +1393,16 @@
     {
       "chapter": 45,
       "position": 9,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L15 Assessment1_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L15 Assessment1_2018_2019"
@@ -1218,12 +1418,16 @@
     {
       "chapter": 46,
       "position": 10,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CB_Question_12_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CB_Question_12_2018_2019"
@@ -1239,11 +1443,15 @@
     {
       "chapter": 47,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L07 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L07 SFLP_2019"
@@ -1259,12 +1467,16 @@
     {
       "chapter": 48,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Encryption and Public Keys_2019"
+        ],
         "progression": "Encryption and Public Keys"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Video - Encryption and Public Keys_2019"
@@ -1280,12 +1492,16 @@
     {
       "chapter": 49,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Cups and Beans Activity_2018_2019"
+        ],
         "progression": "Cups and Beans Activity"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Cups and Beans Activity_2018_2019"
@@ -1301,12 +1517,16 @@
     {
       "chapter": 50,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Modulo Clock Instructions_2018_2019"
+        ],
         "progression": "Modulo Clock Instructions"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Modulo Clock Instructions_2018_2019"
@@ -1322,12 +1542,16 @@
     {
       "chapter": 51,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Modulo Clock_2019"
+        ],
         "progression": "The Modulo Clock"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "The Modulo Clock_2019"
@@ -1343,12 +1567,16 @@
     {
       "chapter": 52,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Public Key Crypto Widget Instructions_2018_2019"
+        ],
         "progression": "Public Key Crypto Widget Instructions"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Public Key Crypto Widget Instructions_2018_2019"
@@ -1364,12 +1592,16 @@
     {
       "chapter": 53,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Public Key Cryptography Widget_2019"
+        ],
         "progression": "Public Key Cryptography Widget"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Public Key Cryptography Widget_2019"
@@ -1385,12 +1617,16 @@
     {
       "chapter": 54,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L18 Free Response Assessment 1_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L18 Free Response Assessment 1_2019"
@@ -1406,12 +1642,16 @@
     {
       "chapter": 55,
       "position": 9,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L18 Match terms to cups and beans analogy_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L18 Match terms to cups and beans analogy_2018_2019"
@@ -1427,12 +1667,16 @@
     {
       "chapter": 56,
       "position": 10,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 Free Response Getting Started_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L19 Free Response Getting Started_2019"
@@ -1448,12 +1692,16 @@
     {
       "chapter": 57,
       "position": 11,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 mutlichoice 20 mod 15_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L19 mutlichoice 20 mod 15_2018_2019"
@@ -1469,12 +1717,16 @@
     {
       "chapter": 58,
       "position": 12,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 multichoice 13 MOD 17_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L19 multichoice 13 MOD 17_2018_2019"
@@ -1490,12 +1742,16 @@
     {
       "chapter": 59,
       "position": 13,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 Free Response Wrap Up_2019"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L19 Free Response Wrap Up_2019"
@@ -1511,11 +1767,15 @@
     {
       "chapter": 60,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L08 SFLP_2019"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L08 SFLP_2019"
@@ -1531,12 +1791,16 @@
     {
       "chapter": 61,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Cybersecurity and Crime_2019"
+        ],
         "progression": "Cybersecurity and Crime"
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Video - Cybersecurity and Crime_2019"
@@ -1552,11 +1816,15 @@
     {
       "chapter": 62,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 Ch1 Cumulative Assessment MC_2018_2019"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 4 Ch1 Cumulative Assessment MC_2018_2019"
@@ -1572,11 +1840,15 @@
     {
       "chapter": 63,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP 18-19 Unit 4 Data Questions"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 18-19 Unit 4 Data Questions"
@@ -1592,11 +1864,15 @@
     {
       "chapter": 64,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-intro-2019"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-post-survey-intro-2019"
@@ -1612,11 +1888,15 @@
     {
       "chapter": 65,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup-2019.2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-post-survey-levelgroup-2019.2"
@@ -2346,5 +2626,35 @@
         "script.name": "csp4-2019"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

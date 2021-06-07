@@ -1,0 +1,6 @@
+login_required true
+
+lesson 'ailab-explore', display_name: 'Explore AI Lab', has_lesson_plan: false
+level 'ml-class test-ai lab 1', progression: 'Explore AI Lab'
+level 'ml-class test-app lab 1', progression: 'Importing into App Lab'
+

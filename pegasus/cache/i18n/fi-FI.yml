@@ -900,6 +900,8 @@ fi-FI:
   coursee-2018_gradelevel: 8-12-vuotiaille
   coursed-2019_gradelevel: Kahdeksasluokkalaisista alkaen
   coursee-2019_gradelevel: 8-12-vuotiaille
+  coursed-2020_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursee-2020_gradelevel: 8-12-vuotiaille
   accelerated_gradelevel: 10+ -vuotiaille (kurssin 3 jälkeen)
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
@@ -1567,3 +1569,14 @@ fi-FI:
     ja sen varmistamisessa, että jokaisella lapsella on mahdollisuus oppia tietojenkäsittelytietettä
     ja taitoja menestyä 2000-luvulla.
   footer_powered_by_aws: Toimii Amazon Web Services -palvelun päällä
+  footer_privacy_policy: Tietosuojakäytäntö
+  footer_about: Tietoja
+  footer_partners: Kumppanit
+  footer_donate: Lahjoita
+  footer_support: Tuki
+  footer_terms: Ehdot
+  ai_microsoft_thanks: Kiitämme Microsoftia visiomme ja tehtävämme tukemisessa ja
+    sen varmistamisessa, että jokaisella lapsella on mahdollisuus oppia tietojenkäsittelytietettä
+    ja taitoja menestyä 2000-luvulla.
+  ai_activity: Toiminta
+  ai_description: Kuvaus

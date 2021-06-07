@@ -1,7 +1,6 @@
 login_required true
-has_lesson_plan true
 
-lesson 'Debugging: Unspotted Bugs', display_name: 'Debugging: Unspotted Bugs'
+lesson 'Debugging: Unspotted Bugs', display_name: 'Debugging: Unspotted Bugs', has_lesson_plan: true
 level 'courseB_video_Unspotted'
 level 'courseB_story_unspottedBugs1'
 level 'courseB_story_unspottedBugs2'
@@ -22,7 +21,7 @@ level 'courseB_story_unspottedBugs16'
 level 'courseB_story_unspottedBugs17'
 level 'courseB_story_unspottedBugs18'
 
-lesson 'Persistence & Frustration: Stevie and the Marbles', display_name: 'Persistence & Frustration: Stevie and the Marbles'
+lesson 'Persistence & Frustration: Stevie and the Marbles', display_name: 'Persistence & Frustration: Stevie and the Marbles', has_lesson_plan: true
 level 'courseA_video_Stevie'
 level 'courseA_external_stevie1'
 level 'courseA_external_stevie2'
@@ -42,10 +41,10 @@ level 'courseA_external_stevie14'
 level 'courseA_external_stevie15'
 level 'courseA_external_stevie16'
 
-lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Real-life Algorithms: Plant a Seed'
+lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Real-life Algorithms: Plant a Seed', has_lesson_plan: true, unplugged: true
 level 'PlantASeed'
 
-lesson 'Learn to Drag and Drop', display_name: 'Learn to Drag and Drop'
+lesson 'Learn to Drag and Drop', display_name: 'Learn to Drag and Drop', has_lesson_plan: true
 level 'elementary_video_pairProgramming'
 skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
@@ -84,10 +83,10 @@ skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:13', assessment: true
 
-lesson 'Programming: Happy Maps', display_name: 'Programming: Happy Maps'
+lesson 'Programming: Happy Maps', display_name: 'Programming: Happy Maps', has_lesson_plan: true, unplugged: true
 level 'UnplugHappyMaps'
 
-lesson 'Programming in Maze', display_name: 'Programming in Maze'
+lesson 'Programming in Maze', display_name: 'Programming in Maze', has_lesson_plan: true
 level 'courseAB_video_NewIntro'
 level 'courseA_maze_seq1'
 level 'courseA_video_debug1'
@@ -106,13 +105,13 @@ level 'courseA_maze_seq13'
 bonus 'courseA_maze_seq_challenge1', challenge: true
 bonus 'courseA_maze_seq_challenge2', challenge: true
 
-lesson 'Going Places Safely', display_name: 'Going Places Safely'
+lesson 'Going Places Safely', display_name: 'Going Places Safely', has_lesson_plan: true, unplugged: true
 level 'GoingPlacesSafely'
 
-lesson 'Loops: Happy Loops', display_name: 'Loops: Happy Loops'
+lesson 'Loops: Happy Loops', display_name: 'Loops: Happy Loops', has_lesson_plan: true
 level 'gradeK_unplugged_loops'
 
-lesson 'Loops in Collector', display_name: 'Loops in Collector'
+lesson 'Loops in Collector', display_name: 'Loops in Collector', has_lesson_plan: true
 level 'courseAB_video_collector'
 level 'courseA_collector_loops1'
 level 'courseA_collector_loops2'
@@ -130,7 +129,7 @@ level 'courseA_collector_loops12'
 bonus 'courseA_collector_loops_challenge1', challenge: true
 bonus 'courseA_collector_loops_challenge2', challenge: true
 
-lesson 'Loops in Artist', display_name: 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: true
 level 'courseB_video_ArtistIntro'
 level 'courseA_artist_loops1'
 level 'courseA_artist_loops2'
@@ -148,10 +147,10 @@ level 'courseA_artist_loops12'
 bonus 'courseA_artist_loops_challenge1', challenge: true
 bonus 'courseA_artist_loops_challenge2', challenge: true
 
-lesson 'Events: The Big Event', display_name: 'Events: The Big Event'
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent'
 
-lesson 'Events in Play Lab', display_name: 'Events in Play Lab'
+lesson 'Events in Play Lab', display_name: 'Events in Play Lab', has_lesson_plan: true
 level 'courseA_video_events'
 level 'courseA_playLab_events1'
 level 'courseA_playLab_events2'

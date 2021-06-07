@@ -123,9 +123,9 @@ describe('Sound', () => {
     it('returns value of isPlaying_ property', () => {
       sound = new Sound({});
       sound.isPlaying_ = true;
-      expect(sound.isPlaying()).to.equal.true;
+      expect(sound.isPlaying()).to.be.true;
       sound.isPlaying_ = false;
-      expect(sound.isPlaying()).to.equal.false;
+      expect(sound.isPlaying()).to.be.false;
     });
   });
 
@@ -133,9 +133,9 @@ describe('Sound', () => {
     it('returns value of isLoaded_ property', () => {
       sound = new Sound({});
       sound.isLoaded_ = true;
-      expect(sound.isLoaded()).to.equal.true;
+      expect(sound.isLoaded()).to.be.true;
       sound.isLoaded_ = false;
-      expect(sound.isLoaded()).to.equal.false;
+      expect(sound.isLoaded()).to.be.false;
     });
   });
 
@@ -143,9 +143,9 @@ describe('Sound', () => {
     it('returns value of didLoadFail_ property', () => {
       sound = new Sound({});
       sound.didLoadFail_ = true;
-      expect(sound.didLoadFail()).to.equal.true;
+      expect(sound.didLoadFail()).to.be.true;
       sound.didLoadFail_ = false;
-      expect(sound.didLoadFail()).to.equal.false;
+      expect(sound.didLoadFail()).to.be.false;
     });
   });
 

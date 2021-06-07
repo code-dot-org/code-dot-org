@@ -1,35 +1,18 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import _ from 'lodash';
+
 import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import LessonTip, {
   tipTypes
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
-import _ from 'lodash';
+import i18n from '@cdo/locale';
 import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import ConfirmDeleteButton from '../../../storage/dataBrowser/ConfirmDeleteButton';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingBottom: 20,
-    paddingRight: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  },
-  dialogContent: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  textArea: {
-    width: '95%'
-  },
-  confirmDeleteButton: {
-    display: 'flex',
-    alignItems: 'center'
-  }
-};
+import ConfirmDeleteButton from '../../../storage/dataBrowser/ConfirmDeleteButton';
+import LessonEditorDialog from './LessonEditorDialog';
+import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
 export default class EditTipDialog extends Component {
   static propTypes = {
@@ -76,11 +59,9 @@ export default class EditTipDialog extends Component {
 
   render() {
     return (
-      <BaseDialog
+      <LessonEditorDialog
         isOpen={this.props.isOpen}
         handleClose={this.handleClose}
-        useUpdatedStyles
-        style={styles.dialog}
       >
         <div style={styles.dialogContent}>
           <h2>Add Callout</h2>
@@ -99,11 +80,12 @@ export default class EditTipDialog extends Component {
               );
             })}
           </select>
-          <textarea
-            defaultValue={this.state.tip.markdown}
-            onChange={this.handleTextChange}
-            style={styles.textArea}
-            rows={5}
+          <MarkdownEnabledTextarea
+            markdown={this.state.tip.markdown}
+            name={'callout'}
+            inputRows={5}
+            handleMarkdownChange={this.handleTextChange}
+            features={{imageUpload: true}}
           />
           <LessonTip tip={this.state.tip} />
         </div>
@@ -123,7 +105,21 @@ export default class EditTipDialog extends Component {
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>
-      </BaseDialog>
+      </LessonEditorDialog>
     );
   }
 }
+
+const styles = {
+  dialogContent: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  textArea: {
+    width: '95%'
+  },
+  confirmDeleteButton: {
+    display: 'flex',
+    alignItems: 'center'
+  }
+};

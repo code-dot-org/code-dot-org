@@ -142,7 +142,11 @@ const makerBlocks = [
   },
   {func: 'exit', category: MAKER_CATEGORY, noAutocomplete: true},
 
-  {func: 'createLed', ...createLedProps, type: 'either'},
+  {
+    func: 'createLed',
+    ...createLedProps,
+    type: 'either'
+  },
   {
     func: 'var myLed = createLed',
     ...createLedProps,
@@ -150,7 +154,11 @@ const makerBlocks = [
     docFunc: 'createLed'
   },
 
-  {func: 'createButton', ...createButtonProps, type: 'either'},
+  {
+    func: 'createButton',
+    ...createButtonProps,
+    type: 'either'
+  },
   {
     func: 'var myButton = createButton',
     ...createButtonProps,
@@ -440,7 +448,11 @@ const microBitBlocks = [
       }
     }
   },
-  {func: 'ledScreen', category: MICROBIT_CATEGORY, type: 'readonlyproperty'},
+  {
+    func: 'ledScreen',
+    category: MICROBIT_CATEGORY,
+    type: 'readonlyproperty'
+  },
   {
     func: 'ledScreen.on',
     category: MICROBIT_CATEGORY,
@@ -567,10 +579,22 @@ const microBitBlocks = [
     type: 'property'
   },
 
-  {func: 'compass.getHeading', category: MICROBIT_CATEGORY, type: 'value'},
+  {
+    func: 'compass.getHeading',
+    category: MICROBIT_CATEGORY,
+    type: 'value'
+  },
 
-  {func: 'tempSensor.F', category: MICROBIT_CATEGORY, type: 'readonlyproperty'},
-  {func: 'tempSensor.C', category: MICROBIT_CATEGORY, type: 'readonlyproperty'}
+  {
+    func: 'tempSensor.F',
+    category: MICROBIT_CATEGORY,
+    type: 'readonlyproperty'
+  },
+  {
+    func: 'tempSensor.C',
+    category: MICROBIT_CATEGORY,
+    type: 'readonlyproperty'
+  }
 ];
 
 config.categories = {

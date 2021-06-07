@@ -28,8 +28,28 @@ function rotateRight();
 function canMove(direction);
 ```
 
-Which code segment will guarantee that the robot makes it to the grey square without hitting a wall or a barrier (black square)?
+Which code segment will guarantee that the robot makes it to the gray square without hitting a wall or a barrier (black square)?
 
 ![](https://images.code.org/38a33896798110989862a99a7ccefe66-image-1581103498011.png)
 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** This animation walks through the function running and directing the robot to the gray square.
+
+Students start seeing libraries in use in  [Lesson 6 - Libraries Investigate](https://curriculum.code.org/csp-20/unit7/6/).
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.M.1: Algorithms can be created from an idea, by combining existing algorithms, or by modifying existing algorithms.
+
+* AAP-2.M.2: Knowledge of existing algorithms can help in constructing new ones. Some existing algorithms include:
+●   	determining the maximum or minimum value of 2 or more numbers
+●   	computing the sum or average of 2 or more numbers
+●   	identifying if an integer is or is not evenly divisible by another integer
+●   	determining a robot’s path through a maze
+:::
+
+
+![](https://images.code.org/46a569f2fd787a18da36ebd0f82e7f82-image-1612571266125.gif)
 MARKDOWN

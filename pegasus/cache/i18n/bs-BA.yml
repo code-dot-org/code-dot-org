@@ -947,6 +947,8 @@ bs-BA:
   coursee-2018_gradelevel: Dob 8-12
   coursed-2019_gradelevel: Razred 8+
   coursee-2019_gradelevel: Dob 8-12
+  coursed-2020_gradelevel: Razred 8+
+  coursee-2020_gradelevel: Dob 8-12
   accelerated_gradelevel: Dob 10+ (nakon Kursa 3)
   codeorg_platformtext: Savremeni browser-i, mobiteli, tableti
   codeintl_platformtext: Savremeni browser-i, mobiteli, tableti
@@ -1047,6 +1049,10 @@ bs-BA:
   infinity_shortdescription: Upotrijebi Laboratorij Igranja da bi napravio/la priču
     ili igru u kojoj igraju karakteri Disney Beskonačnost.
   artist_shortdescription: Crtanje cool slike i dizajn s Umjetnikom!
+  coursea-2020_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti.
+    Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+  courseb-2020_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti.
+    Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
   codeorg_longdescription: Nauči osnovne pojmove računarstva pomoću "povuci-i-ispusti"
     programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije
     koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči
@@ -1574,3 +1580,10 @@ bs-BA:
   hoc2018_dance_video4: Plesna zabava - Zahvale
   hoc2018_mc_with_microsoft: U partnerstvu sa
   footer_powered_by_aws: Potpomognuto sa Amazon Web Services
+  footer_privacy_policy: Pravila Privatnosti
+  footer_donate: Doniraj
+  footer_support: Pomoć i Zajednica
+  footer_terms: Uvjeti
+  ai_in_partnership_with: U partnerstvu sa
+  ai_activity: Aktivnost
+  ai_description: Opis

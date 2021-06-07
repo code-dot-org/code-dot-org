@@ -23,6 +23,9 @@ class ScriptsControllerTest < ActionController::TestCase
     @section_coursez_2017 = create :section, script: @coursez_2017
     @section_coursez_2017.add_student(@student_coursez_2017)
 
+    @migrated_script = create :script, is_migrated: true
+    @unmigrated_script = create :script
+
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
@@ -82,9 +85,9 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should not get show of ECSPD if not signed in" do
+  test "should get show of ECSPD if not signed in" do
     get :show, params: {id: 'ECSPD'}
-    assert_redirected_to_sign_in
+    assert_response :success
   end
 
   test "should not show link to Overview of Courses 1, 2, and 3 if logged in as a student" do
@@ -301,7 +304,8 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @platformization_partner
     post :create, params: {
       script: {name: 'test-script-create'},
-      script_text: ''
+      script_text: '',
+      is_migrated: true
     }
     assert_response :forbidden
   end
@@ -358,10 +362,9 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'create' do
-    expected_contents = ''
     script_name = 'test-script-create'
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with("#{Rails.root}/config/scripts/#{script_name}.script", expected_contents).once
+    File.stubs(:write).with("#{Rails.root}/config/scripts/#{script_name}.script", "is_migrated true\n").once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{script_name}.script_json" && JSON.parse(contents)['script']['name'] == script_name
     end
@@ -370,11 +373,26 @@ class ScriptsControllerTest < ActionController::TestCase
 
     post :create, params: {
       script: {name: script_name},
+      is_migrated: true
     }
     assert_redirected_to edit_script_path id: script_name
 
     script = Script.find_by_name(script_name)
     assert_equal script_name, script.name
+    assert script.is_migrated
+  end
+
+  test 'cannot create legacy script' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    script_name = 'legacy'
+    post :create, params: {
+      script: {name: script_name},
+    }
+
+    assert_response :bad_request
+    refute Script.find_by_name(script_name)
   end
 
   test 'destroy raises exception for evil filenames' do
@@ -406,7 +424,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      visible_to_teachers: true
+      hidden: false
     }
     assert_response :forbidden
     script.reload
@@ -427,7 +445,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      visible_to_teachers: true
+      hidden: false
     }
     assert_response :success
     script.reload
@@ -446,7 +464,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      visible_to_teachers: true
+      hidden: false
     }
     assert_response :success
     script.reload
@@ -464,7 +482,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      visible_to_teachers: true
+      hidden: false
     }
     assert_response :forbidden
     script.reload
@@ -515,6 +533,71 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'can update migrated script containing migrated script levels' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, name: 'migrated', is_migrated: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    activity = create :lesson_activity, lesson: lesson
+    section = create :activity_section, lesson_activity: activity
+
+    # A migrated script level is one with an activity section.
+    create(
+      :script_level,
+      script: script,
+      lesson: lesson,
+      activity_section: section,
+      activity_section_position: 1,
+      levels: [create(:applab)]
+    )
+
+    stub_file_writes(script.name)
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      is_migrated: true,
+      script_text: ScriptDSL.serialize_lesson_groups(script),
+    }
+    assert_response :success
+    assert script.is_migrated
+    assert script.script_levels.any?
+  end
+
+  test 'cannot update migrated script containing legacy script levels' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, name: 'migrated', is_migrated: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'problem lesson'
+
+    # A legacy script level is one without an activity section.
+    create(
+      :script_level,
+      script: script,
+      lesson: lesson,
+      levels: [create(:applab)]
+    )
+
+    stub_file_writes(script.name)
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      is_migrated: true,
+      script_text: ScriptDSL.serialize_lesson_groups(script),
+    }
+
+    assert_response :not_acceptable
+    msg = 'Legacy script levels are not allowed in migrated scripts. Problem lessons: [\"problem lesson\"]'
+    assert_includes response.body, msg
+    assert script.is_migrated
+    assert script.script_levels.any?
+  end
+
   test 'updates teacher resources' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -532,6 +615,53 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(script.name).teacher_resources
   end
 
+  test 'updates migrated teacher resources' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, hidden: true, is_migrated: true
+    stub_file_writes(script.name)
+
+    course_version = create :course_version, content_root: script
+    teacher_resources = [
+      create(:resource, course_version: course_version),
+      create(:resource, course_version: course_version),
+      create(:resource, course_version: course_version)
+    ]
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      resourceIds: teacher_resources.map(&:id),
+      is_migrated: true
+    }
+    assert_equal teacher_resources.map(&:key), Script.find_by_name(script.name).resources.map {|r| r[:key]}
+  end
+
+  test 'updates migrated student resources' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, hidden: true, is_migrated: true
+    stub_file_writes(script.name)
+
+    course_version = create :course_version, content_root: script
+    student_resources = [
+      create(:resource, course_version: course_version),
+      create(:resource, course_version: course_version)
+    ]
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      studentResourceIds: student_resources.map(&:id),
+      is_migrated: true
+    }
+    assert_equal student_resources.map(&:key), Script.find_by_name(script.name).student_resources.map {|r| r[:key]}
+  end
+
   test 'updates pilot_experiment' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -544,7 +674,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: 'pilot-experiment',
-      visible_to_teachers: true,
+      hidden: false
     }
 
     assert_response :success
@@ -566,7 +696,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: '',
-      visible_to_teachers: true,
+      hidden: false
     }
 
     assert_response :success
@@ -659,7 +789,6 @@ class ScriptsControllerTest < ActionController::TestCase
       student_detail_progress_view: 'on',
       lesson_extras_available: 'on',
       has_verified_resources: 'on',
-      has_lesson_plan: 'on',
       is_stable: 'on',
       tts: 'on',
       project_sharing: 'on',
@@ -709,9 +838,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     script.reload
 
-    # peer_reviews_to_complete gets converted to an int by general_params in scripts_controller, so it becomes 0
-    expected = {"peer_reviews_to_complete" => 0}
-    assert_equal expected, script.properties
+    assert_equal({}, script.properties)
   end
 
   test 'add lesson to script' do
@@ -725,7 +852,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_empty script.lessons
 
     script_text = <<~SCRIPT_TEXT
-      lesson 'stage 1', display_name: 'stage 1'
+      lesson 'lesson 1', display_name: 'lesson 1'
       level '#{level.name}'
     SCRIPT_TEXT
 
@@ -738,7 +865,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal level, script.lessons.first.script_levels.first.level
-    assert_equal 'stage 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
+    assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
     assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
   end
 
@@ -780,45 +907,6 @@ class ScriptsControllerTest < ActionController::TestCase
     refute response.body.include? no_access_msg
   end
 
-  test 'can create with has_lesson_plan param' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    File.stubs(:write)
-
-    post :create, params: {
-      script: {name: 'test-script-create'},
-      script_text: '',
-      visible_to_teachers: true,
-      has_lesson_plan: true,
-    }
-
-    script = Script.find_by_name('test-script-create')
-    assert_equal 'test-script-create', script.name
-    assert script.has_lesson_plan?
-  end
-
-  test 'can update with has_lesson_plan param' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    script = create :script
-    refute script.has_lesson_plan?
-
-    File.stubs(:write)
-
-    post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
-      has_lesson_plan: true,
-    }
-
-    # Reload script, expect change
-    script = Script.find_by_id(script.id)
-    assert script.has_lesson_plan?
-  end
-
   test 'should redirect to latest stable version in script family for student without progress or assignment' do
     sign_in create(:student)
 
@@ -841,7 +929,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/dogs2"
   end
 
-  test "levelbuilder does not see visible after warning if stage does not have visible_after property" do
+  test "levelbuilder does not see visible after warning if lesson does not have visible_after property" do
     sign_in @levelbuilder
 
     get :show, params: {id: 'course1'}
@@ -849,7 +937,7 @@ class ScriptsControllerTest < ActionController::TestCase
     refute response.body.include? 'visible after'
   end
 
-  test "levelbuilder does not see visible after warning if stage has visible_after property that is in the past" do
+  test "levelbuilder does not see visible after warning if lesson has visible_after property that is in the past" do
     Timecop.freeze(Time.new(2020, 4, 2))
     sign_in @levelbuilder
 
@@ -863,7 +951,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Timecop.return
   end
 
-  test "levelbuilder sees visible after warning if stage has visible_after property that is in the future" do
+  test "levelbuilder sees visible after warning if lesson has visible_after property that is in the future" do
     Timecop.freeze(Time.new(2020, 3, 27))
     sign_in @levelbuilder
 
@@ -877,7 +965,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Timecop.return
   end
 
-  test "student does not see visible after warning if stage has visible_after property" do
+  test "student does not see visible after warning if lesson has visible_after property" do
     Timecop.freeze(Time.new(2020, 3, 27))
     sign_in create(:student)
 
@@ -891,7 +979,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Timecop.return
   end
 
-  test "teacher does not see visible after warning if stage has visible_after property" do
+  test "teacher does not see visible after warning if lesson has visible_after property" do
     Timecop.freeze(Time.new(2020, 3, 27))
     sign_in create(:teacher)
 
@@ -903,6 +991,71 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     refute response.body.include? 'visible after'
     Timecop.return
+  end
+
+  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
+  test_user_gets_response_for :vocab, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+
+  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
+  test_user_gets_response_for :resources, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+
+  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
+  test_user_gets_response_for :standards, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+
+  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
+  test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+
+  test "view all instructions page for migrated script" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    get :instructions, params: {id: @migrated_script.name}
+    assert_response :success
+  end
+
+  test "view all instructions page for unmigrated script" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    get :instructions, params: {id: @unmigrated_script.name}
+    assert_response :success
+  end
+
+  test "get_rollup_resources return rollups for a script with code, resources, standards, and vocab" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    course_version = create :course_version, content_root: @migrated_script
+    lesson_group = create :lesson_group, script: @migrated_script
+    lesson = create :lesson, lesson_group: lesson_group
+    lesson.programming_expressions = [create(:programming_expression)]
+    lesson.resources = [create(:resource, course_version_id: course_version.id)]
+    lesson.standards = [create(:standard)]
+    lesson.vocabularies = [create(:vocabulary, course_version_id: course_version.id)]
+
+    get :get_rollup_resources, params: {id: @migrated_script.name}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal 4, response_body.length
+    assert_equal ['All Code', 'All Resources', 'All Standards', 'All Vocabulary'], response_body.map {|r| r['name']}
+  end
+
+  test "get_rollup_resources doesn't return rollups if no lesson in a script has the associated object" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    course_version = create :course_version, content_root: @migrated_script
+    lesson_group = create :lesson_group, script: @migrated_script
+    lesson = create :lesson, lesson_group: lesson_group
+    # Only add resources and standards, not programming expressions and vocab
+    lesson.resources = [create(:resource, course_version_id: course_version.id)]
+    lesson.standards = [create(:standard)]
+
+    get :get_rollup_resources, params: {id: @migrated_script.name}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal 2, response_body.length
+    assert_equal ['All Resources', 'All Standards'], response_body.map {|r| r['name']}
   end
 
   def stub_file_writes(script_name)

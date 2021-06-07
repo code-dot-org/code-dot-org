@@ -1361,6 +1361,7 @@ es-ES:
   express-2019_name: Curso Express (2019)
   pre-express-2019_name: Curso Express para prelectores (2019)
   express-2020_name: Curso Express (2019)
+  pre-express-2020_name: Curso exprés para prelectores (2020)
   csd2_name: 'Unidad 2: desarrollo web'
   csd3_name: 'Unidad 3: Animaciones y juegos'
   accelerated_name: Curso acelerado
@@ -1464,6 +1465,12 @@ es-ES:
   coursed-2019_gradelevel: Grado 8 +
   coursee-2019_gradelevel: Edad 8-12
   coursef-2019_gradelevel: De 9 a 13 años
+  coursea-2020_gradelevel: De 4 a 7 años
+  courseb-2020_gradelevel: De 5 a 8 años
+  coursec-2020_gradelevel: Edades de 6 a 10 años
+  coursed-2020_gradelevel: Grado 8 +
+  coursee-2020_gradelevel: Edad 8-12
+  coursef-2020_gradelevel: De 9 a 13 años
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
@@ -1659,6 +1666,28 @@ es-ES:
     C y D, y luego avanza con funciones.
   coursef-2019_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
     de Ciencias de la Computación y crea tu propio arte, historia o juego.
+  coursea-2020_shortdescription_congrats: Aprende los fundamentos de las ciencias
+    de la computación y la seguridad en Internet. Al final del curso, crea tu propio
+    juego o historia para compartir.
+  courseb-2020_shortdescription_congrats: Aprende los fundamentos de las ciencias
+    de la computación y la seguridad en Internet. Al final del curso, crea tu propio
+    juego o historia para compartir.
+  coursec-2020_shortdescription_congrats: Crea programas con secuencias, bucles y
+    eventos. Traduce tus iniciales a código binario, investiga distintas técnicas
+    de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del
+    curso podrás crear tu propio juego o historia para compartir!
+  coursed-2020_shortdescription_congrats: Los estudiantes desarrollan su comprensión
+    de bucles anidados, bucles `mientras`, condicionales y eventos. Los estudiantes
+    no solo aprenden a programar, sino que también aprenden sobre ciudadanía digital.
+  coursee-2020_shortdescription_congrats: Empieza a programar con algoritmos, bucles,
+    condicionales y eventos, y pasa luego a las funciones. En la segunda parte de
+    este curso, diseñarás y crearás un proyecto final que puedes compartir con tus
+    amigos y familiares.
+  coursef-2020_shortdescription_congrats: Aprende a usar diferentes tipos de bucles,
+    eventos, funciones y condicionales. Investiga distintas técnicas de resolución
+    de problemas y debate sobre el impacto de la computación y de Internet en la sociedad.
+    En la segunda parte del curso, diseña y crea un proyecto final que puedes compartir
+    con tus amigos y familiares.
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
     programación de arrastrar y soltar. Este tutorial autodirigido que se parece a
     un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg,
@@ -2225,9 +2254,12 @@ es-ES:
   header_help_support: 'Ayuda y soporte técnico '
   header_report_bug: Reporte los errores
   header_report_abuse: Denunciar abuso
+  header_legal: Privacidad y Legalidad
   header_legal_privacy: Política de Privacidad
   header_legal_tos: Términos de uso
   header_tutorials: Tutoriales
+  header_screen_reader_hamburger: Menú
+  header_screen_reader_help: Menú de ayuda
   app_lab_documentation: Documentación del Laboratorio de aplicaciones
   app_lab_tutorials: Tutoriales del Laboratorio de aplicaciones
   game_lab_documentation: Documentación del Laboratorio de juegos
@@ -2342,6 +2374,11 @@ es-ES:
     y niveles de experiencia, desarrolladas por Code.org y nuestros socios.
   hoc_overview_partner_activities_link: Ver actividades
   hoc_overview_start_tutorial: Inicio
+  hoc_overview_more_resources: Para obtener más recursos sobre cómo participar en
+    tu aula a distancia, consulta nuestra guía para organizar una [Hora del Código
+    virtual](https://hourofcode.com/us/how-to/virtual). Para los alumnos con tecnología
+    o conectividad limitada o nula, comparte este paquete de [Actividades de la Hora
+    del Código Desconectadas](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Ver la guía para docentes
   hoc2018_creativity: creatividad
   hoc2018_creativity_create: Crear
@@ -2392,7 +2429,7 @@ es-ES:
   hoc2018_mc_educators_box2_title: Descarga la guía para facilitadores
   hoc2018_mc_educators_box2_desc: Este kit de herramientas te ayudará a organizar
     una Hora del Código y que tus estudiantes se interesen en las ciencias de la computación.
-  hoc2018_mc_educators_box2_button: Descarga
+  hoc2018_mc_educators_box2_button: Descargar
   hoc2018_mc_educators_box3_title: Asiste a un taller gratis para estudiantes
   hoc2018_mc_educators_box3_desc: Visita una tienda de Microsoft local y encuentra
     un taller gratis de la Hora del Código. Para participantes de todos los niveles,
@@ -2484,6 +2521,8 @@ es-ES:
     y tiene el objetivo de inspirar, educar y capacitar a niños y jóvenes de bajos
     ingresos y otros niños y jóvenes desfavorecidos para que sigan carreras en ciencias
     de la computación. [Más información](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: Si eres alumno o profesor
+    en Francia, visita [Amazon Future Engineer - France].(%{amazon_future_engineer_france_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Aprende más acerca
     de Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: Acerca de Amazon Future Engineer
@@ -2552,6 +2591,116 @@ es-ES:
     2](%{dance_extras_2018_link}) del último año."
   homepage_slot_text_title_at_home: Aprende desde casa
   homepage_slot_text_blurb_at_home: Aprender es fácil con estos recursos
+  homepage_slot_text_link_code_break: "¡Tómate un descanso de código!"
+  homepage_slot_text_link_do_hoc: Prepara una Hora de Código
+  homepage_slot_text_link_express_course: Prueba un Curso Exprés
+  page_not_available_title: Página no disponible
+  page_not_available_description: Lo sentimos, la página que solicitó ya no está disponible
+    en esta dirección. Si todavía necesita acceso, envíe un correo electrónico a [support@code.org](%{support_email_link}).
   page_not_available_button: Volver a la página de inicio
+  hoc2020_mc_available_code_org: Disponible en Code.org
+  hoc2020_mc_available_mee: 'Disponible en Minecraft: Edición de Educación'
+  hoc2020_mc_mee_title: Minecraft Historia de Dos Pueblos
+  hoc2020_mc_mee_description: 'El nuevo tutorial de Minecraft "Hora del Código" ya
+    está disponible en Minecraft: Edición Educativa para Windows, Mac, Chromebook
+    y iPad. Aprende los fundamentos de la codificación y explora la diversidad y la
+    inclusión con tus alumnos. Accede a recursos gratuitos que incluyen un plan de
+    clases, vídeos, un plan de estudios de ciencias de la computación, lecciones de
+    igualdad y formación para profesores.'
   footer_powered_by_aws: Impulsado por Amazon Web Services
+  footer_built_on_github: Creado en GitHub de Microsoft
+  codebytes_skinny_banner_title: "¡Acompáñanos del 7 al 11 de Diciembre en nuestras
+    mini-lecciones en vivo de CodeBytes!"
+  codebytes_skinny_banner_description: "¡Únase a nosotros cada día en la Semana de
+    la Educación en Ciencias de la Computación, para asistir a CodeBytes, lecciones
+    interactivas de 20 minutos sobre ciencias de la computación. Transmitiendo en
+    directo dos veces al día, CodeBytes es una gran manera de que los alumnos participen
+    en una #HoraDelCódigo virtual."
   codebytes_skinny_banner_english_only: Sólo en inglés
+  codebytes_skinny_banner_learn: Más información en [code.org/codebytes](%{code_bytes_url}).
+  footer_privacy_policy: Política de Privacidad
+  footer_privacy_policy_updated: Política de privacidad (actualizada)
+  footer_about: Acerca de
+  footer_partners: Socios
+  footer_blog: Blog
+  footer_donate: Dona
+  footer_store: Tienda
+  footer_support: Soporte
+  footer_terms: Términos
+  ai_for_oceans: Inteligencia Artificial para océanos
+  ai_for_oceans_lesson_plan: plan de estudio
+  ai_for_oceans_tile_description: "¡Ayuda a la Inteligencia Artificial a limpiar los
+    océanos entrenándola para que detecte la basura! Aprende sobre los datos de entrenamiento,
+    los sesgos y cómo la Inteligencia Artificial puede abordar los problemas del mundo.
+    Ver"
+  how_ai_works: Cómo funciona la Inteligencia Artificial
+  how_ai_works_tile_description: Aprende, con esta serie de vídeos cortos, cómo funciona
+    la Inteligencia Artificial y por qué es importante. Con el CEO de Microsoft, Satya
+    Nadella, y un variado elenco de expertos.
+  watch_the_videos: Ver los vídeos
+  ai_and_ethics: Inteligencia Artificial y Ética
+  ai_and_ethics_tile_description: Los alumnos reflexionan sobre las implicaciones
+    éticas de la Inteligencia Artificial y a continuación, colaboran en la creación
+    de un "Código Ético de la Inteligencia Artificial" para los creadores y legisladores
+    de la Inteligencia Artificial de todo el mundo.
+  view_lesson_plan: Ver el plan de estudio
+  ai_in_partnership_with: En colaboración con
+  ai_microsoft_thanks: Agradecemos a Microsoft por el apoyo a nuestra visión y misión
+    centradas en asegurar que cada niño tenga la oportunidad de aprender ciencias
+    de la computación y las habilidades para tener éxito en el siglo XXI.
+  ai_ethics_panel_header: Explorando la Ética de la Inteligencia Artificial en una
+    mesa redonda
+  ai_ethics_panel_description_1: "¡Profundice con algunos de nuestros expertos favoritos
+    en Inteligencia Artificial! Esta mesa redonda aborda temas importantes como el
+    sesgo algorítmico y el futuro del trabajo. Acompáñalo de nuestro"
+  ai_ethics_lesson_plan: Plan de estudios de Inteligencia Artificial y Ética
+  ai_ethics_panel_description_2: "¡para una gran introducción a la ética de la inteligencia
+    artificial!"
+  cs_for_good: Informática para el Bienestar
+  cs_for_good_tile_description: Recursos para inspirar a los alumnos a pensar profundamente
+    en el papel que la informática puede desempeñar en la creación de un mundo más
+    equitativo y sostenible.
+  view_resources: Ver recursos
+  imagine_cup_junior: Imagine Cup Junior
+  imagine_cup_junior_tile_description: Este desafío global de Inteligencia Artificial
+    para el Bienestar presenta a los alumnos las iniciativas de Inteligencia Artificial
+    para el Bienestar de Microsoft, permitiéndoles resolver un problema en el mundo
+    con el poder de la Inteligencia Artificial.
+  ai_activity: Actividad
+  ai_description: Descripción
+  ai_seeing_ai: Viendo la Inteligencia Artificial
+  ai_seeing_ai_description: Una aplicación gratuita que narra el mundo que te rodea
+    en varios idiomas.
+  ai_quick_draw: Rápido, ¡a dibujar!
+  ai_quick_draw_description: "¿Puede una red neuronal aprender a reconocer garabatos?"
+  ai_teachable_machine: Enseñar a una máquina
+  ai_teachable_machine_description: Entrena a un ordenador para que reconozca tus
+    propias imágenes, sonidos y poses.
+  ai_google: Experimentos de Inteligencia Artificial con Google
+  ai_google_description: Empieza a explorar el aprendizaje automático a través de
+    imágenes, dibujos, lenguaje, música y mucho más.
+  ai_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_zooniverse_description: Ayuda a proteger a la Cebra de Montaña de El Cabo en
+    peligro de extinción identificando los diferentes animales en las imágenes.
+  ai_audience: Audiencia
+  ai_minecraft_description: 'Accede a recursos gratuitos que incluyen un plan de clases,
+    vídeos, un plan de estudios de informática y formación para profesores. (Requiere
+    Minecraft: Education Edition)'
+  ai_k_12_audience: K-12 (se requiere saber leer)
+  ai_microsoft_workshop: Talleres virtuales gratuitos de Microsoft
+  ai_microsoft_workshop_description: Despierta la curiosidad con talleres gratuitos
+    de STEM y codificación.
+  ai_machine_learning_for_kids: Aprendizaje automático para niños
+  ai_machine_learning_for_kids_description: Entrena un modelo de aprendizaje automático
+    con texto, números o imágenes y úsalo para crear juegos en Scratch.
+  ai_ibm_machine_learning_for_kids: 'IBM: Aprendizaje Automático para Niños'
+  ai_ecs: 'ECS: Inteligencia Artificial (IA)'
+  ai_ecs_description: Una nueva unidad de plan de estudios alternativo para el plan
+    de estudios de Exploración de Ciencias de la Computación (ECS).
+  ai_elements: Elementos de Inteligencia Artificial
+  ai_elements_description: Una serie de cursos gratuitos en línea creados por Reaktor
+    y la Universidad de Helsinki.
+  ai_cognimates: Cognimates
+  ai_cognimates_description: Una plataforma educativa de IA para crear juegos, programar
+    robots y entrenar.
+  ai_try_activity: Prueba la actividad

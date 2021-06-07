@@ -996,6 +996,8 @@ sq-AL:
   coursee-2018_gradelevel: Moshat 8-12
   coursed-2019_gradelevel: Klasat 8+
   coursee-2019_gradelevel: Moshat 8-12
+  coursed-2020_gradelevel: Klasat 8+
+  coursee-2020_gradelevel: Moshat 8-12
   accelerated_gradelevel: Moshat 10-18
   codeorg_platformtext: Browserat e kohës, smartphones, tableta
   codeintl_platformtext: Browserat e kohës, smartphones, tableta
@@ -1612,3 +1614,9 @@ sq-AL:
   hoc2018_dance_teacher_resources_tile2_button: Aktiviteti Unplugged
   hoc2018_dance_amazon_about_future_engineer_button: Mëso më shumë
   footer_powered_by_aws: Mundësuar nga Amazon Web Services
+  footer_privacy_policy: Rregullat e Privatësisë
+  footer_donate: Dhuro
+  footer_support: Ndihma dhe Komuniteti
+  footer_terms: Termat
+  ai_activity: Aktivizo
+  ai_description: Përshkrimi

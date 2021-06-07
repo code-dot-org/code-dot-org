@@ -10,6 +10,78 @@ import AnimationPreview from './AnimationPreview';
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
 
+class AnimationPickerListItem extends React.Component {
+  static propTypes = {
+    animationProps: shapes.AnimationProps,
+    icon: PropTypes.string,
+    label: PropTypes.string,
+    onClick: PropTypes.func,
+    playAnimations: PropTypes.bool,
+    category: PropTypes.string
+  };
+
+  state = {
+    loaded: false
+  };
+
+  render() {
+    const rootStyle = [styles.root, !this.props.label && styles.noLabel];
+
+    const thumbnailStyle = [
+      styles.thumbnail,
+      this.props.icon && styles.thumbnailIcon,
+      this.props.animationProps && {
+        display: this.state.loaded ? 'block' : 'none'
+      }
+    ];
+
+    const labelStyle = [
+      styles.label,
+      this.props.icon && styles.labelIcon,
+      this.props.animationProps && {
+        display: this.state.loaded ? 'block' : 'none'
+      }
+    ];
+    const iconImageSrc = this.props.category
+      ? `/blockly/media/p5lab/animation-previews/category_${
+          this.props.category
+        }.png`
+      : '';
+
+    return (
+      <div
+        style={rootStyle}
+        onClick={this.props.onClick}
+        className="uitest-animation-picker-item"
+      >
+        <div style={thumbnailStyle}>
+          {this.props.animationProps && (
+            <AnimationPreview
+              animationProps={this.props.animationProps}
+              sourceUrl={this.props.animationProps.sourceUrl}
+              width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+              height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+              playBehavior={
+                !this.props.playAnimations ? PlayBehavior.NEVER_PLAY : null
+              }
+              onPreviewLoad={() => this.setState({loaded: true})}
+            />
+          )}
+          {this.props.icon && <i className={'fa fa-' + this.props.icon} />}
+          {this.props.category && (
+            <img
+              className={this.props.category}
+              style={styles.categoryImage}
+              src={iconImageSrc}
+            />
+          )}
+        </div>
+        {this.props.label && <div style={labelStyle}>{this.props.label}</div>}
+      </div>
+    );
+  }
+}
+
 const styles = {
   root: {
     float: 'left',
@@ -56,76 +128,5 @@ const styles = {
     borderRadius: 10
   }
 };
-
-class AnimationPickerListItem extends React.Component {
-  static propTypes = {
-    animationProps: shapes.AnimationProps,
-    icon: PropTypes.string,
-    label: PropTypes.string,
-    onClick: PropTypes.func,
-    playAnimations: PropTypes.bool,
-    category: PropTypes.string,
-    categoryImagePathPrefix: PropTypes.string
-  };
-
-  state = {
-    loaded: false
-  };
-
-  render() {
-    const rootStyle = [styles.root, !this.props.label && styles.noLabel];
-
-    const thumbnailStyle = [
-      styles.thumbnail,
-      this.props.icon && styles.thumbnailIcon,
-      this.props.animationProps && {
-        display: this.state.loaded ? 'block' : 'none'
-      }
-    ];
-
-    const labelStyle = [
-      styles.label,
-      this.props.icon && styles.labelIcon,
-      this.props.animationProps && {
-        display: this.state.loaded ? 'block' : 'none'
-      }
-    ];
-    const iconImageSrc = this.props.category
-      ? this.props.categoryImagePathPrefix + `${this.props.category}.png`
-      : '';
-
-    return (
-      <div
-        style={rootStyle}
-        onClick={this.props.onClick}
-        className="uitest-animation-picker-item"
-      >
-        <div style={thumbnailStyle}>
-          {this.props.animationProps && (
-            <AnimationPreview
-              animationProps={this.props.animationProps}
-              sourceUrl={this.props.animationProps.sourceUrl}
-              width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-              height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-              playBehavior={
-                !this.props.playAnimations ? PlayBehavior.NEVER_PLAY : null
-              }
-              onPreviewLoad={() => this.setState({loaded: true})}
-            />
-          )}
-          {this.props.icon && <i className={'fa fa-' + this.props.icon} />}
-          {this.props.category && (
-            <img
-              className={this.props.category}
-              style={styles.categoryImage}
-              src={iconImageSrc}
-            />
-          )}
-        </div>
-        {this.props.label && <div style={labelStyle}>{this.props.label}</div>}
-      </div>
-    );
-  }
-}
 
 export default Radium(AnimationPickerListItem);

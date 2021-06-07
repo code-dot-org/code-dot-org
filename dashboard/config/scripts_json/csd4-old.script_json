@@ -11,6 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:55:11 UTC",
     "seeding_key": {
       "script.name": "csd4-old"
     }
@@ -47,6 +48,7 @@
       "name": "Analysis of Design",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -61,6 +63,7 @@
       "name": "Understanding Your User",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -75,6 +78,7 @@
       "name": "User-Centered Design Micro Activity",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -89,6 +93,7 @@
       "name": "User Interface and Prototype Testing",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -103,6 +108,7 @@
       "name": "Feedback and Prototypes",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -117,6 +123,7 @@
       "name": "Identifying User Needs",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -131,6 +138,7 @@
       "name": "Project - Paper Prototype",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -145,6 +153,7 @@
       "name": "Designing Apps for Good",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -159,6 +168,7 @@
       "name": "Market Research",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
       },
@@ -173,6 +183,7 @@
       "name": "Paper Prototypes",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
       },
@@ -187,6 +198,7 @@
       "name": "Prototype Testing",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 11,
       "properties": {
       },
@@ -201,6 +213,7 @@
       "name": "Digital Design",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 12,
       "properties": {
       },
@@ -215,6 +228,7 @@
       "name": "Event Driven Programming",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 13,
       "properties": {
       },
@@ -229,6 +243,7 @@
       "name": "Basic App Functionality",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 14,
       "properties": {
       },
@@ -243,6 +258,7 @@
       "name": "Testing the App",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 15,
       "properties": {
       },
@@ -257,6 +273,7 @@
       "name": "Improving and Iterating",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 16,
       "properties": {
       },
@@ -271,6 +288,7 @@
       "name": "App Presentation",
       "absolute_position": 17,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 17,
       "properties": {
       },
@@ -281,15 +299,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L01 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L01 SFLP"
@@ -305,11 +333,15 @@
     {
       "chapter": 2,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L02 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L02 SFLP"
@@ -325,11 +357,15 @@
     {
       "chapter": 3,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L03 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L03 SFLP"
@@ -345,11 +381,15 @@
     {
       "chapter": 4,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L04 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L04 SFLP"
@@ -365,11 +405,15 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L05 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L05 SFLP"
@@ -385,11 +429,15 @@
     {
       "chapter": 6,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L06 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L06 SFLP"
@@ -405,11 +453,15 @@
     {
       "chapter": 7,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L07 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L07 SFLP"
@@ -425,12 +477,16 @@
     {
       "chapter": 8,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1"
+        ],
         "progression": "Reflection"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch1"
@@ -446,11 +502,15 @@
     {
       "chapter": 9,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L08 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L08 SFLP"
@@ -466,11 +526,15 @@
     {
       "chapter": 10,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L09 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L09 SFLP"
@@ -486,11 +550,15 @@
     {
       "chapter": 11,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L10 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L10 SFLP"
@@ -506,11 +574,15 @@
     {
       "chapter": 12,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Example App Types"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Example App Types"
@@ -526,12 +598,16 @@
     {
       "chapter": 13,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Quiz App Demo"
+        ],
         "progression": "Demo Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Quiz App Demo"
@@ -547,12 +623,16 @@
     {
       "chapter": 14,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Decision App Demo"
+        ],
         "progression": "Demo Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Decision App Demo"
@@ -568,12 +648,16 @@
     {
       "chapter": 15,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 List App Demo"
+        ],
         "progression": "Demo Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 List App Demo"
@@ -589,12 +673,16 @@
     {
       "chapter": 16,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Crowdsource App Demo"
+        ],
         "progression": "Demo Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Crowdsource App Demo"
@@ -610,11 +698,15 @@
     {
       "chapter": 17,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L11 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L11 SFLP"
@@ -630,11 +722,15 @@
     {
       "chapter": 18,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L12 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L12 SFLP"
@@ -650,11 +746,15 @@
     {
       "chapter": 19,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Building a UI with Design Mode"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Building a UI with Design Mode"
@@ -670,12 +770,16 @@
     {
       "chapter": 20,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Design Mode Video"
+        ],
         "progression": "Intro to Design Mode"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Design Mode Video"
@@ -691,12 +795,16 @@
     {
       "chapter": 21,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 15"
+        ],
         "progression": "Intro to Design Mode"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 15"
@@ -712,12 +820,16 @@
     {
       "chapter": 22,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 4"
+        ],
         "progression": "Intro to Design Mode"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 4"
@@ -733,11 +845,15 @@
     {
       "chapter": 23,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Choosing Good IDs"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Choosing Good IDs"
@@ -753,12 +869,16 @@
     {
       "chapter": 24,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Text"
+        ],
         "progression": "Designing Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4 - Design Mode Text"
@@ -774,12 +894,16 @@
     {
       "chapter": 25,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Input Widgets"
+        ],
         "progression": "Designing Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4 - Design Mode Input Widgets"
@@ -795,12 +919,16 @@
     {
       "chapter": 26,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 21"
+        ],
         "progression": "Designing Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 21"
@@ -816,12 +944,16 @@
     {
       "chapter": 27,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode Icons"
+        ],
         "progression": "Designing Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode Icons"
@@ -837,12 +969,16 @@
     {
       "chapter": 28,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 18"
+        ],
         "progression": "Designing Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 18"
@@ -858,11 +994,15 @@
     {
       "chapter": 29,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design a Screen for your App"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Design a Screen for your App"
@@ -878,11 +1018,15 @@
     {
       "chapter": 30,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Project"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4 - Design Mode Project"
@@ -898,11 +1042,15 @@
     {
       "chapter": 31,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L13 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L13 SFLP"
@@ -918,11 +1066,15 @@
     {
       "chapter": 32,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Responding to User Input"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Responding to User Input"
@@ -938,12 +1090,16 @@
     {
       "chapter": 33,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 16"
+        ],
         "progression": "User Input"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 16"
@@ -959,12 +1115,16 @@
     {
       "chapter": 34,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 3"
+        ],
         "progression": "User Input"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 3"
@@ -980,12 +1140,16 @@
     {
       "chapter": 35,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 17"
+        ],
         "progression": "User Input"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 17"
@@ -1001,11 +1165,15 @@
     {
       "chapter": 36,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Multi-Screen Apps"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Multi-Screen Apps"
@@ -1021,12 +1189,16 @@
     {
       "chapter": 37,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 19"
+        ],
         "progression": "Connecting Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 19"
@@ -1042,12 +1214,16 @@
     {
       "chapter": 38,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 20"
+        ],
         "progression": "Connecting Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 20"
@@ -1063,12 +1239,16 @@
     {
       "chapter": 39,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Connecting Screens"
+        ],
         "progression": "Connecting Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Connecting Screens"
@@ -1084,12 +1264,16 @@
     {
       "chapter": 40,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Connecting Screens Getting Back"
+        ],
         "progression": "Connecting Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Connecting Screens Getting Back"
@@ -1105,11 +1289,15 @@
     {
       "chapter": 41,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Importing Screens"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Importing Screens"
@@ -1125,11 +1313,15 @@
     {
       "chapter": 42,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Import"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Project Import"
@@ -1145,11 +1337,15 @@
     {
       "chapter": 43,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L14 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L14 SFLP"
@@ -1165,11 +1361,15 @@
     {
       "chapter": 44,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Changing Design Elements with Code"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Changing Design Elements with Code"
@@ -1185,12 +1385,16 @@
     {
       "chapter": 45,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Functionality setText"
+        ],
         "progression": "Changing Text"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Functionality setText"
@@ -1206,12 +1410,16 @@
     {
       "chapter": 46,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Functionality setText button"
+        ],
         "progression": "Changing Text"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Functionality setText button"
@@ -1227,12 +1435,16 @@
     {
       "chapter": 47,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Functionality setText input"
+        ],
         "progression": "Changing Text"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Functionality setText input"
@@ -1248,12 +1460,16 @@
     {
       "chapter": 48,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Functionality setText quiz 1"
+        ],
         "progression": "Changing Text"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Functionality setText quiz 1"
@@ -1269,12 +1485,16 @@
     {
       "chapter": 49,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Functionality setText quiz 2"
+        ],
         "progression": "Changing Text"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Functionality setText quiz 2"
@@ -1290,12 +1510,16 @@
     {
       "chapter": 50,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Functionality visible"
+        ],
         "progression": "Changing Text"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Functionality visible"
@@ -1311,12 +1535,16 @@
     {
       "chapter": 51,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Functionality setText quiz 3"
+        ],
         "progression": "Changing Text"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Functionality setText quiz 3"
@@ -1332,11 +1560,15 @@
     {
       "chapter": 52,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Getting Better User Input"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Getting Better User Input"
@@ -1352,12 +1584,16 @@
     {
       "chapter": 53,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 24"
+        ],
         "progression": "Other Forms of Input"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 24"
@@ -1373,12 +1609,16 @@
     {
       "chapter": 54,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 25"
+        ],
         "progression": "Other Forms of Input"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 25"
@@ -1394,12 +1634,16 @@
     {
       "chapter": 55,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 26"
+        ],
         "progression": "Other Forms of Input"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 26"
@@ -1415,12 +1659,16 @@
     {
       "chapter": 56,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 27"
+        ],
         "progression": "Other Forms of Input"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 27"
@@ -1436,12 +1684,16 @@
     {
       "chapter": 57,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 28"
+        ],
         "progression": "Other Forms of Input"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 - Design Mode - 28"
@@ -1457,11 +1709,15 @@
     {
       "chapter": 58,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Adding Functionality to your App"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Adding Functionality to your App"
@@ -1477,11 +1733,15 @@
     {
       "chapter": 59,
       "position": 17,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Functionality"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Project Functionality"
@@ -1497,11 +1757,15 @@
     {
       "chapter": 60,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L15 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L15 SFLP"
@@ -1517,11 +1781,15 @@
     {
       "chapter": 61,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L16 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L16 SFLP"
@@ -1537,11 +1805,15 @@
     {
       "chapter": 62,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Bug Feature"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Project Bug Feature"
@@ -1557,11 +1829,15 @@
     {
       "chapter": 63,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L17 SFLP"
+        ]
       },
       "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4L17 SFLP"
@@ -1577,12 +1853,16 @@
     {
       "chapter": 64,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch2"
+        ],
         "progression": "Reflection"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch2"
@@ -2301,5 +2581,35 @@
         "script.name": "csd4-old"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

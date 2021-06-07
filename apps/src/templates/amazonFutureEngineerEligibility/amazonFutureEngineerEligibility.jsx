@@ -10,25 +10,6 @@ import AmazonFutureEngineerAccountConfirmation from './amazonFutureEngineerAccou
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 
-const styles = {
-  intro: {
-    paddingBottom: 10
-  },
-  container: {
-    borderColor: color.teal,
-    borderWidth: 'thin',
-    borderStyle: 'solid',
-    padding: '10px 15px 10px 15px'
-  },
-  button: {
-    backgroundColor: color.orange,
-    color: color.white
-  },
-  header: {
-    marginTop: '10px'
-  }
-};
-
 const sessionStorageKey = 'AmazonFutureEngineerEligibility';
 
 const VALIDATION_STATE_ERROR = 'error';
@@ -318,6 +299,25 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     );
   }
 }
+
+const styles = {
+  intro: {
+    paddingBottom: 10
+  },
+  container: {
+    borderColor: color.teal,
+    borderWidth: 'thin',
+    borderStyle: 'solid',
+    padding: '10px 15px 10px 15px'
+  },
+  button: {
+    backgroundColor: color.orange,
+    color: color.white
+  },
+  header: {
+    marginTop: '10px'
+  }
+};
 
 const StudentAccountNotification = (
   <div style={styles.container}>

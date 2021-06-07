@@ -1115,6 +1115,8 @@ si-LK:
   coursee-2018_gradelevel: වයස 8-12
   coursed-2019_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
   coursee-2019_gradelevel: වයස 8-12
+  coursed-2020_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
+  coursee-2020_gradelevel: වයස 8-12
   accelerated_gradelevel: වයස අවුරුදු 10-18
   codeorg_platformtext: නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්
   codeintl_platformtext: නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්
@@ -1782,3 +1784,8 @@ si-LK:
   hoc2018_dance_teacher_resources_tile2_button: අපේනුගත ක්‍රියාකාරකම
   hoc2018_dance_amazon_about_future_engineer_button: වැඩිදුර ඉගෙන ගන්න
   footer_powered_by_aws: ඇමේසන් වෙබ් සේවා මඟින් බලගැන්වේ
+  footer_privacy_policy: රහස්‍යතා ප්‍රතිපත්තිය
+  footer_donate: පරිත්‍යාග
+  footer_support: සහාය
+  footer_terms: නියම
+  ai_description: විස්තරය

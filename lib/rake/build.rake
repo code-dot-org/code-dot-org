@@ -78,7 +78,7 @@ namespace :build do
         else
           ChatClient.log 'Seeding <b>dashboard</b>...'
           ChatClient.log 'consider setting "skip_seed_all" in locals.yml if this is taking too long' if rack_env?(:development)
-          RakeUtils.rake 'seed:default', (rack_env?(:test) ? '--trace' : nil)
+          RakeUtils.rake_stream_output 'seed:default', (rack_env?(:test) ? '--trace' : nil)
         end
 
         # Commit dsls.en.yml changes on staging
@@ -121,7 +121,7 @@ namespace :build do
       if CDO.daemon
         ChatClient.log 'Updating <b>pegasus</b> database...'
         begin
-          RakeUtils.rake 'pegasus:setup_db', (rack_env?(:test) ? '--trace' : nil)
+          RakeUtils.rake_stream_output 'pegasus:setup_db', (rack_env?(:test) ? '--trace' : nil)
         rescue => e
           ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
           raise e

@@ -19,47 +19,40 @@
 class Foorm::LibraryQuestion < ApplicationRecord
   include Seeded
 
+  belongs_to :library, primary_key: [:name, :version], foreign_key: [:library_name, :library_version], required: true
+
   validate :validate_library_question
+  validates :question_name, :question, presence: true
 
-  def self.setup
-    Dir.glob('config/foorm/library/**/*.json').each do |path|
-      # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
-      # we get full_name: "surveys/pd/pre_workshop_survey"
-      #      and version: 0
-      unique_path = path.partition("config/foorm/library/")[2]
-      filename_and_version = File.basename(unique_path, ".json")
-      filename, version = filename_and_version.split(".")
-      version = version.to_i
-      full_name = File.dirname(unique_path) + "/" + filename
+  after_commit :write_to_file
 
-      # Let's load the JSON text.
-      begin
-        source_questions = JSON.parse(File.read(path))
-        # if published is not provided, default to true
-        published = source_questions['published'].nil? ? true : source_questions['published']
-
-        source_questions["pages"].map do |page|
-          page["elements"].map do |element|
-            question_name = element["name"]
-            library_question = Foorm::LibraryQuestion.find_or_initialize_by(
-              library_name: full_name,
-              library_version: version,
-              question_name: question_name
-            )
-            library_question.question = element.to_json
-            library_question.published = published
-            library_question.save! if library_question.changed?
+  # Before saving updates to a library question, we check whether the library question
+  # is used in any published forms, such that we can warn the editor that
+  # their changes may affect surveys that are already in use.
+  def published_forms_appeared_in
+    Set.new.tap do |forms_appeared_in|
+      Foorm::Form.all.each do |form|
+        next unless form.published
+        JSON.parse(form.questions)['pages']&.each do |page|
+          page['elements']&.each do |element|
+            forms_appeared_in << form if element['type'] == 'library_item' && element['name'] == question_name
           end
         end
-      rescue
-        raise format('failed to parse %s', full_name)
       end
     end
   end
 
+  # TO DO: names need to be tracked in the question column (and JSON) to make sure libraries continue to be valid SurveyJS.
+  # TO DO: check that the library question has the same name in the question as in the question_name field.
+  # TO DO: check that the library question name is unique within the library (there is DB validation for this)
   def validate_library_question
     Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
   rescue StandardError => e
     errors.add(:question, e.message)
+  end
+
+  def write_to_file
+    return true unless saved_changes?
+    library.write_library_to_file
   end
 end

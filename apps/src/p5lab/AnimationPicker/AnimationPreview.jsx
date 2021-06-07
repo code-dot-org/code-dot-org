@@ -95,7 +95,7 @@ export default class AnimationPreview extends React.Component {
       ? nextAnimation.sourceSize
       : {x: 1, y: 1};
     this.setState({
-      framesPerRow: Math.floor(sourceSize.x / nextAnimation.frameSize.x),
+      framesPerRow: Math.floor(sourceSize.x / nextAnimation.frameSize.x) || 1,
       scaledSourceSize: scaleVector2(sourceSize, scale),
       scaledFrameSize: scaledFrameSize,
       extraTopMargin: Math.ceil((innerHeight - scaledFrameSize.y) / 2),

@@ -5,7 +5,6 @@ import sectionProgress, {
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
-  getCurrentProgress,
   getCurrentScriptData,
   startRefreshingProgress,
   finishRefreshingProgress
@@ -85,8 +84,7 @@ describe('sectionProgressRedux', () => {
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.scriptDataByScript, {});
       assert.deepEqual(nextState.studentLevelProgressByScript, {});
-      assert.deepEqual(nextState.levelsByLessonByScript, {});
-      assert.deepEqual(nextState.studentTimestampsByScript, {});
+      assert.deepEqual(nextState.studentLastUpdateByScript, {});
     });
   });
 
@@ -160,23 +158,6 @@ describe('sectionProgressRedux', () => {
     });
   });
 
-  describe('getCurrentProgress', () => {
-    it('gets the progress for the current script', () => {
-      const stateWithProgress = {
-        scriptSelection: {scriptId: 123},
-        sectionProgress: {
-          studentLevelProgressByScript: {
-            123: 'fake progress 1',
-            456: 'fake progress 2'
-          }
-        }
-      };
-      expect(getCurrentProgress(stateWithProgress)).to.deep.equal(
-        'fake progress 1'
-      );
-    });
-  });
-
   describe('getCurrentScriptData', () => {
     it('gets the script data for the section in the selected script', () => {
       const stateWithScript = {
@@ -184,7 +165,7 @@ describe('sectionProgressRedux', () => {
         sectionProgress: {
           scriptDataByScript: {
             123: {
-              stages: [
+              lessons: [
                 {
                   levels: [
                     {
@@ -209,7 +190,7 @@ describe('sectionProgressRedux', () => {
         }
       };
       expect(getCurrentScriptData(stateWithScript)).to.deep.equal({
-        stages: [
+        lessons: [
           {
             levels: [
               {

@@ -897,6 +897,8 @@ kk-KZ:
   coursee-2018_gradelevel: Жас аралығы 8-12
   coursed-2019_gradelevel: 8-сыныптан бастап
   coursee-2019_gradelevel: Жас аралығы 8-12
+  coursed-2020_gradelevel: 8-сыныптан бастап
+  coursee-2020_gradelevel: Жас аралығы 8-12
   accelerated_gradelevel: 10-18 жастағылар үшін
   codeorg_platformtext: Заманауи браузерлер, смартфондар, планшеттер
   codeintl_platformtext: Заманауи браузерлер, смартфондар, планшеттер
@@ -1527,3 +1529,8 @@ kk-KZ:
   hoc2018_dance_teacher_resources_tile2_button: Іс-әрекеттерді өшіру
   hoc2018_dance_amazon_about_future_engineer_button: толығырақ білу
   footer_powered_by_aws: Amazon Web Services серверінде жұмыс істейді
+  footer_privacy_policy: Құпиялылық саясаты
+  footer_donate: Қайырымдылақ жасау
+  footer_support: Қолдау
+  footer_terms: Ережелер
+  ai_description: Сипаттама

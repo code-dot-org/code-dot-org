@@ -8,6 +8,6 @@ class VocabularyAutocomplete < AutocompleteHelper
     query = format_query(query)
     rows = rows.
       where("MATCH(word,definition) AGAINST(? in BOOLEAN MODE)", query)
-    return rows.map(&:attributes)
+    return rows.map(&:summarize_for_lesson_edit)
   end
 end

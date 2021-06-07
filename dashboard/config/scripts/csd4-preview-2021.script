@@ -3,49 +3,48 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-preview-21/unit4/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-preview-21/unit4/vocab"], ["standardMappings", "https://curriculum.code.org/csd-preview-21/unit4/standards/"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-preview-21/unit4/{LESSON}'
 pilot_experiment 'csd-2021-preview'
 project_sharing true
 curriculum_umbrella 'CSD'
 
 lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
-lesson 'Designing With Empathy', display_name: 'Designing With Empathy'
+lesson 'Designing With Empathy', display_name: 'Designing With Empathy', has_lesson_plan: true
 level 'CSD U4L01 autoSFLP_preview-2021', named: true
 
-lesson 'Understanding Your User', display_name: 'Understanding Your User'
+lesson 'Understanding Your User', display_name: 'Understanding Your User', has_lesson_plan: true
 level 'CSD U4L02 autoSFLP_preview-2021', named: true
 
-lesson 'User-Centered Design - Define and Prepare', display_name: 'User-Centered Design - Define and Prepare'
+lesson 'User-Centered Design - Define and Prepare', display_name: 'User-Centered Design - Define and Prepare', has_lesson_plan: true
 level 'CSD U4L03 autoSFLP_preview-2021', named: true
 
-lesson 'User-Centered Design - Try and Reflect', display_name: 'User-Centered Design - Try and Reflect'
+lesson 'User-Centered Design - Try and Reflect', display_name: 'User-Centered Design - Try and Reflect', has_lesson_plan: true
 level 'CSD U4L04 autoSFLP_preview-2021', named: true
 
-lesson 'User Interfaces', display_name: 'User Interfaces'
+lesson 'User Interfaces', display_name: 'User Interfaces', has_lesson_plan: true
 level 'CSD U4L05 autoSFLP_preview-2021', named: true
 
-lesson 'Feedback and Testing', display_name: 'Feedback and Testing'
+lesson 'Feedback and Testing', display_name: 'Feedback and Testing', has_lesson_plan: true
 level 'CSD U4L06 autoSFLP_preview-2021', named: true
 
-lesson 'Identifying User Needs', display_name: 'Identifying User Needs'
+lesson 'Identifying User Needs', display_name: 'Identifying User Needs', has_lesson_plan: true
 level 'CSD U4L07 autoSFLP_preview-2021', named: true
 
-lesson 'Project - Paper Prototype', display_name: 'Project - Paper Prototype'
+lesson 'Project - Paper Prototype', display_name: 'Project - Paper Prototype', has_lesson_plan: true
 level 'CSD U4L08 autoSFLP_preview-2021', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch1_preview-2021', progression: 'Reflection', assessment: true
 
 lesson_group 'csd4_2', display_name: 'Chapter 2: App Prototyping'
-lesson 'Designing Apps for Good', display_name: 'Designing Apps for Good'
+lesson 'Designing Apps for Good', display_name: 'Designing Apps for Good', has_lesson_plan: true
 level 'CSD U4L09 autoSFLP_preview-2021', named: true
 level 'csd-apps for good-1', progression: 'Sample Apps for Good'
 level 'csd-apps for good-2', progression: 'Sample Apps for Good'
 level 'csd-apps for good-3', progression: 'Sample Apps for Good'
 
-lesson 'Market Research', display_name: 'Market Research'
+lesson 'Market Research', display_name: 'Market Research', has_lesson_plan: true
 level 'CSD U4L10 autoSFLP_preview-2021', named: true
 
-lesson 'Exploring UI Elements', display_name: 'Exploring UI Elements'
+lesson 'Exploring UI Elements', display_name: 'Exploring UI Elements', has_lesson_plan: true
 level 'CSD U4L11 autoSFLP_preview-2021', named: true
 level 'csd-explore ui-1', progression: 'Example Apps'
 level 'csd-explore ui-2', progression: 'Example Apps'
@@ -54,13 +53,13 @@ level 'csd-explore ui-4', progression: 'Example Apps'
 level 'csd-explore ui-5', progression: 'Example Apps'
 level 'csd-explore ui-6', progression: 'Example Apps'
 
-lesson 'Build a Paper Prototype', display_name: 'Build a Paper Prototype'
+lesson 'Build a Paper Prototype', display_name: 'Build a Paper Prototype', has_lesson_plan: true
 level 'CSD U4L12 autoSFLP_preview-2021', named: true
 
-lesson 'Prototype Testing', display_name: 'Prototype Testing'
+lesson 'Prototype Testing', display_name: 'Prototype Testing', has_lesson_plan: true
 level 'CSD U4L13 autoSFLP_preview-2021', named: true
 
-lesson 'Digital Mode in App Lab', display_name: 'Design Mode in App Lab'
+lesson 'Digital Mode in App Lab', display_name: 'Design Mode in App Lab', has_lesson_plan: true
 level 'CSD U4L14 autoSFLP_preview-2021', named: true
 level 'CSDU4 Design Mode Video_preview-2021', named: true
 level 'U4 Model Design 1_preview-2021', progression: 'Build a Screen'
@@ -71,12 +70,12 @@ level 'U4 Model Design 5_preview-2021', progression: 'Finish a Screen'
 level 'U4 Model Design 6_preview-2021', progression: 'Finish a Screen'
 level 'U4 Model Design 7_preview-2021', progression: 'Finish a Screen', assessment: true
 
-lesson 'Build a Digital Prototype', display_name: 'Build a Digital Prototype'
+lesson 'Build a Digital Prototype', display_name: 'Build a Digital Prototype', has_lesson_plan: true
 level 'CSD U4L15 autoSFLP_preview-2021', named: true
 level 'Design a Screen for your App_preview-2021', named: true
 level 'CSD U4 - Design Mode Project_preview-2021', progression: 'App Project: Screen Design', assessment: true
 
-lesson 'Events in App Lab', display_name: 'Events in App Lab'
+lesson 'Events in App Lab', display_name: 'Events in App Lab', has_lesson_plan: true
 level 'CSD U4L16 autoSFLP_preview-2021', named: true
 level 'U4 Model Program 1_preview-2021', progression: 'Adding Screens'
 level 'U4 Model Program 1.5_preview-2021', progression: 'Adding Screens'
@@ -86,30 +85,30 @@ level 'U4 Model Program 3_preview-2021', progression: 'Events and Linking Screen
 level 'U4 Model Program 4_preview-2021', progression: 'Events and Linking Screens'
 level 'U4 Model Program 5_preview-2021', progression: 'Events and Linking Screens', assessment: true
 
-lesson 'Linking Prototype Screens', display_name: 'Linking Prototype Screens'
+lesson 'Linking Prototype Screens', display_name: 'Linking Prototype Screens', has_lesson_plan: true
 level 'CSD U4L17 autoSFLP_preview-2021', named: true
 level 'CSDU4 Project Import_preview-2021', progression: 'Combining Projects'
 level 'CSDU4 Project Events_preview-2021', progression: 'Combining Projects', assessment: true
 
-lesson 'Testing the App', display_name: 'Testing the App'
+lesson 'Testing the App', display_name: 'Testing the App', has_lesson_plan: true
 level 'CSD U4L18 autoSFLP_preview-2021', named: true
 
-lesson 'Bugs and Features', display_name: 'Bugs and Features'
+lesson 'Bugs and Features', display_name: 'Bugs and Features', has_lesson_plan: true
 level 'CSD U4L19 autoSFLP_preview-2021', named: true
 
-lesson 'Updating Your Prototype', display_name: 'Updating Your Prototype'
+lesson 'Updating Your Prototype', display_name: 'Updating Your Prototype', has_lesson_plan: true
 level 'CSD U4L20 autoSFLP_preview-2021', named: true
 level 'CSDU4 Project Bug Feature_preview-2021', named: true
 
-lesson 'Project - App Presentation', display_name: 'Project - App Presentation'
+lesson 'Project - App Presentation', display_name: 'Project - App Presentation', has_lesson_plan: true
 level 'CSD U4L21 autoSFLP_preview-2021', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch2_preview-2021', progression: 'Reflection', assessment: true
 
-lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD User Centered Design Post-Project Test_preview-2021', assessment: true
 
 lesson_group 'csdSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true, has_lesson_plan: false
 level 'csd-post-survey-intro-2019_preview-2021'
 level 'csd-post-survey-levelgroup_preview-2021', assessment: true
 

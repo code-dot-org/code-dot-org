@@ -9,13 +9,14 @@ module AzureTextToSpeech
   # https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech#authentication
   TOKEN_CACHE_TTL = 9.minutes.freeze
 
+  AZURE_SERVICE_PREFIX = "azure_speech_service/".freeze
   AZURE_TTS_PREFIX = "azure_tts/".freeze
 
   # Requests an authentication token from Azure, or returns the cached token if still valid.
   def self.get_token
     return nil unless allowed?
 
-    Rails.cache.fetch("azure_speech_service/token", expires_in: TOKEN_CACHE_TTL) do
+    CDO.shared_cache.fetch(AZURE_SERVICE_PREFIX + "token", expires_in: TOKEN_CACHE_TTL) do
       token_uri = URI.parse("https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
       token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
       token_http_request.use_ssl = true
@@ -71,7 +72,7 @@ module AzureTextToSpeech
     token = get_token
     return nil if token.nil_or_empty?
 
-    Rails.cache.fetch("azure_speech_service/voices") do
+    CDO.shared_cache.fetch(AZURE_SERVICE_PREFIX + "voices") do
       voice_uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
       voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
       voice_http_request.use_ssl = true

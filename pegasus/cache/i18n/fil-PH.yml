@@ -1380,6 +1380,12 @@ fil-PH:
   coursed-2019_gradelevel: Baitang 8+
   coursee-2019_gradelevel: Baitang 9+
   coursef-2019_gradelevel: Baitang 10+
+  coursea-2020_gradelevel: Baitang 5+
+  courseb-2020_gradelevel: Baitang 6+
+  coursec-2020_gradelevel: Baitang 7+
+  coursed-2020_gradelevel: Baitang 8+
+  coursee-2020_gradelevel: Baitang 9+
+  coursef-2020_gradelevel: Baitang 10+
   accelerated_gradelevel: Mga edad na 10-18
   codeorg_platformtext: Makabagong mga browser, smartphone, at mga tablet
   codeintl_platformtext: Makabagong mga browser, smartphone, at mga tablet
@@ -1585,6 +1591,26 @@ fil-PH:
   coursef-2019_shortdescription_congrats: Alamin ang lahat ng mga konsepto sa mga
     Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining,
     kuwento o laro.
+  coursea-2020_shortdescription_congrats: Alamin ang mga pangunahing alituntunin sa
+    computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
+    iyong sariling laro o istorya na maaari mong ibahagi.
+  courseb-2020_shortdescription_congrats: Alamin ang mga pangunahing alituntunin sa
+    computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
+    iyong sariling laro o istorya na maaari mong ibahagi.
+  coursec-2020_shortdescription_congrats: Lumikha ng mga programa gamit ang pagsunod-sunod,
+    mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin
+    ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon
+    sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari
+    mong ibahagi!
+  coursee-2020_shortdescription_congrats: Magsimulang mag-code gamit ang mga algoritmo,
+    mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga
+    function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone
+    na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
+  coursef-2020_shortdescription_congrats: Matutong gumami sa iba't ibang uri ng mga
+    loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga
+    pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing
+    at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha
+    ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
   codeorg_longdescription: Matuto ng mga pangunahing konsepto ng Computer Science
     gamit ang drag and drop na pagprogram. Ito ay isang parang laro, pansariling-gabay
     na mga tutoryal na naglakip sa mga video ng mga lektura nina Bill Gates, Mark
@@ -2334,3 +2360,14 @@ fil-PH:
     aming bisyon at misyon na matiyak na ang bawat bata ay may pagkakataon na matuto
     ng computer science at sa mga skill para magtagumpay sa ika-21 siglo.  "
   footer_powered_by_aws: Pinagana sa pamamagitan ng Amazon Web Services
+  footer_privacy_policy: Patakaran sa Pagkapribado
+  footer_about: Tungkol sa
+  footer_partners: Mga Partner
+  footer_donate: Magbigay ng donasyon
+  footer_support: Tulong at Komunidad
+  footer_terms: Mga Alituntunin
+  ai_microsoft_thanks: " Nagpapasalamat kami sa Microsoft sa pagsuporta sa aming bisyon
+    at misyon na matiyak na ang bawat bata ay may pagkakataon na matuto ng computer
+    science at sa mga skill para magtagumpay sa ika-21 siglo.  "
+  ai_activity: Aktibidad
+  ai_description: Deskripsyon

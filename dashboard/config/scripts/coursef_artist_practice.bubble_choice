@@ -1,0 +1,12 @@
+name 'courseF_artist_practice'
+editor_experiment ''
+display_name 'Artist Practice'
+description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with loops and the Artist!'
+
+sublevels
+level 'courseC_artist_prog7_2021'
+level 'ramp_artist_loops4_2021'
+level 'ramp_artist_loops6v1_2021'
+level 'ramp_artist_loops8_2021'
+level 'courseC_artist_prog_challenge1_2021'
+level 'courseC_artist_prog_challenge2a_2021'

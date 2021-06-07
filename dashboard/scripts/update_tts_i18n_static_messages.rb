@@ -114,7 +114,7 @@ TextToSpeech::VOICES.each do |lang, _voice|
       # Sanitize the text after generating the filename to keep the content hash
       # consistent with original text
       text = TextToSpeech.sanitize(text)
-      TextToSpeech.tts_upload_to_s3(text, filename)
+      TextToSpeech.tts_upload_to_s3(text, filename, 'update_i18n_static_messages')
     end
   end
 end

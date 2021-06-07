@@ -14,3 +14,13 @@ The bank intends to develop the algorithm using machine learning techniques. The
 Which of the following best describes whether this algorithm will include bias?
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Students discovered this concept when training the A.I. in the A.I. for Oceans section of [Lesson 6 - Machine Learning and Bias](https://curriculum.code.org/csp-20/unit9/6/). Joy Buolamwini also discussed how this issue led to bias in facial recognition software.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* IOC-1.D: Explain how bias exists in computing innovations.
+:::
+
+MARKDOWN

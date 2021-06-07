@@ -11,15 +11,15 @@ import {
 import {
   authorizeLockable,
   setSectionLockStatus
-} from '@cdo/apps/code-studio/stageLockRedux';
+} from '@cdo/apps/code-studio/lessonLockRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {setHiddenStages} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {setHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import teacherSections, {
   setSections,
   selectSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const lockableStage = {
+const lockableLesson = {
   id: 123,
   levels: [1, 2, 3, 4].map(id => ({
     ids: [id],
@@ -32,45 +32,51 @@ const lockableStage = {
   position: 1
 };
 
-const nonLockableStage = {
-  ...lockableStage,
+const nonLockableLesson = {
+  ...lockableLesson,
   id: 124,
   lockable: false,
   lesson_plan_html_url: 'lesson_plan.html'
 };
 
 const lockableWithLessonPlan = {
-  ...lockableStage,
+  ...lockableLesson,
   id: 125,
   lesson_plan_html_url: 'lesson_plan.html'
 };
 
 const nonLockableNoLessonPlan = {
-  ...lockableStage,
+  ...lockableLesson,
   id: 126,
   lockable: false
 };
 
-const createStore = ({preload = false, allowHidden = true} = {}) => {
+const createStore = ({
+  preload = false,
+  allowHidden = true,
+  teacherVerified = true
+} = {}) => {
   registerReducers({teacherSections});
   const store = createStoreWithReducers();
-  const stages = [
-    lockableStage,
-    nonLockableStage,
+  const lessons = [
+    lockableLesson,
+    nonLockableLesson,
     lockableWithLessonPlan,
     nonLockableNoLessonPlan
   ];
   store.dispatch(
     initProgress({
       scriptName: 'csp1',
-      stages
+      lessons: lessons
     })
   );
-  store.dispatch(authorizeLockable());
+  if (teacherVerified) {
+    store.dispatch(authorizeLockable());
+  }
   store.dispatch(showTeacherInfo());
   store.dispatch(setViewType(ViewType.Teacher));
   store.dispatch(
-    setHiddenStages(
+    setHiddenLessons(
       {
         11: [lockableWithLessonPlan.id]
       },
@@ -87,11 +93,12 @@ const createStore = ({preload = false, allowHidden = true} = {}) => {
         studentCount: 4,
         code: 'TQGSJR',
         providerManaged: false,
-        stages: {}
+        lessons: {},
+        tts_autoplay_enabled: false
       }
     };
-    stages.forEach(stage => {
-      sections[11].stages[stage.id] = [0, 1, 2].map(id => ({
+    lessons.forEach(lesson => {
+      sections[11].lessons[lesson.id] = [0, 1, 2].map(id => ({
         locked: true,
         name: `student${id}`,
         readonly_answers: false
@@ -123,7 +130,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -158,7 +165,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -193,7 +200,24 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[2]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
+                />
+              </div>
+            </Provider>
+          );
+        }
+      },
+      {
+        name: 'non-verified teacher view for lockable lesson',
+        story: () => {
+          const store = createStore({teacherVerified: false});
+          const state = store.getState();
+          return (
+            <Provider store={store}>
+              <div style={style}>
+                <ProgressLessonTeacherInfo
+                  lesson={lessons(state.progress)[2]}
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -228,7 +252,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[1]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -264,7 +288,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[3]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>

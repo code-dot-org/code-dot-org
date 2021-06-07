@@ -21,6 +21,9 @@ class UnitGroup < ApplicationRecord
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_scripts, through: :default_unit_group_units, source: :script
   has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_and_belongs_to_many :resources, join_table: :unit_groups_resources
+  has_many :unit_groups_student_resources, dependent: :destroy
+  has_many :student_resources, through: :unit_groups_student_resources, source: :resource
   has_one :course_version, as: :content_root
 
   after_save :write_serialization
@@ -30,6 +33,7 @@ class UnitGroup < ApplicationRecord
   FAMILY_NAMES = [
     CSD = 'csd'.freeze,
     CSP = 'csp'.freeze,
+    CSA = 'csa'.freeze,
     TEST = 'ui-test-course'.freeze
   ].freeze
 
@@ -83,17 +87,37 @@ class UnitGroup < ApplicationRecord
   def self.load_from_path(path)
     serialization = File.read(path)
     hash = JSON.parse(serialization)
+    UnitGroup.seed_from_hash(hash)
+  end
 
+  def self.create_resource_from_hash(resource_data, course_version_id)
+    resource_attrs = resource_data.except('seeding_key')
+    resource_attrs['course_version_id'] = course_version_id
+    resource = Resource.find_or_initialize_by(key: resource_attrs['key'], course_version_id: course_version_id)
+    resource.assign_attributes(resource_attrs)
+    resource.save! if resource.changed?
+    resource
+  end
+
+  def self.seed_from_hash(hash)
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
     unit_group.properties = hash['properties']
-    unit_group.save!
 
+    # add_course_offering creates the course version
     CourseOffering.add_course_offering(unit_group)
+    course_version = unit_group.course_version
+
+    if course_version
+      unit_group.resources = (hash['resources'] || []).map {|resource_data| create_resource_from_hash(resource_data, course_version.id)}
+      unit_group.student_resources = (hash['student_resources'] || []).map {|resource_data| create_resource_from_hash(resource_data, course_version.id)}
+    end
+
+    unit_group.save!
     unit_group
   rescue Exception => e
     # print filename for better debugging
-    new_e = Exception.new("in course: #{path}: #{e.message}")
+    new_e = Exception.new("in course: #{hash['name']}: #{e.message}")
     new_e.set_backtrace(e.backtrace)
     raise new_e
   end
@@ -115,7 +139,9 @@ class UnitGroup < ApplicationRecord
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
         alternate_scripts: summarize_alternate_scripts,
-        properties: properties
+        properties: properties,
+        resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
+        student_resources: student_resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
       }.compact
     )
   end
@@ -164,12 +190,22 @@ class UnitGroup < ApplicationRecord
   def update_scripts(new_scripts, alternate_scripts = nil)
     alternate_scripts ||= []
     new_scripts = new_scripts.reject(&:empty?)
+    new_scripts_objects = new_scripts.map {|s| Script.find_by_name!(s)}
     # we want to delete existing unit group units that aren't in our new list
-    scripts_to_delete = default_unit_group_units.map(&:script).map(&:name) - new_scripts
-    scripts_to_delete -= alternate_scripts.map {|hash| hash['alternate_script']}
+    scripts_to_remove = default_unit_group_units.map(&:script) - new_scripts_objects
+    scripts_to_remove -= alternate_scripts.map {|hash| Script.find_by_name!(hash['alternate_script'])}
 
-    new_scripts.each_with_index do |script_name, index|
-      script = Script.find_by_name!(script_name)
+    if scripts_to_remove.any?(&:prevent_course_version_change?)
+      raise 'Cannot remove scripts that have resources or vocabulary'
+    end
+
+    if new_scripts_objects.any? do |s|
+      s.unit_group != self && s.prevent_course_version_change?
+    end
+      raise 'Cannot add scripts that have resources or vocabulary'
+    end
+
+    new_scripts_objects.each_with_index do |script, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: script) do |ugu|
         ugu.position = index + 1
       end
@@ -193,8 +229,7 @@ class UnitGroup < ApplicationRecord
       )
     end
 
-    scripts_to_delete.each do |script_name|
-      script = Script.find_by_name!(script_name)
+    scripts_to_remove.each do |script|
       UnitGroupUnit.where(unit_group: self, script: script).destroy_all
     end
     # Reload model so that default_unit_group_units is up to date
@@ -299,19 +334,36 @@ class UnitGroup < ApplicationRecord
       is_stable: is_stable?,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
-      description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
-      description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
+      description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
+      description_teacher: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_teacher", default: '')),
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: scripts_for_user(user).map do |script|
         include_lessons = false
         script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
+      migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.map(&:summarize_for_resources_dropdown),
+      is_migrated: has_migrated_script?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
       show_assign_button: assignable?(user),
-      announcements: announcements
+      announcements: announcements,
+      course_version_id: course_version&.id,
+      course_path: link
+    }
+  end
+
+  def summarize_for_rollup(user = nil)
+    {
+      title: localized_title,
+      link: link,
+      version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
+      units: scripts_for_user(user).map do |script|
+        script.summarize_for_rollup(user)
+      end,
+      has_numbered_units: has_numbered_units?
     }
   end
 
@@ -626,4 +678,8 @@ class UnitGroup < ApplicationRecord
     return !!family_name && !!version_year
   end
   # rubocop:enable Naming/PredicateName
+
+  def has_migrated_script?
+    !!default_scripts[0]&.is_migrated?
+  end
 end

@@ -6,10 +6,10 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import sinon from 'sinon';
 
 describe('ResourcesEditor', () => {
-  let defaultProps, updateTeacherResources;
+  let defaultProps, updateResources;
 
   beforeEach(() => {
-    updateTeacherResources = sinon.spy();
+    updateResources = sinon.spy();
     defaultProps = {
       inputStyle: {},
       resources: [
@@ -24,7 +24,8 @@ describe('ResourcesEditor', () => {
         {link: '', type: ''},
         {link: '', type: ''}
       ],
-      updateTeacherResources
+      updateResources,
+      useMigratedResources: false
     };
   });
 
@@ -73,7 +74,7 @@ describe('ResourcesEditor', () => {
       }
     };
     wrapper.instance().handleChangeType(fakeEvent, 1);
-    expect(updateTeacherResources).to.have.been.calledWith([
+    expect(updateResources).to.have.been.calledWith([
       {link: '/foo', type: 'curriculum'},
       {link: '/link/to/vocab', type: 'vocabulary'},
       {link: '', type: ''},
@@ -114,6 +115,63 @@ describe('ResourcesEditor', () => {
     assert.strictEqual(
       wrapper.state('errorString'),
       'Your resource types contains a duplicate'
+    );
+  });
+
+  it('uses the new resource editor for migrated resources', () => {
+    const wrapper = shallow(
+      <ResourcesEditor
+        {...defaultProps}
+        resources={undefined}
+        migratedTeacherResources={[
+          {
+            id: 1,
+            key: 'curriculum',
+            name: 'Curriculum',
+            url: 'https://example.com/a'
+          },
+          {
+            id: 2,
+            key: 'vocabulary',
+            name: 'Vocabulary',
+            url: 'https://example.com/b'
+          }
+        ]}
+        useMigratedResources={true}
+        courseVersionId={1}
+      />
+    );
+    expect(wrapper.find('Connect(ResourcesEditor)').length).to.equal(1);
+  });
+
+  it('uses no editor for migrated resources without courseVersionId', () => {
+    const wrapper = shallow(
+      <ResourcesEditor
+        {...defaultProps}
+        resources={undefined}
+        migratedTeacherResources={[
+          {
+            id: 1,
+            key: 'curriculum',
+            name: 'Curriculum',
+            url: 'https://example.com/a'
+          },
+          {
+            id: 2,
+            key: 'vocabulary',
+            name: 'Vocabulary',
+            url: 'https://example.com/b'
+          }
+        ]}
+        useMigratedResources={true}
+        courseVersionId={null}
+      />
+    );
+    expect(wrapper.find('Connect(ResourcesEditor)').length).to.equal(0);
+    expect(
+      wrapper.contains(
+        'Cannot add resources to migrated script without course version.'
+      )
     );
   });
 

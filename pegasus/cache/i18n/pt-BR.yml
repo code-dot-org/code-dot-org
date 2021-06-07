@@ -1477,6 +1477,12 @@ pt-BR:
   coursed-2019_gradelevel: Alunos a partir do 8º ano
   coursee-2019_gradelevel: De 8 a 12 anos
   coursef-2019_gradelevel: 'Idade: de 9 a 13 anos'
+  coursea-2020_gradelevel: 'Idade: de 4 a 7 anos'
+  courseb-2020_gradelevel: 'Idade: de 5 a 8 anos'
+  coursec-2020_gradelevel: 'Idade: de 6 a 10 anos'
+  coursed-2020_gradelevel: Alunos a partir do 8º ano
+  coursee-2020_gradelevel: De 8 a 12 anos
+  coursef-2020_gradelevel: 'Idade: de 9 a 13 anos'
   accelerated_gradelevel: 10-18 anos de idade
   codeorg_platformtext: Navegadores modernos, smartphones, tablets
   codeintl_platformtext: Navegadores modernos, smartphones, tablets
@@ -1667,6 +1673,28 @@ pt-BR:
     e D e vai mais longe com funções.
   coursef-2019_shortdescription_congrats: Aprenda todos os conceitos Fundamentais
     da Ciência da Computação e crie sua própria arte, história ou jogo.
+  coursea-2020_shortdescription_congrats: Aprenda o básixo de Ciências da Computação
+    e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou
+    história, que poderá ser compartilhada.
+  courseb-2020_shortdescription_congrats: Aprenda o básixo de Ciências da Computação
+    e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou
+    história, que poderá ser compartilhada.
+  coursec-2020_shortdescription_congrats: Crie programas com sequenciamento, loops
+    e eventos. Traduza suas iniciais em binário, investigue diferentes técnicas de
+    solução de problemas e aprenda a responder ao cyberbullying. No final do curso,
+    crie seu próprio jogo ou história que você pode compartilhar!
+  coursed-2020_shortdescription_congrats: Os alunos desenvolvem sua compreensão de
+    loops, condicionais e eventos. Além da codificação, os alunos aprendem sobre cidadania
+    digital.
+  coursee-2020_shortdescription_congrats: Comece a codificar com algoritmos, loops,
+    condicionais e eventos e, em seguida, você passará às funções. Na segunda parte
+    deste curso, projete e crie um projeto principal que você possa compartilhar com
+    seus amigos e familiares.
+  coursef-2020_shortdescription_congrats: Aprenda a usar diferentes tipos de loops,
+    eventos, funções e condicionais. Investigue diferentes técnicas de solução de
+    problemas e discuta os impactos sociais da computação e da Internet. Na segunda
+    parte deste curso, projete e crie um projeto principal que você possa compartilhar
+    com amigos e familiares.
   codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com
     a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
     e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants
@@ -2557,3 +2585,16 @@ pt-BR:
   page_not_available_button: Volte para a página inicial
   footer_powered_by_aws: Powered by Amazon Web Services
   codebytes_skinny_banner_english_only: Somente inglês
+  footer_privacy_policy: Política de Privacidade
+  footer_about: Sobre
+  footer_partners: Parceiros
+  footer_donate: Faça uma doação
+  footer_support: Suporte
+  footer_terms: Termos
+  ai_for_oceans: IA para oceanos
+  ai_in_partnership_with: Em parceria com
+  ai_microsoft_thanks: Nós agradecemos à Microsoft por apoiar nossa visão e missão
+    para que toda criança tenha a oportunidade de aprender ciência da computação e
+    as habilidades necessárias para ter sucesso no século XXI.
+  ai_activity: Atividade
+  ai_description: Descrição

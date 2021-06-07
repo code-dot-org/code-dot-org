@@ -15,17 +15,6 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import firehoseClient from '../../../lib/util/firehose';
 import {TeacherScores} from './standardsConstants';
 
-const styles = {
-  buttonsGroup: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end'
-  },
-  button: {
-    marginLeft: 20
-  }
-};
-
 class StandardsViewHeaderButtons extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
@@ -130,14 +119,14 @@ class StandardsViewHeaderButtons extends Component {
 
     for (var i = 0; i < selectedLessonIds.length; i++) {
       selectedLessonScores[i] = {
-        stage_id: selectedLessonIds[i],
+        lesson_id: selectedLessonIds[i],
         score: TeacherScores.COMPLETE
       };
     }
 
     for (var j = 0; j < unselectedLessonIds.length; j++) {
       unselectedLessonScores[j] = {
-        stage_id: unselectedLessonIds[j],
+        lesson_id: unselectedLessonIds[j],
         score: TeacherScores.INCOMPLETE
       };
     }
@@ -149,7 +138,7 @@ class StandardsViewHeaderButtons extends Component {
       dataType: 'json',
       data: JSON.stringify({
         section_id: sectionId,
-        stage_scores: selectedLessonScores.concat(unselectedLessonScores)
+        lesson_scores: selectedLessonScores.concat(unselectedLessonScores)
       })
     }).done(() => {
       if (this.state.isLessonStatusDialogOpen) {
@@ -199,6 +188,17 @@ class StandardsViewHeaderButtons extends Component {
     );
   }
 }
+
+const styles = {
+  buttonsGroup: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-end'
+  },
+  button: {
+    marginLeft: 20
+  }
+};
 
 export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
 

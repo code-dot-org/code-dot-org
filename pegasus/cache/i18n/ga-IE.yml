@@ -1431,6 +1431,12 @@ ga-IE:
   coursed-2019_gradelevel: Aois 13+
   coursee-2019_gradelevel: Aois 8-12
   coursef-2019_gradelevel: Aois 9-13
+  coursea-2020_gradelevel: Aois 4-7
+  courseb-2020_gradelevel: Aois 5-8
+  coursec-2020_gradelevel: Aois 6-10
+  coursed-2020_gradelevel: Aois 13+
+  coursee-2020_gradelevel: Aois 8-12
+  coursef-2020_gradelevel: Aois 9-13
   accelerated_gradelevel: Aois 10-18
   codeorg_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   codeintl_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
@@ -2503,3 +2509,16 @@ ga-IE:
   page_not_available_button: Baile
   footer_powered_by_aws: Á chumhachtú ag Amazon Web Services
   codebytes_skinny_banner_english_only: Béarla amháin
+  footer_privacy_policy: Polasaí Príobháideachais
+  footer_about: Maidir Linn
+  footer_partners: Comhpháirtithe
+  footer_donate: Bronn
+  footer_support: Cabhair
+  footer_terms: Téarmaí
+  ai_for_oceans: AI ar son an Aigéin
+  ai_in_partnership_with: I gcomhar le
+  ai_microsoft_thanks: 'Táimid buíoch de Microsoft as tacaíocht a thabhairt dár bhfís
+    agus dár misean: deis a thabhairt do gach gasúr an ríomheolaíocht a fhoghlaim
+    chomh maith le scileanna tábhachtacha don saol sa 21ú haois.'
+  ai_activity: Gníomhaíocht
+  ai_description: Cur Síos

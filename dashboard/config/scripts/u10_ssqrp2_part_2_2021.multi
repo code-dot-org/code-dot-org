@@ -5,8 +5,8 @@ editor_experiment ''
 
 description 'Which of the following data is LEAST likely to be included in the rankings of users on the leaderboard?'
 wrong 'The number of ratings a "Happiness Moment" received.'
-wrong 'The number of comments a "Happiness Moment" received.'
-right 'The location of a "Happiness Moment".'
+right 'The number of comments a "Happiness Moment" received.'
+wrong 'The location of a "Happiness Moment".'
 wrong 'The number of "Happiness Moments" a user has submitted.'
 
 

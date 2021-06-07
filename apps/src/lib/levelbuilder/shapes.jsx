@@ -55,7 +55,10 @@ export const activitySectionShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   position: PropTypes.number.isRequired,
   displayName: PropTypes.string.isRequired,
+  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])])
+    .isRequired,
   remarks: PropTypes.bool,
+  progressionName: PropTypes.string,
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape).isRequired
@@ -70,15 +73,58 @@ export const activityShape = PropTypes.shape({
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
 
+// Represents a migrated resource, backed by the
+// Resource model in Rails
 export const resourceShape = PropTypes.shape({
+  id: PropTypes.number,
   key: PropTypes.string.isRequired,
+  markdownKey: PropTypes.string,
   name: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   type: PropTypes.string,
   audience: PropTypes.string,
   assessment: PropTypes.bool,
   includeInPdf: PropTypes.bool,
-  downloadUrl: PropTypes.string
+  downloadUrl: PropTypes.string,
+  isRollup: PropTypes.bool
+});
+
+export const vocabularyShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
+  markdownKey: PropTypes.string,
+  word: PropTypes.string.isRequired,
+  definition: PropTypes.string.isRequired,
+  commonSenseMedia: PropTypes.bool.isRequired
+});
+
+export const programmingEnvironmentShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired
+});
+
+export const programmingExpressionShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  programmingEnvironmentName: PropTypes.string.isRequired
+});
+
+export const frameworkShape = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired
+});
+
+export const standardShape = PropTypes.shape({
+  frameworkShortcode: PropTypes.string.isRequired,
+  frameworkName: PropTypes.string.isRequired,
+  parentCategoryShortcode: PropTypes.string,
+  parentCategoryDescription: PropTypes.string,
+  categoryShortcode: PropTypes.string.isRequired,
+  categoryDescription: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 });
 
 export const levelShapeForScript = PropTypes.shape({

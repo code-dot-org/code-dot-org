@@ -1,4 +1,4 @@
-lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks'
+lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks', has_lesson_plan: false
 level 'Calc Circles of Eval .1'
 level 'Calc Circles of Eval .2'
 level 'Calc Circles of Eval .3'
@@ -8,7 +8,7 @@ level 'Calc Circles of Eval 3'
 level 'Calc Circles of Eval 4'
 level 'Calc Circles of Eval 5'
 
-lesson 'Making Pictures', display_name: 'Making Pictures'
+lesson 'Making Pictures', display_name: 'Making Pictures', has_lesson_plan: false
 level 'Eval Strings Images .1'
 level 'Eval Strings Images .2'
 level 'Eval Strings Images 1'
@@ -16,7 +16,7 @@ level 'Eval Strings Images 2'
 level 'Eval Strings Images 3'
 level 'Eval Strings Images 4'
 
-lesson 'Defining Variables', display_name: 'Defining Variables'
+lesson 'Defining Variables', display_name: 'Defining Variables', has_lesson_plan: false
 level 'Calc Vars 1'
 level 'Calc Vars 1.1'
 level 'Calc Vars 3'
@@ -24,14 +24,14 @@ level 'Calc Vars 2'
 level 'Calc Vars 2.1'
 level 'Calc Vars 4'
 
-lesson 'Defining Simple Functions', display_name: 'Defining Simple Functions'
+lesson 'Defining Simple Functions', display_name: 'Defining Simple Functions', has_lesson_plan: false
 level 'Eval Define Funcs 1'
 level 'Eval Define Funcs 2'
 level 'Eval Define Funcs 3'
 level 'Eval Define Funcs 4'
 level 'Eval Define Funcs 5'
 
-lesson 'The Design Recipe', display_name: 'The Design Recipe'
+lesson 'The Design Recipe', display_name: 'The Design Recipe', has_lesson_plan: false
 level 'Play Lab Rocket 1'
 level 'Rocket Contract 1'
 level 'Play Lab Rocket 2'

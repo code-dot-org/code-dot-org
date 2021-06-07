@@ -8,14 +8,6 @@ import {ViewType} from './sectionProgressConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
 
-const styles = {
-  toggleButton: {
-    padding: '3px 20px',
-    height: 34,
-    margin: 'auto auto 10px auto'
-  }
-};
-
 /**
  * A toggle that provides a way to switch between detail, summary, and standards views of
  * the progress a section of students have made in a course. Teacher view.
@@ -85,6 +77,14 @@ class SectionProgressToggle extends React.Component {
     );
   }
 }
+
+const styles = {
+  toggleButton: {
+    padding: '3px 20px',
+    height: 34,
+    margin: 'auto auto 10px auto'
+  }
+};
 
 export const UnconnectedSectionProgressToggle = SectionProgressToggle;
 

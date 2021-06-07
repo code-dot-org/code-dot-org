@@ -42,7 +42,8 @@ describe('InstructionsCSF', () => {
     const wrapper = mount(
       <Provider store={getStore()}>
         <InstructionsCSF {...DEFAULT_PROPS} />
-      </Provider>
+      </Provider>,
+      {attachTo: document.getElementById('container')} // needed for getScrollTarget
     );
 
     failWithMessage('Repeat block: <xml><block type="controls_repeat"/></xml>');

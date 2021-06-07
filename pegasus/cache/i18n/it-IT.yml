@@ -1459,6 +1459,12 @@ it-IT:
   coursed-2019_gradelevel: Da 7 a 11 anni
   coursee-2019_gradelevel: Da 8 a 12 anni
   coursef-2019_gradelevel: Da 9 a 13 anni
+  coursea-2020_gradelevel: Da 4 a 7 anni
+  courseb-2020_gradelevel: Da 5 a 8 anni
+  coursec-2020_gradelevel: Da 6 a 10 anni
+  coursed-2020_gradelevel: Da 7 a 11 anni
+  coursee-2020_gradelevel: Da 8 a 12 anni
+  coursef-2020_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: Da 10 anni in su (dopo il Corso 3)
   codeorg_platformtext: Browser moderni, smartphone, tablet
   codeintl_platformtext: Browser moderni, smartphone, tablet
@@ -1652,6 +1658,36 @@ it-IT:
     D e viene aggiunto il concetto di funzione.
   coursef-2019_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
     di informatica e crea disegni, storie o giochi interattivi.
+  coursea-2020_shortdescription_congrats: 'Impara le basi dell''informatica e della
+    sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+    storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018,
+    è la più aggiornata in italiano ==>'
+  courseb-2020_shortdescription_congrats: 'Impara le basi dell''informatica e della
+    sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+    storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018,
+    è la più aggiornata in italiano ==>'
+  coursec-2020_shortdescription_congrats: 'Crea programmi con sequenze di istruzioni,
+    cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche
+    di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo.
+    Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia
+    animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata
+    in italiano ==>'
+  coursed-2020_shortdescription_congrats: 'Gli studenti sviluppano la comprensione
+    dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli
+    eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto
+    di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione 2018, è
+    la più aggiornata in italiano ==>'
+  coursee-2020_shortdescription_congrats: 'Si inizia con algoritmi, cicli, istruzioni
+    condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di
+    questo corso, puoi progettare e creare un progetto finale che potrai condividere
+    con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018,
+    è la più aggiornata in italiano ==>'
+  coursef-2020_shortdescription_congrats: 'Impara ad usare diversi tipi di cicli,
+    eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
+    dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
+    Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso
+    che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la
+    versione 2018, è la più aggiornata in italiano ==>'
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
@@ -2215,6 +2251,8 @@ it-IT:
   header_legal_privacy: Informativa sulla privacy
   header_legal_tos: Termini di servizio
   header_tutorials: Corsi
+  header_screen_reader_hamburger: Menu
+  header_screen_reader_help: Menu Aiuto
   app_lab_documentation: Documentazione dell'App Lab
   app_lab_tutorials: Tutorial dell'App Lab
   game_lab_documentation: Documentazione del Game Lab
@@ -2554,3 +2592,16 @@ it-IT:
     video, curriculum di informatica, lezioni di equità e addestramenti degli insegnanti.'
   footer_powered_by_aws: Eseguito su Amazon Web Services
   codebytes_skinny_banner_english_only: Solo in inglese
+  footer_privacy_policy: Informativa sulla privacy
+  footer_about: Informazioni
+  footer_partners: Partner
+  footer_donate: Sostienici
+  footer_support: Help and Community
+  footer_terms: Condizioni
+  ai_for_oceans: L'Intelligenza Artificiale per il mare
+  ai_in_partnership_with: In collaborazione con
+  ai_microsoft_thanks: Ringraziamo Microsoft per il supporto che dà alla nostra missione
+    per garantire che ogni bambino abbia l'opportunità di imparare l'informatica e
+    le competenze per avere successo nel XXI secolo.
+  ai_activity: Attività
+  ai_description: Descrizione

@@ -669,6 +669,7 @@ lv-LV:
   coursee-2017_gradelevel: Vecumā no 8-12
   coursee-2018_gradelevel: Vecumā no 8-12
   coursee-2019_gradelevel: Vecumā no 8-12
+  coursee-2020_gradelevel: Vecumā no 8-12
   accelerated_gradelevel: Vecumā no 10 gadiem (pēc 3. kursa)
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
@@ -1202,3 +1203,10 @@ lv-LV:
   hoc2018_dance_amazon_about_future_engineer_button: Uzzini vairāk
   footer_powered_by_aws: Nodrošina Amazon Web Services
   codebytes_skinny_banner_english_only: Tikai angliski
+  footer_privacy_policy: Privātuma politika
+  footer_partners: Partneri
+  footer_donate: Ziedot
+  footer_support: Atbalsts
+  footer_terms: Nosacījumi
+  ai_activity: Aktivitāte
+  ai_description: Apraksts

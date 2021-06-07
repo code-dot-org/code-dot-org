@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -122,6 +122,9 @@ class Karel < Maze
     <category name="Bee">
       <block type="maze_nectar"></block>
       <block type="maze_honey"></block>
+      <block type="bee_n_nectar"></block>
+      <block type="bee_n_honey"></block>
+      <block type="bee_n_forward"></block>
       <block type="bee_ifNectarAmount"></block>
       <block type="bee_ifelseNectarAmount"></block>
       <block type="bee_ifTotalNectar"></block>
