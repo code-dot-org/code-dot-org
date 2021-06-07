@@ -814,6 +814,11 @@ class Lesson < ApplicationRecord
     end
   end
 
+  def report_bug_url(request)
+    message = "Bug in Lesson #{name}\n#{request.url}\n#{request.user_agent}\n"
+    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
+  end
+
   private
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
