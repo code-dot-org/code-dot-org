@@ -294,8 +294,17 @@ export const styles = {
     border: "solid 4px rgb(85, 217, 255)"
   },
 
+  selectDatasetItemContainer: {
+    width: "100%",
+    // This assumes that all dataset images have a 1.5 aspect ratio, e.g. 720x480.
+    paddingTop: "calc(100% / 1.5)"
+  },
+
   selectDatasetImage: {
-    width: "100%"
+    display: "block",
+    width: "calc(100% - 20px)",
+    position: "absolute",
+    top: 10
   },
 
   selectDatasetText: {
