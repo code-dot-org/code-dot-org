@@ -219,7 +219,7 @@ class ApiController < ApplicationController
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
-        stages: script.lessons.each_with_object({}) do |lesson, lesson_hash|
+        lessons: script.lessons.each_with_object({}) do |lesson, lesson_hash|
           lesson_state = lesson.lockable_state(section.students)
           lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
         end
@@ -298,7 +298,7 @@ class ApiController < ApplicationController
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
         levels_count: script_levels.length,
-        stages: lessons,
+        lessons: lessons,
       }
     }
 
@@ -447,7 +447,7 @@ class ApiController < ApplicationController
         next unless response
         {
           student: student_hash,
-          stage: level_hash[:script_level].lesson.localized_title,
+          lesson: level_hash[:script_level].lesson.localized_title,
           puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,

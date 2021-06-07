@@ -128,8 +128,8 @@ class ApiControllerTest < ActionController::TestCase
   test "should get text_responses for section with script with text response" do
     script = create :script, name: 'text-response-script'
     lesson_group = create :lesson_group, script: script
-    lesson1 = create :lesson, script: script, name: 'First Stage', key: 'First Stage', lesson_group: lesson_group
-    lesson2 = create :lesson, script: script, name: 'Second Stage', key: 'Second Stage', lesson_group: lesson_group
+    lesson1 = create :lesson, script: script, name: 'First Lesson', key: 'First Lesson', lesson_group: lesson_group
+    lesson2 = create :lesson, script: script, name: 'Second Lesson', key: 'Second Lesson', lesson_group: lesson_group
 
     # create 2 text_match levels
     level1 = create :text_match
@@ -173,7 +173,7 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Lesson 1: First Stage',
+        'lesson' => 'Lesson 1: First Lesson',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
@@ -181,7 +181,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 'Lesson 2: Second Stage',
+        'lesson' => 'Lesson 2: Second Lesson',
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
@@ -189,7 +189,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
-        'stage' => 'Lesson 1: First Stage',
+        'lesson' => 'Lesson 1: First Lesson',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
@@ -227,9 +227,9 @@ class ApiControllerTest < ActionController::TestCase
     section_response = body[@section.id.to_s]
     assert_equal @section.id, section_response['section_id']
     assert_equal @section.name, section_response['section_name']
-    assert_equal 1, section_response['stages'].length
+    assert_equal 1, section_response['lessons'].length
 
-    lessons_response = section_response['stages']
+    lessons_response = section_response['lessons']
     assert_equal 1, lessons_response.keys.length, '1 lesson in our script'
     lesson_response = lessons_response[lesson.id.to_s]
     assert_equal 7, lesson_response.length, "entry for each student in section"
@@ -253,8 +253,8 @@ class ApiControllerTest < ActionController::TestCase
     # do a much more limited set of validation for the flappy section
     flappy_section_response = body[@flappy_section.id.to_s]
     assert_equal @flappy_section.id, flappy_section_response['section_id']
-    assert_equal 1, flappy_section_response['stages'][lesson.id.to_s].length
-    assert_equal @student_flappy_1.name, flappy_section_response['stages'][lesson.id.to_s][0]['name']
+    assert_equal 1, flappy_section_response['lessons'][lesson.id.to_s].length
+    assert_equal @student_flappy_1.name, flappy_section_response['lessons'][lesson.id.to_s][0]['name']
   end
 
   # Helper for setting up student lock tests
@@ -263,7 +263,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
 
-    student_responses = body[@section.id.to_s]['stages'][lesson.id.to_s]
+    student_responses = body[@section.id.to_s]['lessons'][lesson.id.to_s]
     if student_responses
       return student_responses[student_number - 1]
     else
@@ -933,7 +933,7 @@ class ApiControllerTest < ActionController::TestCase
         'id' => Script.get_from_cache(Script::FLAPPY_NAME).id,
         'name' => 'Flappy Code',
         'levels_count' => 10,
-        'stages' => [{
+        'lessons' => [{
           'length' => 10,
           'title' => 'Flappy Code'
         }]
@@ -1138,7 +1138,7 @@ class ApiControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
     assert_equal 1, response["students"][0]["levels"].length
     assert_equal 1, response["script"]["levels_count"]
-    assert_equal 1, response["script"]["stages"][0]["length"]
+    assert_equal 1, response["script"]["lessons"][0]["length"]
   end
 
   test "script_structure returns summarized script" do

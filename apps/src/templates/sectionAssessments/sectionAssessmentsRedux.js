@@ -1000,7 +1000,7 @@ export const getExportableSurveyData = state => {
   for (let i = 0; i < currentSurvey.levelgroup_results.length; i++) {
     const questionResults = currentSurvey.levelgroup_results[i];
     const rowBase = {
-      stage: currentSurvey.lesson_name,
+      lesson: currentSurvey.lesson_name,
       questionNumber: questionResults.question_index + 1,
       questionText: questionResults.question
     };
@@ -1057,7 +1057,7 @@ export const getExportableAssessmentData = state => {
         const response = studentAssessment.level_results[questionIndex];
         responses.push({
           studentName: studentObject.student_name,
-          stage: studentAssessment.stage,
+          lesson: studentAssessment.lesson,
           timestamp: studentAssessment.timestamp,
           question: questionIndex + 1,
           response:
@@ -1147,7 +1147,7 @@ export function indexesToAnswerString(answerArr) {
  * @returns {number|undefined} The id of the first assessment or survey.
  */
 const getFirstAssessmentId = (state, scriptId) =>
-  computeScriptAssessmentList(state, scriptId).map(a => a.id)[0];
+  computeScriptAssessmentList(state, scriptId).map(a => parseInt(a.id))[0];
 
 /**
  * Returns a list of ids and names of assessments and surveys.

@@ -241,7 +241,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.state('collapsed'), false);
   });
 
-  it('uncollapses itself for student when currentStage gets updated', () => {
+  it('uncollapses itself for student when currentLesson gets updated', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
