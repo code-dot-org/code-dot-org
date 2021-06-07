@@ -9,28 +9,402 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-04 16:15:19 UTC",
+    "serialized_at": "2021-06-07 15:57:24 UTC",
     "seeding_key": {
       "script.name": "self-paced-pl-csd5-2021"
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Preparing to Teach Unit 1 "
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Preparing to Teach Unit 2 "
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Preparing to Teach Unit 3"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Preparing to Teach Unit 4"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Preparing to Teach Unit 5"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-7",
+      "user_facing": true,
+      "position": 6,
+      "properties": {
+        "display_name": "Preparing to Teach Unit 6"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-8",
+      "user_facing": true,
+      "position": 7,
+      "properties": {
+        "display_name": "Preparing to Teach Unit 7 "
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Problem Solving and Computing",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Web Development",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Interactive Animations and Games",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "The Design Process",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Data and Society",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Physical Computing",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "AI and Machine Learning",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "9ee30e3a-b2ee-466a-bc7d-37c2ffd90891",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ee30e3a-b2ee-466a-bc7d-37c2ffd90891",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "cb5f9c4b-5594-4112-b6b4-08f7f98c7730",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cb5f9c4b-5594-4112-b6b4-08f7f98c7730",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "17489776-2a11-416d-97a3-976a918799c5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17489776-2a11-416d-97a3-976a918799c5",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "1c9d3461-df1f-40b0-8929-d62c0af419a5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1c9d3461-df1f-40b0-8929-d62c0af419a5",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "6fe25a48-49da-4400-945a-e6014d2b4453",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6fe25a48-49da-4400-945a-e6014d2b4453",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "d1600267-05e7-43a9-a7f9-f3ab5caacb8d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d1600267-05e7-43a9-a7f9-f3ab5caacb8d",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    },
+    {
+      "key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "42dadc83-3915-4a92-b50d-717419c37b56",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "42dadc83-3915-4a92-b50d-717419c37b56",
+        "lesson_activity.key": "9ee30e3a-b2ee-466a-bc7d-37c2ffd90891"
+      }
+    },
+    {
+      "key": "b6ea4e7a-560c-4e2d-bddb-346203774065",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b6ea4e7a-560c-4e2d-bddb-346203774065",
+        "lesson_activity.key": "cb5f9c4b-5594-4112-b6b4-08f7f98c7730"
+      }
+    },
+    {
+      "key": "d2d4af60-8868-461b-b429-e25c2860a80c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d2d4af60-8868-461b-b429-e25c2860a80c",
+        "lesson_activity.key": "17489776-2a11-416d-97a3-976a918799c5"
+      }
+    },
+    {
+      "key": "6781c497-e818-4128-94a5-84a3ff7e17f2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6781c497-e818-4128-94a5-84a3ff7e17f2",
+        "lesson_activity.key": "1c9d3461-df1f-40b0-8929-d62c0af419a5"
+      }
+    },
+    {
+      "key": "42fe8f9e-20cf-4ce4-a74b-cfcc20a7a8f4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "42fe8f9e-20cf-4ce4-a74b-cfcc20a7a8f4",
+        "lesson_activity.key": "6fe25a48-49da-4400-945a-e6014d2b4453"
+      }
+    },
+    {
+      "key": "732f76c6-f19f-4d93-96d0-3e22314c92d1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "732f76c6-f19f-4d93-96d0-3e22314c92d1",
+        "lesson_activity.key": "d1600267-05e7-43a9-a7f9-f3ab5caacb8d"
+      }
+    },
+    {
+      "key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f",
+        "lesson_activity.key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 - CI_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 1 - CI_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "42dadc83-3915-4a92-b50d-717419c37b56"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 1 - CI_2021"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 1 - CI_2021",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 1 - CI_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "42dadc83-3915-4a92-b50d-717419c37b56"
+      }
+    }
   ],
   "resources": [
 
