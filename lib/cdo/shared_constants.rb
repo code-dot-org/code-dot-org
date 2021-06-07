@@ -561,15 +561,6 @@ module SharedConstants
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
-      "declareAssign_str_hello_world": null,
-      "substring": null,
-      "indexOf": null,
-      "includes": null,
-      "length": null,
-      "toUpperCase": null,
-      "toLowerCase": null,
-      "declareAssign_list_abd": null,
-      "listLength": null,
       "comment_Variables": null,
 
       // Functions
