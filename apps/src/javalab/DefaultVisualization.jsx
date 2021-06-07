@@ -1,14 +1,24 @@
 import React from 'react';
-import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
+import PreviewPaneHeader from './PreviewPaneHeader';
 
 export default class DefaultVisualization extends React.Component {
+  state = {
+    isCollapsed: false,
+    isFullscreen: false
+  };
+
   render() {
+    const {isCollapsed, isFullscreen} = this.state;
+
     return (
-      <PaneHeader hasFocus>
-        <PaneSection>Preview</PaneSection>
+      <div>
+        <PreviewPaneHeader
+          isCollapsed={isCollapsed}
+          isFullscreen={isFullscreen}
+        />
         <ProtectedVisualizationDiv />
-      </PaneHeader>
+      </div>
     );
   }
 }

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-28 14:56:35 UTC",
+    "serialized_at": "2021-06-04 17:13:08 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -6314,7 +6314,7 @@
     {
       "key": "efficiency",
       "word": "Efficiency",
-      "definition": "Getting the best outcome with the least amount of waste",
+      "definition": "The amount of time or resources needed to execute an algorithm",
       "properties": {
       },
       "seeding_key": {
