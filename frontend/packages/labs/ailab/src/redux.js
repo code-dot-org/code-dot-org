@@ -496,7 +496,8 @@ export default function rootReducer(state = initialState, action) {
         instructionsOverlayActive: showedOverlay,
         testData: {},
         prediction: undefined,
-        resultsTab: ResultsGrades.CORRECT
+        resultsTab: ResultsGrades.CORRECT,
+        showResultsDetails: false
       };
     }
 

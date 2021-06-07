@@ -36,7 +36,10 @@ class Results extends Component {
         <div id="results" style={styles.panel}>
           <div style={styles.scrollableContents}>
             <div style={styles.scrollingContents}>
-              <div style={styles.largeText}>Result</div>
+              <div style={styles.largeText}>
+                <div style={styles.resultsHeader}>Result</div>
+                <div style={styles.resultsHeaderAccuracy}>Accuracy</div>
+              </div>
               {historicResults.map((historicResult, index) => {
                 return (
                   <div key={index}>
@@ -70,7 +73,8 @@ class Results extends Component {
                           paddingTop: 40
                         }}
                       >
-                        Previous results
+                        <div style={styles.resultsHeader}>Previous results</div>
+                        <div style={styles.resultsHeaderAccuracy}>Accuracy</div>
                       </div>
                     )}
                   </div>
