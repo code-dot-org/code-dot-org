@@ -18,6 +18,7 @@ class XhrProxyController < ApplicationController
   ALLOWED_CONTENT_TYPES = Set.new(
     %w(
       application/json
+      application/geo+json
       text/javascript
       text/json
       text/plain
