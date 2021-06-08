@@ -11,26 +11,11 @@ class FeedbackStudentReviewState extends React.Component {
     isAwaitingTeacherReview: PropTypes.bool
   };
 
-  renderCompleted() {
-    return (
-      <div style={styles.studentReviewState}>{i18n.reviewedComplete()}</div>
-    );
-  }
-
-  renderKeepWorking() {
+  renderReviewState(text, includeBage = true, textStyle) {
     return (
       <div style={styles.studentReviewState}>
-        <KeepWorkingBadge style={styles.keepWorkingBadge} />
-        <span style={styles.keepWorking}>{i18n.keepWorking()}</span>
-      </div>
-    );
-  }
-
-  renderAwaitingReview() {
-    return (
-      <div style={styles.studentReviewState}>
-        <KeepWorkingBadge style={styles.keepWorkingBadge} />
-        <span>{i18n.waitingForTeacherReview()}</span>
+        {includeBage && <KeepWorkingBadge style={styles.keepWorkingBadge} />}
+        <span style={textStyle}>{text}</span>
       </div>
     );
   }
@@ -39,11 +24,15 @@ class FeedbackStudentReviewState extends React.Component {
     const {latestReviewState, isAwaitingTeacherReview} = this.props;
 
     if (latestReviewState === ReviewStates.completed) {
-      return this.renderCompleted();
+      return this.renderReviewState(i18n.reviewedComplete(), false);
     } else if (isAwaitingTeacherReview) {
-      return this.renderAwaitingReview();
+      return this.renderReviewState(i18n.waitingForTeacherReview());
     } else if (latestReviewState === ReviewStates.keepWorking) {
-      return this.renderKeepWorking();
+      return this.renderReviewState(
+        i18n.keepWorking(),
+        true,
+        styles.keepWorking
+      );
     } else {
       return null;
     }
