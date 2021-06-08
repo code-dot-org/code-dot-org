@@ -98,17 +98,17 @@ describe('ScriptEditor', () => {
 
   describe('Script Editor', () => {
     it('does not show publishing editor if hasCourse is true', () => {
-      const wrapper = createWrapper({initialHidden: false, hasCourse: true});
+      const wrapper = createWrapper({hasCourse: true});
       assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 0);
     });
 
     it('shows publishing editor if hasCourse is false', () => {
-      const wrapper = createWrapper({initialHidden: false, hasCourse: false});
+      const wrapper = createWrapper({hasCourse: false});
       assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
     });
 
     it('uses old script editor for non migrated script', () => {
-      const wrapper = createWrapper({initialHidden: false});
+      const wrapper = createWrapper({});
 
       expect(wrapper.find('input').length).to.equal(21);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
@@ -123,7 +123,6 @@ describe('ScriptEditor', () => {
 
     it('uses new script editor for migrated script', () => {
       const wrapper = createWrapper({
-        initialHidden: false,
         isMigrated: true,
         initialCourseVersionId: 1
       });
@@ -197,9 +196,7 @@ describe('ScriptEditor', () => {
     });
 
     it('has correct markdown for preview of unit description', () => {
-      const wrapper = createWrapper({
-        initialHidden: false
-      });
+      const wrapper = createWrapper({});
       expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
       expect(
         wrapper
@@ -221,7 +218,6 @@ describe('ScriptEditor', () => {
 
     it('must set family name in order to check standalone course', () => {
       const wrapper = createWrapper({
-        initialHidden: false,
         initialFamilyName: 'family1'
       });
       let courseCheckbox = wrapper.find('.isCourseCheckbox');
