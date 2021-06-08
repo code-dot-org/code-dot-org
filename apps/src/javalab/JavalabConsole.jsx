@@ -163,7 +163,7 @@ const styles = {
   },
   container: {
     display: 'flex',
-    height: '100%'
+    height: 170
   },
   console: {
     flexGrow: 2,
