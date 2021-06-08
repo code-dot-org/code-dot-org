@@ -7,12 +7,16 @@ export default class Theater {
   afterInject() {
     this.canvas = document.getElementById('theater');
     this.context = this.canvas.getContext('2d');
+    if (this.context) {
+      // Fill the canvas with a white "default" background
+      this.context.fillStyle = 'white';
+      this.context.rect(0, 0, 400, 400);
+      this.context.fill();
+    }
   }
 
   handleSignal(data) {
-    this.context = this.canvas.getContext('2d');
-    var imageString = 'data:image/png;base64,' + data.detail.image;
-
+    var imageString = 'data:image/gif;base64,' + data.detail.image;
     var base_image = new Image();
     base_image.src = imageString;
     base_image.onload = () => {

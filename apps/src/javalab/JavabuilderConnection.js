@@ -50,12 +50,12 @@ export default class JavabuilderConnection {
     if (window.location.hostname.includes('localhost')) {
       // We're hitting the local javabuilder server. Just pass the projectUrl and levelId.
       // TODO: Enable token decryption on local javabuilder server.
-      url += `?projectUrl=${dashboard.project.getProjectSourcesUrl()}` /*&levelId=${
+      url += `?projectUrl=${dashboard.project.getProjectSourcesUrl()}&levelId=${
         this.levelId
       }`;
       if (optionsStr) {
         url += `&${optionsStr}`;
-      }*/
+      }
     } else {
       url += `?Authorization=${token}`;
     }
@@ -73,8 +73,6 @@ export default class JavabuilderConnection {
   }
 
   onMessage(event) {
-    debugger;
-
     const data = JSON.parse(event.data);
     switch (data.type) {
       case WebSocketMessageType.SYSTEM_OUT:

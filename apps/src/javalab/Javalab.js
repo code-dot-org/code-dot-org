@@ -18,7 +18,6 @@ import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
-import DefaultVisualization from './DefaultVisualization';
 import TheaterVisualization from './TheaterVisualization';
 import Theater from './Theater';
 import {CsaViewMode} from './constants';
@@ -28,8 +27,6 @@ import {CsaViewMode} from './constants';
  * image telling the user to rotate their device to landscape mode.
  */
 const MOBILE_PORTRAIT_WIDTH = 600;
-
-const ICON_PATH = '/blockly/media/turtle/';
 
 /**
  * An instantiable Javalab class
@@ -94,7 +91,7 @@ Javalab.prototype.init = function(config) {
     this.miniApp = new Neighborhood();
     config.afterInject = () =>
       this.miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
-    this.visualization = <NeighborhoodVisualizationColumn iconPath={ICON_PATH} showSpeedSlider />
+    this.visualization = <NeighborhoodVisualizationColumn />;
   } else if (this.level.csaViewMode === CsaViewMode.THEATER) {
     this.miniApp = new Theater();
     config.afterInject = () => this.miniApp.afterInject();
