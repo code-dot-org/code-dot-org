@@ -391,6 +391,34 @@ namespace :seed do
     SecretPicture.setup
   end
 
+  timed_task restricted_section: :environment do
+    name = "Fake Section Cap Teacher"
+    email = "Fake-User-Email-Created-#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+    password = "#{name}password"
+    user = User.create!({
+                            name: name,
+                            email: email,
+                            password: password,
+                            user_type: "teacher",
+                            age: "21+"
+                        }
+    )
+
+    section = Section.create!(name: 'Section Capacity Test', user: user)
+
+    500.times do |i|
+      follower = User.create({
+                                 name: "Fake Section Cap Student #{i}",
+                                 email: "#{i}#{email}",
+                                 password: password,
+                                 user_type: "student",
+                                 age: "14"
+                             }
+      )
+      Follower.create!(section_id: section.id, student_user_id: follower.id)
+    end
+  end
+
   timed_task :cached_ui_test do
     HASH_FILE = 'db/ui_test_data.hash'
 
