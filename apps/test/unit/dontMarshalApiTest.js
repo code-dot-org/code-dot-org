@@ -1,7 +1,7 @@
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../util/deprecatedChai';
 import sinon from 'sinon';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
-import * as dontMarshalApi from '@cdo/apps/applab/dontMarshalApi';
+import * as dontMarshalApi from '@cdo/apps/dontMarshalApi';
 
 /*
  * These tests verify the behavior of dontMarshalApi.js list APIs when called
