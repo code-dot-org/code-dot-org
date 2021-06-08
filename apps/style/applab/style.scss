@@ -239,9 +239,10 @@ div#visualizationResizeBar {
   // make sure to update the AdvancedShareOptions.jsx iframe code.
   width: 352px;
   height: 612px;
-  margin: 0 auto;
   padding: 20px 0;
-
+  position: fixed;
+  left: 50%;
+  margin-left: -178px;
   background-size: initial;
 
   #playSpaceHeader, #gameButtons {
