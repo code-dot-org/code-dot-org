@@ -490,6 +490,10 @@ export const styles = {
     width: "75%"
   },
 
+  resultsHeader: { width: "75%", float: "left" },
+
+  resultsHeaderAccuracy: { fontSize: 14, position: "relative", top: 16 },
+
   resultsAccuracy: {
     float: "left",
     fontSize: 14,
