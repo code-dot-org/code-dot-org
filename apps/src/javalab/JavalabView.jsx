@@ -114,12 +114,12 @@ class JavalabView extends React.Component {
       <StudioAppWrapper>
         <div style={styles.javalab}>
           <div style={styles.buttons}>
+            <JavalabSettings>{this.renderSettings()}</JavalabSettings>
             <JavalabButton
               text={i18n.finish()}
               onClick={onContinue}
               style={styles.finish}
             />
-            <JavalabSettings>{this.renderSettings()}</JavalabSettings>
           </div>
           <div style={styles.editorAndVisualization}>
             <div
@@ -207,7 +207,7 @@ const styles = {
   buttons: {
     display: 'flex',
     alignItems: 'center',
-    flexDirection: 'row-reverse',
+    justifyContent: 'flex-end',
     width: '100%',
     margin: '10px 0'
   },
