@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants.js";
+import ScrollableContent from "./ScrollableContent";
 
 class DataCard extends Component {
   static propTypes = {
@@ -27,61 +28,59 @@ class DataCard extends Component {
       dataLength !== 0 && (
         <div id="data-card" style={{ ...styles.panel, ...styles.rightPanel }}>
           <div style={styles.largeText}>{name || "Details"}</div>
-          <div style={styles.scrollableContents}>
-            <div style={styles.scrollingContents}>
-              {card && (
+          <ScrollableContent>
+            {card && (
+              <div>
+                <div style={styles.cardRow}>{metadata.card.description}</div>
                 <div>
-                  <div style={styles.cardRow}>{metadata.card.description}</div>
-                  <div>
-                    <span style={styles.italic}>
-                      Source: &nbsp;
-                      {metadata.card.source}
-                    </span>
-                  </div>
-                  <div>
-                    <span style={styles.italic}>
-                      Rows of data: &nbsp;
-                      {dataLength}
-                    </span>
-                  </div>
-                  {metadata.card.lastUpdated && (
-                    <div>
-                      <span style={styles.italic}>
-                        Last updated: &nbsp;
-                        {metadata.card.lastUpdated}
-                      </span>
-                    </div>
-                  )}
-
-                  {metadata.card.context.potentialUses && (
-                    <div style={styles.cardRow}>
-                      <div style={styles.bold}>Potential uses:</div>
-                      <div style={styles.italic}>
-                        {metadata.card.context.potentialUses}
-                      </div>
-                    </div>
-                  )}
-                  {metadata.card.context.potentialMisuses && (
-                    <div style={styles.cardRow}>
-                      <div style={styles.bold}>Potential misuses:</div>
-                      <div style={styles.italic}>
-                        {metadata.card.context.potentialMisuses}
-                      </div>
-                    </div>
-                  )}
+                  <span style={styles.italic}>
+                    Source: &nbsp;
+                    {metadata.card.source}
+                  </span>
                 </div>
-              )}
-              {!card && dataLength > 0 && (
                 <div>
-                  <br />
-                  <div style={styles.cardRow}>
-                    <div style={styles.bold}>Rows of data:</div>
+                  <span style={styles.italic}>
+                    Rows of data: &nbsp;
                     {dataLength}
-                  </div>
+                  </span>
                 </div>
-              )}
-            </div>
-          </div>
+                {metadata.card.lastUpdated && (
+                  <div>
+                    <span style={styles.italic}>
+                      Last updated: &nbsp;
+                      {metadata.card.lastUpdated}
+                    </span>
+                  </div>
+                )}
+
+                {metadata.card.context.potentialUses && (
+                  <div style={styles.cardRow}>
+                    <div style={styles.bold}>Potential uses:</div>
+                    <div style={styles.italic}>
+                      {metadata.card.context.potentialUses}
+                    </div>
+                  </div>
+                )}
+                {metadata.card.context.potentialMisuses && (
+                  <div style={styles.cardRow}>
+                    <div style={styles.bold}>Potential misuses:</div>
+                    <div style={styles.italic}>
+                      {metadata.card.context.potentialMisuses}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+            {!card && dataLength > 0 && (
+              <div>
+                <br />
+                <div style={styles.cardRow}>
+                  <div style={styles.bold}>Rows of data:</div>
+                  {dataLength}
+                </div>
+              </div>
+            )}
+          </ScrollableContent>
         </div>
       )
     );

@@ -18,6 +18,7 @@ import {
 import { Bar } from "react-chartjs-2";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
+import ScrollableContent from "./ScrollableContent";
 
 const barData = {
   labels: [],
@@ -112,86 +113,84 @@ class ColumnInspector extends Component {
           }}
         >
           <div style={styles.largeText}>{currentColumnData.id}</div>
-          <div style={styles.scrollableContents}>
-            <div style={styles.scrollingContents}>
-              <span style={styles.bold}>Data Type:</span>
-              &nbsp;
-              {currentColumnData.readOnly && currentColumnData.dataType}
-              {!currentColumnData.readOnly && (
-                <select
-                  onChange={event =>
-                    this.handleChangeDataType(event, currentColumnData.id)
-                  }
-                  value={currentColumnData.dataType}
-                >
-                  {Object.values(ColumnTypes).map((option, index) => {
-                    return (
-                      <option key={index} value={option}>
-                        {option}
-                      </option>
-                    );
-                  })}
-                </select>
-              )}
-              {currentColumnData.description && (
-                <div>
-                  <br />
-                  <span style={styles.bold}>Description:</span>
-                  &nbsp;
-                  <div>{currentColumnData.description}</div>
-                  <br />
-                </div>
-              )}
-              {currentPanel === "dataDisplayFeatures" && (
-                <div>
-                  <ScatterPlot />
-                  <CrossTab />
-                </div>
-              )}
-              {isCategorical && (
-                <div>
-                  <div style={styles.bold}>Column information:</div>
+          <ScrollableContent>
+            <span style={styles.bold}>Data Type:</span>
+            &nbsp;
+            {currentColumnData.readOnly && currentColumnData.dataType}
+            {!currentColumnData.readOnly && (
+              <select
+                onChange={event =>
+                  this.handleChangeDataType(event, currentColumnData.id)
+                }
+                value={currentColumnData.dataType}
+              >
+                {Object.values(ColumnTypes).map((option, index) => {
+                  return (
+                    <option key={index} value={option}>
+                      {option}
+                    </option>
+                  );
+                })}
+              </select>
+            )}
+            {currentColumnData.description && (
+              <div>
+                <br />
+                <span style={styles.bold}>Description:</span>
+                &nbsp;
+                <div>{currentColumnData.description}</div>
+                <br />
+              </div>
+            )}
+            {currentPanel === "dataDisplayFeatures" && (
+              <div>
+                <ScatterPlot />
+                <CrossTab />
+              </div>
+            )}
+            {isCategorical && (
+              <div>
+                <div style={styles.bold}>Column information:</div>
 
-                  <div style={styles.barChart}>
-                    {barData.labels.length <= maxLabelsInHistogram && (
-                      <Bar
-                        data={barData}
-                        width={100}
-                        height={150}
-                        options={chartOptions}
-                      />
-                    )}
-                    {barData.labels.length > maxLabelsInHistogram && (
-                      <div>
-                        {barData.labels.length} values were found in this
-                        column. A graph is only shown when there are{" "}
-                        {maxLabelsInHistogram} or fewer.
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
-              {isNumerical && currentColumnData.extrema && (
-                <div>
-                  <div style={styles.bold}>Column information:</div>
-                  {!currentColumnData.isColumnDataValid && (
-                    <p style={styles.error}>
-                      Numerical columns cannot contain strings.
-                    </p>
+                <div style={styles.barChart}>
+                  {barData.labels.length <= maxLabelsInHistogram && (
+                    <Bar
+                      data={barData}
+                      width={100}
+                      height={150}
+                      options={chartOptions}
+                    />
                   )}
-                  {currentColumnData.isColumnDataValid && (
-                    <div style={styles.contents}>
-                      min: {currentColumnData.extrema.min}
-                      <br />
-                      max: {currentColumnData.extrema.max}
-                      <br />
-                      range: {currentColumnData.extrema.range}
+                  {barData.labels.length > maxLabelsInHistogram && (
+                    <div>
+                      {barData.labels.length} values were found in this
+                      column. A graph is only shown when there are{" "}
+                      {maxLabelsInHistogram} or fewer.
                     </div>
                   )}
                 </div>
-              )}
-            </div>
-          </div>
+              </div>
+            )}
+            {isNumerical && currentColumnData.extrema && (
+              <div>
+                <div style={styles.bold}>Column information:</div>
+                {!currentColumnData.isColumnDataValid && (
+                  <p style={styles.error}>
+                    Numerical columns cannot contain strings.
+                  </p>
+                )}
+                {currentColumnData.isColumnDataValid && (
+                  <div style={styles.contents}>
+                    min: {currentColumnData.extrema.min}
+                    <br />
+                    max: {currentColumnData.extrema.max}
+                    <br />
+                    range: {currentColumnData.extrema.range}
+                  </div>
+                )}
+              </div>
+            )}
+          </ScrollableContent>
 
           {currentPanel === "dataDisplayLabel" &&
             currentColumnData.isSelectable && (

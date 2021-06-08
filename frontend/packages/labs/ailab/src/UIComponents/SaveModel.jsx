@@ -10,6 +10,7 @@ import {
 } from "../redux";
 import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
+import ScrollableContent from "./ScrollableContent";
 
 class SaveModel extends Component {
   static propTypes = {
@@ -107,117 +108,111 @@ class SaveModel extends Component {
     return (
       <div style={styles.panel}>
         <Statement />
-        <div style={styles.scrollableContentsTinted}>
-          <div style={styles.scrollingContents}>
-            <div key={nameField.id} style={styles.cardRow}>
-              <span style={styles.bold}>{nameField.text}</span>{" "}
-              <span style={styles.italic}>(required)</span>
-              <div>
-                <input
-                  onChange={event =>
-                    this.handleChange(event, nameField.id, nameField.isColumn)
-                  }
-                  maxLength={ModelNameMaxLength}
-                />
-              </div>
-            </div>
-            <div key={dataDescriptionField.id} style={styles.cardRow}>
-              <div style={styles.bold}>{dataDescriptionField.text}</div>
-              {this.props.isUserUploadedDataset && (
-                <div>
-                  <textarea
-                    rows="4"
-                    onChange={event =>
-                      this.handleChange(event, dataDescriptionField.id, false)
-                    }
-                    placeholder={dataDescriptionField.placeholder}
-                    style={styles.saveInputsWidth}
-                  />
-                </div>
-              )}
-              {!this.props.isUserUploadedDataset && (
-                <div>{dataDescriptionField.answer}</div>
-              )}
-            </div>
+        <ScrollableContent tinted={true}>
+          <div key={nameField.id} style={styles.cardRow}>
+            <span style={styles.bold}>{nameField.text}</span>{" "}
+            <span style={styles.italic}>(required)</span>
             <div>
-              <span
-                onClick={this.toggleColumnDescriptions}
-                style={styles.saveModelToggle}
-              >
-                <i className={arrowIcon} />
-                &nbsp;
-                <span style={styles.bold}>Column Descriptions</span> (
-                {columnCount})
-              </span>
-              {this.state.showColumnDescriptions && (
-                <div style={styles.saveModelToggleContents}>
-                  {this.getColumnFields().map(field => {
-                    return (
-                      <div key={field.id} style={styles.cardRow}>
-                        <div>
-                          <span style={styles.bold}>{field.id}</span> (
-                          {field.columnType})
-                        </div>
-                        {this.props.isUserUploadedDataset && (
-                          <div>
-                            <textarea
-                              rows="1"
-                              onChange={event =>
-                                this.handleChange(
-                                  event,
-                                  field.id,
-                                  field.isColumn
-                                )
-                              }
-                              placeholder={field.placeholder}
-                              value={field.answer || ""}
-                            />
-                          </div>
-                        )}
-                        {!this.props.isUserUploadedDataset && (
-                          <div>{field.answer}</div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-            <div>
-              {this.getUsesFields().map(field => {
-                return (
-                  <div key={field.id} style={styles.cardRow}>
-                    <div style={styles.bold}>{field.text}</div>
-                    <div>{field.description}</div>
-                    <ul>
-                      {field.descriptionDetails &&
-                        field.descriptionDetails.map((detail, index) => {
-                          return (
-                            <li style={styles.regularText} key={index}>
-                              {detail}
-                            </li>
-                          );
-                        })}
-                    </ul>
-                    {!field.answer && (
-                      <div>
-                        <textarea
-                          rows="4"
-                          onChange={event =>
-                            this.handleChange(event, field.id, field.isColumn)
-                          }
-                          placeholder={field.placeholder}
-                          style={styles.saveInputsWidth}
-                        />
-                      </div>
-                    )}
-                    {field.answer && <div>{field.answer}</div>}
-                  </div>
-                );
-              })}
+              <input
+                onChange={event =>
+                  this.handleChange(event, nameField.id, nameField.isColumn)
+                }
+                maxLength={ModelNameMaxLength}
+              />
             </div>
           </div>
-        </div>
+          <div key={dataDescriptionField.id} style={styles.cardRow}>
+            <div style={styles.bold}>{dataDescriptionField.text}</div>
+            {this.props.isUserUploadedDataset && (
+              <div>
+                <textarea
+                  rows="4"
+                  onChange={event =>
+                    this.handleChange(event, dataDescriptionField.id, false)
+                  }
+                  placeholder={dataDescriptionField.placeholder}
+                  style={styles.saveInputsWidth}
+                />
+              </div>
+            )}
+            {!this.props.isUserUploadedDataset && (
+              <div>{dataDescriptionField.answer}</div>
+            )}
+          </div>
+          <div>
+            <span
+              onClick={this.toggleColumnDescriptions}
+              style={styles.saveModelToggle}
+            >
+              <i className={arrowIcon} />
+              &nbsp;
+              <span style={styles.bold}>Column Descriptions</span> (
+              {columnCount})
+            </span>
+            {this.state.showColumnDescriptions && (
+              <div style={styles.saveModelToggleContents}>
+                {this.getColumnFields().map(field => {
+                  return (
+                    <div key={field.id} style={styles.cardRow}>
+                      <div>
+                        <span style={styles.bold}>{field.id}</span> (
+                        {field.columnType})
+                      </div>
+                      {this.props.isUserUploadedDataset && (
+                        <div>
+                          <textarea
+                            rows="1"
+                            onChange={event =>
+                              this.handleChange(event, field.id, field.isColumn)
+                            }
+                            placeholder={field.placeholder}
+                            value={field.answer || ""}
+                          />
+                        </div>
+                      )}
+                      {!this.props.isUserUploadedDataset && (
+                        <div>{field.answer}</div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+          <div>
+            {this.getUsesFields().map(field => {
+              return (
+                <div key={field.id} style={styles.cardRow}>
+                  <div style={styles.bold}>{field.text}</div>
+                  <div>{field.description}</div>
+                  <ul>
+                    {field.descriptionDetails &&
+                      field.descriptionDetails.map((detail, index) => {
+                        return (
+                          <li style={styles.regularText} key={index}>
+                            {detail}
+                          </li>
+                        );
+                      })}
+                  </ul>
+                  {!field.answer && (
+                    <div>
+                      <textarea
+                        rows="4"
+                        onChange={event =>
+                          this.handleChange(event, field.id, field.isColumn)
+                        }
+                        placeholder={field.placeholder}
+                        style={styles.saveInputsWidth}
+                      />
+                    </div>
+                  )}
+                  {field.answer && <div>{field.answer}</div>}
+                </div>
+              );
+            })}
+          </div>
+        </ScrollableContent>
       </div>
     );
   }
