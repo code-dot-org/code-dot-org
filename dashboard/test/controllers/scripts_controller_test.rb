@@ -520,7 +520,7 @@ class ScriptsControllerTest < ActionController::TestCase
     script.reload
     refute script.hidden
     refute script.is_stable
-    assert_equal true, JSON.parse(@response.body)['hidden']
+    assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
   test "update published state to recommended" do
@@ -543,7 +543,7 @@ class ScriptsControllerTest < ActionController::TestCase
     script.reload
     refute script.hidden
     assert script.is_stable
-    assert_equal true, JSON.parse(@response.body)['hidden']
+    assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
   test "can update on test without modifying filesystem" do
