@@ -405,7 +405,7 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({});
 
       const scriptEditor = wrapper.find('ScriptEditor');
-      scriptEditor.setState({publishedState: 'Pilot', pilotExperiment: ''});
+      scriptEditor.setState({publishedState: 'pilot', pilotExperiment: ''});
 
       const saveBar = wrapper.find('SaveBar');
 
