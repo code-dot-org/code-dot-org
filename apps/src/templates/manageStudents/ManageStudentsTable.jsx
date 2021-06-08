@@ -45,6 +45,7 @@ import Button from '../Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import SafeMarkdown from '../SafeMarkdown';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -105,6 +106,53 @@ export const sortRows = (data, columnIndexList, orderList) => {
   newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
   studentRows = orderBy(studentRows, columnIndexList, orderList);
   return addRows.concat(newStudentRows).concat(studentRows);
+};
+
+export const ManageStudentsNotificationFull = ({manageStatus}) => {
+  const {sectionCapacity, sectionCode, sectionStudentCount} = manageStatus;
+
+  const sectionSpotsRemaining =
+    sectionCapacity - sectionStudentCount > 0
+      ? sectionCapacity - sectionStudentCount
+      : 0;
+
+  const notificationParams = {
+    studentLimit: sectionCapacity,
+    currentStudentCount: sectionStudentCount,
+    sectionCode: sectionCode,
+    availableSpace: sectionSpotsRemaining
+  };
+
+  const notification = {
+    notice: i18n.manageStudentsNotificationCannotVerb({
+      numStudents: manageStatus.numStudents,
+      verb: manageStatus.verb || 'add'
+    }),
+    details: `${
+      sectionSpotsRemaining === 0
+        ? i18n.manageStudentsNotificationFull(notificationParams)
+        : i18n.manageStudentsNotificationWillBecomeFull(notificationParams)
+    } 
+          ${i18n.contactSupportFullSection({
+            supportLink: 'https://support.code.org/hc/en-us/requests/new'
+          })}`
+  };
+
+  return (
+    <Notification
+      type={NotificationType.failure}
+      notice={notification.notice}
+      details={
+        // SafeMarkedown required to convert i18n string to clickable link
+        <SafeMarkdown markdown={notification.details} />
+      }
+      dismissible={false}
+    />
+  );
+};
+
+ManageStudentsNotificationFull.propTypes = {
+  manageStatus: PropTypes.object.isRequired
 };
 
 class ManageStudentsTable extends Component {
@@ -696,6 +744,12 @@ class ManageStudentsTable extends Component {
             })}
             dismissible={false}
           />
+        )}
+        {addStatus.status === AddStatus.FULL && (
+          <ManageStudentsNotificationFull manageStatus={addStatus} />
+        )}
+        {transferStatus.status === TransferStatus.FULL && (
+          <ManageStudentsNotificationFull manageStatus={transferStatus} />
         )}
         {addStatus.status === AddStatus.FAIL && (
           <Notification
