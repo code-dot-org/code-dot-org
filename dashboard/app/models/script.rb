@@ -1432,7 +1432,7 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      publishState: published_state,
+      publishedState: published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
