@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-08 18:37:43 UTC",
+    "serialized_at": "2021-06-08 19:52:59 UTC",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
     }
@@ -934,78 +934,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 sequencing introduced_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 sequencing introduced_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 sequencing introduced_2021"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 Stage3aGo_copy_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 Stage3aGo_copy_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 Stage3aGo_copy_2021"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 5,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 FirstProgram_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 FirstProgram_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 FirstProgram_2021"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 6,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "courseA_maze_seq5_2021"
         ]
       },
@@ -1024,153 +952,32 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 7,
+      "chapter": 28,
+      "position": 4,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseA_maze_seq6_2021"
+          "OPD-K5 sequencing introduced_2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseA_maze_seq6_2021"
+          "OPD-K5 sequencing introduced_2021"
         ],
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseA_maze_seq6_2021"
+        "OPD-K5 sequencing introduced_2021"
       ]
     },
     {
-      "chapter": 32,
-      "position": 8,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseA_maze_seq7_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_maze_seq7_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "courseA_maze_seq7_2021"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 9,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseA_maze_seq8_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_maze_seq8_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "courseA_maze_seq8_2021"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 10,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "challenge": true,
-        "level_keys": [
-          "courseA_maze_seq10_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_maze_seq10_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "courseA_maze_seq10_2021"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 11,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 using lesson plans_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 using lesson plans_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 using lesson plans_2021"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 12,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 lesson implementation planning_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 lesson implementation planning_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 lesson implementation planning_2021"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 13,
+      "chapter": 29,
+      "position": 5,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -1193,7 +1000,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1217,7 +1024,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1241,7 +1048,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1265,7 +1072,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1289,7 +1096,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1313,7 +1120,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1337,7 +1144,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 36,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1361,7 +1168,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 37,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1385,7 +1192,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 38,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -1409,7 +1216,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 39,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -1433,7 +1240,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 40,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -1457,7 +1264,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 41,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -1481,7 +1288,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1505,7 +1312,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1529,7 +1336,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1553,7 +1360,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1577,7 +1384,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1601,7 +1408,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1625,7 +1432,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1649,7 +1456,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1673,7 +1480,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 50,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -1697,7 +1504,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 51,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -1721,7 +1528,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 52,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -1745,7 +1552,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1769,7 +1576,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1793,7 +1600,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1817,7 +1624,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1841,7 +1648,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1865,7 +1672,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1889,7 +1696,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1913,7 +1720,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1937,7 +1744,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 61,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -1962,7 +1769,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 62,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -1986,7 +1793,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 63,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2010,7 +1817,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2034,7 +1841,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2058,7 +1865,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2082,7 +1889,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2106,7 +1913,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 68,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2130,7 +1937,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 69,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2154,7 +1961,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 70,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2178,7 +1985,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 71,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2202,7 +2009,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 72,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2226,7 +2033,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 73,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2250,7 +2057,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 74,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2274,7 +2081,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2298,7 +2105,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2322,7 +2129,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 77,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2346,7 +2153,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 78,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2370,7 +2177,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 79,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2394,7 +2201,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 80,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2418,7 +2225,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 81,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2442,7 +2249,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 82,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2466,7 +2273,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 83,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2490,7 +2297,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 84,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2514,7 +2321,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 85,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2538,7 +2345,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 86,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -2562,7 +2369,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2586,7 +2393,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2610,7 +2417,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2634,7 +2441,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2658,7 +2465,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2682,7 +2489,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2706,7 +2513,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 93,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2730,7 +2537,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 94,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2754,7 +2561,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 95,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2778,7 +2585,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 96,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2802,7 +2609,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 97,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2826,7 +2633,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2850,7 +2657,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2874,7 +2681,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2898,7 +2705,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 101,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2922,7 +2729,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 102,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2946,7 +2753,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 103,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2970,7 +2777,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 104,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2994,7 +2801,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 105,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -3018,7 +2825,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 106,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -3042,7 +2849,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 107,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -3066,7 +2873,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 108,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -3090,7 +2897,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 109,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3114,7 +2921,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 110,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3138,7 +2945,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 111,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3162,7 +2969,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 112,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3186,7 +2993,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 113,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3210,7 +3017,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 114,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -3234,7 +3041,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 115,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -3258,7 +3065,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 116,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -3282,7 +3089,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 117,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -3306,7 +3113,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 118,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -3330,7 +3137,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 119,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -3354,7 +3161,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 120,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3378,7 +3185,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 121,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3402,7 +3209,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 122,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3426,7 +3233,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 123,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3450,7 +3257,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 124,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3474,7 +3281,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 125,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -3498,7 +3305,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 126,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -3811,39 +3618,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 sequencing introduced_2021",
-        "script_level.level_keys": [
-          "OPD-K5 sequencing introduced_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 Stage3aGo_copy_2021",
-        "script_level.level_keys": [
-          "OPD-K5 Stage3aGo_copy_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 FirstProgram_2021",
-        "script_level.level_keys": [
-          "OPD-K5 FirstProgram_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseA_maze_seq5_2021",
         "script_level.level_keys": [
           "courseA_maze_seq5_2021"
@@ -3855,64 +3629,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseA_maze_seq6_2021",
+        "level.key": "OPD-K5 sequencing introduced_2021",
         "script_level.level_keys": [
-          "courseA_maze_seq6_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseA_maze_seq7_2021",
-        "script_level.level_keys": [
-          "courseA_maze_seq7_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseA_maze_seq8_2021",
-        "script_level.level_keys": [
-          "courseA_maze_seq8_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseA_maze_seq10_2021",
-        "script_level.level_keys": [
-          "courseA_maze_seq10_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 using lesson plans_2021",
-        "script_level.level_keys": [
-          "OPD-K5 using lesson plans_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 lesson implementation planning_2021",
-        "script_level.level_keys": [
-          "OPD-K5 lesson implementation planning_2021"
+          "OPD-K5 sequencing introduced_2021"
         ],
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
