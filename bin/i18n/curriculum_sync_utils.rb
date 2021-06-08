@@ -53,8 +53,9 @@ module CurriculumSyncUtils
       next unless data.present?
 
       # write data to path
-      # TODO: include the "other directory already exists" logic from localize_level_content
-      path = File.join(I18N_SOURCE_DIR, 'curriculum_content', get_script_subdirectory(script), "#{script.name}.json")
+      name = "#{script.name}.json"
+      path = File.join(I18N_SOURCE_DIR, 'curriculum_content', get_script_subdirectory(script), name)
+      next if I18nScriptUtils.script_directory_change?(name, path)
       FileUtils.mkdir_p(File.dirname(path))
       File.write(path, JSON.pretty_generate(data))
     end
