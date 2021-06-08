@@ -315,7 +315,7 @@ describe('CourseEditor', () => {
       const wrapper = createWrapper({});
 
       const courseEditor = wrapper.find('CourseEditor');
-      courseEditor.setState({publishedState: 'Pilot', pilotExperiment: ''});
+      courseEditor.setState({publishedState: 'pilot', pilotExperiment: ''});
 
       const saveBar = wrapper.find('SaveBar');
 
