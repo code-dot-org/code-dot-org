@@ -295,7 +295,7 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {
       course_name: 'course',
       scripts: ['unit1', 'unit2'],
-      published_state: 'recommended'
+      published_state: 'stable'
     }
     course.reload
     unit1.reload
@@ -355,7 +355,7 @@ class CoursesControllerTest < ActionController::TestCase
       version_year: '2019',
       family_name: 'csp',
       has_verified_resources: 'on',
-      published_state: 'recommended'
+      published_state: 'stable'
     }
     unit_group.reload
 
@@ -366,7 +366,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert unit_group.is_stable?
   end
 
-  test "update: published state of recommended sets visible and is_stable correctly" do
+  test "update: published state of stable sets visible and is_stable correctly" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     unit_group = create :unit_group, name: 'csp-2019'
@@ -376,7 +376,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     post :update, params: {
       course_name: unit_group.name,
-      published_state: 'recommended'
+      published_state: 'stable'
     }
     unit_group.reload
 

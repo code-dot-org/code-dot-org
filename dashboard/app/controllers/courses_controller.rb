@@ -203,7 +203,7 @@ class CoursesController < ApplicationController
       cp[:visible] = true
       cp[:is_stable] = false
       cp.delete(:published_state)
-    elsif cp[:published_state] == 'recommended'
+    elsif cp[:published_state] == 'stable'
       cp[:visible] = true
       cp[:is_stable] = true
       cp.delete(:published_state)

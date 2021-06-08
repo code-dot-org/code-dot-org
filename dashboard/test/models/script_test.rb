@@ -824,9 +824,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'preview', script.published_state
   end
 
-  test 'script with hidden false and is_stable true has recommended published state' do
+  test 'script with hidden false and is_stable true has stable published state' do
     script = create(:script, name: 'single-lesson-script', hidden: false, is_stable: true)
-    assert_equal 'recommended', script.published_state
+    assert_equal 'stable', script.published_state
   end
 
   test 'should summarize script' do

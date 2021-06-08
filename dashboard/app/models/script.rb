@@ -1381,7 +1381,7 @@ class Script < ApplicationRecord
       'pilot'
     elsif !hidden
       if is_stable
-        'recommended'
+        'stable'
       else
         'preview'
       end

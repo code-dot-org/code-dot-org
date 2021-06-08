@@ -327,7 +327,7 @@ class UnitGroup < ApplicationRecord
       'pilot'
     elsif visible
       if is_stable
-        'recommended'
+        'stable'
       else
         'preview'
       end

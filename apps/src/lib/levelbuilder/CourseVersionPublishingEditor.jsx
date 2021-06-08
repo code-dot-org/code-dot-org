@@ -22,7 +22,7 @@ export default class CourseVersionPublishingEditor extends Component {
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
     this.props.updatePublishedState(newPublishedState);
-    if (['preview', 'recommended', 'beta'].includes(newPublishedState)) {
+    if (['preview', 'stable', 'beta'].includes(newPublishedState)) {
       this.props.updatePilotExperiment('');
     }
   };
@@ -108,14 +108,14 @@ export default class CourseVersionPublishingEditor extends Component {
                   <td style={styles.tableBorder}>Preview</td>
                   <td style={styles.tableBorder}>
                     The course is now a choice in the dropdown that is
-                    assignable but is not the recommended course.
+                    assignable.
                   </td>
                 </tr>
                 <tr>
-                  <td style={styles.tableBorder}>Recommended</td>
+                  <td style={styles.tableBorder}>Stable</td>
                   <td style={styles.tableBorder}>
-                    The course is the recommended course. It is assignable and
-                    we try to get teachers to use this course.
+                    A course that is not changing. If it is the most recent
+                    course in your language it will be the recommended course.
                   </td>
                 </tr>
               </tbody>
