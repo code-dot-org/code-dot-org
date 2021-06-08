@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-05-26 19:35:47 UTC",
+    "serialized_at": "2021-06-08 18:25:03 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -1272,7 +1272,7 @@
       "key": "3dc37e4e-05d9-463f-a734-f65322cccb1a",
       "position": 3,
       "properties": {
-        "description": "\n**Discuss:**\n\nHave a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - *Is running in the computer lab okay?*\n - *How loudly should we walk when we are in the computer lab?*\n - *What should you do if you get stuck on a puzzle?*\n - *If you get frustrated, will it help to hit the computer?*\n - *When we're about to go to the computer lab, how should we get ready?*"
+        "description": "\n**Discuss:**\n\nHave a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - *Is running in the computer lab okay?*\n - *How loudly should we talk when we are in the computer lab?*\n - *What should you do if you get stuck on a puzzle?*\n - *If you get frustrated, will it help to hit the computer?*\n - *When we're about to go to the computer lab, how should we get ready?*"
       },
       "seeding_key": {
         "activity_section.key": "3dc37e4e-05d9-463f-a734-f65322cccb1a",
