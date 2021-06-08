@@ -14,7 +14,7 @@ require_relative 'curriculum_sync_utils'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative '../../tools/scripts/ManifestBuilder'
+require_relative '../animation_assets/manifest_builder'
 
 def sync_in
   puts "Sync in starting"
