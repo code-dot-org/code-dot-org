@@ -76,8 +76,8 @@ class JoinSection extends React.Component {
             : 'fail';
         const sectionCapacity =
           data.responseJSON && data.responseJSON.sectionCapacity
-              ? data.responseJSON.sectionCapacity
-              : null;
+            ? data.responseJSON.sectionCapacity
+            : null;
         this.props.updateSectionsResult(
           'join',
           result,
