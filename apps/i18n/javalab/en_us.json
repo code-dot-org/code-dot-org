@@ -22,6 +22,5 @@
   "newFile": "New File",
   "noMainMethod": "Error: your program does not contain a main method.",
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
-  "settings": "Settings",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods."
 }
