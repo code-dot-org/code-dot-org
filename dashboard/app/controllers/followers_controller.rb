@@ -49,7 +49,10 @@ class FollowersController < ApplicationController
           # Check if section is restricted, and redirect with restricted error if true
           elsif @section.restricted?
             redirect_to root_path, alert: I18n.t('follower.error.restricted_section', section_code: params[:section_code])
-          # Othewise, register user and redirect to course with welcome message
+          # Check if the section is already at capacity
+          elsif @section.at_capacity?
+            redirect_to root_path, alert: I18n.t('follower.error.full_section', section_code: params[:section_code], section_capacity: @section.capacity)
+          # Otherwise, register user and redirect to course with welcome message
           else
             redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
           end
@@ -95,6 +98,30 @@ class FollowersController < ApplicationController
 
     if current_user && current_user == @section.user
       redirect_to redirect_url, alert: I18n.t('follower.error.cant_join_own_section')
+      return
+    end
+
+    # Redirect and provide an error for sections at capacity.
+    if @section&.at_capacity? && current_user && !Follower.find_by(section: @section, student_user: current_user)
+
+      # Trigger a FireHose record if add_student returns a capacity error.
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+            study: 'section capacity restriction',
+            event: (current_user.id == @section.user_id ? 'Section owner attempted to add a student to a full section' : 'Student attempted to join a full section').to_s,
+            data_json: {
+                section_id: @section.id,
+                section_code: @section.code,
+                date: "#{Time.now.month}/#{Time.now.day}/#{Time.now.year} at #{Time.now.hour}:#{Time.now.min}",
+                joiner_id: current_user.id,
+                section_teacher_id: @section.user_id
+            }.to_json
+        }
+      )
+
+      redirect_url = "#{root_url}join" # Keeps user on the join page.
+      redirect_to redirect_url, inline_alert: I18n.t('follower.error.full_section', section_code: params[:section_code], section_capacity: @section.capacity)
       return
     end
 
