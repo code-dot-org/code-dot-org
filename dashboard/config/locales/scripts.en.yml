@@ -22590,6 +22590,8 @@ en:
               description_teacher: 'Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. '
             lesson-6:
               name: Adding Randomness to a Program
+              description_student: One of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes. Today, you add randomization to the Pop the Balloon game by adding a dice rolling feature.
+              description_teacher: In this lesson, students develop the dice rolling feature of the Pop the Balloon game. Each subtask of the development process requires students to add different randomization features, including generating numbers between ranges, computing probabilities, and using conditional statements that are executed based on varying results.
             lesson-7:
               name: Comparing Object References and Data
             lesson-8:
