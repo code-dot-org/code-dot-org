@@ -17,6 +17,12 @@ level 'OPD-K5 GettingStarted1_2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted2', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted_Reflection', progression: 'Getting Started'
 
+lesson 'Implementation Approaches and Barriers', display_name: 'Implementation Approaches and Barriers', has_lesson_plan: false
+level 'OPD-K5 AddressingImplementation1', progression: 'Implementation Approaches and Barriers'
+level 'OPD-K5 ImplementationApproach_Reflection', progression: 'Implementation Approaches and Barriers'
+level 'OPD-K5 ImplementationBarriers1_Reflection', progression: 'Implementation Approaches and Barriers'
+level 'OPD-K5 ImplementationBarriers2_Reflection', progression: 'Implementation Approaches and Barriers'
+
 lesson 'CS Teaching and Student Practices', display_name: 'CS Teaching Practices', has_lesson_plan: false
 level 'OPD-K5 CSTeachingLearning1', progression: 'CS Teaching and Student Practices'
 level 'OPD-K5 CSTeachingLearning_Reflection', progression: 'CS Teaching and Student Practices'
@@ -25,19 +31,14 @@ level 'OPD-K5 CS_StudentPractices_Reflection', progression: 'CS Teaching and Stu
 level 'OPD-K5 DebuggingPairProgramming', progression: 'CS Teaching and Student Practices'
 level 'OPD-K5 DebuggingPairProgramming_Reflection', progression: 'CS Teaching and Student Practices'
 
-lesson 'Implementation Approaches and Barriers', display_name: 'Implementation Approaches and Barriers', has_lesson_plan: false
-level 'OPD-K5 AddressingImplementation1', progression: 'Implementation Approaches and Barriers'
-level 'OPD-K5 ImplementationApproach_Reflection', progression: 'Implementation Approaches and Barriers'
-level 'OPD-K5 ImplementationBarriers1_Reflection', progression: 'Implementation Approaches and Barriers'
-level 'OPD-K5 ImplementationBarriers2_Reflection', progression: 'Implementation Approaches and Barriers'
-
 lesson 'Lesson Planning', display_name: 'Lesson Planning', has_lesson_plan: false
 level 'OPD-K5 LessonPlanning1', progression: 'Lesson Planning'
 level 'OPD-K5 LessonPlanning2', progression: 'Lesson Planning'
 level 'OPD-K5 LessonPlanning_Reflection', progression: 'Lesson Planning'
 
-lesson_group 'k5_basic_concepts_1', display_name: 'Part II:  CS Fundamentals CS Concepts'
+lesson_group 'k5_basic_concepts_1', display_name: 'Part II:  CS Concepts in Courses A - F'
 lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
+level 'OPD-K5 IntroToConcepts_2021'
 level 'OPD-K5 Stage3Start_copy_2021'
 level 'OPD-K5 sequencing introduced_2021'
 level 'OPD-K5 Stage3aGo_copy_2021'
