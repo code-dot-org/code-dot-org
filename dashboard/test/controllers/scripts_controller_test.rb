@@ -523,7 +523,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
-  test "update published state to recommended" do
+  test "update published state to stable" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
@@ -537,7 +537,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'recommended'
+      published_state: 'stable'
     }
     assert_response :success
     script.reload

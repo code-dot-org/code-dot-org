@@ -274,7 +274,7 @@ class ScriptsController < ApplicationController
       h[:hidden] = false
       h[:is_stable] = false
       h.delete(:published_state)
-    elsif h[:published_state] == 'recommended'
+    elsif h[:published_state] == 'stable'
       h[:hidden] = false
       h[:is_stable] = true
       h.delete(:published_state)

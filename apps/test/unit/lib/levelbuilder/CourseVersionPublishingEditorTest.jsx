@@ -88,14 +88,14 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
 
-  it('updates visible, isStable, and pilotExperiment when publish state changed to recommended', () => {
+  it('updates visible, isStable, and pilotExperiment when publish state changed to stable', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor {...defaultProps} />
     );
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: 'recommended'}});
+      .simulate('change', {target: {value: 'stable'}});
 
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
