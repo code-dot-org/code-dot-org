@@ -2,7 +2,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import CourseVersionPublishingEditor from '../../../../src/lib/levelbuilder/CourseVersionPublishingEditor';
+import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 
 describe('CourseVersionPublishedStateSelector', () => {
   let defaultProps,

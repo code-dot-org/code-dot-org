@@ -629,13 +629,9 @@ class ScriptEditor extends React.Component {
                     )}
                   </label>
                   <CourseVersionPublishingEditor
-                    visible={!this.state.hidden}
-                    isStable={this.state.isStable}
                     pilotExperiment={this.state.pilotExperiment}
                     versionYear={this.state.versionYear}
                     familyName={this.state.familyName}
-                    updateVisible={visible => this.setState({hidden: !visible})}
-                    updateIsStable={isStable => this.setState({isStable})}
                     updatePilotExperiment={pilotExperiment =>
                       this.setState({pilotExperiment})
                     }
