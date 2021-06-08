@@ -107,3 +107,11 @@
     border: none !important;
   }
 }
+
+div#visualizationResizeBar {
+  position: static;
+}
+
+#codeApp.pin_bottom {
+  top: 50px;
+}
