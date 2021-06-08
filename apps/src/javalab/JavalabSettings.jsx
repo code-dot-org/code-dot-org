@@ -69,8 +69,10 @@ export class JavalabSettings extends Component {
       <div style={styles.main}>
         <JavalabButton
           icon={<FontAwesome icon="cog" />}
+          text={'Settings'}
           style={btnStyle}
           onClick={this.toggleDropdown}
+          isHorizontal
         />
 
         {dropdownOpen && (
@@ -103,7 +105,8 @@ const styles = {
   button: {
     color: color.darkest_gray,
     borderColor: color.darkest_gray,
-    padding: 5,
+    padding: '1px 8px',
+    fontSize: 15,
     selected: {
       backgroundColor: color.cyan,
       color: color.white,
