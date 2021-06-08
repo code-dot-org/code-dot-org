@@ -121,44 +121,46 @@ class JavalabView extends React.Component {
             />
             <JavalabSettings>{this.renderSettings()}</JavalabSettings>
           </div>
-          <div
-            id="visualizationColumn"
-            className="responsive"
-            style={styles.instructionsAndPreview}
-          >
-            <TopInstructions
-              mainStyle={styles.instructions}
-              standalone
-              displayDocumentationTab
-              displayReviewTab
-            />
-            {this.renderVisualization()}
-          </div>
-          <VisualizationResizeBar />
-          <div
-            style={{
-              ...styles.editorAndConsole,
-              color: isDarkMode ? color.white : color.black
-            }}
-            className="editor-column"
-          >
-            <JavalabEditor
-              onCommitCode={onCommitCode}
-              handleVersionHistory={handleVersionHistory}
-            />
-            <JavalabConsole
-              onInputMessage={onInputMessage}
-              leftColumn={
-                <ControlButtons
-                  isDarkMode={isDarkMode}
-                  isRunning={isRunning}
-                  isTesting={isTesting}
-                  toggleRun={this.toggleRun}
-                  toggleTest={this.toggleTest}
-                />
-              }
-              style={styles.console}
-            />
+          <div style={styles.editorAndVisualization}>
+            <div
+              id="visualizationColumn"
+              className="responsive"
+              style={styles.instructionsAndPreview}
+            >
+              <TopInstructions
+                mainStyle={styles.instructions}
+                standalone
+                displayDocumentationTab
+                displayReviewTab
+              />
+              {this.renderVisualization()}
+            </div>
+            <VisualizationResizeBar />
+            <div
+              style={{
+                ...styles.editorAndConsole,
+                color: isDarkMode ? color.white : color.black
+              }}
+              className="editor-column"
+            >
+              <JavalabEditor
+                onCommitCode={onCommitCode}
+                handleVersionHistory={handleVersionHistory}
+              />
+              <JavalabConsole
+                onInputMessage={onInputMessage}
+                leftColumn={
+                  <ControlButtons
+                    isDarkMode={isDarkMode}
+                    isRunning={isRunning}
+                    isTesting={isTesting}
+                    toggleRun={this.toggleRun}
+                    toggleTest={this.toggleTest}
+                  />
+                }
+                style={styles.console}
+              />
+            </div>
           </div>
         </div>
       </StudioAppWrapper>
@@ -169,11 +171,8 @@ class JavalabView extends React.Component {
 const styles = {
   instructionsAndPreview: {
     width: '100%',
-    position: 'absolute',
-    marginRight: 15,
     color: color.black,
-    right: '15px',
-    top: '45px'
+    right: '15px'
   },
   instructions: {
     width: '100%',
@@ -183,10 +182,12 @@ const styles = {
     left: 0
   },
   editorAndConsole: {
-    position: 'absolute',
     right: '15px',
-    marginLeft: '15px',
-    top: '45px'
+    width: '100%'
+  },
+  editorAndVisualization: {
+    display: 'flex',
+    flexGrow: '1'
   },
   preview: {
     backgroundColor: color.light_gray,
@@ -195,7 +196,7 @@ const styles = {
   },
   javalab: {
     display: 'flex',
-    margin: '0 15px 6px 15px'
+    flexWrap: 'wrap'
   },
   console: {
     marginTop: 15
@@ -207,7 +208,8 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'row-reverse',
-    width: '100%'
+    width: '100%',
+    margin: '10px 0'
   },
   finish: {
     backgroundColor: color.orange,
