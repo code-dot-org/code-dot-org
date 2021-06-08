@@ -14,6 +14,7 @@ import { parseCSV } from "../csvReaderWrapper";
 import { parseJSON } from "../jsonReaderWrapper";
 import { allDatasets, getAvailableDatasets } from "../datasetManifest";
 import { styles } from "../constants";
+import ScrollableContent from "./ScrollableContent";
 
 class SelectDataset extends Component {
   static propTypes = {
@@ -78,38 +79,36 @@ class SelectDataset extends Component {
 
     return (
       <div id="select-dataset" style={styles.panel}>
-        <div style={styles.scrollableContentsTinted}>
-          <div style={styles.scrollingContents}>
-            {datasets.map((dataset, index) => {
-              return (
-                <div
-                  style={{
-                    ...styles.selectDatasetItem,
-                    ...(this.props.highlightDataset === dataset.name &&
-                      styles.selectDatasetItemHighlighted),
-                    ...(this.props.name === dataset.name &&
-                      styles.selectDatasetItemSelected),
-                    ...(index % 3 === 0 && { clear: "both" })
-                  }}
-                  key={dataset.id}
-                  onClick={() => this.handleDatasetClick(dataset.id)}
-                  onMouseEnter={() =>
-                    this.props.setHighlightDataset(dataset.name)
-                  }
-                  onMouseLeave={() => this.props.setHighlightDataset(undefined)}
-                >
-                  <img
-                    src={assetPath + dataset.imagePath}
-                    style={styles.selectDatasetImage}
-                    draggable={false}
-                    className="ailab-image-hover"
-                  />
-                  <div style={styles.selectDatasetText}>{dataset.name}</div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        <ScrollableContent tinted={true}>
+          {datasets.map((dataset, index) => {
+            return (
+              <div
+                style={{
+                  ...styles.selectDatasetItem,
+                  ...(this.props.highlightDataset === dataset.name &&
+                    styles.selectDatasetItemHighlighted),
+                  ...(this.props.name === dataset.name &&
+                    styles.selectDatasetItemSelected),
+                  ...(index % 3 === 0 && { clear: "both" })
+                }}
+                key={dataset.id}
+                onClick={() => this.handleDatasetClick(dataset.id)}
+                onMouseEnter={() =>
+                  this.props.setHighlightDataset(dataset.name)
+                }
+                onMouseLeave={() => this.props.setHighlightDataset(undefined)}
+              >
+                <img
+                  src={assetPath + dataset.imagePath}
+                  style={styles.selectDatasetImage}
+                  draggable={false}
+                  className="ailab-image-hover"
+                />
+                <div style={styles.selectDatasetText}>{dataset.name}</div>
+              </div>
+            );
+          })}
+        </ScrollableContent>
         {!specifiedDatasets && (
           <div style={styles.contentsCsvButton}>
             <label style={styles.uploadCsvButton}>
