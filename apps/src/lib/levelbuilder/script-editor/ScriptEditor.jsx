@@ -27,12 +27,11 @@ import {
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+import {PUBLISHED_STATES} from '@cdo/apps/lib/levelbuilder/constants';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
 const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', ''];
-
-const PUBLISHED_STATES = ['pilot', 'beta', 'preview', 'recommended'];
 
 /**
  * Component for editing course scripts.

@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
-
-const PUBLISHED_STATES = ['pilot', 'beta', 'preview', 'recommended'];
+import {PUBLISHED_STATES} from '@cdo/apps/lib/levelbuilder/constants';
 
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
@@ -23,12 +22,8 @@ export default class CourseVersionPublishingEditor extends Component {
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
     this.props.updatePublishedState(newPublishedState);
-    switch (newPublishedState) {
-      case 'preview':
-      case 'recommended':
-      case 'beta':
-        this.props.updatePilotExperiment('');
-        break;
+    if (['preview', 'recommended', 'beta'].includes(newPublishedState)) {
+      this.props.updatePilotExperiment('');
     }
   };
 
