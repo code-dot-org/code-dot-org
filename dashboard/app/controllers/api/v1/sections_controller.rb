@@ -141,8 +141,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # add_student returns 'full' when @section has or will have 500 followers
     if result == 'full'
       render json: {
-          result: 'section_full',
-          sectionCapacity: @section.capacity
+        result: 'section_full',
+        sectionCapacity: @section.capacity
       }, status: :forbidden
       return
     end
