@@ -187,6 +187,10 @@ Javalab.prototype.init = function(config) {
   // Dispatches a redux update of isDarkMode
   getStore().dispatch(setIsDarkMode(this.isDarkMode));
 
+  // ensure autosave is executed on first run by manually setting
+  // projectChanged to true.
+  project.projectChanged();
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <JavalabView
@@ -233,7 +237,9 @@ Javalab.prototype.onRun = function() {
     getStore().getState().pageConstants.serverLevelId,
     options
   );
-  this.javabuilderConnection.connectJavabuilder();
+  project.autosave(() => {
+    this.javabuilderConnection.connectJavabuilder();
+  });
 };
 
 // Called by Javalab console to send a message to Javabuilder.
