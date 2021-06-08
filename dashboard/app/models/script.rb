@@ -1376,6 +1376,20 @@ class Script < ApplicationRecord
     nil
   end
 
+  def published_state
+    if pilot?
+      'pilot'
+    elsif !hidden
+      if is_stable
+        'recommended'
+      else
+        'preview'
+      end
+    else
+      'beta'
+    end
+  end
+
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
     # TODO: Set up peer reviews to be more consistent with the rest of the system
     # so that they don't need a bunch of one off cases (example peer reviews
@@ -1418,8 +1432,7 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      hidden: hidden,
-      is_stable: !!is_stable,
+      publishState: published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,

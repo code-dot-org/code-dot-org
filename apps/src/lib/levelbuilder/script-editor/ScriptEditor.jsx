@@ -32,6 +32,8 @@ const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
 const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', ''];
 
+const PUBLISHED_STATES = ['pilot', 'beta', 'preview', 'recommended'];
+
 /**
  * Component for editing course scripts.
  */
@@ -40,8 +42,7 @@ class ScriptEditor extends React.Component {
     id: PropTypes.number,
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
-    initialHidden: PropTypes.bool,
-    initialIsStable: PropTypes.bool,
+    initialPublishedState: PropTypes.oneOf(PUBLISHED_STATES).isRequired,
     initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
@@ -113,8 +114,6 @@ class ScriptEditor extends React.Component {
       description: this.props.i18nData.description,
       studentDescription: this.props.i18nData.studentDescription,
       announcements: this.props.initialAnnouncements,
-      hidden: this.props.initialHidden,
-      isStable: this.props.initialIsStable,
       loginRequired: this.props.initialLoginRequired,
       hideableLessons: this.props.initialHideableLessons,
       studentDetailProgressView: this.props.initialStudentDetailProgressView,
@@ -148,13 +147,7 @@ class ScriptEditor extends React.Component {
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       deprecated: this.props.initialDeprecated,
-      publishedState: !this.props.initialHidden
-        ? this.props.initialIsStable
-          ? 'Recommended'
-          : 'Preview'
-        : this.props.initialPilotExperiment
-        ? 'Pilot'
-        : 'Beta'
+      publishedState: this.props.initialPublishedState
     };
   }
 
@@ -254,7 +247,7 @@ class ScriptEditor extends React.Component {
       });
       return;
     } else if (
-      this.state.publishedState === 'Pilot' &&
+      this.state.publishedState === 'pilot' &&
       this.state.pilotExperiment === ''
     ) {
       this.setState({
@@ -276,8 +269,10 @@ class ScriptEditor extends React.Component {
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
-      hidden: this.state.hidden,
-      is_stable: this.state.isStable,
+      hidden:
+        this.state.publishedState === 'beta' ||
+        this.state.publishedState === 'pilot',
+      is_stable: this.state.publishedState === 'recommended',
       deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,

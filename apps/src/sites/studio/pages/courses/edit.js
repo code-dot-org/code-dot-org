@@ -45,8 +45,7 @@ function showCourseEditor() {
         initialVersionTitle={courseEditorData.course_summary.version_title}
         initialFamilyName={courseEditorData.course_summary.family_name}
         initialVersionYear={courseEditorData.course_summary.version_year}
-        initialVisible={courseEditorData.course_summary.visible || false}
-        initialIsStable={courseEditorData.course_summary.is_stable || false}
+        initialPublishState={courseEditorData.course_summary.published_state}
         initialPilotExperiment={
           courseEditorData.course_summary.pilot_experiment || ''
         }
