@@ -164,14 +164,18 @@ export class LevelTokenContents extends Component {
               />
               <span style={styles.levelTitle}>{scriptLevel.key}</span>
             </span>
-            {scriptLevel.assessment && (
-              <span style={styles.tag}>assessment</span>
-            )}
-            {scriptLevel.bonus && <span style={styles.tag}>bonus</span>}
-            {scriptLevel.challenge && <span style={styles.tag}>challenge</span>}
-            {scriptLevel.levels.length > 1 && (
-              <span style={styles.tag}>variants</span>
-            )}
+            <span>
+              {scriptLevel.assessment && (
+                <span style={styles.tag}>assessment</span>
+              )}
+              {scriptLevel.bonus && <span style={styles.tag}>bonus</span>}
+              {scriptLevel.challenge && (
+                <span style={styles.tag}>challenge</span>
+              )}
+              {scriptLevel.levels.length > 1 && (
+                <span style={styles.tag}>variants</span>
+              )}
+            </span>
           </span>
         </span>
         <div
@@ -233,7 +237,7 @@ const styles = {
     padding: '3px 5px',
     lineHeight: '12px',
     borderRadius: 5,
-    marginLeft: 3
+    marginLeft: 5
   },
   remove: {
     fontSize: 14,
