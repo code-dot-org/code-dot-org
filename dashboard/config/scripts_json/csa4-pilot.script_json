@@ -7,26 +7,1144 @@
     "properties": {
       "curriculum_umbrella": "CSA",
       "is_migrated": true,
-      "pilot_experiment": "csa-pilot"
+      "pilot_experiment": "csa-pilot",
+      "hideable_lessons": true,
+      "weekly_instructional_minutes": 225,
+      "show_calendar": true,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-19 17:29:54 UTC",
+    "serialized_at": "2021-06-08 18:51:36 UTC",
     "seeding_key": {
       "script.name": "csa4-pilot"
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Using Existing Libraries to Add Capabilities",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. Students explore APIs and their documentation to identify features that they can add to their programs. To begin developing the Pop the Balloon game for The Neighborhood block party, students import The Park API and use it to implement clickable images.",
+        "student_overview": "The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs. To begin developing the Pop the Balloon game for The Neighborhood block party, you import The Park API and use it to implement clickable images."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Solving Problems with the Math Class",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "Students revisit the `Math` class, going more in-depth to explore its methods. They learn about `final` classes and static methods and identify their purposes and uses. They use `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` to solve problems.",
+        "preparation": "* Print copies of the Math Class Activity Guide (one per student)",
+        "student_overview": "In Unit 3, you looked at the source code for the `Math` class, but now it’s time to see what it can do! In this lesson, you learn about `final` classes and static methods and identify their purposes and uses. You use some of the `Math` class methods - `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` - to solve problems."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Treating Data as a Different Types",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "Students revisit the Project Mercury Pastries Food Truck to learn about casting, rounding, and random numbers. The students solve scenarios for the food truck owner using their knowledge of Java and the `Math` class.",
+        "preparation": "* Print copies of the Casting Exploration handout (one per student)",
+        "student_overview": "The Food Truck has run out of coins! Because the owner can’t give change with coins, she can only charge whole dollar amounts and no cents. You learn how to use casting, rounding, and random numbers to help the owner through her coin shortage."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Comparing Values to Make Decisions",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. ",
+        "preparation": "* Print copies of the Exploring Operators handout (one per student)\n* Gather 3-5 sticky notes for each pair of students",
+        "student_overview": "Today is all about using code to make decisions. You compare relationships between values while using conditional statements to help the `Painter` make decisions. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Adding Randomness to a Program",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Comparing Object References and Data",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Providing an Alternate Path of Execution",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Testing Multiple Conditions",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Using Logical Operators",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Applying De Morgan's Laws to Boolean Expressions",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Concert in the Theater Project - Day 1",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Neighborhood Block Party Project - Day 2",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Neighborhood Block Party Project - Day 3",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "FRQ Day",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Assessment Day",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "dc39eb3b-b611-41f1-b13e-55b61be5ce62",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc39eb3b-b611-41f1-b13e-55b61be5ce62",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "2e828b71-fb86-4a4d-9084-aa28cb267fed",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "33c31ab4-714f-4142-a4ad-b9d1ddaf5fc3",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "33c31ab4-714f-4142-a4ad-b9d1ddaf5fc3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "8a84c726-1457-4a5d-95af-dd0887113025",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8a84c726-1457-4a5d-95af-dd0887113025",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "210351ff-121a-4149-8723-c0749c5c45f7",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "210351ff-121a-4149-8723-c0749c5c45f7",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "ca142ef9-43a9-40fc-8536-5c1af8bc465a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ca142ef9-43a9-40fc-8536-5c1af8bc465a",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "4ac26b60-78c6-465a-bb4b-29ea5d475366",
+      "position": 1,
+      "properties": {
+        "duration": 3,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4ac26b60-78c6-465a-bb4b-29ea5d475366",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "5b3da861-7771-4682-886d-221f8b4f02d1",
+      "position": 2,
+      "properties": {
+        "duration": 40,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5b3da861-7771-4682-886d-221f8b4f02d1",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "0dba3509-e723-4a87-83e2-419a5fcdb0fe",
+      "position": 3,
+      "properties": {
+        "duration": 2,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0dba3509-e723-4a87-83e2-419a5fcdb0fe",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "577f24f7-2440-4a23-84be-68051b42e60d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "577f24f7-2440-4a23-84be-68051b42e60d",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "727add1a-e3be-4ad1-874e-39229de541c4",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "727add1a-e3be-4ad1-874e-39229de541c4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "6a2efbe1-008d-4225-bb1d-7677872fa90d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the examples of an app using universal login, Google Maps on a website, and posting on social media from other websites and apps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are examples of apps and websites that use functionalities from other apps and services?*\n\n**Discussion Goal:** Students share examples they have seen or used, such as sharing a post on Instagram to Twitter or getting directions to a store location on the store's website.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How is it possible for apps and websites to use the functionalities of other apps and services?*\n\n**Discussion Goal:** Students guess that software engineers might be writing code to send information to other apps or that they might be using existing code that communicates between their app and other apps.",
+        "name": "App Functionalities"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a2efbe1-008d-4225-bb1d-7677872fa90d",
+        "lesson_activity.key": "dc39eb3b-b611-41f1-b13e-55b61be5ce62"
+      }
+    },
+    {
+      "key": "da359aef-f92f-41c5-a014-88e8841d9a48",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Software engineers often use application program interfaces, or APIs, to create interaction between their program and other programs. APIs contain tools and libraries that software engineers can use in their programs.\n\nWe use the Java API to write our programs. Let's explore it by looking at some classes we have been using and find out exactly where they come from and what we can do with them.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "da359aef-f92f-41c5-a014-88e8841d9a48",
+        "lesson_activity.key": "dc39eb3b-b611-41f1-b13e-55b61be5ce62"
+      }
+    },
+    {
+      "key": "f35707f4-dd64-4a58-b30d-7619c7111df7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run the program on Level 1 for the class to demonstrate the error that occurs.",
+        "duration": "10",
+        "name": "The Scanner Class",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Alternatively, direct students to Level 1 on Code Studio to run the program individually to identify the error."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f35707f4-dd64-4a58-b30d-7619c7111df7",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "f8ed5892-5a5a-4339-8048-3a5354c0b47a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think caused this error?*\n\n**Discussion Goal:** Students guess the meaning of the error displayed in the console, including that Java does not know what a `Scanner` object is. Some students may have noticed the `import` statement at the top of previous programs they have written and may point out that the `import` statement is missing."
+      },
+      "seeding_key": {
+        "activity_section.key": "f8ed5892-5a5a-4339-8048-3a5354c0b47a",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "ab2be058-bebb-46b5-9150-8ee6fe93d47b",
+      "position": 3,
+      "properties": {
+        "description": "We have created `Scanner` objects before, but we did not have to create a `Scanner` class first.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> But remember that no class, __________ (no object)!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab2be058-bebb-46b5-9150-8ee6fe93d47b",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "65c65052-dd39-4259-9c72-d1b0d33aefcb",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How were we able to create `Scanner` objects when we did not create a `Scanner` class first?*\n\n**Discussion Goal:** Students guess that something told Java where to find the `Scanner` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to review the `Scanner` class documentation. Have students work with a partner to find the components listed on the slide in the `Scanner` class documentation."
+      },
+      "seeding_key": {
+        "activity_section.key": "65c65052-dd39-4259-9c72-d1b0d33aefcb",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "7e6bc509-adc3-4792-9bf8-3fe53a118ba7",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What did you find out about the `Scanner` class?*\n* *What did you notice about the constructors and methods for the `Scanner` class?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share information they found about the `Scanner` class, including descriptions, constructors for creating `Scanner` objects, and methods that they can use. Students may wonder about other methods in the `Scanner` class that they have not used yet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define packages, explain their purpose, and demonstrate how to use them in a program.\n* A package is a collection of similar classes.\n* The `Scanner` class is in the `java.util` package.\n* Use the `import` statement to use a package in a program."
+      },
+      "seeding_key": {
+        "activity_section.key": "7e6bc509-adc3-4792-9bf8-3fe53a118ba7",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "1e7da004-e74b-487b-bd22-f1ddca8cf538",
+      "position": 6,
+      "properties": {
+        "description": "`String` is another object that we create and use in our programs, but we never wrote a `String` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> But no class, ______ (no object)!\n\nLike with the `Scanner` class, we can create `String` objects without first creating a `String` class because it is in a package.",
+        "duration": "10",
+        "name": "The String Class",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1e7da004-e74b-487b-bd22-f1ddca8cf538",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "78288938-1c69-49a2-ae12-0320dce63fb5",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Have students work with a partner to find the components listed on the slide in the `String` class documentation."
+      },
+      "seeding_key": {
+        "activity_section.key": "78288938-1c69-49a2-ae12-0320dce63fb5",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "75d1c1c4-fae2-463a-bdd7-6005d381ba67",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to discuss the prompts.*\n* *What did you find out about the `String` class?*\n* *What did you notice about the constructors and methods for the `String` class?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share information they found about the `String` class, including descriptions, constructors for creating `String` objects, and methods that they can use. Students may wonder about other methods in the `String` class that they have not used yet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which package can we find the `String` class?*\n\n**Discussion Goal:** Students share that the `String` class is part of the `java.lang` package.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think we can create `String` objects without first importing `java.lang`?*\n\n**Discussion Goal:** Students guess that the `java.lang` package is the core package of the Java language. Java automatically includes this package in every program.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may wonder about the difference between the `java.util` and the `java.lang` package. Reinforce to students that since packages contain similar classes, they have different types of classes based on their overall purposes or common themes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "75d1c1c4-fae2-463a-bdd7-6005d381ba67",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "6b9b5caf-e594-453b-9e25-1f2f477543d1",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the APIs and Libraries video."
+      },
+      "seeding_key": {
+        "activity_section.key": "6b9b5caf-e594-453b-9e25-1f2f477543d1",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "e18c29a7-0b42-458c-97bd-0dc47b610878",
+      "position": 10,
+      "properties": {
+        "description": "The `Scanner` and `String` classes are part of the Java API, which we use to write programs. That is why the package names start with java, such as `java.util` and `java.lang`.\n\nWe saw at the beginning of class that apps and websites often use functions from other apps. The software engineers of these programs can add functions and interact with other apps by using APIs.\n\nLet's look at some popular APIs used in many of the programs we use every day.",
+        "duration": "15",
+        "name": "Exploring APIs",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e18c29a7-0b42-458c-97bd-0dc47b610878",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "244e6b57-5b27-4d9c-aed1-f4453c6f0349",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students explore example APIs such as Google Developers and Spotify for Developers."
+      },
+      "seeding_key": {
+        "activity_section.key": "244e6b57-5b27-4d9c-aed1-f4453c6f0349",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "6280b5be-eb03-454c-83d3-206ac44fcac3",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to discuss the prompts.*\n* *What do you notice about these APIs?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students notice that the APIs define functionalities that a software engineer can incorporate into their programs and include documentation explaining how to use them. Students may wonder if there are APIs for other apps they use or how to incorporate these into their programs."
+      },
+      "seeding_key": {
+        "activity_section.key": "6280b5be-eb03-454c-83d3-206ac44fcac3",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "0e9cdcbd-c6e8-4846-82a7-3deeb59ab2bb",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Neighborhood is hosting a block party, and you have been asked to develop a game to play at the block party. In this unit, you will implement the API for The Park, which allows people in the community to gather to play games with their friends and family.\n\nThroughout this unit, you will develop a game called Pop the Balloon for The Neighborhood Block Party.",
+        "duration": "10",
+        "name": "Introduction to The Park",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0e9cdcbd-c6e8-4846-82a7-3deeb59ab2bb",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "197d1fab-8d1f-4441-a222-d45808b9fcb2",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to review the API documentation for The Park."
+      },
+      "seeding_key": {
+        "activity_section.key": "197d1fab-8d1f-4441-a222-d45808b9fcb2",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "d318f824-4ef7-483b-8d73-bd48e63cbbfc",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What could you do or create with this API?*\n\n**Discussion Goal:** Students notice the API includes adding and removing images and clickable images. Students also notice that the API allows them to play sounds. Students share ideas about making games and interactive programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 4 on Code Studio. Students import The Park and run the sample code."
+      },
+      "seeding_key": {
+        "activity_section.key": "d318f824-4ef7-483b-8d73-bd48e63cbbfc",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "6a9c4c5e-899f-4553-8b00-0d2c10854efa",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using The Park.\n* Adding a `ClickableImage`\n* Writing the `onClick()` method\n* Adding an `Image`\n* Removing an image\n* Playing a sound effect\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students add a balloon as a `ClickableImage`, then add a popped balloon as an Image that shows when the balloon is clicked."
+      },
+      "seeding_key": {
+        "activity_section.key": "6a9c4c5e-899f-4553-8b00-0d2c10854efa",
+        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
+      }
+    },
+    {
+      "key": "ca3d1fd7-5f92-49fd-af52-a1d59c7619ae",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to discuss the prompts.*\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students discuss the purpose of APIs and libraries and the benefits of using APIs. Students make predictions about how they will use APIs and libraries throughout the unit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Three W's"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca3d1fd7-5f92-49fd-af52-a1d59c7619ae",
+        "lesson_activity.key": "33c31ab4-714f-4142-a4ad-b9d1ddaf5fc3"
+      }
+    },
+    {
+      "key": "51ae3f43-f446-4315-86dd-555abd31c0ab",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "51ae3f43-f446-4315-86dd-555abd31c0ab",
+        "lesson_activity.key": "33c31ab4-714f-4142-a4ad-b9d1ddaf5fc3"
+      }
+    },
+    {
+      "key": "01ce48a4-2b51-4e19-b69d-be2cd1d7aa70",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Solving Problems with the Math Class handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the “What We Know” column on the KWL chart on the first page of the handout.",
+        "name": "KWL: Math Class/Static Methods",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "During this time, students should only complete the “What We Know” column. Students complete the other two columns throughout the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "01ce48a4-2b51-4e19-b69d-be2cd1d7aa70",
+        "lesson_activity.key": "8a84c726-1457-4a5d-95af-dd0887113025"
+      }
+    },
+    {
+      "key": "0f65057a-cbb1-46cf-bacd-5b0580792ccd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *With a partner, share what you wrote in the “What We Know” column. Add to your column based on what your partner shares.*\n\n**Discussion Goal:** Students recall what they learned about the `Math` class and how they used the static keyword to create shared variables and constants."
+      },
+      "seeding_key": {
+        "activity_section.key": "0f65057a-cbb1-46cf-bacd-5b0580792ccd",
+        "lesson_activity.key": "8a84c726-1457-4a5d-95af-dd0887113025"
+      }
+    },
+    {
+      "key": "40ab011e-fb47-4ae3-a36f-5788485fe05c",
+      "position": 3,
+      "properties": {
+        "description": "In Unit 3, we looked at the source code for the `Math` class. Today, we’ll be spending more time with the `Math` class, working with several of its methods. Before we get started in Code Studio, we will be completing a Scavenger Hunt through the `Math` class documentation.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "40ab011e-fb47-4ae3-a36f-5788485fe05c",
+        "lesson_activity.key": "8a84c726-1457-4a5d-95af-dd0887113025"
+      }
+    },
+    {
+      "key": "05a331bc-aa49-4579-b842-7faebfaebadb",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to turn to the next page in their activity guide and work with their partners to complete the Math Class Scavenger Hunt.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to review the `Math` class documentation. Have students work with a partner to find the components listed on their Scavenger Hunt within the `Math` class documentation.",
+        "duration": "10",
+        "name": "Revisiting the Math Class"
+      },
+      "seeding_key": {
+        "activity_section.key": "05a331bc-aa49-4579-b842-7faebfaebadb",
+        "lesson_activity.key": "210351ff-121a-4149-8723-c0749c5c45f7"
+      }
+    },
+    {
+      "key": "ae456811-c368-4f79-8aa5-266c2517ea88",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What did you find most interesting about the `Math` class?*\n* *What questions do you have?*\n\n**Discussion Goal:** Students share what they found during the Math Class Scavenger Hunt and any questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the “What We Want to Know” column on the KWL chart on their Activity Guide. Students can add to this column throughout the lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "ae456811-c368-4f79-8aa5-266c2517ea88",
+        "lesson_activity.key": "210351ff-121a-4149-8723-c0749c5c45f7"
+      }
+    },
+    {
+      "key": "75bf74c6-8d67-41b4-befb-5bb57cbf792a",
+      "position": 3,
+      "properties": {
+        "description": "`Math` is a special type of class because it is `final`. You likely have many questions about the `Math` class at this point, and you may have some written on your KWL chart. Today, we will be learning more about what `final` classes and static methods are and why we use them. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "75bf74c6-8d67-41b4-befb-5bb57cbf792a",
+        "lesson_activity.key": "210351ff-121a-4149-8723-c0749c5c45f7"
+      }
+    },
+    {
+      "key": "8711879f-bb4f-42f3-910a-06b417ef5be8",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Final Classes and Static Methods video. Direct students to answer the questions at the bottom of the second page of their activity guide.\n\n**Display:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the definitions of `final` class and static method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review how to call a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on our definitions of `final` classes and static methods, why do you think the `Math` class is `final` with all static methods?*\n\n**Discussion Goal:** Students identify that mathematical operations or constant values should do the same thing, regardless of the input. A `Math` object does not need to be created to use its methods.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may struggle to identify why the `Math` class is `final` and has only static methods. A few guiding questions might include:\n* *What might happen if we could change different mathematical formulas or calculations depending on the input?*\n* *If we were to create `Math` objects, what would you want to change about them? In other words, what instance variables would you declare?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8711879f-bb4f-42f3-910a-06b417ef5be8",
+        "lesson_activity.key": "210351ff-121a-4149-8723-c0749c5c45f7"
+      }
+    },
+    {
+      "key": "3e2947c2-7efb-455c-a2b7-6859db4c1aa2",
+      "position": 5,
+      "properties": {
+        "description": "While `Math` is a `final` class with all static methods, we can also create static methods within non-`final` classes. We have already seen an example of this in The Theater!",
+        "duration": "7",
+        "name": "The Theater: Static Variables and Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e2947c2-7efb-455c-a2b7-6859db4c1aa2",
+        "lesson_activity.key": "210351ff-121a-4149-8723-c0749c5c45f7"
+      }
+    },
+    {
+      "key": "c493c5e1-e24d-44d6-930a-f39c782c2b09",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Conductor Source Code from The Theater on page 3 of their activity guide. With a partner, students trace the code and write notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *After reviewing the Conductor source code, why do you think the `makeNotes()` method is static?*\n\n**Discussion Goal:** Students identify that this method has to do with playing music in The Theater. While the input may change, users would expect music to play the same regardless of what the input is. Therefore, instead of an object calling each method, the class itself calls the method."
+      },
+      "seeding_key": {
+        "activity_section.key": "c493c5e1-e24d-44d6-930a-f39c782c2b09",
+        "lesson_activity.key": "210351ff-121a-4149-8723-c0749c5c45f7"
+      }
+    },
+    {
+      "key": "27901252-e599-4764-8fbf-fa99f451fd74",
+      "position": 7,
+      "properties": {
+        "description": "Now that we have a better understanding of `final` classes and static methods, we will focus on three methods from the `Math` class. While you may have noticed that the `Math` class has many different methods, we are focusing today on `Math.abs(double a)`, `Math.sqrt(double a)`, and `Math.pow(double a, double b)`.",
+        "duration": "18",
+        "name": "Working with Math",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "27901252-e599-4764-8fbf-fa99f451fd74",
+        "lesson_activity.key": "210351ff-121a-4149-8723-c0749c5c45f7"
+      }
+    },
+    {
+      "key": "30781108-9fd2-451a-9895-3014ca5f71ae",
+      "position": 8,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to demonstrate the `Math` class methods.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `Math.abs(double a)`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `Math.sqrt(double a)`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `Math.pow(double a, double b)`",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When attempting to calculate the square root of a negative number, Java returns `NaN`, which stands for “Not a Number.” Negative numbers do not have square roots (since they must be positive or zero), so Java will always return `NaN`."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "30781108-9fd2-451a-9895-3014ca5f71ae",
+        "lesson_activity.key": "210351ff-121a-4149-8723-c0749c5c45f7"
+      }
+    },
+    {
+      "key": "43aab5cb-ad0b-4530-9351-9c6e7fa4d7b3",
+      "position": 9,
+      "properties": {
+        "description": "Now that we’re familiar with how each of these `Math` methods works, let’s practice using them!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "43aab5cb-ad0b-4530-9351-9c6e7fa4d7b3",
+        "lesson_activity.key": "210351ff-121a-4149-8723-c0749c5c45f7"
+      }
+    },
+    {
+      "key": "1cc41cda-7609-4a04-909f-818137428da3",
+      "position": 10,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 2 through 6 on Code Studio. Students work with the `Scanner` and `Math` classes to calculate the absolute value, square root, and calculate the exponential output of user input.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is okay if students do not finish all five levels. All levels involve using the `Math` class methods highlighted in this lesson while also allowing students to practice with content from previous lessons.\n\nStudents will have access to the Java Quick Reference on the AP Exam, including the `Math` class methods from this lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1cc41cda-7609-4a04-909f-818137428da3",
+        "lesson_activity.key": "210351ff-121a-4149-8723-c0749c5c45f7"
+      }
+    },
+    {
+      "key": "c6edc3d5-781b-4fc3-95cd-a99a689392ed",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students back to their KWL chart on the first page of their activity guide. Direct students to complete the “What We Learned” column with at least three takeaways from this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *With a partner, share what you wrote in the “What We Learned” column. Add to your column based on what your partner shares.*\n\n**Discussion Goal:** Students share their major takeaways from the lesson and add new information from their discussion with their partners.",
+        "name": "KWL: What We Learned"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6edc3d5-781b-4fc3-95cd-a99a689392ed",
+        "lesson_activity.key": "ca142ef9-43a9-40fc-8536-5c1af8bc465a"
+      }
+    },
+    {
+      "key": "a24cc773-d459-4695-b897-41933503daf7",
+      "position": 2,
+      "properties": {
+        "description": "Today, we spent a lot of time with the `Math` class and practiced using  `Math.abs(double a)`, `Math.pow(double a, double b)`, and `Math.sqrt(double a)`. Tomorrow, you will learn about another method from the `Math` class that is particularly helpful as we work to create games: `Math.random`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a24cc773-d459-4695-b897-41933503daf7",
+        "lesson_activity.key": "ca142ef9-43a9-40fc-8536-5c1af8bc465a"
+      }
+    },
+    {
+      "key": "cdc72de2-9755-4ecc-96ef-2b6e0e228d16",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "cdc72de2-9755-4ecc-96ef-2b6e0e228d16",
+        "lesson_activity.key": "ca142ef9-43a9-40fc-8536-5c1af8bc465a"
+      }
+    },
+    {
+      "key": "6527bcf5-d32f-4546-90d1-b70064ae353c",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "6527bcf5-d32f-4546-90d1-b70064ae353c",
+        "lesson_activity.key": "ca142ef9-43a9-40fc-8536-5c1af8bc465a"
+      }
+    },
+    {
+      "key": "dff7822b-f4a6-4de4-b8a3-fe5c905eee00",
+      "position": 1,
+      "properties": {
+        "description": "Yesterday you learned how to use the `Math` class. Today we revisit the Project Mercury Pastries Food Truck.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dff7822b-f4a6-4de4-b8a3-fe5c905eee00",
+        "lesson_activity.key": "4ac26b60-78c6-465a-bb4b-29ea5d475366"
+      }
+    },
+    {
+      "key": "fa40f998-e47f-49e5-aace-28cd4fd0e164",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompt.\n* *The Food Truck has run out of coins! Because the owner can’t give change with coins, she can only charge whole dollar amounts and no cents. With a partner, discuss: How can the owner change the prices of the desserts so that they are all whole numbers?*\n\n**Discussion Goal:** Students share out that the owner could round the price to the nearest dollar. She could also instead always round down or always round up.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To guide students to think about always rounding down, ask leading questions like, *“What if the owner doesn’t want to overcharge customers?”*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fa40f998-e47f-49e5-aace-28cd4fd0e164",
+        "lesson_activity.key": "4ac26b60-78c6-465a-bb4b-29ea5d475366"
+      }
+    },
+    {
+      "key": "10ef022d-fb21-432f-a300-7606e6cdbf56",
+      "position": 1,
+      "properties": {
+        "description": "Today we’re going to learn how to round up to the nearest whole number and round down. We’re going to start with rounding down, or truncation.",
+        "duration": "8",
+        "name": "Casting Exploration",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "10ef022d-fb21-432f-a300-7606e6cdbf56",
+        "lesson_activity.key": "5b3da861-7771-4682-886d-221f8b4f02d1"
+      }
+    },
+    {
+      "key": "dcfee2d2-3c44-44b2-8fd2-b91049a76685",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Casting Exploration handout. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students seven minutes to complete page one of the Casting Exploration activity. As students are working, use Catch and Release as appropriate to maintain engagement. You may choose to catch to:\n* Assist students in writing the code in Code Studio.\n* Clarify how casting works.\n* Support students with misconceptions involving mathematical concepts.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Catch and Release is a technique to allow students to explore a concept with intermittent support while preventing students from struggling for too long or disengaging. As students work, circulate and note any misconceptions. After the two minutes, briefly clarify issues or pose a question to the class that students have been struggling with, then send them back to their work.\n\nIt is not necessary to bring the class back together after every question. If individual discussions address questions or students do not need the answer to continue working, you may choose to address these questions during the summary.\n\nOptional differentiation: Use a public timer to differentiate between independent work and discussion, addressing all student questions after a given amount of time has elapsed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dcfee2d2-3c44-44b2-8fd2-b91049a76685",
+        "lesson_activity.key": "5b3da861-7771-4682-886d-221f8b4f02d1"
+      }
+    },
+    {
+      "key": "bf3b257e-c976-4661-b912-5deb660f8069",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think casting means?*\n\n**Discussion Goal:** Students share their ideas about what casting means.\n\n**Display:** Click through the animated slide to show the definition.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Look at the Food Truck question on your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share that you can cast the `double` price to an `int` to round down.\n\n**Display:** Click through the animated slide to show the code.",
+        "duration": "10",
+        "name": "Double Division"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf3b257e-c976-4661-b912-5deb660f8069",
+        "lesson_activity.key": "5b3da861-7771-4682-886d-221f8b4f02d1"
+      }
+    },
+    {
+      "key": "db51c039-d332-4e08-b164-ba2f7beb7bab",
+      "position": 4,
+      "properties": {
+        "description": "From the activity, you saw that you could cast the `double` price to an `int` to round down. Casting an `int` to a `double` is also useful.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "db51c039-d332-4e08-b164-ba2f7beb7bab",
+        "lesson_activity.key": "5b3da861-7771-4682-886d-221f8b4f02d1"
+      }
+    },
+    {
+      "key": "d7b07f14-c7dc-4886-be73-9ec79c37ea56",
+      "position": 5,
+      "properties": {
+        "description": "**Discuss:** Click through the animated slide to discuss the prompt.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *In Unit 2, you explored evaluating `int`s and `double`s. When we divide two `int`s, we truncate (remove everything to the right of the decimal point). If one of the values is a `double`, then the resulting value is a `double`. With a partner, discuss: Given two `int`s, how can we use casting to get a `double` as the resulting value?*\n\n**Discussion Goal:** Students realize they can cast the numerator or denominator to a `double`. They may also come up with unique solutions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students back to Level 1 on Code Studio. Given two `int`s, students try different ways to get the expression to evaluate to a `double`.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students are using the same level as the Casting Exploration Activity to test their code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d7b07f14-c7dc-4886-be73-9ec79c37ea56",
+        "lesson_activity.key": "5b3da861-7771-4682-886d-221f8b4f02d1"
+      }
+    },
+    {
+      "key": "4d166028-8e6f-47cd-af88-9eca32d6cf82",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is one way that you wrote your expression to evaluate to a `double` in Level 1?*\n\n**Discussion Goal:** Students share ways that they completed Level 1."
+      },
+      "seeding_key": {
+        "activity_section.key": "4d166028-8e6f-47cd-af88-9eca32d6cf82",
+        "lesson_activity.key": "5b3da861-7771-4682-886d-221f8b4f02d1"
+      }
+    },
+    {
+      "key": "3d635d2a-fcbc-4162-bcc2-c32f5cc536b0",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students twelve minutes to complete the rest of the Casting Exploration activity then complete the Check for Understanding on Level 2. As students are working, use Catch and Release as appropriate to maintain engagement. You may choose to catch to:\n* Assist students in writing the code in Code Studio.\n* Clarify how casting works.\n* Support students with misconceptions involving mathematical concepts.",
+        "duration": "15",
+        "name": "More Casting Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d635d2a-fcbc-4162-bcc2-c32f5cc536b0",
+        "lesson_activity.key": "5b3da861-7771-4682-886d-221f8b4f02d1"
+      }
+    },
+    {
+      "key": "52594bdc-796e-4041-8a32-fe9da6846add",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Look at the “Double Division?” question. What was printed? Why?*\n\n**Discussion Goal:** Students share that 1.0 printed because you divide the two `int`s, truncating the answer to 1. Casting it to a `double` prints out 1.0.\n\n**Display:** Click through the animation to show the evaluation.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Casting and Rounding video."
+      },
+      "seeding_key": {
+        "activity_section.key": "52594bdc-796e-4041-8a32-fe9da6846add",
+        "lesson_activity.key": "5b3da861-7771-4682-886d-221f8b4f02d1"
+      }
+    },
+    {
+      "key": "ab89fd95-787a-467a-b053-2af84cf2d19d",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The owner wants to thank everyone for their patience during the coin shortage. She has decided to give customers free donuts! She wants to give each customer between 2-4 donuts, but she wants to be fair by choosing the number of donuts to give at random.",
+        "duration": "7",
+        "name": "Random",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab89fd95-787a-467a-b053-2af84cf2d19d",
+        "lesson_activity.key": "5b3da861-7771-4682-886d-221f8b4f02d1"
+      }
+    },
+    {
+      "key": "5df0e1fb-1071-4d0b-8aa3-648a131dd542",
+      "position": 10,
+      "properties": {
+        "description": "**Display:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show that 2-4 inclusive means that the owner can give two donuts, three donuts, or four donuts.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the random video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct Students to Level 3. Students print out a random number between 2-4 inclusive."
+      },
+      "seeding_key": {
+        "activity_section.key": "5df0e1fb-1071-4d0b-8aa3-648a131dd542",
+        "lesson_activity.key": "5b3da861-7771-4682-886d-221f8b4f02d1"
+      }
+    },
+    {
+      "key": "a22b85ea-5827-49ef-afa8-c802a690f654",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students discuss the importance of using casting and random. Students make predictions on different uses of casting and random in future lessons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Three W's"
+      },
+      "seeding_key": {
+        "activity_section.key": "a22b85ea-5827-49ef-afa8-c802a690f654",
+        "lesson_activity.key": "0dba3509-e723-4a87-83e2-419a5fcdb0fe"
+      }
+    },
+    {
+      "key": "969d669a-c374-4551-9778-ac6b8c0abe5a",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "969d669a-c374-4551-9778-ac6b8c0abe5a",
+        "lesson_activity.key": "0dba3509-e723-4a87-83e2-419a5fcdb0fe"
+      }
+    },
+    {
+      "key": "14c69a55-a843-4827-9d6e-594f7077bcb2",
+      "position": 1,
+      "properties": {
+        "name": "Boolean Value"
+      },
+      "seeding_key": {
+        "activity_section.key": "14c69a55-a843-4827-9d6e-594f7077bcb2",
+        "lesson_activity.key": "577f24f7-2440-4a23-84be-68051b42e60d"
+      }
+    },
+    {
+      "key": "016e1ef0-e2fd-43c8-b611-53dd9ef591be",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "016e1ef0-e2fd-43c8-b611-53dd9ef591be",
+        "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
+      }
+    },
+    {
+      "key": "58d4d4a4-fa9b-48e6-bb85-abff711b4c91",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "58d4d4a4-fa9b-48e6-bb85-abff711b4c91",
+        "lesson_activity.key": "727add1a-e3be-4ad1-874e-39229de541c4"
+      }
+    }
   ],
   "script_levels": [
 
@@ -35,10 +1153,296 @@
 
   ],
   "resources": [
-
+    {
+      "name": "[KEY] Casting Exploration",
+      "url": "https://docs.google.com/document/d/1ZIVUtV10cfpzV5TyXnwxt9V3kjLQtXOoG7vkXBL6TYw/edit#",
+      "key": "_key_casting_exploration",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_casting_exploration"
+      }
+    },
+    {
+      "name": "[KEY] Exploring Operators",
+      "url": "https://docs.google.com/document/d/1EeKzmo5fRWha8iCkOQMwjD7lelmax5rqTMdtVFeJ3Ic/edit?usp=sharing",
+      "key": "_key_exploring_operators",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_exploring_operators"
+      }
+    },
+    {
+      "name": "[KEY] Math Class Activity Guide",
+      "url": "https://docs.google.com/document/d/144NcvwidgzxpHJUa7M6-fpqkkoFHWCukQfWwvkfVG-I/edit?usp=sharing",
+      "key": "_key_math_class_activity_guide",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_math_class_activity_guide"
+      }
+    },
+    {
+      "name": "[KEY] U4L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1d4c2QCa3D9cmlPEyTKBIHBQ5hUCjuWBj7DHdauSzpdw/edit?usp=sharing",
+      "key": "_key_u4l1_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u4l1_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U4L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1kjF5zAh_QwWcNuYknSxq7OGQGtIF2lSysRy-qod9XR4/edit?usp=sharing",
+      "key": "_key_u4l2_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u4l2_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U4L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1x4sYy9FICs5exxkiCjmCX6XP6ISU9W_oZrRoZBKVK88/edit?usp=sharing",
+      "key": "_key_u4l3_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u4l3_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U4L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1NT4dzln49Zq2yxlqs53c2aIKWPDqhzkmH7pm0xYLotk/edit?usp=sharing",
+      "key": "_key_u4l4_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u4l4_extra_practice"
+      }
+    },
+    {
+      "name": "Casting Exploration",
+      "url": "https://docs.google.com/document/d/1IPYgSjg3JmKCD33csEdikwi4-egwQGrWwciFeaHLFUA/edit#",
+      "key": "casting_exploration",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "casting_exploration"
+      }
+    },
+    {
+      "name": "Exploring Operators",
+      "url": "https://docs.google.com/document/d/1Oel7wKZ_3KAaDW_7R84z_AuhFixeYy6l8hgPU7R70SA/edit?usp=sharing",
+      "key": "exploring_operators",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_operators"
+      }
+    },
+    {
+      "name": "Math Class Activity Guide",
+      "url": "https://docs.google.com/document/d/1NWyUTX0o8NfjphkP8FKqH-mY-0PRKw6apnLa-EDQSdw/edit?usp=sharing",
+      "key": "math_class_activity_guide",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "math_class_activity_guide"
+      }
+    },
+    {
+      "name": "U4L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1ABN1VF8UND-BN653ldj6Qhz3PACNcKDrTF5n2Tqe6cU/edit?usp=sharing",
+      "key": "u4l1_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u4l1_extra_practice"
+      }
+    },
+    {
+      "name": "U4L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1yz0twZpG5rCWoi-9mtYgOAb05GpII7d7m_tRdddBiRM/edit?usp=sharing",
+      "key": "u4l2_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u4l2_extra_practice"
+      }
+    },
+    {
+      "name": "U4L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1BAKDgU8YD1hQjNyMzuhChHnkYTK6uKSXWRZ9_vLvDQY/edit?usp=sharing",
+      "key": "u4l3_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u4l3_extra_practice"
+      }
+    },
+    {
+      "name": "U4L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1UCI-265f20rEIljtpvstsYkNZLlP4jfaWZjrx7NLA4k/edit?usp=sharing",
+      "key": "u4l4_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u4l4_extra_practice"
+      }
+    },
+    {
+      "name": "Unit 4 Presentation Slides",
+      "url": "https://docs.google.com/presentation/d/1M-LmKHk-ZbV-5Pi3FnqdcWOGavTBBq3_kZ-kib897tw/edit?usp=sharing",
+      "key": "unit_4_presentation_slides",
+      "properties": {
+        "type": "Slides",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_presentation_slides"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_u4l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "u4l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_math_class_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_u4l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "math_class_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "u4l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_casting_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_u4l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "casting_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "u4l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_exploring_operators"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_u4l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "exploring_operators"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "u4l4_extra_practice"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -47,19 +1451,476 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "application_program_interface_api_",
+      "word": "Application Program Interface (API)",
+      "definition": "A set of tools, definitions, and methods that can be used in a program to access features of other applications and services",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "application_program_interface_api_"
+      }
+    },
+    {
+      "key": "library",
+      "word": "Library",
+      "definition": "A collection of existing code that can be used in a program",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "key": "package",
+      "word": "Package",
+      "definition": "A collection of similar classes",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "package"
+      }
+    },
+    {
+      "key": "math_class",
+      "word": "Math Class",
+      "definition": "A final class in Java that contains methods to perform mathematical operations",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "math_class"
+      }
+    },
+    {
+      "key": "final_class",
+      "word": "final Class",
+      "definition": "A class that cannot be extended",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "final_class"
+      }
+    },
+    {
+      "key": "static_method",
+      "word": "Static Method",
+      "definition": "A method that is called by the class instead of by an instance of the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "static_method"
+      }
+    },
+    {
+      "key": "truncate",
+      "word": "Truncate",
+      "definition": "Remove everything to the right of the decimal point",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "truncate"
+      }
+    },
+    {
+      "key": "cast",
+      "word": "Cast",
+      "definition": "To assign a value of one type to another",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "cast"
+      }
+    },
+    {
+      "key": "widen",
+      "word": "Widen",
+      "definition": "Automatically cast from a smaller type to a larger type",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "widen"
+      }
+    },
+    {
+      "key": "inclusive",
+      "word": "Inclusive",
+      "definition": "To include every value in a range",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "inclusive"
+      }
+    },
+    {
+      "key": "relational_operator",
+      "word": "Relational Operator",
+      "definition": "Used to compare numeric values or arithmetic expressions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "relational_operator"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "application_program_interface_api_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "package"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "math_class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "final_class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "static_method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "truncate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "cast"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "widen"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "inclusive"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "relational_operator"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "a4d602d5-104c-42b1-b4dc-d5a095fad72b",
+      "properties": {
+        "description": "Explain the purpose and capabilities of APIs and libraries"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "a4d602d5-104c-42b1-b4dc-d5a095fad72b"
+      }
+    },
+    {
+      "key": "06000e53-ee6d-4643-b9f8-c6fc7b2623c2",
+      "properties": {
+        "description": "Add new functionality to program code by importing an API"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "06000e53-ee6d-4643-b9f8-c6fc7b2623c2"
+      }
+    },
+    {
+      "key": "8c1c7aa0-9e79-4b29-8d5f-01bfbae5956c",
+      "properties": {
+        "description": "Write code using Math class methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "8c1c7aa0-9e79-4b29-8d5f-01bfbae5956c"
+      }
+    },
+    {
+      "key": "3957c1e1-202b-460b-bb55-77e6674152ee",
+      "properties": {
+        "description": "Define a static method"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "3957c1e1-202b-460b-bb55-77e6674152ee"
+      }
+    },
+    {
+      "key": "2a3ef7a2-62b5-4e1b-ae2b-e285491de8a3",
+      "properties": {
+        "description": "Define a final class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "2a3ef7a2-62b5-4e1b-ae2b-e285491de8a3"
+      }
+    },
+    {
+      "key": "81bef01d-1f7f-422d-b345-c0b4cc08639d",
+      "properties": {
+        "description": "Identify the need for final classes and static methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "81bef01d-1f7f-422d-b345-c0b4cc08639d"
+      }
+    },
+    {
+      "key": "3323cde4-6f82-4648-a6f3-de3eaf244465",
+      "properties": {
+        "description": "Cast between ints and doubles"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "3323cde4-6f82-4648-a6f3-de3eaf244465"
+      }
+    },
+    {
+      "key": "1d921fe4-b0d1-4666-8253-620fece6b206",
+      "properties": {
+        "description": "Round doubles to the nearest int"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "1d921fe4-b0d1-4666-8253-620fece6b206"
+      }
+    },
+    {
+      "key": "03473cb3-8601-4bb8-8861-5066652fe2f1",
+      "properties": {
+        "description": "Use Math.random() to generate random numbers"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "03473cb3-8601-4bb8-8861-5066652fe2f1"
+      }
+    },
+    {
+      "key": "b11a4713-62a2-473a-a1bf-99e66b761f49",
+      "properties": {
+        "description": "Evaluate expressions using relational operators"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "b11a4713-62a2-473a-a1bf-99e66b761f49"
+      }
+    },
+    {
+      "key": "74fc8f0b-5629-4d0c-b9d6-798924eb57eb",
+      "properties": {
+        "description": "Construct if statements using relational operators"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "74fc8f0b-5629-4d0c-b9d6-798924eb57eb"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.G.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.G.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.G.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.E.3"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
