@@ -17,8 +17,7 @@ import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVers
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-
-const PUBLISHED_STATES = ['pilot', 'beta', 'preview', 'recommended'];
+import {PUBLISHED_STATES} from '@cdo/apps/lib/levelbuilder/constants';
 
 class CourseEditor extends Component {
   static propTypes = {
