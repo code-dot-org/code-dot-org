@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
+import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -69,7 +70,7 @@ export class JavalabSettings extends Component {
       <div style={styles.main}>
         <JavalabButton
           icon={<FontAwesome icon="cog" />}
-          text={'Settings'}
+          text={i18n.settings()}
           style={btnStyle}
           onClick={this.toggleDropdown}
           isHorizontal
