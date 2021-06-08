@@ -376,7 +376,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     post :update, params: {
       course_name: unit_group.name,
-      published_state: 'recommmended'
+      published_state: 'recommended'
     }
     unit_group.reload
 

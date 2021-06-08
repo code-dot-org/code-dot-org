@@ -263,14 +263,23 @@ class ScriptsController < ApplicationController
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
-    if h[:published_state] == 'preview'
-      h[:hidden] = false
+
+    # Temporary transition code used to update the boolean values that control published_state
+    # This should be removed once we move off of booleans completely and on to published_state
+    if h[:published_state] == 'pilot' || h[:published_state] == 'beta'
+      h[:hidden] = true
+      h[:is_stable] = false
       h.delete(:published_state)
-    elsif h[:published_state] == 'recommended'
+    elsif h[:published_state] == 'preview'
       h[:hidden] = false
       h[:is_stable] = false
       h.delete(:published_state)
+    elsif h[:published_state] == 'recommended'
+      h[:hidden] = false
+      h[:is_stable] = true
+      h.delete(:published_state)
     end
+
     h
   end
 
