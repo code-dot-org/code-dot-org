@@ -8,8 +8,8 @@ import color from '@cdo/apps/util/color';
 
 export const styles = {
   button: {
-    marginTop: 30,
-    marginLeft: 290
+    marginTop: 20,
+    marginLeft: '50%'
   },
   updateButton: {
     marginLeft: 5
@@ -23,6 +23,9 @@ export const styles = {
   schoolName: {
     color: color.purple,
     fontStyle: 'italic'
+  },
+  body: {
+    margin: 10
   }
 };
 
@@ -88,7 +91,7 @@ class SchoolInfoConfirmationDialog extends Component {
     const {schoolName} = this.state;
     return (
       <Body>
-        <div>
+        <div style={styles.body}>
           <p style={styles.intro}>
             {i18n.schoolInfoDialogDescription()}
             <span style={styles.schoolName}>
@@ -98,6 +101,7 @@ class SchoolInfoConfirmationDialog extends Component {
         </div>
         <Button
           __useDeprecatedTag
+          style={styles.updateButton}
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
           onClick={this.handleClickUpdate}
