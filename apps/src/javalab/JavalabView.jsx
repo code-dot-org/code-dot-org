@@ -113,19 +113,19 @@ class JavalabView extends React.Component {
     return (
       <StudioAppWrapper>
         <div style={styles.javalab}>
+          <div style={styles.buttons}>
+            <JavalabButton
+              text={i18n.finish()}
+              onClick={onContinue}
+              style={styles.finish}
+            />
+            <JavalabSettings>{this.renderSettings()}</JavalabSettings>
+          </div>
           <div
             id="visualizationColumn"
             className="responsive"
             style={styles.instructionsAndPreview}
           >
-            <div style={styles.buttons}>
-              <JavalabSettings>{this.renderSettings()}</JavalabSettings>
-              <JavalabButton
-                text={i18n.continue()}
-                onClick={onContinue}
-                style={styles.continue}
-              />
-            </div>
             <TopInstructions
               mainStyle={styles.instructions}
               standalone
@@ -173,7 +173,7 @@ const styles = {
     marginRight: 15,
     color: color.black,
     right: '15px',
-    top: '15px'
+    top: '45px'
   },
   instructions: {
     width: '100%',
@@ -185,7 +185,8 @@ const styles = {
   editorAndConsole: {
     position: 'absolute',
     right: '15px',
-    marginLeft: '15px'
+    marginLeft: '15px',
+    top: '45px'
   },
   preview: {
     backgroundColor: color.light_gray,
@@ -194,7 +195,7 @@ const styles = {
   },
   javalab: {
     display: 'flex',
-    margin: 15
+    margin: '0 15px 6px 15px'
   },
   console: {
     marginTop: 15
@@ -204,11 +205,17 @@ const styles = {
   },
   buttons: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    flexDirection: 'row-reverse',
+    width: '100%'
   },
-  continue: {
+  finish: {
     backgroundColor: color.orange,
-    fontSize: 15
+    borderColor: color.orange,
+    fontFamily: '"Gotham 5r"',
+    fontSize: '15px',
+    padding: '1px 8px',
+    margin: '5px 0 5px 5px'
   }
 };
 
