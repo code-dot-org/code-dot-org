@@ -54,17 +54,7 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(wrapper.find('input').length).to.equal(0);
   });
 
-  it('updates visible, isStable, and pilotExperiment when publish state changed to pilot', () => {
-    const wrapper = shallow(
-      <CourseVersionPublishingEditor {...defaultProps} />
-    );
-
-    wrapper
-      .find('.publishedStateSelector')
-      .simulate('change', {target: {value: 'pilot'}});
-  });
-
-  it('updates visible, isStable, and pilotExperiment when publish state changed to beta', () => {
+  it('updates pilotExperiment when publish state changed to beta', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor {...defaultProps} />
     );
@@ -76,7 +66,7 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
 
-  it('updates visible, isStable, and pilotExperiment when publish state changed to preview', () => {
+  it('updates pilotExperiment when publish state changed to preview', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor {...defaultProps} />
     );
@@ -88,7 +78,7 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
 
-  it('updates visible, isStable, and pilotExperiment when publish state changed to recommended', () => {
+  it('updates pilotExperiment when publish state changed to recommended', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor {...defaultProps} />
     );
