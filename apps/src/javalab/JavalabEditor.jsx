@@ -6,7 +6,8 @@ import {
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   renameFile,
-  removeFile
+  removeFile,
+  setRenderedHeight
 } from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {
@@ -30,62 +31,27 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
+import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 
-const style = {
-  editor: {
-    width: '100%',
-    height: 400,
-    backgroundColor: color.white
-  },
-  darkBackground: {
-    backgroundColor: color.dark_slate_gray
-  },
-  fileMenuToggleButton: {
-    margin: '0, 0, 0, 4px',
-    padding: 0,
-    height: 20,
-    width: 13,
-    backgroundColor: 'transparent',
-    border: 'none',
-    ':hover': {
-      cursor: 'pointer',
-      boxShadow: 'none'
-    }
-  },
-  darkFileMenuToggleButton: {
-    color: color.white
-  },
-  fileTypeIcon: {
-    margin: 5
-  },
-  tabs: {
-    backgroundColor: color.background_gray,
-    marginBottom: 0,
-    display: 'flex',
-    alignItems: 'center'
-  },
-  backpackSection: {
-    textAlign: 'left',
-    display: 'inline-block',
-    float: 'left',
-    overflow: 'visible',
-    marginLeft: 3
-  }
-};
-
+const MIN_HEIGHT = 100;
+const MAX_HEIGHT = 500;
+// This is the height of the content between the top banner and the editor box
+const HEADER_OFFSET = 80;
 const Dialog = makeEnum(
   'RENAME_FILE',
   'DELETE_FILE',
   'CREATE_FILE',
   'COMMIT_FILES'
 );
+
 class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
     // populated by redux
+    setRenderedHeight: PropTypes.func.isRequired,
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
@@ -94,8 +60,13 @@ class JavalabEditor extends React.Component {
     sources: PropTypes.object,
     validation: PropTypes.object,
     isDarkMode: PropTypes.bool,
+    height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
     handleVersionHistory: PropTypes.func.isRequired
+  };
+
+  static defaultProps = {
+    height: 400
   };
 
   constructor(props) {
@@ -448,6 +419,33 @@ class JavalabEditor extends React.Component {
     });
   }
 
+  /**
+   * Returns the top Y coordinate of the instructions that are being resized
+   * via a call to handleHeightResize from HeightResizer.
+   */
+  getItemTop = () => {
+    return this.tabContainer.getBoundingClientRect().top + HEADER_OFFSET;
+  };
+
+  /**
+   * Returns the height of the container with the header incorporated.
+   */
+  getPosition = () => {
+    return this.props.height + HEADER_OFFSET;
+  };
+
+  /**
+   * Given a desired height, determines how much we can actually change the
+   * height (account for min/max) and changes the height to that.
+   * @param {number} desired height
+   */
+  handleHeightResize = desiredHeight => {
+    let newHeight = Math.max(MIN_HEIGHT, desiredHeight);
+    newHeight = Math.min(newHeight, MAX_HEIGHT);
+
+    this.props.setRenderedHeight(newHeight);
+  };
+
   onOpenCommitDialog() {
     // When the dialog opens, we will compile the user's files and notify them of success/errors.
     // For now, this is mocked out to successfully compile after a set amount of time.
@@ -488,7 +486,7 @@ class JavalabEditor extends React.Component {
       backgroundColor: '#F0F0F0'
     };
     return (
-      <div style={this.props.style}>
+      <div style={this.props.style} ref={ref => (this.tabContainer = ref)}>
         <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
@@ -499,7 +497,7 @@ class JavalabEditor extends React.Component {
             label={javalabMsg.newFile()}
             leftJustified
           />
-          <PaneSection style={style.backpackSection}>
+          <PaneSection style={styles.backpackSection}>
             <Backpack isDarkMode={isDarkMode} />
           </PaneSection>
           <PaneButton
@@ -527,7 +525,7 @@ class JavalabEditor extends React.Component {
           className={isDarkMode ? 'darkmode' : ''}
         >
           <div>
-            <Nav bsStyle="tabs" style={style.tabs}>
+            <Nav bsStyle="tabs" style={styles.tabs}>
               <JavalabFileExplorer
                 fileMetadata={fileMetadata}
                 onSelectFile={this.onOpenFile}
@@ -538,7 +536,7 @@ class JavalabEditor extends React.Component {
                   <NavItem eventKey={tabKey} key={`${tabKey}-tab`}>
                     {isEditingStartSources && (
                       <FontAwesome
-                        style={style.fileTypeIcon}
+                        style={styles.fileTypeIcon}
                         icon={
                           sources[fileMetadata[tabKey]].isVisible
                             ? 'eye'
@@ -550,7 +548,7 @@ class JavalabEditor extends React.Component {
                     )}
                     {!isEditingStartSources && (
                       <FontAwesome
-                        style={style.fileTypeIcon}
+                        style={styles.fileTypeIcon}
                         icon={'file-text'}
                       />
                     )}
@@ -560,9 +558,9 @@ class JavalabEditor extends React.Component {
                       ref={`${tabKey}-file-toggle`}
                       type="button"
                       style={{
-                        ...style.fileMenuToggleButton,
+                        ...styles.fileMenuToggleButton,
                         ...(this.props.isDarkMode &&
-                          style.darkFileMenuToggleButton),
+                          styles.darkFileMenuToggleButton),
                         ...(activeTabKey !== tabKey && {visibility: 'hidden'})
                       }}
                       onClick={e => this.toggleTabMenu(tabKey, e)}
@@ -579,21 +577,27 @@ class JavalabEditor extends React.Component {
                 );
               })}
             </Nav>
-            <Tab.Content animation={false}>
+            <Tab.Content id="tab-content" animation={false}>
               {orderedTabKeys.map(tabKey => {
                 return (
                   <Tab.Pane eventKey={tabKey} key={`${tabKey}-content`}>
                     <div
                       ref={el => (this._codeMirrors[tabKey] = el)}
                       style={{
-                        ...style.editor,
-                        ...(isDarkMode && style.darkBackground)
+                        ...styles.editor,
+                        ...(isDarkMode && styles.darkBackground),
+                        ...{height: this.props.height}
                       }}
                     />
                   </Tab.Pane>
                 );
               })}
             </Tab.Content>
+            <HeightResizer
+              resizeItemTop={this.getItemTop}
+              position={this.getPosition()}
+              onResize={this.handleHeightResize}
+            />
           </div>
         </Tab.Container>
         <div style={menuStyle}>
@@ -659,11 +663,56 @@ class JavalabEditor extends React.Component {
   }
 }
 
+const styles = {
+  editor: {
+    width: '100%',
+    maxHeight: MAX_HEIGHT,
+    minHeight: MIN_HEIGHT,
+    backgroundColor: color.white,
+    overflowY: 'scroll'
+  },
+  darkBackground: {
+    backgroundColor: color.dark_slate_gray
+  },
+  fileMenuToggleButton: {
+    margin: '0, 0, 0, 4px',
+    padding: 0,
+    height: 20,
+    width: 13,
+    backgroundColor: 'transparent',
+    border: 'none',
+    ':hover': {
+      cursor: 'pointer',
+      boxShadow: 'none'
+    }
+  },
+  darkFileMenuToggleButton: {
+    color: color.white
+  },
+  fileTypeIcon: {
+    margin: 5
+  },
+  tabs: {
+    backgroundColor: color.background_gray,
+    marginBottom: 0,
+    display: 'flex',
+    alignItems: 'center'
+  },
+  backpackSection: {
+    textAlign: 'left',
+    display: 'inline-block',
+    float: 'left',
+    overflow: 'visible',
+    marginLeft: 3
+  }
+};
+
 export default connect(
   state => ({
     sources: state.javalab.sources,
     validation: state.javalab.validation,
     isDarkMode: state.javalab.isDarkMode,
+    height: state.javalab.renderedEditorHeight,
     isEditingStartSources: state.pageConstants.isEditingStartSources
   }),
   dispatch => ({
@@ -674,6 +723,7 @@ export default connect(
       dispatch(sourceValidationUpdated(filename, isValidation)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
-    removeFile: filename => dispatch(removeFile(filename))
+    removeFile: filename => dispatch(removeFile(filename)),
+    setRenderedHeight: height => dispatch(setRenderedHeight(height))
   })
 )(Radium(JavalabEditor));
