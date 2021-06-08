@@ -1,18 +1,35 @@
 name 'OPD-K5 Stage3Start_copy_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Overview: Sequencing
+# Introduction to Sequencing 
 
 <img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 In the levels that follow, you will learn about a coding concept through unplugged lessons as well as online puzzles. In order to complete a puzzle, you'll need to write code using Blockly code blocks. You will also learn about a key teaching practice.
 
-## Coding concept: Sequencing
-- You will be able to define "algorithm" and "program"
+## CS Concepts
 
-## Teaching practice: Using lesson plans
-- You will understand the importance of utilizing unplugged and plugged lesson plans
-- You will get the chance to see and practice with Lesson Implementation Planning Guides
+**Sequencing** describes the process of ordering steps in a linear manner.
+
+**Algorithms** are lists of steps to complete a task. Programs are algorithms written as code for a computer to execute.
+
+
+## Built-in Features
+
+The video, "Maze Intro:  Programming with Block (Course A-B)," introduces the built-in features students will use during lessons.
+
+## Concept Progression
+
+Click "Continue" to go through some lessons focused on sequencing in Courses A through E.  As you move from one level to the next, begin to notice the concept progression for sequencing and how it builds from one course to the next. 
+
+* Course A - Lesson 4:  Sequencing with Scrat
+* Course B - Lesson 3:  Sequencing with Angry Birds
+* Course C - Lesson 5:  Debugging in Maze
+* Course D - Lesson 2:  Introduction to Online Puzzles
+* Course E - Lesson 1:  Sequencing in the Maze
+
+
+
 
 
 MARKDOWN

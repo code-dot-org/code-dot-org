@@ -40,16 +40,8 @@ lesson_group 'k5_basic_concepts_1', display_name: 'Part II:  CS Concepts in Cour
 lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
 level 'OPD-K5 IntroToConcepts_2021'
 level 'OPD-K5 Stage3Start_copy_2021'
-level 'OPD-K5 sequencing introduced_2021'
-level 'OPD-K5 Stage3aGo_copy_2021'
-level 'OPD-K5 FirstProgram_2021'
 level 'courseA_maze_seq5_2021'
-level 'courseA_maze_seq6_2021'
-level 'courseA_maze_seq7_2021'
-level 'courseA_maze_seq8_2021'
-level 'courseA_maze_seq10_2021', challenge: true
-level 'OPD-K5 using lesson plans_2021'
-level 'OPD-K5 lesson implementation planning_2021'
+level 'OPD-K5 sequencing introduced_2021'
 level 'OPD-K5 sequencing free response_2021'
 
 lesson 'Sprite Lab', display_name: 'Sprite Lab', has_lesson_plan: false
