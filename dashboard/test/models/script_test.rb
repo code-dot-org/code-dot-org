@@ -809,6 +809,26 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.find_by_name('ECSPD').professional_learning_course?
   end
 
+  test 'script with pilot experiment has pilot published state' do
+    script = create(:script, name: 'single-lesson-script', pilot_experiment: 'my-experiment')
+    assert_equal 'pilot', script.published_state
+  end
+
+  test 'script with hidden true has beta published state' do
+    script = create(:script, name: 'single-lesson-script', hidden: true)
+    assert_equal 'beta', script.published_state
+  end
+
+  test 'script with hidden false has preview published state' do
+    script = create(:script, name: 'single-lesson-script', hidden: false)
+    assert_equal 'preview', script.published_state
+  end
+
+  test 'script with hidden false and is_stable true has recommended published state' do
+    script = create(:script, name: 'single-lesson-script', hidden: false, is_stable: true)
+    assert_equal 'recommended', script.published_state
+  end
+
   test 'should summarize script' do
     script = create(:script, name: 'single-lesson-script')
     lesson_group = create(:lesson_group, key: 'key1', script: script)
