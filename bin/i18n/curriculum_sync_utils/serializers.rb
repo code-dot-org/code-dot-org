@@ -62,12 +62,17 @@ module CurriculumSyncUtils
 
     # override
     def crowdin_key
-      object.url
+      Services::GloballyUniqueIdentifiers.build_resource_key(object)
     end
   end
 
   class VocabularyCrowdinSerializer < CrowdinSerializer
     attributes :word, :definition
+
+    # override
+    def crowdin_key
+      Services::GloballyUniqueIdentifiers.build_vocab_key(object)
+    end
   end
 
   class ObjectiveCrowdinSerializer < CrowdinSerializer
