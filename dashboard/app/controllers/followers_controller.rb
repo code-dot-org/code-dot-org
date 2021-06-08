@@ -108,15 +108,15 @@ class FollowersController < ApplicationController
       FirehoseClient.instance.put_record(
         :analysis,
         {
-            study: 'section capacity restriction',
-            event: (current_user.id == @section.user_id ? 'Section owner attempted to add a student to a full section' : 'Student attempted to join a full section').to_s,
-            data_json: {
-                section_id: @section.id,
-                section_code: @section.code,
-                date: "#{Time.now.month}/#{Time.now.day}/#{Time.now.year} at #{Time.now.hour}:#{Time.now.min}",
-                joiner_id: current_user.id,
-                section_teacher_id: @section.user_id
-            }.to_json
+          study: 'section capacity restriction',
+          event: (current_user.id == @section.user_id ? 'Section owner attempted to add a student to a full section' : 'Student attempted to join a full section').to_s,
+          data_json: {
+            section_id: @section.id,
+            section_code: @section.code,
+            date: "#{Time.now.month}/#{Time.now.day}/#{Time.now.year} at #{Time.now.hour}:#{Time.now.min}",
+            joiner_id: current_user.id,
+            section_teacher_id: @section.user_id
+          }.to_json
         }
       )
 
