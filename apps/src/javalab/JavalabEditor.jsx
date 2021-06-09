@@ -36,7 +36,7 @@ import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 
 const MIN_HEIGHT = 100;
-const MAX_HEIGHT = 500;
+const MAX_HEIGHT = window.innerHeight * 0.6;
 // This is the height of the content between the top banner and the editor box
 const HEADER_OFFSET = 80;
 const Dialog = makeEnum(
@@ -668,8 +668,7 @@ const styles = {
     width: '100%',
     maxHeight: MAX_HEIGHT,
     minHeight: MIN_HEIGHT,
-    backgroundColor: color.white,
-    overflowY: 'scroll'
+    backgroundColor: color.white
   },
   darkBackground: {
     backgroundColor: color.dark_slate_gray
