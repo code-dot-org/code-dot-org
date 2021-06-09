@@ -3,11 +3,27 @@ skip_dialog true
 markdown <<MARKDOWN
 # Part II: CS Concepts in Courses A - F
 
-Welcome to Part II of "Implementing and Teaching Computer Science Fundamentals!"
+Welcome to Part II of this course, "Implementing and Teaching Computer Science Fundamentals!"  Part II focuses on the computer science concepts and skills students will learn in courses A - F.  Reflection prompts are provided at the end of each lesson to help you think about how to best incorporate CS teaching and student practices to support your students with learning computer science.
 
-Each lesson in Part II focuses on the computer science concepts and skills students will learn in courses A - F (grades K - 5) and provides opportunities for reflection about CS teaching practices to support your students with learning computer science.  
+In each lesson of Part II you will find:
 
-Some lessons in Part II will take you through "concept progressions" to experience how a CS concept unfolds within the curriculum from Course A to Course E.  The goal of concept progressions is to provide the big picture of how students learn about computer science concepts and develop skills over time with Computer Science Fundamentals courses.
+* CS Concepts
+* Learning Platform Features
+* Concept Progressions
+
+## CS Concepts
+
+"CS Concepts" include key vocabulary and definitions about the CS concept introduced within the lessons in this course.
+
+## Learning Platform Features
+
+Students use Code.org's learning platform as they learn to program.  The learning platform is made up of built-in features that include buttons, drag and drop blocks for coding, and visuals for students to run and see their code in action.  The same videos that introduce students to concepts and walk students through using built-in features are included in this section.
+
+
+## Concept Progressions
+
+"Concept progressions" are included in this section to help you experience how a CS concept unfolds within either a single course or across Course A to Course E.  The goal of concept progressions is to provide the big picture of how students learn computer science concepts and develop skills over time with Computer Science Fundamentals courses.
+
 
 ## Part II Course Outline
 
@@ -74,9 +90,5 @@ After completing Lesson 13 you will be able to:
 * Continue to use built-in tools to use for loops 
 * Identify skills students will practice when learning about for loops
 
-
-
-
-
-
+Click here to access Part III: Next Steps.
 MARKDOWN

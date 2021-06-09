@@ -23310,7 +23310,7 @@ en:
         self-paced-pl-csd2-2021:
           lessons:
             lesson-4:
-              name: Getting to Know the Site
+              name: Code.org Learning Platform
               description_student: 
               description_teacher: 
             lesson-5:
@@ -23320,7 +23320,9 @@ en:
             lesson-6:
               name: Tracking Student Progress and Providing Feedback
             lesson-3:
-              name: Navigating to Lesson Plans and Lesson Recources
+              name: Lesson Plans and Resources
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: Lesson Plan Structure
             lesson-8:
@@ -23333,11 +23335,11 @@ en:
               name: Report a Problem
           lesson_groups:
             lessonGroup-2:
-              display_name: Getting Started with the Code.org Learning Platform
+              display_name: Navigating the Code.org Learning Platform
             lessonGroup-3:
-              display_name: Finding and Using Lesson Plans
+              display_name: Navigating Lesson Plans and Resources
             lessonGroup-4:
-              display_name: Accessing Additional Support
+              display_name: Navigating Support
           name: self-paced-pl-csd2-2021
           title: Navigating Code.org
           description_audience: ''
@@ -23358,13 +23360,21 @@ en:
           title: Guidance for Teaching CS Discoveries
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |-
+            Short unit description
+
+            **You will:**
+            * Objective 1
+            * Objective 2
+            * Objective 3
+
+            **Suggested Time:** 1 hour
         self-paced-pl-csd5-2021:
           lessons:
             lesson-1:
-              name: Problem Solving and Computing
+              name: 'Lesson 1: Problem Solving and Computing'
               description_student: 
-              description_teacher: Students learn the problem-solving process, the input-output-store-process model of a computer, and how computers help humans solve problems. Students end the unit by proposing their own app to solve a problem.
+              description_teacher: 
             lesson-2:
               name: Web Development
               description_student: 
@@ -23411,19 +23421,111 @@ en:
             lessonGroup-8:
               display_name: 'Preparing to Teach Unit 7 '
               description: 'Students learn how machine learning can be used to solve problems by preparing data, training a machine model, the testing the model for accuracy and bias. Students use Code.org''s AI Lab environment to train machine learning models, then import their models into App Lab to create apps that solve problems. '
+            lessonGroup-9:
+              display_name: Preparing to Teach Unit 1
           name: self-paced-pl-csd5-2021
           title: Preparing to Teach CS Discoveries
           description_audience: ''
           description_short: ''
-          description: "This unit is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** One hour per unit \n"
+          description: "This unit is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 1 hour per unit \n"
         self-paced-pl-csd6-2021:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Intorduction to Unit 1
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Preparing to Teach Week 1
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Unit 1 Key Concepts
+            lesson-4:
+              name: Sample Student Work
+            lesson-5:
+              name: Unit 1 Projects
+            lesson-6:
+              name: Introduction to Unit 2
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: 'Preparing to Teach Week 1 '
+            lesson-8:
+              name: Unit 2 Key Concepts
+            lesson-9:
+              name: Sample Student Work
+            lesson-10:
+              name: Unit 1 Projects
+            lesson-11:
+              name: Introduction to Unit 3
+            lesson-12:
+              name: Preparing to teach week 1 of Unit 3
+            lesson-13:
+              name: Uni 3 Key Concepts
+            lesson-14:
+              name: Sample Student Work
+            lesson-15:
+              name: Unit 3 Projects
+            lesson-16:
+              name: 'Introduction to Unit 4: The Design Process'
+            lesson-17:
+              name: Preparing to teach week 1 of Unit 4
+            lesson-18:
+              name: Unit 4 Key Concepts
+            lesson-19:
+              name: Sample Student Work
+            lesson-20:
+              name: Unit 4 Projects
+            lesson-21:
+              name: 'Introduction to Unit 5: Data and Society'
+            lesson-22:
+              name: Preparing to Teach Week 1
+            lesson-23:
+              name: Unit 5 Key Concepts
+            lesson-24:
+              name: Sample Student Work
+            lesson-25:
+              name: Unit 5 Projects
+            lesson-26:
+              name: Introduction to Unit 6
+            lesson-27:
+              name: Preparing to Teach Unit 6
+            lesson-28:
+              name: Unit 6 Key Concepts
+            lesson-29:
+              name: Sample Student Work
+            lesson-30:
+              name: Unit 6 Projects
+            lesson-31:
+              name: Introduction to Unit 7
+            lesson-32:
+              name: Preparing to teach week 1
+            lesson-33:
+              name: Unit 7 key concepts
+            lesson-34:
+              name: Sample student work
+            lesson-35:
+              name: Unit 1 Projects
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Preparing to Teach Unit 1: Problem Solving and Computing'
+            lessonGroup-3:
+              display_name: 'Unit 2: Web Development'
+            lessonGroup-4:
+              display_name: Content
+            lessonGroup-5:
+              display_name: Content
+            lessonGroup-6:
+              display_name: Content
+            lessonGroup-7:
+              display_name: Content
+            lessonGroup-8:
+              display_name: Content
           name: self-paced-pl-csd6-2021
           title: Next Steps
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "Short unit description \n\n**You will:**\n* Objective 1\n* Objective 2\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csd7-2021:
           lessons: {}
           lesson_groups: {}
