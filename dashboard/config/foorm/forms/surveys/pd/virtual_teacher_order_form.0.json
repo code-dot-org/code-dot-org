@@ -117,91 +117,91 @@
             },
             {
               "value": "item3",
-              "text": "Arizona Science Center"
+              "text": "Allegheny Intermediate Unit 3"
             },
             {
               "value": "item4",
-              "text": "Silicon Valley Education Foundation"
+              "text": "Arizona Science Center"
             },
             {
               "value": "item5",
-              "text": "Broward County Public Schools"
+              "text": "AVID"
             },
             {
               "value": "item6",
-              "text": "USC Viterbi School of Engineering"
+              "text": "Battelle Education"
             },
             {
               "value": "item7",
-              "text": "Fresno County Superintendent of Schools"
+              "text": "Broward County Public Schools"
             },
             {
               "value": "item8",
-              "text": "mindSpark Learning (Colorado)"
+              "text": "CodeVA"
             },
             {
               "value": "item9",
-              "text": "Sacred Heart University"
-            },
-            {
-              "value": "item10",
               "text": "Contra Costa County Office of Education"
             },
             {
+              "value": "item10",
+              "text": "CSforMA"
+            },
+            {
               "value": "item11",
-              "text": "Institute for School Partnership Washington University in St. Louis"
+              "text": "Delaware County Intermediate Unit"
             },
             {
               "value": "item12",
-              "text": "Mouse"
+              "text": "Educate Maine and the Maine Mathematics and Science Alliance"
             },
             {
               "value": "item13",
-              "text": "Georgia Tech Center for Education Integrating Science, Mathematics, and Computing"
+              "text": "EduTech"
             },
             {
               "value": "item14",
-              "text": "STEMworks"
+              "text": "Florida International University"
             },
             {
               "value": "item15",
-              "text": "Idaho Digital Learning Alliance"
+              "text": "Fresno County Superintendent of Schools"
             },
             {
               "value": "item16",
-              "text": "Learning Technology Center"
+              "text": "Georgia Tech Center for Education Integrating Science, Mathematics, and Computing"
             },
             {
               "value": "item17",
-              "text": "Nextech"
+              "text": "Grand Valley State University"
             },
             {
               "value": "item18",
-              "text": "Riverside County Office of Education"
+              "text": "Idaho Digital Learning Alliance"
             },
             {
               "value": "item19",
-              "text": "New Bohemian Innovation Collaborative (NewBoCo)"
+              "text": "Institute for School Parntership Washington University in St. Louis"
             },
             {
               "value": "item20",
-              "text": "Science City at Union Station"
-            },
-            {
-              "value": "item21",
               "text": "Kentucky Science and Technology Corporation"
             },
             {
+              "value": "item21",
+              "text": "KIPP"
+            },
+            {
               "value": "item22",
-              "text": "Los Angeles Unified School District"
+              "text": "Learning Technology Center"
             },
             {
               "value": "item23",
-              "text": "McNeese State University"
+              "text": "Los Angeles Unified School District"
             },
             {
               "value": "item24",
-              "text": "Educate Maine and the Maine Mathematics and Science Alliance"
+              "text": "Marquette University"
             },
             {
               "value": "item25",
@@ -209,95 +209,95 @@
             },
             {
               "value": "item26",
-              "text": "CSforMA"
+              "text": "mindSpark Learning"
             },
             {
               "value": "item27",
-              "text": "Florida International University"
-            },
-            {
-              "value": "item28",
-              "text": "Grand Valley State University"
-            },
-            {
-              "value": "item29",
-              "text": "Twin Cities Public Television"
-            },
-            {
-              "value": "item30",
               "text": "Mississippi State University"
             },
             {
-              "value": "item31",
-              "text": "AVID (MT)"
+              "value": "item28",
+              "text": "Mouse"
             },
             {
-              "value": "item32",
-              "text": "KIPP (Knowledge is Power Program)"
+              "value": "item29",
+              "text": "New Bohemian Innovation Collaborative"
             },
             {
-              "value": "item33",
-              "text": "University of Nebraska"
-            },
-            {
-              "value": "item34",
-              "text": "Southern Nevada Regional Professional Development Program"
-            },
-            {
-              "value": "item35",
-              "text": "TCNJ Center for Excellence in STEM Education"
-            },
-            {
-              "value": "item36",
+              "value": "item30",
               "text": "New Mexico CS Alliance"
             },
             {
-              "value": "item37",
-              "text": "The Friday Institute"
+              "value": "item31",
+              "text": "Nextech"
             },
             {
-              "value": "item38",
-              "text": "EduTech"
+              "value": "item32",
+              "text": "Oklahoma Public Resource Center"
             },
             {
-              "value": "item39",
-              "text": "University of North Florida & STEM2 Hub"
-            },
-            {
-              "value": "item40",
-              "text": "The University of Texas at Austin"
-            },
-            {
-              "value": "item41",
-              "text": "Battelle Education"
-            },
-            {
-              "value": "item42",
-              "text": "Oklahoma Public School Resource Center (OPSRC)"
-            },
-            {
-              "value": "item43",
-              "text": "AVID (OR)"
-            },
-            {
-              "value": "item44",
+              "value": "item33",
               "text": "Orlando Science Center"
             },
             {
+              "value": "item34",
+              "text": "Rice University School Mathematics Project"
+            },
+            {
+              "value": "item35",
+              "text": "Riverside County Office of Education"
+            },
+            {
+              "value": "item36",
+              "text": "Sacramento County Office of Education"
+            },
+            {
+              "value": "item37",
+              "text": "Sacred Heart University"
+            },
+            {
+              "value": "item38",
+              "text": "Science City at Union Station"
+            },
+            {
+              "value": "item39",
+              "text": "Southern Nevada Regional Professional Development Program"
+            },
+            {
+              "value": "item40",
+              "text": "STEMworks"
+            },
+            {
+              "value": "item41",
+              "text": "Tampa Bay STEM Network"
+            },
+            {
+              "value": "item42",
+              "text": "TCNJ Center for Excellence in STEM Education"
+            },
+            {
+              "value": "item43",
+              "text": "Technology & Innovation in Education (SD)"
+            },
+            {
+              "value": "item44",
+              "text": "Tennessee STEM Innovation Network"
+            },
+            {
               "value": "item45",
-              "text": "Delaware County Intermediate Unit"
+              "text": "The Friday Institute"
             },
             {
               "value": "item46",
-              "text": "Allegheny Intermediate Unit 3"
+              "text": "The STEM Center for Excellence at the Citadel"
             },
             {
               "value": "item47",
-              "text": "University of Rhode Island"
+              "text": "The University of Texas at Austin"
             },
             {
               "value": "item48",
-              "text": "Sacramento County Office of Education"
+              "text": "Twin Cities Public Television"
             },
             {
               "value": "item49",
@@ -305,47 +305,27 @@
             },
             {
               "value": "item50",
-              "text": "The STEM Center of Excellence at the Citadel"
+              "text": "University of Nebraska"
+            },
+            {
+              "value": "item51",
+              "text": "University of North Florida & STEM2 Hub"
             },
             {
               "value": "item52",
-              "text": "Rice University School Mathematics Project"
+              "text": "University of Rhode Island"
             },
             {
               "value": "item53",
-              "text": "Tampa Bay STEM Network"
+              "text": "University of Wyoming"
             },
             {
               "value": "item54",
-              "text": "Tennessee STEM Innovation Network"
+              "text": "USC Viterbi School of Engineering"
             },
             {
               "value": "item55",
-              "text": "mindSpark Learning (Utah)"
-            },
-            {
-              "value": "item56",
-              "text": "Vermont Computer Science Alliance"
-            },
-            {
-              "value": "item57",
-              "text": "CodeVA"
-            },
-            {
-              "value": "item58",
-              "text": "AVID (WA)"
-            },
-            {
-              "value": "item59",
               "text": "West Virginia University"
-            },
-            {
-              "value": "item60",
-              "text": "Marquette University"
-            },
-            {
-              "value": "item61",
-              "text": "University of Wyoming"
             }
           ],
           "choicesOrder": "asc"
