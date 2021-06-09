@@ -8,13 +8,15 @@ const SOURCE_VALIDATION_UPDATED = 'javalab/SOURCE_VALIDATION_UPDATED';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
 const SET_ALL_VALIDATION = 'javalab/SET_ALL_VALIDATION';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
+const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 
 const initialState = {
   consoleLogs: [],
   sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
   isDarkMode: false,
-  validation: {}
+  validation: {},
+  renderedEditorHeight: 400
 };
 
 // Action Creators
@@ -107,6 +109,11 @@ export const getValidation = state => {
   return validation;
 };
 
+export const setRenderedHeight = height => ({
+  type: EDITOR_HEIGHT_UPDATED,
+  height
+});
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -182,6 +189,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isDarkMode: action.isDarkMode
+    };
+  }
+  if (action.type === EDITOR_HEIGHT_UPDATED) {
+    return {
+      ...state,
+      renderedEditorHeight: action.height
     };
   }
   return state;

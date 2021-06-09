@@ -131,6 +131,21 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       }, status: :bad_request
       return
     end
+    # add_student returns 'full' when @section has or will have 500 followers
+    if result == 'full'
+      render json: {
+        result: 'section_full'
+      }, status: :forbidden
+      return
+    end
+    # add_student returns 'full' when @section has or will have 500 followers
+    if result == 'full'
+      render json: {
+        result: 'section_full',
+        sectionCapacity: @section.capacity
+      }, status: :forbidden
+      return
+    end
     # add_student returns 'restricted' when @section is flagged to restrict access
     if result == 'restricted'
       render json: {

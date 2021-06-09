@@ -79,6 +79,7 @@ export default class JavabuilderConnection {
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
+      case WebSocketMessageType.THEATER:
         this.miniApp.handleSignal(data);
         break;
       case WebSocketMessageType.EXCEPTION:
@@ -91,7 +92,6 @@ export default class JavabuilderConnection {
         }
         break;
       default:
-        console.log(data);
         break;
     }
   }
