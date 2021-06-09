@@ -21,7 +21,8 @@ export const PrintLoginCardsButtonMetricsCategory = {
 // Response from server after adding a new student to the section.
 export const AddStatus = {
   SUCCESS: 'success',
-  FAIL: 'fail'
+  FAIL: 'fail',
+  FULL: 'full'
 };
 
 // Types of rows in studentData/editingData
@@ -38,6 +39,7 @@ export const RowType = {
 export const TransferStatus = {
   SUCCESS: 'success',
   FAIL: 'fail',
+  FULL: 'full',
   PENDING: 'pending'
 };
 
@@ -147,6 +149,7 @@ const START_SAVING_STUDENT = 'manageStudents/START_SAVING_STUDENT';
 const SAVE_STUDENT_SUCCESS = 'manageStudents/SAVE_STUDENT_SUCCESS';
 const ADD_STUDENT_SUCCESS = 'manageStudents/ADD_STUDENT_SUCCESS';
 const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
+const ADD_STUDENT_FULL = 'manageStudents/ADD_STUDENT_FULL';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
 const SET_SHOW_SHARING_COLUMN = 'manageStudents/SET_SHOW_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
@@ -157,6 +160,7 @@ const CANCEL_STUDENT_TRANSFER = 'manageStudents/CANCEL_STUDENT_TRANSFER';
 const TRANSFER_STUDENTS_SUCCESS = 'manageStudents/TRANSFER_STUDENTS_SUCCESS';
 const TRANSFER_STUDENTS_FAILURE = 'manageStudents/TRANSFER_STUDENTS_FAILURE';
 const TRANSFER_STUDENTS_PENDING = 'manageStudents/TRANSFER_STUDENTS_PENDING';
+const TRANSFER_STUDENTS_FULL = 'manageStudents/TRANSFER_STUDENTS_FULL';
 const START_LOADING_STUDENTS = 'manageStudents/START_LOADING_STUDENTS';
 const FINISH_LOADING_STUDENTS = 'manageStudents/FINISH_LOADING_STUDENTS';
 
@@ -233,6 +237,17 @@ export const transferStudentsFailure = error => ({
 export const transferStudentsPending = () => ({
   type: TRANSFER_STUDENTS_PENDING
 });
+export const transferStudentsFull = (
+  {sectionCapacity, numStudents, sectionCode, sectionStudentCount},
+  copy
+) => ({
+  type: TRANSFER_STUDENTS_FULL,
+  sectionCapacity,
+  numStudents,
+  sectionStudentCount,
+  sectionCode,
+  verb: copy ? 'copy' : 'move'
+});
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => ({
   type: ADD_STUDENT_SUCCESS,
   numStudents,
@@ -243,6 +258,17 @@ export const addStudentsFailure = (numStudents, error, studentIds) => ({
   type: ADD_STUDENT_FAILURE,
   numStudents,
   error,
+  studentIds
+});
+export const addStudentsFull = (
+  {sectionCapacity, numStudents, sectionCode, sectionStudentCount},
+  studentIds
+) => ({
+  type: ADD_STUDENT_FULL,
+  sectionCapacity,
+  numStudents,
+  sectionStudentCount,
+  sectionCode,
   studentIds
 });
 export const addMultipleRows = studentData => ({
@@ -330,7 +356,10 @@ export const addStudents = studentIds => {
       studentIds.includes(student.id)
     );
     addStudentOnServer(filteredData, sectionId, (error, data) => {
-      if (error) {
+      if (error && data && data.result === AddStatus.FULL) {
+        // studentIds required to allow for repeat bulk_add attempts
+        dispatch(addStudentsFull(data, studentIds));
+      } else if (error) {
         dispatch(addStudentsFailure(numStudentsToAdd, error, studentIds));
         console.error(error);
       } else {
@@ -399,8 +428,10 @@ export const transferStudents = onComplete => {
       newSectionCode,
       copyStudents,
       (error, data) => {
-        if (error) {
-          console.error(error);
+        if (error && data && data.result === TransferStatus.FULL) {
+          dispatch(transferStudentsFull(data, copyStudents));
+          onComplete();
+        } else if (error) {
           dispatch(transferStudentsFailure((data && data.error) || error));
         } else {
           if (!copyStudents || !otherTeacher) {
@@ -552,6 +583,30 @@ export default function manageStudents(state = initialState, action) {
     let newState = {
       ...state,
       addStatus: {status: AddStatus.FAIL, numStudents: action.numStudents}
+    };
+    for (let i = 0; i < action.studentIds.length; i++) {
+      newState.studentData[action.studentIds[i]] = {
+        ...state.studentData[action.studentIds[i]],
+        isSaving: false
+      };
+      newState.editingData[action.studentIds[i]] = {
+        ...state.editingData[action.studentIds[i]],
+        isSaving: false
+      };
+    }
+    return newState;
+  }
+  if (action.type === ADD_STUDENT_FULL) {
+    let newState = {
+      ...state,
+      addStatus: {
+        ...state.addStatus,
+        status: AddStatus.FULL,
+        numStudents: action.numStudents,
+        sectionCapacity: action.sectionCapacity,
+        sectionCode: action.sectionCode,
+        sectionStudentCount: action.sectionStudentCount
+      }
     };
     for (let i = 0; i < action.studentIds.length; i++) {
       newState.studentData[action.studentIds[i]] = {
@@ -729,6 +784,20 @@ export default function manageStudents(state = initialState, action) {
       }
     };
   }
+  if (action.type === TRANSFER_STUDENTS_FULL) {
+    return {
+      ...state,
+      transferStatus: {
+        ...state.transferStatus,
+        status: TransferStatus.FULL,
+        sectionCapacity: action.sectionCapacity,
+        numStudents: action.numStudents,
+        sectionCode: action.sectionCode,
+        sectionStudentCount: action.sectionStudentCount,
+        verb: action.verb
+      }
+    };
+  }
   if (action.type === TRANSFER_STUDENTS_FAILURE) {
     return {
       ...state,
@@ -860,7 +929,7 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
       onComplete(null, data);
     })
     .fail((jqXhr, status) => {
-      onComplete(status, null);
+      onComplete(status, jqXhr.responseJSON || null);
     });
 };
 
