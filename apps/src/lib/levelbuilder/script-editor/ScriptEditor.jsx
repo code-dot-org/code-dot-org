@@ -247,7 +247,7 @@ class ScriptEditor extends React.Component {
       });
       return;
     } else if (
-      this.state.publishedState === PublishedState.PILOT &&
+      this.state.publishedState === PublishedState.pilot &&
       this.state.pilotExperiment === ''
     ) {
       this.setState({

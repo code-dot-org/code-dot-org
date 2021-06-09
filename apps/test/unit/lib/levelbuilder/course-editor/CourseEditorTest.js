@@ -317,7 +317,7 @@ describe('CourseEditor', () => {
 
       const courseEditor = wrapper.find('CourseEditor');
       courseEditor.setState({
-        publishedState: PublishedState.PILOT,
+        publishedState: PublishedState.pilot,
         pilotExperiment: ''
       });
 

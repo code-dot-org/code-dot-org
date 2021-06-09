@@ -123,7 +123,7 @@ class CourseEditor extends Component {
     }
 
     if (
-      this.state.publishedState === PublishedState.PILOT &&
+      this.state.publishedState === PublishedState.pilot &&
       this.state.pilotExperiment === ''
     ) {
       this.setState({
