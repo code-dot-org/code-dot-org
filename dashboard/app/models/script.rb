@@ -217,7 +217,6 @@ class Script < ApplicationRecord
     include_student_lesson_plans
     is_migrated
     seeded_from
-    published_state
   )
 
   def self.twenty_hour_script
