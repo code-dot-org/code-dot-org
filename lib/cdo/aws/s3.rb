@@ -209,6 +209,22 @@ module AWS
       end
     end
 
+    # Finds all objects with a given extension in the given bucket
+    # @param bucket [String] The S3 bucket name.
+    # @param ext [String] An extension to search for.
+    # @param prefix [String] An optional prefix to filter objects by.
+    def self.find_objects_with_ext(bucket, ext, prefix)
+      object_keys = []
+      # list_objects is paginated and each response is up to 1000 objects
+      create_client.list_objects_v2(bucket: bucket, prefix: prefix).each do |response|
+        object_keys.concat(
+          response.contents.map(&:key).
+            filter {|key| key.ends_with?(ext)}
+        )
+      end
+      object_keys
+    end
+
     # Processes an S3 file, requires a block to be executed after the data has
     # been downloaded to the temporary file (passed as argument to the block).
     # The block will not be called if the exact version of the S3 object has
