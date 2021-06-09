@@ -1434,20 +1434,20 @@ class Script < ApplicationRecord
   # A script that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    ['preview', 'stable'].include?(get_published_state)
+    [PUBLISHED_STATE.preview, PUBLISHED_STATE.stable].include?(get_published_state)
   end
 
   def get_published_state
     if pilot?
-      'pilot'
+      PUBLISHED_STATE.pilot
     elsif !hidden
       if is_stable
-        'stable'
+        PUBLISHED_STATE.stable
       else
-        'preview'
+        PUBLISHED_STATE.preview
       end
     else
-      'beta'
+      PUBLISHED_STATE.beta
     end
   end
 

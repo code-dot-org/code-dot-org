@@ -295,7 +295,7 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {
       course_name: 'course',
       scripts: ['unit1', 'unit2'],
-      published_state: 'stable'
+      published_state: PUBLISHED_STATE.stable
     }
     course.reload
     unit1.reload
@@ -355,7 +355,7 @@ class CoursesControllerTest < ActionController::TestCase
       version_year: '2019',
       family_name: 'csp',
       has_verified_resources: 'on',
-      published_state: 'stable'
+      published_state: PUBLISHED_STATE.stable
     }
     unit_group.reload
 
@@ -376,7 +376,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     post :update, params: {
       course_name: unit_group.name,
-      published_state: 'stable'
+      published_state: PUBLISHED_STATE.stable
     }
     unit_group.reload
 
@@ -394,7 +394,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     post :update, params: {
       course_name: unit_group.name,
-      published_state: 'preview'
+      published_state: PUBLISHED_STATE.preview
     }
     unit_group.reload
 
@@ -412,7 +412,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     post :update, params: {
       course_name: unit_group.name,
-      published_state: 'beta'
+      published_state: PUBLISHED_STATE.beta
     }
     unit_group.reload
 
@@ -430,7 +430,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     post :update, params: {
       course_name: unit_group.name,
-      published_state: 'pilot',
+      published_state: PUBLISHED_STATE.pilot,
       pilot_experiment: 'my-pilot'
     }
     unit_group.reload
