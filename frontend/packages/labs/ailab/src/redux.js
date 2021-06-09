@@ -1,15 +1,7 @@
 import {
-  datasetUploaded,
-  uniqueColumnNames,
-  noEmptyCells,
-  emptyCellFinder,
-  minOneFeatureSelected,
-  oneLabelSelected,
   uniqLabelFeaturesSelected,
-  selectedColumnsHaveDatatype,
-  numericalColumnsHaveOnlyNumbers,
-  namedModel
-} from "./validate.js";
+  prevNextButtons
+} from "./navigationValidation.js";
 
 import {
   ColumnTypes,
@@ -1001,84 +993,6 @@ export function getSummaryStat(state) {
   return summaryStat;
 }
 
-export function validationMessages(state) {
-  const validationMessages = {};
-  validationMessages["notEnoughData"] = {
-    panel: "dataDisplay",
-    readyToTrain: datasetUploaded(state),
-    errorString: "There is not enough data to train a model.",
-    successString: `There are ${state.data.length} rows of data.`
-  };
-  validationMessages["columnNames"] = {
-    panel: "dataDisplay",
-    readyToTrain: uniqueColumnNames(state),
-    errorString:
-      "Each column must have a name, and column names must be unique.",
-    successString: "Each column has a unique name."
-  };
-  validationMessages["emptyCells"] = {
-    panel: "dataDisplay",
-    readyToTrain: noEmptyCells(state),
-    errorString: "There can't be any empty cells.",
-    successString: "Each cell has a value!"
-  };
-  validationMessages["selectLabel"] = {
-    panel: "selectFeatures",
-    readyToTrain: oneLabelSelected(state),
-    errorString: "Please designate one column as the label column.",
-    successString: "Label column has been selected."
-  };
-  validationMessages["selectFeatures"] = {
-    panel: "selectFeatures",
-    readyToTrain: minOneFeatureSelected(state),
-    errorString: "Please select at least one feature to train.",
-    successString: "At least one feature is selected."
-  };
-  validationMessages["columnUsage"] = {
-    panel: "selectFeatures",
-    readyToTrain: uniqLabelFeaturesSelected(state),
-    errorString:
-      "A column can not be selected as a both a feature and a label.",
-    successString: "Label and feature(s) columns are unique."
-  };
-  validationMessages["columnData"] = {
-    panel: "selectFeatures",
-    readyToTrain: selectedColumnsHaveDatatype(state),
-    errorString:
-      "Feature and label columns must contain only numerical or categorical data.",
-    successString:
-      "Selected features and label contain numerical or categorical data"
-  };
-  validationMessages["numericalNumbers"] = {
-    panel: "selectFeatures",
-    readyToTrain: numericalColumnsHaveOnlyNumbers(state),
-    errorString: "Numerical columns should contain only numbers.",
-    successString: "Numerical columns contain only numbers."
-  };
-  validationMessages["nameModel"] = {
-    panel: "saveModel",
-    readyToTrain: namedModel(state),
-    errorString: "Please name your model.",
-    successString: "Your model is named."
-  };
-  return validationMessages;
-}
-
-export function isDataUploaded(state) {
-  return state.data.length > 0;
-}
-
-export function readyToTrain(state) {
-  return uniqLabelFeaturesSelected(state);
-}
-
-export function getEmptyCellDetails(state) {
-  const emptyCellLocations = emptyCellFinder(state).map(cellDetails => {
-    return `Column: ${cellDetails.column} Row: ${cellDetails.row}`;
-  });
-  return emptyCellLocations;
-}
-
 export function getDataDescription(state) {
   // If this a dataset from the internal collection that already has a description, use that.
   if (
@@ -1178,188 +1092,12 @@ export function getPredictAvailable(state) {
   );
 }
 
-/*
-const panelList = [
-  { id: "selectDataset", label: "Import" },
-  { id: "specifyColumns", label: "Columns" },
-  { id: "dataDisplayLabel", label: "Label" },
-  { id: "dataDisplayFeatures", label: "Features" },
-  { id: "trainModel", label: "Train" },
-  { id: "generateResults", label: "Test" },
-  { id: "results", label: "Results" },
-  { id: "predict", label: "Predict" },
-  { id: "saveModel", label: "Save" },
-  { id: "modelSummary", label: "Finish" }
-];
-*/
-
-// Is a panel ready to be visited?  This determines whether a visible
-// nav button is enabled or disabled.
-function isPanelEnabled(state, panelId) {
-  if (panelId === "specifyColumns") {
-    if (state.data.length === 0) {
-      return false;
-    }
-  }
-
-  if (panelId === "dataDisplayLabel") {
-    if (state.data.length === 0) {
-      return false;
-    }
-  }
-
-  if (panelId === "dataDisplayFeatures") {
-    if (!state.labelColumn || state.labelcolumn === "") {
-      return false;
-    }
-  }
-
-  if (panelId === "columnInspector") {
-    if (getSelectedColumns(state).length === 0) {
-      return false;
-    }
-  }
-
-  if (panelId === "selectFeatures") {
-    if (!isDataUploaded(state)) {
-      return false;
-    }
-  }
-
-  if (panelId === "trainModel") {
-    if (!readyToTrain(state)) {
-      return false;
-    }
-  }
-
-  if (panelId === "results") {
-    if (
-      state.accuracyCheckExamples.length === 0 ||
-      ["success", "started"].includes(state.saveStatus)
-    ) {
-      return false;
-    }
-  }
-
-  if (panelId === "modelSummary") {
-    if (state.saveStatus === "started") {
-      return false;
-    }
-
-    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-// Is a panel available to be shown?  This determines what panels
-// can possibly be visited in the app.
-function isPanelAvailable(state, panelId) {
-  const mode = state.mode;
-
-  if (panelId === "selectDataset") {
-    if (mode && mode.datasets && mode.datasets.length === 1) {
-      return false;
-    }
-  }
-
-  if (panelId === "dataDisplayLabel") {
-    if (mode && mode.hideSelectLabel) {
-      return false;
-    }
-  }
-
-  if (panelId === "saveModel") {
-    if ((mode && mode.hideSave) || state.saveStatus === "success") {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-function isAccuracyAcceptable(state) {
-  const mode = state.mode;
-
-  if (
-    mode &&
-    mode.requireAccuracy &&
-    mode.requireAccuracy > state.historicResults[0].accuracy
-  ) {
-    return false;
-  }
-
-  return true;
-}
-
-// Given the current panel, return the appropriate previous & next buttons.
 export function getPanelButtons(state) {
-  let prev, next;
+  return prevNextButtons(state);
+}
 
-  if (state.currentPanel === "selectDataset") {
-    prev = null;
-    next = isPanelAvailable(state, "dataDisplayLabel")
-      ? { panel: "dataDisplayLabel", text: "Continue" }
-      : isPanelAvailable(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Continue" }
-      : null;
-  } else if (state.currentPanel === "dataDisplayLabel") {
-    prev = isPanelAvailable(state, "selectDataset")
-      ? { panel: "selectDataset", text: "Back" }
-      : null;
-    next = isPanelAvailable(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Continue" }
-      : null;
-  } else if (state.currentPanel === "dataDisplayFeatures") {
-    prev = isPanelAvailable(state, "dataDisplayLabel")
-      ? { panel: "dataDisplayLabel", text: "Back" }
-      : null;
-    next = isPanelAvailable(state, "trainModel")
-      ? { panel: "trainModel", text: "Train" }
-      : null;
-  } else if (state.currentPanel === "trainModel") {
-    if (state.modelSize) {
-      prev = null;
-      next = { panel: "generateResults", text: "Continue" };
-    }
-  } else if (state.currentPanel === "generateResults") {
-    if (state.modelSize) {
-      prev = null;
-      next = { panel: "results", text: "Continue" };
-    }
-  } else if (state.currentPanel === "results") {
-    prev = isPanelAvailable(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Try again" }
-      : null;
-    next = !isAccuracyAcceptable(state)
-      ? null
-      : isPanelAvailable(state, "saveModel")
-      ? { panel: "saveModel", text: "Continue" }
-      : { panel: "continue", text: "Finish" };
-  } else if (state.currentPanel === "saveModel") {
-    prev = { panel: "results", text: "Back" };
-    next = isPanelAvailable(state, "modelSummary")
-      ? { panel: "modelSummary", text: "Save" }
-      : null;
-  } else if (state.currentPanel === "modelSummary") {
-    prev = isPanelAvailable(state, "saveModel")
-      ? { panel: "saveModel", text: "Back" }
-      : null;
-    next = isPanelAvailable(state, "finish")
-      ? { panel: "finish", text: "Finish" }
-      : null;
-  }
-
-  if (prev) {
-    prev.enabled = isPanelEnabled(state, prev.panel);
-  }
-  if (next) {
-    next.enabled = isPanelEnabled(state, next.panel);
-  }
-
-  return { prev, next };
+export function readyToTrain(state) {
+  return uniqLabelFeaturesSelected(state);
 }
 
 /* Returns an object with information for the CrossTab UI.
@@ -1537,12 +1275,4 @@ function getResultsByGrade(state, grade) {
   results.labels = labels;
   results.predictedLabels = predictedLabels;
   return results;
-}
-
-export function isSaveComplete(saveStatus) {
-  return ["success", "failure", "piiProfanity"].includes(saveStatus);
-}
-
-export function shouldDisplaySaveStatus(saveStatus) {
-  return ["success", "failure", "started", "piiProfanity"].includes(saveStatus);
 }

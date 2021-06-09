@@ -15,11 +15,12 @@ import { connect } from "react-redux";
 import {
   getPanelButtons,
   setCurrentPanel,
-  validationMessages,
-  getTrainedModelDataToSave,
+  getTrainedModelDataToSave
+} from "./redux";
+import {
   isSaveComplete,
   shouldDisplaySaveStatus
-} from "./redux";
+} from "./navigationValidation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
@@ -145,7 +146,6 @@ class App extends Component {
     panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
-    validationMessages: PropTypes.object,
     onContinue: PropTypes.func,
     resultsPhase: PropTypes.number,
     startSaveTrainedModel: PropTypes.func,
@@ -257,7 +257,6 @@ export default connect(
   state => ({
     panelButtons: getPanelButtons(state),
     currentPanel: state.currentPanel,
-    validationMessages: validationMessages(state),
     resultsPhase: state.resultsPhase,
     dataToSave: getTrainedModelDataToSave(state),
     saveStatus: state.saveStatus
