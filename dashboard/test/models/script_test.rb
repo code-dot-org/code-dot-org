@@ -1229,7 +1229,7 @@ class ScriptTest < ActiveSupport::TestCase
     # No user, show_assign_button set to nil
     assert_nil script.summarize[:show_assign_button]
 
-    # Teacher should be able to assign a visible script.
+    # Teacher should be able to assign a launched script.
     assert_equal 'preview', script.summarize[:published_state]
     assert_equal true, script.summarize(true, create(:teacher))[:show_assign_button]
 
