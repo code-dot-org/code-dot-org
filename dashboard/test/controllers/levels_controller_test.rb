@@ -602,7 +602,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert_includes @response.body, 'level cannot be renamed'
 
     script.hidden = true
-    assert_equal script.get_published_state, 'preview'
+    assert_equal script.published_state, 'preview'
     script.save!
     get :edit, params: {id: level.id}
     assert_response :success
