@@ -3,7 +3,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
-import {PublishedState} from '@cdo/apps/lib/levelbuilder/constants';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 describe('CourseVersionPublishedStateSelector', () => {
   let defaultProps,
@@ -27,7 +27,7 @@ describe('CourseVersionPublishedStateSelector', () => {
       updatePublishedState,
       families: ['family1', 'family2', 'family3'],
       versionYearOptions: ['1990', '1991', '1992'],
-      publishedState: PublishedState.BETA
+      publishedState: PublishedState.beta
     };
   });
 
@@ -35,12 +35,12 @@ describe('CourseVersionPublishedStateSelector', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor
         {...defaultProps}
-        publishedState={PublishedState.PILOT}
+        publishedState={PublishedState.pilot}
         pilotExperiment={'my-pilot'}
       />
     );
     expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
-      PublishedState.PILOT
+      PublishedState.pilot
     );
     expect(wrapper.find('input').length).to.equal(1);
   });
@@ -50,7 +50,7 @@ describe('CourseVersionPublishedStateSelector', () => {
       <CourseVersionPublishingEditor {...defaultProps} />
     );
     expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
-      PublishedState.BETA
+      PublishedState.beta
     );
     expect(wrapper.find('input').length).to.equal(0);
   });
@@ -62,7 +62,7 @@ describe('CourseVersionPublishedStateSelector', () => {
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: PublishedState.BETA}});
+      .simulate('change', {target: {value: PublishedState.beta}});
 
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
@@ -74,7 +74,7 @@ describe('CourseVersionPublishedStateSelector', () => {
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: PublishedState.PREVIEW}});
+      .simulate('change', {target: {value: PublishedState.preview}});
 
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
@@ -86,7 +86,7 @@ describe('CourseVersionPublishedStateSelector', () => {
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: PublishedState.STABLE}});
+      .simulate('change', {target: {value: PublishedState.stable}});
 
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });

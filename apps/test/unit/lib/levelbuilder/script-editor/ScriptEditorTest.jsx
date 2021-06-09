@@ -20,7 +20,7 @@ import createResourcesReducer, {
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
-import {PublishedState} from '@cdo/apps/lib/levelbuilder/constants';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 describe('ScriptEditor', () => {
   let defaultProps, store;
@@ -75,7 +75,7 @@ describe('ScriptEditor', () => {
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
-      initialPublishedState: PublishedState.BETA,
+      initialPublishedState: PublishedState.beta,
       hasCourse: false,
       scriptPath: '/s/test-script',
       initialLessonLevelData:
@@ -403,7 +403,7 @@ describe('ScriptEditor', () => {
 
       const scriptEditor = wrapper.find('ScriptEditor');
       scriptEditor.setState({
-        publishedState: PublishedState.PILOT,
+        publishedState: PublishedState.pilot,
         pilotExperiment: ''
       });
 
