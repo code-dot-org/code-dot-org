@@ -13,6 +13,7 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
+#  published_state :string(255)
 #
 # Indexes
 #
@@ -217,7 +218,6 @@ class Script < ApplicationRecord
     include_student_lesson_plans
     is_migrated
     seeded_from
-    published_state
   )
 
   def self.twenty_hour_script
@@ -1479,7 +1479,6 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      hidden: hidden,
       publishedState: published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
