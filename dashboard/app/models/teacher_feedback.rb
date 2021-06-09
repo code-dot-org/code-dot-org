@@ -58,7 +58,7 @@ class TeacherFeedback < ApplicationRecord
     script_level
   end
 
-  def self.get_latest_feedback(student_id, level_id, teacher_id, script_id)
+  def self.get_latest_feedback_given(student_id, level_id, teacher_id, script_id)
     where(
       student_id: student_id,
       level_id: level_id,
@@ -68,7 +68,7 @@ class TeacherFeedback < ApplicationRecord
   end
 
   # returns the latest feedback from each teacher for the student on the level
-  def self.get_latest_feedbacks_per_teacher(student_id, level_id, script_id)
+  def self.get_latest_feedbacks_received(student_id, level_id, script_id)
     where(
       student_id: student_id,
       level_id: level_id,
@@ -77,7 +77,7 @@ class TeacherFeedback < ApplicationRecord
   end
 
   # returns the latest feedback for each student on every level
-  def self.get_latest_feedbacks_per_level(student_ids, level_ids, teacher_id)
+  def self.get_latest_feedbacks_given(student_ids, level_ids, teacher_id)
     find(
       where(
         student_id: student_ids,
@@ -95,6 +95,12 @@ class TeacherFeedback < ApplicationRecord
         group([:teacher_id, :student_id]).
         pluck('MAX(teacher_feedbacks.id)')
     )
+  end
+
+  def self.has_feedback?(student_id)
+    where(
+      student_id: student_id
+    ).count > 0
   end
 
   def self.get_unseen_feedback_count(student_id)

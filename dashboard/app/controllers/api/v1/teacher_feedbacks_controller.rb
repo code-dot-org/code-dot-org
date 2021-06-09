@@ -5,7 +5,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   # Use student_id, level_id, and teacher_id to lookup the feedback for a student on a particular level and provide the
   # most recent feedback left by that teacher
   def get_feedback_from_teacher
-    @feedback = TeacherFeedback.get_latest_feedback(
+    @feedback = TeacherFeedback.get_latest_feedback_given(
       params.require(:student_id),
       params.require(:level_id),
       params.require(:teacher_id),
@@ -28,7 +28,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
     headers['csrf-token'] = form_authenticity_token
 
-    @level_feedbacks = TeacherFeedback.get_latest_feedbacks_per_teacher(
+    @level_feedbacks = TeacherFeedback.get_latest_feedbacks_received(
       params.require(:student_id),
       params.require(:level_id),
       params.require(:script_id)
