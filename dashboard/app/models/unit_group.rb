@@ -52,7 +52,6 @@ class UnitGroup < ApplicationRecord
     version_year
     is_stable
     visible
-    published_state
     pilot_experiment
     announcements
   )
