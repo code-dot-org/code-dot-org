@@ -76,7 +76,7 @@ class TeacherFeedback < ApplicationRecord
     ).latest_per_teacher
   end
 
-  # returns the latest feedback for each student on every level
+  # returns the latest feedback for each student on every level given by the teacher
   def self.get_latest_feedbacks_given(student_ids, level_ids, teacher_id)
     find(
       where(
