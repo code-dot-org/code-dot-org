@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
-import {PUBLISHED_STATES} from '@cdo/apps/lib/levelbuilder/constants';
+import {PublishedState} from '@cdo/apps/lib/levelbuilder/constants';
 
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
@@ -15,14 +15,20 @@ export default class CourseVersionPublishingEditor extends Component {
     families: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isCourse: PropTypes.bool,
-    publishedState: PropTypes.string.isRequired,
+    publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
     updatePublishedState: PropTypes.func.isRequired
   };
 
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
     this.props.updatePublishedState(newPublishedState);
-    if (['preview', 'stable', 'beta'].includes(newPublishedState)) {
+    if (
+      [
+        PublishedState.PREVIEW,
+        PublishedState.STABLE,
+        PublishedState.BETA
+      ].includes(newPublishedState)
+    ) {
       this.props.updatePilotExperiment('');
     }
   };
@@ -75,7 +81,7 @@ export default class CourseVersionPublishingEditor extends Component {
             style={styles.dropdown}
             onChange={this.handlePublishedStateChange}
           >
-            {PUBLISHED_STATES.map(state => (
+            {Object.values(PublishedState).map(state => (
               <option key={state} value={state}>
                 {state}
               </option>
@@ -122,7 +128,7 @@ export default class CourseVersionPublishingEditor extends Component {
             </table>
           </HelpTip>
         </label>
-        {this.props.publishedState === 'pilot' && (
+        {this.props.publishedState === PublishedState.PILOT && (
           <label>
             Pilot Experiment
             <HelpTip>

@@ -17,7 +17,7 @@ import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVers
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import {PUBLISHED_STATES} from '@cdo/apps/lib/levelbuilder/constants';
+import {PublishedState} from '@cdo/apps/lib/levelbuilder/constants';
 
 class CourseEditor extends Component {
   static propTypes = {
@@ -26,7 +26,8 @@ class CourseEditor extends Component {
     initialVersionTitle: PropTypes.string,
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
-    initialPublishedState: PropTypes.oneOf(PUBLISHED_STATES).isRequired,
+    initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
+      .isRequired,
     initialPilotExperiment: PropTypes.string,
     initialDescriptionShort: PropTypes.string,
     initialDescriptionStudent: PropTypes.string,
@@ -122,7 +123,7 @@ class CourseEditor extends Component {
     }
 
     if (
-      this.state.publishedState === 'pilot' &&
+      this.state.publishedState === PublishedState.PILOT &&
       this.state.pilotExperiment === ''
     ) {
       this.setState({
