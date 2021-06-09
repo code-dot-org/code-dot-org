@@ -12,10 +12,9 @@ import {
   setPrediction,
   setAccuracyCheckPredictedLabels,
   getSummaryStat,
-  setHistoricResult,
-  logFirehoseMetric
+  setHistoricResult
 } from "../redux";
-
+import { logFirehoseMetric } from "../metrics";
 const KNN = require("ml-knn");
 
 export default class KNNTrainer {

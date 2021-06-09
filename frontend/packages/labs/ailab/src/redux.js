@@ -2,7 +2,7 @@ import {
   uniqLabelFeaturesSelected,
   prevNextButtons
 } from "./navigationValidation.js";
-
+import { reportPanelView } from './metrics.js';
 import {
   ColumnTypes,
   MLTypes,
@@ -620,16 +620,6 @@ export default function rootReducer(state = initialState, action) {
   return state;
 }
 
-function reportPanelView(panel) {
-  if (!window.ga || !panel) {
-    return;
-  }
-  // Record each panel as a different page view in Google Analytics.
-  const syntheticPagePath = window.location.pathname + '/' + panel;
-  window.ga('set', 'page', syntheticPagePath);
-  window.ga('send', 'pageview');
-}
-
 function filterColumnsByType(state, columnType) {
   return Object.keys(state.columnsByDataType).filter(
     column => state.columnsByDataType[column] === columnType
@@ -987,20 +977,6 @@ export function getDataDescription(state) {
   } else {
     return undefined;
   }
-}
-
-function getModelMetrics(state) {
-  const modelMetrics = {};
-  modelMetrics.userUploaded = isUserUploadedDataset(state);
-  modelMetrics.datasetName = state.metadata.name;
-  modelMetrics.features = state.selectedFeatures;
-  modelMetrics.label = state.labelColumn;
-  modelMetrics.accuracy = getSummaryStat(state).stat;
-  return modelMetrics;
-}
-
-export function logFirehoseMetric(action, state) {
-  return state.firehoseMetricsLogger(action, getModelMetrics(state));
 }
 
 export function getDatasetDetails(state) {
