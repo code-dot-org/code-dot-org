@@ -171,7 +171,7 @@ export class TeacherFeedback extends Component {
     );
   }
 
-  renderFeedbackTeacherHeader() {
+  renderCommentAreaHeaderForTeacher() {
     // Pilots which the user is enrolled in (such as keep working experiment) are stored on
     // window.appOptions.experiments, which is queried by experiments.js
     const keepWorkingEnabled = experiments.isEnabled(keepWorkingExperiment);
@@ -192,7 +192,7 @@ export class TeacherFeedback extends Component {
     );
   }
 
-  renderFeedbackStudentHeader() {
+  renderCommentAreaHeaderForStudent() {
     const latestFeedback = this.state.latestFeedback;
 
     return (
@@ -275,8 +275,10 @@ export class TeacherFeedback extends Component {
         )}
         {!displayReadonlyRubric && (
           <div style={styles.commentAndFooter}>
-            {viewAs === ViewType.Teacher && this.renderFeedbackTeacherHeader()}
-            {viewAs === ViewType.Student && this.renderFeedbackStudentHeader()}
+            {viewAs === ViewType.Teacher &&
+              this.renderCommentAreaHeaderForTeacher()}
+            {viewAs === ViewType.Student &&
+              this.renderCommentAreaHeaderForStudent()}
             {displayComment && (
               <CommentArea
                 isReadonly={disabledMode}
