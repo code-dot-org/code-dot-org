@@ -14,7 +14,7 @@ export function isColumnNumerical(state, column) {
   accurate models, and we don't want to overflow the metadata column for saved
   models.
 */
-function hasTooManyUniqueOptions(state, column) {
+export function hasTooManyUniqueOptions(state, column) {
   if (isColumnCategorical(state, column)) {
     const uniqueOptionsCount =
       getUniqueOptions(state, state.currentColumn).length;
@@ -41,7 +41,7 @@ function isValidNumericalData(state, column) {
   return columnContainsOnlyNumbers(state.data, column);
 }
 
-function isColumnDataValid(state, column) {
+export function isColumnDataValid(state, column) {
   return (
     isColumnCategorical(state, column) && isValidCategoricalData(state,column)
   ) ||
