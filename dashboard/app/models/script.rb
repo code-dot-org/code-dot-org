@@ -1434,7 +1434,7 @@ class Script < ApplicationRecord
   # A script that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    ['preview', 'stable'].include?(published_state)
+    [PUBLISHED_STATE.preview, PUBLISHED_STATE.stable].include?(published_state)
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
