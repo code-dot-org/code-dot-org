@@ -22,13 +22,7 @@ export default class CourseVersionPublishingEditor extends Component {
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
     this.props.updatePublishedState(newPublishedState);
-    if (
-      [
-        PublishedState.PREVIEW,
-        PublishedState.STABLE,
-        PublishedState.BETA
-      ].includes(newPublishedState)
-    ) {
+    if (newPublishedState !== PublishedState.PILOT) {
       this.props.updatePilotExperiment('');
     }
   };
