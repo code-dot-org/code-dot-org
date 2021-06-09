@@ -2,18 +2,13 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
-
-const publishedStates = ['Pilot', 'Beta', 'Preview', 'Recommended'];
+import {PUBLISHED_STATES} from '@cdo/apps/lib/levelbuilder/constants';
 
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
-    visible: PropTypes.bool.isRequired,
-    isStable: PropTypes.bool.isRequired,
     pilotExperiment: PropTypes.string,
     versionYear: PropTypes.string,
     familyName: PropTypes.string,
-    updateVisible: PropTypes.func.isRequired,
-    updateIsStable: PropTypes.func.isRequired,
     updatePilotExperiment: PropTypes.func.isRequired,
     updateFamilyName: PropTypes.func.isRequired,
     updateVersionYear: PropTypes.func.isRequired,
@@ -27,27 +22,8 @@ export default class CourseVersionPublishingEditor extends Component {
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
     this.props.updatePublishedState(newPublishedState);
-    switch (newPublishedState) {
-      case 'Pilot':
-        this.props.updateVisible(false);
-        this.props.updateIsStable(false);
-        break;
-      case 'Preview':
-        this.props.updatePilotExperiment('');
-        this.props.updateVisible(true);
-        this.props.updateIsStable(false);
-        break;
-      case 'Recommended':
-        this.props.updatePilotExperiment('');
-        this.props.updateVisible(true);
-        this.props.updateIsStable(true);
-        break;
-      case 'Beta':
-      default:
-        this.props.updatePilotExperiment('');
-        this.props.updateVisible(false);
-        this.props.updateIsStable(false);
-        break;
+    if (['preview', 'recommended', 'beta'].includes(newPublishedState)) {
+      this.props.updatePilotExperiment('');
     }
   };
 
@@ -99,7 +75,7 @@ export default class CourseVersionPublishingEditor extends Component {
             style={styles.dropdown}
             onChange={this.handlePublishedStateChange}
           >
-            {publishedStates.map(state => (
+            {PUBLISHED_STATES.map(state => (
               <option key={state} value={state}>
                 {state}
               </option>
@@ -146,7 +122,7 @@ export default class CourseVersionPublishingEditor extends Component {
             </table>
           </HelpTip>
         </label>
-        {this.props.publishedState === 'Pilot' && (
+        {this.props.publishedState === 'pilot' && (
           <label>
             Pilot Experiment
             <HelpTip>
