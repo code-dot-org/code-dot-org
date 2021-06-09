@@ -916,6 +916,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       curriculum_path: '',
       version_year: '',
+      published_state: '',
       pilot_experiment: '',
       editor_experiment: '',
       curriculum_umbrella: '',
