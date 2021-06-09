@@ -811,22 +811,22 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'script with pilot experiment has pilot published state' do
     script = create(:script, name: 'single-lesson-script', pilot_experiment: 'my-experiment')
-    assert_equal 'pilot', script.get_published_state
+    assert_equal 'pilot', script.published_state
   end
 
   test 'script with hidden true has beta published state' do
     script = create(:script, name: 'single-lesson-script', hidden: true)
-    assert_equal 'beta', script.get_published_state
+    assert_equal 'beta', script.published_state
   end
 
   test 'script with hidden false has preview published state' do
     script = create(:script, name: 'single-lesson-script', hidden: false)
-    assert_equal 'preview', script.get_published_state
+    assert_equal 'preview', script.published_state
   end
 
   test 'script with hidden false and is_stable true has stable published state' do
     script = create(:script, name: 'single-lesson-script', hidden: false, is_stable: true)
-    assert_equal 'stable', script.get_published_state
+    assert_equal 'stable', script.published_state
   end
 
   test 'should summarize script' do

@@ -326,21 +326,7 @@ class UnitGroup < ApplicationRecord
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    ['preview', 'stable'].include?(get_published_state)
-  end
-
-  def get_published_state
-    if pilot?
-      'pilot'
-    elsif visible
-      if is_stable
-        'stable'
-      else
-        'preview'
-      end
-    else
-      'beta'
-    end
+    ['preview', 'stable'].include?(published_state)
   end
 
   def summarize(user = nil)
@@ -351,7 +337,7 @@ class UnitGroup < ApplicationRecord
       assignment_family_title: localized_assignment_family_title,
       family_name: family_name,
       version_year: version_year,
-      published_state: get_published_state,
+      published_state: published_state,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
