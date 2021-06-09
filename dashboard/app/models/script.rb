@@ -335,7 +335,9 @@ class Script < ApplicationRecord
   # @param user [User]
   # @returns [Boolean] Whether the user can assign this script.
   # Users should only be able to assign one of their valid scripts.
-  def assignable?(user)
+  # This includes the scripts that are assignable for everyone as well
+  # as script that might be assignable based on users permissions
+  def assignable_for_user?(user)
     if user&.teacher?
       Script.valid_script_id?(user, id)
     end
@@ -1376,6 +1378,12 @@ class Script < ApplicationRecord
     nil
   end
 
+  # A script that the general public can assign. Has been soft or
+  # hard launched.
+  def launched?
+    ['preview', 'stable'].include?(published_state)
+  end
+
   def published_state
     if pilot?
       'pilot'
@@ -1461,7 +1469,7 @@ class Script < ApplicationRecord
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: pilot_experiment,
       editor_experiment: editor_experiment,
-      show_assign_button: assignable?(user),
+      show_assign_button: assignable_for_user?(user),
       project_sharing: project_sharing,
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
@@ -1610,7 +1618,7 @@ class Script < ApplicationRecord
     scripts = Script.
       where(family_name: family_name).
       all.
-      select {|script| with_hidden || !script.hidden}.
+      select {|script| with_hidden || script.launched?}.
       map do |s|
         {
           name: s.name,
