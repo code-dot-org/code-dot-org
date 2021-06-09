@@ -46,10 +46,10 @@ class FeedbackStudentReviewState extends React.Component {
 
     if (latestReviewState === ReviewStates.completed) {
       return this.renderCompleted();
-    } else if (isAwaitingTeacherReview) {
-      return this.renderAwaitingReview();
     } else if (latestReviewState === ReviewStates.keepWorking) {
-      return this.renderKeepWorking();
+      return isAwaitingTeacherReview
+        ? this.renderAwaitingReview()
+        : this.renderKeepWorking();
     } else {
       return null;
     }
