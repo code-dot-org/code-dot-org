@@ -1382,21 +1382,7 @@ class Script < ApplicationRecord
   # A script that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    ['preview', 'stable'].include?(get_published_state)
-  end
-
-  def get_published_state
-    if pilot?
-      'pilot'
-    elsif !hidden
-      if is_stable
-        'stable'
-      else
-        'preview'
-      end
-    else
-      'beta'
-    end
+    ['preview', 'stable'].include?(published_state)
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
@@ -1442,7 +1428,7 @@ class Script < ApplicationRecord
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       hidden: hidden,
-      publishedState: get_published_state,
+      publishedState: published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
