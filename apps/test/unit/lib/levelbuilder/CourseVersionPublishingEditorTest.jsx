@@ -3,6 +3,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 describe('CourseVersionPublishedStateSelector', () => {
   let defaultProps,
@@ -26,7 +27,7 @@ describe('CourseVersionPublishedStateSelector', () => {
       updatePublishedState,
       families: ['family1', 'family2', 'family3'],
       versionYearOptions: ['1990', '1991', '1992'],
-      publishedState: 'beta'
+      publishedState: PublishedState.beta
     };
   });
 
@@ -34,12 +35,12 @@ describe('CourseVersionPublishedStateSelector', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor
         {...defaultProps}
-        publishedState={'pilot'}
+        publishedState={PublishedState.pilot}
         pilotExperiment={'my-pilot'}
       />
     );
     expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
-      'pilot'
+      PublishedState.pilot
     );
     expect(wrapper.find('input').length).to.equal(1);
   });
@@ -49,7 +50,7 @@ describe('CourseVersionPublishedStateSelector', () => {
       <CourseVersionPublishingEditor {...defaultProps} />
     );
     expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
-      'beta'
+      PublishedState.beta
     );
     expect(wrapper.find('input').length).to.equal(0);
   });
@@ -61,7 +62,7 @@ describe('CourseVersionPublishedStateSelector', () => {
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: 'beta'}});
+      .simulate('change', {target: {value: PublishedState.beta}});
 
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
@@ -73,19 +74,19 @@ describe('CourseVersionPublishedStateSelector', () => {
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: 'preview'}});
+      .simulate('change', {target: {value: PublishedState.preview}});
 
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
 
-  it('updates pilotExperiment when publish state changed to recommended', () => {
+  it('updates pilotExperiment when publish state changed to stable', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor {...defaultProps} />
     );
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: 'recommended'}});
+      .simulate('change', {target: {value: PublishedState.stable}});
 
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
