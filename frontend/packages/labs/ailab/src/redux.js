@@ -255,7 +255,8 @@ const initialState = {
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
-  // Possible values for saveStatus: notStarted, started, success, piiProfanity, and failure.
+  // Possible values for saveStatus: "notStarted", "started", "success",
+  // "piiProfanity", and "failure".
   saveStatus: "notStarted",
   columnRefs: {},
   historicResults: [],
