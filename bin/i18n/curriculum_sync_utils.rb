@@ -43,14 +43,17 @@ module CurriculumSyncUtils
   # default.
   def self.sync_in_serialize
     Script.all.each do |script|
-      # TODO: what else do we want to consider when deciding what to sync?
       next unless script.is_migrated?
+      next unless ScriptConstants.i18n? script.name
 
       # prepare data
       data = ScriptCrowdinSerializer.new(script).as_json.compact
       data.delete(:crowdin_key) # don't need this for top-level data
 
-      next unless data.present?
+      # we expect that some migrated scripts won't have any lesson plan content
+      # at all; that's fine, we can just skip those.
+      data.reject! {|_, v| v.blank?} # don't want any empty values
+      next if data.blank?
 
       # write data to path
       # TODO: include the "other directory already exists" logic from localize_level_content
