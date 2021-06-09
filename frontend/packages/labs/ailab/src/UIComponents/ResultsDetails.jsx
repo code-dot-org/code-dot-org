@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import {
   getConvertedAccuracyCheckExamples,
   getConvertedLabels,
-  getSummaryStat,
+  getPercentCorrect,
   setShowResultsDetails,
   getCorrectResults,
   getIncorrectResults
@@ -21,7 +21,7 @@ class ResultsDetails extends Component {
     resultsTab: PropTypes.string,
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
-    summaryStat: PropTypes.object,
+    percentCorrect: PropTypes.number,
     accuracyCheckExamples: PropTypes.array,
     accuracyCheckLabels: PropTypes.array,
     accuracyCheckPredictedLabels: PropTypes.array,
@@ -46,7 +46,7 @@ class ResultsDetails extends Component {
           <div onClick={this.onClose} style={styles.popupClose}>
             <FontAwesomeIcon icon={faTimes} />
           </div>
-          {!isNaN(this.props.summaryStat.stat) && <ResultsToggle />}
+          {!isNaN(this.props.percentCorrect) && <ResultsToggle />}
           <ResultsTable results={results} />
         </div>
       </div>
@@ -59,7 +59,7 @@ export default connect(
     resultsTab: state.resultsTab,
     selectedFeatures: state.selectedFeatures,
     labelColumn: state.labelColumn,
-    summaryStat: getSummaryStat(state),
+    percentCorrect: getPercentCorrect(state),
     accuracyCheckExamples: getConvertedAccuracyCheckExamples(state),
     accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
     accuracyCheckPredictedLabels: getConvertedLabels(

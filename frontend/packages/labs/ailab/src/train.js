@@ -3,9 +3,8 @@
 import KNNTrainer from "./trainers/KNNTrainer";
 
 import { store } from "./index.js";
+import { buildOptionNumberKey } from "./columnDetails.js";
 import {
-  getUniqueOptions,
-  getCategoricalColumns,
   getSelectedCategoricalColumns,
   setFeatureNumberKey,
   setTrainingExamples,
@@ -17,25 +16,10 @@ import {
   TestDataLocations,
   PERCENT_OF_DATASET_FOR_TESTING
 } from "./constants.js";
+import { getRandomInt } from "./utils.js";
+import { convertValueForTraining } from "./valueConversion.js";
 
-/* Builds a hash that maps a feature's categorical options to numbers because
-  the ML algorithms only accept numerical inputs.
-  @param {string} - feature name
-  @return {
-    option1 : 0,
-    option2 : 1,
-    option3: 2,
-    ...
-  }
-  */
-const buildOptionNumberKey = (state, feature) => {
-  let optionsMappedToNumbers = {};
-  const uniqueOptions = getUniqueOptions(state, feature);
-  uniqueOptions.forEach(
-    option => (optionsMappedToNumbers[option] = uniqueOptions.indexOf(option))
-  );
-  return optionsMappedToNumbers;
-};
+
 
 /* Builds a hash that maps selected categorical features to their option-
   number keys and dispatches that hash to the Redux store.
@@ -67,26 +51,6 @@ const buildOptionNumberKeysByFeature = state => {
   store.dispatch(setFeatureNumberKey(optionsMappedToNumbersByFeature));
 };
 
-/* For feature columns that store categorical data, looks up the value
-  associated with a row's specific option for a given feature; otherwise
-  returns the option converted to an integer for feature columns that store
-  numerical data.
-  @param {object} row, entry from the dataset
-  {
-    labelColumn: option,
-    featureColumn1: option,
-    featureColumn2: option
-    ...
-  }
-  @param {string} - feature name
-  @return {integer}
-  */
-const convertValue = (state, feature, row) => {
-  return getCategoricalColumns(state).includes(feature)
-    ? state.featureNumberKey[feature][row[feature]]
-    : parseFloat(row[feature]);
-};
-
 /* Builds an array containing integer values associated with each feature's
   specific option in a given row.
   @param {object} row, entry from the dataset
@@ -98,28 +62,24 @@ const convertValue = (state, feature, row) => {
   }
   @return {array}
   */
-const extractExamples = (state, row) => {
+const extractTrainingExamples = (state, row) => {
   let exampleValues = [];
   state.selectedFeatures.forEach(feature =>
-    exampleValues.push(convertValue(state, feature, row))
+    exampleValues.push(convertValueForTraining(state, feature, row))
   );
   return exampleValues;
 };
 
-const extractLabel = (state, row) => {
-  return convertValue(state, state.labelColumn, row);
-};
-
-const getRandomInt = max => {
-  return Math.floor(Math.random() * Math.floor(max));
+const extractTrainingLabel = (state, row) => {
+  return convertValueForTraining(state, state.labelColumn, row);
 };
 
 const prepareTrainingData = () => {
   const updatedState = store.getState();
   const trainingExamples = updatedState.data
-    .map(row => extractExamples(updatedState, row));
+    .map(row => extractTrainingExamples(updatedState, row));
   const trainingLabels = updatedState.data
-    .map(row => extractLabel(updatedState, row));
+    .map(row => extractTrainingLabel(updatedState, row));
   /*
   Select X% of examples and corresponding labels from the training set to use for a post-training accuracy calculation.
   */
@@ -154,7 +114,7 @@ const prepareTestData = () => {
   const updatedState = store.getState();
   let testValues = [];
   updatedState.selectedFeatures.forEach(feature =>
-    testValues.push(convertValue(updatedState, feature, updatedState.testData))
+    testValues.push(convertValueForTraining(updatedState, feature, updatedState.testData))
   );
   return testValues;
 };

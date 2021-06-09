@@ -4,14 +4,32 @@ import {
 } from "./navigationValidation.js";
 import { reportPanelView } from './metrics.js';
 import {
+  getAccuracyClassification,
+  getAccuracyRegression,
+  getResultsByGrade
+} from "./accuracy.js";
+import {
+  isColumnNumerical,
+  isColumnCategorical,
+  isColumnReadOnly,
+  getExtrema,
+  getColumnDescription,
+  getOptionFrequencies,
+  hasTooManyUniqueOptions,
+  getColumnDataToSave,
+  isSelectable,
+  getUniqueOptions,
+  isColumnDataValid
+} from "./columnDetails.js";
+import { getConvertedValueForDisplay } from "./valueConversion.js";
+import { areArraysEqual } from "./utils.js";
+import {
   ColumnTypes,
   MLTypes,
   RegressionTrainer,
   ClassificationTrainer,
   TestDataLocations,
-  ResultsGrades,
-  REGRESSION_ERROR_TOLERANCE,
-  UNIQUE_OPTIONS_MAX
+  ResultsGrades
 } from "./constants.js";
 
 // Action types
@@ -626,89 +644,12 @@ function filterColumnsByType(state, columnType) {
   );
 }
 
-export function getCategoricalColumns(state) {
+function getCategoricalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.CATEGORICAL);
 }
 
-function isColumnReadOnly(state, column) {
-  const metadataColumnType =
-    state.metadata &&
-    state.metadata.fields &&
-    state.metadata.fields.find(field => {
-      return field.id === column;
-    }).type;
-  return !!metadataColumnType;
-}
-
-function getSelectedColumns(state) {
-  return state.selectedFeatures
-    .concat(state.labelColumn)
-    .filter(column => column !== undefined && column !== "")
-    .map(columnId => {
-      return { id: columnId, readOnly: isColumnReadOnly(state, columnId) };
-    });
-}
-
-function isColumnCategorical(state, column) {
-  return (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL);
-}
-
-function isValidCategoricalData(state, column) {
-  return !hasTooManyUniqueOptions(state, column);
-}
-
-function isColumnNumerical(state, column) {
-  return (state.columnsByDataType[column] === ColumnTypes.NUMERICAL);
-}
-
-export function columnContainsOnlyNumbers(data, column) {
-  return data.every(row => !isNaN(row[column]));
-}
-
-function isValidNumericalData(state, column) {
-  return !isNaN(getMaximumValue(state, column));
-}
-
-function isColumnDataValid(state, column) {
-  return (
-    isColumnCategorical(state, column) && isValidCategoricalData(state,column)
-  ) ||
-  (isColumnNumerical(state, column) && isValidNumericalData(state,column));
-}
-
-function isLabel(state, column) {
-  return column === state.labelColumn;
-}
-
-function isFeature(state, column) {
-  return state.selectedFeatures.includes(column);
-}
-
-function isSelected(state, column) {
-  return isLabel(state, column) || isFeature(state, column);
-}
-
-function isSelectable(state, column) {
-  return isColumnDataValid(state, column) && !isSelected(state, column);
-}
-
-export function getCurrentColumnData(state) {
-  if (!state.currentColumn) {
-    return null;
-  }
-
-  return {
-    id: state.currentColumn,
-    readOnly: isColumnReadOnly(state, state.currentColumn),
-    dataType: state.columnsByDataType[state.currentColumn],
-    uniqueOptions: getUniqueOptions(state, state.currentColumn),
-    extrema: getExtrema(state, state.currentColumn),
-    frequencies: getOptionFrequencies(state, state.currentColumn),
-    description: getColumnDescription(state, state.currentColumn),
-    hasTooManyUniqueOptions: hasTooManyUniqueOptions(state, state.currentColumn),
-    isColumnDataValid: isColumnDataValid(state, state.currentColumn),
-    isSelectable: isSelectable(state, state.currentColumn)
-  };
+function getNumericalColumns(state) {
+  return filterColumnsByType(state, ColumnTypes.NUMERICAL);
 }
 
 export function getSelectedCategoricalColumns(state) {
@@ -732,40 +673,30 @@ export function getSelectedNumericalFeatures(state) {
   return intersection;
 }
 
-function getNumericalColumns(state) {
-  return filterColumnsByType(state, ColumnTypes.NUMERICAL);
-}
-
-/*
-  Categorical columns with too many unique values are unlikley to make
-  accurate models, and we don't want to overflow the metadata column for saved
-  models.
-*/
-function hasTooManyUniqueOptions(state, column) {
-  if (isColumnCategorical(state, column)) {
-    const uniqueOptionsCount =
-      getUniqueOptions(state, state.currentColumn).length;
-    return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
-  }
-  return false;
-}
-
-export function getUniqueOptions(state, column) {
-  return Array.from(new Set(state.data.map(row => row[column]))).filter(
-    option => option !== undefined && option !== ""
+export function getSelectedNumericalColumns(state) {
+  let intersection = getNumericalColumns(state).filter(
+    x => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
+  return intersection;
 }
 
-function getOptionFrequencies(state, column) {
-  let optionFrequencies = {};
-  for (let row of state.data) {
-    if (optionFrequencies[row[column]]) {
-      optionFrequencies[row[column]]++;
-    } else {
-      optionFrequencies[row[column]] = 1;
-    }
+export function getCurrentColumnData(state) {
+  if (!state.currentColumn) {
+    return null;
   }
-  return optionFrequencies;
+
+  return {
+    id: state.currentColumn,
+    readOnly: isColumnReadOnly(state, state.currentColumn),
+    dataType: state.columnsByDataType[state.currentColumn],
+    uniqueOptions: getUniqueOptions(state, state.currentColumn),
+    extrema: getExtrema(state, state.currentColumn),
+    frequencies: getOptionFrequencies(state, state.currentColumn),
+    description: getColumnDescription(state, state.currentColumn),
+    hasTooManyUniqueOptions: hasTooManyUniqueOptions(state, state.currentColumn),
+    isColumnDataValid: isColumnDataValid(state, state.currentColumn),
+    isSelectable: isSelectable(state, state.currentColumn)
+  };
 }
 
 export function getUniqueOptionsByColumn(state) {
@@ -778,31 +709,19 @@ export function getUniqueOptionsByColumn(state) {
 
 export function getExtremaByColumn(state) {
   let extremaByColumn = {};
-  getNumericalColumns(state).map(
+  getSelectedNumericalColumns(state).map(
     column => (extremaByColumn[column] = getExtrema(state, column))
   );
   return extremaByColumn;
 }
 
-function getMaximumValue(state, column) {
-  return Math.max(...state.data.map(row => parseFloat(row[column])));
-}
-
-function getMinimumValue(state, column) {
-  return Math.min(...state.data.map(row => parseFloat(row[column])));
-}
-
-function getRange(maximumValue, minimumValue) {
-  return Math.abs(maximumValue - minimumValue);
-}
-
-export function getExtrema(state, column) {
-  let extrema = {};
-  extrema.max = getMaximumValue(state, column);
-  extrema.min = getMinimumValue(state, column)
-  extrema.range = getRange(extrema.max, extrema.min);
-
-  return extrema;
+function getSelectedColumns(state) {
+  return state.selectedFeatures
+    .concat(state.labelColumn)
+    .filter(column => column !== undefined && column !== "")
+    .map(columnId => {
+      return { id: columnId, readOnly: isColumnReadOnly(state, columnId) };
+    });
 }
 
 export function getSelectedColumnDescriptions(state) {
@@ -814,51 +733,6 @@ export function getSelectedColumnDescriptions(state) {
   });
 }
 
-function getColumnDescription(state, columnId) {
-  if (!state || !columnId) {
-    return null;
-  }
-
-  // Use metadata if available.
-  if (state.metadata && state.metadata.fields) {
-    const field = state.metadata.fields.find(field => {
-      return field.id === columnId;
-    });
-    return field.description;
-  }
-
-  // Try using a user-entered column description if available.
-  if (!state.columns) {
-    return;
-  }
-  const matchedColumn = state.columns.find(column => {
-    return column.id === columnId;
-  });
-  if (matchedColumn) {
-    return matchedColumn.description;
-  }
-
-  // No column description available.
-  return null;
-}
-
-function getKeyByValue(object, value) {
-  return Object.keys(object).find(key => object[key] === value);
-}
-
-function isEmpty(object) {
-  return Object.keys(object).length === 0;
-}
-
-function getConvertedValue(state, rawValue, column) {
-  const convertedValue =
-    getCategoricalColumns(state).includes(column) &&
-    !isEmpty(state.featureNumberKey)
-      ? getKeyByValue(state.featureNumberKey[column], rawValue)
-      : rawValue;
-  return convertedValue;
-}
-
 export function getConvertedAccuracyCheckExamples(state) {
   const convertedAccuracyCheckExamples = [];
   var example;
@@ -866,7 +740,7 @@ export function getConvertedAccuracyCheckExamples(state) {
     let convertedAccuracyCheckExample = [];
     for (var i = 0; i < state.selectedFeatures.length; i++) {
       convertedAccuracyCheckExample.push(
-        getConvertedValue(state, example[i], state.selectedFeatures[i])
+        getConvertedValueForDisplay(state, example[i], state.selectedFeatures[i])
       );
     }
     convertedAccuracyCheckExamples.push(convertedAccuracyCheckExample);
@@ -874,91 +748,31 @@ export function getConvertedAccuracyCheckExamples(state) {
   return convertedAccuracyCheckExamples;
 }
 
-function getConvertedLabel(state, rawLabel) {
-  if (state.labelColumn) {
-    return getConvertedValue(state, rawLabel, state.labelColumn);
-  }
-}
-
 export function getConvertedPredictedLabel(state) {
-  return getConvertedLabel(state, state.prediction);
+  return getConvertedValueForDisplay(state, state.prediction, state.labelColumn);
 }
 
 export function getConvertedLabels(state, rawLabels = []) {
-  return rawLabels.map(label => getConvertedLabel(state, label));
+  return rawLabels.map(label => getConvertedValueForDisplay(state, label, state.labelColumn));
 }
 
 export function isRegression(state) {
   return isColumnNumerical(state, state.labelColumn);
 }
 
-function getAccuracyGrades(state) {
-  const grades = isRegression(state)
-    ? getAccuracyRegression(state).grades
-    : getAccuracyClassification(state).grades;
-  return grades;
-}
-
-export function getAccuracyClassification(state) {
-  let accuracy = {};
-  let numCorrect = 0;
-  let grades = [];
-  const numPredictedLabels = state.accuracyCheckPredictedLabels
-    ? state.accuracyCheckPredictedLabels.length
-    : 0;
-  for (let i = 0; i < numPredictedLabels; i++) {
-    if (
-      state.accuracyCheckLabels[i].toString() ===
-      state.accuracyCheckPredictedLabels[i].toString()
-    ) {
-      numCorrect++;
-      grades.push(ResultsGrades.CORRECT);
-    } else {
-      grades.push(ResultsGrades.INCORRECT);
-    }
-  }
-  accuracy.percentCorrect = ((numCorrect / numPredictedLabels) * 100).toFixed(
-    2
-  );
-  accuracy.grades = grades;
-  return accuracy;
-}
-
-export function getAccuracyRegression(state) {
-  let accuracy = {};
-  let numCorrect = 0;
-  let grades = [];
-  const range = getExtrema(state, state.labelColumn).range;
-  const errorTolerance = (range * REGRESSION_ERROR_TOLERANCE) / 100;
-  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
-  for (let i = 0; i < numPredictedLabels; i++) {
-    const diff = Math.abs(
-      state.accuracyCheckLabels[i] - state.accuracyCheckPredictedLabels[i]
-    );
-    if (diff <= errorTolerance) {
-      numCorrect++;
-      grades.push(ResultsGrades.CORRECT);
-    } else {
-      grades.push(ResultsGrades.INCORRECT);
-    }
-  }
-  accuracy.percentCorrect = ((numCorrect / numPredictedLabels) * 100).toFixed(
-    2
-  );
-  accuracy.grades = grades;
-  return accuracy;
-}
-
-export function getSummaryStat(state) {
+function getSummaryStat(state) {
   let summaryStat = {};
-  if (isRegression(state)) {
-    summaryStat.type = MLTypes.REGRESSION;
-    summaryStat.stat = getAccuracyRegression(state).percentCorrect;
-  } else {
-    summaryStat.type = MLTypes.CLASSIFICATION;
-    summaryStat.stat = getAccuracyClassification(state).percentCorrect;
-  }
+  summaryStat.type = isRegression(state)
+    ? MLTypes.REGRESSION : MLTypes.CLASSIFICATION;
+  summaryStat.stat = getPercentCorrect(state);
   return summaryStat;
+}
+
+export function getPercentCorrect(state) {
+  const percentCorrect = isRegression(state)
+    ? getAccuracyRegression(state).percentCorrect
+    : getAccuracyClassification(state).percentCorrect;
+  return percentCorrect;
 }
 
 export function getDataDescription(state) {
@@ -986,20 +800,6 @@ export function getDatasetDetails(state) {
   datasetDetails.numRows = state.data.length;
   datasetDetails.isUserUploaded = isUserUploadedDataset(state);
   return datasetDetails;
-}
-
-export function getColumnDataToSave(state, column) {
-  const columnData = {};
-  columnData.id = column;
-  columnData.description = getColumnDescription(state, column);
-  if (isColumnCategorical(state, column)) {
-    columnData.values = getUniqueOptions(state, column);
-  } else if (isColumnNumerical(state, column)) {
-    const {max, min} = getExtrema(state, column);
-    columnData.max = max;
-    columnData.min = min;
-  }
-  return columnData;
 }
 
 export function getFeaturesToSave(state) {
@@ -1190,15 +990,6 @@ export function getScatterPlotData(state) {
   };
 }
 
-function areArraysEqual(array1, array2) {
-  return (
-    array1.length === array2.length &&
-    array1.every((value, index) => {
-      return value === array2[index];
-    })
-  );
-}
-
 export function isUserUploadedDataset(state) {
   // The csvfile for internally curated datasets are strings; those uploaded by
   // users are objects. Use data type as a proxy to know which case we're in.
@@ -1211,22 +1002,4 @@ export function getCorrectResults(state) {
 
 export function getIncorrectResults(state) {
   return getResultsByGrade(state, ResultsGrades.INCORRECT);
-}
-
-function getResultsByGrade(state, grade) {
-  const results = {};
-  const accuracyGrades = getAccuracyGrades(state);
-  const examples = getConvertedAccuracyCheckExamples(state).filter((example, index) => {
-    return grade === accuracyGrades[index];
-  });
-  const labels = getConvertedLabels(state, state.accuracyCheckLabels).filter((example, index) => {
-    return grade === accuracyGrades[index];
-  });
-  const predictedLabels = getConvertedLabels(state, state.accuracyCheckPredictedLabels).filter((example, index) => {
-    return grade === accuracyGrades[index];
-  });
-  results.examples = examples;
-  results.labels = labels;
-  results.predictedLabels = predictedLabels;
-  return results;
 }

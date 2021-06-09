@@ -1,11 +1,11 @@
-import { isUserUploadedDataset, getSummaryStat } from "./redux";
+import { isUserUploadedDataset, getPercentCorrect } from "./redux";
 function getModelMetrics(state) {
   const modelMetrics = {};
   modelMetrics.userUploaded = isUserUploadedDataset(state);
   modelMetrics.datasetName = state.metadata.name;
   modelMetrics.features = state.selectedFeatures;
   modelMetrics.label = state.labelColumn;
-  modelMetrics.accuracy = getSummaryStat(state).stat;
+  modelMetrics.accuracy = getPercentCorrect(state);
   return modelMetrics;
 }
 
