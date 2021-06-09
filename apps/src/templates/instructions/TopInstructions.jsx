@@ -177,7 +177,10 @@ class TopInstructions extends Component {
           .getTeacherFeedbackForStudent(user, serverLevelId, serverScriptId)
           .done((data, _, request) => {
             // If student has feedback make their default tab the feedback tab instead of instructions
-            if (data[0] && (data[0].comment || data[0].performance)) {
+            if (
+              data[0] &&
+              (data[0].comment || data[0].performance || data[0].review_state)
+            ) {
               this.setState({
                 feedbacks: data,
                 tabSelected: TabType.COMMENTS,
@@ -589,10 +592,7 @@ class TopInstructions extends Component {
     const displayHelpTab =
       (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
 
-    const studentHasFeedback =
-      this.isViewingAsStudent &&
-      feedbacks.length > 0 &&
-      !!(feedbacks[0].comment || feedbacks[0].performance);
+    const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
 
     /*
      * The feedback tab will be the Key Concept tab if there is a mini rubric and:
