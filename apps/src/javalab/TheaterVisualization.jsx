@@ -1,8 +1,10 @@
 import React from 'react';
-import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
 import PreviewPaneHeader from './PreviewPaneHeader';
+import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
 
-export default class DefaultVisualization extends React.Component {
+export default class TheaterVisualization extends React.Component {
+  static propTypes = {};
+
   state = {
     isCollapsed: false,
     isFullscreen: false
@@ -10,14 +12,15 @@ export default class DefaultVisualization extends React.Component {
 
   render() {
     const {isCollapsed, isFullscreen} = this.state;
-
     return (
       <div>
         <PreviewPaneHeader
           isCollapsed={isCollapsed}
           isFullscreen={isFullscreen}
         />
-        <ProtectedVisualizationDiv />
+        <ProtectedVisualizationDiv>
+          <canvas id="theater" width="400" height="400" />
+        </ProtectedVisualizationDiv>
       </div>
     );
   }
