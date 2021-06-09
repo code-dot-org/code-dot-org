@@ -458,7 +458,11 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     script = create :script, hidden: false
-
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+    end
     post :update, params: {
       id: script.id,
       script: {name: script.name},
@@ -478,7 +482,11 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     script = create :script, hidden: false
-
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+    end
     post :update, params: {
       id: script.id,
       script: {name: script.name},
@@ -497,7 +505,11 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     script = create :script, hidden: true
-
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+    end
     post :update, params: {
       id: script.id,
       script: {name: script.name},
@@ -516,7 +528,11 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     script = create :script, hidden: true
-
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+    end
     post :update, params: {
       id: script.id,
       script: {name: script.name},
