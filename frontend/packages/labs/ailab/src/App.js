@@ -15,10 +15,12 @@ import { connect } from "react-redux";
 import {
   getPanelButtons,
   setCurrentPanel,
-  getTrainedModelDataToSave,
+  getTrainedModelDataToSave
+} from "./redux";
+import {
   isSaveComplete,
   shouldDisplaySaveStatus
-} from "./redux";
+} from "./navigationValidation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 

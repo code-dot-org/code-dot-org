@@ -1,6 +1,4 @@
-import {
-  uniqueColumnNames
-} from "./validate.js";
+import { isPanelEnabled, isPanelAvailable } from "./navigationValidation.js";
 
 import {
   ColumnTypes,
@@ -978,14 +976,6 @@ export function getSummaryStat(state) {
   return summaryStat;
 }
 
-export function isDataUploaded(state) {
-  return state.data.length > 0;
-}
-
-export function readyToTrain(state) {
-  return uniqLabelFeaturesSelected(state);
-}
-
 export function getDataDescription(state) {
   // If this a dataset from the internal collection that already has a description, use that.
   if (
@@ -1069,108 +1059,6 @@ export function getPredictAvailable(state) {
       value => state.testData[value] && state.testData[value] !== ""
     ).length === state.selectedFeatures.length
   );
-}
-
-/*
-const panelList = [
-  { id: "selectDataset", label: "Import" },
-  { id: "specifyColumns", label: "Columns" },
-  { id: "dataDisplayLabel", label: "Label" },
-  { id: "dataDisplayFeatures", label: "Features" },
-  { id: "trainModel", label: "Train" },
-  { id: "generateResults", label: "Test" },
-  { id: "results", label: "Results" },
-  { id: "predict", label: "Predict" },
-  { id: "saveModel", label: "Save" },
-  { id: "modelSummary", label: "Finish" }
-];
-*/
-
-// Is a panel ready to be visited?  This determines whether a visible
-// nav button is enabled or disabled.
-function isPanelEnabled(state, panelId) {
-  if (panelId === "specifyColumns") {
-    if (state.data.length === 0) {
-      return false;
-    }
-  }
-
-  if (panelId === "dataDisplayLabel") {
-    if (state.data.length === 0) {
-      return false;
-    }
-  }
-
-  if (panelId === "dataDisplayFeatures") {
-    if (!state.labelColumn || state.labelcolumn === "") {
-      return false;
-    }
-  }
-
-  if (panelId === "columnInspector") {
-    if (getSelectedColumns(state).length === 0) {
-      return false;
-    }
-  }
-
-  if (panelId === "selectFeatures") {
-    if (!isDataUploaded(state)) {
-      return false;
-    }
-  }
-
-  if (panelId === "trainModel") {
-    if (!readyToTrain(state)) {
-      return false;
-    }
-  }
-
-  if (panelId === "results") {
-    if (
-      state.accuracyCheckExamples.length === 0 ||
-      ["success", "started"].includes(state.saveStatus)
-    ) {
-      return false;
-    }
-  }
-
-  if (panelId === "modelSummary") {
-    if (state.saveStatus === "started") {
-      return false;
-    }
-
-    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-// Is a panel available to be shown?  This determines what panels
-// can possibly be visited in the app.
-function isPanelAvailable(state, panelId) {
-  const mode = state.mode;
-
-  if (panelId === "selectDataset") {
-    if (mode && mode.datasets && mode.datasets.length === 1) {
-      return false;
-    }
-  }
-
-  if (panelId === "dataDisplayLabel") {
-    if (mode && mode.hideSelectLabel) {
-      return false;
-    }
-  }
-
-  if (panelId === "saveModel") {
-    if ((mode && mode.hideSave) || state.saveStatus === "success") {
-      return false;
-    }
-  }
-
-  return true;
 }
 
 function isAccuracyAcceptable(state) {
@@ -1430,12 +1318,4 @@ function getResultsByGrade(state, grade) {
   results.labels = labels;
   results.predictedLabels = predictedLabels;
   return results;
-}
-
-export function isSaveComplete(saveStatus) {
-  return ["success", "failure"].includes(saveStatus);
-}
-
-export function shouldDisplaySaveStatus(saveStatus) {
-  return ["success", "failure", "started"].includes(saveStatus);
 }
