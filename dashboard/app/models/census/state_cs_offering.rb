@@ -1494,6 +1494,7 @@ class Census::StateCsOffering < ApplicationRecord
   end
 
   CENSUS_BUCKET_NAME = "cdo-census".freeze
+  STATE_CS_FOLDER = "state_cs_offerings".freeze
 
   # Construct a path to the CSV.
   # @param [string] state_code - Something like "CA".
@@ -1502,7 +1503,35 @@ class Census::StateCsOffering < ApplicationRecord
   # @param [string] file_extension
   def self.construct_object_key(state_code, school_year, update = 1, file_extension = 'csv')
     update_string = update == 1 ? "" : ".#{update}"
-    "state_cs_offerings/#{state_code}/#{school_year}-#{school_year + 1}#{update_string}.#{file_extension}"
+    "#{STATE_CS_FOLDER}/#{state_code}/#{school_year}-#{school_year + 1}#{update_string}.#{file_extension}"
+  end
+
+  # Deconstructs an object key into multiple variables.
+  # @param [string] object_key - the AWS object name
+  # @return [array] [state_code, school_year, update, extension]
+  def self.deconstruct_object_key(object_key)
+    # "state_cs_offerings/<state_code>/<school_year>-<school_year_end>(.<update>).<file_extension>"
+    _, state_code, name = object_key.split('/')
+    years, update_or_extension, extension = name.split('.')
+    start_year, _ = years.split('-')
+    update = extension ? update_or_extension : 1
+    extension ||= update_or_extension
+    [
+      state_code,
+      start_year,
+      update,
+      extension
+    ]
+  end
+
+  # Searches the state_cs_offering folder for files with the .test extension and attempts to dry run seed them
+  def self.dry_run_new_test_files
+    AWS::S3.find_files_with_ext(CENSUS_BUCKET_NAME, 'test', STATE_CS_FOLDER) do |object_key|
+      state_code, school_year, update = deconstruct_object_key(object_key)
+      AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
+        seed_from_csv(state_code, school_year, update, filename, true)
+      end
+    end
   end
 
   def self.seed_from_s3(file_extension: 'csv', dry_run: false)

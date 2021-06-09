@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/chat_client'
+
+def main
+  Census::StateCsOffering.dry_run_new_test_files
+rescue => e
+  ChatClient.log("<@#{DevelopersTopic.dotd}> dry run seeding of state cs offerings failed: #{e}", color: 'yellow')
+end
+
+main
