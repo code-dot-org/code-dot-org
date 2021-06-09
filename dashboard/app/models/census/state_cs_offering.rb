@@ -1525,12 +1525,10 @@ class Census::StateCsOffering < ApplicationRecord
   end
 
   # Searches the state_cs_offering folder for files with the .test extension and attempts to dry run seed them
-  def self.dry_run_new_test_files
-    AWS::S3.find_files_with_ext(CENSUS_BUCKET_NAME, 'test', STATE_CS_FOLDER) do |object_key|
-      state_code, school_year, update = deconstruct_object_key(object_key)
-      AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
-        seed_from_csv(state_code, school_year, update, filename, true)
-      end
+  def self.dry_run_new_test_file(object_key)
+    state_code, school_year, update = deconstruct_object_key(object_key)
+    AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
+      seed_from_csv(state_code, school_year, update, filename, true)
     end
   end
 

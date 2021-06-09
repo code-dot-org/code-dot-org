@@ -219,10 +219,19 @@ module AWS
       create_client.list_objects_v2(bucket: bucket, prefix: prefix).each do |response|
         object_keys.concat(
           response.contents.map(&:key).
-            filter {|key| key.ends_with?(ext)}
+            select {|key| key.ends_with?(ext)}
         )
       end
       object_keys
+    end
+
+    # Renames an object by copying it and then deleting the old copy (S3 objects are immutable)
+    # @params bucket [String] The S3 bucket name.
+    # @params object_key [String] The object key to rename.
+    # @params new_key [String] The new key the object should have.
+    def self.rename_object(bucket, object_key, new_key)
+      create_client.copy_object({bucket: bucket, copy_source: "/#{bucket}/#{object_key}", key: new_key})
+      create_client.delete_object({bucket: bucket, key: object_key})
     end
 
     # Processes an S3 file, requires a block to be executed after the data has
