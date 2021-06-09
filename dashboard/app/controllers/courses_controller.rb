@@ -190,8 +190,22 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :visible, :is_stable, :announcements).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
+
+    # Temporary transition code used to update the boolean values that control published_state
+    # This should be removed once we move off of booleans completely and on to published_state
+    if cp[:published_state] == 'beta' || cp[:published_state] == 'pilot'
+      cp[:visible] = false
+      cp[:is_stable] = false
+    elsif cp[:published_state] == 'preview'
+      cp[:visible] = true
+      cp[:is_stable] = false
+    elsif cp[:published_state] == 'stable'
+      cp[:visible] = true
+      cp[:is_stable] = true
+    end
+
     cp
   end
 
