@@ -126,11 +126,11 @@ function didSaveSucceed(state) {
 }
 
 export function isSaveComplete(saveStatus) {
-  return ["success", "failure"].includes(saveStatus);
+  return ["success", "failure", "piiProfanity"].includes(saveStatus);
 }
 
 export function shouldDisplaySaveStatus(saveStatus) {
-  return ["success", "failure", "started"].includes(saveStatus);
+  return ["success", "failure", "started", "piiProfanity"].includes(saveStatus);
 }
 
 function isModelNamed(state) {

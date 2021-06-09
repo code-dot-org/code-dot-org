@@ -12,7 +12,8 @@ import {
   setPrediction,
   setAccuracyCheckPredictedLabels,
   getSummaryStat,
-  setHistoricResult
+  setHistoricResult,
+  logFirehoseMetric
 } from "../redux";
 
 const KNN = require("ml-knn");
@@ -73,6 +74,8 @@ export default class KNNTrainer {
     store.dispatch(setModelSize(kiloBytes));
 
     const state2 = store.getState();
+
+    logFirehoseMetric("train-model", state2);
 
     const accuracy = getSummaryStat(state2).stat;
     store.dispatch(

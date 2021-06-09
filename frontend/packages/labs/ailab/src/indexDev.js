@@ -72,6 +72,10 @@ function saveTrainedModelStub(data, response) {
   );
 }
 
+function logMetricStub(eventName, details) {
+  console.log(`This would log a metric for ${eventName}.`, details);
+}
+
 function setInstructionsKeyStub(instructionsKey, options) {
   const element = document.getElementById("instructions");
 
@@ -91,5 +95,6 @@ initAll({
   mode: mode,
   onContinue: onContinueStub,
   saveTrainedModel: saveTrainedModelStub,
-  setInstructionsKey: setInstructionsKeyStub
+  setInstructionsKey: setInstructionsKeyStub,
+  logMetric: logMetricStub
 });

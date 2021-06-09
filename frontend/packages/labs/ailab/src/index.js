@@ -11,7 +11,8 @@ import rootReducer, {
   setInstructionsKeyCallback,
   setSaveStatus,
   setReserveLocation,
-  setInstructionsDismissed
+  setInstructionsDismissed,
+  setFirehoseMetricsLogger
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
@@ -28,6 +29,7 @@ export const initAll = function (options) {
   const mode = options && options.mode;
   onContinue = options && options.onContinue;
   saveTrainedModel = options && options.saveTrainedModel;
+  store.dispatch(setFirehoseMetricsLogger(options && options.logMetric));
   store.dispatch(
     setInstructionsKeyCallback(options && options.setInstructionsKey)
   );
