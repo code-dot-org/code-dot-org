@@ -2,17 +2,13 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import TeacherFeedbackKeepWorking from '@cdo/apps/templates/instructions/TeacherFeedbackKeepWorking';
+import {ReviewStates} from '@cdo/apps/templates/types';
 import i18n from '@cdo/locale';
 import sinon from 'sinon';
 
 const DEFAULT_PROPS = {
-  latestFeedback: {
-    review_state: null,
-    created_at: new Date(),
-    student_last_updated: null,
-    student_updated_since_feedback: false
-  },
-  reviewState: null,
+  latestReviewState: null,
+  isAwaitingTeacherReview: false,
   setReviewState: () => {},
   setReviewStateChanged: () => {}
 };
@@ -21,13 +17,6 @@ const setUp = overrideProps => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
   // using mount instead of shallow so that refs are set
   return mount(<TeacherFeedbackKeepWorking {...props} />);
-};
-
-const feedbackForIndeterminateState = () => {
-  return {
-    review_state: 'keepWorking',
-    student_updated_since_feedback: true
-  };
 };
 
 describe('TeacherFeedbackKeepWorking', () => {
@@ -46,27 +35,27 @@ describe('TeacherFeedbackKeepWorking', () => {
 
   it('displays a checked checkbox if reviewState is keepWorking and student is not awaiting review', () => {
     const wrapper = setUp({
-      latestFeedback: {
-        review_state: 'keepWorking',
-        student_updated_since_feedback: false
-      }
+      latestReviewState: ReviewStates.keepWorking,
+      isAwaitingTeacherReview: false
     });
     expect(wrapper.instance().checkbox.checked).to.be.true;
   });
 
   it('displays a indeterminate checkbox if reviewState is keepWorking and student is awaiting reivew', () => {
-    const latestFeedback = feedbackForIndeterminateState();
-    const wrapper = setUp({latestFeedback});
+    const wrapper = setUp({
+      latestReviewState: ReviewStates.keepWorking,
+      isAwaitingTeacherReview: true
+    });
     expect(wrapper.instance().checkbox.indeterminate).to.be.true;
   });
 
   it('displays an unchecked checkbox if no latestFeedback', () => {
-    const wrapper = setUp({latestFeedback: null});
+    const wrapper = setUp({latestReviewState: null});
     expect(wrapper.instance().checkbox.checked).to.be.false;
   });
 
   it('displays an unchecked checkbox if reviewState is completed', () => {
-    const wrapper = setUp({latestFeedback: {review_state: 'completed'}});
+    const wrapper = setUp({latestReviewState: ReviewStates.completed});
     expect(wrapper.instance().checkbox.checked).to.be.false;
   });
 
@@ -78,7 +67,7 @@ describe('TeacherFeedbackKeepWorking', () => {
       const wrapper = setUp({
         setReviewState: setReviewStateStub,
         setReviewStateChanged: setReviewStateChangedStub,
-        latestFeedback: null
+        latestReviewState: null
       });
 
       wrapper.instance().checkbox.checked = true;
@@ -95,7 +84,7 @@ describe('TeacherFeedbackKeepWorking', () => {
       const wrapper = setUp({
         setReviewState: setReviewStateStub,
         setReviewStateChanged: setReviewStateChangedStub,
-        latestFeedback: null
+        latestReviewState: null
       });
 
       wrapper.find('input').simulate('change');
@@ -114,9 +103,7 @@ describe('TeacherFeedbackKeepWorking', () => {
       const wrapper = setUp({
         setReviewState: setReviewStateStub,
         setReviewStateChanged: setReviewStateChangedStub,
-        latestFeedback: {
-          review_state: 'keepWorking'
-        }
+        latestReviewState: ReviewStates.keepWorking
       });
 
       wrapper.find('input').simulate('change');
@@ -128,14 +115,18 @@ describe('TeacherFeedbackKeepWorking', () => {
 
   describe('starting with an indeterminate box', () => {
     it('displays waiting for teacher review text', () => {
-      const latestFeedback = feedbackForIndeterminateState();
-      const wrapper = setUp({latestFeedback});
-      expect(wrapper.contains(i18n.awaitingTeacherReview())).to.be.true;
+      const wrapper = setUp({
+        latestReviewState: ReviewStates.keepWorking,
+        isAwaitingTeacherReview: true
+      });
+      expect(wrapper.contains(i18n.waitingForTeacherReviewLabel())).to.be.true;
     });
 
     it('displays tooltip with awaiting review content', () => {
-      const latestFeedback = feedbackForIndeterminateState();
-      const wrapper = setUp({latestFeedback});
+      const wrapper = setUp({
+        latestReviewState: ReviewStates.keepWorking,
+        isAwaitingTeacherReview: true
+      });
 
       const tooltip = wrapper.find('ReactTooltip');
       expect(tooltip).to.have.length(1);
@@ -148,7 +139,8 @@ describe('TeacherFeedbackKeepWorking', () => {
       const setReviewStateChangedStub = sinon.stub();
 
       const wrapper = setUp({
-        latestFeedback: feedbackForIndeterminateState(),
+        latestReviewState: ReviewStates.keepWorking,
+        isAwaitingTeacherReview: true,
         setReviewState: setReviewStateStub,
         setReviewStateChanged: setReviewStateChangedStub
       });
@@ -164,7 +156,8 @@ describe('TeacherFeedbackKeepWorking', () => {
       const setReviewStateChangedStub = sinon.stub();
 
       const wrapper = setUp({
-        latestFeedback: feedbackForIndeterminateState(),
+        latestReviewState: ReviewStates.keepWorking,
+        isAwaitingTeacherReview: true,
         setReviewState: setReviewStateStub,
         setReviewStateChanged: setReviewStateChangedStub
       });
