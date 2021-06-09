@@ -630,10 +630,6 @@ function reportPanelView(panel) {
   window.ga('send', 'pageview');
 }
 
-export function getFeatures(state) {
-  return state.data.length > 0 ? Object.keys(state.data[0]) : [];
-}
-
 function filterColumnsByType(state, columnType) {
   return Object.keys(state.columnsByDataType).filter(
     column => state.columnsByDataType[column] === columnType
@@ -654,7 +650,7 @@ function isColumnReadOnly(state, column) {
   return !!metadataColumnType;
 }
 
-export function getSelectedColumns(state) {
+function getSelectedColumns(state) {
   return state.selectedFeatures
     .concat(state.labelColumn)
     .filter(column => column !== undefined && column !== "")
@@ -739,13 +735,6 @@ export function getSelectedCategoricalFeatures(state) {
   return intersection;
 }
 
-export function getSelectedNumericalColumns(state) {
-  let intersection = getNumericalColumns(state).filter(
-    x => state.selectedFeatures.includes(x) || x === state.labelColumn
-  );
-  return intersection;
-}
-
 export function getSelectedNumericalFeatures(state) {
   let intersection = getNumericalColumns(state).filter(x =>
     state.selectedFeatures.includes(x)
@@ -753,7 +742,7 @@ export function getSelectedNumericalFeatures(state) {
   return intersection;
 }
 
-export function getNumericalColumns(state) {
+function getNumericalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.NUMERICAL);
 }
 
@@ -771,24 +760,13 @@ function hasTooManyUniqueOptions(state, column) {
   return false;
 }
 
-export function getSelectableFeatures(state) {
-  return getFeatures(state).filter(
-    column =>
-      column !== state.labelColumn && !state.selectedFeatures.includes(column)
-  );
-}
-
-export function getSelectableLabels(state) {
-  return getFeatures(state).filter(x => !state.selectedFeatures.includes(x));
-}
-
 export function getUniqueOptions(state, column) {
   return Array.from(new Set(state.data.map(row => row[column]))).filter(
     option => option !== undefined && option !== ""
   );
 }
 
-export function getOptionFrequencies(state, column) {
+function getOptionFrequencies(state, column) {
   let optionFrequencies = {};
   for (let row of state.data) {
     if (optionFrequencies[row[column]]) {
@@ -846,7 +824,7 @@ export function getSelectedColumnDescriptions(state) {
   });
 }
 
-export function getColumnDescription(state, columnId) {
+function getColumnDescription(state, columnId) {
   if (!state || !columnId) {
     return null;
   }
@@ -882,7 +860,7 @@ function isEmpty(object) {
   return Object.keys(object).length === 0;
 }
 
-export function getConvertedValue(state, rawValue, column) {
+function getConvertedValue(state, rawValue, column) {
   const convertedValue =
     getCategoricalColumns(state).includes(column) &&
     !isEmpty(state.featureNumberKey)
@@ -906,7 +884,7 @@ export function getConvertedAccuracyCheckExamples(state) {
   return convertedAccuracyCheckExamples;
 }
 
-export function getConvertedLabel(state, rawLabel) {
+function getConvertedLabel(state, rawLabel) {
   if (state.labelColumn) {
     return getConvertedValue(state, rawLabel, state.labelColumn);
   }
@@ -924,7 +902,7 @@ export function isRegression(state) {
   return isColumnNumerical(state, state.labelColumn);
 }
 
-export function getAccuracyGrades(state) {
+function getAccuracyGrades(state) {
   const grades = isRegression(state)
     ? getAccuracyRegression(state).grades
     : getAccuracyClassification(state).grades;
@@ -1080,7 +1058,7 @@ export function getSpecifiedDatasets(state) {
   return state.mode && state.mode.datasets;
 }
 
-export function getShowColumnClicking(state) {
+function getShowColumnClicking(state) {
   return !(state.mode && state.mode.hideColumnClicking);
 }
 
