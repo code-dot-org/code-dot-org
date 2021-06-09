@@ -18,8 +18,7 @@ import {
   validationMessages,
   getTrainedModelDataToSave,
   isSaveComplete,
-  shouldDisplaySaveStatus,
-  getModelMetrics
+  shouldDisplaySaveStatus
 } from "./redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
@@ -31,8 +30,6 @@ class PanelButtons extends Component {
     setCurrentPanel: PropTypes.func,
     onContinue: PropTypes.func,
     startSaveTrainedModel: PropTypes.func,
-    logMetric: PropTypes.func,
-    modelMetrics: PropTypes.object,
     dataToSave: PropTypes.object,
     saveStatus: PropTypes.string,
     isSaveComplete: PropTypes.func,
@@ -49,7 +46,6 @@ class PanelButtons extends Component {
     } else if (this.props.currentPanel === "saveModel") {
       this.props.startSaveTrainedModel(this.props.dataToSave);
     } else if (this.props.currentPanel === "generateResults") {
-      this.props.logMetric("train-model", this.props.modelMetrics);
       this.props.setCurrentPanel(this.props.panelButtons.next.panel);
     } else {
       this.props.setCurrentPanel(this.props.panelButtons.next.panel);
@@ -153,8 +149,6 @@ class App extends Component {
     setCurrentPanel: PropTypes.func,
     validationMessages: PropTypes.object,
     onContinue: PropTypes.func,
-    logMetric: PropTypes.func,
-    modelMetrics: PropTypes.object,
     resultsPhase: PropTypes.number,
     startSaveTrainedModel: PropTypes.func,
     dataToSave: PropTypes.object,
@@ -169,8 +163,6 @@ class App extends Component {
       currentPanel,
       setCurrentPanel,
       onContinue,
-      logMetric,
-      modelMetrics,
       resultsPhase,
       dataToSave,
       startSaveTrainedModel,
@@ -253,8 +245,6 @@ class App extends Component {
           setCurrentPanel={setCurrentPanel}
           onContinue={onContinue}
           startSaveTrainedModel={startSaveTrainedModel}
-          logMetric={logMetric}
-          modelMetrics={modelMetrics}
           dataToSave={dataToSave}
           saveStatus={saveStatus}
           isSaveComplete={isSaveComplete}
@@ -272,8 +262,7 @@ export default connect(
     validationMessages: validationMessages(state),
     resultsPhase: state.resultsPhase,
     dataToSave: getTrainedModelDataToSave(state),
-    saveStatus: state.saveStatus,
-    modelMetrics: getModelMetrics(state)
+    saveStatus: state.saveStatus
   }),
   dispatch => ({
     setCurrentPanel(panel) {

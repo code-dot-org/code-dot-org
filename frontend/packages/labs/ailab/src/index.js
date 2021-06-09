@@ -11,7 +11,8 @@ import rootReducer, {
   setInstructionsKeyCallback,
   setSaveStatus,
   setReserveLocation,
-  setInstructionsDismissed
+  setInstructionsDismissed,
+  setFirehoseMetricsLogger
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
@@ -22,15 +23,13 @@ export const store = createStore(rootReducer);
 
 let saveTrainedModel = null;
 let onContinue = null;
-let logMetric = null;
 
 export const initAll = function (options) {
   // Handle an optional mode.
   const mode = options && options.mode;
   onContinue = options && options.onContinue;
   saveTrainedModel = options && options.saveTrainedModel;
-  logMetric = options && options.logMetric;
-
+  store.dispatch(setFirehoseMetricsLogger(options && options.logMetric));
   store.dispatch(
     setInstructionsKeyCallback(options && options.setInstructionsKey)
   );
@@ -43,7 +42,6 @@ export const initAll = function (options) {
         mode={mode}
         onContinue={onContinue}
         startSaveTrainedModel={startSaveTrainedModel}
-        logMetric={logMetric}
       />
     </Provider>,
     document.getElementById("root")

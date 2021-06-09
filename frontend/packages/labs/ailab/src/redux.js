@@ -61,6 +61,7 @@ const SET_SHOW_RESULTS_DETAILS = "SET_SHOW_RESULTS_DETAILS";
 const SET_K_VALUE = "SET_K_VALUE";
 const SET_INSTRUCTIONS_DISMISSED = "SET_INSTRUCTIONS_DISMISSED";
 const SET_RESULTS_TAB = "SET_RESULTS_TAB";
+const SET_FIREHOSE_METRICS_LOGGER = "SET_FIREHOSE_METRICS_LOGGER";
 
 // Action creators
 export function setMode(mode) {
@@ -228,6 +229,10 @@ export function setResultsTab(key) {
   return { type: SET_RESULTS_TAB, key };
 }
 
+export function setFirehoseMetricsLogger(firehoseMetricsLogger) {
+  return { type: SET_FIREHOSE_METRICS_LOGGER, firehoseMetricsLogger };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -264,7 +269,8 @@ const initialState = {
   kValue: null,
   viewedPanels: [],
   instructionsOverlayActive: false,
-  resultsTab: ResultsGrades.CORRECT
+  resultsTab: ResultsGrades.CORRECT,
+  firehoseMetricsLogger: undefined
 };
 
 // Reducer
@@ -413,7 +419,8 @@ export default function rootReducer(state = initialState, action) {
       ...initialState,
       instructionsKeyCallback: state.instructionsKeyCallback,
       mode: state.mode,
-      reserveLocation: state.reserveLocation
+      reserveLocation: state.reserveLocation,
+      firehoseMetricsLogger: state.firehoseMetricsLogger
     };
   }
   if (action.type === SET_MODEL_SIZE) {
@@ -608,6 +615,12 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       resultsTab: action.key
+    }
+  }
+  if (action.type === SET_FIREHOSE_METRICS_LOGGER) {
+    return {
+      ...state,
+      firehoseMetricsLogger: action.firehoseMetricsLogger
     }
   }
   return state;
@@ -1082,7 +1095,7 @@ export function getDataDescription(state) {
   }
 }
 
-export function getModelMetrics(state) {
+function getModelMetrics(state) {
   const modelMetrics = {};
   modelMetrics.userUploaded = isUserUploadedDataset(state);
   modelMetrics.datasetName = state.metadata.name;
@@ -1090,6 +1103,10 @@ export function getModelMetrics(state) {
   modelMetrics.label = state.labelColumn;
   modelMetrics.accuracy = getSummaryStat(state).stat;
   return modelMetrics;
+}
+
+export function logFirehoseMetric(action, state) {
+  return state.firehoseMetricsLogger(action, getModelMetrics(state));
 }
 
 export function getDatasetDetails(state) {
