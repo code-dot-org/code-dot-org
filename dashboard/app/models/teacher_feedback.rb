@@ -76,12 +76,13 @@ class TeacherFeedback < ApplicationRecord
     ).latest_per_teacher
   end
 
-  # returns the latest feedback for each student on every level given by the teacher
-  def self.get_latest_feedbacks_given(student_ids, level_ids, teacher_id)
+  # returns the latest feedback for each student on every level in a script given by the teacher
+  def self.get_latest_feedbacks_given(student_ids, level_ids, script_id, teacher_id)
     find(
       where(
         student_id: student_ids,
         level_id: level_ids,
+        script_id: script_id,
         teacher_id: teacher_id
       ).group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)')
     )
