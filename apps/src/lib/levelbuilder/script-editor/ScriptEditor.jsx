@@ -27,6 +27,7 @@ import {
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+import {PUBLISHED_STATES} from '@cdo/apps/lib/levelbuilder/constants';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -40,8 +41,7 @@ class ScriptEditor extends React.Component {
     id: PropTypes.number,
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
-    initialHidden: PropTypes.bool,
-    initialIsStable: PropTypes.bool,
+    initialPublishedState: PropTypes.oneOf(PUBLISHED_STATES).isRequired,
     initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
@@ -113,8 +113,6 @@ class ScriptEditor extends React.Component {
       description: this.props.i18nData.description,
       studentDescription: this.props.i18nData.studentDescription,
       announcements: this.props.initialAnnouncements,
-      hidden: this.props.initialHidden,
-      isStable: this.props.initialIsStable,
       loginRequired: this.props.initialLoginRequired,
       hideableLessons: this.props.initialHideableLessons,
       studentDetailProgressView: this.props.initialStudentDetailProgressView,
@@ -148,13 +146,7 @@ class ScriptEditor extends React.Component {
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       deprecated: this.props.initialDeprecated,
-      publishedState: !this.props.initialHidden
-        ? this.props.initialIsStable
-          ? 'Recommended'
-          : 'Preview'
-        : this.props.initialPilotExperiment
-        ? 'Pilot'
-        : 'Beta'
+      publishedState: this.props.initialPublishedState
     };
   }
 
@@ -254,7 +246,7 @@ class ScriptEditor extends React.Component {
       });
       return;
     } else if (
-      this.state.publishedState === 'Pilot' &&
+      this.state.publishedState === 'pilot' &&
       this.state.pilotExperiment === ''
     ) {
       this.setState({
@@ -276,8 +268,7 @@ class ScriptEditor extends React.Component {
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
-      hidden: this.state.hidden,
-      is_stable: this.state.isStable,
+      published_state: this.state.publishedState,
       deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
@@ -634,13 +625,9 @@ class ScriptEditor extends React.Component {
                     )}
                   </label>
                   <CourseVersionPublishingEditor
-                    visible={!this.state.hidden}
-                    isStable={this.state.isStable}
                     pilotExperiment={this.state.pilotExperiment}
                     versionYear={this.state.versionYear}
                     familyName={this.state.familyName}
-                    updateVisible={visible => this.setState({hidden: !visible})}
-                    updateIsStable={isStable => this.setState({isStable})}
                     updatePilotExperiment={pilotExperiment =>
                       this.setState({pilotExperiment})
                     }

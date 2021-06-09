@@ -13,7 +13,7 @@
         {
           "type": "html",
           "name": "welcome_preamble",
-          "html": "<p><h2>Welcome to the {course} post-course survey</h2>\n<p>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered a $10 Amazon gift card for your time (supplies limited).</strong></p>\n<p><strong>Your honesty and candor are appreciated and help us improve.<br /></strong></p>"
+          "html": "<p><h2>Welcome to the {course} post-course survey</h2>\n<p>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered a $10 Amazon gift card for your time (supplies limited to first 250 respondents).</strong></p>\n<p><strong>Your honesty and candor are appreciated and help us improve.<br /></strong></p>"
         }
       ]
     },
@@ -297,7 +297,7 @@
             {
               "type": "checkbox",
               "name": "other_ap_courses_taught",
-              "title": "What other AP courses did you teach this school year (2019-20), if any?",
+              "title": "What other AP courses did you teach this school year, if any?",
               "description": "Check all that apply",
               "choices": [
                 {
@@ -366,28 +366,32 @@
         },
         {
           "type": "radiogroup",
-          "name": "years_taught_codeorg",
+          "name": "taught_codeorg_since",
           "title": "How many years have you taught using the Code.org {course} curriculum?",
           "choices": [
             {
-              "value": "1st",
-              "text": "This is my first year (2019-20)"
+              "value": "2020",
+              "text": "2020-21 is my first year!"
             },
             {
-              "value": "2nd",
-              "text": "2nd year (since 2018-19)"
+              "value": "2019",
+              "text": "Since 2019-20"
             },
             {
-              "value": "3rd",
-              "text": "3rd year (since 2017-18)"
+              "value": "2018",
+              "text": "Since 2018-19"
             },
             {
-              "value": "4th",
-              "text": "4th year (since 2016-17)"
+              "value": "2017",
+              "text": "Since 2017-18"
             },
             {
-              "value": "5th",
-              "text": "5th year (since 2015-16)"
+              "value": "2016",
+              "text": "Since 2016-17"
+            },
+            {
+              "value": "2015",
+              "text": "Since 2015-16"
             }
           ]
         }
@@ -404,7 +408,7 @@
         {
           "type": "radiogroup",
           "name": "type_of_classroom",
-          "title": "Which best describes how your course class operated this year?",
+          "title": "Which best describes how your {course} class operated this year?",
           "choices": [
             {
               "value": "remote",
@@ -423,16 +427,6 @@
               "text": "Started remote, transitioned to in-person during the school year."
             }
           ]
-        },
-        {
-          "type": "rating",
-          "name": "pct_inperson_v_remote",
-          "visibleIf": "{type_of_classroom} = 'hybrid'",
-          "title": "For a hybrid situation, approximately what % of class hours were REMOTE?",
-          "rateMin": 0,
-          "rateMax": 100,
-          "rateStep": 10,
-          "maxRateDescription": "%"
         },
         {
           "type": "radiogroup",
@@ -487,43 +481,13 @@
           "hasOther": true
         },
         {
-          "type": "radiogroup",
-          "name": "days_per_week_video_conf_remote",
-          "title": "When teaching remotely, approximately how many MINUTES PER WEEK did you teach via a video conference?",
-          "choices": [
-            {
-              "value": "n_a",
-              "text": "None - I did not host class sessions via video conference"
-            },
-            {
-              "value": "50_or_less",
-              "text": "50 or less"
-            },
-            {
-              "value": "51_to_100",
-              "text": "51-100"
-            },
-            {
-              "value": "101_to_150",
-              "text": "101 - 150"
-            },
-            {
-              "value": "151_to_200",
-              "text": "151 - 200"
-            },
-            {
-              "value": "201_to_250",
-              "text": "201 - 250"
-            },
-            {
-              "value": "251_to_300",
-              "text": "251 - 300"
-            },
-            {
-              "value": "301_or_more",
-              "text": "301 or more"
-            }
-          ]
+          "type": "rating",
+          "name": "pct_inperson_v_remote",
+          "title": "Approximately what % of your class hours this year we spent teaching via video conference?",
+          "rateMin": 0,
+          "rateMax": 100,
+          "rateStep": 10,
+          "maxRateDescription": "%"
         },
         {
           "type": "radiogroup",
@@ -564,6 +528,70 @@
             }
           ],
           "hasOther": true
+        },
+        {
+          "type": "rating",
+          "name": "question2",
+          "visibleIf": "{lms_tool_remote} <> 'none'",
+          "title": "How happy are you with your LMS?",
+          "minRateDescription": "Not at all happy",
+          "maxRateDescription": "Extremely happy"
+        },
+        {
+          "type": "matrix",
+          "name": "LMS_useful_integration",
+          "visibleIf": "{lms_tool_remote} <> 'none'",
+          "title": "How useful would it be for your LMS to integrate with Code.org in the following ways (scale 1 to 5)?",
+          "columns": [
+            {
+              "value": "na",
+              "text": "N/A"
+            },
+            {
+              "value": "1",
+              "text": "1 - Not at all useful"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5 - Extremely usful"
+            }
+          ],
+          "rows": [
+            {
+              "value": "section_setup",
+              "text": "Sign-in and section set-up - create a Code.org section using student accounts from your LMS. Students would sign in to Code.org with their LMS accounts"
+            },
+            {
+              "value": "assign_",
+              "text": "Assign work from Code.org to your LMS - when in Code.org, post a lesson to your LMS"
+            },
+            {
+              "value": "track_progress",
+              "text": "Track progress in your LMS - see how many levels and lessons students have completed in your LMS"
+            },
+            {
+              "value": "grade_assignments",
+              "text": "Grade assignments from Code.org in your LMS - give feedback on Code.org levels in your LMS and have that feedback reflect to students in Code.org"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "LMS_useful_integration_other",
+          "visibleIf": "{LMS_useful_integration.other} = 5",
+          "title": "(Optional) Please describe another way Code.org might better integrate with your LMS that would be useful to you."
         },
         {
           "type": "comment",
@@ -1232,5 +1260,5 @@
       ]
     }
   ],
-  "published": false
+  "published": true
 }
