@@ -96,7 +96,7 @@ class Resource < ApplicationRecord
     {
       id: id,
       key: key,
-      markdownKey: Services::MarkdownPreprocessor.build_resource_key(self),
+      markdownKey: Services::GloballyUniqueIdentifiers.build_resource_key(self),
       name: name,
       url: url,
       downloadUrl: download_url || '',
@@ -112,7 +112,7 @@ class Resource < ApplicationRecord
     {
       id: id,
       key: key,
-      markdownKey: Services::MarkdownPreprocessor.build_resource_key(self),
+      markdownKey: Services::GloballyUniqueIdentifiers.build_resource_key(self),
       name: name,
       url: url
     }
