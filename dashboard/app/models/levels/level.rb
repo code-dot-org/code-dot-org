@@ -840,10 +840,10 @@ class Level < ApplicationRecord
     base_name
   end
 
-  # repeatedly strip any version year suffix of the form _NNNN ()e.g. _2017)
+  # repeatedly strip any version year suffix of the form _NNNN or -NNNN ()e.g. _2017 or -2017)
   # from the input string.
   def strip_version_year_suffixes(str)
-    year_suffix_regex = /^(.*)_[0-9]{4}$/
+    year_suffix_regex = /^(.*)[_-][0-9]{4}$/
     loop do
       matchdata = str.match(year_suffix_regex)
       break unless matchdata
