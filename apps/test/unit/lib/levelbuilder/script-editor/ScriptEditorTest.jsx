@@ -74,8 +74,7 @@ describe('ScriptEditor', () => {
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
-      initialIsStable: false,
-      initialHidden: true,
+      initialPublishedState: 'beta',
       hasCourse: false,
       scriptPath: '/s/test-script',
       initialLessonLevelData:
@@ -99,17 +98,17 @@ describe('ScriptEditor', () => {
 
   describe('Script Editor', () => {
     it('does not show publishing editor if hasCourse is true', () => {
-      const wrapper = createWrapper({initialHidden: false, hasCourse: true});
+      const wrapper = createWrapper({hasCourse: true});
       assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 0);
     });
 
     it('shows publishing editor if hasCourse is false', () => {
-      const wrapper = createWrapper({initialHidden: false, hasCourse: false});
+      const wrapper = createWrapper({hasCourse: false});
       assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
     });
 
     it('uses old script editor for non migrated script', () => {
-      const wrapper = createWrapper({initialHidden: false});
+      const wrapper = createWrapper({});
 
       expect(wrapper.find('input').length).to.equal(21);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
@@ -124,7 +123,6 @@ describe('ScriptEditor', () => {
 
     it('uses new script editor for migrated script', () => {
       const wrapper = createWrapper({
-        initialHidden: false,
         isMigrated: true,
         initialCourseVersionId: 1
       });
@@ -198,9 +196,7 @@ describe('ScriptEditor', () => {
     });
 
     it('has correct markdown for preview of unit description', () => {
-      const wrapper = createWrapper({
-        initialHidden: false
-      });
+      const wrapper = createWrapper({});
       expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
       expect(
         wrapper
@@ -222,7 +218,6 @@ describe('ScriptEditor', () => {
 
     it('must set family name in order to check standalone course', () => {
       const wrapper = createWrapper({
-        initialHidden: false,
         initialFamilyName: 'family1'
       });
       let courseCheckbox = wrapper.find('.isCourseCheckbox');
@@ -253,35 +248,6 @@ describe('ScriptEditor', () => {
 
     expect(peerReviewCountInput.props().disabled).to.be.true;
     expect(peerReviewCountInput.props().value).to.equal(0);
-  });
-
-  describe('Publish State', () => {
-    it('published state is beta when visible and isStable are false and there is no pilot experiment', () => {
-      const wrapper = createWrapper({});
-      const scriptEditor = wrapper.find('ScriptEditor');
-      expect(scriptEditor.state().publishedState).to.equal('Beta');
-    });
-
-    it('published state is pilot if there is a pilot experiment', () => {
-      const wrapper = createWrapper({initialPilotExperiment: 'my-pilot'});
-      const scriptEditor = wrapper.find('ScriptEditor');
-      expect(scriptEditor.state().publishedState).to.equal('Pilot');
-    });
-
-    it('published state is preview if visible is true but isStable is false', () => {
-      const wrapper = createWrapper({initialHidden: false});
-      const scriptEditor = wrapper.find('ScriptEditor');
-      expect(scriptEditor.state().publishedState).to.equal('Preview');
-    });
-
-    it('published state is recommended if visible and isStable are true', () => {
-      const wrapper = createWrapper({
-        initialHidden: false,
-        initialIsStable: true
-      });
-      const scriptEditor = wrapper.find('ScriptEditor');
-      expect(scriptEditor.state().publishedState).to.equal('Recommended');
-    });
   });
 
   describe('Saving Script Editor', () => {
@@ -435,7 +401,7 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({});
 
       const scriptEditor = wrapper.find('ScriptEditor');
-      scriptEditor.setState({publishedState: 'Pilot', pilotExperiment: ''});
+      scriptEditor.setState({publishedState: 'pilot', pilotExperiment: ''});
 
       const saveBar = wrapper.find('SaveBar');
 
