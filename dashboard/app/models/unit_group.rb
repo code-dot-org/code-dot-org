@@ -316,7 +316,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @returns [Boolean] Whether the user can assign this course.
   # Users should only be able to assign one of their valid courses.
-  def assignable?(user)
+  def assignable_for_user?(user)
     if user&.teacher?
       UnitGroup.valid_course_id?(id)
     end
@@ -361,7 +361,7 @@ class UnitGroup < ApplicationRecord
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
-      show_assign_button: assignable?(user),
+      show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
       course_path: link
