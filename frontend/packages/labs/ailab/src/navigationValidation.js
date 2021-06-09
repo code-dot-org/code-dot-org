@@ -42,13 +42,13 @@ export function isPanelEnabled(state, panelId) {
   }
 
   if (panelId === "trainModel") {
-    if (!readyToTrain(state)) {
+    if (!uniqLabelFeaturesSelected(state)) {
       return false;
     }
   }
 
   if (panelId === "results") {
-    if (!readyForResults(state)) {
+    if (!resultsAvailable(state)) {
       return false;
     }
   }
@@ -65,7 +65,6 @@ export function isPanelEnabled(state, panelId) {
 
   return true;
 }
-
 
 // Is a panel available to be shown?  This determines what panels
 // can possibly be visited in the app.
@@ -97,10 +96,6 @@ function isDataUploaded(state) {
   return state.data.length > 0;
 }
 
-function readyToTrain(state) {
-  return uniqLabelFeaturesSelected(state);
-}
-
 function minOneFeatureSelected(state) {
   return state.selectedFeatures.length !== 0;
 }
@@ -109,7 +104,7 @@ function labelSelected(state) {
   return !!state.labelColumn;
 }
 
-function uniqLabelFeaturesSelected(state) {
+export function uniqLabelFeaturesSelected(state) {
   return (
     minOneFeatureSelected(state) &&
     labelSelected(state) &&
@@ -117,9 +112,9 @@ function uniqLabelFeaturesSelected(state) {
   );
 }
 
-function readyForResults(state) {
-  return state.accuracyCheckExamples.length === 0 ||
-  didSaveSucceed(state) || isSaveInProgress(state);
+function resultsAvailable(state) {
+  return state.accuracyCheckExamples.length !== 0 ||
+  !didSaveSucceed(state) || !isSaveInProgress(state);
 }
 
 function isSaveInProgress(state) {
@@ -140,4 +135,86 @@ export function shouldDisplaySaveStatus(saveStatus) {
 
 function isModelNamed(state) {
   return ![undefined, ""].includes(state.trainedModelDetails.name);
+}
+
+function isAccuracyAcceptable(state) {
+  const mode = state.mode;
+
+  if (
+    mode &&
+    mode.requireAccuracy &&
+    mode.requireAccuracy > state.historicResults[0].accuracy
+  ) {
+    return false;
+  }
+
+  return true;
+}
+
+// Given the current panel, return the appropriate previous & next buttons.
+export function prevNextButtons(state) {
+  let prev, next;
+
+  if (state.currentPanel === "selectDataset") {
+    prev = null;
+    next = isPanelAvailable(state, "dataDisplayLabel")
+      ? { panel: "dataDisplayLabel", text: "Continue" }
+      : isPanelAvailable(state, "dataDisplayFeatures")
+      ? { panel: "dataDisplayFeatures", text: "Continue" }
+      : null;
+  } else if (state.currentPanel === "dataDisplayLabel") {
+    prev = isPanelAvailable(state, "selectDataset")
+      ? { panel: "selectDataset", text: "Back" }
+      : null;
+    next = isPanelAvailable(state, "dataDisplayFeatures")
+      ? { panel: "dataDisplayFeatures", text: "Continue" }
+      : null;
+  } else if (state.currentPanel === "dataDisplayFeatures") {
+    prev = isPanelAvailable(state, "dataDisplayLabel")
+      ? { panel: "dataDisplayLabel", text: "Back" }
+      : null;
+    next = isPanelAvailable(state, "trainModel")
+      ? { panel: "trainModel", text: "Train" }
+      : null;
+  } else if (state.currentPanel === "trainModel") {
+    if (state.modelSize) {
+      prev = null;
+      next = { panel: "generateResults", text: "Continue" };
+    }
+  } else if (state.currentPanel === "generateResults") {
+    if (state.modelSize) {
+      prev = null;
+      next = { panel: "results", text: "Continue" };
+    }
+  } else if (state.currentPanel === "results") {
+    prev = isPanelAvailable(state, "dataDisplayFeatures")
+      ? { panel: "dataDisplayFeatures", text: "Try again" }
+      : null;
+    next = !isAccuracyAcceptable(state)
+      ? null
+      : isPanelAvailable(state, "saveModel")
+      ? { panel: "saveModel", text: "Continue" }
+      : { panel: "continue", text: "Finish" };
+  } else if (state.currentPanel === "saveModel") {
+    prev = { panel: "results", text: "Back" };
+    next = isPanelAvailable(state, "modelSummary")
+      ? { panel: "modelSummary", text: "Save" }
+      : null;
+  } else if (state.currentPanel === "modelSummary") {
+    prev = isPanelAvailable(state, "saveModel")
+      ? { panel: "saveModel", text: "Back" }
+      : null;
+    next = isPanelAvailable(state, "finish")
+      ? { panel: "finish", text: "Finish" }
+      : null;
+  }
+
+  if (prev) {
+    prev.enabled = isPanelEnabled(state, prev.panel);
+  }
+  if (next) {
+    next.enabled = isPanelEnabled(state, next.panel);
+  }
+
+  return { prev, next };
 }
