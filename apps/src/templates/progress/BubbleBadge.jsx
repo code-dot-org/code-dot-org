@@ -3,39 +3,59 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
 
-/**
- * Icon that indicates an assessment on ProgressBubbles and ProgressPills
- */
-
-const badgeTypes = ['assessment', 'keepWorking'];
-
-function BubbleBadge({type, isDiamond}) {
-  let backgroundColor, icon;
-
-  if (type === 'assessment') {
-    backgroundColor = color.purple;
-    icon = 'check';
-  } else {
-    backgroundColor = color.red;
-    icon = 'exclamation';
-  }
-
-  const position = isDiamond
+export function BubbleBadgeWrapper({isDiamond, children}) {
+  const bubblePositioning = isDiamond
     ? styles.diamondBubblePosition
     : styles.bubblePosition;
 
+  return <div style={bubblePositioning}>{children}</div>;
+}
+BubbleBadgeWrapper.propTypes = {
+  isDiamond: PropTypes.bool,
+  children: PropTypes.node
+};
+
+export function KeepWorkingBadge({hasWhiteBorder = true, style}) {
   return (
-    <span className="fa-stack" style={{...styles.container, ...position}}>
-      <FontAwesome
-        icon="circle"
-        className="fa-stack-2x"
-        style={{color: backgroundColor}}
-      />
-      <FontAwesome
-        icon="circle-thin"
-        className="fa-stack-2x"
-        style={styles.border}
-      />
+    <BaseBadge
+      icon="exclamation"
+      color={color.red}
+      hasWhiteBorder={hasWhiteBorder}
+      style={style}
+    />
+  );
+}
+KeepWorkingBadge.propTypes = {
+  hasWhiteBorder: PropTypes.bool,
+  style: PropTypes.object
+};
+
+export function AssessmentBadge({hasWhiteBorder = true, style}) {
+  return (
+    <BaseBadge
+      icon="check"
+      color={color.purple}
+      hasWhiteBorder={hasWhiteBorder}
+      style={style}
+    />
+  );
+}
+AssessmentBadge.propTypes = {
+  hasWhiteBorder: PropTypes.bool,
+  style: PropTypes.object
+};
+
+function BaseBadge({icon, color, hasWhiteBorder, style}) {
+  return (
+    <span className="fa-stack" style={{...styles.container, ...style}}>
+      <FontAwesome icon="circle" className="fa-stack-2x" style={{color}} />
+      {hasWhiteBorder && (
+        <FontAwesome
+          icon="circle-thin"
+          className="fa-stack-2x"
+          style={styles.border}
+        />
+      )}
       <FontAwesome
         icon={icon}
         className="fa-stack-1x"
@@ -44,10 +64,11 @@ function BubbleBadge({type, isDiamond}) {
     </span>
   );
 }
-
-BubbleBadge.propTypes = {
-  type: PropTypes.oneOf(badgeTypes).isRequired,
-  isDiamond: PropTypes.bool
+BaseBadge.propTypes = {
+  icon: PropTypes.string,
+  color: PropTypes.string,
+  hasWhiteBorder: PropTypes.bool,
+  style: PropTypes.object
 };
 
 const styles = {
@@ -71,5 +92,3 @@ const styles = {
     color: color.white
   }
 };
-
-export default BubbleBadge;
