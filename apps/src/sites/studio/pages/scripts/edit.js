@@ -14,7 +14,6 @@ import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
-import {valueOr} from '@cdo/apps/utils';
 
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
@@ -53,8 +52,7 @@ export default function initPage(scriptEditorData) {
         id={scriptData.id}
         name={scriptEditorData.script.name}
         i18nData={scriptEditorData.i18n}
-        initialHidden={valueOr(scriptData.hidden, true)}
-        initialIsStable={scriptData.is_stable || false}
+        initialPublishedState={scriptData.publishedState}
         initialDeprecated={scriptData.deprecated}
         initialLoginRequired={scriptData.loginRequired}
         initialHideableLessons={scriptData.hideable_lessons}

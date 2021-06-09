@@ -1152,6 +1152,58 @@ class Script < ApplicationRecord
     end
   end
 
+  def clone_migrated_script(new_name, new_level_suffix: nil, destination_unit_group_name: nil, version_year: nil, family_name:  nil)
+    destination_unit_group = destination_unit_group_name ?
+      UnitGroup.find_by_name(destination_unit_group_name) :
+      nil
+    raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_unit_group.course_version
+
+    ActiveRecord::Base.transaction do
+      copied_script = dup
+      copied_script.is_stable = false
+      copied_script.tts = false
+      copied_script.announcements = nil
+      copied_script.is_course = destination_unit_group.nil?
+      copied_script.name = new_name
+
+      if version_year
+        copied_script.version_year = version_year
+      end
+
+      copied_script.save!
+
+      if destination_unit_group
+        raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
+        UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_script, position: destination_unit_group.default_scripts.length + 1)
+        copied_script.reload
+      else
+        copied_script.is_course = true
+        raise "Must supply version year if new script will be a standalone course" unless version_year
+        copied_script.version_year = version_year
+        raise "Must supply family name if new script will be a standalone course" unless family_name
+        copied_script.family_name = family_name
+        CourseOffering.add_course_offering(copied_script)
+      end
+
+      lesson_groups.each do |original_lesson_group|
+        original_lesson_group.copy_to_script(copied_script, new_level_suffix)
+      end
+
+      course_version = copied_script.get_course_version
+      copied_script.resources = resources.map {|r| r.copy_to_course_version(course_version)}
+      copied_script.student_resources = student_resources.map {|r| r.copy_to_course_version(course_version)}
+
+      # Make sure we don't modify any files in unit tests.
+      if Rails.application.config.levelbuilder_mode
+        copy_and_write_i18n(new_name)
+        copied_script.write_script_json
+        copied_script.write_script_dsl
+      end
+
+      copied_script
+    end
+  end
+
   # Clone this script, appending a dash and the suffix to the name of this
   # script. Also clone all the levels in the script, appending an underscore and
   # the suffix to the name of each level. Mark the new script as hidden, and
@@ -1376,6 +1428,20 @@ class Script < ApplicationRecord
     nil
   end
 
+  def published_state
+    if pilot?
+      'pilot'
+    elsif !hidden
+      if is_stable
+        'recommended'
+      else
+        'preview'
+      end
+    else
+      'beta'
+    end
+  end
+
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
     # TODO: Set up peer reviews to be more consistent with the rest of the system
     # so that they don't need a bunch of one off cases (example peer reviews
@@ -1419,7 +1485,7 @@ class Script < ApplicationRecord
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       hidden: hidden,
-      is_stable: !!is_stable,
+      publishedState: published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
