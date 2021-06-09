@@ -62,7 +62,7 @@ class Vocabulary < ApplicationRecord
     {
       id: id,
       key: key,
-      markdownKey: Services::MarkdownPreprocessor.build_vocab_key(self),
+      markdownKey: Services::GloballyUniqueIdentifiers.build_vocab_key(self),
       word: word,
       definition: definition,
       commonSenseMedia: !!common_sense_media
