@@ -227,4 +227,23 @@ class LessonGroup < ApplicationRecord
       {}
     end
   end
+
+  def copy_to_script(destination_script, new_level_suffix = nil)
+    return if script == destination_script
+    raise 'Both lesson group and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
+    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil? || script.get_course_version.nil?
+
+    copied_lesson_group = dup
+    copied_lesson_group.script = destination_script
+    copied_lesson_group.lessons = []
+    copied_lesson_group.position = destination_script.lesson_groups.count + 1
+    copied_lesson_group.save!
+
+    lessons.each do |original_lesson|
+      copied_lesson = original_lesson.copy_to_script(destination_script, new_level_suffix)
+      raise 'Something went wrong: copied lesson should be in new lesson group' unless copied_lesson.lesson_group == copied_lesson_group
+    end
+    Script.merge_and_write_i18n(copied_lesson_group.i18n_hash, destination_script.name)
+    copied_lesson_group
+  end
 end
