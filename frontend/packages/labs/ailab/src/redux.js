@@ -809,6 +809,10 @@ export function getFeaturesToSave(state) {
   return features;
 }
 
+export function getLabelToSave(state) {
+  return getColumnDataToSave(state, state.labelColumn);
+}
+
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
   dataToSave.name = state.trainedModelDetails.name;

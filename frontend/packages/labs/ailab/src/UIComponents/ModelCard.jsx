@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { styles } from "../constants";
 import {
   getPercentCorrect,
-  getColumnDataToSave,
+  getLabelToSave,
   getFeaturesToSave,
   getDatasetDetails
 } from "../redux";
@@ -145,7 +145,7 @@ export default connect(state => ({
   trainedModelDetails: state.trainedModelDetails,
   selectedFeatures: state.selectedFeatures,
   percentCorrect: getPercentCorrect(state),
-  label: getColumnDataToSave(state, state.labelColumn),
+  label: getLabelToSave(state),
   feature: getFeaturesToSave(state),
   datasetDetails: getDatasetDetails(state)
 }))(ModelCard);
