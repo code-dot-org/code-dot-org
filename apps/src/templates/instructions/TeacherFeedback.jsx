@@ -11,8 +11,13 @@ import {CommentArea} from './CommentArea';
 import TeacherFeedbackKeepWorking from '@cdo/apps/templates/instructions/TeacherFeedbackKeepWorking';
 import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedbackStatus';
 import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedbackRubric';
-import {teacherFeedbackShape, rubricShape} from '@cdo/apps/templates/types';
+import {
+  teacherFeedbackShape,
+  rubricShape,
+  ReviewStates
+} from '@cdo/apps/templates/types';
 import experiments from '@cdo/apps/util/experiments';
+import FeedbackStudentReviewState from '@cdo/apps/templates/instructions/FeedbackStudentReviewState';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -47,6 +52,11 @@ export class TeacherFeedback extends Component {
     this.onRubricChange = this.onRubricChange.bind(this);
 
     const {latestFeedback} = this.props;
+
+    this.isAwaitingTeacherReview =
+      latestFeedback?.review_state === ReviewStates.keepWorking &&
+      latestFeedback?.student_updated_since_feedback;
+
     this.state = {
       comment: latestFeedback?.comment || '',
       performance: latestFeedback?.performance || null,
@@ -161,6 +171,68 @@ export class TeacherFeedback extends Component {
     );
   }
 
+  renderCommentAreaHeaderForTeacher() {
+    // Pilots which the user is enrolled in (such as keep working experiment) are stored on
+    // window.appOptions.experiments, which is queried by experiments.js
+    const keepWorkingEnabled = experiments.isEnabled(keepWorkingExperiment);
+    const latestFeedback = this.state.latestFeedback;
+
+    return (
+      <div style={styles.header}>
+        <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
+        {keepWorkingEnabled && (
+          <TeacherFeedbackKeepWorking
+            latestReviewState={latestFeedback?.review_state || null}
+            isAwaitingTeacherReview={this.isAwaitingTeacherReview}
+            setReviewState={this.onReviewStateChange}
+            setReviewStateChanged={this.onReviewStateUpdated}
+          />
+        )}
+      </div>
+    );
+  }
+
+  renderCommentAreaHeaderForStudent() {
+    const latestFeedback = this.state.latestFeedback;
+
+    return (
+      <div style={styles.header}>
+        <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
+        <FeedbackStudentReviewState
+          latestReviewState={latestFeedback?.review_state || null}
+          isAwaitingTeacherReview={this.isAwaitingTeacherReview}
+        />
+      </div>
+    );
+  }
+
+  renderSubmitFeedbackButton() {
+    const {latestFeedback, submitting, errorState} = this.state;
+    const {verifiedTeacher} = this.props;
+
+    const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
+
+    const buttonDisabled =
+      !this.didFeedbackChange() ||
+      submitting ||
+      errorState === ErrorType.Load ||
+      !verifiedTeacher;
+
+    return (
+      <div style={styles.button}>
+        <Button
+          id="ui-test-submit-feedback"
+          text={buttonText}
+          onClick={this.onSubmitFeedback}
+          color={Button.ButtonColor.blue}
+          disabled={buttonDisabled}
+        />
+        {errorState === ErrorType.Save &&
+          this.renderError(i18n.feedbackSaveError())}
+      </div>
+    );
+  }
+
   render() {
     const {
       verifiedTeacher,
@@ -171,21 +243,7 @@ export class TeacherFeedback extends Component {
       disabledMode
     } = this.props;
 
-    const {
-      comment,
-      performance,
-      latestFeedback,
-      submitting,
-      errorState
-    } = this.state;
-
-    const buttonDisabled =
-      !this.didFeedbackChange() ||
-      submitting ||
-      errorState === ErrorType.Load ||
-      !verifiedTeacher;
-
-    const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
+    const {comment, performance, latestFeedback, errorState} = this.state;
 
     const placeholderWarning = verifiedTeacher
       ? i18n.feedbackPlaceholder()
@@ -195,21 +253,14 @@ export class TeacherFeedback extends Component {
       ? latestFeedback.comment
       : placeholderWarning;
 
-    const displayComment =
-      !displayReadonlyRubric && (!!comment || viewAs === ViewType.Teacher);
+    const displayComment = !!comment || viewAs === ViewType.Teacher;
 
-    // Instead of unmounting the component when switching tabs, hide and show it
-    // so a teacher does not lose the feedback they are giving if they switch tabs
-    const tabDisplayStyle = visible
-      ? styles.tabAreaVisible
-      : styles.tabAreaHidden;
-
-    // Pilots which the user is enrolled in (such as keep working experiment) are stored on
-    // window.appOptions.experiments, which is queried by experiments.js
-    const keepWorkingEnabled = experiments.isEnabled(keepWorkingExperiment);
+    if (!visible) {
+      return null;
+    }
 
     return (
-      <div style={tabDisplayStyle}>
+      <div>
         {errorState === ErrorType.Load &&
           this.renderError(i18n.feedbackLoadError())}
         {rubric && (
@@ -222,42 +273,25 @@ export class TeacherFeedback extends Component {
             viewAs={viewAs}
           />
         )}
-        {displayComment && (
+        {!displayReadonlyRubric && (
           <div style={styles.commentAndFooter}>
-            <div style={styles.header}>
-              <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-              {keepWorkingEnabled && viewAs === ViewType.Teacher && (
-                <TeacherFeedbackKeepWorking
-                  latestFeedback={latestFeedback}
-                  reviewState={this.state.reviewState}
-                  setReviewState={this.onReviewStateChange}
-                  setReviewStateChanged={this.onReviewStateUpdated}
-                />
-              )}
-            </div>
-            <CommentArea
-              isReadonly={disabledMode}
-              comment={comment}
-              placeholderText={placeholderText}
-              studentHasFeedback={
-                viewAs === ViewType.Student && !!latestFeedback
-              }
-              onCommentChange={this.onCommentChange}
-            />
+            {viewAs === ViewType.Teacher &&
+              this.renderCommentAreaHeaderForTeacher()}
+            {viewAs === ViewType.Student &&
+              this.renderCommentAreaHeaderForStudent()}
+            {displayComment && (
+              <CommentArea
+                isReadonly={disabledMode}
+                comment={comment}
+                placeholderText={placeholderText}
+                studentHasFeedback={
+                  viewAs === ViewType.Student && !!latestFeedback
+                }
+                onCommentChange={this.onCommentChange}
+              />
+            )}
             <div style={styles.footer}>
-              {viewAs === ViewType.Teacher && (
-                <div style={styles.button}>
-                  <Button
-                    id="ui-test-submit-feedback"
-                    text={buttonText}
-                    onClick={this.onSubmitFeedback}
-                    color={Button.ButtonColor.blue}
-                    disabled={buttonDisabled}
-                  />
-                  {errorState === ErrorType.Save &&
-                    this.renderError(i18n.feedbackSaveError())}
-                </div>
-              )}
+              {viewAs === ViewType.Teacher && this.renderSubmitFeedbackButton()}
               {!!latestFeedback && (
                 <TeacherFeedbackStatus
                   viewAs={viewAs}
@@ -273,12 +307,6 @@ export class TeacherFeedback extends Component {
 }
 
 const styles = {
-  tabAreaHidden: {
-    display: 'none'
-  },
-  tabAreaVisible: {
-    display: 'block'
-  },
   button: {
     fontWeight: 'bold'
   },

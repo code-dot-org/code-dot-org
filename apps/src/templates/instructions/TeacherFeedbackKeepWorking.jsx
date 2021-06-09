@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import ReactTooltip from 'react-tooltip';
-import {makeEnum} from '@cdo/apps/utils';
-
-const ReviewStates = makeEnum('completed', 'keepWorking', 'awaitingReview');
+import {ReviewStates} from '@cdo/apps/templates/types';
 
 // TeacherFeedbackKeepWorking displays a checkbox which can be in one of 3 states:
 // 1. Checked - meaning the teacher has requested the student to keep working
@@ -15,21 +13,17 @@ const ReviewStates = makeEnum('completed', 'keepWorking', 'awaitingReview');
 // This checkbox is displayed to and controlled by the teacher.
 class TeacherFeedbackKeepWorking extends Component {
   static propTypes = {
-    latestFeedback: PropTypes.object,
+    latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
+    isAwaitingTeacherReview: PropTypes.bool,
     setReviewState: PropTypes.func,
     setReviewStateChanged: PropTypes.func
   };
 
   checkbox = null;
 
-  isAwaitingTeacherReview =
-    this.props.latestFeedback &&
-    this.props.latestFeedback.review_state === ReviewStates.keepWorking &&
-    this.props.latestFeedback.student_updated_since_feedback;
-
-  initialReviewState = this.isAwaitingTeacherReview
+  initialReviewState = this.props.isAwaitingTeacherReview
     ? ReviewStates.awaitingReview
-    : this.props.latestFeedback?.review_state || null;
+    : this.props.latestReviewState;
 
   constructor(props) {
     super(props);
@@ -95,7 +89,7 @@ class TeacherFeedbackKeepWorking extends Component {
             <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
             {this.initialReviewState === ReviewStates.awaitingReview && (
               <span style={styles.awaitingReviewText}>
-                &nbsp;-&nbsp;{i18n.awaitingTeacherReview()}
+                {i18n.waitingForTeacherReviewLabel()}
               </span>
             )}
           </label>
@@ -128,7 +122,8 @@ const styles = {
     fontWeight: 'bold'
   },
   awaitingReviewText: {
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    margin: '0 3px'
   },
   tooltipContent: {
     maxWidth: '250px'
