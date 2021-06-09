@@ -29,6 +29,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     family_name: nil,
     version_year: nil,
     is_stable: nil,
+    published_state: nil,
     supported_locales: [],
     pilot_experiment: nil,
     editor_experiment: nil,
@@ -829,12 +830,13 @@ level 'Level 3'
     assert_equal expected, script_text
   end
 
-  test 'Script DSL with new_name, family_name, version_year and is_stable' do
+  test 'Script DSL with new_name, family_name, version_year, published_state and is_stable' do
     input_dsl = <<~DSL
       new_name 'new name'
       family_name 'family name'
       version_year '3035'
       is_stable true
+      published_state beta
       lesson 'Lesson1', display_name: 'Lesson1'
       level 'Level 1'
       level 'Level 2'
@@ -845,6 +847,7 @@ level 'Level 3'
         family_name: "family name",
         version_year: "3035",
         is_stable: true,
+        published_state: 'beta',
         lesson_groups: [
           key: nil,
           display_name: nil,
@@ -866,13 +869,14 @@ level 'Level 3'
     assert_equal expected, output
   end
 
-  test 'serialize new_name, family_name, version_year, is_stable, tts, is_course' do
+  test 'serialize new_name, family_name, version_year, is_stable, tts, is_course, published_state' do
     script = create :script,
       {
         new_name: 'new name',
         family_name: 'family name',
         version_year: '2001',
         is_stable: true,
+        published_state: 'beta',
         tts: true,
         is_course: true
       }
@@ -883,6 +887,7 @@ level 'Level 3'
       family_name 'family name'
       version_year '2001'
       is_stable true
+      published_state beta
       tts true
       is_course true
 

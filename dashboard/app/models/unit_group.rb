@@ -52,6 +52,7 @@ class UnitGroup < ApplicationRecord
     version_year
     is_stable
     visible
+    published_state
     pilot_experiment
     announcements
   )
@@ -322,7 +323,7 @@ class UnitGroup < ApplicationRecord
     end
   end
 
-  def published_state
+  def get_published_state
     if pilot?
       'pilot'
     elsif visible
@@ -344,7 +345,7 @@ class UnitGroup < ApplicationRecord
       assignment_family_title: localized_assignment_family_title,
       family_name: family_name,
       version_year: version_year,
-      published_state: published_state,
+      published_state: get_published_state,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),

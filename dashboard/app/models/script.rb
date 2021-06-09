@@ -217,6 +217,7 @@ class Script < ApplicationRecord
     include_student_lesson_plans
     is_migrated
     seeded_from
+    published_state
   )
 
   def self.twenty_hour_script
@@ -1376,7 +1377,7 @@ class Script < ApplicationRecord
     nil
   end
 
-  def published_state
+  def get_published_state
     if pilot?
       'pilot'
     elsif !hidden
@@ -1433,7 +1434,7 @@ class Script < ApplicationRecord
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       hidden: hidden,
-      publishedState: published_state,
+      publishedState: get_published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
