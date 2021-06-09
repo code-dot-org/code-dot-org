@@ -20,7 +20,10 @@ class FeedbackStudentReviewState extends React.Component {
   renderKeepWorking() {
     return (
       <div style={styles.studentReviewState}>
-        <KeepWorkingBadge style={styles.keepWorkingBadge} />
+        <KeepWorkingBadge
+          hasWhiteBorder={false}
+          style={styles.keepWorkingBadge}
+        />
         <span style={styles.keepWorking}>{i18n.keepWorking()}</span>
       </div>
     );
@@ -29,7 +32,10 @@ class FeedbackStudentReviewState extends React.Component {
   renderAwaitingReview() {
     return (
       <div style={styles.studentReviewState}>
-        <KeepWorkingBadge style={styles.keepWorkingBadge} />
+        <KeepWorkingBadge
+          hasWhiteBorder={false}
+          style={styles.keepWorkingBadge}
+        />
         <span>{i18n.waitingForTeacherReview()}</span>
       </div>
     );

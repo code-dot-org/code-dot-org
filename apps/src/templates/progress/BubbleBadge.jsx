@@ -3,39 +3,53 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
 
-/**
- * Icon that indicates an assessment on ProgressBubbles and ProgressPills
- */
-
-const badgeTypes = ['assessment', 'keepWorking'];
-
-function BubbleBadge({type, isDiamond}) {
-  const position = isDiamond
+export function BubbleBadgeWrapper({isDiamond, children}) {
+  const bubblePositioning = isDiamond
     ? styles.diamondBubblePosition
     : styles.bubblePosition;
 
-  if (type === 'assessment') {
-    return <AssessmentBadge style={position} />;
-  } else {
-    return <KeepWorkingBadge showBorder={true} style={position} />;
-  }
+  return <div style={bubblePositioning}>{children}</div>;
 }
-
-BubbleBadge.propTypes = {
-  type: PropTypes.oneOf(badgeTypes).isRequired,
+BubbleBadgeWrapper.propTypes = {
   isDiamond: PropTypes.bool,
-  positionedRelative: PropTypes.bool
+  children: PropTypes.node
 };
 
-export function KeepWorkingBadge({showBorder, style}) {
+export function KeepWorkingBadge({hasWhiteBorder = true, style}) {
+  return (
+    <BaseBadge
+      icon="exclamation"
+      color={color.red}
+      hasWhiteBorder={hasWhiteBorder}
+      style={style}
+    />
+  );
+}
+KeepWorkingBadge.propTypes = {
+  hasWhiteBorder: PropTypes.bool,
+  style: PropTypes.object
+};
+
+export function AssessmentBadge({hasWhiteBorder = true, style}) {
+  return (
+    <BaseBadge
+      icon="check"
+      color={color.purple}
+      hasWhiteBorder={hasWhiteBorder}
+      style={style}
+    />
+  );
+}
+AssessmentBadge.propTypes = {
+  hasWhiteBorder: PropTypes.bool,
+  style: PropTypes.object
+};
+
+function BaseBadge({icon, color, hasWhiteBorder, style}) {
   return (
     <span className="fa-stack" style={{...styles.container, ...style}}>
-      <FontAwesome
-        icon="circle"
-        className="fa-stack-2x"
-        style={{color: color.red}}
-      />
-      {showBorder && (
+      <FontAwesome icon="circle" className="fa-stack-2x" style={{color}} />
+      {hasWhiteBorder && (
         <FontAwesome
           icon="circle-thin"
           className="fa-stack-2x"
@@ -43,42 +57,17 @@ export function KeepWorkingBadge({showBorder, style}) {
         />
       )}
       <FontAwesome
-        icon="exclamation"
+        icon={icon}
         className="fa-stack-1x"
         style={styles.centerIcon}
       />
     </span>
   );
 }
-
-KeepWorkingBadge.propTypes = {
-  showBorder: PropTypes.bool,
-  style: PropTypes.object
-};
-
-function AssessmentBadge({style}) {
-  return (
-    <span className="fa-stack" style={{...styles.container, ...style}}>
-      <FontAwesome
-        icon="circle"
-        className="fa-stack-2x"
-        style={{color: color.purple}}
-      />
-      <FontAwesome
-        icon="circle-thin"
-        className="fa-stack-2x"
-        style={styles.border}
-      />
-      <FontAwesome
-        icon="check"
-        className="fa-stack-1x"
-        style={styles.centerIcon}
-      />
-    </span>
-  );
-}
-
-AssessmentBadge.propTypes = {
+BaseBadge.propTypes = {
+  icon: PropTypes.string,
+  color: PropTypes.string,
+  hasWhiteBorder: PropTypes.bool,
   style: PropTypes.object
 };
 
@@ -103,5 +92,3 @@ const styles = {
     color: color.white
   }
 };
-
-export default BubbleBadge;

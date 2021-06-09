@@ -18,7 +18,7 @@ const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   latestFeedback: null
 };
 
-const TEACHER_NOT_FEEDBACK_RUBRIC_PROPS = {
+const TEACHER_NO_FEEDBACK_RUBRIC_PROPS = {
   user: 5,
   disabledMode: true,
   rubric: {
@@ -107,12 +107,8 @@ describe('TeacherFeedback', () => {
     const wrapper = shallow(
       <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} visible={false} />
     );
-    expect(
-      wrapper
-        .find('div')
-        .first()
-        .props().style.display
-    ).to.equal('none');
+
+    expect(wrapper.isEmptyRender()).to.be.true;
   });
 
   describe('viewed as Teacher - looking at student work', () => {
@@ -286,13 +282,13 @@ describe('TeacherFeedback', () => {
   describe('viewed as teacher - not looking at student work', () => {
     it('displays readonly rubric if rubric exists for level', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...TEACHER_NOT_FEEDBACK_RUBRIC_PROPS} />
+        <TeacherFeedback {...TEACHER_NO_FEEDBACK_RUBRIC_PROPS} />
       );
 
       const rubric = wrapper.find('TeacherFeedbackRubric');
       expect(rubric).to.have.length(1);
       expect(rubric.props().rubric).to.equal(
-        TEACHER_NOT_FEEDBACK_RUBRIC_PROPS.rubric
+        TEACHER_NO_FEEDBACK_RUBRIC_PROPS.rubric
       );
       expect(rubric.props().isReadonly).to.equal(true);
       expect(rubric.props().disabledMode).to.equal(true);
@@ -300,7 +296,7 @@ describe('TeacherFeedback', () => {
 
     it('does not display comment area', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...TEACHER_NOT_FEEDBACK_RUBRIC_PROPS} />
+        <TeacherFeedback {...TEACHER_NO_FEEDBACK_RUBRIC_PROPS} />
       );
 
       expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
@@ -308,7 +304,7 @@ describe('TeacherFeedback', () => {
 
     it('does not display submit button', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...TEACHER_NOT_FEEDBACK_RUBRIC_PROPS} />
+        <TeacherFeedback {...TEACHER_NO_FEEDBACK_RUBRIC_PROPS} />
       );
 
       expect(wrapper.find('Button')).to.have.lengthOf(0);

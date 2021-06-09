@@ -255,14 +255,12 @@ export class TeacherFeedback extends Component {
 
     const displayComment = !!comment || viewAs === ViewType.Teacher;
 
-    // Instead of unmounting the component when switching tabs, hide and show it
-    // so a teacher does not lose the feedback they are giving if they switch tabs
-    const tabDisplayStyle = visible
-      ? styles.tabAreaVisible
-      : styles.tabAreaHidden;
+    if (!visible) {
+      return null;
+    }
 
     return (
-      <div style={tabDisplayStyle}>
+      <div>
         {errorState === ErrorType.Load &&
           this.renderError(i18n.feedbackLoadError())}
         {rubric && (
@@ -307,12 +305,6 @@ export class TeacherFeedback extends Component {
 }
 
 const styles = {
-  tabAreaHidden: {
-    display: 'none'
-  },
-  tabAreaVisible: {
-    display: 'block'
-  },
   button: {
     fontWeight: 'bold'
   },

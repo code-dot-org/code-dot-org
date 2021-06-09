@@ -13,7 +13,6 @@ const DEFAULT_PROPS = {
 
 const setUp = overrideProps => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  // using mount instead of shallow so that refs are set
   return shallow(<FeedbackStudentReviewState {...props} />);
 };
 
