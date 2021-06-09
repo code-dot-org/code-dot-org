@@ -23,6 +23,7 @@ class ScriptDSL < BaseDSL
     @family_name = nil
     @version_year = nil
     @is_stable = nil
+    @published_state = nil
     @supported_locales = []
     @pilot_experiment = nil
     @editor_experiment = nil
@@ -65,6 +66,7 @@ class ScriptDSL < BaseDSL
   string :editor_experiment
   string :curriculum_umbrella
   string :background
+  string :published_state
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -162,6 +164,7 @@ class ScriptDSL < BaseDSL
       family_name: @family_name,
       version_year: @version_year,
       is_stable: @is_stable,
+      published_state: @published_state,
       supported_locales: @supported_locales,
       pilot_experiment: @pilot_experiment,
       editor_experiment: @editor_experiment,
@@ -355,6 +358,7 @@ class ScriptDSL < BaseDSL
     s << "family_name '#{script.family_name}'" if script.family_name
     s << "version_year '#{script.version_year}'" if script.version_year
     s << 'is_stable true' if script.is_stable
+    s << "published_state #{script.published_state}" if script.published_state
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
     s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
     s << "editor_experiment '#{script.editor_experiment}'" if script.editor_experiment
