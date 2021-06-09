@@ -1279,7 +1279,10 @@ class LessonsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    lesson = create :lesson
+    create :course_version, content_root: script, key: '2021'
+    original_script = create :script
+    lesson = create :lesson, script: original_script
+    create :course_version, content_root: original_script, key: '2021'
     cloned_lesson = create :lesson, script: script
     Lesson.any_instance.stubs(:copy_to_script).returns(cloned_lesson)
     put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
