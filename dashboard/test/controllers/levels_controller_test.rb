@@ -594,14 +594,14 @@ class LevelsControllerTest < ActionController::TestCase
     script_level = create :script_level
     script = script_level.script
     level = script_level.level
-    assert_equal script.hidden, false
+    assert_equal script.published_state, 'stable'
 
     get :edit, params: {id: level.id}
     assert_response :success
     assert_includes @response.body, level.name
     assert_includes @response.body, 'level cannot be renamed'
 
-    script.hidden = true
+    script.published_state = 'beta'
     script.save!
     get :edit, params: {id: level.id}
     assert_response :success
