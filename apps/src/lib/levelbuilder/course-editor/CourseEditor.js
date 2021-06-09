@@ -104,10 +104,7 @@ class CourseEditor extends Component {
       has_numbered_units: this.state.hasNumberedUnits,
       family_name: this.state.familyName,
       version_year: this.state.versionYear,
-      is_stable: this.state.publishedState === 'recommended',
-      visible:
-        this.state.publishedState === 'recommended' ||
-        this.state.publishedState === 'preview',
+      published_state: this.state.publishedState,
       pilot_experiment: this.state.pilotExperiment,
       scripts: this.state.scriptsInCourse
     };

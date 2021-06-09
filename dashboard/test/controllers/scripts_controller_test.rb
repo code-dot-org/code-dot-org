@@ -445,11 +445,88 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      hidden: false
+      published_state: 'preview'
     }
     assert_response :success
     script.reload
     refute script.hidden
+    assert_equal false, JSON.parse(@response.body)['hidden']
+  end
+
+  test "update published state to pilot" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    script = create :script, hidden: false
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      published_state: 'pilot',
+      pilot_experiment: 'my-pilot'
+    }
+    assert_response :success
+    script.reload
+    assert script.hidden
+    refute script.is_stable
+    assert_equal true, JSON.parse(@response.body)['hidden']
+  end
+
+  test "update published state to beta" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    script = create :script, hidden: false
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      published_state: 'beta'
+    }
+    assert_response :success
+    script.reload
+    assert script.hidden
+    refute script.is_stable
+    assert_equal true, JSON.parse(@response.body)['hidden']
+  end
+
+  test "update published state to preview" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      published_state: 'preview'
+    }
+    assert_response :success
+    script.reload
+    refute script.hidden
+    refute script.is_stable
+    assert_equal false, JSON.parse(@response.body)['hidden']
+  end
+
+  test "update published state to stable" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      published_state: 'stable'
+    }
+    assert_response :success
+    script.reload
+    refute script.hidden
+    assert script.is_stable
     assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
@@ -464,7 +541,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      hidden: false
+      published_state: 'preview'
     }
     assert_response :success
     script.reload
@@ -482,7 +559,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      hidden: false
+      published_state: 'preview'
     }
     assert_response :forbidden
     script.reload
@@ -696,7 +773,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: '',
-      hidden: false
+      published_state: 'preview'
     }
 
     assert_response :success
@@ -789,7 +866,7 @@ class ScriptsControllerTest < ActionController::TestCase
       student_detail_progress_view: 'on',
       lesson_extras_available: 'on',
       has_verified_resources: 'on',
-      is_stable: 'on',
+      published_state: 'pilot',
       tts: 'on',
       project_sharing: 'on',
       is_course: 'on',
