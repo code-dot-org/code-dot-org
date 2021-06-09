@@ -19,7 +19,6 @@ class SaveModel extends Component {
     trainedModelDetails: PropTypes.object,
     labelColumn: PropTypes.string,
     columnDescriptions: PropTypes.array,
-    saveStatus: PropTypes.string,
     dataDescription: PropTypes.string,
     isUserUploadedDataset: PropTypes.bool
   };
@@ -224,7 +223,6 @@ export default connect(
     trainedModelDetails: state.trainedModelDetails,
     labelColumn: state.labelColumn,
     columnDescriptions: getSelectedColumnDescriptions(state),
-    saveStatus: state.saveStatus,
     dataDescription: getDataDescription(state),
     isUserUploadedDataset: isUserUploadedDataset(state)
   }),

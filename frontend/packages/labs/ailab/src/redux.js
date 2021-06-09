@@ -255,7 +255,8 @@ const initialState = {
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
-  // Possible values for saveStatus: notStarted, started, success, and failure.
+  // Possible values for saveStatus: "notStarted", "started", "success",
+  // "piiProfanity", and "failure".
   saveStatus: "notStarted",
   columnRefs: {},
   historicResults: [],
@@ -1512,9 +1513,9 @@ function getResultsByGrade(state, grade) {
 }
 
 export function isSaveComplete(saveStatus) {
-  return ["success", "failure"].includes(saveStatus);
+  return ["success", "failure", "piiProfanity"].includes(saveStatus);
 }
 
 export function shouldDisplaySaveStatus(saveStatus) {
-  return ["success", "failure", "started"].includes(saveStatus);
+  return ["success", "failure", "started", "piiProfanity"].includes(saveStatus);
 }
