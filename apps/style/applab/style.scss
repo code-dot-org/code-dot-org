@@ -242,7 +242,8 @@ div#visualizationResizeBar {
   padding: 20px 0;
   position: fixed;
   left: 50%;
-  margin-left: -178px;
+  // Offset by half the width of the app with phone frame to center the applab visualization
+  margin-left: -(($applab-content-width + $applab-phoneframe-width) / 2);
   background-size: initial;
 
   #playSpaceHeader, #gameButtons {
