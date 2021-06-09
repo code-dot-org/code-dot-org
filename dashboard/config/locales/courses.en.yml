@@ -104,7 +104,14 @@ en:
           title: 'CS Discoveries Self-Paced Professional Learning                     '
           description_short: ''
           description_student: ''
-          description_teacher: ''
+          description_teacher: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced virtual course for educators to get started teaching CS Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s Computer Science Discoveries course** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each part and lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and CS Discoveries. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started.
           version_title: "'21 - '22"
         self-paced-pl-csp-2021:
           title: self-paced-pl-csp-2021

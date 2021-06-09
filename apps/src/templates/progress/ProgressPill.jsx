@@ -7,7 +7,7 @@ import {levelWithProgressType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
 import {isLevelAssessment} from './progressHelpers';
-import BubbleBadge from './BubbleBadge';
+import {BubbleBadgeWrapper, AssessmentBadge} from './BubbleBadge';
 import {connect} from 'react-redux';
 
 /**
@@ -100,7 +100,11 @@ class ProgressPill extends React.Component {
             </div>
           )}
           {tooltip}
-          {levelIsAssessment && <BubbleBadge type="assessment" />}
+          {levelIsAssessment && (
+            <BubbleBadgeWrapper>
+              <AssessmentBadge />
+            </BubbleBadgeWrapper>
+          )}
         </div>
       </a>
     );
