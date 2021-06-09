@@ -2,11 +2,12 @@
 #
 # Table name: unit_groups
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
-#  properties :text(65535)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id              :integer          not null, primary key
+#  name            :string(255)
+#  properties      :text(65535)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  published_state :string(255)
 #
 # Indexes
 #
