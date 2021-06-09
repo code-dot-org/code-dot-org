@@ -325,7 +325,7 @@ class UnitGroup < ApplicationRecord
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    ['preview', 'stable'].include?(published_state)
+    [PUBLISHED_STATE.preview, PUBLISHED_STATE.stable].include?(published_state)
   end
 
   def published_state
