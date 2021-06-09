@@ -46,6 +46,10 @@ class Section < ApplicationRecord
     end
   end
 
+  # Sets a class variable for student limit.
+  # Is passed to React and HAML 'add_student' alerts.
+  @@section_capacity = 500
+
   include Rails.application.routes.url_helpers
   acts_as_paranoid
 
@@ -92,6 +96,7 @@ class Section < ApplicationRecord
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
+  ADD_STUDENT_FULL = 'full'.freeze
   ADD_STUDENT_RESTRICTED = 'restricted'.freeze
 
   def self.valid_login_type?(type)
@@ -166,7 +171,6 @@ class Section < ApplicationRecord
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
 
     return ADD_STUDENT_FAILURE if user_id == student.id
-
     # If the section is restricted, return a restricted error unless a user is added by
     # the teacher (Creating a Word or Picture login-based student) or is created via an
     # OAUTH login section (Google Classroom / clever).
@@ -174,6 +178,12 @@ class Section < ApplicationRecord
     # manager their rosters.
     unless added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)
       return ADD_STUDENT_RESTRICTED if restrict_section == TRUE && (!follower || follower.deleted?)
+    end
+
+    # Unless the sections login type is Google or Clever
+    unless externally_rostered?
+      # Return a full section error if the section is already at capacity.
+      return ADD_STUDENT_FULL if students.distinct(&:id).size >= @@section_capacity
     end
 
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
@@ -299,8 +309,20 @@ class Section < ApplicationRecord
     false
   end
 
+  def at_capacity?
+    students.distinct(&:id).size >= @@section_capacity
+  end
+
+  def capacity
+    @@section_capacity
+  end
+
   def restricted?
     restrict_section
+  end
+
+  def will_be_over_capacity?(students_to_add)
+    students.distinct(&:id).size + students_to_add > @@section_capacity
   end
 
   # Hide or unhide a lesson for this section
@@ -310,6 +332,16 @@ class Section < ApplicationRecord
       hidden_lesson.delete
     elsif hidden_lesson.nil? && should_hide
       SectionHiddenLesson.create(stage_id: lesson.id, section_id: id)
+    end
+  end
+
+  # Hide or unhide a stage for this section
+  def toggle_hidden_stage(stage, should_hide)
+    hidden_stage = SectionHiddenLesson.find_by(stage_id: stage.id, section_id: id)
+    if hidden_stage && !should_hide
+      hidden_stage.delete
+    elsif hidden_stage.nil? && should_hide
+      SectionHiddenLesson.create(stage_id: stage.id, section_id: id)
     end
   end
 

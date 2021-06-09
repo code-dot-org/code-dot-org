@@ -4,7 +4,7 @@
 # consist of animation metadata for use in the Game Lab animation library,
 # ready to upload to S3.
 #
-# For usage, run ./generateSingleFrameAnimationMetadata.rb --help
+# For usage, run ./generate_single_frame_animation_metadata.rb --help
 #
 # See also: The Animation Library Tech Spec (requires login):
 # https://docs.google.com/document/d/18-LVuvKd0jKTUiGo5GYReUWM5oFWCyKRyEQURJ5HCOM/edit

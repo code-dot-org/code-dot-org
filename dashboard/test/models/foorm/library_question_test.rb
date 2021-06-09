@@ -11,7 +11,7 @@ class Foorm::LibraryQuestionTest < ActiveSupport::TestCase
 
     library = create :foorm_library, :with_questions
     library_question = library.library_questions.first
-    library_question.question = JSON.generate({pages: [{elements: [{name: "test"}]}]})
+    library_question.question = JSON.generate({name: library_question.question_name})
     library_question.save
   end
 
@@ -20,7 +20,7 @@ class Foorm::LibraryQuestionTest < ActiveSupport::TestCase
 
     library = create :foorm_library, :with_questions
     library_question = library.library_questions.first
-    library_question.question = JSON.generate({pages: [{elements: [{name: "test"}]}]})
+    library_question.question = JSON.generate({name: library_question.question_name})
     library_question.save
   end
 
@@ -78,5 +78,20 @@ class Foorm::LibraryQuestionTest < ActiveSupport::TestCase
         ]
     }"
     assert_empty library_question.published_forms_appeared_in
+  end
+
+  test 'library question JSON cannot be updated with question name different than what is in database entry' do
+    library = create :foorm_library, :with_questions
+    library_question = library.library_questions.first
+
+    assert library_question.valid?
+    parsed_question_json = JSON.parse(library_question.question)
+    parsed_question_json['name'] = 'new name'
+
+    library_question.question = JSON.pretty_generate(parsed_question_json)
+    refute library_question.valid?
+
+    library_question.question_name = 'new name'
+    assert library_question.valid?
   end
 end
