@@ -638,6 +638,34 @@ export default function rootReducer(state = initialState, action) {
   return state;
 }
 
+export function getSpecifiedDatasets(state) {
+  return state.mode && state.mode.datasets;
+}
+
+/* Functions for determining UI element availability and interactivity. */
+
+function getShowColumnClicking(state) {
+  return !(state.mode && state.mode.hideColumnClicking);
+}
+
+export function getPredictAvailable(state) {
+  return (
+    Object.keys(state.testData).filter(
+      value => state.testData[value] && state.testData[value] !== ""
+    ).length === state.selectedFeatures.length
+  );
+}
+
+export function getPanelButtons(state) {
+  return prevNextButtons(state);
+}
+
+export function readyToTrain(state) {
+  return uniqLabelFeaturesSelected(state);
+}
+
+/* Functions for filtering and selecting columns by type.  */
+
 function filterColumnsByType(state, columnType) {
   return Object.keys(state.columnsByDataType).filter(
     column => state.columnsByDataType[column] === columnType
@@ -680,6 +708,44 @@ export function getSelectedNumericalColumns(state) {
   return intersection;
 }
 
+function getSelectedColumns(state) {
+  return state.selectedFeatures
+    .concat(state.labelColumn)
+    .filter(column => column !== undefined && column !== "")
+    .map(columnId => {
+      return { id: columnId, readOnly: isColumnReadOnly(state, columnId) };
+    });
+}
+
+/* Functions for getting specific details about a batch of columns.  */
+
+export function getSelectedColumnDescriptions(state) {
+  return getSelectedColumns(state).map(column => {
+    return {
+      id: column.id,
+      description: getColumnDescription(state, column.id)
+    };
+  });
+}
+
+export function getUniqueOptionsByColumn(state) {
+  let uniqueOptionsByColumn = {};
+  getSelectedCategoricalColumns(state).map(
+    column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
+  );
+  return uniqueOptionsByColumn;
+}
+
+export function getExtremaByColumn(state) {
+  let extremaByColumn = {};
+  getSelectedNumericalColumns(state).map(
+    column => (extremaByColumn[column] = getExtrema(state, column))
+  );
+  return extremaByColumn;
+}
+
+/* Function for retriving aggreate details about a currently selected column. */
+
 export function getCurrentColumnData(state) {
   if (!state.currentColumn) {
     return null;
@@ -699,164 +765,7 @@ export function getCurrentColumnData(state) {
   };
 }
 
-export function getUniqueOptionsByColumn(state) {
-  let uniqueOptionsByColumn = {};
-  getSelectedCategoricalColumns(state).map(
-    column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
-  );
-  return uniqueOptionsByColumn;
-}
-
-export function getExtremaByColumn(state) {
-  let extremaByColumn = {};
-  getSelectedNumericalColumns(state).map(
-    column => (extremaByColumn[column] = getExtrema(state, column))
-  );
-  return extremaByColumn;
-}
-
-function getSelectedColumns(state) {
-  return state.selectedFeatures
-    .concat(state.labelColumn)
-    .filter(column => column !== undefined && column !== "")
-    .map(columnId => {
-      return { id: columnId, readOnly: isColumnReadOnly(state, columnId) };
-    });
-}
-
-export function getSelectedColumnDescriptions(state) {
-  return getSelectedColumns(state).map(column => {
-    return {
-      id: column.id,
-      description: getColumnDescription(state, column.id)
-    };
-  });
-}
-
-export function getConvertedAccuracyCheckExamples(state) {
-  const convertedAccuracyCheckExamples = [];
-  var example;
-  for (example of state.accuracyCheckExamples) {
-    let convertedAccuracyCheckExample = [];
-    for (var i = 0; i < state.selectedFeatures.length; i++) {
-      convertedAccuracyCheckExample.push(
-        getConvertedValueForDisplay(state, example[i], state.selectedFeatures[i])
-      );
-    }
-    convertedAccuracyCheckExamples.push(convertedAccuracyCheckExample);
-  }
-  return convertedAccuracyCheckExamples;
-}
-
-export function getConvertedPredictedLabel(state) {
-  return getConvertedValueForDisplay(state, state.prediction, state.labelColumn);
-}
-
-export function getConvertedLabels(state, rawLabels = []) {
-  return rawLabels.map(label => getConvertedValueForDisplay(state, label, state.labelColumn));
-}
-
-export function isRegression(state) {
-  return isColumnNumerical(state, state.labelColumn);
-}
-
-function getSummaryStat(state) {
-  let summaryStat = {};
-  summaryStat.type = isRegression(state)
-    ? MLTypes.REGRESSION : MLTypes.CLASSIFICATION;
-  summaryStat.stat = getPercentCorrect(state);
-  return summaryStat;
-}
-
-export function getPercentCorrect(state) {
-  const percentCorrect = isRegression(state)
-    ? getAccuracyRegression(state).percentCorrect
-    : getAccuracyClassification(state).percentCorrect;
-  return percentCorrect;
-}
-
-export function getDataDescription(state) {
-  // If this a dataset from the internal collection that already has a description, use that.
-  if (
-    state.metadata &&
-    state.metadata.card &&
-    state.metadata.card.description
-  ) {
-    return state.metadata.card.description;
-  } else if (
-    state.trainedModelDetails &&
-    state.trainedModelDetails.datasetDescription
-  ) {
-    return state.trainedModelDetails.datasetDescription;
-  } else {
-    return undefined;
-  }
-}
-
-export function getDatasetDetails(state) {
-  const datasetDetails = {};
-  datasetDetails.name = state.metadata.name;
-  datasetDetails.description = getDataDescription(state);
-  datasetDetails.numRows = state.data.length;
-  datasetDetails.isUserUploaded = isUserUploadedDataset(state);
-  return datasetDetails;
-}
-
-export function getFeaturesToSave(state) {
-  const features = state.selectedFeatures.map(feature =>
-    getColumnDataToSave(state, feature)
-  );
-  return features;
-}
-
-export function getLabelToSave(state) {
-  return getColumnDataToSave(state, state.labelColumn);
-}
-
-export function getTrainedModelDataToSave(state) {
-  const dataToSave = {};
-  dataToSave.name = state.trainedModelDetails.name;
-  dataToSave.datasetDetails = getDatasetDetails(state);
-  dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
-  dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
-  dataToSave.selectedTrainer = isRegression(state)
-    ? RegressionTrainer
-    : ClassificationTrainer;
-  dataToSave.featureNumberKey = state.featureNumberKey;
-  dataToSave.label = getColumnDataToSave(state, state.labelColumn);
-  dataToSave.features = getFeaturesToSave(state);
-  dataToSave.summaryStat = getSummaryStat(state);
-  dataToSave.trainedModel = state.trainedModel
-    ? state.trainedModel.toJSON()
-    : null;
-  dataToSave.kValue = state.kValue;
-
-  return dataToSave;
-}
-
-export function getSpecifiedDatasets(state) {
-  return state.mode && state.mode.datasets;
-}
-
-function getShowColumnClicking(state) {
-  return !(state.mode && state.mode.hideColumnClicking);
-}
-
-export function getPredictAvailable(state) {
-  return (
-    Object.keys(state.testData).filter(
-      value => state.testData[value] && state.testData[value] !== ""
-    ).length === state.selectedFeatures.length
-  );
-}
-
-export function getPanelButtons(state) {
-  return prevNextButtons(state);
-}
-
-export function readyToTrain(state) {
-  return uniqLabelFeaturesSelected(state);
-}
+/* Functions for processing column data for visualizations. */
 
 /* Returns an object with information for the CrossTab UI.
  *
@@ -994,10 +903,40 @@ export function getScatterPlotData(state) {
   };
 }
 
-export function isUserUploadedDataset(state) {
-  // The csvfile for internally curated datasets are strings; those uploaded by
-  // users are objects. Use data type as a proxy to know which case we're in.
-  return typeof state.csvfile === "object" && state.csvfile !== null;
+/* Functions for processing data to display for results. */
+
+export function getConvertedAccuracyCheckExamples(state) {
+  const convertedAccuracyCheckExamples = [];
+  var example;
+  for (example of state.accuracyCheckExamples) {
+    let convertedAccuracyCheckExample = [];
+    for (var i = 0; i < state.selectedFeatures.length; i++) {
+      convertedAccuracyCheckExample.push(
+        getConvertedValueForDisplay(state, example[i], state.selectedFeatures[i])
+      );
+    }
+    convertedAccuracyCheckExamples.push(convertedAccuracyCheckExample);
+  }
+  return convertedAccuracyCheckExamples;
+}
+
+export function getConvertedPredictedLabel(state) {
+  return getConvertedValueForDisplay(state, state.prediction, state.labelColumn);
+}
+
+export function getConvertedLabels(state, rawLabels = []) {
+  return rawLabels.map(label => getConvertedValueForDisplay(state, label, state.labelColumn));
+}
+
+export function isRegression(state) {
+  return isColumnNumerical(state, state.labelColumn);
+}
+
+export function getPercentCorrect(state) {
+  const percentCorrect = isRegression(state)
+    ? getAccuracyRegression(state).percentCorrect
+    : getAccuracyClassification(state).percentCorrect;
+  return percentCorrect;
 }
 
 export function getCorrectResults(state) {
@@ -1006,4 +945,79 @@ export function getCorrectResults(state) {
 
 export function getIncorrectResults(state) {
   return getResultsByGrade(state, ResultsGrades.INCORRECT);
+}
+
+/* Functions for processing data about a trained model to save. */
+
+export function isUserUploadedDataset(state) {
+  // The csvfile for internally curated datasets are strings; those uploaded by
+  // users are objects. Use data type as a proxy to know which case we're in.
+  return typeof state.csvfile === "object" && state.csvfile !== null;
+}
+
+export function getDataDescription(state) {
+  // If this a dataset from the internal collection that already has a description, use that.
+  if (
+    state.metadata &&
+    state.metadata.card &&
+    state.metadata.card.description
+  ) {
+    return state.metadata.card.description;
+  } else if (
+    state.trainedModelDetails &&
+    state.trainedModelDetails.datasetDescription
+  ) {
+    return state.trainedModelDetails.datasetDescription;
+  } else {
+    return undefined;
+  }
+}
+
+export function getDatasetDetails(state) {
+  const datasetDetails = {};
+  datasetDetails.name = state.metadata.name;
+  datasetDetails.description = getDataDescription(state);
+  datasetDetails.numRows = state.data.length;
+  datasetDetails.isUserUploaded = isUserUploadedDataset(state);
+  return datasetDetails;
+}
+
+export function getFeaturesToSave(state) {
+  const features = state.selectedFeatures.map(feature =>
+    getColumnDataToSave(state, feature)
+  );
+  return features;
+}
+
+export function getLabelToSave(state) {
+  return getColumnDataToSave(state, state.labelColumn);
+}
+
+function getSummaryStat(state) {
+  let summaryStat = {};
+  summaryStat.type = isRegression(state)
+    ? MLTypes.REGRESSION : MLTypes.CLASSIFICATION;
+  summaryStat.stat = getPercentCorrect(state);
+  return summaryStat;
+}
+
+export function getTrainedModelDataToSave(state) {
+  const dataToSave = {};
+  dataToSave.name = state.trainedModelDetails.name;
+  dataToSave.datasetDetails = getDatasetDetails(state);
+  dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
+  dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
+  dataToSave.selectedTrainer = isRegression(state)
+    ? RegressionTrainer
+    : ClassificationTrainer;
+  dataToSave.featureNumberKey = state.featureNumberKey;
+  dataToSave.label = getColumnDataToSave(state, state.labelColumn);
+  dataToSave.features = getFeaturesToSave(state);
+  dataToSave.summaryStat = getSummaryStat(state);
+  dataToSave.trainedModel = state.trainedModel
+    ? state.trainedModel.toJSON()
+    : null;
+  dataToSave.kValue = state.kValue;
+
+  return dataToSave;
 }
