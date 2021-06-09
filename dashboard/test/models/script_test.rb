@@ -3054,6 +3054,96 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal "test-localized-title-default", script.localized_title
   end
 
+  class MigratedScriptCopyTests < ActiveSupport::TestCase
+    setup do
+      Script.any_instance.stubs(:write_script_json)
+      Script.stubs(:merge_and_write_i18n)
+
+      @standalone_script = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
+      create :course_version, content_root: @standalone_script
+
+      @unit_group = create :unit_group
+      create :course_version, content_root: @unit_group
+      @script_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
+      create :unit_group_unit, unit_group: @unit_group, script: @script_in_course, position: 1
+    end
+
+    test 'can copy a standalone script as another standalone script' do
+      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', version_year: '2022', family_name: 'csf')
+      assert_equal 'standalone-2022', cloned_script.name
+      assert_equal '2022', cloned_script.version_year
+    end
+
+    test 'can copy a standalone script into a unit group' do
+      cloned_script = @standalone_script.clone_migrated_script('coursename2-2021', destination_unit_group_name: @unit_group.name)
+      assert_equal 2, @unit_group.default_scripts.count
+      assert_equal 'coursename2-2021', @unit_group.default_scripts[1].name
+      assert_equal cloned_script.unit_group, @unit_group
+    end
+
+    test 'can copy a script in a unit group to a standalone script' do
+      cloned_script = @script_in_course.clone_migrated_script('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
+      assert_nil cloned_script.unit_group
+      assert_equal 'standalone-coursename-2021', cloned_script.name
+    end
+
+    test 'can copy script with lessons without copying levels' do
+      lesson_group = create :lesson_group, script: @standalone_script
+      lesson = create :lesson, lesson_group: lesson_group, script: @standalone_script
+      lesson_activity = create :lesson_activity, lesson: lesson
+      activity_section = create :activity_section, lesson_activity: lesson_activity
+
+      level1 = create :level
+      level2 = create :level
+      create :script_level, levels: [level1], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 1
+      create :script_level, levels: [level2], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 2
+
+      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', version_year: '2022', family_name: 'csf')
+      assert_equal [level1, level2], cloned_script.levels
+    end
+
+    test 'can copy script with lessons and copy levels' do
+      lesson_group = create :lesson_group, script: @standalone_script
+      lesson = create :lesson, lesson_group: lesson_group, script: @standalone_script
+      lesson_activity = create :lesson_activity, lesson: lesson
+      activity_section = create :activity_section, lesson_activity: lesson_activity
+
+      level1 = create :level, name: 'level1-2021'
+      level2 = create :level, name: 'level2-2021'
+      create :script_level, levels: [level1], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 1
+      create :script_level, levels: [level2], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 2
+
+      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', new_level_suffix: '2022', version_year: '2022', family_name: 'csf')
+      refute_equal [level1, level2], cloned_script.levels
+    end
+
+    test 'can copy teacher and student resources' do
+      @standalone_script.resources = [create(:resource)]
+      @standalone_script.student_resources = [create(:resource)]
+
+      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', version_year: '2022', family_name: 'csf')
+      assert_equal 1, cloned_script.resources.count
+      assert_equal 1, cloned_script.student_resources.count
+      refute_equal @standalone_script.resources[0], cloned_script.resources[0]
+      refute_equal @standalone_script.student_resources[0], cloned_script.student_resources[0]
+    end
+
+    test 'can deduplicate teacher and student resources' do
+      @standalone_script.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @standalone_script.course_version.id)]
+      @standalone_script.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @standalone_script.course_version.id)]
+      @script_in_course.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @script_in_course.get_course_version.id)]
+      @script_in_course.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @script_in_course.get_course_version.id)]
+
+      cloned_script = @standalone_script.clone_migrated_script('coursename2-2021', destination_unit_group_name: @unit_group.name)
+      assert_equal 1, cloned_script.resources.count
+      assert_equal 1, cloned_script.student_resources.count
+      refute_equal @standalone_script.resources[0], cloned_script.resources[0]
+      refute_equal @standalone_script.student_resources[0], cloned_script.student_resources[0]
+      assert_equal @script_in_course.resources[0], cloned_script.resources[0]
+      assert_equal @script_in_course.student_resources[0], cloned_script.student_resources[0]
+    end
+  end
+
   private
 
   def has_hidden_script?(scripts)
