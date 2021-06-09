@@ -195,15 +195,15 @@ class CoursesController < ApplicationController
 
     # Temporary transition code used to update the boolean values that control published_state
     # This should be removed once we move off of booleans completely and on to published_state
-    if cp[:published_state] == 'beta' || cp[:published_state] == 'pilot'
+    if cp[:published_state] == PUBLISHED_STATE.beta || cp[:published_state] == PUBLISHED_STATE.pilot
       cp[:visible] = false
       cp[:is_stable] = false
       cp.delete(:published_state)
-    elsif cp[:published_state] == 'preview'
+    elsif cp[:published_state] == PUBLISHED_STATE.preview
       cp[:visible] = true
       cp[:is_stable] = false
       cp.delete(:published_state)
-    elsif cp[:published_state] == 'stable'
+    elsif cp[:published_state] == PUBLISHED_STATE.stable
       cp[:visible] = true
       cp[:is_stable] = true
       cp.delete(:published_state)
