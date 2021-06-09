@@ -22,7 +22,7 @@ export default class CourseVersionPublishingEditor extends Component {
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
     this.props.updatePublishedState(newPublishedState);
-    if (newPublishedState !== PublishedState.PILOT) {
+    if (newPublishedState !== PublishedState.pilot) {
       this.props.updatePilotExperiment('');
     }
   };
@@ -122,7 +122,7 @@ export default class CourseVersionPublishingEditor extends Component {
             </table>
           </HelpTip>
         </label>
-        {this.props.publishedState === PublishedState.PILOT && (
+        {this.props.publishedState === PublishedState.pilot && (
           <label>
             Pilot Experiment
             <HelpTip>
