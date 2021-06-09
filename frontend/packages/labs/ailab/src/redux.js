@@ -1,14 +1,5 @@
 import {
-  datasetUploaded,
-  uniqueColumnNames,
-  noEmptyCells,
-  emptyCellFinder,
-  minOneFeatureSelected,
-  oneLabelSelected,
-  uniqLabelFeaturesSelected,
-  selectedColumnsHaveDatatype,
-  numericalColumnsHaveOnlyNumbers,
-  namedModel
+  uniqueColumnNames
 } from "./validate.js";
 
 import {
@@ -987,82 +978,12 @@ export function getSummaryStat(state) {
   return summaryStat;
 }
 
-export function validationMessages(state) {
-  const validationMessages = {};
-  validationMessages["notEnoughData"] = {
-    panel: "dataDisplay",
-    readyToTrain: datasetUploaded(state),
-    errorString: "There is not enough data to train a model.",
-    successString: `There are ${state.data.length} rows of data.`
-  };
-  validationMessages["columnNames"] = {
-    panel: "dataDisplay",
-    readyToTrain: uniqueColumnNames(state),
-    errorString:
-      "Each column must have a name, and column names must be unique.",
-    successString: "Each column has a unique name."
-  };
-  validationMessages["emptyCells"] = {
-    panel: "dataDisplay",
-    readyToTrain: noEmptyCells(state),
-    errorString: "There can't be any empty cells.",
-    successString: "Each cell has a value!"
-  };
-  validationMessages["selectLabel"] = {
-    panel: "selectFeatures",
-    readyToTrain: oneLabelSelected(state),
-    errorString: "Please designate one column as the label column.",
-    successString: "Label column has been selected."
-  };
-  validationMessages["selectFeatures"] = {
-    panel: "selectFeatures",
-    readyToTrain: minOneFeatureSelected(state),
-    errorString: "Please select at least one feature to train.",
-    successString: "At least one feature is selected."
-  };
-  validationMessages["columnUsage"] = {
-    panel: "selectFeatures",
-    readyToTrain: uniqLabelFeaturesSelected(state),
-    errorString:
-      "A column can not be selected as a both a feature and a label.",
-    successString: "Label and feature(s) columns are unique."
-  };
-  validationMessages["columnData"] = {
-    panel: "selectFeatures",
-    readyToTrain: selectedColumnsHaveDatatype(state),
-    errorString:
-      "Feature and label columns must contain only numerical or categorical data.",
-    successString:
-      "Selected features and label contain numerical or categorical data"
-  };
-  validationMessages["numericalNumbers"] = {
-    panel: "selectFeatures",
-    readyToTrain: numericalColumnsHaveOnlyNumbers(state),
-    errorString: "Numerical columns should contain only numbers.",
-    successString: "Numerical columns contain only numbers."
-  };
-  validationMessages["nameModel"] = {
-    panel: "saveModel",
-    readyToTrain: namedModel(state),
-    errorString: "Please name your model.",
-    successString: "Your model is named."
-  };
-  return validationMessages;
-}
-
 export function isDataUploaded(state) {
   return state.data.length > 0;
 }
 
 export function readyToTrain(state) {
   return uniqLabelFeaturesSelected(state);
-}
-
-export function getEmptyCellDetails(state) {
-  const emptyCellLocations = emptyCellFinder(state).map(cellDetails => {
-    return `Column: ${cellDetails.column} Row: ${cellDetails.row}`;
-  });
-  return emptyCellLocations;
 }
 
 export function getDataDescription(state) {
