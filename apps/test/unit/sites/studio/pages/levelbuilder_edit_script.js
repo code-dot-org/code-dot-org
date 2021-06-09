@@ -15,7 +15,8 @@ describe('the level builder page init script', () => {
         name: 'Test script',
         lessons: [],
         is_migrated: false,
-        scriptPath: '/s/test-script'
+        scriptPath: '/s/test-script',
+        publishedState: 'beta'
       },
       i18n: {
         lessonDescriptions: [],
@@ -24,7 +25,6 @@ describe('the level builder page init script', () => {
         studentDescription:
           '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       },
-      beta: false,
       locales: [['English', 'en-US'], ['French', 'fr-FR']],
       script_families: ['coursea', 'csd1'],
       version_year_options: ['2017', '2018'],
