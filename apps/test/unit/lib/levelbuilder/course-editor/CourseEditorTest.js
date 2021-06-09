@@ -15,7 +15,7 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
-import {PublishedState} from '@cdo/apps/lib/levelbuilder/constants';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
   name: 'test-course',
@@ -317,7 +317,7 @@ describe('CourseEditor', () => {
 
       const courseEditor = wrapper.find('CourseEditor');
       courseEditor.setState({
-        publishedState: PublishedState.PILOT,
+        publishedState: PublishedState.pilot,
         pilotExperiment: ''
       });
 
