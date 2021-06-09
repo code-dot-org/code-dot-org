@@ -84,7 +84,7 @@ class ResourceTest < ActiveSupport::TestCase
     summary = resource.summarize_for_resources_dropdown
     assert summary.key?(:markdownKey)
     assert_equal(
-      Services::MarkdownPreprocessor.build_resource_key(resource),
+      Services::GloballyUniqueIdentifiers.build_resource_key(resource),
       summary[:markdownKey]
     )
   end
