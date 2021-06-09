@@ -4,16 +4,11 @@ markdown <<MARKDOWN
 # Curriculum Overview
 
 <img src="https://images.code.org/835eab960f43b5a947d41450fcb488cf-image-1622754945281.png" class="level-image">
-Curriculum writers design learning experiences from a variety of teaching and learning strategies all with the goal of constructing an equitable and engaging learning environment.
+The CS Fundamentals curriculum incorporates a variety of teaching and learning strategies to support  equitable and engaging learning environments.
 
 ## Course Structure
 
-All CS Fundamentals courses: 
-
-* include a lesson from Common Sense Media focused on Digital Citizenship to teach students about online safety.
-* are organized into Concept Chunks which are big ideas lessons are based on.
-
-**Each course is designed to stand alone and does not require a student to take a course in sequence.  This means students can begin learning CS with any age appropriate course.**
+Each course is designed to stand alone and does not require a student to take a course in sequence. This means students can begin learning CS with any age appropriate course.
 
 ## Lesson Types
 
@@ -29,14 +24,18 @@ All CS Fundamentals courses:
 
 ## Lesson Structure
 
-All lessons have the same components:  Warm Up, Main Activity, and Wrap Up.
+All lessons have the same components:  
 
-Lesson have different types of levels which support students learning CS:
+* Warm Up
+* Main Activity
+* Wrap Up
 
-* Online levels include Code.org tools - Artist, Play Lab, and Sprite Lab.  
+Lesson have different types of levels to support student learning.  
+
+* **Online** levels include Code.org tools - Artist, Play Lab, and Sprite Lab.  
 	* You will use and learn more about these tools during the second portion of this online course.
-* Video levels introduce new tools or explain new CS Concepts.
-* Lesson extras levels are at the end of each lesson and optional for students to revisit concepts.
+* **Video** levels introduce new tools or explain new CS Concepts.
+* **Lesson extras** levels are at the end of each lesson and optional for students to revisit concepts.
 
 In addition, each type of level has a specific purpose such as:
 
