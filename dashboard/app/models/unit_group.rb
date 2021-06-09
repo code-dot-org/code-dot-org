@@ -303,7 +303,7 @@ class UnitGroup < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table.
   def self.valid_courses_without_cache
-    UnitGroup.all.select(&:visible?)
+    UnitGroup.all.select(&:launched?)
   end
 
   # Returns whether the course id is valid, even if it is not "stable" yet.
@@ -320,6 +320,12 @@ class UnitGroup < ApplicationRecord
     if user&.teacher?
       UnitGroup.valid_course_id?(id)
     end
+  end
+
+  # A course that the general public can assign. Has been soft or
+  # hard launched.
+  def launched?
+    ['preview', 'stable'].include?(published_state)
   end
 
   def published_state
@@ -398,7 +404,7 @@ class UnitGroup < ApplicationRecord
   def summarize_versions(user = nil)
     return [] unless family_name
 
-    # Include visible courses, plus self if not already included
+    # Include launched courses, plus self if not already included
     courses = UnitGroup.valid_courses(user: user).clone(freeze: false)
     courses.append(self) unless courses.any? {|c| c.id == id}
 

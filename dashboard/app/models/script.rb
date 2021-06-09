@@ -326,7 +326,7 @@ class Script < ApplicationRecord
 
     def visible_scripts
       visible_scripts = Rails.cache.fetch('valid_scripts/valid') do
-        Script.all.reject(&:hidden).to_a
+        Script.all.select(&:launched?).to_a
       end
       visible_scripts.freeze
     end
@@ -1440,7 +1440,6 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      hidden: hidden,
       publishedState: published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
@@ -1769,7 +1768,7 @@ class Script < ApplicationRecord
   def assignable_info
     info = ScriptConstants.assignable_info(self)
     info[:name] = I18n.t("data.script.name.#{info[:name]}.title", default: info[:name])
-    info[:name] += " *" if hidden
+    info[:name] += " *" unless launched?
 
     if family_name
       info[:assignment_family_name] = family_name
