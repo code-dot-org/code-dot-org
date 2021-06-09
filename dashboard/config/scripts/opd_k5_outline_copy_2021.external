@@ -1,19 +1,18 @@
 name 'OPD-K5 Outline_copy_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Part I: Course Overview
+# Part I: Implementing and Teaching Computer Science
+**Suggested Time:  90 minutes total**
 
-Below is an outline of the lessons included in Part I of this online course, along with what to expect to take away from each lesson.  Approximate times for each lesson are provided. However, feel free to start and stop at your own pace and take more or less time to meet your needs.
+Below is an outline of the lessons included in Part I of this course, along with what you will be able to do after completing a lesson.  Approximate times for each lesson are provided. However, feel free to start and stop at your own pace and take more or less time to meet your learning needs.
 
-## Part I:  Implementing and Teaching CS Fundamentals (90 minutes total)
+Part I focuses on tools, teaching strategies, and resources built into the curriculum to help you get started creating and establishing an inclusive Computer Science Fundamentals classroom.
 
-Part I: Implementing and Teaching Computer Science Fundamentals focuses on tools, teaching strategies, and resources built into the curriculum to help you get started creating and establishing an inclusive Computer Science Fundamentals classroom.
-
-### **Lesson 1: Introduction** (15 minutes)
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/1/levels/3" target="blank"> **Lesson 1: Introduction**</a> (15 minutes)
 
 You are currently in Lesson 1!  This lesson provides a brief overview of Code.org, computer science, and Computer Science Fundamentals courses.
 
-### **Lesson 2: Getting Started** (20 minutes)
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/2/levels/1" target="blank" > **Lesson 2: Getting Started**</a> (20 minutes)
 
 After completing Lesson 2 you will be able to:
 
@@ -22,31 +21,30 @@ After completing Lesson 2 you will be able to:
 * navigate the organization and content of Computer Science Fundamentals courses.
 
 
-### **Lesson 3:  Implementation Approaches and Barriers** (15 minutes) 
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/3/levels/1" target="blank" >**Lesson 3: CS Teaching and Student Practices**</a> (15 minutes) 
 
-Lesson 3 focuses on implementing Computer Science Fundamentals equitably in your classroom.
+Lesson 3 focuses on CS teaching and student practices that may be applied to any Computer Science Fundamentals lesson.
 
 After completing Lesson 3 you will be able to:
-
-* use guiding questions to keep equity in mind when implementing Computer Science Fundamentals courses.
-* address the most common implementation barriers.
-
-
-### **Lesson 4: CS Teaching and Student Practices** (15 minutes) 
-
-Lesson 4 focuses on CS teaching and student practices that may be applied to any Computer Science Fundamentals lesson.
-
-After completing Lesson 4 you will be able to:
 
 * identify three CS teaching practices to use with Computer Science Fundamentals lessons.
 * identify two CS teaching strategies built into the curriculum to use with your students during Computer Science Fundamentals lessons.
 
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/4/levels/1" target="blank" > **Lesson 4:  Lesson Planning**</a> (25 minutes)
 
-### **Lesson 5:  Lesson Planning** (25 minutes)
+After completing Lesson 4 you will be able to prepare a Computer Science Fundamentals lesson to try out with your students.
 
-After completing Lesson 5 you will be able to prepare a Computer Science Fundamentals lesson to try out with your students.
 
-Click here to go to Part II:  CS Concepts in Courses A - F.
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/5/levels/1" target="blank" >**Lesson 5:  Implementation Approaches and Barriers** </a> (15 minutes) 
+
+Lesson 5 focuses on implementing Computer Science Fundamentals equitably in your classroom.
+
+After completing Lesson 5 you will be able to:
+
+* proactively address the most common implementation barriers.
+* use guiding questions to keep equity in mind when implementing Computer Science Fundamentals courses.
+
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/6/levels/1" target="blank" > Click here to go to Part II:  CS Concepts in Courses A - F.</a>
 
 
 MARKDOWN
