@@ -1,0 +1,18 @@
+name 'OPD-K5 IntroToConcepts_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Part II: Computer Science Fundamentals CS Concepts
+
+Welcome to Part II of "Implementing and Teaching Computer Science Fundamentals!"
+
+Each lesson of Part II focuses on both the computer science concepts and skills students will learn, as well as CS teaching practices to help you prepare to implement and teach Computer Science Fundamentals courses.
+
+## Online Part II Overview 
+
+Lesson 2: Getting Started (20 minutes)
+After completing Lesson 2 you will be able to:
+use Code.org provided teacher tools and resources. 
+know where to find help and support after completing this online course. 
+navigate the organization and content of Computer Science Fundamentals courses.
+
+MARKDOWN

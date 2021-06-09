@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-07 15:57:24 UTC",
+    "serialized_at": "2021-06-08 18:55:04 UTC",
     "seeding_key": {
       "script.name": "self-paced-pl-csd5-2021"
     }
@@ -20,7 +20,8 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Preparing to Teach Unit 1 "
+        "display_name": "Preparing to Teach Unit 1 ",
+        "description": "Students learn the problem-solving process, the input-output-store-process model of a computer, and how computers help humans solve problems. Students end the unit by proposing their own app to solve a problem."
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -32,7 +33,8 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Preparing to Teach Unit 2 "
+        "display_name": "Preparing to Teach Unit 2 ",
+        "description": "Students learn to create websites using HTML and CSS inside Code.org's Web Lab environment. Throughout the unit, students consider questions of privacy and ownership on the Internet as they develop their own personal websites.  "
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -44,7 +46,8 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Preparing to Teach Unit 3"
+        "display_name": "Preparing to Teach Unit 3",
+        "description": "Students learn fundamental programming constructs and practices in the JavaScript programming language while developing animations and games in Code.org's Game Lab environment. Students end the unit by designing their own animations and games. "
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
@@ -56,7 +59,8 @@
       "user_facing": true,
       "position": 4,
       "properties": {
-        "display_name": "Preparing to Teach Unit 4"
+        "display_name": "Preparing to Teach Unit 4",
+        "description": "Students apply the problem solving process to the problems of others, learning to empathize with the needs of a user and design solutions to address those needs. During the second half of the unit, students form teams to prototype an app of their own design, first on paper, and eventually in Code.org's App Lab environment. "
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
@@ -68,7 +72,8 @@
       "user_facing": true,
       "position": 5,
       "properties": {
-        "display_name": "Preparing to Teach Unit 5"
+        "display_name": "Preparing to Teach Unit 5",
+        "description": "Students explore different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second half of the unit, students learn how collections of data are used to solve problems and how computers help to automate the steps of this process."
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-6",
@@ -80,7 +85,8 @@
       "user_facing": true,
       "position": 6,
       "properties": {
-        "display_name": "Preparing to Teach Unit 6"
+        "display_name": "Preparing to Teach Unit 6",
+        "description": "Students use Code.org's App Lab environment, in conjunction with the Adafruit Circuit Playground, to explore the relationship between hardware and software. Throughout the unit, students develop prototypes that mirror existing innovative computing platforms, before ultimately designing and prototyping one of their own. "
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-7",
@@ -92,7 +98,8 @@
       "user_facing": true,
       "position": 7,
       "properties": {
-        "display_name": "Preparing to Teach Unit 7 "
+        "display_name": "Preparing to Teach Unit 7 ",
+        "description": "Students learn how machine learning can be used to solve problems by preparing data, training a machine model, the testing the model for accuracy and bias. Students use Code.org's AI Lab environment to train machine learning models, then import their models into App Lab to create apps that solve problems. "
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-8",
@@ -109,6 +116,7 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "Students learn the problem-solving process, the input-output-store-process model of a computer, and how computers help humans solve problems. Students end the unit by proposing their own app to solve a problem."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -124,6 +132,7 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
+        "overview": "Students learn to create websites using HTML and CSS inside Code.org's Web Lab environment. Throughout the unit, students consider questions of privacy and ownership on the Internet as they develop their own personal websites.  "
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -139,6 +148,7 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
+        "overview": "Students learn fundamental programming constructs and practices in the JavaScript programming language while developing animations and games in Code.org's Game Lab environment. Students end the unit by designing their own animations and games. "
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -154,6 +164,7 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "overview": "Students apply the problem solving process to the problems of others, learning to empathize with the needs of a user and design solutions to address those needs. During the second half of the unit, students form teams to prototype an app of their own design, first on paper, and eventually in Code.org's App Lab environment. "
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -169,6 +180,7 @@
       "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
+        "overview": "Students explore different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second half of the unit, students learn how collections of data are used to solve problems and how computers help to automate the steps of this process."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -184,6 +196,7 @@
       "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
+        "overview": "Students use Code.org's App Lab environment, in conjunction with the Adafruit Circuit Playground, to explore the relationship between hardware and software. Throughout the unit, students develop prototypes that mirror existing innovative computing platforms, before ultimately designing and prototyping one of their own. "
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -199,6 +212,7 @@
       "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
+        "overview": "Students learn how machine learning can be used to solve problems by preparing data, training a machine model, the testing the model for accuracy and bias. Students use Code.org's AI Lab environment to train machine learning models, then import their models into App Lab to create apps that solve problems. "
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -305,12 +319,57 @@
       }
     },
     {
-      "key": "b6ea4e7a-560c-4e2d-bddb-346203774065",
+      "key": "df74147e-8700-4347-8e7f-f2ad8acf7535",
       "position": 1,
       "properties": {
+        "progression_name": "Introduction to Unit 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "df74147e-8700-4347-8e7f-f2ad8acf7535",
+        "lesson_activity.key": "cb5f9c4b-5594-4112-b6b4-08f7f98c7730"
+      }
+    },
+    {
+      "key": "b6ea4e7a-560c-4e2d-bddb-346203774065",
+      "position": 2,
+      "properties": {
+        "progression_name": "Preparing to Teach Week 1 "
       },
       "seeding_key": {
         "activity_section.key": "b6ea4e7a-560c-4e2d-bddb-346203774065",
+        "lesson_activity.key": "cb5f9c4b-5594-4112-b6b4-08f7f98c7730"
+      }
+    },
+    {
+      "key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unit 2 Key Concepts"
+      },
+      "seeding_key": {
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331",
+        "lesson_activity.key": "cb5f9c4b-5594-4112-b6b4-08f7f98c7730"
+      }
+    },
+    {
+      "key": "41386eca-5751-43a1-b9e9-648aaed8677a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Sample Student Work"
+      },
+      "seeding_key": {
+        "activity_section.key": "41386eca-5751-43a1-b9e9-648aaed8677a",
+        "lesson_activity.key": "cb5f9c4b-5594-4112-b6b4-08f7f98c7730"
+      }
+    },
+    {
+      "key": "245d7775-7558-434b-a031-966b25fb2cca",
+      "position": 5,
+      "properties": {
+        "progression_name": "Unit 2 Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca",
         "lesson_activity.key": "cb5f9c4b-5594-4112-b6b4-08f7f98c7730"
       }
     },
@@ -390,6 +449,526 @@
       "level_keys": [
         "VPL - CSD - Module 1 - CI_2021"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD Games variables practice_2021"
+        ],
+        "progression": "Introduction to Unit 2"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD Games variables practice_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "df74147e-8700-4347-8e7f-f2ad8acf7535"
+      },
+      "level_keys": [
+        "VPL-CSD Games variables practice_2021"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2021"
+        ],
+        "progression": "Preparing to Teach Week 1 "
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "b6ea4e7a-560c-4e2d-bddb-346203774065"
+      },
+      "level_keys": [
+        "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2021"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Draw Loop_2021"
+        ],
+        "progression": "Preparing to Teach Week 1 "
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Draw Loop_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "b6ea4e7a-560c-4e2d-bddb-346203774065"
+      },
+      "level_keys": [
+        "VPL-CSD 2020 - Module 2 CI - Draw Loop_2021"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Conditionals_2021"
+        ],
+        "progression": "Preparing to Teach Week 1 "
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Conditionals_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "b6ea4e7a-560c-4e2d-bddb-346203774065"
+      },
+      "level_keys": [
+        "VPL-CSD 2020 - Module 2 CI - Conditionals_2021"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L1_2021"
+        ],
+        "progression": "Unit 2 Key Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L1_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 - CI - L1_2021"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI_2021"
+        ],
+        "progression": "Unit 2 Key Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 5 - CI_2021"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 Curriculum Investigation Overview_2021"
+        ],
+        "progression": "Unit 2 Key Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 3 Curriculum Investigation Overview_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      },
+      "level_keys": [
+        "VPL - CSD Module 3 Curriculum Investigation Overview_2021"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 Overview_2021"
+        ],
+        "progression": "Unit 2 Key Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 3 Overview_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      },
+      "level_keys": [
+        "VPL - CSD Module 3 Overview_2021"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 2 Wrap Up_2021"
+        ],
+        "progression": "Unit 2 Key Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 2 Wrap Up_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 2 Wrap Up_2021"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Conclusions and Connections_2021"
+        ],
+        "progression": "Unit 2 Key Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Conclusions and Connections_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      },
+      "level_keys": [
+        "VPL - CSD - Conclusions and Connections_2021"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 2 Project_2021"
+        ],
+        "progression": "Sample Student Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD U5 Chapter 2 Project_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "41386eca-5751-43a1-b9e9-648aaed8677a"
+      },
+      "level_keys": [
+        "VPL - CSD U5 Chapter 2 Project_2021"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - CI_2021"
+        ],
+        "progression": "Sample Student Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 4 - CI_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "41386eca-5751-43a1-b9e9-648aaed8677a"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 4 - CI_2021"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - U4L8 CI_2021"
+        ],
+        "progression": "Sample Student Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 4 - U4L8 CI_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "41386eca-5751-43a1-b9e9-648aaed8677a"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 4 - U4L8 CI_2021"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 14,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - Conclusions and Connections_2021"
+        ],
+        "progression": "Sample Student Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 4 - Conclusions and Connections_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "41386eca-5751-43a1-b9e9-648aaed8677a"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 4 - Conclusions and Connections_2021"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 5 - Differentiation_2021"
+        ],
+        "progression": "Unit 2 Projects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 5 - Differentiation_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
+      },
+      "level_keys": [
+        "VPL - CSD Module 5 - Differentiation_2021"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 16,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 Unit Reflection_2021"
+        ],
+        "progression": "Unit 2 Projects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 Unit Reflection_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
+      },
+      "level_keys": [
+        "VPL - CSD Module 6 Unit Reflection_2021"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 17,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 U5L13 Reflection_2021"
+        ],
+        "progression": "Unit 2 Projects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 U5L13 Reflection_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
+      },
+      "level_keys": [
+        "VPL - CSD Module 6 U5L13 Reflection_2021"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 18,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 U5L9 Reflection_2021"
+        ],
+        "progression": "Unit 2 Projects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 U5L9 Reflection_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
+      },
+      "level_keys": [
+        "VPL - CSD Module 6 U5L9 Reflection_2021"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 19,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 PSP Reflection_2021"
+        ],
+        "progression": "Unit 2 Projects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 PSP Reflection_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
+      },
+      "level_keys": [
+        "VPL - CSD Module 6 PSP Reflection_2021"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 20,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD M7 Theme Introduction_2021"
+        ],
+        "progression": "Unit 2 Projects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD M7 Theme Introduction_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
+      },
+      "level_keys": [
+        "VPL - CSD M7 Theme Introduction_2021"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -403,6 +982,246 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd5-2021",
         "activity_section.key": "42dadc83-3915-4a92-b50d-717419c37b56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD Games variables practice_2021",
+        "script_level.level_keys": [
+          "VPL-CSD Games variables practice_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "df74147e-8700-4347-8e7f-f2ad8acf7535"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2021",
+        "script_level.level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "b6ea4e7a-560c-4e2d-bddb-346203774065"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD 2020 - Module 2 CI - Draw Loop_2021",
+        "script_level.level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Draw Loop_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "b6ea4e7a-560c-4e2d-bddb-346203774065"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD 2020 - Module 2 CI - Conditionals_2021",
+        "script_level.level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Conditionals_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "b6ea4e7a-560c-4e2d-bddb-346203774065"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 - CI - L1_2021",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI - L1_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 5 - CI_2021",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 5 - CI_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 3 Curriculum Investigation Overview_2021",
+        "script_level.level_keys": [
+          "VPL - CSD Module 3 Curriculum Investigation Overview_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 3 Overview_2021",
+        "script_level.level_keys": [
+          "VPL - CSD Module 3 Overview_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 2 Wrap Up_2021",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 2 Wrap Up_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Conclusions and Connections_2021",
+        "script_level.level_keys": [
+          "VPL - CSD - Conclusions and Connections_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "29ce0d9f-ece2-483c-ad0a-0a19da91b331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD U5 Chapter 2 Project_2021",
+        "script_level.level_keys": [
+          "VPL - CSD U5 Chapter 2 Project_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "41386eca-5751-43a1-b9e9-648aaed8677a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 4 - CI_2021",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 4 - CI_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "41386eca-5751-43a1-b9e9-648aaed8677a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 4 - U4L8 CI_2021",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 4 - U4L8 CI_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "41386eca-5751-43a1-b9e9-648aaed8677a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 4 - Conclusions and Connections_2021",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 4 - Conclusions and Connections_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "41386eca-5751-43a1-b9e9-648aaed8677a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 5 - Differentiation_2021",
+        "script_level.level_keys": [
+          "VPL - CSD Module 5 - Differentiation_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 6 Unit Reflection_2021",
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 Unit Reflection_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 6 U5L13 Reflection_2021",
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 U5L13 Reflection_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 6 U5L9 Reflection_2021",
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 U5L9 Reflection_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 6 PSP Reflection_2021",
+        "script_level.level_keys": [
+          "VPL - CSD Module 6 PSP Reflection_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD M7 Theme Introduction_2021",
+        "script_level.level_keys": [
+          "VPL - CSD M7 Theme Introduction_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "245d7775-7558-434b-a031-966b25fb2cca"
       }
     }
   ],
