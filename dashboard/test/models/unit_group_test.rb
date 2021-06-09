@@ -327,22 +327,22 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   test 'unit group with pilot experiment has pilot published state' do
     unit_group = create(:unit_group, name: 'single-lesson-script', pilot_experiment: 'my-experiment')
-    assert_equal 'pilot', unit_group.published_state
+    assert_equal PUBLISHED_STATE.pilot, unit_group.published_state
   end
 
   test 'unit group with visible false and no pilot_experiment has beta published state' do
     unit_group = create(:unit_group, name: 'single-lesson-script', visible: false)
-    assert_equal 'beta', unit_group.published_state
+    assert_equal PUBLISHED_STATE.beta, unit_group.published_state
   end
 
   test 'unit group with visible true has preview published state' do
     unit_group = create(:unit_group, name: 'single-lesson-script', visible: true)
-    assert_equal 'preview', unit_group.published_state
+    assert_equal PUBLISHED_STATE.preview, unit_group.published_state
   end
 
   test 'unit group with visible true and is_stable true has stable published state' do
     unit_group = create(:unit_group, name: 'single-lesson-script', visible: true, is_stable: true)
-    assert_equal 'stable', unit_group.published_state
+    assert_equal PUBLISHED_STATE.stable, unit_group.published_state
   end
 
   test "summarize" do

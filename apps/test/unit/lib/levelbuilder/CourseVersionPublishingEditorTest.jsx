@@ -3,6 +3,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+import {PublishedState} from '@cdo/apps/lib/levelbuilder/constants';
 
 describe('CourseVersionPublishedStateSelector', () => {
   let defaultProps,
@@ -26,7 +27,7 @@ describe('CourseVersionPublishedStateSelector', () => {
       updatePublishedState,
       families: ['family1', 'family2', 'family3'],
       versionYearOptions: ['1990', '1991', '1992'],
-      publishedState: 'beta'
+      publishedState: PublishedState.BETA
     };
   });
 
@@ -34,12 +35,12 @@ describe('CourseVersionPublishedStateSelector', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor
         {...defaultProps}
-        publishedState={'pilot'}
+        publishedState={PublishedState.PILOT}
         pilotExperiment={'my-pilot'}
       />
     );
     expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
-      'pilot'
+      PublishedState.PILOT
     );
     expect(wrapper.find('input').length).to.equal(1);
   });
@@ -49,7 +50,7 @@ describe('CourseVersionPublishedStateSelector', () => {
       <CourseVersionPublishingEditor {...defaultProps} />
     );
     expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
-      'beta'
+      PublishedState.BETA
     );
     expect(wrapper.find('input').length).to.equal(0);
   });
@@ -61,7 +62,7 @@ describe('CourseVersionPublishedStateSelector', () => {
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: 'beta'}});
+      .simulate('change', {target: {value: PublishedState.BETA}});
 
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
@@ -73,7 +74,7 @@ describe('CourseVersionPublishedStateSelector', () => {
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: 'preview'}});
+      .simulate('change', {target: {value: PublishedState.PREVIEW}});
 
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
@@ -85,7 +86,7 @@ describe('CourseVersionPublishedStateSelector', () => {
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: 'stable'}});
+      .simulate('change', {target: {value: PublishedState.STABLE}});
 
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
