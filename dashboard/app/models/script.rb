@@ -1434,7 +1434,7 @@ class Script < ApplicationRecord
   # A script that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [PUBLISHED_STATE.preview, PUBLISHED_STATE.stable].include?(published_state)
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
   def published_state

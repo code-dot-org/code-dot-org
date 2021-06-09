@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import {makeEnum} from '@cdo/apps/utils';
 
 export const videoDataShape = PropTypes.shape({
   src: PropTypes.string.isRequired,
@@ -25,3 +26,9 @@ export const rubricShape = PropTypes.shape({
   performanceLevel3: PropTypes.string,
   performanceLevel4: PropTypes.string
 });
+
+export const ReviewStates = makeEnum(
+  'completed',
+  'keepWorking',
+  'awaitingReview'
+);

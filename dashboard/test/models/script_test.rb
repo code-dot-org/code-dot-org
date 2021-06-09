@@ -1230,17 +1230,17 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil script.summarize[:show_assign_button]
 
     # Teacher should be able to assign a launched script.
-    assert_equal PUBLISHED_STATE.preview, script.summarize[:publishedState]
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.summarize[:publishedState]
     assert_equal true, script.summarize(true, create(:teacher))[:show_assign_button]
 
     # Teacher should not be able to assign a hidden script.
     hidden_script = create(:script, name: 'unassignable-hidden', hidden: true)
-    assert_equal PUBLISHED_STATE.beta, hidden_script.summarize[:publishedState]
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, hidden_script.summarize[:publishedState]
     assert_equal false, hidden_script.summarize(true, create(:teacher))[:show_assign_button]
 
     # Student should not be able to assign a script,
     # regardless of visibility.
-    assert_equal PUBLISHED_STATE.preview, script.summarize[:publishedState]
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.summarize[:publishedState]
     assert_nil script.summarize(true, create(:student))[:show_assign_button]
   end
 
