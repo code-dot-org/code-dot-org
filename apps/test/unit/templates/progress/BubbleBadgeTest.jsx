@@ -1,37 +1,78 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import BubbleBadge from '@cdo/apps/templates/progress/BubbleBadge';
+import {mount, shallow} from 'enzyme';
+import {
+  BubbleBadgeWrapper,
+  KeepWorkingBadge,
+  AssessmentBadge
+} from '@cdo/apps/templates/progress/BubbleBadge';
 import {expect} from '../../../util/reconfiguredChai';
 import color from '@cdo/apps/util/color';
 
 describe('BubbleBadge', () => {
-  it('has a purple background when type is assessment', () => {
-    const wrapper = shallow(<BubbleBadge type="assessment" />);
-    expect(wrapper.find({icon: 'circle'}).props().style.color).to.equal(
-      color.purple
-    );
+  describe('BubbleBadgeWrapper', () => {
+    it('positions the wrapper correctly if isDiamond is false', () => {
+      const children = <div />;
+      const wrapper = shallow(
+        <BubbleBadgeWrapper isDiamond={false}>{children}</BubbleBadgeWrapper>
+      );
+      expect(wrapper.props().style.top).to.equal(-7);
+      expect(wrapper.props().style.right).to.equal(-7);
+    });
+
+    it('positions the wrapper correctly if isDiamond is true', () => {
+      const children = <div />;
+      const wrapper = shallow(
+        <BubbleBadgeWrapper isDiamond={true}>{children}</BubbleBadgeWrapper>
+      );
+      console.log(wrapper.debug());
+      expect(wrapper.props().style.top).to.equal(-13);
+      expect(wrapper.props().style.right).to.equal(-17);
+    });
   });
 
-  it('has a check icon when type is assessment', () => {
-    const wrapper = shallow(<BubbleBadge type="assessment" />);
-    expect(wrapper.find({icon: 'check'})).to.have.length(1);
+  describe('KeepWorkingBadge', () => {
+    it('has a red background', () => {
+      const wrapper = mount(<KeepWorkingBadge />);
+      expect(
+        wrapper.find('FontAwesome[icon="circle"]').props().style.color
+      ).to.equal(color.red);
+    });
+
+    it('has a exclamation icon', () => {
+      const wrapper = mount(<KeepWorkingBadge />);
+      expect(wrapper.find('FontAwesome[icon="exclamation"]')).to.have.length(1);
+    });
+
+    it('displays a white border when hasWhiteBorder is true', () => {
+      it('has a exclamation icon', () => {
+        const wrapper = mount(<KeepWorkingBadge hasWhiteBorder={true} />);
+        expect(wrapper.find('FontAwesome[icon="circle-thin"]')).to.have.length(
+          1
+        );
+      });
+    });
   });
 
-  it('has a red background when type is keepWorking', () => {
-    const wrapper = shallow(<BubbleBadge type="keepWorking" />);
-    expect(wrapper.find({icon: 'circle'}).props().style.color).to.equal(
-      color.red
-    );
-  });
+  describe('AssessmentBadge', () => {
+    it('has a purple background', () => {
+      const wrapper = mount(<AssessmentBadge />);
+      expect(
+        wrapper.find('FontAwesome[icon="circle"]').props().style.color
+      ).to.equal(color.purple);
+    });
 
-  it('has a exclamation icon when type is keepWorking', () => {
-    const wrapper = shallow(<BubbleBadge type="keepWorking" />);
-    expect(wrapper.find({icon: 'exclamation'})).to.have.length(1);
-  });
+    it('has a check icon', () => {
+      const wrapper = mount(<AssessmentBadge />);
+      expect(wrapper.find('FontAwesome[icon="check"]')).to.have.length(1);
+    });
 
-  it('positions the icon correctly if isDiamond is true', () => {
-    const wrapper = shallow(<BubbleBadge type="assessment" isDiamond={true} />);
-    expect(wrapper.props().style.top).to.equal(-13);
-    expect(wrapper.props().style.right).to.equal(-17);
+    it('displays a white border when hasWhiteBorder is true', () => {
+      it('has a exclamation icon', () => {
+        const wrapper = mount(<AssessmentBadge hasWhiteBorder={true} />);
+        expect(wrapper.find('FontAwesome[icon="circle-thin"]')).to.have.length(
+          1
+        );
+      });
+    });
   });
 });
