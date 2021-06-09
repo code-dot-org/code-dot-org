@@ -266,15 +266,15 @@ class ScriptsController < ApplicationController
 
     # Temporary transition code used to update the boolean values that control published_state
     # This should be removed once we move off of booleans completely and on to published_state
-    if h[:published_state] == 'pilot' || h[:published_state] == 'beta'
+    if h[:published_state] == PUBLISHED_STATE.pilot || h[:published_state] == PUBLISHED_STATE.beta
       h[:hidden] = true
       h[:is_stable] = false
       h.delete(:published_state)
-    elsif h[:published_state] == 'preview'
+    elsif h[:published_state] == PUBLISHED_STATE.preview
       h[:hidden] = false
       h[:is_stable] = false
       h.delete(:published_state)
-    elsif h[:published_state] == 'stable'
+    elsif h[:published_state] == PUBLISHED_STATE.stable
       h[:hidden] = false
       h[:is_stable] = true
       h.delete(:published_state)

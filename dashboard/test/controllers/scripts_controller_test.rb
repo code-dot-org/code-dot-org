@@ -445,7 +445,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: PUBLISHED_STATE.preview
     }
     assert_response :success
     script.reload
@@ -467,7 +467,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'pilot',
+      published_state: PUBLISHED_STATE.pilot,
       pilot_experiment: 'my-pilot'
     }
     assert_response :success
@@ -491,7 +491,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'beta'
+      published_state: PUBLISHED_STATE.beta
     }
     assert_response :success
     script.reload
@@ -514,7 +514,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: PUBLISHED_STATE.preview
     }
     assert_response :success
     script.reload
@@ -537,7 +537,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'stable'
+      published_state: PUBLISHED_STATE.stable
     }
     assert_response :success
     script.reload
@@ -557,7 +557,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: PUBLISHED_STATE.preview
     }
     assert_response :success
     script.reload
@@ -575,7 +575,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: PUBLISHED_STATE.preview
     }
     assert_response :forbidden
     script.reload
@@ -789,7 +789,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: '',
-      published_state: 'preview'
+      published_state: PUBLISHED_STATE.preview
     }
 
     assert_response :success
@@ -882,7 +882,7 @@ class ScriptsControllerTest < ActionController::TestCase
       student_detail_progress_view: 'on',
       lesson_extras_available: 'on',
       has_verified_resources: 'on',
-      published_state: 'pilot',
+      published_state: PUBLISHED_STATE.pilot,
       tts: 'on',
       project_sharing: 'on',
       is_course: 'on',

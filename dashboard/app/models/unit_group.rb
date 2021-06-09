@@ -324,15 +324,15 @@ class UnitGroup < ApplicationRecord
 
   def published_state
     if pilot?
-      'pilot'
+      PUBLISHED_STATE.pilot
     elsif visible
       if is_stable
-        'stable'
+        PUBLISHED_STATE.stable
       else
-        'preview'
+        PUBLISHED_STATE.preview
       end
     else
-      'beta'
+      PUBLISHED_STATE.beta
     end
   end
 
