@@ -5,14 +5,22 @@ import Button from '../../templates/Button';
 import SchoolInfoInterstitial from './SchoolInfoInterstitial';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import {getStore} from '../../redux';
 
 export const styles = {
   button: {
     marginTop: 20,
     marginLeft: '50%'
   },
+  buttonRTL: {
+    marginTop: 20,
+    marginRight: '50%'
+  },
   updateButton: {
     marginLeft: 5
+  },
+  updateButtonRTL: {
+    marginRight: 5
   },
   intro: {
     fontSize: 18,
@@ -89,6 +97,7 @@ class SchoolInfoConfirmationDialog extends Component {
 
   renderInitialContent = () => {
     const {schoolName} = this.state;
+    const isRTL = getStore().getState().isRtl;
     return (
       <Body>
         <div style={styles.body}>
@@ -101,7 +110,7 @@ class SchoolInfoConfirmationDialog extends Component {
         </div>
         <Button
           __useDeprecatedTag
-          style={styles.updateButton}
+          style={isRTL ? styles.updateButtonRTL : styles.updateButton}
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
           onClick={this.handleClickUpdate}
@@ -109,7 +118,7 @@ class SchoolInfoConfirmationDialog extends Component {
         />
         <Button
           __useDeprecatedTag
-          style={styles.button}
+          style={isRTL ? styles.buttonRTL : styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.orange}
           onClick={this.handleClickYes}
