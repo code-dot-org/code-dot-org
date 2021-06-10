@@ -2,7 +2,7 @@ import React from 'react';
 import PreviewPaneHeader from './PreviewPaneHeader';
 import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
 
-export default class TheaterVisualization extends React.Component {
+export default class TheaterVisualizationColumn extends React.Component {
   static propTypes = {};
 
   state = {
