@@ -836,7 +836,7 @@ level 'Level 3'
       family_name 'family name'
       version_year '3035'
       is_stable true
-      published_state beta
+      published_state 'beta'
       lesson 'Lesson1', display_name: 'Lesson1'
       level 'Level 1'
       level 'Level 2'
@@ -887,7 +887,7 @@ level 'Level 3'
       family_name 'family name'
       version_year '2001'
       is_stable true
-      published_state beta
+      published_state 'beta'
       tts true
       is_course true
 
