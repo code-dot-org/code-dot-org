@@ -14,7 +14,7 @@ class ScriptTest < ActiveSupport::TestCase
     @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game, level_num: 'custom')}
 
     @unit_group = create(:unit_group)
-    @script_in_unit_group = create(:script, hidden: true)
+    @script_in_unit_group = create(:script, published_state: SharedConstants::PUBLISHED_STATE.beta)
     create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @script_in_unit_group)
 
     @script_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
@@ -97,8 +97,7 @@ class ScriptTest < ActiveSupport::TestCase
     # Set different level name in tested script
     parsed_script[0][:lessons][1][:script_levels][1][:levels][0][:name] = "Level 1"
 
-    # Set different 'hidden' option from defaults in Script.setup
-    options = {name: File.basename(@script_file, ".script"), hidden: false}
+    options = {name: File.basename(@script_file, ".script"), published_state: SharedConstants::PUBLISHED_STATE.preview}
     script = Script.add_script(options, parsed_script)
     assert_equal script_id, script.script_levels[4].script_id
     assert_not_equal script_level_id, script.script_levels[4].id
@@ -214,7 +213,7 @@ class ScriptTest < ActiveSupport::TestCase
     script = Script.find_by!(name: script_names.first)
 
     # Not testing new_name since it causes a new script to be created.
-    assert_equal false, script.hidden? # defaults to true, so we want to verify it was explicitly set to false
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.published_state
     assert script.login_required?
     assert_equal 'csd1', script.family_name
 
@@ -223,7 +222,7 @@ class ScriptTest < ActiveSupport::TestCase
     Script.setup([script_file_no_fields])
     script.reload
 
-    assert script.hidden? # defaults to true
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.published_state
     assert_equal false, script.login_required?
     assert_nil script.family_name
   end
@@ -406,9 +405,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '100', script.script_levels[1].level.level_num
   end
 
-  test 'allow applab and gamelab levels in hidden scripts' do
+  test 'allow applab and gamelab levels in unlaunched scripts' do
     Script.add_script(
-      {name: 'test script', hidden: true},
+      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
         display_name: "Content",
@@ -416,7 +415,7 @@ class ScriptTest < ActiveSupport::TestCase
       }] # From level.yml fixture# From level.yml fixture
     )
     Script.add_script(
-      {name: 'test script', hidden: true},
+      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
         display_name: "Content",
@@ -427,7 +426,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'allow applab and gamelab levels in login_required scripts' do
     Script.add_script(
-      {name: 'test script', hidden: false, login_required: true},
+      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
         display_name: "Content",
@@ -435,7 +434,7 @@ class ScriptTest < ActiveSupport::TestCase
       }] # From level.yml fixture# From level.yml fixture
     )
     Script.add_script(
-      {name: 'test script', hidden: false, login_required: true},
+      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
         display_name: "Content",
@@ -1213,8 +1212,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal SharedConstants::PUBLISHED_STATE.preview, script.summarize[:publishedState]
     assert_equal true, script.summarize(true, create(:teacher))[:show_assign_button]
 
-    # Teacher should not be able to assign a hidden script.
-    hidden_script = create(:script, name: 'unassignable-hidden', hidden: true, published_state: SharedConstants::PUBLISHED_STATE.beta)
+    # Teacher should not be able to assign an unlaunched script.
+    hidden_script = create(:script, name: 'unassignable-hidden', published_state: SharedConstants::PUBLISHED_STATE.beta)
     assert_equal SharedConstants::PUBLISHED_STATE.beta, hidden_script.summarize[:publishedState]
     assert_equal false, hidden_script.summarize(true, create(:teacher))[:show_assign_button]
 
@@ -1774,7 +1773,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil script_copy.family_name
     assert_nil script_copy.version_year
     assert_equal false, script_copy.stable?
-    assert_equal true, script_copy.hidden
     assert_nil script_copy.announcements
 
     # Validate levels.
@@ -1809,7 +1807,7 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
-  # This test case doesn't cover hidden (not a property) or version year (only
+  # This test case doesn't cover version year (only
   # updated under certain conditions). These are covered in other test cases.
   test 'clone with suffix clears certain properties' do
     script_file = File.join(self.class.fixture_path, "test-all-properties.script")
@@ -1852,7 +1850,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'versioned', script_copy.family_name
     assert_equal '1802', script_copy.version_year
     assert_equal false, script_copy.stable?
-    assert_equal true, script_copy.hidden
   end
 
   test 'clone script with variants' do
@@ -1971,33 +1968,33 @@ class ScriptTest < ActiveSupport::TestCase
       "The following categories are missing translations in scripts.en.yml '#{untranslated_categories}'"
   end
 
-  test "self.valid_scripts: does not return hidden scripts when user is a student" do
+  test "self.valid_scripts: does not return unlaunched scripts when user is a student" do
     student = create(:student)
 
     scripts = Script.valid_scripts(student)
-    refute has_hidden_script?(scripts)
+    refute has_unlaunched_script?(scripts)
   end
 
-  test "self.valid_scripts: does not return hidden scripts when user is a teacher" do
+  test "self.valid_scripts: does not return unlaunched scripts when user is a teacher" do
     teacher = create(:teacher)
 
     scripts = Script.valid_scripts(teacher)
-    refute has_hidden_script?(scripts)
+    refute has_unlaunched_script?(scripts)
   end
 
-  test "self.valid_scripts: returns hidden scripts when user is an admin" do
+  test "self.valid_scripts: returns unlaunched scripts when user is an admin" do
     admin = create(:admin)
 
     scripts = Script.valid_scripts(admin)
-    assert has_hidden_script?(scripts)
+    assert has_unlaunched_script?(scripts)
   end
 
-  test "self.valid_scripts: returns hidden scripts when user has hidden script access" do
+  test "self.valid_scripts: returns unlaunched scripts when user has hidden script access" do
     teacher = create(:teacher)
     teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
 
     scripts = Script.valid_scripts(teacher)
-    assert has_hidden_script?(scripts)
+    assert has_unlaunched_script?(scripts)
   end
 
   test "self.valid_scripts: returns alternate script if user has a course experiment with an alternate script" do
@@ -2030,8 +2027,7 @@ class ScriptTest < ActiveSupport::TestCase
     teacher = create :teacher
     levelbuilder = create :levelbuilder
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_script = create :script, pilot_experiment: 'my-experiment'
-    assert pilot_script.hidden
+    create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     assert Script.any?(&:pilot?)
 
     refute Script.valid_scripts(student).any?(&:pilot?)
@@ -2147,7 +2143,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'pilot scripts are always hidden during seed' do
     l = create :level
     dsl = <<-SCRIPT
-      hidden false
+      published_state 'pilot'
       pilot_experiment 'pilot-experiment'
 
       lesson 'Lesson1', display_name: 'Lesson1'
@@ -2160,7 +2156,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal 'pilot-script', script.name
     assert_equal 'pilot-experiment', script.pilot_experiment
-    assert script.hidden
+    assert_equal 'pilot', script.published_state
   end
 
   test 'has pilot access' do
@@ -3126,7 +3122,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   private
 
-  def has_hidden_script?(scripts)
-    scripts.any?(&:hidden)
+  def has_unlaunched_script?(scripts)
+    scripts.any? {|s| !s.launched?}
   end
 end
