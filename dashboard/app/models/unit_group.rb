@@ -51,7 +51,6 @@ class UnitGroup < ApplicationRecord
     has_numbered_units
     family_name
     version_year
-    is_stable
     visible
     pilot_experiment
     announcements
@@ -74,11 +73,11 @@ class UnitGroup < ApplicationRecord
   end
 
   # Any course with a plc_course or no family_name is considered stable.
-  # All other courses must specify an is_stable boolean property.
+  # All other courses must specify a published_state
   def stable?
     return true if plc_course || !family_name
 
-    is_stable || false
+    published_state == SharedConstants::PUBLISHED_STATE.stable || false
   end
 
   def self.file_path(name)
@@ -517,7 +516,7 @@ class UnitGroup < ApplicationRecord
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
       # select only stable courses.
-      where("properties -> '$.is_stable'").
+      where(published_state: SharedConstants::PUBLISHED_STATE.stable).
       # order by version year.
       order("properties -> '$.version_year' DESC")&.
       first

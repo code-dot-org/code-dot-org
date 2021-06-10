@@ -203,7 +203,6 @@ class Script < ApplicationRecord
     curriculum_path
     announcements
     version_year
-    is_stable
     supported_locales
     pilot_experiment
     editor_experiment
@@ -581,7 +580,7 @@ class Script < ApplicationRecord
     locale_str = locale&.to_s
     latest_version = nil
     family_scripts.each do |script|
-      next unless script.is_stable
+      next unless script.stable?
       latest_version ||= script
 
       # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
@@ -685,9 +684,9 @@ class Script < ApplicationRecord
     supported_stable_scripts = script_versions.select do |script|
       is_supported = script.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
       if version_year
-        script.is_stable && is_supported && script.version_year == version_year
+        script.stable? && is_supported && script.version_year == version_year
       else
-        script.is_stable && is_supported
+        script.stable? && is_supported
       end
     end
 
@@ -1163,7 +1162,7 @@ class Script < ApplicationRecord
 
     ActiveRecord::Base.transaction do
       copied_script = dup
-      copied_script.is_stable = false
+      copied_script.published_state = SharedConstants::PUBLISHED_STATE.beta
       copied_script.tts = false
       copied_script.announcements = nil
       copied_script.is_course = destination_unit_group.nil?
@@ -1220,7 +1219,6 @@ class Script < ApplicationRecord
 
     script_filename = "#{Script.script_directory}/#{name}.script"
     new_properties = {
-      is_stable: false,
       tts: false,
       announcements: nil,
       is_course: false
@@ -1668,7 +1666,7 @@ class Script < ApplicationRecord
           version_year: s.version_year,
           version_title: s.version_year,
           can_view_version: s.can_view_version?(user),
-          is_stable: !!s.is_stable,
+          is_stable: s.stable?,
           locales: s.supported_locale_names
         }
       end
@@ -1746,7 +1744,6 @@ class Script < ApplicationRecord
     ]
     boolean_keys = [
       :has_verified_resources,
-      :is_stable,
       :project_sharing,
       :tts,
       :deprecated,
@@ -1832,7 +1829,7 @@ class Script < ApplicationRecord
       info[:student_description] = Services::MarkdownPreprocessor.process(localized_student_description)
     end
 
-    info[:is_stable] = true if is_stable
+    info[:is_stable] = true if stable?
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names

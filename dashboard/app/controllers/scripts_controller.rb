@@ -268,13 +268,10 @@ class ScriptsController < ApplicationController
     # This should be removed once we move off of booleans completely and on to published_state
     if h[:published_state] == SharedConstants::PUBLISHED_STATE.pilot || h[:published_state] == SharedConstants::PUBLISHED_STATE.beta
       h[:hidden] = true
-      h[:is_stable] = false
     elsif h[:published_state] == SharedConstants::PUBLISHED_STATE.preview
       h[:hidden] = false
-      h[:is_stable] = false
     elsif h[:published_state] == SharedConstants::PUBLISHED_STATE.stable
       h[:hidden] = false
-      h[:is_stable] = true
     end
 
     h
