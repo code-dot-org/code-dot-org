@@ -339,7 +339,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes to course_params" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019'
+    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedConstants::PUBLISHED_STATE.beta
 
     assert_nil unit_group.version_year
     assert_nil unit_group.family_name
@@ -382,7 +382,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: published state of preview sets visible correctly" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019'
+    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedConstants::PUBLISHED_STATE.beta
 
     refute unit_group.visible?
 
@@ -398,7 +398,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: published state of beta sets visible correctly" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019'
+    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedConstants::PUBLISHED_STATE.beta
 
     refute unit_group.visible?
 
@@ -414,7 +414,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: published state of pilot sets visible correctly" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019'
+    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedConstants::PUBLISHED_STATE.beta
 
     refute unit_group.visible?
 
