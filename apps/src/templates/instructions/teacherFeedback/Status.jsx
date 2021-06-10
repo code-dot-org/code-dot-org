@@ -6,7 +6,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
-class TeacherFeedbackStatus extends Component {
+class Status extends Component {
   static propTypes = {
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     latestFeedback: PropTypes.object.isRequired
@@ -142,4 +142,4 @@ const styles = {
   }
 };
 
-export default TeacherFeedbackStatus;
+export default Status;

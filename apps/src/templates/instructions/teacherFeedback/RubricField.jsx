@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import Radium from 'radium';
-import {CheckedRadioButton} from '../../lib/ui/CheckedRadioButton';
+import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import i18n from '@cdo/locale';

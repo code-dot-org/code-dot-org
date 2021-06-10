@@ -1,16 +1,16 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedbackStatus';
+import Status from '@cdo/apps/templates/instructions/teacherFeedback/Status';
 import moment from 'moment/moment';
 
 const setUp = (latestFeedback, viewAs = ViewType.Teacher) => {
   const props = {latestFeedback, viewAs};
-  return shallow(<TeacherFeedbackStatus {...props} />);
+  return shallow(<Status {...props} />);
 };
 
-describe('TeacherFeedbackStatusText', () => {
+describe('Status', () => {
   describe('viewed as Teacher', () => {
     it('displays nicely formatted date with checkmark icon if student viewed teacher feedback today', () => {
       const today = new Date();

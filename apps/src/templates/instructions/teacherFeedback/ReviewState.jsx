@@ -5,7 +5,7 @@ import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
 import {ReviewStates} from '@cdo/apps/templates/types';
 import color from '@cdo/apps/util/color';
 
-class FeedbackStudentReviewState extends React.Component {
+class ReviewState extends React.Component {
   static propTypes = {
     latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
     isAwaitingTeacherReview: PropTypes.bool
@@ -75,4 +75,4 @@ const styles = {
   }
 };
 
-export default FeedbackStudentReviewState;
+export default ReviewState;

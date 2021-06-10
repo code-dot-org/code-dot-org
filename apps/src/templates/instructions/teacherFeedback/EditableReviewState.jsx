@@ -5,13 +5,13 @@ import color from '@cdo/apps/util/color';
 import ReactTooltip from 'react-tooltip';
 import {ReviewStates} from '@cdo/apps/templates/types';
 
-// TeacherFeedbackKeepWorking displays a checkbox which can be in one of 3 states:
+// EditableReviewState displays a checkbox which can be in one of 3 states:
 // 1. Checked - meaning the teacher has requested the student to keep working
 // 2. Unchecked - meaning the teacher has not requested the student to keep working, or has removed the previous request
 // 3. Indeterminate - meaning the level is awaiting teacher review (the teacher requested
 // the student to keep working and the student has made progress since that feedback was given)
 // This checkbox is displayed to and controlled by the teacher.
-class TeacherFeedbackKeepWorking extends Component {
+class EditableReviewState extends Component {
   static propTypes = {
     latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
     isAwaitingTeacherReview: PropTypes.bool,
@@ -130,4 +130,4 @@ const styles = {
   }
 };
 
-export default TeacherFeedbackKeepWorking;
+export default EditableReviewState;
