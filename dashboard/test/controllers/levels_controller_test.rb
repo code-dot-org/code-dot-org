@@ -603,7 +603,7 @@ class LevelsControllerTest < ActionController::TestCase
 
     script.hidden = true
     script.save!
-    assert_equal script.published_state, 'beta'
+    assert_equal script.get_published_state, 'beta'
     get :edit, params: {id: level.id}
     assert_response :success
     assert_includes @response.body, level.name
