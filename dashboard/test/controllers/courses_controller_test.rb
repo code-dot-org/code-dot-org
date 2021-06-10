@@ -285,7 +285,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "update: sets visible and published_state on units in unit group" do
+  test "update: sets published_state on units in unit group" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     course = create :unit_group, name: 'course'
@@ -301,11 +301,8 @@ class CoursesControllerTest < ActionController::TestCase
     unit1.reload
     unit2.reload
 
-    assert course.visible?
     assert_equal course.published_state, SharedConstants::PUBLISHED_STATE.stable
-    refute unit1.hidden?
     assert_equal unit1.published_state, SharedConstants::PUBLISHED_STATE.stable
-    refute unit2.hidden?
     assert_equal unit2.published_state, SharedConstants::PUBLISHED_STATE.stable
   end
 
