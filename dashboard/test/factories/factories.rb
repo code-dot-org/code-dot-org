@@ -31,6 +31,15 @@ FactoryGirl.define do
 
   factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
+
+    trait :with_course_version do
+      sequence(:version_year) {|n| "202#{n - 1}"}
+      sequence(:family_name, 'a') {|c| "course-family-#{c}"}
+      after(:create) do |unit_group|
+        create(:course_offering, key: unit_group.family_name, display_name: unit_group.family_name)
+        create(:course_version, key: unit_group.version_year, content_root: unit_group)
+      end
+    end
   end
 
   factory :experiment do

@@ -371,8 +371,8 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists teacher resources for migrated unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course_version = create :course_version, :with_unit_group
-    unit_group = course_version.content_root
+    unit_group = create :unit_group, :with_course_version
+    course_version = unit_group.course_version
     unit_group.update!(name: 'csp-2017')
     script = create :script, hidden: true, is_migrated: true
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
@@ -387,8 +387,8 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists student resources for migrated unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course_version = create :course_version, :with_unit_group
-    unit_group = course_version.content_root
+    unit_group = create :unit_group, :with_course_version
+    course_version = unit_group.course_version
     unit_group.update!(name: 'csp-2017')
     script = create :script, hidden: true, is_migrated: true
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
@@ -398,6 +398,20 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: [resource1.id, resource2.id]}
     unit_group.reload
     assert_equal 2, unit_group.student_resources.length
+  end
+
+  test "update: create course version for unit groups" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    unit_group = create :unit_group
+    unit_group.update!(name: 'csp-2017')
+    script = create :script, hidden: true, is_migrated: true
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+
+    assert_nil unit_group.course_version
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', family_name: 'coursefamily', version_year: 2021}
+    unit_group.reload
+    refute_nil unit_group.course_version
   end
 
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
