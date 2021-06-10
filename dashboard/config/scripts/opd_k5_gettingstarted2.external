@@ -25,7 +25,7 @@ Each course is designed to stand alone and does not require a student to take a 
 ### Examples of Lesson Types
 
 * Course A: example <a href="https://studio.code.org/s/coursea-2021/lessons/3/levels/1?section_id=2860383" target="blank" >context-setting lesson</a>.  Note: Context-setting lessons are typically unplugged, off the computer.
-* Course A: example <a href="https://studio.code.org/s/coursea-2021/lessons/12" >skill-building lesson</a> 
+* Course A: example <a href="https://studio.code.org/s/coursea-2021/lessons/12" target="blank" >skill-building lesson</a> 
 * Course C: example <a href="https://studio.code.org/s/coursec-2021/lessons/14" target="blank" >mini-project lesson</a> 
 * Course C: example <a href="https://studio.code.org/s/coursec-2021/lessons/15" target="blank" >exploratory lesson</a>
 * Course C: example <a href="https://studio.code.org/s/coursec-2021/lessons/16" target="blank" >exploratory lesson</a> 
@@ -50,9 +50,10 @@ Lesson levels also appear at the top of the page in the student learning platfor
 
 ![](https://images.code.org/9c0c4f7a1203a1cd35bf3a73487e42a9-image-1623340914764.png)
 
-Levels within lessons have different purposes to best support students learning a particular concept.  For example, the level type "Free Play" encourages students to get creative.
 
 ### Level Types
+
+Levels within lessons have different types and purposes to best support students learning a particular concept.  
 
 * **Video** levels introduce new tools or explain new CS Concepts.
 * **Online** levels include Code.org tools - Artist, Play Lab, and Sprite Lab.

@@ -39,7 +39,8 @@
               "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>userId = {userId}</li><li>course = {course} </li><li> pd = {pd} </li></p>"
             }
           ],
-          "title": "Panel for variable testing (hide before shipping)"
+          "title": "Panel for variable testing (hide before shipping)",
+          "visible": "false"
         },
         {
           "type": "html",
@@ -889,30 +890,6 @@
             {
               "value": "materials_for_offline",
               "text": "Finding materials to work on that don't require internet and device access"
-            },
-            {
-              "value": "assigning_work",
-              "text": "Assigning new work"
-            },
-            {
-              "value": "communicating",
-              "text": "Communicating with my students while they are at home"
-            },
-            {
-              "value": "internet_device_access",
-              "text": "Internet and/or device access for me or my students"
-            },
-            {
-              "value": "tracking_progress",
-              "text": "Tracking student progress on assigned materials"
-            },
-            {
-              "value": "login_info",
-              "text": "Getting students their login information, or getting students signed in to the site"
-            },
-            {
-              "value": "lms_integration",
-              "text": "Lack of integration with my school’s technology or LMS (Learning Management System)"
             }
           ]
         },

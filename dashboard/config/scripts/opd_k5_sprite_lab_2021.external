@@ -4,6 +4,8 @@ description 'description here'
 markdown <<MARKDOWN
 # Introduction to Sprite Lab
 
+<img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png" class="level-image">
+
 Sprite Lab is a block-based programming environment where students can make simple animations and games with objects and characters that interact with each other. 
 
 **Course E** introduces Sprite Lab to students where they practice coding with algorithms, loops, and conditionals, before moving on to functions.  Course E introduces what a sprite is and how to code the behavior of sprites.
@@ -13,11 +15,10 @@ Sprite Lab is a block-based programming environment where students can make simp
 
 ## CS Concepts
 
->A **sprite** is a graphic character on the screen with properties that describe its location, movement, and look.
+A **sprite** is a graphic character on the screen with properties that describe its location, movement, and look.
 
->A **behavior** is an action that a sprite performs continuously until it's told to stop.
+A **behavior** is an action that a sprite performs continuously until it's told to stop.
 
-<img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png" class="level-image">
 
 ## Learning Platform Features
 
