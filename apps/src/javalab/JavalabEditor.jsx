@@ -36,9 +36,9 @@ import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 
 const MIN_HEIGHT = 100;
-const MAX_HEIGHT = window.innerHeight * 0.6;
-// This is the height of the content between the top banner and the editor box
-const HEADER_OFFSET = 80;
+const MAX_HEIGHT = 500;
+// This is the height of the "editor" header and the file tabs combined
+const HEADER_OFFSET = 63;
 const Dialog = makeEnum(
   'RENAME_FILE',
   'DELETE_FILE',
@@ -597,6 +597,7 @@ class JavalabEditor extends React.Component {
               resizeItemTop={this.getItemTop}
               position={this.getPosition()}
               onResize={this.handleHeightResize}
+              style={styles.resizer}
             />
           </div>
         </Tab.Container>
@@ -703,6 +704,9 @@ const styles = {
     float: 'left',
     overflow: 'visible',
     marginLeft: 3
+  },
+  resizer: {
+    position: 'static'
   }
 };
 
