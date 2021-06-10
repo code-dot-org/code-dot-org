@@ -62,13 +62,6 @@ level 'OPD-K5-EventsE-2021'
 level 'OPD-K5-EventsF-2021'
 level 'OPD-K5-EventsF2-2021'
 level 'OPD-K5 events introduced_2021'
-level 'OPD-K5 Stage7Go_copy_2021'
-level 'OPD-K5-events-2_2021'
-level 'OPD-K5-events-3_2021'
-level 'OPD-K5-events-4_2021'
-level 'OPD-K5-events-5_2021'
-level 'OPD-K5-events-6_2021'
-level 'OPD-K5 debugging_2021'
 level 'OPD-K5 events free response_2021'
 
 lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: false
