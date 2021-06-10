@@ -110,7 +110,7 @@ class Script < ApplicationRecord
   before_validation :hide_pilot_units
 
   def hide_pilot_units
-    self.hidden = true unless pilot_experiment.blank?
+    self.published_state = SharedConstants::PUBLISHED_STATE.pilot unless pilot_experiment.blank?
   end
 
   # As we read and write to files with the unit name, to prevent directory
@@ -988,7 +988,6 @@ class Script < ApplicationRecord
       units_to_add << [{
         id: unit_data[:id],
         name: name,
-        hidden: unit_data[:hidden].nil? ? true : unit_data[:hidden], # default true
         login_required: unit_data[:login_required].nil? ? false : unit_data[:login_required], # default false
         wrapup_video: unit_data[:wrapup_video],
         new_name: unit_data[:new_name],
@@ -1019,7 +1018,7 @@ class Script < ApplicationRecord
   def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     transaction do
       unit = fetch_unit(options)
-      unit.update!(hidden: true) if new_suffix
+      unit.update!(published_state: SharedConstants::PUBLISHED_STATE.beta) if new_suffix
 
       unit.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
@@ -1184,7 +1183,7 @@ class Script < ApplicationRecord
 
   # Clone this unit, appending a dash and the suffix to the name of this
   # unit. Also clone all the levels in the unit, appending an underscore and
-  # the suffix to the name of each level. Mark the new unit as hidden, and
+  # the suffix to the name of each level. Mark the new script published_state as beta, and
   # copy any translations and other metadata associated with the original unit.
   # @param options [Hash] Optional properties to set on the new unit.
   # @param options[:editor_experiment] [String] Optional editor_experiment name.
@@ -1269,7 +1268,6 @@ class Script < ApplicationRecord
       Script.add_unit(
         {
           name: unit_name,
-          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil

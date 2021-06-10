@@ -14,7 +14,7 @@ class ScriptTest < ActiveSupport::TestCase
     @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game, level_num: 'custom')}
 
     @unit_group = create(:unit_group)
-    @unit_in_unit_group = create(:script, hidden: true)
+    @unit_in_unit_group = create(:script, published_state: SharedConstants::PUBLISHED_STATE.beta)
     create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @unit_in_unit_group)
 
     @unit_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
@@ -97,8 +97,7 @@ class ScriptTest < ActiveSupport::TestCase
     # Set different level name in tested unit
     parsed_unit[0][:lessons][1][:script_levels][1][:levels][0][:name] = "Level 1"
 
-    # Set different 'hidden' option from defaults in Script.setup
-    options = {name: File.basename(@unit_file, ".script"), hidden: false}
+    options = {name: File.basename(@unit_file, ".script"), published_state: SharedConstants::PUBLISHED_STATE.preview}
     unit = Script.add_unit(options, parsed_unit)
     assert_equal unit_id, unit.script_levels[4].script_id
     assert_not_equal script_level_id, unit.script_levels[4].id
@@ -214,7 +213,7 @@ class ScriptTest < ActiveSupport::TestCase
     unit = Script.find_by!(name: unit_names.first)
 
     # Not testing new_name since it causes a new unit to be created.
-    assert_equal false, unit.hidden? # defaults to true, so we want to verify it was explicitly set to false
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.published_state
     assert unit.login_required?
     assert_equal 'csd1', unit.family_name
 
@@ -223,7 +222,7 @@ class ScriptTest < ActiveSupport::TestCase
     Script.setup([unit_file_no_fields])
     unit.reload
 
-    assert unit.hidden? # defaults to true
+    assert SharedConstants::PUBLISHED_STATE.beta, unit.published_state
     assert_equal false, unit.login_required?
     assert_nil unit.family_name
   end
@@ -406,9 +405,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '100', unit.script_levels[1].level.level_num
   end
 
-  test 'allow applab and gamelab levels in hidden units' do
+  test 'allow applab and gamelab levels in unlaunched units' do
     Script.add_unit(
-      {name: 'test script', hidden: true},
+      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
         display_name: "Content",
@@ -416,7 +415,7 @@ class ScriptTest < ActiveSupport::TestCase
       }] # From level.yml fixture# From level.yml fixture
     )
     Script.add_unit(
-      {name: 'test script', hidden: true},
+      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
         display_name: "Content",
@@ -427,7 +426,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'allow applab and gamelab levels in login_required units' do
     Script.add_unit(
-      {name: 'test script', hidden: false, login_required: true},
+      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
         display_name: "Content",
@@ -435,7 +434,7 @@ class ScriptTest < ActiveSupport::TestCase
       }] # From level.yml fixture# From level.yml fixture
     )
     Script.add_unit(
-      {name: 'test script', hidden: false, login_required: true},
+      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
         display_name: "Content",
@@ -1214,7 +1213,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal true, unit.summarize(true, create(:teacher))[:show_assign_button]
 
     # Teacher should not be able to assign a hidden script.
-    hidden_unit = create(:script, name: 'unassignable-hidden', hidden: true, published_state: SharedConstants::PUBLISHED_STATE.beta)
+    hidden_unit = create(:script, name: 'unassignable-hidden', published_state: SharedConstants::PUBLISHED_STATE.beta)
     assert_equal SharedConstants::PUBLISHED_STATE.beta, hidden_unit.summarize[:publishedState]
     assert_equal false, hidden_unit.summarize(true, create(:teacher))[:show_assign_button]
 
@@ -1774,7 +1773,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil unit_copy.family_name
     assert_nil unit_copy.version_year
     assert_equal false, unit_copy.stable?
-    assert_equal true, unit_copy.hidden
     assert_nil unit_copy.announcements
 
     # Validate levels.
@@ -1809,7 +1807,7 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
-  # This test case doesn't cover hidden (not a property) or version year (only
+  # This test case doesn't cover version year (only
   # updated under certain conditions). These are covered in other test cases.
   test 'clone with suffix clears certain properties' do
     unit_file = File.join(self.class.fixture_path, "test-all-properties.script")
@@ -1852,7 +1850,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'versioned', unit_copy.family_name
     assert_equal '1802', unit_copy.version_year
     assert_equal false, unit_copy.stable?
-    assert_equal true, unit_copy.hidden
   end
 
   test 'clone unit with variants' do
@@ -1973,33 +1970,33 @@ class ScriptTest < ActiveSupport::TestCase
       "The following categories are missing translations in scripts.en.yml '#{untranslated_categories}'"
   end
 
-  test "self.valid_scripts: does not return hidden units when user is a student" do
+  test "self.valid_scripts: does not return unlaunched units when user is a student" do
     student = create(:student)
 
     units = Script.valid_scripts(student)
-    refute has_hidden_unit?(units)
+    refute has_unlaunched_unit?(units)
   end
 
-  test "self.valid_scripts: does not return hidden units when user is a teacher" do
+  test "self.valid_scripts: does not return unlaunched units when user is a teacher" do
     teacher = create(:teacher)
 
     units = Script.valid_scripts(teacher)
-    refute has_hidden_unit?(units)
+    refute has_unlaunched_unit?(units)
   end
 
-  test "self.valid_scripts: returns hidden units when user is an admin" do
+  test "self.valid_scripts: returns unlaunched units when user is an admin" do
     admin = create(:admin)
 
     units = Script.valid_scripts(admin)
-    assert has_hidden_unit?(units)
+    assert has_unlaunched_unit?(units)
   end
 
-  test "self.valid_scripts: returns hidden units when user has hidden unit access" do
+  test "self.valid_scripts: returns unlaunched units when user has hidden script access" do
     teacher = create(:teacher)
     teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
 
     units = Script.valid_scripts(teacher)
-    assert has_hidden_unit?(units)
+    assert has_unlaunched_unit?(units)
   end
 
   test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
@@ -2032,8 +2029,7 @@ class ScriptTest < ActiveSupport::TestCase
     teacher = create :teacher
     levelbuilder = create :levelbuilder
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_unit = create :script, pilot_experiment: 'my-experiment'
-    assert pilot_unit.hidden
+    create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     assert Script.any?(&:pilot?)
 
     refute Script.valid_scripts(student).any?(&:pilot?)
@@ -2149,7 +2145,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'pilot units are always hidden during seed' do
     l = create :level
     dsl = <<-SCRIPT
-      hidden false
+      published_state 'pilot'
       pilot_experiment 'pilot-experiment'
 
       lesson 'Lesson1', display_name: 'Lesson1'
@@ -2162,7 +2158,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal 'pilot-script', unit.name
     assert_equal 'pilot-experiment', unit.pilot_experiment
-    assert unit.hidden
+    assert_equal 'pilot', unit.published_state
   end
 
   test 'has pilot access' do
@@ -3134,7 +3130,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   private
 
-  def has_hidden_unit?(units)
-    units.any?(&:hidden)
+  def has_unlaunched_unit?(units)
+    units.any? {|u| !u.launched?}
   end
 end
