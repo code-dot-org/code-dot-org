@@ -59,12 +59,7 @@ class TeacherFeedback < ApplicationRecord
   end
 
   def self.get_latest_feedback_given(student_id, level_id, teacher_id, script_id)
-    where(
-      student_id: student_id,
-      level_id: level_id,
-      teacher_id: teacher_id,
-      script_id: script_id
-    ).latest
+    get_latest_feedbacks_given(student_id, level_id, script_id, teacher_id).first
   end
 
   # returns the latest feedback from each teacher for the student on the level
