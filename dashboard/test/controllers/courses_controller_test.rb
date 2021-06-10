@@ -62,15 +62,15 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: redirect to latest stable version in course family" do
     Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
-    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', is_stable: true
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
     create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020'
     get :show, params: {course_name: 'csp'}
     assert_redirected_to '/courses/csp-2019'
 
     Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
-    create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', is_stable: true
-    create :unit_group, name: 'csd-2019', family_name: 'csd', version_year: '2019', is_stable: true
+    create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csd-2019', family_name: 'csd', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
     create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2019'
     get :show, params: {course_name: 'csd'}
     assert_redirected_to '/courses/csd-2019'
@@ -78,9 +78,9 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: redirect from new unstable version to assigned version" do
     student = create :student
-    csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
     create :follower, section: create(:section, unit_group: csp2017), student_user: student
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
     create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019'
 
     sign_in student
@@ -91,8 +91,8 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: redirect to latest stable version in course family for logged out user" do
     sign_out @teacher
-    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
     create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019'
 
     get :show, params: {course_name: 'csp-2017'}
@@ -102,8 +102,8 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: do not redirect to latest stable version if no_redirect query param provided" do
     sign_out @teacher
-    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
 
     get :show, params: {course_name: 'csp-2017', no_redirect: "true"}
     assert_response :ok
@@ -112,8 +112,8 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable version in course family for student" do
-    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
     create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019'
 
     sign_in create(:student)
@@ -148,8 +148,8 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: do not redirect teacher to latest stable version in course family" do
-    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
 
     get :show, params: {course_name: 'csp-2017'}
 
@@ -285,7 +285,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "update: sets visible and is_stable on units in unit group" do
+  test "update: sets visible and published_state on units in unit group" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     course = create :unit_group, name: 'course'
@@ -302,11 +302,11 @@ class CoursesControllerTest < ActionController::TestCase
     unit2.reload
 
     assert course.visible?
-    assert course.stable?
+    assert_equal course.published_state, SharedConstants::PUBLISHED_STATE.stable
     refute unit1.hidden?
-    assert unit1.stable?
+    assert_equal unit1.published_state, SharedConstants::PUBLISHED_STATE.stable
     refute unit2.hidden?
-    assert unit2.stable?
+    assert_equal unit2.published_state, SharedConstants::PUBLISHED_STATE.stable
   end
 
   test "update: sets pilot_experiment on units in unit group" do
@@ -366,13 +366,12 @@ class CoursesControllerTest < ActionController::TestCase
     assert unit_group.stable?
   end
 
-  test "update: published state of stable sets visible and is_stable correctly" do
+  test "update: published state of stable sets visible correctly" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     unit_group = create :unit_group, name: 'csp-2019'
 
     refute unit_group.visible?
-    refute unit_group.stable?
 
     post :update, params: {
       course_name: unit_group.name,
@@ -381,16 +380,14 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group.reload
 
     assert unit_group.visible?
-    assert unit_group.stable?
   end
 
-  test "update: published state of preview sets visible and is_stable correctly" do
+  test "update: published state of preview sets visible correctly" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     unit_group = create :unit_group, name: 'csp-2019'
 
     refute unit_group.visible?
-    refute unit_group.stable?
 
     post :update, params: {
       course_name: unit_group.name,
@@ -399,16 +396,14 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group.reload
 
     assert unit_group.visible?
-    refute unit_group.stable?
   end
 
-  test "update: published state of beta sets visible and is_stable correctly" do
+  test "update: published state of beta sets visible correctly" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     unit_group = create :unit_group, name: 'csp-2019'
 
     refute unit_group.visible?
-    refute unit_group.stable?
 
     post :update, params: {
       course_name: unit_group.name,
@@ -417,16 +412,14 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group.reload
 
     refute unit_group.visible?
-    refute unit_group.stable?
   end
 
-  test "update: published state of pilot sets visible and is_stable correctly" do
+  test "update: published state of pilot sets visible correctly" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     unit_group = create :unit_group, name: 'csp-2019'
 
     refute unit_group.visible?
-    refute unit_group.stable?
 
     post :update, params: {
       course_name: unit_group.name,
@@ -436,7 +429,6 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group.reload
 
     refute unit_group.visible?
-    refute unit_group.stable?
   end
 
   test "update: persists teacher resources for migrated unit groups" do
