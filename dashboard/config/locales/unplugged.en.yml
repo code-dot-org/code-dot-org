@@ -449,6 +449,3 @@ en:
       timeforcs_demo_conditionals:
         title: Conditionals
         desc: To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."
-      TheRightApp_2019:
-        title: The Right App
-        desc: "* Everyone uses computers these days, especially smartphones. \r\n* Smartphone applications, or \"apps\", help people do things like talk to friends, listen to music, shop, or just explore the web.\r\n* It is important for programmers to understand others' needs and design apps with them in mind!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
