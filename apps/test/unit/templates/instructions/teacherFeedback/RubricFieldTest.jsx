@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnwrappedRubricField as RubricField} from '@cdo/apps/templates/instructions/RubricField';
+import {expect} from '../../../../util/reconfiguredChai';
+import {UnwrappedRubricField as RubricField} from '@cdo/apps/templates/instructions/teacherFeedback/RubricField';
 
 const DEFAULT_PROPS = {
   showFeedbackInputAreas: true,

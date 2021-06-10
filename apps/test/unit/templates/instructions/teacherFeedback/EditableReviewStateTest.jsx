@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import TeacherFeedbackKeepWorking from '@cdo/apps/templates/instructions/TeacherFeedbackKeepWorking';
+import {expect} from '../../../../util/reconfiguredChai';
+import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import {ReviewStates} from '@cdo/apps/templates/types';
 import i18n from '@cdo/locale';
 import sinon from 'sinon';
@@ -16,10 +16,10 @@ const DEFAULT_PROPS = {
 const setUp = overrideProps => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
   // using mount instead of shallow so that refs are set
-  return mount(<TeacherFeedbackKeepWorking {...props} />);
+  return mount(<EditableReviewState {...props} />);
 };
 
-describe('TeacherFeedbackKeepWorking', () => {
+describe('EditableReviewState', () => {
   it('displays keep working text', () => {
     const wrapper = setUp();
     expect(wrapper.contains(i18n.keepWorking())).to.be.true;

@@ -1,8 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedbackRubric';
+import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 
 const DEFAULT_PROPS = {
   rubric: {
@@ -21,10 +21,10 @@ const DEFAULT_PROPS = {
 
 const setUp = overrideProps => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  return shallow(<TeacherFeedbackRubric {...props} />);
+  return shallow(<Rubric {...props} />);
 };
 
-describe('TeacherFeedbackRubric', () => {
+describe('Rubric', () => {
   it('displays key concept', () => {
     const wrapper = setUp();
     expect(wrapper.contains('Key Concept')).to.equal(true);
