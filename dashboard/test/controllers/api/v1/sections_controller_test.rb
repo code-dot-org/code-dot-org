@@ -15,16 +15,16 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @unit_group = create(:unit_group)
+    @unit_group = create(:unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta)
     @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
 
-    @script = create(:script)
+    @script = create(:script, published_state: SharedConstants::PUBLISHED_STATE.beta)
     @section_with_script = create(:section, user: @teacher, script: Script.flappy_script)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, visible: true, is_stable: true)
-    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true)
-    @csp_script = create(:script, name: 'csp1')
+    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, visible: true, is_stable: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
+    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true, published_state: SharedConstants::PUBLISHED_STATE.preview)
+    @csp_script = create(:script, name: 'csp1', published_state: SharedConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
   end
 
