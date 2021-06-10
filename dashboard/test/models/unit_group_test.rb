@@ -458,9 +458,9 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test 'summarize_version' do
-    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', visible: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
-    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', visible: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
-    csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', visible: true, published_state: SharedConstants::PUBLISHED_STATE.preview)
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.preview)
     csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta)
 
     [csp_2017, csp_2018, csp_2019].each do |c|
@@ -469,7 +469,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
     end
 
-    # Result should include self, even if it's not visible
+    # Result should include self, even if it's not launched
     summary = csp_2020.summarize_versions
     assert_equal ['csp-2020', 'csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
   end
@@ -746,16 +746,16 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "valid_courses" do
-    csp = create(:unit_group, name: 'csp-2017', visible: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
-    # Should still be in valid_courses if visible and not stable
-    csd = create(:unit_group, name: 'csd-2017', visible: true, published_state: SharedConstants::PUBLISHED_STATE.preview)
+    csp = create(:unit_group, name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    # Should still be in valid_courses if in preview published state
+    csd = create(:unit_group, name: 'csd-2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
     create(:unit_group, name: 'madeup')
 
     assert_equal [csp, csd], UnitGroup.valid_courses
   end
 
   test "assignable_info" do
-    csp = create(:unit_group, name: 'csp-2017', visible: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
+    csp = create(:unit_group, name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.stable)
     csp1 = create(:script, name: 'csp1')
     csp2 = create(:script, name: 'csp2')
     csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
@@ -819,7 +819,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     teacher = create :teacher
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
 
-    csp_2019 = create :unit_group, name: 'csp-2019', visible: true, published_state: SharedConstants::PUBLISHED_STATE.preview
+    csp_2019 = create :unit_group, name: 'csp-2019', published_state: SharedConstants::PUBLISHED_STATE.preview
     csp_2020 = create :unit_group, name: 'csp-2020', pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
 
     assert_equal UnitGroup.valid_courses, [csp_2019]
