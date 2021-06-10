@@ -31,6 +31,8 @@ class DSLDefined < Level
   include Seeded
   after_destroy :delete_level_file
 
+  DEFAULT_LEVEL_NAME = 'unique level name here'
+
   def dsl_default
     "Enter the level definition here.\n"
   end
