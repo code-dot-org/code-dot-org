@@ -13,7 +13,13 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     model_id = generate_id
     model_data = params["ml_model"]
     return head :bad_request if model_data.nil? || model_data == ""
-    profanity_or_pii = ShareFiltering.find_failure(model_data.to_s, request.locale)
+    begin
+      profanity_or_pii = ShareFiltering.find_failure(
+        model_data.except(:trainedModel).to_s, request.locale
+      )
+    rescue OpenURI::HTTPError => e
+      print e
+    end
     if profanity_or_pii
       render json: {id: model_id, status: "piiProfanity"}
     else
