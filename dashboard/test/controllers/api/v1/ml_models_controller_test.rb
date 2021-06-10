@@ -91,14 +91,14 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
-  test 'user can not retrieve nonexistant models' do
+  test 'user can not retrieve nonexistent models' do
     sign_in @owner
     AWS::S3.stubs(:download_from_bucket).returns(false)
     get :show, params: {id: "fake_id"}
     assert_response :not_found
   end
 
-  test 'user can not delete nonexistant models' do
+  test 'user can not delete nonexistent models' do
     sign_in @owner
     delete :destroy, params: {id: "fake_id"}
     assert_response :not_found
