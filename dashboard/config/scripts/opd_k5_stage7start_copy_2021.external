@@ -5,13 +5,15 @@ markdown <<MARKDOWN
 
 Students use Play Lab to program "events" in animated games they create. Play Lab is a tool that allows students to program stories and games using backgrounds and characters.
 
+<img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
+
 ## CS Concepts
 
->An **event** is a line of code that tells your computer to "listen" for something to happen, then take an action.  For example, web pages may include a drop down menu when you roll over the navigation bar with your mouse.  The "mouse rollover" is an event that triggers an action.
+An **event** is a line of code that tells your computer to "listen" for something to happen, then take an action.  For example, web pages may include a drop down menu when you roll over the navigation bar with your mouse.  The "mouse rollover" is an event that triggers an action.
 
 "Events" are introduced in Courses A through C with a **context-setting** lesson in which students engage in an unplugged (off the computer) activity.
 
-Preview and read the lesson plan for the **context-setting** lesson in <a href="https://studio.code.org/s/coursea-2021/lessons/11" target="blank">Course A - Lesson 11:  The Big Event Jr.</a> to understand how "events" are introduced to students. 
+Read the lesson plan for the **context-setting** lesson in <a href="https://studio.code.org/s/coursea-2021/lessons/11" target="blank">Course A - Lesson 11:  The Big Event Jr.</a> for an example of how "events" are first introduced to students in Course A. 
 
 ## Learning Platform Features
 
@@ -27,6 +29,5 @@ Click "Continue" to go through student lesson levels listed below.  These studen
 	* Course C - Lesson 12, Level 2:  Build a Flappy Game
 * Course D - Lesson 6, Level 3:  Events in Bounce
 
-<img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
 MARKDOWN
