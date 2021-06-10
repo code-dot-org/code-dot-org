@@ -498,6 +498,13 @@ $height-to-width: 434 / 477;
     line-height: 11px;
     font-size: 30px;
   }
+
+  .minecraft-big-gray-header {
+    @extend .minecraft-big-yellow-header;
+
+    color: #e7e8ea;
+    margin-bottom: 23px;
+  }
 }
 
 .craft-popup {

@@ -450,7 +450,12 @@ Craft.init = function(config) {
           }
           onMount={onMount}
         />
-        <PlayerSelectionDialog players={[CHARACTER_ALEX, CHARACTER_STEVE]} />
+        <PlayerSelectionDialog
+          players={[CHARACTER_ALEX, CHARACTER_STEVE]}
+          title={craftMsg.playerSelectChooseCharacter()}
+          titleClassName="minecraft-big-gray-header"
+          hideSubtitle
+        />
       </div>
     </Provider>,
     document.getElementById(config.containerId)
