@@ -35,7 +35,7 @@ class DSLDefined < Level
   DEFAULT_LEVEL_NAME = 'unique level name here'
 
   def validate_level_name
-    errors.add(:name, "is invalid") if name == DEFAULT_LEVEL_NAME
+    errors.add(:name, "cannot be the default level name") if name == DEFAULT_LEVEL_NAME
   end
 
   def dsl_default
