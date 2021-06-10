@@ -5,35 +5,52 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/44649c6250481342db2731ec05b3c7f5-image-1622813256255.png" class="level-image">
 
-Debugging is an essential skill and process in computer science.  Pair programming is a built-in CS teaching strategy in the learning platform that supports students in debugging and in developing many of the student practices. 
+**Debugging** is an essential skill and process in computer science.  
 
-Let's investigate how debugging and pair programming are incorporated into lessons.
+**Pair programming** is a technique used in the real-world in which two programmers work together on one computer.  
+
+Both debugging and pair programming are CS teaching strategies built into the student learning platform. 
 
 ## Debugging 
 
-Let's begin with some vocabulary.
+### CS Concepts
 
 * **Bug:** Something that is going wrong with the code, an error.
 * **Debugging:** Finding and fixing “bugs” or the code to fix an error.
-* **Persistence:** A student practice of not giving up when trying things many different ways, many different times.
 
-Debugging is a skill each student will need to practice and strengthen overtime. Debugging as a skill can be thought of as active debugging when students practice debugging while coding.
+Debugging is a skill each individual student will need to practice, strengthen overtime, and practice while coding.
 
-Debugging is also a process that all students can engage in, as a learning community, practice thinking about how to debug. Debugging as a process can be thought of as reflective debugging when students participate in debugging as an entire class.
+Debugging is also a process that students can engage in, as a learning community, to practice problem solving, collaborating, and communicating.  As a class, students can reflect on thinking about how to debug.
 
-<a href="https://www.youtube.com/watch?v=RUZTRNakV9c" target="blank" rel="noopener noreferrer">**Learn about debugging here.**</a>
+### Learning Platform Features
+
+##### Watch this video, <a href="https://www.youtube.com/watch?v=RUZTRNakV9c" target="blank" rel="noopener noreferrer"> Debugging with the Step Button</a>, that introduces students to features built into the student learning platform to help students debug programs.
 
 ## Pair Programming
 
-Pair programming is a technique in which two programmers work together at one computer.  The "driver" writes code while the "navigator" directs the design and setup of the code.  The two programmers switch roles often.  Students in CS Fundamentals courses engage in pair programming throughout many lessons.
+Pair programming is a technique in which two programmers work together at one computer.  The "driver" writes code while the "navigator" directs the design and setup of the code.  The two programmers switch roles often.  Students in Computer Science Fundamentals courses engage in pair programming throughout many lessons.
 
-<a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">**Learn about pair programming here.**</a>
+##### Watch this video, <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q"> Pair Programming</a>, that introduces pair programming to students.
 
-<a href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-">**Read Code.org's support article "How does pair programming on Code.org work?" here.**</a>
+### Learning Platform Features - Teacher Side
+
+Follow the instructions below to turn on pair programming for your students using the teacher dashboard.  Refer to <a hrer="https://levelbuilder-studio.code.org/s/k5-onlinepd-2021/lessons/2/levels/2" target="blank" >Lesson 2: Getting Started</a> of this online course for help with using the teacher dashboard.
+
+<a href="https://studio.code.org/home" target="blank" > **1. Sign-in to your Code.org account.**</a>
+
+**2. Click on "My Dashboard," scroll down to the classroom section you want to turn pair programming on for, and click on that section.**
+![](https://images.code.org/8e05544b91eef252241fab607cafa4a5-image-1623286278212.png)
 
 
-**For more information about debugging and pair programming, check out the <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="blank" rel="noopener noreferrer">Computer Science Fundamentals Curriculum Guide</a>.**
+**3. Click on the "Edit Section Details" button.**
+![](https://images.code.org/28fe582cd2a0a85a241c879c97654525-image-1623286413384.png)
 
+**4. Scroll down to "Allow students to Pair Program?" and select "Yes."**
+![](https://images.code.org/12cb643412a7a22cf518f3efe96c0ae0-image-1623286645973.png)
+
+### Learning Platform Features - Student Side
+
+Students will need to follow the instructions below to pair up with another student.
 
 
 
