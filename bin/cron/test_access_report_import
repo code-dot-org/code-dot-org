@@ -25,6 +25,7 @@ def main
 
     # update object key to reflect invalid file
     update_object_key(object_key, false)
+    raise e
   end
 end
 

@@ -1513,7 +1513,7 @@ class Census::StateCsOffering < ApplicationRecord
     # "state_cs_offerings/<state_code>/<school_year>-<school_year_end>(.<update>).<file_extension>"
     _, state_code, name = object_key.split('/')
     years, update_or_extension, extension = name.split('.')
-    start_year, _ = years.split('-')
+    start_year, _ = years.split('-').map(&:to_i)
     update = extension ? update_or_extension : 1
     extension ||= update_or_extension
     [
