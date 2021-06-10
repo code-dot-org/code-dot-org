@@ -51,7 +51,6 @@ class UnitGroup < ApplicationRecord
     has_numbered_units
     family_name
     version_year
-    visible
     pilot_experiment
     announcements
   )

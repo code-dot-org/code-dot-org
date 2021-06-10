@@ -590,7 +590,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert_not_includes @response.body, 'level cannot be renamed'
   end
 
-  test "should prevent rename of level in visible or pilot script" do
+  test "should prevent rename of level in launched or pilot script" do
     script_level = create :script_level
     script = script_level.script
     script.published_state = 'stable'
