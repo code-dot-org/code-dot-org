@@ -56,6 +56,7 @@ describe('VersionHistory', () => {
     testVersionHistory({
       props: {
         handleClearPuzzle: () => {},
+        isProjectTemplateLevel: false,
         useFilesApi: false
       },
       finishVersionHistoryLoad: () => {
@@ -85,6 +86,7 @@ describe('VersionHistory', () => {
     testVersionHistory({
       props: {
         handleClearPuzzle: () => {},
+        isProjectTemplateLevel: false,
         useFilesApi: true
       },
       finishVersionHistoryLoad: () => {
@@ -190,8 +192,11 @@ describe('VersionHistory', () => {
       assert(
         wrapper.containsMatchingElement(
           <div>
-            <p>Are you sure you want to clear all progress for this level?</p>
-            <button type="button" id="confirm-button">
+            <p>
+              Are you sure you want to restart this level? This will clear all
+              of your code.
+            </p>
+            <button type="button" id="start-over-button">
               Start over
             </button>
             <button type="button" id="again-button">
@@ -210,11 +215,14 @@ describe('VersionHistory', () => {
       wrapper.find('.btn-danger').simulate('click');
 
       // Expect confirmation to show
-      expect(
+      assert(
         wrapper.containsMatchingElement(
           <div>
-            <p>Are you sure you want to clear all progress for this level?</p>
-            <button type="button" id="confirm-button">
+            <p>
+              Are you sure you want to restart this level? This will clear all
+              of your code.
+            </p>
+            <button type="button" id="start-over-button">
               Start over
             </button>
             <button type="button" id="again-button">
@@ -229,6 +237,16 @@ describe('VersionHistory', () => {
 
       // Rendered two version rows
       expect(wrapper.find(VersionRow)).to.have.length(2);
+    });
+
+    it('shows a confirmation with template project warning', () => {
+      wrapper = mount(<VersionHistory {...props} isProjectTemplateLevel />);
+      finishVersionHistoryLoad();
+
+      // Click "Start Over"
+      wrapper.find('.btn-danger').simulate('click');
+
+      expect(wrapper.find('#template-level-warning')).to.exist;
     });
 
     describe('confirming Start Over', () => {
@@ -250,7 +268,7 @@ describe('VersionHistory', () => {
         );
         finishVersionHistoryLoad();
         wrapper.find('.btn-danger').simulate('click');
-        wrapper.find('#confirm-button').simulate('click');
+        wrapper.find('#start-over-button').simulate('click');
       });
 
       afterEach(async () => {
