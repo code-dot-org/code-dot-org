@@ -11,7 +11,7 @@ export default function PreviewPaneHeader({
   isCollapsed,
   isFullscreen,
   showAssetManagerButton = false,
-  headerTitle = i18n.preview()
+  showPreviewTitle = true
 }) {
   return (
     <PaneHeader hasFocus>
@@ -24,8 +24,8 @@ export default function PreviewPaneHeader({
         style={styles.transparent}
         leftJustified
       />
-      {headerTitle && (
-        <PaneSection style={styles.headerTitle}>{headerTitle}</PaneSection>
+      {showPreviewTitle && (
+        <PaneSection style={styles.headerTitle}>{i18n.preview()}</PaneSection>
       )}
       {/* TODO: Uncomment fullscreen button when we are ready to implement fullscreen.
       <PaneButton
@@ -42,7 +42,7 @@ export default function PreviewPaneHeader({
           headerHasFocus
           onClick={() => {}}
           iconClass="fa fa-upload"
-          label="Manage Assets"
+          label={i18n.manageAssets()}
           isRtl={false}
         />
       )}
@@ -54,7 +54,7 @@ PreviewPaneHeader.propTypes = {
   isCollapsed: PropTypes.bool.isRequired,
   isFullscreen: PropTypes.bool.isRequired,
   showAssetManagerButton: PropTypes.bool,
-  headerTitle: PropTypes.string
+  showPreviewTitle: PropTypes.bool
 };
 
 const styles = {

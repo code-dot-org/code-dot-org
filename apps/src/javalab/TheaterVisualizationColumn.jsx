@@ -17,8 +17,8 @@ export default class TheaterVisualizationColumn extends React.Component {
         <PreviewPaneHeader
           isCollapsed={isCollapsed}
           isFullscreen={isFullscreen}
-          showAssetManagerButton={true}
-          headerTitle={''}
+          showAssetManagerButton
+          showPreviewTitle={false}
         />
         <ProtectedVisualizationDiv>
           <canvas id="theater" width="400" height="400" />
