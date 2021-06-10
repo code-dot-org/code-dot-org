@@ -3,23 +3,25 @@ ECS Support Legacy:
   name: ECS Support Legacy
   properties: "{}"
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &1 2020-02-21 16:29:07.000000000 Z
+    utc: &1 2020-09-11 00:59:30.000000000 Z
     zone: &2 !ruby/object:ActiveSupport::TimeZone
       name: Etc/UTC
     time: *1
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &3 2020-02-21 16:29:07.000000000 Z
+    utc: &3 2021-06-10 01:34:19.000000000 Z
     zone: *2
     time: *3
+  published_state: beta
 allthethingscourse:
-  id: 24
+  id: 25
   name: allthethingscourse
   properties: "{}"
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &4 2020-02-21 17:07:55.000000000 Z
+    utc: &4 2020-09-11 01:47:52.000000000 Z
     zone: *2
     time: *4
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &5 2020-02-21 17:07:55.000000000 Z
+    utc: &5 2021-06-10 01:34:20.000000000 Z
     zone: *2
     time: *5
+  published_state: beta
