@@ -73,12 +73,8 @@ class UnitGroup < ApplicationRecord
     I18n.t("data.course.name.#{name}.version_title", default: version_year)
   end
 
-  # Any course with a plc_course or no family_name is considered stable.
-  # All other courses must specify an is_stable boolean property.
   def stable?
-    return true if plc_course || !family_name
-
-    is_stable || false
+    published_state == SharedConstants::PUBLISHED_STATE.stable
   end
 
   def self.file_path(name)
