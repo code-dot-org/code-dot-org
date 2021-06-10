@@ -162,10 +162,10 @@ const styles = {
     color: color.black
   },
   container: {
-    display: 'flex'
+    display: 'flex',
+    height: 170
   },
   console: {
-    height: 200,
     flexGrow: 2,
     overflowY: 'auto',
     padding: 5

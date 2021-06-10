@@ -445,12 +445,11 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     script.reload
     refute script.hidden
-    assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
   test "update published state to pilot" do
@@ -467,14 +466,13 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'pilot',
+      published_state: SharedConstants::PUBLISHED_STATE.pilot,
       pilot_experiment: 'my-pilot'
     }
     assert_response :success
     script.reload
     assert script.hidden
     refute script.is_stable
-    assert_equal true, JSON.parse(@response.body)['hidden']
   end
 
   test "update published state to beta" do
@@ -491,13 +489,12 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'beta'
+      published_state: SharedConstants::PUBLISHED_STATE.beta
     }
     assert_response :success
     script.reload
     assert script.hidden
     refute script.is_stable
-    assert_equal true, JSON.parse(@response.body)['hidden']
   end
 
   test "update published state to preview" do
@@ -514,16 +511,15 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     script.reload
     refute script.hidden
     refute script.is_stable
-    assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
-  test "update published state to recommended" do
+  test "update published state to stable" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
@@ -537,13 +533,12 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'recommended'
+      published_state: SharedConstants::PUBLISHED_STATE.stable
     }
     assert_response :success
     script.reload
     refute script.hidden
     assert script.is_stable
-    assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
   test "can update on test without modifying filesystem" do
@@ -557,7 +552,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     script.reload
@@ -575,7 +570,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
     script.reload
@@ -789,7 +784,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: '',
-      published_state: 'preview'
+      published_state: SharedConstants::PUBLISHED_STATE.preview
     }
 
     assert_response :success
@@ -882,7 +877,7 @@ class ScriptsControllerTest < ActionController::TestCase
       student_detail_progress_view: 'on',
       lesson_extras_available: 'on',
       has_verified_resources: 'on',
-      published_state: 'pilot',
+      published_state: SharedConstants::PUBLISHED_STATE.pilot,
       tts: 'on',
       project_sharing: 'on',
       is_course: 'on',
