@@ -3196,7 +3196,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', hidden: true
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.any_visible_assigned_scripts?
     end
@@ -3212,7 +3212,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned courses and scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', hidden: true
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.assigned_course_or_script?
     end
