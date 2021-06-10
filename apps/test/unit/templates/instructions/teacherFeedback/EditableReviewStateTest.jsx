@@ -2,7 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
-import {ReviewStates} from '@cdo/apps/templates/types';
+import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import i18n from '@cdo/locale';
 import sinon from 'sinon';
 

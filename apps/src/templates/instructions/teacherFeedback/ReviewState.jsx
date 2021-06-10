@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
-import {ReviewStates} from '@cdo/apps/templates/types';
+import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import color from '@cdo/apps/util/color';
 
 class ReviewState extends React.Component {

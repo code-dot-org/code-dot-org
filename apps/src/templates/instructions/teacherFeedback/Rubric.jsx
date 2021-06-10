@@ -4,7 +4,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import RubricField from '@cdo/apps/templates/instructions/teacherFeedback/RubricField';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {rubricShape} from '@cdo/apps/templates/types';
+import {rubricShape} from '@cdo/apps/templates/instructions/teacherFeedback/types';
 
 const rubricLevels = [
   'performanceLevel1',
