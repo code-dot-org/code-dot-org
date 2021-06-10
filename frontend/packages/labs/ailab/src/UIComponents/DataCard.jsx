@@ -9,11 +9,12 @@ class DataCard extends Component {
   static propTypes = {
     name: PropTypes.string,
     metadata: PropTypes.object,
-    dataLength: PropTypes.number
+    dataLength: PropTypes.number,
+    removedRowsCount: PropTypes.number
   };
 
   render() {
-    const { name, metadata, dataLength } = this.props;
+    const { name, metadata, dataLength, removedRowsCount  } = this.props;
 
     const card = metadata && metadata.card;
 
@@ -23,6 +24,11 @@ class DataCard extends Component {
         "Warning: Datasets with more than 20,000 rows will slow down the user experience."
       );
     }
+
+    const removedRowsMsg =
+      removedRowsCount === 1
+      ? `${this.props.removedRowsCount} row was removed because it contained an empty cell.`
+      : `${this.props.removedRowsCount} rows were removed because they contained an empty cell.`;
 
     return (
       dataLength !== 0 && (
@@ -78,6 +84,14 @@ class DataCard extends Component {
                   <div style={styles.bold}>Rows of data:</div>
                   {dataLength}
                 </div>
+                <div style={styles.cardRow}>
+                  {removedRowsCount > 0 &&
+                    <span>
+                      &nbsp;
+                      {removedRowsMsg}
+                    </span>
+                  }
+                </div>
               </div>
             )}
           </ScrollableContent>
@@ -90,5 +104,6 @@ class DataCard extends Component {
 export default connect(state => ({
   name: state.name,
   metadata: state.metadata,
-  dataLength: state.data.length
+  dataLength: state.data.length,
+  removedRowsCount: state.removedRowsCount
 }))(DataCard);
