@@ -1,13 +1,13 @@
 import {
   uniqLabelFeaturesSelected,
   prevNextButtons
-} from "./navigationValidation.js";
-import { reportPanelView } from './metrics.js';
+} from "./helpers/navigationValidation.js";
+import { reportPanelView } from './helpers/metrics.js';
 import {
   getAccuracyClassification,
   getAccuracyRegression,
   getResultsByGrade
-} from "./accuracy.js";
+} from "./helpers/accuracy.js";
 import {
   isColumnNumerical,
   isColumnCategorical,
@@ -20,9 +20,9 @@ import {
   isSelectable,
   getUniqueOptions,
   isColumnDataValid
-} from "./columnDetails.js";
-import { getConvertedValueForDisplay } from "./valueConversion.js";
-import { areArraysEqual } from "./utils.js";
+} from "./helpers/columnDetails.js";
+import { getConvertedValueForDisplay } from "./helpers/valueConversion.js";
+import { areArraysEqual } from "./helpers/utils.js";
 import {
   ColumnTypes,
   MLTypes,

@@ -12,7 +12,7 @@ import {
   setHistoricResult,
   getPercentCorrect
 } from "../redux";
-import { logFirehoseMetric } from "../metrics";
+import { logFirehoseMetric } from "../helpers/metrics";
 const KNN = require("ml-knn");
 
 export default class KNNTrainer {

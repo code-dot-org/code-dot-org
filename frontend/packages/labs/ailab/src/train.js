@@ -3,7 +3,7 @@
 import KNNTrainer from "./trainers/KNNTrainer";
 
 import { store } from "./index.js";
-import { buildOptionNumberKey } from "./columnDetails.js";
+import { buildOptionNumberKey } from "./helpers/columnDetails.js";
 import {
   getSelectedCategoricalColumns,
   setFeatureNumberKey,
@@ -16,8 +16,8 @@ import {
   TestDataLocations,
   PERCENT_OF_DATASET_FOR_TESTING
 } from "./constants.js";
-import { getRandomInt } from "./utils.js";
-import { convertValueForTraining } from "./valueConversion.js";
+import { getRandomInt } from "./helpers/utils.js";
+import { convertValueForTraining } from "./helpers/valueConversion.js";
 
 
 

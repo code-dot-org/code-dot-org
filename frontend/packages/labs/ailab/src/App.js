@@ -20,7 +20,7 @@ import {
 import {
   isSaveComplete,
   shouldDisplaySaveStatus
-} from "./navigationValidation";
+} from "./helpers/navigationValidation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 

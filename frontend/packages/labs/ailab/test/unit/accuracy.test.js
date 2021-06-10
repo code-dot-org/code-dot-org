@@ -1,7 +1,7 @@
 import {
   getAccuracyRegression,
   getAccuracyClassification
-} from '../../src/accuracy.js';
+} from '../../src/helpers/accuracy.js';
 import { ResultsGrades } from '../../src/constants.js';
 
 const resultsState = {

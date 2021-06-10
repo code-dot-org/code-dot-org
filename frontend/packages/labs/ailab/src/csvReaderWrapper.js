@@ -5,7 +5,7 @@ import {
   setColumnsByDataType,
   setRemovedRowsCount
 } from "./redux";
-import { columnContainsOnlyNumbers } from "./columnDetails.js";
+import { columnContainsOnlyNumbers } from "./helpers/columnDetails.js";
 import { ColumnTypes } from "./constants.js";
 
 export const parseCSV = (csvfile, download, useDefaultColumnDataType) => {
