@@ -16,9 +16,9 @@
     / dsl-defined levels specify a name directly in the DSL text
     - unless @level.is_a? DSLDefined
       = f.label :name
-      = f.text_field :name, placeholder: 'Level Name', disabled: @visible || @pilot || @standalone
-      - if @visible
-        %p the level cannot be renamed because it appears in a visible script.
+      = f.text_field :name, placeholder: 'Level Name', disabled: @launched || @pilot || @standalone
+      - if @launched
+        %p the level cannot be renamed because it appears in a assignable script.
       - if @pilot
         %p the level cannot be renamed because it appears in a pilot script.
       - if @standalone
