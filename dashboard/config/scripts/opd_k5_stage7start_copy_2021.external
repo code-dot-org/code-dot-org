@@ -1,14 +1,33 @@
 name 'OPD-K5 Stage7Start_copy_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Overview: Events
+# Introduction to Events
+
+Students use Play Lab to program "events" in animated games they create. Play Lab is a tool that allows students to program stories and games using backgrounds and characters.
 
 <img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
-## Coding concepts: Events
-- Make a program interactive
+## CS Concepts
 
-## Teaching practice: Debugging
-- Find and fix problems in an algorithm or program
+An **event** is a line of code that tells your computer to "listen" for something to happen, then take an action.  For example, web pages may include a drop down menu when you roll over the navigation bar with your mouse.  The "mouse rollover" is an event that triggers an action.
+
+"Events" are introduced in Courses A through C with a **context-setting** lesson in which students engage in an unplugged (off the computer) activity.
+
+Read the lesson plan for the **context-setting** lesson in <a href="https://studio.code.org/s/coursea-2021/lessons/11" target="blank">Course A - Lesson 11:  The Big Event Jr.</a> for an example of how "events" are first introduced to students in Course A. 
+
+## Learning Platform Features
+
+Watch the video, <a href="https://youtu.be/nVsZyQIZyPc" target="blank">"Introduction to Play Lab (Pre-reader version),"</a> which introduces the built-in features students will use during lessons.
+
+## Concept Progression
+
+Click "Continue" to go through student lesson levels listed below.  These student lesson levels are examples of how students engage with "events" across Courses A through D.  As you move from one student lesson level to the next, begin to notice the concept progression for "events" and how student lessons build on from one course to the next. 
+
+* Course A - Lesson 12, Level 4:  Mini-Project: On the Move with Play Lab
+* Course B - Lesson 12, Level 7:  Mini-Project:  A Royal Battle with Events
+* Course C - Lesson 12, Level 1:  Build a Flappy Game
+	* Course C - Lesson 12, Level 2:  Build a Flappy Game
+* Course D - Lesson 6, Level 3:  Events in Bounce
+
 
 MARKDOWN

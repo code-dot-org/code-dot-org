@@ -3,6 +3,8 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedTeacherFeedback as TeacherFeedback} from '@cdo/apps/templates/instructions/TeacherFeedback';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import experiments from '@cdo/apps/util/experiments';
+import sinon from 'sinon';
 
 const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   user: 5,
@@ -15,7 +17,8 @@ const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   displayReadonlyRubric: false,
   latestFeedback: null
 };
-const TEACHER_NOT_FEEDBACK_RUBRIC_PROPS = {
+
+const TEACHER_NO_FEEDBACK_RUBRIC_PROPS = {
   user: 5,
   disabledMode: true,
   rubric: {
@@ -62,6 +65,7 @@ const STUDENT_FEEDBACK_NO_RUBRIC_PROPS = {
   displayReadonlyRubric: false,
   latestFeedback: []
 };
+
 const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
   user: 1,
   disabledMode: true,
@@ -103,376 +107,382 @@ describe('TeacherFeedback', () => {
     const wrapper = shallow(
       <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} visible={false} />
     );
-    expect(
-      wrapper
-        .find('div')
-        .first()
-        .props().style.display
-    ).to.equal('none');
+
+    expect(wrapper.isEmptyRender()).to.be.true;
   });
 
-  describe('viewed as Teacher', () => {
-    it('displays TeacherFeedbackStatus if latestFeedback exists', () => {
-      const latestFeedback = {
-        feedback_provider_id: 5,
-        student_seen_feedback: new Date()
-      };
+  describe('viewed as Teacher - looking at student work', () => {
+    describe('without previous feedback', () => {
+      it('does not display TeacherFeedbackStatus', () => {
+        const props = {
+          ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
+          latestFeedback: null
+        };
 
-      const props = {
-        ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
-        latestFeedback
-      };
-
-      const wrapper = shallow(<TeacherFeedback {...props} />);
-
-      const statusComponent = wrapper.find('TeacherFeedbackStatus');
-      expect(statusComponent).to.have.length(1);
-      expect(statusComponent.props().viewAs).to.equal('Teacher');
-      expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
-    });
-
-    it('does not display TeacherFeedbackStatus if there is no latestFeedback', () => {
-      const props = {
-        ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
-        latestFeedback: null
-      };
-
-      const wrapper = shallow(<TeacherFeedback {...props} />);
-      expect(wrapper.find('TeacherFeedbackStatus')).to.have.length(0);
-    });
-
-    it('shows the correct components if teacher is giving feedback, on a level with a rubric, with no previous feedback', () => {
-      const wrapper = shallow(
-        <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
-      );
-
-      wrapper.setState({
-        studentId: 1,
-        submitting: false
+        const wrapper = shallow(<TeacherFeedback {...props} />);
+        expect(wrapper.find('TeacherFeedbackStatus')).to.have.length(0);
       });
 
-      // Rubric
+      it('displays a rubric with expected props if there is a rubric', () => {
+        const wrapper = shallow(
+          <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
+        );
+
+        const rubric = wrapper.find('TeacherFeedbackRubric');
+        expect(rubric).to.have.length(1);
+        expect(rubric.props().rubric).to.equal(
+          TEACHER_FEEDBACK_RUBRIC_PROPS.rubric
+        );
+        expect(rubric.props().isReadonly).to.equal(false);
+        expect(rubric.props().disabledMode).to.equal(false);
+        expect(rubric.props().viewAs).to.equal(ViewType.Teacher);
+      });
+
+      it('does not display a rubric if there is no rubric', () => {
+        const wrapper = shallow(
+          <TeacherFeedback {...TEACHER_FEEDBACK_NO_RUBRIC_PROPS} />
+        );
+
+        expect(wrapper.find('TeacherFeedbackRubric')).to.have.lengthOf(0);
+      });
+
+      it('displays the comment with expected props', () => {
+        const wrapper = shallow(
+          <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
+        );
+
+        const confirmCommentArea = wrapper.find('CommentArea').first();
+        expect(confirmCommentArea.props().isReadonly).to.equal(false);
+        expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
+        expect(confirmCommentArea.props().comment).to.equal('');
+      });
+
+      it('displays submit feedback button with expected text', () => {
+        const wrapper = shallow(
+          <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
+        );
+
+        const confirmButton = wrapper.find('Button').first();
+        expect(confirmButton.props().disabled).to.equal(true);
+        expect(confirmButton.props().text).to.equal('Save and share');
+      });
+
+      it('renders TeacherFeedbackKeepWorking with expected props if part of the experiment', () => {
+        sinon.stub(experiments, 'isEnabled').returns(true);
+
+        const wrapper = shallow(
+          <TeacherFeedback {...TEACHER_FEEDBACK_NO_RUBRIC_PROPS} />
+        );
+
+        const keepWorkingComponent = wrapper.find('TeacherFeedbackKeepWorking');
+        expect(keepWorkingComponent).to.have.length(1);
+        expect(keepWorkingComponent.props().latestReviewState).to.equal(null);
+        expect(keepWorkingComponent.props().isAwaitingTeacherReview).to.be
+          .false;
+
+        experiments.isEnabled.restore();
+      });
+    });
+
+    describe('with previous feedback given', () => {
+      const feedback = {
+        comment: 'Good work!',
+        created_at: '2019-03-26T19:56:53.000Z',
+        id: 5,
+        level_id: 123,
+        performance: null,
+        student_id: 1,
+        teacher_name: 'Tim The Teacher'
+      };
+
+      it('displays TeacherFeedbackStatus if latestFeedback exists', () => {
+        const latestFeedback = {
+          feedback_provider_id: 5,
+          student_seen_feedback: new Date()
+        };
+
+        const props = {
+          ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
+          latestFeedback
+        };
+
+        const wrapper = shallow(<TeacherFeedback {...props} />);
+
+        const statusComponent = wrapper.find('TeacherFeedbackStatus');
+        expect(statusComponent).to.have.length(1);
+        expect(statusComponent.props().viewAs).to.equal('Teacher');
+        expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
+      });
+
+      it('displays the rubric if there is a rubric', () => {
+        const wrapper = shallow(
+          <TeacherFeedback
+            {...TEACHER_FEEDBACK_RUBRIC_PROPS}
+            latestFeedback={{
+              ...feedback,
+              performance: 'performanceLevel2'
+            }}
+          />
+        );
+
+        const rubric = wrapper.find('TeacherFeedbackRubric');
+        expect(rubric).to.have.length(1);
+      });
+
+      it('renders comment with expected props', () => {
+        const wrapper = shallow(
+          <TeacherFeedback
+            {...TEACHER_FEEDBACK_RUBRIC_PROPS}
+            latestFeedback={feedback}
+          />
+        );
+
+        const confirmCommentArea = wrapper.find('CommentArea').first();
+        expect(confirmCommentArea.props().isReadonly).to.equal(false);
+        expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
+        expect(confirmCommentArea.props().comment).to.equal('Good work!');
+      });
+
+      it('displays submit button with expected text', () => {
+        const wrapper = shallow(
+          <TeacherFeedback
+            {...TEACHER_FEEDBACK_RUBRIC_PROPS}
+            latestFeedback={feedback}
+          />
+        );
+
+        const confirmButton = wrapper.find('Button').first();
+        expect(confirmButton.props().disabled).to.equal(true);
+        expect(confirmButton.props().text).to.equal('Update');
+      });
+
+      it('renders TeacherFeedbackKeepWorking with expected props if part of the experiment', () => {
+        sinon.stub(experiments, 'isEnabled').returns(true);
+
+        const wrapper = shallow(
+          <TeacherFeedback
+            {...TEACHER_FEEDBACK_NO_RUBRIC_PROPS}
+            latestFeedback={{...feedback, review_state: 'completed'}}
+          />
+        );
+
+        const keepWorkingComponent = wrapper.find('TeacherFeedbackKeepWorking');
+        expect(keepWorkingComponent).to.have.length(1);
+        expect(keepWorkingComponent.props().latestReviewState).to.equal(
+          'completed'
+        );
+        expect(keepWorkingComponent.props().isAwaitingTeacherReview).to.be
+          .false;
+
+        experiments.isEnabled.restore();
+      });
+    });
+  });
+
+  describe('viewed as teacher - not looking at student work', () => {
+    it('displays readonly rubric if rubric exists for level', () => {
+      const wrapper = shallow(
+        <TeacherFeedback {...TEACHER_NO_FEEDBACK_RUBRIC_PROPS} />
+      );
+
       const rubric = wrapper.find('TeacherFeedbackRubric');
       expect(rubric).to.have.length(1);
       expect(rubric.props().rubric).to.equal(
-        TEACHER_FEEDBACK_RUBRIC_PROPS.rubric
-      );
-      expect(rubric.props().isReadonly).to.equal(false);
-      expect(rubric.props().disabledMode).to.equal(false);
-      expect(rubric.props().viewAs).to.equal(ViewType.Teacher);
-
-      // Comment
-      const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().isReadonly).to.equal(false);
-      expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
-      expect(confirmCommentArea.props().comment).to.equal('');
-
-      // Submit Feedback
-      const confirmButton = wrapper.find('Button').first();
-      expect(confirmButton.props().disabled).to.equal(true);
-      expect(confirmButton.props().text).to.equal('Save and share');
-    });
-
-    it('shows the correct components if teacher is giving feedback, on a level with a rubric, with previous feedback', () => {
-      const wrapper = shallow(
-        <TeacherFeedback
-          {...TEACHER_FEEDBACK_RUBRIC_PROPS}
-          latestFeedback={{
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'performanceLevel2',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }}
-        />
-      );
-
-      wrapper.setState({
-        studentId: 1,
-        submitting: false
-      });
-
-      // Rubric
-      const rubric = wrapper.find('TeacherFeedbackRubric');
-      expect(rubric).to.have.length(1);
-
-      // Comment
-      const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().isReadonly).to.equal(false);
-      expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
-      expect(confirmCommentArea.props().comment).to.equal('Good work!');
-
-      // Submit Feedback
-      const confirmButton = wrapper.find('Button').first();
-      expect(confirmButton.props().disabled).to.equal(true);
-      expect(confirmButton.props().text).to.equal('Update');
-    });
-
-    it('shows the correct components if teacher is not giving feedback, on a level with a rubric', () => {
-      const wrapper = shallow(
-        <TeacherFeedback {...TEACHER_NOT_FEEDBACK_RUBRIC_PROPS} />
-      );
-
-      wrapper.setState({
-        studentId: 1,
-        submitting: false
-      });
-
-      // Rubric
-      const rubric = wrapper.find('TeacherFeedbackRubric');
-      expect(rubric).to.have.length(1);
-      expect(rubric.props().rubric).to.equal(
-        TEACHER_NOT_FEEDBACK_RUBRIC_PROPS.rubric
+        TEACHER_NO_FEEDBACK_RUBRIC_PROPS.rubric
       );
       expect(rubric.props().isReadonly).to.equal(true);
       expect(rubric.props().disabledMode).to.equal(true);
-
-      // Comment
-      expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
-
-      // Submit Feedback
-      expect(wrapper.find('Button')).to.have.lengthOf(0);
     });
 
-    it('shows the correct components if teacher is giving feedback, on a level with no rubric, with no previous feedback', () => {
+    it('does not display comment area', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...TEACHER_FEEDBACK_NO_RUBRIC_PROPS} />
+        <TeacherFeedback {...TEACHER_NO_FEEDBACK_RUBRIC_PROPS} />
       );
 
-      wrapper.setState({
-        studentId: 1,
-        submitting: false
-      });
+      expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
+    });
 
-      // Rubric
-      expect(wrapper.find('TeacherFeedbackRubric')).to.have.lengthOf(0);
+    it('does not display submit button', () => {
+      const wrapper = shallow(
+        <TeacherFeedback {...TEACHER_NO_FEEDBACK_RUBRIC_PROPS} />
+      );
 
-      // Comment
-      const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().isReadonly).to.equal(false);
-      expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
-      expect(confirmCommentArea.props().comment).to.equal('');
-
-      // Submit Feedback
-      const confirmButton = wrapper.find('Button').first();
-      expect(confirmButton.props().disabled).to.equal(true);
-      expect(confirmButton.props().text).to.equal('Save and share');
+      expect(wrapper.find('Button')).to.have.lengthOf(0);
     });
   });
 
   describe('viewed as a Student', () => {
-    it('displays TeacherFeedbackStatus if latestFeedback exists', () => {
-      const latestFeedback = {
-        student_seen_feedback: new Date(),
-        comment: 'Great!'
+    describe('without previous feedback given', () => {
+      it('does not display TeacherFeedbackStatus', () => {
+        const props = {
+          ...STUDENT_FEEDBACK_RUBRIC_PROPS,
+          latestFeedback: null
+        };
+
+        const wrapper = shallow(<TeacherFeedback {...props} />);
+        expect(wrapper.find('TeacherFeedbackStatus')).to.have.length(0);
+      });
+
+      it('displays rubric with expected props if there is a rubric', () => {
+        const wrapper = shallow(
+          <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
+        );
+
+        const rubric = wrapper.find('TeacherFeedbackRubric');
+        expect(rubric).to.have.length(1);
+        expect(rubric.props().rubric).to.equal(
+          STUDENT_NO_FEEDBACK_RUBRIC_PROPS.rubric
+        );
+        expect(rubric.props().isReadonly).to.equal(true);
+        expect(rubric.props().disabledMode).to.equal(true);
+        expect(rubric.props().viewAs).to.equal(ViewType.Student);
+      });
+
+      it('does not display the comment area', () => {
+        const wrapper = shallow(
+          <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
+        );
+
+        expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
+      });
+
+      it('does not display the submit feedback button', () => {
+        const wrapper = shallow(
+          <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
+        );
+
+        expect(wrapper.find('Button')).to.have.lengthOf(0);
+      });
+
+      it('does not display FeedbackStudentReviewState', () => {
+        const wrapper = shallow(
+          <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
+        );
+
+        expect(wrapper.find('FeedbackStudentReviewState')).to.have.lengthOf(0);
+      });
+    });
+
+    describe('with previous feedback given', () => {
+      const feedback = {
+        comment: 'Good work!',
+        created_at: '2019-03-26T19:56:53.000Z',
+        id: 5,
+        level_id: 123,
+        performance: null,
+        student_id: 1,
+        teacher_name: 'Tim The Teacher'
       };
 
-      const props = {
-        ...STUDENT_FEEDBACK_RUBRIC_PROPS,
-        latestFeedback
-      };
+      it('displays TeacherFeedbackStatus', () => {
+        const latestFeedback = {
+          student_seen_feedback: new Date(),
+          comment: 'Great!'
+        };
 
-      const wrapper = shallow(<TeacherFeedback {...props} />);
+        const props = {
+          ...STUDENT_FEEDBACK_RUBRIC_PROPS,
+          latestFeedback
+        };
 
-      const statusComponent = wrapper.find('TeacherFeedbackStatus');
-      expect(statusComponent).to.have.length(1);
-      expect(statusComponent.props().viewAs).to.equal('Student');
-      expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
-    });
+        const wrapper = shallow(<TeacherFeedback {...props} />);
 
-    it('does not display TeacherFeedbackStatus if there is no latestFeedback', () => {
-      const props = {
-        ...STUDENT_FEEDBACK_RUBRIC_PROPS,
-        latestFeedback: null
-      };
-
-      const wrapper = shallow(<TeacherFeedback {...props} />);
-      expect(wrapper.find('TeacherFeedbackStatus')).to.have.length(0);
-    });
-
-    it('shows the correct components if student is on a level with a rubric, where no feedback has been given by the teacher', () => {
-      const wrapper = shallow(
-        <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
-      );
-
-      wrapper.setState({
-        studentId: 1,
-        submitting: false
+        const statusComponent = wrapper.find('TeacherFeedbackStatus');
+        expect(statusComponent).to.have.length(1);
+        expect(statusComponent.props().viewAs).to.equal('Student');
+        expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
       });
 
-      // Rubric
-      const rubric = wrapper.find('TeacherFeedbackRubric');
-      expect(rubric).to.have.length(1);
-      expect(rubric.props().rubric).to.equal(
-        STUDENT_NO_FEEDBACK_RUBRIC_PROPS.rubric
-      );
-      expect(rubric.props().isReadonly).to.equal(true);
-      expect(rubric.props().disabledMode).to.equal(true);
-      expect(rubric.props().viewAs).to.equal(ViewType.Student);
+      it('does not render rubric if there is no rubric for the level', () => {
+        const wrapper = shallow(
+          <TeacherFeedback
+            {...STUDENT_FEEDBACK_NO_RUBRIC_PROPS}
+            latestFeedback={feedback}
+          />
+        );
 
-      // Comment
-      expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
-
-      // Submit Feedback
-      expect(wrapper.find('Button')).to.have.lengthOf(0);
-    });
-
-    it('shows the correct components if student is on a level with no rubric, where a comment was given by the teacher', () => {
-      const wrapper = shallow(
-        <TeacherFeedback
-          {...STUDENT_FEEDBACK_NO_RUBRIC_PROPS}
-          latestFeedback={{
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: null,
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }}
-        />
-      );
-
-      wrapper.setState({
-        studentId: 1,
-        submitting: false
+        expect(wrapper.find('TeacherFeedbackRubric')).to.have.lengthOf(0);
       });
 
-      // Rubric
-      expect(wrapper.find('TeacherFeedbackRubric')).to.have.lengthOf(0);
+      it('renders rubric with expected props if there is a rubric for the level', () => {
+        const wrapper = shallow(
+          <TeacherFeedback
+            {...STUDENT_FEEDBACK_RUBRIC_PROPS}
+            latestFeedback={{
+              comment: 'Good work!',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: 'performanceLevel2',
+              student_id: 1,
+              teacher_name: 'Tim The Teacher'
+            }}
+          />
+        );
 
-      // Comment
-      const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().isReadonly).to.equal(true);
-      expect(confirmCommentArea.props().studentHasFeedback).to.equal(true);
-      expect(confirmCommentArea.props().comment).to.equal('Good work!');
-
-      // Submit Feedback
-      expect(wrapper.find('Button')).to.have.lengthOf(0);
-    });
-
-    it('shows the correct components if student is on a level with a rubric, where a comment was given by the teacher', () => {
-      const wrapper = shallow(
-        <TeacherFeedback
-          {...STUDENT_FEEDBACK_RUBRIC_PROPS}
-          latestFeedback={{
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: null,
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }}
-        />
-      );
-
-      wrapper.setState({
-        studentId: 1,
-        submitting: false
+        const rubric = wrapper.find('TeacherFeedbackRubric');
+        expect(rubric).to.have.length(1);
+        expect(rubric.props().rubric).to.equal(
+          STUDENT_FEEDBACK_RUBRIC_PROPS.rubric
+        );
+        expect(rubric.props().performance).to.equal('performanceLevel2');
+        expect(rubric.props().isReadonly).to.equal(false);
+        expect(rubric.props().disabledMode).to.equal(true);
+        expect(rubric.props().viewAs).to.equal(ViewType.Student);
       });
 
-      // Rubric
-      const rubric = wrapper.find('TeacherFeedbackRubric');
-      expect(rubric).to.have.length(1);
-      expect(rubric.props().rubric).to.equal(
-        STUDENT_FEEDBACK_RUBRIC_PROPS.rubric
-      );
-      expect(rubric.props().isReadonly).to.equal(false);
-      expect(rubric.props().disabledMode).to.equal(true);
-      expect(rubric.props().viewAs).to.equal(ViewType.Student);
+      it('renders the comment with expected props if there is a comment', () => {
+        const wrapper = shallow(
+          <TeacherFeedback
+            {...STUDENT_FEEDBACK_NO_RUBRIC_PROPS}
+            latestFeedback={feedback}
+          />
+        );
 
-      // Comment
-      const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().isReadonly).to.equal(true);
-      expect(confirmCommentArea.props().studentHasFeedback).to.equal(true);
-      expect(confirmCommentArea.props().comment).to.equal('Good work!');
-
-      // Submit Feedback
-      expect(wrapper.find('Button')).to.have.lengthOf(0);
-    });
-
-    it('shows the correct components if student is on a level with a rubric, where a comment and performance level was given by the teacher', () => {
-      const wrapper = shallow(
-        <TeacherFeedback
-          {...STUDENT_FEEDBACK_RUBRIC_PROPS}
-          latestFeedback={{
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'performanceLevel2',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }}
-        />
-      );
-
-      wrapper.setState({
-        studentId: 1,
-        submitting: false
+        const confirmCommentArea = wrapper.find('CommentArea').first();
+        expect(confirmCommentArea.props().isReadonly).to.equal(true);
+        expect(confirmCommentArea.props().studentHasFeedback).to.equal(true);
+        expect(confirmCommentArea.props().comment).to.equal('Good work!');
       });
 
-      // Rubric
-      const rubric = wrapper.find('TeacherFeedbackRubric');
-      expect(rubric).to.have.length(1);
-      expect(rubric.props().rubric).to.equal(
-        STUDENT_FEEDBACK_RUBRIC_PROPS.rubric
-      );
-      expect(rubric.props().performance).to.equal('performanceLevel2');
-      expect(rubric.props().isReadonly).to.equal(false);
-      expect(rubric.props().disabledMode).to.equal(true);
-      expect(rubric.props().viewAs).to.equal(ViewType.Student);
+      it('does not render a comment if no comment was given with feedback', () => {
+        const wrapper = shallow(
+          <TeacherFeedback
+            {...STUDENT_FEEDBACK_RUBRIC_PROPS}
+            latestFeedback={{
+              ...feedback,
+              comment: '',
+              performance: 'performanceLevel2'
+            }}
+          />
+        );
 
-      // Comment
-      const confirmCommentArea = wrapper.find('CommentArea').first();
-      expect(confirmCommentArea.props().isReadonly).to.equal(true);
-      expect(confirmCommentArea.props().studentHasFeedback).to.equal(true);
-      expect(confirmCommentArea.props().comment).to.equal('Good work!');
-
-      // Submit Feedback
-      expect(wrapper.find('Button')).to.have.lengthOf(0);
-    });
-
-    it('shows the correct components if student is on a level with a rubric, where a performance level was given by the teacher', () => {
-      const wrapper = shallow(
-        <TeacherFeedback
-          {...STUDENT_FEEDBACK_RUBRIC_PROPS}
-          latestFeedback={{
-            comment: '',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'performanceLevel2',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }}
-        />
-      );
-
-      wrapper.setState({
-        studentId: 1,
-        submitting: false
+        expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
       });
 
-      // Rubric
-      const rubric = wrapper.find('TeacherFeedbackRubric');
-      expect(rubric).to.have.length(1);
-      expect(rubric.props().rubric).to.equal(
-        STUDENT_FEEDBACK_RUBRIC_PROPS.rubric
-      );
-      expect(rubric.props().performance).to.equal('performanceLevel2');
-      expect(rubric.props().isReadonly).to.equal(false);
-      expect(rubric.props().disabledMode).to.equal(true);
-      expect(rubric.props().viewAs).to.equal(ViewType.Student);
+      it('does not render submit button', () => {
+        const wrapper = shallow(
+          <TeacherFeedback
+            {...STUDENT_FEEDBACK_NO_RUBRIC_PROPS}
+            latestFeedback={feedback}
+          />
+        );
 
-      // Comment
-      expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
+        expect(wrapper.find('Button')).to.have.lengthOf(0);
+      });
 
-      // Submit Feedback
-      expect(wrapper.find('Button')).to.have.lengthOf(0);
+      it('renders FeedbackStudentReviewState with expected props', () => {
+        const wrapper = shallow(
+          <TeacherFeedback
+            {...STUDENT_FEEDBACK_NO_RUBRIC_PROPS}
+            latestFeedback={{...feedback, review_state: 'keepWorking'}}
+          />
+        );
+
+        const reviewState = wrapper.find('FeedbackStudentReviewState');
+        expect(reviewState).to.have.lengthOf(1);
+        expect(reviewState.props().latestReviewState).to.equal('keepWorking');
+      });
     });
   });
 });

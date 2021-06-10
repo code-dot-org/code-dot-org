@@ -127,4 +127,25 @@ class ResourceTest < ActiveSupport::TestCase
     resource.lessons = [lesson1, lesson2]
     resource.serialize_scripts
   end
+
+  test 'creates new resource when copying to a course version without a matching resource' do
+    course_version = create :course_version
+    resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: course_version
+    destination_course_version = create :course_version
+    create :resource, name: 'Fake Slides', url: 'slides.fake', course_version: destination_course_version
+
+    resource.copy_to_course_version(destination_course_version)
+    assert_equal 2, destination_course_version.resources.count
+  end
+
+  test 'return existing resource when copying to a course version with a matching resource' do
+    course_version = create :course_version
+    resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: course_version
+    destination_course_version = create :course_version
+    existing_resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: destination_course_version
+
+    copied_resource = resource.copy_to_course_version(destination_course_version)
+    assert_equal 1, destination_course_version.resources.count
+    assert_equal existing_resource, copied_resource
+  end
 end
