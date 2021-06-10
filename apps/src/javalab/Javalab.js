@@ -18,7 +18,7 @@ import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
-import TheaterVisualization from './TheaterVisualization';
+import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
 import {CsaViewMode} from './constants';
 
@@ -95,7 +95,7 @@ Javalab.prototype.init = function(config) {
   } else if (this.level.csaViewMode === CsaViewMode.THEATER) {
     this.miniApp = new Theater();
     config.afterInject = () => this.miniApp.afterInject();
-    this.visualization = <TheaterVisualization />;
+    this.visualization = <TheaterVisualizationColumn />;
   }
 
   const onMount = () => {

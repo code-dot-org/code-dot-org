@@ -158,7 +158,6 @@ class JavalabView extends React.Component {
                     toggleTest={this.toggleTest}
                   />
                 }
-                style={styles.console}
               />
             </div>
           </div>
@@ -170,7 +169,6 @@ class JavalabView extends React.Component {
 
 const styles = {
   instructionsAndPreview: {
-    width: '100%',
     color: color.black,
     right: '15px'
   },
@@ -197,9 +195,6 @@ const styles = {
   javalab: {
     display: 'flex',
     flexWrap: 'wrap'
-  },
-  console: {
-    marginTop: 15
   },
   clear: {
     clear: 'both'
