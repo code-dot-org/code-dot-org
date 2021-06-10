@@ -15,7 +15,7 @@ import {
   teacherFeedbackShape,
   rubricShape,
   ReviewStates
-} from '@cdo/apps/templates/types';
+} from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import experiments from '@cdo/apps/util/experiments';
 import ReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReviewState';
 
