@@ -1,4 +1,5 @@
 /* Helper functions for getting information about a column and its data. */
+
 import { ColumnTypes, UNIQUE_OPTIONS_MAX } from "./constants.js";
 
 export function isColumnCategorical(state, column) {

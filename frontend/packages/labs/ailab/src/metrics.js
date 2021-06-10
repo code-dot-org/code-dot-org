@@ -1,4 +1,8 @@
+/*
+  Functions for logging analytics metrics via Google Analytics and Firehose.
+*/
 import { isUserUploadedDataset, getPercentCorrect } from "./redux";
+
 function getModelMetrics(state) {
   const modelMetrics = {};
   modelMetrics.userUploaded = isUserUploadedDataset(state);
