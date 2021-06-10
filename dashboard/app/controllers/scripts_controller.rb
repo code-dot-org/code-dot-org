@@ -264,16 +264,6 @@ class ScriptsController < ApplicationController
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
 
-    # Temporary transition code used to update the boolean values that control published_state
-    # This should be removed once we move off of booleans completely and on to published_state
-    if h[:published_state] == SharedConstants::PUBLISHED_STATE.pilot || h[:published_state] == SharedConstants::PUBLISHED_STATE.beta
-      h[:hidden] = true
-    elsif h[:published_state] == SharedConstants::PUBLISHED_STATE.preview
-      h[:hidden] = false
-    elsif h[:published_state] == SharedConstants::PUBLISHED_STATE.stable
-      h[:hidden] = false
-    end
-
     h
   end
 
