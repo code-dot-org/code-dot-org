@@ -303,7 +303,7 @@ class UnitGroup < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table.
   def self.valid_courses_without_cache
-    UnitGroup.all.select(&:visible?)
+    UnitGroup.all.select(&:launched?)
   end
 
   # Returns whether the course id is valid, even if it is not "stable" yet.
@@ -316,23 +316,29 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @returns [Boolean] Whether the user can assign this course.
   # Users should only be able to assign one of their valid courses.
-  def assignable?(user)
+  def assignable_for_user?(user)
     if user&.teacher?
       UnitGroup.valid_course_id?(id)
     end
   end
 
+  # A course that the general public can assign. Has been soft or
+  # hard launched.
+  def launched?
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
+  end
+
   def published_state
     if pilot?
-      'pilot'
+      SharedConstants::PUBLISHED_STATE.pilot
     elsif visible
       if is_stable
-        'recommended'
+        SharedConstants::PUBLISHED_STATE.stable
       else
-        'preview'
+        SharedConstants::PUBLISHED_STATE.preview
       end
     else
-      'beta'
+      SharedConstants::PUBLISHED_STATE.beta
     end
   end
 
@@ -361,7 +367,7 @@ class UnitGroup < ApplicationRecord
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
-      show_assign_button: assignable?(user),
+      show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
       course_path: link
@@ -398,7 +404,7 @@ class UnitGroup < ApplicationRecord
   def summarize_versions(user = nil)
     return [] unless family_name
 
-    # Include visible courses, plus self if not already included
+    # Include launched courses, plus self if not already included
     courses = UnitGroup.valid_courses(user: user).clone(freeze: false)
     courses.append(self) unless courses.any? {|c| c.id == id}
 

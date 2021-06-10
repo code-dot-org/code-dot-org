@@ -5,10 +5,40 @@
       "name": "Welcome",
       "elements": [
         {
-          "type": "html",
-          "name": "variable_testing",
-          "visible": false,
-          "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>userId = {userId}</li><li>course = {course} </li><li> pd = {pd} </li></p>"
+          "type": "panel",
+          "name": "testing_panel",
+          "elements": [
+            {
+              "type": "text",
+              "name": "course",
+              "title": "course (CS Principles, CS Discoveries, CS Fundamentals)",
+              "placeHolder": "CS Discoveries",
+              "dataList": [
+                "CS Principles",
+                "CS Discoveries"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "pd",
+              "choices": [
+                {
+                  "value": "true",
+                  "text": "true"
+                },
+                {
+                  "value": "false",
+                  "text": "false"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "variable_testing",
+              "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>userId = {userId}</li><li>course = {course} </li><li> pd = {pd} </li></p>"
+            }
+          ],
+          "title": "Panel for variable testing (hide before shipping)"
         },
         {
           "type": "html",
@@ -193,9 +223,81 @@
                   "text": "Other"
                 }
               ]
+            },
+            {
+              "type": "matrix",
+              "name": "question3",
+              "title": "How often do you do each of the following as a {course} teacher?",
+              "columns": [
+                {
+                  "value": "never",
+                  "text": "Never"
+                },
+                {
+                  "value": "little_bit",
+                  "text": "A little bit"
+                },
+                {
+                  "value": "somewhat",
+                  "text": "Somewhat Frequently"
+                },
+                {
+                  "value": "a_lot",
+                  "text": "A lot"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "choose_lessons",
+                  "text": "Determine which lessons or activities students complete."
+                },
+                {
+                  "value": "learnign_support_differention",
+                  "text": "Support student learning and differentiate instruction."
+                },
+                {
+                  "value": "teach_unplugged",
+                  "text": "Teach unplugged activities alongside online portions of the curriculum"
+                },
+                {
+                  "value": "student_reflection",
+                  "text": "Provide opportunities for student reflection, through discussion or journaling"
+                },
+                {
+                  "value": "transfer_to_other_contexts",
+                  "text": "Transfer learning to other contexts (e.g.cross-curricular learning or other computer science content not on Code.org)"
+                },
+                {
+                  "value": "assesment_grading",
+                  "text": "Assessment and grading"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "question2",
+              "title": "Which of the following most closely describes what teaching Code.org looks like in your classroom?",
+              "choices": [
+                {
+                  "value": "all_same",
+                  "text": "Students all work on the same lesson at the same time."
+                },
+                {
+                  "value": "same_course_own_pace",
+                  "text": "All students work on the same course, but move through the different lessons at their own pace."
+                },
+                {
+                  "value": "all_codeorg_different_courses",
+                  "text": "All students work on Code.org, but may be working on different courses and tutorials."
+                },
+                {
+                  "value": "individual_station",
+                  "text": "Students work on Code.org individually or as station/rotation."
+                }
+              ],
+              "hasOther": true
             }
-          ],
-          "visibleIf": "{course} = 'CS Fundamentals'"
+          ]
         },
         {
           "type": "panel",
@@ -232,8 +334,7 @@
                 }
               ]
             }
-          ],
-          "visibleIf": "{course} = 'CS Discoveries'"
+          ]
         },
         {
           "type": "panel",
@@ -246,31 +347,97 @@
               "choices": [
                 {
                   "value": "unit_1",
-                  "text": "Unit 1 - The Internet"
+                  "text": "CSP Unit 1 - Digital Information"
                 },
                 {
                   "value": "unit_2",
-                  "text": "Unit 2 - Digital Information"
+                  "text": "Unit 2 - The Internet"
                 },
                 {
                   "value": "unit_3",
-                  "text": "Unit 3 - Intro to Programming"
+                  "text": "Unit 3 - Intro to App Design"
                 },
                 {
                   "value": "unit_4",
-                  "text": "Unit 4 - Big Data and Privacy"
+                  "text": "Unit 4 - Variables, Conditionals, and Functions"
                 },
                 {
                   "value": "unit_5",
-                  "text": "Unit 5 - Building Apps"
+                  "text": "Unit 5 - Lists, Loops, and Traversals"
                 },
                 {
-                  "value": "explore_pt_prep",
-                  "text": "Explore PT Prep"
+                  "value": "unit_6",
+                  "text": "Unit 6 - Algorithms"
+                },
+                {
+                  "value": "unit_7",
+                  "text": "Unit 7 - Parameters, Return, and Libraries"
+                },
+                {
+                  "value": "unit_8",
+                  "text": "Unit 8 - Create PT Prep"
+                },
+                {
+                  "value": "unit_9",
+                  "text": "Unit 9 - Data"
+                },
+                {
+                  "value": "unit_10",
+                  "text": "Unit 10 - Cybersecurity and Global Impacts"
                 },
                 {
                   "value": "create_pt_prep",
                   "text": "Create PT Prep"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "question4",
+              "title": "How likely would you be to teach a post-AP unit if one were added to the course? ",
+              "choices": [
+                {
+                  "value": "not_at_all",
+                  "text": "Not at all likely"
+                },
+                {
+                  "value": "little_likely",
+                  "text": "A little likely"
+                },
+                {
+                  "value": "somewhat_likely",
+                  "text": "Somewhat likely"
+                },
+                {
+                  "value": "very_likely",
+                  "text": "Very likely"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "question5",
+              "title": "If you are likely to teach a post-AP unit, approximately how many weeks would you have to teach it? ",
+              "choices": [
+                {
+                  "value": "1_week",
+                  "text": "1 week"
+                },
+                {
+                  "value": "2_weeks",
+                  "text": "2 weeks"
+                },
+                {
+                  "value": "3_weeks",
+                  "text": "3 weeks"
+                },
+                {
+                  "value": "4_weeks",
+                  "text": "4 weeks"
+                },
+                {
+                  "value": "more_than_4",
+                  "text": "More than 4 weeks"
                 }
               ]
             },
@@ -342,8 +509,7 @@
                 }
               ]
             }
-          ],
-          "visibleIf": "{course} = 'CS Principles'"
+          ]
         },
         {
           "type": "radiogroup",
@@ -398,7 +564,7 @@
       ]
     },
     {
-      "name": "post_covid_page",
+      "name": "covid_impact_page",
       "elements": [
         {
           "type": "html",
@@ -483,134 +649,22 @@
         {
           "type": "rating",
           "name": "pct_inperson_v_remote",
-          "title": "Approximately what % of your class hours this year we spent teaching via video conference?",
+          "title": "Approximately what % of your class hours this year were spent teaching via video conference?",
           "rateMin": 0,
           "rateMax": 100,
           "rateStep": 10,
           "maxRateDescription": "%"
         },
         {
-          "type": "radiogroup",
-          "name": "lms_tool_remote",
-          "title": "What is the primary Learning Management System (LMS) you make use of?  (If you, your school or district uses multiple LMS's please choose the one you like the most)",
-          "choices": [
-            {
-              "value": "none",
-              "text": "None - I don't really use an LMS"
-            },
-            {
-              "value": "powerschool",
-              "text": "Powerschool"
-            },
-            {
-              "value": "schoology",
-              "text": "Schoology"
-            },
-            {
-              "value": "google_classroom",
-              "text": "Google Classroom"
-            },
-            {
-              "value": "chalkboard",
-              "text": "Blackboard"
-            },
-            {
-              "value": "seesaw",
-              "text": "SeeSaw"
-            },
-            {
-              "value": "canvas",
-              "text": "Canvas"
-            },
-            {
-              "value": "moodle",
-              "text": "Moodle"
-            }
-          ],
-          "hasOther": true
-        },
-        {
-          "type": "rating",
-          "name": "question2",
-          "visibleIf": "{lms_tool_remote} <> 'none'",
-          "title": "How happy are you with your LMS?",
-          "minRateDescription": "Not at all happy",
-          "maxRateDescription": "Extremely happy"
-        },
-        {
-          "type": "matrix",
-          "name": "LMS_useful_integration",
-          "visibleIf": "{lms_tool_remote} <> 'none'",
-          "title": "How useful would it be for your LMS to integrate with Code.org in the following ways (scale 1 to 5)?",
-          "columns": [
-            {
-              "value": "na",
-              "text": "N/A"
-            },
-            {
-              "value": "1",
-              "text": "1 - Not at all useful"
-            },
-            {
-              "value": "2",
-              "text": "2"
-            },
-            {
-              "value": "3",
-              "text": "3"
-            },
-            {
-              "value": "4",
-              "text": "4"
-            },
-            {
-              "value": "5",
-              "text": "5 - Extremely usful"
-            }
-          ],
-          "rows": [
-            {
-              "value": "section_setup",
-              "text": "Sign-in and section set-up - create a Code.org section using student accounts from your LMS. Students would sign in to Code.org with their LMS accounts"
-            },
-            {
-              "value": "assign_",
-              "text": "Assign work from Code.org to your LMS - when in Code.org, post a lesson to your LMS"
-            },
-            {
-              "value": "track_progress",
-              "text": "Track progress in your LMS - see how many levels and lessons students have completed in your LMS"
-            },
-            {
-              "value": "grade_assignments",
-              "text": "Grade assignments from Code.org in your LMS - give feedback on Code.org levels in your LMS and have that feedback reflect to students in Code.org"
-            }
-          ]
-        },
-        {
           "type": "comment",
-          "name": "LMS_useful_integration_other",
-          "visibleIf": "{LMS_useful_integration.other} = 5",
-          "title": "(Optional) Please describe another way Code.org might better integrate with your LMS that would be useful to you."
-        },
-        {
-          "type": "comment",
-          "name": "third_party_integration_FR",
-          "title": "Are there any third party tools you use in your classroom that you wish were better integrated with Code.org (e.g., LMS, collaboration apps, communication apps, etc.)? If so, which tools and how would you want to use them with Code.org?",
-          "cols": 40,
-          "rows": 3
-        },
-        {
-          "type": "comment",
-          "name": "drop_off_FR_remote",
-          "title": "Last, if there is anything else you'd like us to know about the impact COVID-19 had on your {course} classroom, please let us know here.",
-          "cols": 40,
-          "rows": 3
+          "name": "covid_learnings",
+          "title": "How has remote teaching permanently affected your teaching practice, or the the way your school operates?",
+          "description": "If there is anything else you'd like us to know about the impact COVID-19 had on your {course} classroom, please let us know here as well."
         }
       ]
     },
     {
-      "name": "pre_covid_page",
+      "name": "teaching_course",
       "elements": [
         {
           "type": "html",
@@ -653,20 +707,104 @@
           ],
           "rows": [
             {
-              "value": "love_curriculum",
-              "text": "I loved teaching with the curriculum."
+              "value": "enjoyed_teaching",
+              "text": "I enjoyed teaching this curriculum"
+            },
+            {
+              "value": "easy_to_teach",
+              "text": "This curriculum was easy to teach."
             },
             {
               "value": "effective_for_students",
-              "text": "This curriculum was effective for my students."
+              "text": "The curriculum effectively taught the objectives listed in the lesson plans"
             },
             {
               "value": "strategies_are_clear",
-              "text": "The teaching strategies recommended in the curriculum and lesson plans were clear to me."
+              "text": "The teaching strategies recommended in the curriculum were clear to me."
             },
             {
               "value": "tools_sensible_easy",
-              "text": "The tools and technologies that are part of the curriculum made sense and were easy to use."
+              "text": "The tools that are part of the curriculum made sense and were easy to use."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "prep_time",
+          "title": "How much time, on average, did you spend preparing for each lesson ? \n",
+          "choices": [
+            {
+              "value": "0_20",
+              "text": "0-20 minutes"
+            },
+            {
+              "value": "20_40",
+              "text": "20-40 minutes"
+            },
+            {
+              "value": "40_60",
+              "text": "40-60 minutes"
+            },
+            {
+              "value": "60_plus",
+              "text": "more than 60 minutes"
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "question1",
+          "title": "How frequently did you use each of the following resources when preparing to teach a {course} lesson?",
+          "columns": [
+            {
+              "value": "dont_know",
+              "text": "I don't know what this is"
+            },
+            {
+              "value": "never",
+              "text": "Never"
+            },
+            {
+              "value": "a_few_times",
+              "text": "A few times"
+            },
+            {
+              "value": "somewhat_frequently",
+              "text": "Somewhat Frequently"
+            },
+            {
+              "value": "every_lesson",
+              "text": "Every Lesson"
+            }
+          ],
+          "rows": [
+            {
+              "value": "lesson_plan",
+              "text": "Lesson Plan"
+            },
+            {
+              "value": "slides",
+              "text": "Slide presentations"
+            },
+            {
+              "value": "student_levels",
+              "text": "Student levels on Code Studio"
+            },
+            {
+              "value": "sample_solutions",
+              "text": "Example Solutions/Activity Guide Keys"
+            },
+            {
+              "value": "teacher_forum",
+              "text": "Code.org Teacher Forum"
+            },
+            {
+              "value": "curriculum_guide",
+              "text": "Code.org Curriculum Guide"
+            },
+            {
+              "value": "found_on_my_own",
+              "text": "Other resources I found on my own"
             }
           ]
         },
@@ -740,6 +878,10 @@
             {
               "value": "lms_integration",
               "text": "Lack of integration with my school’s technology or LMS (Learning Management System)"
+            },
+            {
+              "value": "differentiating",
+              "text": "Differentiating instruction for students with varying background knowledge and abilities"
             }
           ]
         },
@@ -876,6 +1018,191 @@
               "text": "Explain why they agree or disagree with the work of other students."
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "tools_lms_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "tools_html",
+          "html": "<h2>Tools</h2>\n"
+        },
+        {
+          "type": "radiogroup",
+          "name": "lms_tool_remote",
+          "title": "What is the primary Learning Management System (LMS) you make use of?  (If you, your school or district uses multiple LMS's please choose the one you like the most)",
+          "choices": [
+            {
+              "value": "none",
+              "text": "None - I don't really use an LMS"
+            },
+            {
+              "value": "powerschool",
+              "text": "Powerschool"
+            },
+            {
+              "value": "schoology",
+              "text": "Schoology"
+            },
+            {
+              "value": "google_classroom",
+              "text": "Google Classroom"
+            },
+            {
+              "value": "chalkboard",
+              "text": "Blackboard"
+            },
+            {
+              "value": "seesaw",
+              "text": "SeeSaw"
+            },
+            {
+              "value": "canvas",
+              "text": "Canvas"
+            },
+            {
+              "value": "moodle",
+              "text": "Moodle"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "rating",
+          "name": "happy_with_lms",
+          "visibleIf": "{lms_tool_remote} <> 'none'",
+          "title": "How happy are you with your LMS?",
+          "minRateDescription": "Not at all happy",
+          "maxRateDescription": "Extremely happy"
+        },
+        {
+          "type": "matrix",
+          "name": "tool_changes_grading",
+          "title": "Code.org is considering updates to its teacher tools.  Which of the following potential changes would most improve your experience GRADING OR ASSESSING student work? Please rate them in terms of how important they are to you.",
+          "columns": [
+            {
+              "value": "not_important",
+              "text": "Not important"
+            },
+            {
+              "value": "little_important",
+              "text": "A little important"
+            },
+            {
+              "value": "moderately_important",
+              "text": "Moderately important"
+            },
+            {
+              "value": "very_important",
+              "text": "Very Important"
+            },
+            {
+              "value": "most_important",
+              "text": "Most important"
+            }
+          ],
+          "rows": [
+            {
+              "value": "feedback",
+              "text": "Give feedback on your students' work from within your LMS, instead of within Code.org's tools"
+            },
+            {
+              "value": "single_page",
+              "text": "Within Code.org, be able to see, compare, and leave feedback on different students' work on a single page (no page refresh required)"
+            },
+            {
+              "value": "open_ended",
+              "text": "Within Code.org, give feedback on or evaluate open ended questions within lessons or assessments"
+            },
+            {
+              "value": "grade_summary_codeorg",
+              "text": "Within Code.org, view a summary of the grades you've given students on their work"
+            },
+            {
+              "value": "grade_summary_lms",
+              "text": "Within your LMS, view a summary of the grades you've given students on their work"
+            },
+            {
+              "value": "digital_rubrics",
+              "text": "Digital rubrics available on Code.org programming levels for evaluating student work"
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "tool_changes_progress",
+          "title": "Which of the following potential changes would most improve your experience MANAGING OR TRACKING STUDENT PROGRESS? Please rate them in terms of how important they are to you.",
+          "columns": [
+            {
+              "value": "not_important",
+              "text": "Not important"
+            },
+            {
+              "value": "little_important",
+              "text": "A little important"
+            },
+            {
+              "value": "moderately_important",
+              "text": "Moderately important"
+            },
+            {
+              "value": "very_important",
+              "text": "Very Important"
+            },
+            {
+              "value": "most_important",
+              "text": "Most important"
+            }
+          ],
+          "rows": [
+            {
+              "value": "assign_from_lms",
+              "text": "Assign lessons from within Code.org directly to your LMS"
+            },
+            {
+              "value": "track_progress_in_lms",
+              "text": "From within your LMS, be able to track student progress on Code.org levels and lessons"
+            },
+            {
+              "value": "pdf_of_progress",
+              "text": "A printable PDF of class progress on levels and lessons"
+            },
+            {
+              "value": "interrupt_progress",
+              "text": "An interrupt at the end of each Code.org lesson that stops students from moving forward to the next lesson automatically"
+            },
+            {
+              "value": "student_report_not_finished",
+              "text": "A way for students to say they are not finished with a level (i.e. it's not complete), even if they decide to move forward to the next level"
+            },
+            {
+              "value": "which_levels_correct",
+              "text": "A way to see which levels have been evaluated for correctness (and which have not) in the Progress view"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "LMS_useful_integration_other",
+          "visible": false,
+          "visibleIf": "{LMS_useful_integration.other} = 5",
+          "title": "(Optional) Please describe another way Code.org's tools might better suit your teaching needs."
+        },
+        {
+          "type": "comment",
+          "name": "third_party_integration_FR",
+          "title": "Are there any third party tools you use in your classroom that you wish were better integrated with Code.org (e.g., LMS, collaboration apps, communication apps, etc.)? If so, which tools and how would you want to use them with Code.org?",
+          "cols": 40,
+          "rows": 3
+        },
+        {
+          "type": "comment",
+          "name": "drop_off_FR_remote",
+          "title": "Last, if there is anything else you'd like us to know about the impact COVID-19 had on your {course} classroom, please let us know here.",
+          "cols": 40,
+          "rows": 3
         }
       ]
     },
