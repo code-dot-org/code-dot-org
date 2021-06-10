@@ -71,12 +71,10 @@ class UnitGroup < ApplicationRecord
     I18n.t("data.course.name.#{name}.version_title", default: version_year)
   end
 
-  # Any course with a plc_course or no family_name is considered stable.
-  # All other courses must specify a published_state
+  # Any course with a plc_course is considered stable.
+  # All other courses must specify a published_state.
   def stable?
-    return true if plc_course || !family_name
-
-    published_state == SharedConstants::PUBLISHED_STATE.stable || false
+    plc_course || published_state == SharedConstants::PUBLISHED_STATE.stable
   end
 
   def self.file_path(name)
@@ -138,6 +136,7 @@ class UnitGroup < ApplicationRecord
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
         alternate_scripts: summarize_alternate_scripts,
+        published_state: published_state,
         properties: properties,
         resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
         student_resources: student_resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
