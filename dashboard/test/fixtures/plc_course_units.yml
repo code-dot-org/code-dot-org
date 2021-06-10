@@ -4,12 +4,12 @@ Exploring Computer Science PD:
   unit_description: 'Phase 1: Online Introduction'
   unit_order: 
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &1 2020-09-11 00:59:31.000000000 Z
+    utc: &1 2020-02-21 16:29:09.000000000 Z
     zone: &2 !ruby/object:ActiveSupport::TimeZone
       name: Etc/UTC
     time: *1
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &3 2020-09-11 00:59:31.000000000 Z
+    utc: &3 2020-02-21 16:29:09.000000000 Z
     zone: *2
     time: *3
   script_id: 29
