@@ -30,6 +30,8 @@ import {
   showArrowButtons,
   dismissSwipeOverlay
 } from '@cdo/apps/templates/arrowDisplayRedux';
+import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
+import reducers, {setPlayerSelectionDialog} from '@cdo/apps/craft/redux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -126,15 +128,26 @@ export default class Craft {
     // Use this to start music, and sometimes to show an extra dialog.
     config.level.afterVideoBeforeInstructionsFn = showInstructions => {
       Craft.beginBackgroundMusic();
+
       if (config.level.showPopupOnLoad) {
         if (config.level.showPopupOnLoad === 'playerSelection') {
-          Craft.showPlayerSelectionPopup(function(selectedPlayer) {
-            trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
-            Craft.clearPlayerState();
-            trySetLocalStorage('craftSelectedPlayer', selectedPlayer);
-            Craft.initializeAppLevel(config.level);
-            showInstructions();
-          });
+          getStore().dispatch(
+            setPlayerSelectionDialog(true, selectedPlayer => {
+              if (selectedPlayer) {
+                trackEvent(
+                  'MinecraftAgent',
+                  'ClickedCharacter',
+                  selectedPlayer
+                );
+              } else {
+                selectedPlayer = DEFAULT_CHARACTER;
+              }
+              Craft.setCurrentCharacter(selectedPlayer);
+              getStore().dispatch(setPlayerSelectionDialog(false));
+              Craft.initializeAppLevel(config.level);
+              showInstructions();
+            })
+          );
         }
       } else {
         showInstructions();
@@ -369,17 +382,24 @@ export default class Craft {
 
     ReactDOM.render(
       <Provider store={getStore()}>
-        <AppView
-          visualizationColumn={
-            <CraftVisualizationColumn
-              showFinishButton={!config.level.isProjectLevel}
-            />
-          }
-          onMount={onMount}
-        />
+        <div>
+          <AppView
+            visualizationColumn={
+              <CraftVisualizationColumn
+                showFinishButton={!config.level.isProjectLevel}
+              />
+            }
+            onMount={onMount}
+          />
+          <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
+        </div>
       </Provider>,
       document.getElementById(config.containerId)
     );
+  }
+
+  static getAppReducers() {
+    return reducers;
   }
 
   /**
@@ -426,6 +446,12 @@ export default class Craft {
     );
   }
 
+  static setCurrentCharacter(name = DEFAULT_CHARACTER) {
+    trackEvent('Minecraft', 'ChoseCharacter', name);
+    Craft.clearPlayerState();
+    trySetLocalStorage('craftSelectedPlayer', name);
+  }
+
   /**
    * Get the level IDs for which the player has collected a diamond this
    * session.
@@ -458,36 +484,6 @@ export default class Craft {
     }
 
     return false;
-  }
-
-  static showPlayerSelectionPopup(onSelectedCallback) {
-    let selectedPlayer = DEFAULT_CHARACTER;
-    const popupDiv = document.createElement('div');
-    popupDiv.innerHTML = require('./dialogs/playerSelection.html.ejs')({
-      image: studioApp().assetUrl()
-    });
-    const popupDialog = studioApp().createModalDialog({
-      contentDiv: popupDiv,
-      defaultBtnSelector: '#choose-steve',
-      onHidden: function() {
-        onSelectedCallback(selectedPlayer);
-      },
-      id: 'craft-popup-player-selection'
-    });
-    dom.addClickTouchEvent($('#close-character-select')[0], () => {
-      popupDialog.hide();
-    });
-    dom.addClickTouchEvent($('#choose-steve')[0], () => {
-      selectedPlayer = CHARACTER_STEVE;
-      trackEvent('MinecraftAgent', 'ClickedCharacter', selectedPlayer);
-      popupDialog.hide();
-    });
-    dom.addClickTouchEvent($('#choose-alex')[0], () => {
-      selectedPlayer = CHARACTER_ALEX;
-      trackEvent('MinecraftAgent', 'ClickedCharacter', selectedPlayer);
-      popupDialog.hide();
-    });
-    popupDialog.show();
   }
 
   static clearPlayerState() {

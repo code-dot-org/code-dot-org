@@ -430,6 +430,8 @@ $height-to-width: 434 / 477;
   border-radius: 0;
   height: auto;
 
+  // TODO: Overriding .x-close visibility can be removed once all Minecraft dialogs
+  // use <CraftDialog/> instead of EJS templates.
   .x-close {
     visibility: hidden;
   }
@@ -502,10 +504,6 @@ $height-to-width: 434 / 477;
   @include craft-popup();
 }
 
-.craft-close-popup {
-  @include mc-x-close-button();
-}
-
 #craft-popup-connect {
   @include craft-popup();
 
@@ -549,6 +547,12 @@ $height-to-width: 434 / 477;
 
   @media screen and (max-height: 630px) {
     @include popup-width-height(540px, 400px);
+  }
+
+  // TODO: Overriding .x-close visibility can be removed once all Minecraft dialogs
+  // use <CraftDialog/> instead of EJS templates.
+  .x-close {
+    visibility: visible;
   }
 
   #select-character-text {

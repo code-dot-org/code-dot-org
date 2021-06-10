@@ -9,30 +9,31 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
  */
 export default function CraftDialog({
   isOpen,
+  handleClose,
   id,
   className,
-  children,
-  closeButtonId,
-  closeButtonClassName
+  children
 }) {
   return (
-    <BaseDialog isOpen={isOpen} bodyId={id} bodyClassName={className}>
+    <BaseDialog
+      isOpen={isOpen}
+      handleClose={handleClose}
+      bodyId={id}
+      bodyClassName={className}
+    >
       {children}
-      <div id={closeButtonId} className={closeButtonClassName} />
     </BaseDialog>
   );
 }
 
 CraftDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
+  handleClose: PropTypes.func.isRequired,
   id: PropTypes.string,
   className: PropTypes.string,
-  closeButtonId: PropTypes.string,
-  closeButtonClassName: PropTypes.string,
   children: PropTypes.node
 };
 
 CraftDialog.defaultProps = {
-  className: 'craft-popup',
-  closeButtonClassName: 'craft-close-popup'
+  className: 'minecraft dash_modal craft-popup'
 };
