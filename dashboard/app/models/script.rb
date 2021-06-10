@@ -1299,6 +1299,7 @@ class Script < ApplicationRecord
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
+          published_state: general_params[:published_state],
           properties: Script.build_property_hash(general_params)
         },
         script_data[:lesson_groups]
