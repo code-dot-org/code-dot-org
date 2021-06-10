@@ -103,7 +103,7 @@ class CoursesController < ApplicationController
 
     # Update the published state of all the units in the course to be same as the course
     unit_group.default_scripts.each do |script|
-      script.assign_attributes(hidden: !course_params[:visible], properties: {is_stable: course_params[:is_stable], pilot_experiment: course_params[:pilot_experiment]})
+      script.assign_attributes(published_state: course_params[:published_state], hidden: !course_params[:visible], properties: {is_stable: course_params[:is_stable], pilot_experiment: course_params[:pilot_experiment]})
       next unless script.changed?
       script.save!
       script.write_script_dsl
