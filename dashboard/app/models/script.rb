@@ -1438,6 +1438,10 @@ class Script < ApplicationRecord
     [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
+  def stable?
+    published_state == SharedConstants::PUBLISHED_STATE.stable
+  end
+
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
     # TODO: Set up peer reviews to be more consistent with the rest of the system
     # so that they don't need a bunch of one off cases (example peer reviews
