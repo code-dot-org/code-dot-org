@@ -66,6 +66,6 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
         answers: [{text: "one"}, {text: "two"}, {text: "three"}]
       }
     end
-    assert_includes(e.message, 'Name is invalid')
+    assert_includes(e.message, 'Name cannot be the default level name')
   end
 end
