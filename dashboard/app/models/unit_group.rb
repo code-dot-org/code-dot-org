@@ -136,6 +136,7 @@ class UnitGroup < ApplicationRecord
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
         alternate_scripts: summarize_alternate_scripts,
+        published_state: published_state,
         properties: properties,
         resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
         student_resources: student_resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
