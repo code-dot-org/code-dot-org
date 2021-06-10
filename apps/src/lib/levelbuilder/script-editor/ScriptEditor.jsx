@@ -27,7 +27,7 @@ import {
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
-import {PUBLISHED_STATES} from '@cdo/apps/lib/levelbuilder/constants';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -41,7 +41,8 @@ class ScriptEditor extends React.Component {
     id: PropTypes.number,
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
-    initialPublishedState: PropTypes.oneOf(PUBLISHED_STATES).isRequired,
+    initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
+      .isRequired,
     initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
@@ -246,7 +247,7 @@ class ScriptEditor extends React.Component {
       });
       return;
     } else if (
-      this.state.publishedState === 'pilot' &&
+      this.state.publishedState === PublishedState.pilot &&
       this.state.pilotExperiment === ''
     ) {
       this.setState({
