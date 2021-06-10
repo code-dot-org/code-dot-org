@@ -754,7 +754,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     csp = create(:unit_group, name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.stable)
     csp1 = create(:script, name: 'csp1')
     csp2 = create(:script, name: 'csp2')
-    csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
+    csp2_alt = create(:script, name: 'csp2-alt', published_state: SharedConstants::PUBLISHED_STATE.beta)
     csp3 = create(:script, name: 'csp3')
 
     create(:unit_group_unit, position: 1, unit_group: csp, script: csp1)
