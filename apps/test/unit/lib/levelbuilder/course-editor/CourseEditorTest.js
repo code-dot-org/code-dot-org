@@ -15,14 +15,14 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
   name: 'test-course',
   initialTitle: 'Computer Science Principles 2017',
   initialFamilyName: 'CSP',
   initialVersionYear: '2017',
-  initialVisible: false,
-  initialIsStable: false,
+  initialPublishedState: 'beta',
   initialDescriptionShort: 'Desc here',
   initialDescriptionStudent:
     '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
@@ -154,35 +154,6 @@ describe('CourseEditor', () => {
     ).to.equal(
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
-  });
-
-  describe('Publish State', () => {
-    it('published state is beta when visible and isStable are false and there is no pilot experiment', () => {
-      const wrapper = createWrapper({});
-      const courseEditor = wrapper.find('CourseEditor');
-      expect(courseEditor.state().publishedState).to.equal('Beta');
-    });
-
-    it('published state is pilot if there is a pilot experiment', () => {
-      const wrapper = createWrapper({initialPilotExperiment: 'my-pilot'});
-      const courseEditor = wrapper.find('CourseEditor');
-      expect(courseEditor.state().publishedState).to.equal('Pilot');
-    });
-
-    it('published state is preview if visible is true but isStable is false', () => {
-      const wrapper = createWrapper({initialVisible: true});
-      const courseEditor = wrapper.find('CourseEditor');
-      expect(courseEditor.state().publishedState).to.equal('Preview');
-    });
-
-    it('published state is recommended if visible and isStable are true', () => {
-      const wrapper = createWrapper({
-        initialVisible: true,
-        initialIsStable: true
-      });
-      const courseEditor = wrapper.find('CourseEditor');
-      expect(courseEditor.state().publishedState).to.equal('Recommended');
-    });
   });
 
   describe('Saving Course Editor', () => {
@@ -345,7 +316,10 @@ describe('CourseEditor', () => {
       const wrapper = createWrapper({});
 
       const courseEditor = wrapper.find('CourseEditor');
-      courseEditor.setState({publishedState: 'Pilot', pilotExperiment: ''});
+      courseEditor.setState({
+        publishedState: PublishedState.pilot,
+        pilotExperiment: ''
+      });
 
       const saveBar = wrapper.find('SaveBar');
 

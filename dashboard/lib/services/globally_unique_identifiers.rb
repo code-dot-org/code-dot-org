@@ -21,7 +21,11 @@ module Services
     #
     # @see GloballyUniqueIdentifiers.find_vocab
     def self.build_vocab_key(vocab)
-      return unless vocab&.course_version&.course_offering.present?
+      unless vocab&.course_version&.course_offering.present?
+        STDERR.puts "Vocabulary object #{vocab.key.inspect} is missing course version and/or offering"
+        return
+      end
+
       [vocab.key, vocab.course_version.course_offering.key, vocab.course_version.key].join('/')
     end
 
@@ -49,7 +53,11 @@ module Services
     #
     # @see GloballyUniqueIdentifiers.find_resource
     def self.build_resource_key(resource)
-      return unless resource&.course_version&.course_offering.present?
+      unless resource&.course_version&.course_offering.present?
+        STDERR.puts "Resource object #{resource.key.inspect} is missing course version and/or offering"
+        return
+      end
+
       [resource.key, resource.course_version.course_offering.key, resource.course_version.key].join('/')
     end
 

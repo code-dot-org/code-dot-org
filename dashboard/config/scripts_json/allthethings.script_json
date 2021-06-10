@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:42 UTC",
+    "serialized_at": "2021-06-08 19:01:02 UTC",
     "seeding_key": {
       "script.name": "allthethings"
     }
@@ -4363,6 +4363,54 @@
       "level_keys": [
         "Allthethings Java Lab 2"
       ]
+    },
+    {
+      "chapter": 149,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab 3"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "Allthethings Java Lab 3"
+      ]
+    },
+    {
+      "chapter": 150,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa widget test2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa widget test2"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "csa widget test2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6118,6 +6166,28 @@
         "level.key": "Allthethings Java Lab 2",
         "script_level.level_keys": [
           "Allthethings Java Lab 2"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab 3",
+        "script_level.level_keys": [
+          "Allthethings Java Lab 3"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa widget test2",
+        "script_level.level_keys": [
+          "csa widget test2"
         ],
         "lesson.key": "Java Lab",
         "lesson_group.key": "",

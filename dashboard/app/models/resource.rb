@@ -126,6 +126,17 @@ class Resource < ApplicationRecord
     end
   end
 
+  def copy_to_course_version(destination_course_version)
+    return self if course_version == destination_course_version
+    persisted_resource = Resource.where(name: name, url: url, course_version_id: destination_course_version.id).first
+    if persisted_resource
+      persisted_resource
+    else
+      copied_resource = Resource.create!(attributes.slice('name', 'url', 'properties').merge({course_version_id: destination_course_version.id}))
+      copied_resource
+    end
+  end
+
   private
 
   def generate_key_from_name
