@@ -302,11 +302,11 @@ class CoursesControllerTest < ActionController::TestCase
     unit2.reload
 
     assert course.visible?
-    assert course.is_stable?
+    assert course.stable?
     refute unit1.hidden?
-    assert unit1.is_stable?
+    assert unit1.stable?
     refute unit2.hidden?
-    assert unit2.is_stable?
+    assert unit2.stable?
   end
 
   test "update: sets pilot_experiment on units in unit group" do
@@ -348,7 +348,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_nil unit_group.family_name
     refute unit_group.has_verified_resources
     refute unit_group.visible?
-    refute unit_group.is_stable?
+    refute unit_group.stable?
 
     post :update, params: {
       course_name: unit_group.name,
@@ -363,7 +363,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 'csp', unit_group.family_name
     assert unit_group.has_verified_resources
     assert unit_group.visible?
-    assert unit_group.is_stable?
+    assert unit_group.stable?
   end
 
   test "update: published state of stable sets visible and is_stable correctly" do
@@ -372,7 +372,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group = create :unit_group, name: 'csp-2019'
 
     refute unit_group.visible?
-    refute unit_group.is_stable?
+    refute unit_group.stable?
 
     post :update, params: {
       course_name: unit_group.name,
@@ -381,7 +381,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group.reload
 
     assert unit_group.visible?
-    assert unit_group.is_stable?
+    assert unit_group.stable?
   end
 
   test "update: published state of preview sets visible and is_stable correctly" do
@@ -390,7 +390,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group = create :unit_group, name: 'csp-2019'
 
     refute unit_group.visible?
-    refute unit_group.is_stable?
+    refute unit_group.stable?
 
     post :update, params: {
       course_name: unit_group.name,
@@ -399,7 +399,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group.reload
 
     assert unit_group.visible?
-    refute unit_group.is_stable?
+    refute unit_group.stable?
   end
 
   test "update: published state of beta sets visible and is_stable correctly" do
@@ -408,7 +408,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group = create :unit_group, name: 'csp-2019'
 
     refute unit_group.visible?
-    refute unit_group.is_stable?
+    refute unit_group.stable?
 
     post :update, params: {
       course_name: unit_group.name,
@@ -417,7 +417,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group.reload
 
     refute unit_group.visible?
-    refute unit_group.is_stable?
+    refute unit_group.stable?
   end
 
   test "update: published state of pilot sets visible and is_stable correctly" do
@@ -426,7 +426,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group = create :unit_group, name: 'csp-2019'
 
     refute unit_group.visible?
-    refute unit_group.is_stable?
+    refute unit_group.stable?
 
     post :update, params: {
       course_name: unit_group.name,
@@ -436,7 +436,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group.reload
 
     refute unit_group.visible?
-    refute unit_group.is_stable?
+    refute unit_group.stable?
   end
 
   test "update: persists teacher resources for migrated unit groups" do
