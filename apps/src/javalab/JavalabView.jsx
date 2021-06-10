@@ -169,7 +169,6 @@ class JavalabView extends React.Component {
 
 const styles = {
   instructionsAndPreview: {
-    width: '100%',
     color: color.black,
     right: '15px'
   },
