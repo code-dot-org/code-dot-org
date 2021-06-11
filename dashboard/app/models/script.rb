@@ -122,6 +122,8 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, pilot, beta, preview or stable'}
+
   def prevent_duplicate_levels
     reload
 
