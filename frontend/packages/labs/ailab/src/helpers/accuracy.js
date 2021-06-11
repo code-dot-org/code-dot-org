@@ -1,6 +1,8 @@
 /*
   Functions for calculating the accuracy of trained machine learning models.
-  "Grade" is "correct" or "incorrect". Categorical predicted and expected labels must match exactly to count as "correct". Numerical predicted and expected labels must be within 5% of the range of labels to count as
+  "Grade" is "correct" or "incorrect". Categorical predicted and expected
+  labels must match exactly to count as "correct". Numerical predicted and
+  expected labels must be within 5% of the range of labels to count as
   "correct".
 */
 
