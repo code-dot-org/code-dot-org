@@ -333,10 +333,12 @@ class UnitGroup < ApplicationRecord
   def get_published_state
     if pilot?
       SharedConstants::PUBLISHED_STATE.pilot
-    elsif stable?
-      SharedConstants::PUBLISHED_STATE.stable
     elsif visible
-      SharedConstants::PUBLISHED_STATE.preview
+      if is_stable
+        SharedConstants::PUBLISHED_STATE.stable
+      else
+        SharedConstants::PUBLISHED_STATE.preview
+      end
     else
       SharedConstants::PUBLISHED_STATE.beta
     end
