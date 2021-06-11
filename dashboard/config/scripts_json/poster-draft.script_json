@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-08 18:19:20 UTC",
+    "serialized_at": "2021-06-11 19:31:40 UTC",
     "seeding_key": {
       "script.name": "poster-draft"
     }
@@ -146,6 +146,16 @@
       },
       "seeding_key": {
         "activity_section.key": "f8457faf-7299-423b-b174-ae515ba3d66c",
+        "lesson_activity.key": "213463b5-75b7-4bf3-8505-dd49952e6e01"
+      }
+    },
+    {
+      "key": "9ee1dfaa-8bdc-403d-8bb1-fdf4012585b7",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9ee1dfaa-8bdc-403d-8bb1-fdf4012585b7",
         "lesson_activity.key": "213463b5-75b7-4bf3-8505-dd49952e6e01"
       }
     },
@@ -318,6 +328,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPL_aboutme_3_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -340,6 +353,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPL_aboutme_4_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -362,6 +378,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPL_events_freeplay"
+        ],
         "progression": "Choice Level"
       },
       "named_level": false,
@@ -377,6 +396,50 @@
       },
       "level_keys": [
         "IPL_events_freeplay"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "IPL_events_click"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "9ee1dfaa-8bdc-403d-8bb1-fdf4012585b7"
+      },
+      "level_keys": [
+        "IPL_events_click"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "IPL_events_sound_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "9ee1dfaa-8bdc-403d-8bb1-fdf4012585b7"
+      },
+      "level_keys": [
+        "IPL_events_sound_2021"
       ]
     }
   ],
@@ -487,6 +550,30 @@
         "lesson_group.key": "",
         "script.name": "poster-draft",
         "activity_section.key": "f8457faf-7299-423b-b174-ae515ba3d66c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "IPL_events_click",
+        "script_level.level_keys": [
+          "IPL_events_click"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "9ee1dfaa-8bdc-403d-8bb1-fdf4012585b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "IPL_events_sound_2021",
+        "script_level.level_keys": [
+          "IPL_events_sound_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "9ee1dfaa-8bdc-403d-8bb1-fdf4012585b7"
       }
     }
   ],
