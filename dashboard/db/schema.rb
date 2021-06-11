@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_14_195057) do
+ActiveRecord::Schema.define(version: 2021_06_11_001455) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -674,6 +674,7 @@ ActiveRecord::Schema.define(version: 2021_05_14_195057) do
     t.text "notes"
     t.text "audit_log"
     t.index ["game_id"], name: "index_levels_on_game_id"
+    t.index ["name", "game_id", "level_num"], name: "index_levels_on_name_and_game_id_and_level_num", unique: true
     t.index ["name"], name: "index_levels_on_name"
   end
 
