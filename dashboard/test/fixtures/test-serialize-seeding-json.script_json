@@ -13,7 +13,7 @@
     "new_name": null,
     "family_name": "test-serialize-seeding-json-family",
     "serialized_at": "2021-06-11 02:34:00 UTC",
-    "published_state": "preview",
+    "published_state": null,
     "seeding_key": {
       "script.name": "test-serialize-seeding-json-script"
     }
