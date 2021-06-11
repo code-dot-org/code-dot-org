@@ -3,10 +3,10 @@
   "script_names": [
     "ui-test-script-in-course-2019"
   ],
+  "published_state": "stable",
   "properties": {
     "family_name": "ui-test-course",
     "version_year": "2019",
-    "is_stable": true,
     "visible": true
   }
 }
