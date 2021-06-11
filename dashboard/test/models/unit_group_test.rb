@@ -330,18 +330,23 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal SharedConstants::PUBLISHED_STATE.pilot, unit_group.get_published_state
   end
 
-  test 'unit group with visible false and no pilot_experiment has beta published state' do
-    unit_group = create(:unit_group, name: 'single-lesson-script', visible: false)
+  test 'unit group with visible false, a family name and no pilot_experiment has beta published state' do
+    unit_group = create(:unit_group, name: 'single-lesson-script', visible: false, family_name: 'random')
     assert_equal SharedConstants::PUBLISHED_STATE.beta, unit_group.get_published_state
   end
 
-  test 'unit group with visible true has preview published state' do
-    unit_group = create(:unit_group, name: 'single-lesson-script', visible: true)
+  test 'unit group with visible true and a family name has preview published state' do
+    unit_group = create(:unit_group, name: 'single-lesson-script', visible: true, family_name: 'random')
     assert_equal SharedConstants::PUBLISHED_STATE.preview, unit_group.get_published_state
   end
 
   test 'unit group with visible true and is_stable true has stable published state' do
     unit_group = create(:unit_group, name: 'single-lesson-script', visible: true, is_stable: true)
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, unit_group.get_published_state
+  end
+
+  test 'unit group without a family name has stable published state' do
+    unit_group = create(:unit_group, name: 'single-lesson-script')
     assert_equal SharedConstants::PUBLISHED_STATE.stable, unit_group.get_published_state
   end
 
