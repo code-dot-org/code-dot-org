@@ -5,3 +5,5 @@ description 'Now you can use what you\'ve learned to make your project even bett
 
 sublevels
 level 'IPL_events_freeplay_food'
+level 'IPL_events_freeplay_animals'
+level 'IPL_events_freeplay_blank'
