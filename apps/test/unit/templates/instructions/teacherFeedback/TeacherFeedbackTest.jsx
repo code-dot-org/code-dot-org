@@ -1,10 +1,15 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedTeacherFeedback as TeacherFeedback} from '@cdo/apps/templates/instructions/TeacherFeedback';
+import {expect} from '../../../../util/reconfiguredChai';
+import {UnconnectedTeacherFeedback as TeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedback';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import experiments from '@cdo/apps/util/experiments';
 import sinon from 'sinon';
+import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
+import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
+import ReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReviewState';
+import Status from '@cdo/apps/templates/instructions/teacherFeedback/Status';
+import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 
 const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   user: 5,
@@ -120,7 +125,7 @@ describe('TeacherFeedback', () => {
         };
 
         const wrapper = shallow(<TeacherFeedback {...props} />);
-        expect(wrapper.find('TeacherFeedbackStatus')).to.have.length(0);
+        expect(wrapper.find(Status)).to.have.length(0);
       });
 
       it('displays a rubric with expected props if there is a rubric', () => {
@@ -128,7 +133,7 @@ describe('TeacherFeedback', () => {
           <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
         );
 
-        const rubric = wrapper.find('TeacherFeedbackRubric');
+        const rubric = wrapper.find(Rubric);
         expect(rubric).to.have.length(1);
         expect(rubric.props().rubric).to.equal(
           TEACHER_FEEDBACK_RUBRIC_PROPS.rubric
@@ -143,7 +148,7 @@ describe('TeacherFeedback', () => {
           <TeacherFeedback {...TEACHER_FEEDBACK_NO_RUBRIC_PROPS} />
         );
 
-        expect(wrapper.find('TeacherFeedbackRubric')).to.have.lengthOf(0);
+        expect(wrapper.find(Rubric)).to.have.lengthOf(0);
       });
 
       it('displays the comment with expected props', () => {
@@ -151,7 +156,7 @@ describe('TeacherFeedback', () => {
           <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
         );
 
-        const confirmCommentArea = wrapper.find('CommentArea').first();
+        const confirmCommentArea = wrapper.find(Comment).first();
         expect(confirmCommentArea.props().isReadonly).to.equal(false);
         expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
         expect(confirmCommentArea.props().comment).to.equal('');
@@ -174,7 +179,7 @@ describe('TeacherFeedback', () => {
           <TeacherFeedback {...TEACHER_FEEDBACK_NO_RUBRIC_PROPS} />
         );
 
-        const keepWorkingComponent = wrapper.find('TeacherFeedbackKeepWorking');
+        const keepWorkingComponent = wrapper.find(EditableReviewState);
         expect(keepWorkingComponent).to.have.length(1);
         expect(keepWorkingComponent.props().latestReviewState).to.equal(null);
         expect(keepWorkingComponent.props().isAwaitingTeacherReview).to.be
@@ -208,7 +213,7 @@ describe('TeacherFeedback', () => {
 
         const wrapper = shallow(<TeacherFeedback {...props} />);
 
-        const statusComponent = wrapper.find('TeacherFeedbackStatus');
+        const statusComponent = wrapper.find(Status);
         expect(statusComponent).to.have.length(1);
         expect(statusComponent.props().viewAs).to.equal('Teacher');
         expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
@@ -225,7 +230,7 @@ describe('TeacherFeedback', () => {
           />
         );
 
-        const rubric = wrapper.find('TeacherFeedbackRubric');
+        const rubric = wrapper.find(Rubric);
         expect(rubric).to.have.length(1);
       });
 
@@ -237,7 +242,7 @@ describe('TeacherFeedback', () => {
           />
         );
 
-        const confirmCommentArea = wrapper.find('CommentArea').first();
+        const confirmCommentArea = wrapper.find(Comment).first();
         expect(confirmCommentArea.props().isReadonly).to.equal(false);
         expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
         expect(confirmCommentArea.props().comment).to.equal('Good work!');
@@ -266,7 +271,7 @@ describe('TeacherFeedback', () => {
           />
         );
 
-        const keepWorkingComponent = wrapper.find('TeacherFeedbackKeepWorking');
+        const keepWorkingComponent = wrapper.find(EditableReviewState);
         expect(keepWorkingComponent).to.have.length(1);
         expect(keepWorkingComponent.props().latestReviewState).to.equal(
           'completed'
@@ -285,7 +290,7 @@ describe('TeacherFeedback', () => {
         <TeacherFeedback {...TEACHER_NO_FEEDBACK_RUBRIC_PROPS} />
       );
 
-      const rubric = wrapper.find('TeacherFeedbackRubric');
+      const rubric = wrapper.find(Rubric);
       expect(rubric).to.have.length(1);
       expect(rubric.props().rubric).to.equal(
         TEACHER_NO_FEEDBACK_RUBRIC_PROPS.rubric
@@ -299,7 +304,7 @@ describe('TeacherFeedback', () => {
         <TeacherFeedback {...TEACHER_NO_FEEDBACK_RUBRIC_PROPS} />
       );
 
-      expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
+      expect(wrapper.find(Comment)).to.have.lengthOf(0);
     });
 
     it('does not display submit button', () => {
@@ -320,7 +325,7 @@ describe('TeacherFeedback', () => {
         };
 
         const wrapper = shallow(<TeacherFeedback {...props} />);
-        expect(wrapper.find('TeacherFeedbackStatus')).to.have.length(0);
+        expect(wrapper.find(Status)).to.have.length(0);
       });
 
       it('displays rubric with expected props if there is a rubric', () => {
@@ -328,7 +333,7 @@ describe('TeacherFeedback', () => {
           <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
         );
 
-        const rubric = wrapper.find('TeacherFeedbackRubric');
+        const rubric = wrapper.find(Rubric);
         expect(rubric).to.have.length(1);
         expect(rubric.props().rubric).to.equal(
           STUDENT_NO_FEEDBACK_RUBRIC_PROPS.rubric
@@ -343,7 +348,7 @@ describe('TeacherFeedback', () => {
           <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
         );
 
-        expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
+        expect(wrapper.find(Comment)).to.have.lengthOf(0);
       });
 
       it('does not display the submit feedback button', () => {
@@ -359,7 +364,7 @@ describe('TeacherFeedback', () => {
           <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
         );
 
-        expect(wrapper.find('FeedbackStudentReviewState')).to.have.lengthOf(0);
+        expect(wrapper.find(ReviewState)).to.have.lengthOf(0);
       });
     });
 
@@ -387,7 +392,7 @@ describe('TeacherFeedback', () => {
 
         const wrapper = shallow(<TeacherFeedback {...props} />);
 
-        const statusComponent = wrapper.find('TeacherFeedbackStatus');
+        const statusComponent = wrapper.find(Status);
         expect(statusComponent).to.have.length(1);
         expect(statusComponent.props().viewAs).to.equal('Student');
         expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
@@ -401,7 +406,7 @@ describe('TeacherFeedback', () => {
           />
         );
 
-        expect(wrapper.find('TeacherFeedbackRubric')).to.have.lengthOf(0);
+        expect(wrapper.find(Rubric)).to.have.lengthOf(0);
       });
 
       it('renders rubric with expected props if there is a rubric for the level', () => {
@@ -420,7 +425,7 @@ describe('TeacherFeedback', () => {
           />
         );
 
-        const rubric = wrapper.find('TeacherFeedbackRubric');
+        const rubric = wrapper.find(Rubric);
         expect(rubric).to.have.length(1);
         expect(rubric.props().rubric).to.equal(
           STUDENT_FEEDBACK_RUBRIC_PROPS.rubric
@@ -439,7 +444,7 @@ describe('TeacherFeedback', () => {
           />
         );
 
-        const confirmCommentArea = wrapper.find('CommentArea').first();
+        const confirmCommentArea = wrapper.find(Comment).first();
         expect(confirmCommentArea.props().isReadonly).to.equal(true);
         expect(confirmCommentArea.props().studentHasFeedback).to.equal(true);
         expect(confirmCommentArea.props().comment).to.equal('Good work!');
@@ -457,7 +462,7 @@ describe('TeacherFeedback', () => {
           />
         );
 
-        expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
+        expect(wrapper.find(Comment)).to.have.lengthOf(0);
       });
 
       it('does not render submit button', () => {
@@ -479,7 +484,7 @@ describe('TeacherFeedback', () => {
           />
         );
 
-        const reviewState = wrapper.find('FeedbackStudentReviewState');
+        const reviewState = wrapper.find(ReviewState);
         expect(reviewState).to.have.lengthOf(1);
         expect(reviewState.props().latestReviewState).to.equal('keepWorking');
       });
