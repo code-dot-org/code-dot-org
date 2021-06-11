@@ -30,7 +30,7 @@ class LevelGroup < DSLDefined
 
   def dsl_default
     <<~ruby
-      name 'unique level name here'
+      name '#{DEFAULT_LEVEL_NAME}'
       title 'title of the assessment here'
       submittable 'true'
       anonymous 'false'
