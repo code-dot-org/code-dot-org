@@ -99,7 +99,7 @@ class JavalabView extends React.Component {
   };
 
   setRightContainerHeight = () => {
-    let rightContainerHeight = this.EditorAndVisualization.getBoundingClientRect()
+    let rightContainerHeight = this.editorAndVisualization.getBoundingClientRect()
       .top;
     let topPos = window.innerHeight - rightContainerHeight - FOOTER_BUFFER;
     this.setState({
@@ -140,7 +140,7 @@ class JavalabView extends React.Component {
             />
           </div>
           <div
-            ref={ref => (this.EditorAndVisualization = ref)}
+            ref={ref => (this.editorAndVisualization = ref)}
             style={styles.editorAndVisualization}
           >
             <div
@@ -210,7 +210,9 @@ const styles = {
   consoleParent: {
     display: 'flex',
     flexDirection: 'column',
-    flexGrow: 1
+    height: '100%',
+    flexGrow: 1,
+    overflowY: 'scroll'
   },
   editorAndVisualization: {
     display: 'flex',
@@ -234,7 +236,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'flex-end',
     width: '100%',
-    margin: '10px 0'
+    margin: '10px 0',
+    overflowY: 'hidden'
   },
   finish: {
     backgroundColor: color.orange,
