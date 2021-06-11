@@ -35,8 +35,11 @@ level 'OPD-K5 AddressingImplementation1', progression: 'Implementation Approache
 level 'OPD-K5 ImplementationApproach_Reflection', progression: 'Implementation Approaches and Barriers'
 
 lesson_group 'k5_basic_concepts_1', display_name: 'Part II:  CS Concepts in Courses A - F'
-lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
+lesson 'Part II Overview', display_name: 'Part II Overview', has_lesson_plan: false
 level 'OPD-K5 IntroToConcepts_2021'
+level 'OPD-K5-PartIIOutline-2021'
+
+lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
 level 'OPD-K5 Stage3Start_copy_2021'
 level 'OPD-K5-SeqA-2021'
 level 'OPD-K5-SeqB-2021'
