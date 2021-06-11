@@ -1,6 +1,7 @@
 require 'aws-sdk-s3'
 require 'cdo/aws/s3'
 require 'cdo/share_filtering'
+require 'cdo/firehose'
 
 class Api::V1::MlModelsController < Api::V1::JsonApiController
   skip_before_action :verify_authenticity_token
@@ -17,8 +18,19 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
       profanity_or_pii = ShareFiltering.find_failure(
         model_data.except(:trainedModel).to_s, request.locale
       )
-    rescue OpenURI::HTTPError => e
-      print e
+    rescue OpenURI::HTTPError => share_filtering_error
+    end
+    if share_filtering_error
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: 'ai-ml',
+          study_group: 'pii-profanity-api',
+          event: 'share_filtering_error',
+          user_id: current_user&.id,
+          data_json: model_data.except(:trainedModel).to_json
+        }
+        )
     end
     if profanity_or_pii
       render json: {id: model_id, status: "piiProfanity"}
