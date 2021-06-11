@@ -7,17 +7,17 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
-import {CommentArea} from './CommentArea';
-import TeacherFeedbackKeepWorking from '@cdo/apps/templates/instructions/TeacherFeedbackKeepWorking';
-import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedbackStatus';
-import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedbackRubric';
+import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
+import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
+import Status from '@cdo/apps/templates/instructions/teacherFeedback/Status';
+import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {
   teacherFeedbackShape,
   rubricShape,
   ReviewStates
-} from '@cdo/apps/templates/types';
+} from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import experiments from '@cdo/apps/util/experiments';
-import FeedbackStudentReviewState from '@cdo/apps/templates/instructions/FeedbackStudentReviewState';
+import ReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReviewState';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -181,7 +181,7 @@ export class TeacherFeedback extends Component {
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
         {keepWorkingEnabled && (
-          <TeacherFeedbackKeepWorking
+          <EditableReviewState
             latestReviewState={latestFeedback?.review_state || null}
             isAwaitingTeacherReview={this.isAwaitingTeacherReview}
             setReviewState={this.onReviewStateChange}
@@ -198,7 +198,7 @@ export class TeacherFeedback extends Component {
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        <FeedbackStudentReviewState
+        <ReviewState
           latestReviewState={latestFeedback?.review_state || null}
           isAwaitingTeacherReview={this.isAwaitingTeacherReview}
         />
@@ -264,7 +264,7 @@ export class TeacherFeedback extends Component {
         {errorState === ErrorType.Load &&
           this.renderError(i18n.feedbackLoadError())}
         {rubric && (
-          <TeacherFeedbackRubric
+          <Rubric
             rubric={rubric}
             performance={performance}
             isReadonly={displayReadonlyRubric}
@@ -280,7 +280,7 @@ export class TeacherFeedback extends Component {
             {viewAs === ViewType.Student &&
               this.renderCommentAreaHeaderForStudent()}
             {displayComment && (
-              <CommentArea
+              <Comment
                 isReadonly={disabledMode}
                 comment={comment}
                 placeholderText={placeholderText}
@@ -293,10 +293,7 @@ export class TeacherFeedback extends Component {
             <div style={styles.footer}>
               {viewAs === ViewType.Teacher && this.renderSubmitFeedbackButton()}
               {!!latestFeedback && (
-                <TeacherFeedbackStatus
-                  viewAs={viewAs}
-                  latestFeedback={latestFeedback}
-                />
+                <Status viewAs={viewAs} latestFeedback={latestFeedback} />
               )}
             </div>
           </div>

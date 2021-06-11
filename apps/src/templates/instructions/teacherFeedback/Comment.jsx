@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
-export class CommentArea extends React.Component {
+class Comment extends React.Component {
   static propTypes = {
     isReadonly: PropTypes.bool,
     comment: PropTypes.string,
@@ -51,3 +51,5 @@ const styles = {
     fontWeight: 'normal'
   }
 };
+
+export default Comment;
