@@ -464,6 +464,15 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal 'PlantASeed', level.name
   end
 
+  test 'cannot create two blockly levels with same key' do
+    game = create :game, name: 'Artist'
+    level1 = create :artist, name: 'blockly', level_num: '5_5_5', user_id: nil, game: game
+    assert_equal 'blockly:Artist:5_5_5', level1.key
+    assert_raises ActiveRecord::RecordNotUnique do
+      create :artist, name: 'blockly', level_num: '5_5_5', user_id: nil, game: game
+    end
+  end
+
   test 'applab examples' do
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
