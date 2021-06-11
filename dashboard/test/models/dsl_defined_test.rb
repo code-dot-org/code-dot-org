@@ -59,4 +59,13 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
     expected = [{'text' => "un"}, {'text' => "two"}, {'text' => "three"}]
     assert_equal level.localized_property('answers'), expected
   end
+
+  test 'cannot create level with default name' do
+    e = assert_raises do
+      create :match, name: 'unique level name here', properties: {
+        answers: [{text: "one"}, {text: "two"}, {text: "three"}]
+      }
+    end
+    assert_includes(e.message, 'Name cannot be the default level name')
+  end
 end
