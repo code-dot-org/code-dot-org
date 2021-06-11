@@ -12,6 +12,7 @@ import {
   BubbleBadgeWrapper,
   KeepWorkingBadge
 } from '@cdo/apps/templates/progress/BubbleBadge';
+import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types';
 
 /**
  * A TeacherPanelProgressBubble represents progress for a specific level in the TeacherPanel. It can be a circle
@@ -42,9 +43,8 @@ export class TeacherPanelProgressBubble extends React.Component {
       ...levelProgressStyle(userLevel.status, userLevel.kind)
     };
 
-    // maureen replace with ReviewState const
     const shouldKeepWorking =
-      userLevel.teacherFeedbackReivewState === 'keepWorking';
+      userLevel.teacherFeedbackReivewState === ReviewStates.keepWorking;
 
     // Outer div here is used to make sure our bubbles all take up equivalent
     // amounts of space, whether they're diamonds or circles
