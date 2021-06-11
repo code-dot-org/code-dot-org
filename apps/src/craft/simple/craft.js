@@ -11,6 +11,7 @@ import {
   utils as CraftUtils
 } from '@code-dot-org/craft';
 var dom = require('../../dom');
+import {trySetLocalStorage} from '../../utils';
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../../MusicController');
@@ -102,20 +103,6 @@ var CHARACTER_STEVE = 'Steve';
 var CHARACTER_ALEX = 'Alex';
 var DEFAULT_CHARACTER = CHARACTER_STEVE;
 
-function trySetLocalStorageItem(key, value) {
-  try {
-    window.localStorage.setItem(key, value);
-  } catch (e) {
-    /**
-     * localstorage .setItem in iOS Safari Private Mode always causes an
-     * exception, see http://stackoverflow.com/a/14555361
-     */
-    if (console && console.log) {
-      console.log("Couldn't set local storage item for key " + key);
-    }
-  }
-}
-
 /**
  * Initialize Blockly and the Craft app. Called on page load.
  */
@@ -155,7 +142,7 @@ Craft.init = function(config) {
         Craft.showPlayerSelectionPopup(function(selectedPlayer) {
           trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
           Craft.clearPlayerState();
-          trySetLocalStorageItem('craftSelectedPlayer', selectedPlayer);
+          trySetLocalStorage('craftSelectedPlayer', selectedPlayer);
           Craft.updateUIForCharacter(selectedPlayer);
           Craft.initializeAppLevel(config.level);
           showInstructions();
@@ -582,7 +569,7 @@ Craft.clearPlayerState = function() {
 };
 
 Craft.onHouseSelected = function(houseType) {
-  trySetLocalStorageItem('craftSelectedHouse', houseType);
+  trySetLocalStorage('craftSelectedHouse', houseType);
 };
 
 Craft.initializeAppLevel = function(levelConfig) {
@@ -900,10 +887,7 @@ Craft.executeUserCode = function() {
               levelModel.actionPlane[i].blockType;
           }
         }
-        trySetLocalStorageItem(
-          'craftHouseBlocks',
-          JSON.stringify(newHouseBlocks)
-        );
+        trySetLocalStorage('craftHouseBlocks', JSON.stringify(newHouseBlocks));
       }
 
       var attemptInventoryTypes = levelModel.getInventoryTypes();
@@ -917,7 +901,7 @@ Craft.executeUserCode = function() {
           newInventorySet[type] = true;
         });
 
-      trySetLocalStorageItem(
+      trySetLocalStorage(
         'craftPlayerInventory',
         JSON.stringify(Object.keys(newInventorySet))
       );
