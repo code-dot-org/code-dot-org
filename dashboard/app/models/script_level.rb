@@ -546,20 +546,27 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  # Bring together all the information needed to show the teacher panel on a level
-  def summarize_for_teacher_panel(student, teacher = nil)
-    contained_levels = levels.map(&:contained_levels).flatten
-    contained = contained_levels.any?
+  def contained_levels
+    levels.map(&:contained_levels).flatten
+  end
 
+  # Returns the user_level whose status will determine the bubble state for the
+  # script_level
+  def get_user_level_for_bubble(student)
     levels = if bubble_choice?
                [level.best_result_sublevel(student, script) || level]
-             elsif contained
+             elsif contained_levels.any?
                contained_levels
              else
                [level]
              end
 
-    user_level = student.last_attempt_for_any(levels, script_id: script_id)
+    student.last_attempt_for_any(levels, script_id: script_id)
+  end
+
+  # Bring together all the information needed to show the teacher panel on a level
+  def summarize_for_teacher_panel(student, teacher = nil)
+    user_level = get_user_level_for_bubble(student)
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
 
@@ -573,13 +580,13 @@ class ScriptLevel < ApplicationRecord
       navigator = navigator_info[0] if navigator_info
     end
 
-    if teacher.present?
-      feedback = TeacherFeedback.get_student_level_feedback(student.id, level.id, teacher.id, script_id)
+    if teacher.present? && user_level.present?
+      feedback = TeacherFeedback.get_student_level_feedback(student.id, user_level.level_id, teacher.id, script_id)
     end
 
     teacher_panel_summary = {
       id: level.id.to_s,
-      contained: contained,
+      contained: contained_levels.any?,
       submitLevel: level.properties['submittable'] == 'true',
       paired: paired,
       driver: driver,
@@ -593,6 +600,7 @@ class ScriptLevel < ApplicationRecord
       bonus: bonus,
       teacherFeedbackReivewState: feedback&.review_state
     }
+
     if user_level
       # note: level.id gets replaced with user_level.id here
       teacher_panel_summary.merge!(user_level.attributes)
