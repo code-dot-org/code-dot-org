@@ -215,7 +215,8 @@ module CurriculumSyncUtils
         lesson = Lesson.joins(:script).
           find_by(
             "scripts.name": route_params[:script_id],
-            relative_position: route_params[:position].to_i
+            relative_position: route_params[:position].to_i,
+            has_lesson_plan: true
           )
         unless lesson.present?
           STDERR.puts "could not find lesson for url #{lesson_url.inspect}"
