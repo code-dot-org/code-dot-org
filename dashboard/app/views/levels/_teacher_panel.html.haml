@@ -17,9 +17,10 @@
     - level_example_links = @level.examples.map do |example|
       // We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions
       // as level.game.app gets "gamelab" which makes the examples for sprite lab try to open in game lab.
-      // We treat Dancelab as a sub-set of Sprite Lab levels so have to check and set that before GamelabJr
+      // We treat Dancelab as a sub-set of Sprite Lab levels so have to check and set that before GamelabJr.
       // Artist levels have @level.game.app of "turtle" and Playlab levels have @level.game.app of "studio"
-      // so need to set those too
+      // so need to set those too.
+      // Java Lab levels use hidden levels rather than projects as their example, so we pass the URL directly.
       - if @level.is_a?(Dancelab)
         - send("#{"dance"}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
       - elsif @level.is_a?(GamelabJr)
@@ -29,6 +30,8 @@
         - send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
       - elsif @level.is_a?(Studio) # playlab
         - send("#{"playlab"}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+      - elsif @level.is_a?(Javalab)
+        - example
       - else
         - send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
   - elsif @level.ideal_level_source_id && @script # old style 'solutions' for blockly-type levels

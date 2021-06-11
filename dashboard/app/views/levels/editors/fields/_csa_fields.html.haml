@@ -16,6 +16,43 @@
     - maze_value = @level.serialized_maze ? JSON.pretty_generate(@level.serialized_maze) : ''
     = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'input-block-level'
 
+-# This element exists instead of the _encrypted_examples element in order to facilitate level urls
+-# instead of project urls in the example solutions. This is needed because Java Lab has mini-app
+-# types, such as neighborhood, which are highly dependent on their level definition and do not have
+-# a standalone type. However, we can't use the same method used by Maze or other puzzle level
+-# types. Those send the solution to every client's browser. If we used that method, the solution
+-# would be available to view the solution from the browser. Instead, we encrypt the solution url
+-# and put the level in a hidden script. Only verified teachers will be able to view the level.
+%h1.control-legend{data: {toggle: "collapse", target: "#examples"}}
+  Example Solutions
+
+#examples.in.collapse
+
+  = f.label :examples, 'Example solutions'
+  %p
+    Create a new level in a hidden script. Copy the level url here as it would show up on
+    production.
+    %br
+    Note: The level must be in a hidden script. Otherwise students will be able to find
+    the solution.
+  %p
+  %p
+    %strong
+      Example:
+    https://studio.code.org/s/csp3-2021/lessons/6/levels/3
+  %p
+  %p
+    DO NOT use the levelbuilder URL. Incorrect example: https://levelbuilder-studio.code.org/s/csp3-2021/lessons/6/levels/3
+    %br
+    DO NOT use the level ID. Incorrect example: https://studio.code.org/levels/25959
+  %p
+  - unless f.object.examples.blank?
+    - f.object.examples.each do |example|
+      - next if example.blank?
+      = text_field_tag "level[examples][]", example
+  - 5.times do
+    = text_field_tag "level[examples][]"
+
 :javascript
   function toggleFields(val) {
     const neighborhoodFields = document.getElementById('neighborhood');
