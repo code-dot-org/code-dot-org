@@ -31,6 +31,8 @@ class UnitGroup < ApplicationRecord
 
   scope :with_associated_models, -> {includes([:plc_course, :default_unit_group_units])}
 
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be pilot, beta, preview or stable'}
+
   FAMILY_NAMES = [
     CSD = 'csd'.freeze,
     CSP = 'csp'.freeze,
