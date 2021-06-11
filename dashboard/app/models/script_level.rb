@@ -547,7 +547,7 @@ class ScriptLevel < ApplicationRecord
   end
 
   # Bring together all the information needed to show the teacher panel on a level
-  def summarize_for_teacher_panel(student)
+  def summarize_for_teacher_panel(student, teacher = nil)
     contained_levels = levels.map(&:contained_levels).flatten
     contained = contained_levels.any?
 
@@ -573,6 +573,10 @@ class ScriptLevel < ApplicationRecord
       navigator = navigator_info[0] if navigator_info
     end
 
+    if teacher.present?
+      feedback = TeacherFeedback.get_student_level_feedback(student.id, level.id, teacher.id, script_id)
+    end
+
     teacher_panel_summary = {
       id: level.id.to_s,
       contained: contained,
@@ -586,7 +590,8 @@ class ScriptLevel < ApplicationRecord
       status: status,
       levelNumber: position,
       assessment: assessment,
-      bonus: bonus
+      bonus: bonus,
+      teacherFeedbackReivewState: feedback&.review_state
     }
     if user_level
       # note: level.id gets replaced with user_level.id here

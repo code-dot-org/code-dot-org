@@ -8,49 +8,15 @@ import {
   levelProgressStyle
 } from '@cdo/apps/templates/progress/progressStyles';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {
+  BubbleBadgeWrapper,
+  KeepWorkingBadge
+} from '@cdo/apps/templates/progress/BubbleBadge';
 
 /**
  * A TeacherPanelProgressBubble represents progress for a specific level in the TeacherPanel. It can be a circle
  * or a diamond. The fill and outline change depending on the level status.
  */
-
-const styles = {
-  main: {
-    boxSizing: 'content-box',
-    fontFamily: '"Gotham 5r", sans-serif',
-    width: DOT_SIZE,
-    height: DOT_SIZE,
-    borderRadius: DOT_SIZE,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    fontSize: 16,
-    letterSpacing: -0.11,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    transition:
-      'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
-    marginTop: 3,
-    marginBottom: 3
-  },
-  diamond: {
-    width: DIAMOND_DOT_SIZE,
-    height: DIAMOND_DOT_SIZE,
-    borderRadius: 4,
-    transform: 'rotate(45deg)',
-    marginTop: 6,
-    marginBottom: 6
-  },
-  contents: {
-    whiteSpace: 'nowrap',
-    lineHeight: '16px'
-  },
-  diamondContents: {
-    // undo the rotation from the parent
-    transform: 'rotate(-45deg)'
-  }
-};
-
 export class TeacherPanelProgressBubble extends React.Component {
   static propTypes = {
     // While this userLevel object does have the properties of a levelType object, can
@@ -68,8 +34,6 @@ export class TeacherPanelProgressBubble extends React.Component {
       userLevel.status = LevelStatus.completed_assessment;
     }
 
-    const number = userLevel.levelNumber;
-
     const hideNumber = userLevel.paired || userLevel.bonus;
 
     const style = {
@@ -77,6 +41,10 @@ export class TeacherPanelProgressBubble extends React.Component {
       ...(userLevel.isConceptLevel && styles.diamond),
       ...levelProgressStyle(userLevel.status, userLevel.kind)
     };
+
+    // maureen replace with ReviewState const
+    const shouldKeepWorking =
+      userLevel.teacherFeedbackReivewState === 'keepWorking';
 
     // Outer div here is used to make sure our bubbles all take up equivalent
     // amounts of space, whether they're diamonds or circles
@@ -99,10 +67,53 @@ export class TeacherPanelProgressBubble extends React.Component {
           >
             {userLevel.paired && <FontAwesome icon="users" />}
             {userLevel.bonus && <FontAwesome icon="flag-checkered" />}
-            {!hideNumber && <span>{number}</span>}
+            {!hideNumber && <span>{userLevel.levelNumber}</span>}
           </div>
+          {shouldKeepWorking && (
+            <BubbleBadgeWrapper isDiamond={userLevel.isConceptLevel}>
+              <KeepWorkingBadge />
+            </BubbleBadgeWrapper>
+          )}
         </div>
       </div>
     );
   }
 }
+
+const styles = {
+  main: {
+    boxSizing: 'content-box',
+    fontFamily: '"Gotham 5r", sans-serif',
+    width: DOT_SIZE,
+    height: DOT_SIZE,
+    borderRadius: DOT_SIZE,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    fontSize: 16,
+    letterSpacing: -0.11,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    transition:
+      'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
+    marginTop: 3,
+    marginBottom: 3,
+    position: 'relative'
+  },
+  diamond: {
+    width: DIAMOND_DOT_SIZE,
+    height: DIAMOND_DOT_SIZE,
+    borderRadius: 4,
+    transform: 'rotate(45deg)',
+    marginTop: 6,
+    marginBottom: 6
+  },
+  contents: {
+    whiteSpace: 'nowrap',
+    lineHeight: '16px'
+  },
+  diamondContents: {
+    // undo the rotation from the parent
+    transform: 'rotate(-45deg)'
+  }
+};
