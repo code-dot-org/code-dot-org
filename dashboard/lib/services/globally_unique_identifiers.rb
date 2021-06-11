@@ -81,7 +81,7 @@ module Services
     end
 
     # Returns a key which can be used by to globally and uniquely identify the
-    # given Resource object
+    # given Lesson object
     #
     # Note that currently, this is a one-way only process; we do not yet have a
     # way of finding lessons by this key because we do not yet have a way of
