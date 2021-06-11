@@ -52,13 +52,10 @@ class I18nScriptUtils
   def self.to_crowdin_yaml(data)
     ast = Psych.parse_stream(Psych.dump(data))
 
-    # Make sure we treat the strings 'y' and 'n' as strings, and not bools
-    yaml_bool = /^(?:y|Y|n|N)$/
     ast.grep(Psych::Nodes::Scalar).each do |node|
-      if yaml_bool.match node.value
-        node.plain = false
-        node.quoted = true
-      end
+      node.plain = false
+      node.quoted = true
+      node.style = Psych::Nodes::Scalar::DOUBLE_QUOTED
     end
 
     return ast.yaml(nil, {line_width: -1})
