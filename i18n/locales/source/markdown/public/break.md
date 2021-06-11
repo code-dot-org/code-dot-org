@@ -1,5 +1,5 @@
 ---
-title: Take a Code Break
+"title": "Take a Code Break"
 ---
 
 <div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>

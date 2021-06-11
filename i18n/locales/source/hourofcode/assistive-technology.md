@@ -1,5 +1,5 @@
 ---
-title: Completing an Hour of Code with Assistive Technology
+"title": "Completing an Hour of Code with Assistive Technology"
 ---
 
 # Completing an Hour of Code with Assistive Technology

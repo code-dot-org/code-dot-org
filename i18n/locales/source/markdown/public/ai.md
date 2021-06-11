@@ -1,5 +1,5 @@
 ---
-title: Learn about Artificial Intelligence (AI)
+"title": "Learn about Artificial Intelligence (AI)"
 ---
 
 {{ ai_header_stylesheets_links }}

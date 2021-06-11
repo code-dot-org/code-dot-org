@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for parents
+"title": "Hour of Code How-to Guide for parents"
 ---
 
 # How to do an Hour of Code with your child
