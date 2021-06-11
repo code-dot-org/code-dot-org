@@ -234,12 +234,12 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert unit_group.stable?
   end
 
-  test "stable?: true if unit_group in family has is_stable set" do
-    unit_group = create :unit_group, family_name: 'csd', is_stable: true
+  test "stable?: true if unit_group in family has publsihed_state of stable" do
+    unit_group = create :unit_group, family_name: 'csd', published_state: SharedConstants::PUBLISHED_STATE.stable
     assert unit_group.stable?
   end
 
-  test "stable?: defaults to false if unit_group in family does not have is_stable set" do
+  test "stable?: defaults to false if unit_group in family does not have published_state" do
     unit_group = create :unit_group, family_name: 'csd'
     refute unit_group.stable?
   end
