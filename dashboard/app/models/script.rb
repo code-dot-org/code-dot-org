@@ -1901,7 +1901,7 @@ class Script < ApplicationRecord
 
     level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
     student_ids = section.students.map(&:id)
-    all_feedback = TeacherFeedback.get_all_feedback_for_section(student_ids, level_ids, section.user_id)
+    all_feedback = TeacherFeedback.get_latest_feedbacks_given(student_ids, level_ids, id, section.user_id)
 
     feedback_hash = {}
     all_feedback.each do |feedback_element|
