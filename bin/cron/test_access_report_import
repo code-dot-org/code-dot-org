@@ -4,12 +4,12 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
 require 'cdo/chat_client'
+require 'time'
 
 CENSUS_BUCKET = 'cdo-census'.freeze
 
-def update_object_key(object_key, valid)
-  key_without_extension = object_key.chomp(".test")
-  AWS::S3.rename_object(CENSUS_BUCKET, object_key, key_without_extension + ".#{valid ? 'valid' : 'invalid'}")
+def resolved_object_key(object_key, valid)
+  object_key.chomp(".test") + ".#{Time.now.utc.iso8601}" + ".#{valid ? 'valid' : 'invalid'}"
 end
 
 def main
@@ -18,14 +18,17 @@ def main
     Census::StateCsOffering.dry_run_new_test_file(object_key)
 
     # update object key to reflect valid file
-    update_object_key(object_key, true)
+    new_key = resolved_object_key(object_key, true)
+    AWS::S3.rename_object(CENSUS_BUCKET, object_key, new_key)
+    ChatClient.log("Dry run seeding of state cs offering file succeeded: #{new_key}", color: 'green')
   rescue => e
-    ChatClient.log("Dry run seeding of state cs offering file failed: #{object_key}", color: 'red')
+    new_key = resolved_object_key(object_key, false)
+    ChatClient.log("Dry run seeding of state cs offering file failed: #{new_key}", color: 'red')
     ChatClient.log(e, color: 'red')
 
     # update object key to reflect invalid file
-    update_object_key(object_key, false)
-    raise e
+    AWS::S3.rename_object(CENSUS_BUCKET, object_key, new_key)
+    puts e
   end
 end
 
