@@ -20,7 +20,6 @@ $(document).ready(initPage);
 function initPage() {
   const script = document.querySelector('script[data-teacherpanel]');
   const teacherPanelData = JSON.parse(script.dataset.teacherpanel);
-  console.log(teacherPanelData);
 
   const store = getStore();
 
