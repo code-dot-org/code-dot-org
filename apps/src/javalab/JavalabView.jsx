@@ -35,21 +35,15 @@ class JavalabView extends React.Component {
     channelId: PropTypes.string
   };
 
-  constructor(props) {
-    super(props);
-
-    this.setHeaderHeight = this.setHeaderHeight.bind(this);
-
-    this.state = {
-      isRunning: false,
-      isTesting: false,
-      headerHeight: 800
-    };
-  }
+  state = {
+    isRunning: false,
+    isTesting: false,
+    rightContainerHeight: 800
+  };
 
   componentDidMount() {
     this.props.onMount();
-    this.setHeaderHeight();
+    this.setRightContainerHeight();
   }
 
   compile = () => {
@@ -104,12 +98,12 @@ class JavalabView extends React.Component {
     return <div id="visualization" />;
   };
 
-  setHeaderHeight = () => {
-    let editorAndVisualization = document.getElementById('editor-and-vis-div');
-    let headerHeight = editorAndVisualization.getBoundingClientRect().top;
-    let topPos = window.innerHeight - headerHeight - FOOTER_BUFFER;
+  setRightContainerHeight = () => {
+    let rightContainerHeight = this.EditorAndVisualization.getBoundingClientRect()
+      .top;
+    let topPos = window.innerHeight - rightContainerHeight - FOOTER_BUFFER;
     this.setState({
-      headerHeight: topPos
+      rightContainerHeight: topPos
     });
   };
 
@@ -121,7 +115,7 @@ class JavalabView extends React.Component {
       onContinue,
       handleVersionHistory
     } = this.props;
-    const {isRunning, isTesting, headerHeight} = this.state;
+    const {isRunning, isTesting, rightContainerHeight} = this.state;
 
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -134,7 +128,7 @@ class JavalabView extends React.Component {
         <div
           style={{
             ...styles.javalab,
-            ...{height: headerHeight}
+            ...{height: rightContainerHeight}
           }}
         >
           <div style={styles.buttons}>
@@ -145,7 +139,10 @@ class JavalabView extends React.Component {
               style={styles.finish}
             />
           </div>
-          <div id="editor-and-vis-div" style={styles.editorAndVisualization}>
+          <div
+            ref={ref => (this.EditorAndVisualization = ref)}
+            style={styles.editorAndVisualization}
+          >
             <div
               id="visualizationColumn"
               className="responsive"
