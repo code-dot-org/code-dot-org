@@ -204,6 +204,7 @@ const styles = {
   editorAndConsole: {
     right: '15px',
     width: '100%',
+    height: '100%',
     display: 'flex',
     flexDirection: 'column'
   },
@@ -212,7 +213,7 @@ const styles = {
     flexDirection: 'column',
     height: '100%',
     flexGrow: 1,
-    overflowY: 'scroll'
+    overflowY: 'hidden'
   },
   editorAndVisualization: {
     display: 'flex',
