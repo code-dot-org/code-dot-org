@@ -219,7 +219,7 @@ module AWS
       create_client.list_objects_v2(bucket: bucket, prefix: prefix).each do |response|
         object_keys.concat(
           response.contents.map(&:key).
-            select {|key| key.ends_with?(ext)}
+            select {|key| key.end_with?(ext)}
         )
       end
       object_keys
