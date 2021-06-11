@@ -9,6 +9,11 @@
           "name": "testing_panel",
           "elements": [
             {
+              "type": "html",
+              "name": "testing_warning",
+              "html": "<h2 style='background-color: yellow'>Panel for variable testing (hide before shipping)</h2>"
+            },
+            {
               "type": "text",
               "name": "course",
               "title": "course (CS Principles, CS Discoveries, CS Fundamentals)",
@@ -36,11 +41,17 @@
             {
               "type": "html",
               "name": "variable_testing",
+              "visible": "false",
               "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>userId = {userId}</li><li>course = {course} </li><li> pd = {pd} </li></p>"
+            },
+            {
+              "type": "html",
+              "name": "testing_warning",
+              "html": "<p style='background-color: yellow; text-align:center'>-- End of testing panel -- </p>"
             }
           ],
-          "title": "Panel for variable testing (hide before shipping)",
-          "visible": "false"
+          "title": " ",
+          "visible": "true"
         },
         {
           "type": "html",
@@ -351,7 +362,7 @@
               "choices": [
                 {
                   "value": "unit_1",
-                  "text": "CSP Unit 1 - Digital Information"
+                  "text": "Unit 1 - Digital Information"
                 },
                 {
                   "value": "unit_2",
@@ -396,9 +407,29 @@
               ]
             },
             {
+              "type": "checkbox",
+              "name": "csp_taught_as_ap",
+              "title": "This year I taught CS Principles as...",
+              "description": "Check all that apply",
+              "choices": [
+                {
+                  "value": "ap",
+                  "text": "An AP course"
+                },
+                {
+                  "value": "honors",
+                  "text": "An honors course (non-AP)"
+                },
+                {
+                  "value": "non_AP",
+                  "text": "A regular course (non-AP)"
+                }
+              ]
+            },
+            {
               "type": "radiogroup",
               "name": "ap_admin_support",
-              "title": "How challenging is it for you to get support from your school administration on administering an AP program?",
+              "title": "How challenging is it for you to get support from your school administration running an AP Computer Science program?",
               "choices": [
                 {
                   "value": "1",
@@ -465,26 +496,6 @@
                 {
                   "value": "more_than_4",
                   "text": "More than 4 weeks"
-                }
-              ]
-            },
-            {
-              "type": "checkbox",
-              "name": "csp_taught_as_ap",
-              "title": "This year I taught CS Principles as...",
-              "description": "Check all that apply",
-              "choices": [
-                {
-                  "value": "ap",
-                  "text": "An AP course"
-                },
-                {
-                  "value": "honors",
-                  "text": "An honors course (non-AP)"
-                },
-                {
-                  "value": "non_AP",
-                  "text": "A regular course (non-AP)"
                 }
               ]
             },
