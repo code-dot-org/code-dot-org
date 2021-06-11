@@ -18,7 +18,8 @@ import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
-import DefaultVisualization from './DefaultVisualization';
+import TheaterVisualizationColumn from './TheaterVisualizationColumn';
+import Theater from './Theater';
 import {CsaViewMode} from './constants';
 
 /**
@@ -26,8 +27,6 @@ import {CsaViewMode} from './constants';
  * image telling the user to rotate their device to landscape mode.
  */
 const MOBILE_PORTRAIT_WIDTH = 600;
-
-const ICON_PATH = '/blockly/media/turtle/';
 
 /**
  * An instantiable Javalab class
@@ -41,6 +40,7 @@ const Javalab = function() {
   /** @type {StudioApp} */
   this.studioApp_ = null;
   this.miniApp = null;
+  this.visualization = null;
 };
 
 /**
@@ -91,6 +91,11 @@ Javalab.prototype.init = function(config) {
     this.miniApp = new Neighborhood();
     config.afterInject = () =>
       this.miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
+    this.visualization = <NeighborhoodVisualizationColumn />;
+  } else if (this.level.csaViewMode === CsaViewMode.THEATER) {
+    this.miniApp = new Theater();
+    config.afterInject = () => this.miniApp.afterInject();
+    this.visualization = <TheaterVisualizationColumn />;
   }
 
   const onMount = () => {
@@ -182,6 +187,10 @@ Javalab.prototype.init = function(config) {
   // Dispatches a redux update of isDarkMode
   getStore().dispatch(setIsDarkMode(this.isDarkMode));
 
+  // ensure autosave is executed on first run by manually setting
+  // projectChanged to true.
+  project.projectChanged();
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <JavalabView
@@ -191,27 +200,13 @@ Javalab.prototype.init = function(config) {
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
         handleVersionHistory={handleVersionHistory}
-        visualization={this.getVisualization(this.level.csaViewMode)}
+        visualization={this.visualization}
       />
     </Provider>,
     document.getElementById(config.containerId)
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
-};
-
-Javalab.prototype.getVisualization = function(csaViewMode) {
-  if (!csaViewMode || csaViewMode === CsaViewMode.CONSOLE) {
-    return null;
-  }
-
-  if (csaViewMode === CsaViewMode.NEIGHBORHOOD) {
-    return (
-      <NeighborhoodVisualizationColumn iconPath={ICON_PATH} showSpeedSlider />
-    );
-  }
-
-  return <DefaultVisualization />;
 };
 
 // Ensure project is saved before exiting
@@ -242,7 +237,9 @@ Javalab.prototype.onRun = function() {
     getStore().getState().pageConstants.serverLevelId,
     options
   );
-  this.javabuilderConnection.connectJavabuilder();
+  project.autosave(() => {
+    this.javabuilderConnection.connectJavabuilder();
+  });
 };
 
 // Called by Javalab console to send a message to Javabuilder.

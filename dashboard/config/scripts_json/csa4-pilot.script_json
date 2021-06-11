@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-08 18:51:36 UTC",
+    "serialized_at": "2021-06-08 19:33:12 UTC",
     "seeding_key": {
       "script.name": "csa4-pilot"
     }
@@ -126,6 +126,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "In this lesson, students develop the dice rolling feature of the Pop the Balloon game. Each subtask of the development process requires students to add different randomization features, including generating numbers between ranges, computing probabilities, and using conditional statements that are executed based on varying results.",
+        "preparation": "* Print and cut out a class set of Quiz, Quiz, Trade cards",
+        "student_overview": "One of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes. Today, you add randomization to the Pop the Balloon game by adding a dice rolling feature."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -449,6 +452,48 @@
       "seeding_key": {
         "lesson_activity.key": "727add1a-e3be-4ad1-874e-39229de541c4",
         "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "59e40a92-80b8-4fcb-8c95-94cc43dead42",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59e40a92-80b8-4fcb-8c95-94cc43dead42",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "862927aa-efd1-4026-8466-b3442acebbcd",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "2ebb278d-ac6f-4a1a-991d-3988b03ecd19",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2ebb278d-ac6f-4a1a-991d-3988b03ecd19",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot"
       }
@@ -1118,6 +1163,7 @@
       "key": "14c69a55-a843-4827-9d6e-594f7077bcb2",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you remember about a Boolean value?*\n\n**Discussion Goal:** Students share that Boolean values are only `true` or `false`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the `isOnBucket()` method and its return type.",
         "name": "Boolean Value"
       },
       "seeding_key": {
@@ -1126,9 +1172,47 @@
       }
     },
     {
+      "key": "c23ac4b5-9e0b-4853-88b6-39ead21fb3d5",
+      "position": 2,
+      "properties": {
+        "description": "In Unit 1, you learned that sometimes we need to determine when a value is `true` or `false`. To review, we will look back at scenarios using the `Painter`’s information-gathering commands to determine if a Boolean value is `true` or `false`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c23ac4b5-9e0b-4853-88b6-39ead21fb3d5",
+        "lesson_activity.key": "577f24f7-2440-4a23-84be-68051b42e60d"
+      }
+    },
+    {
+      "key": "f0708d9c-d464-465e-82ce-64a29952e6be",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to review the scenarios. Have students determine if the output is `true` or `false` for each scenario.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `canMove()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `isOnBucket()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingNorth()`"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0708d9c-d464-465e-82ce-64a29952e6be",
+        "lesson_activity.key": "577f24f7-2440-4a23-84be-68051b42e60d"
+      }
+    },
+    {
+      "key": "a91a58b4-a90d-4ce4-ae77-9bac560d411d",
+      "position": 4,
+      "properties": {
+        "description": "Today we will learn how to expand our use of `if` statements with relational operators.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a91a58b4-a90d-4ce4-ae77-9bac560d411d",
+        "lesson_activity.key": "577f24f7-2440-4a23-84be-68051b42e60d"
+      }
+    },
+    {
       "key": "016e1ef0-e2fd-43c8-b611-53dd9ef591be",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you used operators like less than, greater than, or equal?*\n\n**Discussion Goal:** Students recall using operators in math or previous computer science courses. ",
+        "duration": "20",
+        "name": "Relational Operators"
       },
       "seeding_key": {
         "activity_section.key": "016e1ef0-e2fd-43c8-b611-53dd9ef591be",
@@ -1136,13 +1220,308 @@
       }
     },
     {
+      "key": "d49d5c73-f08b-4af3-8f00-8c24ca8e6688",
+      "position": 2,
+      "properties": {
+        "description": "Programming is all about testing and comparing values to make decisions about actions to take. Relational operators help us evaluate values to make these decisions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d49d5c73-f08b-4af3-8f00-8c24ca8e6688",
+        "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
+      }
+    },
+    {
+      "key": "33d90a96-8e7f-4adb-a4f6-8d33ce465965",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the definition and chart of relational operators.\n* The `==` operator is equal to\n* The `!=` operator is not equal to\n* The `>` operator is greater than\n* The `<` operator is less than\n* The `>=` operator is greater than or equal to\n* The `<=` operator is less than or equal to",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you review the chart, emphasize the difference between the assignment operator (`=`) and the equals operator (`==`). Confusing the assignment operator with the equals operator is common. It is important when reading out loud to differentiate the single equal sign as an assignment and the double equals sign as a comparison."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "33d90a96-8e7f-4adb-a4f6-8d33ce465965",
+        "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
+      }
+    },
+    {
+      "key": "b3822b2c-921b-4cfa-9da4-e45662a0d2bc",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In what order would you evaluate this expression?*\n\n**Discussion Goal:** Students recall the order of operations and how to evaluate the expression.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the order of operations that Java uses for arithmetic and relational operators when evaluating expressions.\n* The highest precedence is multiplication, division, and modulus.\n* The second precedence is addition and subtraction.\n* The third precedence is the relational operators.\n* The lowest precedence is the equality operators.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you click through the animated slide, review the mod `%` operator. Emphasize that relational operators have lower precedence than addition and subtraction operators and that relational operators have higher precedence than equality operators. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b3822b2c-921b-4cfa-9da4-e45662a0d2bc",
+        "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
+      }
+    },
+    {
+      "key": "a92e4a2a-fce1-465d-8e98-dce99c98d0e0",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an Exploring Operators handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 10 minutes to complete the Exploring Operators handout. As students are working, use Catch and Release as appropriate to maintain engagement. You may choose to catch to:\n* Ask a student to demonstrate how to use the widget when they have started the plugged section of the activity.\n* Answer the fill-in-the-blank questions for the relational operators.\n* Answer the free-response questions for the numeric values.\n* Clarify how operator precedence is used in arithmetic expressions using relational operators.\n* Support students with misconceptions involving mathematical concepts.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use a public timer to differentiate between independent work and discussion, addressing all student questions after a given amount of time has elapsed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a92e4a2a-fce1-465d-8e98-dce99c98d0e0",
+        "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
+      }
+    },
+    {
+      "key": "9c561b42-e312-49b7-947b-c46bc0f52ae1",
+      "position": 6,
+      "properties": {
+        "description": "You have used `if` statements in previous lessons before. Let’s recall how you would use an `if` statement to modify the outcome of a program. ",
+        "duration": "15",
+        "name": "if Statements Using Relational Operators",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9c561b42-e312-49b7-947b-c46bc0f52ae1",
+        "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
+      }
+    },
+    {
+      "key": "29126bf1-f1f9-4133-b0fc-786107c3f316",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might you modify the code to check if Frida has enough paint to produce the mural?*\n\n**Discussion Goal:** Students notice that for Frida to check if she has enough paint, the variables `currentPaint` and `muralAmount` with the relational operator `<=` needs to be inside the conditional statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using relational operators inside an `if` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 through 4 on Code Studio. Remind them that they should use an `if` statement and relational operator to solve the problems."
+      },
+      "seeding_key": {
+        "activity_section.key": "29126bf1-f1f9-4133-b0fc-786107c3f316",
+        "lesson_activity.key": "4b423dad-bc00-4e13-9c54-6b81cf366aa6"
+      }
+    },
+    {
       "key": "58d4d4a4-fa9b-48e6-bb85-abff711b4c91",
       "position": 1,
       "properties": {
+        "description": "**Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Prompt students to write down any bugs they encountered and the strategy they used to debug on a sticky note. Have students add their sticky notes to the Debugging Wall. If time permits, students should read the sticky notes placed by other students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Debugging if Statements"
       },
       "seeding_key": {
         "activity_section.key": "58d4d4a4-fa9b-48e6-bb85-abff711b4c91",
         "lesson_activity.key": "727add1a-e3be-4ad1-874e-39229de541c4"
+      }
+    },
+    {
+      "key": "9c00429a-ee55-4885-a940-33ddf5f937c4",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c00429a-ee55-4885-a940-33ddf5f937c4",
+        "lesson_activity.key": "727add1a-e3be-4ad1-874e-39229de541c4"
+      }
+    },
+    {
+      "key": "5cbc99ea-5019-42d6-8294-563db7ca260e",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student one Quiz, Quiz, Trade card. Make sure students keep the definition side hidden.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for Quiz, Quiz, Trade. Students should find a partner, complete their Quiz, Quiz, Trade, and then raise their hand to find a new partner. They will repeat this process for 5 minutes.",
+        "name": "Vocabulary Review: Quiz, Quiz, Trade"
+      },
+      "seeding_key": {
+        "activity_section.key": "5cbc99ea-5019-42d6-8294-563db7ca260e",
+        "lesson_activity.key": "59e40a92-80b8-4fcb-8c95-94cc43dead42"
+      }
+    },
+    {
+      "key": "68aa26b0-be5f-4865-a767-d30727dcaa21",
+      "position": 2,
+      "properties": {
+        "description": "You have learned a lot of new words and concepts that will be useful in today’s lesson. Today you will apply them to expand your Pop the Balloon game.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "68aa26b0-be5f-4865-a767-d30727dcaa21",
+        "lesson_activity.key": "59e40a92-80b8-4fcb-8c95-94cc43dead42"
+      }
+    },
+    {
+      "key": "7ff8a8d8-bc27-498b-8bfb-a1a39d0132ec",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today we will build the dice rolling feature of our Pop the Balloon game. \n\nThe game uses two six-sided dice, which we will refer to as the left die and right die. To roll the dice in the game, the user will click the roll button to generate two numbers between 1 and 6. After each roll, images of the dice will be updated on the game board.\n\nThere is a lot to do today so let’s break this into smaller tasks.",
+        "duration": "2",
+        "name": "Dice Rolling Feature Overview",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7ff8a8d8-bc27-498b-8bfb-a1a39d0132ec",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "05b07170-9a10-406d-a73b-3a654bd5d65b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Walk students through the checklist of subtasks needed to create the dice rolling feature."
+      },
+      "seeding_key": {
+        "activity_section.key": "05b07170-9a10-406d-a73b-3a654bd5d65b",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "002741a5-f231-428d-95ee-8bbdc32b8b6f",
+      "position": 3,
+      "properties": {
+        "description": "In previous lessons, you learned how to generate a random number using `Math.random()`.\n\nOne of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes.",
+        "duration": "13",
+        "name": "Task 1: Implementing rollDice()",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "002741a5-f231-428d-95ee-8bbdc32b8b6f",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "5dc75e92-7ae8-4b1b-975b-68f9fbc4fccb",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When the roll button is clicked, two random numbers between 1 and 6 are generated to represent the numbers showing on each die. How might this be implemented using `Math.random()`?*\n\n**Discussion Goal:** For each die, generate a random number between 1 to 6 to represent the value of the rolled die. To generate a number from 1 to 6, use `(int)(Math.random() * 6) + 1 `.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1 then complete Level 2 in pairs, where they create a dice rolling simulation."
+      },
+      "seeding_key": {
+        "activity_section.key": "5dc75e92-7ae8-4b1b-975b-68f9fbc4fccb",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "dbe279fd-073e-47b3-afb4-2aec813105d8",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the numbers returned by `Math.random()` have an equal probability of being generated. \n\n**Display:** Show the Probability with Math.random() video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which of the following would be true about 65% of the time?*\n\n**Discussion Goal:** The answer is B.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To demonstrate this to the class, go to Level 3 on Code Studio and run `Math.random()` 10 times. Keep track of how many times each of the three options were true. Answer B should have the highest number of occurrences out of the 10 trials."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dbe279fd-073e-47b3-afb4-2aec813105d8",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "5ea15af8-e8fb-4500-a212-ce8e9cc329dd",
+      "position": 6,
+      "properties": {
+        "description": "Not all outcomes in a game need to have equal probability. Some outcomes are more likely to occur than others.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5ea15af8-e8fb-4500-a212-ce8e9cc329dd",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "87ac4023-fafe-4fea-97a5-71c3a937a3a2",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show example of a weighted die that rolls a five or higher 65% of the time. Points to highlight:\n* To allow our code to make decisions, we can use an `if-else` statement.\n* If `Math.random()` generates a number between above 0.35, the code block under the `if` statement is executed. This condition is true 65% of the time. Therefore, `leftRoll` will be assigned to be five or six 65% of the time.\n* If `Math.random()` generates a number that is less than or equal to 0.35, the code block under the `else` statement is executed. This condition is true 35% of the time. Therefore, `leftRoll` will be assigned one, two, three or four for the remaining 35% of the time.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The conditional statement expression `Math.random() > 0.35` could also be written as  `Math.random() <= 0.65`. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "87ac4023-fafe-4fea-97a5-71c3a937a3a2",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "504d81d7-988f-4acb-956c-3bf94fd0e3b8",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 4 on Code Studio, where they create a weighted dice using conditional statements."
+      },
+      "seeding_key": {
+        "activity_section.key": "504d81d7-988f-4acb-956c-3bf94fd0e3b8",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "5325bcdc-e120-4f59-9293-50480d6455f2",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the next two tasks from the checklist of subtasks. Use the image to show the result of completing the tasks.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 5 and 6 on Code Studio. In pairs, students complete Level 5 and 6 to add roll button functionality and dice images to the game board.",
+        "duration": "8",
+        "name": "Task 2: Adding Images to the Game Board"
+      },
+      "seeding_key": {
+        "activity_section.key": "5325bcdc-e120-4f59-9293-50480d6455f2",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "299341cc-bc8b-485e-acbd-30439566cfb5",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the last task from the checklist of subtasks. Use the image to show the result of completing the task.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Currently, each side of a die is represented by an individual `Die` object stored in a variable. How could we use an array to represent a `Die`?*\n\n**Discussion Goal:** Create an array of `Die` where each `Die` object element can be accessed at its corresponding index (offset by 1).\n\n**Do This:** Click through the animated slide to show an array containing each side of a die.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 7 on Code Studio. In pairs, students complete Level 7 to use an array to represent dice and expand the `rollDice()` method to update the dice images on the game board.",
+        "duration": "12",
+        "name": "Task 3: Update Dice Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "299341cc-bc8b-485e-acbd-30439566cfb5",
+        "lesson_activity.key": "862927aa-efd1-4026-8466-b3442acebbcd"
+      }
+    },
+    {
+      "key": "eb2e0502-cdac-4bbb-9f29-b918a73b832b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Great job! You have completed all of the subtasks for the dice rolling feature. As we continue to build the Pop the Balloon game, you will continue to modify your code to add more functionality. ",
+        "name": "Closing the Loop",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eb2e0502-cdac-4bbb-9f29-b918a73b832b",
+        "lesson_activity.key": "2ebb278d-ac6f-4a1a-991d-3988b03ecd19"
+      }
+    },
+    {
+      "key": "4fb65044-a62f-4f2a-a4dc-546d2eebdd5f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives."
+      },
+      "seeding_key": {
+        "activity_section.key": "4fb65044-a62f-4f2a-a4dc-546d2eebdd5f",
+        "lesson_activity.key": "2ebb278d-ac6f-4a1a-991d-3988b03ecd19"
+      }
+    },
+    {
+      "key": "55a14961-e0fd-4d72-b03b-85bd705f9f06",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "55a14961-e0fd-4d72-b03b-85bd705f9f06",
+        "lesson_activity.key": "2ebb278d-ac6f-4a1a-991d-3988b03ecd19"
       }
     }
   ],
@@ -1238,6 +1617,18 @@
       }
     },
     {
+      "name": "[KEY] U4L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1PV8nE8aYJ_qdQ1qKu-a6fB9n0cJo1YavimYg8D_7ZTY/edit?usp=sharing",
+      "key": "_key_u4l5_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u4l5_extra_practice"
+      }
+    },
+    {
       "name": "Casting Exploration",
       "url": "https://docs.google.com/document/d/1IPYgSjg3JmKCD33csEdikwi4-egwQGrWwciFeaHLFUA/edit#",
       "key": "casting_exploration",
@@ -1271,6 +1662,18 @@
       },
       "seeding_key": {
         "resource.key": "math_class_activity_guide"
+      }
+    },
+    {
+      "name": "Quiz, Quiz Trade",
+      "url": "https://docs.google.com/document/u/2/d/1c9smHGRY2DNFQupRe7GS3RlU7u4Dd2J-y8dfpukljc4/edit",
+      "key": "quiz_quiz_trade_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "quiz_quiz_trade_1"
       }
     },
     {
@@ -1319,6 +1722,18 @@
       },
       "seeding_key": {
         "resource.key": "u4l4_extra_practice"
+      }
+    },
+    {
+      "name": "U4L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1YyzGnv1oh7nvRvG3DaW5A1nvxns977fGp2c88Qh1jnQ/edit?usp=sharing",
+      "key": "u4l5_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u4l5_extra_practice"
       }
     },
     {
@@ -1441,6 +1856,30 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "u4l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u4l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "quiz_quiz_trade_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u4l5_extra_practice"
       }
     }
   ],
@@ -1725,23 +2164,53 @@
       }
     },
     {
-      "key": "b11a4713-62a2-473a-a1bf-99e66b761f49",
+      "key": "5524873e-9f54-4dd7-81a9-86a164ada4ab",
       "properties": {
         "description": "Evaluate expressions using relational operators"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "objective.key": "b11a4713-62a2-473a-a1bf-99e66b761f49"
+        "objective.key": "5524873e-9f54-4dd7-81a9-86a164ada4ab"
       }
     },
     {
-      "key": "74fc8f0b-5629-4d0c-b9d6-798924eb57eb",
+      "key": "ed9c8df0-539c-4bbb-bb70-737272712974",
       "properties": {
         "description": "Construct if statements using relational operators"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "objective.key": "74fc8f0b-5629-4d0c-b9d6-798924eb57eb"
+        "objective.key": "ed9c8df0-539c-4bbb-bb70-737272712974"
+      }
+    },
+    {
+      "key": "da25aec1-6d77-4aba-a5f2-19500e92349a",
+      "properties": {
+        "description": "Use Math.random() to generate random numbers"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "da25aec1-6d77-4aba-a5f2-19500e92349a"
+      }
+    },
+    {
+      "key": "16b96062-d951-48b5-84f3-42cde5207f51",
+      "properties": {
+        "description": "Use Math.random() to compute probabilities"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "16b96062-d951-48b5-84f3-42cde5207f51"
+      }
+    },
+    {
+      "key": "9b56f9b2-34d1-45c3-b0ae-e9d852d17db1",
+      "properties": {
+        "description": "Write conditional statements to execute an action based on a random number"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "9b56f9b2-34d1-45c3-b0ae-e9d852d17db1"
       }
     }
   ],
@@ -1919,6 +2388,20 @@
         "lesson.key": "lesson-5",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.E.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.D.4"
       }
     }
   ],

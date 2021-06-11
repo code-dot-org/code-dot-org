@@ -325,6 +325,26 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
   end
 
+  test 'unit group with pilot experiment has pilot published state' do
+    unit_group = create(:unit_group, name: 'single-lesson-script', pilot_experiment: 'my-experiment')
+    assert_equal SharedConstants::PUBLISHED_STATE.pilot, unit_group.published_state
+  end
+
+  test 'unit group with visible false and no pilot_experiment has beta published state' do
+    unit_group = create(:unit_group, name: 'single-lesson-script', visible: false)
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, unit_group.published_state
+  end
+
+  test 'unit group with visible true has preview published state' do
+    unit_group = create(:unit_group, name: 'single-lesson-script', visible: true)
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit_group.published_state
+  end
+
+  test 'unit group with visible true and is_stable true has stable published state' do
+    unit_group = create(:unit_group, name: 'single-lesson-script', visible: true, is_stable: true)
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, unit_group.published_state
+  end
+
   test "summarize" do
     unit_group = create :unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999'
 
@@ -363,7 +383,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     summary = unit_group.summarize
 
     assert_equal [:name, :id, :title, :assignment_family_title,
-                  :family_name, :version_year, :visible, :is_stable,
+                  :family_name, :version_year, :published_state,
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources, :migrated_teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :versions, :show_assign_button,

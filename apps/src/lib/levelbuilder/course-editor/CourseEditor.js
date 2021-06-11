@@ -17,6 +17,7 @@ import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVers
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 class CourseEditor extends Component {
   static propTypes = {
@@ -25,8 +26,8 @@ class CourseEditor extends Component {
     initialVersionTitle: PropTypes.string,
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
-    initialVisible: PropTypes.bool.isRequired,
-    initialIsStable: PropTypes.bool.isRequired,
+    initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
+      .isRequired,
     initialPilotExperiment: PropTypes.string,
     initialDescriptionShort: PropTypes.string,
     initialDescriptionStudent: PropTypes.string,
@@ -67,7 +68,6 @@ class CourseEditor extends Component {
       descriptionStudent: this.props.initialDescriptionStudent,
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
-      visible: this.props.initialVisible,
       pilotExperiment: this.props.initialPilotExperiment,
       teacherResources: teacherResources,
       title: this.props.initialTitle,
@@ -77,15 +77,8 @@ class CourseEditor extends Component {
       hasNumberedUnits: this.props.initialHasNumberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
-      isStable: this.props.initialIsStable,
       scriptsInCourse: this.props.initialScriptsInCourse,
-      publishedState: this.props.initialVisible
-        ? this.props.initialIsStable
-          ? 'Recommended'
-          : 'Preview'
-        : this.props.initialPilotExperiment
-        ? 'Pilot'
-        : 'Beta'
+      publishedState: this.props.initialPublishedState
     };
   }
 
@@ -112,8 +105,7 @@ class CourseEditor extends Component {
       has_numbered_units: this.state.hasNumberedUnits,
       family_name: this.state.familyName,
       version_year: this.state.versionYear,
-      is_stable: this.state.isStable,
-      visible: this.state.visible,
+      published_state: this.state.publishedState,
       pilot_experiment: this.state.pilotExperiment,
       scripts: this.state.scriptsInCourse
     };
@@ -131,7 +123,7 @@ class CourseEditor extends Component {
     }
 
     if (
-      this.state.publishedState === 'Pilot' &&
+      this.state.publishedState === PublishedState.pilot &&
       this.state.pilotExperiment === ''
     ) {
       this.setState({
@@ -179,8 +171,6 @@ class CourseEditor extends Component {
       familyName,
       versionYear,
       pilotExperiment,
-      isStable,
-      visible,
       scriptsInCourse,
       publishedState
     } = this.state;
@@ -296,13 +286,9 @@ class CourseEditor extends Component {
 
         <CollapsibleEditorSection title="Publishing Settings">
           <CourseVersionPublishingEditor
-            visible={visible}
-            isStable={isStable}
             pilotExperiment={pilotExperiment}
             versionYear={versionYear}
             familyName={familyName}
-            updateVisible={visible => this.setState({visible})}
-            updateIsStable={isStable => this.setState({isStable})}
             updatePilotExperiment={pilotExperiment =>
               this.setState({pilotExperiment})
             }
