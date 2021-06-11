@@ -13,6 +13,8 @@ import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import ControlButtons from './ControlButtons';
 import JavalabButton from './JavalabButton';
 
+const FOOTER_BUFFER = 10;
+
 class JavalabView extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
@@ -33,13 +35,21 @@ class JavalabView extends React.Component {
     channelId: PropTypes.string
   };
 
-  state = {
-    isRunning: false,
-    isTesting: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.setHeaderHeight = this.setHeaderHeight.bind(this);
+
+    this.state = {
+      isRunning: false,
+      isTesting: false,
+      headerHeight: 800
+    };
+  }
 
   componentDidMount() {
     this.props.onMount();
+    this.setHeaderHeight();
   }
 
   compile = () => {
@@ -94,6 +104,15 @@ class JavalabView extends React.Component {
     return <div id="visualization" />;
   };
 
+  setHeaderHeight = () => {
+    let editorAndVisualization = document.getElementById('editor-and-vis-div');
+    let headerHeight = editorAndVisualization.getBoundingClientRect().top;
+    let topPos = window.innerHeight - headerHeight - FOOTER_BUFFER;
+    this.setState({
+      headerHeight: topPos
+    });
+  };
+
   render() {
     const {
       isDarkMode,
@@ -102,7 +121,7 @@ class JavalabView extends React.Component {
       onContinue,
       handleVersionHistory
     } = this.props;
-    const {isRunning, isTesting} = this.state;
+    const {isRunning, isTesting, headerHeight} = this.state;
 
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -112,7 +131,12 @@ class JavalabView extends React.Component {
 
     return (
       <StudioAppWrapper>
-        <div style={styles.javalab}>
+        <div
+          style={{
+            ...styles.javalab,
+            ...{height: headerHeight}
+          }}
+        >
           <div style={styles.buttons}>
             <JavalabSettings>{this.renderSettings()}</JavalabSettings>
             <JavalabButton
@@ -121,7 +145,7 @@ class JavalabView extends React.Component {
               style={styles.finish}
             />
           </div>
-          <div style={styles.editorAndVisualization}>
+          <div id="editor-and-vis-div" style={styles.editorAndVisualization}>
             <div
               id="visualizationColumn"
               className="responsive"
@@ -149,6 +173,7 @@ class JavalabView extends React.Component {
               />
               <JavalabConsole
                 onInputMessage={onInputMessage}
+                style={styles.consoleParent}
                 leftColumn={
                   <ControlButtons
                     isDarkMode={isDarkMode}
@@ -181,11 +206,19 @@ const styles = {
   },
   editorAndConsole: {
     right: '15px',
-    width: '100%'
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  consoleParent: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1
   },
   editorAndVisualization: {
     display: 'flex',
-    flexGrow: '1'
+    flexGrow: '1',
+    height: '100%'
   },
   preview: {
     backgroundColor: color.light_gray,
