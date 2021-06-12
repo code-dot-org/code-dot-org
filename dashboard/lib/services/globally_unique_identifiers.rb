@@ -79,5 +79,17 @@ module Services
         find_by(key: keys["CourseVersion"], "course_offerings.key": keys["CourseOffering"])
       return Resource.find_by(key: keys["Resource"], course_version: course_version)
     end
+
+    # Returns a key which can be used by to globally and uniquely identify the
+    # given Lesson object
+    #
+    # Note that currently, this is a one-way only process; we do not yet have a
+    # way of finding lessons by this key because we do not yet have a way of
+    # building the regular expression because neither scripts nor lessons have
+    # expression validation for their relevant identifiers.
+    def self.build_lesson_key(lesson)
+      return unless lesson&.script.present?
+      [lesson.script.name, lesson.key].join('/')
+    end
   end
 end
