@@ -2,7 +2,7 @@ import {
   uniqLabelFeaturesSelected,
   prevNextButtons
 } from "./helpers/navigationValidation.js";
-import { reportPanelView } from './helpers/metrics.js';
+import { reportPanelView } from "./helpers/metrics.js";
 import {
   getAccuracyClassification,
   getAccuracyRegression,
@@ -90,8 +90,8 @@ export function setSelectedJSON(jsonfile) {
   return { type: SET_SELECTED_JSON, jsonfile };
 }
 
-export function setImportedData(data) {
-  return { type: SET_IMPORTED_DATA, data };
+export function setImportedData(data, userUploadedData) {
+  return { type: SET_IMPORTED_DATA, data, userUploadedData };
 }
 
 export function setImportedMetadata(metadata) {
@@ -311,6 +311,11 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_IMPORTED_DATA) {
+    state.instructionsKeyCallback(
+      action.userUploadedData ? "uploadedDataset" : "selectedDataset",
+      null
+    );
+
     return {
       ...state,
       data: action.data
@@ -562,11 +567,26 @@ export default function rootReducer(state = initialState, action) {
       return state;
     } else if (state.currentColumn === action.currentColumn) {
       // If column is selected, then deselect.
+      state.instructionsKeyCallback("dataDisplayFeatures", null);
       return {
         ...state,
         currentColumn: undefined
       };
     } else {
+      if (state.currentPanel === "dataDisplayFeatures") {
+        if (
+          state.columnsByDataType[action.currentColumn] ===
+          ColumnTypes.NUMERICAL
+        ) {
+          state.instructionsKeyCallback("selectedFeatureNumerical", null);
+        } else if (
+          state.columnsByDataType[action.currentColumn] ===
+          ColumnTypes.CATEGORICAL
+        ) {
+          state.instructionsKeyCallback("selectedFeatureCategorical", null);
+        }
+      }
+
       // Select the column.
       return {
         ...state,
@@ -584,7 +604,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       resultsHighlightRow: action.highlightRow
-    }
+    };
   }
   if (action.type === SET_SAVE_STATUS) {
     return {
@@ -606,6 +626,10 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_SHOW_RESULTS_DETAILS) {
+    state.instructionsKeyCallback(
+      action.show ? "resultsDetails" : "results",
+      null
+    );
     return {
       ...state,
       showResultsDetails: action.show
@@ -621,19 +645,19 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       instructionsOverlayActive: false
-    }
+    };
   }
   if (action.type === SET_RESULTS_TAB) {
     return {
       ...state,
       resultsTab: action.key
-    }
+    };
   }
   if (action.type === SET_FIREHOSE_METRICS_LOGGER) {
     return {
       ...state,
       firehoseMetricsLogger: action.firehoseMetricsLogger
-    }
+    };
   }
   return state;
 }
@@ -759,7 +783,10 @@ export function getCurrentColumnData(state) {
     extrema: getExtrema(state, state.currentColumn),
     frequencies: getOptionFrequencies(state, state.currentColumn),
     description: getColumnDescription(state, state.currentColumn),
-    hasTooManyUniqueOptions: hasTooManyUniqueOptions(state, state.currentColumn),
+    hasTooManyUniqueOptions: hasTooManyUniqueOptions(
+      state,
+      state.currentColumn
+    ),
     isColumnDataValid: isColumnDataValid(state, state.currentColumn),
     isSelectable: isSelectable(state, state.currentColumn)
   };
@@ -807,7 +834,8 @@ export function getCrossTabData(state) {
   }
 
   if (
-    !isColumnCategorical(state, state.labelColumn) || !isColumnCategorical(state, state.currentColumn)
+    !isColumnCategorical(state, state.labelColumn) ||
+    !isColumnCategorical(state, state.currentColumn)
   ) {
     return null;
   }
@@ -877,8 +905,8 @@ export function getScatterPlotData(state) {
   }
 
   if (
-    !isColumnNumerical(state, state.labelColumn)
-    || !isColumnNumerical(state, state.currentColumn)
+    !isColumnNumerical(state, state.labelColumn) ||
+    !isColumnNumerical(state, state.currentColumn)
   ) {
     return null;
   }
@@ -912,7 +940,11 @@ export function getConvertedAccuracyCheckExamples(state) {
     let convertedAccuracyCheckExample = [];
     for (var i = 0; i < state.selectedFeatures.length; i++) {
       convertedAccuracyCheckExample.push(
-        getConvertedValueForDisplay(state, example[i], state.selectedFeatures[i])
+        getConvertedValueForDisplay(
+          state,
+          example[i],
+          state.selectedFeatures[i]
+        )
       );
     }
     convertedAccuracyCheckExamples.push(convertedAccuracyCheckExample);
@@ -921,11 +953,17 @@ export function getConvertedAccuracyCheckExamples(state) {
 }
 
 export function getConvertedPredictedLabel(state) {
-  return getConvertedValueForDisplay(state, state.prediction, state.labelColumn);
+  return getConvertedValueForDisplay(
+    state,
+    state.prediction,
+    state.labelColumn
+  );
 }
 
 export function getConvertedLabels(state, rawLabels = []) {
-  return rawLabels.map(label => getConvertedValueForDisplay(state, label, state.labelColumn));
+  return rawLabels.map(label =>
+    getConvertedValueForDisplay(state, label, state.labelColumn)
+  );
 }
 
 export function isRegression(state) {
@@ -996,7 +1034,8 @@ export function getLabelToSave(state) {
 function getSummaryStat(state) {
   let summaryStat = {};
   summaryStat.type = isRegression(state)
-    ? MLTypes.REGRESSION : MLTypes.CLASSIFICATION;
+    ? MLTypes.REGRESSION
+    : MLTypes.CLASSIFICATION;
   summaryStat.stat = getPercentCorrect(state);
   return summaryStat;
 }
