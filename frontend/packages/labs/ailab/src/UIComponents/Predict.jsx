@@ -2,6 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { store } from "../index.js";
 import train from "../train";
 import {
   setTestData,
@@ -36,7 +37,7 @@ class Predict extends Component {
   };
 
   onClickPredict = () => {
-    train.onClickPredict();
+    train.onClickPredict(store);
   };
 
   render() {

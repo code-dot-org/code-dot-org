@@ -2,7 +2,6 @@
 
 import KNNTrainer from "./trainers/KNNTrainer";
 
-import { store } from "./index.js";
 import { buildOptionNumberKey } from "./helpers/columnDetails.js";
 import {
   getSelectedCategoricalColumns,
@@ -18,8 +17,6 @@ import {
 } from "./constants.js";
 import { getRandomInt } from "./helpers/utils.js";
 import { convertValueForTraining } from "./helpers/valueConversion.js";
-
-
 
 /* Builds a hash that maps selected categorical features to their option-
   number keys and dispatches that hash to the Redux store.
@@ -38,7 +35,8 @@ import { convertValueForTraining } from "./helpers/valueConversion.js";
   }
   */
 
-const buildOptionNumberKeysByFeature = state => {
+const buildOptionNumberKeysByFeature = store => {
+  const state = store.getState();
   let optionsMappedToNumbersByFeature = {};
   const categoricalColumnsToConvert = getSelectedCategoricalColumns(state);
   categoricalColumnsToConvert.forEach(
@@ -74,12 +72,14 @@ const extractTrainingLabel = (state, row) => {
   return convertValueForTraining(state, state.labelColumn, row);
 };
 
-const prepareTrainingData = () => {
+const prepareTrainingData = store => {
   const updatedState = store.getState();
-  const trainingExamples = updatedState.data
-    .map(row => extractTrainingExamples(updatedState, row));
-  const trainingLabels = updatedState.data
-    .map(row => extractTrainingLabel(updatedState, row));
+  const trainingExamples = updatedState.data.map(row =>
+    extractTrainingExamples(updatedState, row)
+  );
+  const trainingLabels = updatedState.data.map(row =>
+    extractTrainingLabel(updatedState, row)
+  );
   /*
   Select X% of examples and corresponding labels from the training set to use for a post-training accuracy calculation.
   */
@@ -110,29 +110,30 @@ const prepareTrainingData = () => {
   store.dispatch(setAccuracyCheckLabels(accuracyCheckLabels));
 };
 
-const prepareTestData = () => {
+const prepareTestData = store => {
   const updatedState = store.getState();
   let testValues = [];
   updatedState.selectedFeatures.forEach(feature =>
-    testValues.push(convertValueForTraining(updatedState, feature, updatedState.testData))
+    testValues.push(
+      convertValueForTraining(updatedState, feature, updatedState.testData)
+    )
   );
   return testValues;
 };
 
 let trainingState = {};
-const init = () => {
-  const state = store.getState();
-  trainingState.trainer =  new KNNTrainer();
-  buildOptionNumberKeysByFeature(state);
-  prepareTrainingData();
+const init = store => {
+  trainingState.trainer = new KNNTrainer(store);
+  buildOptionNumberKeysByFeature(store);
+  prepareTrainingData(store);
 };
 
-const onClickTrain = () => {
-  trainingState.trainer.startTraining();
+const onClickTrain = store => {
+  trainingState.trainer.startTraining(store);
 };
 
-const onClickPredict = () => {
-  const testValues = prepareTestData();
+const onClickPredict = store => {
+  const testValues = prepareTestData(store);
   trainingState.trainer.predict(testValues);
 };
 
