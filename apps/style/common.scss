@@ -1121,7 +1121,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     background-color: $lightest_purple;
   }
 
-  #template-level-warning {
+  .template-level-warning {
     font-family: 'Gotham 7r', sans-serif;
     color: $red;
     line-height: normal;

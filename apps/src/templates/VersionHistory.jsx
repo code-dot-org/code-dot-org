@@ -120,6 +120,7 @@ export default class VersionHistory extends React.Component {
           isOwner: project.isOwner(),
           currentUrl: window.location.href,
           shareUrl: project.getShareUrl(),
+          isProjectTemplateLevel: this.props.isProjectTemplateLevel,
           currentSourceVersionId: project.getCurrentSourceVersionId()
         })
       },
@@ -148,7 +149,7 @@ export default class VersionHistory extends React.Component {
         <div>
           <p>{i18n.versionHistory_clearProgress_prompt()}</p>
           {this.props.isProjectTemplateLevel && (
-            <p id="template-level-warning">
+            <p className="template-level-warning">
               {i18n.versionHistory_clearProgress_templateLevelWarning()}
             </p>
           )}
