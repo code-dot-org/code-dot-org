@@ -246,7 +246,7 @@ describe('VersionHistory', () => {
       // Click "Start Over"
       wrapper.find('.btn-danger').simulate('click');
 
-      expect(wrapper.find('#template-level-warning')).to.exist;
+      expect(wrapper.find('.template-level-warning')).to.exist;
     });
 
     describe('confirming Start Over', () => {
@@ -300,6 +300,7 @@ describe('VersionHistory', () => {
               isOwner: true,
               currentUrl: window.location.href,
               shareUrl: 'fake-share-url',
+              isProjectTemplateLevel: false,
               currentSourceVersionId: FAKE_CURRENT_VERSION
             })
           },
