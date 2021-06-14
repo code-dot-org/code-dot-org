@@ -1,12 +1,12 @@
 name 'OPD-K5 Outline_copy_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Part I: Implementing and Teaching Computer Science
-**Suggested Time:  90 minutes total**
+# Part I: Teaching Computer Science
+**Suggested Total Time:  90 minutes**
 
 Below is an outline of the lessons included in Part I of this course, along with what you will be able to do after completing a lesson.  Approximate times for each lesson are provided. However, feel free to start and stop at your own pace and take more or less time to meet your learning needs.
 
-Part I focuses on tools, teaching strategies, and resources built into the curriculum to help you get started creating and establishing an inclusive Computer Science Fundamentals classroom.
+Part I focuses on teacher tools, teaching strategies, and resources built into the curriculum to help you start to create your Computer Science Fundamentals classroom.
 
 ### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/1/levels/3" target="blank"> **Lesson 1: Introduction**</a> (15 minutes)
 
@@ -29,21 +29,21 @@ After completing Lesson 3 you will be able to:
 
 * identify three CS teaching practices to use with Computer Science Fundamentals lessons.
 * identify two CS teaching strategies built into the curriculum to use with your students during Computer Science Fundamentals lessons.
+* identify five student practices to lean on in supporting your students learn computer science.
 
-### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/4/levels/1" target="blank" > **Lesson 4:  Lesson Planning**</a> (25 minutes)
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/4/levels/1" target="blank" > **Lesson 4:  Teaching a Lesson**</a> (25 minutes)
 
-After completing Lesson 4 you will be able to prepare a Computer Science Fundamentals lesson to try out with your students.
+After completing Lesson 4 you will be able to prepare a Computer Science Fundamentals lesson to teach to your students.
 
 
-### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/5/levels/1" target="blank" >**Lesson 5:  Implementation Approaches and Barriers** </a> (15 minutes) 
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/5/levels/1" target="blank" >**Lesson 5:  Addressing Barriers** </a> (15 minutes) 
 
-Lesson 5 focuses on implementing Computer Science Fundamentals equitably in your classroom.
+Lesson 5 focuses on proactively addressing common barriers and challenges when implementing Computer Science Fundamentals courses.
 
 After completing Lesson 5 you will be able to:
 
-* proactively address the most common implementation barriers.
-* use guiding questions to keep equity in mind when implementing Computer Science Fundamentals courses.
-
+* identify and prepare for the most common implementation barriers.
+* identify equity related language and guidance to support you in implementing Computer Science Fundamentals equitably.
 ### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/6/levels/1" target="blank" > Click here to go to Part II:  CS Concepts in Courses A - F.</a>
 
 
