@@ -23658,3 +23658,11 @@ en:
           description_short: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
           description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
           student_description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
+        poembot:
+          lessons: {}
+          lesson_groups: {}
+          name: poembot
+          title: Poembot
+          description_audience: ''
+          description_short: ''
+          description: ''
