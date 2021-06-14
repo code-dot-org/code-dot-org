@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-09 17:57:47 UTC",
+    "serialized_at": "2021-06-10 17:22:21 UTC",
     "seeding_key": {
       "script.name": "self-paced-pl-csd6-2021"
     }
@@ -32,7 +32,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Unit 2: Web Development"
+        "display_name": "Preparing to Teach Unit 2: Web Development"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -44,7 +44,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Content"
+        "display_name": "Preparing to Teach Unit 3: Interactive Animations and Games"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
@@ -56,7 +56,7 @@
       "user_facing": true,
       "position": 4,
       "properties": {
-        "display_name": "Content"
+        "display_name": "Preparing to Teach Unit 4: The Design Process"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
@@ -68,7 +68,7 @@
       "user_facing": true,
       "position": 5,
       "properties": {
-        "display_name": "Content"
+        "display_name": "Preparing to Teach Unit 5: Data and Society"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-6",
@@ -80,7 +80,7 @@
       "user_facing": true,
       "position": 6,
       "properties": {
-        "display_name": "Content"
+        "display_name": "Preparing to Teach Unit 6: Physical Computing"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-7",
@@ -92,7 +92,7 @@
       "user_facing": true,
       "position": 7,
       "properties": {
-        "display_name": "Content"
+        "display_name": "Preparing to Teach Unit 7: AI and Machine Learning"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-8",
