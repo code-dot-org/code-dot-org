@@ -11,7 +11,7 @@ import { ColumnTypes } from "./constants.js";
 export const parseCSV = (csvfile, download, useDefaultColumnDataType) => {
   Papa.parse(csvfile, {
     complete: result => {
-      updateData(result, useDefaultColumnDataType);
+      updateData(result, useDefaultColumnDataType, !download);
     },
     header: true,
     download: download,
@@ -38,11 +38,11 @@ const countRemovedRows = (originalData, cleanedData) => {
   store.dispatch(setRemovedRowsCount(removedRowsCount));
 }
 
-const updateData = (result, useDefaultColumnDataType) => {
+const updateData = (result, useDefaultColumnDataType, userUploadedData) => {
   var data = result.data;
   var cleanedData = cleanData(data);
   countRemovedRows(data, cleanedData);
-  store.dispatch(setImportedData(cleanedData));
+  store.dispatch(setImportedData(cleanedData, userUploadedData));
   if (useDefaultColumnDataType) {
     setDefaultColumnDataType(cleanedData);
   }
