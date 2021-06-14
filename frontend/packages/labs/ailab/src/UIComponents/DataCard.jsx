@@ -26,9 +26,11 @@ class DataCard extends Component {
     }
 
     const removedRowsMsg =
-      removedRowsCount === 1
-      ? `${this.props.removedRowsCount} row was removed because it contained an empty cell.`
-      : `${this.props.removedRowsCount} rows were removed because they contained an empty cell.`;
+      removedRowsCount > 0
+        ? removedRowsCount === 1
+          ? `${this.props.removedRowsCount} row was removed because it contained an empty cell.`
+          : `${this.props.removedRowsCount} rows were removed because they contained empty cells.`
+        : null;
 
     return (
       dataLength !== 0 && (
@@ -85,7 +87,7 @@ class DataCard extends Component {
                   {dataLength}
                 </div>
                 <div style={styles.cardRow}>
-                  {removedRowsCount > 0 &&
+                  {removedRowsMsg &&
                     <span>
                       &nbsp;
                       {removedRowsMsg}
