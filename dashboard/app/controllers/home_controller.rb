@@ -121,9 +121,7 @@ class HomeController < ApplicationController
     exclude_primary_script = true
     @homepage_data[:courses] = current_user.recent_courses_and_scripts(exclude_primary_script)
 
-    @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.where(
-      student_id: current_user.id
-    ).count > 0
+    @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.has_feedback?(current_user.id)
 
     script = Queries::ScriptActivity.primary_script(current_user)
     if script
