@@ -27,7 +27,7 @@ export default class StylizedTabView extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <div style={styles.tabContainer}>
           {this.props.tabs.map(tabInfo => (
             <div
               style={Object.assign(
@@ -51,12 +51,19 @@ export default class StylizedTabView extends React.Component {
 }
 
 const styles = {
+  tabContainer: {
+    background: color.lightest_gray,
+    padding: 10,
+    border: '1px solid',
+    borderColor: color.lighter_gray
+  },
   tab: {
-    padding: '2px 10px',
+    padding: '2px 16px',
+    margin: '0px 4px',
     display: 'inline-block',
     cursor: 'pointer',
-    fontSize: 18,
-    lineHeight: '25px'
+    fontSize: 20,
+    lineHeight: '28px'
   },
   activeTab: {
     backgroundColor: color.teal,
@@ -64,8 +71,8 @@ const styles = {
     color: color.white
   },
   inactiveTab: {
-    backgroundColor: color.white,
-    color: color.black,
+    backgroundColor: color.lightest_gray,
+    color: color.dark_charcoal,
     ':hover': {
       color: color.teal
     }
