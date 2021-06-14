@@ -21,7 +21,8 @@ export default class TheaterVisualizationColumn extends React.Component {
           showPreviewTitle={false}
         />
         <ProtectedVisualizationDiv>
-          <canvas id="theater" width="400" height="400" />
+          <img id="theater" width="400" height="400" />
+          {/* <canvas id="theater" width="400" height="400" /> */}
         </ProtectedVisualizationDiv>
       </div>
     );
