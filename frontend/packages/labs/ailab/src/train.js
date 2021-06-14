@@ -90,8 +90,8 @@ const prepareTrainingData = () => {
   let accuracyCheckLabels = [];
   if (updatedState.reserveLocation === TestDataLocations.END) {
     const index = -1 * numToReserve;
-    accuracyCheckExamples = trainingExamples.slice(index);
-    accuracyCheckLabels = trainingLabels.slice(index);
+    accuracyCheckExamples = trainingExamples.splice(index);
+    accuracyCheckLabels = trainingLabels.splice(index);
   }
   if (updatedState.reserveLocation === TestDataLocations.RANDOM) {
     let numReserved = 0;
