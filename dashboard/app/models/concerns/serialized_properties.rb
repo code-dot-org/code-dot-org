@@ -10,7 +10,7 @@ module SerializedProperties
     self.serialized_properties ||= {}
 
     after_initialize :init_properties
-    before_save {properties.select! {|_, v| v.present?}}
+    before_save {properties.select! {|_, v| !v.nil?}}
   end
 
   def assign_attributes(new_attributes)
