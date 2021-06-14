@@ -934,7 +934,7 @@ export const styles = {
     width: 500
   },
 
-  navigationButtonContainer: {
+  navigationButtonsContainer: {
     position: "relative"
   }
 };
