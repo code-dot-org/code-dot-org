@@ -60,13 +60,19 @@ export default class Neighborhood {
         this.getAnimationTime(signal) * this.getPegmanSpeedMultiplier();
       const totalSignalTime =
         timeForSignal + PAUSE_BETWEEN_SIGNALS * this.getPegmanSpeedMultiplier();
-      this.mazeCommand(signal, timeForSignal);
 
+      const beginTime = Date.now();
+      this.mazeCommand(signal, timeForSignal);
       this.nextSignalIndex++;
-      // check for another signal after this signal has completed processing
-      timeoutList.setTimeout(() => this.processSignals(), totalSignalTime);
+      const remainingTime = totalSignalTime - (Date.now() - beginTime);
+
+      // check for another signal after the remaining time to wait between signals
+      timeoutList.setTimeout(
+        () => this.processSignals(),
+        Math.max(remainingTime, 0)
+      );
     } else {
-      // check again for a signal after a specified wait time
+      // check again for a signal after the specified wait time
       timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
     }
   }
