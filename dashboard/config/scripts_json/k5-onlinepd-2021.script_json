@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-11 16:39:25 UTC",
+    "serialized_at": "2021-06-14 14:56:42 UTC",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
     }
@@ -1150,6 +1150,294 @@
     },
     {
       "chapter": 35,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-LoopsA-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-LoopsA-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-LoopsA-2021"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-LoopArtistB-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-LoopArtistB-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-LoopArtistB-2021"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-LoopsArtB-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-LoopsArtB-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-LoopsArtB-2021"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-ArtistLoopsC-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-ArtistLoopsC-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-ArtistLoopsC-2021"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-NestedLoopsD-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-NestedLoopsD-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-NestedLoopsD-2021"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-NestedLoopsPredictionD-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-NestedLoopsPredictionD-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-NestedLoopsPredictionD-2021"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-NestLoopsE-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-NestLoopsE-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-NestLoopsE-2021"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 NestedLoopsE-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 NestedLoopsE-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 NestedLoopsE-2021"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-ForLoopsVidF-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-ForLoopsVidF-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-ForLoopsVidF-2021"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-ForLoopFBee-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-ForLoopFBee-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-ForLoopFBee-2021"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-ForLoopsVideoF-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-ForLoopsVideoF-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-ForLoopsVideoF-2021"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-ForLoopFArtist-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-ForLoopFArtist-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-ForLoopFArtist-2021"
+      ]
+    },
+    {
+      "chapter": 47,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1173,7 +1461,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1197,7 +1485,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1221,7 +1509,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1245,7 +1533,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1269,7 +1557,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1293,7 +1581,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 53,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1317,7 +1605,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 54,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1341,7 +1629,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 55,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -1365,7 +1653,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 56,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -1389,7 +1677,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 57,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -1413,7 +1701,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 58,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -1437,7 +1725,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1461,7 +1749,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1485,7 +1773,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1509,7 +1797,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1533,7 +1821,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1557,7 +1845,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1581,7 +1869,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1605,7 +1893,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 66,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1629,7 +1917,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 67,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -1654,7 +1942,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 68,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -1678,7 +1966,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 69,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -1702,7 +1990,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1726,7 +2014,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1750,7 +2038,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1774,7 +2062,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1798,7 +2086,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1822,7 +2110,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1846,7 +2134,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 76,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1870,7 +2158,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 77,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1894,7 +2182,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 78,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -1918,7 +2206,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 79,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -1942,7 +2230,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 80,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -1966,7 +2254,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 81,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -1990,7 +2278,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 82,
       "position": 13,
       "activity_section_position": null,
       "assessment": false,
@@ -2014,7 +2302,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2038,7 +2326,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2062,7 +2350,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2086,7 +2374,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 86,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2110,7 +2398,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 87,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2134,7 +2422,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 88,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2158,7 +2446,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 89,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2182,7 +2470,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 90,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2206,7 +2494,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 91,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2230,7 +2518,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 92,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2254,7 +2542,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 93,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2278,7 +2566,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 94,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -2302,7 +2590,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2326,7 +2614,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2350,7 +2638,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2374,7 +2662,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2398,7 +2686,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2422,7 +2710,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2446,7 +2734,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2470,7 +2758,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2494,7 +2782,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 103,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2518,7 +2806,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 104,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2542,7 +2830,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 105,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2566,7 +2854,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2590,7 +2878,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 107,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2614,7 +2902,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 108,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2638,7 +2926,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 109,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2662,7 +2950,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 110,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2686,7 +2974,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 111,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2710,7 +2998,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 112,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2734,7 +3022,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 113,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2758,7 +3046,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 114,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2782,7 +3070,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 115,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2806,7 +3094,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 116,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2830,7 +3118,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 117,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2854,7 +3142,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 118,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2878,7 +3166,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 119,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2902,7 +3190,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 120,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2926,7 +3214,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 121,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2950,7 +3238,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 122,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2974,7 +3262,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 123,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2998,7 +3286,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 124,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -3022,7 +3310,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 125,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -3046,7 +3334,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 126,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -3070,7 +3358,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 127,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -3094,7 +3382,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 128,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3118,7 +3406,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 129,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3142,7 +3430,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 130,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3166,7 +3454,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 131,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3190,7 +3478,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 132,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3214,7 +3502,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 133,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -3238,7 +3526,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 134,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -3262,7 +3550,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 135,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -3286,7 +3574,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 136,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -3310,7 +3598,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 137,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -3334,7 +3622,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 138,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -3358,7 +3646,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 139,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3382,7 +3670,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 140,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3406,7 +3694,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 141,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3430,7 +3718,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 142,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3454,7 +3742,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 143,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3478,7 +3766,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 144,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -3502,7 +3790,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 145,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -3895,6 +4183,138 @@
         "level.key": "OPD-K5-LoopsIntro-2021",
         "script_level.level_keys": [
           "OPD-K5-LoopsIntro-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-LoopsA-2021",
+        "script_level.level_keys": [
+          "OPD-K5-LoopsA-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-LoopArtistB-2021",
+        "script_level.level_keys": [
+          "OPD-K5-LoopArtistB-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-LoopsArtB-2021",
+        "script_level.level_keys": [
+          "OPD-K5-LoopsArtB-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-ArtistLoopsC-2021",
+        "script_level.level_keys": [
+          "OPD-K5-ArtistLoopsC-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-NestedLoopsD-2021",
+        "script_level.level_keys": [
+          "OPD-K5-NestedLoopsD-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-NestedLoopsPredictionD-2021",
+        "script_level.level_keys": [
+          "OPD-K5-NestedLoopsPredictionD-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-NestLoopsE-2021",
+        "script_level.level_keys": [
+          "OPD-K5-NestLoopsE-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 NestedLoopsE-2021",
+        "script_level.level_keys": [
+          "OPD-K5 NestedLoopsE-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-ForLoopsVidF-2021",
+        "script_level.level_keys": [
+          "OPD-K5-ForLoopsVidF-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-ForLoopFBee-2021",
+        "script_level.level_keys": [
+          "OPD-K5-ForLoopFBee-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-ForLoopsVideoF-2021",
+        "script_level.level_keys": [
+          "OPD-K5-ForLoopsVideoF-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-ForLoopFArtist-2021",
+        "script_level.level_keys": [
+          "OPD-K5-ForLoopFArtist-2021"
         ],
         "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
