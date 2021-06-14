@@ -15,9 +15,10 @@
   "published_state": "preview",
   "properties": {
     "has_numbered_units": true,
-    "version_year": "2021",
-    "family_name": "csp"
+    "is_course": true
   },
+  "family_name": "csp",
+  "version_year": "2021",
   "resources": [
     {
       "name": "Course Vocabulary",

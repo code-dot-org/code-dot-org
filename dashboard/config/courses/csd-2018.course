@@ -22,9 +22,10 @@
       ]
     ],
     "has_verified_resources": true,
-    "family_name": "csd",
-    "version_year": "2018"
+    "is_course": true
   },
+  "family_name": "csd",
+  "version_year": "2018",
   "resources": [
 
   ],

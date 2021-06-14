@@ -15,10 +15,11 @@
   ],
   "published_state": "stable",
   "properties": {
-    "version_year": "2020",
-    "family_name": "csp",
-    "has_verified_resources": true
+   "has_verified_resources": true,
+    "is_course": true
   },
+  "family_name": "csp",
+  "version_year": "2020",
   "resources": [
 
   ],
