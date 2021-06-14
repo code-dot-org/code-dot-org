@@ -209,6 +209,7 @@ const styles = {
     flexDirection: 'column'
   },
   consoleParent: {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     height: '100%',

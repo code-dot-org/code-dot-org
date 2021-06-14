@@ -162,6 +162,7 @@ const styles = {
     color: color.black
   },
   container: {
+    marginTop: 30,
     display: 'flex',
     flexGrow: 1,
     overflowY: 'hidden'
@@ -196,6 +197,9 @@ const styles = {
     width: 8
   },
   header: {
-    overflowY: 'visible'
+    position: 'absolute',
+    textAlign: 'center',
+    lineHeight: '30px',
+    width: '100%'
   }
 };
