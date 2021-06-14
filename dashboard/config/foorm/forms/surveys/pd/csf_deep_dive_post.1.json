@@ -29,14 +29,16 @@
           "name": "teacher_engagement"
         },
         {
-          "type": "comment",
-          "name": "helped_learn_most_FR",
-          "title": "What helped you learn the most in this workshop and why?"
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "what_supported"
         },
         {
-          "type": "comment",
-          "name": "detracted_learning_FR",
-          "title": "What detracted from your learning in this workshop and why?"
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "what_detracted"
         }
       ],
       "title": "Workshop Effectiveness"

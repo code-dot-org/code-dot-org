@@ -8,19 +8,33 @@ markdown <<MARKDOWN
 
 ## CS Concept
 
-**Conditionals** are if-statements.
+**Conditionals** are statements that only run under certain conditions.
 
 #### Teacher Video
 
 Watch the video, <a href="https://www.youtube.com/watch?v=2m2Rn9VxHfU" target="blank">Conditional with Cards</a> demonstrating how conditionals are first introduced to students with the **context-setting** lesson in Course D - Lesson 12: Conditional with Cards.
 
+#### Student Video
+
+Watch the video, <a href="https://www.youtube.com/watch?v=UymN4lTL50s" target="blank">"Conditionals: If Statements,"</a> that introduces conditionals to students and the " " blocks to use when programming with conditionals.
+
 ## Learning Platform Features
 
 #### Student Video
 
-Watch the video, <a href="https://youtu.be/4N0R16Y97l0" target="blank">"Maze Intro:  Programming with Block (Course A-B),"</a> which introduces the built-in features students will use during lessons.
+Watch the video, <a href="https://www.youtube.com/watch?v=UymN4lTL50s" target="blank">"Conditionals with Cards,"</a> that introduces the activity for Course D - Lesson 12: Conditionals with Cards to students.
 
 ## Concept Progression
+
+* Course D - Lesson 14:  If/Else with Bee
+    * Practice
+
+* Course E - Lesson 
+	* Video - Minecraft:  Voyage Aquatic Conditionals
+    * Practice
+
+* Course F - Lesson: 17: Outbreak
+	* Using conditionals in a computer simulation
 
 
 MARKDOWN

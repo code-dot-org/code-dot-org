@@ -52,6 +52,18 @@ level 'OPD-K5 sequencing free response_2021'
 
 lesson 'Loops', display_name: 'Loops', has_lesson_plan: false
 level 'OPD-K5-LoopsIntro-2021'
+level 'OPD-K5-LoopsA-2021'
+level 'OPD-K5-LoopArtistB-2021'
+level 'OPD-K5-LoopsArtB-2021'
+level 'OPD-K5-ArtistLoopsC-2021'
+level 'OPD-K5-NestedLoopsD-2021'
+level 'OPD-K5-NestedLoopsPredictionD-2021'
+level 'OPD-K5-NestLoopsE-2021'
+level 'OPD-K5 NestedLoopsE-2021'
+level 'OPD-K5-ForLoopsVidF-2021'
+level 'OPD-K5-ForLoopFBee-2021'
+level 'OPD-K5-ForLoopsVideoF-2021'
+level 'OPD-K5-ForLoopFArtist-2021'
 
 lesson 'Events', display_name: 'Events', has_lesson_plan: false
 level 'OPD-K5 Stage7Start_copy_2021'
