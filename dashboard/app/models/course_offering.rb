@@ -37,16 +37,17 @@ class CourseOffering < ApplicationRecord
   #
   # This method will also delete CourseOfferings and/or CourseVersions that were previously associated with
   # the content_root, if appropriate. See CourseVersion#add_course_version for details.
-  def self.add_course_offering(content_root)
+  def self.add_course_offering(content_root, family_name: nil, version_year: nil)
+    family_name ||= content_root.family_name
     if content_root.is_course?
-      raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
+      raise "family_name must be set, since is_course is true, for: #{content_root.name}" if family_name.blank?
 
-      offering = CourseOffering.find_or_create_by!(key: content_root.family_name, display_name: content_root.family_name)
+      offering = CourseOffering.find_or_create_by!(key: family_name, display_name: family_name)
     else
       offering = nil
     end
 
-    CourseVersion.add_course_version(offering, content_root)
+    CourseVersion.add_course_version(offering, content_root, version_year: version_year)
 
     offering
   end

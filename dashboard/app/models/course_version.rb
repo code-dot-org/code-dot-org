@@ -62,14 +62,15 @@ class CourseVersion < ApplicationRecord
   #
   # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
   # Therefore, it does not contain "is_course true". so this method will not create a CourseVersion object for it.
-  def self.add_course_version(course_offering, content_root)
+  def self.add_course_version(course_offering, content_root, version_year: nil)
+    version_year ||= content_root.version_year
     if content_root.is_course?
-      raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
+      raise "version_year must be set, since is_course is true, for: #{content_root.name}" if version_year.blank?
 
       course_version = CourseVersion.find_or_initialize_by(
         course_offering: course_offering,
-        key: content_root.version_year,
-        display_name: content_root.version_year,
+        key: version_year,
+        display_name: version_year,
         content_root: content_root,
       )
       if content_root.prevent_course_version_change? && content_root.course_version != course_version
@@ -104,5 +105,9 @@ class CourseVersion < ApplicationRecord
 
   def all_standards_url
     content_root_type == 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
+  end
+
+  def family_name
+    course_offering&.key
   end
 end

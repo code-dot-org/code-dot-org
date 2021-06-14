@@ -52,10 +52,9 @@ class UnitGroup < ApplicationRecord
     teacher_resources
     has_verified_resources
     has_numbered_units
-    family_name
-    version_year
     pilot_experiment
     announcements
+    is_course
   )
 
   def to_param
@@ -110,7 +109,7 @@ class UnitGroup < ApplicationRecord
     unit_group.published_state = hash['published_state'] || SharedConstants::PUBLISHED_STATE.in_development
 
     # add_course_offering creates the course version
-    CourseOffering.add_course_offering(unit_group)
+    CourseOffering.add_course_offering(unit_group, family_name: hash['family_name'], version_year: hash['version_year'])
     course_version = unit_group.course_version
 
     if course_version
@@ -146,6 +145,8 @@ class UnitGroup < ApplicationRecord
         alternate_units: summarize_alternate_units,
         published_state: published_state,
         properties: properties,
+        family_name: course_version&.family_name,
+        version_year: course_version&.version_year,
         resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
         student_resources: student_resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
       }.compact
@@ -690,7 +691,7 @@ class UnitGroup < ApplicationRecord
 
   # rubocop:disable Naming/PredicateName
   def is_course?
-    return !!family_name && !!version_year
+    is_course
   end
   # rubocop:enable Naming/PredicateName
 
