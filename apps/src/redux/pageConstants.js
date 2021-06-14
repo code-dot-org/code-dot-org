@@ -42,7 +42,6 @@ var ALLOWED_KEYS = new Set([
   'hideCoordinateOverlay',
   'hideSource',
   'hideRunButton',
-  'hideResetButton',
   'playspacePhoneFrame',
   'noVisualization',
   'pinWorkspaceToBottom',
