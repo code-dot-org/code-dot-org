@@ -3,9 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # Introduction to Loops
 
-<img src="https://images.code.org/ec2f0877ef2c14cf64d611f47a11daa7-image-1573236152060.jpg" class="level-image">
-
-
+<img src="https://images.code.org/ec2f0877ef2c14cf64d611f47a11daa7-image-1573236152060.jpg" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
 ## CS Concepts
 
@@ -13,12 +11,16 @@ A **loop** is the action of doing something over and over again.
 
 "Loops" are introduced in Courses A through D with a **context-setting** lesson in which students engage in an unplugged (off the computer) activity.
 
+#### Lesson Plan
+
 Read the lesson plan for the **context-setting** lesson in <a href="https://studio.code.org/s/coursea-2021/lessons/7" target="blank">Course A - Lesson 7:  Happy Loops</a> for an example of how "loops" are first introduced to students in Course A.
 
 
 ## Learning Platform Features
 
-Watch the video, <a href="https://youtu.be/DgL1-axtxmU" target="blank">"Repeat Blocks:  Course A - B,"</a> which introduces the built-in features students will use during lessons.
+#### Student Video
+
+Watch the student video, <a href="https://youtu.be/DgL1-axtxmU" target="blank">"Repeat Blocks:  Course A - B,"</a> which introduces the built-in features students will use during lessons.
 
 ## Concept Progression
 
