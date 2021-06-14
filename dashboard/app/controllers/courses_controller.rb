@@ -109,6 +109,10 @@ class CoursesController < ApplicationController
       unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
+    # Convert checkbox values from a string ("on") to a boolean.
+    [:has_verified_resources, :has_numbered_units].each {|key| params[key] = !!params[key]}
+    unit_group.update(course_params.except(:family_name, :version_year))
+    CourseOffering.add_course_offering(unit_group, family_name: course_params[:family_name], version_year: course_params[:version_year])
 
     # Update the published state of all the units in the course to be same as the course
     unit_group.default_units.each do |unit|
@@ -199,7 +203,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements, :is_course).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
     cp[:published_state] = SharedConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 

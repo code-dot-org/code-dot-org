@@ -32,6 +32,10 @@ FactoryGirl.define do
   factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
     published_state "beta"
+
+    trait :with_course_version do
+      association(:course_version, factory: [:course_version, :with_course_offering])
+    end
   end
 
   factory :experiment do

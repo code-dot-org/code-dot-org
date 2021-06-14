@@ -339,6 +339,29 @@ class UnitGroup < ApplicationRecord
     [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
+  def published_state
+    if pilot?
+      SharedConstants::PUBLISHED_STATE.pilot
+    elsif visible
+      if is_stable
+        SharedConstants::PUBLISHED_STATE.stable
+      else
+        SharedConstants::PUBLISHED_STATE.preview
+      end
+    else
+      SharedConstants::PUBLISHED_STATE.beta
+    end
+  end
+
+  def family_name
+    course_version&.family_name
+  end
+
+  def version_year
+    return nil unless course_version
+    course_version.key.to_i
+  end
+
   def summarize(user = nil)
     {
       name: name,
@@ -523,13 +546,15 @@ class UnitGroup < ApplicationRecord
   def self.latest_stable_version(family_name)
     return nil unless family_name.present?
 
-    UnitGroup.
+    course_offering = CourseOffering.find_by_key(family_name)
+    return nil unless course_offering
+    UnitGroup.joins("INNER JOIN course_versions ON (course_versions.content_root_type = 'UnitGroup' && course_versions.content_root_id = unit_groups.id)").
       # select only courses in the same course family.
-      where("properties -> '$.family_name' = ?", family_name).
+      where("course_versions.course_offering_id": course_offering.id).
       # select only stable courses.
       where(published_state: SharedConstants::PUBLISHED_STATE.stable).
       # order by version year.
-      order("properties -> '$.version_year' DESC")&.
+      order("course_versions.key DESC")&.
       first
   end
 
@@ -540,13 +565,15 @@ class UnitGroup < ApplicationRecord
     return nil unless family_name && user
     assigned_course_ids = user.section_courses.pluck(:id)
 
-    UnitGroup.
+    course_offering = CourseOffering.find_by_key(family_name)
+    return nil unless course_offering
+    UnitGroup.joins("INNER JOIN course_versions ON (course_versions.content_root_type = 'UnitGroup' && course_versions.content_root_id = unit_groups.id)").
       # select only courses assigned to this user.
-      where(id: assigned_course_ids).
+      where("unit_groups.id": assigned_course_ids).
       # select only courses in the same course family.
-      where("properties -> '$.family_name' = ?", family_name).
+      where("course_versions.course_offering_id = ?", course_offering.id).
       # order by version year.
-      order("properties -> '$.version_year' DESC")&.
+      order("course_versions.key DESC")&.
       first
   end
 
@@ -563,18 +590,22 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this course.
   def has_older_version_progress?(user)
-    return nil unless user && family_name && version_year
+    return nil unless user && course_version
+    course_offering = course_version&.course_offering
+    return nil unless course_offering
+    user_script_ids = user.user_scripts.pluck(:script_id)
     user_unit_ids = user.user_scripts.pluck(:script_id)
 
     UnitGroup.
       joins(:default_unit_group_units).
+      joins("INNER JOIN course_versions ON (course_versions.content_root_type = 'UnitGroup' && course_versions.content_root_id = unit_groups.id)").
       # select only courses in the same course family.
-      where("properties -> '$.family_name' = ?", family_name).
+      where("course_versions.course_offering_id": course_offering.id).
       # select only older versions
-      where("properties -> '$.version_year' < ?", version_year).
+      where("course_versions.key < ?", version_year).
       # exclude the current course.
-      where.not(id: id).
-      # select only courses with units which the user has progress in.
+      where.not("unit_groups.id": id).
+      # select only courses with scripts which the user has progress in.
       where('course_scripts.script_id' => user_unit_ids).
       count > 0
   end
