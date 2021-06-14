@@ -66,10 +66,7 @@ function onContinueStub() {
 
 function saveTrainedModelStub(data, response) {
   console.log("This would save a trained model.", data);
-  setTimeout(
-    () => response({ id: 303, status: "success" }),
-    2000
-  );
+  setTimeout(() => response({ id: 303, status: "success" }), 2000);
 }
 
 function logMetricStub(eventName, details) {
@@ -80,10 +77,13 @@ function setInstructionsKeyStub(instructionsKey, options) {
   const element = document.getElementById("instructions");
 
   element.innerText =
-    instructionsKey + (options.showOverlay ? " (click to dismiss overlay)" : " (no overlay)");
+    instructionsKey +
+    (options && options.showOverlay
+      ? " (click to dismiss overlay)"
+      : " (no overlay)");
 
   element.onclick = () => {
-    if (options.showOverlay) {
+    if (options && options.showOverlay) {
       element.innerText = instructionsKey + " (overlay dismissed)";
     }
     instructionsDismissed();
