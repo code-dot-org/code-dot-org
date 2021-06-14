@@ -108,9 +108,8 @@ export const styles = {
   },
 
   bodyContainer: {
-    height: "100%",
-    boxSizing: "border-box",
-    paddingBottom: 50
+    height: "calc(100% - 50px)",
+    boxSizing: "border-box"
   },
 
   largeText: {
@@ -590,18 +589,16 @@ export const styles = {
   predictBotRight: { float: "right", width: "75%" },
 
   previousButton: {
-    position: "fixed",
-    left: 20,
-    bottom: 40,
+    position: "absolute",
+    left: 0,
     fontSize: 30,
     cursor: "pointer",
     zIndex: 1001
   },
 
   nextButton: {
-    position: "fixed",
-    right: 20,
-    bottom: 40,
+    position: "absolute",
+    right: 0,
     fontSize: 30,
     cursor: "pointer",
     zIndex: 1001
@@ -929,13 +926,15 @@ export const styles = {
   },
 
   modelSaveMessage: {
-    bottom: 40,
+    top: 10,
     zIndex: 1001,
     right: "calc(50% - 250px)",
     textAlign: "center",
-    position: "fixed",
-    width: 500,
-    height: 30,
-    lineHeight: "20px"
+    position: "absolute",
+    width: 500
+  },
+
+  navigationButtonContainer: {
+    position: "relative"
   }
 };

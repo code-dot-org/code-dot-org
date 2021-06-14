@@ -59,7 +59,7 @@ class PanelButtons extends Component {
       : ( <FontAwesomeIcon icon={faSpinner} />);
 
     return (
-      <div>
+      <div style={styles.navigationButtonContainer}>
         {panelButtons.prev && (
           <div style={styles.previousButton}>
             <button
