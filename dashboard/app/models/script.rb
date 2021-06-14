@@ -124,7 +124,7 @@ class Script < ApplicationRecord
     }
 
   enum published_state: SharedConstants::PUBLISHED_STATE.to_h
-  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, pilot, beta, preview or stable'}
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
 
   def prevent_duplicate_levels
     reload
