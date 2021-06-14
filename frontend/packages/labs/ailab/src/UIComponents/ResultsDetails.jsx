@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
-  getConvertedAccuracyCheckExamples,
-  getConvertedLabels,
   getSummaryStat,
   setShowResultsDetails,
   getCorrectResults,
@@ -22,9 +20,6 @@ class ResultsDetails extends Component {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
     summaryStat: PropTypes.object,
-    accuracyCheckExamples: PropTypes.array,
-    accuracyCheckLabels: PropTypes.array,
-    accuracyCheckPredictedLabels: PropTypes.array,
     setShowResultsDetails: PropTypes.func,
     correctResults: PropTypes.object,
     incorrectResults: PropTypes.object,
@@ -60,12 +55,6 @@ export default connect(
     selectedFeatures: state.selectedFeatures,
     labelColumn: state.labelColumn,
     summaryStat: getSummaryStat(state),
-    accuracyCheckExamples: getConvertedAccuracyCheckExamples(state),
-    accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
-    accuracyCheckPredictedLabels: getConvertedLabels(
-      state,
-      state.accuracyCheckPredictedLabels
-    ),
     correctResults: getCorrectResults(state),
     incorrectResults: getIncorrectResults(state)
   }),
