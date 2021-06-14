@@ -4,18 +4,15 @@ https://github.com/mljs/knn */
 import { store } from "../index.js";
 import {
   isRegression,
-  getAccuracyRegression,
-  getAccuracyClassification,
   setKValue,
   setModelSize,
   setTrainedModel,
   setPrediction,
   setAccuracyCheckPredictedLabels,
-  getSummaryStat,
   setHistoricResult,
-  logFirehoseMetric
+  getPercentCorrect
 } from "../redux";
-
+import { logFirehoseMetric } from "../helpers/metrics";
 const KNN = require("ml-knn");
 
 export default class KNNTrainer {
@@ -77,7 +74,7 @@ export default class KNNTrainer {
 
     logFirehoseMetric("train-model", state2);
 
-    const accuracy = getSummaryStat(state2).stat;
+    const accuracy = getPercentCorrect(state2);
     store.dispatch(
       setHistoricResult(state2.labelColumn, state2.selectedFeatures, accuracy)
     );
@@ -85,9 +82,7 @@ export default class KNNTrainer {
 
   getAccuracyPercent() {
     const state = store.getState();
-    const percent = isRegression(state)
-      ? getAccuracyRegression(state).percentCorrect
-      : getAccuracyClassification(state).percentCorrect;
+    const percent = getPercentCorrect(state);
     return parseFloat(percent);
   }
 

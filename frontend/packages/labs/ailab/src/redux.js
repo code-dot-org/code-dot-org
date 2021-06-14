@@ -1,17 +1,35 @@
 import {
   uniqLabelFeaturesSelected,
   prevNextButtons
-} from "./navigationValidation.js";
-
+} from "./helpers/navigationValidation.js";
+import { reportPanelView } from './helpers/metrics.js';
+import {
+  getAccuracyClassification,
+  getAccuracyRegression,
+  getResultsByGrade
+} from "./helpers/accuracy.js";
+import {
+  isColumnNumerical,
+  isColumnCategorical,
+  isColumnReadOnly,
+  getExtrema,
+  getColumnDescription,
+  getOptionFrequencies,
+  hasTooManyUniqueOptions,
+  getColumnDataToSave,
+  isSelectable,
+  getUniqueOptions,
+  isColumnDataValid
+} from "./helpers/columnDetails.js";
+import { getConvertedValueForDisplay } from "./helpers/valueConversion.js";
+import { areArraysEqual } from "./helpers/utils.js";
 import {
   ColumnTypes,
   MLTypes,
   RegressionTrainer,
   ClassificationTrainer,
   TestDataLocations,
-  ResultsGrades,
-  REGRESSION_ERROR_TOLERANCE,
-  UNIQUE_OPTIONS_MAX
+  ResultsGrades
 } from "./constants.js";
 
 // Action types
@@ -620,19 +638,33 @@ export default function rootReducer(state = initialState, action) {
   return state;
 }
 
-function reportPanelView(panel) {
-  if (!window.ga || !panel) {
-    return;
-  }
-  // Record each panel as a different page view in Google Analytics.
-  const syntheticPagePath = window.location.pathname + '/' + panel;
-  window.ga('set', 'page', syntheticPagePath);
-  window.ga('send', 'pageview');
+export function getSpecifiedDatasets(state) {
+  return state.mode && state.mode.datasets;
 }
 
-export function getFeatures(state) {
-  return state.data.length > 0 ? Object.keys(state.data[0]) : [];
+/* Functions for determining UI element availability and interactivity. */
+
+function getShowColumnClicking(state) {
+  return !(state.mode && state.mode.hideColumnClicking);
 }
+
+export function getPredictAvailable(state) {
+  return (
+    Object.keys(state.testData).filter(
+      value => state.testData[value] && state.testData[value] !== ""
+    ).length === state.selectedFeatures.length
+  );
+}
+
+export function getPanelButtons(state) {
+  return prevNextButtons(state);
+}
+
+export function readyToTrain(state) {
+  return uniqLabelFeaturesSelected(state);
+}
+
+/* Functions for filtering and selecting columns by type.  */
 
 function filterColumnsByType(state, columnType) {
   return Object.keys(state.columnsByDataType).filter(
@@ -640,21 +672,43 @@ function filterColumnsByType(state, columnType) {
   );
 }
 
-export function getCategoricalColumns(state) {
+function getCategoricalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.CATEGORICAL);
 }
 
-function isColumnReadOnly(state, column) {
-  const metadataColumnType =
-    state.metadata &&
-    state.metadata.fields &&
-    state.metadata.fields.find(field => {
-      return field.id === column;
-    }).type;
-  return !!metadataColumnType;
+function getNumericalColumns(state) {
+  return filterColumnsByType(state, ColumnTypes.NUMERICAL);
 }
 
-export function getSelectedColumns(state) {
+export function getSelectedCategoricalColumns(state) {
+  let intersection = getCategoricalColumns(state).filter(
+    x => state.selectedFeatures.includes(x) || x === state.labelColumn
+  );
+  return intersection;
+}
+
+export function getSelectedCategoricalFeatures(state) {
+  let intersection = getCategoricalColumns(state).filter(x =>
+    state.selectedFeatures.includes(x)
+  );
+  return intersection;
+}
+
+export function getSelectedNumericalFeatures(state) {
+  let intersection = getNumericalColumns(state).filter(x =>
+    state.selectedFeatures.includes(x)
+  );
+  return intersection;
+}
+
+export function getSelectedNumericalColumns(state) {
+  let intersection = getNumericalColumns(state).filter(
+    x => state.selectedFeatures.includes(x) || x === state.labelColumn
+  );
+  return intersection;
+}
+
+function getSelectedColumns(state) {
   return state.selectedFeatures
     .concat(state.labelColumn)
     .filter(column => column !== undefined && column !== "")
@@ -663,48 +717,34 @@ export function getSelectedColumns(state) {
     });
 }
 
-function isColumnCategorical(state, column) {
-  return (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL);
+/* Functions for getting specific details about a batch of columns.  */
+
+export function getSelectedColumnDescriptions(state) {
+  return getSelectedColumns(state).map(column => {
+    return {
+      id: column.id,
+      description: getColumnDescription(state, column.id)
+    };
+  });
 }
 
-function isValidCategoricalData(state, column) {
-  return !hasTooManyUniqueOptions(state, column);
+export function getUniqueOptionsByColumn(state) {
+  let uniqueOptionsByColumn = {};
+  getSelectedCategoricalColumns(state).map(
+    column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
+  );
+  return uniqueOptionsByColumn;
 }
 
-function isColumnNumerical(state, column) {
-  return (state.columnsByDataType[column] === ColumnTypes.NUMERICAL);
+export function getExtremaByColumn(state) {
+  let extremaByColumn = {};
+  getSelectedNumericalColumns(state).map(
+    column => (extremaByColumn[column] = getExtrema(state, column))
+  );
+  return extremaByColumn;
 }
 
-export function columnContainsOnlyNumbers(data, column) {
-  return data.every(row => !isNaN(row[column]));
-}
-
-function isValidNumericalData(state, column) {
-  return !isNaN(getMaximumValue(state, column));
-}
-
-function isColumnDataValid(state, column) {
-  return (
-    isColumnCategorical(state, column) && isValidCategoricalData(state,column)
-  ) ||
-  (isColumnNumerical(state, column) && isValidNumericalData(state,column));
-}
-
-function isLabel(state, column) {
-  return column === state.labelColumn;
-}
-
-function isFeature(state, column) {
-  return state.selectedFeatures.includes(column);
-}
-
-function isSelected(state, column) {
-  return isLabel(state, column) || isFeature(state, column);
-}
-
-function isSelectable(state, column) {
-  return isColumnDataValid(state, column) && !isSelected(state, column);
-}
+/* Function for retriving aggreate details about a currently selected column. */
 
 export function getCurrentColumnData(state) {
   if (!state.currentColumn) {
@@ -725,380 +765,7 @@ export function getCurrentColumnData(state) {
   };
 }
 
-export function getSelectedCategoricalColumns(state) {
-  let intersection = getCategoricalColumns(state).filter(
-    x => state.selectedFeatures.includes(x) || x === state.labelColumn
-  );
-  return intersection;
-}
-
-export function getSelectedCategoricalFeatures(state) {
-  let intersection = getCategoricalColumns(state).filter(x =>
-    state.selectedFeatures.includes(x)
-  );
-  return intersection;
-}
-
-export function getSelectedNumericalColumns(state) {
-  let intersection = getNumericalColumns(state).filter(
-    x => state.selectedFeatures.includes(x) || x === state.labelColumn
-  );
-  return intersection;
-}
-
-export function getSelectedNumericalFeatures(state) {
-  let intersection = getNumericalColumns(state).filter(x =>
-    state.selectedFeatures.includes(x)
-  );
-  return intersection;
-}
-
-export function getNumericalColumns(state) {
-  return filterColumnsByType(state, ColumnTypes.NUMERICAL);
-}
-
-/*
-  Categorical columns with too many unique values are unlikley to make
-  accurate models, and we don't want to overflow the metadata column for saved
-  models.
-*/
-function hasTooManyUniqueOptions(state, column) {
-  if (isColumnCategorical(state, column)) {
-    const uniqueOptionsCount =
-      getUniqueOptions(state, state.currentColumn).length;
-    return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
-  }
-  return false;
-}
-
-export function getSelectableFeatures(state) {
-  return getFeatures(state).filter(
-    column =>
-      column !== state.labelColumn && !state.selectedFeatures.includes(column)
-  );
-}
-
-export function getSelectableLabels(state) {
-  return getFeatures(state).filter(x => !state.selectedFeatures.includes(x));
-}
-
-export function getUniqueOptions(state, column) {
-  return Array.from(new Set(state.data.map(row => row[column]))).filter(
-    option => option !== undefined && option !== ""
-  );
-}
-
-export function getOptionFrequencies(state, column) {
-  let optionFrequencies = {};
-  for (let row of state.data) {
-    if (optionFrequencies[row[column]]) {
-      optionFrequencies[row[column]]++;
-    } else {
-      optionFrequencies[row[column]] = 1;
-    }
-  }
-  return optionFrequencies;
-}
-
-export function getUniqueOptionsByColumn(state) {
-  let uniqueOptionsByColumn = {};
-  getSelectedCategoricalColumns(state).map(
-    column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
-  );
-  return uniqueOptionsByColumn;
-}
-
-export function getExtremaByColumn(state) {
-  let extremaByColumn = {};
-  getNumericalColumns(state).map(
-    column => (extremaByColumn[column] = getExtrema(state, column))
-  );
-  return extremaByColumn;
-}
-
-function getMaximumValue(state, column) {
-  return Math.max(...state.data.map(row => parseFloat(row[column])));
-}
-
-function getMinimumValue(state, column) {
-  return Math.min(...state.data.map(row => parseFloat(row[column])));
-}
-
-function getRange(maximumValue, minimumValue) {
-  return Math.abs(maximumValue - minimumValue);
-}
-
-export function getExtrema(state, column) {
-  let extrema = {};
-  extrema.max = getMaximumValue(state, column);
-  extrema.min = getMinimumValue(state, column)
-  extrema.range = getRange(extrema.max, extrema.min);
-
-  return extrema;
-}
-
-export function getSelectedColumnDescriptions(state) {
-  return getSelectedColumns(state).map(column => {
-    return {
-      id: column.id,
-      description: getColumnDescription(state, column.id)
-    };
-  });
-}
-
-export function getColumnDescription(state, columnId) {
-  if (!state || !columnId) {
-    return null;
-  }
-
-  // Use metadata if available.
-  if (state.metadata && state.metadata.fields) {
-    const field = state.metadata.fields.find(field => {
-      return field.id === columnId;
-    });
-    return field.description;
-  }
-
-  // Try using a user-entered column description if available.
-  if (!state.columns) {
-    return;
-  }
-  const matchedColumn = state.columns.find(column => {
-    return column.id === columnId;
-  });
-  if (matchedColumn) {
-    return matchedColumn.description;
-  }
-
-  // No column description available.
-  return null;
-}
-
-function getKeyByValue(object, value) {
-  return Object.keys(object).find(key => object[key] === value);
-}
-
-function isEmpty(object) {
-  return Object.keys(object).length === 0;
-}
-
-export function getConvertedValue(state, rawValue, column) {
-  const convertedValue =
-    getCategoricalColumns(state).includes(column) &&
-    !isEmpty(state.featureNumberKey)
-      ? getKeyByValue(state.featureNumberKey[column], rawValue)
-      : rawValue;
-  return convertedValue;
-}
-
-export function getConvertedAccuracyCheckExamples(state) {
-  const convertedAccuracyCheckExamples = [];
-  var example;
-  for (example of state.accuracyCheckExamples) {
-    let convertedAccuracyCheckExample = [];
-    for (var i = 0; i < state.selectedFeatures.length; i++) {
-      convertedAccuracyCheckExample.push(
-        getConvertedValue(state, example[i], state.selectedFeatures[i])
-      );
-    }
-    convertedAccuracyCheckExamples.push(convertedAccuracyCheckExample);
-  }
-  return convertedAccuracyCheckExamples;
-}
-
-export function getConvertedLabel(state, rawLabel) {
-  if (state.labelColumn) {
-    return getConvertedValue(state, rawLabel, state.labelColumn);
-  }
-}
-
-export function getConvertedPredictedLabel(state) {
-  return getConvertedLabel(state, state.prediction);
-}
-
-export function getConvertedLabels(state, rawLabels = []) {
-  return rawLabels.map(label => getConvertedLabel(state, label));
-}
-
-export function isRegression(state) {
-  return isColumnNumerical(state, state.labelColumn);
-}
-
-export function getAccuracyGrades(state) {
-  const grades = isRegression(state)
-    ? getAccuracyRegression(state).grades
-    : getAccuracyClassification(state).grades;
-  return grades;
-}
-
-export function getAccuracyClassification(state) {
-  let accuracy = {};
-  let numCorrect = 0;
-  let grades = [];
-  const numPredictedLabels = state.accuracyCheckPredictedLabels
-    ? state.accuracyCheckPredictedLabels.length
-    : 0;
-  for (let i = 0; i < numPredictedLabels; i++) {
-    if (
-      state.accuracyCheckLabels[i].toString() ===
-      state.accuracyCheckPredictedLabels[i].toString()
-    ) {
-      numCorrect++;
-      grades.push(ResultsGrades.CORRECT);
-    } else {
-      grades.push(ResultsGrades.INCORRECT);
-    }
-  }
-  accuracy.percentCorrect = ((numCorrect / numPredictedLabels) * 100).toFixed(
-    2
-  );
-  accuracy.grades = grades;
-  return accuracy;
-}
-
-export function getAccuracyRegression(state) {
-  let accuracy = {};
-  let numCorrect = 0;
-  let grades = [];
-  const range = getExtrema(state, state.labelColumn).range;
-  const errorTolerance = (range * REGRESSION_ERROR_TOLERANCE) / 100;
-  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
-  for (let i = 0; i < numPredictedLabels; i++) {
-    const diff = Math.abs(
-      state.accuracyCheckLabels[i] - state.accuracyCheckPredictedLabels[i]
-    );
-    if (diff <= errorTolerance) {
-      numCorrect++;
-      grades.push(ResultsGrades.CORRECT);
-    } else {
-      grades.push(ResultsGrades.INCORRECT);
-    }
-  }
-  accuracy.percentCorrect = ((numCorrect / numPredictedLabels) * 100).toFixed(
-    2
-  );
-  accuracy.grades = grades;
-  return accuracy;
-}
-
-export function getSummaryStat(state) {
-  let summaryStat = {};
-  if (isRegression(state)) {
-    summaryStat.type = MLTypes.REGRESSION;
-    summaryStat.stat = getAccuracyRegression(state).percentCorrect;
-  } else {
-    summaryStat.type = MLTypes.CLASSIFICATION;
-    summaryStat.stat = getAccuracyClassification(state).percentCorrect;
-  }
-  return summaryStat;
-}
-
-export function getDataDescription(state) {
-  // If this a dataset from the internal collection that already has a description, use that.
-  if (
-    state.metadata &&
-    state.metadata.card &&
-    state.metadata.card.description
-  ) {
-    return state.metadata.card.description;
-  } else if (
-    state.trainedModelDetails &&
-    state.trainedModelDetails.datasetDescription
-  ) {
-    return state.trainedModelDetails.datasetDescription;
-  } else {
-    return undefined;
-  }
-}
-
-function getModelMetrics(state) {
-  const modelMetrics = {};
-  modelMetrics.userUploaded = isUserUploadedDataset(state);
-  modelMetrics.datasetName = state.metadata.name;
-  modelMetrics.features = state.selectedFeatures;
-  modelMetrics.label = state.labelColumn;
-  modelMetrics.accuracy = getSummaryStat(state).stat;
-  return modelMetrics;
-}
-
-export function logFirehoseMetric(action, state) {
-  return state.firehoseMetricsLogger(action, getModelMetrics(state));
-}
-
-export function getDatasetDetails(state) {
-  const datasetDetails = {};
-  datasetDetails.name = state.metadata.name;
-  datasetDetails.description = getDataDescription(state);
-  datasetDetails.numRows = state.data.length;
-  datasetDetails.isUserUploaded = isUserUploadedDataset(state);
-  return datasetDetails;
-}
-
-export function getColumnDataToSave(state, column) {
-  const columnData = {};
-  columnData.id = column;
-  columnData.description = getColumnDescription(state, column);
-  if (isColumnCategorical(state, column)) {
-    columnData.values = getUniqueOptions(state, column);
-  } else if (isColumnNumerical(state, column)) {
-    const {max, min} = getExtrema(state, column);
-    columnData.max = max;
-    columnData.min = min;
-  }
-  return columnData;
-}
-
-export function getFeaturesToSave(state) {
-  const features = state.selectedFeatures.map(feature =>
-    getColumnDataToSave(state, feature)
-  );
-  return features;
-}
-
-export function getTrainedModelDataToSave(state) {
-  const dataToSave = {};
-  dataToSave.name = state.trainedModelDetails.name;
-  dataToSave.datasetDetails = getDatasetDetails(state);
-  dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
-  dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
-  dataToSave.selectedTrainer = isRegression(state)
-    ? RegressionTrainer
-    : ClassificationTrainer;
-  dataToSave.featureNumberKey = state.featureNumberKey;
-  dataToSave.label = getColumnDataToSave(state, state.labelColumn);
-  dataToSave.features = getFeaturesToSave(state);
-  dataToSave.summaryStat = getSummaryStat(state);
-  dataToSave.trainedModel = state.trainedModel
-    ? state.trainedModel.toJSON()
-    : null;
-  dataToSave.kValue = state.kValue;
-
-  return dataToSave;
-}
-
-export function getSpecifiedDatasets(state) {
-  return state.mode && state.mode.datasets;
-}
-
-export function getShowColumnClicking(state) {
-  return !(state.mode && state.mode.hideColumnClicking);
-}
-
-export function getPredictAvailable(state) {
-  return (
-    Object.keys(state.testData).filter(
-      value => state.testData[value] && state.testData[value] !== ""
-    ).length === state.selectedFeatures.length
-  );
-}
-
-export function getPanelButtons(state) {
-  return prevNextButtons(state);
-}
-
-export function readyToTrain(state) {
-  return uniqLabelFeaturesSelected(state);
-}
+/* Functions for processing column data for visualizations. */
 
 /* Returns an object with information for the CrossTab UI.
  *
@@ -1236,19 +903,40 @@ export function getScatterPlotData(state) {
   };
 }
 
-function areArraysEqual(array1, array2) {
-  return (
-    array1.length === array2.length &&
-    array1.every((value, index) => {
-      return value === array2[index];
-    })
-  );
+/* Functions for processing data to display for results. */
+
+export function getConvertedAccuracyCheckExamples(state) {
+  const convertedAccuracyCheckExamples = [];
+  var example;
+  for (example of state.accuracyCheckExamples) {
+    let convertedAccuracyCheckExample = [];
+    for (var i = 0; i < state.selectedFeatures.length; i++) {
+      convertedAccuracyCheckExample.push(
+        getConvertedValueForDisplay(state, example[i], state.selectedFeatures[i])
+      );
+    }
+    convertedAccuracyCheckExamples.push(convertedAccuracyCheckExample);
+  }
+  return convertedAccuracyCheckExamples;
 }
 
-export function isUserUploadedDataset(state) {
-  // The csvfile for internally curated datasets are strings; those uploaded by
-  // users are objects. Use data type as a proxy to know which case we're in.
-  return typeof state.csvfile === "object" && state.csvfile !== null;
+export function getConvertedPredictedLabel(state) {
+  return getConvertedValueForDisplay(state, state.prediction, state.labelColumn);
+}
+
+export function getConvertedLabels(state, rawLabels = []) {
+  return rawLabels.map(label => getConvertedValueForDisplay(state, label, state.labelColumn));
+}
+
+export function isRegression(state) {
+  return isColumnNumerical(state, state.labelColumn);
+}
+
+export function getPercentCorrect(state) {
+  const percentCorrect = isRegression(state)
+    ? getAccuracyRegression(state).percentCorrect
+    : getAccuracyClassification(state).percentCorrect;
+  return percentCorrect;
 }
 
 export function getCorrectResults(state) {
@@ -1259,20 +947,77 @@ export function getIncorrectResults(state) {
   return getResultsByGrade(state, ResultsGrades.INCORRECT);
 }
 
-function getResultsByGrade(state, grade) {
-  const results = {};
-  const accuracyGrades = getAccuracyGrades(state);
-  const examples = getConvertedAccuracyCheckExamples(state).filter((example, index) => {
-    return grade === accuracyGrades[index];
-  });
-  const labels = getConvertedLabels(state, state.accuracyCheckLabels).filter((example, index) => {
-    return grade === accuracyGrades[index];
-  });
-  const predictedLabels = getConvertedLabels(state, state.accuracyCheckPredictedLabels).filter((example, index) => {
-    return grade === accuracyGrades[index];
-  });
-  results.examples = examples;
-  results.labels = labels;
-  results.predictedLabels = predictedLabels;
-  return results;
+/* Functions for processing data about a trained model to save. */
+
+export function isUserUploadedDataset(state) {
+  // The csvfile for internally curated datasets are strings; those uploaded by
+  // users are objects. Use data type as a proxy to know which case we're in.
+  return typeof state.csvfile === "object" && state.csvfile !== null;
+}
+
+export function getDataDescription(state) {
+  // If this a dataset from the internal collection that already has a description, use that.
+  if (
+    state.metadata &&
+    state.metadata.card &&
+    state.metadata.card.description
+  ) {
+    return state.metadata.card.description;
+  } else if (
+    state.trainedModelDetails &&
+    state.trainedModelDetails.datasetDescription
+  ) {
+    return state.trainedModelDetails.datasetDescription;
+  } else {
+    return undefined;
+  }
+}
+
+export function getDatasetDetails(state) {
+  const datasetDetails = {};
+  datasetDetails.name = state.metadata.name;
+  datasetDetails.description = getDataDescription(state);
+  datasetDetails.numRows = state.data.length;
+  datasetDetails.isUserUploaded = isUserUploadedDataset(state);
+  return datasetDetails;
+}
+
+export function getFeaturesToSave(state) {
+  const features = state.selectedFeatures.map(feature =>
+    getColumnDataToSave(state, feature)
+  );
+  return features;
+}
+
+export function getLabelToSave(state) {
+  return getColumnDataToSave(state, state.labelColumn);
+}
+
+function getSummaryStat(state) {
+  let summaryStat = {};
+  summaryStat.type = isRegression(state)
+    ? MLTypes.REGRESSION : MLTypes.CLASSIFICATION;
+  summaryStat.stat = getPercentCorrect(state);
+  return summaryStat;
+}
+
+export function getTrainedModelDataToSave(state) {
+  const dataToSave = {};
+  dataToSave.name = state.trainedModelDetails.name;
+  dataToSave.datasetDetails = getDatasetDetails(state);
+  dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
+  dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
+  dataToSave.selectedTrainer = isRegression(state)
+    ? RegressionTrainer
+    : ClassificationTrainer;
+  dataToSave.featureNumberKey = state.featureNumberKey;
+  dataToSave.label = getColumnDataToSave(state, state.labelColumn);
+  dataToSave.features = getFeaturesToSave(state);
+  dataToSave.summaryStat = getSummaryStat(state);
+  dataToSave.trainedModel = state.trainedModel
+    ? state.trainedModel.toJSON()
+    : null;
+  dataToSave.kValue = state.kValue;
+
+  return dataToSave;
 }

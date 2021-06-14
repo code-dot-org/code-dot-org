@@ -3,9 +3,9 @@ import { store } from "./index.js";
 import {
   setImportedData,
   setColumnsByDataType,
-  columnContainsOnlyNumbers,
   setRemovedRowsCount
 } from "./redux";
+import { columnContainsOnlyNumbers } from "./helpers/columnDetails.js";
 import { ColumnTypes } from "./constants.js";
 
 export const parseCSV = (csvfile, download, useDefaultColumnDataType) => {

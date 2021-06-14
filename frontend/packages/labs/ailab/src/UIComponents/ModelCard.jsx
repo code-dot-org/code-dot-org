@@ -4,8 +4,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import {
-  getSummaryStat,
-  getColumnDataToSave,
+  getPercentCorrect,
+  getLabelToSave,
   getFeaturesToSave,
   getDatasetDetails
 } from "../redux";
@@ -16,7 +16,7 @@ class ModelCard extends Component {
   static propTypes = {
     trainedModelDetails: PropTypes.object,
     selectedFeatures: PropTypes.array,
-    summaryStat: PropTypes.object,
+    percentCorrect: PropTypes.number,
     label: PropTypes.object,
     feature: PropTypes.array,
     datasetDetails: PropTypes.object
@@ -26,7 +26,7 @@ class ModelCard extends Component {
     const {
       trainedModelDetails,
       selectedFeatures,
-      summaryStat,
+      percentCorrect,
       label,
       feature,
       datasetDetails
@@ -49,9 +49,9 @@ class ModelCard extends Component {
             <div style={styles.modelCardContent}>
               <p style={styles.modelCardDetails}>
                 Predict {label.id} based on{" "}
-                {selectedFeatures.length > 0 && summaryStat && (
+                {selectedFeatures.length > 0 && percentCorrect && (
                   <span>
-                    {selectedFeatures.join(", ")} with {summaryStat.stat}%
+                    {selectedFeatures.join(", ")} with {percentCorrect}%
                     accuracy.
                   </span>
                 )}
@@ -144,8 +144,8 @@ class ModelCard extends Component {
 export default connect(state => ({
   trainedModelDetails: state.trainedModelDetails,
   selectedFeatures: state.selectedFeatures,
-  summaryStat: getSummaryStat(state),
-  label: getColumnDataToSave(state, state.labelColumn),
+  percentCorrect: getPercentCorrect(state),
+  label: getLabelToSave(state),
   feature: getFeaturesToSave(state),
   datasetDetails: getDatasetDetails(state)
 }))(ModelCard);
