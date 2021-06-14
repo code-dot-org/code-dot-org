@@ -7,11 +7,12 @@
 #  properties      :text(65535)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  published_state :string(255)
+#  published_state :string(14)
 #
 # Indexes
 #
-#  index_unit_groups_on_name  (name)
+#  index_unit_groups_on_name             (name)
+#  index_unit_groups_on_published_state  (published_state)
 #
 
 require 'cdo/script_constants'
@@ -31,6 +32,7 @@ class UnitGroup < ApplicationRecord
 
   scope :with_associated_models, -> {includes([:plc_course, :default_unit_group_units])}
 
+  enum published_state: SharedConstants::PUBLISHED_STATE.to_h
   validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, pilot, beta, preview or stable'}
 
   FAMILY_NAMES = [

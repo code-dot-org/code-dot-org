@@ -13,13 +13,14 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
-#  published_state :string(255)
+#  published_state :string(14)
 #
 # Indexes
 #
 #  index_scripts_on_family_name      (family_name)
 #  index_scripts_on_name             (name) UNIQUE
 #  index_scripts_on_new_name         (new_name) UNIQUE
+#  index_scripts_on_published_state  (published_state)
 #  index_scripts_on_wrapup_video_id  (wrapup_video_id)
 #
 
@@ -122,6 +123,7 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
+  enum published_state: SharedConstants::PUBLISHED_STATE.to_h
   validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, pilot, beta, preview or stable'}
 
   def prevent_duplicate_levels
