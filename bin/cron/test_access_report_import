@@ -24,11 +24,10 @@ def main
   rescue => e
     new_key = resolved_object_key(object_key, false)
     ChatClient.log("Dry run seeding of state cs offering file failed: #{new_key}", color: 'red')
-    ChatClient.log(e, color: 'red')
+    ChatClient.log(e.message, color: 'red')
 
     # update object key to reflect invalid file
     AWS::S3.rename_object(CENSUS_BUCKET, object_key, new_key)
-    puts e
   end
 end
 
