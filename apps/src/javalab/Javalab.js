@@ -61,8 +61,11 @@ Javalab.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
   this.channelId = config.channel;
-  // Pulls dark mode from user preferences
-  this.isDarkMode = !!config.usingDarkModePref;
+  // Pulls dark mode from user preferences; default to true if not set
+  this.isDarkMode =
+    config.usingDarkModePref === undefined ||
+    config.usingDarkModePref === null ||
+    config.usingDarkModePref;
 
   config.makeYourOwn = false;
   config.wireframeShare = true;
