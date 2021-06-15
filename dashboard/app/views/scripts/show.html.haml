@@ -12,6 +12,8 @@
                             user_providers: current_user&.providers,
                             is_verified_teacher: current_user&.authorized_teacher?,
                             locale: Script.locale_english_name_map[request.locale],
+                            course_link: @script.course_link(params[:section_id]),
+                            course_title: @script.course_title || I18n.t('view_all_units'),
                             sections: @sections_with_assigned_info}
 - scriptOverviewData = {scriptData: script_data.merge(additional_script_data)}
 - if @script.professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
@@ -28,14 +30,6 @@
 - if @current_user.try(:script_hidden?, @script)
   = render partial: 'hidden_script'
 - else
-  - course_link = @script.course_link(params[:section_id])
-  - if course_link
-    - course_title = @script.course_title || I18n.t('view_all_units')
-    #script-breadcrumb
-      %a{href: course_link}
-        %i.fa.fa-chevron-left
-        %span
-          = course_title
   #landingpage
     #notification
     -# This div ends up being owned by ScriptOverviewHeader in react
