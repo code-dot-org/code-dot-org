@@ -554,7 +554,9 @@ class ScriptLevel < ApplicationRecord
   # script_level
   def get_user_level_for_bubble(student)
     levels = if bubble_choice?
-               [level.best_result_sublevel(student, script) || level]
+               keep_working_level = level.keep_working_sublevel(student, script)
+               best_result_level = level.best_result_sublevel(student, script)
+               [keep_working_level || best_result_level || level]
              elsif contained_levels.any?
                contained_levels
              else
@@ -581,7 +583,7 @@ class ScriptLevel < ApplicationRecord
     end
 
     if teacher.present? && user_level.present?
-      feedback = TeacherFeedback.get_student_level_feedback(student.id, user_level.level_id, teacher.id, script_id)
+      feedback = TeacherFeedback.get_latest_feedback_given(student.id, user_level.level_id, teacher.id, script_id)
     end
 
     teacher_panel_summary = {
