@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-05-26 19:27:09 UTC",
+    "serialized_at": "2021-06-10 21:27:38 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -1959,7 +1959,7 @@
       "key": "018fc5e4-ba55-4049-8faf-bfd0f596e796",
       "position": 2,
       "properties": {
-        "name": "Gettinig Loopy"
+        "name": "Getting Loopy"
       },
       "seeding_key": {
         "activity_section.key": "018fc5e4-ba55-4049-8faf-bfd0f596e796",

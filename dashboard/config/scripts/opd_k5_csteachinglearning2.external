@@ -3,9 +3,9 @@ skip_dialog true
 markdown <<MARKDOWN
 # Student Practices
 
-<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+Student practices are a core set of practices and skills students develop throughout each course.  These student practices serve as reminders of the high-level skills and mindset we want students to develop in computer science.
 
-Student practices are a core set of practices and skills students develop throughout each course.  These student practices serve as reminders of the high-level skills and mindset we want students to develop in CS.
+<img src="https://images.code.org/054d81744bd44195c5a0320141470ac2-image-1622741859913.png" class="level-image" style="display: block; width:50%">
 
 ## Problem Solving
 * Use a structured problem solving-process to help solve new problems.
@@ -32,6 +32,8 @@ Student practices are a core set of practices and skills students develop throug
 * Structure your work so that it can be easily understood by others.
 * Consider the perspective and background of your audience when presenting your work.
 * Provide and accept constructive feedback in order to improve your work.
+
+
 
 
 
