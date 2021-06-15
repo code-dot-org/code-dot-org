@@ -29,7 +29,7 @@ import {TestResults} from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
-import reducers, {setPlayerSelectionDialog} from '@cdo/apps/craft/redux';
+import reducers from '@cdo/apps/craft/redux';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -462,10 +462,6 @@ var preloadImage = function(url) {
 
 Craft.getAppReducers = function() {
   return reducers;
-};
-
-Craft.openPlayerSelectionDialog = function(onSelectedCallback) {
-  getStore().dispatch(setPlayerSelectionDialog(true, onSelectedCallback));
 };
 
 Craft.onCharacterSelected = function(name, level, callback) {
