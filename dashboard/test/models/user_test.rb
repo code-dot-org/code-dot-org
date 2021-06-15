@@ -3218,7 +3218,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned courses and scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script'
+      visible_script = create :script, name: 'visible-script', published_state: SharedConstants::PUBLISHED_STATE.preview
       @student.assign_script(visible_script)
       assert @student.assigned_course_or_script?
     end
