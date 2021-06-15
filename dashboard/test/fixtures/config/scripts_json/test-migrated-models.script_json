@@ -3,7 +3,7 @@
     "name": "test-migrated-models",
     "wrapup_video_id": null,
     "login_required": false,
-    "published_state": 'beta',
+    "published_state": "beta",
     "properties": {
       "peer_reviews_to_complete": 0,
       "is_migrated": true

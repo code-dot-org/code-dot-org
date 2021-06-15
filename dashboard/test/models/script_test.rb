@@ -1816,7 +1816,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     assert script.tts
-    assert script.stable?
+    assert_equal SharedConstants::PUBLISHED_STATE.pilot, script.published_state
     assert script.announcements
     assert script.is_course
 
@@ -1829,7 +1829,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     refute script_copy.tts
-    refute script_copy.stable?
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.published_state
     refute script_copy.announcements
     refute script_copy.is_course
 
@@ -1872,6 +1872,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal expected_level_names, actual_level_names
 
     new_dsl = <<~SCRIPT
+      published_state 'beta'
+
       lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: false
       level 'Level 1_copy'
       level 'Level 4_copy'
