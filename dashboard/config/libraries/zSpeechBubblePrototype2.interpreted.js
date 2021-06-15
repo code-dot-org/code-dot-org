@@ -41,8 +41,8 @@ function speechBubbles(){
       if(rectY<0){rectY=0;}
       if(rectY+boxHeight>400){rectY=400-boxHeight;}
       
-      rect(rectX, rectY, boxWidth, boxHeight,5);
-      shape(rectX+(boxWidth/2)-2,rectY+boxHeight,rectX+(boxWidth/2),spriteY,rectX+(boxWidth/2)+2,rectY+boxHeight);
+      rect(rectX, rectY, boxWidth, boxHeight,10);
+      shape(rectX+boxWidth*4/10,rectY+boxHeight,rectX+(boxWidth/2),(spriteY+rectY+boxHeight)/2,rectX+boxWidth/2,rectY+boxHeight);
 
       noStroke();
       fill("white");
