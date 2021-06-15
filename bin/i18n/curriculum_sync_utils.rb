@@ -68,8 +68,9 @@ module CurriculumSyncUtils
       next if data.blank?
 
       # write data to path
-      # TODO: include the "other directory already exists" logic from localize_level_content
-      path = File.join(I18N_SOURCE_DIR, 'curriculum_content', get_script_subdirectory(script), "#{script.name}.json")
+      name = "#{script.name}.json"
+      path = File.join(I18N_SOURCE_DIR, 'curriculum_content', get_script_subdirectory(script), name)
+      next if I18nScriptUtils.script_directory_change?(name, path)
       FileUtils.mkdir_p(File.dirname(path))
       File.write(path, JSON.pretty_generate(data))
     end
@@ -202,15 +203,35 @@ module CurriculumSyncUtils
         script_objects[name] = data if data.present?
       end
 
-      # Then we recursively flatten all of our hashes of objects, and write
-      # each resulting collection of strings out to a rails i18n config file.
+      # Then we recursively flatten all of our hashes of objects, to group them
+      # by type rather than by script
       result = flatten(script_objects, ScriptCrowdinSerializer, :scripts)
+
+      # Then we apply some postprocessing.
+      # We use URLs as keys for lessons in Crowdin, to make things easier for
+      # translators. For the actual translation files, though, we'd like to use
+      # more-standard keys.
+      rekeyed_lessons = result[:lessons].map do |lesson_url, lesson_data|
+        route_params = Rails.application.routes.recognize_path(lesson_url)
+        lesson = Lesson.joins(:script).
+          find_by(
+            "scripts.name": route_params[:script_id],
+            relative_position: route_params[:position].to_i,
+            has_lesson_plan: true
+          )
+        unless lesson.present?
+          STDERR.puts "could not find lesson for url #{lesson_url.inspect}"
+          next
+        end
+        [Services::GloballyUniqueIdentifiers.build_lesson_key(lesson), lesson_data]
+      end
+      result[:lessons] = rekeyed_lessons.to_h
+
+      # Finally, write each resulting collection of strings out to a rails i18n
+      # config file.
       result.each do |type, strings|
         dest = File.join(Rails.root, 'config/locales', "#{type}.#{locale}.json")
         data = {locale => {data: {type => strings}}}
-        # TODO: normalize keys for lessons and resources
-        # route_params = Rails.application.routes.recognize_path(crowdin_key)
-        # {:controller=>"lessons", :action=>"show", :script_id=>"coursea-2021", :position=>"1"}
         File.write(dest, JSON.pretty_generate(data))
       end
     end
