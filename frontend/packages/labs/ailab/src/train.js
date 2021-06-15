@@ -83,7 +83,7 @@ const prepareTrainingData = store => {
   /*
   Select X% of examples and corresponding labels from the training set to use for a post-training accuracy calculation.
   */
-  const numToReserve = parseInt(
+  const numToReserve = Math.ceil(
     trainingExamples.length * PERCENT_OF_DATASET_FOR_TESTING
   );
   let accuracyCheckExamples = [];
