@@ -1097,9 +1097,9 @@ module Services
       version_year = "1999"
 
       if with_unit_group
-        unit_group = create :unit_group, family_name: family_name, version_year: version_year
+        unit_group = create :unit_group, is_course: true
         create :unit_group_unit, unit_group: unit_group, script: script, position: 1
-        CourseOffering.add_course_offering(unit_group)
+        CourseOffering.add_course_offering(unit_group, family_name: family_name, version_year: version_year)
       else
         script.update!(
           is_course: true,
