@@ -9,15 +9,15 @@ class ScriptsControllerTest < ActionController::TestCase
     @platformization_partner = create(:platformization_partner)
     @levelbuilder = create(:levelbuilder)
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_script = create :script, pilot_experiment: 'my-experiment'
+    @pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
     @pilot_student = create(:follower, section: @pilot_section).student_user
     @no_progress_or_assignment_student = create :student
 
-    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', is_stable: true
-    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', is_stable: true
-    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019'
-    @partner_script = create :script, editor_experiment: 'platformization-partners'
+    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', is_stable: true, published_state: SharedConstants::PUBLISHED_STATE.stable
+    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', is_stable: true, published_state: SharedConstants::PUBLISHED_STATE.stable
+    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
+    @partner_script = create :script, editor_experiment: 'platformization-partners', published_state: SharedConstants::PUBLISHED_STATE.beta
 
     @student_coursez_2017 = create :student
     @section_coursez_2017 = create :section, script: @coursez_2017
