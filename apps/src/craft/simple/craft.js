@@ -10,6 +10,10 @@ import {
   EventType,
   utils as CraftUtils
 } from '@code-dot-org/craft';
+import {
+  openPlayerSelectionDialog,
+  closePlayerSelectionDialog
+} from '@cdo/apps/craft/utils';
 var dom = require('../../dom');
 import {trySetLocalStorage} from '../../utils';
 var houseLevels = require('./houseLevels');
@@ -141,19 +145,14 @@ Craft.init = function(config) {
     Craft.beginBackgroundMusic();
     if (config.level.showPopupOnLoad) {
       if (config.level.showPopupOnLoad === 'playerSelection') {
-        getStore().dispatch(
-          setPlayerSelectionDialog(true, selectedPlayer => {
-            if (selectedPlayer) {
-              trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
-            } else {
-              selectedPlayer = DEFAULT_CHARACTER;
-            }
-            Craft.setCurrentCharacter(selectedPlayer);
-            getStore().dispatch(setPlayerSelectionDialog(false));
-            Craft.initializeAppLevel(config.level);
-            showInstructions();
-          })
-        );
+        openPlayerSelectionDialog(selectedPlayer => {
+          closePlayerSelectionDialog();
+          Craft.onCharacterSelected(
+            selectedPlayer,
+            config.level,
+            showInstructions
+          );
+        });
       } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
         Craft.showHouseSelectionPopup(function(selectedHouse) {
           trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
@@ -463,6 +462,23 @@ var preloadImage = function(url) {
 
 Craft.getAppReducers = function() {
   return reducers;
+};
+
+Craft.openPlayerSelectionDialog = function(onSelectedCallback) {
+  getStore().dispatch(setPlayerSelectionDialog(true, onSelectedCallback));
+};
+
+Craft.onCharacterSelected = function(name, level, callback) {
+  if (name) {
+    trackEvent('Minecraft', 'ClickedCharacter', name);
+  } else {
+    name = DEFAULT_CHARACTER;
+  }
+
+  Craft.setCurrentCharacter(name);
+  // getStore().dispatch(setPlayerSelectionDialog(false));
+  Craft.initializeAppLevel(level);
+  callback();
 };
 
 Craft.characterAssetPackName = function(playerName) {
