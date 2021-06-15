@@ -63,12 +63,19 @@ class TeacherFeedback < ApplicationRecord
   end
 
   # returns the latest feedback from each teacher for the student on the level
-  def self.get_latest_feedbacks_received(student_id, level_id, script_id)
-    where(
+  def self.get_latest_feedbacks_received(student_id, level_id, script_id, review_state = nil)
+    query = {
       student_id: student_id,
       level_id: level_id,
-      script_id: script_id
-    ).latest_per_teacher
+      script_id: script_id,
+      review_state: review_state
+    }
+
+    # Note that this will not handle filtering by review_state = nil
+    query[:review_state] = review_state if review_state.present?
+
+    # Maureen make sure these are sorted with latest first
+    where(query).latest_per_teacher
   end
 
   # returns the latest feedback for each student on every level in a script given by the teacher
