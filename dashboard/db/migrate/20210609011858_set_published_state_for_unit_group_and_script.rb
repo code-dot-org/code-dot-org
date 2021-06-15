@@ -7,14 +7,14 @@ class SetPublishedStateForUnitGroupAndScript < ActiveRecord::Migration[5.2]
       script.write_script_json
     end
 
-    change_column_null :scripts, :published_state, true
+    change_column_null :scripts, :published_state, false
     change_column_default :scripts, :published_state, from: nil, to: 'beta'
 
     UnitGroup.all.each do |ug|
       ug.update!({published_state: ug.get_published_state})
     end
 
-    change_column_null :unit_groups, :published_state, true
+    change_column_null :unit_groups, :published_state, false
     change_column_default :unit_groups, :published_state, from: nil, to: 'beta'
   end
 
@@ -26,14 +26,14 @@ class SetPublishedStateForUnitGroupAndScript < ActiveRecord::Migration[5.2]
       script.write_script_json
     end
 
-    change_column_null :scripts, :published_state, false
+    change_column_null :scripts, :published_state, true
     change_column_default :scripts, :published_state, from: 'beta', to: nil
 
     UnitGroup.all.each do |ug|
       ug.update!({published_state: nil})
     end
 
-    change_column_null :unit_groups, :published_state, false
+    change_column_null :unit_groups, :published_state, true
     change_column_default :unit_groups, :published_state, from: 'beta', to: nil
   end
 end
