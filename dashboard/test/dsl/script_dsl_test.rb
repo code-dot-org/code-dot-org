@@ -465,7 +465,6 @@ endvariants
     script = create :script, editor_experiment: 'editors'
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
-      hidden false
       published_state 'beta'
       editor_experiment 'editors'
 
@@ -806,7 +805,6 @@ level 'Level 3'
     script = create :script, project_sharing: true
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
-      hidden false
       published_state 'beta'
       project_sharing true
 
@@ -832,7 +830,6 @@ level 'Level 3'
     script = create :script, curriculum_umbrella: 'CSP'
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
-      hidden false
       published_state 'beta'
       curriculum_umbrella 'CSP'
 
