@@ -28,6 +28,9 @@ describe("train functions", () => {
     ];
 
     store.dispatch(setImportedData(data, false));
+    store.dispatch(setColumnsByDataType("cost", ColumnTypes.NUMERICAL));
+    store.dispatch(setColumnsByDataType("rain", ColumnTypes.NUMERICAL));
+    store.dispatch(setColumnsByDataType("temperature", ColumnTypes.NUMERICAL));
     store.dispatch(setLabelColumn("cost"));
     store.dispatch(addSelectedFeature("temperature"));
     store.dispatch(addSelectedFeature("rain"));
@@ -35,12 +38,13 @@ describe("train functions", () => {
     train.init(store);
     train.onClickTrain(store);
 
-    store.dispatch(setTestData({temperature: "150", rain: "1030"}));
+    store.dispatch(setTestData({temperature: "10", rain: "1010"}));
 
     train.onClickPredict(store);
 
     const predictedValue = getConvertedPredictedLabel(store.getState());
-    expect(predictedValue).toBe(30);
+
+    expect(predictedValue).toBe(20);
   });
 
   test("train and predict with categorical data", async () => {
@@ -74,6 +78,6 @@ describe("train functions", () => {
 
     const predictedLabel = getConvertedPredictedLabel(store.getState());
 
-    expect(predictedLabel).toBe("yellow");
+    expect(predictedLabel).toBe("green");
   });
 });
