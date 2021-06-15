@@ -27,7 +27,7 @@ const NEXT_BUTTON_TEXT = {
   [COMPLETED]: i18n.printCertificate()
 };
 
-class UnitOverviewTopRow extends React.Component {
+class ScriptOverviewTopRow extends React.Component {
   static propTypes = {
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSectionId: PropTypes.number,
@@ -252,7 +252,7 @@ const styles = {
   }
 };
 
-export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
+export const UnconnectedScriptOverviewTopRow = ScriptOverviewTopRow;
 
 export default connect((state, ownProps) => ({
   sectionsForDropdown: sectionsForDropdown(
@@ -261,4 +261,4 @@ export default connect((state, ownProps) => ({
     ownProps.currentCourseId,
     false
   )
-}))(UnitOverviewTopRow);
+}))(ScriptOverviewTopRow);
