@@ -831,7 +831,7 @@ level 'Level 3'
   test 'serialize curriculum_umbrella' do
     script = create :script, curriculum_umbrella: 'CSP'
     script_text = ScriptDSL.serialize_to_string(script)
-    expected = <<~SCRIPT 
+    expected = <<~SCRIPT
       hidden false
       published_state 'beta'
       curriculum_umbrella 'CSP'

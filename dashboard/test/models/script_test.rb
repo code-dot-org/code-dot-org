@@ -1816,7 +1816,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     assert unit.tts
-    assert unit.stable?
+    assert_equal SharedConstants::PUBLISHED_STATE.pilot, unit.published_state
     assert unit.announcements
     assert unit.is_course
 
@@ -1829,7 +1829,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     refute unit_copy.tts
-    refute unit_copy.stable?
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, unit_copy.published_state
     refute unit_copy.announcements
     refute unit_copy.is_course
 
