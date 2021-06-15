@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Hammer from 'hammerjs';
 
 import trackEvent from '../../util/trackEvent';
-import {tryGetLocalStorage, trySetLocalStorage} from '../../utils';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {singleton as studioApp} from '../../StudioApp';
 import craftMsg from '../locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
