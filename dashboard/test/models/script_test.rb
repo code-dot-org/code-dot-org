@@ -1829,7 +1829,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     refute script_copy.tts
-    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, script_copy.published_state
     refute script_copy.announcements
     refute script_copy.is_course
 
