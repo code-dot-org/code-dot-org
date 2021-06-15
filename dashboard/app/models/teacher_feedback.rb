@@ -35,12 +35,14 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :level
   belongs_to :teacher, class_name: 'User'
 
-  REVIEW_STATES = {
-    keepWorking: 'keepWorking',
-    completed: 'completed'
-  }.freeze
+  REVIEW_STATES = OpenStruct.new(
+    {
+      keepWorking: 'keepWorking',
+      completed: 'completed'
+    }
+).freeze
 
-  validates_inclusion_of :review_state, in: REVIEW_STATES.values.map(&:to_s), allow_nil: true
+  validates_inclusion_of :review_state, in: REVIEW_STATES.to_h.values, allow_nil: true
 
   # Finds the script level associated with this object, using script id and
   # level id.

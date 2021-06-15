@@ -260,7 +260,7 @@ DSL
     script = @script_level.script
     create :user_level, user: student, level: @sublevel2, script: script, best_result: 100
     create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
-    create :teacher_feedback, student: student, teacher: teacher, level: @sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES[:keepWorking]
+    create :teacher_feedback, student: student, teacher: teacher, level: @sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
 
     assert_equal @sublevel1, @bubble_choice.keep_working_sublevel(student, script)
   end
