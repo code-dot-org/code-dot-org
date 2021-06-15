@@ -708,7 +708,6 @@ export function getSelectedCategoricalColumns(state) {
   let intersection = getCategoricalColumns(state).filter(
     x => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
-  console.log("selectedCategoricalColumns", intersection)
   return intersection;
 }
 
