@@ -17,7 +17,7 @@ import {
   closePlayerSelectionDialog
 } from '@cdo/apps/craft/utils';
 import dom from '../../dom';
-import {trySetLocalStorage} from '../../utils';
+import {trySetLocalStorage} from '@cdo/apps/utils';
 import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
 import MusicController from '../../MusicController';
 import {Provider} from 'react-redux';

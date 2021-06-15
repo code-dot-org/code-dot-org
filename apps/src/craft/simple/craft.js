@@ -15,7 +15,7 @@ import {
   closePlayerSelectionDialog
 } from '@cdo/apps/craft/utils';
 var dom = require('../../dom');
-import {trySetLocalStorage} from '../../utils';
+import {trySetLocalStorage} from '@cdo/apps/utils';
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../../MusicController');
