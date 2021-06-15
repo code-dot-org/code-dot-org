@@ -136,6 +136,7 @@ class GenerateResults extends Component {
             }}
           >
             <DataTable
+              useResultsData={true}
               reducedColumns={true}
               startingRow={startingRow}
               noLabel={true}
@@ -155,6 +156,7 @@ class GenerateResults extends Component {
               }}
             >
               <DataTable
+                useResultsData={true}
                 reducedColumns={true}
                 singleRow={this.getAnimationStep()}
                 hideLabel={hideLabel}

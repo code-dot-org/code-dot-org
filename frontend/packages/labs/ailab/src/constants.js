@@ -15,7 +15,8 @@ export const REGRESSION_ERROR_TOLERANCE = 5;
 
 export const ResultsGrades = {
   CORRECT: "correct",
-  INCORRECT: "incorrect"
+  INCORRECT: "incorrect",
+  ALL: "all"
 };
 
 export const PERCENT_OF_DATASET_FOR_TESTING = 0.1;
