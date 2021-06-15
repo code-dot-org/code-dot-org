@@ -50,7 +50,8 @@ const styles = {
   tabContainer: {
     background: color.lightest_gray,
     padding: 10,
-    border: '1px solid',
+    borderStyle: 'solid',
+    borderWidth: 1,
     borderColor: color.lighter_gray
   },
   tab: {
