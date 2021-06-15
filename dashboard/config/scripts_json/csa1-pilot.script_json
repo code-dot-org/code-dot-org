@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-07 14:54:57 UTC",
+    "serialized_at": "2021-06-10 18:27:43 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -1578,6 +1578,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In previous courses, you may have seen commands in App Lab, JavaScript, App Inventor, or Python. Looking to the right side of the slide, you can see what commands in Java look like. \n\nJava is an object-oriented language. Object-oriented programming is a powerful tool, which involves creating and using models of physical or imagined objects.\n",
+        "progression_name": "TEST ",
         "remarks": true,
         "tips": [
           {
@@ -1722,7 +1723,8 @@
       "key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Walk students through the starter code to identify the class. Have students run the code without the object.\n\nStudents create a `Painter` object and run the program again. Make sure students can identify:\n* The class name\n* The object name \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. \n\n* Walk students through the starter code to identify the class. Have students run the code without the object.\n* Have students create a `Painter` object and run the program again. Make sure students can identify:\n    * The class name\n    * The object name \n",
+        "progression_name": "Investigate the Painter"
       },
       "seeding_key": {
         "activity_section.key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762",
@@ -1907,6 +1909,7 @@
       "key": "9945a427-d169-4622-8d5c-37d28e5eba77",
       "position": 4,
       "properties": {
+        "progression_name": "Movement Commands",
         "tips": [
           {
             "type": "teachingTip",
@@ -4858,6 +4861,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L1"
+        ],
         "progression": "Exploring The Neighborhood"
       },
       "named_level": false,
@@ -4878,6 +4884,32 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L2-L2"
+        ],
+        "progression": "Investigate the Painter"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2-L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762"
+      },
+      "level_keys": [
+        "CSA U1L2-L2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4902,8 +4934,31 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Movement Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      },
+      "level_keys": [
+        "CSA U1L3-L1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4928,7 +4983,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4969,6 +5024,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U1L2-L2",
+        "script_level.level_keys": [
+          "CSA U1L2-L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U1L2 CFU1",
         "script_level.level_keys": [
           "CSA U1L2 CFU1"
@@ -4977,6 +5044,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
         "activity_section.key": "78af1614-1425-4640-a087-1c3aa1abaab8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L1",
+        "script_level.level_keys": [
+          "CSA U1L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
       }
     },
     {

@@ -1,0 +1,75 @@
+name 'OPD-K5-PartIIOutline-2021'
+title 'Sequencing Introduced'
+description 'description here'
+markdown <<MARKDOWN
+# Part II:  CS Concepts in Courses A - F
+**Suggested Total Time: xxx**
+
+Below is an outline of the lessons included in Part II of this course, along with learning objectives for each lesson. Approximate times for each lesson are provided. However, feel free to start and stop at your own pace and take more or less time to meet your learning needs.
+
+
+#### **Lesson 6: Sequencing** (20 minutes)
+
+This overview is part of Lesson 6 which you are in. After completing Lesson 6 you will be able to:
+
+* Define sequencing
+* Use built-in features for XXX 
+* Identify skills students will practice when learning about sequencing
+
+#### **Lesson 7: Sprite Lab** (20 minutes)
+
+After completing Lesson 7 you will be able to:
+
+* Identify what a "Sprite" is
+* Use built-in features for Sprite Lab 
+* Identify skills students will practice when learning about coding behaviors for different Sprites
+
+#### **Lesson 8: Events** (20 minutes)
+
+After completing Lesson 8 you will be able to:
+
+* Identify what an "event" is in computer science
+* Use built-in features to create an interactive program
+* Identify debugging skills students will practice when learning about "events"
+
+#### **Lesson 9: Conditionals** (20 minutes)
+
+After completing Lesson 9 you will be able to:
+
+* Identify what "conditionals" are
+* Use built-in tools such as Artist and Maze 
+* Identify skills students will practice when learning about conditionals
+
+#### **Lesson 10: End of Course Projects** (20 minutes)
+
+After completing Lesson 10 you will be able to:
+
+* Identify how End of Course Projects support students in 
+* Identify how End of Course Project resources support students in 
+
+#### **Lesson 11: Functions** (20 minutes)
+
+After completing Lesson 11 you will be able to:
+
+* Identify what "functions" are
+* Continue to use built-in tools to code simple functions 
+* Identify skills students will practice when learning about functions
+
+#### **Lesson 12: Variables** (20 minutes)
+
+After completing Lesson 12 you will be able to:
+
+* Identify what "variables" are in computer science
+* Continue to use built-in tools to use variables 
+* Identify skills students will practice when learning about variables
+
+#### **Lesson 13: For Loops** (20 minutes)
+
+After completing Lesson 13 you will be able to:
+
+* Identify what "for loops" are
+* Continue to use built-in tools to use for loops 
+* Identify skills students will practice when learning about for loops
+
+Click here to access Part III: Next Steps.
+MARKDOWN
