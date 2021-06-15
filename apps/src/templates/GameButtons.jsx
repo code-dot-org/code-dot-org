@@ -58,7 +58,8 @@ export const ResetButton = Radium(props => (
     className={classNames([
       'launch',
       'blocklyLaunch',
-      props.hideText && 'hideText'
+      props.hideText && 'hideText',
+      props.hidden && 'hide'
     ])}
     style={[commonStyles.hidden, props.style]}
   >
@@ -67,6 +68,7 @@ export const ResetButton = Radium(props => (
   </button>
 ));
 ResetButton.propTypes = {
+  hidden: PropTypes.bool,
   style: PropTypes.object,
   hideText: PropTypes.bool
 };
@@ -83,7 +85,7 @@ export const UnconnectedGameButtons = props => (
         hidden={props.hideRunButton}
         runButtonText={props.runButtonText}
       />
-      {!props.hideResetButton && <ResetButton />}
+      <ResetButton hidden={props.hideResetButton} />
       {
         ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
       }
