@@ -326,7 +326,7 @@ class Script < ApplicationRecord
 
     def visible_scripts
       visible_scripts = Rails.cache.fetch('valid_scripts/valid') do
-        Script.all.reject(&:hidden).to_a
+        Script.all.select(&:launched?).to_a
       end
       visible_scripts.freeze
     end
@@ -335,7 +335,9 @@ class Script < ApplicationRecord
   # @param user [User]
   # @returns [Boolean] Whether the user can assign this script.
   # Users should only be able to assign one of their valid scripts.
-  def assignable?(user)
+  # This includes the scripts that are assignable for everyone as well
+  # as script that might be assignable based on users permissions
+  def assignable_for_user?(user)
     if user&.teacher?
       Script.valid_script_id?(user, id)
     end
@@ -1428,6 +1430,12 @@ class Script < ApplicationRecord
     nil
   end
 
+  # A script that the general public can assign. Has been soft or
+  # hard launched.
+  def launched?
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
+  end
+
   def published_state
     if pilot?
       SharedConstants::PUBLISHED_STATE.pilot
@@ -1484,7 +1492,6 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      hidden: hidden,
       publishedState: published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
@@ -1513,7 +1520,7 @@ class Script < ApplicationRecord
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: pilot_experiment,
       editor_experiment: editor_experiment,
-      show_assign_button: assignable?(user),
+      show_assign_button: assignable_for_user?(user),
       project_sharing: project_sharing,
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
@@ -1662,7 +1669,7 @@ class Script < ApplicationRecord
     scripts = Script.
       where(family_name: family_name).
       all.
-      select {|script| with_hidden || !script.hidden}.
+      select {|script| with_hidden || script.launched?}.
       map do |s|
         {
           name: s.name,
@@ -1813,7 +1820,7 @@ class Script < ApplicationRecord
   def assignable_info
     info = ScriptConstants.assignable_info(self)
     info[:name] = I18n.t("data.script.name.#{info[:name]}.title", default: info[:name])
-    info[:name] += " *" if hidden
+    info[:name] += " *" unless launched?
 
     if family_name
       info[:assignment_family_name] = family_name
@@ -1894,7 +1901,7 @@ class Script < ApplicationRecord
 
     level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
     student_ids = section.students.map(&:id)
-    all_feedback = TeacherFeedback.get_all_feedback_for_section(student_ids, level_ids, section.user_id)
+    all_feedback = TeacherFeedback.get_latest_feedbacks_given(student_ids, level_ids, id, section.user_id)
 
     feedback_hash = {}
     all_feedback.each do |feedback_element|

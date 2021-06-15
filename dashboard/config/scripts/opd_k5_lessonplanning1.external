@@ -1,54 +1,40 @@
 name 'OPD-K5 LessonPlanning1'
 skip_dialog true
 markdown <<MARKDOWN
-# Planning a Lesson
+# Teaching a Lesson
 
-Are you familiar with Code.org's <a href="https://code.org/learn" target="blank" rel="noopener noreferrer">Hour of Code</a>?
+Take this time now as an opportunity to find a lesson you want to teach to **all** of your students. 
 
-![](https://images.code.org/6057f944128903c31113372130cec800-image-1622827222543.png)
+## Guidance for teaching a lesson with your students
 
-Computer Science Fundamentals courses and Hour of Code are not the same thing.  Hour of Code *introduces* students to CS while Computer Science Fundamentals courses *build* CS knowledge and skills.
-
-Take this time now as an opportunity to find a lesson to try out with your students. 
-
-## Guidance for lesson implementation
-
-When planning to try out a lesson with your students keep in mind the following:
+Reflect on the following questions as you prepare to teach a lesson.
 
 **Logistics**
+
 * What classroom routines or procedures are needed for the lesson?
 
 **CS Teaching Practices**
-* When will any of the following CS teaching practices be used during the lesson?
-	* Role of the Teacher (lead learner)
-    * Discovery and Inquiry
-    * Debugging
-    * Pair Programming
-    * The Classroom Community (active learning, communication)
+
+* When will you be a lead learner during the lesson?
+* Does the lesson use debugging or pair programming?
+	* If so, how will you support your students with debugging or pair programming?
 
 **Inclusion**
-* How will the lesson be inclusive for students?
+* When will you teach the lesson to **all** of your students?
+* How will you know **all** of your students are engaged during the lesson?
 
-## Accessing curriculum resources
+## Access curriculum resources
 
-Here is a reminder from Lesson 2: Getting Started for how to navigate to the Course Overview page and access lesson plans and resources.
+Find a lesson you want to teach to your students. <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/2/levels/2" target="blank" >Refer to Lesson 2, Step 3 to help you access lesson plans.</a>
 
-* <a href="https://code.org" target="blank" rel="noopener noreferrer">Sign-in to Code.org</a>
-* Click on “Course Catalog” link on the top left side
-* Scroll down to “Full Course Catalog”
-* Click on “Learn More” within the Elementary School tile
-* Scroll down to the courses and choose a course
-* Click on “View Course” to go to the course overview page
-* Choose the lesson to plan for
-* Click on “View Lesson Plan” on the right side
+## Teach the Lesson!
 
-## Try the lesson out!
+Find a time to teach the lesson to all of your students.  After teaching the lesson, reflect on:
 
-Find a time to try the lesson out with your students.  After implementing the lesson with your students, reflect on:
+* how much time the lesson really took.
+* how students engaged and responded during the lesson.
 
-* how much time a lesson really takes.
-* how students engage and respond to the lesson.
-* how fun lessons are!
+**Note:**  Part II: CS Concepts in Courses A - F introduces computer science concepts and skills students will develop and practice throughout the courses.  Completing Part II is not necessary if you feel ready to try out a single lesson with your students.
 
 
 MARKDOWN

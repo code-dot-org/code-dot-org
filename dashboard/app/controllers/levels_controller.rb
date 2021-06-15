@@ -138,7 +138,7 @@ class LevelsController < ApplicationController
     # Make sure that the encrypted property is a boolean
     @level.properties['encrypted'] = @level.properties['encrypted'].to_bool if @level.properties['encrypted']
     scripts = @level.script_levels.map(&:script)
-    @visible = scripts.reject(&:hidden).any?
+    @launched = scripts.select(&:launched?).any?
     @pilot = scripts.select(&:pilot_experiment).any?
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
     fb = FirebaseHelper.new('shared')

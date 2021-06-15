@@ -1229,18 +1229,18 @@ class ScriptTest < ActiveSupport::TestCase
     # No user, show_assign_button set to nil
     assert_nil script.summarize[:show_assign_button]
 
-    # Teacher should be able to assign a visible script.
-    assert_equal false, script.summarize[:hidden]
+    # Teacher should be able to assign a launched script.
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.summarize[:publishedState]
     assert_equal true, script.summarize(true, create(:teacher))[:show_assign_button]
 
     # Teacher should not be able to assign a hidden script.
     hidden_script = create(:script, name: 'unassignable-hidden', hidden: true)
-    assert_equal true, hidden_script.summarize[:hidden]
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, hidden_script.summarize[:publishedState]
     assert_equal false, hidden_script.summarize(true, create(:teacher))[:show_assign_button]
 
     # Student should not be able to assign a script,
     # regardless of visibility.
-    assert_equal false, script.summarize[:hidden]
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.summarize[:publishedState]
     assert_nil script.summarize(true, create(:student))[:show_assign_button]
   end
 
@@ -1263,7 +1263,7 @@ class ScriptTest < ActiveSupport::TestCase
     resource = create :resource, key: 'resource', course_version: course_version
     vocab = create :vocabulary, key: 'vocab', course_version: course_version
 
-    source = "We support [r #{Services::MarkdownPreprocessor.build_resource_key(resource)}] resource links and [v #{Services::MarkdownPreprocessor.build_vocab_key(vocab)}] vocabulary definitions"
+    source = "We support [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}] resource links and [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}] vocabulary definitions"
     expected = "We support [fake name](fake.url) resource links and <span class=\"vocab\" title=\"definition\">word</span> vocabulary definitions"
     script = create :script
     script.stubs(:localized_description).returns(source)

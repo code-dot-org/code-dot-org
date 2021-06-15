@@ -1,14 +1,13 @@
 login_required true
 version_year '2021'
 
-lesson_group 'Implementing and Teaching CS', display_name: 'Part I:  Implementing and Teaching CS'
+lesson_group 'Implementing and Teaching CS', display_name: 'Part I:  Teaching and Implementing CS'
 lesson 'Welcome to "Teaching Computer Science Fundamentals"', display_name: 'Welcome and Introduction', has_lesson_plan: false
 level 'OPD-K5 Participation_copy_2021'
 level 'OPD-K5 Outline_copy_2021'
 level 'OPD-K5 Why teach CS_copy_2021'
 level 'OPD-K5 About_copy_2021'
 level 'OPD-K5 WhatIsCSF_2021'
-level 'OPD-K5 WhatIsCS_2021'
 level 'OPD-K5 whats your plan_2021'
 
 lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
@@ -16,12 +15,6 @@ level 'OPD-K5 CSFCourses_2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted1_2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted2', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted_Reflection', progression: 'Getting Started'
-
-lesson 'Implementation Approaches and Barriers', display_name: 'Implementation Approaches and Barriers', has_lesson_plan: false
-level 'OPD-K5 AddressingImplementation1', progression: 'Implementation Approaches and Barriers'
-level 'OPD-K5 ImplementationApproach_Reflection', progression: 'Implementation Approaches and Barriers'
-level 'OPD-K5 ImplementationBarriers1_Reflection', progression: 'Implementation Approaches and Barriers'
-level 'OPD-K5 ImplementationBarriers2_Reflection', progression: 'Implementation Approaches and Barriers'
 
 lesson 'CS Teaching and Student Practices', display_name: 'CS Teaching Practices', has_lesson_plan: false
 level 'OPD-K5 CSTeachingLearning1', progression: 'CS Teaching and Student Practices'
@@ -31,14 +24,22 @@ level 'OPD-K5 CS_StudentPractices_Reflection', progression: 'CS Teaching and Stu
 level 'OPD-K5 DebuggingPairProgramming', progression: 'CS Teaching and Student Practices'
 level 'OPD-K5 DebuggingPairProgramming_Reflection', progression: 'CS Teaching and Student Practices'
 
-lesson 'Lesson Planning', display_name: 'Lesson Planning', has_lesson_plan: false
+lesson 'Lesson Planning', display_name: 'Teaching a Lesson', has_lesson_plan: false
 level 'OPD-K5 LessonPlanning1', progression: 'Lesson Planning'
-level 'OPD-K5 LessonPlanning2', progression: 'Lesson Planning'
 level 'OPD-K5 LessonPlanning_Reflection', progression: 'Lesson Planning'
 
+lesson 'Implementation Approaches and Barriers', display_name: 'Addressing Barriers', has_lesson_plan: false
+level 'OPD-K5 ImplementationBarriers1_Reflection', progression: 'Implementation Approaches and Barriers'
+level 'OPD-K5 ImplementationBarriers2_Reflection', progression: 'Implementation Approaches and Barriers'
+level 'OPD-K5 AddressingImplementation1', progression: 'Implementation Approaches and Barriers'
+level 'OPD-K5 ImplementationApproach_Reflection', progression: 'Implementation Approaches and Barriers'
+
 lesson_group 'k5_basic_concepts_1', display_name: 'Part II:  CS Concepts in Courses A - F'
-lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
+lesson 'Part II Overview', display_name: 'Part II Overview', has_lesson_plan: false
 level 'OPD-K5 IntroToConcepts_2021'
+level 'OPD-K5-PartIIOutline-2021'
+
+lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
 level 'OPD-K5 Stage3Start_copy_2021'
 level 'OPD-K5-SeqA-2021'
 level 'OPD-K5-SeqB-2021'
@@ -49,20 +50,8 @@ level 'OPD-K5-SeqE-2021'
 level 'OPD-K5 sequencing introduced_2021'
 level 'OPD-K5 sequencing free response_2021'
 
-lesson 'Sprite Lab', display_name: 'Sprite Lab', has_lesson_plan: false
-level 'OPD-K5 sprite lab_2021'
-level 'OPD-K5 sprite lab introduction_2021'
-level 'OPD-K5-SpriteLabF-2021'
-level 'OPD-K5 sprite lab unplugged_2021'
-level 'OPD-K5 sprite lab video_2021'
-level 'OPD-K5-spritelab-1_2021'
-level 'OPD-K5-spritelab-2_2021'
-level 'OPD-K5-spritelab-3_2021'
-level 'OPD-K5-spritelab-4_2021'
-level 'OPD-K5-spritelab-5-video_2021'
-level 'OPD-K5-spritelab-6_2021'
-level 'OPD-K5-spritelab-7_2021'
-level 'OPD-K5 sprite lab free response_2021'
+lesson 'Loops', display_name: 'Loops', has_lesson_plan: false
+level 'OPD-K5-LoopsIntro-2021'
 
 lesson 'Events', display_name: 'Events', has_lesson_plan: false
 level 'OPD-K5 Stage7Start_copy_2021'
@@ -73,14 +62,9 @@ level 'OPD-K5-EventsC-2021'
 level 'OPD-K5-EventsD-2021'
 level 'OPD-K5-EventsE-context-2021'
 level 'OPD-K5-EventsE-2021'
+level 'OPD-K5-EventsF-2021'
+level 'OPD-K5-EventsF2-2021'
 level 'OPD-K5 events introduced_2021'
-level 'OPD-K5 Stage7Go_copy_2021'
-level 'OPD-K5-events-2_2021'
-level 'OPD-K5-events-3_2021'
-level 'OPD-K5-events-4_2021'
-level 'OPD-K5-events-5_2021'
-level 'OPD-K5-events-6_2021'
-level 'OPD-K5 debugging_2021'
 level 'OPD-K5 events free response_2021'
 
 lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: false
@@ -96,18 +80,20 @@ level 'courseD_bee_conditionals5_2021', challenge: true
 level 'OPD-K5 journaling_2021'
 level 'OPD-K5 conditionals free response_2021'
 
-lesson 'End of Course projects', display_name: 'End of Course projects', has_lesson_plan: false
-level 'OPD-K5 project_2021'
-level 'OPD-K5 projects introduction_2021'
-level 'OPD-K5-projects-1_2021'
-level 'OPD-K5-projects-2_2021'
-level 'OPD-K5-projects-3_2021'
-level 'OPD-K5-projects-4_2021'
-level 'OPD-K5-projects-5_2021'
-level 'OPD-K5-projects-6_2021'
-level 'OPD-K5-projects-7_2021'
-level 'OPD-K5 projects free response_2021'
-level 'OPD-K5 where to next_2021'
+lesson 'Sprite Lab', display_name: 'Sprite Lab', has_lesson_plan: false
+level 'OPD-K5 sprite lab_2021'
+level 'OPD-K5 sprite lab introduction_2021'
+level 'OPD-K5-SpriteLabF-2021'
+level 'OPD-K5 sprite lab unplugged_2021'
+level 'OPD-K5 sprite lab video_2021'
+level 'OPD-K5-spritelab-1_2021'
+level 'OPD-K5-spritelab-2_2021'
+level 'OPD-K5-spritelab-3_2021'
+level 'OPD-K5-spritelab-4_2021'
+level 'OPD-K5-spritelab-5-video_2021'
+level 'OPD-K5-spritelab-6_2021'
+level 'OPD-K5-spritelab-7_2021'
+level 'OPD-K5 sprite lab free response_2021'
 
 lesson 'Functions', display_name: 'Functions', has_lesson_plan: false
 level 'OPD-K5 diving deeper intro_2021'
@@ -148,6 +134,19 @@ level 'OPD-K5-forloops-5_2021'
 level 'OPD-K5-forloops-6_2021'
 level 'OPD-K5-forloops-7_2021'
 level 'OPD-K5 for loops free response_2021'
+
+lesson 'End of Course projects', display_name: 'End of Course projects', has_lesson_plan: false
+level 'OPD-K5 project_2021'
+level 'OPD-K5 projects introduction_2021'
+level 'OPD-K5-projects-1_2021'
+level 'OPD-K5-projects-2_2021'
+level 'OPD-K5-projects-3_2021'
+level 'OPD-K5-projects-4_2021'
+level 'OPD-K5-projects-5_2021'
+level 'OPD-K5-projects-6_2021'
+level 'OPD-K5-projects-7_2021'
+level 'OPD-K5 projects free response_2021'
+level 'OPD-K5 where to next_2021'
 
 lesson_group 'k5_next_steps_1', display_name: 'Next Steps'
 lesson 'Reviewing your reflections', display_name: 'Reviewing your reflections', has_lesson_plan: false
