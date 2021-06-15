@@ -476,7 +476,6 @@ Craft.onCharacterSelected = function(name, level, callback) {
   }
 
   Craft.setCurrentCharacter(name);
-  // getStore().dispatch(setPlayerSelectionDialog(false));
   Craft.initializeAppLevel(level);
   callback();
 };
