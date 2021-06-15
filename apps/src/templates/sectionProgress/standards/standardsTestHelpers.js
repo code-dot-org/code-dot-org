@@ -256,7 +256,7 @@ export const fakeState = {
     scriptDataByScript: scriptDataByScript,
     studentLevelProgressByScript: {92: {}}
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {
@@ -271,7 +271,7 @@ export const stateForPartiallyCompletedLesson = {
     scriptDataByScript: scriptDataByScript,
     studentLevelProgressByScript: sectionPartialCompletedLesson
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {
@@ -285,7 +285,7 @@ export const stateForCompletedLesson = {
     scriptDataByScript: scriptDataByScript,
     studentLevelProgressByScript: sectionCompletedLesson
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {
@@ -299,7 +299,7 @@ export const stateForTeacherMarkedCompletedLesson = {
     scriptDataByScript: scriptDataByScript,
     studentLevelProgressByScript: sectionCompletedLesson
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {
@@ -315,7 +315,7 @@ export const stateForTeacherMarkedIncompletedLesson = {
     scriptDataByScript: scriptDataByScript,
     studentLevelProgressByScript: sectionCompletedLesson
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {
@@ -331,7 +331,7 @@ export const stateForTeacherMarkedAndProgress = {
     scriptDataByScript: scriptDataByScript,
     studentLevelProgressByScript: sectionCompletedLesson
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {
