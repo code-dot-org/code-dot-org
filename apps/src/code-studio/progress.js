@@ -6,7 +6,7 @@ import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
-import UnitOverview from './components/progress/UnitOverview.jsx';
+import ScriptOverview from './components/progress/ScriptOverview.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
@@ -274,7 +274,7 @@ progress.renderCourseProgress = function(scriptData) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <UnitOverview
+      <ScriptOverview
         id={scriptData.id}
         courseId={scriptData.course_id}
         onOverviewPage={true}

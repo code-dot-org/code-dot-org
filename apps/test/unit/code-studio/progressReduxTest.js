@@ -193,7 +193,7 @@ const lockableLessonData = [
 
 // In the app, this is passed to the client as part of the initial page load. We
 // get this data by running Script::summarize
-const initialUnitOverviewProgress = {
+const initialScriptOverviewProgress = {
   currentLevelId: undefined,
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
@@ -219,7 +219,7 @@ describe('progressReduxTest', () => {
 
     it('can initialize progress on script overview page', () => {
       // Simulate progress initialization from script overview page
-      const action = initProgress(initialUnitOverviewProgress);
+      const action = initProgress(initialScriptOverviewProgress);
       const nextState = reducer(undefined, action);
 
       assert.equal(nextState.currentLevelId, undefined);
@@ -228,7 +228,7 @@ describe('progressReduxTest', () => {
 
       assert.deepEqual(
         nextState.lessons,
-        processedLessons(initialUnitOverviewProgress.lessons)
+        processedLessons(initialScriptOverviewProgress.lessons)
       );
       assert.equal(nextState.scriptName, 'course3');
       assert.equal(nextState.currentLessonId, undefined);
@@ -252,7 +252,7 @@ describe('progressReduxTest', () => {
     it('can merge in fresh progress', () => {
       const initializedState = reducer(
         undefined,
-        initProgress(initialUnitOverviewProgress)
+        initProgress(initialScriptOverviewProgress)
       );
 
       // Create a mergeResults action with level progress, but no peer reviews
@@ -571,7 +571,7 @@ describe('progressReduxTest', () => {
     it('extracts relevant properties on a per level basis', () => {
       const initializedState = reducer(
         undefined,
-        initProgress(initialUnitOverviewProgress)
+        initProgress(initialScriptOverviewProgress)
       );
 
       // merge some progress so that we have statuses
@@ -774,7 +774,7 @@ describe('progressReduxTest', () => {
     it('returns levels for the given lesson', () => {
       const initializedState = reducer(
         undefined,
-        initProgress(initialUnitOverviewProgress)
+        initProgress(initialScriptOverviewProgress)
       );
 
       const lessonId = lessonData[0].id;
@@ -784,7 +784,7 @@ describe('progressReduxTest', () => {
 
     it('sets isCurrentLevel to true for current level only', () => {
       const initializedState = {
-        ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
+        ...reducer(undefined, initProgress(initialScriptOverviewProgress)),
         currentLevelId: lessonData[0].levels[1].activeId
       };
 

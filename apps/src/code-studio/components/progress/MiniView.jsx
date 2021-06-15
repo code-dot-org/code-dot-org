@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import UnitOverview from './UnitOverview';
+import ScriptOverview from './ScriptOverview';
 import MiniViewTopRow from './MiniViewTopRow';
 import {hasGroups} from '@cdo/apps/code-studio/progressRedux';
 
@@ -47,7 +47,7 @@ class MiniView extends React.Component {
             ...(hasGroups && styles.groupView)
           }}
         >
-          <UnitOverview
+          <ScriptOverview
             onOverviewPage={false}
             excludeCsfColumnInLegend={false}
             teacherResources={[]}

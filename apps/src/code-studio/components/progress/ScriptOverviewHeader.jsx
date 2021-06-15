@@ -33,7 +33,7 @@ const SCRIPT_OVERVIEW_WIDTH = 1100;
  * client the data and have React generate the DOM. Doing so should not be super
  * difficult in this case
  */
-class UnitOverviewHeader extends Component {
+class ScriptOverviewHeader extends Component {
   static propTypes = {
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
@@ -257,7 +257,7 @@ const styles = {
   }
 };
 
-export const UnconnectedUnitOverviewHeader = UnitOverviewHeader;
+export const UnconnectedScriptOverviewHeader = ScriptOverviewHeader;
 
 export default connect(state => ({
   plcHeaderProps: state.plcHeader,
@@ -273,4 +273,4 @@ export default connect(state => ({
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
   hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
   localeEnglishName: state.locales.localeEnglishName
-}))(UnitOverviewHeader);
+}))(ScriptOverviewHeader);
