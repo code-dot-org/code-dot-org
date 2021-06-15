@@ -30,14 +30,27 @@ export default class KNNTrainer {
     this.store = store;
     const state = store.getState();
     const datasetSize = state.data.length;
-    const defaultRegressionK = datasetSize < 100 ? 1 : 5;
+    /*
+      We modify algorithm hyperparameters (k) based on dataset size and type of
+      machine learning in attempt to increase the liklihood of accurate
+      models that behave in ways consistent with the mental model presented in
+      the curriculum.
+    */
+    const smallDatasetSize = 10;
+    const mediumDatasetSize = 100;
+    const minimalK = 1;
+    const smallK = 5;
+    const defaultRegressionK = datasetSize < mediumDatasetSize
+      ? minimalK
+      : smallK;
     const defaultClassificationK = Math.round(datasetSize / 3);
+
     let bestModel = null;
     let bestPredictedLabels = [];
     let bestK = -1;
     let bestAccuracy = -1;
     if (state.accuracyCheckExamples.length > 0) {
-      if (datasetSize < 11 && !isRegression(state)) {
+      if (datasetSize <= smallDatasetSize && !isRegression(state)) {
         this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
           k: datasetSize
         });
