@@ -13,13 +13,14 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
-#  published_state :string(255)
+#  published_state :string(255)      default("beta"), not null
 #
 # Indexes
 #
 #  index_scripts_on_family_name      (family_name)
 #  index_scripts_on_name             (name) UNIQUE
 #  index_scripts_on_new_name         (new_name) UNIQUE
+#  index_scripts_on_published_state  (published_state)
 #  index_scripts_on_wrapup_video_id  (wrapup_video_id)
 #
 
@@ -121,6 +122,8 @@ class Script < ApplicationRecord
       without: /\A~|\A\.|\//,
       message: 'cannot start with a tilde or dot or contain slashes'
     }
+
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   def prevent_duplicate_levels
     reload
@@ -1017,6 +1020,7 @@ class Script < ApplicationRecord
         wrapup_video: script_data[:wrapup_video],
         new_name: script_data[:new_name],
         family_name: script_data[:family_name],
+        published_state: new_suffix ? SharedConstants::PUBLISHED_STATE.beta : script_data[:published_state],
         properties: Script.build_property_hash(script_data).merge(new_properties)
       }, lesson_groups]
     end
