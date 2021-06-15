@@ -10,8 +10,8 @@ Part II of this online course, "Teaching Computer Science Fundamentals," focuses
 In each lesson of Part II you will find:
 
 * **CS Concepts**
-* **Learning Platform Features**
-* **Concept Progressions**
+* **Tools and Website Features**
+* **Concepts Reiterated Across Courses**
 
 ## CS Concepts
 
@@ -25,15 +25,33 @@ This section encourages you to learn about CS concepts with one or more of the f
 * previewing the teacher slide deck that accompanies a lesson.
 
 
-## Learning Platform Features
+## Learning Tools and Website Features
 
-Students use Code.org's learning platform as they learn to program.  The learning platform is made up of built-in features that include buttons, drag and drop blocks for coding, and visuals for students to see their code in action.  
+Students use Code.org's built-in learning tools and website features as they learn to program to include buttons, drag and drop blocks for coding, and visuals for students to see their code in action.  
 
 This section provides either a student video that walks students through using built-in features or a student lesson level for you to experience using the built-in features.
 
+In addition, this section highlights the learning tools students will engage with during lessons:
 
-## Concept Progressions
+* **Maze/Collector Puzzles (all courses):**  Recognizable by the 8x8 square grid, these puzzles ask students to move an on-screen character to complete a specified goal, sometimes collecting objects or performing other actions along the way. These levels feature characters from popular media franchises and others that are unique to Code.org.
 
-This section takes you to student lesson levels for you to experience how a CS concept unfolds within either a single course or across multiple courses.  The goal of concept progressions is to provide a big picture of how students learn computer science concepts and develop skills over time with Computer Science Fundamentals courses.
+![](https://images.code.org/18bb7d04e505852b13607d5aff9f88f3-image-1623770785445.png)
+
+* **The Artist (all courses):**  Students can program the Artist character to move and turn over a blank canvas, creating drawings along the way. Puzzles require persistence as students work to re-create an image. Free play levels allow you to draw whatever you want. Creativity is encouraged!
+
+![](https://images.code.org/d758d935c6cc2dbdd3f2ef516852d8fd-image-1623770641235.png)
+
+* **Play Lab (Courses A - C):**  Featuring a diverse cast of fun actors, Play Lab allows students to create their own stories and simple games. Actors can speak, move and even express emotions. Play Lab projects are interactive, controlled by the user’s keyboard and mouse.
+
+![](https://images.code.org/a02134121c8a0e16bcba5454baa6474c-image-1623769867198.png)
+
+* **Sprite Lab (Courses E - F):**  Sprite Lab is the most open-ended programming tool found in CS Fundamentals. It enables students to create fun animations in no time but is also a powerful tool for creating everything from interactive posters to games to simulations.
+
+![](https://images.code.org/b446bf892c83f490a904e37991674412-image-1623770868460.png)
+
+## Concepts Reiterated Across Courses
+
+This section takes you to student lesson levels for you to experience how a CS concept unfolds and is reiterated within either a single course or across multiple courses.  The goal of this section is to provide you with the big picture of how students learn computer science concepts and develop skills over time with Computer Science Fundamentals courses.
+
 
 MARKDOWN

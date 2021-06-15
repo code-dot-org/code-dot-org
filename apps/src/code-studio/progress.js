@@ -277,6 +277,8 @@ progress.renderCourseProgress = function(scriptData) {
       <ScriptOverview
         id={scriptData.id}
         courseId={scriptData.course_id}
+        courseTitle={scriptData.course_title}
+        courseLink={scriptData.course_link}
         onOverviewPage={true}
         excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={teacherResources}
