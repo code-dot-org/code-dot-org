@@ -344,7 +344,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_nil unit_group.version_year
     assert_nil unit_group.family_name
     refute unit_group.has_verified_resources
-    refute unit_group.visible?
+    refute unit_group.launched?
     refute unit_group.stable?
 
     post :update, params: {
@@ -359,73 +359,8 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal '2019', unit_group.version_year
     assert_equal 'csp', unit_group.family_name
     assert unit_group.has_verified_resources
-    assert unit_group.visible?
+    assert unit_group.launched?
     assert unit_group.stable?
-  end
-
-  test "update: published state of stable sets visible correctly" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019'
-
-    refute unit_group.visible?
-
-    post :update, params: {
-      course_name: unit_group.name,
-      published_state: SharedConstants::PUBLISHED_STATE.stable
-    }
-    unit_group.reload
-
-    assert unit_group.visible?
-  end
-
-  test "update: published state of preview sets visible correctly" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedConstants::PUBLISHED_STATE.beta
-
-    refute unit_group.visible?
-
-    post :update, params: {
-      course_name: unit_group.name,
-      published_state: SharedConstants::PUBLISHED_STATE.preview
-    }
-    unit_group.reload
-
-    assert unit_group.visible?
-  end
-
-  test "update: published state of beta sets visible correctly" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedConstants::PUBLISHED_STATE.beta
-
-    refute unit_group.visible?
-
-    post :update, params: {
-      course_name: unit_group.name,
-      published_state: SharedConstants::PUBLISHED_STATE.beta
-    }
-    unit_group.reload
-
-    refute unit_group.visible?
-  end
-
-  test "update: published state of pilot sets visible correctly" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedConstants::PUBLISHED_STATE.beta
-
-    refute unit_group.visible?
-
-    post :update, params: {
-      course_name: unit_group.name,
-      published_state: SharedConstants::PUBLISHED_STATE.pilot,
-      pilot_experiment: 'my-pilot'
-    }
-    unit_group.reload
-
-    refute unit_group.visible?
   end
 
   test "update: persists teacher resources for migrated unit groups" do
