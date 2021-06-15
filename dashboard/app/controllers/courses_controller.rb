@@ -192,6 +192,8 @@ class CoursesController < ApplicationController
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
 
+    cp[:published_state] = SharedConstants::PUBLISHED_STATE.beta unless cp[:published_state]
+
     # Temporary transition code used to update the boolean values that control published_state
     # This should be removed once we move off of booleans completely and on to published_state
     if cp[:published_state] == SharedConstants::PUBLISHED_STATE.beta || cp[:published_state] == SharedConstants::PUBLISHED_STATE.pilot

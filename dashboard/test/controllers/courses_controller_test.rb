@@ -319,15 +319,19 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {
       course_name: 'course',
       scripts: ['unit1', 'unit2'],
-      pilot_experiment: 'my-pilot'
+      pilot_experiment: 'my-pilot',
+      published_state: 'pilot'
     }
     course.reload
     unit1.reload
     unit2.reload
 
     assert_equal course.pilot_experiment, 'my-pilot'
+    assert_equal course.published_state, 'pilot'
     assert_equal unit1.pilot_experiment, 'my-pilot'
+    assert_equal unit1.published_state, 'pilot'
     assert_equal unit2.pilot_experiment, 'my-pilot'
+    assert_equal unit2.published_state, 'pilot'
   end
 
   test "update: persists changes localizeable strings" do
