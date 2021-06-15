@@ -1,12 +1,12 @@
 import React from 'react';
-import StylizedTabView from './StylizedTabView';
+import TabView from './TabView';
 
 export default storybook => {
-  storybook.storiesOf('StylizedTabView', module).addStoryTable([
+  storybook.storiesOf('TabView', module).addStoryTable([
     {
-      name: 'StylizedTabView',
+      name: 'TabView',
       story: () => (
-        <StylizedTabView
+        <TabView
           tabs={[
             {
               key: 'tab1',

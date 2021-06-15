@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
 /**
- * StylizedTabView
+ * TabView
  */
-export default class StylizedTabView extends React.Component {
+export default class TabView extends React.Component {
   static propTypes = {
     tabs: PropTypes.arrayOf(
       PropTypes.shape({
