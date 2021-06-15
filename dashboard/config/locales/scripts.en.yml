@@ -23648,21 +23648,29 @@ en:
         poster-draft:
           lessons:
             lesson-1:
-              name: Interactive Poster
+              name: Story Board
               description_student: 
               description_teacher: 
           lesson_groups: {}
           name: poster-draft
-          title: 'V1_Interactive Poster: Self-Expression'
+          title: Story Board (V1)
           description_audience: ''
-          description_short: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
-          description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
+          description_short: Story Board (V1)
+          description: ''
           student_description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
         poembot:
           lessons: {}
           lesson_groups: {}
           name: poembot
           title: Poembot
+          description_audience: ''
+          description_short: ''
+          description: ''
+        outbreak-module:
+          lessons: {}
+          lesson_groups: {}
+          name: outbreak-module
+          title: Outbreak
           description_audience: ''
           description_short: ''
           description: ''

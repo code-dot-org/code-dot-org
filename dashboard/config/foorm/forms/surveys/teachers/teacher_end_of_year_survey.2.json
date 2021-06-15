@@ -7,7 +7,6 @@
         {
           "type": "panel",
           "name": "testing_panel",
-          "visible": "false",
           "elements": [
             {
               "type": "html",
@@ -51,6 +50,7 @@
               "html": "<p style='background-color: yellow; text-align:center'>-- End of testing panel -- </p>"
             }
           ],
+          "visible": false,
           "title": " "
         },
         {
@@ -189,6 +189,10 @@
                   "text": "Express"
                 },
                 {
+                  "value": "pre_express",
+                  "text": "Pre-Express"
+                },
+                {
                   "value": "20_hour",
                   "text": "20-hour"
                 },
@@ -270,7 +274,7 @@
                 },
                 {
                   "value": "teach_unplugged",
-                  "text": "Teach unplugged activities alongside online portions of the curriculum."
+                  "text": "Teach unplugged activities along with online portions of the curriculum."
                 },
                 {
                   "value": "student_reflection",
@@ -278,7 +282,7 @@
                 },
                 {
                   "value": "transfer_to_other_contexts",
-                  "text": "Transfer learning to other contexts (e.g.cross-curricular learning or other computer science content not on Code.org)."
+                  "text": "Transfer learning to other contexts (e.g. cross-curricular learning or other computer science content not on Code.org)."
                 },
                 {
                   "value": "assesment_grading",
@@ -288,24 +292,20 @@
             },
             {
               "type": "radiogroup",
-              "name": "question2",
-              "title": "Which of the following most closely describes what teaching Code.org looks like in your classroom?",
+              "name": "csf_implementation",
+              "title": "Which of the following most closely describes what using Code.org looks like in your classroom?",
               "choices": [
                 {
                   "value": "all_same",
-                  "text": "Students all work on the same lesson at the same time."
+                  "text": "Students are able to engage in Code.org lessons during time dedicated to computer science instruction."
                 },
                 {
                   "value": "same_course_own_pace",
-                  "text": "All students work on the same course, but move through the different lessons at their own pace."
+                  "text": "Students engage in Code.org lessons as part of a station/rotation alongside other activities."
                 },
                 {
-                  "value": "all_codeorg_different_courses",
-                  "text": "All students work on Code.org, but may be working on different courses and tutorials."
-                },
-                {
-                  "value": "individual_station",
-                  "text": "Students work on Code.org individually or as a station/rotation."
+                  "value": "extra_time",
+                  "text": "Students engage in Code.org if they have extra time in class, or at home."
                 }
               ],
               "hasOther": true
@@ -925,7 +925,7 @@
         },
         {
           "type": "matrix",
-          "name": "question1",
+          "name": "lesson_prep",
           "title": "How frequently did you use each of the following resources when preparing to teach a {course} lesson?",
           "columns": [
             {
@@ -1012,10 +1012,6 @@
               "text": "Providing instruction on new concepts to my students"
             },
             {
-              "value": "assisting_students",
-              "text": "Providing support to students while they work"
-            },
-            {
               "value": "providing_feedback",
               "text": "Providing feedback on work students have done"
             },
@@ -1028,12 +1024,20 @@
               "text": "Differentiating instruction for students with varying background knowledge and abilities"
             },
             {
-              "value": "materials_for_indpendent_work",
-              "text": "Finding materials that students can work on independently"
-            },
-            {
               "value": "materials_for_offline",
               "text": "Finding materials to work on that don't require internet and device access"
+            },
+            {
+              "value": "completing_early",
+              "text": "Supporting students who are completing materials early and need additional challenges "
+            },
+            {
+              "value": "not_engaged",
+              "text": "Supporting students who are not engaged in the material"
+            },
+            {
+              "value": "different_levels_of_experience",
+              "text": "Supporting students who have different levels of prior experience "
             }
           ]
         },
@@ -1311,7 +1315,7 @@
           "rows": [
             {
               "value": "assign_from_lms",
-              "text": "Assign lessons from within Code.org directly to your LMS"
+              "text": "Assign Code.org lessons through your LMS"
             },
             {
               "value": "track_progress_in_lms",

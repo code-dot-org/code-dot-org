@@ -92,85 +92,10 @@
           "title": "Is there anything else you’d like to tell us about your experience at this workshop?"
         },
         {
-          "type": "paneldynamic",
-          "name": "facilitators",
-          "title": "Your facilitators",
-          "templateElements": [
-            {
-              "type": "matrix",
-              "name": "facilitator_effectiveness",
-              "title": "During my workshop, {panel.facilitator_name} did the following:",
-              "columns": [
-                {
-                  "value": "1",
-                  "text": "Strongly Disagree"
-                },
-                {
-                  "value": "2",
-                  "text": "Disagree"
-                },
-                {
-                  "value": "3",
-                  "text": "Slightly Disagree"
-                },
-                {
-                  "value": "4",
-                  "text": "Neutral"
-                },
-                {
-                  "value": "5",
-                  "text": "Slightly Agree"
-                },
-                {
-                  "value": "6",
-                  "text": "Agree"
-                },
-                {
-                  "value": "7",
-                  "text": "Strongly Agree"
-                }
-              ],
-              "rows": [
-                {
-                  "value": "demonstrated_knowledge",
-                  "text": "Demonstrated knowledge of the curriculum."
-                },
-                {
-                  "value": "built_equitable",
-                  "text": "Built and sustained an equitable learning environment in our workshop."
-                },
-                {
-                  "value": "on_track",
-                  "text": "Kept the workshop and participants on track."
-                },
-                {
-                  "value": "productive_discussions",
-                  "text": "Supported productive workshop discussions."
-                },
-                {
-                  "value": "ways_equitable",
-                  "text": "Helped me see ways to create and support an equitable learning environment for my students."
-                },
-                {
-                  "value": "healthy_relationship",
-                  "text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable)."
-                }
-              ]
-            },
-            {
-              "type": "comment",
-              "name": "k5_facilitator_did_well",
-              "title": "What were two things {panel.facilitator_name} did well?"
-            },
-            {
-              "type": "comment",
-              "name": "k5_facilitator_could_improve",
-              "title": "What were two things {panel.facilitator_name} could do better?"
-            }
-          ],
-          "templateTitle": "Information about: {panel.facilitator_name}",
-          "allowAddPanel": false,
-          "allowRemovePanel": false
+          "type": "library_item",
+          "library_name": "surveys/pd/facilitator_panel",
+          "library_version": 0,
+          "name": "facilitators"
         },
         {
           "type": "html",
@@ -252,24 +177,10 @@
           ]
         },
         {
-          "type": "radiogroup",
-          "name": "permission",
-          "title": "I give the workshop organizer permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "yes_name",
-              "text": "Yes, I give the workshop organizer permission to quote me and use my name."
-            },
-            {
-              "value": "yes_anonymous",
-              "text": "Yes, I give the workshop organizer permission to quote me, but I want to be anonymous."
-            },
-            {
-              "value": "no",
-              "text": "No, I do not give the workshop organizer my permission."
-            }
-          ]
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "permission_to_quote"
         },
         {
           "type": "radiogroup",
