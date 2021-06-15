@@ -7,7 +7,7 @@
 #  properties      :text(65535)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  published_state :string(255)
+#  published_state :string(255)      default("beta")
 #
 # Indexes
 #
@@ -32,7 +32,7 @@ class UnitGroup < ApplicationRecord
 
   scope :with_associated_models, -> {includes([:plc_course, :default_unit_group_units])}
 
-  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   FAMILY_NAMES = [
     CSD = 'csd'.freeze,
