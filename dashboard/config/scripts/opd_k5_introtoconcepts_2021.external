@@ -3,92 +3,37 @@ skip_dialog true
 markdown <<MARKDOWN
 # Part II: CS Concepts in Courses A - F
 
-Welcome to Part II of this course, "Implementing and Teaching Computer Science Fundamentals!"  Part II focuses on the computer science concepts and skills students will learn in courses A - F.  Reflection prompts are provided at the end of each lesson to help you think about how to best incorporate CS teaching and student practices to support your students with learning computer science.
+##Welcome to Part II!  
+
+Part II of this online course, "Teaching Computer Science Fundamentals," focuses on the computer science concepts and skills students will learn in courses A - F.  Reflection prompts are provided at the end of each lesson to help you think about how to best incorporate CS teaching and student practices to support your students with learning computer science.
 
 In each lesson of Part II you will find:
 
-* CS Concepts
-* Learning Platform Features
-* Concept Progressions
+* **CS Concepts**
+* **Learning Platform Features**
+* **Concept Progressions**
 
 ## CS Concepts
 
-"CS Concepts" include key vocabulary and definitions about the CS concept introduced within the lessons in this course.
+"CS Concepts" include key vocabulary and definitions about the computer science concepts students will be learning throughout Computer Science Fundamentals courses.
+
+This section encourages you to learn about CS concepts with one or more of the following ways:
+
+* reading a lesson plan.
+* watching a teacher video showing a teacher giving a lesson.
+* watching a student video that introduces the CS concept to students.
+* previewing the teacher slide deck that accompanies a lesson.
+
 
 ## Learning Platform Features
 
-Students use Code.org's learning platform as they learn to program.  The learning platform is made up of built-in features that include buttons, drag and drop blocks for coding, and visuals for students to run and see their code in action.  The same videos that introduce students to concepts and walk students through using built-in features are included in this section.
+Students use Code.org's learning platform as they learn to program.  The learning platform is made up of built-in features that include buttons, drag and drop blocks for coding, and visuals for students to see their code in action.  
+
+This section provides either a student video that walks students through using built-in features or a student lesson level for you to experience using the built-in features.
 
 
 ## Concept Progressions
 
-"Concept progressions" are included in this section to help you experience how a CS concept unfolds within either a single course or across Course A to Course E.  The goal of concept progressions is to provide the big picture of how students learn computer science concepts and develop skills over time with Computer Science Fundamentals courses.
+This section takes you to student lesson levels for you to experience how a CS concept unfolds within either a single course or across multiple courses.  The goal of concept progressions is to provide a big picture of how students learn computer science concepts and develop skills over time with Computer Science Fundamentals courses.
 
-
-## Part II Course Outline
-
-**Lesson 6: Sequencing** (20 minutes)
-
-This welcome is part of Lesson 6 which you are in. After completing Lesson 6 you will be able to:
-
-* Define sequencing
-* Use built-in features for XXX 
-* Identify skills students will practice when learning about sequencing
-
-**Lesson 7: Sprite Lab** (20 minutes)
-
-After completing Lesson 7 you will be able to:
-
-* Identify what a "Sprite" is
-* Use built-in features for Sprite Lab 
-* Identify skills students will practice when learning about coding behaviors for different Sprites
-
-**Lesson 8: Events** (20 minutes)
-
-After completing Lesson 8 you will be able to:
-
-* Identify what an "event" is in computer science
-* Use built-in features to create an interactive program
-* Identify debugging skills students will practice when learning about "events"
-
-**Lesson 9: Conditionals** (20 minutes)
-
-After completing Lesson 9 you will be able to:
-
-* Identify what "conditionals" are
-* Use built-in tools such as Artist and Maze 
-* Identify skills students will practice when learning about conditionals
-
-**Lesson 10: End of Course Projects** (20 minutes)
-
-After completing Lesson 10 you will be able to:
-
-* Identify how End of Course Projects support students in 
-* Identify how End of Course Project resources support students in 
-
-**Lesson 11: Functions** (20 minutes)
-
-After completing Lesson 11 you will be able to:
-
-* Identify what "functions" are
-* Continue to use built-in tools to code simple functions 
-* Identify skills students will practice when learning about functions
-
-**Lesson 12: Variables** (20 minutes)
-
-After completing Lesson 12 you will be able to:
-
-* Identify what "variables" are in computer science
-* Continue to use built-in tools to use variables 
-* Identify skills students will practice when learning about variables
-
-**Lesson 13: For Loops** (20 minutes)
-
-After completing Lesson 13 you will be able to:
-
-* Identify what "for loops" are
-* Continue to use built-in tools to use for loops 
-* Identify skills students will practice when learning about for loops
-
-Click here to access Part III: Next Steps.
 MARKDOWN

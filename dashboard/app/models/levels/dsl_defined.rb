@@ -30,6 +30,13 @@ require 'cdo/script_constants'
 class DSLDefined < Level
   include Seeded
   after_destroy :delete_level_file
+  validate :validate_level_name
+
+  DEFAULT_LEVEL_NAME = 'unique level name here'
+
+  def validate_level_name
+    errors.add(:name, "cannot be the default level name") if name == DEFAULT_LEVEL_NAME
+  end
 
   def dsl_default
     "Enter the level definition here.\n"

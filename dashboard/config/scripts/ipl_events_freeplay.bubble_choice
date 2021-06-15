@@ -1,12 +1,7 @@
 name 'IPL_events_freeplay'
 editor_experiment ''
 display_name 'Events - Free Play'
-description 'Now you can used what you\'ve learned to make your project even better! Keep adding to your program or start something new!'
+description 'Now you can use what you\'ve learned to make your project even better! Keep adding to your program or start something new!'
 
 sublevels
-level 'courseF_events_freeplay_food'
-level 'courseF_events_freeplay_aquatic'
-level 'courseF_events_freeplay_air'
-level 'courseF_events_freeplay_space'
-level 'courseF_events_freeplay_animals'
-level 'courseF_events_freeplay_blank'
+level 'IPL_events_freeplay_food'
