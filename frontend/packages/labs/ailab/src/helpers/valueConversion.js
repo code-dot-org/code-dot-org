@@ -8,11 +8,15 @@ import { getSelectedCategoricalColumns } from "../redux.js";
 
 // Take a ML-friendly integer and convert to human-readable string.
 export function getConvertedValueForDisplay(state, rawValue, column) {
+  console.log("state in getConvertedValueForDisplay", state)
+  console.log("rawValue", rawValue)
+  console.log("column", column)
   const convertedValue =
     getSelectedCategoricalColumns(state).includes(column) &&
     !isEmpty(state.featureNumberKey)
       ? getKeyByValue(state.featureNumberKey[column], rawValue)
       : rawValue;
+      console.log("convertedValue", convertedValue)
   return convertedValue;
 }
 

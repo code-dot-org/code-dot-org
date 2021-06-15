@@ -1,10 +1,16 @@
 import {
   getAccuracyRegression,
-  getAccuracyClassification
+  getAccuracyClassification,
+  getAccuracyGrades,
+  getResultsByGrade
 } from '../../src/helpers/accuracy.js';
-import { ResultsGrades } from '../../src/constants.js';
+import { ResultsGrades, ColumnTypes } from '../../src/constants.js';
 
-const resultsState = {
+const columnsByDataType = {};
+columnsByDataType['height'] = ColumnTypes.NUMERICAL;
+columnsByDataType['sun'] = ColumnTypes.CATEGORICAL;
+
+const regressionState = {
   data: [
     {
       sun: 'high',
@@ -32,10 +38,28 @@ const resultsState = {
     }
   ],
   labelColumn: 'height',
-  labelColumnCategorical: 'sun',
   accuracyCheckPredictedLabels: [4.0, 3.75, 2.63, 2.46, 1.6, 1.0],
-  accuracyCheckLabels: [5.9, 3.8, 2.6, 2.5, 1.6, 0.7]
+  accuracyCheckLabels: [5.9, 3.8, 2.6, 2.5, 1.6, 0.7],
+  accuracyCheckExamples: [['high'], ['high'], ['medium'], ['medium'], ['low'], ['low']],
+  selectedFeatures: ['sun'],
+  columnsByDataType: columnsByDataType,
+  featureNumberKey: {
+    'sun': {
+      'low' : 0,
+      'medium' : 1,
+      'high' : 2,
+    }
+  }
 };
+
+const regressionGrades = [
+  ResultsGrades.INCORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.INCORRECT
+];
 
 const resultsStateClassification = {
   data: [
@@ -83,7 +107,8 @@ const resultsStateClassification = {
 describe('redux functions', () => {
   test('getAccuracyClassification - all accurate', async () => {
     const accurateResults  = ['no', 'yes', 'yes', 'yes', 'yes', 'no'];
-    resultsStateClassification['accuracyCheckPredictedLabels'] = accurateResults
+    resultsStateClassification['accuracyCheckPredictedLabels'] =
+      accurateResults;
 
     const accuracy = getAccuracyClassification(resultsStateClassification);
     expect(accuracy.grades).toEqual([
@@ -99,7 +124,8 @@ describe('redux functions', () => {
 
   test('getAccuracyClassification - mostly accurate', async () => {
     const accurateResults = ['no','yes','yes','yes','yes','yes'];
-    resultsStateClassification['accuracyCheckPredictedLabels'] = accurateResults
+    resultsStateClassification['accuracyCheckPredictedLabels'] =
+      accurateResults;
 
     const accuracy = getAccuracyClassification(resultsStateClassification);
     expect(accuracy.grades).toEqual([
@@ -131,7 +157,8 @@ describe('redux functions', () => {
 
   test('getAccuracyClassification - 0% accuracy', async () => {
     const accurateResults = ['yes','no','no','no','no','yes'];
-    resultsStateClassification['accuracyCheckPredictedLabels'] = accurateResults
+    resultsStateClassification['accuracyCheckPredictedLabels'] =
+      accurateResults;
 
     const accuracy = getAccuracyClassification(resultsStateClassification);
     expect(accuracy.grades).toEqual([
@@ -146,16 +173,31 @@ describe('redux functions', () => {
   });
 
   test("getAccuracyRegression", async () => {
-    const accuracy = getAccuracyRegression(resultsState);
-    expect(accuracy.grades).toEqual([
-      ResultsGrades.INCORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.INCORRECT
-    ]);
+    const accuracy = getAccuracyRegression(regressionState);
+    expect(accuracy.grades).toEqual(regressionGrades);
     // error tolerance of +/- 0.15, 4/6 correct
     expect(accuracy.percentCorrect).toBe("66.67");
+  });
+
+  test("getAccuracyGrades - regression", async () => {
+    const grades = getAccuracyGrades(regressionState);
+    expect(grades).toEqual(regressionGrades);
+  })
+
+  test("getResultsByGrade - correct", async () => {
+    const results = getResultsByGrade(regressionState, ResultsGrades.CORRECT);
+    console.log("results", results)
+    // expect(accuracy.percentCorrect).toBe("66.67");
+    // const accuracy = getAccuracyRegression(resultsState);
+    // expect(accuracy.grades).toEqual([
+    //   ResultsGrades.INCORRECT,
+    //   ResultsGrades.CORRECT,
+    //   ResultsGrades.CORRECT,
+    //   ResultsGrades.CORRECT,
+    //   ResultsGrades.CORRECT,
+    //   ResultsGrades.INCORRECT
+    // ]);
+    // // error tolerance of +/- 0.15, 4/6 correct
+    // expect(accuracy.percentCorrect).toBe("66.67");
   });
 });
