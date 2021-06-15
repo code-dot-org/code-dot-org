@@ -113,6 +113,6 @@ export function handlePlayerSelection(
       selectedPlayer = defaultPlayer;
     }
 
-    onComplete();
+    onComplete(selectedPlayer);
   });
 }
