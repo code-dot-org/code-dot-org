@@ -97,8 +97,7 @@ class CoursesController < ApplicationController
       unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
-    # Convert checkbox values from a string ("on") to a boolean.
-    [:has_verified_resources, :has_numbered_units].each {|key| params[key] = !!params[key]}
+
     unit_group.update(course_params)
 
     # Update the published state of all the units in the course to be same as the course
