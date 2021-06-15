@@ -3,7 +3,7 @@
 # Distribute downloaded translations from i18n/locales
 # back to blockly-core, apps, pegasus, and dashboard.
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'cdo/languages'
 
 require 'cdo/crowdin/utils'
@@ -15,9 +15,10 @@ require 'parallel'
 require 'tempfile'
 require 'yaml'
 
+require_relative 'curriculum_sync_utils'
+require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative 'hoc_sync_utils'
 require_relative '../animation_assets/manifest_builder'
 
 def sync_out(upload_manifests=false)
@@ -139,24 +140,30 @@ def restore_redacted_files
       translated_path = original_path.sub("original", locale)
       next unless File.file?(translated_path)
 
-      if original_path.include? "course_content"
+      if original_path == 'i18n/locales/original/dashboard/blocks.yml'
+        # Blocks are text, not markdown
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
+      elsif original_path.starts_with? "i18n/locales/original/course_content"
+        # Course content should be merged with existing content, so existing
+        # data doesn't get lost
         restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
         translated_data = JSON.parse(File.read(translated_path))
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
         end
       else
+        # Everything else is differentiated only by the plugins used
         plugins = []
-        if original_path == 'i18n/locales/original/dashboard/blocks.yml'
-          plugins << 'blockfield'
-        elsif [
+        if [
           'i18n/locales/original/dashboard/scripts.yml',
           'i18n/locales/original/dashboard/courses.yml'
         ].include? original_path
           plugins << 'resourceLink'
           plugins << 'vocabularyDefinition'
+        elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
+          plugins.push(*CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
         end
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins, 'txt')
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
       end
 
       find_malformed_links_images(locale, translated_path)

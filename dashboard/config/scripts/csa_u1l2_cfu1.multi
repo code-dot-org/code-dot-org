@@ -7,7 +7,7 @@ right 'object'
 
 
 markdown <<MARKDOWN
-Look at the underlined code snippet below. Which of the following correctly identifies the code?
+Look at the code snippet below. Which of the following correctly identifies the code?
 
 ```
 Painter art = new Painter();

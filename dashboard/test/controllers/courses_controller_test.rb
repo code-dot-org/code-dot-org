@@ -354,7 +354,7 @@ class CoursesControllerTest < ActionController::TestCase
       course_name: unit_group.name,
       version_year: '2019',
       family_name: 'csp',
-      has_verified_resources: 'on',
+      has_verified_resources: true,
       published_state: SharedConstants::PUBLISHED_STATE.stable
     }
     unit_group.reload
