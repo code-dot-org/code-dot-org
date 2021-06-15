@@ -1,5 +1,5 @@
 {
-  "title": "Code.org End-of-Year Teacher Survey",
+  "title": "Code.org End-of-Course Teacher Survey",
   "pages": [
     {
       "name": "Welcome",
@@ -41,7 +41,7 @@
             {
               "type": "html",
               "name": "variable_testing",
-              "visible": "false",
+              "visible": false,
               "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>userId = {userId}</li><li>course = {course} </li><li> pd = {pd} </li></p>"
             },
             {
@@ -50,13 +50,13 @@
               "html": "<p style='background-color: yellow; text-align:center'>-- End of testing panel -- </p>"
             }
           ],
-          "title": " ",
-          "visible": "true"
+          "visible": false,
+          "title": " "
         },
         {
           "type": "html",
           "name": "welcome_preamble",
-          "html": "<p><h2>Welcome to the {course} post-course survey</h2>\n<p>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered a $10 Amazon gift card for your time (supplies limited to first 250 respondents).</strong></p>\n<p><strong>Your honesty and candor are appreciated and help us improve.<br /></strong></p>"
+          "html": "<p><h2>Welcome to the {course} End-of-Course Survey</h2>\n<p>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take about 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered a $10 Amazon gift card for your time (supplies limited to first 250 respondents).</strong></p>\n<p><strong>Your honesty and candor are appreciated and help us improve.<br /></strong></p>"
         }
       ]
     },
@@ -189,6 +189,10 @@
                   "text": "Express"
                 },
                 {
+                  "value": "pre_express",
+                  "text": "Pre-Express"
+                },
+                {
                   "value": "20_hour",
                   "text": "20-hour"
                 },
@@ -262,7 +266,7 @@
               "rows": [
                 {
                   "value": "choose_lessons",
-                  "text": "Determine which lessons or activities students complete."
+                  "text": "Choose which lessons or activities students will complete."
                 },
                 {
                   "value": "learnign_support_differention",
@@ -270,42 +274,38 @@
                 },
                 {
                   "value": "teach_unplugged",
-                  "text": "Teach unplugged activities alongside online portions of the curriculum"
+                  "text": "Teach unplugged activities along with online portions of the curriculum."
                 },
                 {
                   "value": "student_reflection",
-                  "text": "Provide opportunities for student reflection, through discussion or journaling"
+                  "text": "Provide opportunities for student reflection, through discussion or journaling."
                 },
                 {
                   "value": "transfer_to_other_contexts",
-                  "text": "Transfer learning to other contexts (e.g.cross-curricular learning or other computer science content not on Code.org)"
+                  "text": "Transfer learning to other contexts (e.g. cross-curricular learning or other computer science content not on Code.org)."
                 },
                 {
                   "value": "assesment_grading",
-                  "text": "Assessment and grading"
+                  "text": "Assess or grade student work."
                 }
               ]
             },
             {
               "type": "radiogroup",
-              "name": "question2",
-              "title": "Which of the following most closely describes what teaching Code.org looks like in your classroom?",
+              "name": "csf_implementation",
+              "title": "Which of the following most closely describes what using Code.org looks like in your classroom?",
               "choices": [
                 {
                   "value": "all_same",
-                  "text": "Students all work on the same lesson at the same time."
+                  "text": "Students are able to engage in Code.org lessons during time dedicated to computer science instruction."
                 },
                 {
                   "value": "same_course_own_pace",
-                  "text": "All students work on the same course, but move through the different lessons at their own pace."
+                  "text": "Students engage in Code.org lessons as part of a station/rotation alongside other activities."
                 },
                 {
-                  "value": "all_codeorg_different_courses",
-                  "text": "All students work on Code.org, but may be working on different courses and tutorials."
-                },
-                {
-                  "value": "individual_station",
-                  "text": "Students work on Code.org individually or as a station/rotation."
+                  "value": "extra_time",
+                  "text": "Students engage in Code.org if they have extra time in class, or at home."
                 }
               ],
               "hasOther": true
@@ -399,10 +399,6 @@
                 {
                   "value": "unit_10",
                   "text": "Unit 10 - Cybersecurity and Global Impacts"
-                },
-                {
-                  "value": "create_pt_prep",
-                  "text": "Create PT Prep"
                 }
               ]
             },
@@ -599,6 +595,129 @@
               "text": "Since 2015-16"
             }
           ]
+        },
+        {
+          "type": "checkbox",
+          "name": "other_subjects_taught",
+          "title": "Are you responsible for teaching other courses or subjects at your school? ",
+          "description": "If so, please check all that apply.",
+          "choices": [
+            {
+              "value": "none",
+              "text": "None"
+            },
+            {
+              "value": "math",
+              "text": "Math"
+            },
+            {
+              "value": "english",
+              "text": "English"
+            },
+            {
+              "value": "history",
+              "text": "History"
+            },
+            {
+              "value": "art",
+              "text": "Art (visual or performing)"
+            },
+            {
+              "value": "science",
+              "text": "Science (any area)"
+            },
+            {
+              "value": "world_language",
+              "text": "World Language"
+            },
+            {
+              "value": "business",
+              "text": "Business"
+            },
+            {
+              "value": "library",
+              "text": "Library"
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "integration_interest",
+          "title": "How interested are you in doing either of the following to help your school teach integrated computer science lessons in other subjects to make cross-curricular connections?",
+          "columns": [
+            {
+              "value": "no_interest",
+              "text": "Not interested"
+            },
+            {
+              "value": "little_interest",
+              "text": "A little interested"
+            },
+            {
+              "value": "somewhat_interested",
+              "text": "Somewhat interested"
+            },
+            {
+              "value": "very_interested",
+              "text": "Very interested!"
+            }
+          ],
+          "rows": [
+            {
+              "value": "myself",
+              "text": "Teaching integrated CS lessons myself"
+            },
+            {
+              "value": "support_other_teacher",
+              "text": "Supporting another teacher in the school to teach CS lessons in other subjects. "
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "integration_subject",
+          "visibleIf": "{integration_interest.myself} anyof ['very_interested', 'somewhat_interested'] or {integration_interest.support_other_teacher} anyof ['very_interested', 'somewhat_interested']",
+          "title": "For which of the following subjects are you the most interested in having integrated computer science content? ",
+          "columns": [
+            {
+              "value": "no_interest",
+              "text": "Not interested"
+            },
+            {
+              "value": "little_interest",
+              "text": "A little interested"
+            },
+            {
+              "value": "somewhat_interested",
+              "text": "Somewhat interested"
+            },
+            {
+              "value": "very_interested",
+              "text": "Very interested!"
+            }
+          ],
+          "rows": [
+            {
+              "value": "english",
+              "text": "English Language Arts"
+            },
+            {
+              "value": "math",
+              "text": "Math"
+            },
+            {
+              "value": "science",
+              "text": "Science"
+            },
+            {
+              "value": "history",
+              "text": "History or Social Studies"
+            },
+            {
+              "value": "art",
+              "text": "Arts"
+            }
+          ]
         }
       ]
     },
@@ -613,7 +732,7 @@
         {
           "type": "radiogroup",
           "name": "type_of_classroom",
-          "title": "Which best describes how your {course} class operated this year?",
+          "title": "Which best describes how your {course} class operated for the majority of this year?",
           "choices": [
             {
               "value": "remote",
@@ -697,7 +816,7 @@
         {
           "type": "comment",
           "name": "covid_learnings",
-          "title": "How has remote teaching permanently affected your teaching practice, or the the way your school operates?",
+          "title": "How has remote teaching permanently affected your teaching practice, or the way your school operates?",
           "description": "If there is anything else you'd like us to know about the impact COVID-19 had on your {course} classroom, please let us know here as well."
         }
       ]
@@ -707,7 +826,7 @@
       "elements": [
         {
           "type": "html",
-          "name": "pre_covid_preamble",
+          "name": "teaching_course_header",
           "html": "<h2>Teaching {course}</h2>\n"
         },
         {
@@ -768,6 +887,20 @@
           ]
         },
         {
+          "type": "rating",
+          "name": "nps",
+          "title": "Overall, I would recommend teaching {course} to other teachers.",
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not at all likely",
+          "maxRateDescription": "Extremely likely"
+        },
+        {
+          "type": "html",
+          "name": "hr_break",
+          "html": "<hr>"
+        },
+        {
           "type": "radiogroup",
           "name": "prep_time",
           "title": "How much time, on average, did you spend preparing for each lesson ? \n",
@@ -792,7 +925,7 @@
         },
         {
           "type": "matrix",
-          "name": "question1",
+          "name": "lesson_prep",
           "title": "How frequently did you use each of the following resources when preparing to teach a {course} lesson?",
           "columns": [
             {
@@ -879,10 +1012,6 @@
               "text": "Providing instruction on new concepts to my students"
             },
             {
-              "value": "assisting_students",
-              "text": "Providing support to students while they work"
-            },
-            {
               "value": "providing_feedback",
               "text": "Providing feedback on work students have done"
             },
@@ -895,12 +1024,20 @@
               "text": "Differentiating instruction for students with varying background knowledge and abilities"
             },
             {
-              "value": "materials_for_indpendent_work",
-              "text": "Finding materials that students can work on independently"
-            },
-            {
               "value": "materials_for_offline",
               "text": "Finding materials to work on that don't require internet and device access"
+            },
+            {
+              "value": "completing_early",
+              "text": "Supporting students who are completing materials early and need additional challenges "
+            },
+            {
+              "value": "not_engaged",
+              "text": "Supporting students who are not engaged in the material"
+            },
+            {
+              "value": "different_levels_of_experience",
+              "text": "Supporting students who have different levels of prior experience "
             }
           ]
         },
@@ -914,7 +1051,7 @@
         {
           "type": "matrix",
           "name": "cdo_strategies",
-          "title": "When teaching {course} how often did YOU explicitly do the following?",
+          "title": "When teaching {course} how often did you explicitly do the following?",
           "columns": [
             {
               "value": "1",
@@ -963,7 +1100,7 @@
         {
           "type": "matrix",
           "name": "facilitation_of_student_interest",
-          "title": "When teaching {course} how often did YOU explicitly do the following?",
+          "title": "When teaching {course} how often did you explicitly do the following?",
           "columns": [
             {
               "value": "1",
@@ -1178,7 +1315,7 @@
           "rows": [
             {
               "value": "assign_from_lms",
-              "text": "Assign lessons from within Code.org directly to your LMS"
+              "text": "Assign Code.org lessons through your LMS"
             },
             {
               "value": "track_progress_in_lms",
@@ -1259,23 +1396,23 @@
             },
             {
               "value": "class_fully_enrolled",
-              "text": "My class being fully enrolled (or recruiting students into the class)"
+              "text": "My class being fully enrolled (or recruiting students into the class)."
             },
             {
-              "value": "cs_being_offered_reomote",
-              "text": "Computer science being offered by my school if students are at home"
+              "value": "cs_being_offered",
+              "text": "Computer science being offered by my school."
             },
             {
-              "value": "teaching_cdo_remote",
-              "text": "Teaching Code.org materials (specifically)"
+              "value": "teaching_cdo",
+              "text": "Teaching Code.org materials (specifically)."
             },
             {
-              "value": "teaching_cs_remote",
-              "text": "Teaching computer science (in general)"
+              "value": "teaching_cs_general",
+              "text": "Teaching computer science (in general)."
             },
             {
-              "value": "taching_in_general_remote",
-              "text": "Teaching (in general)"
+              "value": "taching_in_general",
+              "text": "Teaching (in general)."
             }
           ]
         },
@@ -1469,59 +1606,6 @@
               "text": "Prefer not to answer"
             }
           ]
-        },
-        {
-          "type": "checkbox",
-          "name": "other_subjects_taught",
-          "title": "Are you responsible for teaching other courses or subjects at your school? ",
-          "description": "If so, please check all that apply.",
-          "choices": [
-            {
-              "value": "none",
-              "text": "None"
-            },
-            {
-              "value": "math",
-              "text": "Math"
-            },
-            {
-              "value": "english",
-              "text": "English"
-            },
-            {
-              "value": "history",
-              "text": "History"
-            },
-            {
-              "value": "art",
-              "text": "Art (visual or performing)"
-            },
-            {
-              "value": "science",
-              "text": "Science (any area)"
-            },
-            {
-              "value": "world_language",
-              "text": "World Language"
-            },
-            {
-              "value": "business",
-              "text": "Business"
-            },
-            {
-              "value": "library",
-              "text": "Library"
-            }
-          ]
-        },
-        {
-          "type": "rating",
-          "name": "nps",
-          "title": "Overall, I would recommend teaching {course} to other teachers.",
-          "rateMin": 0,
-          "rateMax": 10,
-          "minRateDescription": "Not at all likely",
-          "maxRateDescription": "Extremely likely"
         },
         {
           "type": "comment",
