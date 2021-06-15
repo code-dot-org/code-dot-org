@@ -28,7 +28,7 @@ require "csv"
 class Multi < Match
   def dsl_default
     <<~ruby
-      name 'unique level name here'
+      name '#{DEFAULT_LEVEL_NAME}'
       title 'title'
       description 'description here'
       question 'Question'

@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/chat_client'
+require 'time'
+
+CENSUS_BUCKET = 'cdo-census'.freeze
+
+def resolved_object_key(object_key, valid)
+  object_key.chomp(".test") + ".#{Time.now.utc.iso8601}" + ".#{valid ? 'valid' : 'invalid'}"
+end
+
+def main
+  AWS::S3.find_objects_with_ext(CENSUS_BUCKET, 'test', 'state_cs_offerings').each do |object_key|
+    ChatClient.log("Attempting dry run seed of state cs offering file: #{object_key}")
+    Census::StateCsOffering.dry_run_new_test_file(object_key)
+
+    # update object key to reflect valid file
+    new_key = resolved_object_key(object_key, true)
+    AWS::S3.rename_object(CENSUS_BUCKET, object_key, new_key)
+    ChatClient.log("Dry run seeding of state cs offering file succeeded: #{new_key}", color: 'green')
+  rescue => e
+    new_key = resolved_object_key(object_key, false)
+    ChatClient.log("Dry run seeding of state cs offering file failed: #{new_key}", color: 'red')
+    ChatClient.log(e.message, color: 'red')
+
+    # update object key to reflect invalid file
+    AWS::S3.rename_object(CENSUS_BUCKET, object_key, new_key)
+  end
+end
+
+main
