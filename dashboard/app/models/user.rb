@@ -1558,15 +1558,15 @@ class User < ApplicationRecord
     scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
-  # Checks if there are any non-hidden scripts assigned to the user.
+  # Checks if there are any launched scripts assigned to the user.
   # @return [Array] of Scripts
   def visible_assigned_scripts
     user_scripts.where("assigned_at").
-      map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
+      map {|user_script| Script.where(id: user_script.script.id).select(&:launched?)}.
       flatten
   end
 
-  # Checks if there are any non-hidden scripts assigned to the user.
+  # Checks if there are any launched scripts assigned to the user.
   # @return [Boolean]
   def any_visible_assigned_scripts?
     visible_assigned_scripts.any?
@@ -1609,7 +1609,7 @@ class User < ApplicationRecord
     user_script_with_most_recent_progress[:last_progress_at]
   end
 
-  # Checks if there are any non-hidden scripts or courses assigned to the user.
+  # Checks if there are any launched scripts or courses assigned to the user.
   # @return [Boolean]
   def assigned_course_or_script?
     assigned_courses.any? || any_visible_assigned_scripts?
