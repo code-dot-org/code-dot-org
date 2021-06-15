@@ -3297,24 +3297,6 @@ code {
   }
 }
 
-#script-breadcrumb {
-  padding-bottom: 10px;
-  a:hover {
-    // Don't underline despite the fact that we're technically a link
-    text-decoration: none;
-  }
-  i {
-    color: $teal;
-    font-size: 18px;
-    margin-right: 15px;
-  }
-  span {
-    color: $teal;
-    font-size: 20px;
-    font-family: "Gotham 4r", sans-serif;
-  }
-}
-
 .breadcrumb-header {
   margin-top: 10px;
 }
