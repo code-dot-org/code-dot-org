@@ -14,6 +14,8 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     model_id = generate_id
     model_data = params["ml_model"]
     return head :bad_request if model_data.nil? || model_data == ""
+    # If there's a PII/profanity API error, we rescue the exception and the save
+    # will succeed. The saved model will bypass the PII/profanity filters.
     begin
       profanity_or_pii = ShareFiltering.find_failure(
         model_data.except(:trainedModel).to_s, request.locale
@@ -67,7 +69,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     return head :not_found unless model
     render json: model
   end
-
+co
   # DELETE api/v1/ml_models/:id
   def destroy
     @user_ml_model = UserMlModel.find_by(model_id: params[:id])
