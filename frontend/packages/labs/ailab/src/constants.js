@@ -591,6 +591,7 @@ export const styles = {
   previousButton: {
     position: "absolute",
     left: 0,
+    top: 7,
     fontSize: 30,
     cursor: "pointer",
     zIndex: 1001
@@ -599,6 +600,7 @@ export const styles = {
   nextButton: {
     position: "absolute",
     right: 0,
+    top: 7,
     fontSize: 30,
     cursor: "pointer",
     zIndex: 1001
@@ -611,7 +613,8 @@ export const styles = {
     fontSize: 24,
     border: "initial",
     padding: "10px 20px 10px 20px",
-    cursor: "pointer"
+    cursor: "pointer",
+    margin: 0
   },
 
   statement: {
@@ -926,7 +929,7 @@ export const styles = {
   },
 
   modelSaveMessage: {
-    top: 10,
+    top: 15,
     zIndex: 1001,
     right: "calc(50% - 250px)",
     textAlign: "center",
