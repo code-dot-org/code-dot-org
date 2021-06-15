@@ -1020,7 +1020,7 @@ class Script < ApplicationRecord
         wrapup_video: script_data[:wrapup_video],
         new_name: script_data[:new_name],
         family_name: script_data[:family_name],
-        published_state: new_suffix ? SharedConstants::PUBLISHED_STATE.beta : script_data[:published_state],
+        published_state: script_data[:published_state].nil? || !new_suffix.nil? ? SharedConstants::PUBLISHED_STATE.beta : script_data[:published_state],
         properties: Script.build_property_hash(script_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1046,7 +1046,7 @@ class Script < ApplicationRecord
   def self.add_script(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     transaction do
       script = fetch_script(options)
-      script.update!(published_state: SharedConstants::PUBLISHED_STATE.beta) if new_suffix
+      script.update!(published_state: SharedConstants::PUBLISHED_STATE.beta) unless new_suffix.nil?
 
       script.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
