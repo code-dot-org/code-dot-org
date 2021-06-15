@@ -428,7 +428,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :forbidden
     script.reload
-    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test "can update on levelbuilder" do
@@ -570,7 +570,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :forbidden
     script.reload
-    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
