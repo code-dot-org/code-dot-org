@@ -12,6 +12,10 @@ import {
   FacingDirection,
   utils as CraftUtils
 } from '@code-dot-org/craft';
+import {
+  openPlayerSelectionDialog,
+  closePlayerSelectionDialog
+} from '@cdo/apps/craft/utils';
 import dom from '../../dom';
 import {trySetLocalStorage} from '../../utils';
 import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
@@ -33,7 +37,7 @@ import {
   dismissSwipeOverlay
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
-import reducers, {setPlayerSelectionDialog} from '@cdo/apps/craft/redux';
+import reducers from '@cdo/apps/craft/redux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -188,23 +192,14 @@ Craft.init = function(config) {
     Craft.beginBackgroundMusic();
     if (config.level.showPopupOnLoad) {
       if (config.level.showPopupOnLoad === 'playerSelection') {
-        getStore().dispatch(
-          setPlayerSelectionDialog(true, selectedPlayer => {
-            if (selectedPlayer) {
-              trackEvent(
-                'MinecraftDesigner',
-                'ClickedCharacter',
-                selectedPlayer
-              );
-            } else {
-              selectedPlayer = DEFAULT_CHARACTER;
-            }
-            Craft.setCurrentCharacter(selectedPlayer);
-            getStore().dispatch(setPlayerSelectionDialog(false));
-            Craft.initializeAppLevel(config.level);
-            showInstructions();
-          })
-        );
+        openPlayerSelectionDialog(selectedPlayer => {
+          closePlayerSelectionDialog();
+          Craft.onCharacterSelected(
+            selectedPlayer,
+            config.level,
+            showInstructions
+          );
+        });
       }
     } else {
       showInstructions();
@@ -499,6 +494,18 @@ Craft.onDocumentMouseUp = function() {
 var preloadImage = function(url) {
   var img = new Image();
   img.src = url;
+};
+
+Craft.onCharacterSelected = function(name, level, callback) {
+  if (name) {
+    trackEvent('MinecraftDesigner', 'ClickedCharacter', name);
+  } else {
+    name = DEFAULT_CHARACTER;
+  }
+
+  Craft.setCurrentCharacter(name);
+  Craft.initializeAppLevel(level);
+  callback();
 };
 
 Craft.characterAssetPackName = function(playerName) {
