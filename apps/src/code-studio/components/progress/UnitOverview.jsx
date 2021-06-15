@@ -28,6 +28,7 @@ import {
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import UnitCalendar from './UnitCalendar';
+import color from '@cdo/apps/util/color';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -36,6 +37,8 @@ class UnitOverview extends React.Component {
   static propTypes = {
     id: PropTypes.number,
     courseId: PropTypes.number,
+    courseTitle: PropTypes.string,
+    courseLink: PropTypes.string,
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
@@ -145,6 +148,13 @@ class UnitOverview extends React.Component {
       <div>
         {onOverviewPage && (
           <div>
+            {this.props.courseLink && (
+              <div className="script-breadcrumb" style={styles.navArea}>
+                <a href={this.props.courseLink} style={styles.navLink}>{`< ${
+                  this.props.courseTitle
+                }`}</a>
+              </div>
+            )}
             {displayRedirectDialog && (
               <RedirectDialog
                 isOpen={this.state.showRedirectDialog}
@@ -206,6 +216,17 @@ class UnitOverview extends React.Component {
     );
   }
 }
+
+const styles = {
+  navLink: {
+    fontSize: 14,
+    lineHeight: '22px',
+    color: color.purple
+  },
+  navArea: {
+    padding: '10px 0px'
+  }
+};
 
 export const UnconnectedUnitOverview = Radium(UnitOverview);
 export default connect((state, ownProps) => ({
