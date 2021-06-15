@@ -29,7 +29,7 @@ class TabView extends React.Component {
             <div
               style={[
                 styles.tab,
-                this.state.activeTab === tabInfo
+                this.state.activeTab?.key === tabInfo.key
                   ? styles.activeTab
                   : styles.inactiveTab
               ]}
