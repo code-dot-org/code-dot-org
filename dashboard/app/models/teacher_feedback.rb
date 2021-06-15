@@ -35,12 +35,12 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :level
   belongs_to :teacher, class_name: 'User'
 
-  REVIEW_STATES = [
-    "keepWorking",
-    "completed"
-  ]
+  REVIEW_STATES = {
+    keepWorking: 'keepWorking',
+    completed: 'completed'
+  }.freeze
 
-  validates_inclusion_of :review_state, in: REVIEW_STATES, allow_nil: true
+  validates_inclusion_of :review_state, in: REVIEW_STATES.values.map(&:to_s), allow_nil: true
 
   # Finds the script level associated with this object, using script id and
   # level id.
@@ -67,14 +67,12 @@ class TeacherFeedback < ApplicationRecord
     query = {
       student_id: student_id,
       level_id: level_id,
-      script_id: script_id,
-      review_state: review_state
+      script_id: script_id
     }
 
     # Note that this will not handle filtering by review_state = nil
     query[:review_state] = review_state if review_state.present?
 
-    # Maureen make sure these are sorted with latest first
     where(query).latest_per_teacher
   end
 
