@@ -239,11 +239,9 @@ div#visualizationResizeBar {
   // make sure to update the AdvancedShareOptions.jsx iframe code.
   width: 352px;
   height: 612px;
+  margin: 0 auto;
   padding: 20px 0;
-  position: fixed;
-  left: 50%;
-  // Offset by half the width of the app with phone frame to center the applab visualization
-  margin-left: -(($applab-content-width + $applab-phoneframe-width) / 2);
+
   background-size: initial;
 
   #playSpaceHeader, #gameButtons {

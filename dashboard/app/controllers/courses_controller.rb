@@ -97,8 +97,7 @@ class CoursesController < ApplicationController
       unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
-    # Convert checkbox values from a string ("on") to a boolean.
-    [:has_verified_resources, :has_numbered_units].each {|key| params[key] = !!params[key]}
+
     unit_group.update(course_params)
 
     # Update the published state of all the units in the course to be same as the course
@@ -192,6 +191,8 @@ class CoursesController < ApplicationController
   def course_params
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
+
+    cp[:published_state] = SharedConstants::PUBLISHED_STATE.beta unless cp[:published_state]
 
     # Temporary transition code used to update the boolean values that control published_state
     # This should be removed once we move off of booleans completely and on to published_state
