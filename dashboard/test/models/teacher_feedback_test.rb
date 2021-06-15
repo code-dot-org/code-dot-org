@@ -274,4 +274,47 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
       assert_equal script_level, feedback.get_script_level
     end
   end
+
+  test 'get_latest_feedbacks_received returns latest feedback for student on level' do
+    teacher = create :teacher
+    students = create_list :student, 2
+    section = create :section, user: teacher
+    section.add_student(students[0])
+    section.add_student(students[1])
+
+    script_level = create :script_level
+    script = script_level.script
+    level = script_level.levels.first
+
+    expected_feedback = create :teacher_feedback, teacher: teacher, student: students[0], script: script, level: level
+    create :teacher_feedback, teacher: teacher, student: students[1], script: script, level: level
+
+    # create additional feedbacks which should not be returned
+    script_level2 = create :script_level
+    script2 = script_level2.script
+    level2 = script_level2.levels.first
+
+    create :teacher_feedback, teacher: teacher, student: students[0], script: script2, level: level2
+    create :teacher_feedback, teacher: teacher, student: students[1], script: script2, level: level2
+
+    retrieved = TeacherFeedback.get_latest_feedbacks_received(students[0].id, level.id, script.id)
+    assert_equal([expected_feedback], retrieved)
+  end
+
+  test 'get_latest_feedbacks_received can filter by review_state' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student(student)
+
+    script_level = create :script_level
+    script = script_level.script
+    level = script_level.levels.first
+
+    expected_feedback = create :teacher_feedback, teacher: teacher, student: student, script: script, level: level, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+    create :teacher_feedback, teacher: teacher, student: student, script: script, level: level
+
+    retrieved = TeacherFeedback.get_latest_feedbacks_received(student.id, level.id, script.id, TeacherFeedback::REVIEW_STATES.keepWorking)
+    assert_equal([expected_feedback], retrieved)
+  end
 end
