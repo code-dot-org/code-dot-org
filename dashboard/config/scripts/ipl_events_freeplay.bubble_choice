@@ -7,3 +7,8 @@ sublevels
 level 'IPL_events_freeplay_food'
 level 'IPL_events_freeplay_animals'
 level 'IPL_events_freeplay_blank'
+level 'IPL_events_click'
+level 'IPL_events_sound_2021'
+level 'IPL_sprites_behaviors'
+level 'IPL_text_print'
+level 'self-expression_positioning'
