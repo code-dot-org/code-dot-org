@@ -1039,13 +1039,17 @@ StudioApp.prototype.toggleRunReset = function(button) {
   }
 
   var run = document.getElementById('runButton');
-  var reset = document.getElementById('resetButton');
-  if (run || reset) {
+  if (run) {
     run.style.display = showRun ? 'inline-block' : 'none';
     run.disabled = !showRun;
+  }
+
+  var reset = document.getElementById('resetButton');
+  if (reset) {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
   }
+
   if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
     // craft has a darker color scheme than other blockly labs. It needs to
     // toggle between different colors on run/reset or else, on run, the workspace
