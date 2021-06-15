@@ -1022,6 +1022,7 @@ class Script < ApplicationRecord
         wrapup_video: script_data[:wrapup_video],
         new_name: script_data[:new_name],
         family_name: script_data[:family_name],
+        published_state: new_suffix ? SharedConstants::PUBLISHED_STATE.beta : script_data[:published_state],
         properties: Script.build_property_hash(script_data).merge(new_properties)
       }, lesson_groups]
     end
