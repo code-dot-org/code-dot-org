@@ -35,20 +35,24 @@ export default class KNNTrainer {
     let bestAccuracy = -1;
     if (state.accuracyCheckExamples.length > 0) {
       const kValues = this.calculatePossibleKValues();
-      kValues.forEach(kValue => {
-        this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
-          k: kValue
+      kValues
+        .filter(kValue => kValue <= state.trainingExamples.length)
+        .forEach(kValue => {
+          this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
+            k: kValue
+          });
+          var model = this.knn;
+          const predictedLabels = this.batchPredict(
+            state.accuracyCheckExamples
+          );
+          const accuracy = this.getAccuracyPercent();
+          if (accuracy > bestAccuracy) {
+            bestAccuracy = accuracy;
+            bestK = kValue;
+            bestModel = model;
+            bestPredictedLabels = predictedLabels;
+          }
         });
-        var model = this.knn;
-        const predictedLabels = this.batchPredict(state.accuracyCheckExamples);
-        const accuracy = this.getAccuracyPercent();
-        if (accuracy > bestAccuracy) {
-          bestAccuracy = accuracy;
-          bestK = kValue;
-          bestModel = model;
-          bestPredictedLabels = predictedLabels;
-        }
-      });
     } else {
       const defaultK = isRegression(state)
         ? 5
