@@ -4,10 +4,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Introduction to Sprite Lab
 
-<img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
-
-
 Sprite Lab is a block-based programming environment where students can make simple animations and games with objects and characters that interact with each other. 
+
+<img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 30px 30px;">
 
 **Course E** introduces Sprite Lab to students where they practice coding with algorithms, loops, and conditionals, before moving on to functions.  Course E introduces what a sprite is and how to code the behavior of sprites.
 
@@ -20,6 +19,7 @@ A **sprite** is a graphic character on the screen with properties that describe 
 
 A **behavior** is an action that a sprite performs continuously until it's told to stop.
 
+Read the **context-setting** lesson, <a href="https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview" target="blank">Course E - Lesson 1:  Follow the Algorithm</a> that accompany the **context-setting** lesson in Course E - Lesson 1:  Follow the Algorithm, that first introduces students to sprites.
 
 #### Teacher Slide Deck
 
@@ -29,7 +29,7 @@ Preview the <a href="https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJm
 
 #### Student Videos
 
-Watch the following student videos to learn about Sprite Lab:
+Watch the following student videos to learn about sprites and Sprite Lab:
 
 * <a href="https://youtu.be/l0B0gDuHHC8" target="blank">Introducing Sprite Lab</a>
 * <a href="https://youtu.be/nHq7_-Kpgc8" target="blank">How to Make a Sprite</a>
@@ -37,10 +37,12 @@ Watch the following student videos to learn about Sprite Lab:
 
 ## Concept Progression
 
-Click "Continue" to go through student lesson levels listed below.  These student lesson levels are examples of how students are introduced to sprites in Course E and F.  As you move from one student lesson level to the next, begin to notice any similarities and differences for how students program sprites and sprite behavior.
+Click "Continue" to go through student lesson levels listed below.  These student lesson levels are examples of how students are introduced to sprites in Course E and F.  As you move from one student lesson level to the next, notice .
 
-* Course E - Lesson X, Level X: 
-* Course F - Lesson 1, Level 2:  Introducing Sprite Lab
+* Course E - Lesson 2, Level 3: Swimming Fish with Sprite Lab
+* Course E - Lesson 2, Level 7: Swimming Fish with Sprite Lab
+* Course F - Lesson 3, Levels 5 and 6: Sprites in Action
+* Course F - Lesson 4, Levels 1 and 2: Mini-Project: Virtual Pet
 
 
 
