@@ -1022,7 +1022,7 @@ class Script < ApplicationRecord
         wrapup_video: script_data[:wrapup_video],
         new_name: script_data[:new_name],
         family_name: script_data[:family_name],
-        published_state: new_suffix ? SharedConstants::PUBLISHED_STATE.beta : script_data[:published_state],
+        published_state: script_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.beta : script_data[:published_state],
         properties: Script.build_property_hash(script_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1303,7 +1303,7 @@ class Script < ApplicationRecord
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-          published_state: general_params[:published_state],
+          published_state: general_params[:published_state].nil? ? SharedConstants::PUBLISHED_STATE.beta : general_params[:published_state],
           properties: Script.build_property_hash(general_params)
         },
         script_data[:lesson_groups]
