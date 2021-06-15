@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-15 18:25:12 UTC",
+    "serialized_at": "2021-06-15 19:34:28 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -1488,7 +1488,8 @@
       "key": "4c4cbcd7-0365-4582-bff6-3f3abb8292a5",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. Students add instance variables and constructor to the `Dessert` class (but are not yet creating `Dessert` objects)."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. Students add instance variables and constructor to the `Dessert` class (but are not yet creating `Dessert` objects).",
+        "progression_name": "Writing the Dessert Class"
       },
       "seeding_key": {
         "activity_section.key": "4c4cbcd7-0365-4582-bff6-3f3abb8292a5",
@@ -1554,6 +1555,7 @@
       "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3 and 4 on Code Studio. Students create a `Dessert` object and use Scanner to get user input for values for the instance variables.",
+        "progression_name": "Creating a Dessert Object",
         "tips": [
           {
             "type": "teachingTip",
@@ -1600,7 +1602,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "c209709f-7efc-438c-98ac-9c2c00ffc00f",
@@ -4239,6 +4242,121 @@
       "level_keys": [
         "CSA U2L2-L6"
       ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Writing the Dessert Class"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "4c4cbcd7-0365-4582-bff6-3f3abb8292a5"
+      },
+      "level_keys": [
+        "CSA U2L3-L1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Writing the Dessert Class"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "4c4cbcd7-0365-4582-bff6-3f3abb8292a5"
+      },
+      "level_keys": [
+        "CSA U2L3-L2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating a Dessert Object"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "94802c4f-ee4e-4377-a024-afd6c7a8269c"
+      },
+      "level_keys": [
+        "CSA U2L3-L3"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Creating a Dessert Object"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "94802c4f-ee4e-4377-a024-afd6c7a8269c"
+      },
+      "level_keys": [
+        "CSA U2L3-L4"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "c209709f-7efc-438c-98ac-9c2c00ffc00f"
+      },
+      "level_keys": [
+        "CSA U2L3-L5"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4324,6 +4442,66 @@
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot",
         "activity_section.key": "143e0a0e-14a1-4550-86f7-bd8c76c1428d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L1",
+        "script_level.level_keys": [
+          "CSA U2L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "4c4cbcd7-0365-4582-bff6-3f3abb8292a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L2",
+        "script_level.level_keys": [
+          "CSA U2L3-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "4c4cbcd7-0365-4582-bff6-3f3abb8292a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L3",
+        "script_level.level_keys": [
+          "CSA U2L3-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "94802c4f-ee4e-4377-a024-afd6c7a8269c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L4",
+        "script_level.level_keys": [
+          "CSA U2L3-L4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "94802c4f-ee4e-4377-a024-afd6c7a8269c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L5",
+        "script_level.level_keys": [
+          "CSA U2L3-L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "c209709f-7efc-438c-98ac-9c2c00ffc00f"
       }
     }
   ],
