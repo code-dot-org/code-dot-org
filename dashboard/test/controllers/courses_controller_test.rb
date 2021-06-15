@@ -10,21 +10,21 @@ class CoursesControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment'
+    @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
     Script.stubs(:should_cache?).returns true
     Script.clear_cache
 
-    @unit_group_regular = create :unit_group, name: 'non-plc-course'
+    @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
 
-    @migrated_script = create :script, is_migrated: true
-    @unit_group_migrated = create :unit_group
+    @migrated_script = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
+    @unit_group_migrated = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_script, position: 1
 
-    @unmigrated_script = create :script
-    @unit_group_unmigrated = create :unit_group
+    @unmigrated_script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    @unit_group_unmigrated = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_unmigrated, script: @unmigrated_script, position: 1
 
     # stub writes so that we dont actually make updates to filesystem
