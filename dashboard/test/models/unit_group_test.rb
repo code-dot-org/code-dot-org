@@ -62,24 +62,24 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   test "should serialize to json" do
     unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedConstants::PUBLISHED_STATE.stable)
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
-    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1", published_state: SharedConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2", published_state: SharedConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3", published_state: SharedConstants::PUBLISHED_STATE.stable))
 
     serialization = unit_group.serialize
 
     obj = JSON.parse(serialization)
     assert_equal 'my-unit-group', obj['name']
     assert_equal ['script1', 'script2', 'script3'], obj['script_names']
-    assert obj['properties']['is_stable']
+    assert_equal obj['published_state'], SharedConstants::PUBLISHED_STATE.stable
   end
 
   test "should serialize resources to json" do
     course_version = create :course_version
     unit_group = create(:unit_group, name: 'my-unit-group', course_version: course_version, published_state: SharedConstants::PUBLISHED_STATE.stable)
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
-    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1", published_state: SharedConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2", published_state: SharedConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3", published_state: SharedConstants::PUBLISHED_STATE.stable))
     unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
     unit_group.student_resources = [create(:resource, course_version: course_version)]
 
@@ -88,7 +88,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     obj = JSON.parse(serialization)
     assert_equal 'my-unit-group', obj['name']
     assert_equal ['script1', 'script2', 'script3'], obj['script_names']
-    assert obj['properties']['is_stable']
+    assert_equal obj['published_state'], SharedConstants::PUBLISHED_STATE.stable
     assert_equal 2, obj['resources'].length
     assert_equal 1, obj['student_resources'].length
   end
