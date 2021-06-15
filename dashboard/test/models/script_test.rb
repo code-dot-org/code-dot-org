@@ -1243,7 +1243,7 @@ class ScriptTest < ActiveSupport::TestCase
     resource = create :resource, key: 'resource', course_version: course_version
     vocab = create :vocabulary, key: 'vocab', course_version: course_version
 
-    source = "We support [r #{Services::MarkdownPreprocessor.build_resource_key(resource)}] resource links and [v #{Services::MarkdownPreprocessor.build_vocab_key(vocab)}] vocabulary definitions"
+    source = "We support [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}] resource links and [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}] vocabulary definitions"
     expected = "We support [fake name](fake.url) resource links and <span class=\"vocab\" title=\"definition\">word</span> vocabulary definitions"
     script = create :script
     script.stubs(:localized_description).returns(source)

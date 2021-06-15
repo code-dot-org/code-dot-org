@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
-import TeacherFeedback from './TeacherFeedback';
+import TeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedback';
 import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import HelpTabContents from './HelpTabContents';
