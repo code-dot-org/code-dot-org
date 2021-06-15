@@ -1,0 +1,234 @@
+---
+title: CS Journeys - Explore the many worlds of computer science
+video_player: true
+theme: responsive
+social:
+  "og:title": "CS Journeys - Explore the many worlds of computer science"
+  "twitter:title": "CS Journeys - Explore the many worlds of computer science"
+  "og:description": "Exciting live engagement opportunities and rich resources that help bring classroom learning to life"
+  "twitter:description": "Exciting live engagement opportunities and rich resources that help bring classroom learning to life"
+  "og:image": "/images/csjourneys/og-csjourneys.png"
+  "twitter:image:": "/images/csjourneys/og-csjourneys.png"
+  "og:image:width": 1200
+  "og:image:height": 630
+---
+<link href="/css/tools.css" rel="stylesheet">
+
+<a id="top"></a>
+
+<img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:500px; max-width:100%; margin-top:35px">
+<h1 style="margin-top:25px">Explore the wide world of computer science with your students</h1>
+
+<p>The most memorable school experiences are frequently not in lessons, but associated with an eye-opening field trip or a special guest speaker. Connecting what students are learning to the real world not only enables them to better understand and recall concepts but also excites and inspires them to continue learning.</p>
+<p>Code.org has created easy-to-use resources designed to help you to excite, encourage, and empower your students to continue their CS journeys in and beyond your class:</p>
+<br>
+<div class="col-33" style="padding-bottom:15px; text-align:left">
+  <a class="linktag" id="excite-nav" href="#excite"> 
+  <div class="box bounce-6">
+    <img src="/images/csjourneys/excite.png" alt="Excite" style="margin-bottom:-45px; margin-left:15px; width:100px">
+  </div>
+  </a>
+  <br>
+  <div class="col-100" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#7665a0; text-align:center">
+    <a class="linktag" id="excite-nav" href="#excite" style="text-decoration:none"><h3 style="color:#ffffff; margin-top:10px"><strong>Excite</strong></h3></a>
+    <p style="margin-left:10px; margin-right:10px; color:#ffffff">Excite and inspire students to learn CS and explore pathways with videos, live experiences and events, and other activities that showcase the possibilities with CS</p>
+  </div>
+  <div style="clear: both"></div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px; text-align:left">
+  <a class="linktag" id="encourage-nav" href="#encourage">
+    <div class="box bounce-6">
+      <img src="/images/csjourneys/encourage.png" alt="Encourage" style="margin-bottom:-45px; margin-left:15px; width:100px">
+    </div>
+  </a>
+  <br>
+  <div class="col-100" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#7665a0; text-align:center">
+    <a class="linktag" id="encourage-nav" href="#encourage" style="text-decoration:none"><h3 style="color:#ffffff; margin-top:10px"><strong>Encourage</strong></h3></a>
+    <p style="margin-left:10px; margin-right:10px; color:#ffffff">Encourage students to keep learning — connect them to role models and mentors, and get parents invested in their children’s CS journeys</p>
+  </div>
+  <div style="clear: both"></div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px; text-align:left">
+  <a class="linktag" id="empower-nav" href="#empower">
+    <div class="box bounce-6">
+      <img src="/images/csjourneys/empower.png" alt="Empower" style="margin-bottom:-45px; margin-left:15px; width:100px">
+    </div>
+  </a>
+  <br>
+  <div class="col-100" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#7665a0; text-align:center">
+    <a class="linktag" id="empower-nav" href="#empower" style="text-decoration:none"><h3 style="color:#ffffff; margin-top:10px"><strong>Empower</strong></h3></a>
+    <p style="margin-left:10px; margin-right:10px; color:#ffffff">Empower students to take control of their CS journeys with resources enabling them to explore, look forward and plan</p>
+    <br>
+  </div>
+  <div style="clear: both"></div>
+</div>
+
+<div style="clear: both; margin-bottom:35px"></div>
+<hr style="border: none;  height: 4px;  margin-bottom: 24px; background-image: url(../images/csjourneys/yellowdash.png); background-repeat: repeat-x;"/>
+<br>
+
+<a id="excite"></a>
+<img style="width:40px; float: left; margin-right: 2%" src="/images/csjourneys/excite.png" alt="Excite" >
+<div style="width: 87%; float: left">
+  <h2 style="margin-top:0">Get your students excited and inspired to learn CS with these great options</h2>
+  <p>Use the options below to introduce CS Journeys to your students and inspire them to keep learning and exploring!</p>
+</div>
+<div style="clear: both; margin-bottom:25px"></div>
+
+<div class="col-50" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="career-videos" href="/careers-with-cs#videos" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-placeholder.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Careers with CS photo">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Take your class on a CS adventure</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sign your classroom up for live, virtual field trips, discussions, and demonstrations with NASA, Amazon and others! <i>Code.org teacher account required.</i></div>
+        <br>
+        <br>
+        <a class="linktag" id="career-videos" href="/careers-with-cs#videos" target="_blank"><button>View opportunities</button></a>
+  </div>
+</div>
+</div>
+
+<div class="col-50" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="career-explore" href="careers-with-cs#explore" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/explore-careers.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Explore Careers">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>View more career exploration and inspiration resources</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">View our Career Exploration hub for videos, interactive tools, and other resources that students can use to explore different CS pathways.</div>
+          <a class="linktag" id="career-k5" href="/careers-in-tech" target="_blank"><button>For grades K-5</button></a>
+          <a class="linktag" id="career-explore" href="/careers-with-cs" target="_blank"><button>For grades 6-12</button></a>
+  </div>
+</div>
+</div>
+
+<div style="clear: both"></div>
+
+<p><a href="#top">[Back to top]</a></p>
+<br>
+<br>
+
+<div class="col-100" style="border-radius:15px; background-color:#00adbc; padding:25px; width: 98%">
+  <img style="width:18%; float: left; margin-right: 2%" src="/images/csjourneys/explore-careers.png" alt="can't wait to see you">
+  <div style="width: 79%; float: left">
+    <p style="color:#ffffff; margin-bottom:5px">Save the Date: Hour of Code 2021 Kickoff Event</p>
+    <h2 style="margin-top:0; margin-bottom: 0; color:#ffffff; font-size: 26px">Join us on December 6th to celebrate computer science with fun activities and special celebrity guests!</h2>
+  </div>
+  <div style="clear: both"></div>
+</div>
+
+<div style="clear: both; margin-bottom: 50px"></div>
+
+<a id="encourage"></a>
+<img style="width:40px; float: left; margin-right: 2%" src="/images/csjourneys/encourage.png" alt="Encourage">
+<div style="width: 87%; float: left">
+  <h2 style="margin-top:0">Get parents/guardians engaged and hear from role models to encourage students to keep learning</h2>
+  <p>Parent/guardian engagement is critical to student success — make space to touch base with them throughout the school year using customizable email templates and other resources designed to educate them about what computer science is and the opportunities it can offer their children.</p>
+  <p>Role models and mentors can demonstrate real-life successful CS journeys and help connect students to opportunities and resources. Share Code.org resources below to make students aware of mentorship opportunities. You will soon also be able to schedule live chats with CS role models.</p>
+</div>
+<div style="clear: both; margin-bottom:25px"></div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/csjourneys/coming-soon.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="Classroom speakers">
+    <div class="tutorial-info" style="border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <h3 class="tutorial-info-h" style="color: #dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hear from a diverse group of professionals using CS to do amazing things</strong></h3>
+        <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Young, diverse professionals are available to talk about their CS journeys and answer students’ questions.</div>
+        <a class="linktag" id="guest-speakers" href="/csjourneys/engage-parents" target="_blank"><button>Learn more</button></a>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="letters-home" href="/csjourneys/engage-parents" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/engage-parents.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="email icon">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Engage parents/guardians with email updates & other resources</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Welcome parents to CS, keep them informed of student progress, and make them aware of career opportunities.</div>
+        <a class="linktag" id="letters-home" href="/csjourneys/engage-parents" target="_blank"><button>View resources</button></a>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="mentors" href="/beyond/mentors-and-community" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/mentorships.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="mentorships">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Connect students to mentors</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">View our list of opportunities for students to connect with mentors or plug in with like-minded communities.</div>
+        <br>
+        <a class="linktag" id="mentors" href="/beyond/mentors-and-community" target="_blank"><button>Learn more</button></a>
+  </div>
+</div>
+</div>
+
+<div style="clear: both"></div>
+
+<p><a href="#top">[Back to top]</a></p>
+<br>
+<br>
+
+<div class="col-100" style="border-radius:15px; background-color:#00adbc; padding:25px; width:98%">
+  <img style="width:18%; float: left; margin-right: 2%" src="/images/csjourneys/explore-careers.png" alt="you're a shining star">
+  <div style="width: 79%; float: left">
+    <p style="color:#ffffff; margin-bottom:5px">Did you know?</p>
+    <h2 style="margin-top:0; margin-bottom: 0; color:#ffffff; font-size: 26px">If a parent or teacher tells a student they’d be good at a subject, that student is three times more likely to stick with that subject!</h2>
+  </div>
+  <div style="clear: both"></div>
+</div>
+
+<div style="clear: both; margin-bottom: 50px"></div>
+
+<a id="empower"></a>
+<img style="width:40px; float: left; margin-right: 2%" src="/images/csjourneys/empower.png" alt="Empower">
+<div style="width: 87%; float: left">
+  <h2 style="margin-top:0">Empower older students to take control of their CS journeys by exploring next steps</h2>
+  <p>Empower students to take control of their CS journeys by exploring the academic and career pathways available to them with CS and giving them a deeper understanding of how to get there. Sign your class up to participate in live discussions designed to make students aware of tangible next steps they can take. Point students to resources like internship and scholarship opportunities, and encourage them to apply what they've learned outside the classroom, in extracurricular opportunities like hackathons and summer programs.</p>
+</div>
+<div style="clear: both; margin-bottom:25px"></div>
+
+<div class="col-50" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="next-steps" href="/csjourneys/nextsteps" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-placeholder.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Next Steps Discussions for high school students">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Next Steps Discussions for High School Students</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join us this fall for live talks and Q&As designed to demystify ‘next steps’ in high school students’ computer science journeys.</div>
+        <a class="linktag" id="next-steps" href="/csjourneys/nextsteps" target="_blank"><button>View details</button></a>
+  </div>
+</div>
+</div>
+
+<div class="col-50" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="beyond-resources" href="/beyond" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/explore-careers.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="More resources to empower students">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>More resources for empowering students</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Make your students aware of awesome opportunities to apply for internships and scholarships, plug in with support networks, and participate in hackathons and summer programs.</div>
+          <a class="linktag" id="beyond-resources" href="/beyond" target="_blank"><button>View resources</button></a>
+  </div>
+</div>
+</div>
+
+<div style="clear: both"></div>
+
+<p><a href="#top">[Back to top]</a></p>
+<br>
+<br>
+
+
+<!--
+<hr style="border: none;  height: 4px;  margin-bottom: 24px; background-image: url(../images/csjourneys/yellowdash.png); background-repeat: repeat-x;"/>
+<br>
+-->

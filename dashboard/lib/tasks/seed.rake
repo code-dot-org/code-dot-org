@@ -171,7 +171,6 @@ namespace :seed do
     script_files = opts[:script_files] || SCRIPTS_GLOB
     begin
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
-      LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
       _, custom_i18n = Script.setup(custom_scripts, show_progress: Rake.application.options.trace)
       Script.merge_and_write_i18n(custom_i18n)
     rescue

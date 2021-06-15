@@ -13,12 +13,14 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
+#  published_state :string(255)
 #
 # Indexes
 #
 #  index_scripts_on_family_name      (family_name)
 #  index_scripts_on_name             (name) UNIQUE
 #  index_scripts_on_new_name         (new_name) UNIQUE
+#  index_scripts_on_published_state  (published_state)
 #  index_scripts_on_wrapup_video_id  (wrapup_video_id)
 #
 
@@ -120,6 +122,8 @@ class Script < ApplicationRecord
       without: /\A~|\A\.|\//,
       message: 'cannot start with a tilde or dot or contain slashes'
     }
+
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
 
   def prevent_duplicate_levels
     reload
@@ -1901,7 +1905,7 @@ class Script < ApplicationRecord
 
     level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
     student_ids = section.students.map(&:id)
-    all_feedback = TeacherFeedback.get_all_feedback_for_section(student_ids, level_ids, section.user_id)
+    all_feedback = TeacherFeedback.get_latest_feedbacks_given(student_ids, level_ids, id, section.user_id)
 
     feedback_hash = {}
     all_feedback.each do |feedback_element|
