@@ -1,0 +1,17 @@
+framework,parent,name,category,description,type
+AI4K12,,Perception,BI-1,Computers perceive the world using sensors,Big Idea
+AI4K12,,Representation and Reasoning,BI-2,Agents maintain representations of the world and use them for reasoning,Big Idea
+AI4K12,,Learning,BI-3,Computers can learn from data,Big Idea
+AI4K12,,Natural Interaction,BI-4,Intelligent agents require many kinds of knowledge to interact naturally with humans,Big Idea
+AI4K12,,Societal Impact,BI-5,AI can impact society in both positive and negative ways,Big Idea
+AI4K12,BI-3,Nature of Learning - humans vs machines,3-A-i,Nature of Learning - humans vs machines,Concept
+AI4K12,BI-3,Nature of Learning - finding patterns in data,3-A-ii,Nature of Learning - finding patterns in data,Concept
+AI4K12,BI-3,Nature of Learning - training a model,3-A-iii,Nature of Learning - training a model,Concept
+AI4K12,BI-3,Nature of Learning - constructinv vs using a reasoner,3-A-iv,Nature of Learning - constructinv vs using a reasoner,Concept
+AI4K12,BI-3,Nature of Learning - adjusting internal representations,3-A-v,Nature of Learning - adjusting internal representations,Concept
+AI4K12,BI-3,Nature of Learning - learning from experience,3-A-vi,Nature of Learning - learning from experience,Concept
+AI4K12,BI-3,Neural Networks - structure of a neural network,3-B-i,Neural Networks - structure of a neural network,Concept
+AI4K12,BI-3,Neural Networks - weight adjustment,3-B-ii,Neural Networks - weight adjustment,Concept
+AI4K12,BI-3,Datasets - feature sets,3-C-i,Datasets - feature sets,Concept
+AI4K12,BI-3,Datasets - large datasets,3-C-ii,Datasets - large datasets,Concept
+AI4K12,BI-3,Datasets - bias,3-C-iii,Datasets - bias,Concept
