@@ -69,7 +69,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     return head :not_found unless model
     render json: model
   end
-co
+
   # DELETE api/v1/ml_models/:id
   def destroy
     @user_ml_model = UserMlModel.find_by(model_id: params[:id])
