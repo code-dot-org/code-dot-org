@@ -1506,7 +1506,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_212035) do
     t.text "properties"
     t.string "new_name"
     t.string "family_name"
-    t.string "published_state"
+    t.string "published_state", default: "beta"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
@@ -1752,7 +1752,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_212035) do
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "published_state"
+    t.string "published_state", default: "beta"
     t.index ["name"], name: "index_unit_groups_on_name"
     t.index ["published_state"], name: "index_unit_groups_on_published_state"
   end
