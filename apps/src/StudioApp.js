@@ -2271,9 +2271,14 @@ StudioApp.prototype.handleHideSource_ = function(options) {
         // Set the document to use flex.
         document.body.className += ' WireframeButtons_container';
 
+        // Create an empty div on the left for padding
+        var div = document.createElement('div');
+        div.className = 'WireframeButtons_containerLeft';
+        document.body.insertBefore(div, document.body.firstChild);
+
         // Add 'withWireframeButtons' class to top level div that wraps app.
         // This will add necessary styles.
-        var div = document.getElementsByClassName('wrapper')[0];
+        div = document.getElementsByClassName('wrapper')[0];
         if (div) {
           div.className = 'wrapper withWireframeButtons';
         }
