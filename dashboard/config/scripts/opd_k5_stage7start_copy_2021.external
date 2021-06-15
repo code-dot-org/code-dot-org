@@ -5,19 +5,21 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/9d05ff62f3098c6143eff78553e05f06-image-1571780679511.jpg" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
-Students use Play Lab to program "events" in animated games they create. Play Lab is a tool that allows students to program stories and games using backgrounds and characters.
-
 ## CS Concepts
 
-An **event** is a line of code that tells your computer to "listen" for something to happen, then take an action.  For example, web pages may include a drop down menu when you roll over the navigation bar with your mouse.  The "mouse rollover" is an event that triggers an action.
+An **event** is an action that causes something to happen. For example, web pages may include a drop down menu when you roll over the navigation bar with your mouse.  The "mouse rollover" is an action that causes the menu to drop down.
 
-"Events" are introduced in Courses A through C with a **context-setting** lesson in which students engage in an unplugged (off the computer) activity.
+### Student Video
 
-##### Watch the video, <a href="https://www.youtube.com/watch?v=u0WV9shCoak" target="blank"> The Big Event Jr.</a> , demonstrating how events are first introduced to students in Course A - Lesson 11:  The Big Event Jr. 
+Watch the video, <a href="https://www.youtube.com/watch?v=u0WV9shCoak" target="blank"> "The Big Event Jr.,"</a>, that first introduces "events" to students in Course A - Lesson 11:  The Big Event Jr. 
 
 ## Learning Platform Features
 
-Watch the video, <a href="https://youtu.be/nVsZyQIZyPc" target="blank">"Introduction to Play Lab (Pre-reader version),"</a> which introduces the built-in features students will use during lessons.
+Students use Play Lab to program "events" in animated games they create. 
+
+Watch the video, <a href="https://youtu.be/nVsZyQIZyPc" target="blank">"Introduction to Play Lab (Pre-reader version),"</a> that introduces Play Lab to students.
+
+Also, watch the video, <a href="studio.code.org/s/coursec-2021/lessons/12/levels/1" target="blank">"Flappy Intro,"</a> that first introduces the "event" block to students in Course C - Lesson 12, Level 1:  Build A Flappy Game.
 
 ## Concept Progression
 
