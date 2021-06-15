@@ -1,7 +1,6 @@
 /* Training and prediction using a multiclassification KNN machine learning model from
 https://github.com/mljs/knn */
 
-import { store } from "../index.js";
 import {
   isRegression,
   setKValue,
@@ -16,51 +15,82 @@ import { logFirehoseMetric } from "../helpers/metrics";
 const KNN = require("ml-knn");
 
 export default class KNNTrainer {
-
   calculatePossibleKValues() {
-    let possibleKValues = [1, 3, 5, 7, 17, 31, 45, 61];
-    const state = store.getState();
+    const state = this.store.getState();
     let datasetSize = state.data.length;
+    let possibleKValues = [1, 3, 5, 7, 17, 31, 45, 61];
     const heuristicK = Math.round(Math.sqrt(datasetSize));
     possibleKValues.push(heuristicK);
-    const oneThird = Math.round(datasetSize/3);
+    const oneThird = Math.round(datasetSize / 3);
     possibleKValues.push(oneThird);
     return possibleKValues;
   }
 
-  startTraining() {
+  startTraining(store) {
+    this.store = store;
     const state = store.getState();
+    const datasetSize = state.data.length;
+    /*
+      We modify algorithm hyperparameters (k) based on dataset size and type of
+      machine learning in attempt to increase the liklihood of accurate
+      models that behave in ways consistent with the mental model presented in
+      the curriculum.
+    */
+    const smallDatasetSize = 10;
+    const mediumDatasetSize = 100;
+    const minimalK = 1;
+    const smallK = 5;
+    const defaultRegressionK = datasetSize < mediumDatasetSize
+      ? minimalK
+      : smallK;
+    const defaultClassificationK = Math.round(datasetSize / 3);
+
     let bestModel = null;
     let bestPredictedLabels = [];
     let bestK = -1;
     let bestAccuracy = -1;
     if (state.accuracyCheckExamples.length > 0) {
-      const kValues = this.calculatePossibleKValues();
-      kValues.forEach(kValue => {
-        this.knn = new KNN(
-          state.trainingExamples,
-          state.trainingLabels,
-          {k: kValue}
-        );
-        var model = this.knn;
-        const predictedLabels = this.batchPredict(state.accuracyCheckExamples);
-        const accuracy = this.getAccuracyPercent();
-        if (accuracy > bestAccuracy) {
-          bestAccuracy = accuracy;
-          bestK = kValue;
-          bestModel = model;
-          bestPredictedLabels = predictedLabels;
+      if (datasetSize <= smallDatasetSize && !isRegression(state)) {
+        this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
+          k: datasetSize
+        });
+        bestModel = this.knn;
+        bestK = datasetSize;
+      } else if (isRegression(state)) {
+        this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
+          k: defaultRegressionK
+        });
+        bestModel = this.knn;
+        bestK = defaultRegressionK;
+      } else {
+        const kValues = this.calculatePossibleKValues();
+        kValues
+          .filter(kValue => kValue <= state.trainingExamples.length)
+          .forEach(kValue => {
+            this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
+              k: kValue
+            });
+            var model = this.knn;
+            const predictedLabels = this.batchPredict(
+              state.accuracyCheckExamples
+            );
+            const accuracy = this.getAccuracyPercent();
+            if (accuracy > bestAccuracy) {
+              bestAccuracy = accuracy;
+              bestK = kValue;
+              bestModel = model;
+              bestPredictedLabels = predictedLabels;
+            }
+          });
         }
-      })
-    } else {
-      const defaultK = isRegression(state) ?
-        5 : Math.round(state.data.length/3);
-      this.knn = new KNN(
-        state.trainingExamples,
-        state.trainingLabels,
-        {k: defaultK}
-      );
-      bestModel = this.knn
+      } else {
+      const defaultK = isRegression(state)
+        ? defaultRegressionK
+        : defaultClassificationK;
+      this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
+        k: defaultK
+      });
+      bestModel = this.knn;
       bestK = defaultK;
     }
     store.dispatch(setKValue(bestK));
@@ -81,20 +111,20 @@ export default class KNNTrainer {
   }
 
   getAccuracyPercent() {
-    const state = store.getState();
+    const state = this.store.getState();
     const percent = getPercentCorrect(state);
     return parseFloat(percent);
   }
 
   batchPredict(accuracyCheckExamples) {
     const predictedLabels = this.knn.predict(accuracyCheckExamples);
-    store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
+    this.store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
     return predictedLabels;
   }
 
   predict(testValues) {
-    const state = store.getState();
+    const state = this.store.getState();
     const prediction = state.trainedModel.predict(testValues);
-    store.dispatch(setPrediction(prediction));
+    this.store.dispatch(setPrediction(prediction));
   }
 }
