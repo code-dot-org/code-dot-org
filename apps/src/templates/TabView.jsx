@@ -1,17 +1,18 @@
 import React from 'react';
+import Radium from 'radium';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
 /**
  * TabView
  */
-export default class TabView extends React.Component {
+class TabView extends React.Component {
   static propTypes = {
     tabs: PropTypes.arrayOf(
       PropTypes.shape({
-        key: PropTypes.string,
-        name: PropTypes.string,
-        renderFn: PropTypes.func
+        key: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        renderFn: PropTypes.func.isRequired
       })
     )
   };
@@ -20,23 +21,18 @@ export default class TabView extends React.Component {
     activeTab: this.props.tabs[0]
   };
 
-  selectTab(tabInfo) {
-    this.setState({activeTab: tabInfo});
-  }
-
   render() {
     return (
       <div>
         <div style={styles.tabContainer}>
           {this.props.tabs.map(tabInfo => (
             <div
-              style={Object.assign(
-                {},
+              style={[
                 styles.tab,
                 this.state.activeTab === tabInfo
                   ? styles.activeTab
                   : styles.inactiveTab
-              )}
+              ]}
               key={tabInfo.key}
               onClick={() => this.setState({activeTab: tabInfo})}
             >
@@ -44,7 +40,7 @@ export default class TabView extends React.Component {
             </div>
           ))}
         </div>
-        {this.state.activeTab && this.state.activeTab.renderFn()}
+        {this.state.activeTab?.renderFn()}
       </div>
     );
   }
@@ -78,3 +74,5 @@ const styles = {
     }
   }
 };
+
+export default Radium(TabView);
