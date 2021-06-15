@@ -698,6 +698,7 @@ FactoryGirl.define do
 
   factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
+    published_state "beta"
 
     factory :csf_script do
       after(:create) do |csf_script|
