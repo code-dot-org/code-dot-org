@@ -229,13 +229,13 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert unit_group.stable?
   end
 
-  test "stable?: true if unit_group in family has publsihed_state of stable" do
-    unit_group = create :unit_group, family_name: 'csd', published_state: SharedConstants::PUBLISHED_STATE.stable
+  test "stable?: true if unit_group has published_state of stable" do
+    unit_group = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.stable
     assert unit_group.stable?
   end
 
-  test "stable?: defaults to false if unit_group in family does not have published_state" do
-    unit_group = create :unit_group, family_name: 'csd'
+  test "stable?: defaults to false if unit_group does not have published_state" do
+    unit_group = create :unit_group
     refute unit_group.stable?
   end
 
