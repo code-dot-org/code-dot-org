@@ -151,6 +151,64 @@
         },
         {
           "type": "matrix",
+          "name": "codedotorg_teaching_strategies_csf",
+          "title": "To what extent do the following statements about teaching strategies describe you?",
+          "questionTitleLocation": "hidden",
+          "columns": [
+            {
+              "value": "0",
+              "text": "N/A"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            }
+          ],
+          "rows": [
+            {
+              "value": "work_collaboratively",
+              "text": "I can ensure that students work collaboratively when writing code."
+            },
+            {
+              "value": "share_ideas",
+              "text": "I can ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group or large-group discussion."
+            },
+            {
+              "value": "normalize_failure",
+              "text": "I can create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process. "
+            },
+            {
+              "value": "support_problem_solving",
+              "text": "I can support students in solving the various problems they encounter while working on programming activities."
+            }
+          ]
+        },
+        {
+          "type": "matrix",
           "name": "codedotorg_teaching_strategies_csp",
           "title": "Right now, I have concrete teaching strategies to...",
           "visibleIf": "{workshop_course} = 'CS Principles'",

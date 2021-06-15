@@ -10,19 +10,18 @@ markdown <<MARKDOWN
 
 A **for loop** is a loop with a predetermined beginning, end, and increment (step interval).
 
-#### Teacher Video
+#### Lesson in Action
 
-Watch <a href="https://www.youtube.com/watch?v=HO4uhoahtjM," target="blank">this video </a> demonstrating how you might introduce for loops to students with the **context-setting** lesson in Course F - Lesson 13:  For Loop Fun. 
-
-#### Student Video
-
-Watch this video, <a href="https://studio.code.org/s/coursef-2021/lessons/13/levels/1" target="blank">"For Loop Fun,"</a> which introduces for loops to students during the lesson.
+Watch <a href="https://www.youtube.com/watch?v=HO4uhoahtjM" target="blank">this video </a> demonstrating how you might introduce "for loops" to students with the **context-setting** lesson in Course F - Lesson 13:  For Loop Fun. 
 
 ## Learning Platform Features
 
-#### Student Lesson Level
+Watch <a href="https://studio.code.org/s/coursef-2021/lessons/14/levels/4" target="blank">this video </a> from Course F - Lesson 14, Level 4:  For Loops with Bee that introduces students to using a counter variable. 
 
-Check out this <a href="https://studio.code.org/s/coursef-2021/lessons/14/levels/3" target="blank" >student lesson level</a> providing students with an opportunity to explore for loops.
+Students engage with Maze Puzzles and The Artist as they learn about "for loops."
 
 ## Concept Progression
+
+* Course F - Lesson 14, Levels 7 and 8: For Loops with Bee
+* Course F - Lesson 15, Levels 3 and 4: For Loops with Artist
 MARKDOWN
