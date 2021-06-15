@@ -3,7 +3,7 @@
     "name": "test-new-seed-course-offering",
     "wrapup_video_id": null,
     "login_required": false,
-    "published_state": 'beta',
+    "published_state": "beta",
     "properties": {
       "version_year": "1234",
       "is_course": true
