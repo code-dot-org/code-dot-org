@@ -38,25 +38,22 @@ export default class Congrats extends Component {
   /**
    * Renders links to certificate alternatives when there is a special event going on.
    * @param {string} language The language code related to the special event i.e. 'en', 'es', 'ko', etc
-   * @param {string} tutorialType The type of lesson the student completed i.e. 'dance', '2018Minecraft', etc
+   * @param {string} tutorial The type of tutorial the student finished i.e. 'dance', 'oceans', etc
    * @returns {HTMLElement} HTML for rendering the extra certificate links.
    */
-  renderExtraCertificateLinks = (language, tutorialType) => {
+  renderExtraCertificateLinks = (language, tutorial) => {
     let extraLinkUrl, extraLinkText;
     // https://codedotorg.atlassian.net/browse/FND-1604
     // these can be removed after July 25 2021
     if (language === 'ko') {
-      switch (tutorialType) {
-        case 'oceans':
-          extraLinkUrl = pegasus('/files/online-coding-party-2021-oceans.pdf');
-          extraLinkText =
-            '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
-          break;
-        case 'dance':
-          extraLinkUrl = pegasus('/files/online-coding-party-2021-dance.pdf');
-          extraLinkText =
-            '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
-          break;
+      if (/oceans/.test(tutorial)) {
+        extraLinkUrl = pegasus('/files/online-coding-party-2021-oceans.pdf');
+        extraLinkText =
+          '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
+      } else if (/dance/.test(tutorial)) {
+        extraLinkUrl = pegasus('/files/online-coding-party-2021-dance.pdf');
+        extraLinkText =
+          '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
       }
     }
     if (!extraLinkUrl || !extraLinkText) {
@@ -94,7 +91,7 @@ export default class Congrats extends Component {
           randomDonorTwitter={randomDonorTwitter}
           under13={under13}
         >
-          {this.renderExtraCertificateLinks(language, tutorialType)}
+          {this.renderExtraCertificateLinks(language, tutorial)}
         </Certificate>
         {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
         <StudentsBeyondHoc

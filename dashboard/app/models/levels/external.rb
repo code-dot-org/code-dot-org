@@ -42,7 +42,7 @@ class External < DSLDefined
 
   def dsl_default
     <<~TEXT
-      name '#{name || 'unique level name here'}'
+      name '#{name || DEFAULT_LEVEL_NAME}'
       title 'title'
       description 'description here'
     TEXT

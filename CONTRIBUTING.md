@@ -8,7 +8,7 @@ This project adheres to the [Contributor Covenant][code-of-conduct]. By particip
 
 You can start setting up with these next steps:
 
-1. Anyone who would like to contribute to **[Code.org](https://github.com/code-dot-org/)** projects **must read and sign the [Contributor License Agreement](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8eb90665-c9f7-4b06-81a5-11d12020f251)**. We can't accept pull requests from contributors who haven't yet signed the CLA.
+1. Anyone who would like to contribute to **[Code.org](https://github.com/code-dot-org/)** projects **must read and sign the [Contributor License Agreement](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e5fc8c52-925f-47e0-922c-90b24daa2b94&env=na2&acct=66bab3ee-40e1-40e3-ad7f-7576ba73668c&v=2)**. We can't accept pull requests from contributors who haven't yet signed the CLA.
 
 2. Get your local development build working by following our [SETUP](SETUP.md). Fork our repo and make sure to merge our staging branch into yours **WEEKLY** as we do update frequently.
 
