@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "test-serialize-seeding-json-family",
-    "published_state": null,
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "test-serialize-seeding-json-script"
     }
