@@ -34,7 +34,7 @@ export const RunButton = Radium(props => (
       className={classNames([
         'launch',
         'blocklyLaunch',
-        props.hidden && 'invisible'
+        props.hidden && 'hide'
       ])}
       style={props.style}
     >
