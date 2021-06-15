@@ -1,4 +1,6 @@
 import i18n from './locale';
+import {getStore} from '@cdo/apps/redux';
+import {setPlayerSelectionDialog} from '@cdo/apps/craft/redux';
 
 export const ARROW_KEY_NAMES = [
   'ArrowLeft',
@@ -86,4 +88,12 @@ export function blockTypesToDropdownOptions(blockTypes) {
     const displayName = BLOCK_NAME_TO_DISPLAY_TEXT[blockType] || blockType;
     return [displayName, blockType];
   });
+}
+
+export function openPlayerSelectionDialog(onSelectedCallback) {
+  getStore().dispatch(setPlayerSelectionDialog(true, onSelectedCallback));
+}
+
+export function closePlayerSelectionDialog() {
+  getStore().dispatch(setPlayerSelectionDialog(false));
 }
