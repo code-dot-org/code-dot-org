@@ -12,10 +12,6 @@ import {
   FacingDirection,
   utils as CraftUtils
 } from '@code-dot-org/craft';
-import {
-  openPlayerSelectionDialog,
-  closePlayerSelectionDialog
-} from '@cdo/apps/craft/utils';
 import dom from '../../dom';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
@@ -30,7 +26,7 @@ import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {ARROW_KEY_NAMES} from '../utils';
+import {ARROW_KEY_NAMES, handlePlayerSelection} from '@cdo/apps/craft/utils';
 import {
   showArrowButtons,
   hideArrowButtons,
@@ -192,14 +188,16 @@ Craft.init = function(config) {
     Craft.beginBackgroundMusic();
     if (config.level.showPopupOnLoad) {
       if (config.level.showPopupOnLoad === 'playerSelection') {
-        openPlayerSelectionDialog(selectedPlayer => {
-          closePlayerSelectionDialog();
-          Craft.onCharacterSelected(
-            selectedPlayer,
-            config.level,
-            showInstructions
-          );
-        });
+        const onPlayerSelected = selectedPlayer => {
+          Craft.setCurrentCharacter(selectedPlayer);
+          Craft.initializeAppLevel(config.level);
+          showInstructions();
+        };
+        handlePlayerSelection(
+          DEFAULT_CHARACTER,
+          onPlayerSelected,
+          'MinecraftDesigner'
+        );
       }
     } else {
       showInstructions();
@@ -494,18 +492,6 @@ Craft.onDocumentMouseUp = function() {
 var preloadImage = function(url) {
   var img = new Image();
   img.src = url;
-};
-
-Craft.onCharacterSelected = function(name, level, callback) {
-  if (name) {
-    trackEvent('MinecraftDesigner', 'ClickedCharacter', name);
-  } else {
-    name = DEFAULT_CHARACTER;
-  }
-
-  Craft.setCurrentCharacter(name);
-  Craft.initializeAppLevel(level);
-  callback();
 };
 
 Craft.characterAssetPackName = function(playerName) {

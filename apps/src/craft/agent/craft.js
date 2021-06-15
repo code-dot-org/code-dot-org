@@ -14,10 +14,6 @@ import {
   EventType,
   utils as CraftUtils
 } from '@code-dot-org/craft';
-import {
-  openPlayerSelectionDialog,
-  closePlayerSelectionDialog
-} from '@cdo/apps/craft/utils';
 import dom from '../../dom';
 import MusicController from '../../MusicController';
 import {Provider} from 'react-redux';
@@ -29,7 +25,7 @@ import Sounds from '../../Sounds';
 import {TestResults} from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {ARROW_KEY_NAMES} from '../utils';
+import {ARROW_KEY_NAMES, handlePlayerSelection} from '@cdo/apps/craft/utils';
 import {
   showArrowButtons,
   dismissSwipeOverlay
@@ -135,14 +131,16 @@ export default class Craft {
 
       if (config.level.showPopupOnLoad) {
         if (config.level.showPopupOnLoad === 'playerSelection') {
-          openPlayerSelectionDialog(selectedPlayer => {
-            closePlayerSelectionDialog();
-            Craft.onCharacterSelected(
-              selectedPlayer,
-              config.level,
-              showInstructions
-            );
-          });
+          const onPlayerSelected = selectedPlayer => {
+            Craft.setCurrentCharacter(selectedPlayer);
+            Craft.initializeAppLevel(config.level);
+            showInstructions();
+          };
+          handlePlayerSelection(
+            DEFAULT_CHARACTER,
+            onPlayerSelected,
+            'MinecraftAgent'
+          );
         }
       } else {
         showInstructions();
@@ -429,18 +427,6 @@ export default class Craft {
     for (const direction in directionToFacing) {
       Craft.gameController.codeOrgAPI.arrowUp(directionToFacing[direction]);
     }
-  }
-
-  static onCharacterSelected(name, level, callback) {
-    if (name) {
-      trackEvent('MinecraftAgent', 'ClickedCharacter', name);
-    } else {
-      name = DEFAULT_CHARACTER;
-    }
-
-    Craft.setCurrentCharacter(name);
-    Craft.initializeAppLevel(level);
-    callback();
   }
 
   static characterAssetPackName(playerName) {

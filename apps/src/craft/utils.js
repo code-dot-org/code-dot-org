@@ -1,4 +1,5 @@
 import i18n from './locale';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import {getStore} from '@cdo/apps/redux';
 import {setPlayerSelectionDialog} from '@cdo/apps/craft/redux';
 
@@ -96,4 +97,22 @@ export function openPlayerSelectionDialog(onSelectedCallback) {
 
 export function closePlayerSelectionDialog() {
   getStore().dispatch(setPlayerSelectionDialog(false));
+}
+
+export function handlePlayerSelection(
+  defaultPlayer,
+  onComplete,
+  craftEventType = 'Minecraft'
+) {
+  openPlayerSelectionDialog(selectedPlayer => {
+    closePlayerSelectionDialog();
+
+    if (selectedPlayer) {
+      trackEvent(craftEventType, 'ClickedCharacter', selectedPlayer);
+    } else {
+      selectedPlayer = defaultPlayer;
+    }
+
+    onComplete();
+  });
 }

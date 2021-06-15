@@ -10,10 +10,7 @@ import {
   EventType,
   utils as CraftUtils
 } from '@code-dot-org/craft';
-import {
-  openPlayerSelectionDialog,
-  closePlayerSelectionDialog
-} from '@cdo/apps/craft/utils';
+import {handlePlayerSelection} from '@cdo/apps/craft/utils';
 var dom = require('../../dom');
 import {trySetLocalStorage} from '@cdo/apps/utils';
 var houseLevels = require('./houseLevels');
@@ -145,14 +142,12 @@ Craft.init = function(config) {
     Craft.beginBackgroundMusic();
     if (config.level.showPopupOnLoad) {
       if (config.level.showPopupOnLoad === 'playerSelection') {
-        openPlayerSelectionDialog(selectedPlayer => {
-          closePlayerSelectionDialog();
-          Craft.onCharacterSelected(
-            selectedPlayer,
-            config.level,
-            showInstructions
-          );
-        });
+        const onPlayerSelected = selectedPlayer => {
+          Craft.setCurrentCharacter(selectedPlayer);
+          Craft.initializeAppLevel(config.level);
+          showInstructions();
+        };
+        handlePlayerSelection(DEFAULT_CHARACTER, onPlayerSelected);
       } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
         Craft.showHouseSelectionPopup(function(selectedHouse) {
           trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
@@ -462,18 +457,6 @@ var preloadImage = function(url) {
 
 Craft.getAppReducers = function() {
   return reducers;
-};
-
-Craft.onCharacterSelected = function(name, level, callback) {
-  if (name) {
-    trackEvent('Minecraft', 'ClickedCharacter', name);
-  } else {
-    name = DEFAULT_CHARACTER;
-  }
-
-  Craft.setCurrentCharacter(name);
-  Craft.initializeAppLevel(level);
-  callback();
 };
 
 Craft.characterAssetPackName = function(playerName) {
