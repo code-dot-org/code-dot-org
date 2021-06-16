@@ -13,6 +13,8 @@ import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import ControlButtons from './ControlButtons';
 import JavalabButton from './JavalabButton';
 
+const FOOTER_BUFFER = 10;
+
 class JavalabView extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
@@ -30,16 +32,19 @@ class JavalabView extends React.Component {
     isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
     setIsDarkMode: PropTypes.func,
-    channelId: PropTypes.string
+    channelId: PropTypes.string,
+    isEditingStartSources: PropTypes.bool
   };
 
   state = {
     isRunning: false,
-    isTesting: false
+    isTesting: false,
+    rightContainerHeight: 800
   };
 
   componentDidMount() {
     this.props.onMount();
+    this.setRightContainerHeight();
   }
 
   compile = () => {
@@ -94,15 +99,25 @@ class JavalabView extends React.Component {
     return <div id="visualization" />;
   };
 
+  setRightContainerHeight = () => {
+    let rightContainerHeight = this.editorAndVisualization.getBoundingClientRect()
+      .top;
+    let topPos = window.innerHeight - rightContainerHeight - FOOTER_BUFFER;
+    this.setState({
+      rightContainerHeight: topPos
+    });
+  };
+
   render() {
     const {
       isDarkMode,
       onCommitCode,
       onInputMessage,
       onContinue,
-      handleVersionHistory
+      handleVersionHistory,
+      isEditingStartSources
     } = this.props;
-    const {isRunning, isTesting} = this.state;
+    const {isRunning, isTesting, rightContainerHeight} = this.state;
 
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -112,16 +127,26 @@ class JavalabView extends React.Component {
 
     return (
       <StudioAppWrapper>
-        <div style={styles.javalab}>
+        <div
+          style={{
+            ...styles.javalab,
+            ...{height: rightContainerHeight}
+          }}
+        >
           <div style={styles.buttons}>
             <JavalabSettings>{this.renderSettings()}</JavalabSettings>
-            <JavalabButton
-              text={i18n.finish()}
-              onClick={onContinue}
-              style={styles.finish}
-            />
+            {!isEditingStartSources && (
+              <JavalabButton
+                text={i18n.finish()}
+                onClick={onContinue}
+                style={styles.finish}
+              />
+            )}
           </div>
-          <div style={styles.editorAndVisualization}>
+          <div
+            ref={ref => (this.editorAndVisualization = ref)}
+            style={styles.editorAndVisualization}
+          >
             <div
               id="visualizationColumn"
               className="responsive"
@@ -149,6 +174,7 @@ class JavalabView extends React.Component {
               />
               <JavalabConsole
                 onInputMessage={onInputMessage}
+                style={styles.consoleParent}
                 leftColumn={
                   <ControlButtons
                     isDarkMode={isDarkMode}
@@ -181,11 +207,23 @@ const styles = {
   },
   editorAndConsole: {
     right: '15px',
-    width: '100%'
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  consoleParent: {
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
+    flexGrow: 1,
+    overflowY: 'hidden'
   },
   editorAndVisualization: {
     display: 'flex',
-    flexGrow: '1'
+    flexGrow: '1',
+    height: '100%'
   },
   preview: {
     backgroundColor: color.light_gray,
@@ -204,7 +242,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'flex-end',
     width: '100%',
-    margin: '10px 0'
+    margin: '10px 0',
+    overflowY: 'hidden'
   },
   finish: {
     backgroundColor: color.orange,
@@ -225,7 +264,8 @@ export default connect(
     isProjectLevel: state.pageConstants.isProjectLevel,
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     channelId: state.pageConstants.channelId,
-    isDarkMode: state.javalab.isDarkMode
+    isDarkMode: state.javalab.isDarkMode,
+    isEditingStartSources: state.pageConstants.isEditingStartSources
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),

@@ -4,25 +4,15 @@ description 'description here'
 markdown <<MARKDOWN
 # Introduction to For Loops
 
-<img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 20px 20px;">
 
 ## CS Concept
 
 A **for loop** is a loop with a predetermined beginning, end, and increment (step interval).
 
-#### Teacher Video
+#### Lesson in Action
 
-Watch <a href="https://www.youtube.com/watch?v=HO4uhoahtjM," target="blank">this video </a> demonstrating how you might introduce for loops to students with the **context-setting** lesson in Course F - Lesson 13:  For Loop Fun. 
+Watch <a href="https://www.youtube.com/watch?v=HO4uhoahtjM" target="blank">this video </a> demonstration of a teacher introducing "for loops" to students with the **context-setting** lesson in Course F - Lesson 13:  For Loop Fun. 
 
-#### Student Video
-
-Watch this video, <a href="https://studio.code.org/s/coursef-2021/lessons/13/levels/1" target="blank">"For Loop Fun,"</a> which introduces for loops to students during the lesson.
-
-## Learning Platform Features
-
-#### Student Lesson Level
-
-Check out this <a href="https://studio.code.org/s/coursef-2021/lessons/14/levels/3" target="blank" >student lesson level</a> providing students with an opportunity to explore for loops.
-
-## Concept Progression
+**Note:** The video will open in a new tab.  Be sure to return to the tab with this online course after watching the video.
 MARKDOWN

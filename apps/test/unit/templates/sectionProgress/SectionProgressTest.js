@@ -45,7 +45,7 @@ describe('SectionProgress', () => {
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
       showStandardsIntroDialog: false,
-      studentLastUpdateByScript: {
+      studentLastUpdateByUnit: {
         1: Date.now()
       }
     };
