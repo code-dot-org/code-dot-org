@@ -4,11 +4,11 @@ import {shallow} from 'enzyme';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
-  UnconnectedScriptOverviewTopRow as ScriptOverviewTopRow,
+  UnconnectedUnitOverviewTopRow as UnitOverviewTopRow,
   NOT_STARTED,
   IN_PROGRESS,
   COMPLETED
-} from '@cdo/apps/code-studio/components/progress/ScriptOverviewTopRow';
+} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
@@ -32,10 +32,10 @@ const defaultProps = {
   isMigrated: false
 };
 
-describe('ScriptOverviewTopRow', () => {
+describe('UnitOverviewTopRow', () => {
   it('renders "Try Now" for student', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow
+      <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Student}
         scriptProgress={NOT_STARTED}
@@ -73,7 +73,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('renders "Continue" for student', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow
+      <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Student}
         scriptProgress={IN_PROGRESS}
@@ -94,7 +94,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('renders "Print Certificate" for student', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow
+      <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Student}
         scriptProgress={COMPLETED}
@@ -115,7 +115,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('renders SectionAssigner for teacher', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow {...defaultProps} viewAs={ViewType.Teacher} />
+      <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Teacher} />
     );
 
     expect(
@@ -140,7 +140,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('renders resources for teacher', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow
+      <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Teacher}
         teacherResources={[
@@ -176,7 +176,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('renders migrated resources for teacher on a migrated script', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow
+      <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Teacher}
         isMigrated={true}
@@ -221,7 +221,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('renders the unit calendar when showCalendar true for teacher', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow
+      <UnitOverviewTopRow
         {...defaultProps}
         showCalendar
         unitCalendarLessons={testLessons}
@@ -242,7 +242,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('does not render the unit calendar when showCalendar false for teacher', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow
+      <UnitOverviewTopRow
         {...defaultProps}
         unitCalendarLessons={testLessons}
         weeklyInstructionalMinutes={90}
@@ -262,7 +262,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('does not render the unit calendar for student', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow
+      <UnitOverviewTopRow
         {...defaultProps}
         showCalendar
         unitCalendarLessons={testLessons}
@@ -283,7 +283,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('renders dropdown button with links to printing options', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow
+      <UnitOverviewTopRow
         {...defaultProps}
         scriptOverviewPdfUrl="/link/to/script_overview.pdf"
         scriptResourcesPdfUrl="/link/to/script_resources.pdf"
@@ -307,7 +307,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('does not render printing option dropdown for students', () => {
     const wrapper = shallow(
-      <ScriptOverviewTopRow
+      <UnitOverviewTopRow
         {...defaultProps}
         scriptOverviewPdfUrl="/link/to/script_overview.pdf"
         scriptResourcesPdfUrl="/link/to/script_resources.pdf"
@@ -319,7 +319,7 @@ describe('ScriptOverviewTopRow', () => {
 
   it('renders RTL without errors', () => {
     expect(() => {
-      shallow(<ScriptOverviewTopRow {...defaultProps} isRtl={true} />);
+      shallow(<UnitOverviewTopRow {...defaultProps} isRtl={true} />);
     }).not.to.throw();
   });
 });
