@@ -278,7 +278,7 @@ class Script < ApplicationRecord
 
     if has_any_course_experiments
       scripts = scripts.map do |script|
-        alternate_script = script.alternate_script(user)
+        alternate_script = script.alternate_unit(user)
         alternate_script.presence || script
       end
     end
@@ -1406,7 +1406,7 @@ class Script < ApplicationRecord
     nil
   end
 
-  # A script that the general public can assign. Has been soft or
+  # A unit that the general public can assign. Has been soft or
   # hard launched.
   def launched?
     [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
@@ -1513,8 +1513,8 @@ class Script < ApplicationRecord
       weeklyInstructionalMinutes: weekly_instructional_minutes,
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
       courseVersionId: get_course_version&.id,
-      scriptOverviewPdfUrl: get_script_overview_pdf_url,
-      scriptResourcesPdfUrl: get_script_resources_pdf_url
+      scriptOverviewPdfUrl: get_unit_overview_pdf_url,
+      scriptResourcesPdfUrl: get_unit_resources_pdf_url
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1546,10 +1546,10 @@ class Script < ApplicationRecord
     summary
   end
 
-  def summarize_for_script_edit
+  def summarize_for_unit_edit
     include_lessons = false
     summary = summarize(include_lessons)
-    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_script_edit)
+    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
     summary
   end
@@ -1704,8 +1704,8 @@ class Script < ApplicationRecord
   end
 
   # Returns a property hash that always has the same keys, even if those keys were missing
-  # from the input. This ensures that values can be un-set via seeding or the script edit UI.
-  def self.build_property_hash(script_data)
+  # from the input. This ensures that values can be un-set via seeding or the unit edit UI.
+  def self.build_property_hash(unit_data)
     # When adding a key, add it to the appropriate list based on whether you want it defaulted to nil or false.
     # The existing keys in this list may not all be in the right place theoretically, but when adding a new key,
     # try to put it in the appropriate place.
@@ -1740,21 +1740,21 @@ class Script < ApplicationRecord
       :include_student_lesson_plans
     ]
     not_defaulted_keys = [
-      :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path
+      :teacher_resources, # teacher_resources gets updated from the unit edit UI through its own code path
     ]
 
     result = {}
     # If a non-boolean prop was missing from the input, it'll get populated in the result hash as nil.
-    nonboolean_keys.each {|k| result[k] = script_data[k]}
+    nonboolean_keys.each {|k| result[k] = unit_data[k]}
     # If a boolean prop was missing from the input, it'll get populated in the result hash as false.
-    boolean_keys.each {|k| result[k] = !!script_data[k]}
-    not_defaulted_keys.each {|k| result[k] = script_data[k] if script_data.keys.include?(k)}
+    boolean_keys.each {|k| result[k] = !!unit_data[k]}
+    not_defaulted_keys.each {|k| result[k] = unit_data[k] if unit_data.keys.include?(k)}
 
     result
   end
 
-  # A script is considered to have a matching course if there is exactly one
-  # course for this script
+  # A unit is considered to have a matching course if there is exactly one
+  # unit_group for this unit
   def unit_group
     return nil if unit_group_units.length != 1
     UnitGroup.get_from_cache(unit_group_units[0].course_id)
@@ -1768,7 +1768,7 @@ class Script < ApplicationRecord
     course_version || unit_group&.course_version
   end
 
-  # @return {String|nil} path to the course overview page for this script if there
+  # @return {String|nil} path to the course overview page for this unit if there
   #   is one.
   def course_link(section_id = nil)
     return nil unless unit_group
@@ -1781,10 +1781,10 @@ class Script < ApplicationRecord
     unit_group.try(:localized_title)
   end
 
-  # If there is an alternate version of this script which the user should be on
-  # due to existing progress or a course experiment, return that script. Otherwise,
+  # If there is an alternate version of this unit which the user should be on
+  # due to existing progress or a course experiment, return that unit. Otherwise,
   # return nil.
-  def alternate_script(user)
+  def alternate_unit(user)
     unit_group_units.each do |ugu|
       alternate_ugu = ugu.unit_group.select_unit_group_unit(user, ugu)
       return alternate_ugu.script if ugu != alternate_ugu
@@ -1805,7 +1805,7 @@ class Script < ApplicationRecord
     if version_year
       info[:version_year] = version_year
       # No need to localize version_title yet, since we only display it for CSF
-      # scripts, which just use version_year.
+      # units, which just use version_year.
       info[:version_title] = version_year
     end
     if localized_description
@@ -1917,12 +1917,12 @@ class Script < ApplicationRecord
     return false unless pilot? && user
     return true if user.permission?(UserPermission::LEVELBUILDER)
     return true if has_pilot_experiment?(user)
-    # a platformization partner should be able to view pilot scripts which they
+    # a platformization partner should be able to view pilot units which they
     # own, even if they are not in the pilot experiment.
     return true if has_editor_experiment?(user)
 
-    # A user without the experiment has pilot script access if
-    # (1) they have been assigned to or have progress in the pilot script, and
+    # A user without the experiment has pilot unit access if
+    # (1) they have been assigned to or have progress in the pilot unit, and
     # (2) one of their teachers has the pilot experiment enabled.
     has_progress = !!UserScript.find_by(user: user, script: self)
     has_progress && user.teachers.any? {|t| has_pilot_experiment?(t)}
@@ -1935,15 +1935,15 @@ class Script < ApplicationRecord
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot
-  # script experiments enabled.
+  # unit experiments enabled.
   def self.has_any_pilot_access?(user = nil)
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
-    all_scripts.any? {|script| script.has_pilot_experiment?(user)}
+    all_scripts.any? {|unit| unit.has_pilot_experiment?(user)}
   end
 
-  # If a user is in the editor experiment of this script, that indicates that
-  # they are a platformization partner who owns this script.
+  # If a user is in the editor experiment of this unit, that indicates that
+  # they are a platformization partner who owns this unit.
   def has_editor_experiment?(user)
     return false unless editor_experiment
     SingleUserExperiment.enabled?(user: user, experiment_name: editor_experiment)
@@ -1976,24 +1976,24 @@ class Script < ApplicationRecord
     Services::ScriptSeed.serialize_seeding_json(self)
   end
 
-  # @param [String] script_name - name of the script to seed from .script_json
-  # @returns [Script] - the newly seeded script object
-  def self.seed_from_json_file(script_name)
-    filepath = script_json_filepath(script_name)
+  # @param [String] unit_name - name of the unit to seed from .script_json
+  # @returns [Script] - the newly seeded unit object
+  def self.seed_from_json_file(unit_name)
+    filepath = script_json_filepath(unit_name)
     Services::ScriptSeed.seed_from_json_file(filepath) if File.exist?(filepath)
   end
 
-  def self.script_json_filepath(script_name)
-    "#{unit_json_directory}/#{script_name}.script_json"
+  def self.script_json_filepath(unit_name)
+    "#{unit_json_directory}/#{unit_name}.script_json"
   end
 
-  def get_script_overview_pdf_url
+  def get_unit_overview_pdf_url
     if is_migrated?
       Services::CurriculumPdfs.get_script_overview_url(self)
     end
   end
 
-  def get_script_resources_pdf_url
+  def get_unit_resources_pdf_url
     if is_migrated?
       Services::CurriculumPdfs.get_script_resources_url(self)
     end
