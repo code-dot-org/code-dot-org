@@ -1,0 +1,18 @@
+name 'OPD-K5-CounterVariableVid-2021'
+title 'For Loops Intro'
+description 'description here'
+markdown <<MARKDOWN
+# Introduction to For Loops
+
+<img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;"> 
+
+Students build skills using "for loops" with Bee in Maze Puzzles, then get creative with The Artist.
+
+<a href="https://levelbuilder-studio.code.org/s/coursef-2021/lessons/14/levels/4" target="blank">this video </a> from Course F - Lesson 14, Level 4:  For Loops with Bee that introduces students to using a counter variable.
+* Course F - Lesson 14, Levels 7 and 8: For Loops with Bee
+* Course F - Lesson 15, Levels 3 and 4: For Loops with Artist
+
+Click "Continue" to watch a video introducing students to the counter variable and to engage with lessons in Course F.
+
+
+MARKDOWN

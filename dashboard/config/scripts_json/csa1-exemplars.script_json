@@ -1,0 +1,868 @@
+{
+  "script": {
+    "name": "csa1-exemplars",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-06-16 17:19:35 UTC",
+    "seeding_key": {
+      "script.name": "csa1-exemplars"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-exemplars"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Welcome to CSA",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Classes and Objects",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Using Commands",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Conditionals and Debugging",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "More with Objects",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "While Loops and Practice",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "More with Conditionals",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Introduction to Code Reviews",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Inheritance and Methods",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "More Methods, More Features",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Painting Methods",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Spray Painter",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "StampPainter",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Edge Cases",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Software Engineering Wrap Up",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Project: Personal Symbol - Day 1",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Project: Personal Symbol - Day 2",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "Project: Personal Symbol - Day 3",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-19",
+      "name": "FRQ Day",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "lesson-20",
+      "name": "Assessment Day",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-exemplars"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "feab8c15-bf5e-47cf-939a-f058ad14962b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "feab8c15-bf5e-47cf-939a-f058ad14962b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "3d4b1f62-5e5f-4f23-b249-11cd0d550032",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d4b1f62-5e5f-4f23-b249-11cd0d550032",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    },
+    {
+      "key": "7ac54740-ad11-43d5-a77b-33bc8149991d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7ac54740-ad11-43d5-a77b-33bc8149991d",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "cb4b8542-3bdf-48c9-83ab-7f682bb1347d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Exploring the Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb4b8542-3bdf-48c9-83ab-7f682bb1347d",
+        "lesson_activity.key": "feab8c15-bf5e-47cf-939a-f058ad14962b"
+      }
+    },
+    {
+      "key": "63701b9b-26e7-45b8-8f4c-1271cb802043",
+      "position": 2,
+      "properties": {
+        "progression_name": "Investigate the Painter"
+      },
+      "seeding_key": {
+        "activity_section.key": "63701b9b-26e7-45b8-8f4c-1271cb802043",
+        "lesson_activity.key": "feab8c15-bf5e-47cf-939a-f058ad14962b"
+      }
+    },
+    {
+      "key": "41be92fc-56ff-45db-9905-9776aa2495d1",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "41be92fc-56ff-45db-9905-9776aa2495d1",
+        "lesson_activity.key": "feab8c15-bf5e-47cf-939a-f058ad14962b"
+      }
+    },
+    {
+      "key": "d057562a-dca3-4bde-8a14-d112f2934e27",
+      "position": 1,
+      "properties": {
+        "progression_name": "Exploring the Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "d057562a-dca3-4bde-8a14-d112f2934e27",
+        "lesson_activity.key": "3d4b1f62-5e5f-4f23-b249-11cd0d550032"
+      }
+    },
+    {
+      "key": "1237e5cc-80c5-4435-a88d-47537fd0b637",
+      "position": 2,
+      "properties": {
+        "progression_name": "Investigate the Painter"
+      },
+      "seeding_key": {
+        "activity_section.key": "1237e5cc-80c5-4435-a88d-47537fd0b637",
+        "lesson_activity.key": "3d4b1f62-5e5f-4f23-b249-11cd0d550032"
+      }
+    },
+    {
+      "key": "f040c729-3ba2-4bdf-8438-92741ae4bf2e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f040c729-3ba2-4bdf-8438-92741ae4bf2e",
+        "lesson_activity.key": "3d4b1f62-5e5f-4f23-b249-11cd0d550032"
+      }
+    },
+    {
+      "key": "11cafda2-43b6-463c-bd10-6913de1c1537",
+      "position": 1,
+      "properties": {
+        "progression_name": "Movement Commands"
+      },
+      "seeding_key": {
+        "activity_section.key": "11cafda2-43b6-463c-bd10-6913de1c1537",
+        "lesson_activity.key": "7ac54740-ad11-43d5-a77b-33bc8149991d"
+      }
+    },
+    {
+      "key": "ea78f440-ae7c-43db-b86f-991512c84d06",
+      "position": 2,
+      "properties": {
+        "progression_name": "Painting Commands"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea78f440-ae7c-43db-b86f-991512c84d06",
+        "lesson_activity.key": "7ac54740-ad11-43d5-a77b-33bc8149991d"
+      }
+    },
+    {
+      "key": "23157b66-570a-4a9b-8dce-a58bdccba235",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "23157b66-570a-4a9b-8dce-a58bdccba235",
+        "lesson_activity.key": "7ac54740-ad11-43d5-a77b-33bc8149991d"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring the Neighborhood"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2-L1 - exemplar"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "d057562a-dca3-4bde-8a14-d112f2934e27"
+      },
+      "level_keys": [
+        "CSA U1L2-L1 - exemplar"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate the Painter"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2-L2 - exemplar"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "1237e5cc-80c5-4435-a88d-47537fd0b637"
+      },
+      "level_keys": [
+        "CSA U1L2-L2 - exemplar"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2 CFU1 - placeholder"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "f040c729-3ba2-4bdf-8438-92741ae4bf2e"
+      },
+      "level_keys": [
+        "CSA U1L2 CFU1 - placeholder"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Movement Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L1 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "11cafda2-43b6-463c-bd10-6913de1c1537"
+      },
+      "level_keys": [
+        "CSA U1L3-L1 - exemplar"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Movement Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L2 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "11cafda2-43b6-463c-bd10-6913de1c1537"
+      },
+      "level_keys": [
+        "CSA U1L3-L2 - exemplar"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Movement Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L3 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "11cafda2-43b6-463c-bd10-6913de1c1537"
+      },
+      "level_keys": [
+        "CSA U1L3-L3 - exemplar"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Painting Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L4 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "ea78f440-ae7c-43db-b86f-991512c84d06"
+      },
+      "level_keys": [
+        "CSA U1L3-L4 - exemplar"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Painting Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L5 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "ea78f440-ae7c-43db-b86f-991512c84d06"
+      },
+      "level_keys": [
+        "CSA U1L3-L5 - exemplar"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Painting Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L6 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "ea78f440-ae7c-43db-b86f-991512c84d06"
+      },
+      "level_keys": [
+        "CSA U1L3-L6 - exemplar"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L7 CFU - placeholder"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "23157b66-570a-4a9b-8dce-a58bdccba235"
+      },
+      "level_keys": [
+        "CSA U1L3-L7 CFU - placeholder"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2-L1 - exemplar",
+        "script_level.level_keys": [
+          "CSA U1L2-L1 - exemplar"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "d057562a-dca3-4bde-8a14-d112f2934e27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2-L2 - exemplar",
+        "script_level.level_keys": [
+          "CSA U1L2-L2 - exemplar"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "1237e5cc-80c5-4435-a88d-47537fd0b637"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2 CFU1 - placeholder",
+        "script_level.level_keys": [
+          "CSA U1L2 CFU1 - placeholder"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "f040c729-3ba2-4bdf-8438-92741ae4bf2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L1 - exemplar",
+        "script_level.level_keys": [
+          "CSA U1L3-L1 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "11cafda2-43b6-463c-bd10-6913de1c1537"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L2 - exemplar",
+        "script_level.level_keys": [
+          "CSA U1L3-L2 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "11cafda2-43b6-463c-bd10-6913de1c1537"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L3 - exemplar",
+        "script_level.level_keys": [
+          "CSA U1L3-L3 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "11cafda2-43b6-463c-bd10-6913de1c1537"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L4 - exemplar",
+        "script_level.level_keys": [
+          "CSA U1L3-L4 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "ea78f440-ae7c-43db-b86f-991512c84d06"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L5 - exemplar",
+        "script_level.level_keys": [
+          "CSA U1L3-L5 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "ea78f440-ae7c-43db-b86f-991512c84d06"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L6 - exemplar",
+        "script_level.level_keys": [
+          "CSA U1L3-L6 - exemplar"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "ea78f440-ae7c-43db-b86f-991512c84d06"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L7 CFU - placeholder",
+        "script_level.level_keys": [
+          "CSA U1L3-L7 CFU - placeholder"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "23157b66-570a-4a9b-8dce-a58bdccba235"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
