@@ -2,12 +2,12 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Status from '@cdo/apps/templates/instructions/teacherFeedback/Status';
+import FeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/FeedbackStatus';
 import moment from 'moment/moment';
 
 const setUp = (latestFeedback, viewAs = ViewType.Teacher) => {
   const props = {latestFeedback, viewAs};
-  return shallow(<Status {...props} />);
+  return shallow(<FeedbackStatus {...props} />);
 };
 
 describe('Status', () => {
