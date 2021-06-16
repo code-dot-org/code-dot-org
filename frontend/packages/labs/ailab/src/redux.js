@@ -1006,8 +1006,10 @@ export function getResultsDataInDataTableForm(state) {
     return null;
   }
 
+  const numItems = Math.min(10, resultsByGrades.examples.length);
+
   const results = [];
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < numItems; i++) {
     results[i] = {};
 
     state.selectedFeatures.map((feature, index) => {
