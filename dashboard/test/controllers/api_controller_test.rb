@@ -67,7 +67,7 @@ class ApiControllerTest < ActionController::TestCase
     get :section_text_responses, params: {section_id: @section.id}
     assert_response :success
 
-    # we fall back to twenty_hour_script, which has no text_response levels
+    # we fall back to twenty_hour_unit, which has no text_response levels
     assert_equal '[]', @response.body
   end
 
@@ -750,7 +750,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get user progress" do
-    script = Script.twenty_hour_script
+    script = Script.twenty_hour_unit
 
     user = create :user, total_lines: 2
     create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
@@ -771,7 +771,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get user progress for lesson" do
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
-    script = Script.hoc_2014_script
+    script = Script.hoc_2014_unit
 
     user = create :user, total_lines: 2
     sign_in user
@@ -837,7 +837,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get user progress for lesson for signed-out user" do
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
-    script = Script.hoc_2014_script
+    script = Script.hoc_2014_unit
     script_level = script.script_levels[0]
     level = script_level.level
 
@@ -868,7 +868,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get user progress for lesson with young student" do
-    script = Script.twenty_hour_script
+    script = Script.twenty_hour_unit
     young_student = create :young_student
     sign_in young_student
 
@@ -885,7 +885,7 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should get user progress for disabled milestone posts" do
     Gatekeeper.set('postMilestone', value: false)
-    script = Script.course1_script
+    script = Script.course1_unit
     user = create :user, total_lines: 2
     sign_in user
 
