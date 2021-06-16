@@ -18,7 +18,7 @@ class FeatureModeController < ApplicationController
       ScriptConfig.hoc_scripts, ScriptConfig.csf_scripts
     )
     @pending_mode = pending_mode
-    @script_names = Gatekeeper.script_names.sort
+    @unit_names = Gatekeeper.script_names.sort
     @feature_names = Gatekeeper.feature_names.sort
 
     # If a mode update is still pending, display a notice.

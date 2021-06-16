@@ -122,14 +122,14 @@
                     %td
                     %td
                       DEFAULT
-                    - for script_name in @script_names
+                    - for script_name in @unit_names
                       %td
                         = script_name
                   - for feature in @feature_names
                     %tr
                       %td.heading
                         = feature
-                      - for script in [nil] + @script_names
+                      - for script in [nil] + @unit_names
                         %td
                           = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, script)
 
