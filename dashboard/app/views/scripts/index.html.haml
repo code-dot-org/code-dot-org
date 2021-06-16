@@ -10,8 +10,8 @@
         %li= msg
 %table
   %tbody
-    - if !@scripts.nil?
-      - @scripts.each do |script|
+    - if !@units.nil?
+      - @units.each do |script|
         - script_level = ScriptLevel.where(chapter: 1, script: script).first
         %tr
           %td= link_to script.name, script

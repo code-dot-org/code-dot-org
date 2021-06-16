@@ -66,7 +66,7 @@ class ScriptsController < ApplicationController
     authorize! :manage, Script
     rake if params[:rake] == '1'
     # Show all the scripts that a user has created.
-    @scripts = Script.all
+    @units = Script.all
   end
 
   def new
