@@ -303,11 +303,11 @@ class ScriptLevelsController < ApplicationController
   def self.get_script(request)
     script_id = request.params[:script_id]
     # Due to a programming error, we have been inadvertently passing user: nil
-    # to Script.get_script_family_redirect_for_user . Since end users may be
+    # to Script.get_unit_family_redirect_for_user . Since end users may be
     # depending on this incorrect behavior, and we are trying to deprecate this
     # codepath anyway, the current plan is to not fix this bug.
     script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
-      Script.get_script_family_redirect_for_user(script_id, user: nil, locale: request.locale) :
+      Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale) :
       Script.get_from_cache(script_id)
 
     raise ActiveRecord::RecordNotFound unless script
@@ -467,7 +467,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def present_level
-    # All database look-ups should have already been cached by Script::script_cache_from_db
+    # All database look-ups should have already been cached by Script::unit_cache_from_db
     @game = @level.game
     @lesson ||= @script_level.lesson
 
