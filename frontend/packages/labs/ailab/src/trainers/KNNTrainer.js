@@ -27,10 +27,7 @@ export default class KNNTrainer {
 
     logFirehoseMetric("train-model", state2);
 
-    const accuracy = getPercentCorrect(state2);
-    store.dispatch(
-      setHistoricResult(state2.labelColumn, state2.selectedFeatures, accuracy)
-    );
+    this.storeHistoricResult(store, state2);
   }
 
   /*
@@ -100,6 +97,17 @@ export default class KNNTrainer {
     return kValues;
   }
 
+  calculatePotentialKValues(state) {
+    let datasetSize = state.data.length;
+    let trainingExamplesSize = state.trainingExamples.length;
+    let possibleKValues = [1, 3, 5, 7, 17, 31, 45, 61];
+    const heuristicK = Math.round(Math.sqrt(datasetSize));
+    possibleKValues.push(heuristicK);
+    const oneThird = Math.round(datasetSize / 3);
+    possibleKValues.push(oneThird);
+    return possibleKValues.filter(kValue => kValue <= trainingExamplesSize);
+  }
+
   getAccuracyPercent() {
     const state = this.store.getState();
     const percent = getPercentCorrect(state);
@@ -118,21 +126,18 @@ export default class KNNTrainer {
     this.store.dispatch(setPrediction(prediction));
   }
 
-  calculatePotentialKValues(state) {
-    let datasetSize = state.data.length;
-    let possibleKValues = [1, 3, 5, 7, 17, 31, 45, 61];
-    const heuristicK = Math.round(Math.sqrt(datasetSize));
-    possibleKValues.push(heuristicK);
-    const oneThird = Math.round(datasetSize / 3);
-    possibleKValues.push(oneThird);
-    return possibleKValues;
-  }
-
   storeTrainedModel(store, trainedModel) {
     store.dispatch(setKValue(trainedModel.kValue));
     store.dispatch(setAccuracyCheckPredictedLabels(
       trainedModel.predictedLabels
     ));
     store.dispatch(setTrainedModel(trainedModel.model));
+  }
+
+  storeHistoricResult(store, state) {
+    const accuracy = getPercentCorrect(state);
+    store.dispatch(
+      setHistoricResult(state.labelColumn, state.selectedFeatures, accuracy)
+    );
   }
 }
