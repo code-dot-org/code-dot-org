@@ -107,13 +107,13 @@ class Script < ApplicationRecord
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
-  before_validation :hide_pilot_scripts
+  before_validation :hide_pilot_units
 
-  def hide_pilot_scripts
+  def hide_pilot_units
     self.hidden = true unless pilot_experiment.blank?
   end
 
-  # As we read and write to files with the script name, to prevent directory
+  # As we read and write to files with the unit name, to prevent directory
   # traversal (for security reasons), we do not allow the name to start with a
   # tilde or dot or contain a slash.
   validates :name,
@@ -139,20 +139,20 @@ class Script < ApplicationRecord
 
   after_save :generate_plc_objects
 
-  SCRIPT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
+  UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
   def prevent_course_version_change?
     lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
   end
 
-  def self.script_directory
-    SCRIPT_DIRECTORY
+  def self.unit_directory
+    UNIT_DIRECTORY
   end
 
-  SCRIPT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+  UNIT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
 
-  def self.script_json_directory
-    SCRIPT_JSON_DIRECTORY
+  def self.unit_json_directory
+    UNIT_JSON_DIRECTORY
   end
 
   def generate_plc_objects
@@ -182,7 +182,7 @@ class Script < ApplicationRecord
     end
   end
 
-  # is_course - true if this Script/Unit is intended to be the root of a
+  # is_course - true if this Unit is intended to be the root of a
   #   CourseOffering version.  Used during seeding to create the appropriate
   #   CourseVersion and CourseOffering objects. For example, this should be
   #   true for CourseA-CourseF .script files.
@@ -190,7 +190,7 @@ class Script < ApplicationRecord
   #   its script_json file, as determined by the serialized_at value within
   #   said json.  Expect this to be nil on levelbulider, since those objects
   #   are created, not seeded. Used by the staging build to identify when a
-  #   script is being updated, so we can regenerate PDFs.
+  #   unit is being updated, so we can regenerate PDFs.
   serialized_attrs %w(
     hideable_lessons
     professional_learning_course
@@ -223,59 +223,31 @@ class Script < ApplicationRecord
     seeded_from
   )
 
-  def self.twenty_hour_script
+  def self.twenty_hour_unit
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
   end
 
-  def self.hoc_2014_script
+  def self.hoc_2014_unit
     Script.get_from_cache(Script::HOC_NAME)
   end
 
-  def self.starwars_script
+  def self.starwars_unit
     Script.get_from_cache(Script::STARWARS_NAME)
   end
 
-  def self.minecraft_script
-    Script.get_from_cache(Script::MINECRAFT_NAME)
-  end
-
-  def self.starwars_blocks_script
-    Script.get_from_cache(Script::STARWARS_BLOCKS_NAME)
-  end
-
-  def self.frozen_script
+  def self.frozen_unit
     Script.get_from_cache(Script::FROZEN_NAME)
   end
 
-  def self.course1_script
+  def self.course1_unit
     Script.get_from_cache(Script::COURSE1_NAME)
   end
 
-  def self.course2_script
-    Script.get_from_cache(Script::COURSE2_NAME)
-  end
-
-  def self.course3_script
-    Script.get_from_cache(Script::COURSE3_NAME)
-  end
-
-  def self.course4_script
-    Script.get_from_cache(Script::COURSE4_NAME)
-  end
-
-  def self.infinity_script
-    Script.get_from_cache(Script::INFINITY_NAME)
-  end
-
-  def self.flappy_script
+  def self.flappy_unit
     Script.get_from_cache(Script::FLAPPY_NAME)
   end
 
-  def self.playlab_script
-    Script.get_from_cache(Script::PLAYLAB_NAME)
-  end
-
-  def self.artist_script
+  def self.artist_unit
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
@@ -283,15 +255,15 @@ class Script < ApplicationRecord
     @@lesson_extras_scripts ||= Script.all.select(&:lesson_extras_available?).pluck(:id)
   end
 
-  def self.maker_unit_scripts
-    visible_scripts.select {|s| s.family_name == 'csd6'}
+  def self.maker_unit_units
+    visible_units.select {|s| s.family_name == 'csd6'}
   end
 
-  def self.text_to_speech_script_ids
+  def self.text_to_speech_unit_ids
     all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
   end
 
-  def self.pre_reader_script_ids
+  def self.pre_reader_unit_ids
     all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
   end
 
@@ -302,7 +274,7 @@ class Script < ApplicationRecord
   def self.valid_scripts(user)
     has_any_course_experiments = UnitGroup.has_any_course_experiments?(user)
     with_hidden = !has_any_course_experiments && user.hidden_script_access?
-    scripts = with_hidden ? all_scripts : visible_scripts
+    scripts = with_hidden ? all_scripts : visible_units
 
     if has_any_course_experiments
       scripts = scripts.map do |script|
@@ -328,29 +300,29 @@ class Script < ApplicationRecord
 
     private
 
-    def visible_scripts
-      visible_scripts = Rails.cache.fetch('valid_scripts/valid') do
+    def visible_units
+      visible_units = Rails.cache.fetch('valid_scripts/valid') do
         Script.all.select(&:launched?).to_a
       end
-      visible_scripts.freeze
+      visible_units.freeze
     end
   end
 
   # @param user [User]
-  # @returns [Boolean] Whether the user can assign this script.
-  # Users should only be able to assign one of their valid scripts.
-  # This includes the scripts that are assignable for everyone as well
-  # as script that might be assignable based on users permissions
+  # @returns [Boolean] Whether the user can assign this unit.
+  # Users should only be able to assign one of their valid units.
+  # This includes the units that are assignable for everyone as well
+  # as unit that might be assignable based on users permissions
   def assignable_for_user?(user)
     if user&.teacher?
-      Script.valid_script_id?(user, id)
+      Script.valid_unit_id?(user, id)
     end
   end
 
   # @param [User] user
-  # @param script_id [String] id of the script we're checking the validity of
-  # @return [Boolean] Whether this is a valid script ID
-  def self.valid_script_id?(user, script_id)
+  # @param script_id [String] id of the unit we're checking the validity of
+  # @return [Boolean] Whether this is a valid unit ID
+  def self.valid_unit_id?(user, script_id)
     valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
   end
 
@@ -1221,7 +1193,7 @@ class Script < ApplicationRecord
   def clone_with_suffix(new_suffix, options = {})
     new_name = "#{base_name}-#{new_suffix}"
 
-    script_filename = "#{Script.script_directory}/#{name}.script"
+    script_filename = "#{Script.unit_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
       tts: false,
@@ -1237,7 +1209,7 @@ class Script < ApplicationRecord
     # Make sure we don't modify any files in unit tests.
     if Rails.application.config.levelbuilder_mode
       copy_and_write_i18n(new_name)
-      new_filename = "#{Script.script_directory}/#{new_name}.script"
+      new_filename = "#{Script.unit_directory}/#{new_name}.script"
       ScriptDSL.serialize(new_script, new_filename)
     end
 
@@ -2012,7 +1984,7 @@ class Script < ApplicationRecord
   end
 
   def self.script_json_filepath(script_name)
-    "#{script_json_directory}/#{script_name}.script_json"
+    "#{unit_json_directory}/#{script_name}.script_json"
   end
 
   def get_script_overview_pdf_url
