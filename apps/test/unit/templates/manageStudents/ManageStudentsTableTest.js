@@ -34,7 +34,7 @@ import teacherSections, {
   setSections
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
-import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import {ManageStudentsNotificationFull} from '../../../../src/templates/manageStudents/ManageStudentsTable';
@@ -122,7 +122,7 @@ describe('ManageStudentsTable', () => {
         manageStudents,
         isRtl,
         sectionData,
-        scriptSelection
+        unitSelection
       });
       const store = getStore();
       store.dispatch(setLoginType(fakeSection.login_type));

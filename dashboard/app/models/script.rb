@@ -13,12 +13,14 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
+#  published_state :string(255)
 #
 # Indexes
 #
 #  index_scripts_on_family_name      (family_name)
 #  index_scripts_on_name             (name) UNIQUE
 #  index_scripts_on_new_name         (new_name) UNIQUE
+#  index_scripts_on_published_state  (published_state)
 #  index_scripts_on_wrapup_video_id  (wrapup_video_id)
 #
 
@@ -120,6 +122,8 @@ class Script < ApplicationRecord
       without: /\A~|\A\.|\//,
       message: 'cannot start with a tilde or dot or contain slashes'
     }
+
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
 
   def prevent_duplicate_levels
     reload
@@ -1180,9 +1184,9 @@ class Script < ApplicationRecord
         copied_script.reload
       else
         copied_script.is_course = true
-        raise "Must supply version year if new script will be a standalone course" unless version_year
+        raise "Must supply version year if new script will be a standalone unit" unless version_year
         copied_script.version_year = version_year
-        raise "Must supply family name if new script will be a standalone course" unless family_name
+        raise "Must supply family name if new script will be a standalone unit" unless family_name
         copied_script.family_name = family_name
         CourseOffering.add_course_offering(copied_script)
       end
@@ -1784,7 +1788,7 @@ class Script < ApplicationRecord
     UnitGroup.get_from_cache(unit_group_units[0].course_id)
   end
 
-  # If this unit is a standalone course, returns its CourseVersion. Otherwise,
+  # If this unit is a standalone unit, returns its CourseVersion. Otherwise,
   # if this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion,
   # if there is one.
   # @return [CourseVersion]
