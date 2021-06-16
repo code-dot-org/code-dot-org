@@ -119,7 +119,7 @@ class Lesson < ApplicationRecord
       )
       lesson.save! if lesson.changed?
 
-      lesson.script_levels = ScriptLevel.add_script_levels(
+      lesson.script_levels = ScriptLevel.add_unit_levels(
         script, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
       )
       lesson.save!

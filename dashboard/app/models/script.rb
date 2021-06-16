@@ -1005,7 +1005,7 @@ class Script < ApplicationRecord
       added_unit =
         options[:properties][:is_migrated] == true ?
           seed_from_json_file(options[:name]) :
-          add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+          add_unit(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       progressbar.increment if show_progress
       added_unit.name
     rescue => e
@@ -1016,7 +1016,7 @@ class Script < ApplicationRecord
 
   # if new_suffix is specified, copy the unit, hide it, and copy all its
   # levelbuilder-defined levels.
-  def self.add_script(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
+  def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     transaction do
       script = fetch_script(options)
       script.update!(hidden: true) if new_suffix
@@ -1267,7 +1267,7 @@ class Script < ApplicationRecord
     script_name = script_params[:name]
     begin
       script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
-      Script.add_script(
+      Script.add_unit(
         {
           name: script_name,
           hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
