@@ -691,7 +691,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: script_id is not updated if invalid" do
-    Script.stubs(:valid_script_id?).returns(false)
+    Script.stubs(:valid_unit_id?).returns(false)
 
     sign_in @teacher
     section = create(:section, user: @teacher, script_id: nil)

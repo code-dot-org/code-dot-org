@@ -3,8 +3,10 @@ class SetPublishedStateForUnitGroupAndScript < ActiveRecord::Migration[5.2]
     Script.all.each do |script|
       script.update!({skip_name_format_validation: true, published_state: script.get_published_state})
 
-      script.write_script_dsl
-      script.write_script_json
+      if Rails.application.config.levelbuilder_mode
+        script.write_script_dsl
+        script.write_script_json
+      end
     end
 
     change_column_null :scripts, :published_state, false
@@ -22,8 +24,10 @@ class SetPublishedStateForUnitGroupAndScript < ActiveRecord::Migration[5.2]
     Script.all.each do |script|
       script.update!({skip_name_format_validation: true, published_state: nil})
 
-      script.write_script_dsl
-      script.write_script_json
+      if Rails.application.config.levelbuilder_mode
+        script.write_script_dsl
+        script.write_script_json
+      end
     end
 
     change_column_null :scripts, :published_state, true

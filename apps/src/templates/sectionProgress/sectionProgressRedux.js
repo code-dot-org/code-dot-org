@@ -8,7 +8,7 @@ const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
 const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const START_REFRESHING_PROGRESS = 'sectionProgress/START_REFRESHING_PROGRESS';
 const FINISH_REFRESHING_PROGRESS = 'sectionProgress/FINISH_REFRESHING_PROGRESS';
-const ADD_DATA_BY_SCRIPT = 'sectionProgress/ADD_DATA_BY_SCRIPT';
+const ADD_DATA_BY_UNIT = 'sectionProgress/ADD_DATA_BY_UNIT';
 const SET_SHOW_SECTION_PROGRESS_DETAILS =
   'teacherDashboard/SET_SHOW_SECTION_PROGRESS_DETAILS';
 
@@ -26,8 +26,8 @@ export const setLessonOfInterest = lessonOfInterest => ({
   lessonOfInterest
 });
 export const setCurrentView = viewType => ({type: SET_CURRENT_VIEW, viewType});
-export const addDataByScript = data => ({
-  type: ADD_DATA_BY_SCRIPT,
+export const addDataByUnit = data => ({
+  type: ADD_DATA_BY_UNIT,
   data
 });
 export const setShowSectionProgressDetails = showSectionProgressDetails => ({
@@ -40,10 +40,10 @@ const INITIAL_LESSON_OF_INTEREST = 1;
 const initialState = {
   section: {},
   currentView: ViewType.SUMMARY,
-  scriptDataByScript: {},
-  studentLevelProgressByScript: {},
-  studentLessonProgressByScript: {},
-  studentLastUpdateByScript: {},
+  unitDataByUnit: {},
+  studentLevelProgressByUnit: {},
+  studentLessonProgressByUnit: {},
+  studentLastUpdateByUnit: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
   isRefreshingProgress: false,
@@ -100,24 +100,24 @@ export default function sectionProgress(state = initialState, action) {
       showSectionProgressDetails: action.showSectionProgressDetails
     };
   }
-  if (action.type === ADD_DATA_BY_SCRIPT) {
+  if (action.type === ADD_DATA_BY_UNIT) {
     return {
       ...state,
-      scriptDataByScript: {
-        ...state.scriptDataByScript,
-        ...action.data.scriptDataByScript
+      unitDataByUnit: {
+        ...state.unitDataByUnit,
+        ...action.data.unitDataByUnit
       },
-      studentLevelProgressByScript: {
-        ...state.studentLevelProgressByScript,
-        ...action.data.studentLevelProgressByScript
+      studentLevelProgressByUnit: {
+        ...state.studentLevelProgressByUnit,
+        ...action.data.studentLevelProgressByUnit
       },
-      studentLessonProgressByScript: {
-        ...state.studentLessonProgressByScript,
-        ...action.data.studentLessonProgressByScript
+      studentLessonProgressByUnit: {
+        ...state.studentLessonProgressByUnit,
+        ...action.data.studentLessonProgressByUnit
       },
-      studentLastUpdateByScript: {
-        ...state.studentLastUpdateByScript,
-        ...action.data.studentLastUpdateByScript
+      studentLastUpdateByUnit: {
+        ...state.studentLastUpdateByUnit,
+        ...action.data.studentLastUpdateByUnit
       }
     };
   }
@@ -150,9 +150,9 @@ export const jumpToLessonDetails = lessonOfInterest => {
 // Selector functions
 
 /**
- * Retrieves the script data for the section in the selected script
- * @returns {scriptDataPropType} object containing metadata about the script structure
+ * Retrieves the unit data for the section in the selected unit
+ * @returns {scriptDataPropType} object containing metadata about the unit structure
  */
-export const getCurrentScriptData = state => {
-  return state.sectionProgress.scriptDataByScript[state.unitSelection.scriptId];
+export const getCurrentUnitData = state => {
+  return state.sectionProgress.unitDataByUnit[state.unitSelection.scriptId];
 };

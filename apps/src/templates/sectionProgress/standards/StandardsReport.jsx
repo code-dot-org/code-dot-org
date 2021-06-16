@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {connect} from 'react-redux';
-import {getCurrentScriptData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {scriptDataPropType} from '../sectionProgressConstants';
 import {
   getSelectedScriptFriendlyName,
@@ -209,7 +209,7 @@ export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     section: state.sectionData.section,
-    scriptData: getCurrentScriptData(state),
+    scriptData: getCurrentUnitData(state),
     scriptFriendlyName: getSelectedScriptFriendlyName(state),
     scriptDescription: getSelectedScriptDescription(state),
     numStudentsInSection: state.sectionData.section.students.length,
