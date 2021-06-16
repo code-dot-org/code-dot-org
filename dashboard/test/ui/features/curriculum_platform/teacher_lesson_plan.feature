@@ -110,7 +110,7 @@ Feature: Teacher Lesson Plan
     And I wait until element ".modal" is visible
     And I wait until element ".modal-body button:contains(Dismiss)" is visible
     And I wait until element ".modal-backdrop" is visible
-    And I see no difference for "standalone video preview"
+    And I see no difference for "level instructions preview"
     And I click selector ".modal-body button:contains(Dismiss)"
     And I wait until element ".modal-backdrop" is gone
     And I close my eyes
