@@ -566,7 +566,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        script_id: Script.twenty_hour_script,
+        script_id: Script.twenty_hour_unit,
         lesson_position: '99999999999999999999999999',
         id: '1'
       }
@@ -574,7 +574,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        script_id: Script.twenty_hour_script,
+        script_id: Script.twenty_hour_unit,
         lesson_position: '1',
         id: '99999999999999999999999999'
       }
@@ -628,7 +628,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "updated routing for 20 hour script" do
-    sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
+    sl = ScriptLevel.find_by script: Script.twenty_hour_unit, chapter: 3
     assert_equal '/s/20-hour/lessons/2/levels/2', build_script_level_path(sl)
     assert_routing(
       {method: "get", path: build_script_level_path(sl)},
