@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
-import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
+import LessonGroupCard from '@cdo/apps/lib/levelbuilder/unit-editor/LessonGroupCard';
 import {
   addGroup,
   convertGroupToUserFacing,
   convertGroupToNonUserFacing
-} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import ReactDOM from 'react-dom';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 

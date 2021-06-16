@@ -6,12 +6,8 @@ const timeoutList = require('@cdo/apps/lib/util/timeoutList');
 
 const PAUSE_BETWEEN_SIGNALS = 200;
 const ANIMATED_STEP_SPEED = 500;
-const ANIMATED_STEPS = [
-  NeighborhoodSignalType.MOVE,
-  NeighborhoodSignalType.PAINT,
-  NeighborhoodSignalType.REMOVE_PAINT,
-  NeighborhoodSignalType.TURN_LEFT
-];
+const ANIMATED_STEPS = [NeighborhoodSignalType.MOVE];
+const SIGNAL_CHECK_TIME = 200;
 
 export default class Neighborhood {
   constructor() {
@@ -41,68 +37,86 @@ export default class Neighborhood {
 
     const slider = document.getElementById('slider');
     this.speedSlider = new Slider(10, 35, 130, slider);
-    this.lastSignalEndTime = null;
+    this.signals = [];
+    this.nextSignalIndex = 0;
   }
 
   handleSignal(signal) {
-    // Calculate time to wait until executing this signal. Animated steps such as move
-    // have an additional timeForSignal that is used by maze to animate the sprite. All
-    // signals have a pause between signals. The timing is multiplied by the pegmanSpeedMultiplier
-    // to speed up or slow down the overall animation.
-    let timeout = 0;
-    const timeForSignal =
-      this.getAnimationTime(signal) * this.getPegmanSpeedMultiplier();
-    const totalSignalTime =
-      timeForSignal + PAUSE_BETWEEN_SIGNALS * this.getPegmanSpeedMultiplier();
-    if (this.lastSignalEndTime) {
-      timeout = this.lastSignalEndTime - Date.now();
-      if (timeout < 0) {
-        timeout = 0;
-      }
-      this.lastSignalEndTime = this.lastSignalEndTime + totalSignalTime;
-    } else {
-      this.lastSignalEndTime = Date.now() + totalSignalTime;
-    }
-    timeoutList.setTimeout(
-      () => this.getMazeCommand(signal, timeForSignal),
-      timeout
-    );
+    // add next signal to our queue of signals
+    this.signals.push(signal);
   }
 
-  getMazeCommand(signal, timeForSignal) {
+  // Process avaiable signals recursively. We process recursively to ensure
+  // the commands appear sequential to the user and all commands stay in sync.
+  processSignals() {
+    // if there is at least one signal we have not processed, process it
+    if (this.signals.length > this.nextSignalIndex) {
+      const signal = this.signals[this.nextSignalIndex];
+      if (signal.value === NeighborhoodSignalType.DONE) {
+        // we are done processing commands and can stop checking for signals
+        return;
+      }
+      const timeForSignal =
+        this.getAnimationTime(signal) * this.getPegmanSpeedMultiplier();
+      const totalSignalTime =
+        timeForSignal + PAUSE_BETWEEN_SIGNALS * this.getPegmanSpeedMultiplier();
+
+      const beginTime = Date.now();
+      this.mazeCommand(signal, timeForSignal);
+      this.nextSignalIndex++;
+      const remainingTime = totalSignalTime - (Date.now() - beginTime);
+
+      // check for another signal after the remaining time to wait between signals
+      timeoutList.setTimeout(
+        () => this.processSignals(),
+        Math.max(remainingTime, 0)
+      );
+    } else {
+      // check again for a signal after the specified wait time
+      timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
+    }
+  }
+
+  mazeCommand(signal, timeForSignal) {
     switch (signal.value) {
       case NeighborhoodSignalType.MOVE: {
         const {direction, id} = signal.detail;
-        return this.controller.animatedMove(
+        this.controller.animatedMove(
           Direction[direction.toUpperCase()],
           timeForSignal,
           id
         );
+        break;
       }
       case NeighborhoodSignalType.INITIALIZE_PAINTER: {
         const {direction, x, y, id} = signal.detail;
-        return this.controller.addPegman(
+        this.controller.addPegman(
           id,
           parseInt(x),
           parseInt(y),
           Direction[direction.toUpperCase()]
         );
+        break;
       }
       case NeighborhoodSignalType.TAKE_PAINT: {
         const {id} = signal.detail;
-        return this.controller.subtype.takePaint(id);
+        this.controller.subtype.takePaint(id);
+        break;
       }
       case NeighborhoodSignalType.PAINT: {
         const {id, color} = signal.detail;
-        return this.controller.subtype.addPaint(id, color);
+        this.controller.subtype.addPaint(id, color);
+        break;
       }
       case NeighborhoodSignalType.REMOVE_PAINT: {
         const {id} = signal.detail;
-        return this.controller.subtype.removePaint(id);
+        this.controller.subtype.removePaint(id);
+        break;
       }
       case NeighborhoodSignalType.TURN_LEFT: {
         const {id} = signal.detail;
-        return this.controller.subtype.turnLeft(id);
+        this.controller.subtype.turnLeft(id);
+        break;
       }
       default:
         console.log(signal.value);
@@ -116,12 +130,32 @@ export default class Neighborhood {
 
   onCompile() {
     this.controller.hideDefaultPegman();
+    // start checking for signals after the specified wait time
+    timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
   }
 
   reset() {
+    // this will clear all remaining processSignals() commands
     timeoutList.clearTimeouts();
+    this.resetSignalQueue();
     this.controller.reset(false, false);
-    this.lastSignalEndTime = null;
+  }
+
+  // TODO: Call this function when we enable stopping a program
+  onStop() {
+    timeoutList.clearTimeouts();
+    this.resetSignalQueue();
+  }
+
+  onClose() {
+    // On any close command from the server, add a done signal to the end of the queue.
+    // We won't receive any more signals after close.
+    this.signals.push({value: NeighborhoodSignalType.DONE});
+  }
+
+  resetSignalQueue() {
+    this.signals = [];
+    this.nextSignalIndex = 0;
   }
 
   // Multiplier on the time per action or step at execution time.

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   getExportableFeedbackData,
   isCurrentScriptCSD

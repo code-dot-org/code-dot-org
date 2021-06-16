@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
+import LessonDescriptions from '@cdo/apps/lib/levelbuilder/unit-editor/LessonDescriptions';
 
 const currentDescriptions = [
   {
