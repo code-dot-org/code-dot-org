@@ -10,7 +10,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from '../../lib/ui/Headings';
 import {
-  getCurrentScriptData,
+  getCurrentUnitData,
   setLessonOfInterest,
   setCurrentView
 } from './sectionProgressRedux';
@@ -217,7 +217,7 @@ export default connect(
     section: state.sectionData.section,
     validScripts: state.unitSelection.validScripts,
     currentView: state.sectionProgress.currentView,
-    scriptData: getCurrentScriptData(state),
+    scriptData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
     showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
   }),

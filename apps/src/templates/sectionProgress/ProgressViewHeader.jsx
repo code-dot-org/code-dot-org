@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {getCurrentScriptData} from './sectionProgressRedux';
+import {getCurrentUnitData} from './sectionProgressRedux';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
@@ -110,6 +110,6 @@ export default connect(state => ({
   section: state.sectionData.section,
   currentView: state.sectionProgress.currentView,
   refreshing: state.sectionProgress.isRefreshingProgress,
-  scriptData: getCurrentScriptData(state),
+  scriptData: getCurrentUnitData(state),
   scriptFriendlyName: getSelectedScriptFriendlyName(state)
 }))(ProgressViewHeader);
