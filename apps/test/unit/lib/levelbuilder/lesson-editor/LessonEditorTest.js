@@ -70,7 +70,7 @@ describe('LessonEditor', () => {
         courseVersionId: 1,
         scriptPath: '/s/my-script/',
         lessonPath: '/lessons/1',
-        scriptIsVisible: false,
+        unitIsLaunched: false,
         frameworks: []
       }
     };
@@ -130,7 +130,7 @@ describe('LessonEditor', () => {
 
   it('disables editing of lockable and has lesson plan for visible script', () => {
     let initialLessonDataCopy = _.cloneDeep(defaultProps.initialLessonData);
-    initialLessonDataCopy.scriptIsVisible = true;
+    initialLessonDataCopy.unitIsLaunched = true;
     const wrapper = createWrapper({initialLessonData: initialLessonDataCopy});
     expect(
       wrapper

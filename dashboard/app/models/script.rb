@@ -13,12 +13,14 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
+#  published_state :string(255)
 #
 # Indexes
 #
 #  index_scripts_on_family_name      (family_name)
 #  index_scripts_on_name             (name) UNIQUE
 #  index_scripts_on_new_name         (new_name) UNIQUE
+#  index_scripts_on_published_state  (published_state)
 #  index_scripts_on_wrapup_video_id  (wrapup_video_id)
 #
 
@@ -105,13 +107,13 @@ class Script < ApplicationRecord
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
-  before_validation :hide_pilot_scripts
+  before_validation :hide_pilot_units
 
-  def hide_pilot_scripts
+  def hide_pilot_units
     self.hidden = true unless pilot_experiment.blank?
   end
 
-  # As we read and write to files with the script name, to prevent directory
+  # As we read and write to files with the unit name, to prevent directory
   # traversal (for security reasons), we do not allow the name to start with a
   # tilde or dot or contain a slash.
   validates :name,
@@ -120,6 +122,8 @@ class Script < ApplicationRecord
       without: /\A~|\A\.|\//,
       message: 'cannot start with a tilde or dot or contain slashes'
     }
+
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
 
   def prevent_duplicate_levels
     reload
@@ -135,20 +139,20 @@ class Script < ApplicationRecord
 
   after_save :generate_plc_objects
 
-  SCRIPT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
+  UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
   def prevent_course_version_change?
     lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
   end
 
-  def self.script_directory
-    SCRIPT_DIRECTORY
+  def self.unit_directory
+    UNIT_DIRECTORY
   end
 
-  SCRIPT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+  UNIT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
 
-  def self.script_json_directory
-    SCRIPT_JSON_DIRECTORY
+  def self.unit_json_directory
+    UNIT_JSON_DIRECTORY
   end
 
   def generate_plc_objects
@@ -178,7 +182,7 @@ class Script < ApplicationRecord
     end
   end
 
-  # is_course - true if this Script/Unit is intended to be the root of a
+  # is_course - true if this Unit is intended to be the root of a
   #   CourseOffering version.  Used during seeding to create the appropriate
   #   CourseVersion and CourseOffering objects. For example, this should be
   #   true for CourseA-CourseF .script files.
@@ -186,7 +190,7 @@ class Script < ApplicationRecord
   #   its script_json file, as determined by the serialized_at value within
   #   said json.  Expect this to be nil on levelbulider, since those objects
   #   are created, not seeded. Used by the staging build to identify when a
-  #   script is being updated, so we can regenerate PDFs.
+  #   unit is being updated, so we can regenerate PDFs.
   serialized_attrs %w(
     hideable_lessons
     professional_learning_course
@@ -219,59 +223,31 @@ class Script < ApplicationRecord
     seeded_from
   )
 
-  def self.twenty_hour_script
+  def self.twenty_hour_unit
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
   end
 
-  def self.hoc_2014_script
+  def self.hoc_2014_unit
     Script.get_from_cache(Script::HOC_NAME)
   end
 
-  def self.starwars_script
+  def self.starwars_unit
     Script.get_from_cache(Script::STARWARS_NAME)
   end
 
-  def self.minecraft_script
-    Script.get_from_cache(Script::MINECRAFT_NAME)
-  end
-
-  def self.starwars_blocks_script
-    Script.get_from_cache(Script::STARWARS_BLOCKS_NAME)
-  end
-
-  def self.frozen_script
+  def self.frozen_unit
     Script.get_from_cache(Script::FROZEN_NAME)
   end
 
-  def self.course1_script
+  def self.course1_unit
     Script.get_from_cache(Script::COURSE1_NAME)
   end
 
-  def self.course2_script
-    Script.get_from_cache(Script::COURSE2_NAME)
-  end
-
-  def self.course3_script
-    Script.get_from_cache(Script::COURSE3_NAME)
-  end
-
-  def self.course4_script
-    Script.get_from_cache(Script::COURSE4_NAME)
-  end
-
-  def self.infinity_script
-    Script.get_from_cache(Script::INFINITY_NAME)
-  end
-
-  def self.flappy_script
+  def self.flappy_unit
     Script.get_from_cache(Script::FLAPPY_NAME)
   end
 
-  def self.playlab_script
-    Script.get_from_cache(Script::PLAYLAB_NAME)
-  end
-
-  def self.artist_script
+  def self.artist_unit
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
@@ -279,15 +255,15 @@ class Script < ApplicationRecord
     @@lesson_extras_scripts ||= Script.all.select(&:lesson_extras_available?).pluck(:id)
   end
 
-  def self.maker_unit_scripts
-    visible_scripts.select {|s| s.family_name == 'csd6'}
+  def self.maker_units
+    visible_units.select {|s| s.family_name == 'csd6'}
   end
 
-  def self.text_to_speech_script_ids
+  def self.text_to_speech_unit_ids
     all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
   end
 
-  def self.pre_reader_script_ids
+  def self.pre_reader_unit_ids
     all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
   end
 
@@ -298,7 +274,7 @@ class Script < ApplicationRecord
   def self.valid_scripts(user)
     has_any_course_experiments = UnitGroup.has_any_course_experiments?(user)
     with_hidden = !has_any_course_experiments && user.hidden_script_access?
-    scripts = with_hidden ? all_scripts : visible_scripts
+    scripts = with_hidden ? all_scripts : visible_units
 
     if has_any_course_experiments
       scripts = scripts.map do |script|
@@ -324,27 +300,29 @@ class Script < ApplicationRecord
 
     private
 
-    def visible_scripts
-      visible_scripts = Rails.cache.fetch('valid_scripts/valid') do
-        Script.all.reject(&:hidden).to_a
+    def visible_units
+      visible_units = Rails.cache.fetch('valid_scripts/valid') do
+        Script.all.select(&:launched?).to_a
       end
-      visible_scripts.freeze
+      visible_units.freeze
     end
   end
 
   # @param user [User]
-  # @returns [Boolean] Whether the user can assign this script.
-  # Users should only be able to assign one of their valid scripts.
-  def assignable?(user)
+  # @returns [Boolean] Whether the user can assign this unit.
+  # Users should only be able to assign one of their valid units.
+  # This includes the units that are assignable for everyone as well
+  # as unit that might be assignable based on users permissions
+  def assignable_for_user?(user)
     if user&.teacher?
-      Script.valid_script_id?(user, id)
+      Script.valid_unit_id?(user, id)
     end
   end
 
   # @param [User] user
-  # @param script_id [String] id of the script we're checking the validity of
-  # @return [Boolean] Whether this is a valid script ID
-  def self.valid_script_id?(user, script_id)
+  # @param script_id [String] id of the unit we're checking the validity of
+  # @return [Boolean] Whether this is a valid unit ID
+  def self.valid_unit_id?(user, script_id)
     valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
   end
 
@@ -1178,9 +1156,9 @@ class Script < ApplicationRecord
         copied_script.reload
       else
         copied_script.is_course = true
-        raise "Must supply version year if new script will be a standalone course" unless version_year
+        raise "Must supply version year if new script will be a standalone unit" unless version_year
         copied_script.version_year = version_year
-        raise "Must supply family name if new script will be a standalone course" unless family_name
+        raise "Must supply family name if new script will be a standalone unit" unless family_name
         copied_script.family_name = family_name
         CourseOffering.add_course_offering(copied_script)
       end
@@ -1215,7 +1193,7 @@ class Script < ApplicationRecord
   def clone_with_suffix(new_suffix, options = {})
     new_name = "#{base_name}-#{new_suffix}"
 
-    script_filename = "#{Script.script_directory}/#{name}.script"
+    script_filename = "#{Script.unit_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
       tts: false,
@@ -1231,7 +1209,7 @@ class Script < ApplicationRecord
     # Make sure we don't modify any files in unit tests.
     if Rails.application.config.levelbuilder_mode
       copy_and_write_i18n(new_name)
-      new_filename = "#{Script.script_directory}/#{new_name}.script"
+      new_filename = "#{Script.unit_directory}/#{new_name}.script"
       ScriptDSL.serialize(new_script, new_filename)
     end
 
@@ -1428,6 +1406,12 @@ class Script < ApplicationRecord
     nil
   end
 
+  # A script that the general public can assign. Has been soft or
+  # hard launched.
+  def launched?
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
+  end
+
   def published_state
     if pilot?
       SharedConstants::PUBLISHED_STATE.pilot
@@ -1484,7 +1468,6 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      hidden: hidden,
       publishedState: published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
@@ -1513,7 +1496,7 @@ class Script < ApplicationRecord
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: pilot_experiment,
       editor_experiment: editor_experiment,
-      show_assign_button: assignable?(user),
+      show_assign_button: assignable_for_user?(user),
       project_sharing: project_sharing,
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
@@ -1662,7 +1645,7 @@ class Script < ApplicationRecord
     scripts = Script.
       where(family_name: family_name).
       all.
-      select {|script| with_hidden || !script.hidden}.
+      select {|script| with_hidden || script.launched?}.
       map do |s|
         {
           name: s.name,
@@ -1777,7 +1760,7 @@ class Script < ApplicationRecord
     UnitGroup.get_from_cache(unit_group_units[0].course_id)
   end
 
-  # If this unit is a standalone course, returns its CourseVersion. Otherwise,
+  # If this unit is a standalone unit, returns its CourseVersion. Otherwise,
   # if this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion,
   # if there is one.
   # @return [CourseVersion]
@@ -1813,7 +1796,7 @@ class Script < ApplicationRecord
   def assignable_info
     info = ScriptConstants.assignable_info(self)
     info[:name] = I18n.t("data.script.name.#{info[:name]}.title", default: info[:name])
-    info[:name] += " *" if hidden
+    info[:name] += " *" unless launched?
 
     if family_name
       info[:assignment_family_name] = family_name
@@ -1894,7 +1877,7 @@ class Script < ApplicationRecord
 
     level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
     student_ids = section.students.map(&:id)
-    all_feedback = TeacherFeedback.get_all_feedback_for_section(student_ids, level_ids, section.user_id)
+    all_feedback = TeacherFeedback.get_latest_feedbacks_given(student_ids, level_ids, id, section.user_id)
 
     feedback_hash = {}
     all_feedback.each do |feedback_element|
@@ -2001,7 +1984,7 @@ class Script < ApplicationRecord
   end
 
   def self.script_json_filepath(script_name)
-    "#{script_json_directory}/#{script_name}.script_json"
+    "#{unit_json_directory}/#{script_name}.script_json"
   end
 
   def get_script_overview_pdf_url

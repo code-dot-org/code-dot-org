@@ -1,6 +1,7 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 
 require 'cdo/google/drive'
+require 'cdo/honeybadger'
 require 'cgi'
 require 'fileutils'
 require 'psych'
@@ -130,7 +131,10 @@ class I18nScriptUtils
   def self.get_script_level(route_params, url)
     script = Script.get_from_cache(route_params[:script_id])
     unless script.present?
-      STDERR.puts "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
+      Honeybadger.notify(
+        error_class: 'Could not find script in get_script_level',
+        error_message: "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
+      )
       return nil
     end
 
@@ -149,7 +153,10 @@ class I18nScriptUtils
         Level.find_by_name(uri_params['level_name'].first)
       end
     else
-      STDERR.puts "unknown route action #{route_params[:action].inspect} for url #{url.inspect}"
+      Honeybadger.notify(
+        error_class: 'Could not identify route in get_script_level',
+        error_message: "unknown route action #{route_params[:action].inspect} for url #{url.inspect}"
+      )
       nil
     end
   end
@@ -172,11 +179,17 @@ class I18nScriptUtils
         when "script_levels"
           get_script_level(route_params, new_url)
         else
-          STDERR.puts "unknown route #{route_params[:controller].inspect} for url #{new_url.inspect}"
+          Honeybadger.notify(
+            error_class: 'Could not identify route in get_level_from_url',
+            error_message: "unknown route #{route_params[:controller].inspect} for url #{new_url.inspect}"
+          )
         end
 
       unless level.present?
-        STDERR.puts "could not find level for url #{new_url.inspect}"
+        Honeybadger.notify(
+          error_class: 'Could not find level in get_level_from_url',
+          error_message: "could not find level for url #{new_url.inspect}"
+        )
         next
       end
 
@@ -203,5 +216,38 @@ class I18nScriptUtils
   # any English content (description, social share stuff, etc).
   def self.sanitize_header!(header)
     header.slice!("title")
+  end
+
+  # If a script is updated such that its destination directory changes after
+  # creation, we can end up in a situation in which we have multiple copies of
+  # the script file in the repo, which makes it difficult for the sync out to
+  # know which is the canonical version.
+  #
+  # To prevent that, here we proactively check for existing files in the
+  # filesystem with the same filename as our target script file, but a
+  # different directory. If found, we refuse to create the second such script
+  # file and notify of the attempt, so the issue can be manually resolved.
+  #
+  # Note we could try here to remove the old version of the file both from the
+  # filesystem and from github, but it would be significantly harder to also
+  # remove it from Crowdin.
+  def self.unit_directory_change?(script_i18n_name, script_i18n_filename)
+    level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
+
+    matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|
+      other_filename == script_i18n_filename
+    end
+
+    return false if matching_files.empty?
+
+    # Clean up the file paths, just to make our output a little nicer
+    base = Pathname.new(level_content_directory)
+    relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
+    relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
+    Honeybadger.notify(
+      error_class: 'Destination directory for script is attempting to change',
+      error_message: "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
+    )
+    return true
   end
 end
