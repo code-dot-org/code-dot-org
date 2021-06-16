@@ -11,7 +11,7 @@ export const WebSocketMessageType = {
   THEATER: 'THEATER',
   SYSTEM_OUT: 'SYSTEM_OUT',
   EXCEPTION: 'EXCEPTION',
-  DEBUBG: 'DEBUG'
+  DEBUG: 'DEBUG'
 };
 
 export const JavabuilderExceptionType = {
@@ -46,7 +46,9 @@ export const NeighborhoodSignalType = {
   // Hide all paint buckets
   HIDE_BUCKETS: 'HIDE_BUCKETS',
   // Show all paint buckets
-  SHOW_BUCKETS: 'SHOW_BUCKETS'
+  SHOW_BUCKETS: 'SHOW_BUCKETS',
+  // We will not receive any more commands
+  DONE: 'DONE'
 };
 
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');

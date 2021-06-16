@@ -7,7 +7,8 @@
     "name_suffix": "_2021",
     "parent_level_id": 27062,
     "encrypted": "false",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "long_instructions": "**Student lesson level shown here:  Course F - Lesson 14, Level:  For Loops.**"
   },
   "game_id": 54,
   "published": true,
@@ -15,7 +16,7 @@
   "level_num": "custom",
   "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-06-14 14:47:52 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-06-14 14:47:52 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 13:22:42 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

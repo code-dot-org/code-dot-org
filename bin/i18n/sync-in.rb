@@ -18,6 +18,7 @@ require_relative '../animation_assets/manifest_builder'
 
 def sync_in
   puts "Sync in starting"
+  CurriculumSyncUtils.sync_in
   HocSyncUtils.sync_in
   localize_level_and_project_content
   localize_block_content
@@ -269,7 +270,7 @@ def localize_level_content(variable_strings, parameter_strings)
       script_i18n_name = "#{script.name}.json"
       script_i18n_filename = File.join(script_i18n_directory, script_i18n_name)
 
-      next if I18nScriptUtils.script_directory_change?(script_i18n_name, script_i18n_filename)
+      next if I18nScriptUtils.unit_directory_change?(script_i18n_name, script_i18n_filename)
 
       File.write(script_i18n_filename, JSON.pretty_generate(script_strings))
     end

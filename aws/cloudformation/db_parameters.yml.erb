@@ -172,10 +172,9 @@ AuroraCluster: &aurora
   # Improve insert/update concurrency for autoincrement tables.
   innodb_autoinc_lock_mode: 2 # not dynamic
 
-  # With a setting of 0, logs are written and flushed to disk once per second.
-  # Transactions for which logs have not been flushed can be lost in a crash.
-  # Reduces durability for better performance.
-  innodb_flush_log_at_trx_commit: 0
+  # Favor durability over transaction write performance.
+  # https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
+  innodb_flush_log_at_trx_commit: 1
 
   # IAM role ARN used to select data into AWS S3.
   aurora_select_into_s3_role: {'Fn::GetAtt': [AuroraS3Role, Arn]}

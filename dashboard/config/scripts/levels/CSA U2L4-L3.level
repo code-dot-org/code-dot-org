@@ -1,0 +1,19 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-06-16T15:40:27.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "The owner of Project Mercury Pastries wants you to expand the current `Dessert` class.\r\n\r\n1. In `Dessert.java`, write an overloaded constructor that takes parameters `newFlavor` for `flavor` and `newPrice` for `price` but sets `quantity` to 12 by default.\r\n\r\n2. In `MyFoodTruck.java`, create a new `Dessert` object called `customDozen`.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "published": true
+}]]></config>
+</Javalab>
