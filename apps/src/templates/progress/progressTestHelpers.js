@@ -257,7 +257,7 @@ export const fakeProgressTableReduxInitialState = (
       ),
       lessonOfInterest: 1
     },
-    scriptSelection: {scriptId: scriptData.id},
+    unitSelection: {scriptId: scriptData.id},
     locales: {localeCode: 'en-US'}
   };
 };

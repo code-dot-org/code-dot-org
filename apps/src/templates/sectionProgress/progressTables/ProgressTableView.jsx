@@ -386,16 +386,16 @@ export default connect(
     scriptData: getCurrentUnitData(state),
     lessonProgressByStudent:
       state.sectionProgress.studentLessonProgressByUnit[
-        state.scriptSelection.scriptId
+        state.unitSelection.scriptId
       ],
     levelProgressByStudent:
       state.sectionProgress.studentLevelProgressByUnit[
-        state.scriptSelection.scriptId
+        state.unitSelection.scriptId
       ],
     lessonOfInterest: state.sectionProgress.lessonOfInterest,
     studentTimestamps:
       state.sectionProgress.studentLastUpdateByUnit[
-        state.scriptSelection.scriptId
+        state.unitSelection.scriptId
       ],
     localeCode: state.locales.localeCode,
     showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails

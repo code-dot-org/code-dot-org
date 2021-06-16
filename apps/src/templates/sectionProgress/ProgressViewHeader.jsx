@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {getCurrentUnitData} from './sectionProgressRedux';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
-import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
 import color from '../../util/color';
