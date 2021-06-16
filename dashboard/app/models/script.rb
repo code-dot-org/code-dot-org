@@ -1018,37 +1018,37 @@ class Script < ApplicationRecord
   # levelbuilder-defined levels.
   def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     transaction do
-      script = fetch_script(options)
-      script.update!(hidden: true) if new_suffix
+      unit = fetch_script(options)
+      unit.update!(hidden: true) if new_suffix
 
-      script.prevent_duplicate_lesson_groups(raw_lesson_groups)
+      unit.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
       # More all lessons into a temporary lesson group so that we do not delete
       # the lesson entries unless the lesson has been entirely removed from the
-      # script
+      # unit
       temp_lg = LessonGroup.create!(
         key: 'temp-will-be-deleted',
-        script: script,
+        script: unit,
         user_facing: false,
-        position: script.lesson_groups.length + 1
+        position: unit.lesson_groups.length + 1
       )
-      script.lessons.each do |l|
+      unit.lessons.each do |l|
         l.lesson_group = temp_lg
         l.save!
       end
 
-      temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
-      script.reload
-      script.lesson_groups = temp_lgs
-      script.save!
-      script.prevent_legacy_script_levels_in_migrated_scripts
+      temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, unit, new_suffix, editor_experiment)
+      unit.reload
+      unit.lesson_groups = temp_lgs
+      unit.save!
+      unit.prevent_legacy_script_levels_in_migrated_units
 
-      script.generate_plc_objects
+      unit.generate_plc_objects
 
-      CourseOffering.add_course_offering(script)
+      CourseOffering.add_course_offering(unit)
 
-      script
+      unit
     end
   end
 
@@ -1065,7 +1065,7 @@ class Script < ApplicationRecord
     end
   end
 
-  # Lesson groups can only show up once in a script
+  # Lesson groups can only show up once in a unit
   def prevent_duplicate_lesson_groups(raw_lesson_groups)
     previous_lesson_groups = []
     raw_lesson_groups.each do |lesson_group|
@@ -1076,10 +1076,10 @@ class Script < ApplicationRecord
     end
   end
 
-  def prevent_legacy_script_levels_in_migrated_scripts
+  def prevent_legacy_script_levels_in_migrated_units
     if is_migrated && script_levels.reject(&:activity_section).any?
       lesson_names = lessons.all.select {|l| l.script_levels.reject(&:activity_section).any?}.map(&:name)
-      raise "Legacy script levels are not allowed in migrated scripts. Problem lessons: #{lesson_names.to_json}"
+      raise "Legacy script levels are not allowed in migrated units. Problem lessons: #{lesson_names.to_json}"
     end
   end
 
@@ -1088,11 +1088,11 @@ class Script < ApplicationRecord
   # 2. position: position within the Lesson
   # 3. activity_section_position: position within the ActivitySection.
   # This method uses activity_section_position as the source of truth to set the
-  # values of position and chapter on all script levels in the script.
+  # values of position and chapter on all script levels in the unit.
   def fix_script_level_positions
     reload
-    raise 'cannot fix script level positions on non-migrated scripts' unless is_migrated
-    prevent_legacy_script_levels_in_migrated_scripts
+    raise 'cannot fix script level positions on non-migrated units' unless is_migrated
+    prevent_legacy_script_levels_in_migrated_units
 
     chapter = 0
     lessons.each do |lesson|
@@ -1110,9 +1110,9 @@ class Script < ApplicationRecord
   end
 
   # Lessons unfortunately have 2 position values:
-  # 1. absolute_position: position within the script (used to order lessons with in lesson groups in correct order)
+  # 1. absolute_position: position within the unit (used to order lessons with in lesson groups in correct order)
   # 2. relative_position: position within the Script relative other numbered/unnumbered lessons
-  # This method updates the position values for all lessons in a script after
+  # This method updates the position values for all lessons in a unit after
   # a lesson is saved
   def fix_lesson_positions
     reload
@@ -1130,70 +1130,70 @@ class Script < ApplicationRecord
     end
   end
 
-  def clone_migrated_script(new_name, new_level_suffix: nil, destination_unit_group_name: nil, version_year: nil, family_name:  nil)
+  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, version_year: nil, family_name:  nil)
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name(destination_unit_group_name) :
       nil
     raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_unit_group.course_version
 
     ActiveRecord::Base.transaction do
-      copied_script = dup
-      copied_script.is_stable = false
-      copied_script.tts = false
-      copied_script.announcements = nil
-      copied_script.is_course = destination_unit_group.nil?
-      copied_script.name = new_name
+      copied_unit = dup
+      copied_unit.is_stable = false
+      copied_unit.tts = false
+      copied_unit.announcements = nil
+      copied_unit.is_course = destination_unit_group.nil?
+      copied_unit.name = new_name
 
       if version_year
-        copied_script.version_year = version_year
+        copied_unit.version_year = version_year
       end
 
-      copied_script.save!
+      copied_unit.save!
 
       if destination_unit_group
         raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
-        UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_script, position: destination_unit_group.default_scripts.length + 1)
-        copied_script.reload
+        UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_scripts.length + 1)
+        copied_unit.reload
       else
-        copied_script.is_course = true
-        raise "Must supply version year if new script will be a standalone unit" unless version_year
-        copied_script.version_year = version_year
-        raise "Must supply family name if new script will be a standalone unit" unless family_name
-        copied_script.family_name = family_name
-        CourseOffering.add_course_offering(copied_script)
+        copied_unit.is_course = true
+        raise "Must supply version year if new unit will be a standalone unit" unless version_year
+        copied_unit.version_year = version_year
+        raise "Must supply family name if new unit will be a standalone unit" unless family_name
+        copied_unit.family_name = family_name
+        CourseOffering.add_course_offering(copied_unit)
       end
 
       lesson_groups.each do |original_lesson_group|
-        original_lesson_group.copy_to_script(copied_script, new_level_suffix)
+        original_lesson_group.copy_to_script(copied_unit, new_level_suffix)
       end
 
-      course_version = copied_script.get_course_version
-      copied_script.resources = resources.map {|r| r.copy_to_course_version(course_version)}
-      copied_script.student_resources = student_resources.map {|r| r.copy_to_course_version(course_version)}
+      course_version = copied_unit.get_course_version
+      copied_unit.resources = resources.map {|r| r.copy_to_course_version(course_version)}
+      copied_unit.student_resources = student_resources.map {|r| r.copy_to_course_version(course_version)}
 
       # Make sure we don't modify any files in unit tests.
       if Rails.application.config.levelbuilder_mode
         copy_and_write_i18n(new_name)
-        copied_script.write_script_json
-        copied_script.write_script_dsl
+        copied_unit.write_script_json
+        copied_unit.write_script_dsl
       end
 
-      copied_script
+      copied_unit
     end
   end
 
-  # Clone this script, appending a dash and the suffix to the name of this
-  # script. Also clone all the levels in the script, appending an underscore and
-  # the suffix to the name of each level. Mark the new script as hidden, and
-  # copy any translations and other metadata associated with the original script.
-  # @param options [Hash] Optional properties to set on the new script.
+  # Clone this unit, appending a dash and the suffix to the name of this
+  # unit. Also clone all the levels in the unit, appending an underscore and
+  # the suffix to the name of each level. Mark the new unit as hidden, and
+  # copy any translations and other metadata associated with the original unit.
+  # @param options [Hash] Optional properties to set on the new unit.
   # @param options[:editor_experiment] [String] Optional editor_experiment name.
   #   if specified, this editor_experiment will also be applied to any newly
   #   created levels.
   def clone_with_suffix(new_suffix, options = {})
     new_name = "#{base_name}-#{new_suffix}"
 
-    script_filename = "#{Script.unit_directory}/#{name}.script"
+    unit_filename = "#{Script.unit_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
       tts: false,
@@ -1203,17 +1203,17 @@ class Script < ApplicationRecord
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
     end
-    script_names, _ = Script.setup([script_filename], new_suffix: new_suffix, new_properties: new_properties)
-    new_script = Script.find_by!(name: script_names.first)
+    unit_names, _ = Script.setup([unit_filename], new_suffix: new_suffix, new_properties: new_properties)
+    new_unit = Script.find_by!(name: unit_names.first)
 
     # Make sure we don't modify any files in unit tests.
     if Rails.application.config.levelbuilder_mode
       copy_and_write_i18n(new_name)
       new_filename = "#{Script.unit_directory}/#{new_name}.script"
-      ScriptDSL.serialize(new_script, new_filename)
+      ScriptDSL.serialize(new_unit, new_filename)
     end
 
-    new_script
+    new_unit
   end
 
   def base_name
