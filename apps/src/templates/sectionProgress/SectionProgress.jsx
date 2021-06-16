@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ScriptSelector from './ScriptSelector';
+import UnitSelector from './UnitSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
@@ -20,7 +20,7 @@ import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
   setScriptId,
   validScriptPropType
-} from '@cdo/apps/redux/scriptSelectionRedux';
+} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
 
@@ -130,7 +130,7 @@ class SectionProgress extends Component {
             <div style={{...h3Style, ...styles.heading}}>
               {i18n.selectACourse()}
             </div>
-            <ScriptSelector
+            <UnitSelector
               validScripts={validScripts}
               scriptId={scriptId}
               onChange={this.onChangeScript}
@@ -213,9 +213,9 @@ export const UnconnectedSectionProgress = SectionProgress;
 
 export default connect(
   state => ({
-    scriptId: state.scriptSelection.scriptId,
+    scriptId: state.unitSelection.scriptId,
     section: state.sectionData.section,
-    validScripts: state.scriptSelection.validScripts,
+    validScripts: state.unitSelection.validScripts,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentScriptData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
