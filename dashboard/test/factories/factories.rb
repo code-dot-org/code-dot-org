@@ -990,7 +990,7 @@ FactoryGirl.define do
 
   factory :bubble_choice_level, class: BubbleChoice do
     game {create(:game, app: "bubble_choice")}
-    name 'name'
+    sequence(:name) {|n| "Bubble_Choice_Level_#{n}"}
     display_name 'display_name'
     transient do
       sublevels []
