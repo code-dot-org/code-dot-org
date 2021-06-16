@@ -2,17 +2,9 @@ name 'OPD-K5 sprite lab_2021'
 title 'Sprite Lab'
 description 'description here'
 markdown <<MARKDOWN
-# Introduction to Sprite Lab
+# Introduction to Sprites
 
-<img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
-
-
-Sprite Lab is a block-based programming environment where students can make simple animations and games with objects and characters that interact with each other. 
-
-**Course E** introduces Sprite Lab to students where they practice coding with algorithms, loops, and conditionals, before moving on to functions.  Course E introduces what a sprite is and how to code the behavior of sprites.
-
-**Course F** also introduces students to Sprite Lab to support those students who did not engage with Course E.  However, Course F introduces sprites within the context of how apps and tools give users choices about how to use them.
-
+<img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 30px 30px;">
 
 ## CS Concepts
 
@@ -20,27 +12,35 @@ A **sprite** is a graphic character on the screen with properties that describe 
 
 A **behavior** is an action that a sprite performs continuously until it's told to stop.
 
+Read the **context-setting** lesson plan, <a href="https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview" target="blank">Course E - Lesson 1:  Follow the Algorithm</a> from Course E that first introduces students to sprites.
 
-#### Teacher Slide Deck
+Also, preview the <a href="https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview" target="blank">teacher slides</a> that accompany Course E - Lesson 1:  Follow the Algorithm.
 
-Preview the <a href="https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview" target="blank">teacher slides</a> that accompany the **context-setting** lesson in Course E - Lesson 1:  Follow the Algorithm, that first introduces students to sprites.
+**Note:**  The lesson plan and teacher slides each open in a new window.  Be sure to return to this online course to continue with lessons.
 
-## Learning Platform Features
+## Learning Tools 
 
-#### Student Videos
+Sprites are created in Sprite Lab where they practice coding with algorithms, loops, and conditionals.
 
-Watch the following student videos to learn about Sprite Lab:
+## Concepts reiterated across Courses E and F
 
-* <a href="https://youtu.be/l0B0gDuHHC8" target="blank">Introducing Sprite Lab</a>
-* <a href="https://youtu.be/nHq7_-Kpgc8" target="blank">How to Make a Sprite</a>
-* <a href="https://youtu.be/vsjoWjyQLRU" target="blank">Sprites in Action</a>
+**Course E** introduces what a sprite is and how to code the behavior of sprites. 
 
-## Concept Progression
+**Course F** also introduces students to sprites to support those students who may not have engaged with Course E. Course F focuses on how apps and tools give users choices about how to use sprites.
 
-Click "Continue" to go through student lesson levels listed below.  These student lesson levels are examples of how students are introduced to sprites in Course E and F.  As you move from one student lesson level to the next, begin to notice any similarities and differences for how students program sprites and sprite behavior.
+Click "Continue" to go through student lesson levels listed below.  These student lesson levels are examples of how students are introduced to sprites in Course E and F.  As you move from one student lesson level to the next, notice.
 
-* Course E - Lesson X, Level X: 
-* Course F - Lesson 1, Level 2:  Introducing Sprite Lab
+* Course E - Lesson 2, Levels 1 and 3: Swimming Fish with Sprite Lab
+	* Video: Introducing Sprite Lab
+    * Build skills using sprite blocks.
+
+* Course E - Lesson 2, Levels 6 and 7: Swimming Fish with Sprite Lab
+	* Video: How to Make a Sprite
+    * Build skills adding more sprites to your program.
+
+* Course E - Lesson 2, Levels 2 and 3:  Swimming Fish with Sprite Lab
+	* Video:  Sprites in Action
+    * Build skills using the behavior block to move sprites.
 
 
 

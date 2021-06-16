@@ -4,17 +4,27 @@ description 'description here'
 markdown <<MARKDOWN
 # Introduction to End of Course Projects
 
-<img src="https://images.code.org/0a5fca1b8c79ab8463d53ef7bde1a7a1-image-1573236230401.jpg" width="350px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/0a5fca1b8c79ab8463d53ef7bde1a7a1-image-1573236230401.jpg" width="350px" style="border-radius: 10px; float: right; margin: 0 0 35px 35px;">
 
 ## Curriculum Resources
 
-## Preview End of Course Projects
+End of course projects are open-ended lessons found at the end of each course.  All end of course lesson plans include planning guides for students.
 
-* Course A
-* Course B
-* Course C
-* Course D
-* Course E
+Students apply what they learned about sequencing and loops with The Artist in Course A.
+
+* **Course A**
+	* <a href= "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview" target="blank" >Artist Project Planning Guide</a>
+
+Students apply what they learned about sequencing and events with Play Lab in Course B.
+
+
+* **Course B**
+	* <a href= "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview" target="blank" >Artist Project Planning Guide</a>
+
+## Preview End of Course Projects Courses A and B
+
+Click "Continue" to preview sample projects for Courses A and B.
+
 
 
 MARKDOWN

@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "video_key": "C3_bee_nested_loops",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2021",
+    "parent_level_id": 26785,
+    "encrypted": "false",
+    "long_instructions": "**Example student lesson level shown here:  Course D - Lesson 11, Level : Nested Loops in Maze**"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2021-06-14T14:29:27.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-06-14 14:29:41 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-15 14:44:28 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-15 14:44:48 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
