@@ -1,0 +1,24 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "video_key": "csf21pilot_prompts",
+    "instructions_important": "false",
+    "display_name": "How to Make a Sprite",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 27432,
+    "name_suffix": "_2020",
+    "encrypted": "false",
+    "long_instructions": "**Student lesson level shown here:  Course F - Lesson 7, Level 2:  Texts and Prompts.**"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2021-06-16T14:30:40.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-07-03 22:54:26 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-03 22:55:11 +0000\",\"changed\":[\"video_key\",\"display_name\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-09 01:35:41 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-09 01:36:17 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-05-29 17:26:33 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2021-01-08 20:44:11 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-02-09 22:54:48 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-06-16 14:31:28 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 14:44:29 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
