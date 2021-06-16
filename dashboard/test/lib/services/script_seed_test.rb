@@ -1123,14 +1123,16 @@ module Services
       end
       script.reload
 
-      (1..num_resources_per_script).each do |r|
-        resource = create :resource, key: "#{script.name}-resource-#{r}", course_version: course_version
-        ScriptsResource.find_or_create_by!(resource: resource, script: script)
-      end
+      if course_version
+        (1..num_resources_per_script).each do |r|
+          resource = create :resource, key: "#{script.name}-resource-#{r}", course_version: course_version
+          ScriptsResource.find_or_create_by!(resource: resource, script: script)
+        end
 
-      (1..num_resources_per_script).each do |r|
-        resource = create :resource, key: "#{script.name}-student-resource-#{r}", course_version: course_version
-        ScriptsStudentResource.find_or_create_by!(resource: resource, script: script)
+        (1..num_resources_per_script).each do |r|
+          resource = create :resource, key: "#{script.name}-student-resource-#{r}", course_version: course_version
+          ScriptsStudentResource.find_or_create_by!(resource: resource, script: script)
+        end
       end
 
       sl_num = 1
