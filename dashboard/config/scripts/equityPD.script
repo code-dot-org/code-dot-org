@@ -1,5 +1,6 @@
 professional_learning_course 'Equity Support'
 login_required true
+published_state 'beta'
 
 lesson 'Necessary Background', display_name: 'Necessary Background', has_lesson_plan: false
 level 'equity Intro'

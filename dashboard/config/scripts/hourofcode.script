@@ -1,5 +1,6 @@
 hidden false
 wrapup_video 'hoc_wrapup'
+published_state 'preview'
 
 lesson 'Maze', display_name: 'Maze', has_lesson_plan: false
 skin 'birds'

@@ -11,7 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:51 UTC",
+    "serialized_at": "2021-06-16 23:01:02 UTC",
+    "published_state": "pilot",
     "seeding_key": {
       "script.name": "vpl-csp-2020"
     }

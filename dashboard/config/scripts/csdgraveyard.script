@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Introduction to Styling with CSS', display_name: 'Introduction to Styling with CSS', has_lesson_plan: false
 level 'Unit 2 Lesson 7 Overview', named: true
 level 'CSDU2 - Intro to CSS'

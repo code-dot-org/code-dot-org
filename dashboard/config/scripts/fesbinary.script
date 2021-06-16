@@ -1,0 +1,54 @@
+login_required true
+published_state 'beta'
+
+lesson 'Binary Images', display_name: 'Binary Images', has_lesson_plan: true
+level 'BinaryImages'
+level 'grade5_pixelation'
+
+lesson 'Binary Artist Puzzles', display_name: 'Binary Artist Puzzles', has_lesson_plan: true
+level 'grade5_artist_binary5'
+level 'grade5_artist_binary4'
+level 'grade5_artist_binary8'
+level 'grade5_artist_binary9'
+level 'grade5_artist_binary11'
+
+lesson 'Auto-Run Binary Artist Puzzles', display_name: 'Auto-Run Binary Artist Puzzles', has_lesson_plan: true
+level 'courseD_external_binary1_2018'
+level 'courseD_artist_binary1_2018'
+level 'courseD_artist_binary2_2018'
+level 'courseD_autorun_binary2_2019'
+level 'courseD_autorun_binary3_2019'
+level 'courseD_autorun_binary4_2019'
+level 'courseD_autorun_binary5_2019'
+level 'courseD_autorun_binary6_2019'
+level 'courseD_autorun_binary7_2019'
+level 'courseD_autorun_binary8_2019'
+level 'courseD_autorun_binary8_predict1_2019'
+level 'grade5_artist_binary11'
+
+lesson 'RGB Color', display_name: 'RGB Color', has_lesson_plan: true
+level 'Additive Color (Simulation)', named: true
+level '3-Bit Pixel Simulator', named: true
+level 'mike3bit'
+level 'mike3bitbird'
+level 'mike3bitmario'
+level 'mike3bitfreeplay'
+
+lesson 'Processing with Bits', display_name: 'Processing with Bits', has_lesson_plan: true
+level 'Unit 1 Lesson 6 Overview'
+level 'CSD U1 - PixFilter 1x1 intro'
+level 'CSD U1 - PixFilter Filter Intro'
+level 'CSD U1 - PixFilter Mushroom'
+level 'CSD U1 - PixFilter Filter Revisit'
+level 'CSD U1 - PixFilter Mario'
+level 'CSD U1 - PixFilter UnFilter'
+level 'CSD U1 - PixFilter FreePlay'
+
+lesson 'Play Lab', display_name: 'Play Lab', has_lesson_plan: true
+level 'courseC19_playLab_EOC1'
+level 'courseC19_playLab_EOC2'
+level 'courseC19_playLab_EOC3'
+level 'courseC19_playLab_EOC4'
+level 'courseC19_playLab_EOC5'
+level 'courseC19_playLab_EOC6'
+

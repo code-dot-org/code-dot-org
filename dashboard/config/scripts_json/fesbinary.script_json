@@ -1,0 +1,1411 @@
+{
+  "script": {
+    "name": "fesbinary",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "hideable_stages": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-06-16 22:58:29 UTC",
+    "published_state": "beta",
+    "seeding_key": {
+      "script.name": "fesbinary"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 0,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Binary Images",
+      "name": "Binary Images",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Images",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "key": "Binary Artist Puzzles",
+      "name": "Binary Artist Puzzles",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "key": "Auto-Run Binary Artist Puzzles",
+      "name": "Auto-Run Binary Artist Puzzles",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "key": "RGB Color",
+      "name": "RGB Color",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "key": "Processing with Bits",
+      "name": "Processing with Bits",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "key": "Play Lab",
+      "name": "Play Lab",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BinaryImages"
+        ],
+        "lesson.key": "Binary Images",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "BinaryImages"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_pixelation"
+        ],
+        "lesson.key": "Binary Images",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "grade5_pixelation"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_binary5"
+        ],
+        "lesson.key": "Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "grade5_artist_binary5"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_binary4"
+        ],
+        "lesson.key": "Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "grade5_artist_binary4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_binary8"
+        ],
+        "lesson.key": "Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "grade5_artist_binary8"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_binary9"
+        ],
+        "lesson.key": "Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "grade5_artist_binary9"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_binary11"
+        ],
+        "lesson.key": "Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "grade5_artist_binary11"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_external_binary1_2018"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseD_external_binary1_2018"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary1_2018"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseD_artist_binary1_2018"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary2_2018"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseD_artist_binary2_2018"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_autorun_binary2_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseD_autorun_binary2_2019"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_autorun_binary3_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseD_autorun_binary3_2019"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_autorun_binary4_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseD_autorun_binary4_2019"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_autorun_binary5_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseD_autorun_binary5_2019"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_autorun_binary6_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseD_autorun_binary6_2019"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_autorun_binary7_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseD_autorun_binary7_2019"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_autorun_binary8_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseD_autorun_binary8_2019"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_autorun_binary8_predict1_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseD_autorun_binary8_predict1_2019"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_binary11"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "grade5_artist_binary11"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Additive Color (Simulation)"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "Additive Color (Simulation)"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "3-Bit Pixel Simulator"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "3-Bit Pixel Simulator"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mike3bit"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "mike3bit"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mike3bitbird"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "mike3bitbird"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mike3bitmario"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "mike3bitmario"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "mike3bitfreeplay"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "mike3bitfreeplay"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 6 Overview"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 6 Overview"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter 1x1 intro"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter 1x1 intro"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Filter Intro"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter Filter Intro"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Mushroom"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter Mushroom"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Filter Revisit"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter Filter Revisit"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Mario"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter Mario"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter UnFilter"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter UnFilter"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter FreePlay"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter FreePlay"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC1"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseC19_playLab_EOC1"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC2"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseC19_playLab_EOC2"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC3"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseC19_playLab_EOC3"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC4"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseC19_playLab_EOC4"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC5"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseC19_playLab_EOC5"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC6"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      },
+      "level_keys": [
+        "courseC19_playLab_EOC6"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "BinaryImages",
+        "script_level.level_keys": [
+          "BinaryImages"
+        ],
+        "lesson.key": "Binary Images",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_pixelation",
+        "script_level.level_keys": [
+          "grade5_pixelation"
+        ],
+        "lesson.key": "Binary Images",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_binary5",
+        "script_level.level_keys": [
+          "grade5_artist_binary5"
+        ],
+        "lesson.key": "Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_binary4",
+        "script_level.level_keys": [
+          "grade5_artist_binary4"
+        ],
+        "lesson.key": "Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_binary8",
+        "script_level.level_keys": [
+          "grade5_artist_binary8"
+        ],
+        "lesson.key": "Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_binary9",
+        "script_level.level_keys": [
+          "grade5_artist_binary9"
+        ],
+        "lesson.key": "Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_binary11",
+        "script_level.level_keys": [
+          "grade5_artist_binary11"
+        ],
+        "lesson.key": "Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_external_binary1_2018",
+        "script_level.level_keys": [
+          "courseD_external_binary1_2018"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary1_2018",
+        "script_level.level_keys": [
+          "courseD_artist_binary1_2018"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary2_2018",
+        "script_level.level_keys": [
+          "courseD_artist_binary2_2018"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_autorun_binary2_2019",
+        "script_level.level_keys": [
+          "courseD_autorun_binary2_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_autorun_binary3_2019",
+        "script_level.level_keys": [
+          "courseD_autorun_binary3_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_autorun_binary4_2019",
+        "script_level.level_keys": [
+          "courseD_autorun_binary4_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_autorun_binary5_2019",
+        "script_level.level_keys": [
+          "courseD_autorun_binary5_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_autorun_binary6_2019",
+        "script_level.level_keys": [
+          "courseD_autorun_binary6_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_autorun_binary7_2019",
+        "script_level.level_keys": [
+          "courseD_autorun_binary7_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_autorun_binary8_2019",
+        "script_level.level_keys": [
+          "courseD_autorun_binary8_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_autorun_binary8_predict1_2019",
+        "script_level.level_keys": [
+          "courseD_autorun_binary8_predict1_2019"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_binary11",
+        "script_level.level_keys": [
+          "grade5_artist_binary11"
+        ],
+        "lesson.key": "Auto-Run Binary Artist Puzzles",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Additive Color (Simulation)",
+        "script_level.level_keys": [
+          "Additive Color (Simulation)"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "3-Bit Pixel Simulator",
+        "script_level.level_keys": [
+          "3-Bit Pixel Simulator"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mike3bit",
+        "script_level.level_keys": [
+          "mike3bit"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mike3bitbird",
+        "script_level.level_keys": [
+          "mike3bitbird"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mike3bitmario",
+        "script_level.level_keys": [
+          "mike3bitmario"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "mike3bitfreeplay",
+        "script_level.level_keys": [
+          "mike3bitfreeplay"
+        ],
+        "lesson.key": "RGB Color",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 6 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 6 Overview"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter 1x1 intro",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter 1x1 intro"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter Filter Intro",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Filter Intro"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter Mushroom",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Mushroom"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter Filter Revisit",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Filter Revisit"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter Mario",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Mario"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter UnFilter",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter UnFilter"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter FreePlay",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter FreePlay"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC19_playLab_EOC1",
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC1"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC19_playLab_EOC2",
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC2"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC19_playLab_EOC3",
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC3"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC19_playLab_EOC4",
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC4"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC19_playLab_EOC5",
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC5"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC19_playLab_EOC6",
+        "script_level.level_keys": [
+          "courseC19_playLab_EOC6"
+        ],
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "fesbinary"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
