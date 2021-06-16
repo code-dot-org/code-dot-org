@@ -326,7 +326,7 @@ class Script < ApplicationRecord
     valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
   end
 
-  # @return [Array<Script>] An array of modern elementary scripts.
+  # @return [Array<Script>] An array of modern elementary units.
   def self.modern_elementary_courses
     Script::CATEGORIES[:csf].map {|name| Script.get_from_cache(name)}
   end
@@ -334,16 +334,16 @@ class Script < ApplicationRecord
   # @param locale [String] An "xx-YY" locale string.
   # @return [Boolean] Whether all the modern elementary courses are available in the given locale.
   def self.modern_elementary_courses_available?(locale)
-    @modern_elementary_courses_available = modern_elementary_courses.all? do |script|
-      supported_languages = script.supported_locales || []
+    @modern_elementary_courses_available = modern_elementary_courses.all? do |unit|
+      supported_languages = unit.supported_locales || []
       supported_languages.any? {|s| locale.casecmp?(s)}
     end
   end
 
   def starting_level
-    raise "Script #{name} has no level to start at" if script_levels.empty?
+    raise "Unit #{name} has no level to start at" if script_levels.empty?
     candidate_level = script_levels.first.or_next_progression_level
-    raise "Script #{name} has no valid progression levels (non-unplugged) to start at" unless candidate_level
+    raise "Unit #{name} has no valid progression levels (non-unplugged) to start at" unless candidate_level
     candidate_level
   end
 
@@ -357,14 +357,14 @@ class Script < ApplicationRecord
     end
   end
 
-  # For all scripts, cache all related information (levels, etc),
+  # For all units, cache all related information (levels, etc),
   # indexed by both id and name. This is cached both in a class
   # variable (ie. in memory in the worker process) and in a
   # distributed cache (Rails.cache)
-  @@script_cache = nil
-  SCRIPT_CACHE_KEY = 'script-cache'.freeze
+  @@unit_cache = nil
+  UNIT_CACHE_KEY = 'script-cache'.freeze
 
-  # Caching is disabled when editing scripts and levels or running unit tests.
+  # Caching is disabled when editing units and levels or running unit tests.
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
     return false unless Rails.application.config.cache_classes
@@ -372,30 +372,30 @@ class Script < ApplicationRecord
     true
   end
 
-  def self.script_cache_to_cache
-    Rails.cache.write(SCRIPT_CACHE_KEY, script_cache_from_db)
+  def self.unit_cache_to_cache
+    Rails.cache.write(UNIT_CACHE_KEY, unit_cache_from_db)
   end
 
-  def self.script_cache_from_cache
+  def self.unit_cache_from_cache
     [
       ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly, UnitGroupUnit
     ].each(&:new) # make sure all possible loaded objects are completely loaded
-    Rails.cache.read SCRIPT_CACHE_KEY
+    Rails.cache.read UNIT_CACHE_KEY
   end
 
-  def self.script_cache_from_db
+  def self.unit_cache_from_db
     {}.tap do |cache|
-      Script.with_associated_models.find_each do |script|
-        cache[script.name] = script
-        cache[script.id.to_s] = script
+      Script.with_associated_models.find_each do |unit|
+        cache[unit.name] = unit
+        cache[unit.id.to_s] = unit
       end
     end
   end
 
   def self.script_cache
     return nil unless should_cache?
-    @@script_cache ||=
-      script_cache_from_cache || script_cache_from_db
+    @@unit_cache ||=
+      unit_cache_from_cache || unit_cache_from_db
   end
 
   # Returns a cached map from script level id to script_level, or nil if in level_builder mode
@@ -403,8 +403,8 @@ class Script < ApplicationRecord
   def self.script_level_cache
     return nil unless should_cache?
     @@script_level_cache ||= {}.tap do |cache|
-      script_cache.values.each do |script|
-        cache.merge!(script.script_levels.index_by(&:id))
+      script_cache.values.each do |unit|
+        cache.merge!(unit.script_levels.index_by(&:id))
       end
     end
   end
@@ -423,10 +423,10 @@ class Script < ApplicationRecord
     end
   end
 
-  # Returns a cached map from family_name to scripts, or nil if caching is disabled.
-  def self.script_family_cache
+  # Returns a cached map from family_name to units, or nil if caching is disabled.
+  def self.unit_family_cache
     return nil unless should_cache?
-    @@script_family_cache ||= {}.tap do |cache|
+    @@unit_family_cache ||= {}.tap do |cache|
       family_scripts = script_cache.values.group_by(&:family_name)
       # Not all scripts have a family_name, and thus will be grouped as family_scripts[nil].
       # We do not want to store this key-value pair in the cache.
@@ -483,23 +483,23 @@ class Script < ApplicationRecord
   end
 
   def self.get_without_cache(id_or_name, with_associated_models: true)
-    # Also serve any script by its new_name, if it has one.
-    script = id_or_name && Script.find_by(new_name: id_or_name)
-    return script if script
+    # Also serve any unit by its new_name, if it has one.
+    unit = id_or_name && Script.find_by(new_name: id_or_name)
+    return unit if unit
 
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     is_id = id_or_name.to_i.to_s == id_or_name.to_s
     find_by = is_id ? :id : :name
-    script_model = with_associated_models ? Script.with_associated_models : Script
-    script = script_model.find_by(find_by => id_or_name)
-    return script if script
+    unit_model = with_associated_models ? Script.with_associated_models : Script
+    unit = unit_model.find_by(find_by => id_or_name)
+    return unit if unit
 
     raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
   end
 
-  # Returns the script with the specified id, or a script with the specified
-  # name. Also populates the script cache so that future responses will be cached.
+  # Returns the unit with the specified id, or a unit with the specified
+  # name. Also populates the unit cache so that future responses will be cached.
   # For example:
   #   get_from_cache('11') --> script_cache['11'] = <Script id=11, name=...>
   #   get_from_cache('frozen') --> script_cache['frozen'] = <Script name="frozen", id=...>
@@ -507,7 +507,7 @@ class Script < ApplicationRecord
   # @param id_or_name [String|Integer] script id, script name, or script family name.
   def self.get_from_cache(id_or_name)
     if ScriptConstants::FAMILY_NAMES.include?(id_or_name)
-      raise "Do not call Script.get_from_cache with a family_name. Call Script.get_script_family_redirect_for_user instead.  Family: #{id_or_name}"
+      raise "Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: #{id_or_name}"
     end
 
     return get_without_cache(id_or_name, with_associated_models: false) unless should_cache?
@@ -522,16 +522,16 @@ class Script < ApplicationRecord
     Script.where(family_name: family_name).order("properties -> '$.version_year' DESC")
   end
 
-  # Returns all scripts within a family from the Rails cache.
-  # Populates the cache with scripts in that family upon cache miss.
-  # @param family_name [String] Family name for the desired scripts.
+  # Returns all units within a family from the Rails cache.
+  # Populates the cache with units in that family upon cache miss.
+  # @param family_name [String] Family name for the desired units.
   # @return [Array<Script>] Scripts within the specified family.
   def self.get_family_from_cache(family_name)
     return Script.get_family_without_cache(family_name) unless should_cache?
 
-    script_family_cache.fetch(family_name) do
+    unit_family_cache.fetch(family_name) do
       # Populate cache on miss.
-      script_family_cache[family_name] = Script.get_family_without_cache(family_name)
+      unit_family_cache[family_name] = Script.get_family_without_cache(family_name)
     end
   end
 
@@ -539,7 +539,7 @@ class Script < ApplicationRecord
     script_cache.delete(script_name) if script_cache
   end
 
-  def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
+  def self.get_unit_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
     family_scripts = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
@@ -1662,10 +1662,10 @@ class Script < ApplicationRecord
 
   def self.clear_cache
     raise "only call this in a test!" unless Rails.env.test?
-    @@script_cache = nil
-    @@script_family_cache = nil
+    @@unit_cache = nil
+    @@unit_family_cache = nil
     @@level_cache = nil
-    Rails.cache.delete SCRIPT_CACHE_KEY
+    Rails.cache.delete UNIT_CACHE_KEY
   end
 
   def localized_title

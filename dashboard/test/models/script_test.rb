@@ -35,9 +35,9 @@ class ScriptTest < ActiveSupport::TestCase
   def populate_cache_and_disconnect_db
     Script.stubs(:should_cache?).returns true
     # Only need to populate cache once per test-suite run
-    @@script_cached ||= Script.script_cache_to_cache
+    @@script_cached ||= Script.unit_cache_to_cache
     Script.script_cache
-    Script.script_family_cache
+    Script.unit_family_cache
 
     # Also populate course_cache, as it's used by course_link
     UnitGroup.stubs(:should_cache?).returns true
@@ -469,10 +469,10 @@ class ScriptTest < ActiveSupport::TestCase
     error = assert_raises do
       Script.get_from_cache('coursea')
     end
-    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_script_family_redirect_for_user instead.  Family: coursea', error.message
+    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: coursea', error.message
   end
 
-  test 'get_family_from_cache uses script_family_cache' do
+  test 'get_family_from_cache uses unit_family_cache' do
     family_scripts = Script.where(family_name: 'family-cache-test')
     assert_equal [@script_2017.name, @script_2018.name], family_scripts.map(&:name)
 
@@ -560,7 +560,7 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable script assigned or with progress if student' do
+  test 'get_unit_family_redirect_for_user returns latest stable script assigned or with progress if student' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
 
@@ -569,54 +569,54 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
     section.students << student
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: student)
     assert_equal csp1_2017.name, redirect_script.redirect_to
 
     # Student makes progress in csp1_2018.
     create :user_level, user: student, script: csp1_2018
     student.reload
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: student)
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable script in family if teacher' do
+  test 'get_unit_family_redirect_for_user returns latest stable script in family if teacher' do
     teacher = create :teacher
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
     create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
     create :section, user: teacher, script: csp1_2017
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', user: teacher)
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: teacher)
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns nil if no scripts in family are stable' do
+  test 'get_unit_family_redirect_for_user returns nil if no scripts in family are stable' do
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: false)
-    assert_nil Script.get_script_family_redirect_for_user('csp')
+    assert_nil Script.get_unit_family_redirect_for_user('csp')
   end
 
-  test 'get_script_family_redirect_for_user returns latest version supported in locale if available' do
+  test 'get_unit_family_redirect_for_user returns latest version supported in locale if available' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', locale: 'es-MX')
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', locale: 'es-MX')
     assert_equal csp1_2017.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable version if no user or locale' do
+  test 'get_unit_family_redirect_for_user returns latest stable version if no user or locale' do
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp')
+    redirect_script = Script.get_unit_family_redirect_for_user('csp')
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable version if no versions supported in locale' do
+  test 'get_unit_family_redirect_for_user returns latest stable version if no versions supported in locale' do
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', locale: 'it-IT')
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', locale: 'it-IT')
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
