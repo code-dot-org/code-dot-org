@@ -506,7 +506,7 @@ class ApiController < ApplicationController
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
     script = Script.get_from_cache(script_id) if script_id
-    script ||= Script.twenty_hour_script
+    script ||= Script.twenty_hour_unit
     script
   end
 end

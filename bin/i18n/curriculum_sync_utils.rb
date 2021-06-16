@@ -70,7 +70,7 @@ module CurriculumSyncUtils
       # write data to path
       name = "#{script.name}.json"
       path = File.join(I18N_SOURCE_DIR, 'curriculum_content', get_script_subdirectory(script), name)
-      next if I18nScriptUtils.script_directory_change?(name, path)
+      next if I18nScriptUtils.unit_directory_change?(name, path)
       FileUtils.mkdir_p(File.dirname(path))
       File.write(path, JSON.pretty_generate(data))
     end
