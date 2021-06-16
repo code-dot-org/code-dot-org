@@ -4,15 +4,15 @@ description 'description here'
 markdown <<MARKDOWN
 # Introduction to For Loops
 
-<img src="https://images.code.org/9d05ff62f3098c6143eff78553e05f06-image-1571780679511.jpg" class="level-image">
+<img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 20px 20px;">
 
 ## CS Concept
 
->A **for loop** is a loop with a predetermined beginning, end, and increment (step interval).
+A **for loop** is a loop with a predetermined beginning, end, and increment (step interval).
 
-## Built-in Features
+#### Lesson in Action
 
-The video, "Variables,"
+Watch <a href="https://www.youtube.com/watch?v=HO4uhoahtjM" target="blank">this video </a> demonstration of a teacher introducing "for loops" to students with the **context-setting** lesson in Course F - Lesson 13:  For Loop Fun. 
 
-## Concept Progression
+**Note:** The video will open in a new tab.  Be sure to return to the tab with this online course after watching the video.
 MARKDOWN

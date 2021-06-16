@@ -99,7 +99,7 @@ class JavalabConsole extends React.Component {
 
     return (
       <div style={style}>
-        <PaneHeader hasFocus>
+        <PaneHeader id="pane-header" style={styles.header} hasFocus>
           <PaneButton
             id="javalab-console-clear"
             headerHasFocus
@@ -162,8 +162,10 @@ const styles = {
     color: color.black
   },
   container: {
+    marginTop: 30,
     display: 'flex',
-    height: 170
+    flexGrow: 1,
+    overflowY: 'hidden'
   },
   console: {
     flexGrow: 2,
@@ -193,5 +195,11 @@ const styles = {
   },
   spacer: {
     width: 8
+  },
+  header: {
+    position: 'absolute',
+    textAlign: 'center',
+    lineHeight: '30px',
+    width: '100%'
   }
 };

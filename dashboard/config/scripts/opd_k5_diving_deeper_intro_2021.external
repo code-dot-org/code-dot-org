@@ -4,14 +4,36 @@ description 'description here'
 markdown <<MARKDOWN
 # Introduction to Functions
 
+<img src="https://images.code.org/a9d545b97e53615be6dea756f4e2c50b-image-1623431857938.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
+
 ## CS Concepts 
 
->A **function** is code that you can easily call over and over again.
+A **function** is code that you can easily call over and over again.
 
 Programmers use **functions** to make their code more efficient and reuse segments of code.
 
-## Built-in Features
+### Lesson in Action
 
+Watch this video, <a href="https://www.youtube.com/watch?v=QuIMLel1mmw" target="blank">" Songwriting with Functions,"</a> demsontrating how you might introduce functions to students with the **context-setting** lesson in Course E - Lessons 11:  Songwriting.
 
+**Note:**  The video will open in a new window.  Be sure to return to this online course to continue with lessons.
+
+Click "Continue" to watch a video introducing students to the context-setting lesson activity.
+
+## Learning Platform Features
+
+#### Student Video
+
+Watch this video, <a href="https://studio.code.org/s/coursee-2021/lessons/12/levels/1" target="blank">"Minecraft Hour of Code - The Agent,"</a> which introduces students to the built-in features they will use to program with functions in Course E - Lesson 12:  Functions in Minecraft.
+
+## Concept Progression
+
+* Course F - Lesson 12:  Functions in Minecraft
+	* Introduction to using functions.
+    
+* Course F - Lesson 13:  Functions with Artist
+
+* Course F - Lesson 16:  Functions with Harvester
+	* Students use conditionals with functions.
 
 MARKDOWN

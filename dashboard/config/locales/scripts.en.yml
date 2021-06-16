@@ -22667,7 +22667,7 @@ en:
           description: ''
           student_description: ''
         k5-onlinepd-2021:
-          title: Implementing and Teaching Computer Science Fundamentals '21-'22
+          title: Teaching Computer Science Fundamentals '21-'22
           description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
@@ -22725,7 +22725,7 @@ en:
               description_teacher: ''
             Sprite Lab:
               key: Sprite Lab
-              name: Sprite Lab
+              name: Sequencing with Sprites
               description_student: ''
               description_teacher: ''
             Reviewing your reflections:
@@ -22747,13 +22747,17 @@ en:
             Addressing Implementation Approaches and Barriers:
               name: Implementation Approaches and Barriers
             Lesson Planning:
-              name: Lesson Planning
+              name: Teaching a Lesson
             CS Teaching and Learning Practices:
               name: CS Teaching and Learning Practices
             CS Teaching and Student Practices:
               name: CS Teaching Practices
             Implementation Approaches and Barriers:
-              name: Implementation Approaches and Barriers
+              name: Addressing Barriers
+            Part II Overview:
+              name: Part II Overview
+            Sequencing with Sprites:
+              name: Sequencing with Sprites
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduction
@@ -22766,7 +22770,7 @@ en:
             Introduction:
               display_name: Introduction
             Implementing and Teaching CS:
-              display_name: 'Part I:  Implementing and Teaching CS'
+              display_name: 'Part I:  Teaching and Implementing CS'
           name: k5-onlinepd-2021
         haikubot-pilot:
           lessons:
@@ -23510,17 +23514,17 @@ en:
             lessonGroup-2:
               display_name: 'Preparing to Teach Unit 1: Problem Solving and Computing'
             lessonGroup-3:
-              display_name: 'Unit 2: Web Development'
+              display_name: 'Preparing to Teach Unit 2: Web Development'
             lessonGroup-4:
-              display_name: Content
+              display_name: 'Preparing to Teach Unit 3: Interactive Animations and Games'
             lessonGroup-5:
-              display_name: Content
+              display_name: 'Preparing to Teach Unit 4: The Design Process'
             lessonGroup-6:
-              display_name: Content
+              display_name: 'Preparing to Teach Unit 5: Data and Society'
             lessonGroup-7:
-              display_name: Content
+              display_name: 'Preparing to Teach Unit 6: Physical Computing'
             lessonGroup-8:
-              display_name: Content
+              display_name: 'Preparing to Teach Unit 7: AI and Machine Learning'
           name: self-paced-pl-csd6-2021
           title: Next Steps
           description_audience: ''
@@ -23646,13 +23650,159 @@ en:
         poster-draft:
           lessons:
             lesson-1:
-              name: Interactive Poster
+              name: Story Board
               description_student: 
               description_teacher: 
           lesson_groups: {}
           name: poster-draft
-          title: 'V1_Interactive Poster: Self-Expression'
+          title: Story Board (V1)
           description_audience: ''
-          description_short: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
-          description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
+          description_short: Story Board (V1)
+          description: ''
           student_description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
+        poembot:
+          lessons: {}
+          lesson_groups: {}
+          name: poembot
+          title: Poembot
+          description_audience: ''
+          description_short: ''
+          description: ''
+        outbreak-module:
+          lessons: {}
+          lesson_groups: {}
+          name: outbreak-module
+          title: Outbreak
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csa1-exemplars:
+          lessons:
+            lesson-1:
+              name: Welcome to CSA
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Classes and Objects
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Using Commands
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Conditionals and Debugging
+            lesson-5:
+              name: More with Objects
+            lesson-6:
+              name: While Loops and Practice
+            lesson-7:
+              name: More with Conditionals
+            lesson-8:
+              name: Introduction to Code Reviews
+            lesson-9:
+              name: Inheritance and Methods
+            lesson-10:
+              name: More Methods, More Features
+            lesson-11:
+              name: Painting Methods
+            lesson-12:
+              name: Spray Painter
+            lesson-13:
+              name: StampPainter
+            lesson-14:
+              name: Edge Cases
+            lesson-15:
+              name: Software Engineering Wrap Up
+            lesson-16:
+              name: 'Project: Personal Symbol - Day 1'
+            lesson-17:
+              name: 'Project: Personal Symbol - Day 2'
+            lesson-18:
+              name: 'Project: Personal Symbol - Day 3'
+            lesson-19:
+              name: FRQ Day
+            lesson-20:
+              name: Assessment Day
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa1-exemplars
+          title: Unit 1 - Object Oriented Programming [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csa2-exemplars:
+          lessons:
+            lesson-1:
+              name: Defining Attributes
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Using Variables
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Writing Constructors
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Adding Multiple Constructors
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Manipulating Variables and Object Data
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Minimizing Errors in Initialization
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Writing Constructors for Hierarchies
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Accessing Object Data
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Modifying Object Data
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Displaying Object Information
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: 'Project: The Neighborhood Store Management - Day 1'
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: 'Project: The Neighborhood Store Management - Day 2'
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: 'Project: The Neighborhood Store Management - Day 3'
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: FRQ Day
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: Assessment Day
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa2-exemplars
+          title: Unit 2 - Giving Objects State [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
