@@ -30,7 +30,8 @@ class JavalabView extends React.Component {
     isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
     setIsDarkMode: PropTypes.func,
-    channelId: PropTypes.string
+    channelId: PropTypes.string,
+    isEditingStartSources: PropTypes.bool
   };
 
   state = {
@@ -100,7 +101,8 @@ class JavalabView extends React.Component {
       onCommitCode,
       onInputMessage,
       onContinue,
-      handleVersionHistory
+      handleVersionHistory,
+      isEditingStartSources
     } = this.props;
     const {isRunning, isTesting} = this.state;
 
@@ -115,11 +117,13 @@ class JavalabView extends React.Component {
         <div style={styles.javalab}>
           <div style={styles.buttons}>
             <JavalabSettings>{this.renderSettings()}</JavalabSettings>
-            <JavalabButton
-              text={i18n.finish()}
-              onClick={onContinue}
-              style={styles.finish}
-            />
+            {!isEditingStartSources && (
+              <JavalabButton
+                text={i18n.finish()}
+                onClick={onContinue}
+                style={styles.finish}
+              />
+            )}
           </div>
           <div style={styles.editorAndVisualization}>
             <div
@@ -225,7 +229,8 @@ export default connect(
     isProjectLevel: state.pageConstants.isProjectLevel,
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     channelId: state.pageConstants.channelId,
-    isDarkMode: state.javalab.isDarkMode
+    isDarkMode: state.javalab.isDarkMode,
+    isEditingStartSources: state.pageConstants.isEditingStartSources
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
