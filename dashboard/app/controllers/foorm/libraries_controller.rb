@@ -19,7 +19,7 @@ module Foorm
 
       categories = library_names_and_versions.map {|data| data[:name].slice(0, data[:name].rindex('/'))}.uniq
 
-      @script_data = {
+      @unit_data = {
         props: {
           libraryNamesAndVersions: library_names_and_versions,
           libraryCategories: categories

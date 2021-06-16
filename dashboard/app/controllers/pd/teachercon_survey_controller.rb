@@ -10,7 +10,7 @@ class Pd::TeacherconSurveyController < ApplicationController
 
     workshop = @pd_enrollment.workshop
 
-    @script_data = {
+    @unit_data = {
       props: {
         apiEndpoint: "/api/v1/pd/teachercon_surveys",
         facilitatorNames: workshop.facilitators.map(&:name),

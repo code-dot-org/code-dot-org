@@ -4,7 +4,7 @@
 
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
-  %script{src: webpack_asset_path('js/pd/workshop_survey/new.js'), data: @script_data}
+  %script{src: webpack_asset_path('js/pd/workshop_survey/new.js'), data: @unit_data}
 
 %h1
   = @page_title

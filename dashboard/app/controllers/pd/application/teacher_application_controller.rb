@@ -21,7 +21,7 @@ module Pd::Application
 
       @year = APPLICATION_CURRENT_YEAR
 
-      @script_data = {
+      @unit_data = {
         props: {
           options: TEACHER_APPLICATION_CLASS.options.camelize_keys,
           requiredFields: TEACHER_APPLICATION_CLASS.camelize_required_fields,

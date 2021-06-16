@@ -7,7 +7,7 @@ class Pd::InternationalOptInController < ApplicationController
     return render '/pd/application/teacher_application/not_teacher' unless current_user.teacher?
     return render '/pd/application/teacher_application/no_teacher_email' unless current_user.email.present?
 
-    @script_data = {
+    @unit_data = {
       props: {
         options: Pd::InternationalOptIn.options.camelize_keys,
         accountEmail: current_user.email,

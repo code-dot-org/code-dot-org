@@ -43,7 +43,7 @@ module Pd::Application
 
       @year = APPLICATION_CURRENT_YEAR
 
-      @script_data = {
+      @unit_data = {
         props: {
           options: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options.camelize_keys,
           requiredFields: PRINCIPAL_APPROVAL_APPLICATION_CLASS.camelize_required_fields,

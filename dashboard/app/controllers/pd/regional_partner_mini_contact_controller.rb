@@ -13,7 +13,7 @@ class Pd::RegionalPartnerMiniContactController < ApplicationController
       }
     )
 
-    @script_data = {
+    @unit_data = {
       props: {
         options: options,
         apiEndpoint: "/api/v1/pd/regional_partner_mini_contacts"

@@ -11,7 +11,7 @@ module Pd
         RegionalPartnerSerializer.new(regional_partner).attributes
       end
 
-      @script_data = {
+      @unit_data = {
         props: {
           regionalPartners: serialized_partners,
           isWorkshopAdmin: is_workshop_admin,

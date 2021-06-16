@@ -17,7 +17,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     if @workshop.nil?
       render_404
     elsif workshop_closed?
-      @script_data = {
+      @unit_data = {
         props: {
           workshop: {
             organizer: @workshop.organizer
@@ -26,7 +26,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         }.to_json
       }
     elsif workshop_full?
-      @script_data = {
+      @unit_data = {
         props: {
           workshop: {
             organizer: @workshop.organizer
@@ -69,7 +69,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.where(user: current_user).empty? &&
         @workshop.local_summer?
 
-      @script_data = {
+      @unit_data = {
         props: {
           workshop: @workshop.attributes.merge(
             {
@@ -158,7 +158,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     elsif @enrollment.attendances.any?
       render :attended
     else
-      @script_data = {
+      @unit_data = {
         props: {
           enrollmentCode: @enrollment.code,
           workshopFriendlyName: @enrollment.workshop.friendly_name

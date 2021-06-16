@@ -24,7 +24,7 @@ module Pd::Application
 
       return render :closed unless FACILITATOR_APPLICATION_CLASS.open? || params[:extend_deadline]
 
-      @script_data = {
+      @unit_data = {
         props: {
           options: FACILITATOR_APPLICATION_CLASS.options.camelize_keys,
           requiredFields: FACILITATOR_APPLICATION_CLASS.camelize_required_fields,

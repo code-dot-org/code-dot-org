@@ -43,9 +43,9 @@ class CensusReviewersController < ApplicationController
   end
 
   def review_reported_inaccuracies
-    @script_data = {}
-    @script_data[:authenticityToken] = form_authenticity_token
+    @unit_data = {}
+    @unit_data[:authenticityToken] = form_authenticity_token
     inaccuracy_reports = Census::CensusSubmission.unresolved_reported_inaccuracies
-    @script_data[:reportsToReview] = inaccuracy_reports.map(&:inaccuracy_review_data).flatten.compact.map(&:to_json)
+    @unit_data[:reportsToReview] = inaccuracy_reports.map(&:inaccuracy_review_data).flatten.compact.map(&:to_json)
   end
 end

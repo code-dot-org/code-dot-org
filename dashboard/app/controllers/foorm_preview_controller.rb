@@ -10,7 +10,7 @@ class FoormPreviewController < ApplicationController
       }
     end
 
-    @script_data = {
+    @unit_data = {
       props: {
         forms: forms
       }.to_json
@@ -56,7 +56,7 @@ class FoormPreviewController < ApplicationController
       workshop_agenda: params[:workshopAgenda] || "module1"
     }
 
-    @script_data = {
+    @unit_data = {
       props: {
         formQuestions: form_questions,
         formName: name,

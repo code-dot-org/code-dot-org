@@ -27,7 +27,7 @@ module Pd
         return render_404
       end
 
-      @script_data = {
+      @unit_data = {
         props: {
           permissionList: permission_list,
           facilitatorCourses: facilitator_courses,

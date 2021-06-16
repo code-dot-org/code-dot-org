@@ -17,7 +17,7 @@
     = f.hidden_field :name
   .edit_container
   %script{src: webpack_asset_path('js/scripts/edit.js'),
-          data: {levelBuilderEditScript: @script_data.to_json}}
+          data: {levelBuilderEditScript: @unit_data.to_json}}
 
 - if @show_all_instructions
   - @script.lessons.each do |lesson|

@@ -9,7 +9,7 @@ class Pd::PreWorkshopSurveyController < ApplicationController
     return render_404 unless @workshop.try(:pre_survey?)
 
     @workshop_date = @workshop.sessions.first.start.strftime('%-m/%-d/%y')
-    @script_data = {
+    @unit_data = {
       props: {
         options: Pd::PreWorkshopSurvey.options.camelize_keys,
         requiredFields: Pd::PreWorkshopSurvey.camelize_required_fields,

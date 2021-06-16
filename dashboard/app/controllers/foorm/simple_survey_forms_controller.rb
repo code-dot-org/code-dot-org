@@ -69,7 +69,7 @@ module Foorm
         return render :thanks if response_exists?(key_params)
       end
 
-      @script_data = {
+      @unit_data = {
         props: {
           formQuestions: form_questions,
           formName: form_data[:form_name],
@@ -104,7 +104,7 @@ module Foorm
 
       return render json: {}, status: :no_content if !form_questions || (!form_data[:allow_multiple_submissions] && response_exists?(key_params))
 
-      render json: @script_data = {
+      render json: @unit_data = {
         props: {
           formQuestions: form_questions,
           formName: form_data[:form_name],

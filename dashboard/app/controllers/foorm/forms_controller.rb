@@ -10,7 +10,7 @@ module Foorm
       formatted_names_and_versions = Foorm::Form.all.map {|form| {name: form.name, version: form.version, id: form.id}}
       categories = formatted_names_and_versions.map {|data| data[:name].slice(0, data[:name].rindex('/'))}.uniq
 
-      @script_data = {
+      @unit_data = {
         props: {
           formNamesAndVersions: formatted_names_and_versions,
           formCategories: categories

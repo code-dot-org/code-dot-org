@@ -18,7 +18,7 @@ class Pd::WorkshopSurveyController < ApplicationController
     demographics_required_fields = @pd_enrollment.survey_class.camelize_fields @pd_enrollment.survey_class.demographics_required_fields
     implementation_required_fields = @pd_enrollment.survey_class.camelize_fields @pd_enrollment.survey_class.implementation_required_fields
 
-    @script_data = {
+    @unit_data = {
       props: {
         options: @pd_enrollment.survey_class.options.camelize_keys,
         requiredFields: @pd_enrollment.survey_class.camelize_required_fields,

@@ -18,7 +18,7 @@ class Pd::FitWeekendRegistrationController < ApplicationController
       return
     end
 
-    @script_data = {
+    @unit_data = {
       props: {
         options: FIT_WEEKEND_REGISTRATION_CLASS.options.camelize_keys,
         requiredFields: FIT_WEEKEND_REGISTRATION_CLASS.camelize_required_fields,
