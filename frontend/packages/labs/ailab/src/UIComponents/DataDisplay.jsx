@@ -8,16 +8,11 @@ import { styles } from "../constants";
 
 class DataDisplay extends Component {
   static propTypes = {
-    data: PropTypes.array,
-    removedRowsCount: PropTypes.number
+    data: PropTypes.array
   };
 
   render() {
-    const { data, removedRowsCount } = this.props;
-    const removedRowsMsg =
-      removedRowsCount === 1
-      ? `${this.props.removedRowsCount} row was removed because it contained an empty cell.`
-      : `${this.props.removedRowsCount} rows were removed because they contained an empty cell.`;
+    const { data } = this.props;
 
     if (data.length === 0) {
       return null;
@@ -31,12 +26,6 @@ class DataDisplay extends Component {
         </div>
         <div style={styles.footerText}>
           There are {this.props.data.length} rows of data.
-          {removedRowsCount > 0 &&
-            <span>
-              &nbsp;
-              {removedRowsMsg}
-            </span>
-          }
           {this.props.data.length > 100 &&
             <span>
               &nbsp;
@@ -51,7 +40,6 @@ class DataDisplay extends Component {
 
 export default connect(
   state => ({
-    data: state.data,
-    removedRowsCount: state.removedRowsCount
+    data: state.data
   })
 )(DataDisplay);

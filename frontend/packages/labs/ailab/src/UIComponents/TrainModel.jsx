@@ -2,6 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { store } from "../index.js";
 import train from "../train";
 import { readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
@@ -35,8 +36,8 @@ class TrainModel extends Component {
   }
 
   componentDidMount() {
-    train.init();
-    train.onClickTrain();
+    train.init(store);
+    train.onClickTrain(store);
 
     const animationTimer = setInterval(
       this.updateAnimation.bind(this),
