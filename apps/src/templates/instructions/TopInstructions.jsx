@@ -594,20 +594,8 @@ class TopInstructions extends Component {
 
     const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
 
-    /*
-     * The feedback tab will be the Key Concept tab if there is a mini rubric and:
-     * 1) Teacher is viewing the level but not giving feedback to the student
-     * 2) Student does not have any feedback for that level
-     * The Key Concept tab shows the Key Concept and Rubric for the level in a view
-     * only form
-     */
-    const displayReadonlyRubric =
-      rubric &&
-      ((this.isViewingAsStudent && !studentHasFeedback) ||
-        (this.isViewingAsTeacher && !teacherViewingStudentWork));
-
     const displayFeedback =
-      displayReadonlyRubric || teacherViewingStudentWork || studentHasFeedback;
+      !!rubric || teacherViewingStudentWork || studentHasFeedback;
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -649,7 +637,7 @@ class TopInstructions extends Component {
           isCSDorCSP={isCSDorCSP}
           displayHelpTab={displayHelpTab}
           displayFeedback={displayFeedback}
-          displayKeyConcept={displayReadonlyRubric} // Key Concept tab displays a readonly rubric
+          levelHasRubric={!!rubric}
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
@@ -689,8 +677,7 @@ class TopInstructions extends Component {
               <TeacherFeedback
                 user={user}
                 visible={tabSelected === TabType.COMMENTS}
-                displayReadonlyRubric={displayReadonlyRubric}
-                disabledMode={
+                isReadonly={
                   this.isViewingAsStudent || !teacherViewingStudentWork
                 }
                 rubric={rubric}

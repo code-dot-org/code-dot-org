@@ -14,7 +14,6 @@ const DEFAULT_PROPS = {
   },
   performance: null,
   isReadonly: false,
-  disabledMode: false,
   onRubricChange: () => {},
   viewAs: ViewType.Teacher
 };

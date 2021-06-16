@@ -30,13 +30,12 @@ const keepWorkingExperiment = 'teacher-feedback-review-state';
 export class TeacherFeedback extends Component {
   static propTypes = {
     user: PropTypes.number,
-    disabledMode: PropTypes.bool.isRequired,
+    isReadonly: PropTypes.bool.isRequired,
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
     serverScriptId: PropTypes.number,
     serverLevelId: PropTypes.number,
     teacher: PropTypes.number,
-    displayReadonlyRubric: PropTypes.bool,
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
     //Provided by Redux
@@ -234,14 +233,7 @@ export class TeacherFeedback extends Component {
   }
 
   render() {
-    const {
-      verifiedTeacher,
-      viewAs,
-      rubric,
-      visible,
-      displayReadonlyRubric,
-      disabledMode
-    } = this.props;
+    const {verifiedTeacher, viewAs, rubric, visible, isReadonly} = this.props;
 
     const {comment, performance, latestFeedback, errorState} = this.state;
 
@@ -255,6 +247,9 @@ export class TeacherFeedback extends Component {
 
     const displayComment = !!comment || viewAs === ViewType.Teacher;
 
+    const displayCommentSection =
+      !isReadonly || (viewAs === ViewType.Student && !!latestFeedback);
+
     if (!visible) {
       return null;
     }
@@ -267,13 +262,12 @@ export class TeacherFeedback extends Component {
           <Rubric
             rubric={rubric}
             performance={performance}
-            isReadonly={displayReadonlyRubric}
-            disabledMode={disabledMode}
+            isReadonly={isReadonly}
             onRubricChange={this.onRubricChange}
             viewAs={viewAs}
           />
         )}
-        {!displayReadonlyRubric && (
+        {displayCommentSection && (
           <div style={styles.commentAndFooter}>
             {viewAs === ViewType.Teacher &&
               this.renderCommentAreaHeaderForTeacher()}
@@ -281,7 +275,7 @@ export class TeacherFeedback extends Component {
               this.renderCommentAreaHeaderForStudent()}
             {displayComment && (
               <Comment
-                isReadonly={disabledMode}
+                isReadonly={isReadonly}
                 comment={comment}
                 placeholderText={placeholderText}
                 onCommentChange={this.onCommentChange}
