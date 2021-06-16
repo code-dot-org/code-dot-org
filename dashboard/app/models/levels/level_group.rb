@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 class LevelGroup < DSLDefined
@@ -30,7 +31,7 @@ class LevelGroup < DSLDefined
 
   def dsl_default
     <<~ruby
-      name 'unique level name here'
+      name '#{DEFAULT_LEVEL_NAME}'
       title 'title of the assessment here'
       submittable 'true'
       anonymous 'false'

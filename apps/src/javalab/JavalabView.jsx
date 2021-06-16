@@ -13,6 +13,8 @@ import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import ControlButtons from './ControlButtons';
 import JavalabButton from './JavalabButton';
 
+const FOOTER_BUFFER = 10;
+
 class JavalabView extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
@@ -35,11 +37,13 @@ class JavalabView extends React.Component {
 
   state = {
     isRunning: false,
-    isTesting: false
+    isTesting: false,
+    rightContainerHeight: 800
   };
 
   componentDidMount() {
     this.props.onMount();
+    this.setRightContainerHeight();
   }
 
   compile = () => {
@@ -94,6 +98,15 @@ class JavalabView extends React.Component {
     return <div id="visualization" />;
   };
 
+  setRightContainerHeight = () => {
+    let rightContainerHeight = this.editorAndVisualization.getBoundingClientRect()
+      .top;
+    let topPos = window.innerHeight - rightContainerHeight - FOOTER_BUFFER;
+    this.setState({
+      rightContainerHeight: topPos
+    });
+  };
+
   render() {
     const {
       isDarkMode,
@@ -102,7 +115,7 @@ class JavalabView extends React.Component {
       onContinue,
       handleVersionHistory
     } = this.props;
-    const {isRunning, isTesting} = this.state;
+    const {isRunning, isTesting, rightContainerHeight} = this.state;
 
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -112,53 +125,63 @@ class JavalabView extends React.Component {
 
     return (
       <StudioAppWrapper>
-        <div style={styles.javalab}>
+        <div
+          style={{
+            ...styles.javalab,
+            ...{height: rightContainerHeight}
+          }}
+        >
+          <div style={styles.buttons}>
+            <JavalabSettings>{this.renderSettings()}</JavalabSettings>
+            <JavalabButton
+              text={i18n.finish()}
+              onClick={onContinue}
+              style={styles.finish}
+            />
+          </div>
           <div
-            id="visualizationColumn"
-            className="responsive"
-            style={styles.instructionsAndPreview}
+            ref={ref => (this.editorAndVisualization = ref)}
+            style={styles.editorAndVisualization}
           >
-            <div style={styles.buttons}>
-              <JavalabSettings>{this.renderSettings()}</JavalabSettings>
-              <JavalabButton
-                text={i18n.continue()}
-                onClick={onContinue}
-                style={styles.continue}
+            <div
+              id="visualizationColumn"
+              className="responsive"
+              style={styles.instructionsAndPreview}
+            >
+              <TopInstructions
+                mainStyle={styles.instructions}
+                standalone
+                displayDocumentationTab
+                displayReviewTab
+              />
+              {this.renderVisualization()}
+            </div>
+            <VisualizationResizeBar />
+            <div
+              style={{
+                ...styles.editorAndConsole,
+                color: isDarkMode ? color.white : color.black
+              }}
+              className="editor-column"
+            >
+              <JavalabEditor
+                onCommitCode={onCommitCode}
+                handleVersionHistory={handleVersionHistory}
+              />
+              <JavalabConsole
+                onInputMessage={onInputMessage}
+                style={styles.consoleParent}
+                leftColumn={
+                  <ControlButtons
+                    isDarkMode={isDarkMode}
+                    isRunning={isRunning}
+                    isTesting={isTesting}
+                    toggleRun={this.toggleRun}
+                    toggleTest={this.toggleTest}
+                  />
+                }
               />
             </div>
-            <TopInstructions
-              mainStyle={styles.instructions}
-              standalone
-              displayDocumentationTab
-              displayReviewTab
-            />
-            {this.renderVisualization()}
-          </div>
-          <VisualizationResizeBar />
-          <div
-            style={{
-              ...styles.editorAndConsole,
-              color: isDarkMode ? color.white : color.black
-            }}
-            className="editor-column"
-          >
-            <JavalabEditor
-              onCommitCode={onCommitCode}
-              handleVersionHistory={handleVersionHistory}
-            />
-            <JavalabConsole
-              onInputMessage={onInputMessage}
-              leftColumn={
-                <ControlButtons
-                  isDarkMode={isDarkMode}
-                  isRunning={isRunning}
-                  isTesting={isTesting}
-                  toggleRun={this.toggleRun}
-                  toggleTest={this.toggleTest}
-                />
-              }
-              style={styles.console}
-            />
           </div>
         </div>
       </StudioAppWrapper>
@@ -168,12 +191,8 @@ class JavalabView extends React.Component {
 
 const styles = {
   instructionsAndPreview: {
-    width: '100%',
-    position: 'absolute',
-    marginRight: 15,
     color: color.black,
-    right: '15px',
-    top: '15px'
+    right: '15px'
   },
   instructions: {
     width: '100%',
@@ -183,9 +202,24 @@ const styles = {
     left: 0
   },
   editorAndConsole: {
-    position: 'absolute',
     right: '15px',
-    marginLeft: '15px'
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  consoleParent: {
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
+    flexGrow: 1,
+    overflowY: 'hidden'
+  },
+  editorAndVisualization: {
+    display: 'flex',
+    flexGrow: '1',
+    height: '100%'
   },
   preview: {
     backgroundColor: color.light_gray,
@@ -194,21 +228,26 @@ const styles = {
   },
   javalab: {
     display: 'flex',
-    margin: 15
-  },
-  console: {
-    marginTop: 15
+    flexWrap: 'wrap'
   },
   clear: {
     clear: 'both'
   },
   buttons: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    width: '100%',
+    margin: '10px 0',
+    overflowY: 'hidden'
   },
-  continue: {
+  finish: {
     backgroundColor: color.orange,
-    fontSize: 15
+    borderColor: color.orange,
+    fontFamily: '"Gotham 5r"',
+    fontSize: '15px',
+    padding: '1px 8px',
+    margin: '5px 0 5px 5px'
   }
 };
 

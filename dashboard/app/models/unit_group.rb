@@ -2,15 +2,17 @@
 #
 # Table name: unit_groups
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
-#  properties :text(65535)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id              :integer          not null, primary key
+#  name            :string(255)
+#  properties      :text(65535)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  published_state :string(255)
 #
 # Indexes
 #
-#  index_unit_groups_on_name  (name)
+#  index_unit_groups_on_name             (name)
+#  index_unit_groups_on_published_state  (published_state)
 #
 
 require 'cdo/script_constants'
@@ -29,6 +31,8 @@ class UnitGroup < ApplicationRecord
   after_save :write_serialization
 
   scope :with_associated_models, -> {includes([:plc_course, :default_unit_group_units])}
+
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
 
   FAMILY_NAMES = [
     CSD = 'csd'.freeze,
@@ -303,7 +307,7 @@ class UnitGroup < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table.
   def self.valid_courses_without_cache
-    UnitGroup.all.select(&:visible?)
+    UnitGroup.all.select(&:launched?)
   end
 
   # Returns whether the course id is valid, even if it is not "stable" yet.
@@ -316,10 +320,16 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @returns [Boolean] Whether the user can assign this course.
   # Users should only be able to assign one of their valid courses.
-  def assignable?(user)
+  def assignable_for_user?(user)
     if user&.teacher?
       UnitGroup.valid_course_id?(id)
     end
+  end
+
+  # A course that the general public can assign. Has been soft or
+  # hard launched.
+  def launched?
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
   def published_state
@@ -361,7 +371,7 @@ class UnitGroup < ApplicationRecord
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
-      show_assign_button: assignable?(user),
+      show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
       course_path: link
@@ -398,7 +408,7 @@ class UnitGroup < ApplicationRecord
   def summarize_versions(user = nil)
     return [] unless family_name
 
-    # Include visible courses, plus self if not already included
+    # Include launched courses, plus self if not already included
     courses = UnitGroup.valid_courses(user: user).clone(freeze: false)
     courses.append(self) unless courses.any? {|c| c.id == id}
 

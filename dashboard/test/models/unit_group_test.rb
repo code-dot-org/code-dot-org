@@ -330,7 +330,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal SharedConstants::PUBLISHED_STATE.pilot, unit_group.published_state
   end
 
-  test 'unit group with visible false has beta published state' do
+  test 'unit group with visible false and no pilot_experiment has beta published state' do
     unit_group = create(:unit_group, name: 'single-lesson-script', visible: false)
     assert_equal SharedConstants::PUBLISHED_STATE.beta, unit_group.published_state
   end
@@ -466,7 +466,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     resource = create :resource, course_version: course_version
     vocab = create :vocabulary, course_version: course_version
 
-    source = "We support [r #{Services::MarkdownPreprocessor.build_resource_key(resource)}] resource links and [v #{Services::MarkdownPreprocessor.build_vocab_key(vocab)}] vocabulary definitions"
+    source = "We support [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}] resource links and [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}] vocabulary definitions"
     I18n.stubs(:t).returns(source)
 
     expected = "We support [fake name](fake.url) resource links and <span class=\"vocab\" title=\"definition\">word</span> vocabulary definitions"

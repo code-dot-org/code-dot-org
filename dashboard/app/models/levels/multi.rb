@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 require "csv"
@@ -28,7 +29,7 @@ require "csv"
 class Multi < Match
   def dsl_default
     <<~ruby
-      name 'unique level name here'
+      name '#{DEFAULT_LEVEL_NAME}'
       title 'title'
       description 'description here'
       question 'Question'

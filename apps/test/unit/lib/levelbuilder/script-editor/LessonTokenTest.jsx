@@ -4,7 +4,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import LessonToken, {
   LessonTokenContents
-} from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
+} from '@cdo/apps/lib/levelbuilder/unit-editor/LessonToken';
 
 const defaultLesson = {
   id: 10,

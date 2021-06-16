@@ -247,7 +247,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can setup new migrated script' do
-    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     # the contents of test-migrated-new.script and test-migrated-new.script_json
     # reflect that of a new script which has been modified only by adding
@@ -260,7 +260,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can setup migrated script with new models' do
-    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     # test that LessonActivity, ActivitySection and Objective can be seeded
     # from .script_json when is_migrated is specified in the .script file.
@@ -289,7 +289,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'script_json settings override take precedence for migrated script' do
-    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-overrides.script')
     Script.setup([script_file])
@@ -1229,18 +1229,18 @@ class ScriptTest < ActiveSupport::TestCase
     # No user, show_assign_button set to nil
     assert_nil script.summarize[:show_assign_button]
 
-    # Teacher should be able to assign a visible script.
-    assert_equal false, script.summarize[:hidden]
+    # Teacher should be able to assign a launched script.
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.summarize[:publishedState]
     assert_equal true, script.summarize(true, create(:teacher))[:show_assign_button]
 
     # Teacher should not be able to assign a hidden script.
     hidden_script = create(:script, name: 'unassignable-hidden', hidden: true)
-    assert_equal true, hidden_script.summarize[:hidden]
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, hidden_script.summarize[:publishedState]
     assert_equal false, hidden_script.summarize(true, create(:teacher))[:show_assign_button]
 
     # Student should not be able to assign a script,
     # regardless of visibility.
-    assert_equal false, script.summarize[:hidden]
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.summarize[:publishedState]
     assert_nil script.summarize(true, create(:student))[:show_assign_button]
   end
 
@@ -1263,7 +1263,7 @@ class ScriptTest < ActiveSupport::TestCase
     resource = create :resource, key: 'resource', course_version: course_version
     vocab = create :vocabulary, key: 'vocab', course_version: course_version
 
-    source = "We support [r #{Services::MarkdownPreprocessor.build_resource_key(resource)}] resource links and [v #{Services::MarkdownPreprocessor.build_vocab_key(vocab)}] vocabulary definitions"
+    source = "We support [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}] resource links and [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}] vocabulary definitions"
     expected = "We support [fake name](fake.url) resource links and <span class=\"vocab\" title=\"definition\">word</span> vocabulary definitions"
     script = create :script
     script.stubs(:localized_description).returns(source)
@@ -1788,7 +1788,7 @@ class ScriptTest < ActiveSupport::TestCase
     script = Script.find_by!(name: script_names.first)
     assert_equal 1, script.announcements.count
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-copy', script_copy.name
     assert_nil script_copy.family_name
@@ -1845,7 +1845,7 @@ class ScriptTest < ActiveSupport::TestCase
     # some properties that should not change
     assert script.curriculum_path
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-all-properties-copy', script_copy.name
 
@@ -1864,7 +1864,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_names, _ = Script.setup([script_file])
     script = Script.find_by!(name: script_names.first)
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('1802')
 
     # make sure the old suffix is removed before the new one is added.
@@ -1880,7 +1880,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_names, _ = Script.setup([script_file])
     script = Script.find_by!(name: script_names.first)
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-experiments-copy', script_copy.name
 
@@ -1911,7 +1911,7 @@ class ScriptTest < ActiveSupport::TestCase
     script = Script.find_by!(name: script_names.first)
     assert_equal 1, script.announcements.count
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy', editor_experiment: 'script-editors')
     assert_equal 'test-fixture-copy', script_copy.name
     assert_equal 'script-editors', script_copy.editor_experiment

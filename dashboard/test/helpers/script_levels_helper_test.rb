@@ -50,7 +50,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
   test 'show lesson position in header for default script' do
     stubs(:current_user).returns(nil)
-    script_level = Script.twenty_hour_script.script_levels.fifth
+    script_level = Script.twenty_hour_unit.script_levels.fifth
     assert_equal 'Lesson 2: The Maze', script_level.lesson.summarize[:title]
   end
 

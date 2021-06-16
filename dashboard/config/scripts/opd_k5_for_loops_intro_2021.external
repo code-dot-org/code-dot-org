@@ -4,15 +4,24 @@ description 'description here'
 markdown <<MARKDOWN
 # Introduction to For Loops
 
-<img src="https://images.code.org/9d05ff62f3098c6143eff78553e05f06-image-1571780679511.jpg" class="level-image">
+<img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
 ## CS Concept
 
->A **for loop** is a loop with a predetermined beginning, end, and increment (step interval).
+A **for loop** is a loop with a predetermined beginning, end, and increment (step interval).
 
-## Built-in Features
+#### Lesson in Action
 
-The video, "Variables,"
+Watch <a href="https://www.youtube.com/watch?v=HO4uhoahtjM" target="blank">this video </a> demonstrating how you might introduce "for loops" to students with the **context-setting** lesson in Course F - Lesson 13:  For Loop Fun. 
+
+## Learning Platform Features
+
+Watch <a href="https://studio.code.org/s/coursef-2021/lessons/14/levels/4" target="blank">this video </a> from Course F - Lesson 14, Level 4:  For Loops with Bee that introduces students to using a counter variable. 
+
+Students engage with Maze Puzzles and The Artist as they learn about "for loops."
 
 ## Concept Progression
+
+* Course F - Lesson 14, Levels 7 and 8: For Loops with Bee
+* Course F - Lesson 15, Levels 3 and 4: For Loops with Artist
 MARKDOWN

@@ -10,6 +10,7 @@ require 'fileutils'
 require 'json'
 require 'digest/md5'
 
+require_relative 'curriculum_sync_utils'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
@@ -17,6 +18,7 @@ require_relative '../animation_assets/manifest_builder'
 
 def sync_in
   puts "Sync in starting"
+  CurriculumSyncUtils.sync_in
   HocSyncUtils.sync_in
   localize_level_and_project_content
   localize_block_content
@@ -268,31 +270,7 @@ def localize_level_content(variable_strings, parameter_strings)
       script_i18n_name = "#{script.name}.json"
       script_i18n_filename = File.join(script_i18n_directory, script_i18n_name)
 
-      # If a script is updated such that its destination directory changes
-      # after creation, we can end up in a situation in which we have multiple
-      # copies of the script file in the repo, which makes it difficult for the
-      # sync out to know which is the canonical version.
-      #
-      # To prevent that, here we proactively check for existing files in the
-      # filesystem with the same filename as our target script file, but a
-      # different directory. If found, we refuse to create the second such
-      # script file and notify of the attempt, so the issue can be manually
-      # resolved.
-      #
-      # Note we could try here to remove the old version of the file both from
-      # the filesystem and from github, but it would be significantly harder to
-      # also remove it from Crowdin.
-      matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|
-        other_filename == script_i18n_filename
-      end
-      unless matching_files.empty?
-        # Clean up the file paths, just to make our output a little nicer
-        base = Pathname.new(level_content_directory)
-        relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
-        relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
-        STDERR.puts "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
-        next
-      end
+      next if I18nScriptUtils.unit_directory_change?(script_i18n_name, script_i18n_filename)
 
       File.write(script_i18n_filename, JSON.pretty_generate(script_strings))
     end
