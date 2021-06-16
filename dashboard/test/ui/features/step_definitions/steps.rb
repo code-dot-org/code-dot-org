@@ -166,7 +166,7 @@ When /^I reset the puzzle to the starting version$/ do
     Then I click selector "#versions-header"
     And I wait until element "button:contains(Start over)" is visible
     And I click selector "button:contains(Start over)"
-    And I click selector "#confirm-button"
+    And I click selector "#start-over-button"
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
   STEPS

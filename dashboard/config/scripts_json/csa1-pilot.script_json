@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-10 18:27:43 UTC",
+    "serialized_at": "2021-06-15 16:19:36 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -4939,6 +4939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L1"
+        ],
         "progression": "Movement Commands"
       },
       "named_level": false,
