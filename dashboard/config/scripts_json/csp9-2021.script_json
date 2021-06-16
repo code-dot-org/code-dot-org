@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-07 16:39:11 UTC",
+    "serialized_at": "2021-06-14 21:48:26 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -1740,7 +1740,7 @@
       "key": "973186fb-7622-4f93-8823-9ee1fd5899d6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which steps of this process to you think have to be done by humans? Would you be concerned if any of them were automated?*\n\nTime may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which steps of this process do you think have to be done by humans? Would you be concerned if any of them were automated?*\n\nTime may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias.",
         "tips": [
           {
             "type": "teachingTip",

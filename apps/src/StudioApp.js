@@ -676,6 +676,7 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
     ReactDOM.render(
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
+        isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
         useFilesApi: !!config.useFilesApi
       }),
       contentDiv
