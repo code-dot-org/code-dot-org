@@ -2,7 +2,7 @@ import React from 'react';
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {UnconnectedScriptOverviewHeader as ScriptOverviewHeader} from '@cdo/apps/code-studio/components/progress/ScriptOverviewHeader';
+import {UnconnectedUnitOverviewHeader as UnitOverviewHeader} from '@cdo/apps/code-studio/components/progress/UnitOverviewHeader';
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
@@ -26,16 +26,16 @@ const defaultProps = {
   versions: []
 };
 
-describe('ScriptOverviewHeader', () => {
+describe('UnitOverviewHeader', () => {
   it('renders', () => {
-    shallow(<ScriptOverviewHeader {...defaultProps} />, {
+    shallow(<UnitOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true
     });
   });
 
   it('includes a PlcHeader if it has plcHeaderProps', () => {
     const wrapper = shallow(
-      <ScriptOverviewHeader
+      <UnitOverviewHeader
         {...defaultProps}
         plcHeaderProps={{
           unitName: 'foo',
@@ -48,14 +48,14 @@ describe('ScriptOverviewHeader', () => {
   });
 
   it('does not have a PlcHeader if we have no plcHeaderProps', () => {
-    const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />, {
+    const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true
     });
     assert.equal(wrapper.find('PlcHeader').length, 0);
   });
 
   it('has no notifications by default', () => {
-    const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />, {
+    const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true
     });
     assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
@@ -63,7 +63,7 @@ describe('ScriptOverviewHeader', () => {
 
   it('includes a single notification default for non-verified teachers', () => {
     const wrapper = shallow(
-      <ScriptOverviewHeader
+      <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
@@ -76,7 +76,7 @@ describe('ScriptOverviewHeader', () => {
 
   it('has non-verified and provided teacher announcements if necessary', () => {
     const wrapper = shallow(
-      <ScriptOverviewHeader
+      <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
@@ -94,7 +94,7 @@ describe('ScriptOverviewHeader', () => {
 
   it('has student announcement if viewing as student', () => {
     const wrapper = shallow(
-      <ScriptOverviewHeader
+      <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
@@ -134,7 +134,7 @@ describe('ScriptOverviewHeader', () => {
       }
     ];
     const wrapper = shallow(
-      <ScriptOverviewHeader
+      <UnitOverviewHeader
         {...defaultProps}
         scriptName="coursea-2018"
         versions={versions}
@@ -154,7 +154,7 @@ describe('ScriptOverviewHeader', () => {
   });
 
   it('has correct unit description for teacher', () => {
-    const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />, {
+    const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true
     });
     expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
@@ -164,7 +164,7 @@ describe('ScriptOverviewHeader', () => {
 
   it('has correct unit description for student', () => {
     const wrapper = shallow(
-      <ScriptOverviewHeader {...defaultProps} viewAs={ViewType.Student} />,
+      <UnitOverviewHeader {...defaultProps} viewAs={ViewType.Student} />,
       {
         disableLifecycleMethods: true
       }

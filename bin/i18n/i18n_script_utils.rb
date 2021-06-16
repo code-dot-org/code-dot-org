@@ -237,7 +237,7 @@ class I18nScriptUtils
   # Note we could try here to remove the old version of the file both from the
   # filesystem and from github, but it would be significantly harder to also
   # remove it from Crowdin.
-  def self.script_directory_change?(script_i18n_name, script_i18n_filename)
+  def self.unit_directory_change?(script_i18n_name, script_i18n_filename)
     level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
 
     matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|

@@ -1,13 +1,13 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
+import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import {Provider} from 'react-redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import reducers, {
   init
-} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {
   stubRedux,
   restoreRedux,
@@ -22,7 +22,7 @@ import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
 import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
-describe('ScriptEditor', () => {
+describe('UnitEditor', () => {
   let defaultProps, store;
   beforeEach(() => {
     sinon.stub(utils, 'navigateToHref');
@@ -66,7 +66,7 @@ describe('ScriptEditor', () => {
       },
       isLevelbuilder: true,
       locales: [],
-      name: 'test-script',
+      name: 'test-unit',
       scriptFamilies: [],
       teacherResources: [],
       versionYearOptions: [],
@@ -77,7 +77,7 @@ describe('ScriptEditor', () => {
       isMigrated: false,
       initialPublishedState: PublishedState.beta,
       hasCourse: false,
-      scriptPath: '/s/test-script',
+      scriptPath: '/s/test-unit',
       initialLessonLevelData:
         "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n"
     };
@@ -92,7 +92,7 @@ describe('ScriptEditor', () => {
     const combinedProps = {...defaultProps, ...overrideProps};
     return mount(
       <Provider store={store}>
-        <ScriptEditor {...combinedProps} />
+        <UnitEditor {...combinedProps} />
       </Provider>
     );
   };
@@ -108,7 +108,7 @@ describe('ScriptEditor', () => {
       assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
     });
 
-    it('uses old script editor for non migrated script', () => {
+    it('uses old unit editor for non migrated unit', () => {
       const wrapper = createWrapper({});
 
       expect(wrapper.find('input').length).to.equal(21);
@@ -122,7 +122,7 @@ describe('ScriptEditor', () => {
       expect(wrapper.find('#script_text').length).to.equal(1);
     });
 
-    it('uses new script editor for migrated script', () => {
+    it('uses new unit editor for migrated unit', () => {
       const wrapper = createWrapper({
         isMigrated: true,
         initialCourseVersionId: 1
@@ -142,21 +142,18 @@ describe('ScriptEditor', () => {
     describe('Teacher Resources', () => {
       it('adds empty resources if passed none', () => {
         const wrapper = createWrapper({});
-        assert.deepEqual(
-          wrapper.find('ScriptEditor').state('teacherResources'),
-          [
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''}
-          ]
-        );
+        assert.deepEqual(wrapper.find('UnitEditor').state('teacherResources'), [
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''}
+        ]);
       });
 
       it('adds empty resources if passed fewer than max', () => {
@@ -166,24 +163,21 @@ describe('ScriptEditor', () => {
           ]
         });
 
-        assert.deepEqual(
-          wrapper.find('ScriptEditor').state('teacherResources'),
-          [
-            {type: ResourceType.curriculum, link: '/foo'},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''},
-            {type: '', link: ''}
-          ]
-        );
+        assert.deepEqual(wrapper.find('UnitEditor').state('teacherResources'), [
+          {type: ResourceType.curriculum, link: '/foo'},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''},
+          {type: '', link: ''}
+        ]);
       });
 
-      it('uses new resource editor for migrated scripts', () => {
+      it('uses new resource editor for migrated units', () => {
         const wrapper = createWrapper({
           isMigrated: true
         });
@@ -217,7 +211,7 @@ describe('ScriptEditor', () => {
       );
     });
 
-    it('must set family name in order to check standalone course', () => {
+    it('must set family name in order to check standalone unit', () => {
       const wrapper = createWrapper({
         initialFamilyName: 'family1'
       });
@@ -263,10 +257,10 @@ describe('ScriptEditor', () => {
 
     it('can save and keep editing', () => {
       const wrapper = createWrapper({});
-      const scriptEditor = wrapper.find('ScriptEditor');
+      const unitEditor = wrapper.find('UnitEditor');
 
       let returnData = {
-        scriptPath: '/s/test-script'
+        scriptPath: '/s/test-unit'
       };
       let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
@@ -284,17 +278,17 @@ describe('ScriptEditor', () => {
 
       // check the the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-      expect(scriptEditor.state().isSaving).to.equal(true);
+      expect(unitEditor.state().isSaving).to.equal(true);
 
       clock = sinon.useFakeTimers(new Date('2020-12-01'));
       const expectedLastSaved = Date.now();
       server.respond();
       clock.tick(50);
 
-      scriptEditor.update();
+      unitEditor.update();
       expect(utils.navigateToHref).to.not.have.been.called;
-      expect(scriptEditor.state().isSaving).to.equal(false);
-      expect(scriptEditor.state().lastSaved).to.equal(expectedLastSaved);
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().lastSaved).to.equal(expectedLastSaved);
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       //check that last saved message is showing
       expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
@@ -302,7 +296,7 @@ describe('ScriptEditor', () => {
 
     it('shows error when save and keep editing has error saving', () => {
       const wrapper = createWrapper({});
-      const scriptEditor = wrapper.find('ScriptEditor');
+      const unitEditor = wrapper.find('UnitEditor');
 
       let returnData = 'There was an error';
       let server = sinon.fakeServer.create();
@@ -321,13 +315,13 @@ describe('ScriptEditor', () => {
 
       // check the the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-      expect(scriptEditor.state().isSaving).to.equal(true);
+      expect(unitEditor.state().isSaving).to.equal(true);
 
       server.respond();
-      scriptEditor.update();
+      unitEditor.update();
       expect(utils.navigateToHref).to.not.have.been.called;
-      expect(scriptEditor.state().isSaving).to.equal(false);
-      expect(scriptEditor.state().error).to.equal('There was an error');
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal('There was an error');
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
@@ -339,7 +333,7 @@ describe('ScriptEditor', () => {
     it('shows error when showCalendar is true and weeklyInstructionalMinutes not provided', () => {
       sinon.stub($, 'ajax');
       const wrapper = createWrapper({initialShowCalendar: true});
-      const scriptEditor = wrapper.find('ScriptEditor');
+      const unitEditor = wrapper.find('UnitEditor');
 
       const saveBar = wrapper.find('SaveBar');
 
@@ -350,8 +344,8 @@ describe('ScriptEditor', () => {
 
       expect($.ajax).to.not.have.been.called;
 
-      expect(scriptEditor.state().isSaving).to.equal(false);
-      expect(scriptEditor.state().error).to.equal(
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
         'Please provide instructional minutes per week in Unit Calendar Settings.'
       );
 
@@ -371,7 +365,7 @@ describe('ScriptEditor', () => {
         initialShowCalendar: true,
         initialWeeklyInstructionalMinutes: -100
       });
-      const scriptEditor = wrapper.find('ScriptEditor');
+      const unitEditor = wrapper.find('UnitEditor');
 
       const saveBar = wrapper.find('SaveBar');
 
@@ -382,8 +376,8 @@ describe('ScriptEditor', () => {
 
       expect($.ajax).to.not.have.been.called;
 
-      expect(scriptEditor.state().isSaving).to.equal(false);
-      expect(scriptEditor.state().error).to.equal(
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
         'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
       );
 
@@ -401,8 +395,8 @@ describe('ScriptEditor', () => {
       sinon.stub($, 'ajax');
       const wrapper = createWrapper({});
 
-      const scriptEditor = wrapper.find('ScriptEditor');
-      scriptEditor.setState({
+      const unitEditor = wrapper.find('UnitEditor');
+      unitEditor.setState({
         publishedState: PublishedState.pilot,
         pilotExperiment: ''
       });
@@ -416,8 +410,8 @@ describe('ScriptEditor', () => {
 
       expect($.ajax).to.not.have.been.called;
 
-      expect(scriptEditor.state().isSaving).to.equal(false);
-      expect(scriptEditor.state().error).to.equal(
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
         'Please provide a pilot experiment in order to save with published state as pilot.'
       );
 
@@ -434,10 +428,10 @@ describe('ScriptEditor', () => {
 
     it('can save and close', () => {
       const wrapper = createWrapper({});
-      const scriptEditor = wrapper.find('ScriptEditor');
+      const unitEditor = wrapper.find('UnitEditor');
 
       let returnData = {
-        scriptPath: '/s/test-script'
+        scriptPath: '/s/test-unit'
       };
       let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
@@ -454,12 +448,12 @@ describe('ScriptEditor', () => {
 
       // check the the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-      expect(scriptEditor.state().isSaving).to.equal(true);
+      expect(unitEditor.state().isSaving).to.equal(true);
 
       server.respond();
-      scriptEditor.update();
+      unitEditor.update();
       expect(utils.navigateToHref).to.have.been.calledWith(
-        `/s/test-script${window.location.search}`
+        `/s/test-unit${window.location.search}`
       );
 
       server.restore();
@@ -467,7 +461,7 @@ describe('ScriptEditor', () => {
 
     it('shows error when save and keep editing has error saving', () => {
       const wrapper = createWrapper({});
-      const scriptEditor = wrapper.find('ScriptEditor');
+      const unitEditor = wrapper.find('UnitEditor');
 
       let returnData = 'There was an error';
       let server = sinon.fakeServer.create();
@@ -485,15 +479,15 @@ describe('ScriptEditor', () => {
 
       // check the the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-      expect(scriptEditor.state().isSaving).to.equal(true);
+      expect(unitEditor.state().isSaving).to.equal(true);
 
       server.respond();
 
-      scriptEditor.update();
+      unitEditor.update();
       expect(utils.navigateToHref).to.not.have.been.called;
 
-      expect(scriptEditor.state().isSaving).to.equal(false);
-      expect(scriptEditor.state().error).to.equal('There was an error');
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal('There was an error');
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
