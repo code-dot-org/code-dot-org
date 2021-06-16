@@ -217,7 +217,7 @@ describe('ScriptEditor', () => {
       );
     });
 
-    it('must set family name in order to check standalone course', () => {
+    it('must set family name in order to check standalone unit', () => {
       const wrapper = createWrapper({
         initialFamilyName: 'family1'
       });
