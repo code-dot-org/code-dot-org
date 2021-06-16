@@ -3,7 +3,7 @@
     "name": "csa1-pilot",
     "wrapup_video_id": null,
     "hidden": true,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "is_migrated": true,
       "curriculum_umbrella": "CSA",
@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-09 19:33:24 UTC",
+    "serialized_at": "2021-06-16 17:41:22 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -1578,6 +1578,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In previous courses, you may have seen commands in App Lab, JavaScript, App Inventor, or Python. Looking to the right side of the slide, you can see what commands in Java look like. \n\nJava is an object-oriented language. Object-oriented programming is a powerful tool, which involves creating and using models of physical or imagined objects.\n",
+        "progression_name": "TEST ",
         "remarks": true,
         "tips": [
           {
@@ -1908,6 +1909,7 @@
       "key": "9945a427-d169-4622-8d5c-37d28e5eba77",
       "position": 4,
       "properties": {
+        "progression_name": "Movement Commands",
         "tips": [
           {
             "type": "teachingTip",
@@ -1937,6 +1939,7 @@
       "key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c",
       "position": 6,
       "properties": {
+        "progression_name": "Painting Commands",
         "tips": [
           {
             "type": "teachingTip",
@@ -4885,6 +4888,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L2"
+        ],
         "progression": "Investigate the Painter"
       },
       "named_level": false,
@@ -4932,10 +4938,166 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U1L3 CFU1"
+          "CSA U1L3-L1"
+        ],
+        "progression": "Movement Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      },
+      "level_keys": [
+        "CSA U1L3-L1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L2"
+        ],
+        "progression": "Movement Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      },
+      "level_keys": [
+        "CSA U1L3-L2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L3"
+        ],
+        "progression": "Movement Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      },
+      "level_keys": [
+        "CSA U1L3-L3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L4"
+        ],
+        "progression": "Painting Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      },
+      "level_keys": [
+        "CSA U1L3-L4"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L5"
+        ],
+        "progression": "Painting Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      },
+      "level_keys": [
+        "CSA U1L3-L5"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L6"
+        ],
+        "progression": "Painting Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L6"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      },
+      "level_keys": [
+        "CSA U1L3-L6"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L7 CFU"
         ],
         "progression": "Check For Understanding"
       },
@@ -4943,7 +5105,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L3 CFU1"
+          "CSA U1L3-L7 CFU"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
@@ -4951,11 +5113,11 @@
         "activity_section.key": "aed67282-2415-4401-9c3e-c62c39d534b1"
       },
       "level_keys": [
-        "CSA U1L3 CFU1"
+        "CSA U1L3-L7 CFU"
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5020,9 +5182,81 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L3 CFU1",
+        "level.key": "CSA U1L3-L1",
         "script_level.level_keys": [
-          "CSA U1L3 CFU1"
+          "CSA U1L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L2",
+        "script_level.level_keys": [
+          "CSA U1L3-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L3",
+        "script_level.level_keys": [
+          "CSA U1L3-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L4",
+        "script_level.level_keys": [
+          "CSA U1L3-L4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L5",
+        "script_level.level_keys": [
+          "CSA U1L3-L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L6",
+        "script_level.level_keys": [
+          "CSA U1L3-L6"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L7 CFU",
+        "script_level.level_keys": [
+          "CSA U1L3-L7 CFU"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",

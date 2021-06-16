@@ -3,64 +3,95 @@ skip_dialog true
 markdown <<MARKDOWN
 # Getting Started
 
-Here are tools, resources, and support to help you get started in implementing and teaching CS Fundamentals.
+Here are teacher tools, curriculum resources, and support to help you start teaching Computer Science Fundamentals.
 
 ## Step 1:  Create a teacher account
 
 Visit the <a href="https://code.org" target="blank" rel="noopener noreferrer">Code.org main website</a> to sign up for an account, if you don't already have one.  
 
-**Note:**  Teachers and students do not need an account to work on CS Fundamentals courses.  However, having an account allows teachers to see student work and student work to be saved.
+**Note:**  You and your students do not need an account to work on Computer Science Fundamentals courses.  However, having an account allows you to see your students work and for student work to be saved.
 
 ## Step 2:  Use the teacher dashboard
 
-**Question:**  What is the teacher dashboard?
+The teacher dashboard contains tools for checking on and evaluating student work, as well as managing students in a classroom section. The image below is an example of the teacher dashboard with a class section filled with students.
 
-**Answer:**  The teacher dashboard contains tools for checking on and evaluating students' work, as well as managing the students in a particular section.
+<img src="https://images.code.org/2f6a671e5cd2825d77fa733567320f79-image-1623280184259.png" class="center" style="display: block; margin-left: auto; margin-right: auto; height:80%; width:80%">
 
-<img src="https://images.code.org/58e27a8e329fa9e74dd5a1b0c1c0bca3-image-1622753350872.png" class="center" style="display: block; margin-left: auto; margin-right: auto; height:45%; width:45%">
+##### Watch <a href="https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b" target="blank" >this video</a> to guide you in creating a class section and adding students to your section.
 
-The teacher dashboard allows you to:
+For information about using Google Classroom or Clever when adding students to your section, check out this <a href="https://support.code.org/hc/en-us/articles/202114633-Creating-accounts-for-students-and-adding-them-to-your-section" target="blank" rel="noopener noreferrer"> Code.org support article</a>.
+	
 
-* Create a classroom section
-* Choose how to add students
-* View and manage your classroom sections
-* Access and find courses
-* Access curriculum resources
-	* Lesson Plans
-	* Curriculum standards
-	* Connect with the teacher community
-* Share and hide lessons
 
-<a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section" target="blank" rel="noopener noreferrer">**Learn how to create a classroom section of your own here.**</a>
 
-<a href="https://support.code.org/hc/en-us/articles/202114633-Creating-accounts-for-students-and-adding-them-to-your-section" target="blank" rel="noopener noreferrer">**Learn how to add students to your classroom section here.**</a>
 
 ## Step 3:  Access curriculum resources
 
-Curriculum resources include:
-* Lesson plans for all courses.
-* Lesson resources for educators such as slide decks, rubrics, and project guides.
-* Lesson resources for students such as handouts, 
+### Examples of curriculum resources
 
-Access and preview lesson plans and corresponding built-in lesson levels on the learning platform by navigating to the Course Overview page:
+Curriculum resources are included in all lesson plans for both you and your students.  All courses do not have the same curriculum resources as some handouts may not be age appriopriate for younger students.  For example, Course A is designed for kindergarten and does not include a student rubric, but does include a project guide.
 
-* <a href="https://code.org" target="blank" rel="noopener noreferrer">Sign-in to Code.org</a>
-* Click on “Course Catalog” link on the top left side
-* Scroll down to “Full Course Catalog”
-* Click on “Learn More” within the Elementary School tile
-* Scroll down to the courses and choose a course
-* Click on “View Course” to go to the course overview page
-* Choose the lesson to plan for
-* Click on “View Lesson Plan” on the right side
+* <a href="https://studio.code.org/s/coursea-2021/lessons/2" target="blank"> Course A:  example lesson plan</a>
+* <a href="https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview" target="blank"> Course A:  example student project guide</a>
+* <a href="https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview" target="blank"> Course A:  example teacher answer key</a>
+* <a href="https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit" target="blank" > Course A:  example student handout </a>
+* <a href="https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/edit" target="blank" > Course F:  example student rubric </a>
+* <a href="https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview" > Course F:  example teacher slide deck </a>
+
+
+### Navigating to lesson plans
+
+Follow the instructions below to navigate to the Course Overview page, access lesson plans, and preview lessons on the student learning platform.  You may want to add a bookmark to the course(s) you are considering teaching.
+
+##### <a href="https://code.org" target="blank" rel="noopener noreferrer">**1. Sign-in to Code.org**</a>
+
+##### **2. Click on “Course Catalog” link on the top left side**
+
+![](https://images.code.org/8eb3187e27b819ff92553369cd5f4186-image-1623278415928.png)
+
+
+##### **3. Scroll down to “Full Course Catalog” and click on “Learn More” within the elementary school tile**
+
+![](https://images.code.org/812f07283d5ad58c069de6d0caab4804-image-1623278539695.png)
+
+
+##### **4. Scroll down to the courses and choose a course and click on “View Course” to go to the course overview page**
+
+![](https://images.code.org/cfd7b40b091618de9a733895a310d131-image-1623278683614.png)
+
+
+##### **5. Choose a lesson and click on “View Lesson Plan” on the right side**
+	
+**Note:** You can also share lessons with students using the "Send to students" button for students to work on lessons outside of the classroom, as well as hide lessons from students using the "Hidden" button to help with pacing lessons with the class.
+    
+![](https://images.code.org/296441fe2699af449b772741e5f9aeb8-image-1623279500771.png)
+
+
+
+### Navigating to the student learning platform
+
+* **Clicking on a lesson with levels (shown as circles in the image below) takes you to the student learning platform where students practice programming.**
+![](https://images.code.org/81d286ea7114b52168a6a7a38e67a48e-image-1623281785518.png)
+![](https://images.code.org/e36c85cdbead6b125ec17a3b9b4849ef-image-1623282316184.png)
+
+* **Clicking on the ">" symbol on the right hand side, reveals the teacher panel where you can:**
+
+	* view the page as a teacher or student,
+    * see an individual students work,
+    * and access an example solution.
+    ![](https://images.code.org/2a65efd2c8ab70770b012987887220d7-image-1623282773353.png)
+
+
 
 ## Step 4: Know where to find help and support
 
-Visit <a href="https://support.code.org/hc/en-us" target="blank" rel="noopener noreferrer">Code.org's Support Articles</a> to search responses for common issues and questions. 
+Check out <a href="https://support.code.org/hc/en-us" target="blank" rel="noopener noreferrer">Code.org's Support Articles</a> to search responses for common issues and questions. 
 
-<a href="https://code.org/educate/professional-learning" target="blank" rel="noopener noreferrer">**Learn how to become a verified teacher and consider professional development here.**</a>  
+In addition, you can also click on the "?" button when it appears on the top right hand side of the page to get help and support, report a problem, or access the teacher forum.
 
-Code.org also appreciates getting help and support from you!  
+![](https://images.code.org/4675a023e1abe604250a513030cf5291-image-1623283096066.png)
 
-One of Code.org's values is being agile and responsive to feedback.  Please feel free to make a <a href="https://support.code.org/hc/en-us/articles/360002531412-Filing-bug-reportsCode-org-of-a-bug-I-ve-found-#:~:text=If%20you%20come%20across%20a,%40code.org%20as%20" target="blank" rel="noopener noreferrer">bug report</a> to tell us about any bugs you may encounter as you use the website, curriculum resources, and lesson levels.
+Code.org appreciates getting help and support from you!  One of Code.org's values is being agile and responsive to feedback.  Please feel free to make a <a href="https://support.code.org/hc/en-us/articles/360002531412-Filing-bug-reportsCode-org-of-a-bug-I-ve-found-#:~:text=If%20you%20come%20across%20a,%40code.org%20as%20" target="blank" rel="noopener noreferrer">bug report</a> to tell us about any bugs you may encounter as you use the website, curriculum resources, and lesson levels.
+
 
 MARKDOWN

@@ -71,11 +71,18 @@ class Lesson < ApplicationRecord
     assessment_opportunities
   )
 
-  # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
-  # numbers the lessons in order in two groups 1. lessons that are numbered on the script overview page (lockable false OR has_lesson_plan true)
-  # 2. lessons that are not numbered on the script overview page (lockable true AND has_lesson_plan false)
+  # A lesson has an absolute position and a relative position. The difference
+  # between the two is that relative_position numbers the lessons in order in
+  # two groups
+  #
+  # 1. lessons that are numbered on the script overview page (lockable false OR
+  # has_lesson_plan true)
+  # 2. lessons that are not numbered on the script overview page (lockable true
+  # AND has_lesson_plan false)
+  #
   # if we have two lessons without lesson plans that are lockable followed by a
-  # lesson that is not lockable, the third lesson will have an absolute_position of 3 but a relative_position of 1
+  # lesson that is not lockable, the third lesson will have an
+  # absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
   validates_uniqueness_of :key, scope: :script_id

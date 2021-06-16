@@ -209,6 +209,31 @@ module AWS
       end
     end
 
+    # Finds all objects with a given extension in the given bucket
+    # @param bucket [String] The S3 bucket name.
+    # @param ext [String] An extension to search for.
+    # @param prefix [String] An optional prefix to filter objects by.
+    def self.find_objects_with_ext(bucket, ext, prefix)
+      object_keys = []
+      # list_objects is paginated and each response is up to 1000 objects
+      create_client.list_objects_v2(bucket: bucket, prefix: prefix).each do |response|
+        object_keys.concat(
+          response.contents.map(&:key).
+            select {|key| key.end_with?(ext)}
+        )
+      end
+      object_keys
+    end
+
+    # Renames an object by copying it and then deleting the old copy (S3 objects are immutable)
+    # @params bucket [String] The S3 bucket name.
+    # @params object_key [String] The object key to rename.
+    # @params new_key [String] The new key the object should have.
+    def self.rename_object(bucket, object_key, new_key)
+      create_client.copy_object({bucket: bucket, copy_source: "/#{bucket}/#{object_key}", key: new_key})
+      create_client.delete_object({bucket: bucket, key: object_key})
+    end
+
     # Processes an S3 file, requires a block to be executed after the data has
     # been downloaded to the temporary file (passed as argument to the block).
     # The block will not be called if the exact version of the S3 object has

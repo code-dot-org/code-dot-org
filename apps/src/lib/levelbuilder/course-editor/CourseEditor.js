@@ -257,8 +257,8 @@ class CourseEditor extends Component {
               type="checkbox"
               defaultChecked={hasVerifiedResources}
               style={styles.checkbox}
-              onChange={e =>
-                this.setState({hasVerifiedResources: e.target.value})
+              onChange={() =>
+                this.setState({hasVerifiedResources: !hasVerifiedResources})
               }
             />
           </label>
@@ -274,7 +274,9 @@ class CourseEditor extends Component {
               type="checkbox"
               defaultChecked={hasNumberedUnits}
               style={styles.checkbox}
-              onChange={e => this.setState({hasNumberedUnits: e.target.value})}
+              onChange={() =>
+                this.setState({hasNumberedUnits: !hasNumberedUnits})
+              }
             />
           </label>
           <AnnouncementsEditor

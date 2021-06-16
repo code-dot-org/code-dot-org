@@ -7,11 +7,11 @@ if File.basename($0) != 'rake' &&
     Script.should_cache? &&
     !Rails.application.config.skip_script_preload
   # Populate the shared in-memory cache from the database.
-  Script.script_cache_to_cache
+  Script.unit_cache_to_cache
   Script.script_cache
   Script.script_level_cache
   Script.level_cache
-  Script.script_family_cache
+  Script.unit_family_cache
   UnitGroup.course_cache_to_cache
   UnitGroup.course_cache
 end
