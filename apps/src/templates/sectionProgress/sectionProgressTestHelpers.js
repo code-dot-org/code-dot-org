@@ -5,9 +5,9 @@ import sectionProgress, {
   setLessonOfInterest,
   setShowSectionProgressDetails
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import scriptSelection, {
+import unitSelection, {
   setValidScripts
-} from '@cdo/apps/redux/scriptSelectionRedux';
+} from '@cdo/apps/redux/unitSelectionRedux';
 import locales from '@cdo/apps/redux/localesRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
@@ -48,7 +48,7 @@ export function createStore(numStudents, numLessons) {
     registerReducers({
       sectionProgress,
       sectionData,
-      scriptSelection,
+      unitSelection,
       locales
     });
   } catch {}

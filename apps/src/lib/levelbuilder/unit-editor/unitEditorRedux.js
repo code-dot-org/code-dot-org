@@ -2,18 +2,18 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const INIT = 'scriptEditor/INIT';
-const ADD_GROUP = 'scriptEditor/ADD_GROUP';
-const ADD_LESSON = 'scriptEditor/ADD_LESSON';
-const MOVE_GROUP = 'scriptEditor/MOVE_GROUP';
-const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
-const REMOVE_LESSON = 'scriptEditor/REMOVE_LESSON';
-const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
-const CONVERT_GROUP_USER_FACING = 'scriptEditor/CONVERT_GROUP_USER_FACING';
+const INIT = 'unitEditor/INIT';
+const ADD_GROUP = 'unitEditor/ADD_GROUP';
+const ADD_LESSON = 'unitEditor/ADD_LESSON';
+const MOVE_GROUP = 'unitEditor/MOVE_GROUP';
+const REMOVE_GROUP = 'unitEditor/REMOVE_GROUP';
+const REMOVE_LESSON = 'unitEditor/REMOVE_LESSON';
+const SET_LESSON_GROUP = 'unitEditor/SET_LESSON_GROUP';
+const CONVERT_GROUP_USER_FACING = 'unitEditor/CONVERT_GROUP_USER_FACING';
 const CONVERT_GROUP_NON_USER_FACING =
-  'scriptEditor/CONVERT_GROUP_NON_USER_FACING';
-const REORDER_LESSON = 'scriptEditor/REORDER_LESSON';
-const UPDATE_LESSON_GROUP_FIELD = 'scriptEditor/UPDATE_LESSON_GROUP_FIELD';
+  'unitEditor/CONVERT_GROUP_NON_USER_FACING';
+const REORDER_LESSON = 'unitEditor/REORDER_LESSON';
+const UPDATE_LESSON_GROUP_FIELD = 'unitEditor/UPDATE_LESSON_GROUP_FIELD';
 
 // NOTE: Position for Lesson Groups and Lessons is 1 based.
 
