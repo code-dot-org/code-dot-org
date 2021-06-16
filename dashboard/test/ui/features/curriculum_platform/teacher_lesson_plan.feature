@@ -83,3 +83,34 @@ Feature: Teacher Lesson Plan
     And I wait until element "a:contains(All the Migrated Things)" is visible
     And I click selector "a:contains(All the Migrated Things)"
     And I wait until I am on "http://studio.code.org/s/allthemigratedthings"
+
+  @eyes
+  Scenario: Viewing Level Details Dialogs
+    When I open my eyes to test "level details dialog"
+    Given I create a teacher named "Prof_Dumbledore"
+    And I am on "http://studio.code.org/s/allthemigratedthings/lessons/5"
+    And I wait until element "#show-container" is visible
+    And I click selector ".uitest-ProgressPill:nth(0)"
+    And I wait until element ".modal" is visible
+    And I wait until element ".modal-body button:contains(Dismiss)" is visible
+    And I wait until element ".modal-backdrop" is visible
+    And I see no difference for "bubble choice preview"
+    And I click selector ".modal-body button:contains(Dismiss)"
+    And I wait until element ".modal-backdrop" is gone
+
+    And I click selector ".uitest-ProgressPill:nth(1)"
+    And I wait until element ".modal" is visible
+    And I wait until element ".modal-body button:contains(Dismiss)" is visible
+    And I wait until element ".modal-backdrop" is visible
+    And I see no difference for "standalone video preview"
+    And I click selector ".modal-body button:contains(Dismiss)"
+    And I wait until element ".modal-backdrop" is gone
+
+    And I click selector ".uitest-ProgressPill:nth(2)"
+    And I wait until element ".modal" is visible
+    And I wait until element ".modal-body button:contains(Dismiss)" is visible
+    And I wait until element ".modal-backdrop" is visible
+    And I see no difference for "standalone video preview"
+    And I click selector ".modal-body button:contains(Dismiss)"
+    And I wait until element ".modal-backdrop" is gone
+    And I close my eyes
