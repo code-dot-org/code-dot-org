@@ -811,22 +811,22 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'script with pilot experiment has pilot published state' do
     script = create(:script, name: 'single-lesson-script', pilot_experiment: 'my-experiment')
-    assert_equal SharedConstants::PUBLISHED_STATE.pilot, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.pilot, script.get_published_state
   end
 
   test 'script with hidden true has beta published state' do
     script = create(:script, name: 'single-lesson-script', hidden: true)
-    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.get_published_state
   end
 
   test 'script with hidden false has preview published state' do
     script = create(:script, name: 'single-lesson-script', hidden: false)
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.get_published_state
   end
 
   test 'script with hidden false and is_stable true has stable published state' do
     script = create(:script, name: 'single-lesson-script', hidden: false, is_stable: true)
-    assert_equal SharedConstants::PUBLISHED_STATE.stable, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, script.get_published_state
   end
 
   test 'should summarize script' do
@@ -1895,6 +1895,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal expected_level_names, actual_level_names
 
     new_dsl = <<~SCRIPT
+      published_state 'beta'
+
       lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: false
       level 'Level 1_copy'
       level 'Level 4_copy'
@@ -3108,8 +3110,8 @@ class ScriptTest < ActiveSupport::TestCase
       lesson_activity = create :lesson_activity, lesson: lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
 
-      level1 = create :level, name: 'level1-2021'
-      level2 = create :level, name: 'level2-2021'
+      level1 = create :level, name: 'level1-2021', level_num: 'custom'
+      level2 = create :level, name: 'level2-2021', level_num: 'custom'
       create :script_level, levels: [level1], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 

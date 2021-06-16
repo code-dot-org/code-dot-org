@@ -13,7 +13,7 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
-#  published_state :string(255)
+#  published_state :string(255)      default("beta"), not null
 #
 # Indexes
 #
@@ -123,7 +123,7 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
-  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   def prevent_duplicate_levels
     reload
@@ -994,6 +994,7 @@ class Script < ApplicationRecord
         wrapup_video: script_data[:wrapup_video],
         new_name: script_data[:new_name],
         family_name: script_data[:family_name],
+        published_state: script_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.beta : script_data[:published_state],
         properties: Script.build_property_hash(script_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1274,6 +1275,7 @@ class Script < ApplicationRecord
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
+          published_state: general_params[:published_state].nil? ? SharedConstants::PUBLISHED_STATE.beta : general_params[:published_state],
           properties: Script.build_property_hash(general_params)
         },
         script_data[:lesson_groups]
@@ -1409,10 +1411,10 @@ class Script < ApplicationRecord
   # A script that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(get_published_state)
   end
 
-  def published_state
+  def get_published_state
     if pilot?
       SharedConstants::PUBLISHED_STATE.pilot
     elsif !hidden
@@ -1468,7 +1470,7 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      publishedState: published_state,
+      publishedState: get_published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
