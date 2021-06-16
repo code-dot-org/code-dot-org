@@ -241,17 +241,17 @@ export const fakeProgressTableReduxInitialState = (
       section: fakeSection(students)
     },
     sectionProgress: {
-      scriptDataByScript: {[scriptData.id]: scriptData},
-      studentLevelProgressByScript: {
+      unitDataByUnit: {[scriptData.id]: scriptData},
+      studentLevelProgressByUnit: {
         [scriptData.id]: levelProgressData
       },
-      studentLessonProgressByScript: {
+      studentLessonProgressByUnit: {
         [scriptData.id]: lessonProgressForSection(
           levelProgressData,
           scriptData.lessons
         )
       },
-      studentLastUpdateByScript: fakeStudentLastUpdateByScript(
+      studentLastUpdateByUnit: fakeStudentLastUpdateByScript(
         scriptData,
         students
       ),
