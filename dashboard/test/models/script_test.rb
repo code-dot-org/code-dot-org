@@ -620,30 +620,30 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'redirect_to_script_url returns nil unless user can view script version' do
+  test 'redirect_to_unit_url returns nil unless user can view script version' do
     Script.any_instance.stubs(:can_view_version?).returns(false)
     student = create :student
     script = create :script, name: 'my-script'
 
-    assert_nil script.redirect_to_script_url(student)
+    assert_nil script.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_script_url returns nil if user is assigned to script' do
+  test 'redirect_to_unit_url returns nil if user is assigned to script' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     script = create :script, name: 'my-script'
     section = create :section, script: script
     section.students << student
 
-    assert_nil script.redirect_to_script_url(student)
+    assert_nil script.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_script_url returns nil if user is not assigned to any script in family' do
+  test 'redirect_to_unit_url returns nil if user is not assigned to any script in family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     script = create :script, name: 'my-script'
 
-    assert_nil script.redirect_to_script_url(student)
+    assert_nil script.redirect_to_unit_url(student)
   end
 
   test 'returns nil if latest assigned script is an older version than the current script' do
@@ -654,10 +654,10 @@ class ScriptTest < ActiveSupport::TestCase
     section = create :section, script: csp1_2017
     section.students << student
 
-    assert_nil csp1_2018.redirect_to_script_url(student)
+    assert_nil csp1_2018.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_script_url returns script url of latest assigned script version in family for script belonging to course family' do
+  test 'redirect_to_unit_url returns script url of latest assigned script version in family for script belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
@@ -669,10 +669,10 @@ class ScriptTest < ActiveSupport::TestCase
     section = create :section, unit_group: csp_2018
     section.students << student
 
-    assert_equal csp1_2018.link, csp1_2017.redirect_to_script_url(student)
+    assert_equal csp1_2018.link, csp1_2017.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_script_url returns script url of latest assigned script version in family for script not belonging to course family' do
+  test 'redirect_to_unit_url returns script url of latest assigned script version in family for script not belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
@@ -680,7 +680,7 @@ class ScriptTest < ActiveSupport::TestCase
     section = create :section, script: courseg_2018
     section.students << student
 
-    assert_equal courseg_2018.link, courseg_2017.redirect_to_script_url(student)
+    assert_equal courseg_2018.link, courseg_2017.redirect_to_unit_url(student)
   end
 
   test 'can_view_version? is true for teachers' do

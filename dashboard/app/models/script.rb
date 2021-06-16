@@ -535,44 +535,44 @@ class Script < ApplicationRecord
     end
   end
 
-  def self.remove_from_cache(script_name)
-    script_cache.delete(script_name) if script_cache
+  def self.remove_from_cache(unit_name)
+    script_cache.delete(unit_name) if script_cache
   end
 
   def self.get_unit_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
-    family_scripts = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
+    family_units = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
-    # Only students should be redirected based on script progress and/or section assignments.
+    # Only students should be redirected based on unit progress and/or section assignments.
     if user&.student?
-      assigned_script_ids = user.section_scripts.pluck(:id)
-      progress_script_ids = user.user_levels.map(&:script_id)
-      script_ids = assigned_script_ids.concat(progress_script_ids).compact.uniq
-      script_name = family_scripts.select {|s| script_ids.include?(s.id)}&.first&.name
-      return Script.new(redirect_to: script_name) if script_name
+      assigned_unit_ids = user.section_scripts.pluck(:id)
+      progress_unit_ids = user.user_levels.map(&:script_id)
+      unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
+      unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
+      return Script.new(redirect_to: unit_name) if unit_name
     end
 
     locale_str = locale&.to_s
     latest_version = nil
-    family_scripts.each do |script|
-      next unless script.is_stable
-      latest_version ||= script
+    family_units.each do |unit|
+      next unless unit.is_stable
+      latest_version ||= unit
 
       # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
       # than matching en-US specifically.
-      is_supported = script.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
+      is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
       if is_supported
-        latest_version = script
+        latest_version = unit
         break
       end
     end
 
-    script_name = latest_version&.name
-    script_name ? Script.new(redirect_to: script_name) : nil
+    unit_name = latest_version&.name
+    unit_name ? Script.new(redirect_to: unit_name) : nil
   end
 
-  def self.log_redirect(old_script_name, new_script_name, request, event_name, user_type)
+  def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
     FirehoseClient.instance.put_record(
       :analysis,
       {
@@ -580,8 +580,8 @@ class Script < ApplicationRecord
         event: event_name,
         data_string: request.path,
         data_json: {
-          old_script_name: old_script_name,
-          new_script_name: new_script_name,
+          old_script_name: old_unit_name,
+          new_script_name: new_unit_name,
           method: request.method,
           url: request.url,
           referer: request.referer,
@@ -593,21 +593,21 @@ class Script < ApplicationRecord
 
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
-  # @return [String|nil] URL to the script overview page the user should be redirected to (if any).
-  def redirect_to_script_url(user, locale: nil)
-    # No redirect unless script belongs to a family.
+  # @return [String|nil] URL to the unit overview page the user should be redirected to (if any).
+  def redirect_to_unit_url(user, locale: nil)
+    # No redirect unless unit belongs to a family.
     return nil unless family_name
     # Only redirect students.
     return nil unless user && user.student?
-    # No redirect unless user is allowed to view this script version and they are not already assigned to this script
+    # No redirect unless user is allowed to view this unit version and they are not already assigned to this unit
     # or the course it belongs to.
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
-    # No redirect if script or its course are not versioned.
+    # No redirect if unit or its course are not versioned.
     current_version_year = version_year || unit_group&.version_year
     return nil unless current_version_year.present?
 
-    # Redirect user to the latest assigned script in this family,
-    # if one exists and it is newer than the current script.
+    # Redirect user to the latest assigned unit in this family,
+    # if one exists and it is newer than the current unit.
     latest_assigned_version = Script.latest_assigned_version(family_name, user)
     latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.unit_group&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > current_version_year
@@ -620,7 +620,7 @@ class Script < ApplicationRecord
 
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
-  # @return [Boolean] Whether the user can view the script.
+  # @return [Boolean] Whether the user can view the unit.
   def can_view_version?(user, locale: nil)
     # Users can view any course not in a family.
     return true unless family_name
@@ -629,25 +629,25 @@ class Script < ApplicationRecord
     latest_stable_version_in_locale = Script.latest_stable_version(family_name, locale: locale)
     is_latest = latest_stable_version == self || latest_stable_version_in_locale == self
 
-    # All users can see the latest script version in English and in their locale.
+    # All users can see the latest unit version in English and in their locale.
     return true if is_latest
 
     # Restrictions only apply to students and logged out users.
     return false if user.nil?
     return true unless user.student?
 
-    # A student can view the script version if they have progress in it or the course it belongs to.
+    # A student can view the unit version if they have progress in it or the course it belongs to.
     has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)
     return true if has_progress
 
-    # A student can view the script version if they are assigned to it.
+    # A student can view the unit version if they are assigned to it.
     user.assigned_script?(self)
   end
 
-  # @param family_name [String] The family name for a script family.
+  # @param family_name [String] The family name for a unit family.
   # @param version_year [String] Version year to return. Optional.
   # @param locale [String] User or request locale. Optional.
-  # @return [Script|nil] Returns the latest version in a script family.
+  # @return [Script|nil] Returns the latest version in a unit family.
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
     return nil unless family_name.present?
 
