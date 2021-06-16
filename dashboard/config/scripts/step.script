@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Step', display_name: 'Step', has_lesson_plan: false
 skin 'birds'
 level 'blockly:MazeStep:2_1_step'

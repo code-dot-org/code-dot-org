@@ -1,6 +1,7 @@
 login_required true
 hideable_lessons true
 student_detail_progress_view true
+published_state 'beta'
 
 lesson 'Intro to Problem Solving', display_name: 'Intro to Problem Solving', has_lesson_plan: false
 level 'Unit 1 Lesson 1 Overview', named: true

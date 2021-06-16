@@ -4,6 +4,7 @@ lesson_extras_available true
 curriculum_path 'https://code.org/curriculum/course2/{LESSON}/Teacher'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+published_state 'preview'
 curriculum_umbrella 'CSF'
 tts true
 
@@ -40,8 +41,8 @@ level '2-3 Artist 3.4'
 level '2-3 Artist 4'
 level '2-3 Artist 6'
 variants
-  level '2-3 Artist 9 NEW'
   level '2-3 Artist 9', active: false
+  level '2-3 Artist 9 NEW'
 endvariants
 level '2-3 Artist 7'
 level '2-3 Artist 8'

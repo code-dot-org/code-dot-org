@@ -6,6 +6,7 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit2/"],
 has_verified_resources true
 curriculum_path 'https://curriculum.code.org/csd-20/unit2/{LESSON}'
 is_stable true
+published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true

@@ -17,7 +17,8 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-06-16 22:16:58 UTC",
+    "serialized_at": "2021-06-16 23:17:09 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
     }
@@ -778,7 +779,7 @@
       "key": "e4f2ec6a-e050-4868-8146-ebb78bdb4360",
       "position": 3,
       "properties": {
-        "name": "Levels"
+        "name": "Old Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "e4f2ec6a-e050-4868-8146-ebb78bdb4360",
@@ -788,8 +789,21 @@
       }
     },
     {
-      "key": "4f210793-1d0f-4344-8bbc-c2e311bc7111",
+      "key": "65edda3c-6e23-4d7d-9e42-c0eef2f7e9bd",
       "position": 4,
+      "properties": {
+        "name": "New Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "65edda3c-6e23-4d7d-9e42-c0eef2f7e9bd",
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "4f210793-1d0f-4344-8bbc-c2e311bc7111",
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -3533,10 +3547,22 @@
       "key": "229d1329-3184-4f16-9714-88e6579a7f3b",
       "position": 1,
       "properties": {
+        "progression_name": "Old Levels"
       },
       "seeding_key": {
         "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b",
         "lesson_activity.key": "e4f2ec6a-e050-4868-8146-ebb78bdb4360"
+      }
+    },
+    {
+      "key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7",
+      "position": 1,
+      "properties": {
+        "progression_name": "New Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7",
+        "lesson_activity.key": "65edda3c-6e23-4d7d-9e42-c0eef2f7e9bd"
       }
     },
     {
@@ -6435,6 +6461,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1A-2021"
+        ],
+        "progression": "Old Levels"
       },
       "named_level": false,
       "bonus": false,
@@ -6457,6 +6487,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-pet model card-2021"
+        ],
+        "progression": "Old Levels"
       },
       "named_level": false,
       "bonus": false,
@@ -6479,6 +6513,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1B-2021"
+        ],
+        "progression": "Old Levels"
       },
       "named_level": false,
       "bonus": false,
@@ -6501,6 +6539,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1C-2021"
+        ],
+        "progression": "Old Levels"
       },
       "named_level": false,
       "bonus": false,
@@ -6523,6 +6565,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1D-2021"
+        ],
+        "progression": "Old Levels"
       },
       "named_level": false,
       "bonus": false,
@@ -6545,6 +6591,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1E-2021"
+        ],
+        "progression": "Old Levels"
       },
       "named_level": false,
       "bonus": false,
@@ -6567,6 +6617,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use models applab-practice choice-2021"
+        ],
+        "progression": "Old Levels"
       },
       "named_level": false,
       "bonus": false,
@@ -6585,6 +6639,133 @@
     },
     {
       "chapter": 21,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 0-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7"
+      },
+      "level_keys": [
+        "ml-intro app lab-book recommender 0-2021"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 1-2021"
+        ],
+        "progression": "New Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 1-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7"
+      },
+      "level_keys": [
+        "ml-intro app lab-book recommender 1-2021"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 2-2021"
+        ],
+        "progression": "New Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 2-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7"
+      },
+      "level_keys": [
+        "ml-intro app lab-book recommender 2-2021"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 3-2021"
+        ],
+        "progression": "New Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 3-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7"
+      },
+      "level_keys": [
+        "ml-intro app lab-book recommender 3-2021"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 4-2021"
+        ],
+        "progression": "New Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 4-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7"
+      },
+      "level_keys": [
+        "ml-intro app lab-book recommender 4-2021"
+      ]
+    },
+    {
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6610,7 +6791,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6636,7 +6817,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6662,7 +6843,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6688,7 +6869,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6714,7 +6895,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6740,7 +6921,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6766,11 +6947,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-vacation example-2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6788,11 +6972,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-import 1-2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6810,11 +6997,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-2-2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6832,11 +7022,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-1-2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6854,11 +7047,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-3-2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6876,11 +7072,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-practice choice-2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6898,7 +7097,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6924,7 +7123,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6950,7 +7149,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6976,7 +7175,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7002,7 +7201,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7028,7 +7227,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7054,7 +7253,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -7080,7 +7279,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -7106,7 +7305,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -7132,7 +7331,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 48,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7158,7 +7357,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7184,7 +7383,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7210,7 +7409,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7475,6 +7674,66 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
         "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender 0-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 0-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender 1-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 1-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender 2-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 2-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender 3-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 3-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender 4-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 4-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "0fc04428-a82e-4f69-9dcf-8e93129f48f7"
       }
     },
     {

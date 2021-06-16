@@ -10,7 +10,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:43 UTC",
+    "serialized_at": "2021-06-16 22:57:58 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "cspfacilitator"
     }
