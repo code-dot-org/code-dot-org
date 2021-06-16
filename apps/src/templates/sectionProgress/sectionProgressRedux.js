@@ -1,4 +1,4 @@
-import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
+import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import {ViewType} from './sectionProgressConstants';
 
@@ -139,7 +139,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
           section_id: state.sectionData.section.id,
           old_view: ViewType.SUMMARY,
           new_view: ViewType.DETAIL,
-          script_id: state.scriptSelection.scriptId
+          script_id: state.unitSelection.scriptId
         })
       },
       {includeUserId: true}
@@ -154,7 +154,5 @@ export const jumpToLessonDetails = lessonOfInterest => {
  * @returns {scriptDataPropType} object containing metadata about the script structure
  */
 export const getCurrentScriptData = state => {
-  return state.sectionProgress.scriptDataByScript[
-    state.scriptSelection.scriptId
-  ];
+  return state.sectionProgress.scriptDataByScript[state.unitSelection.scriptId];
 };

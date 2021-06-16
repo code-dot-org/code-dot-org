@@ -2,7 +2,7 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 import {
   SET_SCRIPT,
   getSelectedScriptName
-} from '@cdo/apps/redux/scriptSelectionRedux';
+} from '@cdo/apps/redux/unitSelectionRedux';
 
 export const ALL_STUDENT_FILTER = 0;
 
@@ -269,7 +269,7 @@ export default function sectionAssessments(state = initialState, action) {
 export const getCurrentScriptAssessmentList = state => {
   let tempAssessmentList = computeScriptAssessmentList(
     state.sectionAssessments,
-    state.scriptSelection.scriptId
+    state.unitSelection.scriptId
   );
   /* Only add the feedback option to the dropdown for CSD and CSP */
   if (doesCurrentCourseUseFeedback(state)) {
@@ -285,7 +285,7 @@ export const getCurrentScriptAssessmentList = state => {
 export const getAssessmentResponsesForCurrentScript = state => {
   return (
     state.sectionAssessments.assessmentResponsesByScript[
-      state.scriptSelection.scriptId
+      state.unitSelection.scriptId
     ] || {}
   );
 };
@@ -294,7 +294,7 @@ export const getAssessmentResponsesForCurrentScript = state => {
 export const getCurrentAssessmentQuestions = state => {
   const currentScriptData =
     state.sectionAssessments.assessmentQuestionsByScript[
-      state.scriptSelection.scriptId
+      state.unitSelection.scriptId
     ] || {};
   return currentScriptData[state.sectionAssessments.assessmentId];
 };
@@ -306,9 +306,8 @@ export const getCurrentQuestion = state => {
   const isSurvey = isCurrentAssessmentSurvey(state);
   if (isSurvey) {
     const surveys =
-      state.sectionAssessments.surveysByScript[
-        state.scriptSelection.scriptId
-      ] || {};
+      state.sectionAssessments.surveysByScript[state.unitSelection.scriptId] ||
+      {};
     const currentSurvey = surveys[state.sectionAssessments.assessmentId];
     const questionsData = currentSurvey.levelgroup_results;
     const question = questionsData[state.sectionAssessments.questionIndex];
@@ -607,7 +606,7 @@ export const getAssessmentsFreeResponseResults = state => {
  */
 export const getSurveyFreeResponseQuestions = state => {
   const surveysStructure =
-    state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] ||
+    state.sectionAssessments.surveysByScript[state.unitSelection.scriptId] ||
     {};
   const currentSurvey = surveysStructure[state.sectionAssessments.assessmentId];
   if (!currentSurvey) {
@@ -636,7 +635,7 @@ export const getSurveyFreeResponseQuestions = state => {
  */
 export const getMultipleChoiceSurveyResults = state => {
   const surveysStructure =
-    state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] ||
+    state.sectionAssessments.surveysByScript[state.unitSelection.scriptId] ||
     {};
   const currentSurvey = surveysStructure[state.sectionAssessments.assessmentId];
   if (!currentSurvey) {
@@ -693,7 +692,7 @@ export const getMultipleChoiceSurveyResults = state => {
 // Returns a boolean.  The selector function checks if the current assessment Id
 // is in the surveys structure.
 export const isCurrentAssessmentSurvey = state => {
-  const scriptId = state.scriptSelection.scriptId;
+  const scriptId = state.unitSelection.scriptId;
   const surveysStructure =
     state.sectionAssessments.surveysByScript[scriptId] || {};
 
@@ -948,9 +947,8 @@ export const countSubmissionsForCurrentAssessment = state => {
   const isSurvey = isCurrentAssessmentSurvey(state);
   if (isSurvey) {
     const surveysStructure =
-      state.sectionAssessments.surveysByScript[
-        state.scriptSelection.scriptId
-      ] || {};
+      state.sectionAssessments.surveysByScript[state.unitSelection.scriptId] ||
+      {};
     const currentSurvey = surveysStructure[currentAssessmentId];
     if (!currentSurvey || currentSurvey.levelgroup_results.length === 0) {
       return 0;
@@ -992,7 +990,7 @@ export const getExportableData = state => {
 export const getExportableSurveyData = state => {
   const currentAssessmentId = state.sectionAssessments.assessmentId;
   const surveys =
-    state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] ||
+    state.sectionAssessments.surveysByScript[state.unitSelection.scriptId] ||
     {};
   const currentSurvey = surveys[currentAssessmentId];
   let responses = [];
@@ -1080,7 +1078,7 @@ export const getExportableAssessmentData = state => {
 export const getExportableFeedbackData = state => {
   let feedback = [];
   let feedbackForCurrentScript =
-    state.sectionAssessments.feedbackByScript[state.scriptSelection.scriptId] ||
+    state.sectionAssessments.feedbackByScript[state.unitSelection.scriptId] ||
     {};
 
   Object.keys(feedbackForCurrentScript).forEach(feedbackId => {
