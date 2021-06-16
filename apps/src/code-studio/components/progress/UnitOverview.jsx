@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import ScriptOverviewTopRow, {
+import UnitOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
   COMPLETED
-} from './ScriptOverviewTopRow';
+} from './UnitOverviewTopRow';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -15,7 +15,7 @@ import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import ScriptOverviewHeader from './ScriptOverviewHeader';
+import UnitOverviewHeader from './UnitOverviewHeader';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
   onDismissRedirectDialog,
@@ -28,14 +28,17 @@ import {
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import UnitCalendar from './UnitCalendar';
+import color from '@cdo/apps/util/color';
 
 /**
  * Lesson progress component used in level header and script overview.
  */
-class ScriptOverview extends React.Component {
+class UnitOverview extends React.Component {
   static propTypes = {
     id: PropTypes.number,
     courseId: PropTypes.number,
+    courseTitle: PropTypes.string,
+    courseLink: PropTypes.string,
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
@@ -145,6 +148,13 @@ class ScriptOverview extends React.Component {
       <div>
         {onOverviewPage && (
           <div>
+            {this.props.courseLink && (
+              <div className="script-breadcrumb" style={styles.navArea}>
+                <a href={this.props.courseLink} style={styles.navLink}>{`< ${
+                  this.props.courseTitle
+                }`}</a>
+              </div>
+            )}
             {displayRedirectDialog && (
               <RedirectDialog
                 isOpen={this.state.showRedirectDialog}
@@ -154,7 +164,7 @@ class ScriptOverview extends React.Component {
                 redirectButtonText={i18n.goToAssignedVersion()}
               />
             )}
-            <ScriptOverviewHeader
+            <UnitOverviewHeader
               showCourseUnitVersionWarning={showCourseUnitVersionWarning}
               showScriptVersionWarning={showScriptVersionWarning}
               showRedirectWarning={showRedirectWarning}
@@ -172,7 +182,7 @@ class ScriptOverview extends React.Component {
                 />
               </div>
             )}
-            <ScriptOverviewTopRow
+            <UnitOverviewTopRow
               sectionsForDropdown={sectionsForDropdown}
               selectedSectionId={parseInt(selectedSectionId)}
               professionalLearningCourse={professionalLearningCourse}
@@ -207,7 +217,18 @@ class ScriptOverview extends React.Component {
   }
 }
 
-export const UnconnectedScriptOverview = Radium(ScriptOverview);
+const styles = {
+  navLink: {
+    fontSize: 14,
+    lineHeight: '22px',
+    color: color.purple
+  },
+  navArea: {
+    padding: '10px 0px'
+  }
+};
+
+export const UnconnectedUnitOverview = Radium(UnitOverview);
 export default connect((state, ownProps) => ({
   perLevelResults: state.progress.levelResults,
   scriptCompleted: !!state.progress.scriptCompleted,
@@ -226,4 +247,4 @@ export default connect((state, ownProps) => ({
     ownProps.courseId,
     false
   )
-}))(UnconnectedScriptOverview);
+}))(UnconnectedUnitOverview);
