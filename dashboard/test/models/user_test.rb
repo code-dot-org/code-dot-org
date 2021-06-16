@@ -814,14 +814,14 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_visible_progression_level, no progress, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     assert twenty_hour.script_levels.first.level.unplugged?
     assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
   end
 
   test 'can get next_unpassed_visible_progression_level, progress, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     second_script_level = twenty_hour.get_script_level_by_chapter(2)
     UserLevel.create(
       user: user,
@@ -835,7 +835,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_visible_progression_level, user skips level, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     first_script_level = twenty_hour.get_script_level_by_chapter(1)
     UserLevel.create(
       user: user,
@@ -859,7 +859,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_visible_progression_level, out of order progress, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     first_script_level = twenty_hour.get_script_level_by_chapter(1)
     UserLevel.create(
       user: user,
@@ -892,7 +892,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_visible_progression_level, completed script, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
 
     twenty_hour.script_levels.each do |sl|
       UserLevel.create(
@@ -909,7 +909,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
 
     twenty_hour.script_levels.take(3).each do |sl|
       UserLevel.create(
@@ -934,7 +934,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_progression_level if not completed any unplugged levels' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     twenty_hour.script_levels.each do |script_level|
       next if script_level.level.game.unplugged? # skip all unplugged
       next if script_level.chapter > 33
@@ -952,7 +952,7 @@ class UserTest < ActiveSupport::TestCase
   test 'can get next_unpassed_progression_level, not tainted by other user progress' do
     user = create :user
     other_user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter > 33
       UserLevel.create(
@@ -968,7 +968,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_progression_level when most recent level is not passed' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
 
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter != 3
@@ -988,7 +988,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_progression_level when most recent level is last level' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
 
     script_level = twenty_hour.script_levels.last
     UserLevel.create(
@@ -3699,7 +3699,7 @@ class UserTest < ActiveSupport::TestCase
     test 'can get next_unpassed_visible_progression_level, progress, hidden' do
       student = create :student
       teacher = create :teacher
-      twenty_hour = Script.twenty_hour_script
+      twenty_hour = Script.twenty_hour_unit
 
       # User completed the second lesson
       twenty_hour.lessons[1].script_levels.each do |sl|
@@ -3727,7 +3727,7 @@ class UserTest < ActiveSupport::TestCase
     test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, first hidden' do
       student = create :student
       teacher = create :teacher
-      twenty_hour = Script.twenty_hour_script
+      twenty_hour = Script.twenty_hour_unit
 
       UserLevel.create(
         user: student,
@@ -3985,7 +3985,7 @@ class UserTest < ActiveSupport::TestCase
 
     # No UserScript if we only have channel tokens elsewhere
     user = create :student
-    channel_token = create :channel_token, level: Script.twenty_hour_script.levels.first, storage_user: user
+    channel_token = create :channel_token, level: Script.twenty_hour_unit.levels.first, storage_user: user
     user.generate_progress_from_storage_id(channel_token.storage_id, script.name)
 
     user_scripts = UserScript.where(user: user)
@@ -4043,7 +4043,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'user_levels_by_user_by_level' do
     users = (1..3).map {create :user}
-    script = Script.twenty_hour_script
+    script = Script.twenty_hour_unit
     script_levels = script.script_levels.first(2)
     script_levels.each do |script_level|
       users.first(2).each do |user|

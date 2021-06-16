@@ -493,7 +493,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should not edit level if not custom level" do
-    level = Script.twenty_hour_script.levels.first
+    level = Script.twenty_hour_unit.levels.first
     refute Ability.new(@levelbuilder).can? :edit, level
 
     post :update_blocks, params: @default_update_blocks_params.merge(
