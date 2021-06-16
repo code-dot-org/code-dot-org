@@ -255,7 +255,7 @@ class Script < ApplicationRecord
     @@lesson_extras_scripts ||= Script.all.select(&:lesson_extras_available?).pluck(:id)
   end
 
-  def self.maker_unit_units
+  def self.maker_units
     visible_units.select {|s| s.family_name == 'csd6'}
   end
 
