@@ -4,7 +4,6 @@ https://github.com/mljs/knn */
 import {
   isRegression,
   setKValue,
-  setModelSize,
   setTrainedModel,
   setPrediction,
   setAccuracyCheckPredictedLabels,
@@ -96,9 +95,6 @@ export default class KNNTrainer {
     store.dispatch(setKValue(bestK));
     store.dispatch(setAccuracyCheckPredictedLabels(bestPredictedLabels));
     store.dispatch(setTrainedModel(bestModel));
-    const size = Buffer.byteLength(JSON.stringify(bestModel));
-    const kiloBytes = size / 1024;
-    store.dispatch(setModelSize(kiloBytes));
 
     const state2 = store.getState();
 
