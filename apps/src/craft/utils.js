@@ -91,21 +91,21 @@ export function blockTypesToDropdownOptions(blockTypes) {
   });
 }
 
-export function openPlayerSelectionDialog(onSelectedCallback) {
+exports.openPlayerSelectionDialog = onSelectedCallback => {
   getStore().dispatch(setPlayerSelectionDialog(true, onSelectedCallback));
-}
+};
 
-export function closePlayerSelectionDialog() {
+exports.closePlayerSelectionDialog = () => {
   getStore().dispatch(setPlayerSelectionDialog(false));
-}
+};
 
-export function handlePlayerSelection(
+exports.handlePlayerSelection = (
   defaultPlayer,
   onComplete,
   craftEventType = 'Minecraft'
-) {
-  openPlayerSelectionDialog(selectedPlayer => {
-    closePlayerSelectionDialog();
+) => {
+  exports.openPlayerSelectionDialog(selectedPlayer => {
+    exports.closePlayerSelectionDialog();
 
     if (selectedPlayer) {
       trackEvent(craftEventType, 'ClickedCharacter', selectedPlayer);
@@ -115,4 +115,4 @@ export function handlePlayerSelection(
 
     onComplete(selectedPlayer);
   });
-}
+};
