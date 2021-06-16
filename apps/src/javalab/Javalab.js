@@ -21,6 +21,7 @@ import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
 import {CsaViewMode} from './constants';
+import {DisplayMode, getDisplayModeFromString} from './DisplayMode';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -61,11 +62,9 @@ Javalab.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
   this.channelId = config.channel;
-  // Pulls dark mode from user preferences; default to true if not set
+  // Sets dark mode based on displayMode user preference
   this.isDarkMode =
-    config.usingDarkModePref === undefined ||
-    config.usingDarkModePref === null ||
-    config.usingDarkModePref;
+    getDisplayModeFromString(config.displayMode) === DisplayMode.DARK;
 
   config.makeYourOwn = false;
   config.wireframeShare = true;
