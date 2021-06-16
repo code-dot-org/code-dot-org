@@ -74,7 +74,7 @@ function checkOffset() {
     $('#pagefooter').offset().top
   ) {
     $('#map').css('position', 'fixed');
-  } // restore when you scroll up
+  }
 }
 
 function submitForm() {
