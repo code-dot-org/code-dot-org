@@ -10,7 +10,7 @@ import sectionProgress, {
   finishRefreshingProgress
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
-import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
 const fakeSectionData = {
@@ -71,7 +71,7 @@ describe('sectionProgressRedux', () => {
       const action = setLessonOfInterest(lessonOfInterest);
       const nextState = sectionProgress(initialState, action);
 
-      // This action is from scriptSelectionRedux but affects sectionProgress
+      // This action is from unitSelectionRedux but affects sectionProgress
       const action2 = setScriptId(130);
       const nextState2 = sectionProgress(nextState, action2);
       assert.deepEqual(nextState2.lessonOfInterest, 1);
@@ -161,7 +161,7 @@ describe('sectionProgressRedux', () => {
   describe('getCurrentScriptData', () => {
     it('gets the script data for the section in the selected script', () => {
       const stateWithScript = {
-        scriptSelection: {scriptId: 123},
+        unitSelection: {scriptId: 123},
         sectionProgress: {
           scriptDataByScript: {
             123: {

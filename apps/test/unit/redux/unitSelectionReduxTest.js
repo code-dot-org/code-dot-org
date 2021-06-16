@@ -1,10 +1,10 @@
-import {assert} from '../../util/deprecatedChai';
-import scriptSelection, {
+import {assert} from '../../util/reconfiguredChai';
+import unitSelection, {
   setValidScripts,
   setScriptId,
   getSelectedScriptName,
   getSelectedScriptDescription
-} from '@cdo/apps/redux/scriptSelectionRedux';
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
 const fakeValidScripts = [
@@ -71,13 +71,13 @@ const fakeValidCourses = [
   }
 ];
 
-describe('scriptSelectionRedux', () => {
-  const initialState = scriptSelection(undefined, {});
+describe('unitSelectionRedux', () => {
+  const initialState = unitSelection(undefined, {});
 
   describe('getSelectedScriptName', () => {
     it('returns the script name of the selected script', () => {
       const state = {
-        scriptSelection: {
+        unitSelection: {
           scriptId: 2,
           validScripts: [
             {id: 1, script_name: 'Wrong script!'},
@@ -90,7 +90,7 @@ describe('scriptSelectionRedux', () => {
 
     it('returns null if no script is selected', () => {
       const state = {
-        scriptSelection: {
+        unitSelection: {
           scriptId: null,
           validScripts: [
             {id: 1, script_name: 'Wrong script!'},
@@ -105,7 +105,7 @@ describe('scriptSelectionRedux', () => {
   describe('getSelectedScriptDescription', () => {
     it('returns the script description of the selected script', () => {
       const state = {
-        scriptSelection: {
+        unitSelection: {
           scriptId: 182,
           validScripts: fakeValidScripts
         }
@@ -115,7 +115,7 @@ describe('scriptSelectionRedux', () => {
 
     it('returns null if no script is selected', () => {
       const state = {
-        scriptSelection: {
+        unitSelection: {
           scriptId: null,
           validScripts: fakeValidScripts
         }
@@ -127,7 +127,7 @@ describe('scriptSelectionRedux', () => {
   describe('setScriptId', () => {
     it('sets the script id', () => {
       const action = setScriptId(130);
-      const nextState = scriptSelection(initialState, action);
+      const nextState = unitSelection(initialState, action);
       assert.deepEqual(nextState.scriptId, 130);
     });
   });
@@ -135,7 +135,7 @@ describe('scriptSelectionRedux', () => {
   describe('setSection', () => {
     it('sets the section data and assigned scriptId', () => {
       const action = setSection(fakeSectionData);
-      const nextState = scriptSelection(initialState, action);
+      const nextState = unitSelection(initialState, action);
       assert.deepEqual(nextState.scriptId, 300);
     });
 
@@ -145,7 +145,7 @@ describe('scriptSelectionRedux', () => {
         script: null
       };
       const action = setSection(sectionDataWithNoScript);
-      const nextState = scriptSelection(initialState, action);
+      const nextState = unitSelection(initialState, action);
       assert.deepEqual(nextState.scriptId, null);
     });
   });
@@ -159,7 +159,7 @@ describe('scriptSelectionRedux', () => {
         studentScriptIds,
         validCourses
       );
-      const nextState = scriptSelection(
+      const nextState = unitSelection(
         {
           ...initialState,
           scriptId: 100
@@ -177,7 +177,7 @@ describe('scriptSelectionRedux', () => {
         studentScriptIds,
         validCourses
       );
-      const nextState = scriptSelection(initialState, action);
+      const nextState = unitSelection(initialState, action);
       assert.deepEqual(
         nextState.validScripts,
         fakeValidScripts.filter(script => script.script_name === 'express-2017')
@@ -192,7 +192,7 @@ describe('scriptSelectionRedux', () => {
         studentScriptIds,
         validCourses
       );
-      const nextState = scriptSelection(initialState, action);
+      const nextState = unitSelection(initialState, action);
       assert.deepEqual(
         nextState.validScripts,
         fakeValidScripts.filter(script => script.id === 456)
@@ -207,7 +207,7 @@ describe('scriptSelectionRedux', () => {
         studentScriptIds,
         validCourses
       );
-      const nextState = scriptSelection(initialState, action);
+      const nextState = unitSelection(initialState, action);
       const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
       assert.deepEqual(expectedScripts, nextState.validScripts);
     });
@@ -222,7 +222,7 @@ describe('scriptSelectionRedux', () => {
         validCourses,
         {course_id: assignedCourseId}
       );
-      const nextState = scriptSelection(initialState, action);
+      const nextState = unitSelection(initialState, action);
       const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
       assert.deepEqual(expectedScripts, nextState.validScripts);
     });
@@ -236,7 +236,7 @@ describe('scriptSelectionRedux', () => {
         validCourses,
         {script: {id: 300}}
       );
-      const nextState = scriptSelection(initialState, action);
+      const nextState = unitSelection(initialState, action);
       const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
       assert.deepEqual(expectedScripts, nextState.validScripts);
     });

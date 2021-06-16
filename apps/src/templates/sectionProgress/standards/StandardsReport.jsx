@@ -10,7 +10,7 @@ import {
   getSelectedScriptFriendlyName,
   getSelectedScriptDescription,
   setScriptId
-} from '@cdo/apps/redux/scriptSelectionRedux';
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import StandardsProgressTable from './StandardsProgressTable';
 import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -207,7 +207,7 @@ export const UnconnectedStandardsReport = StandardsReport;
 
 export default connect(
   state => ({
-    scriptId: state.scriptSelection.scriptId,
+    scriptId: state.unitSelection.scriptId,
     section: state.sectionData.section,
     scriptData: getCurrentScriptData(state),
     scriptFriendlyName: getSelectedScriptFriendlyName(state),
