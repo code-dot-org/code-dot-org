@@ -1,0 +1,26 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Yesterday's cookies are one dollar off! Help Project Mercury Pastries Food Truck by doing the following:\r\n\r\n1. Correct the price of yesterday's cookies by decreasing it by 1.\r\n\r\n2. Create a `String` called `description` that says `\"Yesterday's cookies cost $\" + price + \" each\"`.\r\n\r\n3. Determine the total price of all of yesterday's cookies and store the result in a variable called `income`.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    int yesterdayCookies = 14;\n    double cookiePrice = 2.15;\n\n    // To Do: Correct the price of the cookie by decreasing it by 1.\n\n\n    // To Do: Create a String variable called description to display the information.\n\n\n    // To Do: Calculate the total possible income from yesterday's cookies.\n\n\n\n\n    System.out.println(description);\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-06-16T16:10:59.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-16 16:14:55 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 16:16:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
