@@ -10,7 +10,7 @@ import reducers, {
   emptyNonUserFacingGroup,
   getSerializedLessonGroups,
   mapLessonGroupDataForEditor
-} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import _ from 'lodash';
 
 const getInitialState = () => ({
@@ -107,7 +107,7 @@ const getInitialState = () => ({
 
 const reducer = combineReducers(reducers);
 
-describe('scriptEditorRedux reducer tests', () => {
+describe('unitEditorRedux reducer tests', () => {
   let initialState;
   beforeEach(() => (initialState = getInitialState()));
 

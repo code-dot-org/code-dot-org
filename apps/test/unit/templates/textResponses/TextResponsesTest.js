@@ -39,7 +39,7 @@ const responses = {
 };
 
 describe('TextResponses', () => {
-  it('renders the ScriptSelector dropdown', () => {
+  it('renders the UnitSelector dropdown', () => {
     const wrapper = shallow(
       <TextResponses
         sectionId={2}
@@ -52,7 +52,7 @@ describe('TextResponses', () => {
       />
     );
 
-    expect(wrapper.find('ScriptSelector').exists()).to.be.true;
+    expect(wrapper.find('UnitSelector').exists()).to.be.true;
   });
 
   it('renders the TextResponsesTable', () => {

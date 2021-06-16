@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {validScriptPropType} from '@cdo/apps/redux/scriptSelectionRedux';
+import {validScriptPropType} from '@cdo/apps/redux/unitSelectionRedux';
 import _ from 'lodash';
 
 // TODO: Can/should we share any logic with AssignmentSelector?
@@ -27,7 +27,7 @@ const groupedAssignments = assignments =>
     .groupBy('category')
     .value();
 
-export default class ScriptSelector extends Component {
+export default class UnitSelector extends Component {
   static propTypes = {
     // This shape is similar to that used by AssignmentSelector, but in that
     // case they've been semi-processed and given assignIds to differentiate
