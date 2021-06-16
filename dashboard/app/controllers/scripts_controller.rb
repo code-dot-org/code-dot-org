@@ -208,7 +208,7 @@ class ScriptsController < ApplicationController
   def set_script
     script_id = params[:id]
     @script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
-      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
+      Script.get_unit_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
       Script.get_from_cache(script_id)
     raise ActiveRecord::RecordNotFound unless @script
 
