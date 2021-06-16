@@ -1,0 +1,116 @@
+<Artist>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "artist",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "true",
+    "impressive": "false",
+    "discard_background": "false",
+    "disable_sharing": "false",
+    "start_direction": "90",
+    "x": "70",
+    "y": "70",
+    "project_template_level_name": "courseC_artist_loopsTemplateA_2021",
+    "tts_long_instructions_override": "Now, use a loop to spin your bird around 12 times with a 30 degree turn.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Inside your loop, you will want to jump to the middle, then turn, then draw a sticker.\",\"hint_id\":\"courseC_artist_loops2a_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/763656ddd516cdfd22454a229f3641f5/courseC_artist_loops2a_2019.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Click on the number at the top of the `repeat` loop to change how many times it repeats.\",\"hint_id\":\"courseC_artist_loops2a_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/574234625b47bfd6017ec271cf4b29c1/courseC_artist_loops2a_2019.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 26669,
+    "name_suffix": "_2021",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "short_instructions": "Now, use a loop to make more copies of your sticker. Try changing the numbers in the turn and repeat blocks to make different patterns.",
+    "long_instructions": "**Example student lesson level shown here:  Course C - Lesson 10, Level :  Mini-Project: Sticker Art**\r\n\r\nNow, use a loop to make more copies of your sticker. Try changing the numbers in the `turn` and `repeat` blocks to make different patterns.\r\n\r\n---\r\n\r\nPress \"Finish\" when you are happy with what you've made.\r\n\r\n![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)\r\n![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)\r\n![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "encrypted_examples": "RQucKH5JyNSHQ5reTcJBFJLf9TNFWmUjezvI997dG++7+MEOAdVwBgg9GPTo\nXCh8eBSfvHS193WzrM8RpAmkKsAWUzkAzchEPao+HTN64ks6C4F5j7BVljTB\nnxeYze2q7ickC2fuaNfNuZPJq1i6sIFNsfoLzY5cd/G8cpa1usCs6Yb2MRwN\na7jYKOe03mUTter6zGBlCsJDjft8hbvw9A==\n",
+    "teacher_markdown": "This lesson contains a **mini-project** called *Sticker Design*. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \r\n\r\n* The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \r\n* Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "validation_enabled": "false",
+    "enable_download_image": "false",
+    "preload_asset_list": null
+  },
+  "game_id": 23,
+  "published": true,
+  "created_at": "2021-06-14T14:26:17.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-23 18:09:31 +0000\",\"changed\":[\"notes\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:12:40 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:13:09 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:13:38 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"x\",\"y\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:19:23 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:19:54 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:21:35 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:22:13 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:23:13 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:23:51 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:24:24 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:24:45 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:25:30 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"images\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:26:05 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:26:53 +0000\",\"changed\":[\"instructions\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:27:16 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 18:27:35 +0000\",\"changed\":[\"toolbox_blocks\",\"x\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-23 20:10:40 +0000\",\"changed\":[\"toolbox_blocks\",\"images\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 00:12:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-05 21:35:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"skin\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-05 21:55:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"y\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-05 21:56:06 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-05 21:57:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-06 00:49:34 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-06 00:51:36 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-06 00:53:21 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-06 00:56:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-06 01:00:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-06 02:01:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-06 02:47:15 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-06 02:47:24 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-09 19:18:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-09 20:15:29 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-30 17:44:15 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-30 17:55:22 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-10 18:28:19 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-21 17:49:49 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-19 22:30:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-25 16:54:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-10-09 00:04:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-09 19:36:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-03-20 16:07:46 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"short_instructions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-03-20 16:08:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-06-19 15:05:43 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-06-19 15:40:36 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-06-14 14:26:22 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-15 14:42:03 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-15 14:42:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">50</title>
+        </block>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveBackward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">???</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="jump_to">
+          <title name="VALUE">13</title>
+        </block>
+        <block type="jump_to_xy" id="callMe">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+        </block>
+        <block type="sticker">
+          <title name="VALUE">Bird</title>
+        </block>
+        <block type="draw_colour" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+</xml>
+    </solution_blocks>
+  </blocks>
+</Artist>
