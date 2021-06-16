@@ -1,5 +1,6 @@
 login_required true
 version_year '2021'
+published_state 'beta'
 
 lesson_group 'Implementing and Teaching CS', display_name: 'Part I:  Teaching and Implementing CS'
 lesson 'Welcome to "Teaching Computer Science Fundamentals"', display_name: 'Welcome and Introduction', has_lesson_plan: false
@@ -42,17 +43,19 @@ level 'OPD-K5-PartIIOutline-2021'
 
 lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
 level 'OPD-K5 Stage3Start_copy_2021'
+level 'OPD-K5-SeqSprites-2021'
 level 'OPD-K5-Sequencing-2021'
+level 'OPD-K5-SeqVidA-2021'
 level 'OPD-K5-SeqA-2021'
+level 'OPD-K5-DebugB-2021'
 level 'OPD-K5-SeqB-2021'
 level 'OPD-K5-SeqC-2021'
 level 'OPD-K5-SeqDebug-2021'
-level 'OPD-K5 sequencing introduced_2021'
 level 'OPD-K5 sequencing free response_2021'
 
 lesson 'Sequencing with Sprites', display_name: 'Sequencing with Sprites', has_lesson_plan: false
 level 'OPD-K5 sprite lab_2021'
-level 'OPD-K5 sprite lab introduction_2021'
+level 'OPD-K5-SeqSprites-2021'
 level 'OPD-K5-IntroSpriteLab-2021'
 level 'OPD-K5-IntroSprites-2021'
 level 'OPD-K5-SpritesVid-2021'
@@ -77,6 +80,7 @@ level 'OPD-K5-NestedLoopsD-2021'
 level 'OPD-K5-NestedLoopsPredictionD-2021'
 level 'OPD-K5-NestLoopsE-2021'
 level 'OPD-K5 NestedLoopsE-2021'
+level 'OPD-K5-RefLoops_2021'
 
 lesson 'Events', display_name: 'Events', has_lesson_plan: false
 level 'OPD-K5 Stage7Start_copy_2021'
@@ -89,9 +93,8 @@ level 'OPD-K5-Events-Video-2021'
 level 'OPD-K5-EventsC-2021'
 level 'OPD-K5-DVidEvents-2021'
 level 'OPD-K5-DEvents-2021'
-level 'OPD-K5-EventsE-2021'
+level 'OPD-K5-EEvents-2021'
 level 'OPD-K5-EventsF2-2021'
-level 'OPD-K5 events introduced_2021'
 level 'OPD-K5 events free response_2021'
 
 lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: false
@@ -103,7 +106,6 @@ level 'OPD-K5-IfElseVid-2021'
 level 'OPD-K5-IfElse2-2021'
 level 'OPD-K5-ConditionalsE-2021'
 level 'OPD-K5-ConditionalE-2021'
-level 'OPD-K5 conditionals introduced_2021'
 level 'OPD-K5 conditionals free response_2021'
 
 lesson 'Functions', display_name: 'Functions', has_lesson_plan: false
@@ -113,7 +115,6 @@ level 'OPD-K5-Functions-2021'
 level 'OPD-K5-FunctionsVideo-2021'
 level 'OPD-K5-FuncMineCraft-2021'
 level 'OPD-K5-FuncArtist-2021'
-level 'OPD-K5 functions introduced_2021'
 level 'OPD-K5 functions free response_2021'
 
 lesson 'Variables', display_name: 'Variables', has_lesson_plan: false

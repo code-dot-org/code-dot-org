@@ -11,7 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:24 UTC",
+    "serialized_at": "2021-06-16 22:59:48 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "csd4-dlp-18"
     }

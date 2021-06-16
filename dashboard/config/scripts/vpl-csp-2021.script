@@ -1,6 +1,7 @@
 hideable_lessons true
 student_detail_progress_view true
 version_year '2021'
+published_state 'pilot'
 pilot_experiment '20-21-virtual-AYW-CSP'
 
 lesson 'Module 1', display_name: 'Module 1: Introducing Unit 4 and new pedagogy for teaching programming', has_lesson_plan: false

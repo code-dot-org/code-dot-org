@@ -1,4 +1,5 @@
 login_required true
+published_state 'beta'
 
 lesson 'CSD Workshop 1 Bugs', display_name: 'CSD Workshop 1 Bugs', has_lesson_plan: false
 level 'CSD-PL AYWS1 Debugging Intro', named: true
