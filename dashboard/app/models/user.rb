@@ -100,7 +100,7 @@ class User < ApplicationRecord
     ops_school
     ops_gender
     using_text_mode
-    using_dark_mode
+    display_mode
     last_seen_school_info_interstitial
     has_seen_standards_report_info_dialog
     oauth_refresh_token
