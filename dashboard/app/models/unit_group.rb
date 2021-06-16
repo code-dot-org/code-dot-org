@@ -7,7 +7,7 @@
 #  properties      :text(65535)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  published_state :string(255)
+#  published_state :string(255)      default("beta"), not null
 #
 # Indexes
 #
@@ -32,7 +32,7 @@ class UnitGroup < ApplicationRecord
 
   scope :with_associated_models, -> {includes([:plc_course, :default_unit_group_units])}
 
-  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   FAMILY_NAMES = [
     CSD = 'csd'.freeze,
@@ -143,6 +143,7 @@ class UnitGroup < ApplicationRecord
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
         alternate_scripts: summarize_alternate_scripts,
+        published_state: published_state,
         properties: properties,
         resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
         student_resources: student_resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
@@ -329,10 +330,10 @@ class UnitGroup < ApplicationRecord
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(get_published_state)
   end
 
-  def published_state
+  def get_published_state
     if pilot?
       SharedConstants::PUBLISHED_STATE.pilot
     elsif visible
@@ -354,7 +355,7 @@ class UnitGroup < ApplicationRecord
       assignment_family_title: localized_assignment_family_title,
       family_name: family_name,
       version_year: version_year,
-      published_state: published_state,
+      published_state: get_published_state,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
@@ -704,5 +705,9 @@ class UnitGroup < ApplicationRecord
 
   def has_migrated_script?
     !!default_scripts[0]&.is_migrated?
+  end
+
+  def prevent_course_version_change?
+    default_scripts.any?(&:prevent_course_version_change?)
   end
 end
