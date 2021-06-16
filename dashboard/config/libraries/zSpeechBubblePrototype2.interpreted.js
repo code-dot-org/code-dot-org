@@ -17,25 +17,36 @@ function speechBubbles(){
     var spriteX=getProp({id: spriteIds[i]}, "x");
     var spriteY=400-getProp({id: spriteIds[i]}, "y");
     var spriteScale=getProp({id: spriteIds[i]}, "scale");
-    var spriteSpeech=wordWrap(getProp({id: spriteIds[i]}, "speech"),20);
-    //console.log(spriteSpeech);
-    setProp({id: spriteIds[i]}, "lineCount", tempLineCount+1);
+    var spriteSpeech=getProp({id: spriteIds[i]}, "speech");
     var spriteTimeout=getProp({id: spriteIds[i]}, "timeout");
-    //console.log(getProp({id: spriteIds[i]}, "lineCount"));
-    //console.log(getProp({id: spriteIds[i]}, "timeout"));
-    //console.log(spriteTimeout);
 
     if(spriteTimeout){
+      var widthOfText=textWidth(spriteSpeech);
+      var textScaler=16;//font size
+      textSize(textScaler);
+      while(widthOfText>500){
+        textScaler--;
+        textSize(textScaler);
+        widthOfText=textWidth(spriteSpeech);
+      }
+      var charCount=Math.sqrt(spriteSpeech.length*10);
+      if(charCount < 20) {
+        charCount=20;
+      }
+
+
+      spriteSpeech=wordWrap(getProp({id: spriteIds[i]}, "speech"),charCount);//16 characters per line
+      var lines = spriteSpeech.split(/\r\n|\r|\n/); 
+      setProp({id: spriteIds[i]}, "lineCount", lines.length);
       fill(rgb(50,50,50,0.5));
       stroke("gray");
-      var textScaler=16;
+
+
       textAlign(CENTER, TOP);
-      textSize(textScaler);
+
 
       var minWidth=15;
 
-      var lines = spriteSpeech.split(/\r\n|\r|\n/); 
-      console.log(lines);
       for(var j=0;j<lines.length;j++){
         if(minWidth<textWidth(lines[j])){
           minWidth=textWidth(lines[j]);
@@ -45,10 +56,11 @@ function speechBubbles(){
 
 
       var boxWidth=minWidth+5;
-      var boxHeight=((textScaler)+5)*(getProp({id: spriteIds[i]}, "lineCount"));
-      //console.log(boxHeight);
+      var boxHeight=((textScaler)+3)*(getProp({id: spriteIds[i]}, "lineCount"))+5;
+
       var rectX=spriteX-boxWidth/2;
-      var rectY=spriteY-(spriteScale/2)-boxHeight-5-boxHeight+textScaler;
+      var rectY=spriteY-(spriteScale/2)-boxHeight-5;
+
       if(rectX<0){
         rectX=0;
       }
@@ -58,11 +70,12 @@ function speechBubbles(){
       if(rectX<0){
         rectX=200-boxWidth/2;
       }
-      //console.log(rectX);
+
       if(rectY<0){rectY=0;}
       if(rectY+boxHeight>400){
         rectY=400-boxHeight;
       }
+
       strokeWeight(2);
       var bubbleRad=4;
       fill("white");
@@ -84,7 +97,7 @@ function speechBubbles(){
       noStroke();
       shape(rectX+boxWidth*4/10,rectY+boxHeight-1,tipX,tipY,rectX+boxWidth/2,rectY+boxHeight-1);
       stroke("gray");
-      //line(2+rectX+boxWidth*4/10,rectY+boxHeight,rectX-2+boxWidth/2,rectY+boxHeight);  
+
       line(rectX+boxWidth*4/10,rectY+boxHeight,tipX,tipY);
       line(tipX,tipY,rectX+boxWidth/2,rectY+boxHeight);
       noStroke();
@@ -115,11 +128,9 @@ function wordWrap(str, maxWidth) {
       res += [str.slice(0, maxWidth), newLineStr].join('');
       str = str.slice(maxWidth);
     }
-    tempLineCount++;
   }
   return res + str;
 }
-var tempLineCount=0;
 other.push(speechBubbles);
 
 
