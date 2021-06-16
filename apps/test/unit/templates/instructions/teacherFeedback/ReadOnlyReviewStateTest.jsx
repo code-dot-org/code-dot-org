@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import ReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReviewState';
+import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
 
 const setUp = overrideProps => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  return shallow(<ReviewState {...props} />);
+  return shallow(<ReadOnlyReviewState {...props} />);
 };
 
 describe('ReviewState', () => {
