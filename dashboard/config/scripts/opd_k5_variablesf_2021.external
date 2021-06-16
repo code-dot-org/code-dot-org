@@ -1,0 +1,24 @@
+name 'OPD-K5-VariablesF-2021'
+title 'variables'
+description 'description here'
+markdown <<MARKDOWN
+# Introduction to Variables
+
+<img src="https://images.code.org/833108f29baf6f8633b1282aeb7d06e5-image-1571780548872.jpg" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
+
+Click "Continue" to engage with the following student lesson levels and learn about variables.
+
+
+## Concept Progression
+
+* Course F - Lesson 7, Level 6:  Text and Prompts
+	*  Students use variables in **Sprite Lab**.
+
+* Course F - Lesson 10, Levels 2 and :  Using Variables with the Artist
+	*  Students use variables in **The Artist**.
+
+* Course F - Lesson 12, Level:  Varibles with the Bee
+	*  Students use variables in **Maze Puzzles**.
+
+
+MARKDOWN

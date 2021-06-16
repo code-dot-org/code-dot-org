@@ -811,22 +811,22 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'script with pilot experiment has pilot published state' do
     script = create(:script, name: 'single-lesson-script', pilot_experiment: 'my-experiment')
-    assert_equal SharedConstants::PUBLISHED_STATE.pilot, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.pilot, script.get_published_state
   end
 
   test 'script with hidden true has beta published state' do
     script = create(:script, name: 'single-lesson-script', hidden: true)
-    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.get_published_state
   end
 
   test 'script with hidden false has preview published state' do
     script = create(:script, name: 'single-lesson-script', hidden: false)
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.get_published_state
   end
 
   test 'script with hidden false and is_stable true has stable published state' do
     script = create(:script, name: 'single-lesson-script', hidden: false, is_stable: true)
-    assert_equal SharedConstants::PUBLISHED_STATE.stable, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, script.get_published_state
   end
 
   test 'should summarize script' do
@@ -1895,6 +1895,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal expected_level_names, actual_level_names
 
     new_dsl = <<~SCRIPT
+      published_state 'beta'
+
       lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: false
       level 'Level 1_copy'
       level 'Level 4_copy'
