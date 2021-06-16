@@ -37,7 +37,7 @@ class LessonsControllerTest < ActionController::TestCase
       relative_position: 2
     )
 
-    @script_title = 'Script Display Name'
+    @unit_title = 'Script Display Name'
     @lesson_name = 'Lesson Display Name'
 
     custom_i18n = {
@@ -45,7 +45,7 @@ class LessonsControllerTest < ActionController::TestCase
         'script' => {
           'name' => {
             @script.name => {
-              'title' => @script_title,
+              'title' => @unit_title,
               'lessons' => {
                 @lesson.name => {
                   'name' => @lesson_name
@@ -58,7 +58,7 @@ class LessonsControllerTest < ActionController::TestCase
     }
 
     I18n.backend.store_translations 'en-US', custom_i18n
-    assert_equal @script_title, @lesson.script.localized_title
+    assert_equal @unit_title, @lesson.script.localized_title
 
     @update_params = {
       id: @lesson.id,
@@ -219,7 +219,7 @@ class LessonsControllerTest < ActionController::TestCase
         'script' => {
           'name' => {
             @solo_lesson_in_script.script.name => {
-              'title' => @script_title,
+              'title' => @unit_title,
               'lessons' => {
                 @lesson.name => {
                   'name' => @lesson_name
@@ -232,17 +232,17 @@ class LessonsControllerTest < ActionController::TestCase
     }
 
     I18n.backend.store_translations 'en-US', custom_i18n
-    assert_equal @script_title, @solo_lesson_in_script.script.localized_title
+    assert_equal @unit_title, @solo_lesson_in_script.script.localized_title
 
     # a bit weird, but this is what happens when there is only one lesson.
-    assert_equal @script_title, @solo_lesson_in_script.localized_name
+    assert_equal @unit_title, @solo_lesson_in_script.localized_name
 
     get :show, params: {
       script_id: script.name,
       position: @solo_lesson_in_script.relative_position
     }
     assert_response :ok
-    assert(@response.body.include?(@script_title))
+    assert(@response.body.include?(@unit_title))
     assert(@response.body.include?(@solo_lesson_in_script.overview))
     assert(@response.body.include?(script_lesson_path(@solo_lesson_in_script.script, @solo_lesson_in_script)))
   end
@@ -253,7 +253,7 @@ class LessonsControllerTest < ActionController::TestCase
       position: @lesson.relative_position
     }
     assert_response :ok
-    assert(@response.body.include?(@script_title))
+    assert(@response.body.include?(@unit_title))
     assert(@response.body.include?(@lesson.overview))
     assert(@response.body.include?(@script.link))
     assert(@response.body.include?(script_lesson_path(@lesson.script, @lesson)))
