@@ -44,6 +44,11 @@ $(function() {
   // Make the map sticky.
   $('#map').sticky({topSpacing: 0});
 
+  //Prevent the map from covering the footer
+  $(document).scroll(function() {
+    checkOffset();
+  });
+
   // Trigger query when a facet is changed.
   $('#class-search-facets')
     .find('select')
@@ -51,6 +56,21 @@ $(function() {
       submitForm();
     });
 });
+
+function checkOffset() {
+  if (
+    $('#map').offset().top + $('#map').height() >=
+    $('#pagefooter').offset().top - 10
+  ) {
+    $('#map').css('position', 'absolute');
+  }
+  if (
+    $(document).scrollTop() + window.innerHeight <
+    $('#pagefooter').offset().top
+  ) {
+    $('#map').css('position', 'fixed');
+  } // restore when you scroll up
+}
 
 function submitForm() {
   var form_data = $('#class-search-form').serializeArray();
