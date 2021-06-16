@@ -1,0 +1,20 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "The owner wants to enter desserts as she expands her inventory. In `MyFoodTruck.java`, implement the `Scanner` class so she can enter values for the flavor, quantity, and price for the dessert she wants to create.\r\n\r\nCreate a `Dessert` object using the values she enters.\r\n\r\n```\r\n// Create Scanner object\r\n\r\n\r\n// Get user input for the\r\n// instance variables\r\n\r\n\r\n// Create a Dessert object\r\n// named cake\r\n\r\n\r\n\r\ncake.printInfo();\r\n```",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-06-15T18:55:05.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-15 18:58:36 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
