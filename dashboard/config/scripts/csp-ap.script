@@ -3,7 +3,6 @@ hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
 announcements [{"notice"=>"This unit is being replaced....", "details"=>"As part of improving Performance Task prep, this unit has been split into separate units \"Explore PT Prep\" and \"Create PT Prep\" which can now be found in the pull down menu where you assign units to one of your sections.  Please go there and assign your section to the appropriate unit to see improved activities and resources.  The lesson plan for the Explore PT prep will link to the new lessons. Click the Learn More button to read about the changes and updates.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/52", "type"=>"bullhorn"}]
-published_state 'beta'
 
 lesson_group 'csp_ap_1', display_name: 'Chapter 1: AP Tech Setup'
 lesson 'Tech Setup - Your AP Digital Portfolio and Other Tools', display_name: 'Tech Setup - Your AP Digital Portfolio and Other Tools', has_lesson_plan: true

@@ -1,7 +1,6 @@
 login_required true
 hideable_lessons true
 student_detail_progress_view true
-published_state 'beta'
 
 lesson 'Computers and Problem Solving', display_name: 'Computers and Problem Solving', has_lesson_plan: false
 level 'CSD U1 Test define a computer'

@@ -1,6 +1,5 @@
 login_required true
 version_year '2020'
-published_state 'beta'
 
 lesson_group 'k5_getting_started_1', display_name: 'Getting Started'
 lesson 'Welcome to "Teaching Computer Science Fundamentals"', display_name: 'Welcome to "Teaching Computer Science Fundamentals"', has_lesson_plan: false

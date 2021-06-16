@@ -2,7 +2,6 @@ login_required true
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"]]
 announcements [{"notice"=>"Attention pilot teachers!", "details"=>"Lesson plans for this course are currently available in Google Doc format only. Click the button to access the lesson plans.", "link"=>"https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing", "type"=>"information", "visibility"=>"Teacher-only"}]
-published_state 'pilot'
 pilot_experiment 'csf-2021-pilot'
 
 lesson_group 'Sprites', display_name: 'Sprites'

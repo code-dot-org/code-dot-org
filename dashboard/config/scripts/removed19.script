@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Debugging: Unspotted Bugs', display_name: 'Debugging: Unspotted Bugs', has_lesson_plan: false
 level 'courseB_video_Unspotted_2019'
 

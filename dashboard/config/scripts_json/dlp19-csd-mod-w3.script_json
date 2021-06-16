@@ -11,8 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:00:23 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-05-03 23:55:37 UTC",
     "seeding_key": {
       "script.name": "dlp19-csd-mod-w3"
     }

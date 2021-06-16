@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson_group 'lesson group', display_name: 'lesson group display name'
 lesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true
 

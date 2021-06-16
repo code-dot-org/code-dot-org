@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Algorithms: Graph Paper Programming', display_name: 'Algorithms: Graph Paper Programming', has_lesson_plan: false, unplugged: true
 level 'GraphPaperProgramming'
 

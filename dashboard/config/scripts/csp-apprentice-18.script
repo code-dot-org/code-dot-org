@@ -1,7 +1,6 @@
 professional_learning_course 'CS Principles Facilitator in Training 2018-2019'
 login_required true
 student_detail_progress_view true
-published_state 'beta'
 
 lesson_group 'required', display_name: 'Overview'
 lesson 'Apprentice Reflection Overview', display_name: 'Apprentice Reflection Overview', has_lesson_plan: false

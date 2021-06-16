@@ -1,5 +1,4 @@
 hidden false
-published_state 'preview'
 
 lesson 'Debugging for AB Educators', display_name: 'Debugging for AB Educators', has_lesson_plan: false
 level 'AB_debug_Laurel1'

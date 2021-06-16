@@ -3,7 +3,6 @@ login_required true
 hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
-published_state 'preview'
 project_sharing true
 
 lesson_group 'csp3_1_2018', display_name: 'Unit 3: Intro to Programming'

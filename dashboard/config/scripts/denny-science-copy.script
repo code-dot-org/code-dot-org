@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Collision Detector: Designing Screens', display_name: 'Collision Detector: Designing Screens', has_lesson_plan: false
 level 'CSD mini design mode video_copy'
 level 'Design Mode Map_copy'

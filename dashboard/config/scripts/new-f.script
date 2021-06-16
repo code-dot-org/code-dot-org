@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson_group 'csf_f_1', display_name: 'Ramp Up to Course F (Optional)'
 lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: false, unplugged: true
 level 'courseB_unplugged_MRF'
@@ -114,50 +112,50 @@ level 'courseF_unplugged_powerOfWords'
 lesson 'Ice Age Play Lab', display_name: 'Ice Age Play Lab', has_lesson_plan: false
 level 'courseF_video_IceAgeIntro'
 variants
-  level 'iceage_hello1'
   level 'courseF_IceAge_1'
+  level 'iceage_hello1'
 endvariants
 variants
-  level 'iceage_hello2'
   level 'courseF_IceAge_2'
+  level 'iceage_hello2'
 endvariants
 variants
-  level 'iceage_move_to_flag'
   level 'courseF_IceAge_3'
+  level 'iceage_move_to_flag'
 endvariants
 variants
-  level 'iceage_move_to_actor'
   level 'courseF_IceAge_4'
+  level 'iceage_move_to_actor'
 endvariants
 level 'courseF_video_iceAgeRepeat'
 variants
-  level 'iceage_repeat'
   level 'courseF_IceAge_5'
+  level 'iceage_repeat'
 endvariants
 level 'courseF_video_IceAgeEvents'
 variants
-  level 'iceage_click_hello'
   level 'courseF_IceAge_6'
+  level 'iceage_click_hello'
 endvariants
 variants
-  level 'iceage_move_events'
   level 'courseF_IceAge_7'
+  level 'iceage_move_events'
 endvariants
 variants
-  level 'iceage_sound_and_points'
   level 'courseF_IceAge_8'
+  level 'iceage_sound_and_points'
 endvariants
 variants
-  level 'iceage_warn_ice_age'
   level 'courseF_IceAge_9'
+  level 'iceage_warn_ice_age'
 endvariants
 variants
-  level 'iceage_throw_hearts'
   level 'courseF_IceAge_10'
+  level 'iceage_throw_hearts'
 endvariants
 variants
-  level 'iceage_free_play'
   level 'courseF_IceAge_11'
+  level 'iceage_free_play'
 endvariants
 
 lesson 'Conditionals in Minecraft', display_name: 'Conditionals in Minecraft', has_lesson_plan: false

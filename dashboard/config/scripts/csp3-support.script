@@ -2,7 +2,6 @@ professional_learning_course 'CSP Support'
 peer_reviews_to_complete 4
 login_required true
 student_detail_progress_view true
-published_state 'beta'
 
 lesson_group 'required', display_name: 'Overview'
 lesson 'Unit 3 Overview', display_name: 'Unit 3 Overview', has_lesson_plan: false

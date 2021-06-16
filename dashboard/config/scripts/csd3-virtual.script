@@ -5,7 +5,6 @@ student_detail_progress_view true
 teacher_resources [["teacherForum", "https://forum.code.org/c/csd3"]]
 has_verified_resources true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
-published_state 'preview'
 project_sharing true
 
 lesson 'Drawing in Game Lab', display_name: 'Drawing in Game Lab', has_lesson_plan: false

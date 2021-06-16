@@ -1,6 +1,5 @@
 professional_learning_course 'ECS Support Legacy'
 login_required true
-published_state 'beta'
 
 lesson 'Welcome to Phase 1!', display_name: 'Welcome to Phase 1!', has_lesson_plan: false
 level 'PDECS Welcome Video'

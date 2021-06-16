@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson_group 'csf_data', display_name: 'Virus Simulation for Code Bytes'
 lesson 'Virus Simulation for Code Bytes', display_name: 'Virus Simulation for Code Bytes', has_lesson_plan: false
 level 'virus_1_codebytes', progression: 'Create your sprites'

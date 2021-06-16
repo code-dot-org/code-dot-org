@@ -47,8 +47,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-06-16 23:00:35 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-05-03 23:55:41 UTC",
     "seeding_key": {
       "script.name": "csd6-2020"
     }

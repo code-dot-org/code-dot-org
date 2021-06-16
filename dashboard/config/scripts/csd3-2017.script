@@ -8,7 +8,6 @@ new_name 'csd3-2017'
 family_name 'csd3'
 version_year '2017'
 is_stable true
-published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true

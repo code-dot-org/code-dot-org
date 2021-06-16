@@ -1,6 +1,5 @@
 professional_learning_course 'CS in Algebra Legacy'
 login_required true
-published_state 'beta'
 
 lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks', has_lesson_plan: false
 level 'Calc Circles of Eval 1'

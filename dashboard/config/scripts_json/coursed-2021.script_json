@@ -15,8 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-06-16 23:01:20 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-05-26 18:18:03 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }

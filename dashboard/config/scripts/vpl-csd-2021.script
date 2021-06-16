@@ -2,7 +2,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["curriculum", "https://studio.code.org/courses/csd-2021"], ["teacherForum", "https://forum.code.org/"], ["curriculumGuide", "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview"]]
 version_year '2021'
-published_state 'pilot'
 pilot_experiment '20-21-virtual-AYW-CSD'
 
 lesson_group 'CSD_Module 1', display_name: 'Module 1'

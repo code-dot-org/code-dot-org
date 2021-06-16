@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'Unit 1 - Sending Bits in the Real World', display_name: 'Unit 1 - Sending Bits in the Real World', has_lesson_plan: true
 level 'Sending Bits Real World Student Lesson Introduction'

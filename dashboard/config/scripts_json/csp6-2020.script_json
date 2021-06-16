@@ -58,8 +58,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:00:50 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-06-07 21:17:54 UTC",
     "seeding_key": {
       "script.name": "csp6-2020"
     }

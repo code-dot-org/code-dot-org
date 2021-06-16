@@ -1,5 +1,4 @@
 login_required true
-published_state 'pilot'
 pilot_experiment 'denny-science-piloters'
 
 lesson 'Earthquake Detector: Designing Screens', display_name: 'Earthquake Detector: Designing Screens', has_lesson_plan: false

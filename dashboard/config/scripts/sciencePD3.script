@@ -1,6 +1,5 @@
 professional_learning_course 'CS in Science Support'
 login_required true
-published_state 'beta'
 
 lesson 'Welcome Back!', display_name: 'Welcome Back!', has_lesson_plan: false
 level 'sciPDpart4_S1_L1'

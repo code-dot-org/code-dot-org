@@ -2,7 +2,6 @@ hidden false
 login_required true
 hideable_lessons true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/algebra/courseB/{LESSON}'
-published_state 'preview'
 
 lesson 'Unplugged: Video Games and Coordinate Planes', display_name: 'Unplugged: Video Games and Coordinate Planes', has_lesson_plan: true, unplugged: true
 level 'VideoGamesCoordinatePlanes'

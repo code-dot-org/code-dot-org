@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson_group 'required', display_name: 'Overview'
 lesson 'Unit 5 Overview', display_name: 'Unit 5 Overview', has_lesson_plan: false
 level 'What\'s inside and how is it organized?', named: true

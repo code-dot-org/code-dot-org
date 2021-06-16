@@ -7,7 +7,6 @@ has_verified_resources true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit8/{LESSON}'
 announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 is_stable true
-published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSP'
 

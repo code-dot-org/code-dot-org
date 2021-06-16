@@ -1,7 +1,6 @@
 hidden false
 login_required true
 has_verified_resources true
-published_state 'preview'
 
 lesson_group 'csd_survey', display_name: 'Post-Course Survey'
 lesson 'CSD post-course survey', display_name: 'CSD post-course survey', has_lesson_plan: false

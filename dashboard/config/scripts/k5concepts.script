@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Events', display_name: 'Events', has_lesson_plan: false, unplugged: true
 level 'BigEvent'
 level '2-3 Big Event Match 1', assessment: true

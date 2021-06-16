@@ -1,5 +1,4 @@
 professional_learning_course 'Equity Support'
-published_state 'beta'
 
 lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
 level 'Equity Welcome'

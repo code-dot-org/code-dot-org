@@ -1,6 +1,5 @@
 professional_learning_course 'CS in Algebra Legacy'
 login_required true
-published_state 'beta'
 
 lesson 'Updates - Tweaks and Polish', display_name: 'Updates - Tweaks and Polish', has_lesson_plan: false
 level 'PDAlg Updates Tweaks'

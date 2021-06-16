@@ -8,7 +8,6 @@ project_widget_types ["playlab", "artist"]
 family_name 'coursee'
 version_year '2020'
 is_stable true
-published_state 'stable'
 curriculum_umbrella 'CSF'
 tts true
 is_course true

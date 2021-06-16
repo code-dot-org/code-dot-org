@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'Creating Javascript Objects', display_name: 'Creating Javascript Objects', has_lesson_plan: false
 level 'U4L02 Student Lesson Introduction Video'

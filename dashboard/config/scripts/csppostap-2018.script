@@ -8,7 +8,6 @@ announcements [{"notice"=>"No Lesson Plans for Chapter 2", "details"=>"Chapter 2
 family_name 'csppostap'
 version_year '2018'
 is_stable true
-published_state 'stable'
 project_sharing true
 tts true
 

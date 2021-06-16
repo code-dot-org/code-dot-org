@@ -4,7 +4,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
 announcements [{"notice"=>"Check out the CSP mid-course survey", "details"=>"We recently added a mid-course survey to the end of Unit 3.  Please allow your students some time to complete it.", "link"=>"", "type"=>"success"}]
-published_state 'preview'
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp3_1', display_name: 'Chapter 1: Programming Languages and Algorithms'
@@ -129,8 +128,8 @@ level 'U3L08 - digitalScene', progression: 'Challenge: Design Your Digital Scene
 lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
 lesson 'Unit 3 Chapter 1 Assessment', display_name: 'Unit 3 Chapter 1 Assessment', lockable: true, has_lesson_plan: false
 variants
-  level 'csp_affirmation_intervention_3', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
   level 'csp_affirmation_control_3', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention_3', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
 endvariants
 level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group', assessment: true
 

@@ -1,6 +1,5 @@
 id '2'
 wrapup_video 'hoc_wrapup'
-published_state 'beta'
 
 lesson 'Hour of Code 2013', display_name: 'Hour of Code 2013', has_lesson_plan: false
 skin 'birds'

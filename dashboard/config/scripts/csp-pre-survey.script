@@ -1,5 +1,4 @@
 hideable_lessons true
-published_state 'beta'
 
 lesson 'Anonymous student pre-survey', display_name: 'Anonymous student pre-survey', has_lesson_plan: false
 level 'CSP pre-assessment survey', assessment: true

@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'Debugging: Unspotted Bugs', display_name: 'Debugging: Unspotted Bugs', has_lesson_plan: true
 level 'courseB_video_Unspotted'

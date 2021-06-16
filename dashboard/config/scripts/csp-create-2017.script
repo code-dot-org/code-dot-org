@@ -8,7 +8,6 @@ new_name 'csp-create-2017'
 family_name 'csp-create'
 version_year '2017'
 is_stable true
-published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSP'
 

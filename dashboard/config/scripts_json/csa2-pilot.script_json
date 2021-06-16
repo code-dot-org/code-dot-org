@@ -15,8 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:01:28 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2021-06-16 19:21:10 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -4413,9 +4412,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L4-L1"
-        ],
         "progression": "Constructor Overloading"
       },
       "named_level": false,
@@ -4439,9 +4435,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L4-L3"
-        ],
         "progression": "Multiple Constructors"
       },
       "named_level": false,
@@ -4465,9 +4458,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L4-L4"
-        ],
         "progression": "Constructor Overloading with Scanner"
       },
       "named_level": false,
@@ -4491,9 +4481,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U2L4-L6"
-        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -4517,9 +4504,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L5-L2"
-        ],
         "progression": "Evaluating Expressions"
       },
       "named_level": false,
@@ -4543,9 +4527,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L5-L3"
-        ],
         "progression": "Evaluating Expressions"
       },
       "named_level": false,
@@ -4569,9 +4550,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L5-L4"
-        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -4595,9 +4573,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L5-L5"
-        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -4621,9 +4596,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L6-L1"
-        ],
         "progression": "Debugging Errors"
       },
       "named_level": false,
@@ -4647,9 +4619,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L6-L2"
-        ],
         "progression": "Scope Error"
       },
       "named_level": false,
@@ -4673,9 +4642,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L6-L3"
-        ],
         "progression": "Scope"
       },
       "named_level": false,
@@ -4699,9 +4665,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L6-L4"
-        ],
         "progression": "Scope"
       },
       "named_level": false,
@@ -4725,9 +4688,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L6-L5"
-        ],
         "progression": "Constructor"
       },
       "named_level": false,
@@ -4751,9 +4711,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L6-L6"
-        ],
         "progression": "Constructor"
       },
       "named_level": false,
@@ -4777,9 +4734,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L6-L7"
-        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,

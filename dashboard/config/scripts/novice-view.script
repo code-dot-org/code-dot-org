@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'CSP Tuesday', display_name: 'CSP Tuesday', has_lesson_plan: false
 level 'csp-tuesday-unit', progression: 'Unit Reflection'

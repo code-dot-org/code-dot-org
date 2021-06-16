@@ -1,6 +1,5 @@
 professional_learning_course 'K5 Support'
 login_required true
-published_state 'pilot'
 pilot_experiment 'csf-online-pd-kodea'
 
 lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false

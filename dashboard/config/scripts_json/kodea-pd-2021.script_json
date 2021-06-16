@@ -10,8 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:01:34 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2021-06-09 18:08:25 UTC",
     "seeding_key": {
       "script.name": "kodea-pd-2021"
     }

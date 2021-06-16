@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: true
 level 'courseD_video_ramp1'

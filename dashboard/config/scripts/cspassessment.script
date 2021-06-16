@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment', display_name: 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment', has_lesson_plan: false
 level 'CSP_Final_instructions'

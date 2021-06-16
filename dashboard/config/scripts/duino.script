@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Basic Circuits', display_name: 'Basic Circuits', has_lesson_plan: false
 level 'duino battery led'
 level 'duino button led'

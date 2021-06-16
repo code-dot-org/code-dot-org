@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'new stage', display_name: 'new stage', has_lesson_plan: false
 level 'Test Map Level'
 level 'e_textbook_nested_loops_wrapup'

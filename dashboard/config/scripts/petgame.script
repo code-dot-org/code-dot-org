@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'pet game', display_name: 'pet game', has_lesson_plan: false
 level 'pet game 1'
 level 'pet game 2'

@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson_group 'Outbreak Module', display_name: 'Outbreak Module'
 lesson 'intro monster town', display_name: 'Outbreak in Monster Town', has_lesson_plan: false
 level 'contagion_story', progression: 'Welcome to Monster Town'

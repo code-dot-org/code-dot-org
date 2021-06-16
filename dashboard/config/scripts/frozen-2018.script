@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Artist', display_name: 'Artist', has_lesson_plan: false
 level 'frozen line'
 level 'frozen perpendicular'

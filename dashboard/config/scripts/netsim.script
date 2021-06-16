@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Overview and Setup Instructions', display_name: 'Overview and Setup Instructions', has_lesson_plan: false
 level 'Internet Simulator Setup'
 level 'Internet Simulator Setup 2'

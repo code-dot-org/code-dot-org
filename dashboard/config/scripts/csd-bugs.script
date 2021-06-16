@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Game Lab Bugs', display_name: 'Game Lab Bugs', has_lesson_plan: false
 level 'gamelab bug declare sprite in loop'
 level 'gamelab bug text behind sprites'

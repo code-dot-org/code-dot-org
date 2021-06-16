@@ -14,8 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:01:06 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-06-01 17:09:04 UTC",
     "seeding_key": {
       "script.name": "2021drafting"
     }

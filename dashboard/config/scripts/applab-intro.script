@@ -1,6 +1,5 @@
 hidden false
 student_detail_progress_view true
-published_state 'preview'
 tts true
 
 lesson 'Intro to App Lab', display_name: 'Intro to App Lab', has_lesson_plan: true

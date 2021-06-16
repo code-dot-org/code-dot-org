@@ -11,8 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:01:33 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-06-07 21:17:55 UTC",
     "seeding_key": {
       "script.name": "csp-post-survey-2020"
     }
