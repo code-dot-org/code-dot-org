@@ -13,7 +13,7 @@ import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 
 const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   user: 5,
-  disabledMode: false,
+  isReadonly: false,
   rubric: null,
   visible: true,
   viewAs: 'Teacher',
@@ -25,7 +25,7 @@ const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
 
 const TEACHER_NO_FEEDBACK_RUBRIC_PROPS = {
   user: 5,
-  disabledMode: true,
+  isReadonly: true,
   rubric: {
     keyConcept: 'This is the Key Concept',
     performanceLevel1: 'exceeded expectations',
@@ -43,7 +43,7 @@ const TEACHER_NO_FEEDBACK_RUBRIC_PROPS = {
 
 const TEACHER_FEEDBACK_RUBRIC_PROPS = {
   user: 5,
-  disabledMode: false,
+  isReadonly: false,
   rubric: {
     keyConcept: 'This is the Key Concept',
     performanceLevel1: 'exceeded expectations',
@@ -61,7 +61,7 @@ const TEACHER_FEEDBACK_RUBRIC_PROPS = {
 
 const STUDENT_FEEDBACK_NO_RUBRIC_PROPS = {
   user: 1,
-  disabledMode: true,
+  isReadonly: true,
   rubric: null,
   visible: true,
   viewAs: 'Student',
@@ -73,7 +73,7 @@ const STUDENT_FEEDBACK_NO_RUBRIC_PROPS = {
 
 const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
   user: 1,
-  disabledMode: true,
+  isReadonly: true,
   rubric: {
     keyConcept: 'This is the Key Concept',
     performanceLevel1: 'exceeded expectations',
@@ -91,7 +91,7 @@ const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
 
 const STUDENT_FEEDBACK_RUBRIC_PROPS = {
   user: 1,
-  disabledMode: true,
+  isReadonly: true,
   rubric: {
     keyConcept: 'This is the Key Concept',
     performanceLevel1: 'exceeded expectations',
@@ -139,7 +139,7 @@ describe('TeacherFeedback', () => {
           TEACHER_FEEDBACK_RUBRIC_PROPS.rubric
         );
         expect(rubric.props().isReadonly).to.equal(false);
-        expect(rubric.props().disabledMode).to.equal(false);
+        expect(rubric.props().isReadonly).to.equal(false);
         expect(rubric.props().viewAs).to.equal(ViewType.Teacher);
       });
 
@@ -294,7 +294,7 @@ describe('TeacherFeedback', () => {
         TEACHER_NO_FEEDBACK_RUBRIC_PROPS.rubric
       );
       expect(rubric.props().isReadonly).to.equal(true);
-      expect(rubric.props().disabledMode).to.equal(true);
+      expect(rubric.props().isReadonly).to.equal(true);
     });
 
     it('does not display comment area', () => {
@@ -337,7 +337,7 @@ describe('TeacherFeedback', () => {
           STUDENT_NO_FEEDBACK_RUBRIC_PROPS.rubric
         );
         expect(rubric.props().isReadonly).to.equal(true);
-        expect(rubric.props().disabledMode).to.equal(true);
+        expect(rubric.props().isReadonly).to.equal(true);
         expect(rubric.props().viewAs).to.equal(ViewType.Student);
       });
 
@@ -429,8 +429,7 @@ describe('TeacherFeedback', () => {
           STUDENT_FEEDBACK_RUBRIC_PROPS.rubric
         );
         expect(rubric.props().performance).to.equal('performanceLevel2');
-        expect(rubric.props().isReadonly).to.equal(false);
-        expect(rubric.props().disabledMode).to.equal(true);
+        expect(rubric.props().isReadonly).to.equal(true);
         expect(rubric.props().viewAs).to.equal(ViewType.Student);
       });
 
