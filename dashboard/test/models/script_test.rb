@@ -2291,22 +2291,22 @@ class ScriptTest < ActiveSupport::TestCase
     assert partner_script.has_editor_experiment?(partner)
   end
 
-  test "script_names_by_curriculum_umbrella returns the correct script names" do
+  test "unit_names_by_curriculum_umbrella returns the correct script names" do
     assert_equal(
       ["20-hour", "course1", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_script.name, @csf_script_2019.name],
-      Script.script_names_by_curriculum_umbrella('CSF')
+      Script.unit_names_by_curriculum_umbrella('CSF')
     )
     assert_equal(
       [@csd_script.name],
-      Script.script_names_by_curriculum_umbrella('CSD')
+      Script.unit_names_by_curriculum_umbrella('CSD')
     )
     assert_equal(
       [@csp_script.name],
-      Script.script_names_by_curriculum_umbrella('CSP')
+      Script.unit_names_by_curriculum_umbrella('CSP')
     )
     assert_equal(
       [@csa_script.name],
-      Script.script_names_by_curriculum_umbrella('CSA')
+      Script.unit_names_by_curriculum_umbrella('CSA')
     )
   end
 
@@ -2321,14 +2321,14 @@ class ScriptTest < ActiveSupport::TestCase
     assert @csa_script.csa?
   end
 
-  test "scripts_with_standards" do
+  test "units_with_standards" do
     assert_equal(
       [
         [
           @csf_script_2019.localized_title, @csf_script_2019.name
         ]
       ],
-      Script.scripts_with_standards
+      Script.units_with_standards
     )
   end
 
