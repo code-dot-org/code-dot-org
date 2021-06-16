@@ -267,27 +267,27 @@ class Script < ApplicationRecord
     all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
   end
 
-  # Get the set of scripts that are valid for the current user, ignoring those
+  # Get the set of units that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
     has_any_course_experiments = UnitGroup.has_any_course_experiments?(user)
     with_hidden = !has_any_course_experiments && user.hidden_script_access?
-    scripts = with_hidden ? all_scripts : visible_units
+    units = with_hidden ? all_scripts : visible_units
 
     if has_any_course_experiments
-      scripts = scripts.map do |script|
-        alternate_script = script.alternate_unit(user)
-        alternate_script.presence || script
+      units = units.map do |unit|
+        alternate_unit = unit.alternate_unit(user)
+        alternate_unit.presence || unit
       end
     end
 
     if !with_hidden && has_any_pilot_access?(user)
-      scripts += all_scripts.select {|s| s.has_pilot_access?(user)}
+      units += all_scripts.select {|s| s.has_pilot_access?(user)}
     end
 
-    scripts
+    units
   end
 
   class << self
@@ -427,18 +427,18 @@ class Script < ApplicationRecord
   def self.unit_family_cache
     return nil unless should_cache?
     @@unit_family_cache ||= {}.tap do |cache|
-      family_scripts = script_cache.values.group_by(&:family_name)
-      # Not all scripts have a family_name, and thus will be grouped as family_scripts[nil].
+      family_units = script_cache.values.group_by(&:family_name)
+      # Not all units have a family_name, and thus will be grouped as family_units[nil].
       # We do not want to store this key-value pair in the cache.
-      family_scripts.delete(nil)
-      cache.merge!(family_scripts)
+      family_units.delete(nil)
+      cache.merge!(family_units)
     end
   end
 
   # Find the script level with the given id from the cache, unless the level build mode
   # is enabled in which case it is always fetched from the database. If we need to fetch
-  # the script and we're not in level mode (for example because the script was created after
-  # the cache), then an entry for the script is added to the cache.
+  # the unit and we're not in level mode (for example because the unit was created after
+  # the cache), then an entry for the unit is added to the cache.
   def self.cache_find_script_level(script_level_id)
     script_level = script_level_cache[script_level_id] if should_cache?
 
@@ -651,35 +651,35 @@ class Script < ApplicationRecord
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
     return nil unless family_name.present?
 
-    script_versions = Script.get_family_from_cache(family_name).
+    unit_versions = Script.get_family_from_cache(family_name).
       sort_by(&:version_year).reverse
 
-    # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
+    # Only select stable, supported units (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
     locale_str = locale&.to_s
-    supported_stable_scripts = script_versions.select do |script|
-      is_supported = script.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
+    supported_stable_units = unit_versions.select do |unit|
+      is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
       if version_year
-        script.is_stable && is_supported && script.version_year == version_year
+        unit.is_stable && is_supported && unit.version_year == version_year
       else
-        script.is_stable && is_supported
+        unit.is_stable && is_supported
       end
     end
 
-    supported_stable_scripts&.first
+    supported_stable_units&.first
   end
 
-  # @param family_name [String] The family name for a script family.
+  # @param family_name [String] The family name for a unit family.
   # @param user [User]
   # @return [Script|nil] Returns the latest version in a family that the user is assigned to.
   def self.latest_assigned_version(family_name, user)
     return nil unless family_name && user
-    assigned_script_ids = user.section_scripts.pluck(:id)
+    assigned_unit_ids = user.section_scripts.pluck(:id)
 
     Script.
-      # select only scripts assigned to this user.
-      where(id: assigned_script_ids).
-      # select only scripts in the same family.
+      # select only units assigned to this user.
+      where(id: assigned_unit_ids).
+      # select only units in the same family.
       where(family_name: family_name).
       # order by version year descending.
       order("properties -> '$.version_year' DESC")&.
@@ -751,15 +751,15 @@ class Script < ApplicationRecord
     ScriptConstants.script_in_category?(:csf_international, name)
   end
 
-  def self.script_names_by_curriculum_umbrella(curriculum_umbrella)
+  def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
     Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 
-  def self.scripts_with_standards
+  def self.units_with_standards
     Script.
       where("properties -> '$.curriculum_umbrella' = 'CSF'").
       where("properties -> '$.version_year' >= '2019'").
-      map {|script| [script.title_for_display, script.name]}
+      map {|unit| [unit.title_for_display, unit.name]}
   end
 
   def has_standards_associations?
@@ -1263,10 +1263,10 @@ class Script < ApplicationRecord
   end
 
   # Update strings and serialize changes to .script file
-  def update_text(script_params, script_text, metadata_i18n, general_params)
-    unit_name = script_params[:name]
+  def update_text(unit_params, unit_text, metadata_i18n, general_params)
+    unit_name = unit_params[:name]
     begin
-      script_data, i18n = ScriptDSL.parse(script_text, 'input', unit_name)
+      unit_data, i18n = ScriptDSL.parse(unit_text, 'input', unit_name)
       Script.add_unit(
         {
           name: unit_name,
@@ -1276,7 +1276,7 @@ class Script < ApplicationRecord
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
           properties: Script.build_property_hash(general_params)
         },
-        script_data[:lesson_groups]
+        unit_data[:lesson_groups]
       )
       if Rails.application.config.levelbuilder_mode
         Script.merge_and_write_i18n(i18n, unit_name, metadata_i18n)
@@ -1290,16 +1290,16 @@ class Script < ApplicationRecord
     update_student_resources(general_params[:studentResourceIds]) if general_params[:is_migrated]
     begin
       if Rails.application.config.levelbuilder_mode
-        script = Script.find_by_name(unit_name)
+        unit = Script.find_by_name(unit_name)
         # Save in our custom Script DSL format. This is how we currently sync
-        # data across environments for non-migrated scripts.
-        script.write_script_dsl
+        # data across environments for non-migrated units.
+        unit.write_script_dsl
 
         # Also save in JSON format for "new seeding". This is how we currently
-        # sync data across environments for migrated scripts. As part of
-        # pre-launch testing, we also generate these files for legacy scripts in
+        # sync data across environments for migrated units. As part of
+        # pre-launch testing, we also generate these files for legacy units in
         # addition to the old .script files.
-        script.write_script_json
+        unit.write_script_json
       end
       true
     rescue StandardError => e
@@ -1349,20 +1349,20 @@ class Script < ApplicationRecord
     Rake::FileTask['config/scripts/.seeded'].invoke
   end
 
-  # This method updates scripts.en.yml with i18n data from the scripts.
+  # This method updates scripts.en.yml with i18n data from the units.
   # There are three types of i18n data
   # 1. Lesson names, which we get from the script DSL, and is passed in as lessons_i18n here
   # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
   # 3. Lesson descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
-  def self.merge_and_write_i18n(lessons_i18n, script_name = '', metadata_i18n = {})
-    scripts_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
-    i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
+  def self.merge_and_write_i18n(lessons_i18n, unit_name = '', metadata_i18n = {})
+    units_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
+    i18n = File.exist?(units_yml) ? YAML.load_file(units_yml) : {}
 
-    updated_i18n = update_i18n(i18n, lessons_i18n, script_name, metadata_i18n)
-    File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + updated_i18n.to_yaml(line_width: -1))
+    updated_i18n = update_i18n(i18n, lessons_i18n, unit_name, metadata_i18n)
+    File.write(units_yml, "# Autogenerated scripts locale file.\n" + updated_i18n.to_yaml(line_width: -1))
   end
 
-  def self.update_i18n(existing_i18n, lessons_i18n, script_name = '', metadata_i18n = {})
+  def self.update_i18n(existing_i18n, lessons_i18n, unit_name = '', metadata_i18n = {})
     if metadata_i18n != {}
       lesson_descriptions = metadata_i18n.delete(:stage_descriptions)
       metadata_i18n['lessons'] = {}
@@ -1376,7 +1376,7 @@ class Script < ApplicationRecord
           metadata_i18n['lessons'][lesson_name] = lesson_data
         end
       end
-      metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
+      metadata_i18n = {'en' => {'data' => {'script' => {'name' => {unit_name => metadata_i18n.to_h}}}}}
     end
 
     lessons_i18n = {'en' => {'data' => {'script' => {'name' => lessons_i18n}}}}
@@ -1453,10 +1453,10 @@ class Script < ApplicationRecord
     end
 
     has_older_course_progress = unit_group.try(:has_older_version_progress?, user)
-    has_older_script_progress = has_older_version_progress?(user)
-    user_script = user && user_scripts.find_by(user: user)
+    has_older_unit_progress = has_older_version_progress?(user)
+    user_unit = user && user_scripts.find_by(user: user)
 
-    # If the current user is assigned to this script, get the section
+    # If the current user is assigned to this unit, get the section
     # that assigned it.
     assigned_section_id = user&.assigned_script?(self) ? user.section_for_script(self)&.id : nil
 
@@ -1490,7 +1490,7 @@ class Script < ApplicationRecord
       announcements: announcements,
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
-      show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
+      show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
       versions: summarize_versions(user),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
@@ -1509,7 +1509,7 @@ class Script < ApplicationRecord
       background: background,
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
-      showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated scripts for now
+      showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
       weeklyInstructionalMinutes: weekly_instructional_minutes,
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
       courseVersionId: get_course_version&.id,
@@ -1587,7 +1587,7 @@ class Script < ApplicationRecord
     }
   end
 
-  # Creates an object representing all translations associated with this script
+  # Creates an object representing all translations associated with this unit
   # and its lessons, in a format that can be deep-merged with the contents of
   # scripts.en.yml.
   def summarize_i18n_for_copy(new_name)
@@ -1636,16 +1636,16 @@ class Script < ApplicationRecord
     data
   end
 
-  # Returns an array of objects showing the name and version year for all scripts
+  # Returns an array of objects showing the name and version year for all units
   # sharing the family_name of this course, including this one.
   def summarize_versions(user = nil)
     return [] unless family_name
     return [] unless unit_groups.empty?
     with_hidden = user&.hidden_script_access?
-    scripts = Script.
+    units = Script.
       where(family_name: family_name).
       all.
-      select {|script| with_hidden || script.launched?}.
+      select {|unit| with_hidden || unit.launched?}.
       map do |s|
         {
           name: s.name,
@@ -1657,7 +1657,7 @@ class Script < ApplicationRecord
         }
       end
 
-    scripts.sort_by {|info| info[:version_year]}.reverse
+    units.sort_by {|info| info[:version_year]}.reverse
   end
 
   def self.clear_cache
