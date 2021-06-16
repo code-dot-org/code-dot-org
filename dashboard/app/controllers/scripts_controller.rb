@@ -269,15 +269,12 @@ class ScriptsController < ApplicationController
     if h[:published_state] == SharedConstants::PUBLISHED_STATE.pilot || h[:published_state] == SharedConstants::PUBLISHED_STATE.beta
       h[:hidden] = true
       h[:is_stable] = false
-      h.delete(:published_state)
     elsif h[:published_state] == SharedConstants::PUBLISHED_STATE.preview
       h[:hidden] = false
       h[:is_stable] = false
-      h.delete(:published_state)
     elsif h[:published_state] == SharedConstants::PUBLISHED_STATE.stable
       h[:hidden] = false
       h[:is_stable] = true
-      h.delete(:published_state)
     end
 
     h

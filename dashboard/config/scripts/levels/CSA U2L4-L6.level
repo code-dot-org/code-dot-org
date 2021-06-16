@@ -1,0 +1,20 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2021-06-16T15:54:02.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "Based on the following overloaded constructors, write two `Dessert` objects.\r\n\r\n```\r\npublic Dessert(String newFlavor, int newQty, double newPrice) {\r\n  flavor = newFlavor;\r\n  quantity = newQty;\r\n  price = newPrice;\r\n}\r\n\r\npublic Dessert() {\r\n  flavor = “red velvet”;\r\n  quantity = 7;\r\n  price = 2.75;\r\n}\r\n```",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>
