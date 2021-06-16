@@ -58,12 +58,16 @@ $(function() {
 });
 
 function checkOffset() {
+  // Once the user scrolls down far enough for the
+  // bottom of the map to touch the footer within 10px,
+  // set position to absolute
   if (
     $('#map').offset().top + $('#map').height() >=
     $('#pagefooter').offset().top - 10
   ) {
     $('#map').css('position', 'absolute');
   }
+  // restore fixed position when the user scrolls up
   if (
     $(document).scrollTop() + window.innerHeight <
     $('#pagefooter').offset().top
