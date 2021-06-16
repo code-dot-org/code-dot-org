@@ -895,7 +895,7 @@ class Script < ApplicationRecord
     tts?
   end
 
-  # Generates TTS files for each level in a script.
+  # Generates TTS files for each level in a unit.
   def tts_update
     levels.each(&:tts_update)
   end
@@ -946,75 +946,75 @@ class Script < ApplicationRecord
   end
 
   # @param user [User]
-  # @return [Boolean] Whether the user has progress on another version of this script.
+  # @return [Boolean] Whether the user has progress on another version of this unit.
   def has_older_version_progress?(user)
     return nil unless user && family_name && version_year
-    user_script_ids = user.user_scripts.pluck(:script_id)
+    user_unit_ids = user.user_scripts.pluck(:script_id)
 
     Script.
-      # select only scripts in the same script family.
+      # select only units in the same unit family.
       where(family_name: family_name).
       # select only older versions.
       where("properties -> '$.version_year' < ?", version_year).
-      # exclude the current script.
+      # exclude the current unit.
       where.not(id: id).
-      # select only scripts which the user has progress in.
-      where(id: user_script_ids).
+      # select only units which the user has progress in.
+      where(id: user_unit_ids).
       count > 0
   end
 
-  # Create or update any scripts, script levels and lessons specified in the
+  # Create or update any units, script levels and lessons specified in the
   # script file definitions. If new_suffix is specified, create a copy of the
-  # script and any associated levels, appending new_suffix to the name when
-  # copying. Any new_properties are merged into the properties of the new script.
+  # unit and any associated levels, appending new_suffix to the name when
+  # copying. Any new_properties are merged into the properties of the new unit.
   def self.setup(custom_files, new_suffix: nil, new_properties: {}, show_progress: false)
-    scripts_to_add = []
+    units_to_add = []
 
     custom_i18n = {}
-    # Load custom scripts from Script DSL format
-    custom_files.map do |script|
-      name = File.basename(script, '.script')
+    # Load custom units from Script DSL format
+    custom_files.map do |unit|
+      name = File.basename(unit, '.script')
       base_name = Script.base_name(name)
       name = "#{base_name}-#{new_suffix}" if new_suffix
-      script_data, i18n =
+      unit_data, i18n =
         begin
-          ScriptDSL.parse_file(script, name)
+          ScriptDSL.parse_file(unit, name)
         rescue => e
-          raise e, "Error parsing script file #{script}: #{e}"
+          raise e, "Error parsing script file #{unit}: #{e}"
         end
 
-      lesson_groups = script_data[:lesson_groups]
+      lesson_groups = unit_data[:lesson_groups]
       custom_i18n.deep_merge!(i18n)
-      # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
-      scripts_to_add << [{
-        id: script_data[:id],
+      # TODO: below is duplicated in update_text. and maybe can be refactored to pass unit_data?
+      units_to_add << [{
+        id: unit_data[:id],
         name: name,
-        hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
-        login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
-        wrapup_video: script_data[:wrapup_video],
-        new_name: script_data[:new_name],
-        family_name: script_data[:family_name],
-        properties: Script.build_property_hash(script_data).merge(new_properties)
+        hidden: unit_data[:hidden].nil? ? true : unit_data[:hidden], # default true
+        login_required: unit_data[:login_required].nil? ? false : unit_data[:login_required], # default false
+        wrapup_video: unit_data[:wrapup_video],
+        new_name: unit_data[:new_name],
+        family_name: unit_data[:family_name],
+        properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
 
-    progressbar = ProgressBar.create(total: scripts_to_add.length, format: '%t (%c/%C): |%B|') if show_progress
+    progressbar = ProgressBar.create(total: units_to_add.length, format: '%t (%c/%C): |%B|') if show_progress
 
-    # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-    added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
-      added_script =
+    # Stable sort by ID then add each unit, ensuring units with no ID end up at the end
+    added_unit_names = units_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
+      added_unit =
         options[:properties][:is_migrated] == true ?
           seed_from_json_file(options[:name]) :
           add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       progressbar.increment if show_progress
-      added_script.name
+      added_unit.name
     rescue => e
-      raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
+      raise e, "Error adding unit named '#{options[:name]}': #{e}", e.backtrace
     end
-    [added_script_names, custom_i18n]
+    [added_unit_names, custom_i18n]
   end
 
-  # if new_suffix is specified, copy the script, hide it, and copy all its
+  # if new_suffix is specified, copy the unit, hide it, and copy all its
   # levelbuilder-defined levels.
   def self.add_script(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     transaction do
