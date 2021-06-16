@@ -594,7 +594,7 @@ class LevelsControllerTest < ActionController::TestCase
     script_level = create :script_level
     script = script_level.script
     level = script_level.level
-    assert_equal script.published_state, 'preview'
+    assert_equal script.get_published_state, 'preview'
 
     get :edit, params: {id: level.id}
     assert_response :success
@@ -603,7 +603,7 @@ class LevelsControllerTest < ActionController::TestCase
 
     script.hidden = true
     script.save!
-    assert_equal script.published_state, 'beta'
+    assert_equal script.get_published_state, 'beta'
     get :edit, params: {id: level.id}
     assert_response :success
     assert_includes @response.body, level.name

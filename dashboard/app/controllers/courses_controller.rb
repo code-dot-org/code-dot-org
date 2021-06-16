@@ -102,7 +102,7 @@ class CoursesController < ApplicationController
 
     # Update the published state of all the units in the course to be same as the course
     unit_group.default_scripts.each do |script|
-      script.assign_attributes(hidden: !course_params[:visible], properties: {is_stable: course_params[:is_stable], pilot_experiment: course_params[:pilot_experiment]})
+      script.assign_attributes(published_state: course_params[:published_state], hidden: !course_params[:visible], properties: {is_stable: course_params[:is_stable], pilot_experiment: course_params[:pilot_experiment]})
       next unless script.changed?
       script.save!
       script.write_script_dsl
@@ -192,20 +192,19 @@ class CoursesController < ApplicationController
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
 
+    cp[:published_state] = SharedConstants::PUBLISHED_STATE.beta unless cp[:published_state]
+
     # Temporary transition code used to update the boolean values that control published_state
     # This should be removed once we move off of booleans completely and on to published_state
     if cp[:published_state] == SharedConstants::PUBLISHED_STATE.beta || cp[:published_state] == SharedConstants::PUBLISHED_STATE.pilot
       cp[:visible] = false
       cp[:is_stable] = false
-      cp.delete(:published_state)
     elsif cp[:published_state] == SharedConstants::PUBLISHED_STATE.preview
       cp[:visible] = true
       cp[:is_stable] = false
-      cp.delete(:published_state)
     elsif cp[:published_state] == SharedConstants::PUBLISHED_STATE.stable
       cp[:visible] = true
       cp[:is_stable] = true
-      cp.delete(:published_state)
     end
 
     cp
