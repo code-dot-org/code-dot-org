@@ -27,14 +27,14 @@ import sectionProgress, {
   setShowSectionProgressDetails
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import currentUser, {
   setCurrentUserId,
   setCurrentUserName,
   setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
-import {setValidScripts} from '../../../../redux/scriptSelectionRedux';
+import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -62,7 +62,7 @@ $(document).ready(function() {
     sectionData,
     manageStudents,
     sectionProgress,
-    scriptSelection,
+    unitSelection,
     stats,
     textResponses,
     sectionAssessments,
