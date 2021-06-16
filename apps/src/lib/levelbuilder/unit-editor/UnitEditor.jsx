@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import UnitCard from '@cdo/apps/lib/levelbuilder/script-editor/UnitCard';
-import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
+import UnitCard from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
+import LessonDescriptions from '@cdo/apps/lib/levelbuilder/unit-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/script-editor/LessonExtrasEditor';
+import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExtrasEditor';
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
@@ -20,7 +20,7 @@ import {
   getSerializedLessonGroups,
   init,
   mapLessonGroupDataForEditor
-} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {
   lessonGroupShape,
   resourceShape as migratedResourceShape
@@ -34,9 +34,9 @@ const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', ''];
 
 /**
- * Component for editing course scripts.
+ * Component for editing units in unit_groups or stand alone courses
  */
-class ScriptEditor extends React.Component {
+class UnitEditor extends React.Component {
   static propTypes = {
     id: PropTypes.number,
     name: PropTypes.string.isRequired,
@@ -174,7 +174,7 @@ class ScriptEditor extends React.Component {
     this.setState({familyName: event.target.value});
   };
 
-  handleStandaloneCourseChange = () => {
+  handleStandaloneUnitChange = () => {
     this.setState({isCourse: !this.state.isCourse});
   };
 
@@ -201,28 +201,28 @@ class ScriptEditor extends React.Component {
     const videoKeysBefore = (
       this.props.initialLessonLevelData.match(VIDEO_KEY_REGEX) || []
     ).length;
-    const scriptText = this.props.isMigrated ? '' : this.state.lessonLevelData;
-    const videoKeysAfter = (scriptText.match(VIDEO_KEY_REGEX) || []).length;
+    const unitText = this.props.isMigrated ? '' : this.state.lessonLevelData;
+    const videoKeysAfter = (unitText.match(VIDEO_KEY_REGEX) || []).length;
     if (videoKeysBefore !== videoKeysAfter) {
       if (
         !confirm(
           'WARNING: adding or removing video keys will also affect ' +
-            'uses of this level in other scripts. Are you sure you want to ' +
+            'uses of this level in other units. Are you sure you want to ' +
             'continue?'
         )
       ) {
         shouldCloseAfterSave = false;
       }
     }
-    // HACK: until the script edit page no longer overwrites changes to the
+    // HACK: until the unit edit page no longer overwrites changes to the
     // arrangement of levels within lessons, give the user a warning
     if (
       window.lessonEditorOpened &&
       !confirm(
-        'WARNING: It looks like you opened a lesson edit page from this script edit page. ' +
+        'WARNING: It looks like you opened a lesson edit page from this unit edit page. ' +
           'If you made any changes on the lesson edit page which you do not ' +
           'wish to lose, please click cancel now and reload this page before ' +
-          'saving any changes to this script edit page.'
+          'saving any changes to this unit edit page.'
       )
     ) {
       shouldCloseAfterSave = false;
@@ -430,7 +430,7 @@ class ScriptEditor extends React.Component {
               }
             />
             <HelpTip>
-              <p>Require users to log in before viewing this script.</p>
+              <p>Require users to log in before viewing this unit.</p>
             </HelpTip>
           </label>
           <label>
@@ -451,7 +451,7 @@ class ScriptEditor extends React.Component {
                 By default students start in the summary view (only shows the
                 levels). When this box is checked, we instead stick everyone
                 into detail view (shows the levels broken into progression) to
-                start for this script.
+                start for this unit.
               </p>
             </HelpTip>
           </label>
@@ -469,7 +469,7 @@ class ScriptEditor extends React.Component {
               <p>
                 If checked, the "Sharing" column in the "Manage Students" tab of
                 Teacher Dashboard will be displayed by default for sections
-                assigned to this script.
+                assigned to this unit.
               </p>
             </HelpTip>
           </label>
@@ -482,19 +482,19 @@ class ScriptEditor extends React.Component {
               onChange={() => this.setState({tts: !this.state.tts})}
             />
             <HelpTip>
-              <p>Check to enable text-to-speech for this script.</p>
+              <p>Check to enable text-to-speech for this unit.</p>
             </HelpTip>
           </label>
           <label>
             Supported locales
             <HelpTip>
               <p>
-                A list of other locales supported by this script besides en-US.
+                A list of other locales supported by this unit besides en-US.
               </p>
             </HelpTip>
             <p>
               <span>
-                {'Select additional locales supported by this script. Select '}
+                {'Select additional locales supported by this unit. Select '}
               </span>
               <a onClick={this.handleClearSupportedLocalesSelectClick}>none</a>
               <span>{' or shift-click or cmd-click to select multiple.'}</span>
@@ -519,7 +519,7 @@ class ScriptEditor extends React.Component {
               <HelpTip>
                 <p>
                   If specified, users with this experiment on the levelbuilder
-                  machine will be able to edit this script.
+                  machine will be able to edit this unit.
                 </p>
               </HelpTip>
               <input
@@ -576,7 +576,7 @@ class ScriptEditor extends React.Component {
                 </select>
                 <HelpTip>
                   <p>
-                    By selecting, this script will have a property,
+                    By selecting, this unit will have a property,
                     curriculum_umbrella, specific to that course regardless of
                     version.
                   </p>
@@ -598,20 +598,20 @@ class ScriptEditor extends React.Component {
               {!this.props.hasCourse && (
                 <div>
                   <label>
-                    Is a Standalone Course
+                    Is a Standalone Unit
                     <input
                       className="isCourseCheckbox"
                       type="checkbox"
                       checked={this.state.isCourse}
                       disabled={!this.state.familyName}
                       style={styles.checkbox}
-                      onChange={this.handleStandaloneCourseChange}
+                      onChange={this.handleStandaloneUnitChange}
                     />
                     {this.state.familyName && (
                       <HelpTip>
                         <p>
                           If checked, indicates that this Unit represents a
-                          standalone course. Examples of such Units include
+                          standalone unit. Examples of such Units include
                           CourseA-F, Express, and Pre-Express.
                         </p>
                       </HelpTip>
@@ -620,7 +620,7 @@ class ScriptEditor extends React.Component {
                       <HelpTip>
                         <p>
                           You must select a family name in order to mark
-                          something as a standalone course.
+                          something as a standalone unit.
                         </p>
                       </HelpTip>
                     )}
@@ -674,7 +674,7 @@ class ScriptEditor extends React.Component {
             <HelpTip>
               <p>
                 Allow teachers to toggle whether or not specific lessons in this
-                script are visible to students in their section.
+                unit are visible to students in their section.
               </p>
             </HelpTip>
           </label>
@@ -751,13 +751,13 @@ class ScriptEditor extends React.Component {
             />
             <HelpTip>
               <p>
-                Check if this script has resources for verified teachers, and we
+                Check if this unit has resources for verified teachers, and we
                 want to notify non-verified teachers that this is the case.
               </p>
             </HelpTip>
           </label>
           Select the resources you'd like to have show up in the dropdown at the
-          top of the script overview page:
+          top of the unit overview page:
           <div>
             <h4>Teacher Resources</h4>
             <div>
@@ -779,7 +779,7 @@ class ScriptEditor extends React.Component {
                 <h4>Student Resources</h4>
                 <div>
                   Select the Student Resources buttons you'd like to have show
-                  up on the top of the script overview page
+                  up on the top of the unit overview page
                 </div>
                 <ResourcesEditor
                   inputStyle={styles.input}
@@ -858,7 +858,7 @@ class ScriptEditor extends React.Component {
               Professional Learning Course
               <HelpTip>
                 <p>
-                  When filled out, the course unit associated with this script
+                  When filled out, the course unit associated with this unit
                   will be associated with the course named in this box. If the
                   course unit does not exist, and if the course does not exist
                   it will be created.
@@ -975,7 +975,7 @@ const styles = {
   }
 };
 
-export const UnconnectedScriptEditor = ScriptEditor;
+export const UnconnectedUnitEditor = UnitEditor;
 
 export default connect(
   state => ({
@@ -987,4 +987,4 @@ export default connect(
   {
     init
   }
-)(ScriptEditor);
+)(UnitEditor);
