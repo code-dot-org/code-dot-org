@@ -8,8 +8,8 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 const DEFAULT_SCRIPT_NAME = 'express-2017';
 
 // Action type constants
-export const SET_SCRIPT = 'scriptSelection/SET_SCRIPT';
-export const SET_VALID_SCRIPTS = 'scriptSelection/SET_VALID_SCRIPTS';
+export const SET_SCRIPT = 'unitSelection/SET_SCRIPT';
+export const SET_VALID_SCRIPTS = 'unitSelection/SET_VALID_SCRIPTS';
 
 // Action creators
 export const setScriptId = scriptId => ({type: SET_SCRIPT, scriptId});
@@ -28,36 +28,36 @@ export const setValidScripts = (
 
 // Selectors
 export const getSelectedScriptName = state => {
-  const scriptId = state.scriptSelection.scriptId;
+  const scriptId = state.unitSelection.scriptId;
   if (!scriptId) {
     return null;
   }
 
-  const scripts = state.scriptSelection.validScripts;
+  const scripts = state.unitSelection.validScripts;
   const script = scripts.find(script => script.id === scriptId);
   return script ? script.script_name : null;
 };
 
 /* Get the user friendly name of a script(the unit or course name) */
 export const getSelectedScriptFriendlyName = state => {
-  const scriptId = state.scriptSelection.scriptId;
+  const scriptId = state.unitSelection.scriptId;
   if (!scriptId) {
     return null;
   }
 
-  const scripts = state.scriptSelection.validScripts;
+  const scripts = state.unitSelection.validScripts;
   const script = scripts.find(script => script.id === scriptId);
   return script ? script.name : null;
 };
 
 /* Get the description of a script(the unit or course name) */
 export const getSelectedScriptDescription = state => {
-  const scriptId = state.scriptSelection.scriptId;
+  const scriptId = state.unitSelection.scriptId;
   if (!scriptId) {
     return null;
   }
 
-  const scripts = state.scriptSelection.validScripts;
+  const scripts = state.unitSelection.validScripts;
   const script = scripts.find(script => script.id === scriptId);
   return script ? script.description : null;
 };
@@ -74,13 +74,13 @@ export const validScriptPropType = PropTypes.shape({
   description: PropTypes.string
 });
 
-// Initial state of scriptSelectionRedux
+// Initial state of unitSelectionRedux
 const initialState = {
   scriptId: null,
   validScripts: []
 };
 
-export default function scriptSelection(state = initialState, action) {
+export default function unitSelection(state = initialState, action) {
   if (action.type === SET_SCRIPT) {
     return {
       ...state,
@@ -88,7 +88,7 @@ export default function scriptSelection(state = initialState, action) {
     };
   }
 
-  // Note: This listens to the sectionData redux, not the scriptSelection redux.
+  // Note: This listens to the sectionData redux, not the unitSelection redux.
   if (action.type === SET_SECTION) {
     // Default the scriptId to the script assigned to the section
     const defaultScriptId = action.section.script
