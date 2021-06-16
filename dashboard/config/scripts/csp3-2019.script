@@ -8,7 +8,6 @@ curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit3/{LESSON}'
 family_name 'csp3'
 version_year '2019'
 is_stable true
-published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSP'
 tts true

@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson '20-hr Stage 2', display_name: '20-hr Stage 2', has_lesson_plan: false
 level '20hr_maze_stage2_1'
 level '20hr_maze_stage2_2'

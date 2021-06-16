@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation'
 

@@ -1,5 +1,4 @@
 professional_learning_course 'Other plc course'
-published_state 'beta'
 
 lesson 'Sample Stage', display_name: 'Sample Stage', has_lesson_plan: false
 level 'MikeTest1'

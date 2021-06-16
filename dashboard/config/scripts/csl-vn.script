@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
 lesson 'Sequencing with Scrat', display_name: 'Sequencing with Scrat', has_lesson_plan: false
 level 'courseAB_video_NewIntro_2019'

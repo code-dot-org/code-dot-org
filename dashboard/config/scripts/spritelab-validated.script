@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Fish Tank - Creating Sprites', display_name: 'Fish Tank - Creating Sprites', has_lesson_plan: false
 level 'Fish Tank 1-validated'
 level 'Fish Tank 2-validated'

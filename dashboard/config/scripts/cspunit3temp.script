@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'While Loops', display_name: 'While Loops', has_lesson_plan: false
 level 'U3L28 Student Lesson Introduction'

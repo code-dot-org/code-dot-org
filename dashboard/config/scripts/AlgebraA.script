@@ -2,7 +2,6 @@ hidden false
 login_required true
 hideable_lessons true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/algebra/courseA/{LESSON}'
-published_state 'preview'
 
 lesson 'Calc: Evaluation Blocks', display_name: 'Calc: Evaluation Blocks', has_lesson_plan: true
 level 'Calc Circles of Eval .1'

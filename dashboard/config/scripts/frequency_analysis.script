@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Frequency Analysis', display_name: 'Frequency Analysis', has_lesson_plan: false
 level 'Frequency Analysis'
 

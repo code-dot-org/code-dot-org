@@ -1,7 +1,6 @@
 professional_learning_course 'All The PLC Things'
 peer_reviews_to_complete 5
 login_required true
-published_state 'beta'
 
 lesson_group 'required', display_name: 'Overview'
 lesson 'Introduction to Teachercon', display_name: 'Introduction to Teachercon', has_lesson_plan: false

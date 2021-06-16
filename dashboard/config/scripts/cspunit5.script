@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'Explore PT Prep', display_name: 'Explore PT Prep', has_lesson_plan: true
 level 'U5 - Explore PT Prep - Student Introduction'

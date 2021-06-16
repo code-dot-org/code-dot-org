@@ -1,6 +1,5 @@
 professional_learning_course 'CS in Science Legacy'
 login_required true
-published_state 'beta'
 
 lesson 'Introduction to PD', display_name: 'Introduction to PD', has_lesson_plan: false
 level 'sciPD Intro'

@@ -1,5 +1,4 @@
 hideable_lessons true
-published_state 'pilot'
 pilot_experiment 'haikubot-pilot'
 
 lesson_group 'Peom Bot', display_name: 'Poem Bot'

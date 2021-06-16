@@ -1,59 +1,58 @@
 version_year '2019'
-published_state 'beta'
 
 lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: false
 level 'courseE_video_ramp1'
 variants
-  level 'courseE_maze_ramp1', active: false
   level 'courseD_scrat_ramp1'
+  level 'courseE_maze_ramp1', active: false
 endvariants
 variants
-  level 'courseE_maze_ramp2', active: false
   level 'courseD_scrat_ramp2'
+  level 'courseE_maze_ramp2', active: false
 endvariants
 variants
-  level 'courseE_maze_ramp3', active: false
   level 'courseD_scrat_ramp3'
+  level 'courseE_maze_ramp3', active: false
 endvariants
 variants
-  level 'courseE_maze_ramp4', active: false
   level 'courseD_scrat_ramp4'
+  level 'courseE_maze_ramp4', active: false
 endvariants
 variants
-  level 'courseE_maze_ramp5', active: false
   level 'courseD_scrat_ramp5'
+  level 'courseE_maze_ramp5', active: false
 endvariants
 variants
-  level 'courseE_maze_predict1', active: false
   level 'courseD_scrat_predict1'
+  level 'courseE_maze_predict1', active: false
 endvariants
 variants
   level 'courseCDEF_video_AngryBirdLoops', active: false
   level 'courseD_video_ScratLoops'
 endvariants
 variants
-  level 'courseE_maze_ramp6', active: false
   level 'courseD_scrat_ramp6'
+  level 'courseE_maze_ramp6', active: false
 endvariants
 variants
-  level 'courseE_maze_ramp7', active: false
   level 'courseD_scrat_ramp7'
+  level 'courseE_maze_ramp7', active: false
 endvariants
 variants
-  level 'courseE_artist_ramp8', active: false, challenge: true
   level 'courseD_scrat_ramp8', challenge: true
+  level 'courseE_artist_ramp8', active: false, challenge: true
 endvariants
 variants
   level 'courseC_video_angles', active: false
   level 'ramp_video_artistIntro'
 endvariants
 variants
-  level 'courseE_artist_ramp9', active: false
   level 'courseE_artist_ramp8_2'
+  level 'courseE_artist_ramp9', active: false
 endvariants
 variants
-  level 'courseE_artist_predict1', active: false
   level 'courseC_video_angles2'
+  level 'courseE_artist_predict1', active: false
 endvariants
 variants
   level 'courseD_video_nestedLoopsArtist', active: false

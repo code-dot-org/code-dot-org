@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'colehoc2017 stage', display_name: 'colehoc2017 stage', has_lesson_plan: false
 level 'MC_HOC_2017_01_Cole'
 level 'MC_HOC_2017_02_Cole'

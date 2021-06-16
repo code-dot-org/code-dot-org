@@ -1,5 +1,4 @@
 hideable_lessons true
-published_state 'beta'
 
 lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: false
 level 'courseD_video_ramp1'

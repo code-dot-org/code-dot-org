@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Collector Hour of Code 2017', display_name: 'Collector Hour of Code 2017', has_lesson_plan: false
 level 'courseAB_video_collector'
 level 'courseA_collector_preLoops1'

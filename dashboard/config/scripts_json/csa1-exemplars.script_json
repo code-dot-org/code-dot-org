@@ -9,8 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:01:36 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-06-16 17:19:35 UTC",
     "seeding_key": {
       "script.name": "csa1-exemplars"
     }
@@ -489,9 +488,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L2-L1 - exemplar"
-        ],
         "progression": "Exploring the Neighborhood"
       },
       "named_level": false,
@@ -515,9 +511,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L2-L2 - exemplar"
-        ],
         "progression": "Investigate the Painter"
       },
       "named_level": false,
@@ -541,9 +534,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L2 CFU1 - placeholder"
-        ],
         "progression": "Check For Understanding"
       },
       "named_level": false,
@@ -567,9 +557,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L1 - exemplar"
-        ],
         "progression": "Movement Commands"
       },
       "named_level": false,
@@ -593,9 +580,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L2 - exemplar"
-        ],
         "progression": "Movement Commands"
       },
       "named_level": false,
@@ -619,9 +603,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L3 - exemplar"
-        ],
         "progression": "Movement Commands"
       },
       "named_level": false,
@@ -645,9 +626,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L4 - exemplar"
-        ],
         "progression": "Painting Commands"
       },
       "named_level": false,
@@ -671,9 +649,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L5 - exemplar"
-        ],
         "progression": "Painting Commands"
       },
       "named_level": false,
@@ -697,9 +672,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L6 - exemplar"
-        ],
         "progression": "Painting Commands"
       },
       "named_level": false,
@@ -723,9 +695,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L7 CFU - placeholder"
-        ],
         "progression": "Check For Understanding"
       },
       "named_level": false,

@@ -8,7 +8,6 @@ new_name 'csp2-2017'
 family_name 'csp2'
 version_year '2017'
 is_stable true
-published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSP'
 
@@ -114,8 +113,8 @@ level 'v2 U2L15 Student Lesson Introduction', progression: 'Lesson Vocabulary & 
 
 lesson 'Unit 2 Chapter 2 Assessment', display_name: 'Unit 2 Chapter 2 Assessment', lockable: true, has_lesson_plan: false
 variants
-  level 'csp_affirmation_intervention_2', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
   level 'csp_affirmation_control_2', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention_2', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
 endvariants
 level 'CSP Unit 2 Ch2 Cumulative Assessment MC', assessment: true
 

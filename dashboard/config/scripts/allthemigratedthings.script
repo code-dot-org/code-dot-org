@@ -1,1 +1,22 @@
+student_detail_progress_view true
+family_name 'ui-test-versioned-script'
+version_year '2020'
+is_course true
 is_migrated true
+
+lesson_group 'lessonGroup-2', display_name: 'Lesson Group 1'
+lesson_group_description 'Lesson group 1 description'
+lesson_group_big_questions '* Who?
+* What?
+* Where?'
+lesson 'lesson-1', display_name: 'First Lesson', has_lesson_plan: true
+
+lesson_group 'lessonGroup-3', display_name: 'Lesson Group 2'
+lesson 'lesson-2', display_name: 'Second Lesson', has_lesson_plan: true
+
+lesson 'lesson-3', display_name: 'Third Lesson', has_lesson_plan: true
+
+lesson_group 'lessonGroup-4', display_name: 'UI/Eyes Test Content'
+lesson_group_description 'All lessons which are examined by automated UI or Eyes tests.'
+lesson 'lesson-4', display_name: 'Printable', has_lesson_plan: true
+

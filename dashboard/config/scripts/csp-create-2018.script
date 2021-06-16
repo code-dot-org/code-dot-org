@@ -8,7 +8,6 @@ announcements [{"notice"=>"CS Principles Post-Course Survey for Students Now Ope
 family_name 'csp-create'
 version_year '2018'
 is_stable true
-published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSP'
 

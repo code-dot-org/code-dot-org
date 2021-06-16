@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Valentine Puzzles', display_name: 'Valentine Puzzles', has_lesson_plan: false
 level 'Valentine_playlab_01'
 level 'Valentine_artist_01'

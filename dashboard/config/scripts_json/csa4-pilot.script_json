@@ -15,8 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:01:29 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2021-06-08 19:33:12 UTC",
     "seeding_key": {
       "script.name": "csa4-pilot"
     }

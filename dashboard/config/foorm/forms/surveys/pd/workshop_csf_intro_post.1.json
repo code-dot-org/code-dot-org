@@ -11,21 +11,6 @@
           "html": "<p><strong>Well done, you've completed the Code.org CS Fundamentals Intro workshop!</strong></p><p>This survey asks questions about your experience today. Your feedback is crucial to ensuring we best serve educators through continual program improvement.</p><p><strong>Privacy and Confidentiality</strong></p><ul><li>Your individual responses here are completely <strong>confidential</strong>.</li><li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li><li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li><li>Your <strong>de-identified</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li></ul>"
         },
         {
-          "type": "radiogroup",
-          "name": "workshop_type",
-          "title": "Was your workshop:",
-          "choices": [
-            {
-              "value": "item1",
-              "text": "in person"
-            },
-            {
-              "value": "item2",
-              "text": "virtual"
-            }
-          ]
-        },
-        {
           "type": "library_item",
           "library_name": "surveys/pd/workshop_elements",
           "library_version": 0,
@@ -93,14 +78,6 @@
             {
               "value": "understand_tools",
               "text": "I understand all of the tools and technologies I can use in the curriculum."
-            },
-            {
-              "value": "understand_inclusive",
-              "text": "I am aware of strategies to support an inclusive CS classroom."
-            },
-            {
-              "value": "understand_barriers",
-              "text": "I am aware of strategies to overcome barriers to implementing this curriculum."
             }
           ]
         },

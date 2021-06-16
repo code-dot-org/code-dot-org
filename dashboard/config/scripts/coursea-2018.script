@@ -8,7 +8,6 @@ project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'coursea'
 version_year '2018'
 is_stable true
-published_state 'stable'
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 tts true

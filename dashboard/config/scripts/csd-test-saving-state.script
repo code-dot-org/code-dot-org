@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'What is a Computer?', display_name: 'What is a Computer?', has_lesson_plan: false
 level 'csd digital unplugged WIAC'

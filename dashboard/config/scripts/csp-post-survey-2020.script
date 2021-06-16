@@ -3,7 +3,6 @@ login_required true
 hideable_lessons true
 has_verified_resources true
 is_stable true
-published_state 'stable'
 
 lesson_group 'cspSurvey2020', display_name: 'Survey'
 lesson 'CSP post-course survey', display_name: 'CSP Post-Course Survey', has_lesson_plan: false

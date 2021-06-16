@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'CS Principles Culminating Assessment Part 2', display_name: 'CS Principles Culminating Assessment Part 2', has_lesson_plan: false
 level 'CSP_Final_instructions'

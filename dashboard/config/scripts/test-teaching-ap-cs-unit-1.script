@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson_group 'required', display_name: 'Overview'
 lesson 'test Unit 1 required reading', display_name: 'test Unit 1 required reading', has_lesson_plan: false
 level 'CSPPD Welcome Video'

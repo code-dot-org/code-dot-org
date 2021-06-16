@@ -13,8 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 22:57:35 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-05-03 23:54:34 UTC",
     "seeding_key": {
       "script.name": "20-hour"
     }

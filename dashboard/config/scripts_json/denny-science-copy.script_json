@@ -8,8 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:00:25 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-05-03 23:55:38 UTC",
     "seeding_key": {
       "script.name": "denny-science-copy"
     }

@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Module 1', display_name: 'Module 1', has_lesson_plan: false
 level 'CSP-PL AYWS1 Workshop Overview', progression: 'Module 1 Overview (~5 minutes)'
 level 'CSP Module 1 Unit 3 Context', progression: 'Wrapping up Unit 3 (~20 minutes)'

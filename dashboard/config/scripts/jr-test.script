@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Using Behaviors', display_name: 'Using Behaviors', has_lesson_plan: false
 level 'GLJr_Behavior_1'
 level 'GLJr_Behavior_2'

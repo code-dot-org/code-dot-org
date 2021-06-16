@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson_group 'about me_ip', display_name: 'Interactive Poster: Self-Expression'
 lesson_group_description 'Version 1 of Interactive Poster: Self-Expression'
 lesson 'HoC Tutorial 1', display_name: 'Self-Expression', has_lesson_plan: false

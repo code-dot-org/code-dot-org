@@ -7,7 +7,6 @@ has_verified_resources true
 family_name 'csd1'
 version_year '2018'
 is_stable true
-published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 

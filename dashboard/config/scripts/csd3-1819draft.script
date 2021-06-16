@@ -2,7 +2,6 @@ login_required true
 hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
-published_state 'beta'
 
 lesson_group 'csd3_1', display_name: 'Chapter 1: Images and Animations'
 lesson 'Programming for Entertainment', display_name: 'Programming for Entertainment', has_lesson_plan: false

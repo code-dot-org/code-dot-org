@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson_group 'required', display_name: 'Overview'
 lesson 'Intro to the Unit', display_name: 'Intro to the Unit', has_lesson_plan: false

@@ -1,6 +1,5 @@
 professional_learning_course 'CS in Algebra Legacy'
 login_required true
-published_state 'beta'
 
 lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks', has_lesson_plan: false
 level 'Calc Circles of Eval .1'
@@ -91,7 +90,7 @@ lesson 'Big Game - Player Movement', display_name: 'Big Game - Player Movement',
 level 'Big Game Player 1'
 level 'Big Game Player 2'
 
-lesson 'Big GAme - Collision Detection', display_name: 'Big Game - Collision Detection', has_lesson_plan: false
+lesson 'Big Game - Collision Detection', display_name: 'Big Game - Collision Detection', has_lesson_plan: false
 level 'Big Game Collision 1'
 level 'Big Game Collision 4'
 level 'Big Game Collision 3'

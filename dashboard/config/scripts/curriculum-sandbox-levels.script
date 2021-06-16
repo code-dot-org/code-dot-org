@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson_group 'lesson group', display_name: 'Teacher Levels'
 lesson_group_description 'These are teaching-facing levels that are linked to lesson plans. The levels do not appear in other scripts.'
 lesson 'csf', display_name: 'CS Fundamentals', has_lesson_plan: false

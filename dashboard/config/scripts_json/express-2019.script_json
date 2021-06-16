@@ -70,8 +70,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-06-16 23:00:01 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-05-03 23:55:28 UTC",
     "seeding_key": {
       "script.name": "express-2019"
     }

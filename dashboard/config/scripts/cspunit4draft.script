@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'Finding Trends with Visualizations', display_name: 'Finding Trends with Visualizations', has_lesson_plan: false
 level 'U4L02v2 - Finding Trends'

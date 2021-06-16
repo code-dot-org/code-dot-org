@@ -18,8 +18,7 @@
     },
     "new_name": "csppostap-2017",
     "family_name": "csppostap",
-    "serialized_at": "2021-06-16 22:58:40 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-05-03 23:54:57 UTC",
     "seeding_key": {
       "script.name": "csppostap-2017"
     }

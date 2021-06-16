@@ -9,8 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 22:58:09 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-05-03 23:54:46 UTC",
     "seeding_key": {
       "script.name": "cspunit4"
     }

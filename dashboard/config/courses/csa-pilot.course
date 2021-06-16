@@ -11,7 +11,6 @@
     "csa8-pilot",
     "csa9-pilot"
   ],
-  "published_state": "pilot",
   "properties": {
     "has_numbered_units": true,
     "version_year": "2020",

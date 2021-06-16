@@ -12,7 +12,6 @@ announcements [{"notice"=>"Check out the new CS Discoveries resources for 2019-2
 family_name 'csd3'
 version_year '2019'
 is_stable true
-published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true

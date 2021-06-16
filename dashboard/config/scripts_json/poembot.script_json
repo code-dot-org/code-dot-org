@@ -9,8 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:01:36 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-06-14 21:21:41 UTC",
     "seeding_key": {
       "script.name": "poembot"
     }

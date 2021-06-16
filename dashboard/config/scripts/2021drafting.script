@@ -1,5 +1,4 @@
 teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"]]
-published_state 'beta'
 
 lesson_group 'introduction', display_name: 'Introduction'
 lesson_group_description 'Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!'

@@ -1,6 +1,5 @@
 login_required true
 student_detail_progress_view true
-published_state 'beta'
 
 lesson_group 'csd5_1', display_name: 'Chapter 1: Representing Information'
 lesson 'Representation Matters', display_name: 'Representation Matters', has_lesson_plan: false

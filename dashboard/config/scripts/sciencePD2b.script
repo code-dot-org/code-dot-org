@@ -1,6 +1,5 @@
 professional_learning_course 'CS in Science Legacy'
 login_required true
-published_state 'beta'
 
 lesson 'Welcome!', display_name: 'Welcome!', has_lesson_plan: false
 level 'sciPD2b intro'

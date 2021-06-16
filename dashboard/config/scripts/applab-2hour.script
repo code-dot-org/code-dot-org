@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'Digital Design', display_name: 'Digital Design', has_lesson_plan: false
 level 'Building a UI with Design Mode', named: true

@@ -1,6 +1,5 @@
 professional_learning_course 'CS Principles Support'
 login_required true
-published_state 'beta'
 
 lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
 level 'CSPPD2 welcome'

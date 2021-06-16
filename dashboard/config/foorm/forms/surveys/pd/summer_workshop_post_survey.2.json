@@ -441,16 +441,6 @@
           "name": "activities_youd_change"
         },
         {
-          "type": "rating",
-          "name": "rating",
-          "title": "How likely are you to recommend Code.org to a friend or colleague?",
-          "isRequired": true,
-          "requiredErrorText": "Please select a value",
-          "rateMax": 10,
-          "minRateDescription": "Not likely at All",
-          "maxRateDescription": "Extremely likely"
-        },
-        {
           "type": "library_item",
           "library_name": "surveys/pd/workshop_elements",
           "library_version": 0,

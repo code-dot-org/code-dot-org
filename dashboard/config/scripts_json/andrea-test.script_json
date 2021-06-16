@@ -20,8 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:00:02 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-05-13 15:42:24 UTC",
     "seeding_key": {
       "script.name": "andrea-test"
     }

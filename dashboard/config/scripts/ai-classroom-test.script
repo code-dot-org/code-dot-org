@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson 'ailab-explore', display_name: 'Explore AI Lab', has_lesson_plan: false
 level 'ml-class test-ai lab 1', progression: 'Explore AI Lab'

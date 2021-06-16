@@ -1,5 +1,4 @@
 hideable_lessons true
-published_state 'beta'
 
 lesson 'Algorithms with Hill Harper', display_name: 'Algorithms with Hill Harper', has_lesson_plan: false
 level 'CodeBreak Episode Placeholder', progression: 'Code Break: Episode 1'

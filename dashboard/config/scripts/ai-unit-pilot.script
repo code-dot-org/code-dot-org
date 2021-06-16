@@ -2,7 +2,6 @@ login_required true
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/ai-unit-pilot/ai-unit/"], ["vocabulary", "https://curriculum.code.org/ai-unit-pilot/ai-unit/vocab"], ["standardMappings", "https://curriculum.code.org/ai-unit-pilot/ai-unit/standards"]]
 curriculum_path 'https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}'
-published_state 'pilot'
 pilot_experiment 'ai-unit-pilot'
 
 lesson 'lesson1', display_name: 'Introduction to Machine Learning', has_lesson_plan: true

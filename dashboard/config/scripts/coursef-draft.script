@@ -1,5 +1,4 @@
 login_required true
-published_state 'beta'
 
 lesson_group 'content', display_name: 'Content'
 lesson 'Algorithms: Tangrams', display_name: 'Algorithms: Tangrams', has_lesson_plan: true, unplugged: true

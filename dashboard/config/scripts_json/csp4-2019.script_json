@@ -41,8 +41,7 @@
     },
     "new_name": null,
     "family_name": "csp4",
-    "serialized_at": "2021-06-16 23:00:14 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-05-03 23:55:33 UTC",
     "seeding_key": {
       "script.name": "csp4-2019"
     }

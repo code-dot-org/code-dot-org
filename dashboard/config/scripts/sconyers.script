@@ -1,5 +1,4 @@
 project_widget_types ["applab"]
-published_state 'beta'
 
 lesson 'Digital Design', display_name: 'Digital Design', has_lesson_plan: false
 level 'CSD U4L12 autoSFLP_2018', named: true

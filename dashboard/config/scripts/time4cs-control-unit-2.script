@@ -1,7 +1,6 @@
 login_required true
 hideable_lessons true
 lesson_extras_available true
-published_state 'beta'
 editor_experiment 'broward'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'

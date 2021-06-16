@@ -2,7 +2,6 @@ login_required true
 hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
-published_state 'beta'
 
 lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
 lesson 'Analysis of Design', display_name: 'Analysis of Design', has_lesson_plan: false

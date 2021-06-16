@@ -43,8 +43,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-06-16 22:59:51 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-05-03 23:55:25 UTC",
     "seeding_key": {
       "script.name": "pre-express-2018"
     }

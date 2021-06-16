@@ -1,5 +1,4 @@
 hidden false
-published_state 'preview'
 
 lesson 'Aquatic', display_name: 'Aquatic', has_lesson_plan: false
 level 'HOC 2018 Level_1'

@@ -1,5 +1,3 @@
-published_state 'beta'
-
 lesson 'Happy Maps', display_name: 'Happy Maps', has_lesson_plan: false, unplugged: true
 level 'UnplugHappyMaps'
 
