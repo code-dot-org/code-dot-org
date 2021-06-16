@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedUnitCard as UnitCard} from '@cdo/apps/lib/levelbuilder/script-editor/UnitCard';
+import {UnconnectedUnitCard as UnitCard} from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
 import sinon from 'sinon';
 import {nonUserFacingGroup} from './LessonGroupCardTest';
 import {
@@ -12,7 +12,7 @@ import {
 } from '@cdo/apps/redux';
 import reducers, {
   init
-} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {Provider} from 'react-redux';
 
 describe('UnitCard', () => {
