@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "video_key": "C4_variables_artist",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2021",
+    "parent_level_id": 27024,
+    "encrypted": "false",
+    "long_instructions": "**Student lesson level shown here:  Course F - Lesson 10, Level 2:  Using Variables with the Artist.**"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2021-06-16T14:37:12.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-06-16 14:37:25 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 14:48:07 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
