@@ -255,7 +255,7 @@ class Script < ApplicationRecord
     @@lesson_extras_scripts ||= Script.all.select(&:lesson_extras_available?).pluck(:id)
   end
 
-  def self.maker_unit_units
+  def self.maker_units
     visible_units.select {|s| s.family_name == 'csd6'}
   end
 
@@ -1156,9 +1156,9 @@ class Script < ApplicationRecord
         copied_script.reload
       else
         copied_script.is_course = true
-        raise "Must supply version year if new script will be a standalone course" unless version_year
+        raise "Must supply version year if new script will be a standalone unit" unless version_year
         copied_script.version_year = version_year
-        raise "Must supply family name if new script will be a standalone course" unless family_name
+        raise "Must supply family name if new script will be a standalone unit" unless family_name
         copied_script.family_name = family_name
         CourseOffering.add_course_offering(copied_script)
       end
@@ -1760,7 +1760,7 @@ class Script < ApplicationRecord
     UnitGroup.get_from_cache(unit_group_units[0].course_id)
   end
 
-  # If this unit is a standalone course, returns its CourseVersion. Otherwise,
+  # If this unit is a standalone unit, returns its CourseVersion. Otherwise,
   # if this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion,
   # if there is one.
   # @return [CourseVersion]
