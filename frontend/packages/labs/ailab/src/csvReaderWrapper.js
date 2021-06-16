@@ -31,7 +31,11 @@ const isRowValid = (row) => {
 const trimWhiteSpaces = (row) => {
   var trimmedRows = {};
   for (var cellName in row) {
-    trimmedRows[cellName] = row[cellName].trim();
+    if (typeof row[cellName] === 'string') {
+      trimmedRows[cellName] = row[cellName].trim();
+    } else {
+      trimmedRows[cellName] = row[cellName]
+    }
   }
   return trimmedRows;
 }
