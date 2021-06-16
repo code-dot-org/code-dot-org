@@ -1,0 +1,27 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Run the code. What error do you get?\r\n\r\nChange line 16 in `Dessert.java` to `quantity = quantity - 1;`\r\n\r\nDo you still get the error?",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert cake = new Dessert(-2);\n    cake.eat();\n  }\n}",
+        "isVisible": true
+      },
+      "Dessert.java": {
+        "text": "public class Dessert {\n  private int quantity;\n\n  public Dessert(int newQty) {\n    boolean isValid = (newQty >= 0);\n\n    if (!isValid) {\n      quantity = 1;\n    }\n    else {\n      quantity = newQty;\n    }\n  }\n\n  public void eat() {\n    newQty = newQty - 1;\n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2021-06-16T17:04:29.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-06-16 17:06:36 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

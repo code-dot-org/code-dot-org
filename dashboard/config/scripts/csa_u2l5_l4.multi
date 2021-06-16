@@ -1,0 +1,20 @@
+name 'CSA U2L5-L4'
+title 'Check for Understanding'
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+int a = 3;
+int b = 10;
+double c = 2.5;
+c = 2 * a - 15 / b + c;
+```
+
+What is the value of `c` after this code segment is executed?
+MARKDOWN
+
+wrong '5'
+wrong '5.0'
+right '7.5'
+wrong '10.5'

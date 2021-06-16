@@ -1,0 +1,10 @@
+name 'OPD-K5-FunctionsVid-2021'
+video_key 'C3_songwriting_with_parameters'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Songwriting
+
+Use the concept of the chorus in a song to learn about defining and calling functions.
+MARKDOWN

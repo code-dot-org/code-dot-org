@@ -353,7 +353,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "should redirect old k-8" do
     get :show, params: {id: 1}
-    assert_redirected_to script_path(Script.twenty_hour_script)
+    assert_redirected_to script_path(Script.twenty_hour_unit)
   end
 
   test "show should redirect to flappy" do
