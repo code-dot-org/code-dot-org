@@ -28,8 +28,17 @@ const isRowValid = (row) => {
   return cells.every(isCellValid)
 }
 
+const trimWhiteSpaces = (row) => {
+  var trimmedRows = {};
+  for (var cellName in row) {
+    trimmedRows[cellName] = row[cellName].trim();
+  }
+  return trimmedRows;
+}
+
 const cleanData = (data) => {
-  var cleanedData = data.filter(row => isRowValid(row));
+  var filterValidData = data.filter(row => isRowValid(row));
+  var cleanedData = filterValidData.map(row => trimWhiteSpaces(row));
   return cleanedData;
 }
 
