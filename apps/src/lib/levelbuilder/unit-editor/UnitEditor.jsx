@@ -174,7 +174,7 @@ class UnitEditor extends React.Component {
     this.setState({familyName: event.target.value});
   };
 
-  handleStandaloneCourseChange = () => {
+  handleStandaloneUnitChange = () => {
     this.setState({isCourse: !this.state.isCourse});
   };
 
@@ -598,20 +598,20 @@ class UnitEditor extends React.Component {
               {!this.props.hasCourse && (
                 <div>
                   <label>
-                    Is a Standalone Course
+                    Is a Standalone Unit
                     <input
                       className="isCourseCheckbox"
                       type="checkbox"
                       checked={this.state.isCourse}
                       disabled={!this.state.familyName}
                       style={styles.checkbox}
-                      onChange={this.handleStandaloneCourseChange}
+                      onChange={this.handleStandaloneUnitChange}
                     />
                     {this.state.familyName && (
                       <HelpTip>
                         <p>
                           If checked, indicates that this Unit represents a
-                          standalone course. Examples of such Units include
+                          standalone unit. Examples of such Units include
                           CourseA-F, Express, and Pre-Express.
                         </p>
                       </HelpTip>
@@ -620,7 +620,7 @@ class UnitEditor extends React.Component {
                       <HelpTip>
                         <p>
                           You must select a family name in order to mark
-                          something as a standalone course.
+                          something as a standalone unit.
                         </p>
                       </HelpTip>
                     )}
