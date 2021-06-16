@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {tableLayoutStyles} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
-import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 class ManageStudentNameCell extends Component {

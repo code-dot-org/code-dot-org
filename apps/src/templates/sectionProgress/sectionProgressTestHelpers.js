@@ -1,13 +1,13 @@
 import {registerReducers, createStoreWithReducers} from '@cdo/apps/redux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import sectionProgress, {
-  addDataByScript,
+  addDataByUnit,
   setLessonOfInterest,
   setShowSectionProgressDetails
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import scriptSelection, {
+import unitSelection, {
   setValidScripts
-} from '@cdo/apps/redux/scriptSelectionRedux';
+} from '@cdo/apps/redux/unitSelectionRedux';
 import locales from '@cdo/apps/redux/localesRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
@@ -48,7 +48,7 @@ export function createStore(numStudents, numLessons) {
     registerReducers({
       sectionProgress,
       sectionData,
-      scriptSelection,
+      unitSelection,
       locales
     });
   } catch {}
@@ -56,7 +56,7 @@ export function createStore(numStudents, numLessons) {
   store.dispatch(setSection(section));
   store.dispatch(setValidScripts([scriptData], [scriptData.id], [], section));
   store.dispatch(
-    addDataByScript(buildSectionProgress(section.students, scriptData))
+    addDataByUnit(buildSectionProgress(section.students, scriptData))
   );
   store.dispatch(setLessonOfInterest(0));
   store.dispatch(setShowSectionProgressDetails(true));
@@ -83,12 +83,12 @@ function buildSectionProgress(students, scriptData) {
     });
   });
   return {
-    scriptDataByScript: {[scriptData.id]: scriptData},
-    studentLevelProgressByScript: {[scriptData.id]: progress},
-    studentLessonProgressByScript: {
+    unitDataByUnit: {[scriptData.id]: scriptData},
+    studentLevelProgressByUnit: {[scriptData.id]: progress},
+    studentLessonProgressByUnit: {
       [scriptData.id]: lessonProgressForSection(progress, scriptData.lessons)
     },
-    studentLastUpdateByScript: {[scriptData.id]: lastUpdates}
+    studentLastUpdateByUnit: {[scriptData.id]: lastUpdates}
   };
 }
 
