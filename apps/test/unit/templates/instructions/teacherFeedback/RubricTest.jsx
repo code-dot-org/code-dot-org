@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
+import i18n from '@cdo/locale';
 
 const DEFAULT_PROPS = {
   rubric: {
@@ -26,8 +27,13 @@ const setUp = overrideProps => {
 describe('Rubric', () => {
   it('displays key concept', () => {
     const wrapper = setUp();
-    expect(wrapper.contains('Key Concept')).to.equal(true);
+    expect(wrapper.contains(i18n.rubricKeyConceptHeader())).to.equal(true);
     expect(wrapper.contains('This is the Key Concept')).to.equal(true);
+  });
+
+  it('displays rubric header', () => {
+    const wrapper = setUp();
+    expect(wrapper.contains(i18n.rubric())).to.equal(true);
   });
 
   it('has 4 rubric fields', () => {
