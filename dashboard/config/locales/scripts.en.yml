@@ -23678,27 +23678,3 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-        temp-script-1623797736-840005:
-          lessons:
-            temp-lesson-2:
-              name: Temp Lesson Without Lesson Plan
-              description_student: 
-              description_teacher: 
-        temp-script-1623797753-810898:
-          lessons:
-            temp-lesson:
-              name: Temp Lesson
-              description_student: 
-              description_teacher: 
-        temp-script-1623797774-669579:
-          lessons:
-            temp-lesson:
-              name: Temp Lesson
-              description_student: 
-              description_teacher: 
-        temp-script-1623797790-554556:
-          lessons:
-            temp-lesson:
-              name: Temp Lesson
-              description_student: 
-              description_teacher: 
