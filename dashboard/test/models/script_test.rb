@@ -17,8 +17,8 @@ class ScriptTest < ActiveSupport::TestCase
     @unit_in_unit_group = create(:script, hidden: true)
     create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @unit_in_unit_group)
 
-    @script_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
-    @script_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
+    @unit_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
+    @unit_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
 
     @csf_script = create :csf_script, name: 'csf1'
     @csd_script = create :csd_script, name: 'csd1'
@@ -474,12 +474,12 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'get_family_from_cache uses unit_family_cache' do
     family_scripts = Script.where(family_name: 'family-cache-test')
-    assert_equal [@script_2017.name, @script_2018.name], family_scripts.map(&:name)
+    assert_equal [@unit_2017.name, @unit_2018.name], family_scripts.map(&:name)
 
     populate_cache_and_disconnect_db
 
     cached_family_scripts = Script.get_family_from_cache('family-cache-test')
-    assert_equal [@script_2017.name, @script_2018.name], cached_family_scripts.map(&:name).uniq
+    assert_equal [@unit_2017.name, @unit_2018.name], cached_family_scripts.map(&:name).uniq
   end
 
   test 'cache_find_script_level uses cache' do
