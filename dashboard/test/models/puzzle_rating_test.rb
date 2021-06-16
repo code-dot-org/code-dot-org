@@ -3,7 +3,7 @@ require 'test_helper'
 class PuzzleRatingTest < ActiveSupport::TestCase
   setup do
     @student = create :student
-    @script = create :script
+    @unit = create :script
     @level = create :level
   end
 

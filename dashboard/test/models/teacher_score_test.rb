@@ -11,7 +11,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
     @section.add_student(@student_1)
     @section.add_student(@student_2)
     @section.add_student(@student_3)
-    @script = create :script
+    @unit = create :script
     @lesson_group = create :lesson_group, script: @script
     @lesson = create :lesson, script: @script, lesson_group: @lesson_group, unplugged: true
     @script_level = create(

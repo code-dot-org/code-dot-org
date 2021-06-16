@@ -20,7 +20,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     @section.add_student(@student)
     @level = create :level
     @script_level = create :script_level
-    @script = @script_level.script
+    @unit = @script_level.script
   end
 
   test 'can be created' do
@@ -35,14 +35,14 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
   test 'retrieves no content when no feedback is available' do
     sign_in @teacher
-    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @unit.id}
 
     assert_response :no_content
   end
 
   test 'can be retrieved by teacher' do
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, REVIEW_STATE)
-    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @unit.id}
 
     assert_equal COMMENT1, parsed_response['comment']
     assert_equal PERFORMANCE1, parsed_response['performance']
@@ -55,7 +55,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
     teacher_sign_in_and_give_feedback(@teacher, student2, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
-    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @unit.id}
 
     assert_response :success
     assert_equal @student.id, parsed_response['student_id']
@@ -75,11 +75,11 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_out teacher2
 
     sign_in @teacher
-    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @unit.id}
     assert_equal COMMENT1, parsed_response['comment']
     assert_equal PERFORMANCE1, parsed_response['performance']
 
-    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: teacher2.id, script_id: @script.id}
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: teacher2.id, script_id: @unit.id}
     assert_equal COMMENT2, parsed_response['comment']
     assert_equal PERFORMANCE2, parsed_response['performance']
   end
@@ -105,7 +105,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT3, PERFORMANCE3)
-    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @unit.id}
 
     assert_equal COMMENT3, parsed_response['comment']
     assert_equal PERFORMANCE3, parsed_response['performance']
@@ -113,21 +113,21 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
   test 'bad request when student_id not provided - get_feedback_from_teacher' do
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    get "#{API}/get_feedback_from_teacher", params: {level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
+    get "#{API}/get_feedback_from_teacher", params: {level_id: @level.id, teacher_id: @teacher.id, script_id: @unit.id}
 
     assert_response :bad_request
   end
 
   test 'bad request when level_id not provided - get_feedback_from_teacher' do
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, teacher_id: @teacher.id, script_id: @script.id}
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, teacher_id: @teacher.id, script_id: @unit.id}
 
     assert_response :bad_request
   end
 
   test 'bad request when teacher_id not provided - get_feedback_from_teacher' do
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, script_id: @unit.id}
 
     assert_response :bad_request
   end
@@ -141,7 +141,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
   test 'empty array when no feedback available' do
     sign_in @student
-    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @unit.id}
 
     assert_equal [], parsed_response
   end
@@ -202,14 +202,14 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
   test 'bad request when student_id not provided - get_feedbacks' do
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    get "#{API}/get_feedbacks", params: {level_id: @level.id, script_id: @script.id}
+    get "#{API}/get_feedbacks", params: {level_id: @level.id, script_id: @unit.id}
 
     assert_response :bad_request
   end
 
   test 'bad request when level_id not provided - get_feedbacks' do
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    get "#{API}/get_feedbacks", params: {student_id: @student.id, script_id: @script.id}
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, script_id: @unit.id}
 
     assert_response :bad_request
   end
@@ -227,7 +227,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_out @teacher
 
     sign_in @student
-    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @unit.id}
 
     assert_equal 1, parsed_response.count
     assert_equal COMMENT2, parsed_response[0]['comment']
@@ -247,7 +247,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_out @teacher
 
     sign_in @student
-    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @unit.id}
 
     assert_equal 2, parsed_response.count
     assert_equal COMMENT2, parsed_response[1]['comment']
@@ -266,7 +266,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_out @teacher
 
     sign_in @student
-    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @unit.id}
 
     assert_equal 1, JSON.parse(@response.body).count
     assert_equal COMMENT1, parsed_response[0]['comment']
@@ -295,7 +295,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
   test 'returns elegantly when no feedback' do
     sign_in @student
-    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @unit.id}
 
     assert_empty parsed_response
   end
@@ -307,7 +307,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
     teacher_sign_in_and_give_feedback(@teacher1, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
     sign_in @student
-    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @unit.id}
 
     assert_equal 'Test Name', parsed_response[0]['teacher_name']
   end
@@ -321,7 +321,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
     teacher_sign_in_and_give_feedback(@teacher1, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
     sign_in @student
-    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @unit.id}
 
     assert_equal user_level.updated_at, parsed_response[0]['student_last_updated']
     assert_equal false, parsed_response[0]['student_updated_since_feedback']

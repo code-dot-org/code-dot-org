@@ -4,7 +4,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
   setup do
     PuzzleRating.stubs(:enabled?).returns true
     @student = create :student
-    @script = create :script
+    @unit = create :script
   end
 
   test 'creation requires script, level, and rating' do
@@ -16,7 +16,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     assert_response :bad_request
 
     assert_does_not_create(PuzzleRating) do
-      post :create, params: {script_id: @script.id}, format: :json
+      post :create, params: {script_id: @unit.id}, format: :json
     end
     assert_response :bad_request
 
@@ -32,7 +32,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
 
     assert_creates(PuzzleRating) do
       post :create, params: {
-        script_id: @script.id,
+        script_id: @unit.id,
         level_id: level.id,
         rating: 0
       }, format: :json
@@ -46,7 +46,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     [nil, 0.5, 2, -1].each do |bad_rating|
       assert_does_not_create(PuzzleRating) do
         post :create, params: {
-          script_id: @script.id,
+          script_id: @unit.id,
           level_id: level.id,
           rating: bad_rating
         }, format: :json
@@ -57,7 +57,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     [0, 1].each do |good_rating|
       assert_creates(PuzzleRating) do
         post :create, params: {
-          script_id: @script.id,
+          script_id: @unit.id,
           level_id: level.id,
           rating: good_rating
         }, format: :json
@@ -72,7 +72,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     level = create :level
 
     params = {
-      script_id: @script.id,
+      script_id: @unit.id,
       level_id: level.id,
       rating: 1
     }
@@ -94,7 +94,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     level = create :level
 
     params = {
-      script_id: @script.id,
+      script_id: @unit.id,
       level_id: level.id,
       rating: 1
     }
@@ -118,7 +118,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     level = create :level
 
     params = {
-      script_id: @script.id,
+      script_id: @unit.id,
       level_id: level.id,
       rating: 1
     }

@@ -8,7 +8,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     @section = create :section, user: @teacher
     @lesson = create :lesson
     @lesson_2 = create :lesson
-    @script = create :script
+    @unit = create :script
   end
 
   test 'score_lesson_for_section is forbidden if signed out' do
@@ -80,13 +80,13 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'get_teacher_scores_for_script is restricted if signed out' do
-    get "/dashboardapi/v1/teacher_scores/#{@section.id}/#{@script.id}"
+    get "/dashboardapi/v1/teacher_scores/#{@section.id}/#{@unit.id}"
     assert_response :unauthorized
   end
 
   test 'get_teacher_scores_for_script is restricted if student' do
     sign_in @student
-    get "/dashboardapi/v1/teacher_scores/#{@section.id}/#{@script.id}"
+    get "/dashboardapi/v1/teacher_scores/#{@section.id}/#{@unit.id}"
     assert_response :forbidden
   end
 

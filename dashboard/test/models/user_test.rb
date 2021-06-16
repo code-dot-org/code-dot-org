@@ -3629,7 +3629,7 @@ class UserTest < ActiveSupport::TestCase
     setup_all do
       @teacher = create :teacher
 
-      @script = create(:script, hideable_lessons: true)
+      @unit = create(:script, hideable_lessons: true)
       @lesson1 = create(:lesson, script: @script, absolute_position: 1, relative_position: '1')
       @lesson2 = create(:lesson, script: @script, absolute_position: 2, relative_position: '2')
       @lesson3 = create(:lesson, script: @script, absolute_position: 3, relative_position: '3')

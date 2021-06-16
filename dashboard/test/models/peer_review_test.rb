@@ -23,7 +23,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     @learning_module = create :plc_learning_module, plc_course_unit: @plc_course_unit
 
     @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson
-    @script = @script_level.script
+    @unit = @script_level.script
 
     @user = create :user
 

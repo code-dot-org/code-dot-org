@@ -74,7 +74,7 @@ class ScriptsController < ApplicationController
 
   def create
     return head :bad_request unless general_params[:is_migrated]
-    @script = Script.new(script_params)
+    @unit = Script.new(script_params)
     if @script.save && @script.update_text(script_params, params[:script_text], i18n_params, general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
@@ -106,9 +106,9 @@ class ScriptsController < ApplicationController
     raise "The new script editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
     @show_all_instructions = params[:show_all_instructions]
     @unit_data = {
-      script: @script ? @script.summarize_for_script_edit : {},
+      script: @unit ? @script.summarize_for_script_edit : {},
       has_course: @script&.unit_groups&.any?,
-      i18n: @script ? @script.summarize_i18n_for_edit : {},
+      i18n: @unit ? @script.summarize_i18n_for_edit : {},
       levelKeyList: @script.is_migrated ? Level.key_list : {},
       lessonLevelData: @script_dsl_text,
       locales: options_for_locale_select,
@@ -207,7 +207,7 @@ class ScriptsController < ApplicationController
 
   def set_script
     script_id = params[:id]
-    @script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
+    @unit = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
       Script.get_unit_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
       Script.get_from_cache(script_id)
     raise ActiveRecord::RecordNotFound unless @script

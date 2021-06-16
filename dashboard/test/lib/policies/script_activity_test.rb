@@ -3,7 +3,7 @@ require 'test_helper'
 class Policies::ScriptActivityTest < ActiveSupport::TestCase
   setup_all do
     @user = create :user
-    @script = create :script
+    @unit = create :script
     @lesson_group = create :lesson_group, script: @script
     @lesson = create :lesson, script: @script, lesson_group: @lesson_group
     @script_level = create(

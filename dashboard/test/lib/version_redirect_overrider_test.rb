@@ -7,7 +7,7 @@ class VersionRedirectOverriderTest < ActiveSupport::TestCase
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script
+    @unit = create :script
     @unit_group = create :unit_group
     create :unit_group_unit, unit_group: @unit_group, script: @script, position: 1
   end

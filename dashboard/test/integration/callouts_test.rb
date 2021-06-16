@@ -4,7 +4,7 @@ class CalloutsTest < ActionDispatch::IntegrationTest
   setup do
     Script.stubs(:should_cache?).returns true
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    @script = create :script
+    @unit = create :script
     @lesson_group = create :lesson_group, script: @script
     @lesson = create :lesson, script: @script, lesson_group: @lesson_group
     @maze_data = {game_id: 25, user_id: 1, name: '__bob4', level_num: 'custom', skin: 'birds', short_instructions: 'sdfdfs'}

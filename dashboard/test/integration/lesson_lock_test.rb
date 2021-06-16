@@ -11,13 +11,13 @@ class StageLockTest < ActionDispatch::IntegrationTest
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
-    @script = create :script
-    @lesson_group = create :lesson_group, script: @script
-    @lockable_lesson = create(:lesson, script: @script, name: 'Lockable Lesson', lockable: true, lesson_group: @lesson_group)
+    @unit = create :script
+    @lesson_group = create :lesson_group, script: @unit
+    @lockable_lesson = create(:lesson, script: @unit, name: 'Lockable Lesson', lockable: true, lesson_group: @lesson_group)
     external = create(:external, name: 'markdown level')
-    @lockable_external_sl = create(:script_level, script: @script, lesson: @lockable_lesson, levels: [external])
+    @lockable_external_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [external])
     @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
-    @lockable_level_group_sl = create(:script_level, script: @script, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
   end
 
   test 'authorized teacher viewing lockable lesson contents' do
@@ -61,7 +61,7 @@ class StageLockTest < ActionDispatch::IntegrationTest
 
     # Unlock the lesson.
     UserLevel.update_lockable_state(
-      @student.id, @level_group.id, @script.id, false, false
+      @student.id, @level_group.id, @unit.id, false, false
     )
     refute @lockable_level_group_sl.locked?(@student)
     refute @lockable_external_sl.locked?(@student)

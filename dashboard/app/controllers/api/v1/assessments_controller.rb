@@ -6,7 +6,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   load_and_authorize_resource :script
 
   def load_from_cache
-    @script = Script.get_from_cache(params[:script_id])
+    @unit = Script.get_from_cache(params[:script_id])
   end
 
   # For each assessment in a script, return an object of script_level IDs to question data.

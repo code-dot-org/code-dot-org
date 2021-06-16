@@ -17,7 +17,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @learning_module.plc_course_unit.script.update(peer_reviews_to_complete: 1)
 
     @script_level = create :script_level, levels: [level], lesson: @learning_module.lesson
-    @script = @script_level.script
+    @unit = @script_level.script
 
     @level_source = create :level_source, data: 'My submitted answer'
   end
@@ -72,11 +72,11 @@ class PeerReviewsControllerTest < ActionController::TestCase
   end
 
   test 'Pull review pulls a peer review' do
-    @script.update(professional_learning_course: true)
-    Plc::UserCourseEnrollment.create(user: @user, plc_course: @script.plc_course_unit.plc_course)
+    @unit.update(professional_learning_course: true)
+    Plc::UserCourseEnrollment.create(user: @user, plc_course: @unit.plc_course_unit.plc_course)
 
     assert_equal 0, PeerReview.where(reviewer: @user).size
-    get :pull_review, params: {script_id: @script.name}
+    get :pull_review, params: {script_id: @unit.name}
     @peer_review.reload
     assert_equal @user.id, @peer_review.reviewer_id
     assert_redirected_to peer_review_path(@peer_review)
@@ -85,7 +85,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
   test 'Pull review redirects if there are no reviews to assign' do
     PeerReview.update_all(reviewer_id: @user.id)
 
-    get :pull_review, params: {script_id: @script.name}
+    get :pull_review, params: {script_id: @unit.name}
     assert_redirected_to script_path(@script)
   end
 

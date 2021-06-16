@@ -18,7 +18,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @unit_group = create(:unit_group)
     @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
 
-    @script = create(:script)
+    @unit = create(:script)
     @section_with_script = create(:section, user: @teacher, script: Script.flappy_unit)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
@@ -472,7 +472,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: @script.id},
+      script: {id: @unit.id},
     }
 
     assert_equal @script.id, returned_json['script']['id']

@@ -7,11 +7,11 @@ class LessonsTest < ActionDispatch::IntegrationTest
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script, name: 'unit-1', is_migrated: true
-    lesson_group = create :lesson_group, script: @script
+    @unit = create :script, name: 'unit-1', is_migrated: true
+    lesson_group = create :lesson_group, script: @unit
     @lesson = create(
       :lesson,
-      script_id: @script.id,
+      script_id: @unit.id,
       lesson_group: lesson_group,
       name: 'lesson display name',
       relative_position: 1,
@@ -29,7 +29,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
 
     @lesson2 = create(
       :lesson,
-      script_id: @script.id,
+      script_id: @unit.id,
       lesson_group: lesson_group,
       name: 'second lesson',
       relative_position: 2,

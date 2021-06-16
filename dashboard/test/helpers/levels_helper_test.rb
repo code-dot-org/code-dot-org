@@ -292,7 +292,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'a teacher viewing student work should see isStarted value for student' do
     @user = create :user
     @level = create :applab
-    @script = script = create(:script)
+    @unit = script = create(:script)
     create(:script_level, levels: [@level], script: script)
 
     teacher = create :teacher
@@ -449,7 +449,7 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in user
 
     @level = create(:level, :blockly, :with_ideal_level_source)
-    @script = create(:script)
+    @unit = create(:script)
     @script.update(professional_learning_course: 'Professional Learning Course')
     @script_level = create(:script_level, levels: [@level], script: @script)
     assert_not can_view_solution?
@@ -473,7 +473,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'show solution link shows link for appropriate users' do
     @level = create(:level, :blockly, :with_ideal_level_source)
-    @script = create(:script)
+    @unit = create(:script)
     @script_level = create(:script_level, levels: [@level], script: @script)
 
     user = create :levelbuilder
@@ -639,7 +639,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'standalone multi should include answers for student' do
     sign_in create(:student)
 
-    @script = create(:script)
+    @unit = create(:script)
     @level = create :multi
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson
@@ -653,7 +653,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'non-standalone multi should not include answers for student' do
     sign_in create(:student)
 
-    @script = create(:script)
+    @unit = create(:script)
     @level = create :multi
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson
@@ -916,7 +916,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'sets hint prompt attempts threshold in options for level in csf script' do
-    @script = create :csf_script
+    @unit = create :csf_script
     @level = create :level
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson
@@ -927,7 +927,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'sets hint prompt attempts threshold in options to default if not already set' do
-    @script = create :csf_script
+    @unit = create :csf_script
     @level = create :level
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson
@@ -937,7 +937,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'does not set hint prompt attempts threshold in options for level in csp script' do
-    @script = create :csp_script
+    @unit = create :csp_script
     @level = create :level
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson

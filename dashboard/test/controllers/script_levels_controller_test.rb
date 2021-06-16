@@ -43,7 +43,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     )
     create(:script_level, script: @custom_script, lesson: @custom_lesson_3, position: 1)
 
-    @script = @custom_script
+    @unit = @custom_script
     @script_level = @custom_s1_l1
 
     pilot_script = create(:script, pilot_experiment: 'pilot-experiment')
@@ -154,7 +154,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should allow public caching for script level pages with default lifetime' do
-    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(true)
+    ScriptConfig.stubs(:allows_public_caching_for_script).with(@unit.name).returns(true)
 
     # Verify the default max age is used if none is specifically configured.
     get_show_script_level_page(@script_level)
@@ -164,7 +164,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should allow public caching for script level pages with dynamic lifetime' do
-    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(true)
+    ScriptConfig.stubs(:allows_public_caching_for_script).with(@unit.name).returns(true)
     DCDO.set('public_max_age', 3600)
     DCDO.set('public_proxy_max_age', 7200)
     get_show_script_level_page(@script_level)
@@ -173,7 +173,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should make script level pages uncachable if disabled' do
     # Configure the script not to use public caching and make the headers disable caching.
-    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(false)
+    ScriptConfig.stubs(:allows_public_caching_for_script).with(@unit.name).returns(false)
     get_show_script_level_page(@script_level)
     assert_caching_disabled response.headers['Cache-Control']
   end
@@ -1091,7 +1091,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # cached page, as we tend to do for high-traffic levels.
 
     get :show, params: {
-      script_id: @script,
+      script_id: @unit,
       lesson_position: @script_level.lesson,
       id: @script_level.position,
       user_id: @student.id,
@@ -1345,7 +1345,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should have milestone posting disabled if Milestone is set" do
-    Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
+    Gatekeeper.set('postMilestone', where: {script_name: @unit.name}, value: false)
     get_show_script_level_page @script_level
     assert_equal POST_MILESTONE_MODE.final_level_only, assigns(:view_options)[:post_milestone_mode]
   end
@@ -1364,13 +1364,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "can view CSF teacher markdown as non-authorized teacher" do
     stubs(:current_user).returns(@teacher)
-    @script.stubs(:k5_course?).returns(true)
+    @unit.stubs(:k5_course?).returns(true)
     assert can_view_teacher_markdown?
   end
 
   test "students can not view CSF teacher markdown" do
     stubs(:current_user).returns(@student)
-    @script.stubs(:k5_course?).returns(true)
+    @unit.stubs(:k5_course?).returns(true)
     refute can_view_teacher_markdown?
   end
 
@@ -1586,7 +1586,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "hidden_lesson_ids for user not signed in" do
-    response = get :hidden_lesson_ids, params: {script_id: @script.name}
+    response = get :hidden_lesson_ids, params: {script_id: @unit.name}
     assert_response :success
 
     hidden = JSON.parse(response.body)
@@ -1597,7 +1597,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     SectionHiddenLesson.create(section_id: @section.id, stage_id: @custom_lesson_1.id)
 
     sign_in @student
-    response = get :hidden_lesson_ids, params: {script_id: @script.name}
+    response = get :hidden_lesson_ids, params: {script_id: @unit.name}
     assert_response :success
 
     hidden = JSON.parse(response.body)
@@ -1608,7 +1608,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     SectionHiddenLesson.create(section_id: @section.id, stage_id: @custom_lesson_1.id)
 
     sign_in @teacher
-    response = get :hidden_lesson_ids, params: {script_id: @script.name}
+    response = get :hidden_lesson_ids, params: {script_id: @unit.name}
     assert_response :success
 
     hidden = JSON.parse(response.body)

@@ -3,7 +3,7 @@ require 'test_helper'
 class HintViewRequestTest < ActiveSupport::TestCase
   setup do
     @student = create :student
-    @script = create :script
+    @unit = create :script
     @level_one = create :level
     @level_two = create :level
   end

@@ -1026,14 +1026,14 @@ class ScriptTest < ActiveSupport::TestCase
 
       Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
 
-      @script = create(:script, name: 'script-with-visible-after')
-      @lesson_group = create(:lesson_group, key: 'key1', script: @script)
-      lesson_no_visible_after = create(:lesson, script: @script, name: 'Lesson 1', lesson_group: @lesson_group)
-      create(:script_level, script: @script, lesson: lesson_no_visible_after)
-      lesson_future_visible_after = create(:lesson, script: @script, name: 'Lesson 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @script, lesson: lesson_future_visible_after)
-      lesson_past_visible_after = create(:lesson, script: @script, name: 'Lesson 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @script, lesson: lesson_past_visible_after)
+      @unit = create(:script, name: 'script-with-visible-after')
+      @lesson_group = create(:lesson_group, key: 'key1', script: @unit)
+      lesson_no_visible_after = create(:lesson, script: @unit, name: 'Lesson 1', lesson_group: @lesson_group)
+      create(:script_level, script: @unit, lesson: lesson_no_visible_after)
+      lesson_future_visible_after = create(:lesson, script: @unit, name: 'Lesson 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
+      create(:script_level, script: @unit, lesson: lesson_future_visible_after)
+      lesson_past_visible_after = create(:lesson, script: @unit, name: 'Lesson 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
+      create(:script_level, script: @unit, lesson: lesson_past_visible_after)
     end
 
     teardown do
@@ -1041,22 +1041,22 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'should summarize script with visible after dates for unsigned in user' do
-      summary = @script.summarize(true, nil, false)
+      summary = @unit.summarize(true, nil, false)
       assert_equal 2, summary[:lessons].count
     end
 
     test 'should summarize script with visible after dates for teacher' do
-      summary = @script.summarize(true, @teacher, false)
+      summary = @unit.summarize(true, @teacher, false)
       assert_equal 2, summary[:lessons].count
     end
 
     test 'should summarize script with visible after dates for student' do
-      summary = @script.summarize(true, @student, false)
+      summary = @unit.summarize(true, @student, false)
       assert_equal 2, summary[:lessons].count
     end
 
     test 'should summarize script with visible after dates for levelbuilder' do
-      summary = @script.summarize(true, @levelbuilder, false)
+      summary = @unit.summarize(true, @levelbuilder, false)
       assert_equal 3, summary[:lessons].count
     end
   end

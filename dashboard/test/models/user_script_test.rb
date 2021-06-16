@@ -3,7 +3,7 @@ require 'test_helper'
 class UserScriptTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @script = create :script
+    @unit = create :script
     @lesson_group = create :lesson_group, script: @script
     @lesson = create :lesson, script: @script, lesson_group: @lesson_group
     @script_levels = 1.upto(10).map do

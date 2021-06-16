@@ -3,7 +3,7 @@ require 'test_helper'
 class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
   setup do
     AuthoredHintViewRequest.stubs(:enabled?).returns true
-    @script = create :script
+    @unit = create :script
     @level = create :level
     @user = create :user
     sign_in @user
@@ -11,7 +11,7 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
     @default_params = {
       hints: [
         {
-          scriptId: @script.id,
+          scriptId: @unit.id,
           levelId: @level.id,
           hintId: 'hint'
         }
@@ -41,12 +41,12 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
         params: {
           hints: [
             {
-              scriptId: @script.id,
+              scriptId: @unit.id,
               levelId: @level.id,
               hintId: "first"
             },
             {
-              scriptId: @script.id,
+              scriptId: @unit.id,
               levelId: @level.id,
               hintId: "second"
             }
@@ -75,7 +75,7 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
 
   test 'records all (optional) data fields' do
     data = {
-      scriptId: @script.id,
+      scriptId: @unit.id,
       levelId: @level.id,
       hintId: 'first',
       hintClass: 'bottom-out',

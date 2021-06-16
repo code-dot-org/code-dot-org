@@ -15,11 +15,11 @@ class AdminUsersControllerTest < ActionController::TestCase
     @malformed.update_column(:email, '')  # Bypasses validation!
 
     @user = create :user, email: 'test_user@example.com'
-    @script = Script.first
-    @level = @script.script_levels.first.level
+    @unit = Script.first
+    @level = @unit.script_levels.first.level
     @manual_pass_params = {
       user_id: @user.id,
-      script_id_or_name: @script.id,
+      script_id_or_name: @unit.id,
       level_id: @level.id
     }
   end
@@ -146,7 +146,7 @@ class AdminUsersControllerTest < ActionController::TestCase
       post :manual_pass, params: @manual_pass_params
     end
     user_level = UserLevel.find_by_user_id(@user.id)
-    assert_equal @script.id, user_level.script_id
+    assert_equal @unit.id, user_level.script_id
     assert_equal @level.id, user_level.level_id
     assert_equal ActivityConstants::MANUAL_PASS_RESULT, user_level.best_result
   end
@@ -156,10 +156,10 @@ class AdminUsersControllerTest < ActionController::TestCase
 
     assert_creates(UserLevel) do
       post :manual_pass,
-        params: @manual_pass_params.merge(script_id_or_name: @script.name)
+        params: @manual_pass_params.merge(script_id_or_name: @unit.name)
     end
     user_level = UserLevel.find_by_user_id(@user.id)
-    assert_equal @script.id, user_level.script_id
+    assert_equal @unit.id, user_level.script_id
     assert_equal @level.id, user_level.level_id
     assert_equal ActivityConstants::MANUAL_PASS_RESULT, user_level.best_result
   end
@@ -167,14 +167,14 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'manual_pass modifies with user_level with manual pass' do
     sign_in @admin
     UserLevel.create!(
-      user: @user, level: @level, script: @script, best_result: 20
+      user: @user, level: @level, script: @unit, best_result: 20
     )
 
     assert_does_not_create(UserLevel) do
       post :manual_pass, params: @manual_pass_params
     end
     user_level = UserLevel.find_by_user_id(@user.id)
-    assert_equal @script.id, user_level.script_id
+    assert_equal @unit.id, user_level.script_id
     assert_equal @level.id, user_level.level_id
     assert_equal ActivityConstants::MANUAL_PASS_RESULT, user_level.best_result
   end
@@ -182,14 +182,14 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'manual_pass does not overwrite previous perfect' do
     sign_in @admin
     UserLevel.create!(
-      user: @user, level: @level, script: @script, best_result: 100
+      user: @user, level: @level, script: @unit, best_result: 100
     )
 
     assert_does_not_create(UserLevel) do
       post :manual_pass, params: @manual_pass_params
     end
     user_level = UserLevel.find_by_user_id(@user.id)
-    assert_equal @script.id, user_level.script_id
+    assert_equal @unit.id, user_level.script_id
     assert_equal @level.id, user_level.level_id
     assert_equal 100, user_level.best_result
   end

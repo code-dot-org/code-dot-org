@@ -9,11 +9,11 @@ class LessonsControllerTest < ActionController::TestCase
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script, name: 'unit-1', is_migrated: true
-    lesson_group = create :lesson_group, script: @script
+    @unit = create :script, name: 'unit-1', is_migrated: true
+    lesson_group = create :lesson_group, script: @unit
     @lesson = create(
       :lesson,
-      script_id: @script.id,
+      script_id: @unit.id,
       lesson_group: lesson_group,
       name: 'lesson display name',
       absolute_position: 1,
@@ -28,7 +28,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     @lesson2 = create(
       :lesson,
-      script_id: @script.id,
+      script_id: @unit.id,
       lesson_group: lesson_group,
       name: 'second lesson',
       has_lesson_plan: false,
@@ -44,7 +44,7 @@ class LessonsControllerTest < ActionController::TestCase
       'data' => {
         'script' => {
           'name' => {
-            @script.name => {
+            @unit.name => {
               'title' => @unit_title,
               'lessons' => {
                 @lesson.name => {
@@ -107,10 +107,10 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   # anyone can show lesson with lesson plan
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: nil, response: :success
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :student, response: :success
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :teacher, response: :success
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @unit.name, position: @lesson.relative_position}}, user: nil, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @unit.name, position: @lesson.relative_position}}, user: :student, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @unit.name, position: @lesson.relative_position}}, user: :teacher, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @unit.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
 
   # anyone can show lesson in a script that has login required
   test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_lesson.relative_position}}, user: nil, response: :success, name: 'signed out user can view lesson on script where login is required'
@@ -171,7 +171,7 @@ class LessonsControllerTest < ActionController::TestCase
   test 'can not show lesson when has_lesson_plan is false' do
     assert_raises(ActiveRecord::RecordNotFound) do
       get :show, params: {
-        script_id: @script.name,
+        script_id: @unit.name,
         position: @lesson2.relative_position
       }
     end
@@ -249,13 +249,13 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'show lesson when script has multiple lessons' do
     get :show, params: {
-      script_id: @script.name,
+      script_id: @unit.name,
       position: @lesson.relative_position
     }
     assert_response :ok
     assert(@response.body.include?(@unit_title))
     assert(@response.body.include?(@lesson.overview))
-    assert(@response.body.include?(@script.link))
+    assert(@response.body.include?(@unit.link))
     assert(@response.body.include?(script_lesson_path(@lesson.script, @lesson)))
     refute(@response.body.include?(script_lesson_path(@lesson2.script, @lesson2)))
   end
@@ -273,7 +273,7 @@ class LessonsControllerTest < ActionController::TestCase
     )
 
     get :show, params: {
-      script_id: @script.name,
+      script_id: @unit.name,
       position: @lesson.relative_position
     }
     assert_response :ok
@@ -583,7 +583,7 @@ class LessonsControllerTest < ActionController::TestCase
     activity_section = create :activity_section, lesson_activity: lesson_activity
     create(
       :script_level,
-      script: @script,
+      script: @unit,
       assessment: true,
       activity_section: activity_section,
       activity_section_position: 1,
@@ -987,7 +987,7 @@ class LessonsControllerTest < ActionController::TestCase
     activity2 = create :lesson_activity, lesson: @lesson2
     section2 = create :activity_section, lesson_activity: activity2
     existing_level = create :maze, name: 'existing-level'
-    create :script_level, activity_section: section2, activity_section_position: 1, lesson: @lesson2, script: @script, levels: [existing_level]
+    create :script_level, activity_section: section2, activity_section_position: 1, lesson: @lesson2, script: @unit, levels: [existing_level]
 
     @lesson.reload
     activities_data = @lesson.summarize_for_lesson_edit[:activities]

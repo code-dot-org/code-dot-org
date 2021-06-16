@@ -1,8 +1,8 @@
 - hidden = local_assigns[:hidden]
-- unless @script.nil?
+- unless @unit.nil?
   #hidden-lesson{style: hidden ? 'display: none' : '' }
     %div{style: 'margin-bottom: 15px; margin-top: 10px' }
       =t('hidden_stage')
-    %a{href: script_path(@script)}
+    %a{href: script_path(@unit)}
       %button.btn.btn-large.btn-primary
         =t('return_unit_overview')

@@ -199,8 +199,8 @@ module LevelsHelper
       )
     end
 
-    if @script
-      view_options(script_name: @script.name)
+    if @unit
+      view_options(script_name: @unit.name)
     end
 
     unless params[:share]
@@ -215,11 +215,11 @@ module LevelsHelper
     # the projects code to save and load the user's progress on that level.
     view_options(is_external_project_level: true) if @level.is_a? Pixelation
 
-    post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
-    post_failed_run_milestone = @script ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @script.name}, default: true) : true
+    post_milestone = @unit ? Gatekeeper.allows('postMilestone', where: {script_name: @unit.name}, default: true) : true
+    post_failed_run_milestone = @unit ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @unit.name}, default: true) : true
     view_options(post_milestone_mode: post_milestone_mode(post_milestone, post_failed_run_milestone))
 
-    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
+    @public_caching = @unit ? ScriptConfig.allows_public_caching_for_script(@unit.name) : false
     view_options(public_caching: @public_caching)
 
     if PuzzleRating.enabled?
@@ -228,8 +228,8 @@ module LevelsHelper
 
     if AuthoredHintViewRequest.enabled?
       view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
-      if current_user && @script
-        view_options(authored_hints_used_ids: AuthoredHintViewRequest.hints_used(current_user.id, @script.id, @level.id).pluck(:hint_id).uniq)
+      if current_user && @unit
+        view_options(authored_hints_used_ids: AuthoredHintViewRequest.hints_used(current_user.id, @unit.id, @level.id).pluck(:hint_id).uniq)
       end
     end
 
@@ -240,7 +240,7 @@ module LevelsHelper
     end
 
     if pairing_check_user
-      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
+      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@unit, @level, pairing_check_user)
       if recent_driver && !recent_user.is_a?(DeletedUser)
         level_view_options(@level.id, pairing_driver: recent_driver)
         if recent_attempt
@@ -269,7 +269,7 @@ module LevelsHelper
       end
 
     if @script_level && @level.can_have_feedback?
-      @app_options[:serverScriptId] = @script.id
+      @app_options[:serverScriptId] = @unit.id
       @app_options[:serverScriptLevelId] = @script_level.id
       @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
     end
@@ -294,15 +294,15 @@ module LevelsHelper
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
 
-      if (@user || current_user) && @script
-        @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
+      if (@user || current_user) && @unit
+        @app_options[:level][:isStarted] = level_started?(@level, @unit, @user || current_user)
       end
     end
 
     if current_user
       section =
-        if @script
-          current_user.sections_as_student.detect {|s| s.script_id == @script.id} ||
+        if @unit
+          current_user.sections_as_student.detect {|s| s.script_id == @unit.id} ||
             current_user.sections_as_student.first
         else
           current_user.sections_as_student.first
@@ -312,7 +312,7 @@ module LevelsHelper
         section.save(validate: false)
       end
       @app_options[:experiments] =
-        Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
+        Experiment.get_all_enabled(user: current_user, section: section, script: @unit).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
       @app_options[:usingDarkModePref] = !!current_user.using_dark_mode
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
@@ -364,12 +364,12 @@ module LevelsHelper
 
   def set_tts_options(level_options, app_options)
     # Text to speech - set url to empty string if the instructions are empty
-    if @script && @script.text_to_speech_enabled?
+    if @unit && @unit.text_to_speech_enabled?
       level_options['ttsShortInstructionsUrl'] = @level.tts_short_instructions_text.empty? ? "" : @level.tts_url(@level.tts_short_instructions_text)
       level_options['ttsLongInstructionsUrl'] = @level.tts_long_instructions_text.empty? ? "" : @level.tts_url(@level.tts_long_instructions_text)
     end
 
-    app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
+    app_options[:textToSpeechEnabled] = @unit.try(:text_to_speech_enabled?)
   end
 
   def set_hint_prompt_options(level_options)
@@ -377,7 +377,7 @@ module LevelsHelper
     # levels in Courses 2, 3, 4 and the 2017 versions of Courses A-F. See PR
     # #36507 for more details.
     default_hint_prompt_attempts_threshold = 6.5
-    if @script&.hint_prompt_enabled?
+    if @unit&.hint_prompt_enabled?
       level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold || default_hint_prompt_attempts_threshold
     end
   end
@@ -504,11 +504,11 @@ module LevelsHelper
     raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
     app_options = l.blockly_app_options(l.game, l.skin).dup
-    level_options = l.localized_blockly_level_options(@script).dup
+    level_options = l.localized_blockly_level_options(@unit).dup
     app_options[:level] = level_options
 
     # Script-dependent option
-    script = @script
+    script = @unit
     app_options[:scriptId] = script.id if script
     app_options[:scriptName] = script.name if script
 
@@ -878,16 +878,16 @@ module LevelsHelper
   end
 
   def can_view_solution?
-    if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions? && @level.contained_levels.empty?
-      Ability.new(current_user).can? :view_level_solutions, @script
+    if current_user && @level.try(:ideal_level_source_id) && @script_level && !@unit.hide_solutions? && @level.contained_levels.empty?
+      Ability.new(current_user).can? :view_level_solutions, @unit
     end
   end
 
   def can_view_teacher_markdown?
     if current_user.try(:authorized_teacher?)
       true
-    elsif current_user.try(:teacher?) && @script
-      @script.k5_course? || @script.k5_draft_course?
+    elsif current_user.try(:teacher?) && @unit
+      @unit.k5_course? || @unit.k5_draft_course?
     else
       false
     end

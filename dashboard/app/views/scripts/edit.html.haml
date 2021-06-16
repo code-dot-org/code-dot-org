@@ -1,7 +1,7 @@
 %h1= @page_title = "Editing script '#{@script.name}'"
 
-= form_for(@script || :script, @script ? {} : {url: scripts_path}) do |f|
-  - if @script && @script.errors.any?
+= form_for(@unit || :script, @unit ? {} : {url: scripts_path}) do |f|
+  - if @unit && @script.errors.any?
     #error_explanation
       %h2
         = pluralize(@script.errors.count, 'error')

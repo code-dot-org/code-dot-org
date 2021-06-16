@@ -31,7 +31,7 @@
         - send("#{"playlab"}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
       - else
         - send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-  - elsif @level.ideal_level_source_id && @script # old style 'solutions' for blockly-type levels
+  - elsif @level.ideal_level_source_id && @unit # old style 'solutions' for blockly-type levels
     -level_example_links = []
     -level_example_links.push(build_script_level_url(@script_level, {solution: true}.merge(@section ? {section_id: @section.id} : {})))
 

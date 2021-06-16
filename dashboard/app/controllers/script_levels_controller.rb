@@ -36,13 +36,13 @@ class ScriptLevelsController < ApplicationController
 
   def reset
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id])
+    @unit = Script.get_from_cache(params[:script_id])
     prevent_caching
 
     # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
     # If the user is signed in, continue normally.
-    redirect_path = build_script_level_path(@script.starting_level)
+    redirect_path = build_script_level_path(@unit.starting_level)
 
     if current_user
       redirect_to(redirect_path)
@@ -58,15 +58,15 @@ class ScriptLevelsController < ApplicationController
 
   def next
     authorize! :read, ScriptLevel
-    @script = ScriptLevelsController.get_script(request)
+    @unit = ScriptLevelsController.get_script(request)
 
-    if @script.redirect_to?
-      redirect_to "/s/#{@script.redirect_to}/next"
+    if @unit.redirect_to?
+      redirect_to "/s/#{@unit.redirect_to}/next"
       return
     end
     configure_caching(@script)
-    if @script.finish_url && Policies::ScriptActivity.completed?(current_user, @script)
-      redirect_to @script.finish_url
+    if @unit.finish_url && Policies::ScriptActivity.completed?(current_user, @script)
+      redirect_to @unit.finish_url
       return
     end
     path = build_script_level_path(next_script_level)
@@ -78,7 +78,7 @@ class ScriptLevelsController < ApplicationController
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
-    @script = ScriptLevelsController.get_script(request)
+    @unit = ScriptLevelsController.get_script(request)
 
     # will be true if the user is in any unarchived section where tts autoplay is enabled
     @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
@@ -87,11 +87,11 @@ class ScriptLevelsController < ApplicationController
     view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
     @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
 
-    # Redirect to the same script level within @script.redirect_to.
+    # Redirect to the same script level within @unit.redirect_to.
     # There are too many variations of the script level path to use
     # a path helper, so use a regex to compute the new path.
-    if @script.redirect_to?
-      new_script = Script.get_from_cache(@script.redirect_to)
+    if @unit.redirect_to?
+      new_script = Script.get_from_cache(@unit.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
       if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
@@ -230,15 +230,15 @@ class ScriptLevelsController < ApplicationController
     # A 404 (or 410) tells search engine crawlers to stop requesting these URLs.
     return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
 
-    @script = Script.get_from_cache(params[:script_id])
-    @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
+    @unit = Script.get_from_cache(params[:script_id])
+    @lesson = @unit.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
       @level = @script_level.level
     elsif params[:level_name]
       @level = Level.find_by_name params[:level_name]
-      @script_level = @level.script_levels.find_by_script_id(@script.id) if @level
+      @script_level = @level.script_levels.find_by_script_id(@unit.id) if @level
     end
 
     if @level
@@ -252,8 +252,8 @@ class ScriptLevelsController < ApplicationController
     ).lesson_by_relative_position(
       params[:lesson_position].to_i
       )
-    @script = @lesson.script
-    script_bonus_levels_by_lesson = @script.get_bonus_script_levels(@lesson)
+    @unit = @lesson.script
+    script_bonus_levels_by_lesson = @unit.get_bonus_script_levels(@lesson)
 
     user = @user || current_user
     unless user.nil?
@@ -336,7 +336,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def next_script_level
-    user_or_session_level || @script.starting_level
+    user_or_session_level || @unit.starting_level
   end
 
   def user_or_session_level

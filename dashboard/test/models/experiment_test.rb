@@ -5,7 +5,7 @@ class ExperimentTest < ActiveSupport::TestCase
   setup_all do
     @user = create :user
     @section = create :section, first_activity_at: DateTime.now
-    @script = create :script
+    @unit = create :script
   end
 
   test "no experiments" do
