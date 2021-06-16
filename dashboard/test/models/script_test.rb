@@ -3064,8 +3064,8 @@ class ScriptTest < ActiveSupport::TestCase
 
       @unit_group = create :unit_group
       create :course_version, content_root: @unit_group
-      @script_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
-      create :unit_group_unit, unit_group: @unit_group, script: @script_in_course, position: 1
+      @unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
+      create :unit_group_unit, unit_group: @unit_group, script: @unit_in_course, position: 1
     end
 
     test 'can copy a standalone script as another standalone script' do
@@ -3082,7 +3082,7 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'can copy a script in a unit group to a standalone script' do
-      cloned_script = @script_in_course.clone_migrated_script('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
+      cloned_script = @unit_in_course.clone_migrated_script('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
       assert_nil cloned_script.unit_group
       assert_equal 'standalone-coursename-2021', cloned_script.name
     end
@@ -3131,16 +3131,16 @@ class ScriptTest < ActiveSupport::TestCase
     test 'can deduplicate teacher and student resources' do
       @standalone_script.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @standalone_script.course_version.id)]
       @standalone_script.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @standalone_script.course_version.id)]
-      @script_in_course.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @script_in_course.get_course_version.id)]
-      @script_in_course.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @script_in_course.get_course_version.id)]
+      @unit_in_course.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @unit_in_course.get_course_version.id)]
+      @unit_in_course.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @unit_in_course.get_course_version.id)]
 
       cloned_script = @standalone_script.clone_migrated_script('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 1, cloned_script.resources.count
       assert_equal 1, cloned_script.student_resources.count
       refute_equal @standalone_script.resources[0], cloned_script.resources[0]
       refute_equal @standalone_script.student_resources[0], cloned_script.student_resources[0]
-      assert_equal @script_in_course.resources[0], cloned_script.resources[0]
-      assert_equal @script_in_course.student_resources[0], cloned_script.student_resources[0]
+      assert_equal @unit_in_course.resources[0], cloned_script.resources[0]
+      assert_equal @unit_in_course.student_resources[0], cloned_script.student_resources[0]
     end
   end
 
