@@ -37,7 +37,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @admin = create(:admin)
 
-    script_levels = Script.twenty_hour_script.script_levels
+    script_levels = Script.twenty_hour_unit.script_levels
     @script_level_prev = script_levels[0]
     @script_level = @script_level_prev.next_progression_level
     @script_level_next = @script_level.next_progression_level

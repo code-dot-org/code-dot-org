@@ -34,7 +34,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = Script.hoc_2014_script
+    script = Script.hoc_2014_unit
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
