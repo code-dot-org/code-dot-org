@@ -44,7 +44,7 @@ $(function() {
   // Make the map sticky.
   $('#map').sticky({topSpacing: 0});
 
-  //Prevent the map from covering the footer
+  // Prevent the map from covering the footer
   $(document).scroll(function() {
     checkOffset();
   });
@@ -57,6 +57,7 @@ $(function() {
     });
 });
 
+// Prevent the map from covering the footer
 function checkOffset() {
   if (
     $('#map').offset().top + $('#map').height() >=
