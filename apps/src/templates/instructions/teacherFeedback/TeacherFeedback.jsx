@@ -246,7 +246,7 @@ export class TeacherFeedback extends Component {
       : placeholderWarning;
 
     // The comment section (reivew state, comment and status) is only displayed
-    // if it's being edited (not readonly) or if the student is viewing their feedback.
+    // if it's editable or if the student is viewing their feedback.
     const displayCommentSection =
       isEditable || (viewAs === ViewType.Student && !!latestFeedback);
 
