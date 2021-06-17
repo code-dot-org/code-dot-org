@@ -55,7 +55,6 @@ const SET_TRAINING_EXAMPLES = "SET_TRAINING_EXAMPLES";
 const SET_TRAINING_LABELS = "SET_TRAINING_LABELS";
 const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
-const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
 const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
@@ -175,10 +174,6 @@ export function resetState() {
   return { type: RESET_STATE };
 }
 
-export function setModelSize(modelSize) {
-  return { type: SET_MODEL_SIZE, modelSize };
-}
-
 export function setTrainedModel(trainedModel) {
   return { type: SET_TRAINED_MODEL, trainedModel };
 }
@@ -263,7 +258,6 @@ const initialState = {
   accuracyCheckPredictedLabels: [],
   testData: {},
   prediction: undefined,
-  modelSize: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
   instructionCallback: undefined,
@@ -437,12 +431,6 @@ export default function rootReducer(state = initialState, action) {
       mode: state.mode,
       reserveLocation: state.reserveLocation,
       firehoseMetricsLogger: state.firehoseMetricsLogger
-    };
-  }
-  if (action.type === SET_MODEL_SIZE) {
-    return {
-      ...state,
-      modelSize: action.modelSize
     };
   }
   if (action.type === SET_TRAINED_MODEL) {
