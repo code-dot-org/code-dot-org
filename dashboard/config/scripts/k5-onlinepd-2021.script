@@ -43,7 +43,6 @@ level 'OPD-K5-PartIIOutline-2021'
 
 lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
 level 'OPD-K5 Stage3Start_copy_2021'
-level 'OPD-K5-SeqSprites-2021'
 level 'OPD-K5-Sequencing-2021'
 level 'OPD-K5-SeqVidA-2021'
 level 'OPD-K5-SeqA-2021'
@@ -63,8 +62,7 @@ level 'OPD-K5-ESprites-2021'
 level 'OPD-K5-VidSprites-2021'
 level 'OPD-K5-SpritesE-2021'
 level 'OPD-K5-SpriteLabF-2021'
-level 'OPD-K5-SeqE-context-2021'
-level 'OPD-K5-SeqE-2021'
+level 'OPD-K5-SeqSpritesF-2021'
 level 'OPD-K5 sprite lab free response_2021'
 
 lesson 'Loops', display_name: 'Loops', has_lesson_plan: false
