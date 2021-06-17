@@ -591,12 +591,12 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns nil if no scripts in family are stable' do
+  test 'get_unit_family_redirect_for_user returns nil if no scripts in family are stable' do
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.preview)
-    assert_nil Script.get_script_family_redirect_for_user('csp')
+    assert_nil Script.get_unit_family_redirect_for_user('csp')
   end
 
-  test 'get_script_family_redirect_for_user returns latest version supported in locale if available' do
+  test 'get_unit_family_redirect_for_user returns latest version supported in locale if available' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable, supported_locales: ['es-MX'])
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
 
@@ -604,7 +604,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal csp1_2017.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable version if no user or locale' do
+  test 'get_unit_family_redirect_for_user returns latest stable version if no user or locale' do
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable)
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
 
@@ -612,7 +612,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable version if no versions supported in locale' do
+  test 'get_unit_family_redirect_for_user returns latest stable version if no versions supported in locale' do
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable, supported_locales: ['es-MX'])
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
 
