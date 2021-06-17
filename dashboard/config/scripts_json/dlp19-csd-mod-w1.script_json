@@ -2,7 +2,6 @@
   "script": {
     "name": "dlp19-csd-mod-w1",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "peer_reviews_to_complete": 6,

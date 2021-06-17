@@ -2,7 +2,6 @@
   "script": {
     "name": "csd4-dlp-18",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "professional_learning_course": "CS Discoveries Facilitator in Training 2018-2019",

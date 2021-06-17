@@ -1,5 +1,4 @@
 id '7'
-hidden false
 published_state 'preview'
 
 lesson 'Jigsaw', display_name: 'Jigsaw', has_lesson_plan: false
