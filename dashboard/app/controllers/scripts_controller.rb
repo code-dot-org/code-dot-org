@@ -106,7 +106,7 @@ class ScriptsController < ApplicationController
     raise "The new script editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {
-      script: @script ? @script.summarize_for_script_edit : {},
+      script: @script ? @script.summarize_for_unit_edit : {},
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       levelKeyList: @script.is_migrated ? Level.key_list : {},
@@ -130,7 +130,7 @@ class ScriptsController < ApplicationController
     script_text = params[:script_text]
     if @script.update_text(script_params, script_text, i18n_params, general_params)
       @script.reload
-      render json: @script.summarize_for_script_edit
+      render json: @script.summarize_for_unit_edit
     else
       render(status: :not_acceptable, json: @script.errors)
     end

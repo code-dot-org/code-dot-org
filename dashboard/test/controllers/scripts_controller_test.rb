@@ -680,7 +680,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
 
     assert_response :not_acceptable
-    msg = 'Legacy script levels are not allowed in migrated scripts. Problem lessons: [\"problem lesson\"]'
+    msg = 'Legacy script levels are not allowed in migrated units. Problem lessons: [\"problem lesson\"]'
     assert_includes response.body, msg
     assert script.is_migrated
     assert script.script_levels.any?
