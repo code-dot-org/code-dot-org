@@ -64,8 +64,8 @@ class LoginTypePicker extends Component {
 
     return (
       <div style={containerStyle}>
-        <Heading1>{i18n.newSectionUpdated()}</Heading1>
-        <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
+        <Heading1>{i18n.newSection()}</Heading1>
+        <Heading2>{i18n.addStudentsToSectionInstructions()}</Heading2>
         <div>
           <CardContainer>
             {withGoogle && (
