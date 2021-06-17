@@ -24,18 +24,18 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
-   * Save the display_mode user preference
-   * @param {string} displayMode - display mode string.
+   * Save the display_theme user preference
+   * @param {string} displayTheme - display mode string.
    */
-  setDisplayMode(displayMode) {
-    return $.post(`/api/v1/users/${this.userId}/display_mode`, {
-      display_mode: displayMode
+  setDisplayTheme(displayTheme) {
+    return $.post(`/api/v1/users/${this.userId}/display_theme`, {
+      display_theme: displayTheme
     });
   }
 
-  getDisplayMode() {
-    return $.getJSON(`/api/v1/users/${this.userId}/display_mode`).then(
-      response => response.display_mode
+  getDisplayTheme() {
+    return $.getJSON(`/api/v1/users/${this.userId}/display_theme`).then(
+      response => response.display_theme
     );
   }
 }
