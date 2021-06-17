@@ -88,6 +88,11 @@ Resources:
               SSEAlgorithm: aws:kms
               KMSMasterKeyID: alias/aws/s3
             BucketKeyEnabled: true
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
       NotificationConfiguration:
         LambdaConfigurations:
           - Event: 's3:ObjectCreated:*'
