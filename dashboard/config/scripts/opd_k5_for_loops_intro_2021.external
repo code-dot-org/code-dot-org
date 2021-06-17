@@ -6,6 +6,14 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 20px 20px;">
 
+## Course Lesson Objectives
+
+After completing Lesson 14 you will be able to:
+
+* define for loop,
+* use for loops blocks with Maze Puzzles, 
+* and use for loop blocks with The Artist to create a spiral.
+
 ## CS Concept
 
 A **for loop** is a loop with a predetermined beginning, end, and increment (step interval).
