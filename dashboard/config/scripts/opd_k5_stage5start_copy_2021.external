@@ -5,6 +5,13 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/054d81744bd44195c5a0320141470ac2-image-1622741859913.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
+## Course Lesson Objectives
+
+After completing Lesson 11 you will be able to:
+
+* define conditionals,
+* use "if" and "if/else" blocks with Maze Puzzles, 
+* and use loops and conditionals with Minecraft.
 
 ## CS Concept
 
@@ -12,7 +19,7 @@ markdown <<MARKDOWN
 
 #### Lesson in Action
 
-Watch this video, <a href="https://www.youtube.com/watch?v=2m2Rn9VxHfU" target="blank">Conditional with Cards</a> demonstration of a teacher introducing conditionals to students with the **context-setting** lesson in Course D - Lesson 12: Conditional with Cards.
+* Watch this video, <a href="https://www.youtube.com/watch?v=2m2Rn9VxHfU" target="blank">Conditional with Cards</a> demonstration of a teacher introducing conditionals to students with the **context-setting** lesson in Course D - Lesson 12: Conditional with Cards.
 
 **Note:** The video opens in a new window.  Be sure to return to this online course to continue with lessons.
 
