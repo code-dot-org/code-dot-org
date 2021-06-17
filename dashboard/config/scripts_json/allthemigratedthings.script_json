@@ -2,7 +2,6 @@
   "script": {
     "name": "allthemigratedthings",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "student_detail_progress_view": true,

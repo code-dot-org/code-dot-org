@@ -2,7 +2,6 @@
   "script": {
     "name": "dance",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
       "has_lesson_plan": true,
