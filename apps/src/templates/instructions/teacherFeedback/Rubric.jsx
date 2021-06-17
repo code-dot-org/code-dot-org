@@ -17,7 +17,7 @@ class TeacherFeedbackRubric extends Component {
   static propTypes = {
     rubric: rubricShape,
     performance: PropTypes.string,
-    isReadonly: PropTypes.bool,
+    isEditable: PropTypes.bool,
     onRubricChange: PropTypes.func.isRequired,
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired
   };
@@ -26,7 +26,7 @@ class TeacherFeedbackRubric extends Component {
     const {
       rubric,
       performance,
-      isReadonly,
+      isEditable,
       onRubricChange,
       viewAs
     } = this.props;
@@ -36,8 +36,8 @@ class TeacherFeedbackRubric extends Component {
       expandByDefault = !performance;
       showFeedbackInputAreas = !!performance;
     } else if (viewAs === ViewType.Teacher) {
-      expandByDefault = isReadonly;
-      showFeedbackInputAreas = !isReadonly;
+      expandByDefault = !isEditable;
+      showFeedbackInputAreas = isEditable;
     }
 
     return (
@@ -59,7 +59,7 @@ class TeacherFeedbackRubric extends Component {
                 }
                 rubricLevel={level}
                 rubricValue={rubric[level]}
-                disabledMode={isReadonly}
+                disabledMode={!isEditable}
                 onChange={onRubricChange}
                 currentlyChecked={performance === level}
               />

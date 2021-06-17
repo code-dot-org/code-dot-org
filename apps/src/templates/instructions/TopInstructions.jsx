@@ -677,9 +677,7 @@ class TopInstructions extends Component {
               <TeacherFeedback
                 user={user}
                 visible={tabSelected === TabType.COMMENTS}
-                isReadonly={
-                  this.isViewingAsStudent || !teacherViewingStudentWork
-                }
+                isEditable={teacherViewingStudentWork}
                 rubric={rubric}
                 ref={ref => (this.commentTab = ref)}
                 latestFeedback={feedbacks.length ? feedbacks[0] : null}

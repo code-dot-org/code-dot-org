@@ -30,7 +30,7 @@ const keepWorkingExperiment = 'teacher-feedback-review-state';
 export class TeacherFeedback extends Component {
   static propTypes = {
     user: PropTypes.number,
-    isReadonly: PropTypes.bool.isRequired,
+    isEditable: PropTypes.bool.isRequired,
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
     serverScriptId: PropTypes.number,
@@ -233,7 +233,7 @@ export class TeacherFeedback extends Component {
   }
 
   render() {
-    const {verifiedTeacher, viewAs, rubric, visible, isReadonly} = this.props;
+    const {verifiedTeacher, viewAs, rubric, visible, isEditable} = this.props;
 
     const {comment, performance, latestFeedback, errorState} = this.state;
 
@@ -248,7 +248,7 @@ export class TeacherFeedback extends Component {
     // The comment section (reivew state, comment and status) is only displayed
     // if it's being edited (not readonly) or if the student is viewing their feedback.
     const displayCommentSection =
-      !isReadonly || (viewAs === ViewType.Student && !!latestFeedback);
+      isEditable || (viewAs === ViewType.Student && !!latestFeedback);
 
     const displayComment = !!comment || viewAs === ViewType.Teacher;
 
@@ -264,7 +264,7 @@ export class TeacherFeedback extends Component {
           <Rubric
             rubric={rubric}
             performance={performance}
-            isReadonly={isReadonly}
+            isEditable={isEditable}
             onRubricChange={this.onRubricChange}
             viewAs={viewAs}
           />
@@ -277,7 +277,7 @@ export class TeacherFeedback extends Component {
               this.renderCommentAreaHeaderForStudent()}
             {displayComment && (
               <Comment
-                isReadonly={isReadonly}
+                isEditable={isEditable}
                 comment={comment}
                 placeholderText={placeholderText}
                 onCommentChange={this.onCommentChange}
