@@ -36,7 +36,6 @@
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/courseb/{LESSON}",
       "version_year": "2019",
       "curriculum_umbrella": "CSF",
-      "is_stable": true,
       "family_name": "courseb",
       "tts": true,
       "supported_locales": [
