@@ -44,22 +44,16 @@ class I18nScriptUtils
   #      is only managed programmatically, we avoid wrapping to make the git
   #      diffs smaller and change detection easier.
   #
-  #   2. Quote 'y' and 'n'. Psych intentionally departs from the YAML spec for
-  #      these strings: https://github.com/ruby/psych/blob/8e880f7837db9ed66032a1dddc85444a1514a1e3/test/psych/test_boolean.rb#L21-L35
-  #      But Crowdin sticks strictly to the YAML spec, so here we add special
-  #      logic to ensure that we conform to the spec when outputting for Crowdin
-  #      consumption.
-  #      See https://github.com/gvvaughan/lyaml/issues/8#issuecomment-123132430
+  #   2. Make every line uses the Double-quote format so it is consistent between
+  #      syncs and also the values will be on one line. If we don't tell Psych to
+  #      use Double-quotes, then it might use the Block format which is multi-line.
   def self.to_crowdin_yaml(data)
     ast = Psych.parse_stream(Psych.dump(data))
 
-    # Make sure we treat the strings 'y' and 'n' as strings, and not bools
-    yaml_bool = /^(?:y|Y|n|N)$/
     ast.grep(Psych::Nodes::Scalar).each do |node|
-      if yaml_bool.match node.value
-        node.plain = false
-        node.quoted = true
-      end
+      node.plain = false
+      node.quoted = true
+      node.style = Psych::Nodes::Scalar::DOUBLE_QUOTED
     end
 
     return ast.yaml(nil, {line_width: -1})
