@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-15 22:36:05 UTC",
+    "serialized_at": "2021-06-16 23:36:34 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -3070,7 +3071,8 @@
       "key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_",
       "properties": {
         "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing"
       },
       "seeding_key": {
         "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"

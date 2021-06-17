@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson_group 'content', display_name: 'Content'
 lesson 'Algorithms: Graph Paper Programming', display_name: 'Algorithms: Graph Paper Programming', has_lesson_plan: false, unplugged: true
 level 'GraphPaperProgramming'
@@ -150,44 +152,44 @@ level 'blockly:Studio:hoc2015_blockly_15'
 lesson 'Events with Flappy', display_name: 'Events with Flappy', has_lesson_plan: false
 level 'courseC_video_flappyIntro'
 variants
-  level 'courseC_flappy_events1'
   level 'flappy_1'
+  level 'courseC_flappy_events1'
 endvariants
 variants
-  level 'courseC_flappy_events2'
   level 'flappy_2'
+  level 'courseC_flappy_events2'
 endvariants
 variants
-  level 'courseC_flappy_events3'
   level 'flappy_3'
+  level 'courseC_flappy_events3'
 endvariants
 variants
-  level 'courseC_flappy_events4'
   level 'flappy_4'
+  level 'courseC_flappy_events4'
 endvariants
 variants
-  level 'courseC_flappy_events5'
   level 'flappy_5'
+  level 'courseC_flappy_events5'
 endvariants
 variants
-  level 'courseC_flappy_events6'
   level 'flappy_6'
+  level 'courseC_flappy_events6'
 endvariants
 variants
-  level 'courseC_flappy_events7'
   level 'flappy_7'
+  level 'courseC_flappy_events7'
 endvariants
 variants
-  level 'courseC_flappy_events8'
   level 'flappy_8'
+  level 'courseC_flappy_events8'
 endvariants
 variants
-  level 'courseC_flappy_events9'
   level 'flappy_9'
+  level 'courseC_flappy_events9'
 endvariants
 variants
-  level 'courseC_flappy_events10'
   level 'flappy_11'
+  level 'courseC_flappy_events10'
 endvariants
 
 lesson 'Events in Bounce', display_name: 'Events in Bounce', has_lesson_plan: false

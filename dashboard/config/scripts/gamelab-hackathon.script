@@ -1,4 +1,5 @@
 login_required true
+published_state 'beta'
 
 lesson 'Middle_School_Hackathon', display_name: 'Middle_School_Hackathon', has_lesson_plan: false
 level 'Middle School Hackathon Pt 1'
