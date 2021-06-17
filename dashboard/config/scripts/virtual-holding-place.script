@@ -1,4 +1,5 @@
 hideable_lessons true
+published_state 'beta'
 
 lesson_group 'content', display_name: 'Content'
 lesson 'Example Projects', display_name: 'Example Projects', has_lesson_plan: false

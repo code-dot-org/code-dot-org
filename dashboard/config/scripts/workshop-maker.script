@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'App Lab Basics', display_name: 'App Lab Basics', has_lesson_plan: false
 level 'CSD Review: Design Mode, IDs, and Events', named: true
 level 'CSD: Review Events', named: true
