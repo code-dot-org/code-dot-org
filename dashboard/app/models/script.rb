@@ -278,8 +278,8 @@ class Script < ApplicationRecord
 
     if has_any_course_experiments
       units = units.map do |unit|
-        alternate_unit = unit.alternate_unit(user)
-        alternate_unit.presence || unit
+        alternate_script = unit.alternate_script(user)
+        alternate_script.presence || unit
       end
     end
 
@@ -1786,7 +1786,7 @@ class Script < ApplicationRecord
   # If there is an alternate version of this unit which the user should be on
   # due to existing progress or a course experiment, return that unit. Otherwise,
   # return nil.
-  def alternate_unit(user)
+  def alternate_script(user)
     unit_group_units.each do |ugu|
       alternate_ugu = ugu.unit_group.select_unit_group_unit(user, ugu)
       return alternate_ugu.script if ugu != alternate_ugu
