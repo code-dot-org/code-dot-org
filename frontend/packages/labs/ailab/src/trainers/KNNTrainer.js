@@ -38,7 +38,6 @@ export default class KNNTrainer {
     values and select the one that yields the most accurate model.
   */
   getOptimalModelDetails(state) {
-    let optimalValues = {};
     let bestModel = null;
     let bestPredictedLabels = [];
     let bestK = -1;
@@ -60,10 +59,11 @@ export default class KNNTrainer {
         bestPredictedLabels = predictedLabels;
       }
     });
-    optimalValues.model = bestModel;
-    optimalValues.predictedLabels = bestPredictedLabels;
-    optimalValues.kValue = bestK;
-    return optimalValues;
+    return {
+      model: bestModel,
+      predictedLabels: bestPredictedLabels,
+      kValue: bestK
+    };
   }
 
   possibleKValues(state) {
@@ -99,8 +99,8 @@ export default class KNNTrainer {
 
   calculatePotentialKValues(state) {
     let datasetSize = state.data.length;
-    let trainingExamplesSize = state.trainingExamples.length;
-    let possibleKValues = [1, 3, 5, 7, 17, 31, 45, 61];
+    const trainingExamplesSize = state.trainingExamples.length;
+    const possibleKValues = [1, 3, 5, 7, 17, 31, 45, 61];
     const heuristicK = Math.round(Math.sqrt(datasetSize));
     possibleKValues.push(heuristicK);
     const oneThird = Math.round(datasetSize / 3);
