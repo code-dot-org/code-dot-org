@@ -9,29 +9,38 @@ Part II of this online course, "Teaching Computer Science Fundamentals," focuses
 
 In each lesson of Part II you will find:
 
+* **Course Lesson Objectives** 
 * **CS Concepts**
-* **Tools and Website Features**
+* **Learning Tools**
 * **Concepts Reiterated Across Courses**
+
+## Course Lesson Objectives
+
+The lesson objectives listed in this area are objectives intended for you as the educator preparing to teach Computer Science Fundamentals courses, rather than student objectives in Computer Science Fundamentals lessons.  Student objectives are found in lesson plans.
+
+An example of a course lesson objective is:
+
+* After completing Lesson 7, you will be able to:
+	* define sequencing and algorithms,
+    * use Blockly code blocks,
+    * use the "step button" for debugging.
 
 ## CS Concepts
 
 "CS Concepts" include key vocabulary and definitions about the computer science concepts students will be learning throughout Computer Science Fundamentals courses.
 
-This section encourages you to learn about CS concepts with one or more of the following ways:
+The "CS Concepts" section provides you with one or more of the following to support you in learning computer science concepts:
 
-* reading a lesson plan.
-* watching a teacher video showing a teacher giving a lesson.
-* watching a student video that introduces the CS concept to students.
-* previewing the teacher slide deck that accompanies a lesson.
+* reading a lesson plan and previewing the teacher slide deck that accompanies the lesson.
+* watching a "Lesson in Action" video in which a teacher demonstrates giving a lesson to students.
+* watching the same video your students will watch that introduces a CS concept.
 
 
-## Learning Tools and Website Features
+## Learning Tools
 
 Students use Code.org's built-in learning tools and website features as they learn to program to include buttons, drag and drop blocks for coding, and visuals for students to see their code in action.  
 
-This section provides either a student video that walks students through using built-in features or a student lesson level for you to experience using the built-in features.
-
-In addition, this section highlights the learning tools students will engage with during lessons:
+The "Learning Tools" section identifies the following learning tools students will engage with during lessons.
 
 * **Maze/Collector Puzzles (all courses):**  Recognizable by the 8x8 square grid, these puzzles ask students to move an on-screen character to complete a specified goal, sometimes collecting objects or performing other actions along the way. These levels feature characters from popular media franchises and others that are unique to Code.org.
 
@@ -51,7 +60,7 @@ In addition, this section highlights the learning tools students will engage wit
 
 ## Concepts Reiterated Across Courses
 
-This section takes you to student lesson levels for you to experience how a CS concept unfolds and is reiterated within either a single course or across multiple courses.  The goal of this section is to provide you with the big picture of how students learn computer science concepts and develop skills over time with Computer Science Fundamentals courses.
+The "Concepts reiterated across courses" section provides you with a cross-section of student lesson levels that represent how a computer science concept unfolds and is reiterated within either a single course or across multiple courses.  The goal of this section is to provide you with an experience of the big picture for how students learn computer science concepts and develop skills over time with Computer Science Fundamentals courses.
 
 
 MARKDOWN

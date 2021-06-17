@@ -32,6 +32,12 @@
           "type": "library_item",
           "library_name": "surveys/pd/workshop_elements",
           "library_version": 0,
+          "name": "equity_inclusion"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
           "name": "what_supported"
         },
         {

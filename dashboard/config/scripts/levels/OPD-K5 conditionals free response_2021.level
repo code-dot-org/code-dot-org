@@ -5,7 +5,7 @@
     "tts_short_instructions_override": "How would you explain the concept of conditionals to your students? What is the benefit of journaling as a teaching practice for comptuer science?",
     "tts_long_instructions_override": "In this lesson, we explored how conditionals help programmers add logic to their code.\r\n\r\nNow take a moment to reflect. How would you explain the concept of conditionals to your students? What is the benefit of journaling as a teaching practice for comptuer science?",
     "instructions_important": "false",
-    "long_instructions": "# Reflection: Conditionals\r\n\r\n**Prompts:**\r\n\r\n* How would you explain the concept of conditionals to your students? \r\n* What is the benefit of journaling as a teaching practice for computer science?",
+    "long_instructions": "# Reflection: Conditionals\r\n\r\n**Prompts:**\r\n\r\n* How would you explain the concept of conditionals to your students? \r\n* How will the context-setting lesson (Conditional with Cards) support your students with learning about conditionals?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -21,7 +21,7 @@
   "level_num": "custom",
   "user_id": 884,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-06-16 16:35:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-06-16 16:35:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:26:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:27:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
