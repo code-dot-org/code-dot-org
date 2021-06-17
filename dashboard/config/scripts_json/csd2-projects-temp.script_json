@@ -2,6 +2,7 @@
   "script": {
     "name": "csd2-projects-temp",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": true,
     "properties": {
       "pilot_experiment": "csd-noaccess"

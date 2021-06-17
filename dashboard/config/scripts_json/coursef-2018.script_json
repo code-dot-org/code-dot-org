@@ -2,6 +2,7 @@
   "script": {
     "name": "coursef-2018",
     "wrapup_video_id": null,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "project_widget_visible": true,

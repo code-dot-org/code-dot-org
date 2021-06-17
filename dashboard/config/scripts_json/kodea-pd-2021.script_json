@@ -2,6 +2,7 @@
   "script": {
     "name": "kodea-pd-2021",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": true,
     "properties": {
       "professional_learning_course": "K5 Support",

@@ -1,3 +1,4 @@
+hidden false
 published_state 'preview'
 
 lesson_group 'outbreak', display_name: 'Outbreak Simulation'

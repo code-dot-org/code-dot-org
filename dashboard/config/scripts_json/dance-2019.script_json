@@ -2,6 +2,7 @@
   "script": {
     "name": "dance-2019",
     "wrapup_video_id": null,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "tts": true

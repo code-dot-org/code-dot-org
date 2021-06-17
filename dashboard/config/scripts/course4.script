@@ -1,3 +1,4 @@
+hidden false
 hideable_lessons true
 curriculum_path 'https://code.org/curriculum/course4/{LESSON}/Teacher'
 published_state 'preview'
