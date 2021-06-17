@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Public Key Crypto Widgets', display_name: 'Public Key Crypto Widgets', has_lesson_plan: false
 level 'The Modulo Clock', named: true
 level 'Public Key Cryptography Widget', named: true

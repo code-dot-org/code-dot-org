@@ -8,7 +8,7 @@
     "parent_level_id": 26531,
     "name_suffix": "_2021",
     "encrypted": "false",
-    "long_instructions": "**Example student lesson level shown here:  Course B - Lesson 9, Level :  Drawing Gardens with Loops**"
+    "long_instructions": "**Student lesson level shown here:  Course B - Lesson 9, Level 3:  Drawing Gardens with Loops**"
   },
   "game_id": 54,
   "published": true,
@@ -16,7 +16,7 @@
   "level_num": "custom",
   "user_id": 302,
   "notes": "Is there a way for these videos to start automatically (and if so, is that a good idea for this stage)?",
-  "audit_log": "[{\"changed_at\":\"2018-01-09 02:18:34 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-06-15 14:38:40 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-15 14:38:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-15 14:39:19 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-09 02:18:34 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-06-15 14:38:40 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-15 14:38:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-15 14:39:19 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 22:41:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

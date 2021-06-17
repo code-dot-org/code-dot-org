@@ -1,4 +1,5 @@
 lesson_extras_available true
+published_state 'beta'
 
 lesson_group 'ramp_up', display_name: 'Ramp-Up'
 lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: true, unplugged: true

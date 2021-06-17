@@ -1,4 +1,5 @@
 login_required true
+published_state 'beta'
 
 lesson 'Pre Hour of Code Survey', display_name: 'Pre Hour of Code Survey', has_lesson_plan: false
 level 'HOC pre-survey 2016 levelgroup', assessment: true

@@ -2,9 +2,11 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
+    "long_instructions": "The owner of Project Mercury Pastries Food Truck has decided to offer cupcakes for $1.50. She wants customers to enter values for flavor and quantity.\r\n\r\n1. In `Dessert.java`, write a constructor taking parameters `newFlavor` for `flavor` and `newQty` for `quantity`.\r\n\r\n2. In `MyFoodTruck.java`, create a `Scanner` object called `input`.\r\n\r\n3. Use the `Scanner` object to get user input for flavor and quantity.\r\n\r\n4. Create a `Dessert` object called `cupcake` using the values the customer enters.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
+    "parent_level_id": 28416,
     "start_sources": {
       "MyFoodTruck.java": {
         "text": "import java.util.Scanner;\n\npublic class MyFoodTruck {\n  public static void main(String[] args) {\n\tDessert cake = new Dessert(\"chocolate\", 5, 1.99);\n    cake.printInfo();\n\n    // Level 1\n    Dessert redVelvetPack = new Dessert();\n    redVelvetPack.printInfo();\n\n    // Level 3\n    Dessert customDozen = new Dessert(\"vanilla\", 2.50);\n    customDozen.printInfo();\n\n    // Level 4\n    String flavor;\n    int quantity;\n    Scanner input = new Scanner(System.in);\n\n    System.out.print(\"Enter the flavor: \");\n    flavor = input.next();\n\n    System.out.print(\"Enter the quantity available: \");\n    quantity = input.nextInt();\n    \n    Dessert cupcake = new Dessert(flavor, quantity);\n    \n    cupcake.printInfo();\n  }\n}",
@@ -14,14 +16,13 @@
         "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String newFlavor, int newQty, double newPrice) {\n    flavor = newFlavor;\n    quantity = newQty;\n    price = newPrice;\n  }\n\n  // Level 1\n  public Dessert() {\n    flavor = \"red velvet\";\n    quantity = 6;\n    price = newPrice;\n  }\n\n  // Level 3\n  public Dessert(String newFlavor, int newQty) {\n    flavor = newFlavor;\n    quantity = newQty;\n    price = 1.50;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
         "isVisible": true
       }
-    },
-    "parent_level_id": 28408
+    }
   },
   "game_id": 68,
-  "created_at": "2021-06-16T15:20:17.000Z",
+  "created_at": "2021-06-16T21:37:30.000Z",
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-06-16 15:18:33 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 15:20:25 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 15:27:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-16 21:37:37 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 21:38:24 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

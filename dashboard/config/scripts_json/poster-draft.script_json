@@ -11,7 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-15 21:05:48 UTC",
+    "serialized_at": "2021-06-17 14:36:49 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "poster-draft"
     }
@@ -113,7 +114,7 @@
       "key": "8e95ece4-6727-4cdf-bcf9-d2675d6ef797",
       "position": 2,
       "properties": {
-        "progression_name": "Your Personal Storyboard"
+        "progression_name": "Create Your Story Board"
       },
       "seeding_key": {
         "activity_section.key": "8e95ece4-6727-4cdf-bcf9-d2675d6ef797",
@@ -160,6 +161,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_sprites"
+        ],
         "progression": "Welcome to Sprite Lab!"
       },
       "named_level": false,
@@ -183,6 +187,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_locations"
+        ],
         "progression": "Welcome to Sprite Lab!"
       },
       "named_level": false,
@@ -206,6 +213,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_print"
+        ],
         "progression": "Welcome to Sprite Lab!"
       },
       "named_level": false,
@@ -229,6 +239,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_events"
+        ],
         "progression": "Welcome to Sprite Lab!"
       },
       "named_level": false,
@@ -252,7 +265,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Your Personal Storyboard"
+        "level_keys": [
+          "storyboard_project_start"
+        ],
+        "progression": "Create Your Story Board"
       },
       "named_level": false,
       "bonus": false,
@@ -275,7 +291,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Your Personal Storyboard"
+        "level_keys": [
+          "storyboard_project_print"
+        ],
+        "progression": "Create Your Story Board"
       },
       "named_level": false,
       "bonus": false,
@@ -298,7 +317,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Your Personal Storyboard"
+        "level_keys": [
+          "storyboard_project_sprites"
+        ],
+        "progression": "Create Your Story Board"
       },
       "named_level": false,
       "bonus": false,
@@ -321,7 +343,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Your Personal Storyboard"
+        "level_keys": [
+          "storyboard_project_events"
+        ],
+        "progression": "Create Your Story Board"
       },
       "named_level": false,
       "bonus": false,

@@ -8,6 +8,7 @@ project_widget_types ["playlab", "artist"]
 family_name 'coursec'
 version_year '2019'
 is_stable true
+published_state 'stable'
 supported_locales ["cs-CZ", "sk-SK"]
 curriculum_umbrella 'CSF'
 tts true

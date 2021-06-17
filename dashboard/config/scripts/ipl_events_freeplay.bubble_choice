@@ -1,9 +1,10 @@
 name 'IPL_events_freeplay'
 editor_experiment ''
-display_name 'Events - Free Play'
-description 'Now you can use what you\'ve learned to make your project even better! Keep adding to your program or start something new!'
+display_name 'Story Board: Mini-Lessons'
+description 'Great job so far! Keep learning by exploring some of the optional levels below. When you are ready to go back to your project, press Continue.'
 
 sublevels
+level 'storyboard_choices_properties'
 level 'IPL_events_freeplay_food'
 level 'IPL_events_freeplay_animals'
 level 'IPL_events_freeplay_blank'

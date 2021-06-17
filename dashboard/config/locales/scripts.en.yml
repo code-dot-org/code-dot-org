@@ -1175,6 +1175,8 @@ en:
               name: Strings and Images
             The Design Recipe:
               name: The Design Recipe
+            Big GAme - Collision Detection:
+              name: Big Game - Collision Detection
           student_description: 'Phase 2 Online: Blended Summer Study'
         allthethings:
           title: All the Things!
@@ -22735,7 +22737,7 @@ en:
               description_teacher: ''
             Next steps:
               key: Next steps
-              name: 'Part III:  Next steps'
+              name: Develop a Plan
               description_student: ''
               description_teacher: ''
             Module 1:
@@ -22766,7 +22768,7 @@ en:
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
-              display_name: Next Steps
+              display_name: 'Part III:  Next Steps'
             Introduction:
               display_name: Introduction
             Implementing and Teaching CS:
@@ -22840,9 +22842,13 @@ en:
               description_student: 
               description_teacher: 
             lesson-4:
-              name: Printable
+              name: Printable Lesson Plans
               description_student: 
               description_teacher: This lesson should contain examples of all the kinds of content that we want to be able to print, to confirm that changes made to that content don't end up working weird when printed. Things like collapsible or interactable stuff in particular is a good candidate for this page.
+            lesson-5:
+              name: Level Details Dialog Examples
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Lesson Group 1
@@ -22981,7 +22987,7 @@ en:
 
                 **Question of the Day:** How can we use machine learning to make recommendations?
             lesson6:
-              name: App Lab - New Screens and If Statements
+              name: App Lab - Importing a Model
               description_student: 'Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson.'
               description_teacher: "Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson.\r\n\r\n**Question of the Day:** How can I create an app using machine learning?"
             lesson7:
@@ -23000,7 +23006,7 @@ en:
               description_student: In this lesson, students take on the role of a modern middle school student surviving an unprecedented pandemic. They are one day granted responsibility for delivering the formula for a vaccine to a laboratory somewhere in their local area. To do so, they must use an intelligent personal assistant (IPA) named “Tom” to predict the safest route to the laboratory, which will require training Tom with a regression algorithm.
               description_teacher: "In this lesson, students take on the role of a modern middle school student surviving an unprecedented pandemic. They are one day granted responsibility for delivering the formula for a vaccine to a laboratory somewhere in their local area. To do so, they must use an intelligent personal assistant (IPA) named “Tom” to predict the safest route to the laboratory, which will require training Tom with a regression algorithm.\r\n\r\n**Question of the Day:** How do computers learn to make predictions with numerical data?"
             lesson10:
-              name: App Lab - Import Model
+              name: App Lab - If Statements and Screens
               description_student: Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app.
               description_teacher: |-
                 Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app.

@@ -118,7 +118,7 @@ Scenario: Save Project After Signing Out
 @no_mobile
 Scenario: Save Script Level After Signing Out
   Given I create a student named "Sally Student"
-  Given I am assigned to script "csp3-2017"
+  Given I am assigned to unit "csp3-2017"
   And I am on "http://studio.code.org/s/csp3-2017/lessons/5/levels/3"
   And I wait for the page to fully load
   And I wait for initial project save to complete
