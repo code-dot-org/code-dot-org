@@ -1,4 +1,5 @@
 professional_learning_course 'CS Discoveries TeacherCon Novice'
+published_state 'beta'
 
 lesson 'Welcome', display_name: 'Welcome', has_lesson_plan: false
 level 'welcome-csd-novice', named: true

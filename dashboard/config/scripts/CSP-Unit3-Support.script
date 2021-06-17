@@ -1,5 +1,6 @@
 professional_learning_course 'CS Principles Support'
 login_required true
+published_state 'beta'
 
 lesson 'Unit 3 Overview', display_name: 'Unit 3 Overview', has_lesson_plan: false
 level 'CSPPD3-u3 breakdown of u3 chunks'

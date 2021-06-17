@@ -45,7 +45,8 @@
     },
     "new_name": "csp5-2017",
     "family_name": "csp5",
-    "serialized_at": "2021-05-03 23:54:49 UTC",
+    "serialized_at": "2021-06-16 22:58:18 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp5-2017"
     }
