@@ -21,10 +21,23 @@ export default class TheaterVisualizationColumn extends React.Component {
           showPreviewTitle={false}
         />
         <ProtectedVisualizationDiv>
-          <img id="theater" width="400" height="400" />
-          {/* <canvas id="theater" width="400" height="400" /> */}
+          <div style={styles.theater}>
+            <img id="theater" style={styles.theaterImage} />
+          </div>
         </ProtectedVisualizationDiv>
       </div>
     );
   }
 }
+
+const styles = {
+  theater: {
+    backgroundColor: 'white',
+    width: 400,
+    height: 400
+  },
+  theaterImage: {
+    width: 400,
+    height: 400
+  }
+};
