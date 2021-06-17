@@ -1,4 +1,5 @@
 login_required true
+published_state 'beta'
 
 lesson 'Intro to Data', display_name: 'Introduction to Data', has_lesson_plan: true
 level 'U4L01 Student Lesson Introduction'

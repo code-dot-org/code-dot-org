@@ -9,7 +9,7 @@ import color from '@cdo/apps/util/color';
 import $ from 'jquery';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
-import Status from '@cdo/apps/templates/instructions/teacherFeedback/Status';
+import FeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/FeedbackStatus';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {
   teacherFeedbackShape,
@@ -17,7 +17,7 @@ import {
   ReviewStates
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import experiments from '@cdo/apps/util/experiments';
-import ReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReviewState';
+import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -198,7 +198,7 @@ export class TeacherFeedback extends Component {
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        <ReviewState
+        <ReadOnlyReviewState
           latestReviewState={latestFeedback?.review_state || null}
           isAwaitingTeacherReview={this.isAwaitingTeacherReview}
         />
@@ -284,16 +284,16 @@ export class TeacherFeedback extends Component {
                 isReadonly={disabledMode}
                 comment={comment}
                 placeholderText={placeholderText}
-                studentHasFeedback={
-                  viewAs === ViewType.Student && !!latestFeedback
-                }
                 onCommentChange={this.onCommentChange}
               />
             )}
             <div style={styles.footer}>
               {viewAs === ViewType.Teacher && this.renderSubmitFeedbackButton()}
               {!!latestFeedback && (
-                <Status viewAs={viewAs} latestFeedback={latestFeedback} />
+                <FeedbackStatus
+                  viewAs={viewAs}
+                  latestFeedback={latestFeedback}
+                />
               )}
             </div>
           </div>

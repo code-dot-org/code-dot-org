@@ -1,4 +1,5 @@
 login_required true
+published_state 'beta'
 
 lesson 'The Need For Programming Languages', display_name: 'The Need For Programming Languages', has_lesson_plan: true
 level 'U3L01 Student Lesson Introduction'
@@ -50,7 +51,7 @@ level 'U3L06 Assessment2', assessment: true
 level 'U3L06-API-multichoice', assessment: true
 level 'U3L06 Assessment', assessment: true
 
-lesson 'Creating Functions with Parameters', display_name: 'Creating Functions with Parameters', has_lesson_plan: true
+lesson 'Creating functions with Parameters', display_name: 'Creating Functions with Parameters', has_lesson_plan: true
 level 'U3L08 Student Lesson Introduction'
 level 'U3L08 - drawSquareWithParam'
 level 'U3L07 - createTriangleParam'

@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/CloneLessonDialog';
+import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/CloneLessonDialog';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 
