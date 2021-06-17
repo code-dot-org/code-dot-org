@@ -2,6 +2,7 @@
   "script": {
     "name": "peru-2019",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": false,
     "properties": {
       "version_year": "2019"

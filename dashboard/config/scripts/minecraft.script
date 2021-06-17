@@ -1,3 +1,4 @@
+hidden false
 published_state 'preview'
 
 lesson 'Minecraft Hour of Code Designer', display_name: 'Minecraft Hour of Code Designer', has_lesson_plan: false

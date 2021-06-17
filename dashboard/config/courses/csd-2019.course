@@ -22,7 +22,8 @@
     ],
     "has_verified_resources": true,
     "family_name": "csd",
-    "version_year": "2019"
+    "version_year": "2019",
+    "visible": true
   },
   "resources": [
 

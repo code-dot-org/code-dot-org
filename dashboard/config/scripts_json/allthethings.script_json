@@ -2,6 +2,7 @@
   "script": {
     "name": "allthethings",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": false,
     "properties": {
       "lesson_extras_available": true,

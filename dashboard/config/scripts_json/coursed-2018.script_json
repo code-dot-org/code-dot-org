@@ -2,6 +2,7 @@
   "script": {
     "name": "coursed-2018",
     "wrapup_video_id": null,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "version_year": "2018",

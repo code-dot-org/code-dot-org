@@ -1,3 +1,4 @@
+hidden false
 published_state 'preview'
 
 lesson 'Simple Encryption', display_name: 'Simple Encryption', has_lesson_plan: false

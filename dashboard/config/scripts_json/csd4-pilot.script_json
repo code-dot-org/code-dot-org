@@ -2,6 +2,7 @@
   "script": {
     "name": "csd4-pilot",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": false,
     "properties": {
       "pilot_experiment": "csd-piloters"

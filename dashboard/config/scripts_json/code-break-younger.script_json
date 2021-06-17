@@ -2,6 +2,7 @@
   "script": {
     "name": "code-break-younger",
     "wrapup_video_id": null,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "student_detail_progress_view": true,

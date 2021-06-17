@@ -2,6 +2,7 @@
   "script": {
     "name": "csp-post-survey-2020",
     "wrapup_video_id": null,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,

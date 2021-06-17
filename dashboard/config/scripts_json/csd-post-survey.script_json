@@ -2,6 +2,7 @@
   "script": {
     "name": "csd-post-survey",
     "wrapup_video_id": null,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "exclude_csf_column_in_legend": true,
