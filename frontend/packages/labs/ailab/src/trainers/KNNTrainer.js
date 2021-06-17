@@ -14,96 +14,98 @@ import { logFirehoseMetric } from "../helpers/metrics";
 const KNN = require("ml-knn");
 
 export default class KNNTrainer {
-  calculatePossibleKValues() {
-    const state = this.store.getState();
-    let datasetSize = state.data.length;
-    let possibleKValues = [1, 3, 5, 7, 17, 31, 45, 61];
-    const heuristicK = Math.round(Math.sqrt(datasetSize));
-    possibleKValues.push(heuristicK);
-    const oneThird = Math.round(datasetSize / 3);
-    possibleKValues.push(oneThird);
-    return possibleKValues;
-  }
 
   startTraining(store) {
     this.store = store;
     const state = store.getState();
-    const datasetSize = state.data.length;
-    /*
-      We modify algorithm hyperparameters (k) based on dataset size and type of
-      machine learning in attempt to increase the liklihood of accurate
-      models that behave in ways consistent with the mental model presented in
-      the curriculum.
-    */
+
+    const trainedModel = this.getOptimalModelDetails(state);
+
+    this.storeTrainedModel(store, trainedModel);
+
+    const state2 = store.getState();
+
+    logFirehoseMetric("train-model", state2);
+
+    this.storeHistoricResult(store, state2);
+  }
+
+  /*
+    We modify algorithm hyperparameters (k) based on dataset size and type of
+    machine learning in attempt to increase the liklihood of accurate
+    models that behave in ways consistent with the mental model presented in
+    the curriculum. For large classification datasets we try a variety of K
+    values and select the one that yields the most accurate model.
+  */
+  getOptimalModelDetails(state) {
+    let optimalValues = {};
+    let bestModel = null;
+    let bestPredictedLabels = [];
+    let bestK = -1;
+    let bestAccuracy = -1;
+    const kValues = this.possibleKValues(state);
+    kValues.forEach(kValue => {
+      this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
+        k: kValue
+      });
+      var model = this.knn;
+      const predictedLabels = this.batchPredict(
+        state.accuracyCheckExamples
+      );
+      const accuracy = this.getAccuracyPercent();
+      if (accuracy > bestAccuracy) {
+        bestAccuracy = accuracy;
+        bestK = kValue;
+        bestModel = model;
+        bestPredictedLabels = predictedLabels;
+      }
+    });
+    optimalValues.model = bestModel;
+    optimalValues.predictedLabels = bestPredictedLabels;
+    optimalValues.kValue = bestK;
+    return optimalValues;
+  }
+
+  possibleKValues(state) {
+    let datasetSize = state.data.length;
     const smallDatasetSize = 10;
     const mediumDatasetSize = 100;
+
+    let kValues = [];
     const minimalK = 1;
     const smallK = 5;
     const defaultRegressionK = datasetSize < mediumDatasetSize
       ? minimalK
       : smallK;
     const defaultClassificationK = Math.round(datasetSize / 3);
+    const defaultK = isRegression(state)
+      ? defaultRegressionK
+      : defaultClassificationK;
 
-    let bestModel = null;
-    let bestPredictedLabels = [];
-    let bestK = -1;
-    let bestAccuracy = -1;
     if (state.accuracyCheckExamples.length > 0) {
       if (datasetSize <= smallDatasetSize && !isRegression(state)) {
-        this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
-          k: datasetSize
-        });
-        bestModel = this.knn;
-        bestK = datasetSize;
+        kValues.push(datasetSize)
       } else if (isRegression(state)) {
-        this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
-          k: defaultRegressionK
-        });
-        bestModel = this.knn;
-        bestK = defaultRegressionK;
+        kValues.push(defaultRegressionK)
       } else {
-        const kValues = this.calculatePossibleKValues();
-        kValues
+        kValues = this.calculatePotentialKValues(state)
           .filter(kValue => kValue <= state.trainingExamples.length)
-          .forEach(kValue => {
-            this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
-              k: kValue
-            });
-            var model = this.knn;
-            const predictedLabels = this.batchPredict(
-              state.accuracyCheckExamples
-            );
-            const accuracy = this.getAccuracyPercent();
-            if (accuracy > bestAccuracy) {
-              bestAccuracy = accuracy;
-              bestK = kValue;
-              bestModel = model;
-              bestPredictedLabels = predictedLabels;
-            }
-          });
-        }
-      } else {
-      const defaultK = isRegression(state)
-        ? defaultRegressionK
-        : defaultClassificationK;
-      this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
-        k: defaultK
-      });
-      bestModel = this.knn;
-      bestK = defaultK;
+      }
+    } else {
+      kValues.push(defaultK)
     }
-    store.dispatch(setKValue(bestK));
-    store.dispatch(setAccuracyCheckPredictedLabels(bestPredictedLabels));
-    store.dispatch(setTrainedModel(bestModel));
+    return kValues;
+  }
 
-    const state2 = store.getState();
-
-    logFirehoseMetric("train-model", state2);
-
-    const accuracy = getPercentCorrect(state2);
-    store.dispatch(
-      setHistoricResult(state2.labelColumn, state2.selectedFeatures, accuracy)
-    );
+  calculatePotentialKValues(state) {
+    let datasetSize = state.data.length;
+    let trainingExamplesSize = state.trainingExamples.length;
+    let possibleKValues = [1, 3, 5, 7, 17, 31, 45, 61];
+    const heuristicK = Math.round(Math.sqrt(datasetSize));
+    possibleKValues.push(heuristicK);
+    const oneThird = Math.round(datasetSize / 3);
+    possibleKValues.push(oneThird);
+    return possibleKValues.filter(kValue => kValue <= trainingExamplesSize);
   }
 
   getAccuracyPercent() {
@@ -122,5 +124,20 @@ export default class KNNTrainer {
     const state = this.store.getState();
     const prediction = state.trainedModel.predict(testValues);
     this.store.dispatch(setPrediction(prediction));
+  }
+
+  storeTrainedModel(store, trainedModel) {
+    store.dispatch(setKValue(trainedModel.kValue));
+    store.dispatch(setAccuracyCheckPredictedLabels(
+      trainedModel.predictedLabels
+    ));
+    store.dispatch(setTrainedModel(trainedModel.model));
+  }
+
+  storeHistoricResult(store, state) {
+    const accuracy = getPercentCorrect(state);
+    store.dispatch(
+      setHistoricResult(state.labelColumn, state.selectedFeatures, accuracy)
+    );
   }
 }
