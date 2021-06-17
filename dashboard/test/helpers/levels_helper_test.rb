@@ -531,7 +531,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'test_script'},
       script_data[:lesson_groups]
     )
@@ -585,7 +585,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script_data, _ = ScriptDSL.parse(input_dsl, 'test_bonus_level_links')
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'test_bonus_level_links'},
       script_data[:lesson_groups]
     )
@@ -614,7 +614,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script_data, _ = ScriptDSL.parse(input_dsl, 'my_cool_script')
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'my_cool_script'},
       script_data[:lesson_groups]
     )
