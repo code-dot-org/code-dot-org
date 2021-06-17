@@ -165,6 +165,21 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "allthemigratedthings"
       }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Level Details Dialog Examples",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings"
+      }
     }
   ],
   "lesson_activities": [
@@ -215,6 +230,18 @@
       "seeding_key": {
         "lesson_activity.key": "e406b746-2b7f-4631-b8fe-9df85984bf1e",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings"
+      }
+    },
+    {
+      "key": "28a5ff1d-93c3-4e04-abad-9549c17cfe45",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "28a5ff1d-93c3-4e04-abad-9549c17cfe45",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "allthemigratedthings"
       }
@@ -313,6 +340,42 @@
         "activity_section.key": "a85c218f-7269-4b2f-b29b-91da44794ace",
         "lesson_activity.key": "e406b746-2b7f-4631-b8fe-9df85984bf1e"
       }
+    },
+    {
+      "key": "8309150b-9523-4e1a-be55-28c1ecd5aa88",
+      "position": 1,
+      "properties": {
+        "name": "Bubble Choice",
+        "progression_name": "Bubble Choice"
+      },
+      "seeding_key": {
+        "activity_section.key": "8309150b-9523-4e1a-be55-28c1ecd5aa88",
+        "lesson_activity.key": "28a5ff1d-93c3-4e04-abad-9549c17cfe45"
+      }
+    },
+    {
+      "key": "d0e7256a-9dbf-4850-8386-31aca733070a",
+      "position": 2,
+      "properties": {
+        "name": "Standalone Video",
+        "progression_name": "Standalone Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0e7256a-9dbf-4850-8386-31aca733070a",
+        "lesson_activity.key": "28a5ff1d-93c3-4e04-abad-9549c17cfe45"
+      }
+    },
+    {
+      "key": "a2dea029-aae5-4699-9a1f-6f428b1e1596",
+      "position": 3,
+      "properties": {
+        "name": "Level With Top Instructions",
+        "progression_name": "Level with Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2dea029-aae5-4699-9a1f-6f428b1e1596",
+        "lesson_activity.key": "28a5ff1d-93c3-4e04-abad-9549c17cfe45"
+      }
     }
   ],
   "script_levels": [
@@ -341,6 +404,75 @@
       "level_keys": [
         "U3L2 Using Simple Commands"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Bubble Choice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ui_lesson_bubble_choice"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings",
+        "activity_section.key": "8309150b-9523-4e1a-be55-28c1ecd5aa88"
+      },
+      "level_keys": [
+        "ui_lesson_bubble_choice"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Standalone Video"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ui_lesson_standalone_video"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings",
+        "activity_section.key": "d0e7256a-9dbf-4850-8386-31aca733070a"
+      },
+      "level_keys": [
+        "ui_lesson_standalone_video"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Level with Instructions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "uitest_lesson_applab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings",
+        "activity_section.key": "a2dea029-aae5-4699-9a1f-6f428b1e1596"
+      },
+      "level_keys": [
+        "uitest_lesson_applab"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -354,6 +486,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "allthemigratedthings",
         "activity_section.key": "f48d977f-0ba1-42c5-9af1-9e7205c45bfb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ui_lesson_bubble_choice",
+        "script_level.level_keys": [
+          "ui_lesson_bubble_choice"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings",
+        "activity_section.key": "8309150b-9523-4e1a-be55-28c1ecd5aa88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ui_lesson_standalone_video",
+        "script_level.level_keys": [
+          "ui_lesson_standalone_video"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings",
+        "activity_section.key": "d0e7256a-9dbf-4850-8386-31aca733070a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "uitest_lesson_applab",
+        "script_level.level_keys": [
+          "uitest_lesson_applab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings",
+        "activity_section.key": "a2dea029-aae5-4699-9a1f-6f428b1e1596"
       }
     }
   ],
