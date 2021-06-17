@@ -4,12 +4,11 @@ import queryString from 'query-string';
 
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import StyledCodeBlock from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 
 import LessonEditorDialog from './LessonEditorDialog';
 import {connect} from 'react-redux';
-import {buildProgrammingExpressionMarkdown} from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
 export const SearchForm = function(props) {
   return (
@@ -74,11 +73,7 @@ export const ProgrammingExpressionTable = function(props) {
               />
             </td>
             <td>
-              <SafeMarkdown
-                markdown={buildProgrammingExpressionMarkdown(
-                  programmingExpression
-                )}
-              />
+              <StyledCodeBlock programmingExpression={programmingExpression} />
             </td>
             <td>{programmingExpression.programmingEnvironmentName}</td>
           </tr>
