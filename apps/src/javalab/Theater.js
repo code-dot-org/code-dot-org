@@ -5,13 +5,13 @@ export default class Theater {
   }
 
   handleSignal(data) {
-    var imageString = 'data:image/gif;base64,' + data.detail.image;
-    var imgElement = this.getImgElement();
+    const imageString = 'data:image/gif;base64,' + data.detail.image;
+    const imgElement = this.getImgElement();
     imgElement.src = imageString;
   }
 
   reset() {
-    var imgElement = this.getImgElement();
+    const imgElement = this.getImgElement();
     imgElement.src = '';
   }
 
