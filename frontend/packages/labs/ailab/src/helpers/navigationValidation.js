@@ -177,12 +177,12 @@ export function prevNextButtons(state) {
       ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "trainModel") {
-    if (state.modelSize) {
+    if (state.trainedModel) {
       prev = null;
       next = { panel: "generateResults", text: "Continue" };
     }
   } else if (state.currentPanel === "generateResults") {
-    if (state.modelSize) {
+    if (state.trainedModel) {
       prev = null;
       next = { panel: "results", text: "Continue" };
     }

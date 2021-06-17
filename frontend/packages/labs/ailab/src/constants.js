@@ -342,7 +342,11 @@ export const styles = {
     textAlign: "right",
     position: "sticky",
     top: 0,
-    fontSize: 12
+    fontSize: 12,
+    padding: 5,
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "white"
   },
 
   dataDisplayHeader: {
@@ -568,12 +572,14 @@ export const styles = {
     backgroundColor: "white",
     color: "rgb(30, 30, 30)",
     verticalAlign: "top",
-    fontSize: 24
+    fontSize: 24,
+    height: 31
   },
 
   resultsTableSecondHeader: {
     top: "42px",
-    color: "white"
+    color: "white",
+    height: 15
   },
 
   resultsCellHighlight: {

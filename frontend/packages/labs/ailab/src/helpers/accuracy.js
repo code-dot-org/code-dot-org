@@ -64,7 +64,7 @@ export function getAccuracyRegression(state) {
   return accuracy;
 }
 
-function getAccuracyGrades(state) {
+export function getAccuracyGrades(state) {
   const grades = isRegression(state)
     ? getAccuracyRegression(state).grades
     : getAccuracyClassification(state).grades;

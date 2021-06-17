@@ -17,7 +17,6 @@ class GenerateResults extends Component {
   static propTypes = {
     data: PropTypes.array,
     readyToTrain: PropTypes.bool,
-    modelSize: PropTypes.number,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array,
     instructionsOverlayActive: PropTypes.bool
@@ -196,7 +195,6 @@ class GenerateResults extends Component {
 export default connect(state => ({
   data: getTableData(state, true),
   readyToTrain: readyToTrain(state),
-  modelSize: state.modelSize,
   labelColumn: state.labelColumn,
   selectedFeatures: state.selectedFeatures,
   instructionsOverlayActive: state.instructionsOverlayActive
