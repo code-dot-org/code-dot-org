@@ -356,10 +356,10 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
 
   # only levelbuilders can edit with lesson position in url
-  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :student, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in', name: 'sign out user cannot edit lessons using lesson position url'
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: :student, response: :forbidden, name: 'student cannot edit lessons using lesson position url'
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: :teacher, response: :forbidden, name: 'teacher cannot edit lessons using lesson position url'
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can edit lessons using lesson position url'
 
   test 'edit lesson' do
     sign_in @levelbuilder
