@@ -14,7 +14,8 @@ export default class VersionHistory extends React.Component {
   static propTypes = {
     handleClearPuzzle: PropTypes.func.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
-    useFilesApi: PropTypes.bool.isRequired
+    useFilesApi: PropTypes.bool.isRequired,
+    viewingVersion: PropTypes.string
   };
 
   /**
@@ -183,6 +184,11 @@ export default class VersionHistory extends React.Component {
               versionId={version.versionId}
               lastModified={new Date(version.lastModified)}
               isLatest={version.isLatest}
+              isActive={
+                this.props.viewingVersion
+                  ? version.versionId === this.props.viewingVersion
+                  : version.isLatest
+              }
               onChoose={this.onChooseVersion.bind(this, version.versionId)}
             />
           );
