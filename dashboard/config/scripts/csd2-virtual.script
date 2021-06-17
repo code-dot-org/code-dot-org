@@ -2,6 +2,7 @@ login_required true
 hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
+published_state 'beta'
 project_sharing true
 
 lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'

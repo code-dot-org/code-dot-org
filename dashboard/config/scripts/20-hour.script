@@ -1,6 +1,7 @@
 id '1'
 hidden false
 hideable_lessons true
+published_state 'preview'
 supported_locales ["de-DE"]
 curriculum_umbrella 'CSF'
 

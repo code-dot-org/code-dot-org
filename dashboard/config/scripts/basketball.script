@@ -1,4 +1,5 @@
 hidden false
+published_state 'preview'
 tts true
 
 lesson 'Bounce', display_name: 'Bounce', has_lesson_plan: false

@@ -2,6 +2,7 @@ professional_learning_course 'CS Principles Deeper Learning 2019 - 2020'
 peer_reviews_to_complete 6
 login_required true
 student_detail_progress_view true
+published_state 'beta'
 
 lesson_group 'required', display_name: 'Overview'
 lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview', has_lesson_plan: false
