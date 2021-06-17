@@ -1,4 +1,5 @@
 hidden false
+published_state 'preview'
 
 lesson 'Infinity', display_name: 'Infinity', has_lesson_plan: false
 level 'Infinity_move_right'

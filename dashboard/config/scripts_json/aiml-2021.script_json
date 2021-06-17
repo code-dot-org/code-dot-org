@@ -17,7 +17,8 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-05-28 21:51:56 UTC",
+    "serialized_at": "2021-06-17 15:49:14 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
     }
@@ -173,19 +174,20 @@
       }
     },
     {
-      "key": "lesson10",
-      "name": "App Lab - Import Model",
+      "key": "lesson6",
+      "name": "App Lab - Importing a Model",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app.\n\n**Question of the Day:** How can I improve how a user interacts with a machine learning app?",
-        "student_overview": "Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app."
+        "overview": "Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson.\r\n\r\n**Question of the Day:** How can I create an app using machine learning?",
+        "preparation": "Prep!",
+        "student_overview": "Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson."
       },
       "seeding_key": {
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021"
       }
@@ -227,20 +229,19 @@
       }
     },
     {
-      "key": "lesson6",
-      "name": "App Lab - New Screens and If Statements",
+      "key": "lesson10",
+      "name": "App Lab - If Statements and Screens",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson.\r\n\r\n**Question of the Day:** How can I create an app using machine learning?",
-        "preparation": "Prep!",
-        "student_overview": "Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson."
+        "overview": "Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app.\n\n**Question of the Day:** How can I improve how a user interacts with a machine learning app?",
+        "student_overview": "Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app."
       },
       "seeding_key": {
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021"
       }
@@ -747,43 +748,56 @@
       }
     },
     {
-      "key": "f0e3a38a-278e-43ca-ba19-841683ff38de",
+      "key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5",
       "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de",
-        "lesson.key": "lesson10",
+        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021"
       }
     },
     {
-      "key": "7098aa79-268d-444e-bbe6-227afbd95401",
+      "key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c",
       "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401",
-        "lesson.key": "lesson10",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021"
       }
     },
     {
-      "key": "fd2147b3-eb19-4131-b6b0-6395eccbaaf5",
+      "key": "4f210793-1d0f-4344-8bbc-c2e311bc7111",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "fd2147b3-eb19-4131-b6b0-6395eccbaaf5",
-        "lesson.key": "lesson10",
+        "lesson_activity.key": "4f210793-1d0f-4344-8bbc-c2e311bc7111",
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "e4f2ec6a-e050-4868-8146-ebb78bdb4360",
+      "position": 4,
+      "properties": {
+        "name": "Old Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e4f2ec6a-e050-4868-8146-ebb78bdb4360",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021"
       }
@@ -873,43 +887,69 @@
       }
     },
     {
-      "key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5",
+      "key": "f0e3a38a-278e-43ca-ba19-841683ff38de",
       "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5",
-        "lesson.key": "lesson6",
+        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021"
       }
     },
     {
-      "key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c",
+      "key": "7098aa79-268d-444e-bbe6-227afbd95401",
       "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c",
-        "lesson.key": "lesson6",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021"
       }
     },
     {
-      "key": "4f210793-1d0f-4344-8bbc-c2e311bc7111",
+      "key": "fd2147b3-eb19-4131-b6b0-6395eccbaaf5",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "4f210793-1d0f-4344-8bbc-c2e311bc7111",
-        "lesson.key": "lesson6",
+        "lesson_activity.key": "fd2147b3-eb19-4131-b6b0-6395eccbaaf5",
+        "lesson.key": "lesson10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "5f12419c-3d6c-4d1b-9e1a-7e952d71b75a",
+      "position": 4,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f12419c-3d6c-4d1b-9e1a-7e952d71b75a",
+        "lesson.key": "lesson10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "39a43575-66ee-4617-95e5-11c4a0f26805",
+      "position": 5,
+      "properties": {
+        "name": "From Other Lesson Plan"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "39a43575-66ee-4617-95e5-11c4a0f26805",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021"
       }
@@ -3264,240 +3304,284 @@
       }
     },
     {
-      "key": "80064b89-707a-4a64-9dac-6876965476d3",
+      "key": "1a026b1e-478a-454c-8f02-b42840e0dbc0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show a screenshot of an app that has imported a model into App Lab with no changes to design mode. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What changes could you make to this app to make it easier for people to use? Write a list of changes to the design or to the app flow that you would recommend for this app._\n\nHave students journal individually first, then share in small groups before bringing the full class together.",
-        "name": "Journal "
+        "description": "Students will be interacting with a survey as part of this lesson. Before class, you can create your own copy of the survey here: [click to make a copy](https://docs.google.com/forms/d/1hc5nuA2DSxCaonYlKPUJv6ywtHWuX6Oc928ixMp0JPE/copy). Once you make a copy, you can have students take this version of the survey rather than the generic one in the lesson plan. Interacting with this version of the survey can be more personalized, since students can see data from other students within the class.",
+        "name": "Pre-Work"
       },
       "seeding_key": {
-        "activity_section.key": "80064b89-707a-4a64-9dac-6876965476d3",
-        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de"
+        "activity_section.key": "1a026b1e-478a-454c-8f02-b42840e0dbc0",
+        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5"
       }
     },
     {
-      "key": "dd9a739f-82a2-4fa2-8fd8-cfbf7f2b980c",
+      "key": "6ac51382-acd6-4f59-b521-032a9fc3266c",
       "position": 2,
       "properties": {
-        "description": " **Discussion Goal:** Students may comment on style elements, such as using colors to liven up the page. Students may comment on the descriptions to the user, like how the generated prompts aren’t very descriptive. Students may comment on the flow of the app, such as suggesting that it be broken up into multiple screens or adding a “welcome” screen to the beginning. All of these are valuable brainstorm ideas that will carry into today’s lesson."
-      },
-      "seeding_key": {
-        "activity_section.key": "dd9a739f-82a2-4fa2-8fd8-cfbf7f2b980c",
-        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de"
-      }
-    },
-    {
-      "key": "b71118a1-520e-491a-8fb1-6715e1a546c7",
-      "position": 3,
-      "properties": {
-        "description": "As we can see, the basic version of our machine learning apps could use improvements and we have a great list here. Today, we’ll learn how to improve the user experience for our apps. We’ll start by looking at an app that uses numerical data and see how this changes the user interface for our app.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "b71118a1-520e-491a-8fb1-6715e1a546c7",
-        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de"
-      }
-    },
-    {
-      "key": "1919635e-4946-4b6a-9f6e-95d77d32f428",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I improve how a user interacts with a machine learning app?"
-      },
-      "seeding_key": {
-        "activity_section.key": "1919635e-4946-4b6a-9f6e-95d77d32f428",
-        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de"
-      }
-    },
-    {
-      "key": "283059e1-d586-43f4-a40d-3209eb08ee0a",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. In this first sequence of levels, students will see how numerical data affects the user interface and how to update elements on the screen.",
-        "name": "Pet Recommender (20 mins)",
-        "progression_name": "Pet Recommender"
-      },
-      "seeding_key": {
-        "activity_section.key": "283059e1-d586-43f4-a40d-3209eb08ee0a",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "a2cae783-cde6-48a2-8798-f7d7c41687fd",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** _How can you tell the difference between categorical features and numerical features in the app?_",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Purposefully Mysterious:** This app is deliberately mysterious and requires a lot of guessing to understand. This is purposeful, since we will work to improve this app in the next few levels. If students ask questions or express uncertainty about how the app is working: validate their instincts, but avoid revealing too much about the app - instead, encourage them to keep these thoughts in mind as the lesson continues.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a2cae783-cde6-48a2-8798-f7d7c41687fd",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "65e07780-ed3e-4d02-af2b-1031bc850cd7",
-      "position": 3,
-      "properties": {
-        "description": "discussion!!!discussion-0<!-- place where you'd like the icon --> **Discussion Goal:** Students should notice that numerical features appear as text boxes and categorical features appear as dropdowns. Follow up and ask students why they think this is. Guide the conversation towards the definitions for categorical and numerical data - categorical data can be put into groups which makes a dropdown useful, and numerical data can be represented as a range of numbers which makes an input box useful.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Numbers in Dropdowns:** Students may notice that the NO feature has a dropdown that contains the numbers 1-4, and they may ask why this is represented as a dropdown instead of a text input. This is a valid question that will get cleared up in the next level - for now, confirm with students that this feels confusing and prompt them to consider: what extra information do you wish you had to help understand what’s happening here?\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "65e07780-ed3e-4d02-af2b-1031bc850cd7",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "885ab10c-ea37-4a77-a860-39cd7dabf940",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This app isn’t very easy to understand. What do you think the features represent? How many different pets can it recommend?_\n\nLet students share their guesses, but be careful not to validate as “right” or “wrong”. Instead, let the class come to their own conclusions before continuing."
-      },
-      "seeding_key": {
-        "activity_section.key": "885ab10c-ea37-4a77-a860-39cd7dabf940",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "28a5b0c3-f739-4b12-9d4b-54183f309007",
-      "position": 5,
-      "properties": {
-        "description": "If we’re going to create this app, we’ll need to add more information to make it easier for the user to understand how this app is making decisions. Luckily, we have a Model Card that’s included with our app and has this information. Let’s look at the model card and see what extra information it can tell us about our features and label.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "28a5b0c3-f739-4b12-9d4b-54183f309007",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "1eea6334-2050-4da1-b4d3-299c156619f8",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, which displays the model card. Have students read the labels and features to better understand how the app is working. If students guessed any of these in the earlier discussion, circle back and validate those answers from before.",
-        "progression_name": "Pet Recommender"
-      },
-      "seeding_key": {
-        "activity_section.key": "1eea6334-2050-4da1-b4d3-299c156619f8",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "57502ab3-ab06-4215-b39a-4a0a36d7afd1",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** _How can you tell the difference between categorical features and numerical features in the model card?_",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Printing Model Cards:** You may decide to print the model card as well so students can read it on paper. If possible, the model card is designed to be printed two-sided so it appears as a single sheet of paper that you can flip back and forth.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "57502ab3-ab06-4215-b39a-4a0a36d7afd1",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "2dd13411-293d-4308-80dc-d3c2d6d30684",
-      "position": 8,
-      "properties": {
-        "description": " **Discussion Goal:** Students should notice that numerical features have a min and a max on their card, while categorical features have a bulleted list of the possible values."
-      },
-      "seeding_key": {
-        "activity_section.key": "2dd13411-293d-4308-80dc-d3c2d6d30684",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "1d2c9c62-46e9-4fa6-be17-e1253bec9a73",
-      "position": 9,
-      "properties": {
-        "description": "Let’s use the information from this model card to improve our app, especially the questions for each feature.  We’ll also start improving the look and design of our app to be more user friendly in the next few levels.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "1d2c9c62-46e9-4fa6-be17-e1253bec9a73",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level, where they can still access the model card for this app and use it to update the user interface. As they progress, they will update the style of their app using Themes and will add a “Welcome Screen” to the app for when a user first loads the app.\n\n**Circulate:** As students complete these levels, they will continue automatically to keep customizing their apps. Here are some tips for how to support students in each level:\n\n- **Level 4:** Students will use the model card to update the text on their screen to be more descriptive. Help students view the Model Card from within Code Studio and use it as a reference for updating levels\n- **Level 5:** Students will choose a theme to update the design of their app. For now, just have them choose a theme. Later on, they can continue to customize their app with Design Mode\n- **Level 6:** Students add a home screen to their app and use the Model Card to describe the name and purpose of the app. The instructions for this level may be difficult to keep track of - encourage students to “check off” each step as they complete it. They can also use the animated example on the level as a guide for how to complete this task.\n- **Level 7:** Students add a button from the home screen to the predict screen, and add an event to connect the two screens together. Support students in reading through the instructions and “checking off” each piece as they go along. They can also click the “Show Me How” lines in the instructions for screenshots of what each step can look like.",
-        "progression_name": "Pet Recommender"
-      },
-      "seeding_key": {
-        "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "fb5ed861-1ad9-400f-9cd9-9ec63129a613",
-      "position": 11,
-      "properties": {
-        "description": "**Choice Levels:** Once students have created their Pet Recommender app, they can choose from several example activities to continue improving their app. Each level uses the same Pet Recommender app they’ve already built as a template to add to. Students can choose to complete as many of these levels as they would like - each one lets them continue to customize and improve their app."
-      },
-      "seeding_key": {
-        "activity_section.key": "fb5ed861-1ad9-400f-9cd9-9ec63129a613",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "7d14c666-aa61-41e8-8ac3-97e4bc9a6ce2",
-      "position": 12,
-      "properties": {
-        "name": "You Choose: Improve Your App",
-        "progression_name": "You Choose: Improve Your App"
-      },
-      "seeding_key": {
-        "activity_section.key": "7d14c666-aa61-41e8-8ac3-97e4bc9a6ce2",
-        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
-      }
-    },
-    {
-      "key": "007256b2-caa0-4579-b9c2-59880599afe2",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example of how a model card can be useful when making an app?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** A class is interested in making a book recommendation app for new students. The app will ask several questions and, based on the responses, will recommend a book that other people in the class have read.\n\n\n**Prompt:** _What is a question you think they should ask to help recommend a book?_\n\nHave students journal individually, then share their answers with a neighbor. Ask students to share-out with the whole class and keep track of responses at the front of the classroom.",
         "name": "Journal\r"
       },
       "seeding_key": {
-        "activity_section.key": "007256b2-caa0-4579-b9c2-59880599afe2",
-        "lesson_activity.key": "fd2147b3-eb19-4131-b6b0-6395eccbaaf5"
+        "activity_section.key": "6ac51382-acd6-4f59-b521-032a9fc3266c",
+        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5"
       }
     },
     {
-      "key": "8e0845e5-3c5c-4cfc-9c22-26e16d9ef99f",
-      "position": 2,
-      "properties": {
-        "description": " **Discussion Goal:** Look for responses that highlight how a model card can help communicate the purpose of an app to a user. Some examples from today may include:\r\n\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "8e0845e5-3c5c-4cfc-9c22-26e16d9ef99f",
-        "lesson_activity.key": "fd2147b3-eb19-4131-b6b0-6395eccbaaf5"
-      }
-    },
-    {
-      "key": "8af08bbd-35c6-4511-a1f4-20d4d7aaae89",
+      "key": "e3f3ab2d-c4ae-4dd5-a147-56d37fb3f0dc",
       "position": 3,
       "properties": {
-        "description": "- Using label or feature descriptions to help clarify choices in an app\r\n- Using the “Intended Uses” section to help create a welcome screen for an app\r\n- Including the possible values for categorical features in an app"
+        "description": " **Discussion Goal:** Students may suggest that the class ask about other books students have read before, or types of books people like reading. They may also suggest questions based on interest or hobby. Ask students to explain their questions, and listen for responses where students hope to find a relationship between the answers and the book recommendation. For example, someone who is interested in magic may be more likely to read a fantasy book - this is an example where gathering data can be useful in seeing if this relationship will be true."
       },
       "seeding_key": {
-        "activity_section.key": "8af08bbd-35c6-4511-a1f4-20d4d7aaae89",
-        "lesson_activity.key": "fd2147b3-eb19-4131-b6b0-6395eccbaaf5"
+        "activity_section.key": "e3f3ab2d-c4ae-4dd5-a147-56d37fb3f0dc",
+        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5"
+      }
+    },
+    {
+      "key": "a0baab02-fa2e-4a20-944e-d35b1c5b9872",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Take The Quiz**: Have students log into a computer and take the [Book Recommender Quiz](https://docs.google.com/forms/d/e/1FAIpQLSeobjrYyl-y-T2Mu9IvC0YTya7pHRvdjAW_1RyIgopqZI9rQA/viewform). Once they have completed the quiz, they can click the \"See Previous Responses\" link to view the data from the quiz.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using Your Own Quiz:** Rather than taking the generic survey available to everyone, you can also make a copy of the survey so it contains just data from your classes. To do this, **[Click Here to make a copy of the survey](https://docs.google.com/forms/d/1hc5nuA2DSxCaonYlKPUJv6ywtHWuX6Oc928ixMp0JPE/copy)**. You can then use this survey with your students and they will be able to view the results just from their class.\n\n**Why Google Forms?** Later on in the unit, students will have the opportunity to create their own surveys using Google Forms. Even if you usually use a different survey tool for your classes, we using Google Forms for this lesson since it will help familiarize students with the tool by the time they get to their final project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a0baab02-fa2e-4a20-944e-d35b1c5b9872",
+        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5"
+      }
+    },
+    {
+      "key": "1883f43f-3b04-417f-9485-e4a061441b57",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the machine learning process _[Dan Note: this will have circles or something going from Problem --> Data --> Model --> App. There will be an arrow pointing at the App part to tie in with the remark below]_"
+      },
+      "seeding_key": {
+        "activity_section.key": "1883f43f-3b04-417f-9485-e4a061441b57",
+        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5"
+      }
+    },
+    {
+      "key": "41c16d55-adbe-4607-b9ff-60af3009546b",
+      "position": 6,
+      "properties": {
+        "description": "Yesterday, we learned that AI Lab can take data - like this - and turn it into a model that can be used to make a decision. In this case, we're trying to decide what book to recommend to a new student. Today, we're going to learn how to take that model and turn it into an app that people can use.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "41c16d55-adbe-4607-b9ff-60af3009546b",
+        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5"
+      }
+    },
+    {
+      "key": "1ab48a1d-b907-4f75-9cf9-7a84c7216da4",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I create an app using machine learning?"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ab48a1d-b907-4f75-9cf9-7a84c7216da4",
+        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5"
+      }
+    },
+    {
+      "key": "2a68d88e-9822-45a1-a779-b8cc6274e7b4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first contains a working version of the app that students will create today. Have students run the program a few times.",
+        "name": "Main Activity",
+        "progression_name": "Book Recommender App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**App Lab Experience:** This unit assumes students are already familiar with the design elements of App Lab and the onEvent and setScreen commands - essentially what is covered in Unit 4 of CS Discoveries. If you have students who have not seen these elements before, consider postponing this lesson and instead spending a few extra class periods introducing students to App Lab and design mode with these two lessons:\n\n- [Unit 4 Lesson 14 - Design Mode in App Lab](https://studio.code.org/s/csd4-2021/lessons/14)\n- [Unit 4 Lesson 16- Events in App Lab](https://studio.code.org/s/csd4-2021/lessons/16)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2a68d88e-9822-45a1-a779-b8cc6274e7b4",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "652fe87c-8a35-45bc-a770-741ecb0a626c",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is your Ideal Vacation?"
+      },
+      "seeding_key": {
+        "activity_section.key": "652fe87c-8a35-45bc-a770-741ecb0a626c",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "eb424716-5003-4a67-a2f6-be31b9285373",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** _What design elements did you see in this app?_\n\nHave students brainstorm on their own or record a list in their journals, then invite them to share as a full class.\n\n **Discussion Goal:** Students will probably notice that buttons, images, and text labels are used extensively. Be sure to remind students that each screen is an element as well. If students are missing any elements, use this as an opportunity to remind students of design mode in App Lab.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Mode Reminder:** If students need a reminder of design mode, you can provide copies of this handout or project it for students: \n\n- [Design Mode](https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing)\n- [Design Mode Elements](https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eb424716-5003-4a67-a2f6-be31b9285373",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "8ad0e6f5-c08b-4cfe-a3d0-93247ad5cc4e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What coding commands would you expect to see in this app?_\n\nHave students brainstorm on their own or record a list in their journals, then invite them to share as a full class. \n\n**Discussion Goal:** Students should predict that onEvent is being used for each button, and that setScreen is used to switch between screens. If students have been through Unit 3 of CS Discoveries, they may also predict that if-statements are used to generate the final answer, but it is okay if this isn’t discussed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Events Reminder:** If students need a reminder of events in App Lab, you can provide copies of this handout or project it for students: \n\n- [Responding to User Input](https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view)\n- [Changing Screens](https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8ad0e6f5-c08b-4cfe-a3d0-93247ad5cc4e",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "8791b5cc-e0ff-4543-ac99-80e091cd40d7",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _The app is missing two questions from the survey:_\n- _Which type of sandwich is your favorite?_\n- _What kind of day do you like?_\n\n_Why do you think those questions didn't make it into the model?_\n\n**Discussion Goal:** **[[questions probably didn't have strong relationship with book recommendations, so decided not to use them in the model. Way to review yesterday's lesson and how feature selection is an important part of AI Lab]]**",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Lesson Writing Tension:** I want the wrap-up prompt to be a formative assessment opportunity, since this is important for the first time getting into App Lab.\n\nBUT - that means I lose the opportunity to ask the ethics/bias question around including gender. The \"Another class asked about gender and found a relationship - should they use it?\".\n\nCan I actually do that here instead? Should I change the survey to not have the other silly questions and instead try and have that convo here?\n\nThis is like the fundamental problem I run into - wanting to include thoughtful discussion around sources of bias, but not wanting it to feel like an \"add on\" to the lesson, which I'm worried is what would happen if I included it here."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8791b5cc-e0ff-4543-ac99-80e091cd40d7",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "85d2e7dc-ea7d-44bb-8387-096d92a53b87",
+      "position": 6,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the “How to Import Models in AppLab” video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. Here they will import a model into their app and test that it works correctly.",
+        "progression_name": "Import a Model",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**This Can Be Overwhelming:** When models are imported into AppLab, a lot of code is pre-generated and this can be overwhelming. Students may feel nervous about needing to understand everything that’s happened. You may want to reassure students in the following way:\n\n- Remind students that they already know a lot of what’s happening based on the discussion they just had! All of the design mode elements are familiar, and the code uses the same onEvent blocks they were expecting\n- Assure students that we’ll uncover what most of this code does throughout the unit, and they don’t have to understand every little piece of it right now \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "85d2e7dc-ea7d-44bb-8387-096d92a53b87",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "0fc4769c-7b1e-4427-aac2-99dd3813744b",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _Can you identify the line where the button press happens?_\n- _Can you identify where all of our data is collected into a variable?_\n- _Can you identify the line where our prediction happens?_\n\nHave students talk with a partner first before having a full-class discussion. Ensure that students can recognize the lines of code where each of these events are happening in their code."
+      },
+      "seeding_key": {
+        "activity_section.key": "0fc4769c-7b1e-4427-aac2-99dd3813744b",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "5b736490-fd93-4fdb-b2d1-4a0804d757b4",
+      "position": 8,
+      "properties": {
+        "description": " **Discussion Goal:** Help students identify the following information:\n\n- The button press happens on line 2 with the yellow [`onEvent`(#fff176)](/docs/applab/onEvent/) block\n- The data is collected on lines 3 through 6 with the [`addPair`(#BB77C7)](/docs/applab/addPair/) blocks and the yellow [`getText`(#fff176)](/docs/applab/getText/) blocks\n- The prediction happens on line 8 with the green [`getPrediction`(#d3e965)](/docs/applab/getPrediction/) block"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b736490-fd93-4fdb-b2d1-4a0804d757b4",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "6712ead7-42d3-4d1f-ad8c-5334555b6826",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level. As they progress, they will update the style of their app using Themes and will add a “Welcome Screen” to the app for when a user first loads the app.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "6712ead7-42d3-4d1f-ad8c-5334555b6826",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61",
+      "position": 10,
+      "properties": {
+        "progression_name": "Customize Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "0a56918e-1c87-4a73-a20f-c70392c253a3",
+      "position": 11,
+      "properties": {
+        "description": "**Circulate:** As students complete these levels, they will continue automatically to keep customizing their apps. Here are some tips for how to support students in each level:\n\n- **Level 3:** Students will update the text on their app so it is easier for a user to understand. Instead of the one or two word description from the pre-generated design elements, students will use the same questions they saw in the survey.\n- **Level 4:** Students will choose a theme to update the design of their app. For now, just have them choose a theme. Later on, they can continue to customize their app with Design Mode\n- **Level 5:** Students add a home screen to their app. The instructions for this level may be difficult to keep track of - encourage students to “check off” each step as they complete it. They can also use the animated example on the level as a guide for how to complete this task.\n- **Level 6:** Students add a button from the home screen to the predict screen, and add an event to connect the two screens together. Support students in reading through the instructions and “checking off” each piece as they go along. They can also click the “Show Me How” lines in the instructions for screenshots of what each step can look like."
+      },
+      "seeding_key": {
+        "activity_section.key": "0a56918e-1c87-4a73-a20f-c70392c253a3",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "9a1eafc2-dbaa-45ed-a881-acf22b64df3f",
+      "position": 12,
+      "properties": {
+        "description": "**Choice Levels:** Once students have created their Book Recommender app, they can choose from several example activities to continue improving their app. Each level uses the same Book Recommender app they’ve already built as a template to add to. Students can choose to complete as many of these levels as they would like - each one lets them continue to customize and improve their app.",
+        "progression_name": "Choice Levels: Customize Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a1eafc2-dbaa-45ed-a881-acf22b64df3f",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "15cf30d4-0683-4735-ba2d-0c6fd1ed7a34",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Prompt:**\n1) _What was a moment from today where you felt successful?_\n\n2) _What is a question or point of confusion you still have from today?_\n\nHave students write their responses in their journal. They can also share one of their responses with you as they leave for the day, or you can check their journals later.",
+        "name": "Journal",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Formative Assessment:** There are a lot of places in this lesson where students may get lost or confused and not feel comfortable speaking up, especially if other students in the class have prior App Lab experience. Use this prompt as a way to determine if you need to check in with students at a later lesson, or revisit a concept from today. This is especially true if students have varied levels of experience with App Lab before this unit.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "15cf30d4-0683-4735-ba2d-0c6fd1ed7a34",
+        "lesson_activity.key": "4f210793-1d0f-4344-8bbc-c2e311bc7111"
+      }
+    },
+    {
+      "key": "229d1329-3184-4f16-9714-88e6579a7f3b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Old Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b",
+        "lesson_activity.key": "e4f2ec6a-e050-4868-8146-ebb78bdb4360"
       }
     },
     {
@@ -4182,282 +4266,283 @@
       }
     },
     {
-      "key": "6ac51382-acd6-4f59-b521-032a9fc3266c",
+      "key": "80064b89-707a-4a64-9dac-6876965476d3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could choose to take a trip to a beach, a big city, or a forest: which would you choose and why?_\r\n\r\nHave students journal individually, but don’t have them share with a neighbor - have them keep their answers a secret. Before asking students to respond, continue to the next prompt\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Do you think there’s a way to predict what answer someone else chose? What questions might you ask to help predict what answer they may have chosen?_\r\n\r\nHave students discuss with a neighbor before facilitating a full-class discussion.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show a screenshot of an app that has imported a model into App Lab with no changes to design mode. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What changes could you make to this app to make it easier for people to use? Write a list of changes to the design or to the app flow that you would recommend for this app._\n\nHave students journal individually first, then share in small groups before bringing the full class together.",
+        "name": "Journal "
+      },
+      "seeding_key": {
+        "activity_section.key": "80064b89-707a-4a64-9dac-6876965476d3",
+        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de"
+      }
+    },
+    {
+      "key": "dd9a739f-82a2-4fa2-8fd8-cfbf7f2b980c",
+      "position": 2,
+      "properties": {
+        "description": " **Discussion Goal:** Students may comment on style elements, such as using colors to liven up the page. Students may comment on the descriptions to the user, like how the generated prompts aren’t very descriptive. Students may comment on the flow of the app, such as suggesting that it be broken up into multiple screens or adding a “welcome” screen to the beginning. All of these are valuable brainstorm ideas that will carry into today’s lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "dd9a739f-82a2-4fa2-8fd8-cfbf7f2b980c",
+        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de"
+      }
+    },
+    {
+      "key": "b71118a1-520e-491a-8fb1-6715e1a546c7",
+      "position": 3,
+      "properties": {
+        "description": "As we can see, the basic version of our machine learning apps could use improvements and we have a great list here. Today, we’ll learn how to improve the user experience for our apps. We’ll start by looking at an app that uses numerical data and see how this changes the user interface for our app.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b71118a1-520e-491a-8fb1-6715e1a546c7",
+        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de"
+      }
+    },
+    {
+      "key": "1919635e-4946-4b6a-9f6e-95d77d32f428",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I improve how a user interacts with a machine learning app?"
+      },
+      "seeding_key": {
+        "activity_section.key": "1919635e-4946-4b6a-9f6e-95d77d32f428",
+        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de"
+      }
+    },
+    {
+      "key": "283059e1-d586-43f4-a40d-3209eb08ee0a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. In this first sequence of levels, students will see how numerical data affects the user interface and how to update elements on the screen.",
+        "name": "Pet Recommender (20 mins)",
+        "progression_name": "Pet Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "283059e1-d586-43f4-a40d-3209eb08ee0a",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "a2cae783-cde6-48a2-8798-f7d7c41687fd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** _How can you tell the difference between categorical features and numerical features in the app?_",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Purposefully Mysterious:** This app is deliberately mysterious and requires a lot of guessing to understand. This is purposeful, since we will work to improve this app in the next few levels. If students ask questions or express uncertainty about how the app is working: validate their instincts, but avoid revealing too much about the app - instead, encourage them to keep these thoughts in mind as the lesson continues.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a2cae783-cde6-48a2-8798-f7d7c41687fd",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "65e07780-ed3e-4d02-af2b-1031bc850cd7",
+      "position": 3,
+      "properties": {
+        "description": "discussion!!!discussion-0<!-- place where you'd like the icon --> **Discussion Goal:** Students should notice that numerical features appear as text boxes and categorical features appear as dropdowns. Follow up and ask students why they think this is. Guide the conversation towards the definitions for categorical and numerical data - categorical data can be put into groups which makes a dropdown useful, and numerical data can be represented as a range of numbers which makes an input box useful.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Numbers in Dropdowns:** Students may notice that the NO feature has a dropdown that contains the numbers 1-4, and they may ask why this is represented as a dropdown instead of a text input. This is a valid question that will get cleared up in the next level - for now, confirm with students that this feels confusing and prompt them to consider: what extra information do you wish you had to help understand what’s happening here?\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "65e07780-ed3e-4d02-af2b-1031bc850cd7",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "885ab10c-ea37-4a77-a860-39cd7dabf940",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This app isn’t very easy to understand. What do you think the features represent? How many different pets can it recommend?_\n\nLet students share their guesses, but be careful not to validate as “right” or “wrong”. Instead, let the class come to their own conclusions before continuing."
+      },
+      "seeding_key": {
+        "activity_section.key": "885ab10c-ea37-4a77-a860-39cd7dabf940",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "28a5b0c3-f739-4b12-9d4b-54183f309007",
+      "position": 5,
+      "properties": {
+        "description": "If we’re going to create this app, we’ll need to add more information to make it easier for the user to understand how this app is making decisions. Luckily, we have a Model Card that’s included with our app and has this information. Let’s look at the model card and see what extra information it can tell us about our features and label.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "28a5b0c3-f739-4b12-9d4b-54183f309007",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "1eea6334-2050-4da1-b4d3-299c156619f8",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, which displays the model card. Have students read the labels and features to better understand how the app is working. If students guessed any of these in the earlier discussion, circle back and validate those answers from before.",
+        "progression_name": "Pet Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "1eea6334-2050-4da1-b4d3-299c156619f8",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "57502ab3-ab06-4215-b39a-4a0a36d7afd1",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** _How can you tell the difference between categorical features and numerical features in the model card?_",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Printing Model Cards:** You may decide to print the model card as well so students can read it on paper. If possible, the model card is designed to be printed two-sided so it appears as a single sheet of paper that you can flip back and forth.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "57502ab3-ab06-4215-b39a-4a0a36d7afd1",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "2dd13411-293d-4308-80dc-d3c2d6d30684",
+      "position": 8,
+      "properties": {
+        "description": " **Discussion Goal:** Students should notice that numerical features have a min and a max on their card, while categorical features have a bulleted list of the possible values."
+      },
+      "seeding_key": {
+        "activity_section.key": "2dd13411-293d-4308-80dc-d3c2d6d30684",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "1d2c9c62-46e9-4fa6-be17-e1253bec9a73",
+      "position": 9,
+      "properties": {
+        "description": "Let’s use the information from this model card to improve our app, especially the questions for each feature.  We’ll also start improving the look and design of our app to be more user friendly in the next few levels.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1d2c9c62-46e9-4fa6-be17-e1253bec9a73",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level, where they can still access the model card for this app and use it to update the user interface. As they progress, they will update the style of their app using Themes and will add a “Welcome Screen” to the app for when a user first loads the app.\n\n**Circulate:** As students complete these levels, they will continue automatically to keep customizing their apps. Here are some tips for how to support students in each level:\n\n- **Level 4:** Students will use the model card to update the text on their screen to be more descriptive. Help students view the Model Card from within Code Studio and use it as a reference for updating levels\n- **Level 5:** Students will choose a theme to update the design of their app. For now, just have them choose a theme. Later on, they can continue to customize their app with Design Mode\n- **Level 6:** Students add a home screen to their app and use the Model Card to describe the name and purpose of the app. The instructions for this level may be difficult to keep track of - encourage students to “check off” each step as they complete it. They can also use the animated example on the level as a guide for how to complete this task.\n- **Level 7:** Students add a button from the home screen to the predict screen, and add an event to connect the two screens together. Support students in reading through the instructions and “checking off” each piece as they go along. They can also click the “Show Me How” lines in the instructions for screenshots of what each step can look like.",
+        "progression_name": "Pet Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "fb5ed861-1ad9-400f-9cd9-9ec63129a613",
+      "position": 11,
+      "properties": {
+        "description": "**Choice Levels:** Once students have created their Pet Recommender app, they can choose from several example activities to continue improving their app. Each level uses the same Pet Recommender app they’ve already built as a template to add to. Students can choose to complete as many of these levels as they would like - each one lets them continue to customize and improve their app."
+      },
+      "seeding_key": {
+        "activity_section.key": "fb5ed861-1ad9-400f-9cd9-9ec63129a613",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "7d14c666-aa61-41e8-8ac3-97e4bc9a6ce2",
+      "position": 12,
+      "properties": {
+        "name": "You Choose: Improve Your App",
+        "progression_name": "You Choose: Improve Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d14c666-aa61-41e8-8ac3-97e4bc9a6ce2",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "007256b2-caa0-4579-b9c2-59880599afe2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example of how a model card can be useful when making an app?_",
         "name": "Journal\r"
       },
       "seeding_key": {
-        "activity_section.key": "6ac51382-acd6-4f59-b521-032a9fc3266c",
-        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5"
+        "activity_section.key": "007256b2-caa0-4579-b9c2-59880599afe2",
+        "lesson_activity.key": "fd2147b3-eb19-4131-b6b0-6395eccbaaf5"
       }
     },
     {
-      "key": "e3f3ab2d-c4ae-4dd5-a147-56d37fb3f0dc",
+      "key": "8e0845e5-3c5c-4cfc-9c22-26e16d9ef99f",
       "position": 2,
       "properties": {
-        "description": " **Discussion Goal:** Students may suggest asking about whether they like water or trees, or whether someone is an introvert or extrovert, or any other variety of questions. Encourage students to come up with a wide variety of questions and ask them to explain how they think these questions will help with their predictions. In the process, students may share the answers they gave and how their question could have helped narrow in on an answer."
+        "description": " **Discussion Goal:** Look for responses that highlight how a model card can help communicate the purpose of an app to a user. Some examples from today may include:\r\n\r"
       },
       "seeding_key": {
-        "activity_section.key": "e3f3ab2d-c4ae-4dd5-a147-56d37fb3f0dc",
-        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5"
+        "activity_section.key": "8e0845e5-3c5c-4cfc-9c22-26e16d9ef99f",
+        "lesson_activity.key": "fd2147b3-eb19-4131-b6b0-6395eccbaaf5"
       }
     },
     {
-      "key": "a0baab02-fa2e-4a20-944e-d35b1c5b9872",
+      "key": "8af08bbd-35c6-4511-a1f4-20d4d7aaae89",
       "position": 3,
       "properties": {
-        "description": "Trying to predict how you’ll answer a question is a fun game, and there are a lot of fun internet quizzes or surveys that do something similar - which athlete are you most similar to? Which pet is your favorite? Which movie character are you most related to? Each of these has several seemingly random questions that make a prediction based on your answers. Today, we’re going to learn how to use App Lab to make an app that does something similar - predicting your ideal vacation destination.",
-        "remarks": true
+        "description": "- Using label or feature descriptions to help clarify choices in an app\r\n- Using the “Intended Uses” section to help create a welcome screen for an app\r\n- Including the possible values for categorical features in an app"
       },
       "seeding_key": {
-        "activity_section.key": "a0baab02-fa2e-4a20-944e-d35b1c5b9872",
-        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5"
+        "activity_section.key": "8af08bbd-35c6-4511-a1f4-20d4d7aaae89",
+        "lesson_activity.key": "fd2147b3-eb19-4131-b6b0-6395eccbaaf5"
       }
     },
     {
-      "key": "1ab48a1d-b907-4f75-9cf9-7a84c7216da4",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I create an app using machine learning?"
-      },
-      "seeding_key": {
-        "activity_section.key": "1ab48a1d-b907-4f75-9cf9-7a84c7216da4",
-        "lesson_activity.key": "54f65d6a-ad3d-4d52-8a20-28c4e2545ef5"
-      }
-    },
-    {
-      "key": "10cb2200-8765-4cb3-b814-688323b864db",
+      "key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487",
       "position": 1,
       "properties": {
-        "description": "**Code Studio:** Have students log into Code Studio and visit the second level - (Enabling AI Models). In this level, students only need to click a link which will reload the page for them and enable the \"Import AI Models\" option from the gear dropdown. Students who don't complete this step won't be able to complete the tasks on the next few levels.",
-        "name": "(Pilot Classrooms Only) Enabling AI Models"
       },
       "seeding_key": {
-        "activity_section.key": "10cb2200-8765-4cb3-b814-688323b864db",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487",
+        "lesson_activity.key": "5f12419c-3d6c-4d1b-9e1a-7e952d71b75a"
       }
     },
     {
-      "key": "8e4ae398-9b7f-4b57-8d97-39773df3efec",
-      "position": 2,
-      "properties": {
-        "progression_name": "(Enable AI Models)"
-      },
-      "seeding_key": {
-        "activity_section.key": "8e4ae398-9b7f-4b57-8d97-39773df3efec",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "2a68d88e-9822-45a1-a779-b8cc6274e7b4",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Code Studio:** Have students log into Code Studio. The next level contains a basic program that recommends an ideal vacation spot based on several questions. Have students run the program a few times.",
-        "name": "Main Activity",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**App Lab Experience:** This unit assumes students are already familiar with the design elements of App Lab and the onEvent and setScreen commands - essentially what is covered in Unit 4 of CS Discoveries. If you have students who have not seen these elements before, consider postponing this lesson and instead spending a few extra class periods introducing students to App Lab and design mode with these two lessons:\n\n- [Unit 4 Lesson 12 - Digital Design](https://studio.code.org/s/csd4-2020/stage/12/puzzle/1)\n- [Unit 4 Lesson 13- Linking Screens](https://studio.code.org/s/csd4-2020/stage/13/puzzle/1)\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2a68d88e-9822-45a1-a779-b8cc6274e7b4",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "652fe87c-8a35-45bc-a770-741ecb0a626c",
-      "position": 4,
-      "properties": {
-        "progression_name": "What is your Ideal Vacation?"
-      },
-      "seeding_key": {
-        "activity_section.key": "652fe87c-8a35-45bc-a770-741ecb0a626c",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "d9026b69-128c-4a32-ae3b-441934598cd9",
-      "position": 5,
-      "properties": {
-        "description": "Today we’re going to learn how to take a model from AI Lab and use it to create an app like this. By the end of today, you will have an app similar to this that you can share with friends.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "d9026b69-128c-4a32-ae3b-441934598cd9",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "eb424716-5003-4a67-a2f6-be31b9285373",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** _What design elements did you see in this app?_",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Design Mode Reminder:** If students need a reminder of design mode, you can provide copies of this handout or project it for students: \n\n- [Design Mode](https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing)\n- [Design Mode Elements](https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing)\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "eb424716-5003-4a67-a2f6-be31b9285373",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "e35b128b-876b-4a3c-8c28-11bd713ecedd",
-      "position": 7,
-      "properties": {
-        "description": "Have students brainstorm on their own or record a list in their journals, then invite them to share as a full class."
-      },
-      "seeding_key": {
-        "activity_section.key": "e35b128b-876b-4a3c-8c28-11bd713ecedd",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "198d8a1b-e1c2-4874-af18-43881d4bc992",
-      "position": 8,
-      "properties": {
-        "description": " **Discussion Goal:** Students will probably notice that buttons, images, and text labels are used extensively. Be sure to remind students that each screen is an element as well. If students are missing any elements, use this as an opportunity to remind students of design mode in App Lab."
-      },
-      "seeding_key": {
-        "activity_section.key": "198d8a1b-e1c2-4874-af18-43881d4bc992",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "8ad0e6f5-c08b-4cfe-a3d0-93247ad5cc4e",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What coding commands would you expect to see in this app?_",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Events Reminder:** If students need a reminder of events in App Lab, you can provide copies of this handout or project it for students: \n\n- [Responding to User Input](https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view)\n- [Changing Screens](https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view)\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8ad0e6f5-c08b-4cfe-a3d0-93247ad5cc4e",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "85d2e7dc-ea7d-44bb-8387-096d92a53b87",
-      "position": 10,
-      "properties": {
-        "description": "Have students brainstorm on their own or record a list in their journals, then invite them to share as a full class. Students should predict that onEvent is being used for each button, and that setScreen is used to switch between screens. If students have been through Unit 3 of CS Discoveries, they may also predict that if-statements are used, but it is okay if this isn’t discussed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the “How to Import Models in AppLab” video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. Here they will import a model into their app and test that it works correctly.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**This Can Be Overwhelming:** When models are imported into AppLab, a lot of code is pre-generated and this can be overwhelming. Students may feel nervous about needing to understand everything that’s happened. You may want to reassure students in the following way:\n\n- Remind students that they already know a lot of what’s happening based on the discussion they just had! All of the design mode elements are familiar, and the code uses the same onEvent blocks they were expecting\n- Assure students that we’ll uncover what most of this code does throughout the unit, and they don’t have to understand every little piece of it right now \n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "85d2e7dc-ea7d-44bb-8387-096d92a53b87",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "0fc4769c-7b1e-4427-aac2-99dd3813744b",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _Can you identify the line where the button press happens?_\n- _Can you identify where all of our data is collected into a variable?_\n- _Can you identify the line where our prediction happens?_\n\nHave students talk with a partner first before having a full-class discussion. Ensure that students can recognize the lines of code where each of these events are happening in their code."
-      },
-      "seeding_key": {
-        "activity_section.key": "0fc4769c-7b1e-4427-aac2-99dd3813744b",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "5b736490-fd93-4fdb-b2d1-4a0804d757b4",
-      "position": 12,
-      "properties": {
-        "description": " **Discussion Goal:** Help students identify the following information:\n\n- The button press happens on line 2 with the yellow [`onEvent`(#fff176)](/docs/applab/onEvent/) block\n- The data is collected on lines 3 through 6 with the purple `=` blocks and the yellow [`getText`(#fff176)](/docs/applab/getText/) blocks\n- The prediction happens on line 8 with the green [`getPrediction`(#d3e965)](/docs/applab/getPrediction/) block\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students go to the next level in Code Studio, where they will add another screen to their app\n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "5b736490-fd93-4fdb-b2d1-4a0804d757b4",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "17ada59a-9b77-4062-99d7-b38fe5e5b0f8",
-      "position": 13,
-      "properties": {
-        "progression_name": "Import Your Model"
-      },
-      "seeding_key": {
-        "activity_section.key": "17ada59a-9b77-4062-99d7-b38fe5e5b0f8",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "f18989e3-1089-4640-a19b-2ff95227cde2",
-      "position": 14,
+      "key": "087a6b2d-3715-4c43-8ce6-d1d0f9111a82",
+      "position": 1,
       "properties": {
         "description": "You may have noticed that in this app, the prediction appears on the home screen. But in the app we tested, we went to a whole new screen based on the result! In order to have our app change screens, we’ll need to check the result of our prediction. This means our code will need to use a new type of block called an **if-statement**.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "f18989e3-1089-4640-a19b-2ff95227cde2",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+        "activity_section.key": "087a6b2d-3715-4c43-8ce6-d1d0f9111a82",
+        "lesson_activity.key": "39a43575-66ee-4617-95e5-11c4a0f26805"
       }
     },
     {
-      "key": "25158d55-cbd5-49c0-a3bc-b09c99339f3f",
-      "position": 15,
+      "key": "84d590f6-ccb5-4b8a-9e9c-939d7c6dd2f3",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Conditionals video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students go to the next level in Code Studio, where they will add if-statements to their code to change the screen. They will continue to work through the remaining levels as well, adding new elements to their app along the way."
       },
       "seeding_key": {
-        "activity_section.key": "25158d55-cbd5-49c0-a3bc-b09c99339f3f",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+        "activity_section.key": "84d590f6-ccb5-4b8a-9e9c-939d7c6dd2f3",
+        "lesson_activity.key": "39a43575-66ee-4617-95e5-11c4a0f26805"
       }
     },
     {
-      "key": "ba1e3fee-4fb9-49b1-853b-52ee120ddf3d",
-      "position": 16,
+      "key": "fe5f9a15-a136-408c-9ba9-d470e9b527cc",
+      "position": 3,
       "properties": {
-        "progression_name": "Changing Screens"
       },
       "seeding_key": {
-        "activity_section.key": "ba1e3fee-4fb9-49b1-853b-52ee120ddf3d",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "edaf13e1-c93d-4c3b-a58f-60a2e635abcf",
-      "position": 17,
-      "properties": {
-        "progression_name": "You Choose: Quiz Apps"
-      },
-      "seeding_key": {
-        "activity_section.key": "edaf13e1-c93d-4c3b-a58f-60a2e635abcf",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
-      "key": "15cf30d4-0683-4735-ba2d-0c6fd1ed7a34",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Prompt:**\n1) _What was a moment from today where you felt successful?_\n\n2) _What is a question or point of confusion you still have from today?_\n\nHave students write their responses in their journal. They can also share one of their responses with you as they leave for the day, or you can check their journals later.",
-        "name": "Journal",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Formative Assessment:** There are a lot of places in this lesson where students may get lost or confused and not feel comfortable speaking up, especially if other students in the class have prior App Lab experience. Use this prompt as a way to determine if you need to check in with students at a later lesson, or revisit a concept from today. This is especially true if students have varied levels of experience with App Lab before this unit.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "15cf30d4-0683-4735-ba2d-0c6fd1ed7a34",
-        "lesson_activity.key": "4f210793-1d0f-4344-8bbc-c2e311bc7111"
+        "activity_section.key": "fe5f9a15-a136-408c-9ba9-d470e9b527cc",
+        "lesson_activity.key": "39a43575-66ee-4617-95e5-11c4a0f26805"
       }
     },
     {
@@ -6377,24 +6462,21 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example1A-2021"
-        ],
-        "progression": "Pet Recommender"
+        "progression": "Book Recommender App"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example1A-2021"
+          "ml-intro app lab-book recommender demo-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "283059e1-d586-43f4-a40d-3209eb08ee0a"
+        "activity_section.key": "2a68d88e-9822-45a1-a779-b8cc6274e7b4"
       },
       "level_keys": [
-        "ml-use model card-example1A-2021"
+        "ml-intro app lab-book recommender demo-2021"
       ]
     },
     {
@@ -6403,24 +6485,21 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-pet model card-2021"
-        ],
-        "progression": "Pet Recommender"
+        "progression": "Import a Model"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-pet model card-2021"
+          "ml-intro app lab-book recommender 0-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "1eea6334-2050-4da1-b4d3-299c156619f8"
+        "activity_section.key": "85d2e7dc-ea7d-44bb-8387-096d92a53b87"
       },
       "level_keys": [
-        "ml-use model card-pet model card-2021"
+        "ml-intro app lab-book recommender 0-2021"
       ]
     },
     {
@@ -6429,24 +6508,21 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example1B-2021"
-        ],
-        "progression": "Pet Recommender"
+        "progression": "Customize Your App"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example1B-2021"
+          "ml-intro app lab-book recommender 1-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
+        "activity_section.key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61"
       },
       "level_keys": [
-        "ml-use model card-example1B-2021"
+        "ml-intro app lab-book recommender 1-2021"
       ]
     },
     {
@@ -6455,24 +6531,21 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example1C-2021"
-        ],
-        "progression": "Pet Recommender"
+        "progression": "Customize Your App"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example1C-2021"
+          "ml-intro app lab-book recommender 2-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
+        "activity_section.key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61"
       },
       "level_keys": [
-        "ml-use model card-example1C-2021"
+        "ml-intro app lab-book recommender 2-2021"
       ]
     },
     {
@@ -6481,50 +6554,44 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example1D-2021"
-        ],
-        "progression": "Pet Recommender"
+        "progression": "Customize Your App"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example1D-2021"
+          "ml-intro app lab-book recommender 3-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
+        "activity_section.key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61"
       },
       "level_keys": [
-        "ml-use model card-example1D-2021"
+        "ml-intro app lab-book recommender 3-2021"
       ]
     },
     {
       "chapter": 19,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example1E-2021"
-        ],
-        "progression": "Pet Recommender"
+        "progression": "Customize Your App"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example1E-2021"
+          "ml-intro app lab-book recommender 4-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
+        "activity_section.key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61"
       },
       "level_keys": [
-        "ml-use model card-example1E-2021"
+        "ml-intro app lab-book recommender 4-2021"
       ]
     },
     {
@@ -6533,10 +6600,189 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Choice Levels: Customize Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 5-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "9a1eafc2-dbaa-45ed-a881-acf22b64df3f"
+      },
+      "level_keys": [
+        "ml-intro app lab-book recommender 5-2021"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-use model card-example1A-2021"
+        ],
+        "progression": "Old Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-use model card-example1A-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
+      },
+      "level_keys": [
+        "ml-use model card-example1A-2021"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-use model card-pet model card-2021"
+        ],
+        "progression": "Old Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-use model card-pet model card-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
+      },
+      "level_keys": [
+        "ml-use model card-pet model card-2021"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-use model card-example1B-2021"
+        ],
+        "progression": "Old Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-use model card-example1B-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
+      },
+      "level_keys": [
+        "ml-use model card-example1B-2021"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-use model card-example1C-2021"
+        ],
+        "progression": "Old Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-use model card-example1C-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
+      },
+      "level_keys": [
+        "ml-use model card-example1C-2021"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-use model card-example1D-2021"
+        ],
+        "progression": "Old Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-use model card-example1D-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
+      },
+      "level_keys": [
+        "ml-use model card-example1D-2021"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 13,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-use model card-example1E-2021"
+        ],
+        "progression": "Old Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-use model card-example1E-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
+      },
+      "level_keys": [
+        "ml-use model card-example1E-2021"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 14,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "ml-use models applab-practice choice-2021"
         ],
-        "progression": "You Choose: Improve Your App"
+        "progression": "Old Levels"
       },
       "named_level": false,
       "bonus": false,
@@ -6544,17 +6790,17 @@
         "script_level.level_keys": [
           "ml-use models applab-practice choice-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "7d14c666-aa61-41e8-8ac3-97e4bc9a6ce2"
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
       },
       "level_keys": [
         "ml-use models applab-practice choice-2021"
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6580,7 +6826,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6606,7 +6852,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6632,7 +6878,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6658,7 +6904,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6684,7 +6930,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6710,7 +6956,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6736,41 +6982,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Course Experiments Dashboard - AI Models-2021"
-        ],
-        "progression": "(Enable AI Models)"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Course Experiments Dashboard - AI Models-2021"
-        ],
-        "lesson.key": "lesson6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "8e4ae398-9b7f-4b57-8d97-39773df3efec"
-      },
-      "level_keys": [
-        "Course Experiments Dashboard - AI Models-2021"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "ml-models in applab-vacation example-2021"
-        ],
-        "progression": "What is your Ideal Vacation?"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6778,25 +6997,24 @@
         "script_level.level_keys": [
           "ml-models in applab-vacation example-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "652fe87c-8a35-45bc-a770-741ecb0a626c"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       },
       "level_keys": [
         "ml-models in applab-vacation example-2021"
       ]
     },
     {
-      "chapter": 30,
-      "position": 3,
-      "activity_section_position": 1,
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ml-models in applab-import 1-2021"
-        ],
-        "progression": "Import Your Model"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6804,25 +7022,24 @@
         "script_level.level_keys": [
           "ml-models in applab-import 1-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "17ada59a-9b77-4062-99d7-b38fe5e5b0f8"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       },
       "level_keys": [
         "ml-models in applab-import 1-2021"
       ]
     },
     {
-      "chapter": 31,
-      "position": 4,
-      "activity_section_position": 1,
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ml-models in applab-screens-2-2021"
-        ],
-        "progression": "Changing Screens"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6830,25 +7047,24 @@
         "script_level.level_keys": [
           "ml-models in applab-screens-2-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "ba1e3fee-4fb9-49b1-853b-52ee120ddf3d"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       },
       "level_keys": [
         "ml-models in applab-screens-2-2021"
       ]
     },
     {
-      "chapter": 32,
-      "position": 5,
-      "activity_section_position": 2,
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ml-models in applab-screens-1-2021"
-        ],
-        "progression": "Changing Screens"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6856,25 +7072,24 @@
         "script_level.level_keys": [
           "ml-models in applab-screens-1-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "ba1e3fee-4fb9-49b1-853b-52ee120ddf3d"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       },
       "level_keys": [
         "ml-models in applab-screens-1-2021"
       ]
     },
     {
-      "chapter": 33,
-      "position": 6,
-      "activity_section_position": 3,
+      "chapter": 39,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ml-models in applab-screens-3-2021"
-        ],
-        "progression": "Changing Screens"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6882,25 +7097,24 @@
         "script_level.level_keys": [
           "ml-models in applab-screens-3-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "ba1e3fee-4fb9-49b1-853b-52ee120ddf3d"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       },
       "level_keys": [
         "ml-models in applab-screens-3-2021"
       ]
     },
     {
-      "chapter": 34,
-      "position": 7,
-      "activity_section_position": 1,
+      "chapter": 40,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ml-models in applab-practice choice-2021"
-        ],
-        "progression": "You Choose: Quiz Apps"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -6908,17 +7122,17 @@
         "script_level.level_keys": [
           "ml-models in applab-practice choice-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "edaf13e1-c93d-4c3b-a58f-60a2e635abcf"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       },
       "level_keys": [
         "ml-models in applab-practice choice-2021"
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6944,7 +7158,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6970,7 +7184,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6996,7 +7210,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7022,7 +7236,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7048,7 +7262,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7074,7 +7288,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -7100,7 +7314,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -7126,7 +7340,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -7152,7 +7366,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 50,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7178,7 +7392,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7204,7 +7418,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7230,7 +7444,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7415,14 +7629,98 @@
     },
     {
       "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender demo-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender demo-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "2a68d88e-9822-45a1-a779-b8cc6274e7b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender 0-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 0-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "85d2e7dc-ea7d-44bb-8387-096d92a53b87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender 1-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 1-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender 2-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 2-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender 3-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 3-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender 4-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 4-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro app lab-book recommender 5-2021",
+        "script_level.level_keys": [
+          "ml-intro app lab-book recommender 5-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "9a1eafc2-dbaa-45ed-a881-acf22b64df3f"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-use model card-example1A-2021",
         "script_level.level_keys": [
           "ml-use model card-example1A-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "283059e1-d586-43f4-a40d-3209eb08ee0a"
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
       }
     },
     {
@@ -7431,10 +7729,10 @@
         "script_level.level_keys": [
           "ml-use model card-pet model card-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "1eea6334-2050-4da1-b4d3-299c156619f8"
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
       }
     },
     {
@@ -7443,10 +7741,10 @@
         "script_level.level_keys": [
           "ml-use model card-example1B-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
       }
     },
     {
@@ -7455,10 +7753,10 @@
         "script_level.level_keys": [
           "ml-use model card-example1C-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
       }
     },
     {
@@ -7467,10 +7765,10 @@
         "script_level.level_keys": [
           "ml-use model card-example1D-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
       }
     },
     {
@@ -7479,10 +7777,10 @@
         "script_level.level_keys": [
           "ml-use model card-example1E-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
       }
     },
     {
@@ -7491,10 +7789,10 @@
         "script_level.level_keys": [
           "ml-use models applab-practice choice-2021"
         ],
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "7d14c666-aa61-41e8-8ac3-97e4bc9a6ce2"
+        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b"
       }
     },
     {
@@ -7583,26 +7881,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "Course Experiments Dashboard - AI Models-2021",
-        "script_level.level_keys": [
-          "Course Experiments Dashboard - AI Models-2021"
-        ],
-        "lesson.key": "lesson6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "8e4ae398-9b7f-4b57-8d97-39773df3efec"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ml-models in applab-vacation example-2021",
         "script_level.level_keys": [
           "ml-models in applab-vacation example-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "652fe87c-8a35-45bc-a770-741ecb0a626c"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       }
     },
     {
@@ -7611,10 +7897,10 @@
         "script_level.level_keys": [
           "ml-models in applab-import 1-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "17ada59a-9b77-4062-99d7-b38fe5e5b0f8"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       }
     },
     {
@@ -7623,10 +7909,10 @@
         "script_level.level_keys": [
           "ml-models in applab-screens-2-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "ba1e3fee-4fb9-49b1-853b-52ee120ddf3d"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       }
     },
     {
@@ -7635,10 +7921,10 @@
         "script_level.level_keys": [
           "ml-models in applab-screens-1-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "ba1e3fee-4fb9-49b1-853b-52ee120ddf3d"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       }
     },
     {
@@ -7647,10 +7933,10 @@
         "script_level.level_keys": [
           "ml-models in applab-screens-3-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "ba1e3fee-4fb9-49b1-853b-52ee120ddf3d"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       }
     },
     {
@@ -7659,10 +7945,10 @@
         "script_level.level_keys": [
           "ml-models in applab-practice choice-2021"
         ],
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "edaf13e1-c93d-4c3b-a58f-60a2e635abcf"
+        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
       }
     },
     {
@@ -8296,7 +8582,13 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
+        "resource.key": "importing-ai-models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson6",
         "resource.key": "unit_7_-_ai_and_machine_learning"
       }
     },
@@ -8320,13 +8612,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson6",
-        "resource.key": "importing-ai-models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "resource.key": "unit_7_-_ai_and_machine_learning"
       }
     },
@@ -8750,21 +9036,7 @@
       "seeding_key": {
         "lesson.key": "lesson6",
         "programming_environment.name": "applab",
-        "programming_expression.key": "equalityOperator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson6",
-        "programming_environment.name": "applab",
         "programming_expression.key": "onEvent"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson6",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "ifBlock"
       }
     },
     {
@@ -8786,6 +9058,13 @@
         "lesson.key": "lesson6",
         "programming_environment.name": "applab",
         "programming_expression.key": "getPrediction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson6",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "addPair"
       }
     }
   ],
@@ -8891,23 +9170,23 @@
       }
     },
     {
-      "key": "87215a32-fe94-4878-9d84-fbfc1cb056e9",
+      "key": "f258977a-6df0-4dcb-b5d7-2eef5db3290b",
       "properties": {
-        "description": "Use a model card to update the user interface of an app"
+        "description": "Import a model into App Lab"
       },
       "seeding_key": {
-        "lesson.key": "lesson10",
-        "objective.key": "87215a32-fe94-4878-9d84-fbfc1cb056e9"
+        "lesson.key": "lesson6",
+        "objective.key": "f258977a-6df0-4dcb-b5d7-2eef5db3290b"
       }
     },
     {
-      "key": "27dfb962-593c-46d2-b9aa-66ebc12ac01f",
+      "key": "0646433f-2fae-4cc9-ac50-3978b7315005",
       "properties": {
-        "description": "Add new screens and customize design elements to make an app more user friendly"
+        "description": "Use if-statements to change screens based on the result of a prediction"
       },
       "seeding_key": {
-        "lesson.key": "lesson10",
-        "objective.key": "27dfb962-593c-46d2-b9aa-66ebc12ac01f"
+        "lesson.key": "lesson6",
+        "objective.key": "0646433f-2fae-4cc9-ac50-3978b7315005"
       }
     },
     {
@@ -8961,23 +9240,23 @@
       }
     },
     {
-      "key": "f258977a-6df0-4dcb-b5d7-2eef5db3290b",
+      "key": "87215a32-fe94-4878-9d84-fbfc1cb056e9",
       "properties": {
-        "description": "Import a model into App Lab"
+        "description": "Use a model card to update the user interface of an app"
       },
       "seeding_key": {
-        "lesson.key": "lesson6",
-        "objective.key": "f258977a-6df0-4dcb-b5d7-2eef5db3290b"
+        "lesson.key": "lesson10",
+        "objective.key": "87215a32-fe94-4878-9d84-fbfc1cb056e9"
       }
     },
     {
-      "key": "0646433f-2fae-4cc9-ac50-3978b7315005",
+      "key": "27dfb962-593c-46d2-b9aa-66ebc12ac01f",
       "properties": {
-        "description": "Use if-statements to change screens based on the result of a prediction"
+        "description": "Add new screens and customize design elements to make an app more user friendly"
       },
       "seeding_key": {
-        "lesson.key": "lesson6",
-        "objective.key": "0646433f-2fae-4cc9-ac50-3978b7315005"
+        "lesson.key": "lesson10",
+        "objective.key": "27dfb962-593c-46d2-b9aa-66ebc12ac01f"
       }
     },
     {

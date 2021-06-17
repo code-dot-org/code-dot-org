@@ -358,7 +358,7 @@ class Lesson < ApplicationRecord
   #
   # TODO: [PLAT-369] trim down to only include those fields needed on the
   # script edit page
-  def summarize_for_script_edit
+  def summarize_for_unit_edit
     summary = summarize(true, for_edit: true).dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = name

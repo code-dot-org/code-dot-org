@@ -1,5 +1,6 @@
 login_required true
 student_detail_progress_view true
+published_state 'beta'
 
 lesson 'Plotting Shapes', display_name: 'Plotting Shapes', has_lesson_plan: false
 level 'CSD U3 Lesson Overview 2', named: true
