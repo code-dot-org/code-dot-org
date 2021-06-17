@@ -3048,7 +3048,7 @@ class ScriptTest < ActiveSupport::TestCase
     error = assert_raises do
       script.fix_script_level_positions
     end
-    assert_includes error.message, 'Legacy script levels are not allowed in migrated scripts.'
+    assert_includes error.message, 'Legacy script levels are not allowed in migrated units.'
   end
 
   test 'localized_title defaults to name' do
