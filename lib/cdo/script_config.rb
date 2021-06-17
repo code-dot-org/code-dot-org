@@ -26,6 +26,6 @@ class ScriptConfig
   end
 
   def self.csf_scripts
-    Script.script_names_by_curriculum_umbrella('CSF')
+    Script.unit_names_by_curriculum_umbrella('CSF')
   end
 end
