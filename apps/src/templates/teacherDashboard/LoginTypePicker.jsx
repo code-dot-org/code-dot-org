@@ -64,8 +64,8 @@ class LoginTypePicker extends Component {
 
     return (
       <div style={containerStyle}>
-        <Heading1>{i18n.newSection()}</Heading1>
-        <Heading2>{i18n.addStudentsToSectionInstructions()}</Heading2>
+        <Heading1>{i18n.newSectionUpdated()}</Heading1>
+        <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
         <div>
           <CardContainer>
             {withGoogle && (
@@ -118,7 +118,7 @@ export default connect(state => ({
 const PictureLoginCard = props => (
   <LoginTypeCard
     className="uitest-pictureLogin"
-    title={i18n.loginTypePicture()}
+    title={i18n.loginTypePictureUpdated()}
     subtitle={i18n.loginTypePictureAgeGroup()}
     description={i18n.loginTypePictureDescription()}
     onClick={() => props.onClick('picture')}
@@ -132,7 +132,7 @@ PictureLoginCard.propTypes = {
 const WordLoginCard = props => (
   <LoginTypeCard
     className="uitest-wordLogin"
-    title={i18n.loginTypeWord()}
+    title={i18n.loginTypeWordUpdated()}
     subtitle={i18n.loginTypeWordAgeGroup()}
     description={i18n.loginTypeWordDescription()}
     onClick={() => props.onClick('word')}
@@ -154,7 +154,7 @@ EmailLoginCard.propTypes = PictureLoginCard.propTypes;
 const GoogleClassroomCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeGoogleClassroom()}
-    description={i18n.loginTypeGoogleClassroomDescription()}
+    description={i18n.loginTypeGoogleClassroomDescriptionUpdated()}
     onClick={() => props.onClick(OAuthSectionTypes.google_classroom)}
   />
 );
@@ -163,7 +163,7 @@ GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
 const MicrosoftClassroomCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeMicrosoftClassroom()}
-    description={i18n.loginTypeMicrosoftClassroomDescription()}
+    description={i18n.loginTypeMicrosoftClassroomDescriptionUpdated()}
     onClick={() => props.onClick(OAuthSectionTypes.microsoft_classroom)}
   />
 );
@@ -172,7 +172,7 @@ MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
 const CleverCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeClever()}
-    description={i18n.loginTypeCleverDescription()}
+    description={i18n.loginTypeCleverDescriptionUpdated()}
     onClick={() => props.onClick(OAuthSectionTypes.clever)}
   />
 );
