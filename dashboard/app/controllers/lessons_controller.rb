@@ -12,6 +12,15 @@ class LessonsController < ApplicationController
   # This helps avoid losing data from existing scripts by accidentally editing
   # them with the new lessons editor.
   def disallow_legacy_script_levels
+    # If we have the lesson_position as a param we need to find the lesson first. This is
+    # only used for edit right now but needed to go here because this runs before edit
+    if params[:lesson_position]
+      script = Script.get_from_cache(params[:script_id])
+      @lesson = script.lessons.find do |l|
+        l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+      end
+    end
+
     return unless @lesson.script_levels.reject(&:activity_section).any?
     return render :forbidden
   end
@@ -44,7 +53,7 @@ class LessonsController < ApplicationController
     @lesson_data = @lesson.summarize_for_student_lesson_plan
   end
 
-  # GET /lessons/1/edit
+  # GET /lessons/1/edit where 1 can be the id or the lesson position
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit
     # Return an empty list, because computing the list of related lessons here
