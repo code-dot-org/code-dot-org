@@ -10,6 +10,7 @@ export default class VersionRow extends React.Component {
     versionId: PropTypes.string.isRequired,
     lastModified: PropTypes.instanceOf(Date).isRequired,
     isLatest: PropTypes.bool,
+    isActive: PropTypes.bool,
     onChoose: PropTypes.func
   };
 
@@ -22,10 +23,11 @@ export default class VersionRow extends React.Component {
   }
 
   render() {
-    let button;
+    let buttons = [];
     if (this.props.isLatest) {
-      button = (
+      buttons.push(
         <button
+          key={buttons.length}
           type="button"
           className="btn-default"
           disabled="disabled"
@@ -35,14 +37,26 @@ export default class VersionRow extends React.Component {
         </button>
       );
     } else {
-      button = [
+      buttons.push(
+        <button
+          key={buttons.length}
+          type="button"
+          className="btn-info"
+          onClick={this.props.onChoose}
+        >
+          {msg.restoreThisVersion()}
+        </button>
+      );
+    }
+
+    if (!this.props.isActive) {
+      buttons.push(
         <a
-          key={0}
+          key={buttons.length}
           href={
             location.origin +
             location.pathname +
-            '?version=' +
-            this.props.versionId
+            (this.props.isLatest ? '' : '?version=' + this.props.versionId)
           }
           target="_blank"
           rel="noopener noreferrer"
@@ -50,20 +64,17 @@ export default class VersionRow extends React.Component {
           <button type="button" className="version-preview">
             <i className="fa fa-eye" />
           </button>
-        </a>,
-        <button
-          type="button"
-          key={1}
-          className="btn-info"
-          onClick={this.props.onChoose}
-        >
-          {msg.restoreThisVersion()}
-        </button>
-      ];
+        </a>
+      );
     }
 
     return (
-      <tr className="versionRow">
+      <tr
+        className={[
+          'versionRow',
+          this.props.isActive ? 'activeVersion' : ''
+        ].join(' ')}
+      >
         <td>
           <p>
             {msg.versionHistory_versionLabel({
@@ -72,7 +83,7 @@ export default class VersionRow extends React.Component {
           </p>
         </td>
         <td width="275" style={{textAlign: 'right'}}>
-          {button}
+          {buttons}
         </td>
       </tr>
     );
