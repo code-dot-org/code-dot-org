@@ -137,7 +137,7 @@ class ScriptLevelsController < ApplicationController
     if can_view_version
       # If user is allowed to see level but is assigned to a newer version of the level's script,
       # we will show a dialog for the user to choose whether they want to go to the newer version.
-      @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
+      @redirect_script_url = @script_level&.script&.redirect_to_unit_url(current_user, locale: request.locale)
     elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
       # Redirect user to the proper script overview page if we think they ended up on the wrong level.
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
@@ -303,11 +303,11 @@ class ScriptLevelsController < ApplicationController
   def self.get_script(request)
     script_id = request.params[:script_id]
     # Due to a programming error, we have been inadvertently passing user: nil
-    # to Script.get_script_family_redirect_for_user . Since end users may be
+    # to Script.get_unit_family_redirect_for_user . Since end users may be
     # depending on this incorrect behavior, and we are trying to deprecate this
     # codepath anyway, the current plan is to not fix this bug.
     script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
-      Script.get_script_family_redirect_for_user(script_id, user: nil, locale: request.locale) :
+      Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale) :
       Script.get_from_cache(script_id)
 
     raise ActiveRecord::RecordNotFound unless script
@@ -467,7 +467,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def present_level
-    # All database look-ups should have already been cached by Script::script_cache_from_db
+    # All database look-ups should have already been cached by Script::unit_cache_from_db
     @game = @level.game
     @lesson ||= @script_level.lesson
 

@@ -5,6 +5,14 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
+##  Course Lesson Objective
+
+After completing Lesson 7 you will be able to:
+
+* define sequencing and algorithms,
+* use Blockly code blocks, 
+* use the "step button" for debugging.
+
 ## CS Concepts
 
 **Sequencing** describes the process of ordering steps in a linear manner.
@@ -12,20 +20,8 @@ markdown <<MARKDOWN
 **Algorithms** are lists of steps to complete a task. Programs are algorithms written as code for a computer to execute.
 
 ### Lesson in Action 
-Watch the video,  <a href="https://www.youtube.com/watch?v=hrnhiKAQ1_k" target="blank">Happy Maps</a> demonstrating how sequencing is introduced to students with the **context-setting** lesson in Course A - Lesson 3:  Happy Maps.
 
-## Learning Platform Features
+* Watch the video demonstration,  <a href="https://www.youtube.com/watch?v=hrnhiKAQ1_k" target="blank">Happy Maps,</a> of a teacher first introducing sequencing to students with the **context-setting** lesson in Course A - Lesson 3:  Happy Maps.
 
-Watch the video, <a href="https://youtu.be/4N0R16Y97l0" target="blank">"Maze Intro:  Programming with Block (Course A-B),"</a> from courses A and B that introduces Blockly code blocks students drag and drop as they learn to write code.
-
-Students engage with Maze/Collector Puzzles as they learn about sequencing.
-
-## Concept Progression
-
-Click "Continue" to go through the student lesson levels listed below.  These student lesson levels are examples of how students engage with sequencing across Courses A through D.  As you move from one student lesson level to the next, begin to notice the concept progression for sequencing and how student lessons build on from one course to the next. 
-
-* Course A - Lesson 4, Level:  Sequencing with Scrat
-* Course B - Lesson 5, Level:  Programming with Harvester
-* Course C - Lesson 4, Level:  Debugging in Maze
-* Course D - Lesson 3, Level:  Introduction to Online Puzzles
+**Note:**  This video opens in a new window.  Be sure to return to this online course to continue with lessons.
 MARKDOWN

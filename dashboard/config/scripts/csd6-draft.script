@@ -4,6 +4,7 @@ student_detail_progress_view true
 lesson_extras_available true
 project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
+published_state 'beta'
 
 lesson_group 'csd6_1', display_name: 'Chapter 1: Programming with Hardware'
 lesson 'Computing Innovations', display_name: 'Computing Innovations', has_lesson_plan: false
