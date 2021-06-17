@@ -535,44 +535,44 @@ class Script < ApplicationRecord
     end
   end
 
-  def self.remove_from_cache(script_name)
-    script_cache.delete(script_name) if script_cache
+  def self.remove_from_cache(unit_name)
+    script_cache.delete(unit_name) if script_cache
   end
 
   def self.get_unit_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
-    family_scripts = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
+    family_units = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
-    # Only students should be redirected based on script progress and/or section assignments.
+    # Only students should be redirected based on unit progress and/or section assignments.
     if user&.student?
-      assigned_script_ids = user.section_scripts.pluck(:id)
-      progress_script_ids = user.user_levels.map(&:script_id)
-      script_ids = assigned_script_ids.concat(progress_script_ids).compact.uniq
-      script_name = family_scripts.select {|s| script_ids.include?(s.id)}&.first&.name
-      return Script.new(redirect_to: script_name) if script_name
+      assigned_unit_ids = user.section_scripts.pluck(:id)
+      progress_unit_ids = user.user_levels.map(&:script_id)
+      unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
+      unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
+      return Script.new(redirect_to: unit_name) if unit_name
     end
 
     locale_str = locale&.to_s
     latest_version = nil
-    family_scripts.each do |script|
-      next unless script.is_stable
-      latest_version ||= script
+    family_units.each do |unit|
+      next unless unit.is_stable
+      latest_version ||= unit
 
       # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
       # than matching en-US specifically.
-      is_supported = script.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
+      is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
       if is_supported
-        latest_version = script
+        latest_version = unit
         break
       end
     end
 
-    script_name = latest_version&.name
-    script_name ? Script.new(redirect_to: script_name) : nil
+    unit_name = latest_version&.name
+    unit_name ? Script.new(redirect_to: unit_name) : nil
   end
 
-  def self.log_redirect(old_script_name, new_script_name, request, event_name, user_type)
+  def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
     FirehoseClient.instance.put_record(
       :analysis,
       {
@@ -580,8 +580,8 @@ class Script < ApplicationRecord
         event: event_name,
         data_string: request.path,
         data_json: {
-          old_script_name: old_script_name,
-          new_script_name: new_script_name,
+          old_script_name: old_unit_name,
+          new_script_name: new_unit_name,
           method: request.method,
           url: request.url,
           referer: request.referer,
@@ -593,21 +593,21 @@ class Script < ApplicationRecord
 
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
-  # @return [String|nil] URL to the script overview page the user should be redirected to (if any).
-  def redirect_to_script_url(user, locale: nil)
-    # No redirect unless script belongs to a family.
+  # @return [String|nil] URL to the unit overview page the user should be redirected to (if any).
+  def redirect_to_unit_url(user, locale: nil)
+    # No redirect unless unit belongs to a family.
     return nil unless family_name
     # Only redirect students.
     return nil unless user && user.student?
-    # No redirect unless user is allowed to view this script version and they are not already assigned to this script
+    # No redirect unless user is allowed to view this unit version and they are not already assigned to this unit
     # or the course it belongs to.
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
-    # No redirect if script or its course are not versioned.
+    # No redirect if unit or its course are not versioned.
     current_version_year = version_year || unit_group&.version_year
     return nil unless current_version_year.present?
 
-    # Redirect user to the latest assigned script in this family,
-    # if one exists and it is newer than the current script.
+    # Redirect user to the latest assigned unit in this family,
+    # if one exists and it is newer than the current unit.
     latest_assigned_version = Script.latest_assigned_version(family_name, user)
     latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.unit_group&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > current_version_year
@@ -620,7 +620,7 @@ class Script < ApplicationRecord
 
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
-  # @return [Boolean] Whether the user can view the script.
+  # @return [Boolean] Whether the user can view the unit.
   def can_view_version?(user, locale: nil)
     # Users can view any course not in a family.
     return true unless family_name
@@ -629,25 +629,25 @@ class Script < ApplicationRecord
     latest_stable_version_in_locale = Script.latest_stable_version(family_name, locale: locale)
     is_latest = latest_stable_version == self || latest_stable_version_in_locale == self
 
-    # All users can see the latest script version in English and in their locale.
+    # All users can see the latest unit version in English and in their locale.
     return true if is_latest
 
     # Restrictions only apply to students and logged out users.
     return false if user.nil?
     return true unless user.student?
 
-    # A student can view the script version if they have progress in it or the course it belongs to.
+    # A student can view the unit version if they have progress in it or the course it belongs to.
     has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)
     return true if has_progress
 
-    # A student can view the script version if they are assigned to it.
+    # A student can view the unit version if they are assigned to it.
     user.assigned_script?(self)
   end
 
-  # @param family_name [String] The family name for a script family.
+  # @param family_name [String] The family name for a unit family.
   # @param version_year [String] Version year to return. Optional.
   # @param locale [String] User or request locale. Optional.
-  # @return [Script|nil] Returns the latest version in a script family.
+  # @return [Script|nil] Returns the latest version in a unit family.
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
     return nil unless family_name.present?
 
@@ -895,7 +895,7 @@ class Script < ApplicationRecord
     tts?
   end
 
-  # Generates TTS files for each level in a script.
+  # Generates TTS files for each level in a unit.
   def tts_update
     levels.each(&:tts_update)
   end
@@ -946,78 +946,78 @@ class Script < ApplicationRecord
   end
 
   # @param user [User]
-  # @return [Boolean] Whether the user has progress on another version of this script.
+  # @return [Boolean] Whether the user has progress on another version of this unit.
   def has_older_version_progress?(user)
     return nil unless user && family_name && version_year
-    user_script_ids = user.user_scripts.pluck(:script_id)
+    user_unit_ids = user.user_scripts.pluck(:script_id)
 
     Script.
-      # select only scripts in the same script family.
+      # select only units in the same unit family.
       where(family_name: family_name).
       # select only older versions.
       where("properties -> '$.version_year' < ?", version_year).
-      # exclude the current script.
+      # exclude the current unit.
       where.not(id: id).
-      # select only scripts which the user has progress in.
-      where(id: user_script_ids).
+      # select only units which the user has progress in.
+      where(id: user_unit_ids).
       count > 0
   end
 
-  # Create or update any scripts, script levels and lessons specified in the
+  # Create or update any units, script levels and lessons specified in the
   # script file definitions. If new_suffix is specified, create a copy of the
-  # script and any associated levels, appending new_suffix to the name when
-  # copying. Any new_properties are merged into the properties of the new script.
+  # unit and any associated levels, appending new_suffix to the name when
+  # copying. Any new_properties are merged into the properties of the new unit.
   def self.setup(custom_files, new_suffix: nil, new_properties: {}, show_progress: false)
-    scripts_to_add = []
+    units_to_add = []
 
     custom_i18n = {}
-    # Load custom scripts from Script DSL format
-    custom_files.map do |script|
-      name = File.basename(script, '.script')
+    # Load custom units from Script DSL format
+    custom_files.map do |unit|
+      name = File.basename(unit, '.script')
       base_name = Script.base_name(name)
       name = "#{base_name}-#{new_suffix}" if new_suffix
-      script_data, i18n =
+      unit_data, i18n =
         begin
-          ScriptDSL.parse_file(script, name)
+          ScriptDSL.parse_file(unit, name)
         rescue => e
-          raise e, "Error parsing script file #{script}: #{e}"
+          raise e, "Error parsing script file #{unit}: #{e}"
         end
 
-      lesson_groups = script_data[:lesson_groups]
+      lesson_groups = unit_data[:lesson_groups]
       custom_i18n.deep_merge!(i18n)
-      # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
-      scripts_to_add << [{
-        id: script_data[:id],
+      # TODO: below is duplicated in update_text. and maybe can be refactored to pass unit_data?
+      units_to_add << [{
+        id: unit_data[:id],
         name: name,
-        hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
-        login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
-        wrapup_video: script_data[:wrapup_video],
-        new_name: script_data[:new_name],
-        family_name: script_data[:family_name],
-        published_state: script_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.beta : script_data[:published_state],
-        properties: Script.build_property_hash(script_data).merge(new_properties)
+        hidden: unit_data[:hidden].nil? ? true : unit_data[:hidden], # default true
+        login_required: unit_data[:login_required].nil? ? false : unit_data[:login_required], # default false
+        wrapup_video: unit_data[:wrapup_video],
+        new_name: unit_data[:new_name],
+        family_name: unit_data[:family_name],
+        published_state: unit_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.beta : unitt_data[:published_state],
+        properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
 
-    progressbar = ProgressBar.create(total: scripts_to_add.length, format: '%t (%c/%C): |%B|') if show_progress
+    progressbar = ProgressBar.create(total: units_to_add.length, format: '%t (%c/%C): |%B|') if show_progress
 
-    # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-    added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
-      added_script =
+    # Stable sort by ID then add each unit, ensuring units with no ID end up at the end
+    added_unit_names = units_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
+      added_unit =
         options[:properties][:is_migrated] == true ?
           seed_from_json_file(options[:name]) :
-          add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+          add_unit(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       progressbar.increment if show_progress
-      added_script.name
+      added_unit.name
     rescue => e
-      raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
+      raise e, "Error adding unit named '#{options[:name]}': #{e}", e.backtrace
     end
-    [added_script_names, custom_i18n]
+    [added_unit_names, custom_i18n]
   end
 
-  # if new_suffix is specified, copy the script, hide it, and copy all its
+  # if new_suffix is specified, copy the unit, hide it, and copy all its
   # levelbuilder-defined levels.
-  def self.add_script(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
+  def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     transaction do
       script = fetch_script(options)
       script.update!(hidden: true) if new_suffix
@@ -1268,7 +1268,7 @@ class Script < ApplicationRecord
     script_name = script_params[:name]
     begin
       script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
-      Script.add_script(
+      Script.add_unit(
         {
           name: script_name,
           hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
