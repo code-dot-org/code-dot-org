@@ -1,0 +1,12 @@
+name 'CSA U1L4-L4'
+editor_experiment ''
+display_name 'Debugging Challenges'
+description "Choose at least one of the following debugging challenges to debug. If you finish early, debug the second challenge!"
+
+sublevels
+level 'CodeBreak Dance Party Challenge'
+level 'CodeBreak - escape room challenge'
+
+markdown <<MARKDOWN
+
+MARKDOWN
