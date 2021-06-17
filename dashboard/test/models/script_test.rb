@@ -2775,6 +2775,8 @@ class ScriptTest < ActiveSupport::TestCase
     ScriptConstants.stubs(:i18n?).with('coursea-2017').returns(true)
 
     new_dsl = <<-SCRIPT
+      published_state 'stable'
+
       lesson 'Debugging: Unspotted Bugs 1', display_name: 'Debugging: Unspotted Bugs'
       level 'courseB_video_Unspotted'
     SCRIPT
@@ -2794,6 +2796,8 @@ class ScriptTest < ActiveSupport::TestCase
     l1 = create :level
 
     new_dsl = <<-SCRIPT
+      published_state 'stable'
+
       lesson 'new-lesson', display_name: 'New Lesson'
       level '#{l1.name}'
 
@@ -2814,6 +2818,8 @@ class ScriptTest < ActiveSupport::TestCase
     ScriptConstants.stubs(:i18n?).with('coursea-2017').returns(true)
 
     new_dsl = <<-SCRIPT
+      published_state 'stable'
+
       lesson_group 'lg', display_name: 'Lesson Group'
       lesson 'Debugging: Unspotted Bugs 1', display_name: 'Debugging: Unspotted Bugs'
       level 'courseB_video_Unspotted'
