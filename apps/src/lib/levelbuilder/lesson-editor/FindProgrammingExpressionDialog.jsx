@@ -92,8 +92,8 @@ ProgrammingExpressionTable.propTypes = {
   programmingExpressions: PropTypes.arrayOf(
     PropTypes.shape({
       color: PropTypes.string,
-      name: PropTypes.string.isRequired,
       link: PropTypes.string,
+      syntax: PropTypes.string.isRequired,
       programmingEnvironmentName: PropTypes.string.isRequired,
       uniqueKey: PropTypes.string.isRequired
     })
