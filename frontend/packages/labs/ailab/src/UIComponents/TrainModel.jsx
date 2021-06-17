@@ -77,6 +77,10 @@ class TrainModel extends Component {
     return Math.min(maxNumItems, this.props.data.length);
   };
 
+  getShowItemsFadingOut = () => {
+    return this.props.data.length > maxNumItems;
+  };
+
   getAnimationStep = () => {
     return Math.floor(this.state.frame / framesPerCycle);
   };
@@ -89,8 +93,9 @@ class TrainModel extends Component {
     const transform = `translateX(-50%) translateY(-50%) rotateZ(${rotateZ}deg)`;
     const opacity = getFadeOpacity(animationProgress);
     const showAnimation = this.getAnimationStep() < this.getNumItems();
-
-    const maxFrames = framesPerCycle * (this.getNumItems() - 1.5);
+    const startFadingAtItem =
+      this.getNumItems() - (this.getShowItemsFadingOut() ? 1.5 : 0);
+    const maxFrames = framesPerCycle * startFadingAtItem;
     const tableOpacity =
       this.state.frame < framesPerCycle
         ? this.state.frame / framesPerCycle

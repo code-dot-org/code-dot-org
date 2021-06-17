@@ -51,6 +51,10 @@ class GenerateResults extends Component {
     return Math.min(maxNumItems, this.props.data.length);
   };
 
+  getShowItemsFadingOut = () => {
+    return this.props.data.length > maxNumItems;
+  };
+
   getAnimationSubstep = () => {
     return this.state.frame % framesPerCycle;
   };
@@ -91,7 +95,9 @@ class GenerateResults extends Component {
     const opacity = getFadeOpacity(animationProgress);
     const hideLabel = this.getAnimationSubstep() < framesPerCycle / 2;
     const showAnimation = this.getAnimationStep() < this.getNumItems();
-    const maxFrames = framesPerCycle * (this.getNumItems() - 1.5);
+    const startFadingAtItem =
+      this.getNumItems() - (this.getShowItemsFadingOut() ? 1.5 : 0);
+    const maxFrames = framesPerCycle * startFadingAtItem;
     const tableOpacity =
       this.state.frame < framesPerCycle
         ? this.state.frame / framesPerCycle
@@ -101,7 +107,6 @@ class GenerateResults extends Component {
         : this.state.frame >= maxFrames + framesPerCycle
         ? 0
         : 1;
-
     const headMoveAmount =
       this.state.frame < framesPerCycle / 4
         ? this.state.frame / (framesPerCycle / 4)
