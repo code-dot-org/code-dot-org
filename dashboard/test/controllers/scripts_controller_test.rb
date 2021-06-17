@@ -676,7 +676,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
 
     assert_response :not_acceptable
-    msg = 'Legacy script levels are not allowed in migrated scripts. Problem lessons: [\"problem lesson\"]'
+    msg = 'Legacy script levels are not allowed in migrated units. Problem lessons: [\"problem lesson\"]'
     assert_includes response.body, msg
     assert script.is_migrated
     assert script.script_levels.any?
@@ -827,7 +827,7 @@ class ScriptsControllerTest < ActionController::TestCase
     stub_file_writes(script.name)
 
     # Test doing this twice because teacher_resources in particular is set via its own code path in update_teacher_resources,
-    # which can cause incorrect behavior if it is removed during the Script.add_script while being added via the
+    # which can cause incorrect behavior if it is removed during the Script.add_unit while being added via the
     # update_teacher_resources during the same call to Script.update_text
     2.times do
       post :update, params: {
