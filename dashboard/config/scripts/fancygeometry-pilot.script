@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson_group 'Fancy Geometry', display_name: 'Fancy Geometry'
 lesson 'Fancy Geometry', display_name: 'Fancy Geometry', has_lesson_plan: false
 

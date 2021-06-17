@@ -706,4 +706,8 @@ class UnitGroup < ApplicationRecord
   def has_migrated_script?
     !!default_scripts[0]&.is_migrated?
   end
+
+  def prevent_course_version_change?
+    default_scripts.any?(&:prevent_course_version_change?)
+  end
 end

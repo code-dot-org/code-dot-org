@@ -5,31 +5,18 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/9d05ff62f3098c6143eff78553e05f06-image-1571780679511.jpg" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
+## Course Lesson Objective
+
+After completing Lesson 10 you will be able to:
+
+* define event,
+* use "event" blocks with Play Lab, 
+* and begin coding a Flappy Bird Game and Virtual Pet using "event" blocks.
+
 ## CS Concepts
 
 An **event** is an action that causes something to happen. For example, web pages may include a drop down menu when you roll over the navigation bar with your mouse.  The "mouse rollover" is an action that causes the menu to drop down.
 
-### Student Video
-
-Watch the video, <a href="https://www.youtube.com/watch?v=u0WV9shCoak" target="blank"> "The Big Event Jr.,"</a>, that first introduces "events" to students in Course A - Lesson 11:  The Big Event Jr. 
-
-## Learning Platform Features
-
-Students use Play Lab to program "events" in animated games they create. 
-
-Watch the video, <a href="https://youtu.be/nVsZyQIZyPc" target="blank">"Introduction to Play Lab (Pre-reader version),"</a> that introduces Play Lab to students.
-
-Also, watch the video, <a href="studio.code.org/s/coursec-2021/lessons/12/levels/1" target="blank">"Flappy Intro,"</a> that first introduces the "event" block to students in Course C - Lesson 12, Level 1:  Build A Flappy Game.
-
-## Concept Progression
-
-Click "Continue" to go through student lesson levels listed below.  These student lesson levels are examples of how students engage with "events" across Courses A through D.  As you move from one student lesson level to the next, begin to notice the concept progression for "events" and how student lessons build on from one course to the next. 
-
-* Course A - Lesson 12, Level 4:  Mini-Project: On the Move with Play Lab
-* Course B - Lesson 12, Level 7:  Mini-Project:  A Royal Battle with Events
-* Course C - Lesson 12, Level 1:  Build a Flappy Game
-	* Course C - Lesson 12, Level 2:  Build a Flappy Game
-* Course D - Lesson 6, Level 3:  Events in Bounce
-
+Click "Continue" to watch the video, "The Big Event," introducing students to "events."
 
 MARKDOWN

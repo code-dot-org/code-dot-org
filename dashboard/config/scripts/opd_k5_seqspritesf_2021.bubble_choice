@@ -1,0 +1,28 @@
+name 'OPD-K5-SeqSpritesF-2021'
+editor_experiment ''
+display_name 'Events Practice'
+description '**Student lesson level shown here:  Course F - Lesson 3, Level 8:  Sprites in Action.**
+
+Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with events!'
+
+sublevels
+level 'courseF_events_ship'
+level 'courseF_events_practice_reorder'
+level 'courseF_events_choice_conflict'
+level 'courseF_events_choice_conflict2'
+level 'courseF_events_choice_pufferfish'
+level 'courseF_events_choice_penguin'
+
+teacher_markdown <<MARKDOWN
+# Choice Level Overview
+Choice levels provide a menu of additional levels for students to complete. Students must complete at least one of the sub-levels here, but may work through as many as they (or you) like.
+
+You can use the descriptions below to help students self-select choices, or to set expectations around how many sub-levels they should complete.
+
+|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Blast Off!|Learning to fly|Do a barrel roll|Shrink and Grow|Puff up the fish!|Penguin on the move|
+|-|-|-|-|-|-|-|
+| ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**
+| ***Concept***|*events, behaviors*|*events, behaviors*|*events, behaviors*|*events, behaviors*|*when/while events*|*when/while events*|
+
+
+MARKDOWN

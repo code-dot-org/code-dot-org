@@ -94,7 +94,6 @@ Javalab.prototype.init = function(config) {
     this.visualization = <NeighborhoodVisualizationColumn />;
   } else if (this.level.csaViewMode === CsaViewMode.THEATER) {
     this.miniApp = new Theater();
-    config.afterInject = () => this.miniApp.afterInject();
     this.visualization = <TheaterVisualizationColumn />;
   }
 

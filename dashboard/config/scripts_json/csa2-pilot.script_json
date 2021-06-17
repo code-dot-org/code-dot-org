@@ -15,7 +15,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 16:34:58 UTC",
+    "serialized_at": "2021-06-16 23:01:28 UTC",
+    "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -2096,7 +2097,8 @@
       "key": "4b71ad62-38d6-4405-9195-f0a72bb44029",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students run the code to identify the error resulting from using `newQty`, then correct the code to use `quantity`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students run the code to identify the error resulting from using `newQty`, then correct the code to use `quantity`.",
+        "progression_name": "Debugging Errors"
       },
       "seeding_key": {
         "activity_section.key": "4b71ad62-38d6-4405-9195-f0a72bb44029",
@@ -2141,7 +2143,8 @@
       "key": "da1d2967-ca73-4f44-8270-6c2332828243",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students run the previous code to check their prediction."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students run the previous code to check their prediction.",
+        "progression_name": "Scope Error"
       },
       "seeding_key": {
         "activity_section.key": "da1d2967-ca73-4f44-8270-6c2332828243",
@@ -2212,7 +2215,8 @@
       "key": "38cd0432-31c5-4c92-b107-e23e835fbb9f",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students run the previous code to check their prediction."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students run the previous code to check their prediction.",
+        "progression_name": "Scope"
       },
       "seeding_key": {
         "activity_section.key": "38cd0432-31c5-4c92-b107-e23e835fbb9f",
@@ -2240,7 +2244,8 @@
       "key": "e9b89bbc-c727-431b-9ac9-93aa9c9b24c8",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students run the previous code to check their prediction."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students run the previous code to check their prediction.",
+        "progression_name": "Scope"
       },
       "seeding_key": {
         "activity_section.key": "e9b89bbc-c727-431b-9ac9-93aa9c9b24c8",
@@ -2262,7 +2267,7 @@
       "key": "616ece61-9681-4c8d-96e8-39daf7675ca3",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students now debug the code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students back to Level 4 on Code Studio. Students now debug the code."
       },
       "seeding_key": {
         "activity_section.key": "616ece61-9681-4c8d-96e8-39daf7675ca3",
@@ -2296,7 +2301,8 @@
       "key": "21383e98-526c-4ba2-bf1f-861c3d92f2a2",
       "position": 23,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students update the constructor then complete a vocabulary matching level."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students update the constructor then complete a vocabulary matching level.",
+        "progression_name": "Constructor"
       },
       "seeding_key": {
         "activity_section.key": "21383e98-526c-4ba2-bf1f-861c3d92f2a2",
@@ -2336,7 +2342,8 @@
       "position": 3,
       "properties": {
         "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket. ",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "7d212dff-8b9b-433c-afd7-78add4021cd1",
@@ -4406,6 +4413,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L1"
+        ],
         "progression": "Constructor Overloading"
       },
       "named_level": false,
@@ -4429,6 +4439,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L3"
+        ],
         "progression": "Multiple Constructors"
       },
       "named_level": false,
@@ -4452,6 +4465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L4"
+        ],
         "progression": "Constructor Overloading with Scanner"
       },
       "named_level": false,
@@ -4475,6 +4491,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -4498,6 +4517,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L2"
+        ],
         "progression": "Evaluating Expressions"
       },
       "named_level": false,
@@ -4521,6 +4543,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L3"
+        ],
         "progression": "Evaluating Expressions"
       },
       "named_level": false,
@@ -4544,6 +4569,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -4567,6 +4595,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -4582,6 +4613,188 @@
       },
       "level_keys": [
         "CSA U2L5-L5"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L6-L1"
+        ],
+        "progression": "Debugging Errors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L6-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "4b71ad62-38d6-4405-9195-f0a72bb44029"
+      },
+      "level_keys": [
+        "CSA U2L6-L1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L6-L2"
+        ],
+        "progression": "Scope Error"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L6-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "da1d2967-ca73-4f44-8270-6c2332828243"
+      },
+      "level_keys": [
+        "CSA U2L6-L2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L6-L3"
+        ],
+        "progression": "Scope"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L6-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "38cd0432-31c5-4c92-b107-e23e835fbb9f"
+      },
+      "level_keys": [
+        "CSA U2L6-L3"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L6-L4"
+        ],
+        "progression": "Scope"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L6-L4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "e9b89bbc-c727-431b-9ac9-93aa9c9b24c8"
+      },
+      "level_keys": [
+        "CSA U2L6-L4"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L6-L5"
+        ],
+        "progression": "Constructor"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L6-L5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "21383e98-526c-4ba2-bf1f-861c3d92f2a2"
+      },
+      "level_keys": [
+        "CSA U2L6-L5"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L6-L6"
+        ],
+        "progression": "Constructor"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L6-L6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "21383e98-526c-4ba2-bf1f-861c3d92f2a2"
+      },
+      "level_keys": [
+        "CSA U2L6-L6"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L6-L7"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L6-L7"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "7d212dff-8b9b-433c-afd7-78add4021cd1"
+      },
+      "level_keys": [
+        "CSA U2L6-L7"
       ]
     }
   ],
@@ -4824,6 +5037,90 @@
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot",
         "activity_section.key": "ad085f55-9443-4332-aca4-66c95fd4c6cd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L6-L1",
+        "script_level.level_keys": [
+          "CSA U2L6-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "4b71ad62-38d6-4405-9195-f0a72bb44029"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L6-L2",
+        "script_level.level_keys": [
+          "CSA U2L6-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "da1d2967-ca73-4f44-8270-6c2332828243"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L6-L3",
+        "script_level.level_keys": [
+          "CSA U2L6-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "38cd0432-31c5-4c92-b107-e23e835fbb9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L6-L4",
+        "script_level.level_keys": [
+          "CSA U2L6-L4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "e9b89bbc-c727-431b-9ac9-93aa9c9b24c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L6-L5",
+        "script_level.level_keys": [
+          "CSA U2L6-L5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "21383e98-526c-4ba2-bf1f-861c3d92f2a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L6-L6",
+        "script_level.level_keys": [
+          "CSA U2L6-L6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "21383e98-526c-4ba2-bf1f-861c3d92f2a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L6-L7",
+        "script_level.level_keys": [
+          "CSA U2L6-L7"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "7d212dff-8b9b-433c-afd7-78add4021cd1"
       }
     }
   ],
