@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Game Lab', display_name: 'Game Lab', has_lesson_plan: false
 level 'allthethings_U3 - Simple Drawing - Rectangle Width and Height'
 

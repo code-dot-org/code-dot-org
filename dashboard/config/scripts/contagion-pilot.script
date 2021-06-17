@@ -1,4 +1,5 @@
 teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"]]
+published_state 'pilot'
 pilot_experiment 'contagion-pilot'
 
 lesson_group 'contagion', display_name: 'Contagion'

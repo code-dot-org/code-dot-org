@@ -4,6 +4,7 @@
     "time4cs-control-unit-1",
     "time4cs-control-unit-2"
   ],
+  "published_state": "beta",
   "properties": {
   },
   "resources": [

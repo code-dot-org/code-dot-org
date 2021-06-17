@@ -8,6 +8,7 @@ announcements [{"notice"=>"CS Discoveries Post-Course Survey for Students Now Op
 family_name 'csd5'
 version_year '2018'
 is_stable true
+published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 
