@@ -1,0 +1,29 @@
+name 'OPD-K5-SeqSprites-2021'
+title 'Sprite Lab'
+description 'description here'
+markdown <<MARKDOWN
+# Introduction to Sequencing with Sprites
+
+## Learning Tools 
+
+Students in Courses E and F engage with Sprite Lab to practice coding sprites with algorithms, loops, and conditionals.
+
+## Concepts reiterated across Courses E and F
+
+<img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 30px 30px;">
+
+**Course E** introduces what a sprite is and how to code the behavior of sprites. 
+
+**Course F** also introduces students to sprites to support those students who may not have engaged with Course E. Course F focuses on how apps and tools give users choices about how to use sprites.
+
+Click "Continue" to go through the following student lesson levels to learn about sequencing with sprites. 
+
+* **Course E** - Lesson 2, Levels 1 and 3: Swimming Fish with Sprite Lab
+* **Course E** - Lesson 2, Levels 6 and 7: Swimming Fish with Sprite Lab
+* **Course F** - Lesson 3, Level 8:  Sprites in Action
+
+
+
+
+
+MARKDOWN

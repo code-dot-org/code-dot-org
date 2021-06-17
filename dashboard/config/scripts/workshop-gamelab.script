@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: false
 level 'Game Lab Workshop: Introduction', named: true
 level 'CSD: Drawing in Game Lab 1', named: true

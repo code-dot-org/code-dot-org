@@ -1,4 +1,5 @@
 hidden false
+published_state 'preview'
 
 lesson 'Artist', display_name: 'Artist', has_lesson_plan: false
 level 'frozen line'

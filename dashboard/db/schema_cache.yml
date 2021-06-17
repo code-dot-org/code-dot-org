@@ -9374,8 +9374,8 @@ columns:
     name: published_state
     table_name: scripts
     sql_type_metadata: *5
-    'null': true
-    default: 
+    'null': false
+    default: beta
     default_function: 
     collation: utf8_unicode_ci
     comment: 
@@ -10838,8 +10838,8 @@ columns:
     name: published_state
     table_name: unit_groups
     sql_type_metadata: *5
-    'null': true
-    default: 
+    'null': false
+    default: beta
     default_function: 
     collation: utf8_unicode_ci
     comment: 

@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Cats and Dogs', display_name: 'Cats and Dogs', has_lesson_plan: false
 level 'KIKI GLJ Test 1'
 level 'KIKI GLJ Test 2'
