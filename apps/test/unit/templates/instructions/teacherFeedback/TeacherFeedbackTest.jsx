@@ -7,8 +7,8 @@ import experiments from '@cdo/apps/util/experiments';
 import sinon from 'sinon';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
-import ReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReviewState';
-import Status from '@cdo/apps/templates/instructions/teacherFeedback/Status';
+import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
+import FeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/FeedbackStatus';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 
 const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
@@ -125,7 +125,7 @@ describe('TeacherFeedback', () => {
         };
 
         const wrapper = shallow(<TeacherFeedback {...props} />);
-        expect(wrapper.find(Status)).to.have.length(0);
+        expect(wrapper.find(FeedbackStatus)).to.have.length(0);
       });
 
       it('displays a rubric with expected props if there is a rubric', () => {
@@ -158,7 +158,6 @@ describe('TeacherFeedback', () => {
 
         const confirmCommentArea = wrapper.find(Comment).first();
         expect(confirmCommentArea.props().isReadonly).to.equal(false);
-        expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
         expect(confirmCommentArea.props().comment).to.equal('');
       });
 
@@ -213,7 +212,7 @@ describe('TeacherFeedback', () => {
 
         const wrapper = shallow(<TeacherFeedback {...props} />);
 
-        const statusComponent = wrapper.find(Status);
+        const statusComponent = wrapper.find(FeedbackStatus);
         expect(statusComponent).to.have.length(1);
         expect(statusComponent.props().viewAs).to.equal('Teacher');
         expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
@@ -244,7 +243,6 @@ describe('TeacherFeedback', () => {
 
         const confirmCommentArea = wrapper.find(Comment).first();
         expect(confirmCommentArea.props().isReadonly).to.equal(false);
-        expect(confirmCommentArea.props().studentHasFeedback).to.equal(false);
         expect(confirmCommentArea.props().comment).to.equal('Good work!');
       });
 
@@ -325,7 +323,7 @@ describe('TeacherFeedback', () => {
         };
 
         const wrapper = shallow(<TeacherFeedback {...props} />);
-        expect(wrapper.find(Status)).to.have.length(0);
+        expect(wrapper.find(FeedbackStatus)).to.have.length(0);
       });
 
       it('displays rubric with expected props if there is a rubric', () => {
@@ -364,7 +362,7 @@ describe('TeacherFeedback', () => {
           <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
         );
 
-        expect(wrapper.find(ReviewState)).to.have.lengthOf(0);
+        expect(wrapper.find(ReadOnlyReviewState)).to.have.lengthOf(0);
       });
     });
 
@@ -392,7 +390,7 @@ describe('TeacherFeedback', () => {
 
         const wrapper = shallow(<TeacherFeedback {...props} />);
 
-        const statusComponent = wrapper.find(Status);
+        const statusComponent = wrapper.find(FeedbackStatus);
         expect(statusComponent).to.have.length(1);
         expect(statusComponent.props().viewAs).to.equal('Student');
         expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
@@ -446,7 +444,6 @@ describe('TeacherFeedback', () => {
 
         const confirmCommentArea = wrapper.find(Comment).first();
         expect(confirmCommentArea.props().isReadonly).to.equal(true);
-        expect(confirmCommentArea.props().studentHasFeedback).to.equal(true);
         expect(confirmCommentArea.props().comment).to.equal('Good work!');
       });
 
@@ -484,7 +481,7 @@ describe('TeacherFeedback', () => {
           />
         );
 
-        const reviewState = wrapper.find(ReviewState);
+        const reviewState = wrapper.find(ReadOnlyReviewState);
         expect(reviewState).to.have.lengthOf(1);
         expect(reviewState.props().latestReviewState).to.equal('keepWorking');
       });

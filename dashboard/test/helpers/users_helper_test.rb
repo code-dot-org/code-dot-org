@@ -6,7 +6,7 @@ class UsersHelperTest < ActionView::TestCase
   include SharedConstants
 
   def test_summarize_user_progress
-    script = Script.twenty_hour_script
+    script = Script.twenty_hour_unit
     user = create :user, total_lines: 42
 
     # Verify results for no completed levels.

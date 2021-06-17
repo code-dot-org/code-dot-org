@@ -35,9 +35,9 @@ class ScriptTest < ActiveSupport::TestCase
   def populate_cache_and_disconnect_db
     Script.stubs(:should_cache?).returns true
     # Only need to populate cache once per test-suite run
-    @@script_cached ||= Script.script_cache_to_cache
+    @@script_cached ||= Script.unit_cache_to_cache
     Script.script_cache
-    Script.script_family_cache
+    Script.unit_family_cache
 
     # Also populate course_cache, as it's used by course_link
     UnitGroup.stubs(:should_cache?).returns true
@@ -247,7 +247,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can setup new migrated script' do
-    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     # the contents of test-migrated-new.script and test-migrated-new.script_json
     # reflect that of a new script which has been modified only by adding
@@ -260,7 +260,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can setup migrated script with new models' do
-    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     # test that LessonActivity, ActivitySection and Objective can be seeded
     # from .script_json when is_migrated is specified in the .script file.
@@ -289,7 +289,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'script_json settings override take precedence for migrated script' do
-    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-overrides.script')
     Script.setup([script_file])
@@ -469,10 +469,10 @@ class ScriptTest < ActiveSupport::TestCase
     error = assert_raises do
       Script.get_from_cache('coursea')
     end
-    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_script_family_redirect_for_user instead.  Family: coursea', error.message
+    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: coursea', error.message
   end
 
-  test 'get_family_from_cache uses script_family_cache' do
+  test 'get_family_from_cache uses unit_family_cache' do
     family_scripts = Script.where(family_name: 'family-cache-test')
     assert_equal [@script_2017.name, @script_2018.name], family_scripts.map(&:name)
 
@@ -560,7 +560,7 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable script assigned or with progress if student' do
+  test 'get_unit_family_redirect_for_user returns latest stable script assigned or with progress if student' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
 
@@ -569,54 +569,54 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
     section.students << student
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: student)
     assert_equal csp1_2017.name, redirect_script.redirect_to
 
     # Student makes progress in csp1_2018.
     create :user_level, user: student, script: csp1_2018
     student.reload
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: student)
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable script in family if teacher' do
+  test 'get_unit_family_redirect_for_user returns latest stable script in family if teacher' do
     teacher = create :teacher
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
     create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
     create :section, user: teacher, script: csp1_2017
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', user: teacher)
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: teacher)
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns nil if no scripts in family are stable' do
+  test 'get_unit_family_redirect_for_user returns nil if no scripts in family are stable' do
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: false)
-    assert_nil Script.get_script_family_redirect_for_user('csp')
+    assert_nil Script.get_unit_family_redirect_for_user('csp')
   end
 
-  test 'get_script_family_redirect_for_user returns latest version supported in locale if available' do
+  test 'get_unit_family_redirect_for_user returns latest version supported in locale if available' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', locale: 'es-MX')
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', locale: 'es-MX')
     assert_equal csp1_2017.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable version if no user or locale' do
+  test 'get_unit_family_redirect_for_user returns latest stable version if no user or locale' do
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp')
+    redirect_script = Script.get_unit_family_redirect_for_user('csp')
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable version if no versions supported in locale' do
+  test 'get_unit_family_redirect_for_user returns latest stable version if no versions supported in locale' do
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', locale: 'it-IT')
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', locale: 'it-IT')
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
@@ -811,22 +811,22 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'script with pilot experiment has pilot published state' do
     script = create(:script, name: 'single-lesson-script', pilot_experiment: 'my-experiment')
-    assert_equal SharedConstants::PUBLISHED_STATE.pilot, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.pilot, script.get_published_state
   end
 
   test 'script with hidden true has beta published state' do
     script = create(:script, name: 'single-lesson-script', hidden: true)
-    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.get_published_state
   end
 
   test 'script with hidden false has preview published state' do
     script = create(:script, name: 'single-lesson-script', hidden: false)
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.get_published_state
   end
 
   test 'script with hidden false and is_stable true has stable published state' do
     script = create(:script, name: 'single-lesson-script', hidden: false, is_stable: true)
-    assert_equal SharedConstants::PUBLISHED_STATE.stable, script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, script.get_published_state
   end
 
   test 'should summarize script' do
@@ -1788,7 +1788,7 @@ class ScriptTest < ActiveSupport::TestCase
     script = Script.find_by!(name: script_names.first)
     assert_equal 1, script.announcements.count
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-copy', script_copy.name
     assert_nil script_copy.family_name
@@ -1845,7 +1845,7 @@ class ScriptTest < ActiveSupport::TestCase
     # some properties that should not change
     assert script.curriculum_path
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-all-properties-copy', script_copy.name
 
@@ -1864,7 +1864,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_names, _ = Script.setup([script_file])
     script = Script.find_by!(name: script_names.first)
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('1802')
 
     # make sure the old suffix is removed before the new one is added.
@@ -1880,7 +1880,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_names, _ = Script.setup([script_file])
     script = Script.find_by!(name: script_names.first)
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-experiments-copy', script_copy.name
 
@@ -1895,6 +1895,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal expected_level_names, actual_level_names
 
     new_dsl = <<~SCRIPT
+      published_state 'beta'
+
       lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: false
       level 'Level 1_copy'
       level 'Level 4_copy'
@@ -1911,7 +1913,7 @@ class ScriptTest < ActiveSupport::TestCase
     script = Script.find_by!(name: script_names.first)
     assert_equal 1, script.announcements.count
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy', editor_experiment: 'script-editors')
     assert_equal 'test-fixture-copy', script_copy.name
     assert_equal 'script-editors', script_copy.editor_experiment
@@ -3108,8 +3110,8 @@ class ScriptTest < ActiveSupport::TestCase
       lesson_activity = create :lesson_activity, lesson: lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
 
-      level1 = create :level, name: 'level1-2021'
-      level2 = create :level, name: 'level2-2021'
+      level1 = create :level, name: 'level1-2021', level_num: 'custom'
+      level2 = create :level, name: 'level2-2021', level_num: 'custom'
       create :script_level, levels: [level1], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 

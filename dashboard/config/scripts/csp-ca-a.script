@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Commutative Assessment A', display_name: 'Commutative Assessment A', has_lesson_plan: false
 level 'CSP Cumulative Assess A', assessment: true
 

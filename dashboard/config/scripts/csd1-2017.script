@@ -9,6 +9,7 @@ new_name 'csd1-2017'
 family_name 'csd1'
 version_year '2017'
 is_stable true
+published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 

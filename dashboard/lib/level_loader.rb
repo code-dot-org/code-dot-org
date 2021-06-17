@@ -60,6 +60,11 @@ class LevelLoader
         changed_levels.reject!(&:encrypted?)
       end
 
+      dsl_levels = changed_levels.select {|l| l.is_a? DSLDefined}
+      if dsl_levels.any?
+        raise "cannot define DSLDefined level types in .level files: #{dsl_levels.map {|l| "#{l.name}.level".dump}.join(',')}"
+      end
+
       # activerecord-import (with MySQL, anyway) doesn't save associated
       # models, so we've got to do this manually.
       changed_lcds = changed_levels.map(&:level_concept_difficulty).compact

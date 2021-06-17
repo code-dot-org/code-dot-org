@@ -1,4 +1,5 @@
 login_required true
+published_state 'beta'
 
 lesson 'Pluralsight LevelGroup', display_name: 'Pluralsight LevelGroup', lockable: true, has_lesson_plan: false
 level 'Pluralsight for CSP', assessment: true
