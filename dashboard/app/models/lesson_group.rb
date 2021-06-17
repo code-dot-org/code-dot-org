@@ -85,10 +85,8 @@ class LessonGroup < ApplicationRecord
         lesson_group.save! if lesson_group.changed?
       end
 
-      unless raw_lesson_group[:lessons].empty?
-        new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
-        lesson_group.lessons = new_lessons
-      end
+      new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
+      lesson_group.lessons = new_lessons
       lesson_group.save!
 
       lesson_group
