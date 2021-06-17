@@ -66,6 +66,7 @@ function checkOffset() {
     $('#pagefooter').offset().top - 20
   ) {
     $('#map').css('position', 'absolute');
+    // eslint-disable-next-line brace-style
   }
   // restore fixed position when the user scrolls up
   else {
