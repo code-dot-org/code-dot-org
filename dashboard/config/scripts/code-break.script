@@ -2,6 +2,7 @@ hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
+published_state 'preview'
 
 lesson 'Episode 1 - Algorithms with Hill Harper', display_name: 'Episode 1 - Algorithms with Hill Harper', has_lesson_plan: false
 level 'CodeBreak Episode Placeholder', progression: 'Code Break: Episode 1'

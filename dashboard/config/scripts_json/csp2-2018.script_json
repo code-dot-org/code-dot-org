@@ -58,7 +58,8 @@
     },
     "new_name": null,
     "family_name": "csp2",
-    "serialized_at": "2021-05-03 23:55:22 UTC",
+    "serialized_at": "2021-06-16 22:59:44 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp2-2018"
     }

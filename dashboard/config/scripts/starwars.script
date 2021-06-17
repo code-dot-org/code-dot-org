@@ -1,4 +1,5 @@
 hidden false
+published_state 'preview'
 
 lesson 'Hour of Code 2015', display_name: 'Hour of Code 2015', has_lesson_plan: false
 skin 'hoc2015x'

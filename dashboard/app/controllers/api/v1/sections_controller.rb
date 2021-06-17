@@ -37,7 +37,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
 
-    valid_script = params[:script] && Script.valid_script_id?(current_user, params[:script][:id])
+    valid_script = params[:script] && Script.valid_unit_id?(current_user, params[:script][:id])
     script_to_assign = valid_script && Script.get_from_cache(params[:script][:id])
 
     section = Section.create(
@@ -134,13 +134,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # add_student returns 'full' when @section has or will have 500 followers
     if result == 'full'
       render json: {
-        result: 'section_full'
-      }, status: :forbidden
-      return
-    end
-    # add_student returns 'full' when @section has or will have 500 followers
-    if result == 'full'
-      render json: {
         result: 'section_full',
         sectionCapacity: @section.capacity
       }, status: :forbidden
@@ -218,7 +211,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Update script_id if user provided valid script_id
   # Set script_id to nil if invalid or no script_id provided
   def set_script_id(script_id)
-    return script_id if Script.valid_script_id?(current_user, script_id)
+    return script_id if Script.valid_unit_id?(current_user, script_id)
     nil
   end
 

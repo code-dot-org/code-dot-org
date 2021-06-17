@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_14_195057) do
+ActiveRecord::Schema.define(version: 2021_06_17_011456) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -674,6 +674,7 @@ ActiveRecord::Schema.define(version: 2021_05_14_195057) do
     t.text "notes"
     t.text "audit_log"
     t.index ["game_id"], name: "index_levels_on_game_id"
+    t.index ["level_num"], name: "index_levels_on_level_num"
     t.index ["name"], name: "index_levels_on_name"
   end
 
@@ -1506,9 +1507,11 @@ ActiveRecord::Schema.define(version: 2021_05_14_195057) do
     t.text "properties"
     t.string "new_name"
     t.string "family_name"
+    t.string "published_state", default: "beta", null: false
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
+    t.index ["published_state"], name: "index_scripts_on_published_state"
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
   end
 
@@ -1750,7 +1753,9 @@ ActiveRecord::Schema.define(version: 2021_05_14_195057) do
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "published_state", default: "beta", null: false
     t.index ["name"], name: "index_unit_groups_on_name"
+    t.index ["published_state"], name: "index_unit_groups_on_published_state"
   end
 
   create_table "unit_groups_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

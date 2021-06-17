@@ -1,4 +1,5 @@
 hidden false
+published_state 'preview'
 tts true
 
 lesson 'Sports', display_name: 'Sports', has_lesson_plan: false

@@ -31,6 +31,7 @@ FactoryGirl.define do
 
   factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
+    published_state "beta"
   end
 
   factory :experiment do
@@ -698,6 +699,7 @@ FactoryGirl.define do
 
   factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
+    published_state "beta"
 
     factory :csf_script do
       after(:create) do |csf_script|

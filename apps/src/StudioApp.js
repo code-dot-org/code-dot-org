@@ -676,6 +676,7 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
     ReactDOM.render(
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
+        isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
         useFilesApi: !!config.useFilesApi
       }),
       contentDiv
@@ -1039,17 +1040,13 @@ StudioApp.prototype.toggleRunReset = function(button) {
   }
 
   var run = document.getElementById('runButton');
-  if (run) {
+  var reset = document.getElementById('resetButton');
+  if (run || reset) {
     run.style.display = showRun ? 'inline-block' : 'none';
     run.disabled = !showRun;
-  }
-
-  var reset = document.getElementById('resetButton');
-  if (reset) {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
   }
-
   if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
     // craft has a darker color scheme than other blockly labs. It needs to
     // toggle between different colors on run/reset or else, on run, the workspace

@@ -13,7 +13,7 @@ import {
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
 import {
-  getCurrentScriptData,
+  getCurrentUnitData,
   jumpToLessonDetails
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -383,19 +383,19 @@ export const UnconnectedProgressTableView = ProgressTableView;
 export default connect(
   state => ({
     section: state.sectionData.section,
-    scriptData: getCurrentScriptData(state),
+    scriptData: getCurrentUnitData(state),
     lessonProgressByStudent:
-      state.sectionProgress.studentLessonProgressByScript[
-        state.scriptSelection.scriptId
+      state.sectionProgress.studentLessonProgressByUnit[
+        state.unitSelection.scriptId
       ],
     levelProgressByStudent:
-      state.sectionProgress.studentLevelProgressByScript[
-        state.scriptSelection.scriptId
+      state.sectionProgress.studentLevelProgressByUnit[
+        state.unitSelection.scriptId
       ],
     lessonOfInterest: state.sectionProgress.lessonOfInterest,
     studentTimestamps:
-      state.sectionProgress.studentLastUpdateByScript[
-        state.scriptSelection.scriptId
+      state.sectionProgress.studentLastUpdateByUnit[
+        state.unitSelection.scriptId
       ],
     localeCode: state.locales.localeCode,
     showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails

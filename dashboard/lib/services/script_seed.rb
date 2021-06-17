@@ -658,6 +658,7 @@ module Services
         :new_name,
         :family_name,
         :serialized_at,
+        :published_state,
         :seeding_key
       )
 

@@ -1,4 +1,5 @@
 hidden false
+published_state 'preview'
 
 lesson 'Black & White Pixelation Tutorial', display_name: 'Black & White Pixelation Tutorial', has_lesson_plan: false
 level 'Pixelation 4x4 Empty'

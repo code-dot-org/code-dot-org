@@ -40,7 +40,8 @@
     },
     "new_name": "csp2-2017",
     "family_name": "csp2",
-    "serialized_at": "2021-05-03 23:54:48 UTC",
+    "serialized_at": "2021-06-16 22:58:14 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp2-2017"
     }

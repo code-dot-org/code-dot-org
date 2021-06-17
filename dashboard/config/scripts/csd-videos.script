@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Problem Solving and Computers', display_name: 'Problem Solving and Computers', has_lesson_plan: false
 level 'CSD What Makes a Computer a Computer Video_2019', named: true
 
