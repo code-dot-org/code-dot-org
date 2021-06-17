@@ -10,7 +10,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-08 19:01:02 UTC",
+    "serialized_at": "2021-06-16 22:57:57 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "allthethings"
     }
@@ -4395,6 +4396,30 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "Allthethings Java Lab 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab 4"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "Allthethings Java Lab 4"
+      ]
+    },
+    {
+      "chapter": 151,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "csa widget test2"
         ]
       },
@@ -5571,7 +5596,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 1",
+        "level.key": "2-3 Maze 4",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -5583,7 +5608,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 4",
+        "level.key": "2-3 Maze 1",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -5691,7 +5716,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 3",
+        "level.key": "2-3 Artist Loops 4",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
@@ -5703,7 +5728,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 4",
+        "level.key": "2-3 Artist 3",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
@@ -6177,6 +6202,17 @@
         "level.key": "Allthethings Java Lab 3",
         "script_level.level_keys": [
           "Allthethings Java Lab 3"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab 4",
+        "script_level.level_keys": [
+          "Allthethings Java Lab 4"
         ],
         "lesson.key": "Java Lab",
         "lesson_group.key": "",

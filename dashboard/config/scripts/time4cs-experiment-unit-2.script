@@ -1,5 +1,6 @@
 login_required true
 hideable_lessons true
+published_state 'pilot'
 pilot_experiment 'time4cs-experiment'
 editor_experiment 'broward'
 

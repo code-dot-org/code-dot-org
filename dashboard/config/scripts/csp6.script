@@ -1,6 +1,7 @@
 login_required true
 hideable_lessons true
 student_detail_progress_view true
+published_state 'beta'
 curriculum_umbrella 'CSP'
 
 lesson 'Tech Setup - Your AP Digital Portfolio and Other Tools', display_name: 'Tech Setup - Your AP Digital Portfolio and Other Tools', has_lesson_plan: true

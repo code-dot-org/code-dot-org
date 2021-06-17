@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson_group 'lesson group', display_name: 'display name'
 lesson 'new lesson', display_name: 'new lesson', has_lesson_plan: false
 level 'CSD U3L12 TFMD_virtual_2020'

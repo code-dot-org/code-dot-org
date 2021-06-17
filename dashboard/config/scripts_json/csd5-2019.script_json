@@ -37,7 +37,8 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2021-05-03 23:55:32 UTC",
+    "serialized_at": "2021-06-16 23:00:09 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csd5-2019"
     }
