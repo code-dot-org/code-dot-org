@@ -6,7 +6,16 @@ export default class Theater {
 
   handleSignal(data) {
     var imageString = 'data:image/gif;base64,' + data.detail.image;
-    var imgElement = document.getElementById('theater');
+    var imgElement = this.getImgElement();
     imgElement.src = imageString;
+  }
+
+  reset() {
+    var imgElement = this.getImgElement();
+    imgElement.src = '';
+  }
+
+  getImgElement() {
+    return document.getElementById('theater');
   }
 }
