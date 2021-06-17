@@ -5,6 +5,13 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/054d81744bd44195c5a0320141470ac2-image-1622741859913.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
+## Course Lesson Objectives
+
+After completing Lesson 11 you will be able to:
+
+* define conditionals,
+* use "if" and "if/else" blocks with Maze Puzzles, 
+* and use loops and conditionals with Minecraft.
 
 ## CS Concept
 
@@ -12,28 +19,9 @@ markdown <<MARKDOWN
 
 #### Lesson in Action
 
-Watch the video, <a href="https://www.youtube.com/watch?v=2m2Rn9VxHfU" target="blank">Conditional with Cards</a> demonstrating how conditionals are first introduced to students with the **context-setting** lesson in Course D - Lesson 12: Conditional with Cards.
+* Watch this video, <a href="https://www.youtube.com/watch?v=2m2Rn9VxHfU" target="blank">Conditional with Cards</a> demonstration of a teacher introducing conditionals to students with the **context-setting** lesson in Course D - Lesson 12: Conditional with Cards.
 
-## Learning Platform Features
-
-Watch the video, <a href="https://studio.code.org/s/coursed-2021/lessons/14/levels/1" target="blank">"The If-Block,"</a> that introduces the conditional block to students.
-
-Students engage with Maze Puzzles as they learn about conditionals.
-
-## Concept Progression
-
-Click "Continue" to go through student lesson levels listed below.  These student lesson levels are examples of how students engage with "events" across Courses A through D.  As you move from one student lesson level to the next, begin to notice the concept progression for "events" and how student lessons build on from one course to the next. 
-
-* Course D - Lesson 14, Levels 3 and 9:  If/Else with Bee
-	* Building skills with "if" blocks.
-    * Building skills iwth "if/else" blocks.
-
-* Course E - Lesson 14, Levels 9 and 10:  Conditionals in Minecraft:  Voyage Aquatic
-	* Student Video:  Minecraft:  Voyage Aquatic Conditionals
-    * Building skills with loops and conditionals.
-
-* Course F - Lesson: 17: Outbreak
-	* Applying conditionals in a computer simulation.
+**Note:** The video opens in a new window.  Be sure to return to this online course to continue with lessons.
 
 
 MARKDOWN

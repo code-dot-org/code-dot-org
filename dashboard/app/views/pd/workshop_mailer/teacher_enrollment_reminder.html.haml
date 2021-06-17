@@ -20,7 +20,7 @@
     I wanted to remind you about your upcoming Code.org
     = @workshop.course_name
     = @workshop.subject
-    workshop.
+    workshop. This is a great step towards bringing computer science to your classroom!
 - else
   %p
     This is a reminder about your upcoming Code.org
@@ -56,13 +56,7 @@
     = mail_to @organizer.email, "#{@organizer.email}."
 
 - if @workshop.subject == Pd::Workshop::SUBJECT_CSF_201
-  %p
-    Please remember that this workshop is for educators who are already using the CS Fundamentals curriculum in their classroom.
-    If you have not used CS Fundamentals with students yet, or don’t plan to do so before this workshop, please
-    = link_to 'click here to cancel your registration', @cancel_url, target: "_blank", rel: "noopener noreferrer"
-    to this workshop and sign up for a
-    = link_to 'CS Fundamentals Intro workshop', 'https://code.org/professional-development-workshops'
-    near you to help you get started.
+  = render partial: 'csf_deepdive_reminder'
 
   %h3
     Pre-workshop survey

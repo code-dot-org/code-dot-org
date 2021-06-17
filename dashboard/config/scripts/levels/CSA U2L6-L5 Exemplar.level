@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Project Mercury Pastries gives a discount of 10% if the total cost is greater than $25.00.\r\n\r\nFor example, if the price is set to $1.00 and the quantity is 30, the price should be set to $0.90 to reflect the discount.\r\n\r\nImport `Dessert.java` from your **Backpack**.\r\n\r\nUpdate the three parameter constructor for the `Dessert` class.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert donut = new Dessert(\"donut\", 30, 1.0);\n    donut.printInfo();\n  }\n}",
+        "isVisible": true
+      },
+      "Dessert.java": {
+        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String newFlavor, int newQty, double newPrice) {\n    boolean discount = (newQty * newPrice >= 25);\n\n    flavor = newFlavor;\n    quantity = newQty;\n    price = newPrice;\n\n    if (discount) {\n      price = price * 0.9;\n    }\n  }\n  \n  public Dessert() {\n    flavor = \"mint chocolate\";\n    quantity = 5;\n    price = 2.75;\n  }\n\n  public Dessert(int quantity) {\n    boolean isValid = (quantity >= 0);\n\n    if (!isValid) {\n      this.quantity = 1;\n    }\n    else {\n      this.quantity = quantity;\n    }\n\n    flavor = \"coconut\";\n    price = 1.50;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "parent_level_id": 28462
+  },
+  "game_id": 68,
+  "created_at": "2021-06-16T19:03:37.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-06-16 19:03:02 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:03:42 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:04:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

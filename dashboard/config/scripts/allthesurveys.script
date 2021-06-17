@@ -1,4 +1,5 @@
 login_required true
+published_state 'beta'
 
 lesson 'CSP post course survey 2019 staging', display_name: 'CSP post course survey 2019 staging', has_lesson_plan: false
 level 'csp-post-survey-levelgroup-2019', assessment: true

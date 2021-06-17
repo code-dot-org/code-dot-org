@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {
   setScriptId,
   validScriptPropType
-} from '@cdo/apps/redux/scriptSelectionRedux';
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   asyncLoadAssessments,
   getCurrentScriptAssessmentList,
@@ -19,7 +19,7 @@ import {connect} from 'react-redux';
 import {h3Style} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
 import i18n from '@cdo/locale';
-import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
+import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import MultipleChoiceAssessmentsOverviewContainer from './MultipleChoiceAssessmentsOverviewContainer';
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
 import SubmissionStatusAssessmentsContainer from './SubmissionStatusAssessmentsContainer';
@@ -201,11 +201,11 @@ class SectionAssessments extends Component {
     return (
       <div>
         <div style={styles.selectors}>
-          <div style={styles.scriptSelection}>
+          <div style={styles.unitSelection}>
             <div style={{...h3Style, ...styles.header}}>
               {i18n.selectACourse()}
             </div>
-            <ScriptSelector
+            <UnitSelector
               validScripts={validScripts}
               scriptId={scriptId}
               onChange={this.onSelectScript}
@@ -345,7 +345,7 @@ const styles = {
   selectors: {
     clear: 'both'
   },
-  scriptSelection: {
+  unitSelection: {
     float: 'left',
     marginRight: 20
   },
@@ -370,9 +370,9 @@ export default connect(
   state => ({
     sectionId: state.sectionData.section.id,
     isLoading: !!state.sectionAssessments.isLoading,
-    validScripts: state.scriptSelection.validScripts,
+    validScripts: state.unitSelection.validScripts,
     assessmentList: getCurrentScriptAssessmentList(state),
-    scriptId: state.scriptSelection.scriptId,
+    scriptId: state.unitSelection.scriptId,
     assessmentId: state.sectionAssessments.assessmentId,
     isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),

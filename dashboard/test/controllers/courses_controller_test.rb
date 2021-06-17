@@ -10,21 +10,21 @@ class CoursesControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment'
+    @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
     Script.stubs(:should_cache?).returns true
     Script.clear_cache
 
-    @unit_group_regular = create :unit_group, name: 'non-plc-course'
+    @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
 
-    @migrated_script = create :script, is_migrated: true
-    @unit_group_migrated = create :unit_group
+    @migrated_script = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
+    @unit_group_migrated = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_script, position: 1
 
-    @unmigrated_script = create :script
-    @unit_group_unmigrated = create :unit_group
+    @unmigrated_script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    @unit_group_unmigrated = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_unmigrated, script: @unmigrated_script, position: 1
 
     # stub writes so that we dont actually make updates to filesystem
@@ -319,15 +319,19 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {
       course_name: 'course',
       scripts: ['unit1', 'unit2'],
-      pilot_experiment: 'my-pilot'
+      pilot_experiment: 'my-pilot',
+      published_state: 'pilot'
     }
     course.reload
     unit1.reload
     unit2.reload
 
     assert_equal course.pilot_experiment, 'my-pilot'
+    assert_equal course.published_state, 'pilot'
     assert_equal unit1.pilot_experiment, 'my-pilot'
+    assert_equal unit1.published_state, 'pilot'
     assert_equal unit2.pilot_experiment, 'my-pilot'
+    assert_equal unit2.published_state, 'pilot'
   end
 
   test "update: persists changes localizeable strings" do
@@ -442,9 +446,9 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists teacher resources for migrated unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course_version = create :course_version, :with_unit_group
-    unit_group = course_version.content_root
-    unit_group.update!(name: 'csp-2017')
+    unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017'
+    CourseOffering.add_course_offering(unit_group)
+    course_version = unit_group.course_version
     script = create :script, hidden: true, is_migrated: true
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     resource1 = create :resource, course_version: course_version
@@ -458,9 +462,9 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists student resources for migrated unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course_version = create :course_version, :with_unit_group
-    unit_group = course_version.content_root
-    unit_group.update!(name: 'csp-2017')
+    unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017'
+    CourseOffering.add_course_offering(unit_group)
+    course_version = unit_group.course_version
     script = create :script, hidden: true, is_migrated: true
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     resource1 = create :resource, course_version: course_version
@@ -469,6 +473,20 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: [resource1.id, resource2.id]}
     unit_group.reload
     assert_equal 2, unit_group.student_resources.length
+  end
+
+  test "update: create course version for unit groups" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    unit_group = create :unit_group
+    unit_group.update!(name: 'csp-2017')
+    script = create :script, hidden: true, is_migrated: true
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+
+    assert_nil unit_group.course_version
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', family_name: 'coursefamily', version_year: 2021}
+    unit_group.reload
+    refute_nil unit_group.course_version
   end
 
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}

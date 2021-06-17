@@ -22,9 +22,9 @@ Debugging is a skill each individual student will need to practice, strengthen o
 
 Debugging is also a process that students can engage in, as a learning community, to practice problem solving, collaborating, and communicating.  As a class, students can reflect on thinking about how to debug.
 
-### Learning Platform Features
+### Learning Tools and Website Features
 
-##### Watch this video, <a href="https://www.youtube.com/watch?v=RUZTRNakV9c" target="blank" rel="noopener noreferrer"> Debugging with the Step Button</a>, that introduces students to features built into the student learning platform to help students debug programs.
+##### Watch this video, <a href="https://www.youtube.com/watch?v=RUZTRNakV9c" target="blank" rel="noopener noreferrer"> Debugging with the Step Button</a>, that introduces students to features built into the website to help students debug programs.
 
 ## Pair Programming
 
@@ -32,7 +32,7 @@ Pair programming is a technique in which two programmers work together at one co
 
 ##### Watch this video, <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q" target="blank"> Pair Programming</a>, that introduces pair programming to students.
 
-### Learning Platform Features - Teacher Side
+### Pair Programming - Teacher Side
 
 Follow the instructions below to turn on pair programming for your students using the teacher dashboard.  Refer to <a hrer="https://levelbuilder-studio.code.org/s/k5-onlinepd-2021/lessons/2/levels/2" target="blank" >Lesson 2: Getting Started</a> of this online course for help with using the teacher dashboard.
 
@@ -48,7 +48,7 @@ Follow the instructions below to turn on pair programming for your students usin
 **4. Scroll down to "Allow students to Pair Program?" and select "Yes."**
 ![](https://images.code.org/12cb643412a7a22cf518f3efe96c0ae0-image-1623286645973.png)
 
-### Learning Platform Features - Student Side
+### Pair Programming - Student Side
 
 Students will need to follow the instructions below to pair up with another student.
 

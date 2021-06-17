@@ -1,0 +1,220 @@
+{
+  "published": true,
+  "title": "CS Fundamentals Deep Dive Pre Survey",
+  "pages": [
+    {
+      "name": "overview",
+      "elements": [
+        {
+          "type": "html",
+          "name": "question1",
+          "html": "<p>Thank you for completing the pre-survey for the CS Fundamentals Deep Dive workshop. </p>\n\n<p>The purpose of this survey is to:</p>\n\n<ul>\n<li>Help us understand how best to support your development</li>\n<li>Help us understand where and how to improve our program</li>\n</ul>\n\n<p>Your individual responses here are completely confidential and will never be tied back to you in any way. Your honesty and candor is appreciated. This survey should take about 5 minutes to complete.</p>\n\n<p>As a reminder, <strong>the Deep Dive workshop is intended for teachers with at least some experience implementing CS Fundamentals curriculum</strong>. If you have not taught at least two lessons from this curriculum and will not be able to do so prior to this workshop, we recommend you cancel your registration and enroll in a CS Fundamentals Intro workshop.</p>"
+        }
+      ]
+    },
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "barriers_scale",
+          "html": "<p>Below, we ask you to use the following scale to identify the barriers that have impacted your ability to teach CS Fundamentals in the way you would like to teach the curriculum.</p>\n\n\n<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;” cellpadding=\"1px”><caption></caption>\n<tbody>\n<tr>\n<td style=\"width: 23%; padding-top: 3px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #FFFFFF;\">----</span>2</span></strong></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #FFFFFF;\">----</span>4<span style=\"color: #FFFFFF;\">----</span>5</span></strong></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #FFFFFF;\">----</span>7</span></strong></td>\n</tr>\n<tr>\n<td style=\"width: 23%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Not a barrier</strong></span></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Somewhat of a barrier</strong></span></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>A significant barrier</strong></span></td>\n</tr>\n</tbody>\n</table>"
+        },
+        {
+          "type": "matrix",
+          "name": "how_much_barrier_to_teaching_cs",
+          "title": "To what degree are each of the following a barrier preventing you from teaching CS Fundamentals in the way you would like to teach the curriculum?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            }
+          ],
+          "rows": [
+            {
+              "value": "time_plan_prepare",
+              "text": "Time to plan and prepare to teach the curriculum."
+            },
+            {
+              "value": "space_lessons_school_day",
+              "text": "Space to fit the lessons in during the school day."
+            },
+            {
+              "value": "managing_different_courses",
+              "text": "Managing different courses and resources across multiple grades."
+            },
+            {
+              "value": "admin_support",
+              "text": "Support from school or district administration."
+            },
+            {
+              "value": "other_teacher_support",
+              "text": "Support from other teachers in the school."
+            },
+            {
+              "value": "cs_knowledge",
+              "text": "Knowledge and understanding of computer science."
+            },
+            {
+              "value": "understanding_codeorg_tools",
+              "text": "Understanding the Code.org teaching and learning tools."
+            },
+            {
+              "value": "understanding_course_resources",
+              "text": "Understanding the course resources (lesson plans, etc)."
+            },
+            {
+              "value": "understanding_cs_pedagogy",
+              "text": "Understanding the pedagogy for a computer science classroom."
+            },
+            {
+              "value": "keeping_students_engaged",
+              "text": "Keeping students engaged during all lessons."
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "other_barriers_fr",
+          "title": "What other barriers do you experience teaching CS Fundamentals?"
+        }
+      ],
+      "title": "Barriers to Teaching CS Fundamentals"
+    },
+    {
+      "name": "page2",
+      "elements": [
+        {
+          "type": "html",
+          "name": "true_of_me_now_scale_1",
+          "html": "<p>There are a variety of teaching strategies that computer science teachers use with students in classrooms.</p>\n\n<p>Below, we ask you to use a \"true of me now\" scale to self-rate how true it is that you have concrete strategies - techniques or methods you could name or describe to another teacher - for doing these things right now.</p>\n\n<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;” cellpadding=\"1px”><caption></caption>\n<tbody>\n<tr>\n<td style=\"width: 23%; padding-top: 3px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #FFFFFF;\">----</span>2</span></strong></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #FFFFFF;\">----</span>4<span style=\"color: #FFFFFF;\">----</span>5</span></strong></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #FFFFFF;\">----</span>7</span></strong></td>\n</tr>\n<tr>\n<td style=\"width: 23%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Not true of me</strong></span></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Somewhat true of me now</strong></span></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Very true of me now</strong></span></td>\n</tr>\n</tbody>\n</table>"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "codedotorg_teaching_strategies_csf"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "codedotorg_teaching_strategies_csf_deepdive"
+        },
+        {
+          "type": "html",
+          "name": "true_of_me_now_scale_2",
+          "html": "<p>Next, use the \"true of me now\" scale to self-rate your level of comfort accessing, navigating and using CS Fundamentals curricular materials and the Code.org website.</p>\n\n<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;” cellpadding=\"1px”><caption></caption>\n<tbody>\n<tr>\n<td style=\"width: 23%; padding-top: 3px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #FFFFFF;\">----</span>2</span></strong></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #FFFFFF;\">----</span>4<span style=\"color: #FFFFFF;\">----</span>5</span></strong></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #FFFFFF;\">----</span>7</span></strong></td>\n</tr>\n<tr>\n<td style=\"width: 23%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Not true of me</strong></span></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Somewhat true of me now</strong></span></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Very true of me now</strong></span></td>\n</tr>\n</tbody>\n</table>"
+        },
+        {
+          "type": "matrix",
+          "name": "codeorg_tools_familiarity",
+          "title": "Right now, I know exactly how to...",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            }
+          ],
+          "rows": [
+            {
+              "value": "access_lesson_plans",
+              "text": "access teacher-facing lesson plans online for CS Fundamentals courses."
+            },
+            {
+              "value": "view_student_work",
+              "text": "view student work through the teacher dashboard on the Code.org website."
+            },
+            {
+              "value": "access_sample_solutions",
+              "text": "access sample solutions to programming puzzles on the Code.org website."
+            },
+            {
+              "value": "create_sections",
+              "text": "create sections of students on the Code.org website."
+            },
+            {
+              "value": "manage_sections",
+              "text": "manage sections of students on the Code.org website (move students between sections, reset passwords, etc)."
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "teaching_strategy_fr",
+          "title": "What is a teaching strategy or approach that has helped you teach CS Fundamentals in a way in which you want your students to experience the course?"
+        }
+      ],
+      "title": "CS Fundamentals Teaching Practices and Course Materials"
+    },
+    {
+      "name": "page3",
+      "elements": [
+        {
+          "type": "html",
+          "name": "question2",
+          "html": "<p>The following questions are designed to help us better understand what you hope to get out of attending the Deep Dive workshop.</p>"
+        },
+        {
+          "type": "comment",
+          "name": "hope_to_learn_fr",
+          "title": "What do you hope to learn in the Deep Dive workshop that will impact your use of CS Fundamentals in your classroom?"
+        },
+        {
+          "type": "comment",
+          "name": "anything_else_fr",
+          "title": "Is there anything else you want to discuss at the workshop, or would like to tell us before the workshop?"
+        }
+      ],
+      "title": "Your Goals for the Deep Dive Workshop "
+    }
+  ]
+}
