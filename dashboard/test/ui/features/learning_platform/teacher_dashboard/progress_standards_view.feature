@@ -13,8 +13,8 @@ Feature: Viewing and Printing Standards Progress
 
   Scenario: Viewing standards progress in Progress Tab of Teacher Dashboard
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to script "coursea-2019"
-    Given I am assigned to script "allthethings"
+    Given I am assigned to unit "coursea-2019"
+    Given I am assigned to unit "allthethings"
 
     When I sign in as "Teacher_Sally" and go home
     And I get hidden script access

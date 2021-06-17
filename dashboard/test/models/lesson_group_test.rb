@@ -29,7 +29,7 @@ class LessonGroupTest < ActiveSupport::TestCase
     lesson = create :lesson, name: "Lesson1", script: script, lesson_group: lesson_group, absolute_position: 1
     create(:script_level, script: script, lesson: lesson)
 
-    summary = lesson_group.summarize_for_script_edit
+    summary = lesson_group.summarize_for_unit_edit
 
     assert_equal 'my-lesson-group', summary[:key]
     assert_equal 1, summary[:position]
