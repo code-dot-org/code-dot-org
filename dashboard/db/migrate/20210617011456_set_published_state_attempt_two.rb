@@ -3,7 +3,7 @@ class SetPublishedStateAttemptTwo < ActiveRecord::Migration[5.2]
     Script.all.each do |script|
       script.update!({skip_name_format_validation: true, published_state: script.get_published_state})
 
-      if Rails.application.config.levelbuilder_mode
+      if rack_env == :levelbuilder
         script.write_script_dsl
         script.write_script_json
       end
@@ -24,7 +24,7 @@ class SetPublishedStateAttemptTwo < ActiveRecord::Migration[5.2]
     Script.all.each do |script|
       script.update!({skip_name_format_validation: true, published_state: nil})
 
-      if Rails.application.config.levelbuilder_mode
+      if rack_env == :levelbuilder
         script.write_script_dsl
         script.write_script_json
       end
