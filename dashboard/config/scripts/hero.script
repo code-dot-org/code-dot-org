@@ -1,4 +1,5 @@
 hidden false
+published_state 'preview'
 
 lesson 'Minecraft Hour of Code', display_name: 'Minecraft Hour of Code', has_lesson_plan: false
 level 'MC_HOC_2017_01_RETRY'

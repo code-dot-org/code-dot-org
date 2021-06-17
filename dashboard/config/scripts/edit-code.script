@@ -1,5 +1,6 @@
 id '3'
 wrapup_video 'hoc_wrapup'
+published_state 'beta'
 
 lesson 'The Maze', display_name: 'The Maze', has_lesson_plan: false
 skin 'birds'
