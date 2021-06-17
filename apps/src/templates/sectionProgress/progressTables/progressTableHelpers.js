@@ -149,10 +149,13 @@ function formatLastUpdated(studentProgress) {
 }
 
 /**
+ * Determines what to display in the "time spent" / "last update"
+ * expanded table rows when we don't have any data.
+ *
  * If the student hasn't made any progress on the level, we display nothing.
  * However, if the student has made progress but we don't have time spent or
  * last update data, that means we aren't tracking that data for this level so
- * we display '-' to indicate N/A.
+ * we display '-' (a hyphen) to indicate N/A.
  *
  * Note: we also use '-' for lessons with no levels.
  */
@@ -163,6 +166,13 @@ function missingDataFormatter(progressNotApplicable) {
   return '';
 }
 
+/**
+ * Returns what we display in the primary (non-expanded) table
+ * rows for lessons without any levels.
+ *
+ * Note that we use the larger em dash for empty lessons, as opposed to the
+ * hyphen used for missing detail data.
+ */
 function emptyLessonFormatter() {
   return '—';
 }
