@@ -6,8 +6,7 @@
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
-      "has_verified_resources": true,
-      "is_stable": true
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,

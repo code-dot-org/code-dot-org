@@ -18,8 +18,7 @@
     "version_year": "2020",
     "family_name": "csp",
     "has_verified_resources": true,
-    "visible": true,
-    "is_stable": true
+    "visible": true
   },
   "resources": [
 
