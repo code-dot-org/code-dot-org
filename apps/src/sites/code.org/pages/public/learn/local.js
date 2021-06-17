@@ -42,8 +42,7 @@ $(function() {
   geocoder.addTo('#mapboxgeocoder');
 
   // Make the map sticky.
-  $('#map').sticky({topSpacing: 0});
-
+  $('#map').css('position', 'sticky');
   // Prevent the map from covering the footer
   $(document).scroll(function() {
     checkOffset();
@@ -64,16 +63,14 @@ function checkOffset() {
   // set position to absolute
   if (
     $('#map').offset().top + $('#map').height() >=
-    $('#pagefooter').offset().top - 10
+    $('#pagefooter').offset().top - 20
   ) {
     $('#map').css('position', 'absolute');
   }
   // restore fixed position when the user scrolls up
-  if (
-    $(document).scrollTop() + window.innerHeight <
-    $('#pagefooter').offset().top
-  ) {
-    $('#map').css('position', 'fixed');
+  else {
+    // Make the map sticky.
+    $('#map').css('position', 'sticky');
   }
 }
 
