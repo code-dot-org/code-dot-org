@@ -349,11 +349,17 @@ class LessonsControllerTest < ActionController::TestCase
     assert_includes @response.body, script2.name
   end
 
-  # only levelbuilders can edit
+  # only levelbuilders can edit with lesson id in url
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :student, response: :forbidden
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
+
+  # only levelbuilders can edit with lesson position in url
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
 
   test 'edit lesson' do
     sign_in @levelbuilder
