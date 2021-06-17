@@ -31,12 +31,14 @@ class TeacherFeedbackRubric extends Component {
       viewAs
     } = this.props;
 
-    const studentViewingPerfFeedback =
-      !!performance && viewAs === ViewType.Student;
-
-    const showFeedbackInputAreas = !isReadonly || studentViewingPerfFeedback;
-
-    const expandByDefault = isReadonly && !studentViewingPerfFeedback;
+    let showFeedbackInputAreas, expandByDefault;
+    if (viewAs === ViewType.Student) {
+      expandByDefault = !performance;
+      showFeedbackInputAreas = !!performance;
+    } else if (viewAs === ViewType.Teacher) {
+      expandByDefault = isReadonly;
+      showFeedbackInputAreas = !isReadonly;
+    }
 
     return (
       <div style={styles.performanceArea}>
@@ -53,7 +55,7 @@ class TeacherFeedbackRubric extends Component {
                 showFeedbackInputAreas={showFeedbackInputAreas}
                 expandByDefault={
                   expandByDefault ||
-                  (studentViewingPerfFeedback && performance === level)
+                  (viewAs === ViewType.Student && performance === level)
                 }
                 rubricLevel={level}
                 rubricValue={rubric[level]}
