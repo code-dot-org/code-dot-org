@@ -1,4 +1,5 @@
 hidden false
+published_state 'preview'
 tts true
 
 lesson 'Dance Party - Go Further', display_name: 'Dance Party - Go Further', has_lesson_plan: false

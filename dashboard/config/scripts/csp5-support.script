@@ -1,6 +1,7 @@
 professional_learning_course 'CSP Support'
 student_detail_progress_view true
 announcements [{"notice"=>"This professional learning course is associated with a version of the CS Principles course that is no longer supported.  Please visit our Courses Overview page (https://studio.code.org/courses) to see our most current curricula.", "details"=>"", "link"=>"https://studio.code.org/courses", "type"=>"warning", "visibility"=>"Teacher-only"}]
+published_state 'beta'
 
 lesson_group 'required', display_name: 'Overview'
 lesson 'Unit 5 Overview', display_name: 'Unit 5 Overview', has_lesson_plan: false
