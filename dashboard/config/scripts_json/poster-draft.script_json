@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:01:36 UTC",
+    "serialized_at": "2021-06-17 14:36:49 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poster-draft"
@@ -114,7 +114,7 @@
       "key": "8e95ece4-6727-4cdf-bcf9-d2675d6ef797",
       "position": 2,
       "properties": {
-        "progression_name": "Your Personal Storyboard"
+        "progression_name": "Create Your Story Board"
       },
       "seeding_key": {
         "activity_section.key": "8e95ece4-6727-4cdf-bcf9-d2675d6ef797",
@@ -268,7 +268,7 @@
         "level_keys": [
           "storyboard_project_start"
         ],
-        "progression": "Your Personal Storyboard"
+        "progression": "Create Your Story Board"
       },
       "named_level": false,
       "bonus": false,
@@ -294,7 +294,7 @@
         "level_keys": [
           "storyboard_project_print"
         ],
-        "progression": "Your Personal Storyboard"
+        "progression": "Create Your Story Board"
       },
       "named_level": false,
       "bonus": false,
@@ -320,7 +320,7 @@
         "level_keys": [
           "storyboard_project_sprites"
         ],
-        "progression": "Your Personal Storyboard"
+        "progression": "Create Your Story Board"
       },
       "named_level": false,
       "bonus": false,
@@ -346,7 +346,7 @@
         "level_keys": [
           "storyboard_project_events"
         ],
-        "progression": "Your Personal Storyboard"
+        "progression": "Create Your Story Board"
       },
       "named_level": false,
       "bonus": false,

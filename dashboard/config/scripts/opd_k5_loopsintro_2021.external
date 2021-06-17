@@ -5,6 +5,14 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/ec2f0877ef2c14cf64d611f47a11daa7-image-1573236152060.jpg" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
+## Course Lesson Objective
+
+After completing Lesson 9 you will be able to:
+
+* define loop,
+* use the "repeat" block with Maze Puzzles and The Artist,  
+* and create "nested" loops with Maze Puzzles and The Artist.
+
 ## CS Concepts
 
 A **loop** is the action of doing something over and over again.
@@ -13,7 +21,7 @@ A **loop** is the action of doing something over and over again.
 
 #### Lesson Plan
 
-Read the **context-setting** lesson <a href="https://studio.code.org/s/coursea-2021/lessons/7" target="blank">Course A - Lesson 7:  Happy Loops</a> for an example of how "loops" are first introduced to students in Course A.
+* Read the **context-setting** lesson <a href="https://studio.code.org/s/coursea-2021/lessons/7" target="blank">Course A - Lesson 7:  Happy Loops</a> for an example of how "loops" are first introduced to students in Course A.
 
 **Note:** The lesson plan will open in a new window.  Be sure to return to this online course to continue with lessons.
 
