@@ -21,7 +21,6 @@
       ],
       "version_year": "2018",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}",
-      "is_stable": true,
       "supported_locales": [
         "it-IT",
         "sk-SK"
