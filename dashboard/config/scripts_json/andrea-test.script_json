@@ -2,6 +2,7 @@
   "script": {
     "name": "andrea-test",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": true,
     "properties": {
       "student_detail_progress_view": true,

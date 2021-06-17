@@ -1,3 +1,4 @@
+hidden false
 published_state 'preview'
 
 lesson 'Play Lab', display_name: 'Play Lab', has_lesson_plan: false

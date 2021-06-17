@@ -2,6 +2,7 @@
   "script": {
     "name": "ScienceP3OLPT3",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": true,
     "properties": {
       "pd": true,

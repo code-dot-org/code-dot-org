@@ -2,6 +2,7 @@
   "script": {
     "name": "glj-behavior-test",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": false,
     "properties": {
     },

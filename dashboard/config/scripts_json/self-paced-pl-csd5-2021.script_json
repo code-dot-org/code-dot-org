@@ -2,12 +2,8 @@
   "script": {
     "name": "self-paced-pl-csd5-2021",
     "wrapup_video_id": null,
-<<<<<<< HEAD
     "hidden": true,
     "login_required": true,
-=======
-    "login_required": false,
->>>>>>> Update all course, script and script_json to remove hidden/visible
     "properties": {
       "is_migrated": true,
       "student_detail_progress_view": true,

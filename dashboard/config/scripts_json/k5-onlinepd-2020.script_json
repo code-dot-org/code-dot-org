@@ -2,6 +2,7 @@
   "script": {
     "name": "k5-onlinepd-2020",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": true,
     "properties": {
       "version_year": "2020"

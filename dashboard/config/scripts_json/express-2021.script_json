@@ -2,10 +2,7 @@
   "script": {
     "name": "express-2021",
     "wrapup_video_id": null,
-<<<<<<< HEAD
     "hidden": false,
-=======
->>>>>>> Update all course, script and script_json to remove hidden/visible
     "login_required": false,
     "properties": {
       "hideable_lessons": true,

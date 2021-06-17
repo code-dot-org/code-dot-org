@@ -2,6 +2,7 @@
   "script": {
     "name": "sciencepd5",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": false,
     "properties": {
       "professional_learning_course": "CS in Science Support"

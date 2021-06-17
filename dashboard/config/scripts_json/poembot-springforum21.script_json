@@ -2,6 +2,7 @@
   "script": {
     "name": "poembot-springforum21",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": false,
     "properties": {
     },

@@ -2,6 +2,7 @@
   "script": {
     "name": "cspexam2-AKwgAh1ac5",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": true,
     "properties": {
     },

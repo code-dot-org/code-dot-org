@@ -2,6 +2,7 @@
   "script": {
     "name": "aiml-2021",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": true,
     "properties": {
       "show_calendar": true,

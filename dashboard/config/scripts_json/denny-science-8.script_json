@@ -2,6 +2,7 @@
   "script": {
     "name": "denny-science-8",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": true,
     "properties": {
       "pilot_experiment": "denny-science-piloters"

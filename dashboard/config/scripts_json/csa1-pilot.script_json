@@ -2,6 +2,7 @@
   "script": {
     "name": "csa1-pilot",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": true,
     "properties": {
       "is_migrated": true,

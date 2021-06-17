@@ -2,6 +2,7 @@
   "script": {
     "name": "vpl-csd-2020",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,

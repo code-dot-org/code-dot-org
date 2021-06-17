@@ -41,7 +41,8 @@
     ],
     "has_verified_resources": true,
     "family_name": "csp",
-    "version_year": "2017"
+    "version_year": "2017",
+    "visible": true
   },
   "resources": [
 

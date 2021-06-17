@@ -1,3 +1,4 @@
+hidden false
 hideable_lessons true
 lesson_extras_available true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-1718/coursef/{LESSON}'
