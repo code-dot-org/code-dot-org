@@ -28,7 +28,7 @@ def sync_out(upload_manifests=false)
   copy_untranslated_apps
   rebuild_blockly_js_files
   restore_markdown_headers
-  CurriculumSyncUtils.sync_out
+  Services::I18n::CurriculumSyncUtils.sync_out
   HocSyncUtils.sync_out
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
   I18nScriptUtils.with_synchronous_stdout do
