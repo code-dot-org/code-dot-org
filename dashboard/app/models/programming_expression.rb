@@ -145,7 +145,7 @@ class ProgrammingExpression < ApplicationRecord
       category: category,
       color: color,
       key: key,
-      name: name,
+      syntax: syntax,
       link: documentation_path,
       programmingEnvironmentName: programming_environment.name,
       uniqueKey: [key, programming_environment.name].join('/')
