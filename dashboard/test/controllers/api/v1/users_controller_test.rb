@@ -40,30 +40,30 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, !!@user.using_text_mode
   end
 
-  test 'a get request to display_mode returns display_mode attribute of user object' do
+  test 'a get request to display_theme returns display_theme attribute of user object' do
     sign_in(@user)
-    get :get_display_mode, params: {user_id: 'me'}
+    get :get_display_theme, params: {user_id: 'me'}
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_nil response["display_mode"]
+    assert_nil response["display_theme"]
   end
 
   test_user_gets_response_for(
-    :update_display_mode,
+    :update_display_theme,
     user: nil,
-    params: {user_id: 'me', display_mode: 'dark'},
+    params: {user_id: 'me', display_theme: 'dark'},
     response: :forbidden
   )
 
-  test 'a post request to display_mode updates display_mode' do
+  test 'a post request to display_theme updates display_theme' do
     sign_in(@user)
-    assert !@user.display_mode
-    post :update_display_mode, params: {user_id: 'me', display_mode: 'dark'}
+    assert !@user.display_theme
+    post :update_display_theme, params: {user_id: 'me', display_theme: 'dark'}
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal "dark", response["display_mode"]
+    assert_equal "dark", response["display_theme"]
     @user.reload
-    assert_equal "dark", @user.display_mode
+    assert_equal "dark", @user.display_theme
   end
 
   test 'will 403 if given a user id other than the person logged in' do
