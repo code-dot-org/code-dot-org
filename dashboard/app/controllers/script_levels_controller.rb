@@ -137,7 +137,7 @@ class ScriptLevelsController < ApplicationController
     if can_view_version
       # If user is allowed to see level but is assigned to a newer version of the level's script,
       # we will show a dialog for the user to choose whether they want to go to the newer version.
-      @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
+      @redirect_script_url = @script_level&.script&.redirect_to_unit_url(current_user, locale: request.locale)
     elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
       # Redirect user to the proper script overview page if we think they ended up on the wrong level.
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
