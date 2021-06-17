@@ -28,7 +28,6 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2017",
-      "is_stable": true,
       "script_announcements": [
         {
           "notice": "Are you signed up for the AP exam?",

@@ -42,8 +42,7 @@
         ]
       ],
       "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "is_stable": true
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": "csd6",

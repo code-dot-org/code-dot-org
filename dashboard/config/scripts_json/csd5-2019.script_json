@@ -30,7 +30,6 @@
       "version_year": "2019",
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
-      "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/csd-19/unit5/{LESSON}",
       "family_name": "csd5",
       "hideable_lessons": true
