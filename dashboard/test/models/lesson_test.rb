@@ -398,7 +398,7 @@ class LessonTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level1]
     create :script_level, script: script, lesson: lesson, activity_section: section, activity_section_position: 2, levels: [level2], bonus: true
 
-    levels_data = lesson.summarize_for_script_edit[:levels]
+    levels_data = lesson.summarize_for_unit_edit[:levels]
     assert_equal 2, levels_data.length
     refute levels_data.first[:bonus]
     assert levels_data.last[:bonus]
