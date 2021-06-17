@@ -14,7 +14,7 @@ const DEFAULT_PROPS = {
     performanceLevel4: 'no evidence of trying'
   },
   performance: null,
-  isReadonly: false,
+  isEditable: true,
   onRubricChange: () => {},
   viewAs: ViewType.Teacher
 };
@@ -79,40 +79,40 @@ describe('Rubric', () => {
   });
 
   describe('view as teacher', () => {
-    it('RubricField prop showFeedbackInputAreas is true if isReadonly = false', () => {
+    it('RubricField prop showFeedbackInputAreas is true if isEditable = true', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
-        isReadonly: false
+        isEditable: true
       });
 
       const firstRubricField = wrapper.find('RubricField').first();
       expect(firstRubricField.props().showFeedbackInputAreas).to.be.true;
     });
 
-    it('RubricField prop showFeedbackInputAreas is false if isReadonly = true', () => {
+    it('RubricField prop showFeedbackInputAreas is false if isEditable = false', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
-        isReadonly: true
+        isEditable: false
       });
 
       const firstRubricField = wrapper.find('RubricField').first();
       expect(firstRubricField.props().showFeedbackInputAreas).to.be.false;
     });
 
-    it('RubricField prop expandByDefault is false isReadonly = false', () => {
+    it('RubricField prop expandByDefault is false isEditable = true', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
-        isReadonly: false
+        isEditable: true
       });
 
       const firstRubricField = wrapper.find('RubricField').first();
       expect(firstRubricField.props().expandByDefault).to.be.false;
     });
 
-    it('RubricField prop expandByDefault is true isReadonly = true', () => {
+    it('RubricField prop expandByDefault is true isEditable = false', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
-        isReadonly: true
+        isEditable: false
       });
 
       const firstRubricField = wrapper.find('RubricField').first();
@@ -124,7 +124,7 @@ describe('Rubric', () => {
     it('expands rubric value with feedback', () => {
       const wrapper = setUp({
         viewAs: ViewType.Student,
-        isReadonly: false,
+        isEditable: false,
         performance: 'performanceLevel2'
       });
 
