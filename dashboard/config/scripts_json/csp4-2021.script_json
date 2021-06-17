@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-07 16:39:09 UTC",
+    "serialized_at": "2021-06-16 23:01:15 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -2098,7 +2099,7 @@
       "key": "cdad4926-56d3-49dc-9372-cecff2908009",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2 - Lemon Squeeze App Pt 2:** This code investigation includes a number of steps to help students get familiar with a new app.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Now look together at lines 30-36. Students discuss with a partner how they think the MOD operator works.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4 - Lemon Squeeze App Pt 2:** This code investigation includes a number of steps to help students get familiar with a new app.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Now look together at lines 54-58. Students discuss with a partner how they think the MOD operator works.",
         "name": "Investigation 2: If-Else Statements and MOD",
         "tips": [
           {
@@ -2150,7 +2151,7 @@
       "key": "e344df9b-29ac-4652-ad59-3729140048c0",
       "position": 11,
       "properties": {
-        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4 - Video - Conditionals: If-Else-If Statements** As a class watch the video on if-else statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 5 - Lemon Squeeze App Pt 2** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
+        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5 - Video - Conditionals: If-Else-If Statements** As a class watch the video on if-else statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 6 - Lemon Squeeze App Pt 3** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
         "duration": "10",
         "name": "Investigation 3: If-Else-If Statements",
         "tips": [
@@ -2191,7 +2192,7 @@
       "key": "084f73ba-22aa-4103-9788-a1b4f5b8dc21",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 6 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 7 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements.",
         "duration": "10",
         "name": "Investigation 3: Logical Operators AND OR"
       },
@@ -2204,7 +2205,7 @@
       "key": "1ef6e1bb-0e0b-4bd5-ab5e-fab53c0531dc",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 7 - Lemon Squeeze App Pt 3:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 8 - Lemon Squeeze App Pt 4:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
         "tips": [
           {
             "type": "teachingTip",

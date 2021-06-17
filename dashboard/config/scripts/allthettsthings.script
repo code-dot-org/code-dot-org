@@ -1,3 +1,4 @@
+published_state 'beta'
 tts true
 
 lesson 'TTS', display_name: 'TTS', has_lesson_plan: false

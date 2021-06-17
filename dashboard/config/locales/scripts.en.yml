@@ -1175,6 +1175,8 @@ en:
               name: Strings and Images
             The Design Recipe:
               name: The Design Recipe
+            Big GAme - Collision Detection:
+              name: Big Game - Collision Detection
           student_description: 'Phase 2 Online: Blended Summer Study'
         allthethings:
           title: All the Things!
@@ -22725,7 +22727,7 @@ en:
               description_teacher: ''
             Sprite Lab:
               key: Sprite Lab
-              name: Sprite Lab
+              name: Sequencing with Sprites
               description_student: ''
               description_teacher: ''
             Reviewing your reflections:
@@ -22735,7 +22737,7 @@ en:
               description_teacher: ''
             Next steps:
               key: Next steps
-              name: 'Part III:  Next steps'
+              name: Develop a Plan
               description_student: ''
               description_teacher: ''
             Module 1:
@@ -22756,6 +22758,8 @@ en:
               name: Addressing Barriers
             Part II Overview:
               name: Part II Overview
+            Sequencing with Sprites:
+              name: Sequencing with Sprites
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduction
@@ -22764,7 +22768,7 @@ en:
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
-              display_name: Next Steps
+              display_name: 'Part III:  Next Steps'
             Introduction:
               display_name: Introduction
             Implementing and Teaching CS:
@@ -22838,9 +22842,13 @@ en:
               description_student: 
               description_teacher: 
             lesson-4:
-              name: Printable
+              name: Printable Lesson Plans
               description_student: 
               description_teacher: This lesson should contain examples of all the kinds of content that we want to be able to print, to confirm that changes made to that content don't end up working weird when printed. Things like collapsible or interactable stuff in particular is a good candidate for this page.
+            lesson-5:
+              name: Level Details Dialog Examples
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Lesson Group 1
@@ -22979,7 +22987,7 @@ en:
 
                 **Question of the Day:** How can we use machine learning to make recommendations?
             lesson6:
-              name: App Lab - New Screens and If Statements
+              name: App Lab - Importing a Model
               description_student: 'Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson.'
               description_teacher: "Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson.\r\n\r\n**Question of the Day:** How can I create an app using machine learning?"
             lesson7:
@@ -22998,7 +23006,7 @@ en:
               description_student: In this lesson, students take on the role of a modern middle school student surviving an unprecedented pandemic. They are one day granted responsibility for delivering the formula for a vaccine to a laboratory somewhere in their local area. To do so, they must use an intelligent personal assistant (IPA) named “Tom” to predict the safest route to the laboratory, which will require training Tom with a regression algorithm.
               description_teacher: "In this lesson, students take on the role of a modern middle school student surviving an unprecedented pandemic. They are one day granted responsibility for delivering the formula for a vaccine to a laboratory somewhere in their local area. To do so, they must use an intelligent personal assistant (IPA) named “Tom” to predict the safest route to the laboratory, which will require training Tom with a regression algorithm.\r\n\r\n**Question of the Day:** How do computers learn to make predictions with numerical data?"
             lesson10:
-              name: App Lab - Import Model
+              name: App Lab - If Statements and Screens
               description_student: Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app.
               description_teacher: |-
                 Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app.
@@ -23648,13 +23656,159 @@ en:
         poster-draft:
           lessons:
             lesson-1:
-              name: Interactive Poster
+              name: Story Board
               description_student: 
               description_teacher: 
           lesson_groups: {}
           name: poster-draft
-          title: 'V1_Interactive Poster: Self-Expression'
+          title: Story Board (V1)
           description_audience: ''
-          description_short: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
-          description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
+          description_short: Story Board (V1)
+          description: ''
           student_description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
+        poembot:
+          lessons: {}
+          lesson_groups: {}
+          name: poembot
+          title: Poembot
+          description_audience: ''
+          description_short: ''
+          description: ''
+        outbreak-module:
+          lessons: {}
+          lesson_groups: {}
+          name: outbreak-module
+          title: Outbreak
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csa1-exemplars:
+          lessons:
+            lesson-1:
+              name: Welcome to CSA
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Classes and Objects
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Using Commands
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Conditionals and Debugging
+            lesson-5:
+              name: More with Objects
+            lesson-6:
+              name: While Loops and Practice
+            lesson-7:
+              name: More with Conditionals
+            lesson-8:
+              name: Introduction to Code Reviews
+            lesson-9:
+              name: Inheritance and Methods
+            lesson-10:
+              name: More Methods, More Features
+            lesson-11:
+              name: Painting Methods
+            lesson-12:
+              name: Spray Painter
+            lesson-13:
+              name: StampPainter
+            lesson-14:
+              name: Edge Cases
+            lesson-15:
+              name: Software Engineering Wrap Up
+            lesson-16:
+              name: 'Project: Personal Symbol - Day 1'
+            lesson-17:
+              name: 'Project: Personal Symbol - Day 2'
+            lesson-18:
+              name: 'Project: Personal Symbol - Day 3'
+            lesson-19:
+              name: FRQ Day
+            lesson-20:
+              name: Assessment Day
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa1-exemplars
+          title: Unit 1 - Object Oriented Programming [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csa2-exemplars:
+          lessons:
+            lesson-1:
+              name: Defining Attributes
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Using Variables
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Writing Constructors
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Adding Multiple Constructors
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Manipulating Variables and Object Data
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Minimizing Errors in Initialization
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Writing Constructors for Hierarchies
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Accessing Object Data
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Modifying Object Data
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Displaying Object Information
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: 'Project: The Neighborhood Store Management - Day 1'
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: 'Project: The Neighborhood Store Management - Day 2'
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: 'Project: The Neighborhood Store Management - Day 3'
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: FRQ Day
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: Assessment Day
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa2-exemplars
+          title: Unit 2 - Giving Objects State [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''

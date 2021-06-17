@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Maze: Sequence', display_name: 'Maze: Sequence', has_lesson_plan: false
 level '2-3 Maze 1'
 level '2-3 Maze 2'

@@ -8,6 +8,7 @@ curriculum_path 'https://curriculum.code.org/csd-19/unit2/{LESSON}'
 family_name 'csd2'
 version_year '2019'
 is_stable true
+published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true

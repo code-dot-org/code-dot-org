@@ -1,0 +1,20 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2021-06-16T19:10:06.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "List the line numbers that have a bug. Remember scope and when to use `this`.\r\n\r\n```\r\n1   public class Dessert {\r\n2      private String flavor;\r\n3      private int quantity;\r\n4      private double price;\r\n5\r\n6      public Dessert(String flavor, int newQty, double newPrice) {\r\n7         flavor = this.flavor;\r\n8         quantity = newQty;\r\n9         newPrice = newPrice;\r\n10     }\r\n11\r\n12     public void sale() {\r\n13        newPrice = newPrice * 0.9;\r\n14     }\r\n15  }\r\n```",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

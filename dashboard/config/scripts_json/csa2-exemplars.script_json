@@ -1,0 +1,641 @@
+{
+  "script": {
+    "name": "csa2-exemplars",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-06-16 23:01:36 UTC",
+    "published_state": "beta",
+    "seeding_key": {
+      "script.name": "csa2-exemplars"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Defining Attributes",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Using Variables",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Writing Constructors",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Adding Multiple Constructors",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Manipulating Variables and Object Data",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Minimizing Errors in Initialization",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Writing Constructors for Hierarchies",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Accessing Object Data",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Modifying Object Data",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Displaying Object Information",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Project: The Neighborhood Store Management - Day 1",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Project: The Neighborhood Store Management - Day 2",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Project: The Neighborhood Store Management - Day 3",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "FRQ Day",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Assessment Day",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "064ecbea-fac7-41b7-9b8b-428143396da7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "064ecbea-fac7-41b7-9b8b-428143396da7",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "7720380e-3153-4c91-9051-1c182d6f9976",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7720380e-3153-4c91-9051-1c182d6f9976",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "45c03c1b-bd51-4a82-845c-6b65fae59673",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "45c03c1b-bd51-4a82-845c-6b65fae59673",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "73611474-bf28-4bc7-9d39-981ca8b89c90",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "73611474-bf28-4bc7-9d39-981ca8b89c90",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "922d60b7-bf8a-4fd8-9c6f-efb7643afd37",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "922d60b7-bf8a-4fd8-9c6f-efb7643afd37",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "9fafac2b-4cee-42e4-8f60-a6da40d48b5f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9fafac2b-4cee-42e4-8f60-a6da40d48b5f",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "39e92ea7-81b0-4d40-983b-243a12411005",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "39e92ea7-81b0-4d40-983b-243a12411005",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "60a9827e-10d5-4fec-80ab-56d3e1df9db1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "60a9827e-10d5-4fec-80ab-56d3e1df9db1",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "75a8e238-eb47-46e7-9d80-924f4ab0b2bc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75a8e238-eb47-46e7-9d80-924f4ab0b2bc",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "0a389ddc-fe2b-4083-9861-627b3744f507",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a389ddc-fe2b-4083-9861-627b3744f507",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "26b241f4-9353-4146-ac95-cba219699a35",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26b241f4-9353-4146-ac95-cba219699a35",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "831acf2c-7de5-44ce-aa87-b73ff01b2d0b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "831acf2c-7de5-44ce-aa87-b73ff01b2d0b",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "4691c57a-ab2a-412a-b6ea-55f7e1facdfd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4691c57a-ab2a-412a-b6ea-55f7e1facdfd",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "36a8cadf-e632-4de3-a149-79748033c89a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "36a8cadf-e632-4de3-a149-79748033c89a",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars"
+      }
+    },
+    {
+      "key": "dd359e36-df97-49ad-83f2-1dd1f757857c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd359e36-df97-49ad-83f2-1dd1f757857c",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "b667fc54-ba28-49a2-964f-f27f7c71981b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b667fc54-ba28-49a2-964f-f27f7c71981b",
+        "lesson_activity.key": "064ecbea-fac7-41b7-9b8b-428143396da7"
+      }
+    },
+    {
+      "key": "26c643ed-54a1-430b-9e51-bc43556dce6e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "26c643ed-54a1-430b-9e51-bc43556dce6e",
+        "lesson_activity.key": "7720380e-3153-4c91-9051-1c182d6f9976"
+      }
+    },
+    {
+      "key": "4f19fd00-9767-4f0c-9cb1-0daa7f52357f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4f19fd00-9767-4f0c-9cb1-0daa7f52357f",
+        "lesson_activity.key": "45c03c1b-bd51-4a82-845c-6b65fae59673"
+      }
+    },
+    {
+      "key": "ccf2686e-33b1-41f4-88f0-3af4d4d4007c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ccf2686e-33b1-41f4-88f0-3af4d4d4007c",
+        "lesson_activity.key": "73611474-bf28-4bc7-9d39-981ca8b89c90"
+      }
+    },
+    {
+      "key": "38144248-0f41-45d8-93c6-ab4858dee9db",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "38144248-0f41-45d8-93c6-ab4858dee9db",
+        "lesson_activity.key": "922d60b7-bf8a-4fd8-9c6f-efb7643afd37"
+      }
+    },
+    {
+      "key": "80812d6f-e009-4321-a7d1-bdec735ced5c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "80812d6f-e009-4321-a7d1-bdec735ced5c",
+        "lesson_activity.key": "9fafac2b-4cee-42e4-8f60-a6da40d48b5f"
+      }
+    },
+    {
+      "key": "80be3e5a-8b1e-4962-9e08-43550b95b949",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "80be3e5a-8b1e-4962-9e08-43550b95b949",
+        "lesson_activity.key": "39e92ea7-81b0-4d40-983b-243a12411005"
+      }
+    },
+    {
+      "key": "cdb69419-d333-40bb-984c-b88c1aae020c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cdb69419-d333-40bb-984c-b88c1aae020c",
+        "lesson_activity.key": "60a9827e-10d5-4fec-80ab-56d3e1df9db1"
+      }
+    },
+    {
+      "key": "7a84305d-7663-479c-a7c3-cac6a86d3e8e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7a84305d-7663-479c-a7c3-cac6a86d3e8e",
+        "lesson_activity.key": "75a8e238-eb47-46e7-9d80-924f4ab0b2bc"
+      }
+    },
+    {
+      "key": "2bfc9d4a-39e6-44c5-a548-72a2cfd23ef5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2bfc9d4a-39e6-44c5-a548-72a2cfd23ef5",
+        "lesson_activity.key": "0a389ddc-fe2b-4083-9861-627b3744f507"
+      }
+    },
+    {
+      "key": "9fd85eb1-61e3-47b1-8b6b-e6d931b68f2f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9fd85eb1-61e3-47b1-8b6b-e6d931b68f2f",
+        "lesson_activity.key": "26b241f4-9353-4146-ac95-cba219699a35"
+      }
+    },
+    {
+      "key": "d5c30357-47ec-4690-8b29-80928a6f1ad2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d5c30357-47ec-4690-8b29-80928a6f1ad2",
+        "lesson_activity.key": "831acf2c-7de5-44ce-aa87-b73ff01b2d0b"
+      }
+    },
+    {
+      "key": "26a772ca-15b1-4632-b005-8fac77c41589",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "26a772ca-15b1-4632-b005-8fac77c41589",
+        "lesson_activity.key": "4691c57a-ab2a-412a-b6ea-55f7e1facdfd"
+      }
+    },
+    {
+      "key": "70ff19b7-7c64-44ad-8c5f-31d4a4ae2e5f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "70ff19b7-7c64-44ad-8c5f-31d4a4ae2e5f",
+        "lesson_activity.key": "36a8cadf-e632-4de3-a149-79748033c89a"
+      }
+    },
+    {
+      "key": "66f6eb53-209e-43c3-b61b-5f90263d1f4c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "66f6eb53-209e-43c3-b61b-5f90263d1f4c",
+        "lesson_activity.key": "dd359e36-df97-49ad-83f2-1dd1f757857c"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

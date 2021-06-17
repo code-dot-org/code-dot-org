@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Import `Dessert.java` from your **Backpack**.\r\n\r\nThe Project Mercury Pastries bestseller is their 6-count red-velvet flavored cupcakes for $6.50.\r\n\r\n1. Add a no-argument constructor to `Dessert.java` using this information for the default values.\r\n\r\n2. Using the no-argument constructor, create a `Dessert` object called `redVelvetPack` in `MyFoodTruck.java`.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "parent_level_id": 28407,
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "import java.util.Scanner;\n\npublic class MyFoodTruck {\n  public static void main(String[] args) {\n\tDessert cake = new Dessert(\"chocolate\", 5, 1.99);\n    cake.printInfo();\n\n    // Level 1\n    Dessert redVelvetPack = new Dessert();\n    redVelvetPack.printInfo();\n\n  }\n}",
+        "isVisible": true
+      },
+      "Dessert.java": {
+        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String newFlavor, int newQty, double newPrice) {\n    flavor = newFlavor;\n    quantity = newQty;\n    price = newPrice;\n  }\n\n  // Level 1\n  public Dessert() {\n    flavor = \"red velvet\";\n    quantity = 6;\n    price = newPrice;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2021-06-16T21:34:15.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-06-16 21:34:20 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 21:35:10 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
