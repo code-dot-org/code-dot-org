@@ -7,7 +7,7 @@ class AdminStandardsController < ApplicationController
   end
 
   def index
-    @scripts_with_standards = Script.scripts_with_standards.sort
+    @units_with_standards = Script.units_with_standards.sort
   end
 
   def import_standards
