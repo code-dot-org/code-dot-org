@@ -59,7 +59,7 @@ $(function() {
 // Prevent the map from covering the footer
 function checkOffset() {
   // Once the user scrolls down far enough for the
-  // bottom of the map to touch the footer within 10px,
+  // bottom of the map to touch the footer within 20px,
   // set position to absolute
   if (
     $('#map').offset().top + $('#map').height() >=
