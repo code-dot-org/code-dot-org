@@ -82,6 +82,12 @@ Resources:
     DependsOn: AccessLogPartitionPermission
     Properties:
       BucketName: !Ref BucketName
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: 
+              SSEAlgorithm: aws:kms
+              KMSMasterKeyID: alias/aws/s3
+            BucketKeyEnabled: true
       NotificationConfiguration:
         LambdaConfigurations:
           - Event: 's3:ObjectCreated:*'
@@ -113,6 +119,9 @@ Resources:
     Type: AWS::Kinesis::Stream
     Properties:
       ShardCount: !Ref ShardCount
+      StreamEncryption:
+        EncryptionType: KMS
+        KeyId: alias/aws/kinesis
   AccessLogDeliveryStream:
     Type: AWS::KinesisFirehose::DeliveryStream
     Properties:
@@ -143,7 +152,6 @@ Resources:
             DatabaseName: !Ref AccessLogDatabase
             TableName: !Ref AccessLogTable
             RoleARN: !GetAtt AccessLogDeliveryRole.Arn
-
   AccessLogProcessor:
     Type: AWS::Lambda::Function
     Properties:
