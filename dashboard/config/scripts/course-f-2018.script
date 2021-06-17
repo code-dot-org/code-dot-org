@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson_group 'csf_f_1', display_name: 'Ramp Up to Course F (Optional)'
 lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: false, unplugged: true
 level 'courseB_unplugged_MRF_2018'

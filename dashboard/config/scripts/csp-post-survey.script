@@ -1,6 +1,7 @@
 hidden false
 login_required true
 has_verified_resources true
+published_state 'preview'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
 lesson 'CSP post-course survey', display_name: 'CSP post-course survey', has_lesson_plan: false
