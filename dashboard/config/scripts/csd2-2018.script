@@ -8,6 +8,7 @@ announcements [{"notice"=>"Post-Course Survey for Students Now Open!", "details"
 family_name 'csd2'
 version_year '2018'
 is_stable true
+published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
