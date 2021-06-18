@@ -134,7 +134,7 @@ class GenerateResults extends Component {
           backgroundImage: "url(" + background + ")"
         }}
       >
-        <div style={styles.statementWithBackground}>Testing the model</div>
+        <div style={styles.statementWithBackgroundAbsolute}>Testing the model</div>
 
         <div style={styles.generateResultsContainer}>
           <div

@@ -639,6 +639,16 @@ export const styles = {
     paddingBottom: 10
   },
 
+  statementWithBackgroundAbsolute: {
+    lineHeight: "38px",
+    fontSize: 24,
+    marginBottom: 20,
+    paddingBottom: 10,
+    position: "absolute",
+    top: 10,
+    left: 10
+  },
+
   statementSmall: {
     fontSize: 14,
     paddingBottom: 6
@@ -734,7 +744,7 @@ export const styles = {
     width: "30%",
     overflow: "hidden",
     opacity: 1,
-    paddingTop: 20
+    paddingTop: 40
   },
   trainModelBotContainer: {
     position: "absolute",
@@ -772,7 +782,7 @@ export const styles = {
     width: "30%",
     overflow: "hidden",
     opacity: 1,
-    paddingTop: 20
+    paddingTop: 40
   },
   generateResultsBotContainer: {
     position: "absolute",
