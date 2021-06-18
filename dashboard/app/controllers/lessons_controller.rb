@@ -44,13 +44,14 @@ class LessonsController < ApplicationController
     @lesson_data = @lesson.summarize_for_student_lesson_plan
   end
 
-  # GET /lessons/1/edit where 1 is the relative position of the lesson in the script
+  # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
   def edit_with_lesson_position
     script = Script.get_from_cache(params[:script_id])
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
 
+    disallow_legacy_script_levels
     setup_edit
     render :edit
   end
@@ -58,17 +59,6 @@ class LessonsController < ApplicationController
   # GET /lessons/1/edit where 1 is the ID of the lesson
   def edit
     setup_edit
-  end
-
-  # We have two urls you can use to edit a lesson with a lesson plan. This does the
-  # work for both of them to prepare the data for editing
-  def setup_edit
-    @lesson_data = @lesson.summarize_for_lesson_edit
-    # Return an empty list, because computing the list of related lessons here
-    # sometimes hits a bug and causes the lesson edit page to fail to load.
-    @related_lessons = []
-    @search_options = Level.search_options
-    view_options(full_width: true)
   end
 
   # PATCH/PUT /lessons/1
@@ -160,6 +150,17 @@ class LessonsController < ApplicationController
   end
 
   private
+
+  # We have two urls you can use to edit a lesson with a lesson plan. This does the
+  # work for both of them to prepare the data for editing
+  def setup_edit
+    @lesson_data = @lesson.summarize_for_lesson_edit
+    # Return an empty list, because computing the list of related lessons here
+    # sometimes hits a bug and causes the lesson edit page to fail to load.
+    @related_lessons = []
+    @search_options = Level.search_options
+    view_options(full_width: true)
+  end
 
   def lesson_params
     # Convert camelCase params to snake_case. Right now this only works on
