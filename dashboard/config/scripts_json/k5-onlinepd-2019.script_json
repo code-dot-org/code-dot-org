@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:00:26 UTC",
+    "serialized_at": "2021-06-17 22:30:26 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "k5-onlinepd-2019"

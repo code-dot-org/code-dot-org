@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-06-17 15:49:14 UTC",
+    "serialized_at": "2021-06-18 00:13:21 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -969,8 +969,21 @@
       }
     },
     {
-      "key": "56c8b316-5fd9-4920-852f-7392325d2752",
+      "key": "092e7142-dafc-48f1-b3e1-691062a81420",
       "position": 2,
+      "properties": {
+        "name": "Activity V2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420",
+        "lesson.key": "lesson9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "56c8b316-5fd9-4920-852f-7392325d2752",
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -984,7 +997,7 @@
     },
     {
       "key": "9f3d4572-6b10-42e5-89ac-9b13e7b7d470",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -4549,7 +4562,7 @@
       "key": "afd0eeb9-f9b8-40d1-b6fa-d9b77d35ff30",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _You are friends with Amy, Dan, Hannah, Ken, and Mike._\r\n\r\n- _Amy likes Hawaiian food_\r\n- _Dan likes Mexican food_\r\n- _Hannah likes Japanese food_\r\n- _Ken likes Italian food_\r\n- _Mike likes Hawaiian food_\r\n\r\n_Your new friend, Aaron, has a lot in common with Amy, Hannah, and Mike. What kind of food do you predict Aaron will like? Explain your reasoning._\r\n\r\nHave students journal individually first, then share with a neighbor. Before regrouping, present students with the next prompt\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _You all make plans to hang out at a park over the weekend._\r\n\r\n- _Amy lives 12 minutes away from the park_\r\n- _Dan lives 24 minutes away from the park_\r\n- _Hannah lives 5 minutes away from the park_\r\n- _Ken lives 30 minutes away from the park_\r\n- _Mike lives 13 minutes away from the park_\r\n\r\n_Aaron lives closest to Amy, Dan, and Ken. How long do you predict it will take Aaron to get to the park? Explain your reasoning._\r\n\r\nHave students journal individually first, then share with a neighbor.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share out their responses to both prompts.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _You all make plans to hang out at a park over the weekend._\n\n- _Amy lives 12 minutes away from the park_\n- _Dan lives 24 minutes away from the park_\n- _Hannah lives 5 minutes away from the park_\n- _Ken lives 30 minutes away from the park_\n- _Mike lives 13 minutes away from the park_\n\n_Aaron lives closest to Amy, Dan, and Ken. How long do you predict it will take Aaron to get to the park? Explain your reasoning._\n\nHave students journal individually first, then share with a neighbor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share out their responses to both prompts.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -4561,7 +4574,7 @@
       "key": "4d7fc696-2a35-4ac1-876a-0bd903005e30",
       "position": 2,
       "properties": {
-        "description": " **Discussion Goal:** Even though students can’t be 100% sure about these answers, they should use the clues about the friends Aaron is “closest to” to help guide their answers. In the first prompt, students may predict Aaron will like Hawaiian or Japanese food since these are what his friends liked. In the second prompt, students may have a wider variety of answers, but they should all rely on using the values from Amy, Dan, and Ken to help predict how long it will take Aaron to get to the park."
+        "description": " **Discussion Goal:** Even though students can’t be 100% sure about the answer, students should use the clues about the friends Aaron is “closest to” to help guide their answers. Students may have a wider variety of answers, but they should all rely on using the values from Amy, Dan, and Ken to help predict how long it will take Aaron to get to the park."
       },
       "seeding_key": {
         "activity_section.key": "4d7fc696-2a35-4ac1-876a-0bd903005e30",
@@ -4572,7 +4585,7 @@
       "key": "502a328f-f7c0-4d99-a72f-734e939be2d2",
       "position": 3,
       "properties": {
-        "description": "In both of these situations, we can use information about Aaron’s friends to help predict something about Aaron. It may not be 100% correct, but our prediction will probably be close enough. This is another way that computers can find patterns in data with machine learning - looking at similar data to make predictions. Today, we’ll see how this is especially helpful with numerical data and how A.I. Bot might try to solve the second prompt from today.",
+        "description": "In both of these situations, we can use information about Aaron’s friends to help predict something about Aaron. It may not be 100% correct, but our prediction will probably be close enough. This is another way that computers can find patterns in data with machine learning - looking at similar data to make predictions. Today, we'll explore how machines can make decisions using this same technique.",
         "remarks": true
       },
       "seeding_key": {
@@ -4589,6 +4602,129 @@
       "seeding_key": {
         "activity_section.key": "b30a319e-6920-405e-98cf-5e4987b3c84f",
         "lesson_activity.key": "07679a5a-9023-4f12-98dd-765f10decb66"
+      }
+    },
+    {
+      "key": "c589d268-67e6-4c07-ae30-dfcadbf16418",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [Activity Guide] to each student."
+      },
+      "seeding_key": {
+        "activity_section.key": "c589d268-67e6-4c07-ae30-dfcadbf16418",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "bc5b0524-b664-47d8-81ef-8e162556473b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the overview from the activity guide, which explains how there has been a zombie uprising and we are working to figure out safe places to hide. "
+      },
+      "seeding_key": {
+        "activity_section.key": "bc5b0524-b664-47d8-81ef-8e162556473b",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "01d4ae8a-5cd4-40c0-8181-ce21740ae402",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students look over the data showing how many zombies are at eight different locations. They should record their observations at the bottom of the activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Key:** An answer key to this activity is provided to verified teachers in the links section of the lesson plan"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "01d4ae8a-5cd4-40c0-8181-ce21740ae402",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "fd183da5-2b1f-4a34-9095-fb371121047f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share out their answers to the questions at the bottom of the activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "fd183da5-2b1f-4a34-9095-fb371121047f",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "ca900d16-1f4d-412e-a388-0bcab090191d",
+      "position": 5,
+      "properties": {
+        "description": "**Discussion Goal:** Students may notice that zombies tend to group at loud, outdoor areas. Students may also notice zombies tend to group at locations where there are humans or animals, like schools or zoos. Students may try to justify this pattern by making references to zombies in pop culture, but it's okay if this doesn't come up."
+      },
+      "seeding_key": {
+        "activity_section.key": "ca900d16-1f4d-412e-a388-0bcab090191d",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "74f67209-1518-45fb-9967-34a5fb0f4c5e",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Have students flip to the next page of the activity guide, which is also represented on a slide. This activity guides students through the process of turning the zombie data into a model that can make predictions about how many zombies are in a particular location."
+      },
+      "seeding_key": {
+        "activity_section.key": "74f67209-1518-45fb-9967-34a5fb0f4c5e",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "082bda98-c0da-4454-a2ed-748664e66bd6",
+      "position": 7,
+      "properties": {
+        "description": "**Model:** Help students track how similar each row of the table is similar to Location A. This involves counting each time a cell from Location A matches a cell in the table. For example, if the only thing both locations have in common is that they are indoors, then we would write a 1 for the similarities with Location A. Or, if both locations are indoors, loud, and have sidewalks: then we would write a 3 for the similarities with Location A.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Key:** An answer key to this activity is provided to verified teachers in the links section of the lesson plan"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "082bda98-c0da-4454-a2ed-748664e66bd6",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "90884bc4-fb15-486a-bac8-fd03df79c5e7",
+      "position": 8,
+      "properties": {
+        "description": "**Model:** Help students predict how many zombies will be at Location A by finding the three most similar locations, then averaging the number of zombies at each location. It can be helpful to model this process for Location A, since students will repeat this process for Locations B and C on the back of the activity guide.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**[Content Corner about how this simulates KNN and link to learn more]**"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "90884bc4-fb15-486a-bac8-fd03df79c5e7",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "015eedd8-8d21-4ede-8c7e-b44848440644",
+      "position": 9,
+      "properties": {
+        "description": "**Do This:** On the next page of the activity guide, students are given two new locations to predict the number of zombies. They will repeat this same process for these locations: determine the three most similar locations, then find the average to predict the number of zombies.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Formative Assessment**: [have students do this in pairs so they can practice on their own as a formative assessment]"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "015eedd8-8d21-4ede-8c7e-b44848440644",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
       }
     },
     {
@@ -6462,6 +6598,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender demo-2021"
+        ],
         "progression": "Book Recommender App"
       },
       "named_level": false,
@@ -6485,6 +6624,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 0-2021"
+        ],
         "progression": "Import a Model"
       },
       "named_level": false,
@@ -6508,6 +6650,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 1-2021"
+        ],
         "progression": "Customize Your App"
       },
       "named_level": false,
@@ -6531,6 +6676,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 2-2021"
+        ],
         "progression": "Customize Your App"
       },
       "named_level": false,
@@ -6554,6 +6702,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 3-2021"
+        ],
         "progression": "Customize Your App"
       },
       "named_level": false,
@@ -6577,6 +6728,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 4-2021"
+        ],
         "progression": "Customize Your App"
       },
       "named_level": false,
@@ -6600,6 +6754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 5-2021"
+        ],
         "progression": "Choice Levels: Customize Your App"
       },
       "named_level": false,
