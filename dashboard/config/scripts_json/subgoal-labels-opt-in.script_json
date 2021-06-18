@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 22:59:01 UTC",
+    "serialized_at": "2021-06-17 22:29:05 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "subgoal-labels-opt-in"
