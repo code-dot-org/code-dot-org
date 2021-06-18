@@ -357,6 +357,7 @@ Dashboard::Application.routes.draw do
       get 'student', to: 'lessons#student_lesson_plan'
       get 'extras', to: 'script_levels#lesson_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
+      get 'edit', to: 'lessons#edit_with_lesson_position'
 
       # /s/xxx/lessons/yyy/levels/zzz
       resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -738,9 +739,9 @@ Dashboard::Application.routes.draw do
       concerns :api_v1_pd_routes
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
-      post 'users/:user_id/using_dark_mode', to: 'users#update_using_dark_mode'
+      post 'users/:user_id/display_theme', to: 'users#update_display_theme'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
-      get 'users/:user_id/using_dark_mode', to: 'users#get_using_dark_mode'
+      get 'users/:user_id/display_theme', to: 'users#get_display_theme'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
       get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
