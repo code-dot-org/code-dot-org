@@ -17,7 +17,7 @@ require_relative '../animation_assets/manifest_builder'
 
 def sync_in
   puts "Sync in starting"
-  CurriculumSyncUtils.sync_in
+  Services::I18n::CurriculumSyncUtils.sync_in
   HocSyncUtils.sync_in
   localize_level_and_project_content
   localize_block_content
