@@ -1,5 +1,5 @@
 ---
-title: Teacher Resources - MINECRAFT
+"title": "Teacher Resources - MINECRAFT"
 ---
 
 # MINECRAFT Hour of Code
