@@ -76,12 +76,10 @@ class UnitGroup < ApplicationRecord
     I18n.t("data.course.name.#{name}.version_title", default: version_year)
   end
 
-  # Any course with a plc_course or no family_name is considered stable.
-  # All other courses must specify an is_stable boolean property.
+  # Any course with a plc_course is considered stable.
+  # All other courses must specify a published_state.
   def stable?
-    return true if plc_course || !family_name
-
-    is_stable || false
+    plc_course || published_state == SharedConstants::PUBLISHED_STATE.stable
   end
 
   def self.file_path(name)
@@ -330,9 +328,10 @@ class UnitGroup < ApplicationRecord
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(get_published_state)
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
+  # No longer used except in migration. Should be removed July 2021 after people have had time to migrate
   def get_published_state
     if pilot?
       SharedConstants::PUBLISHED_STATE.pilot
@@ -355,7 +354,7 @@ class UnitGroup < ApplicationRecord
       assignment_family_title: localized_assignment_family_title,
       family_name: family_name,
       version_year: version_year,
-      published_state: get_published_state,
+      published_state: published_state,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
