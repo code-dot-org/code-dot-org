@@ -357,6 +357,7 @@ Dashboard::Application.routes.draw do
       get 'student', to: 'lessons#student_lesson_plan'
       get 'extras', to: 'script_levels#lesson_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
+      get 'edit', to: 'lessons#edit_with_lesson_position'
 
       # /s/xxx/lessons/yyy/levels/zzz
       resources :script_levels, only: [:show], path: "/levels", format: false do
