@@ -22737,7 +22737,7 @@ en:
               description_teacher: ''
             Next steps:
               key: Next steps
-              name: 'Part III:  Next steps'
+              name: Develop a Plan
               description_student: ''
               description_teacher: ''
             Module 1:
@@ -22768,7 +22768,7 @@ en:
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
-              display_name: Next Steps
+              display_name: 'Part III:  Next Steps'
             Introduction:
               display_name: Introduction
             Implementing and Teaching CS:
