@@ -161,7 +161,7 @@ def restore_redacted_files
           plugins << 'resourceLink'
           plugins << 'vocabularyDefinition'
         elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
-          plugins.push(*CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
+          plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
         end
         RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
       end
