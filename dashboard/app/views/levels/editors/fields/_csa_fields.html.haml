@@ -16,13 +16,15 @@
     - maze_value = @level.serialized_maze ? JSON.pretty_generate(@level.serialized_maze) : ''
     = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'input-block-level'
 
--# This element exists instead of the _encrypted_examples element in order to facilitate level urls
--# instead of project urls in the example solutions. This is needed because Java Lab has mini-app
--# types, such as neighborhood, which are highly dependent on their level definition and do not have
--# a standalone type. However, we can't use the same method used by Maze or other puzzle level
--# types. Those send the solution to every client's browser. If we used that method, the solution
--# would be available to view the solution from the browser. Instead, we encrypt the solution url
--# and put the level in a hidden script. Only verified teachers will be able to view the level.
+-# This element exists instead of the _encrypted_examples element as a temporary workaround in order
+-# to facilitate level urls instead of project urls in the example solutions. This is needed because
+-# Java Lab has mini-app types, such as neighborhood, which are highly dependent on their level
+-# definition and do not have a standalone type. However, we can't use the same method used by Maze
+-# or other puzzle level types. Those send the solution to every client's browser. If we used that
+-# method, the student would be available to view the solution from the browser. Instead, we encrypt
+-# the solution url and put the level in a pilot script. The link will only be sent to verified
+-# teachers, but their students could access the level if they know the URL. In the future, we will
+-# add an "exemplar mode" similar to "start mode" that can be used to create exemplars.
 %h1.control-legend{data: {toggle: "collapse", target: "#examples"}}
   Example Solutions
 
