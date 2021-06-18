@@ -1,7 +1,6 @@
 function spriteSay(sprite,speech){
   setProp(sprite, "speech", speech);
   setProp(sprite, "timeout", 120);
-
 }
 
 function spriteSayTime(sprite,speech,time){
@@ -20,22 +19,42 @@ function speechBubbles(){
     var spriteSpeech=getProp({id: spriteIds[i]}, "speech");
     var spriteTimeout=getProp({id: spriteIds[i]}, "timeout");
 
-    if(spriteTimeout){
+    if(spriteTimeout&&spriteSpeech!=undefined){
       var widthOfText=textWidth(spriteSpeech);
-      var textScaler=16;//font size
-      textSize(textScaler);
+      var textHeight=16;//font size
+      
+     /*
       while(widthOfText>500){
-        textScaler--;
-        textSize(textScaler);
+        textHeight--;
+        textSize(textHeight);
         widthOfText=textWidth(spriteSpeech);
+      }*/
+
+      if (spriteSpeech.length > 150) {
+        spriteSpeech = spriteSpeech.substring(0, 149) + "…";
       }
+      if(spriteSpeech.length < 50){
+        textHeight=20;
+        charCount=20;
+      } else if(spriteSpeech.length < 75){
+        textHeight=15;
+        charCount=25;
+      } else if(spriteSpeech.length < 125){
+        textHeight=10;
+        charCount=30;
+      } else {
+        textHeight=10;
+        charCount=35;
+      }
+      textSize(textHeight);
+
       var charCount=Math.sqrt(spriteSpeech.length*10);
       if(charCount < 20) {
         charCount=20;
       }
 
 
-      spriteSpeech=wordWrap(getProp({id: spriteIds[i]}, "speech"),charCount);//16 characters per line
+      spriteSpeech=wordWrap(spriteSpeech,charCount);//16 characters per line
       var lines = spriteSpeech.split(/\r\n|\r|\n/); 
       setProp({id: spriteIds[i]}, "lineCount", lines.length);
       fill(rgb(50,50,50,0.5));
@@ -56,7 +75,7 @@ function speechBubbles(){
 
 
       var boxWidth=minWidth+5;
-      var boxHeight=((textScaler)+3)*(getProp({id: spriteIds[i]}, "lineCount"))+5;
+      var boxHeight=((textHeight)+3)*(getProp({id: spriteIds[i]}, "lineCount"))+5;
 
       var rectX=spriteX-boxWidth/2;
       var rectY=spriteY-(spriteScale/2)-boxHeight-5;
