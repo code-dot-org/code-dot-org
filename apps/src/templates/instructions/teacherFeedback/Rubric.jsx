@@ -31,12 +31,27 @@ class TeacherFeedbackRubric extends Component {
       viewAs
     } = this.props;
 
-    let showFeedbackInputAreas, expandByDefault;
+    // RubricFields are used to display and update performance levels. When expanded,
+    // the RubricField displays detailed information about the performance level. The RubricFields also
+    // have input areas for the teacher to select a performance level or for the student
+    // to view the selection.
+
+    let showFeedbackInputAreas, expandAllRubricFields;
     if (viewAs === ViewType.Student) {
-      expandByDefault = !performance;
+      // If the student has not been evaluated by the rubric (!performance),
+      // the rubric fields are expanded to display details. If the student has
+      // been evaluated the rubric, fields are collapsed by default. Except for the
+      // selected performance level (see RubricField implementation below).
+      expandAllRubricFields = !performance;
+
+      // Input areas are only displayed if a student has been evalutated with the rubric.
       showFeedbackInputAreas = !!performance;
     } else if (viewAs === ViewType.Teacher) {
-      expandByDefault = !isEditable;
+      // Rubric fields are all expanded if teacher is viewing but not editing the rubric (this
+      // will happen when the teacher is viewing the level and not viewing a student's work).
+      // Rubric fields are all collapsed by default if the teacher is evaluating a student.
+      expandAllRubricFields = !isEditable;
+
       showFeedbackInputAreas = isEditable;
     }
 
@@ -54,7 +69,7 @@ class TeacherFeedbackRubric extends Component {
                 key={level}
                 showFeedbackInputAreas={showFeedbackInputAreas}
                 expandByDefault={
-                  expandByDefault ||
+                  expandAllRubricFields ||
                   (viewAs === ViewType.Student && performance === level)
                 }
                 rubricLevel={level}
