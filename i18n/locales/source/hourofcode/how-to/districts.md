@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+"title": "Hour of Code How-To for Districts"
 ---
 
 {{ signup_button }}
