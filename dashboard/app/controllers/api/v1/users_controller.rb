@@ -33,9 +33,9 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     render json: {using_text_mode: !!@user.using_text_mode}
   end
 
-  # GET /api/v1/users/<user_id>/using_dark_mode
-  def get_using_dark_mode
-    render json: {using_dark_mode: !!@user.using_dark_mode}
+  # GET /api/v1/users/<user_id>/display_theme
+  def get_display_theme
+    render json: {display_theme: @user&.display_theme}
   end
 
   # GET /api/v1/users/<user_id>/get_donor_teacher_banner_details
@@ -76,12 +76,12 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     render json: {using_text_mode: !!@user.using_text_mode}
   end
 
-  # POST /api/v1/users/<user_id>/using_dark_mode
-  def update_using_dark_mode
-    @user.using_dark_mode = !!params[:using_dark_mode].try(:to_bool)
+  # POST /api/v1/users/<user_id>/display_theme
+  def update_display_theme
+    @user.display_theme = params[:display_theme]
     @user.save
 
-    render json: {using_dark_mode: !!@user.using_dark_mode}
+    render json: {display_theme: @user.display_theme}
   end
 
   # POST /api/v1/users/accept_data_transfer_agreement

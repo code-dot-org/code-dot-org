@@ -474,6 +474,24 @@ class LevelTest < ActiveSupport::TestCase
     assert_includes e.message, 'Validation failed: Level num has already been taken'
   end
 
+  test 'cannot create multi and match levels with same key' do
+    multi = create :multi, name: 'multi match', level_num: nil, user_id: nil
+    assert_equal 'multi match', multi.key
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :match, name: 'multi match', level_num: nil, user_id: nil
+    end
+    assert_includes e.message, 'Validation failed: Name has already been taken'
+  end
+
+  test 'cannot create custom and dsl levels with same key' do
+    level1 = create :artist, name: 'artist multi', level_num: 'custom'
+    assert_equal 'artist multi', level1.key
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :multi, name: 'artist multi', level_num: nil, user_id: nil
+    end
+    assert_includes e.message, 'Validation failed: Name has already been taken'
+  end
+
   test 'applab examples' do
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
