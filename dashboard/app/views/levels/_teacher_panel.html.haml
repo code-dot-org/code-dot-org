@@ -20,7 +20,9 @@
       // We treat Dancelab as a sub-set of Sprite Lab levels so have to check and set that before GamelabJr.
       // Artist levels have @level.game.app of "turtle" and Playlab levels have @level.game.app of "studio"
       // so need to set those too.
-      // Java Lab levels use hidden levels rather than projects as their example, so we pass the URL directly.
+      // Java Lab levels use levels rather than projects as their example, so the URL is much more clearly
+      // defined and is directly set on the level. Because of this, the value of "example" is already in its
+      // final state - a string representation of the URL of the exemplar level: studio.code.org/s/<course>/...
       - if @level.is_a?(Dancelab)
         - send("#{"dance"}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
       - elsif @level.is_a?(GamelabJr)
