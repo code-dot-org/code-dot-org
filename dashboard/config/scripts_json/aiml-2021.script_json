@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-06-17 21:58:12 UTC",
+    "serialized_at": "2021-06-18 00:13:21 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -4562,7 +4562,7 @@
       "key": "afd0eeb9-f9b8-40d1-b6fa-d9b77d35ff30",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _You are friends with Amy, Dan, Hannah, Ken, and Mike._\r\n\r\n- _Amy likes Hawaiian food_\r\n- _Dan likes Mexican food_\r\n- _Hannah likes Japanese food_\r\n- _Ken likes Italian food_\r\n- _Mike likes Hawaiian food_\r\n\r\n_Your new friend, Aaron, has a lot in common with Amy, Hannah, and Mike. What kind of food do you predict Aaron will like? Explain your reasoning._\r\n\r\nHave students journal individually first, then share with a neighbor. Before regrouping, present students with the next prompt\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _You all make plans to hang out at a park over the weekend._\r\n\r\n- _Amy lives 12 minutes away from the park_\r\n- _Dan lives 24 minutes away from the park_\r\n- _Hannah lives 5 minutes away from the park_\r\n- _Ken lives 30 minutes away from the park_\r\n- _Mike lives 13 minutes away from the park_\r\n\r\n_Aaron lives closest to Amy, Dan, and Ken. How long do you predict it will take Aaron to get to the park? Explain your reasoning._\r\n\r\nHave students journal individually first, then share with a neighbor.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share out their responses to both prompts.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _You all make plans to hang out at a park over the weekend._\n\n- _Amy lives 12 minutes away from the park_\n- _Dan lives 24 minutes away from the park_\n- _Hannah lives 5 minutes away from the park_\n- _Ken lives 30 minutes away from the park_\n- _Mike lives 13 minutes away from the park_\n\n_Aaron lives closest to Amy, Dan, and Ken. How long do you predict it will take Aaron to get to the park? Explain your reasoning._\n\nHave students journal individually first, then share with a neighbor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share out their responses to both prompts.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -4574,7 +4574,7 @@
       "key": "4d7fc696-2a35-4ac1-876a-0bd903005e30",
       "position": 2,
       "properties": {
-        "description": " **Discussion Goal:** Even though students can’t be 100% sure about these answers, they should use the clues about the friends Aaron is “closest to” to help guide their answers. In the first prompt, students may predict Aaron will like Hawaiian or Japanese food since these are what his friends liked. In the second prompt, students may have a wider variety of answers, but they should all rely on using the values from Amy, Dan, and Ken to help predict how long it will take Aaron to get to the park."
+        "description": " **Discussion Goal:** Even though students can’t be 100% sure about the answer, students should use the clues about the friends Aaron is “closest to” to help guide their answers. Students may have a wider variety of answers, but they should all rely on using the values from Amy, Dan, and Ken to help predict how long it will take Aaron to get to the park."
       },
       "seeding_key": {
         "activity_section.key": "4d7fc696-2a35-4ac1-876a-0bd903005e30",
@@ -4666,21 +4666,10 @@
       }
     },
     {
-      "key": "bd11db05-bdba-48fc-a7b3-df1edaede174",
+      "key": "74f67209-1518-45fb-9967-34a5fb0f4c5e",
       "position": 6,
       "properties": {
-        "description": "**Distribute**: Pass out the [Second Activity Guide] to each student. Students will use the data from the first handout to complete this activity guide, so both should be available to students."
-      },
-      "seeding_key": {
-        "activity_section.key": "bd11db05-bdba-48fc-a7b3-df1edaede174",
-        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
-      }
-    },
-    {
-      "key": "74f67209-1518-45fb-9967-34a5fb0f4c5e",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the overview of the activity guide, which will guide students through the process of turning the zombie data into a model that can make predictions about how many zombies are in a particular location."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Have students flip to the next page of the activity guide, which is also represented on a slide. This activity guides students through the process of turning the zombie data into a model that can make predictions about how many zombies are in a particular location."
       },
       "seeding_key": {
         "activity_section.key": "74f67209-1518-45fb-9967-34a5fb0f4c5e",
@@ -4689,9 +4678,9 @@
     },
     {
       "key": "082bda98-c0da-4454-a2ed-748664e66bd6",
-      "position": 8,
+      "position": 7,
       "properties": {
-        "description": "**Model:** Help students track the number of similarities for Location A and record their results on their activity guide. You may want to model the process for a few of the locations first before having students try on their own.",
+        "description": "**Model:** Help students track how similar each row of the table is similar to Location A. This involves counting each time a cell from Location A matches a cell in the table. For example, if the only thing both locations have in common is that they are indoors, then we would write a 1 for the similarities with Location A. Or, if both locations are indoors, loud, and have sidewalks: then we would write a 3 for the similarities with Location A.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4706,7 +4695,7 @@
     },
     {
       "key": "90884bc4-fb15-486a-bac8-fd03df79c5e7",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "**Model:** Help students predict how many zombies will be at Location A by finding the three most similar locations, then averaging the number of zombies at each location. It can be helpful to model this process for Location A, since students will repeat this process for Locations B and C on the back of the activity guide.",
         "tips": [
@@ -4723,7 +4712,7 @@
     },
     {
       "key": "015eedd8-8d21-4ede-8c7e-b44848440644",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "**Do This:** On the next page of the activity guide, students are given two new locations to predict the number of zombies. They will repeat this same process for these locations: determine the three most similar locations, then find the average to predict the number of zombies.",
         "tips": [
@@ -6609,6 +6598,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender demo-2021"
+        ],
         "progression": "Book Recommender App"
       },
       "named_level": false,
@@ -6632,6 +6624,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 0-2021"
+        ],
         "progression": "Import a Model"
       },
       "named_level": false,
@@ -6655,6 +6650,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 1-2021"
+        ],
         "progression": "Customize Your App"
       },
       "named_level": false,
@@ -6678,6 +6676,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 2-2021"
+        ],
         "progression": "Customize Your App"
       },
       "named_level": false,
@@ -6701,6 +6702,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 3-2021"
+        ],
         "progression": "Customize Your App"
       },
       "named_level": false,
@@ -6724,6 +6728,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 4-2021"
+        ],
         "progression": "Customize Your App"
       },
       "named_level": false,
@@ -6747,6 +6754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 5-2021"
+        ],
         "progression": "Choice Levels: Customize Your App"
       },
       "named_level": false,

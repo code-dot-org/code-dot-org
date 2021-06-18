@@ -456,6 +456,67 @@
         },
         {
           "type": "matrix",
+          "name": "curriculum_impressions_csf",
+          "title": "Having attended the workshop, what are your overall impressions of the {workshop_course} curriculum?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "love",
+              "text": "I am going to love teaching with this curriculum."
+            },
+            {
+              "value": "understand_what",
+              "text": "I understand what CS Fundamentals courses look like, including lesson plans, online activities, and unplugged activities."
+            },
+            {
+              "value": "understand_which",
+              "text": "I understand which courses and lessons are most appropriate for my students."
+            },
+            {
+              "value": "understand_tools",
+              "text": "I understand all of the tools and technologies I can use in the curriculum."
+            },
+            {
+              "value": "understand_inclusive",
+              "text": "I am aware of strategies to support an inclusive CS classroom."
+            },
+            {
+              "value": "understand_barriers",
+              "text": "I am aware of strategies to overcome barriers to implementing this curriculum."
+            }
+          ]
+        },
+        {
+          "type": "matrix",
           "name": "development_needs",
           "title": "Thinking about your future development needs, how important are the following topics to you?",
           "columns": [

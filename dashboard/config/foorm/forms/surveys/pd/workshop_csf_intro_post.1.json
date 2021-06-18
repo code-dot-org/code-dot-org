@@ -44,65 +44,10 @@
           "name": "what_detracted"
         },
         {
-          "type": "matrix",
-          "name": "curriculum_impressions",
-          "title": "Having attended the workshop, what are your overall impressions of the {workshop_course} curriculum?",
-          "columns": [
-            {
-              "value": "1",
-              "text": "Strongly Disagree"
-            },
-            {
-              "value": "2",
-              "text": "Disagree"
-            },
-            {
-              "value": "3",
-              "text": "Slightly Disagree"
-            },
-            {
-              "value": "4",
-              "text": "Neutral"
-            },
-            {
-              "value": "5",
-              "text": "Slightly Agree"
-            },
-            {
-              "value": "6",
-              "text": "Agree"
-            },
-            {
-              "value": "7",
-              "text": "Strongly Agree"
-            }
-          ],
-          "rows": [
-            {
-              "value": "love",
-              "text": "I am going to love teaching with this curriculum."
-            },
-            {
-              "value": "understand_what",
-              "text": "I understand what CS Fundamentals courses look like, including lesson plans, online activities, and unplugged activities."
-            },
-            {
-              "value": "understand_which",
-              "text": "I understand which courses and lessons are most appropriate for my students."
-            },
-            {
-              "value": "understand_tools",
-              "text": "I understand all of the tools and technologies I can use in the curriculum."
-            },
-            {
-              "value": "understand_inclusive",
-              "text": "I am aware of strategies to support an inclusive CS classroom."
-            },
-            {
-              "value": "understand_barriers",
-              "text": "I am aware of strategies to overcome barriers to implementing this curriculum."
-            }
-          ]
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "curriculum_impressions_csf"
         },
         {
           "type": "comment",
@@ -134,70 +79,16 @@
           "max": "2020"
         },
         {
-          "type": "radiogroup",
-          "name": "gender",
-          "title": "What is your gender identity?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "female",
-              "text": "Female"
-            },
-            {
-              "value": "male",
-              "text": "Male"
-            },
-            {
-              "value": "non_binary",
-              "text": "Non-binary"
-            },
-            {
-              "value": "not_listed",
-              "text": "Preferred term not listed"
-            },
-            {
-              "value": "prefer_not_answer",
-              "text": "Prefer not to answer"
-            }
-          ]
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
+          "name": "gender_identity"
         },
         {
-          "type": "checkbox",
-          "name": "race",
-          "title": "What is your racial or ethnic identity?",
-          "isRequired": true,
-          "hasOther": true,
-          "otherText": "Other",
-          "choices": [
-            {
-              "value": "ai_or_an",
-              "text": "American Indian/Alaska Native"
-            },
-            {
-              "value": "asian",
-              "text": "Asian"
-            },
-            {
-              "value": "black_african_american",
-              "text": "Black or African American"
-            },
-            {
-              "value": "hispanic_latino",
-              "text": "Hispanic or Latino"
-            },
-            {
-              "value": "nh_or_pi",
-              "text": "Native Hawaiian or other Pacific Islander"
-            },
-            {
-              "value": "white",
-              "text": "White"
-            },
-            {
-              "value": "prefer_not_answer",
-              "text": "Prefer not to answer"
-            }
-          ]
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
+          "name": "racial_ethnic_identity"
         },
         {
           "type": "library_item",
