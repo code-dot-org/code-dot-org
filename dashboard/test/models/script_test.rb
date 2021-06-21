@@ -689,7 +689,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert unit.can_view_version?(teacher)
   end
 
-  test 'can_view_version? is true if script is latest stable version in student locale or in English' do
+  test 'can_view_version? is true if unit is latest stable version in student locale or in English' do
     latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', is_stable: true, supported_locales: []
     latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', is_stable: true, supported_locales: ['it-it']
     student = create :student
@@ -700,42 +700,42 @@ class ScriptTest < ActiveSupport::TestCase
     assert latest_in_locale.can_view_version?(nil, locale: 'it-it')
   end
 
-  test 'can_view_version? is false if script is unstable and has no progress and is not assigned' do
+  test 'can_view_version? is false if unit is unstable and has no progress and is not assigned' do
     unstable = create :script, name: 'new-unstable', family_name: 'courseg', version_year: '2018'
     student = create :student
 
     refute unstable.can_view_version?(student, locale: 'it-it')
   end
 
-  test 'can_view_version? is true if student is assigned to script' do
-    script = create :script, name: 'my-script', family_name: 'script-fam'
+  test 'can_view_version? is true if student is assigned to unit' do
+    unit = create :script, name: 'my-script', family_name: 'script-fam'
     student = create :student
     student.expects(:assigned_script?).returns(true)
 
-    assert script.can_view_version?(student)
+    assert unit.can_view_version?(student)
   end
 
-  test 'can_view_version? is true if student has progress in script' do
-    script = create :script, name: 'my-script', family_name: 'script-fam'
+  test 'can_view_version? is true if student has progress in unit' do
+    unit = create :script, name: 'my-script', family_name: 'script-fam'
     student = create :student
-    student.scripts << script
+    student.scripts << unit
 
-    assert script.can_view_version?(student)
+    assert unit.can_view_version?(student)
   end
 
   test 'can_view_version? is true if student has progress in unit group unit belongs to' do
-    unit_group = create :unit_group, family_name: 'script-fam'
-    script1 = create :script, name: 'script1', family_name: 'script-fam'
-    create :unit_group_unit, unit_group: unit_group, script: script1, position: 1
-    script2 = create :script, name: 'script2', family_name: 'script-fam'
-    create :unit_group_unit, unit_group: unit_group, script: script2, position: 2
+    unit_group = create :unit_group, family_name: 'unit-fam'
+    unit1 = create :script, name: 'unit1', family_name: 'unit-fam'
+    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
+    unit2 = create :script, name: 'unit2', family_name: 'unit-fam'
+    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
     student = create :student
-    student.scripts << script1
+    student.scripts << unit1
 
-    assert script2.can_view_version?(student)
+    assert unit2.can_view_version?(student)
   end
 
-  test 'self.latest_stable_version is nil if no script versions in family are stable in locale' do
+  test 'self.latest_stable_version is nil if no unit versions in family are stable in locale' do
     create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true, supported_locales: ["it-it"]
     create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true, supported_locales: ["it-it"]
 
@@ -744,35 +744,35 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'self.latest_stable_version returns latest stable version for user locale' do
     create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true, supported_locales: ["it-it"]
-    script_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true, supported_locales: ["it-it"]
+    unit_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true, supported_locales: ["it-it"]
 
-    assert_equal script_2018, Script.latest_stable_version('fake-family', locale: 'it-it')
+    assert_equal unit_2018, Script.latest_stable_version('fake-family', locale: 'it-it')
   end
 
   test 'self.latest_stable_version returns latest stable version for English locales' do
     create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true
-    script_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true
+    unit_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true
 
-    assert_equal script_2018, Script.latest_stable_version('fake-family')
-    assert_equal script_2018, Script.latest_stable_version('fake-family', locale: 'en-ca')
+    assert_equal unit_2018, Script.latest_stable_version('fake-family')
+    assert_equal unit_2018, Script.latest_stable_version('fake-family', locale: 'en-ca')
   end
 
-  test 'self.latest_stable_version returns correct script version in family if version_year is supplied' do
-    script_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true
+  test 'self.latest_stable_version returns correct unit version in family if version_year is supplied' do
+    unit_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true
     create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true
 
-    assert_equal script_2017, Script.latest_stable_version('fake-family', version_year: '2017')
+    assert_equal unit_2017, Script.latest_stable_version('fake-family', version_year: '2017')
   end
 
-  test 'self.latest_assigned_version returns nil if no scripts in family are assigned to user' do
-    script1 = create :script, name: 's-1', family_name: 'family-1'
+  test 'self.latest_assigned_version returns nil if no units in family are assigned to user' do
+    unit1 = create :script, name: 's-1', family_name: 'family-1'
     student = create :student
-    student.scripts << script1
+    student.scripts << unit1
 
     assert_nil Script.latest_assigned_version('family-2', student)
   end
 
-  test 'self.latest_assigned_version returns latest assigned script in family if script is in course family' do
+  test 'self.latest_assigned_version returns latest assigned unit in family if unit is in course family' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
     create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
@@ -787,7 +787,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal csp1_2017, Script.latest_assigned_version('csp', student)
   end
 
-  test 'self.latest_assigned_version returns latest assigned script in family if script is not in course family' do
+  test 'self.latest_assigned_version returns latest assigned unit in family if unit is not in course family' do
     student = create :student
     courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
     create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
@@ -809,34 +809,34 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.find_by_name('ECSPD').professional_learning_course?
   end
 
-  test 'script with pilot experiment has pilot published state' do
-    script = create(:script, name: 'single-lesson-script', pilot_experiment: 'my-experiment')
-    assert_equal SharedConstants::PUBLISHED_STATE.pilot, script.get_published_state
+  test 'unit with pilot experiment has pilot published state' do
+    unit = create(:script, name: 'single-lesson-script', pilot_experiment: 'my-experiment')
+    assert_equal SharedConstants::PUBLISHED_STATE.pilot, unit.get_published_state
   end
 
-  test 'script with hidden true has beta published state' do
-    script = create(:script, name: 'single-lesson-script', hidden: true)
-    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.get_published_state
+  test 'unit with hidden true has beta published state' do
+    unit = create(:script, name: 'single-lesson-script', hidden: true)
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, unit.get_published_state
   end
 
-  test 'script with hidden false has preview published state' do
-    script = create(:script, name: 'single-lesson-script', hidden: false)
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.get_published_state
+  test 'unit with hidden false has preview published state' do
+    unit = create(:script, name: 'single-lesson-script', hidden: false)
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.get_published_state
   end
 
-  test 'script with hidden false and is_stable true has stable published state' do
-    script = create(:script, name: 'single-lesson-script', hidden: false, is_stable: true)
-    assert_equal SharedConstants::PUBLISHED_STATE.stable, script.get_published_state
+  test 'unit with hidden false and is_stable true has stable published state' do
+    unit = create(:script, name: 'single-lesson-script', hidden: false, is_stable: true)
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, unit.get_published_state
   end
 
-  test 'should summarize script' do
-    script = create(:script, name: 'single-lesson-script')
-    lesson_group = create(:lesson_group, key: 'key1', script: script)
-    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
-    create(:script_level, script: script, lesson: lesson)
-    script.teacher_resources = [['curriculum', '/link/to/curriculum']]
+  test 'should summarize unit' do
+    unit = create(:script, name: 'single-lesson-script')
+    lesson_group = create(:lesson_group, key: 'key1', script: unit)
+    lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
+    create(:script_level, script: unit, lesson: lesson)
+    unit.teacher_resources = [['curriculum', '/link/to/curriculum']]
 
-    summary = script.summarize
+    summary = unit.summarize
 
     assert_equal 1, summary[:lessons].count
     assert_nil summary[:peerReviewLessonInfo]
@@ -844,15 +844,15 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
   end
 
-  test 'should summarize script with peer reviews' do
-    script = create(:script, name: 'script-with-peer-review', peer_reviews_to_complete: 1)
-    lesson_group = create(:lesson_group, key: 'key1', script: script)
-    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
-    create(:script_level, script: script, lesson: lesson)
-    lesson = create(:lesson, script: script, name: 'lesson 2', lesson_group: lesson_group)
-    create(:script_level, script: script, lesson: lesson)
+  test 'should summarize unit with peer reviews' do
+    unit = create(:script, name: 'script-with-peer-review', peer_reviews_to_complete: 1)
+    lesson_group = create(:lesson_group, key: 'key1', script: unit)
+    lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
+    create(:script_level, script: unit, lesson: lesson)
+    lesson = create(:lesson, script: unit, name: 'lesson 2', lesson_group: lesson_group)
+    create(:script_level, script: unit, lesson: lesson)
 
-    summary = script.summarize
+    summary = unit.summarize
 
     expected_peer_review_lesson = {
       name: "You must complete 1 reviews for this unit",
@@ -874,34 +874,34 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
-  test 'does not include peer reviews in script that only requires instructor review' do
-    # Our script editing UI prevents creating a script with a number of peer reviews
+  test 'does not include peer reviews in unit that only requires instructor review' do
+    # Our unit editing UI prevents creating a unit with a number of peer reviews
     # to complete that is not 0 when only instructor review is required.
     # That said, this test confirms that we would not display a peer review lesson even if this
     # did occur.
-    script = create(:script,
+    unit = create(:script,
       name: 'script-with-peer-review',
       peer_reviews_to_complete: 1,
       only_instructor_review_required: true
     )
-    lesson_group = create(:lesson_group, key: 'key1', script: script)
-    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
-    create(:script_level, script: script, lesson: lesson)
+    lesson_group = create(:lesson_group, key: 'key1', script: unit)
+    lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
+    create(:script_level, script: unit, lesson: lesson)
 
-    summary = script.summarize
+    summary = unit.summarize
 
     assert_nil summary[:peerReviewLessonInfo]
   end
 
-  test 'can summarize script for lesson plan' do
-    script = create :script, name: 'my-script'
-    lesson_group = create :lesson_group, key: 'lg-1', script: script
-    lesson_group2 = create :lesson_group, key: 'lg-2', script: script
-    lesson_group3 = create :lesson_group, key: 'lg-3', script: script
+  test 'can summarize unit for lesson plan' do
+    unit = create :script, name: 'my-script'
+    lesson_group = create :lesson_group, key: 'lg-1', script: unit
+    lesson_group2 = create :lesson_group, key: 'lg-2', script: unit
+    lesson_group3 = create :lesson_group, key: 'lg-3', script: unit
     create(
       :lesson,
       lesson_group: lesson_group,
-      script: script,
+      script: unit,
       name: 'Lesson 1',
       key: 'lesson-1',
       has_lesson_plan: true,
@@ -912,7 +912,7 @@ class ScriptTest < ActiveSupport::TestCase
     create(
       :lesson,
       lesson_group: lesson_group,
-      script: script,
+      script: unit,
       name: 'Lesson 2',
       key: 'lesson-2',
       has_lesson_plan: false,
@@ -924,7 +924,7 @@ class ScriptTest < ActiveSupport::TestCase
     create(
       :lesson,
       lesson_group: lesson_group2,
-      script: script,
+      script: unit,
       name: 'Lesson 3',
       key: 'lesson-3',
       has_lesson_plan: true,
@@ -936,7 +936,7 @@ class ScriptTest < ActiveSupport::TestCase
     create(
       :lesson,
       lesson_group: lesson_group3,
-      script: script,
+      script: unit,
       name: 'Lesson 4',
       key: 'lesson-4',
       has_lesson_plan: false,
@@ -945,7 +945,7 @@ class ScriptTest < ActiveSupport::TestCase
       absolute_position: 4
     )
 
-    summary = script.summarize_for_lesson_show
+    summary = unit.summarize_for_lesson_show
     assert_equal '/s/my-script', summary[:link]
     # only includes lesson groups with lessons with lesson plans
     assert_equal 2, summary[:lessonGroups].count
@@ -955,15 +955,15 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '/s/my-script/lessons/1', summary[:lessonGroups][0][:lessons][0][:link]
   end
 
-  test 'can summarize script for student lesson plan' do
-    script = create :script, name: 'my-script'
-    lesson_group = create :lesson_group, script: script
-    lesson_group2 = create :lesson_group, key: 'lg-2', script: script
-    lesson_group3 = create :lesson_group, key: 'lg-3', script: script
+  test 'can summarize unit for student lesson plan' do
+    unit = create :script, name: 'my-script'
+    lesson_group = create :lesson_group, script: unit
+    lesson_group2 = create :lesson_group, key: 'lg-2', script: unit
+    lesson_group3 = create :lesson_group, key: 'lg-3', script: unit
     create(
       :lesson,
       lesson_group: lesson_group,
-      script: script,
+      script: unit,
       name: 'Lesson 1',
       key: 'lesson-1',
       has_lesson_plan: true,
@@ -974,7 +974,7 @@ class ScriptTest < ActiveSupport::TestCase
     create(
       :lesson,
       lesson_group: lesson_group,
-      script: script,
+      script: unit,
       name: 'Lesson 2',
       key: 'lesson-2',
       has_lesson_plan: false,
@@ -986,7 +986,7 @@ class ScriptTest < ActiveSupport::TestCase
     create(
       :lesson,
       lesson_group: lesson_group2,
-      script: script,
+      script: unit,
       name: 'Lesson 3',
       key: 'lesson-3',
       has_lesson_plan: true,
@@ -998,7 +998,7 @@ class ScriptTest < ActiveSupport::TestCase
     create(
       :lesson,
       lesson_group: lesson_group3,
-      script: script,
+      script: unit,
       name: 'Lesson 4',
       key: 'lesson-4',
       has_lesson_plan: false,
@@ -1007,7 +1007,7 @@ class ScriptTest < ActiveSupport::TestCase
       absolute_position: 4
     )
 
-    summary = script.summarize_for_lesson_show(true)
+    summary = unit.summarize_for_lesson_show(true)
     assert_equal '/s/my-script', summary[:link]
     # only includes lesson groups with lessons with lesson plans
     assert_equal 2, summary[:lessonGroups].count
@@ -1026,46 +1026,46 @@ class ScriptTest < ActiveSupport::TestCase
 
       Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
 
-      @script = create(:script, name: 'script-with-visible-after')
-      @lesson_group = create(:lesson_group, key: 'key1', script: @script)
-      lesson_no_visible_after = create(:lesson, script: @script, name: 'Lesson 1', lesson_group: @lesson_group)
-      create(:script_level, script: @script, lesson: lesson_no_visible_after)
-      lesson_future_visible_after = create(:lesson, script: @script, name: 'Lesson 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @script, lesson: lesson_future_visible_after)
-      lesson_past_visible_after = create(:lesson, script: @script, name: 'Lesson 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @script, lesson: lesson_past_visible_after)
+      @unit = create(:script, name: 'script-with-visible-after')
+      @lesson_group = create(:lesson_group, key: 'key1', script: @unit)
+      lesson_no_visible_after = create(:lesson, script: @unit, name: 'Lesson 1', lesson_group: @lesson_group)
+      create(:script_level, script: @unit, lesson: lesson_no_visible_after)
+      lesson_future_visible_after = create(:lesson, script: @unit, name: 'Lesson 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
+      create(:script_level, script: @unit, lesson: lesson_future_visible_after)
+      lesson_past_visible_after = create(:lesson, script: @unit, name: 'Lesson 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
+      create(:script_level, script: @unit, lesson: lesson_past_visible_after)
     end
 
     teardown do
       Timecop.return
     end
 
-    test 'should summarize script with visible after dates for unsigned in user' do
-      summary = @script.summarize(true, nil, false)
+    test 'should summarize unit with visible after dates for unsigned in user' do
+      summary = @unit.summarize(true, nil, false)
       assert_equal 2, summary[:lessons].count
     end
 
-    test 'should summarize script with visible after dates for teacher' do
-      summary = @script.summarize(true, @teacher, false)
+    test 'should summarize unit with visible after dates for teacher' do
+      summary = @unit.summarize(true, @teacher, false)
       assert_equal 2, summary[:lessons].count
     end
 
-    test 'should summarize script with visible after dates for student' do
-      summary = @script.summarize(true, @student, false)
+    test 'should summarize unit with visible after dates for student' do
+      summary = @unit.summarize(true, @student, false)
       assert_equal 2, summary[:lessons].count
     end
 
-    test 'should summarize script with visible after dates for levelbuilder' do
-      summary = @script.summarize(true, @levelbuilder, false)
+    test 'should summarize unit with visible after dates for levelbuilder' do
+      summary = @unit.summarize(true, @levelbuilder, false)
       assert_equal 3, summary[:lessons].count
     end
   end
 
   test 'should generate a shorter summary for header' do
-    script = create(:script, name: 'single-lesson-script')
-    lesson_group = create(:lesson_group, key: 'key1', script: script)
-    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
-    create(:script_level, script: script, lesson: lesson)
+    unit = create(:script, name: 'single-lesson-script')
+    lesson_group = create(:lesson_group, key: 'key1', script: unit)
+    lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
+    create(:script_level, script: unit, lesson: lesson)
 
     expected = {
       name: 'single-lesson-script',
@@ -1075,50 +1075,50 @@ class ScriptTest < ActiveSupport::TestCase
       age_13_required: false,
       is_csf: false,
     }
-    assert_equal expected, script.summarize_header
+    assert_equal expected, unit.summarize_header
   end
 
   test 'should exclude lessons if include_lessons is false' do
-    script = create(:script, name: 'single-lesson-script')
-    lesson_group = create(:lesson_group, key: 'key1', script: script)
-    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
-    create(:script_level, script: script, lesson: lesson)
+    unit = create(:script, name: 'single-lesson-script')
+    lesson_group = create(:lesson_group, key: 'key1', script: unit)
+    lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
+    create(:script_level, script: unit, lesson: lesson)
 
-    assert_nil script.summarize(false)[:lessons]
+    assert_nil unit.summarize(false)[:lessons]
   end
 
   test 'summarize includes show_calendar' do
-    script = create(:script, name: 'calendar-script')
+    unit = create(:script, name: 'calendar-script')
 
-    script.is_migrated = true
-    script.show_calendar = true
-    assert script.show_calendar
-    summary = script.summarize
+    unit.is_migrated = true
+    unit.show_calendar = true
+    assert unit.show_calendar
+    summary = unit.summarize
     assert summary[:showCalendar]
 
-    script.is_migrated = true
-    script.show_calendar = false
-    refute script.show_calendar
-    summary = script.summarize
+    unit.is_migrated = true
+    unit.show_calendar = false
+    refute unit.show_calendar
+    summary = unit.summarize
     refute summary[:showCalendar]
 
-    script.is_migrated = false
-    script.show_calendar = true
-    summary = script.summarize
+    unit.is_migrated = false
+    unit.show_calendar = true
+    summary = unit.summarize
     refute summary[:showCalendar]
   end
 
   test 'summarize includes has_verified_resources' do
-    script = create(:script, name: 'resources-script')
+    unit = create(:script, name: 'resources-script')
 
-    script.has_verified_resources = true
-    assert script.has_verified_resources
-    summary = script.summarize
+    unit.has_verified_resources = true
+    assert unit.has_verified_resources
+    summary = unit.summarize
     assert summary[:has_verified_resources]
 
-    script.has_verified_resources = false
-    refute script.has_verified_resources
-    summary = script.summarize
+    unit.has_verified_resources = false
+    refute unit.has_verified_resources
+    summary = unit.summarize
     refute summary[:has_verified_resources]
   end
 
@@ -1160,13 +1160,13 @@ class ScriptTest < ActiveSupport::TestCase
     refute foo17.summarize(true, user)[:show_script_version_warning]
     assert foo18.summarize(true, user)[:show_script_version_warning]
 
-    user_script_18 = create(:user_script, user: user, script: foo18)
+    user_unit_18 = create(:user_script, user: user, script: foo18)
     refute foo17.summarize(true, user)[:show_script_version_warning]
     assert foo18.summarize(true, user)[:show_script_version_warning]
 
     # version warning can be dismissed
-    user_script_18.version_warning_dismissed = true
-    user_script_18.save!
+    user_unit_18.version_warning_dismissed = true
+    user_unit_18.save!
     refute foo18.summarize(true, user)[:show_script_version_warning]
   end
 
@@ -1224,34 +1224,34 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show assign button' do
-    script = create(:script, name: 'script')
+    unit = create(:script, name: 'script')
 
     # No user, show_assign_button set to nil
-    assert_nil script.summarize[:show_assign_button]
+    assert_nil unit.summarize[:show_assign_button]
 
-    # Teacher should be able to assign a launched script.
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.summarize[:publishedState]
-    assert_equal true, script.summarize(true, create(:teacher))[:show_assign_button]
+    # Teacher should be able to assign a launched unit.
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
+    assert_equal true, unit.summarize(true, create(:teacher))[:show_assign_button]
 
-    # Teacher should not be able to assign a hidden script.
-    hidden_script = create(:script, name: 'unassignable-hidden', hidden: true)
-    assert_equal SharedConstants::PUBLISHED_STATE.beta, hidden_script.summarize[:publishedState]
-    assert_equal false, hidden_script.summarize(true, create(:teacher))[:show_assign_button]
+    # Teacher should not be able to assign a hidden unit.
+    hidden_unit = create(:script, name: 'unassignable-hidden', hidden: true)
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, hidden_unit.summarize[:publishedState]
+    assert_equal false, hidden_unit.summarize(true, create(:teacher))[:show_assign_button]
 
-    # Student should not be able to assign a script,
+    # Student should not be able to assign a unit,
     # regardless of visibility.
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.summarize[:publishedState]
-    assert_nil script.summarize(true, create(:student))[:show_assign_button]
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
+    assert_nil unit.summarize(true, create(:student))[:show_assign_button]
   end
 
   test 'summarize includes bonus levels for lessons if include_bonus_levels and include_lessons are true' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
     level = create :level
     create :script_level, lesson: lesson, levels: [level], bonus: true
 
-    response = script.summarize(true, nil, true)
+    response = unit.summarize(true, nil, true)
     assert_equal 1, response[:lessons].length
     assert_equal 1, response[:lessons].first[:levels].length
     assert_equal [level.id.to_s], response[:lessons].first[:levels].first[:ids]
@@ -1265,19 +1265,19 @@ class ScriptTest < ActiveSupport::TestCase
 
     source = "We support [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}] resource links and [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}] vocabulary definitions"
     expected = "We support [fake name](fake.url) resource links and <span class=\"vocab\" title=\"definition\">word</span> vocabulary definitions"
-    script = create :script
-    script.stubs(:localized_description).returns(source)
-    script.stubs(:localized_student_description).returns(source)
-    summary = script.summarize
+    unit = create :script
+    unit.stubs(:localized_description).returns(source)
+    unit.stubs(:localized_student_description).returns(source)
+    summary = unit.summarize
 
     assert_equal(expected, summary[:description])
     assert_equal(expected, summary[:studentDescription])
   end
 
   test 'should generate PLC objects' do
-    script_file = File.join(self.class.fixture_path, 'test-plc.script')
-    script_names, custom_i18n = Script.setup([script_file])
-    script = Script.find_by!(name: script_names.first)
+    unit_file = File.join(self.class.fixture_path, 'test-plc.script')
+    unit_names, custom_i18n = Script.setup([unit_file])
+    unit = Script.find_by!(name: unit_names.first)
     custom_i18n.deep_merge!(
       {
         'en' => {
@@ -1296,16 +1296,16 @@ class ScriptTest < ActiveSupport::TestCase
     )
     I18n.backend.store_translations I18n.locale, custom_i18n['en']
 
-    script.save! # Need to trigger an update because i18n strings weren't loaded
-    assert script.professional_learning_course?
-    assert_equal 'Test plc course', script.professional_learning_course
-    assert_equal 42, script.peer_reviews_to_complete
+    unit.save! # Need to trigger an update because i18n strings weren't loaded
+    assert unit.professional_learning_course?
+    assert_equal 'Test plc course', unit.professional_learning_course
+    assert_equal 42, unit.peer_reviews_to_complete
 
-    unit = script.plc_course_unit
+    unit = unit.plc_course_unit
     assert_equal 'PLC Test', unit.unit_name
     assert_equal 'PLC test fixture script', unit.unit_description
 
-    lm = script.lessons.first.plc_learning_module
+    lm = unit.lessons.first.plc_learning_module
     assert_equal 'Sample Module', lm.name
     assert_equal 1, unit.plc_learning_modules.count
     assert_equal lm, unit.plc_learning_modules.first
@@ -1313,13 +1313,13 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'expect error on bad module types' do
-    script_file = File.join(self.class.fixture_path, 'test-bad-plc-module.script')
+    unit_file = File.join(self.class.fixture_path, 'test-bad-plc-module.script')
     assert_raises ActiveRecord::RecordInvalid do
-      Script.setup([script_file])
+      Script.setup([unit_file])
     end
   end
 
-  test 'script name format validation' do
+  test 'unit name format validation' do
     assert_raises ActiveRecord::RecordInvalid do
       create :script, name: 'abc 123'
     end
@@ -1346,12 +1346,12 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'can edit existing script with invalid name' do
-    script = create :script, name: 'Invalid Name', skip_name_format_validation: true
-    script.update!(login_required: true)
+  test 'can edit existing unit with invalid name' do
+    unit = create :script, name: 'Invalid Name', skip_name_format_validation: true
+    unit.update!(login_required: true)
   end
 
-  test 'names lessons appropriately when script has lockable lessons' do
+  test 'names lessons appropriately when unit has lockable lessons' do
     create :level, name: 'LockableAssessment1'
     create :level, name: 'NonLockableAssessment1'
     create :level, name: 'NonLockableAssessment2'
@@ -1365,13 +1365,13 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'NonLockable3', display_name: 'NonLockable3'
       assessment 'NonLockableAssessment3';
     DSL
-    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_unit({name: 'test_script'}, script_data[:lesson_groups])
+    unit_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+    unit = Script.add_unit({name: 'test_script'}, unit_data[:lesson_groups])
 
     # Everything has Lesson <number> when nothing is lockable
-    assert (/^Lesson 1:/.match(script.lessons[0].localized_title))
-    assert (/^Lesson 2:/.match(script.lessons[1].localized_title))
-    assert (/^Lesson 3:/.match(script.lessons[2].localized_title))
+    assert (/^Lesson 1:/.match(unit.lessons[0].localized_title))
+    assert (/^Lesson 2:/.match(unit.lessons[1].localized_title))
+    assert (/^Lesson 3:/.match(unit.lessons[2].localized_title))
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       lesson 'Lockable1', display_name: 'Lockable1', lockable: true
@@ -1381,13 +1381,13 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'NonLockable2', display_name: 'NonLockable2'
       assessment 'NonLockableAssessment2';
     DSL
-    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_unit({name: 'test_script'}, script_data[:lesson_groups])
+    unit_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+    unit = Script.add_unit({name: 'test_script'}, unit_data[:lesson_groups])
 
     # When first lesson is lockable, it has no lesson number, and the next lesson starts at 1
-    assert (/^Lesson/.match(script.lessons[0].localized_title).nil?)
-    assert (/^Lesson 1:/.match(script.lessons[1].localized_title))
-    assert (/^Lesson 2:/.match(script.lessons[2].localized_title))
+    assert (/^Lesson/.match(unit.lessons[0].localized_title).nil?)
+    assert (/^Lesson 1:/.match(unit.lessons[1].localized_title))
+    assert (/^Lesson 2:/.match(unit.lessons[2].localized_title))
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       lesson 'NonLockable1', display_name: 'NonLockable1'
@@ -1397,13 +1397,13 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'NonLockable2', display_name: 'NonLockable2'
       assessment 'NonLockableAssessment2';
     DSL
-    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_unit({name: 'test_script'}, script_data[:lesson_groups])
+    unit_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+    unit = Script.add_unit({name: 'test_script'}, unit_data[:lesson_groups])
 
     # When only second lesson is lockable, we count non-lockable lessons appropriately
-    assert (/^Lesson 1:/.match(script.lessons[0].localized_title))
-    assert (/^Lesson/.match(script.lessons[1].localized_title).nil?)
-    assert (/^Lesson 2:/.match(script.lessons[2].localized_title))
+    assert (/^Lesson 1:/.match(unit.lessons[0].localized_title))
+    assert (/^Lesson/.match(unit.lessons[1].localized_title).nil?)
+    assert (/^Lesson 2:/.match(unit.lessons[2].localized_title))
   end
 
   test 'Script DSL fails when creating invalid lockable lessons' do
@@ -1414,15 +1414,15 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'LockableAssessment1';
       level 'Level1';
     DSL
-    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
+    unit_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     assert_raises do
-      Script.add_unit({name: 'test_script'}, script_data[:lesson_groups])
+      Script.add_unit({name: 'test_script'}, unit_data[:lesson_groups])
     end
   end
 
   test "update_i18n without metdata" do
     # This simulates us doing a seed after adding new lessons to multiple of
-    # our script files. Doing so should update our object with the new lesson
+    # our unit files. Doing so should update our object with the new lesson
     # names (which we would then persist to sripts.en.yml)
     original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
 
@@ -1449,7 +1449,7 @@ class ScriptTest < ActiveSupport::TestCase
     # No updates to lesson names
     lessons_i18n = {'en' => {'data' => {'name' => {}}}}
 
-    script_name = 'Report Script'
+    unit_name = 'Report Script'
 
     metadata = {
       'title' => 'Report Script Name',
@@ -1461,15 +1461,15 @@ class ScriptTest < ActiveSupport::TestCase
       }].to_json
     }
 
-    updated = Script.update_i18n(original_yml, lessons_i18n, script_name, metadata)
+    updated = Script.update_i18n(original_yml, lessons_i18n, unit_name, metadata)
 
-    updated_report_script = updated['en']['data']['script']['name']['Report Script']
+    updated_report_unit = updated['en']['data']['script']['name']['Report Script']
 
-    assert_equal 'Report Script Name', updated_report_script['title']
-    assert_equal 'This is what Report Script is all about', updated_report_script['description']
-    assert_equal 'report-lesson-1', updated_report_script['lessons']['Report Lesson 1']['name']
-    assert_equal 'lesson 1 is pretty neat', updated_report_script['lessons']['Report Lesson 1']['description_student']
-    assert_equal 'This is what you should know as a teacher', updated_report_script['lessons']['Report Lesson 1']['description_teacher']
+    assert_equal 'Report Script Name', updated_report_unit['title']
+    assert_equal 'This is what Report Script is all about', updated_report_unit['description']
+    assert_equal 'report-lesson-1', updated_report_unit['lessons']['Report Lesson 1']['name']
+    assert_equal 'lesson 1 is pretty neat', updated_report_unit['lessons']['Report Lesson 1']['description_student']
+    assert_equal 'This is what you should know as a teacher', updated_report_unit['lessons']['Report Lesson 1']['description_teacher']
   end
 
   test "update_i18n with new lesson display name" do
@@ -3066,8 +3066,8 @@ class ScriptTest < ActiveSupport::TestCase
 
       @unit_group = create :unit_group
       create :course_version, content_root: @unit_group
-      @script_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
-      create :unit_group_unit, unit_group: @unit_group, script: @script_in_course, position: 1
+      @unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
+      create :unit_group_unit, unit_group: @unit_group, script: @unit_in_course, position: 1
     end
 
     test 'can copy a standalone script as another standalone script' do
@@ -3084,7 +3084,7 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'can copy a script in a unit group to a standalone script' do
-      cloned_script = @script_in_course.clone_migrated_unit('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
+      cloned_script = @unit_in_course.clone_migrated_unit('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
       assert_nil cloned_script.unit_group
       assert_equal 'standalone-coursename-2021', cloned_script.name
     end
@@ -3133,16 +3133,16 @@ class ScriptTest < ActiveSupport::TestCase
     test 'can deduplicate teacher and student resources' do
       @standalone_script.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @standalone_script.course_version.id)]
       @standalone_script.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @standalone_script.course_version.id)]
-      @script_in_course.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @script_in_course.get_course_version.id)]
-      @script_in_course.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @script_in_course.get_course_version.id)]
+      @unit_in_course.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @unit_in_course.get_course_version.id)]
+      @unit_in_course.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @unit_in_course.get_course_version.id)]
 
       cloned_script = @standalone_script.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 1, cloned_script.resources.count
       assert_equal 1, cloned_script.student_resources.count
       refute_equal @standalone_script.resources[0], cloned_script.resources[0]
       refute_equal @standalone_script.student_resources[0], cloned_script.student_resources[0]
-      assert_equal @script_in_course.resources[0], cloned_script.resources[0]
-      assert_equal @script_in_course.student_resources[0], cloned_script.student_resources[0]
+      assert_equal @unit_in_course.resources[0], cloned_script.resources[0]
+      assert_equal @unit_in_course.student_resources[0], cloned_script.student_resources[0]
     end
   end
 
