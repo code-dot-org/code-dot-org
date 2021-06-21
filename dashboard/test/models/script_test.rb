@@ -333,80 +333,80 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'calling next_level on last script_level points to next lesson' do
-    script = create(:script, name: 'test2')
-    lesson_group = create(:lesson_group, key: 'key1', script: script)
-    first_lesson = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
+    unit = create(:script, name: 'test2')
+    lesson_group = create(:lesson_group, key: 'key1', script: unit)
+    first_lesson = create(:lesson, script: unit, absolute_position: 1, lesson_group: lesson_group)
 
-    first_lesson_last_level = create(:script_level, script: script, lesson: first_lesson, position: 1)
-    second_lesson = create(:lesson, script: script, absolute_position: 2, lesson_group: lesson_group)
-    second_lesson_first_level = create(:script_level, script: script, lesson: second_lesson, position: 1)
-    create(:script_level, script: script, lesson: second_lesson, position: 2)
+    first_lesson_last_level = create(:script_level, script: unit, lesson: first_lesson, position: 1)
+    second_lesson = create(:lesson, script: unit, absolute_position: 2, lesson_group: lesson_group)
+    second_lesson_first_level = create(:script_level, script: unit, lesson: second_lesson, position: 1)
+    create(:script_level, script: unit, lesson: second_lesson, position: 2)
 
     assert_equal second_lesson_first_level, first_lesson_last_level.next_progression_level
   end
 
   test 'script_level positions should reset' do
-    script_names, _ = Script.setup([@unit_file])
-    script = Script.find_by!(name: script_names.first)
-    first = script.lessons[0].script_levels[0]
-    second = script.lessons[0].script_levels[1]
+    unit_names, _ = Script.setup([@unit_file])
+    unit = Script.find_by!(name: unit_names.first)
+    first = unit.lessons[0].script_levels[0]
+    second = unit.lessons[0].script_levels[1]
     assert_equal 1, first.position
     assert_equal 2, second.position
     promoted_level = second.level
-    script_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
+    unit_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
 
-    script_names, _ = Script.setup([script_file_remove_level])
-    script = Script.find_by!(name: script_names.first)
-    new_first_script_level = ScriptLevel.joins(:levels).where(script: script, levels: {id: promoted_level}).first
+    unit_names, _ = Script.setup([unit_file_remove_level])
+    unit = Script.find_by!(name: unit_names.first)
+    new_first_script_level = ScriptLevel.joins(:levels).where(script: unit, levels: {id: promoted_level}).first
     assert_equal 1, new_first_script_level.position
   end
 
-  test 'script import is idempotent w.r.t. positions and count' do
-    script_names, _ = Script.setup([@unit_file])
-    script = Script.find_by!(name: script_names.first)
+  test 'unit import is idempotent w.r.t. positions and count' do
+    unit_names, _ = Script.setup([@unit_file])
+    unit = Script.find_by!(name: unit_names.first)
     original_count = ScriptLevel.count
-    first = script.lessons[0].script_levels[0]
-    second = script.lessons[0].script_levels[1]
-    third = script.lessons[0].script_levels[2]
+    first = unit.lessons[0].script_levels[0]
+    second = unit.lessons[0].script_levels[1]
+    third = unit.lessons[0].script_levels[2]
     assert_equal 1, first.position
     assert_equal 2, second.position
     assert_equal 3, third.position
-    original_seed_keys = script.script_levels.map(&:seed_key).compact
+    original_seed_keys = unit.script_levels.map(&:seed_key).compact
     assert_equal 5, original_seed_keys.length
-    original_script_level_ids = script.script_levels.map(&:id)
+    original_script_level_ids = unit.script_levels.map(&:id)
 
-    script_names, _ = Script.setup([@unit_file])
-    script = Script.find_by!(name: script_names.first)
-    first = script.lessons[0].script_levels[0]
-    second = script.lessons[0].script_levels[1]
-    third = script.lessons[0].script_levels[2]
+    unit_names, _ = Script.setup([@unit_file])
+    unit = Script.find_by!(name: unit_names.first)
+    first = unit.lessons[0].script_levels[0]
+    second = unit.lessons[0].script_levels[1]
+    third = unit.lessons[0].script_levels[2]
     assert_equal 1, first.position
     assert_equal 2, second.position
     assert_equal 3, third.position
     assert_equal original_count, ScriptLevel.count
-    assert_equal original_seed_keys, script.script_levels.map(&:seed_key)
-    assert_equal original_script_level_ids, script.script_levels.map(&:id)
+    assert_equal original_seed_keys, unit.script_levels.map(&:seed_key)
+    assert_equal original_script_level_ids, unit.script_levels.map(&:id)
   end
 
-  test 'unplugged in script' do
+  test 'unplugged in unit' do
     @unit_file = File.join(self.class.fixture_path, 'test-unplugged.script')
-    script_names, _ = Script.setup([@unit_file])
-    script = Script.find_by!(name: script_names.first)
-    assert_equal 'Unplugged', script.script_levels[1].level['type']
+    unit_names, _ = Script.setup([@unit_file])
+    unit = Script.find_by!(name: unit_names.first)
+    assert_equal 'Unplugged', unit.script_levels[1].level['type']
   end
 
-  test 'blockly level in custom script' do
-    script_data, _ = ScriptDSL.parse(
+  test 'blockly level in custom unit' do
+    unit_data, _ = ScriptDSL.parse(
       "lesson 'Lesson1', display_name: 'Lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
    )
 
-    script = Script.add_unit({name: 'test script'}, script_data[:lesson_groups])
+    unit = Script.add_unit({name: 'test script'}, unit_data[:lesson_groups])
 
-    assert_equal 'Studio', script.script_levels[1].level.game.name
-    assert_equal '100', script.script_levels[1].level.level_num
+    assert_equal 'Studio', unit.script_levels[1].level.game.name
+    assert_equal '100', unit.script_levels[1].level.level_num
   end
 
-  test 'allow applab and gamelab levels in hidden scripts' do
+  test 'allow applab and gamelab levels in hidden units' do
     Script.add_unit(
       {name: 'test script', hidden: true},
       [{
@@ -425,7 +425,7 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
-  test 'allow applab and gamelab levels in login_required scripts' do
+  test 'allow applab and gamelab levels in login_required units' do
     Script.add_unit(
       {name: 'test script', hidden: false, login_required: true},
       [{
@@ -528,17 +528,17 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'lesson hierarchy uses cache' do
-    script = Script.first
-    lesson = script.lessons.first
+    unit = Script.first
+    lesson = unit.lessons.first
     expected_script_level = lesson.script_levels.first
     expected_level = lesson.script_levels.first.levels.first
 
     populate_cache_and_disconnect_db
 
     assert_equal expected_script_level,
-      Script.get_from_cache(script.id).lessons.first.script_levels.first
+      Script.get_from_cache(unit.id).lessons.first.script_levels.first
     assert_equal expected_level,
-      Script.get_from_cache(script.id).
+      Script.get_from_cache(unit.id).
         lessons.first.script_levels.first.levels.first
   end
 
@@ -560,7 +560,7 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'get_unit_family_redirect_for_user returns latest stable script assigned or with progress if student' do
+  test 'get_unit_family_redirect_for_user returns latest stable unit assigned or with progress if student' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
 
@@ -569,29 +569,29 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
     section.students << student
 
-    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: student)
-    assert_equal csp1_2017.name, redirect_script.redirect_to
+    redirect_unit = Script.get_unit_family_redirect_for_user('csp', user: student)
+    assert_equal csp1_2017.name, redirect_unit.redirect_to
 
     # Student makes progress in csp1_2018.
     create :user_level, user: student, script: csp1_2018
     student.reload
 
-    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: student)
-    assert_equal csp1_2018.name, redirect_script.redirect_to
+    redirect_unit = Script.get_unit_family_redirect_for_user('csp', user: student)
+    assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
-  test 'get_unit_family_redirect_for_user returns latest stable script in family if teacher' do
+  test 'get_unit_family_redirect_for_user returns latest stable unit in family if teacher' do
     teacher = create :teacher
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
     create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
     create :section, user: teacher, script: csp1_2017
 
-    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: teacher)
-    assert_equal csp1_2018.name, redirect_script.redirect_to
+    redirect_unit = Script.get_unit_family_redirect_for_user('csp', user: teacher)
+    assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
-  test 'get_unit_family_redirect_for_user returns nil if no scripts in family are stable' do
+  test 'get_unit_family_redirect_for_user returns nil if no units in family are stable' do
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: false)
     assert_nil Script.get_unit_family_redirect_for_user('csp')
   end
@@ -600,53 +600,53 @@ class ScriptTest < ActiveSupport::TestCase
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_unit_family_redirect_for_user('csp', locale: 'es-MX')
-    assert_equal csp1_2017.name, redirect_script.redirect_to
+    redirect_unit = Script.get_unit_family_redirect_for_user('csp', locale: 'es-MX')
+    assert_equal csp1_2017.name, redirect_unit.redirect_to
   end
 
   test 'get_unit_family_redirect_for_user returns latest stable version if no user or locale' do
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_unit_family_redirect_for_user('csp')
-    assert_equal csp1_2018.name, redirect_script.redirect_to
+    redirect_unit = Script.get_unit_family_redirect_for_user('csp')
+    assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
   test 'get_unit_family_redirect_for_user returns latest stable version if no versions supported in locale' do
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_unit_family_redirect_for_user('csp', locale: 'it-IT')
-    assert_equal csp1_2018.name, redirect_script.redirect_to
+    redirect_unit = Script.get_unit_family_redirect_for_user('csp', locale: 'it-IT')
+    assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
-  test 'redirect_to_unit_url returns nil unless user can view script version' do
+  test 'redirect_to_unit_url returns nil unless user can view unit version' do
     Script.any_instance.stubs(:can_view_version?).returns(false)
     student = create :student
-    script = create :script, name: 'my-script'
+    unit = create :script, name: 'my-script'
 
-    assert_nil script.redirect_to_unit_url(student)
+    assert_nil unit.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_unit_url returns nil if user is assigned to script' do
+  test 'redirect_to_unit_url returns nil if user is assigned to unit' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
-    script = create :script, name: 'my-script'
-    section = create :section, script: script
+    unit = create :script, name: 'my-script'
+    section = create :section, script: unit
     section.students << student
 
-    assert_nil script.redirect_to_unit_url(student)
+    assert_nil unit.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_unit_url returns nil if user is not assigned to any script in family' do
+  test 'redirect_to_unit_url returns nil if user is not assigned to any unit in family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
-    script = create :script, name: 'my-script'
+    unit = create :script, name: 'my-script'
 
-    assert_nil script.redirect_to_unit_url(student)
+    assert_nil unit.redirect_to_unit_url(student)
   end
 
-  test 'returns nil if latest assigned script is an older version than the current script' do
+  test 'returns nil if latest assigned unit is an older version than the current unit' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
@@ -657,7 +657,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil csp1_2018.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_unit_url returns script url of latest assigned script version in family for script belonging to course family' do
+  test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
@@ -672,7 +672,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal csp1_2018.link, csp1_2017.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_unit_url returns script url of latest assigned script version in family for script not belonging to course family' do
+  test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit not belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
@@ -684,9 +684,9 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can_view_version? is true for teachers' do
-    script = create :script, name: 'my-script'
+    unit = create :script, name: 'my-script'
     teacher = create :teacher
-    assert script.can_view_version?(teacher)
+    assert unit.can_view_version?(teacher)
   end
 
   test 'can_view_version? is true if script is latest stable version in student locale or in English' do
