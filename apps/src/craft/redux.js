@@ -1,3 +1,5 @@
+import {getStore} from '@cdo/apps/redux';
+
 /**
  * Initial State
  */
@@ -16,7 +18,7 @@ const SET_PLAYER_SELECTION_DIALOG = 'craft/SET_PLAYER_SELECTION_DIALOG';
  * Action Creators
  */
 
-export const setPlayerSelectionDialog = (
+const setPlayerSelectionDialog = (
   isOpen,
   handlePlayerSelection = () => {}
 ) => ({
@@ -28,7 +30,7 @@ export const setPlayerSelectionDialog = (
 /**
  * Reducers
  */
-const craft = (state = initialState, action) => {
+function craft(state = initialState, action) {
   if (action.type === SET_PLAYER_SELECTION_DIALOG) {
     return {
       ...state,
@@ -38,8 +40,20 @@ const craft = (state = initialState, action) => {
   }
 
   return state;
-};
+}
 
 export default {
   craft
 };
+
+/**
+ * Helpers
+ */
+
+export function openPlayerSelectionDialog(onSelectedCallback) {
+  getStore().dispatch(setPlayerSelectionDialog(true, onSelectedCallback));
+}
+
+export function closePlayerSelectionDialog() {
+  getStore().dispatch(setPlayerSelectionDialog(false));
+}
