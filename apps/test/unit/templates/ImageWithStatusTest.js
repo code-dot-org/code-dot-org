@@ -2,12 +2,19 @@ import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import {ImageWithStatus} from '@cdo/apps/templates/ImageWithStatus';
+import {
+  allowConsoleErrors,
+  allowConsoleWarnings
+} from '../../util/throwOnConsole';
 
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';
 const BOGUS_IMAGE_URL = '/nonexistent.png';
 const THUMBNAIL_SIZE = 50;
 
 describe('ImageWithStatus', () => {
+  allowConsoleErrors();
+  allowConsoleWarnings();
+
   it('shows status loading initially', () => {
     const root = mount(
       <ImageWithStatus

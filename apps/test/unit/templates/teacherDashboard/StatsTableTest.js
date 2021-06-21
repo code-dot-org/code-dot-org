@@ -2,6 +2,10 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedStatsTable as StatsTable} from '@cdo/apps/templates/teacherDashboard/StatsTable';
+import {
+  allowConsoleErrors,
+  allowConsoleWarnings
+} from '../../../util/throwOnConsole';
 
 const students = [
   {id: 3, name: 'Student C'},
@@ -19,6 +23,9 @@ const section = {
 };
 
 describe('StatsTable', () => {
+  allowConsoleErrors();
+  allowConsoleWarnings();
+
   it('renders a table', () => {
     const wrapper = mount(
       <StatsTable

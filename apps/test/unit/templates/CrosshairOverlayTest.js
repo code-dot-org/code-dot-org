@@ -5,8 +5,15 @@ import CrosshairOverlay, {
   CROSSHAIR_MARGIN,
   styles
 } from '@cdo/apps/templates/CrosshairOverlay';
+import {
+  allowConsoleErrors,
+  allowConsoleWarnings
+} from '../../util/throwOnConsole';
 
 describe('CrosshairOverlay', () => {
+  allowConsoleErrors();
+  allowConsoleWarnings();
+
   const TEST_APP_WIDTH = 300,
     TEST_APP_HEIGHT = 200;
 

@@ -3,8 +3,15 @@ import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import FreeResponsesAssessmentsTable from '@cdo/apps/templates/sectionAssessments/FreeResponsesAssessmentsTable';
 import {questionOne} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
+import {
+  allowConsoleErrors,
+  allowConsoleWarnings
+} from '../../../util/throwOnConsole';
 
 describe('FreeResponsesAssessmentsTable', () => {
+  allowConsoleErrors();
+  allowConsoleWarnings();
+
   it('renders a table', () => {
     const wrapper = mount(
       <FreeResponsesAssessmentsTable freeResponses={questionOne} />
