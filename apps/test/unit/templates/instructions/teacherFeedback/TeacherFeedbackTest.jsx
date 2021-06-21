@@ -133,7 +133,6 @@ describe('TeacherFeedback', () => {
           TEACHER_FEEDBACK_RUBRIC_PROPS.rubric
         );
         expect(rubric.props().isEditable).to.equal(true);
-        expect(rubric.props().isEditable).to.equal(true);
         expect(rubric.props().viewAs).to.equal(ViewType.Teacher);
       });
 
@@ -288,7 +287,6 @@ describe('TeacherFeedback', () => {
         TEACHER_NO_FEEDBACK_RUBRIC_PROPS.rubric
       );
       expect(rubric.props().isEditable).to.equal(false);
-      expect(rubric.props().isEditable).to.equal(false);
     });
 
     it('does not display comment area', () => {
@@ -330,7 +328,6 @@ describe('TeacherFeedback', () => {
         expect(rubric.props().rubric).to.equal(
           STUDENT_NO_FEEDBACK_RUBRIC_PROPS.rubric
         );
-        expect(rubric.props().isEditable).to.equal(false);
         expect(rubric.props().isEditable).to.equal(false);
         expect(rubric.props().viewAs).to.equal(ViewType.Student);
       });
