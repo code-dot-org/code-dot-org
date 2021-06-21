@@ -38,13 +38,9 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import {ManageStudentsNotificationFull} from '../../../../src/templates/manageStudents/ManageStudentsTable';
-import {
-  allowConsoleErrors,
-  allowConsoleWarnings
-} from '../../../util/throwOnConsole';
+import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('ManageStudentsTable', () => {
-  allowConsoleErrors();
   allowConsoleWarnings();
 
   it('sortRows orders table in the following order: add, newStudent, student', () => {
