@@ -48,7 +48,7 @@
     },
     "new_name": "coursea-2017",
     "family_name": "coursea",
-    "serialized_at": "2021-06-16 22:58:49 UTC",
+    "serialized_at": "2021-06-17 22:28:52 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursea-2017"

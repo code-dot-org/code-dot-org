@@ -52,7 +52,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-06-16 23:00:43 UTC",
+    "serialized_at": "2021-06-17 22:30:43 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursee-2020"
