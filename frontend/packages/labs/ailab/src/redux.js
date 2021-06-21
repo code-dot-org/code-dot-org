@@ -994,6 +994,8 @@ export function getResultsDataInDataTableForm(state) {
     return null;
   }
 
+  // None of the existing uses of this function should need more than 10
+  // items.  Increase the value here if they do.
   const numItems = Math.min(10, resultsByGrades.examples.length);
 
   const results = [];
