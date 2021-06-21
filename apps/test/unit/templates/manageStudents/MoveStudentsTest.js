@@ -9,6 +9,10 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {
+  allowConsoleErrors,
+  allowConsoleWarnings
+} from '../../../util/throwOnConsole';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -23,6 +27,9 @@ const sections = [
 ];
 
 describe('MoveStudents', () => {
+  allowConsoleErrors();
+  allowConsoleWarnings();
+
   let updateStudentTransfer;
   let transferStudents;
   let cancelStudentTransfer;
