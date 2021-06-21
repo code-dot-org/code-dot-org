@@ -1,9 +1,10 @@
 import { createSelector } from 'reselect';
 import { ColumnTypes } from "./constants.js";
 
-/* Functions for filtering and selecting columns by type.  */
 const getColumnsByDataType = state => state.columnsByDataType;
 const getSelectedFeatures = state => state.selectedFeatures;
+
+/* Functions for filtering and selecting columns by type.  */
 
 const getCategoricalColumns = createSelector(
   [getColumnsByDataType],
