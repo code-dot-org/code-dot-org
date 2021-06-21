@@ -5,15 +5,8 @@ import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/
 import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 import sinon from 'sinon';
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
-import {
-  allowConsoleErrors,
-  allowConsoleWarnings
-} from '../../util/throwOnConsole';
 
 describe('CodeWorkspace', () => {
-  allowConsoleErrors();
-  allowConsoleWarnings();
-
   const MINIMUM_PROPS = {
     editCode: true,
     isRtl: false,
