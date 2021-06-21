@@ -65,7 +65,7 @@ module Services
 
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
-      #   5 queries to set up course offering and course version
+      #   4 queries to set up course offering and course version
       #   34 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
       #     Resources, and Vocabulary.
@@ -88,7 +88,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(86) do
+      assert_queries(85) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -1121,18 +1121,15 @@ module Services
           create :lesson, lesson_group: lg, script: script, name: name, key: name, overview: "overview #{m + 1} #{n + 1}", has_lesson_plan: true
         end
       end
-      script.reload
 
-      if course_version
-        (1..num_resources_per_script).each do |r|
-          resource = create :resource, key: "#{script.name}-resource-#{r}", course_version: course_version
-          ScriptsResource.find_or_create_by!(resource: resource, script: script)
-        end
+      (1..num_resources_per_script).each do |r|
+        resource = create :resource, key: "#{script.name}-resource-#{r}", course_version: course_version
+        ScriptsResource.find_or_create_by!(resource: resource, script: script)
+      end
 
-        (1..num_resources_per_script).each do |r|
-          resource = create :resource, key: "#{script.name}-student-resource-#{r}", course_version: course_version
-          ScriptsStudentResource.find_or_create_by!(resource: resource, script: script)
-        end
+      (1..num_resources_per_script).each do |r|
+        resource = create :resource, key: "#{script.name}-student-resource-#{r}", course_version: course_version
+        ScriptsStudentResource.find_or_create_by!(resource: resource, script: script)
       end
 
       sl_num = 1
