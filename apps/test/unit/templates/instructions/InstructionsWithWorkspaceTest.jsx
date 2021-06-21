@@ -59,9 +59,7 @@ describe('InstructionsWithWorkspace', () => {
 
       // Fake ref to inner object, since we're shallow rendering.
       wrapper.instance().codeWorkspaceContainer = {
-        getWrappedInstance: () => ({
-          getRenderedHeight: () => codeWorkspaceHeight
-        })
+        getRenderedHeight: () => codeWorkspaceHeight
       };
 
       return wrapper;
@@ -83,7 +81,7 @@ describe('InstructionsWithWorkspace', () => {
       expect(wrapper.instance().setState).not.to.have.been.called;
     });
 
-    it.skip('handles resize', () => {
+    it('handles resize', () => {
       const wrapper = setupComponent();
       wrapper.instance().onResize();
       expect(
@@ -91,7 +89,7 @@ describe('InstructionsWithWorkspace', () => {
       ).to.have.been.calledOnce.and.calledWith(230);
     });
 
-    it.skip('breakpoint in behavior at total height of 420 (meets all reserves)', () => {
+    it('breakpoint in behavior at total height of 420 (meets all reserves)', () => {
       let wrapper;
 
       wrapper = setupComponent({
