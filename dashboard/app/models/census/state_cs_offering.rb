@@ -84,13 +84,16 @@ class Census::StateCsOffering < ApplicationRecord
     CA
     HI
     IL
+    ID
     MA
     MD
     NE
     NY
+    SD
     OR
     PA
     VA
+    WA
   ).freeze
 
   # The following states use the "V2" format for CSV files in 2018-2019.
