@@ -62,7 +62,7 @@ export default class AnimationPickerBody extends React.Component {
     currentPage: 0
   };
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.defaultQuery !== nextProps.defaultQuery) {
       const currentPage = 0;
       const {results, pageCount} = this.searchAssetsWrapper(
