@@ -1,0 +1,3293 @@
+{
+  "script": {
+    "name": "csa-videos",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-06-21 21:34:37 UTC",
+    "published_state": "beta",
+    "seeding_key": {
+      "script.name": "csa-videos"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Resources"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Unit 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Unit 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Unit 3"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Unit 4"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lessonGroup-7",
+      "user_facing": true,
+      "position": 6,
+      "properties": {
+        "display_name": "Unit 5"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-21",
+      "name": "Empty Levels to Clone",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-22",
+      "name": "Neighborhood Setup Widget",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "U1L1: Welcome to CSA",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "U1L2: Classes and Objects",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "U1L3: Using Commands",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "U1L4: Conditionals and Debugging",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "U1L5: More with Objects",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "U1L6: While Loops and Practice",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "U1L7: More with Conditionals",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "U1L8: Introduction to Code Reviews",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "U1L9: Inheritance and Methods",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "U1L10: More Methods, More Features",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "U1L11: Painting Methods",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "U1L12: SprayPainter",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "U1L13: StampPainter",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "U1L14: Edge Cases",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "U1L15: Software Engineering Wrap Up",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "U1L16: Asphalt Art Project Day 1",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "U1L17: Asphalt Art Project Day 2",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "U1L18: Asphalt Art Project Day 3",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-19",
+      "name": "U1L19: FRQ Day",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-20",
+      "name": "U1L20: Assessment Day",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-23",
+      "name": "U2L1: Defining Attributes",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 23,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-24",
+      "name": "U2L2: Using Variables",
+      "absolute_position": 24,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 24,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-24",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-25",
+      "name": "U2L3: Writing Constructors",
+      "absolute_position": 25,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 25,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-26",
+      "name": "U2L4: Adding Multiple Constructors",
+      "absolute_position": 26,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 26,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-27",
+      "name": "U2L5: Manipulating Variables and Object Data",
+      "absolute_position": 27,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 27,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-28",
+      "name": "U2L6: Minimizing Errors in Intialization",
+      "absolute_position": 28,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 28,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-28",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-29",
+      "name": "U2L7: Writing Constructors for Hierarchies",
+      "absolute_position": 29,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 29,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-30",
+      "name": "U2L8: Accessing Object Data",
+      "absolute_position": 30,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 30,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-31",
+      "name": "U2L9: Modifying Object Data",
+      "absolute_position": 31,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 31,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-32",
+      "name": "U2L10: Displaying Object Information",
+      "absolute_position": 32,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 32,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-32",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-33",
+      "name": "U2L11: Neighborhood Store Management Project Day 1",
+      "absolute_position": 33,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 33,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-33",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-34",
+      "name": "U2L12: Neighborhood Store Management Project Day 2",
+      "absolute_position": 34,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 34,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-34",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-35",
+      "name": "U2L13: Neighborhood Store Management Project Day 3",
+      "absolute_position": 35,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 35,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-35",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-36",
+      "name": "U2L14: FRQ Day",
+      "absolute_position": 36,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 36,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-36",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-37",
+      "name": "U2L15: Assessment Day",
+      "absolute_position": 37,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 37,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-37",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-38",
+      "name": "U3L1: Creating Arrays",
+      "absolute_position": 38,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 38,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-38",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-39",
+      "name": "U3L2: Accessing and Modifying Elements",
+      "absolute_position": 39,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 39,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-39",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-40",
+      "name": "U3L3: Traversing Arrays with for Loops",
+      "absolute_position": 40,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 40,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-40",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-41",
+      "name": "U3L4: Traversing Arrays with while Loops",
+      "absolute_position": 41,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 41,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-41",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-42",
+      "name": "U3L5: Storing Objects into Arrays",
+      "absolute_position": 42,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 42,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-42",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-43",
+      "name": "U3L6: Traversing Arrays with Enhanced for Loops",
+      "absolute_position": 43,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 43,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-43",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-44",
+      "name": "U3L7: Using Static Variables and Constants",
+      "absolute_position": 44,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 44,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-44",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-45",
+      "name": "U3L8: Answering Questions with Arrays",
+      "absolute_position": 45,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 45,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-45",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-46",
+      "name": "U3L9: Solving Problems with Arrays",
+      "absolute_position": 46,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 46,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-46",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-47",
+      "name": "U3L10: Manipulating Elements in an Array",
+      "absolute_position": 47,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 47,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-47",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-48",
+      "name": "U3L11: Concert in the Theater Project Day 1",
+      "absolute_position": 48,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 48,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-49",
+      "name": "U3L12: Concert in the Theater Project Day 2",
+      "absolute_position": 49,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 49,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-50",
+      "name": "U3L13: Concert in the Theater Project Day 3",
+      "absolute_position": 50,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 50,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-51",
+      "name": "U3L14: FRQ Day",
+      "absolute_position": 51,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 51,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-51",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-52",
+      "name": "U3L15: Assessment Day",
+      "absolute_position": 52,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 52,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-52",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-53",
+      "name": "U4L1: Using Existing Libraries to Add Capabilities",
+      "absolute_position": 53,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 53,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-54",
+      "name": "U4L2: Solving Problems with the Math Class",
+      "absolute_position": 54,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 54,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-55",
+      "name": "U4L3: Treating Data as a Different Type",
+      "absolute_position": 55,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 55,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-55",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-56",
+      "name": "U4L4: Comparing Values to Make Decisions",
+      "absolute_position": 56,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 56,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-56",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-57",
+      "name": "U4L5: Adding Randomness to a Program",
+      "absolute_position": 57,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 57,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-58",
+      "name": "U4L6: Comparing Object References and Data",
+      "absolute_position": 58,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 58,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-58",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-59",
+      "name": "U4L7: Providing an Alternate Path of Execution",
+      "absolute_position": 59,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 59,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-60",
+      "name": "U4L8: Testing Multiple Conditions",
+      "absolute_position": 60,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 60,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-60",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-61",
+      "name": "U4L9: Using Logical Operators",
+      "absolute_position": 61,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 61,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-62",
+      "name": "U4L10: Applying De Morgan's Laws to Boolean Expressioins",
+      "absolute_position": 62,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 62,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-62",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-63",
+      "name": "U4L11: Neighborhood Block Party Project Day 1",
+      "absolute_position": 63,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 63,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-63",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-64",
+      "name": "U4L12: Neighborhood Block Party Project Day 2",
+      "absolute_position": 64,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 64,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-64",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-65",
+      "name": "U4L13: Neighborhood Block Party Project Day 3",
+      "absolute_position": 65,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 65,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-65",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-66",
+      "name": "U4L14: FRQ Day",
+      "absolute_position": 66,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 66,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-66",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-67",
+      "name": "U4L15: Assessment Day",
+      "absolute_position": 67,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 67,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-67",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-68",
+      "name": "U5L1: Creating Tables of Data",
+      "absolute_position": 68,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 68,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-68",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-69",
+      "name": "U5L2: Traversing a 2D Array by Rows",
+      "absolute_position": 69,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 69,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-69",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-70",
+      "name": "U5L3: Traversing a 2D Array by Columns",
+      "absolute_position": 70,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 70,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-70",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-71",
+      "name": "U5L4: Using Enhanced for Loops",
+      "absolute_position": 71,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 71,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-71",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-72",
+      "name": "U5L5: Evaluating 2D Arrays",
+      "absolute_position": 72,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 72,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-72",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-73",
+      "name": "U5L6: Applying Standard Algorithms",
+      "absolute_position": 73,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 73,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-73",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-74",
+      "name": "U5L7: Reversing Elements",
+      "absolute_position": 74,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 74,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-74",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-75",
+      "name": "U5L8: Shifting Elements",
+      "absolute_position": 75,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 75,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-75",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-76",
+      "name": "U5L9: Finding Duplicates",
+      "absolute_position": 76,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 76,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-76",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-77",
+      "name": "U5L10: Searching for Elements",
+      "absolute_position": 77,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 77,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-77",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-78",
+      "name": "U5L11: A Sustainable Neighborhood Project Day 1",
+      "absolute_position": 78,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 78,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-78",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-79",
+      "name": "U5L12: A Sustainable Neighborhood Project Day 2",
+      "absolute_position": 79,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 79,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-79",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-80",
+      "name": "U5L13: A Sustainable Neighborhood Project Day 3",
+      "absolute_position": 80,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 80,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-80",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-81",
+      "name": "U5L14: FRQ Day",
+      "absolute_position": 81,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 81,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-81",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "lesson-82",
+      "name": "U5L15: Assessment Day",
+      "absolute_position": 82,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 82,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-82",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "95933844-5266-4966-a791-bb2b2ada77dc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "95933844-5266-4966-a791-bb2b2ada77dc",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "dd520dfc-f3ee-4bc7-b955-4c6b4c6c748b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd520dfc-f3ee-4bc7-b955-4c6b4c6c748b",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "68a90c22-26a9-4a55-a638-3152c646e987",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "68a90c22-26a9-4a55-a638-3152c646e987",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "dc4cd131-4070-45c6-aec1-d6e00499499e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc4cd131-4070-45c6-aec1-d6e00499499e",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "885ac057-dc06-41f7-b359-575a0f6164e3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "885ac057-dc06-41f7-b359-575a0f6164e3",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "e235e643-f0f6-4f03-9b44-7e347cdf9c71",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e235e643-f0f6-4f03-9b44-7e347cdf9c71",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "3065d658-34b3-4051-bd01-4688c85cb379",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3065d658-34b3-4051-bd01-4688c85cb379",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "0dfcabed-ee47-421c-86f8-7dbf8ad4de2a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0dfcabed-ee47-421c-86f8-7dbf8ad4de2a",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "22979fcd-fd9e-4799-95ba-f2229f004b1e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22979fcd-fd9e-4799-95ba-f2229f004b1e",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "23db7a29-9225-4635-a370-275b18f92bc6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "23db7a29-9225-4635-a370-275b18f92bc6",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "093c3707-3585-4e4c-8757-8b828296ffe1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "093c3707-3585-4e4c-8757-8b828296ffe1",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "4e9ac92f-d081-4737-80d6-7116bac8ca93",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4e9ac92f-d081-4737-80d6-7116bac8ca93",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "4ebd661c-9dbf-4604-880a-77fc6a1735bb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4ebd661c-9dbf-4604-880a-77fc6a1735bb",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "d930ed01-d9ad-45ba-889b-784f6a6adcda",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d930ed01-d9ad-45ba-889b-784f6a6adcda",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "74476822-5d4f-43b0-953c-a9db01fc5d9b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "74476822-5d4f-43b0-953c-a9db01fc5d9b",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "447754a2-8958-4313-a8c3-0eed969d2a50",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "447754a2-8958-4313-a8c3-0eed969d2a50",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "8e2c1b5a-ab26-4d64-b5ca-4ab351e20268",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8e2c1b5a-ab26-4d64-b5ca-4ab351e20268",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "9b8a8ab2-54a0-4be8-af02-517c252daf9c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b8a8ab2-54a0-4be8-af02-517c252daf9c",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "64893c92-cac3-4278-b6d2-cb13fab4a683",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "64893c92-cac3-4278-b6d2-cb13fab4a683",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "9451c362-e4bf-4317-b589-7e3268df7f41",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9451c362-e4bf-4317-b589-7e3268df7f41",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "40ef884d-9e82-401e-a73c-03b2ca06deb2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40ef884d-9e82-401e-a73c-03b2ca06deb2",
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "02cc353b-4419-41b9-b64e-3b976a53d0cf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "02cc353b-4419-41b9-b64e-3b976a53d0cf",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "1446a5dc-0d14-4cbe-a136-f3fb62d5472f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1446a5dc-0d14-4cbe-a136-f3fb62d5472f",
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "a97c1719-0469-4d58-ab0d-1e1b8109a1d6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a97c1719-0469-4d58-ab0d-1e1b8109a1d6",
+        "lesson.key": "lesson-24",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "dcac91c3-631e-4e81-a00c-2feb675fb286",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dcac91c3-631e-4e81-a00c-2feb675fb286",
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "8d1c65d7-382c-4947-9cf0-ae7b20729257",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d1c65d7-382c-4947-9cf0-ae7b20729257",
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "1497de55-f74b-40fe-a45d-9cfaeecbdd99",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1497de55-f74b-40fe-a45d-9cfaeecbdd99",
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "a77c266e-ab81-44f4-84d0-54a172aa88cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a77c266e-ab81-44f4-84d0-54a172aa88cb",
+        "lesson.key": "lesson-28",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "66b30e73-3fc0-41a2-85a9-b2cc5b2f3631",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "66b30e73-3fc0-41a2-85a9-b2cc5b2f3631",
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "06daf54c-657d-4734-8c76-3ae43764bd96",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "06daf54c-657d-4734-8c76-3ae43764bd96",
+        "lesson.key": "lesson-30",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "6b353312-c125-4504-8e9e-f5a7d6f0620e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b353312-c125-4504-8e9e-f5a7d6f0620e",
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "e0d20f9f-21cc-49a2-861c-138e43597c17",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0d20f9f-21cc-49a2-861c-138e43597c17",
+        "lesson.key": "lesson-32",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "c1eca98e-5ea5-4cb5-8611-2de955c34332",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c1eca98e-5ea5-4cb5-8611-2de955c34332",
+        "lesson.key": "lesson-33",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "a2b632b1-bd68-451d-9532-b9012accccb2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a2b632b1-bd68-451d-9532-b9012accccb2",
+        "lesson.key": "lesson-34",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "3955e6ff-6a7e-49c1-87cd-fdc4da916bf9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3955e6ff-6a7e-49c1-87cd-fdc4da916bf9",
+        "lesson.key": "lesson-35",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "73fb97a7-e825-4e3c-be4a-6af8d510811a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "73fb97a7-e825-4e3c-be4a-6af8d510811a",
+        "lesson.key": "lesson-36",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "54a32fc6-e831-4374-818d-775377dffc56",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54a32fc6-e831-4374-818d-775377dffc56",
+        "lesson.key": "lesson-37",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "f8e6f3a8-7fda-4b40-b6c9-13057bbe4453",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f8e6f3a8-7fda-4b40-b6c9-13057bbe4453",
+        "lesson.key": "lesson-38",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "2d32870f-4e2e-48ff-9f93-6dba19b806a3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2d32870f-4e2e-48ff-9f93-6dba19b806a3",
+        "lesson.key": "lesson-39",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "92c51540-c251-478a-9db1-dd526bba3357",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "92c51540-c251-478a-9db1-dd526bba3357",
+        "lesson.key": "lesson-40",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "3e425c9d-5805-4746-aa68-9607641c7921",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3e425c9d-5805-4746-aa68-9607641c7921",
+        "lesson.key": "lesson-41",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "f3548903-e343-49d1-9cd1-e9527be8d005",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f3548903-e343-49d1-9cd1-e9527be8d005",
+        "lesson.key": "lesson-42",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "0a67b0de-914d-4629-91f3-bf69c66313cf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a67b0de-914d-4629-91f3-bf69c66313cf",
+        "lesson.key": "lesson-43",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "6e1ba62a-5ced-4267-a907-e0c33be735c5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e1ba62a-5ced-4267-a907-e0c33be735c5",
+        "lesson.key": "lesson-44",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "95af5dc4-8314-48ae-885e-231267593fe7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "95af5dc4-8314-48ae-885e-231267593fe7",
+        "lesson.key": "lesson-45",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "6c049881-96fb-404c-b9d5-c959c4dc9c2d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6c049881-96fb-404c-b9d5-c959c4dc9c2d",
+        "lesson.key": "lesson-46",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "565997a5-15d1-4b8a-abad-77aae5d742c8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "565997a5-15d1-4b8a-abad-77aae5d742c8",
+        "lesson.key": "lesson-47",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "9a42ca0e-184e-49c2-857e-86f5a6f103a4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a42ca0e-184e-49c2-857e-86f5a6f103a4",
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "32093d2e-1a5a-48da-91e5-c2d63725d10d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "32093d2e-1a5a-48da-91e5-c2d63725d10d",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "2c3f05d7-7a10-42d3-b2d3-2c4ea3146c5f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c3f05d7-7a10-42d3-b2d3-2c4ea3146c5f",
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "7b88e09d-579a-4489-8fc7-fd4f8893a359",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b88e09d-579a-4489-8fc7-fd4f8893a359",
+        "lesson.key": "lesson-51",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "07a5257c-1f91-41c4-88ac-439a84195e1a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "07a5257c-1f91-41c4-88ac-439a84195e1a",
+        "lesson.key": "lesson-52",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "c52e0420-903f-4bec-b622-c41aea841205",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c52e0420-903f-4bec-b622-c41aea841205",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "55841098-231f-4cc2-85fe-7afecb7a5b04",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "55841098-231f-4cc2-85fe-7afecb7a5b04",
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "9b965344-6351-43d8-a32a-8430d724f85f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b965344-6351-43d8-a32a-8430d724f85f",
+        "lesson.key": "lesson-55",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "cbc86bd9-d6f0-4a6a-966f-f46be8fc52b9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cbc86bd9-d6f0-4a6a-966f-f46be8fc52b9",
+        "lesson.key": "lesson-56",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "040b949b-2b8c-486d-9407-d53bea4b0cee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "040b949b-2b8c-486d-9407-d53bea4b0cee",
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "1a450815-92f3-4d1d-a505-41f36885fdb3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a450815-92f3-4d1d-a505-41f36885fdb3",
+        "lesson.key": "lesson-58",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "20bacc30-1694-4f81-959d-b5dc47f21f40",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20bacc30-1694-4f81-959d-b5dc47f21f40",
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "220a5c37-d690-4cdb-a513-199ba3a88a9f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "220a5c37-d690-4cdb-a513-199ba3a88a9f",
+        "lesson.key": "lesson-60",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "93715d9f-7e64-4802-8196-b9926842c11e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "93715d9f-7e64-4802-8196-b9926842c11e",
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "8305c2d2-aabd-499c-940b-159d815191a6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8305c2d2-aabd-499c-940b-159d815191a6",
+        "lesson.key": "lesson-62",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "d9b07fdf-78a7-45b2-994c-2c1b2f7843a4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d9b07fdf-78a7-45b2-994c-2c1b2f7843a4",
+        "lesson.key": "lesson-63",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "2165e1d9-21c9-467b-afff-afa8a195f219",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2165e1d9-21c9-467b-afff-afa8a195f219",
+        "lesson.key": "lesson-64",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "03a25870-46e1-4e51-a9b3-c7f37979a9d3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03a25870-46e1-4e51-a9b3-c7f37979a9d3",
+        "lesson.key": "lesson-65",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "3af7f59f-f82d-43ee-b549-6c83f3b5b895",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3af7f59f-f82d-43ee-b549-6c83f3b5b895",
+        "lesson.key": "lesson-66",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "bacbecf2-f214-4a87-b9e1-95f916ecffc2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bacbecf2-f214-4a87-b9e1-95f916ecffc2",
+        "lesson.key": "lesson-67",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "1b159b52-2510-4e15-8105-63fe217c573b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1b159b52-2510-4e15-8105-63fe217c573b",
+        "lesson.key": "lesson-68",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "c0250573-810f-4bdb-9fad-887f1ce5d89b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c0250573-810f-4bdb-9fad-887f1ce5d89b",
+        "lesson.key": "lesson-69",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "8548ef1e-60c1-426f-9dbe-fcf83747f8a0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8548ef1e-60c1-426f-9dbe-fcf83747f8a0",
+        "lesson.key": "lesson-70",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "6bd18b9a-b7a9-457b-a322-731874d8db35",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6bd18b9a-b7a9-457b-a322-731874d8db35",
+        "lesson.key": "lesson-71",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "679d3fe8-3f0d-4870-9e9f-56ea95091ce5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "679d3fe8-3f0d-4870-9e9f-56ea95091ce5",
+        "lesson.key": "lesson-72",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "17838c5e-86a9-4c23-81fe-c940d6a43f65",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17838c5e-86a9-4c23-81fe-c940d6a43f65",
+        "lesson.key": "lesson-73",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "d8e5f76f-a5b9-455a-bb87-81ce3a0dae2b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d8e5f76f-a5b9-455a-bb87-81ce3a0dae2b",
+        "lesson.key": "lesson-74",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "cd4277b6-423f-4eb0-be8b-396492af62e1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd4277b6-423f-4eb0-be8b-396492af62e1",
+        "lesson.key": "lesson-75",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "3844903e-a8a5-43ea-a533-b53f606f628a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3844903e-a8a5-43ea-a533-b53f606f628a",
+        "lesson.key": "lesson-76",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "4f8bc443-d444-4930-ab1f-ca1b7289160f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f8bc443-d444-4930-ab1f-ca1b7289160f",
+        "lesson.key": "lesson-77",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "69c038d0-6142-477f-a425-40fe377afefb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69c038d0-6142-477f-a425-40fe377afefb",
+        "lesson.key": "lesson-78",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "6a5e19e0-bca8-46cc-a707-64b62b25affe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6a5e19e0-bca8-46cc-a707-64b62b25affe",
+        "lesson.key": "lesson-79",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "6a95247d-3986-4daa-9c59-851b87360df3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6a95247d-3986-4daa-9c59-851b87360df3",
+        "lesson.key": "lesson-80",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "bac66ea1-82d6-4748-8ddf-ef6a854a853f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bac66ea1-82d6-4748-8ddf-ef6a854a853f",
+        "lesson.key": "lesson-81",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    },
+    {
+      "key": "c9f0a847-e385-4e1f-b5ba-b4b93bce44e5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9f0a847-e385-4e1f-b5ba-b4b93bce44e5",
+        "lesson.key": "lesson-82",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa-videos"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "970e6779-35b8-4e91-b128-6bec2d9d8e91",
+      "position": 1,
+      "properties": {
+        "progression_name": "Empty Neighborhood Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "970e6779-35b8-4e91-b128-6bec2d9d8e91",
+        "lesson_activity.key": "95933844-5266-4966-a791-bb2b2ada77dc"
+      }
+    },
+    {
+      "key": "a8bc15e2-96b2-4f7b-9603-dc6c3fd45da0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Empty Java Console Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8bc15e2-96b2-4f7b-9603-dc6c3fd45da0",
+        "lesson_activity.key": "95933844-5266-4966-a791-bb2b2ada77dc"
+      }
+    },
+    {
+      "key": "39e9deec-23ce-4e34-a31a-92c69e00c996",
+      "position": 1,
+      "properties": {
+        "progression_name": "Neighborhood Setup Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "39e9deec-23ce-4e34-a31a-92c69e00c996",
+        "lesson_activity.key": "dd520dfc-f3ee-4bc7-b955-4c6b4c6c748b"
+      }
+    },
+    {
+      "key": "57c992dd-0f13-42c7-b8d5-cd4398a066d9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "57c992dd-0f13-42c7-b8d5-cd4398a066d9",
+        "lesson_activity.key": "68a90c22-26a9-4a55-a638-3152c646e987"
+      }
+    },
+    {
+      "key": "972a19ec-62ad-4013-ad02-f3e19ef3c409",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "972a19ec-62ad-4013-ad02-f3e19ef3c409",
+        "lesson_activity.key": "dc4cd131-4070-45c6-aec1-d6e00499499e"
+      }
+    },
+    {
+      "key": "db514aaa-ee09-4a07-a88d-223dc8444f1c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "db514aaa-ee09-4a07-a88d-223dc8444f1c",
+        "lesson_activity.key": "885ac057-dc06-41f7-b359-575a0f6164e3"
+      }
+    },
+    {
+      "key": "e5a76a7f-519a-4d42-8bfc-49f139dd6afd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e5a76a7f-519a-4d42-8bfc-49f139dd6afd",
+        "lesson_activity.key": "e235e643-f0f6-4f03-9b44-7e347cdf9c71"
+      }
+    },
+    {
+      "key": "75dd387e-6790-4162-9c78-b1eaa1459f14",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "75dd387e-6790-4162-9c78-b1eaa1459f14",
+        "lesson_activity.key": "3065d658-34b3-4051-bd01-4688c85cb379"
+      }
+    },
+    {
+      "key": "ecf7535b-906b-4059-87dc-033bf286ddbf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ecf7535b-906b-4059-87dc-033bf286ddbf",
+        "lesson_activity.key": "0dfcabed-ee47-421c-86f8-7dbf8ad4de2a"
+      }
+    },
+    {
+      "key": "4c0bc6e0-9996-4f63-b13e-b2f74ae66df5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4c0bc6e0-9996-4f63-b13e-b2f74ae66df5",
+        "lesson_activity.key": "22979fcd-fd9e-4799-95ba-f2229f004b1e"
+      }
+    },
+    {
+      "key": "31925bba-87e7-418b-8ffd-2e69e04133a5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "31925bba-87e7-418b-8ffd-2e69e04133a5",
+        "lesson_activity.key": "23db7a29-9225-4635-a370-275b18f92bc6"
+      }
+    },
+    {
+      "key": "7354a3ce-70e2-466d-949e-f8e49c62017d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7354a3ce-70e2-466d-949e-f8e49c62017d",
+        "lesson_activity.key": "093c3707-3585-4e4c-8757-8b828296ffe1"
+      }
+    },
+    {
+      "key": "cc4889e2-0c41-4f74-8927-176f0586113d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cc4889e2-0c41-4f74-8927-176f0586113d",
+        "lesson_activity.key": "4e9ac92f-d081-4737-80d6-7116bac8ca93"
+      }
+    },
+    {
+      "key": "644024da-5cbf-4f7f-b18a-d6e3b284a522",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "644024da-5cbf-4f7f-b18a-d6e3b284a522",
+        "lesson_activity.key": "4ebd661c-9dbf-4604-880a-77fc6a1735bb"
+      }
+    },
+    {
+      "key": "feda871b-9ee5-4f7e-bd72-3964e20f0f48",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "feda871b-9ee5-4f7e-bd72-3964e20f0f48",
+        "lesson_activity.key": "d930ed01-d9ad-45ba-889b-784f6a6adcda"
+      }
+    },
+    {
+      "key": "1e4cf6f3-24d6-4ac0-81db-ed52c3403ad9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1e4cf6f3-24d6-4ac0-81db-ed52c3403ad9",
+        "lesson_activity.key": "74476822-5d4f-43b0-953c-a9db01fc5d9b"
+      }
+    },
+    {
+      "key": "2736e67c-53e6-4e6f-99f9-f4d82f729120",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2736e67c-53e6-4e6f-99f9-f4d82f729120",
+        "lesson_activity.key": "447754a2-8958-4313-a8c3-0eed969d2a50"
+      }
+    },
+    {
+      "key": "8a96ea24-1a0c-4ccb-a8d7-a7765b062bc7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8a96ea24-1a0c-4ccb-a8d7-a7765b062bc7",
+        "lesson_activity.key": "8e2c1b5a-ab26-4d64-b5ca-4ab351e20268"
+      }
+    },
+    {
+      "key": "1c2673d3-15c2-4ae2-8adc-693b1c7f79e3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1c2673d3-15c2-4ae2-8adc-693b1c7f79e3",
+        "lesson_activity.key": "9b8a8ab2-54a0-4be8-af02-517c252daf9c"
+      }
+    },
+    {
+      "key": "bebf4404-93b5-467b-8202-575acc13d25a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bebf4404-93b5-467b-8202-575acc13d25a",
+        "lesson_activity.key": "64893c92-cac3-4278-b6d2-cb13fab4a683"
+      }
+    },
+    {
+      "key": "a9386c83-54f0-465f-a5a8-92348ca38b9e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a9386c83-54f0-465f-a5a8-92348ca38b9e",
+        "lesson_activity.key": "9451c362-e4bf-4317-b589-7e3268df7f41"
+      }
+    },
+    {
+      "key": "fc113817-549e-4765-b057-965790c863ee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fc113817-549e-4765-b057-965790c863ee",
+        "lesson_activity.key": "40ef884d-9e82-401e-a73c-03b2ca06deb2"
+      }
+    },
+    {
+      "key": "542c3adf-bb94-4c50-a1a5-cf884c23dfd8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "542c3adf-bb94-4c50-a1a5-cf884c23dfd8",
+        "lesson_activity.key": "02cc353b-4419-41b9-b64e-3b976a53d0cf"
+      }
+    },
+    {
+      "key": "2fefce36-cf61-476a-84cb-2dc4d4523cfb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2fefce36-cf61-476a-84cb-2dc4d4523cfb",
+        "lesson_activity.key": "1446a5dc-0d14-4cbe-a136-f3fb62d5472f"
+      }
+    },
+    {
+      "key": "c14bf34f-3995-434a-a216-3930638b639e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c14bf34f-3995-434a-a216-3930638b639e",
+        "lesson_activity.key": "a97c1719-0469-4d58-ab0d-1e1b8109a1d6"
+      }
+    },
+    {
+      "key": "2c8f7eb6-ecd4-4abd-83b0-1206b8e9ac4e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2c8f7eb6-ecd4-4abd-83b0-1206b8e9ac4e",
+        "lesson_activity.key": "dcac91c3-631e-4e81-a00c-2feb675fb286"
+      }
+    },
+    {
+      "key": "09e1663b-563e-4233-b434-8e138cdf36e4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "09e1663b-563e-4233-b434-8e138cdf36e4",
+        "lesson_activity.key": "8d1c65d7-382c-4947-9cf0-ae7b20729257"
+      }
+    },
+    {
+      "key": "e10626d3-78de-4f0b-a101-04fb192a28be",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e10626d3-78de-4f0b-a101-04fb192a28be",
+        "lesson_activity.key": "1497de55-f74b-40fe-a45d-9cfaeecbdd99"
+      }
+    },
+    {
+      "key": "689b9518-d95b-426c-b6d9-79825caa24a9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "689b9518-d95b-426c-b6d9-79825caa24a9",
+        "lesson_activity.key": "a77c266e-ab81-44f4-84d0-54a172aa88cb"
+      }
+    },
+    {
+      "key": "bce43d73-d703-4aeb-8ddd-2b3d30cabf66",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bce43d73-d703-4aeb-8ddd-2b3d30cabf66",
+        "lesson_activity.key": "66b30e73-3fc0-41a2-85a9-b2cc5b2f3631"
+      }
+    },
+    {
+      "key": "9d1b21c5-d476-4f1d-8e57-cbe174b60dca",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9d1b21c5-d476-4f1d-8e57-cbe174b60dca",
+        "lesson_activity.key": "06daf54c-657d-4734-8c76-3ae43764bd96"
+      }
+    },
+    {
+      "key": "e21e0a75-e041-484a-966d-9b73c6669218",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e21e0a75-e041-484a-966d-9b73c6669218",
+        "lesson_activity.key": "6b353312-c125-4504-8e9e-f5a7d6f0620e"
+      }
+    },
+    {
+      "key": "ad665610-a76e-415f-9310-1a610c88d879",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ad665610-a76e-415f-9310-1a610c88d879",
+        "lesson_activity.key": "e0d20f9f-21cc-49a2-861c-138e43597c17"
+      }
+    },
+    {
+      "key": "043a70e8-ab3a-4b1b-add3-5793ea7cd3a8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "043a70e8-ab3a-4b1b-add3-5793ea7cd3a8",
+        "lesson_activity.key": "c1eca98e-5ea5-4cb5-8611-2de955c34332"
+      }
+    },
+    {
+      "key": "e26895cf-bcf4-46bb-9842-3de49ace3f78",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e26895cf-bcf4-46bb-9842-3de49ace3f78",
+        "lesson_activity.key": "a2b632b1-bd68-451d-9532-b9012accccb2"
+      }
+    },
+    {
+      "key": "6517c4d7-03f2-4549-9328-07515b1936fe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6517c4d7-03f2-4549-9328-07515b1936fe",
+        "lesson_activity.key": "3955e6ff-6a7e-49c1-87cd-fdc4da916bf9"
+      }
+    },
+    {
+      "key": "f61287cb-7ff4-4f69-8eca-3717a51537f9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f61287cb-7ff4-4f69-8eca-3717a51537f9",
+        "lesson_activity.key": "73fb97a7-e825-4e3c-be4a-6af8d510811a"
+      }
+    },
+    {
+      "key": "d9c342f8-76bd-4348-8fb3-3a9c9c7f5189",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d9c342f8-76bd-4348-8fb3-3a9c9c7f5189",
+        "lesson_activity.key": "54a32fc6-e831-4374-818d-775377dffc56"
+      }
+    },
+    {
+      "key": "d4dc9ae2-d798-42a7-b256-f28b632bb9d2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d4dc9ae2-d798-42a7-b256-f28b632bb9d2",
+        "lesson_activity.key": "f8e6f3a8-7fda-4b40-b6c9-13057bbe4453"
+      }
+    },
+    {
+      "key": "eb892d51-5f56-4bc8-9324-af17028c67ce",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eb892d51-5f56-4bc8-9324-af17028c67ce",
+        "lesson_activity.key": "2d32870f-4e2e-48ff-9f93-6dba19b806a3"
+      }
+    },
+    {
+      "key": "ba7d2a85-9810-46f6-baae-c356e8dd4035",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ba7d2a85-9810-46f6-baae-c356e8dd4035",
+        "lesson_activity.key": "92c51540-c251-478a-9db1-dd526bba3357"
+      }
+    },
+    {
+      "key": "e0661cc3-6b07-4e7e-9534-144a196170b8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e0661cc3-6b07-4e7e-9534-144a196170b8",
+        "lesson_activity.key": "3e425c9d-5805-4746-aa68-9607641c7921"
+      }
+    },
+    {
+      "key": "b2a21175-3f98-41f6-85f3-39f2669430a0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b2a21175-3f98-41f6-85f3-39f2669430a0",
+        "lesson_activity.key": "f3548903-e343-49d1-9cd1-e9527be8d005"
+      }
+    },
+    {
+      "key": "b77f7263-06b8-475e-ad1b-e38c6abe5fdf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b77f7263-06b8-475e-ad1b-e38c6abe5fdf",
+        "lesson_activity.key": "0a67b0de-914d-4629-91f3-bf69c66313cf"
+      }
+    },
+    {
+      "key": "9487f886-fa03-41c3-9259-fb37430a567c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9487f886-fa03-41c3-9259-fb37430a567c",
+        "lesson_activity.key": "6e1ba62a-5ced-4267-a907-e0c33be735c5"
+      }
+    },
+    {
+      "key": "d773d4d3-7f8f-41f0-8d9b-d3b2dce0b70c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d773d4d3-7f8f-41f0-8d9b-d3b2dce0b70c",
+        "lesson_activity.key": "95af5dc4-8314-48ae-885e-231267593fe7"
+      }
+    },
+    {
+      "key": "0e78e239-9830-4c40-afab-ac0afd9208f2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0e78e239-9830-4c40-afab-ac0afd9208f2",
+        "lesson_activity.key": "6c049881-96fb-404c-b9d5-c959c4dc9c2d"
+      }
+    },
+    {
+      "key": "db72494d-e3a1-40f2-808a-470e82d612f1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "db72494d-e3a1-40f2-808a-470e82d612f1",
+        "lesson_activity.key": "565997a5-15d1-4b8a-abad-77aae5d742c8"
+      }
+    },
+    {
+      "key": "0d2954cc-1387-462c-8ccc-023c475b4110",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0d2954cc-1387-462c-8ccc-023c475b4110",
+        "lesson_activity.key": "9a42ca0e-184e-49c2-857e-86f5a6f103a4"
+      }
+    },
+    {
+      "key": "5397bc28-30a9-4910-b63c-6e74004834b3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5397bc28-30a9-4910-b63c-6e74004834b3",
+        "lesson_activity.key": "32093d2e-1a5a-48da-91e5-c2d63725d10d"
+      }
+    },
+    {
+      "key": "83785d43-afed-4624-bac7-c4705dac241e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "83785d43-afed-4624-bac7-c4705dac241e",
+        "lesson_activity.key": "2c3f05d7-7a10-42d3-b2d3-2c4ea3146c5f"
+      }
+    },
+    {
+      "key": "085f32ad-248a-445f-b808-5e753e6f2906",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "085f32ad-248a-445f-b808-5e753e6f2906",
+        "lesson_activity.key": "7b88e09d-579a-4489-8fc7-fd4f8893a359"
+      }
+    },
+    {
+      "key": "024824b7-7a3e-4a99-b653-e8b54752c29e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "024824b7-7a3e-4a99-b653-e8b54752c29e",
+        "lesson_activity.key": "07a5257c-1f91-41c4-88ac-439a84195e1a"
+      }
+    },
+    {
+      "key": "41db2c0e-3c08-4fcc-a9e8-1d1712553a80",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "41db2c0e-3c08-4fcc-a9e8-1d1712553a80",
+        "lesson_activity.key": "c52e0420-903f-4bec-b622-c41aea841205"
+      }
+    },
+    {
+      "key": "65da6ecd-e47a-402e-9b81-7b7bbe00b425",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "65da6ecd-e47a-402e-9b81-7b7bbe00b425",
+        "lesson_activity.key": "55841098-231f-4cc2-85fe-7afecb7a5b04"
+      }
+    },
+    {
+      "key": "d7dc1772-5f4e-4435-a542-317e0f5e3024",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d7dc1772-5f4e-4435-a542-317e0f5e3024",
+        "lesson_activity.key": "9b965344-6351-43d8-a32a-8430d724f85f"
+      }
+    },
+    {
+      "key": "52fa2645-063c-4eba-9e9e-05554ad15e74",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "52fa2645-063c-4eba-9e9e-05554ad15e74",
+        "lesson_activity.key": "cbc86bd9-d6f0-4a6a-966f-f46be8fc52b9"
+      }
+    },
+    {
+      "key": "4eae4f67-1eed-4ea6-9a7e-0041345c1f5b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4eae4f67-1eed-4ea6-9a7e-0041345c1f5b",
+        "lesson_activity.key": "040b949b-2b8c-486d-9407-d53bea4b0cee"
+      }
+    },
+    {
+      "key": "fab9e693-dc3c-4324-9db1-acd6524d9ab7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fab9e693-dc3c-4324-9db1-acd6524d9ab7",
+        "lesson_activity.key": "1a450815-92f3-4d1d-a505-41f36885fdb3"
+      }
+    },
+    {
+      "key": "85e2a4b7-a681-46d5-b413-be180063154c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "85e2a4b7-a681-46d5-b413-be180063154c",
+        "lesson_activity.key": "20bacc30-1694-4f81-959d-b5dc47f21f40"
+      }
+    },
+    {
+      "key": "6da4797c-680d-4512-8853-2f88058052f1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6da4797c-680d-4512-8853-2f88058052f1",
+        "lesson_activity.key": "220a5c37-d690-4cdb-a513-199ba3a88a9f"
+      }
+    },
+    {
+      "key": "dc40668a-6347-4a8c-934f-803eac276249",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dc40668a-6347-4a8c-934f-803eac276249",
+        "lesson_activity.key": "93715d9f-7e64-4802-8196-b9926842c11e"
+      }
+    },
+    {
+      "key": "f18da62f-57b7-4340-bac8-5ae3165e85fd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f18da62f-57b7-4340-bac8-5ae3165e85fd",
+        "lesson_activity.key": "8305c2d2-aabd-499c-940b-159d815191a6"
+      }
+    },
+    {
+      "key": "3f7fde2e-1b54-4348-951a-de1c62624d7d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3f7fde2e-1b54-4348-951a-de1c62624d7d",
+        "lesson_activity.key": "d9b07fdf-78a7-45b2-994c-2c1b2f7843a4"
+      }
+    },
+    {
+      "key": "e13d4d47-7f58-4ac1-9cf1-f5435abb4aa3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e13d4d47-7f58-4ac1-9cf1-f5435abb4aa3",
+        "lesson_activity.key": "2165e1d9-21c9-467b-afff-afa8a195f219"
+      }
+    },
+    {
+      "key": "13837011-16f3-4393-a5d3-5b5e1c86b049",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "13837011-16f3-4393-a5d3-5b5e1c86b049",
+        "lesson_activity.key": "03a25870-46e1-4e51-a9b3-c7f37979a9d3"
+      }
+    },
+    {
+      "key": "11622fac-8db2-4427-97d5-39cdabc6cbe4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "11622fac-8db2-4427-97d5-39cdabc6cbe4",
+        "lesson_activity.key": "3af7f59f-f82d-43ee-b549-6c83f3b5b895"
+      }
+    },
+    {
+      "key": "d6e038ce-6d61-4aa3-9abe-2f66721135ed",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d6e038ce-6d61-4aa3-9abe-2f66721135ed",
+        "lesson_activity.key": "bacbecf2-f214-4a87-b9e1-95f916ecffc2"
+      }
+    },
+    {
+      "key": "bcb6e49a-a5b8-4333-a411-d75570908da8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bcb6e49a-a5b8-4333-a411-d75570908da8",
+        "lesson_activity.key": "1b159b52-2510-4e15-8105-63fe217c573b"
+      }
+    },
+    {
+      "key": "f9ccb58b-2b22-4bbb-bfdd-7edc10420bb1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f9ccb58b-2b22-4bbb-bfdd-7edc10420bb1",
+        "lesson_activity.key": "c0250573-810f-4bdb-9fad-887f1ce5d89b"
+      }
+    },
+    {
+      "key": "4ef8da71-15a9-4716-818e-0e6da5520e5e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4ef8da71-15a9-4716-818e-0e6da5520e5e",
+        "lesson_activity.key": "8548ef1e-60c1-426f-9dbe-fcf83747f8a0"
+      }
+    },
+    {
+      "key": "459e61f1-903e-4fec-92b2-632c28fb018a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "459e61f1-903e-4fec-92b2-632c28fb018a",
+        "lesson_activity.key": "6bd18b9a-b7a9-457b-a322-731874d8db35"
+      }
+    },
+    {
+      "key": "0da86b26-6e62-4c11-a958-0bb2440bda50",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0da86b26-6e62-4c11-a958-0bb2440bda50",
+        "lesson_activity.key": "679d3fe8-3f0d-4870-9e9f-56ea95091ce5"
+      }
+    },
+    {
+      "key": "1ea6d684-5a45-4f60-b73b-499fcd2dcf99",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1ea6d684-5a45-4f60-b73b-499fcd2dcf99",
+        "lesson_activity.key": "17838c5e-86a9-4c23-81fe-c940d6a43f65"
+      }
+    },
+    {
+      "key": "f53cd7c2-bdb9-4e2d-bb67-cc5aa4cf717e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f53cd7c2-bdb9-4e2d-bb67-cc5aa4cf717e",
+        "lesson_activity.key": "d8e5f76f-a5b9-455a-bb87-81ce3a0dae2b"
+      }
+    },
+    {
+      "key": "5e4857b5-e9e6-44b7-bd9d-fcc39dd84c18",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5e4857b5-e9e6-44b7-bd9d-fcc39dd84c18",
+        "lesson_activity.key": "cd4277b6-423f-4eb0-be8b-396492af62e1"
+      }
+    },
+    {
+      "key": "4d1ba5ad-c6fa-46b0-bd6c-958ef10782c6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4d1ba5ad-c6fa-46b0-bd6c-958ef10782c6",
+        "lesson_activity.key": "3844903e-a8a5-43ea-a533-b53f606f628a"
+      }
+    },
+    {
+      "key": "35590b4d-5130-46d3-999d-c7001be94f2d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "35590b4d-5130-46d3-999d-c7001be94f2d",
+        "lesson_activity.key": "4f8bc443-d444-4930-ab1f-ca1b7289160f"
+      }
+    },
+    {
+      "key": "ca8f56aa-ba57-4a9a-bd72-933bafd0e24b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ca8f56aa-ba57-4a9a-bd72-933bafd0e24b",
+        "lesson_activity.key": "69c038d0-6142-477f-a425-40fe377afefb"
+      }
+    },
+    {
+      "key": "56d605b8-edc1-40d0-a7d8-ae6c58a5839f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "56d605b8-edc1-40d0-a7d8-ae6c58a5839f",
+        "lesson_activity.key": "6a5e19e0-bca8-46cc-a707-64b62b25affe"
+      }
+    },
+    {
+      "key": "652c9399-4a17-4566-87f4-b90b7efc9a48",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "652c9399-4a17-4566-87f4-b90b7efc9a48",
+        "lesson_activity.key": "6a95247d-3986-4daa-9c59-851b87360df3"
+      }
+    },
+    {
+      "key": "8591760a-e5e7-4bc6-bad1-c215ecd130fa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8591760a-e5e7-4bc6-bad1-c215ecd130fa",
+        "lesson_activity.key": "bac66ea1-82d6-4748-8ddf-ef6a854a853f"
+      }
+    },
+    {
+      "key": "95856231-27f1-4ed6-978e-fb7f17d881a1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "95856231-27f1-4ed6-978e-fb7f17d881a1",
+        "lesson_activity.key": "c9f0a847-e385-4e1f-b5ba-b4b93bce44e5"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Blank Neighborhood Level"
+        ],
+        "progression": "Empty Neighborhood Level"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Blank Neighborhood Level"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-videos",
+        "activity_section.key": "970e6779-35b8-4e91-b128-6bec2d9d8e91"
+      },
+      "level_keys": [
+        "Blank Neighborhood Level"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Empty Java Console Level"
+        ],
+        "progression": "Empty Java Console Level"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Empty Java Console Level"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-videos",
+        "activity_section.key": "a8bc15e2-96b2-4f7b-9603-dc6c3fd45da0"
+      },
+      "level_keys": [
+        "Empty Java Console Level"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa widget test2"
+        ],
+        "progression": "Neighborhood Setup Widget"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa widget test2"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-videos",
+        "activity_section.key": "39e9deec-23ce-4e34-a31a-92c69e00c996"
+      },
+      "level_keys": [
+        "csa widget test2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Blank Neighborhood Level",
+        "script_level.level_keys": [
+          "Blank Neighborhood Level"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-videos",
+        "activity_section.key": "970e6779-35b8-4e91-b128-6bec2d9d8e91"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Empty Java Console Level",
+        "script_level.level_keys": [
+          "Empty Java Console Level"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-videos",
+        "activity_section.key": "a8bc15e2-96b2-4f7b-9603-dc6c3fd45da0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa widget test2",
+        "script_level.level_keys": [
+          "csa widget test2"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-videos",
+        "activity_section.key": "39e9deec-23ce-4e34-a31a-92c69e00c996"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
