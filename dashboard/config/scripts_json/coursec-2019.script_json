@@ -48,7 +48,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-06-16 23:00:03 UTC",
+    "serialized_at": "2021-06-17 22:30:05 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursec-2019"

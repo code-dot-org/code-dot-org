@@ -54,7 +54,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 22:59:02 UTC",
+    "serialized_at": "2021-06-17 22:29:05 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp3-research-mxghyt"
@@ -2748,17 +2748,17 @@
         ],
         "progression": "Pre-test reflection",
         "variants": {
-          "csp_affirmation_control_3": {
-            "experiments": [
-              "rene-control-control",
-              "rene-belonging-control"
-            ]
-          },
           "csp_affirmation_intervention_3": {
             "active": false,
             "experiments": [
               "rene-control-affirmation",
               "rene-belonging-affirmation"
+            ]
+          },
+          "csp_affirmation_control_3": {
+            "experiments": [
+              "rene-control-control",
+              "rene-belonging-control"
             ]
           }
         }

@@ -217,7 +217,7 @@ namespace :seed do
   end
 
   timed_task courses: :environment do
-    Dir.glob(UnitGroup.file_path('**')).map do |path|
+    Dir.glob(UnitGroup.file_path('**')).sort.map do |path|
       UnitGroup.load_from_path(path)
     end
   end
