@@ -25,7 +25,8 @@ export function hasTooManyUniqueOptions(state, column) {
 }
 
 export function getUniqueOptions(state, column) {
-  return Array.from(new Set(state.data.map(row => row[column]))).filter(
+  const columnData = getColumnData(state, column);
+  return Array.from(new Set(columnData)).filter(
     option => option !== undefined && option !== ""
   );
 }

@@ -699,19 +699,19 @@ export function getSelectedCategoricalColumns(state) {
   return intersection;
 }
 
-export function getSelectedCategoricalFeatures(state) {
-  let intersection = getCategoricalColumns(state).filter(x =>
-    state.selectedFeatures.includes(x)
-  );
-  return intersection;
-}
+// export function getSelectedCategoricalFeatures(state) {
+//   let intersection = getCategoricalColumns(state).filter(x =>
+//     state.selectedFeatures.includes(x)
+//   );
+//   return intersection;
+// }
 
-export function getSelectedNumericalFeatures(state) {
-  let intersection = getNumericalColumns(state).filter(x =>
-    state.selectedFeatures.includes(x)
-  );
-  return intersection;
-}
+// export function getSelectedNumericalFeatures(state) {
+//   let intersection = getNumericalColumns(state).filter(x =>
+//     state.selectedFeatures.includes(x)
+//   );
+//   return intersection;
+// }
 
 export function getSelectedNumericalColumns(state) {
   let intersection = getNumericalColumns(state).filter(

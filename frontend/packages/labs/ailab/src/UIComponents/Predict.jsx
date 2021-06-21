@@ -6,13 +6,15 @@ import { store } from "../index.js";
 import train from "../train";
 import {
   setTestData,
-  getSelectedNumericalFeatures,
-  getSelectedCategoricalFeatures,
   getUniqueOptionsByColumn,
   getConvertedPredictedLabel,
   getPredictAvailable,
   getExtremaByColumn
 } from "../redux";
+import {
+  getSelectedCategoricalFeatures,
+  getSelectedNumericalFeatures
+} from "../selectors";
 import { styles } from "../constants";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
 import ScrollableContent from "./ScrollableContent";
