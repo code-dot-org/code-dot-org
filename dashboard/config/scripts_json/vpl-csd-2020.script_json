@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:01:02 UTC",
+    "serialized_at": "2021-06-17 22:31:01 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "vpl-csd-2020"
