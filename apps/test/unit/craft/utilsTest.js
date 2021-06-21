@@ -1,6 +1,5 @@
-// Copied from ./i18nTest.js:
-// We have to include the base locale file so the craft-specific one will work,
-// even though we don't need to use the base locale directly in this test.
+// We have to include the locale files below as translations must be loaded in the global
+// scope for HeadlessChrome to run properly.
 import commonI18n from '@cdo/locale'; // eslint-disable-line no-unused-vars
 import craftI18n from '@cdo/apps/craft/locale'; // eslint-disable-line no-unused-vars
 
