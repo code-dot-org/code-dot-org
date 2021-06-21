@@ -18,7 +18,7 @@ export class UnwrappedInstructionsDialogWrapper extends React.Component {
     showInstructionsDialog: PropTypes.func.isRequired
   };
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (!this.props.isOpen && nextProps.isOpen) {
       this.props.showInstructionsDialog(nextProps.autoClose);
     }
