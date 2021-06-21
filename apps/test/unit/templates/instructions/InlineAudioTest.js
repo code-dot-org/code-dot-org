@@ -105,14 +105,15 @@ describe('InlineAudio', function() {
     );
   });
 
-  it.skip('renders controls if text-to-speech is enabled and sound is loaded', function() {
-    const component = getComponent(
+  it('renders controls if text-to-speech is enabled and sound is loaded', function() {
+    const wrapper = mount(
       <StatelessInlineAudio {...DEFAULT_PROPS} textToSpeechEnabled />
     );
-
-    expect(component.find('.inline-audio').exists()).to.be.false;
+    expect(wrapper.find('.inline-audio').exists()).to.be.false;
+    const component = wrapper.at(0);
     component.instance().setState({loaded: true});
-    expect(component.find('.inline-audio').exists()).to.be.true;
+    wrapper.setProps({});
+    expect(wrapper.find('.inline-audio').exists()).to.be.true;
   });
 
   it('can toggle audio', async function() {
@@ -165,14 +166,16 @@ describe('InlineAudio', function() {
     expect(window.Audio).to.have.been.calledOnce;
   });
 
-  it.skip('handles source update gracefully, stopping audio', function() {
-    const component = getComponent(<StatelessInlineAudio {...DEFAULT_PROPS} />);
-    component.instance().playAudio();
+  it('handles source update gracefully, stopping audio', async function() {
+    const wrapper = mount(<StatelessInlineAudio {...DEFAULT_PROPS} />);
+    const component = wrapper.at(0);
+    await component.instance().playAudio();
+    expect(component.state().playing).to.be.true;
 
-    component.setProps({src: 'state2'});
-    expect(component.instance().state.audio).to.be.undefined;
-    expect(component.instance().state.playing).to.be.false;
-    expect(component.instance().state.error).to.be.false;
+    wrapper.setProps({src: 'state2'});
+    expect(component.state().audio).to.be.undefined;
+    expect(component.state().playing).to.be.false;
+    expect(component.state().error).to.be.false;
   });
 
   it('can toggle hover state', function() {
