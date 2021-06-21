@@ -247,7 +247,7 @@ class TopInstructions extends Component {
    * Height can get below min height iff we resize the window to be super small.
    * If we then resize it to be larger again, we want to increase height.
    */
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (
       !nextProps.isCollapsed &&
       nextProps.height < MIN_HEIGHT &&
