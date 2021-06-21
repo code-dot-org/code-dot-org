@@ -15,8 +15,8 @@ Both debugging and pair programming are CS teaching strategies built into the st
 
 ### CS Concepts
 
-* **Bug:** Something that is going wrong with the code, an error.
-* **Debugging:** Finding and fixing “bugs” or the code to fix an error.
+* **Bug:** Something that is going wrong with the code. An error.
+* **Debugging:** To find and fix errors.
 
 Debugging is a skill each individual student will need to practice, strengthen overtime, and practice while coding.
 
@@ -48,10 +48,29 @@ Follow the instructions below to turn on pair programming for your students usin
 **4. Scroll down to "Allow students to Pair Program?" and select "Yes."**
 ![](https://images.code.org/12cb643412a7a22cf518f3efe96c0ae0-image-1623286645973.png)
 
+
 ### Pair Programming - Student Side
 
-Students will need to follow the instructions below to pair up with another student.
+Students will need to follow the instructions below to pair program with up to four other students in the same class section.
 
+**Note:**  Pairing for students depends on one of the following login types you chose for you class section:
 
+1. Class section login type with secret word/picture based passwords.
+2. Class section login type with personal email, Google Classroom, and Clever.
 
+### 1. Secret Word/Picture Based Password Sections
+
+Students will see the images below when they log into your class section.  If a student checks "I have a partner at my computer" and then signs in, they will be given the option to choose a partner.
+
+![](https://images.code.org/9b2240d8359a4a2b7784fbe181c88b4b-image-1624296554148.png)
+
+![](https://images.code.org/df58989d73ec8d41a618257a2177e479-image-1624296593266.png)
+
+### 2. Secret Word/Picture Based Password Sections
+
+Students will see the image below when they log into your class section.  Students can select a partner after signing in by clicking on the top-right corner of their page and selecting "Pair programming" from the drop down menu shown below.
+
+![](https://images.code.org/539148c0d232d46c1b047457209f4b56-image-1624296642422.png)
+
+**For more information about pair programming, check out this support article, <a hrer="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-" target="blank" >How does pair programming on Code.org work?**</a> 
 MARKDOWN
