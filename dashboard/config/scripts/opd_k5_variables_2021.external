@@ -4,15 +4,25 @@ description 'description here'
 markdown <<MARKDOWN
 # Introduction to Variables
 
-<img src="https://images.code.org/833108f29baf6f8633b1282aeb7d06e5-image-1571780548872.jpg" class="level-image">
+<img src="https://images.code.org/833108f29baf6f8633b1282aeb7d06e5-image-1571780548872.jpg" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
+
+## Course Lesson Objectives
+
+After completing Lesson 13 you will be able to:
+
+* define variable,
+* use variables to program sprite behavior, 
+* and use variables with Maze Puzzles and The Artist.
 
 ## CS Concept
 
->A **variable** is a placeholder for a piece of information that can change.
+A **variable** is a label for a piece of information used in a program.
 
-## Built-in Features
+### Lesson Plan
 
-## Concept Progression
+* Preview the teacher slide deck that accompanies Course F - Lesson 6:  Blank Stories that supports introducing variables to students.
+
+* Click "Continue" to watch a video that introducing students to the lesson activity for Course F - Lesson 6:  Blank Stories.
 
 
 MARKDOWN

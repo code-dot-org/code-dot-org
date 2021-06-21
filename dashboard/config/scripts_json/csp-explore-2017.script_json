@@ -31,7 +31,8 @@
     },
     "new_name": "csp-explore-2017",
     "family_name": "csp-explore",
-    "serialized_at": "2021-05-03 23:55:25 UTC",
+    "serialized_at": "2021-06-17 22:29:54 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp-explore-2017"
     }

@@ -1,5 +1,6 @@
 Feature: Starwars Project
 
+@skip
 @as_student @no_mobile
 Scenario: Starwars Flow
   Given I am on "http://studio.code.org/projects/starwars"

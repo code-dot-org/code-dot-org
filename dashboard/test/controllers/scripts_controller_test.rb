@@ -9,15 +9,15 @@ class ScriptsControllerTest < ActionController::TestCase
     @platformization_partner = create(:platformization_partner)
     @levelbuilder = create(:levelbuilder)
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_script = create :script, pilot_experiment: 'my-experiment'
+    @pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
     @pilot_student = create(:follower, section: @pilot_section).student_user
     @no_progress_or_assignment_student = create :student
 
-    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', is_stable: true
-    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', is_stable: true
-    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019'
-    @partner_script = create :script, editor_experiment: 'platformization-partners'
+    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', is_stable: true, published_state: SharedConstants::PUBLISHED_STATE.stable
+    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', is_stable: true, published_state: SharedConstants::PUBLISHED_STATE.stable
+    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
+    @partner_script = create :script, editor_experiment: 'platformization-partners', published_state: SharedConstants::PUBLISHED_STATE.beta
 
     @student_coursez_2017 = create :student
     @section_coursez_2017 = create :section, script: @coursez_2017
@@ -353,7 +353,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "should redirect old k-8" do
     get :show, params: {id: 1}
-    assert_redirected_to script_path(Script.twenty_hour_script)
+    assert_redirected_to script_path(Script.twenty_hour_unit)
   end
 
   test "show should redirect to flappy" do
@@ -445,12 +445,11 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     script.reload
     refute script.hidden
-    assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
   test "update published state to pilot" do
@@ -467,14 +466,13 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'pilot',
+      published_state: SharedConstants::PUBLISHED_STATE.pilot,
       pilot_experiment: 'my-pilot'
     }
     assert_response :success
     script.reload
     assert script.hidden
     refute script.is_stable
-    assert_equal true, JSON.parse(@response.body)['hidden']
   end
 
   test "update published state to beta" do
@@ -491,13 +489,12 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'beta'
+      published_state: SharedConstants::PUBLISHED_STATE.beta
     }
     assert_response :success
     script.reload
     assert script.hidden
     refute script.is_stable
-    assert_equal true, JSON.parse(@response.body)['hidden']
   end
 
   test "update published state to preview" do
@@ -514,16 +511,15 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     script.reload
     refute script.hidden
     refute script.is_stable
-    assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
-  test "update published state to recommended" do
+  test "update published state to stable" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
@@ -537,13 +533,12 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'recommended'
+      published_state: SharedConstants::PUBLISHED_STATE.stable
     }
     assert_response :success
     script.reload
     refute script.hidden
     assert script.is_stable
-    assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
   test "can update on test without modifying filesystem" do
@@ -557,7 +552,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     script.reload
@@ -575,7 +570,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      published_state: 'preview'
+      published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
     script.reload
@@ -685,7 +680,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
 
     assert_response :not_acceptable
-    msg = 'Legacy script levels are not allowed in migrated scripts. Problem lessons: [\"problem lesson\"]'
+    msg = 'Legacy script levels are not allowed in migrated units. Problem lessons: [\"problem lesson\"]'
     assert_includes response.body, msg
     assert script.is_migrated
     assert script.script_levels.any?
@@ -789,7 +784,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: '',
-      published_state: 'preview'
+      published_state: SharedConstants::PUBLISHED_STATE.preview
     }
 
     assert_response :success
@@ -836,7 +831,7 @@ class ScriptsControllerTest < ActionController::TestCase
     stub_file_writes(script.name)
 
     # Test doing this twice because teacher_resources in particular is set via its own code path in update_teacher_resources,
-    # which can cause incorrect behavior if it is removed during the Script.add_script while being added via the
+    # which can cause incorrect behavior if it is removed during the Script.add_unit while being added via the
     # update_teacher_resources during the same call to Script.update_text
     2.times do
       post :update, params: {
@@ -882,7 +877,7 @@ class ScriptsControllerTest < ActionController::TestCase
       student_detail_progress_view: 'on',
       lesson_extras_available: 'on',
       has_verified_resources: 'on',
-      published_state: 'pilot',
+      published_state: SharedConstants::PUBLISHED_STATE.pilot,
       tts: 'on',
       project_sharing: 'on',
       is_course: 'on',

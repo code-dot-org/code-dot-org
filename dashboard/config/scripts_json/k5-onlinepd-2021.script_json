@@ -9,7 +9,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-09 18:59:40 UTC",
+    "serialized_at": "2021-06-21 21:31:44 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
     }
@@ -20,7 +21,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Part I:  Implementing and Teaching CS"
+        "display_name": "Part I:  Teaching and Implementing CS"
       },
       "seeding_key": {
         "lesson_group.key": "Implementing and Teaching CS",
@@ -44,7 +45,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Next Steps"
+        "display_name": "Part III:  Next Steps"
       },
       "seeding_key": {
         "lesson_group.key": "k5_next_steps_1",
@@ -84,27 +85,12 @@
       }
     },
     {
-      "key": "Implementation Approaches and Barriers",
-      "name": "Implementation Approaches and Barriers",
+      "key": "CS Teaching and Student Practices",
+      "name": "CS Teaching Practices",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Implementation Approaches and Barriers",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "key": "CS Teaching and Student Practices",
-      "name": "CS Teaching Practices",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -115,11 +101,11 @@
     },
     {
       "key": "Lesson Planning",
-      "name": "Lesson Planning",
-      "absolute_position": 5,
+      "name": "Teaching a Lesson",
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 5,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -129,12 +115,42 @@
       }
     },
     {
-      "key": "Sequencing",
-      "name": "Sequencing",
+      "key": "Implementation Approaches and Barriers",
+      "name": "Addressing Barriers",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "key": "Part II Overview",
+      "name": "Part II Overview",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Part II Overview",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "key": "Sequencing",
+      "name": "Sequencing",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -144,16 +160,31 @@
       }
     },
     {
-      "key": "Sprite Lab",
-      "name": "Sprite Lab",
-      "absolute_position": 7,
+      "key": "Sequencing with Sprites",
+      "name": "Sequencing with Sprites",
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Sprite Lab",
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "key": "Loops",
+      "name": "Loops",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
@@ -161,10 +192,10 @@
     {
       "key": "Events",
       "name": "Events",
-      "absolute_position": 8,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 8,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -176,10 +207,10 @@
     {
       "key": "Conditionals",
       "name": "Conditionals",
-      "absolute_position": 9,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 9,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -189,27 +220,12 @@
       }
     },
     {
-      "key": "End of Course projects",
-      "name": "End of Course projects",
-      "absolute_position": 10,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
       "key": "Functions",
       "name": "Functions",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -221,10 +237,10 @@
     {
       "key": "Variables",
       "name": "Variables",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -236,10 +252,10 @@
     {
       "key": "For Loops",
       "name": "For Loops",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -249,12 +265,27 @@
       }
     },
     {
-      "key": "Reviewing your reflections",
-      "name": "Reviewing your reflections",
-      "absolute_position": 14,
+      "key": "End of Course projects",
+      "name": "End of Course projects",
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 14,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "key": "Reviewing your reflections",
+      "name": "Reviewing your reflections",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -265,11 +296,11 @@
     },
     {
       "key": "Next steps",
-      "name": "Part III:  Next steps",
-      "absolute_position": 15,
+      "name": "Develop a Plan",
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 15,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -413,30 +444,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 WhatIsCS_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 WhatIsCS_2021"
-        ],
-        "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 WhatIsCS_2021"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "OPD-K5 whats your plan_2021"
         ]
       },
@@ -455,7 +462,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -480,7 +487,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -505,7 +512,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -530,7 +537,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -555,107 +562,7 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 AddressingImplementation1"
-        ],
-        "progression": "Implementation Approaches and Barriers"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 AddressingImplementation1"
-        ],
-        "lesson.key": "Implementation Approaches and Barriers",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 AddressingImplementation1"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 ImplementationApproach_Reflection"
-        ],
-        "progression": "Implementation Approaches and Barriers"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 ImplementationApproach_Reflection"
-        ],
-        "lesson.key": "Implementation Approaches and Barriers",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 ImplementationApproach_Reflection"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 ImplementationBarriers1_Reflection"
-        ],
-        "progression": "Implementation Approaches and Barriers"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 ImplementationBarriers1_Reflection"
-        ],
-        "lesson.key": "Implementation Approaches and Barriers",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 ImplementationBarriers1_Reflection"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 ImplementationBarriers2_Reflection"
-        ],
-        "progression": "Implementation Approaches and Barriers"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 ImplementationBarriers2_Reflection"
-        ],
-        "lesson.key": "Implementation Approaches and Barriers",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 ImplementationBarriers2_Reflection"
-      ]
-    },
-    {
-      "chapter": 16,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -680,7 +587,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -705,7 +612,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -730,7 +637,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -755,7 +662,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -780,7 +687,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -805,7 +712,57 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 17,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 journaling_2021"
+        ],
+        "progression": "CS Teaching and Student Practices"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 journaling_2021"
+        ],
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 journaling_2021"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-Journaling_Reflection"
+        ],
+        "progression": "CS Teaching and Student Practices"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-Journaling_Reflection"
+        ],
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-Journaling_Reflection"
+      ]
+    },
+    {
+      "chapter": 19,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -830,33 +787,8 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 LessonPlanning2"
-        ],
-        "progression": "Lesson Planning"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 LessonPlanning2"
-        ],
-        "lesson.key": "Lesson Planning",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 LessonPlanning2"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 3,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -880,6 +812,106 @@
       ]
     },
     {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 ImplementationBarriers1_Reflection"
+        ],
+        "progression": "Implementation Approaches and Barriers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers1_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 ImplementationBarriers1_Reflection"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 ImplementationBarriers2_Reflection"
+        ],
+        "progression": "Implementation Approaches and Barriers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers2_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 ImplementationBarriers2_Reflection"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 AddressingImplementation1"
+        ],
+        "progression": "Implementation Approaches and Barriers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 AddressingImplementation1"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 AddressingImplementation1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 ImplementationApproach_Reflection"
+        ],
+        "progression": "Implementation Approaches and Barriers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationApproach_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 ImplementationApproach_Reflection"
+      ]
+    },
+    {
       "chapter": 25,
       "position": 1,
       "activity_section_position": null,
@@ -895,7 +927,7 @@
         "script_level.level_keys": [
           "OPD-K5 IntroToConcepts_2021"
         ],
-        "lesson.key": "Sequencing",
+        "lesson.key": "Part II Overview",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
@@ -906,6 +938,30 @@
     {
       "chapter": 26,
       "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-PartIIOutline-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-PartIIOutline-2021"
+        ],
+        "lesson.key": "Part II Overview",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-PartIIOutline-2021"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -928,8 +984,56 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-Sequencing-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-Sequencing-2021"
+        ],
+        "lesson.key": "Sequencing",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-Sequencing-2021"
+      ]
+    },
+    {
+      "chapter": 29,
       "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-SeqVidA-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-SeqVidA-2021"
+        ],
+        "lesson.key": "Sequencing",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-SeqVidA-2021"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -952,8 +1056,32 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 4,
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-DebugB-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-DebugB-2021"
+        ],
+        "lesson.key": "Sequencing",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-DebugB-2021"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -976,8 +1104,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 5,
+      "chapter": 33,
+      "position": 7,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -1000,104 +1128,32 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 6,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-SeqD-2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-SeqD-2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-SeqD-2021"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 7,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-SeqE-context-2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-SeqE-context-2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-SeqE-context-2021"
-      ]
-    },
-    {
-      "chapter": 32,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-SeqE-2021"
+          "OPD-K5-SeqDebug-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-SeqE-2021"
+          "OPD-K5-SeqDebug-2021"
         ],
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-SeqE-2021"
+        "OPD-K5-SeqDebug-2021"
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 9,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 sequencing introduced_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 sequencing introduced_2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 sequencing introduced_2021"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 10,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -1120,7 +1176,31 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "Sequencing",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-CourseNav-2021"
+      ]
+    },
+    {
+      "chapter": 37,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1135,7 +1215,7 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab_2021"
         ],
-        "lesson.key": "Sprite Lab",
+        "lesson.key": "Sequencing with Sprites",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
@@ -1144,32 +1224,176 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 sprite lab introduction_2021"
+          "OPD-K5-SeqSprites-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 sprite lab introduction_2021"
+          "OPD-K5-SeqSprites-2021"
         ],
-        "lesson.key": "Sprite Lab",
+        "lesson.key": "Sequencing with Sprites",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 sprite lab introduction_2021"
+        "OPD-K5-SeqSprites-2021"
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-IntroSpriteLab-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-IntroSpriteLab-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-IntroSpriteLab-2021"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-IntroSprites-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-IntroSprites-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-IntroSprites-2021"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-SpritesVid-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-SpritesVid-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-SpritesVid-2021"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-ESprites-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-ESprites-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-ESprites-2021"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-VidSprites-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-VidSprites-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-VidSprites-2021"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-SpritesE-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-SpritesE-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-SpritesE-2021"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 9,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -1183,7 +1407,7 @@
         "script_level.level_keys": [
           "OPD-K5-SpriteLabF-2021"
         ],
-        "lesson.key": "Sprite Lab",
+        "lesson.key": "Sequencing with Sprites",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
@@ -1192,228 +1416,36 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 sprite lab unplugged_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab unplugged_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 sprite lab unplugged_2021"
-      ]
-    },
-    {
-      "chapter": 39,
-      "position": 5,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 sprite lab video_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab video_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 sprite lab video_2021"
-      ]
-    },
-    {
-      "chapter": 40,
-      "position": 6,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-1_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-1_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-1_2021"
-      ]
-    },
-    {
-      "chapter": 41,
-      "position": 7,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-2_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-2_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-2_2021"
-      ]
-    },
-    {
-      "chapter": 42,
-      "position": 8,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-3_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-3_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-3_2021"
-      ]
-    },
-    {
-      "chapter": 43,
-      "position": 9,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-4_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-4_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-4_2021"
-      ]
-    },
-    {
-      "chapter": 44,
+      "chapter": 46,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-spritelab-5-video_2021"
+          "OPD-K5-SeqSpritesF-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-spritelab-5-video_2021"
+          "OPD-K5-SeqSpritesF-2021"
         ],
-        "lesson.key": "Sprite Lab",
+        "lesson.key": "Sequencing with Sprites",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-spritelab-5-video_2021"
+        "OPD-K5-SeqSpritesF-2021"
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-spritelab-6_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-6_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-6_2021"
-      ]
-    },
-    {
-      "chapter": 46,
-      "position": 12,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-7_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-7_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-7_2021"
-      ]
-    },
-    {
-      "chapter": 47,
-      "position": 13,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "OPD-K5 sprite lab free response_2021"
         ]
       },
@@ -1423,7 +1455,7 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab free response_2021"
         ],
-        "lesson.key": "Sprite Lab",
+        "lesson.key": "Sequencing with Sprites",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
@@ -1433,6 +1465,366 @@
     },
     {
       "chapter": 48,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-CourseNav-2021"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-LoopsIntro-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-LoopsIntro-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-LoopsIntro-2021"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-Loops-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-Loops-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-Loops-2021"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-LoopsVid-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-LoopsVid-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-LoopsVid-2021"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-LoopsMazeA-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-LoopsMazeA-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-LoopsMazeA-2021"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-LoopsA-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-LoopsA-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-LoopsA-2021"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-LoopArtistB-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-LoopArtistB-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-LoopArtistB-2021"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-LoopsArtB-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-LoopsArtB-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-LoopsArtB-2021"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-ArtistLoopsC-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-ArtistLoopsC-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-ArtistLoopsC-2021"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-NestedLoopsD-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-NestedLoopsD-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-NestedLoopsD-2021"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-NestedLoopsPredictionD-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-NestedLoopsPredictionD-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-NestedLoopsPredictionD-2021"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-NestLoopsE-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-NestLoopsE-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-NestLoopsE-2021"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 NestedLoopsE-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 NestedLoopsE-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 NestedLoopsE-2021"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-RefLoops_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-RefLoops_2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-RefLoops_2021"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-CourseNav-2021"
+      ]
+    },
+    {
+      "chapter": 63,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1456,8 +1848,80 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 64,
       "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-EventsIntro-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-EventsIntro-2021"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-EventsIntro-2021"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-Events-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-Events-2021"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-Events-2021"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-PlayLabVid-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-PlayLabVid-2021"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-PlayLabVid-2021"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -1480,32 +1944,32 @@
       ]
     },
     {
-      "chapter": 50,
-      "position": 3,
+      "chapter": 68,
+      "position": 6,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-EventsB-2021"
+          "OPD-K5-BEvents-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-EventsB-2021"
+          "OPD-K5-BEvents-2021"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-EventsB-2021"
+        "OPD-K5-BEvents-2021"
       ]
     },
     {
-      "chapter": 51,
-      "position": 4,
+      "chapter": 69,
+      "position": 7,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -1528,8 +1992,8 @@
       ]
     },
     {
-      "chapter": 52,
-      "position": 5,
+      "chapter": 70,
+      "position": 8,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -1552,272 +2016,104 @@
       ]
     },
     {
-      "chapter": 53,
-      "position": 6,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-EventsD-2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-EventsD-2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-EventsD-2021"
-      ]
-    },
-    {
-      "chapter": 54,
-      "position": 7,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-EventsE-context-2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-EventsE-context-2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-EventsE-context-2021"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 8,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-EventsE-2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-EventsE-2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-EventsE-2021"
-      ]
-    },
-    {
-      "chapter": 56,
+      "chapter": 71,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 events introduced_2021"
+          "OPD-K5-DVidEvents-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 events introduced_2021"
+          "OPD-K5-DVidEvents-2021"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 events introduced_2021"
+        "OPD-K5-DVidEvents-2021"
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 72,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 Stage7Go_copy_2021"
+          "OPD-K5-DEvents-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Stage7Go_copy_2021"
+          "OPD-K5-DEvents-2021"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 Stage7Go_copy_2021"
+        "OPD-K5-DEvents-2021"
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 73,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-events-2_2021"
+          "OPD-K5-EEvents-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-events-2_2021"
+          "OPD-K5-EEvents-2021"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-events-2_2021"
+        "OPD-K5-EEvents-2021"
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 74,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-events-3_2021"
+          "OPD-K5-EventsF2-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-events-3_2021"
+          "OPD-K5-EventsF2-2021"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-events-3_2021"
+        "OPD-K5-EventsF2-2021"
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 75,
       "position": 13,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-events-4_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-events-4_2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-events-4_2021"
-      ]
-    },
-    {
-      "chapter": 61,
-      "position": 14,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-events-5_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-events-5_2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-events-5_2021"
-      ]
-    },
-    {
-      "chapter": 62,
-      "position": 15,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-events-6_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-events-6_2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-events-6_2021"
-      ]
-    },
-    {
-      "chapter": 63,
-      "position": 16,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 debugging_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 debugging_2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 debugging_2021"
-      ]
-    },
-    {
-      "chapter": 64,
-      "position": 17,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -1840,7 +2136,31 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 76,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-CourseNav-2021"
+      ]
+    },
+    {
+      "chapter": 77,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1864,225 +2184,176 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 conditionals introduced_2021"
+          "OPD-K5-Conditionals-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 conditionals introduced_2021"
+          "OPD-K5-Conditionals-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 conditionals introduced_2021"
+        "OPD-K5-Conditionals-2021"
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 79,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 Stage5Go_copy_2021"
+          "OPD-K5-ConditionsVid-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Stage5Go_copy_2021"
+          "OPD-K5-ConditionsVid-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 Stage5Go_copy_2021"
+        "OPD-K5-ConditionsVid-2021"
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 80,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_bee_conditionalsVid1_2021"
+          "OPD-K5-IfE-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_bee_conditionalsVid1_2021"
+          "OPD-K5-IfE-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseD_bee_conditionalsVid1_2021"
+        "OPD-K5-IfE-2021"
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 81,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_bee_conditionals1_predict1_2021"
+          "OPD-K5-IfElseVid-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_bee_conditionals1_predict1_2021"
+          "OPD-K5-IfElseVid-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseD_bee_conditionals1_predict1_2021"
+        "OPD-K5-IfElseVid-2021"
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 82,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_bee_conditionals2_2021"
+          "OPD-K5-IfElse2-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_bee_conditionals2_2021"
+          "OPD-K5-IfElse2-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseD_bee_conditionals2_2021"
+        "OPD-K5-IfElse2-2021"
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 83,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_bee_conditionals3_2021"
+          "OPD-K5-ConditionalsE-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_bee_conditionals3_2021"
+          "OPD-K5-ConditionalsE-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseD_bee_conditionals3_2021"
+        "OPD-K5-ConditionalsE-2021"
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 84,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_bee_conditionals4_2021"
+          "OPD-K5-ConditionalE-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_bee_conditionals4_2021"
+          "OPD-K5-ConditionalE-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseD_bee_conditionals4_2021"
+        "OPD-K5-ConditionalE-2021"
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 85,
       "position": 9,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "challenge": true,
-        "level_keys": [
-          "courseD_bee_conditionals5_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_bee_conditionals5_2021"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "courseD_bee_conditionals5_2021"
-      ]
-    },
-    {
-      "chapter": 74,
-      "position": 10,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 journaling_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 journaling_2021"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 journaling_2021"
-      ]
-    },
-    {
-      "chapter": 75,
-      "position": 11,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2105,267 +2376,27 @@
       ]
     },
     {
-      "chapter": 76,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 project_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 project_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 project_2021"
-      ]
-    },
-    {
-      "chapter": 77,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 projects introduction_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 projects introduction_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 projects introduction_2021"
-      ]
-    },
-    {
-      "chapter": 78,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-projects-1_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-projects-1_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-projects-1_2021"
-      ]
-    },
-    {
-      "chapter": 79,
-      "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-projects-2_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-projects-2_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-projects-2_2021"
-      ]
-    },
-    {
-      "chapter": 80,
-      "position": 5,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-projects-3_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-projects-3_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-projects-3_2021"
-      ]
-    },
-    {
-      "chapter": 81,
-      "position": 6,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-projects-4_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-projects-4_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-projects-4_2021"
-      ]
-    },
-    {
-      "chapter": 82,
-      "position": 7,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-projects-5_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-projects-5_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-projects-5_2021"
-      ]
-    },
-    {
-      "chapter": 83,
-      "position": 8,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-projects-6_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-projects-6_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-projects-6_2021"
-      ]
-    },
-    {
-      "chapter": 84,
-      "position": 9,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-projects-7_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-projects-7_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-projects-7_2021"
-      ]
-    },
-    {
-      "chapter": 85,
+      "chapter": 86,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 projects free response_2021"
+          "OPD-K5-CourseNav-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 projects free response_2021"
+          "OPD-K5-CourseNav-2021"
         ],
-        "lesson.key": "End of Course projects",
+        "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 projects free response_2021"
-      ]
-    },
-    {
-      "chapter": 86,
-      "position": 11,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 where to next_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 where to next_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 where to next_2021"
+        "OPD-K5-CourseNav-2021"
       ]
     },
     {
@@ -2399,21 +2430,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 Stage6Start_copy_2021"
+          "OPD-K5-FunctionsVid-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Stage6Start_copy_2021"
+          "OPD-K5-FunctionsVid-2021"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 Stage6Start_copy_2021"
+        "OPD-K5-FunctionsVid-2021"
       ]
     },
     {
@@ -2423,21 +2454,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 functions introduced_2021"
+          "OPD-K5-Functions-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 functions introduced_2021"
+          "OPD-K5-Functions-2021"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 functions introduced_2021"
+        "OPD-K5-Functions-2021"
       ]
     },
     {
@@ -2447,21 +2478,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 Stage6Go_copy_2021"
+          "OPD-K5-FunctionsVideo-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Stage6Go_copy_2021"
+          "OPD-K5-FunctionsVideo-2021"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 Stage6Go_copy_2021"
+        "OPD-K5-FunctionsVideo-2021"
       ]
     },
     {
@@ -2471,21 +2502,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseE_artist_functions1_2021"
+          "OPD-K5-FuncMineCraft-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseE_artist_functions1_2021"
+          "OPD-K5-FuncMineCraft-2021"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseE_artist_functions1_2021"
+        "OPD-K5-FuncMineCraft-2021"
       ]
     },
     {
@@ -2495,146 +2526,26 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseE_artist_functions_predict1_2021"
+          "OPD-K5-FuncArtist-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseE_artist_functions_predict1_2021"
+          "OPD-K5-FuncArtist-2021"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseE_artist_functions_predict1_2021"
+        "OPD-K5-FuncArtist-2021"
       ]
     },
     {
       "chapter": 93,
       "position": 7,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_video_functionsArtist_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_video_functionsArtist_2021"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "courseE_video_functionsArtist_2021"
-      ]
-    },
-    {
-      "chapter": 94,
-      "position": 8,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_artist_functions2_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_artist_functions2_2021"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "courseE_artist_functions2_2021"
-      ]
-    },
-    {
-      "chapter": 95,
-      "position": 9,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_artist_functions3_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_artist_functions3_2021"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "courseE_artist_functions3_2021"
-      ]
-    },
-    {
-      "chapter": 96,
-      "position": 10,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_artist_functions4_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_artist_functions4_2021"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "courseE_artist_functions4_2021"
-      ]
-    },
-    {
-      "chapter": 97,
-      "position": 11,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_artist_functions5_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_artist_functions5_2021"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "courseE_artist_functions5_2021"
-      ]
-    },
-    {
-      "chapter": 98,
-      "position": 12,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2657,7 +2568,31 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 94,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-CourseNav-2021"
+      ]
+    },
+    {
+      "chapter": 95,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2681,224 +2616,176 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 variables introduction_2021"
+          "OPD-K5-VariablesVid-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 variables introduction_2021"
+          "OPD-K5-VariablesVid-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 variables introduction_2021"
+        "OPD-K5-VariablesVid-2021"
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 variables unplugged_2021"
+          "OPD-K5-VariablesF-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 variables unplugged_2021"
+          "OPD-K5-VariablesF-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 variables unplugged_2021"
+        "OPD-K5-VariablesF-2021"
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-variables-1_2021"
+          "OPD-K5-VariablesSpriteLab-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-variables-1_2021"
+          "OPD-K5-VariablesSpriteLab-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-variables-1_2021"
+        "OPD-K5-VariablesSpriteLab-2021"
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-variables-2_2021"
+          "OPD-K5-PromptsVariables-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-variables-2_2021"
+          "OPD-K5-PromptsVariables-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-variables-2_2021"
+        "OPD-K5-PromptsVariables-2021"
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-variables-3-video_2021"
+          "OPD-K5-VariablesArtist-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-variables-3-video_2021"
+          "OPD-K5-VariablesArtist-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-variables-3-video_2021"
+        "OPD-K5-VariablesArtist-2021"
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-variables-4_2021"
+          "OPD-K5-ArtistVariables-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-variables-4_2021"
+          "OPD-K5-ArtistVariables-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-variables-4_2021"
+        "OPD-K5-ArtistVariables-2021"
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-variables-5_2021"
+          "OPD-K5-VariablesBee-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-variables-5_2021"
+          "OPD-K5-VariablesBee-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-variables-5_2021"
+        "OPD-K5-VariablesBee-2021"
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 103,
       "position": 9,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-variables-6_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-variables-6_2021"
-        ],
-        "lesson.key": "Variables",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-variables-6_2021"
-      ]
-    },
-    {
-      "chapter": 108,
-      "position": 10,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-variables-7_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-variables-7_2021"
-        ],
-        "lesson.key": "Variables",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-variables-7_2021"
-      ]
-    },
-    {
-      "chapter": 109,
-      "position": 11,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2921,7 +2808,31 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 104,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-CourseNav-2021"
+      ]
+    },
+    {
+      "chapter": 105,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2945,224 +2856,128 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 106,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 for loops introduction_2021"
+          "OPD-K5-CounterVariableVid-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 for loops introduction_2021"
+          "OPD-K5-CounterVariableVid-2021"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 for loops introduction_2021"
+        "OPD-K5-CounterVariableVid-2021"
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 107,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 for loops_2021"
+          "OPD-K5-ForLoopsVidF-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 for loops_2021"
+          "OPD-K5-ForLoopsVidF-2021"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 for loops_2021"
+        "OPD-K5-ForLoopsVidF-2021"
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 108,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-forloops-1_2021"
+          "OPD-K5-ForLoopFBee-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-forloops-1_2021"
+          "OPD-K5-ForLoopFBee-2021"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-forloops-1_2021"
+        "OPD-K5-ForLoopFBee-2021"
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 109,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-forloops-2_2021"
+          "OPD-K5-ForLoopsVideoF-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-forloops-2_2021"
+          "OPD-K5-ForLoopsVideoF-2021"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-forloops-2_2021"
+        "OPD-K5-ForLoopsVideoF-2021"
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 110,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-forloops-3-video_2021"
+          "OPD-K5-ForLoopFArtist-2021"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-forloops-3-video_2021"
+          "OPD-K5-ForLoopFArtist-2021"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-forloops-3-video_2021"
+        "OPD-K5-ForLoopFArtist-2021"
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 111,
       "position": 7,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-forloops-4_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-forloops-4_2021"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-forloops-4_2021"
-      ]
-    },
-    {
-      "chapter": 117,
-      "position": 8,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-forloops-5_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-forloops-5_2021"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-forloops-5_2021"
-      ]
-    },
-    {
-      "chapter": 118,
-      "position": 9,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-forloops-6_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-forloops-6_2021"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-forloops-6_2021"
-      ]
-    },
-    {
-      "chapter": 119,
-      "position": 10,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-forloops-7_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-forloops-7_2021"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-forloops-7_2021"
-      ]
-    },
-    {
-      "chapter": 120,
-      "position": 11,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -3185,7 +3000,247 @@
       ]
     },
     {
+      "chapter": 112,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-CourseNav-2021"
+      ]
+    },
+    {
+      "chapter": 113,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 project_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 project_2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 project_2021"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-EoCProjectA-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectA-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-EoCProjectA-2021"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-EoCProjectB-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectB-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-EoCProjectB-2021"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-EoCProjectCF-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectCF-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-EoCProjectCF-2021"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-EoCProjectC-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectC-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-EoCProjectC-2021"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-EoCProjectD-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectD-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-EoCProjectD-2021"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-EoCProjectE-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectE-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-EoCProjectE-2021"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-EoCProjectF-2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectF-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-EoCProjectF-2021"
+      ]
+    },
+    {
       "chapter": 121,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 projects free response_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 projects free response_2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 projects free response_2021"
+      ]
+    },
+    {
+      "chapter": 122,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3209,7 +3264,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3233,7 +3288,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3257,7 +3312,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3281,7 +3336,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3305,7 +3360,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -3329,7 +3384,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -3353,7 +3408,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -3377,7 +3432,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -3401,7 +3456,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -3425,7 +3480,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -3449,7 +3504,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3473,7 +3528,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3497,7 +3552,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3521,7 +3576,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3545,7 +3600,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3569,7 +3624,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 138,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -3593,7 +3648,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 139,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -3675,17 +3730,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 WhatIsCS_2021",
-        "script_level.level_keys": [
-          "OPD-K5 WhatIsCS_2021"
-        ],
-        "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "OPD-K5 whats your plan_2021",
         "script_level.level_keys": [
           "OPD-K5 whats your plan_2021"
@@ -3735,50 +3779,6 @@
           "OPD-K5 GettingStarted_Reflection"
         ],
         "lesson.key": "Getting Started",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 AddressingImplementation1",
-        "script_level.level_keys": [
-          "OPD-K5 AddressingImplementation1"
-        ],
-        "lesson.key": "Implementation Approaches and Barriers",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 ImplementationApproach_Reflection",
-        "script_level.level_keys": [
-          "OPD-K5 ImplementationApproach_Reflection"
-        ],
-        "lesson.key": "Implementation Approaches and Barriers",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 ImplementationBarriers1_Reflection",
-        "script_level.level_keys": [
-          "OPD-K5 ImplementationBarriers1_Reflection"
-        ],
-        "lesson.key": "Implementation Approaches and Barriers",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 ImplementationBarriers2_Reflection",
-        "script_level.level_keys": [
-          "OPD-K5 ImplementationBarriers2_Reflection"
-        ],
-        "lesson.key": "Implementation Approaches and Barriers",
         "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
@@ -3851,20 +3851,31 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 LessonPlanning1",
+        "level.key": "OPD-K5 journaling_2021",
         "script_level.level_keys": [
-          "OPD-K5 LessonPlanning1"
+          "OPD-K5 journaling_2021"
         ],
-        "lesson.key": "Lesson Planning",
+        "lesson.key": "CS Teaching and Student Practices",
         "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 LessonPlanning2",
+        "level.key": "OPD-K5-Journaling_Reflection",
         "script_level.level_keys": [
-          "OPD-K5 LessonPlanning2"
+          "OPD-K5-Journaling_Reflection"
+        ],
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 LessonPlanning1",
+        "script_level.level_keys": [
+          "OPD-K5 LessonPlanning1"
         ],
         "lesson.key": "Lesson Planning",
         "lesson_group.key": "Implementing and Teaching CS",
@@ -3884,11 +3895,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "OPD-K5 ImplementationBarriers1_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers1_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 ImplementationBarriers2_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers2_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 AddressingImplementation1",
+        "script_level.level_keys": [
+          "OPD-K5 AddressingImplementation1"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 ImplementationApproach_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationApproach_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "OPD-K5 IntroToConcepts_2021",
         "script_level.level_keys": [
           "OPD-K5 IntroToConcepts_2021"
         ],
-        "lesson.key": "Sequencing",
+        "lesson.key": "Part II Overview",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-PartIIOutline-2021",
+        "script_level.level_keys": [
+          "OPD-K5-PartIIOutline-2021"
+        ],
+        "lesson.key": "Part II Overview",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
@@ -3906,9 +3972,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "OPD-K5-Sequencing-2021",
+        "script_level.level_keys": [
+          "OPD-K5-Sequencing-2021"
+        ],
+        "lesson.key": "Sequencing",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-SeqVidA-2021",
+        "script_level.level_keys": [
+          "OPD-K5-SeqVidA-2021"
+        ],
+        "lesson.key": "Sequencing",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "OPD-K5-SeqA-2021",
         "script_level.level_keys": [
           "OPD-K5-SeqA-2021"
+        ],
+        "lesson.key": "Sequencing",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-DebugB-2021",
+        "script_level.level_keys": [
+          "OPD-K5-DebugB-2021"
         ],
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -3939,42 +4038,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-SeqD-2021",
+        "level.key": "OPD-K5-SeqDebug-2021",
         "script_level.level_keys": [
-          "OPD-K5-SeqD-2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-SeqE-context-2021",
-        "script_level.level_keys": [
-          "OPD-K5-SeqE-context-2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-SeqE-2021",
-        "script_level.level_keys": [
-          "OPD-K5-SeqE-2021"
-        ],
-        "lesson.key": "Sequencing",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 sequencing introduced_2021",
-        "script_level.level_keys": [
-          "OPD-K5 sequencing introduced_2021"
+          "OPD-K5-SeqDebug-2021"
         ],
         "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -3994,22 +4060,99 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 sprite lab_2021",
+        "level.key": "OPD-K5-CourseNav-2021",
         "script_level.level_keys": [
-          "OPD-K5 sprite lab_2021"
+          "OPD-K5-CourseNav-2021"
         ],
-        "lesson.key": "Sprite Lab",
+        "lesson.key": "Sequencing",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 sprite lab introduction_2021",
+        "level.key": "OPD-K5 sprite lab_2021",
         "script_level.level_keys": [
-          "OPD-K5 sprite lab introduction_2021"
+          "OPD-K5 sprite lab_2021"
         ],
-        "lesson.key": "Sprite Lab",
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-SeqSprites-2021",
+        "script_level.level_keys": [
+          "OPD-K5-SeqSprites-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-IntroSpriteLab-2021",
+        "script_level.level_keys": [
+          "OPD-K5-IntroSpriteLab-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-IntroSprites-2021",
+        "script_level.level_keys": [
+          "OPD-K5-IntroSprites-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-SpritesVid-2021",
+        "script_level.level_keys": [
+          "OPD-K5-SpritesVid-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-ESprites-2021",
+        "script_level.level_keys": [
+          "OPD-K5-ESprites-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-VidSprites-2021",
+        "script_level.level_keys": [
+          "OPD-K5-VidSprites-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-SpritesE-2021",
+        "script_level.level_keys": [
+          "OPD-K5-SpritesE-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
@@ -4020,106 +4163,18 @@
         "script_level.level_keys": [
           "OPD-K5-SpriteLabF-2021"
         ],
-        "lesson.key": "Sprite Lab",
+        "lesson.key": "Sequencing with Sprites",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 sprite lab unplugged_2021",
+        "level.key": "OPD-K5-SeqSpritesF-2021",
         "script_level.level_keys": [
-          "OPD-K5 sprite lab unplugged_2021"
+          "OPD-K5-SeqSpritesF-2021"
         ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 sprite lab video_2021",
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab video_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-1_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-1_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-2_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-2_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-3_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-3_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-4_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-4_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-5-video_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-5-video_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-6_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-6_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-7_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-7_2021"
-        ],
-        "lesson.key": "Sprite Lab",
+        "lesson.key": "Sequencing with Sprites",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
@@ -4130,7 +4185,172 @@
         "script_level.level_keys": [
           "OPD-K5 sprite lab free response_2021"
         ],
-        "lesson.key": "Sprite Lab",
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-CourseNav-2021",
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "Sequencing with Sprites",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-LoopsIntro-2021",
+        "script_level.level_keys": [
+          "OPD-K5-LoopsIntro-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-Loops-2021",
+        "script_level.level_keys": [
+          "OPD-K5-Loops-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-LoopsVid-2021",
+        "script_level.level_keys": [
+          "OPD-K5-LoopsVid-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-LoopsMazeA-2021",
+        "script_level.level_keys": [
+          "OPD-K5-LoopsMazeA-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-LoopsA-2021",
+        "script_level.level_keys": [
+          "OPD-K5-LoopsA-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-LoopArtistB-2021",
+        "script_level.level_keys": [
+          "OPD-K5-LoopArtistB-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-LoopsArtB-2021",
+        "script_level.level_keys": [
+          "OPD-K5-LoopsArtB-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-ArtistLoopsC-2021",
+        "script_level.level_keys": [
+          "OPD-K5-ArtistLoopsC-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-NestedLoopsD-2021",
+        "script_level.level_keys": [
+          "OPD-K5-NestedLoopsD-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-NestedLoopsPredictionD-2021",
+        "script_level.level_keys": [
+          "OPD-K5-NestedLoopsPredictionD-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-NestLoopsE-2021",
+        "script_level.level_keys": [
+          "OPD-K5-NestLoopsE-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 NestedLoopsE-2021",
+        "script_level.level_keys": [
+          "OPD-K5 NestedLoopsE-2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-RefLoops_2021",
+        "script_level.level_keys": [
+          "OPD-K5-RefLoops_2021"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-CourseNav-2021",
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "Loops",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
@@ -4140,6 +4360,39 @@
         "level.key": "OPD-K5 Stage7Start_copy_2021",
         "script_level.level_keys": [
           "OPD-K5 Stage7Start_copy_2021"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-EventsIntro-2021",
+        "script_level.level_keys": [
+          "OPD-K5-EventsIntro-2021"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-Events-2021",
+        "script_level.level_keys": [
+          "OPD-K5-Events-2021"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-PlayLabVid-2021",
+        "script_level.level_keys": [
+          "OPD-K5-PlayLabVid-2021"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4159,9 +4412,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-EventsB-2021",
+        "level.key": "OPD-K5-BEvents-2021",
         "script_level.level_keys": [
-          "OPD-K5-EventsB-2021"
+          "OPD-K5-BEvents-2021"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4192,9 +4445,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-EventsD-2021",
+        "level.key": "OPD-K5-DVidEvents-2021",
         "script_level.level_keys": [
-          "OPD-K5-EventsD-2021"
+          "OPD-K5-DVidEvents-2021"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4203,9 +4456,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-EventsE-context-2021",
+        "level.key": "OPD-K5-DEvents-2021",
         "script_level.level_keys": [
-          "OPD-K5-EventsE-context-2021"
+          "OPD-K5-DEvents-2021"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4214,9 +4467,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-EventsE-2021",
+        "level.key": "OPD-K5-EEvents-2021",
         "script_level.level_keys": [
-          "OPD-K5-EventsE-2021"
+          "OPD-K5-EEvents-2021"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4225,86 +4478,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 events introduced_2021",
+        "level.key": "OPD-K5-EventsF2-2021",
         "script_level.level_keys": [
-          "OPD-K5 events introduced_2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 Stage7Go_copy_2021",
-        "script_level.level_keys": [
-          "OPD-K5 Stage7Go_copy_2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-events-2_2021",
-        "script_level.level_keys": [
-          "OPD-K5-events-2_2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-events-3_2021",
-        "script_level.level_keys": [
-          "OPD-K5-events-3_2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-events-4_2021",
-        "script_level.level_keys": [
-          "OPD-K5-events-4_2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-events-5_2021",
-        "script_level.level_keys": [
-          "OPD-K5-events-5_2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-events-6_2021",
-        "script_level.level_keys": [
-          "OPD-K5-events-6_2021"
-        ],
-        "lesson.key": "Events",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 debugging_2021",
-        "script_level.level_keys": [
-          "OPD-K5 debugging_2021"
+          "OPD-K5-EventsF2-2021"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4324,6 +4500,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "OPD-K5-CourseNav-2021",
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "OPD-K5 Stage5Start_copy_2021",
         "script_level.level_keys": [
           "OPD-K5 Stage5Start_copy_2021"
@@ -4335,9 +4522,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 conditionals introduced_2021",
+        "level.key": "OPD-K5-Conditionals-2021",
         "script_level.level_keys": [
-          "OPD-K5 conditionals introduced_2021"
+          "OPD-K5-Conditionals-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4346,9 +4533,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 Stage5Go_copy_2021",
+        "level.key": "OPD-K5-ConditionsVid-2021",
         "script_level.level_keys": [
-          "OPD-K5 Stage5Go_copy_2021"
+          "OPD-K5-ConditionsVid-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4357,9 +4544,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_bee_conditionalsVid1_2021",
+        "level.key": "OPD-K5-IfE-2021",
         "script_level.level_keys": [
-          "courseD_bee_conditionalsVid1_2021"
+          "OPD-K5-IfE-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4368,9 +4555,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_bee_conditionals1_predict1_2021",
+        "level.key": "OPD-K5-IfElseVid-2021",
         "script_level.level_keys": [
-          "courseD_bee_conditionals1_predict1_2021"
+          "OPD-K5-IfElseVid-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4379,9 +4566,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_bee_conditionals2_2021",
+        "level.key": "OPD-K5-IfElse2-2021",
         "script_level.level_keys": [
-          "courseD_bee_conditionals2_2021"
+          "OPD-K5-IfElse2-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4390,9 +4577,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_bee_conditionals3_2021",
+        "level.key": "OPD-K5-ConditionalsE-2021",
         "script_level.level_keys": [
-          "courseD_bee_conditionals3_2021"
+          "OPD-K5-ConditionalsE-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4401,31 +4588,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_bee_conditionals4_2021",
+        "level.key": "OPD-K5-ConditionalE-2021",
         "script_level.level_keys": [
-          "courseD_bee_conditionals4_2021"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_bee_conditionals5_2021",
-        "script_level.level_keys": [
-          "courseD_bee_conditionals5_2021"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 journaling_2021",
-        "script_level.level_keys": [
-          "OPD-K5 journaling_2021"
+          "OPD-K5-ConditionalE-2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4445,121 +4610,11 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 project_2021",
+        "level.key": "OPD-K5-CourseNav-2021",
         "script_level.level_keys": [
-          "OPD-K5 project_2021"
+          "OPD-K5-CourseNav-2021"
         ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 projects introduction_2021",
-        "script_level.level_keys": [
-          "OPD-K5 projects introduction_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-projects-1_2021",
-        "script_level.level_keys": [
-          "OPD-K5-projects-1_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-projects-2_2021",
-        "script_level.level_keys": [
-          "OPD-K5-projects-2_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-projects-3_2021",
-        "script_level.level_keys": [
-          "OPD-K5-projects-3_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-projects-4_2021",
-        "script_level.level_keys": [
-          "OPD-K5-projects-4_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-projects-5_2021",
-        "script_level.level_keys": [
-          "OPD-K5-projects-5_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-projects-6_2021",
-        "script_level.level_keys": [
-          "OPD-K5-projects-6_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-projects-7_2021",
-        "script_level.level_keys": [
-          "OPD-K5-projects-7_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 projects free response_2021",
-        "script_level.level_keys": [
-          "OPD-K5 projects free response_2021"
-        ],
-        "lesson.key": "End of Course projects",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 where to next_2021",
-        "script_level.level_keys": [
-          "OPD-K5 where to next_2021"
-        ],
-        "lesson.key": "End of Course projects",
+        "lesson.key": "Conditionals",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
@@ -4577,9 +4632,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 Stage6Start_copy_2021",
+        "level.key": "OPD-K5-FunctionsVid-2021",
         "script_level.level_keys": [
-          "OPD-K5 Stage6Start_copy_2021"
+          "OPD-K5-FunctionsVid-2021"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4588,9 +4643,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 functions introduced_2021",
+        "level.key": "OPD-K5-Functions-2021",
         "script_level.level_keys": [
-          "OPD-K5 functions introduced_2021"
+          "OPD-K5-Functions-2021"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4599,9 +4654,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 Stage6Go_copy_2021",
+        "level.key": "OPD-K5-FunctionsVideo-2021",
         "script_level.level_keys": [
-          "OPD-K5 Stage6Go_copy_2021"
+          "OPD-K5-FunctionsVideo-2021"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4610,9 +4665,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_artist_functions1_2021",
+        "level.key": "OPD-K5-FuncMineCraft-2021",
         "script_level.level_keys": [
-          "courseE_artist_functions1_2021"
+          "OPD-K5-FuncMineCraft-2021"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4621,64 +4676,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_artist_functions_predict1_2021",
+        "level.key": "OPD-K5-FuncArtist-2021",
         "script_level.level_keys": [
-          "courseE_artist_functions_predict1_2021"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_video_functionsArtist_2021",
-        "script_level.level_keys": [
-          "courseE_video_functionsArtist_2021"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_artist_functions2_2021",
-        "script_level.level_keys": [
-          "courseE_artist_functions2_2021"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_artist_functions3_2021",
-        "script_level.level_keys": [
-          "courseE_artist_functions3_2021"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_artist_functions4_2021",
-        "script_level.level_keys": [
-          "courseE_artist_functions4_2021"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_artist_functions5_2021",
-        "script_level.level_keys": [
-          "courseE_artist_functions5_2021"
+          "OPD-K5-FuncArtist-2021"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4698,6 +4698,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "OPD-K5-CourseNav-2021",
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "OPD-K5 variables_2021",
         "script_level.level_keys": [
           "OPD-K5 variables_2021"
@@ -4709,9 +4720,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 variables introduction_2021",
+        "level.key": "OPD-K5-VariablesVid-2021",
         "script_level.level_keys": [
-          "OPD-K5 variables introduction_2021"
+          "OPD-K5-VariablesVid-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4720,9 +4731,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 variables unplugged_2021",
+        "level.key": "OPD-K5-VariablesF-2021",
         "script_level.level_keys": [
-          "OPD-K5 variables unplugged_2021"
+          "OPD-K5-VariablesF-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4731,9 +4742,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-variables-1_2021",
+        "level.key": "OPD-K5-VariablesSpriteLab-2021",
         "script_level.level_keys": [
-          "OPD-K5-variables-1_2021"
+          "OPD-K5-VariablesSpriteLab-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4742,9 +4753,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-variables-2_2021",
+        "level.key": "OPD-K5-PromptsVariables-2021",
         "script_level.level_keys": [
-          "OPD-K5-variables-2_2021"
+          "OPD-K5-PromptsVariables-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4753,9 +4764,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-variables-3-video_2021",
+        "level.key": "OPD-K5-VariablesArtist-2021",
         "script_level.level_keys": [
-          "OPD-K5-variables-3-video_2021"
+          "OPD-K5-VariablesArtist-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4764,9 +4775,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-variables-4_2021",
+        "level.key": "OPD-K5-ArtistVariables-2021",
         "script_level.level_keys": [
-          "OPD-K5-variables-4_2021"
+          "OPD-K5-ArtistVariables-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4775,31 +4786,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-variables-5_2021",
+        "level.key": "OPD-K5-VariablesBee-2021",
         "script_level.level_keys": [
-          "OPD-K5-variables-5_2021"
-        ],
-        "lesson.key": "Variables",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-variables-6_2021",
-        "script_level.level_keys": [
-          "OPD-K5-variables-6_2021"
-        ],
-        "lesson.key": "Variables",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-variables-7_2021",
-        "script_level.level_keys": [
-          "OPD-K5-variables-7_2021"
+          "OPD-K5-VariablesBee-2021"
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4819,6 +4808,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "OPD-K5-CourseNav-2021",
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "OPD-K5 for loops intro_2021",
         "script_level.level_keys": [
           "OPD-K5 for loops intro_2021"
@@ -4830,9 +4830,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 for loops introduction_2021",
+        "level.key": "OPD-K5-CounterVariableVid-2021",
         "script_level.level_keys": [
-          "OPD-K5 for loops introduction_2021"
+          "OPD-K5-CounterVariableVid-2021"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4841,9 +4841,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 for loops_2021",
+        "level.key": "OPD-K5-ForLoopsVidF-2021",
         "script_level.level_keys": [
-          "OPD-K5 for loops_2021"
+          "OPD-K5-ForLoopsVidF-2021"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4852,9 +4852,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-forloops-1_2021",
+        "level.key": "OPD-K5-ForLoopFBee-2021",
         "script_level.level_keys": [
-          "OPD-K5-forloops-1_2021"
+          "OPD-K5-ForLoopFBee-2021"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4863,9 +4863,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-forloops-2_2021",
+        "level.key": "OPD-K5-ForLoopsVideoF-2021",
         "script_level.level_keys": [
-          "OPD-K5-forloops-2_2021"
+          "OPD-K5-ForLoopsVideoF-2021"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4874,53 +4874,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-forloops-3-video_2021",
+        "level.key": "OPD-K5-ForLoopFArtist-2021",
         "script_level.level_keys": [
-          "OPD-K5-forloops-3-video_2021"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-forloops-4_2021",
-        "script_level.level_keys": [
-          "OPD-K5-forloops-4_2021"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-forloops-5_2021",
-        "script_level.level_keys": [
-          "OPD-K5-forloops-5_2021"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-forloops-6_2021",
-        "script_level.level_keys": [
-          "OPD-K5-forloops-6_2021"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_basic_concepts_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-forloops-7_2021",
-        "script_level.level_keys": [
-          "OPD-K5-forloops-7_2021"
+          "OPD-K5-ForLoopFArtist-2021"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -4934,6 +4890,116 @@
           "OPD-K5 for loops free response_2021"
         ],
         "lesson.key": "For Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-CourseNav-2021",
+        "script_level.level_keys": [
+          "OPD-K5-CourseNav-2021"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 project_2021",
+        "script_level.level_keys": [
+          "OPD-K5 project_2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-EoCProjectA-2021",
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectA-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-EoCProjectB-2021",
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectB-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-EoCProjectCF-2021",
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectCF-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-EoCProjectC-2021",
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectC-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-EoCProjectD-2021",
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectD-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-EoCProjectE-2021",
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectE-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-EoCProjectF-2021",
+        "script_level.level_keys": [
+          "OPD-K5-EoCProjectF-2021"
+        ],
+        "lesson.key": "End of Course projects",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 projects free response_2021",
+        "script_level.level_keys": [
+          "OPD-K5 projects free response_2021"
+        ],
+        "lesson.key": "End of Course projects",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }

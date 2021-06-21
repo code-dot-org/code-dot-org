@@ -10,6 +10,17 @@ require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
 # result in changes to these other files.
 
 module SharedConstants
+  # Used to determine who can access curriculum content
+  PUBLISHED_STATE = OpenStruct.new(
+    {
+      in_development: "in_development",
+      pilot: "pilot",
+      beta: "beta",
+      preview: "preview",
+      stable: "stable"
+    }
+  ).freeze
+
   # Used to communicate different types of levels
   LEVEL_KIND = OpenStruct.new(
     {

@@ -77,7 +77,8 @@
     },
     "new_name": null,
     "family_name": "csp3",
-    "serialized_at": "2021-05-03 23:55:22 UTC",
+    "serialized_at": "2021-06-17 22:29:46 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp3-2018"
     }

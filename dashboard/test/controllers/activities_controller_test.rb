@@ -37,7 +37,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @admin = create(:admin)
 
-    script_levels = Script.twenty_hour_script.script_levels
+    script_levels = Script.twenty_hour_unit.script_levels
     @script_level_prev = script_levels[0]
     @script_level = @script_level_prev.next_progression_level
     @script_level_next = @script_level.next_progression_level
@@ -929,7 +929,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       "lesson 'Milestone Lesson 1', display_name: 'Milestone Lesson 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Lesson 2', display_name: 'Milestone Lesson 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
+    script = Script.add_unit({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
 
     last_level_in_first_lesson = script.lessons.first.script_levels.last
     post :milestone,

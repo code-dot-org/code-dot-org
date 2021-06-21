@@ -40,7 +40,8 @@
     },
     "new_name": "csp1-2017",
     "family_name": "csp1",
-    "serialized_at": "2021-05-03 23:54:48 UTC",
+    "serialized_at": "2021-06-17 22:28:17 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp1-2017"
     }
@@ -448,17 +449,17 @@
         ],
         "progression": "Reflection: starting out in computer science",
         "variants": {
-          "csp_socialBelonging_control": {
-            "experiments": [
-              "rene-control-control",
-              "rene-control-affirmation"
-            ]
-          },
           "csp_socialBelonging_intervention": {
             "active": false,
             "experiments": [
               "rene-belonging-control",
               "rene-belonging-affirmation"
+            ]
+          },
+          "csp_socialBelonging_control": {
+            "experiments": [
+              "rene-control-control",
+              "rene-control-affirmation"
             ]
           }
         }
@@ -2365,17 +2366,17 @@
         ],
         "progression": "Pre-test reflection",
         "variants": {
-          "csp_affirmation_control": {
-            "experiments": [
-              "rene-control-control",
-              "rene-belonging-control"
-            ]
-          },
           "csp_affirmation_intervention": {
             "active": false,
             "experiments": [
               "rene-control-affirmation",
               "rene-belonging-affirmation"
+            ]
+          },
+          "csp_affirmation_control": {
+            "experiments": [
+              "rene-control-control",
+              "rene-belonging-control"
             ]
           }
         }

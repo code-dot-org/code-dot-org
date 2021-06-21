@@ -35,9 +35,9 @@ class ScriptTest < ActiveSupport::TestCase
   def populate_cache_and_disconnect_db
     Script.stubs(:should_cache?).returns true
     # Only need to populate cache once per test-suite run
-    @@script_cached ||= Script.script_cache_to_cache
+    @@script_cached ||= Script.unit_cache_to_cache
     Script.script_cache
-    Script.script_family_cache
+    Script.unit_family_cache
 
     # Also populate course_cache, as it's used by course_link
     UnitGroup.stubs(:should_cache?).returns true
@@ -99,7 +99,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # Set different 'hidden' option from defaults in Script.setup
     options = {name: File.basename(@script_file, ".script"), hidden: false}
-    script = Script.add_script(options, parsed_script)
+    script = Script.add_unit(options, parsed_script)
     assert_equal script_id, script.script_levels[4].script_id
     assert_not_equal script_level_id, script.script_levels[4].id
   end
@@ -110,13 +110,13 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
-    old_script = Script.add_script(
+    old_script = Script.add_unit(
       {name: 'old script name'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal 'old script name', old_script.name
 
-    new_script = Script.add_script(
+    new_script = Script.add_unit(
       {name: 'new script name'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
@@ -132,13 +132,13 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
-    old_script = Script.add_script(
+    old_script = Script.add_unit(
       {name: 'old script name', new_name: 'new script name'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal 'old script name', old_script.name
 
-    new_script = Script.add_script(
+    new_script = Script.add_unit(
       {name: 'new script name', new_name: 'new script name'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
@@ -147,7 +147,7 @@ class ScriptTest < ActiveSupport::TestCase
     # the old script was renamed
     assert_equal old_script.id, new_script.id
 
-    old_script = Script.add_script(
+    old_script = Script.add_unit(
       {name: 'old script name', new_name: 'new script name'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
@@ -247,7 +247,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can setup new migrated script' do
-    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     # the contents of test-migrated-new.script and test-migrated-new.script_json
     # reflect that of a new script which has been modified only by adding
@@ -260,7 +260,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can setup migrated script with new models' do
-    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     # test that LessonActivity, ActivitySection and Objective can be seeded
     # from .script_json when is_migrated is specified in the .script file.
@@ -289,7 +289,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'script_json settings override take precedence for migrated script' do
-    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-overrides.script')
     Script.setup([script_file])
@@ -400,14 +400,14 @@ class ScriptTest < ActiveSupport::TestCase
       "lesson 'Lesson1', display_name: 'Lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
    )
 
-    script = Script.add_script({name: 'test script'}, script_data[:lesson_groups])
+    script = Script.add_unit({name: 'test script'}, script_data[:lesson_groups])
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
     assert_equal '100', script.script_levels[1].level.level_num
   end
 
   test 'allow applab and gamelab levels in hidden scripts' do
-    Script.add_script(
+    Script.add_unit(
       {name: 'test script', hidden: true},
       [{
         key: "my_key",
@@ -415,7 +415,7 @@ class ScriptTest < ActiveSupport::TestCase
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
       }] # From level.yml fixture# From level.yml fixture
     )
-    Script.add_script(
+    Script.add_unit(
       {name: 'test script', hidden: true},
       [{
         key: "my_key",
@@ -426,7 +426,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'allow applab and gamelab levels in login_required scripts' do
-    Script.add_script(
+    Script.add_unit(
       {name: 'test script', hidden: false, login_required: true},
       [{
         key: "my_key",
@@ -434,7 +434,7 @@ class ScriptTest < ActiveSupport::TestCase
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
       }] # From level.yml fixture# From level.yml fixture
     )
-    Script.add_script(
+    Script.add_unit(
       {name: 'test script', hidden: false, login_required: true},
       [{
         key: "my_key",
@@ -469,10 +469,10 @@ class ScriptTest < ActiveSupport::TestCase
     error = assert_raises do
       Script.get_from_cache('coursea')
     end
-    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_script_family_redirect_for_user instead.  Family: coursea', error.message
+    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: coursea', error.message
   end
 
-  test 'get_family_from_cache uses script_family_cache' do
+  test 'get_family_from_cache uses unit_family_cache' do
     family_scripts = Script.where(family_name: 'family-cache-test')
     assert_equal [@script_2017.name, @script_2018.name], family_scripts.map(&:name)
 
@@ -560,7 +560,7 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable script assigned or with progress if student' do
+  test 'get_unit_family_redirect_for_user returns latest stable script assigned or with progress if student' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
 
@@ -569,81 +569,81 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
     section.students << student
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: student)
     assert_equal csp1_2017.name, redirect_script.redirect_to
 
     # Student makes progress in csp1_2018.
     create :user_level, user: student, script: csp1_2018
     student.reload
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: student)
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable script in family if teacher' do
+  test 'get_unit_family_redirect_for_user returns latest stable script in family if teacher' do
     teacher = create :teacher
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
     create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
     create :section, user: teacher, script: csp1_2017
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', user: teacher)
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', user: teacher)
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns nil if no scripts in family are stable' do
+  test 'get_unit_family_redirect_for_user returns nil if no scripts in family are stable' do
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: false)
-    assert_nil Script.get_script_family_redirect_for_user('csp')
+    assert_nil Script.get_unit_family_redirect_for_user('csp')
   end
 
-  test 'get_script_family_redirect_for_user returns latest version supported in locale if available' do
+  test 'get_unit_family_redirect_for_user returns latest version supported in locale if available' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', locale: 'es-MX')
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', locale: 'es-MX')
     assert_equal csp1_2017.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable version if no user or locale' do
+  test 'get_unit_family_redirect_for_user returns latest stable version if no user or locale' do
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp')
+    redirect_script = Script.get_unit_family_redirect_for_user('csp')
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'get_script_family_redirect_for_user returns latest stable version if no versions supported in locale' do
+  test 'get_unit_family_redirect_for_user returns latest stable version if no versions supported in locale' do
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
 
-    redirect_script = Script.get_script_family_redirect_for_user('csp', locale: 'it-IT')
+    redirect_script = Script.get_unit_family_redirect_for_user('csp', locale: 'it-IT')
     assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
-  test 'redirect_to_script_url returns nil unless user can view script version' do
+  test 'redirect_to_unit_url returns nil unless user can view script version' do
     Script.any_instance.stubs(:can_view_version?).returns(false)
     student = create :student
     script = create :script, name: 'my-script'
 
-    assert_nil script.redirect_to_script_url(student)
+    assert_nil script.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_script_url returns nil if user is assigned to script' do
+  test 'redirect_to_unit_url returns nil if user is assigned to script' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     script = create :script, name: 'my-script'
     section = create :section, script: script
     section.students << student
 
-    assert_nil script.redirect_to_script_url(student)
+    assert_nil script.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_script_url returns nil if user is not assigned to any script in family' do
+  test 'redirect_to_unit_url returns nil if user is not assigned to any script in family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     script = create :script, name: 'my-script'
 
-    assert_nil script.redirect_to_script_url(student)
+    assert_nil script.redirect_to_unit_url(student)
   end
 
   test 'returns nil if latest assigned script is an older version than the current script' do
@@ -654,10 +654,10 @@ class ScriptTest < ActiveSupport::TestCase
     section = create :section, script: csp1_2017
     section.students << student
 
-    assert_nil csp1_2018.redirect_to_script_url(student)
+    assert_nil csp1_2018.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_script_url returns script url of latest assigned script version in family for script belonging to course family' do
+  test 'redirect_to_unit_url returns script url of latest assigned script version in family for script belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
@@ -669,10 +669,10 @@ class ScriptTest < ActiveSupport::TestCase
     section = create :section, unit_group: csp_2018
     section.students << student
 
-    assert_equal csp1_2018.link, csp1_2017.redirect_to_script_url(student)
+    assert_equal csp1_2018.link, csp1_2017.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_script_url returns script url of latest assigned script version in family for script not belonging to course family' do
+  test 'redirect_to_unit_url returns script url of latest assigned script version in family for script not belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
@@ -680,7 +680,7 @@ class ScriptTest < ActiveSupport::TestCase
     section = create :section, script: courseg_2018
     section.students << student
 
-    assert_equal courseg_2018.link, courseg_2017.redirect_to_script_url(student)
+    assert_equal courseg_2018.link, courseg_2017.redirect_to_unit_url(student)
   end
 
   test 'can_view_version? is true for teachers' do
@@ -811,22 +811,22 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'script with pilot experiment has pilot published state' do
     script = create(:script, name: 'single-lesson-script', pilot_experiment: 'my-experiment')
-    assert_equal 'pilot', script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.pilot, script.get_published_state
   end
 
   test 'script with hidden true has beta published state' do
     script = create(:script, name: 'single-lesson-script', hidden: true)
-    assert_equal 'beta', script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.get_published_state
   end
 
   test 'script with hidden false has preview published state' do
     script = create(:script, name: 'single-lesson-script', hidden: false)
-    assert_equal 'preview', script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.get_published_state
   end
 
-  test 'script with hidden false and is_stable true has recommended published state' do
+  test 'script with hidden false and is_stable true has stable published state' do
     script = create(:script, name: 'single-lesson-script', hidden: false, is_stable: true)
-    assert_equal 'recommended', script.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, script.get_published_state
   end
 
   test 'should summarize script' do
@@ -1229,18 +1229,18 @@ class ScriptTest < ActiveSupport::TestCase
     # No user, show_assign_button set to nil
     assert_nil script.summarize[:show_assign_button]
 
-    # Teacher should be able to assign a visible script.
-    assert_equal false, script.summarize[:hidden]
+    # Teacher should be able to assign a launched script.
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.summarize[:publishedState]
     assert_equal true, script.summarize(true, create(:teacher))[:show_assign_button]
 
     # Teacher should not be able to assign a hidden script.
     hidden_script = create(:script, name: 'unassignable-hidden', hidden: true)
-    assert_equal true, hidden_script.summarize[:hidden]
+    assert_equal SharedConstants::PUBLISHED_STATE.beta, hidden_script.summarize[:publishedState]
     assert_equal false, hidden_script.summarize(true, create(:teacher))[:show_assign_button]
 
     # Student should not be able to assign a script,
     # regardless of visibility.
-    assert_equal false, script.summarize[:hidden]
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.summarize[:publishedState]
     assert_nil script.summarize(true, create(:student))[:show_assign_button]
   end
 
@@ -1263,7 +1263,7 @@ class ScriptTest < ActiveSupport::TestCase
     resource = create :resource, key: 'resource', course_version: course_version
     vocab = create :vocabulary, key: 'vocab', course_version: course_version
 
-    source = "We support [r #{Services::MarkdownPreprocessor.build_resource_key(resource)}] resource links and [v #{Services::MarkdownPreprocessor.build_vocab_key(vocab)}] vocabulary definitions"
+    source = "We support [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}] resource links and [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}] vocabulary definitions"
     expected = "We support [fake name](fake.url) resource links and <span class=\"vocab\" title=\"definition\">word</span> vocabulary definitions"
     script = create :script
     script.stubs(:localized_description).returns(source)
@@ -1366,7 +1366,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment3';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups])
+    script = Script.add_unit({name: 'test_script'}, script_data[:lesson_groups])
 
     # Everything has Lesson <number> when nothing is lockable
     assert (/^Lesson 1:/.match(script.lessons[0].localized_title))
@@ -1382,7 +1382,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups])
+    script = Script.add_unit({name: 'test_script'}, script_data[:lesson_groups])
 
     # When first lesson is lockable, it has no lesson number, and the next lesson starts at 1
     assert (/^Lesson/.match(script.lessons[0].localized_title).nil?)
@@ -1398,7 +1398,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups])
+    script = Script.add_unit({name: 'test_script'}, script_data[:lesson_groups])
 
     # When only second lesson is lockable, we count non-lockable lessons appropriately
     assert (/^Lesson 1:/.match(script.lessons[0].localized_title))
@@ -1416,7 +1416,7 @@ class ScriptTest < ActiveSupport::TestCase
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     assert_raises do
-      Script.add_script({name: 'test_script'}, script_data[:lesson_groups])
+      Script.add_unit({name: 'test_script'}, script_data[:lesson_groups])
     end
   end
 
@@ -1643,14 +1643,14 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'challengeTestScript'},
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert script.script_levels.first.challenge
     original_script_level_id = script.script_levels.first.id
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'challengeTestScript'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
@@ -1669,14 +1669,14 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'challengeTestScript'},
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert script.script_levels.first.bonus
     original_script_level_id = script.script_levels.first.id
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'challengeTestScript'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
@@ -1697,7 +1697,7 @@ class ScriptTest < ActiveSupport::TestCase
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
-    script = Script.add_script(
+    script = Script.add_unit(
       {
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
@@ -1707,7 +1707,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert script.project_widget_visible
 
     script_data, _ = ScriptDSL.parse(new_dsl, 'a filename')
-    script = Script.add_script(
+    script = Script.add_unit(
       {
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
@@ -1730,7 +1730,7 @@ class ScriptTest < ActiveSupport::TestCase
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
-    script = Script.add_script(
+    script = Script.add_unit(
       {
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
@@ -1740,7 +1740,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert script.announcements
 
     script_data, _ = ScriptDSL.parse(new_dsl, 'a filename')
-    script = Script.add_script(
+    script = Script.add_unit(
       {
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
@@ -1761,7 +1761,7 @@ class ScriptTest < ActiveSupport::TestCase
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(dsl, 'a filename')
-    script = Script.add_script(
+    script = Script.add_unit(
       {
         name: 'curriculumTestScript',
         properties: Script.build_property_hash(script_data),
@@ -1788,7 +1788,7 @@ class ScriptTest < ActiveSupport::TestCase
     script = Script.find_by!(name: script_names.first)
     assert_equal 1, script.announcements.count
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-copy', script_copy.name
     assert_nil script_copy.family_name
@@ -1845,7 +1845,7 @@ class ScriptTest < ActiveSupport::TestCase
     # some properties that should not change
     assert script.curriculum_path
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-all-properties-copy', script_copy.name
 
@@ -1864,7 +1864,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_names, _ = Script.setup([script_file])
     script = Script.find_by!(name: script_names.first)
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('1802')
 
     # make sure the old suffix is removed before the new one is added.
@@ -1880,7 +1880,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_names, _ = Script.setup([script_file])
     script = Script.find_by!(name: script_names.first)
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-experiments-copy', script_copy.name
 
@@ -1895,6 +1895,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal expected_level_names, actual_level_names
 
     new_dsl = <<~SCRIPT
+      published_state 'beta'
+
       lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: false
       level 'Level 1_copy'
       level 'Level 4_copy'
@@ -1911,7 +1913,7 @@ class ScriptTest < ActiveSupport::TestCase
     script = Script.find_by!(name: script_names.first)
     assert_equal 1, script.announcements.count
 
-    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    Script.stubs(:unit_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy', editor_experiment: 'script-editors')
     assert_equal 'test-fixture-copy', script_copy.name
     assert_equal 'script-editors', script_copy.editor_experiment
@@ -2291,22 +2293,22 @@ class ScriptTest < ActiveSupport::TestCase
     assert partner_script.has_editor_experiment?(partner)
   end
 
-  test "script_names_by_curriculum_umbrella returns the correct script names" do
+  test "unit_names_by_curriculum_umbrella returns the correct script names" do
     assert_equal(
       ["20-hour", "course1", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_script.name, @csf_script_2019.name],
-      Script.script_names_by_curriculum_umbrella('CSF')
+      Script.unit_names_by_curriculum_umbrella('CSF')
     )
     assert_equal(
       [@csd_script.name],
-      Script.script_names_by_curriculum_umbrella('CSD')
+      Script.unit_names_by_curriculum_umbrella('CSD')
     )
     assert_equal(
       [@csp_script.name],
-      Script.script_names_by_curriculum_umbrella('CSP')
+      Script.unit_names_by_curriculum_umbrella('CSP')
     )
     assert_equal(
       [@csa_script.name],
-      Script.script_names_by_curriculum_umbrella('CSA')
+      Script.unit_names_by_curriculum_umbrella('CSA')
     )
   end
 
@@ -2321,14 +2323,14 @@ class ScriptTest < ActiveSupport::TestCase
     assert @csa_script.csa?
   end
 
-  test "scripts_with_standards" do
+  test "units_with_standards" do
     assert_equal(
       [
         [
           @csf_script_2019.localized_title, @csf_script_2019.name
         ]
       ],
-      Script.scripts_with_standards
+      Script.units_with_standards
     )
   end
 
@@ -2344,7 +2346,7 @@ class ScriptTest < ActiveSupport::TestCase
       level '#{l1.name}'
     SCRIPT
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2363,7 +2365,7 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     raise = assert_raises do
-      Script.add_script(
+      Script.add_unit(
         {name: 'lesson-group-test-script'},
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
@@ -2381,7 +2383,7 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     raise = assert_raises do
-      Script.add_script(
+      Script.add_unit(
         {name: 'lesson-group-test-script'},
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
@@ -2399,7 +2401,7 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     raise = assert_raises do
-      Script.add_script(
+      Script.add_unit(
         {name: 'lesson-group-test-script'},
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
@@ -2417,7 +2419,7 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     raise = assert_raises do
-      Script.add_script(
+      Script.add_unit(
         {name: 'lesson-group-test-script'},
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
@@ -2438,7 +2440,7 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     raise = assert_raises do
-      Script.add_script(
+      Script.add_unit(
         {name: 'lesson-group-test-script'},
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
@@ -2463,7 +2465,7 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     raise = assert_raises do
-      Script.add_script(
+      Script.add_unit(
         {name: 'lesson-group-test-script'},
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
@@ -2483,7 +2485,7 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     raise = assert_raises do
-      Script.add_script(
+      Script.add_unit(
         {name: 'lesson-group-test-script'},
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
@@ -2508,7 +2510,7 @@ class ScriptTest < ActiveSupport::TestCase
       level '#{l3.name}'
     SCRIPT
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2545,7 +2547,7 @@ class ScriptTest < ActiveSupport::TestCase
       lesson '#{lesson3.key}', display_name: '#{lesson3.name}'
     SCRIPT
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2579,7 +2581,7 @@ class ScriptTest < ActiveSupport::TestCase
       level '#{level1.name}'
     SCRIPT
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2601,13 +2603,13 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal '', script.lessons[0].lesson_group.key
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2630,7 +2632,7 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'Lesson2', display_name: 'Lesson 2'
       level '#{l.name}'
     SCRIPT
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2652,13 +2654,13 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal 'required', script.lessons[0].lesson_group.key
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2677,14 +2679,14 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
 
     assert_equal 'required', script.lessons[0].lesson_group.key
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2714,7 +2716,7 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'Lesson2', display_name: 'Lesson2'
       level '#{l2.name}'
     SCRIPT
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2724,7 +2726,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'content', script.lesson_groups[1].key
     assert_equal 2, script.lesson_groups[1].position
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2756,7 +2758,7 @@ class ScriptTest < ActiveSupport::TestCase
       level '#{l5.name}'
     SCRIPT
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2780,7 +2782,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     SCRIPT
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2798,7 +2800,7 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     raise = assert_raises do
-      Script.add_script(
+      Script.add_unit(
         {name: 'coursea-2017'},
         ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
       )
@@ -2820,7 +2822,7 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     raise = assert_raises do
-      Script.add_script(
+      Script.add_unit(
         {name: 'coursea-2017'},
         ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
       )
@@ -2838,7 +2840,7 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     raise = assert_raises do
-      Script.add_script(
+      Script.add_unit(
         {name: 'coursea-2017'},
         ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
       )
@@ -2892,7 +2894,7 @@ class ScriptTest < ActiveSupport::TestCase
       bonus '#{extra2.name}'
     SCRIPT
     script_data = ScriptDSL.parse(dsl, 'a filename')[0]
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'all-levels-script'},
       script_data[:lesson_groups]
     )
@@ -2924,7 +2926,7 @@ class ScriptTest < ActiveSupport::TestCase
       level '#{l4.name}'
     SCRIPT
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
@@ -2946,7 +2948,7 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     error = assert_raises do
-      Script.add_script(
+      Script.add_unit(
         {name: 'level-included-multiple-times'},
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
@@ -2961,7 +2963,7 @@ class ScriptTest < ActiveSupport::TestCase
       lesson 'Lesson1', display_name: 'Lesson 1', unplugged: true
     SCRIPT
 
-    script = Script.add_script(
+    script = Script.add_unit(
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
@@ -3046,7 +3048,7 @@ class ScriptTest < ActiveSupport::TestCase
     error = assert_raises do
       script.fix_script_level_positions
     end
-    assert_includes error.message, 'Legacy script levels are not allowed in migrated scripts.'
+    assert_includes error.message, 'Legacy script levels are not allowed in migrated units.'
   end
 
   test 'localized_title defaults to name' do
@@ -3069,20 +3071,20 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'can copy a standalone script as another standalone script' do
-      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', version_year: '2022', family_name: 'csf')
+      cloned_script = @standalone_script.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
       assert_equal 'standalone-2022', cloned_script.name
       assert_equal '2022', cloned_script.version_year
     end
 
     test 'can copy a standalone script into a unit group' do
-      cloned_script = @standalone_script.clone_migrated_script('coursename2-2021', destination_unit_group_name: @unit_group.name)
+      cloned_script = @standalone_script.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_scripts.count
       assert_equal 'coursename2-2021', @unit_group.default_scripts[1].name
       assert_equal cloned_script.unit_group, @unit_group
     end
 
     test 'can copy a script in a unit group to a standalone script' do
-      cloned_script = @script_in_course.clone_migrated_script('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
+      cloned_script = @script_in_course.clone_migrated_unit('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
       assert_nil cloned_script.unit_group
       assert_equal 'standalone-coursename-2021', cloned_script.name
     end
@@ -3098,7 +3100,7 @@ class ScriptTest < ActiveSupport::TestCase
       create :script_level, levels: [level1], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 
-      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', version_year: '2022', family_name: 'csf')
+      cloned_script = @standalone_script.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
       assert_equal [level1, level2], cloned_script.levels
     end
 
@@ -3108,12 +3110,12 @@ class ScriptTest < ActiveSupport::TestCase
       lesson_activity = create :lesson_activity, lesson: lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
 
-      level1 = create :level, name: 'level1-2021'
-      level2 = create :level, name: 'level2-2021'
+      level1 = create :level, name: 'level1-2021', level_num: 'custom'
+      level2 = create :level, name: 'level2-2021', level_num: 'custom'
       create :script_level, levels: [level1], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @standalone_script, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 
-      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', new_level_suffix: '2022', version_year: '2022', family_name: 'csf')
+      cloned_script = @standalone_script.clone_migrated_unit('standalone-2022', new_level_suffix: '2022', version_year: '2022', family_name: 'csf')
       refute_equal [level1, level2], cloned_script.levels
     end
 
@@ -3121,7 +3123,7 @@ class ScriptTest < ActiveSupport::TestCase
       @standalone_script.resources = [create(:resource)]
       @standalone_script.student_resources = [create(:resource)]
 
-      cloned_script = @standalone_script.clone_migrated_script('standalone-2022', version_year: '2022', family_name: 'csf')
+      cloned_script = @standalone_script.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
       assert_equal 1, cloned_script.resources.count
       assert_equal 1, cloned_script.student_resources.count
       refute_equal @standalone_script.resources[0], cloned_script.resources[0]
@@ -3134,7 +3136,7 @@ class ScriptTest < ActiveSupport::TestCase
       @script_in_course.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @script_in_course.get_course_version.id)]
       @script_in_course.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @script_in_course.get_course_version.id)]
 
-      cloned_script = @standalone_script.clone_migrated_script('coursename2-2021', destination_unit_group_name: @unit_group.name)
+      cloned_script = @standalone_script.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 1, cloned_script.resources.count
       assert_equal 1, cloned_script.student_resources.count
       refute_equal @standalone_script.resources[0], cloned_script.resources[0]

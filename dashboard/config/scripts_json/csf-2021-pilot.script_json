@@ -25,7 +25,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:11 UTC",
+    "serialized_at": "2021-06-17 22:31:26 UTC",
+    "published_state": "pilot",
     "seeding_key": {
       "script.name": "csf-2021-pilot"
     }

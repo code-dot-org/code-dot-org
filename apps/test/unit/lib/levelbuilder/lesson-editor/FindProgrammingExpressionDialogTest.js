@@ -52,12 +52,12 @@ describe('ProgrammingExpressionTable', () => {
         handleSelect={() => {}}
         programmingExpressions={[
           {
-            name: 'first expression',
+            syntax: 'first_expression()',
             programmingEnvironmentName: 'environment',
             uniqueKey: 'first'
           },
           {
-            name: 'second expression',
+            syntax: 'second_expression()',
             programmingEnvironmentName: 'environment',
             uniqueKey: 'second'
           }

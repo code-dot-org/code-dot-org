@@ -50,7 +50,8 @@
     },
     "new_name": "courseb-2017",
     "family_name": "courseb",
-    "serialized_at": "2021-05-03 23:55:01 UTC",
+    "serialized_at": "2021-06-17 22:28:53 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "courseb-2017"
     }

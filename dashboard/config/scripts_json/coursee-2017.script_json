@@ -52,7 +52,8 @@
     },
     "new_name": "coursee-2017",
     "family_name": "coursee",
-    "serialized_at": "2021-05-03 23:55:02 UTC",
+    "serialized_at": "2021-06-17 22:28:56 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "coursee-2017"
     }

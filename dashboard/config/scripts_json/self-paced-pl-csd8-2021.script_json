@@ -9,7 +9,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-07 15:22:43 UTC",
+    "serialized_at": "2021-06-17 22:31:36 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd8-2021"
     }

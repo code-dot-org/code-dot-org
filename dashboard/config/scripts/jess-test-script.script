@@ -1,6 +1,7 @@
 hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/"], ["teacherForum", "https://forum.code.org/"], ["curriculumGuide", "https://docs.google.com/document/d/1-O6o5yQ4I1dk0n4Qzh86quXGBtzDDtyJ3Skr6RpcpO4/preview"], ["professionalLearning", "https://studio.code.org/my-professional-learning"]]
+published_state 'beta'
 
 lesson 'Module 1', display_name: 'Module 1', has_lesson_plan: false
 level 'OPL - CSD-PL AYWS1 Debugging Intro', progression: 'Module 1 Overview'

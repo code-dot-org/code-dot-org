@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-07 16:39:11 UTC",
+    "serialized_at": "2021-06-17 22:31:18 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -1740,7 +1741,7 @@
       "key": "973186fb-7622-4f93-8823-9ee1fd5899d6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which steps of this process to you think have to be done by humans? Would you be concerned if any of them were automated?*\n\nTime may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which steps of this process do you think have to be done by humans? Would you be concerned if any of them were automated?*\n\nTime may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2928,6 +2929,18 @@
   ],
   "resources": [
     {
+      "name": "Are We Automating Racism",
+      "url": "https://www.youtube.com/watch?v=Ok5sKLXqynQ",
+      "key": "are_we_automating_racism",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "are_we_automating_racism"
+      }
+    },
+    {
       "name": "Big, Open, and Crowdsourced Data",
       "url": "https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit",
       "key": "big-data-citizen-science-machine-learning-activity-guide",
@@ -3029,6 +3042,18 @@
       }
     },
     {
+      "name": "Sharing learnings about our image cropping algorithm (Twitter)",
+      "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
+      "key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -3038,6 +3063,19 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Twitter says its image-cropping algorithm was biased, so it's ditching it (CNN)",
+      "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
+      "key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing"
+      },
+      "seeding_key": {
+        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
       }
     },
     {
@@ -3118,6 +3156,24 @@
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
         "resource.key": "csp-u9-presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "are_we_automating_racism"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
       }
     },
     {
