@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-21 17:19:22 UTC",
+    "serialized_at": "2021-06-21 21:34:37 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csa-videos"
