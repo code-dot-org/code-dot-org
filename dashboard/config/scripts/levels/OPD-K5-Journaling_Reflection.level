@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "Take a moment now to consider how and when you will complete this online course to ensure you get the most benefit from the experience. When you've got a good plan sketched out, continue on to dive more deeply into Computer Science Fundamentals.",
+    "tts_long_instructions_override": "Take a moment now to consider how and when you will complete this online course to ensure you get the most benefit from the experience. When you've got a good plan sketched out, continue on to dive more deeply into Computer Science Fundamentals.",
+    "instructions_important": "false",
+    "short_instructions": "Take a moment now to consider how and when you will complete this online course to ensure you get the most benefit from the experience. When you've got a good plan sketched out, continue on to dive more deeply into Computer Science Fundamentals.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "# Reflection: Journaling\r\n\r\n\r\n**Prompts:**\r\n\r\n* What benefits does journaling provide your students during Computer Science Fundamentals lessons?\r\n* What support, if any, do you anticipate your students will need for journaling?\r\n",
+    "parent_level_id": 27644,
+    "name_suffix": "_2021"
+  },
+  "game_id": 52,
+  "published": true,
+  "created_at": "2021-06-21T18:43:23.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-11-07 00:36:42 +0000\",\"changed\":[],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:37:20 +0000\",\"changed\":[\"name\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:39:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-08 17:52:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2021-03-05 19:35:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-05 22:37:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-05 22:53:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-05 23:21:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-06 00:14:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-06 00:15:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-06 00:18:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-04 13:43:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-10 17:14:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-10 17:15:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-21 18:43:27 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-21 18:50:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-21 18:52:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
