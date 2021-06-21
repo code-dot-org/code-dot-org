@@ -202,6 +202,10 @@ def jquery_is_element_visible(selector)
   "return $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
 end
 
+def jquery_is_element_displayed(selector)
+  "return $(#{selector.dump}).css('display') !== 'none';"
+end
+
 When /^I wait until element "([^"]*)" is (not )?visible$/ do |selector, negation|
   wait_for_jquery
   wait_until {@browser.execute_script(jquery_is_element_visible(selector)) == negation.nil?}
@@ -756,6 +760,10 @@ def element_visible?(selector)
   @browser.execute_script(jquery_is_element_visible(selector))
 end
 
+def element_displayed?(selector)
+  @browser.execute_script(jquery_is_element_displayed(selector))
+end
+
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
 end
@@ -766,6 +774,10 @@ end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
   expect(element_visible?(selector)).to eq(false)
+end
+
+Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
+  expect(element_displayed?(selector)).to eq(negation.nil?)
 end
 
 And (/^I select age (\d+) in the age dialog/) do |age|
