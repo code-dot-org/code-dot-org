@@ -1,5 +1,6 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
+import {allowConsoleWarnings} from '../../../../util/testUtils';
 import {mount} from 'enzyme';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
 import ProgressTableLessonNumber from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
@@ -57,6 +58,8 @@ const setUp = (overrideProps = {}) => {
 };
 
 describe('ProgressTableContentView', () => {
+  allowConsoleWarnings();
+
   afterEach(() => {
     FORMATTERS.forEach(formatter => {
       formatter.resetHistory();
