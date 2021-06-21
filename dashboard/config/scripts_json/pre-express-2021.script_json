@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-06-16 23:01:25 UTC",
+    "serialized_at": "2021-06-17 22:31:25 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "pre-express-2021"
