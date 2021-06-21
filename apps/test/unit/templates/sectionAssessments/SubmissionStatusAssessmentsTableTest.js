@@ -7,8 +7,15 @@ import {
   testDataTimestamps
 } from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 import i18n from '@cdo/locale';
+import {
+  allowConsoleErrors,
+  allowConsoleWarnings
+} from '../../../util/throwOnConsole';
 
 describe('SubmissionStatusAssessmentsTable', () => {
+  allowConsoleErrors();
+  allowConsoleWarnings();
+
   it('renders a table', () => {
     const wrapper = mount(
       <SubmissionStatusAssessmentsTable

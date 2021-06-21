@@ -1,10 +1,16 @@
 import sinon from 'sinon';
 import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
 import React from 'react';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
+import {
+  allowConsoleErrors,
+  allowConsoleWarnings
+} from '../../util/throwOnConsole';
 
 describe('BackToFrontConfetti', () => {
+  allowConsoleErrors();
+  allowConsoleWarnings();
   let clock;
 
   beforeEach(() => {
