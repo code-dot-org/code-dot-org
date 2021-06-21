@@ -24,7 +24,8 @@ level 'OPD-K5 CSTeachingLearning2', progression: 'CS Teaching and Student Practi
 level 'OPD-K5 CS_StudentPractices_Reflection', progression: 'CS Teaching and Student Practices'
 level 'OPD-K5 DebuggingPairProgramming', progression: 'CS Teaching and Student Practices'
 level 'OPD-K5 DebuggingPairProgramming_Reflection', progression: 'CS Teaching and Student Practices'
-level 'OPD-K5 journaling_2021'
+level 'OPD-K5 journaling_2021', progression: 'CS Teaching and Student Practices'
+level 'OPD-K5-Journaling_Reflection', progression: 'CS Teaching and Student Practices'
 
 lesson 'Lesson Planning', display_name: 'Teaching a Lesson', has_lesson_plan: false
 level 'OPD-K5 LessonPlanning1', progression: 'Lesson Planning'
