@@ -66,16 +66,12 @@ class CourseVersion < ApplicationRecord
     if content_root.is_course?
       raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
 
-      course_version = CourseVersion.find_or_initialize_by(
+      course_version = CourseVersion.find_or_create_by!(
         course_offering: course_offering,
         key: content_root.version_year,
         display_name: content_root.version_year,
         content_root: content_root,
       )
-      if content_root.prevent_course_version_change? && content_root.course_version != course_version
-        raise "cannot change course version of #{content_root.name}"
-      end
-      course_version.save!
     else
       course_version = nil
     end
