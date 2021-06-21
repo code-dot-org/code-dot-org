@@ -249,6 +249,7 @@ Resources:
   AccessLogRole:
     Type: AWS::IAM::Role
     Properties:
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
       AssumeRolePolicyDocument:
         Statement:
           - Action: sts:AssumeRole
@@ -273,12 +274,12 @@ Resources:
   AccessLogConfigRole:
     Type: AWS::IAM::Role
     Properties:
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
       AssumeRolePolicyDocument:
         Statement:
           - Action: sts:AssumeRole
             Effect: Allow
             Principal: {Service: cloudfront.amazonaws.com}
-#      PermissionsBoundary: !ImportValue IAM-DevPermissions
       Policies:
         - PolicyName: root
           PolicyDocument:
@@ -294,12 +295,12 @@ Resources:
   AccessLogDeliveryRole:
     Type: AWS::IAM::Role
     Properties:
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
       AssumeRolePolicyDocument:
         Statement:
           - Action: sts:AssumeRole
             Effect: Allow
             Principal: {Service: firehose.amazonaws.com}
-#      PermissionsBoundary: !ImportValue IAM-DevPermissions
       Policies:
         - PolicyName: firehose_delivery_policy
           PolicyDocument:
@@ -343,6 +344,7 @@ Resources:
   AccessLogRedshiftSpectrumRole:
     Type: AWS::IAM::Role
     Properties:
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
       AssumeRolePolicyDocument:
         Statement:
           - Action: sts:AssumeRole
