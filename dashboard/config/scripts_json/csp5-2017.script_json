@@ -45,7 +45,7 @@
     },
     "new_name": "csp5-2017",
     "family_name": "csp5",
-    "serialized_at": "2021-06-16 22:58:18 UTC",
+    "serialized_at": "2021-06-17 22:28:21 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp5-2017"
@@ -2770,17 +2770,17 @@
         ],
         "progression": "Pre-test reflection",
         "variants": {
-          "csp_affirmation_control_5": {
-            "experiments": [
-              "rene-control-control",
-              "rene-belonging-control"
-            ]
-          },
           "csp_affirmation_intervention_5": {
             "active": false,
             "experiments": [
               "rene-control-affirmation",
               "rene-belonging-affirmation"
+            ]
+          },
+          "csp_affirmation_control_5": {
+            "experiments": [
+              "rene-control-control",
+              "rene-belonging-control"
             ]
           }
         }
@@ -4837,17 +4837,17 @@
         ],
         "progression": "Pre-test reflection",
         "variants": {
-          "csp_affirmation_control_5": {
-            "experiments": [
-              "rene-control-control",
-              "rene-belonging-control"
-            ]
-          },
           "csp_affirmation_intervention_5": {
             "active": false,
             "experiments": [
               "rene-control-affirmation",
               "rene-belonging-affirmation"
+            ]
+          },
+          "csp_affirmation_control_5": {
+            "experiments": [
+              "rene-control-control",
+              "rene-belonging-control"
             ]
           }
         }

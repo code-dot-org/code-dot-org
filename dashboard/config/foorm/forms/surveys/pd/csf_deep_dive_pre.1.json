@@ -109,9 +109,10 @@
       "name": "page2",
       "elements": [
         {
-          "type": "html",
-          "name": "true_of_me_now_scale_1",
-          "html": "<p>There are a variety of teaching strategies that computer science teachers use with students in classrooms.</p>\n\n<p>Below, we ask you to use a \"true of me now\" scale to self-rate how true it is that you have concrete strategies - techniques or methods you could name or describe to another teacher - for doing these things right now.</p>\n\n<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;” cellpadding=\"1px”><caption></caption>\n<tbody>\n<tr>\n<td style=\"width: 23%; padding-top: 3px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #FFFFFF;\">----</span>2</span></strong></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #FFFFFF;\">----</span>4<span style=\"color: #FFFFFF;\">----</span>5</span></strong></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #FFFFFF;\">----</span>7</span></strong></td>\n</tr>\n<tr>\n<td style=\"width: 23%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Not true of me</strong></span></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Somewhat true of me now</strong></span></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Very true of me now</strong></span></td>\n</tr>\n</tbody>\n</table>"
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "true_of_me_now_scale_expl"
         },
         {
           "type": "library_item",
