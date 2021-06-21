@@ -7,13 +7,14 @@ import craftI18n from '@cdo/apps/craft/locale'; // eslint-disable-line no-unused
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/craft/utils';
+import * as reducer from '@cdo/apps/craft/redux';
 
 describe('craft utils', () => {
   describe('handlePlayerSelection', () => {
     const defaultPlayer = 'Alex';
 
     beforeEach(() => {
-      sinon.stub(utils, 'closePlayerSelectionDialog');
+      sinon.stub(reducer, 'closePlayerSelectionDialog');
     });
 
     afterEach(() => {
@@ -22,19 +23,19 @@ describe('craft utils', () => {
 
     it('closes player selection dialog after opening', () => {
       sinon
-        .stub(utils, 'openPlayerSelectionDialog')
+        .stub(reducer, 'openPlayerSelectionDialog')
         .callsFake(callback => callback('Steve'));
 
       utils.handlePlayerSelection(defaultPlayer, () => {});
 
-      expect(utils.openPlayerSelectionDialog).to.have.been.calledOnce;
-      expect(utils.closePlayerSelectionDialog).to.have.been.calledOnce;
+      expect(reducer.openPlayerSelectionDialog).to.have.been.calledOnce;
+      expect(reducer.closePlayerSelectionDialog).to.have.been.calledOnce;
     });
 
     it('invokes onComplete with selectedPlayer', () => {
       const selectedPlayer = 'Tom';
       sinon
-        .stub(utils, 'openPlayerSelectionDialog')
+        .stub(reducer, 'openPlayerSelectionDialog')
         .callsFake(callback => callback(selectedPlayer));
       const onCompleteSpy = sinon.spy();
 
@@ -45,7 +46,7 @@ describe('craft utils', () => {
 
     it('invokes callback with default player if no selectedPlayer is given', () => {
       sinon
-        .stub(utils, 'openPlayerSelectionDialog')
+        .stub(reducer, 'openPlayerSelectionDialog')
         .callsFake(callback => callback(undefined));
       const onCompleteSpy = sinon.spy();
 

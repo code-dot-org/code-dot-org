@@ -1,7 +1,6 @@
 import i18n from './locale';
 import trackEvent from '@cdo/apps/util/trackEvent';
-import {getStore} from '@cdo/apps/redux';
-import {setPlayerSelectionDialog} from '@cdo/apps/craft/redux';
+import * as reducer from '@cdo/apps/craft/redux';
 
 export const ARROW_KEY_NAMES = [
   'ArrowLeft',
@@ -91,21 +90,13 @@ export function blockTypesToDropdownOptions(blockTypes) {
   });
 }
 
-exports.openPlayerSelectionDialog = onSelectedCallback => {
-  getStore().dispatch(setPlayerSelectionDialog(true, onSelectedCallback));
-};
-
-exports.closePlayerSelectionDialog = () => {
-  getStore().dispatch(setPlayerSelectionDialog(false));
-};
-
-exports.handlePlayerSelection = (
+export function handlePlayerSelection(
   defaultPlayer,
   onComplete,
   craftEventType = 'Minecraft'
-) => {
-  exports.openPlayerSelectionDialog(selectedPlayer => {
-    exports.closePlayerSelectionDialog();
+) {
+  reducer.openPlayerSelectionDialog(selectedPlayer => {
+    reducer.closePlayerSelectionDialog();
 
     if (selectedPlayer) {
       trackEvent(craftEventType, 'ClickedCharacter', selectedPlayer);
@@ -115,4 +106,4 @@ exports.handlePlayerSelection = (
 
     onComplete(selectedPlayer);
   });
-};
+}
