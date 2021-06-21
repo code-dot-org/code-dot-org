@@ -1,5 +1,5 @@
 import { convertValueForDisplay, convertValueForTraining } from '../../src/helpers/valueConversion';
-import { classificationState, regressionState } from './testData';
+import { classificationState } from './testData';
 
 describe("converting categorical values", () => {
 
