@@ -742,7 +742,7 @@ export function getExtremaByColumn(state) {
   return extremaByColumn;
 }
 
-/* Function for retriving aggreate details about a currently selected column. */
+/* Function for retriving aggregate details about a currently selected column. */
 
 export function getCurrentColumnData(state) {
   if (!state.currentColumn) {

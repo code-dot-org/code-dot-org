@@ -6,7 +6,7 @@ const getSelectedFeatures = state => state.selectedFeatures;
 
 /* Functions for filtering and selecting columns by type.  */
 
-const getCategoricalColumns = createSelector(
+export const getCategoricalColumns = createSelector(
   [getColumnsByDataType],
   (columnsByDataType) => {
     return Object.keys(columnsByDataType).filter(
