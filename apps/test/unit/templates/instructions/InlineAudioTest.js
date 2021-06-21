@@ -4,6 +4,10 @@ import sinon from 'sinon';
 import {setExternalGlobals} from '../../../util/testUtils';
 import React from 'react';
 import {StatelessInlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
+import {
+  allowConsoleErrors,
+  allowConsoleWarnings
+} from '../../../util/throwOnConsole';
 
 const DEFAULT_PROPS = {
   assetUrl: () => {},
@@ -25,6 +29,8 @@ const waitForPromises = async () => {
 };
 
 describe('InlineAudio', function() {
+  allowConsoleErrors();
+  allowConsoleWarnings();
   setExternalGlobals();
 
   let windowAudio;

@@ -14,8 +14,15 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import project from '@cdo/apps/code-studio/initApp/project';
+import {
+  allowConsoleErrors,
+  allowConsoleWarnings
+} from '../../util/throwOnConsole';
 
 describe('The ShowCodeToggle component', () => {
+  allowConsoleErrors();
+  allowConsoleWarnings();
+
   let config, toggle, containerDiv, codeWorkspaceDiv, server, editor;
 
   beforeEach(() => {

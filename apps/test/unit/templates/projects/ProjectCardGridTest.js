@@ -7,8 +7,14 @@ import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea.
 import {projects} from './projectsTestData';
 import {combineReducers, createStore} from 'redux';
 import reducer from '@cdo/apps/templates/projects/projectsRedux';
+import {
+  allowConsoleErrors,
+  allowConsoleWarnings
+} from '../../../util/throwOnConsole';
 
 describe('ProjectCardGrid', () => {
+  allowConsoleErrors();
+  allowConsoleWarnings();
   const store = createStore(combineReducers({projects: reducer}));
 
   it('filters by selected app type', () => {
