@@ -1120,6 +1120,14 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   tr:nth-child(even){
     background-color: $lightest_purple;
   }
+
+  .template-level-warning {
+    font-family: 'Gotham 7r', sans-serif;
+    color: $red;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
 }
 
 .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
@@ -1573,6 +1581,13 @@ $see-examples-thick-underline-color: $yellow;
   display: flex;
 }
 
+.WireframeButtons_containerLeft {
+  flex: 1 1 372px;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
 .wrapper.withWireframeButtons {
   flex: 0 0 auto;
   margin-bottom: 0;
@@ -1589,6 +1604,10 @@ $see-examples-thick-underline-color: $yellow;
 @media (max-width: 845px) {
   .WireframeButtons_containerRight {
     flex: 1 1 372px;
+  }
+
+  .WireframeButtons_containerLeft {
+    flex: 1 1 auto;
   }
 }
 

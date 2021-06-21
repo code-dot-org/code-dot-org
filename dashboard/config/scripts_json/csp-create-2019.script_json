@@ -33,7 +33,8 @@
     },
     "new_name": null,
     "family_name": "csp-create",
-    "serialized_at": "2021-05-03 23:55:35 UTC",
+    "serialized_at": "2021-06-17 22:30:18 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp-create-2019"
     }

@@ -3,11 +3,11 @@ skip_dialog true
 markdown <<MARKDOWN
 # Welcome!
 
-Welcome to Code.org's free self-paced online course for educators to get started implementing and teaching K-5 CS Fundamentals courses!
+Welcome to Code.org's self-paced online course Teaching Computer Science Fundamentals!
 
-After completing this online course, you'll be ready to teach one or more of Code.org’s Computer Science Fundamentals courses in your classroom.
+This course is designed for educators who want to get started teaching K-5 Computer Science Fundamentals courses.  After completing this online course, you'll be ready to teach one or more of Code.org’s Computer Science Fundamentals courses in your classroom.
 
-**ADD CONTEXT AND DESCRIPTION FOR UPDATED PL VIDEO HERE**
+Please watch <a href="https://youtu.be/mqmt2Zk7CFU" target="blank"> this video </a> featuring Code.org's founder and CEO, Hadi Partovi, in welcoming you to Code.org's Professional Learning. 
 
 ## Take the pre-survey
 
@@ -17,7 +17,7 @@ Code.org values and is responsive to feedback. Please fill out <a href="https://
 
 ## Go at your own pace
 
-This self-paced online course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each part and lesson.  **However, we encourage you to engage with the context at your own pace.** 
+This self-paced online course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each part and lesson.  **However, we encourage you to engage with the content at your own pace.** 
 
 ## Find help when you need it
 
@@ -27,5 +27,5 @@ Another great way to get support is to work through this online course with a pa
 
 ## Find the learning experience that works for you
 
-We recognize online learning is not for everyone.  This online course does not include an instructor or way to communicate in real-time with peers. If you find yourself needing more one-on-one attention or know you learn better in a real-world classroom where there is opportunity for collaboration and engagement with others, consider participating in one of our <a href="http://code.org/professional-development-workshops" target="blank" rel="noopener noreferrer">in-person professional development opportunities</a>.
+We recognize online learning is not for everyone.  This online course does not include an instructor or way to communicate in real-time with peers. If you find yourself needing more one-on-one attention or know you learn better in a facilitator-led workshop where there is opportunity for collaboration and engagement with others, consider participating in one of our <a href="http://code.org/professional-development-workshops" target="blank" rel="noopener noreferrer">in-person professional development opportunities</a>.
 MARKDOWN

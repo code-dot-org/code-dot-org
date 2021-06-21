@@ -1,0 +1,8 @@
+name 'CSA U2L7-L2'
+title 'Check for Understanding'
+
+question 'Which of the following pairs of classes have an "is-a" relationship?'
+wrong 'School and Teacher'
+wrong 'School and Classroom'
+wrong 'Student and Teacher'
+right 'Student and ClassPresident'

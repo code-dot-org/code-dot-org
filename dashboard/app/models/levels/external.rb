@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 class External < DSLDefined
@@ -42,7 +43,7 @@ class External < DSLDefined
 
   def dsl_default
     <<~TEXT
-      name '#{name || 'unique level name here'}'
+      name '#{name || DEFAULT_LEVEL_NAME}'
       title 'title'
       description 'description here'
     TEXT

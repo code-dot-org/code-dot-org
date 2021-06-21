@@ -18,9 +18,10 @@ import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
-import TheaterVisualization from './TheaterVisualization';
+import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
 import {CsaViewMode} from './constants';
+import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -61,8 +62,9 @@ Javalab.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
   this.channelId = config.channel;
-  // Pulls dark mode from user preferences
-  this.isDarkMode = !!config.usingDarkModePref;
+  // Sets dark mode based on displayTheme user preference
+  this.isDarkMode =
+    getDisplayThemeFromString(config.displayTheme) === DisplayTheme.DARK;
 
   config.makeYourOwn = false;
   config.wireframeShare = true;
@@ -94,8 +96,7 @@ Javalab.prototype.init = function(config) {
     this.visualization = <NeighborhoodVisualizationColumn />;
   } else if (this.level.csaViewMode === CsaViewMode.THEATER) {
     this.miniApp = new Theater();
-    config.afterInject = () => this.miniApp.afterInject();
-    this.visualization = <TheaterVisualization />;
+    this.visualization = <TheaterVisualizationColumn />;
   }
 
   const onMount = () => {

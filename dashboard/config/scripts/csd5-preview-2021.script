@@ -4,6 +4,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-preview-21/unit5/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-preview-21/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd-preview-21/unit5/standards/"]]
 has_verified_resources true
 curriculum_path 'https://curriculum.code.org/csd-preview-21/unit5/{LESSON}'
+published_state 'pilot'
 pilot_experiment 'csd-2021-preview'
 project_sharing true
 curriculum_umbrella 'CSD'

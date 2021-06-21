@@ -36,9 +36,9 @@ import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 
 const MIN_HEIGHT = 100;
-const MAX_HEIGHT = 500;
-// This is the height of the content between the top banner and the editor box
-const HEADER_OFFSET = 80;
+const CONSOLE_BUFFER = 270;
+// This is the height of the "editor" header and the file tabs combined
+const HEADER_OFFSET = 63;
 const Dialog = makeEnum(
   'RENAME_FILE',
   'DELETE_FILE',
@@ -440,8 +440,9 @@ class JavalabEditor extends React.Component {
    * @param {number} desired height
    */
   handleHeightResize = desiredHeight => {
+    let maxHeight = window.innerHeight - HEADER_OFFSET - CONSOLE_BUFFER;
     let newHeight = Math.max(MIN_HEIGHT, desiredHeight);
-    newHeight = Math.min(newHeight, MAX_HEIGHT);
+    newHeight = Math.min(maxHeight, newHeight);
 
     this.props.setRenderedHeight(newHeight);
   };
@@ -597,6 +598,7 @@ class JavalabEditor extends React.Component {
               resizeItemTop={this.getItemTop}
               position={this.getPosition()}
               onResize={this.handleHeightResize}
+              style={styles.resizer}
             />
           </div>
         </Tab.Container>
@@ -666,10 +668,8 @@ class JavalabEditor extends React.Component {
 const styles = {
   editor: {
     width: '100%',
-    maxHeight: MAX_HEIGHT,
     minHeight: MIN_HEIGHT,
-    backgroundColor: color.white,
-    overflowY: 'scroll'
+    backgroundColor: color.white
   },
   darkBackground: {
     backgroundColor: color.dark_slate_gray
@@ -704,6 +704,9 @@ const styles = {
     float: 'left',
     overflow: 'visible',
     marginLeft: 3
+  },
+  resizer: {
+    position: 'static'
   }
 };
 
