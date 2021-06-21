@@ -1997,21 +1997,21 @@ class ScriptTest < ActiveSupport::TestCase
     student = create(:student)
 
     units = Script.valid_scripts(student)
-    refute has_hidden_script?(units)
+    refute has_hidden_unit?(units)
   end
 
   test "self.valid_scripts: does not return hidden units when user is a teacher" do
     teacher = create(:teacher)
 
     units = Script.valid_scripts(teacher)
-    refute has_hidden_script?(units)
+    refute has_hidden_unit?(units)
   end
 
   test "self.valid_scripts: returns hidden units when user is an admin" do
     admin = create(:admin)
 
     units = Script.valid_scripts(admin)
-    assert has_hidden_script?(units)
+    assert has_hidden_unit?(units)
   end
 
   test "self.valid_scripts: returns hidden units when user has hidden unit access" do
@@ -2019,7 +2019,7 @@ class ScriptTest < ActiveSupport::TestCase
     teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
 
     units = Script.valid_scripts(teacher)
-    assert has_hidden_script?(units)
+    assert has_hidden_unit?(units)
   end
 
   test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
@@ -3070,26 +3070,26 @@ class ScriptTest < ActiveSupport::TestCase
       create :unit_group_unit, unit_group: @unit_group, script: @unit_in_course, position: 1
     end
 
-    test 'can copy a standalone script as another standalone script' do
-      cloned_script = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
-      assert_equal 'standalone-2022', cloned_script.name
-      assert_equal '2022', cloned_script.version_year
+    test 'can copy a standalone unit as another standalone unit' do
+      cloned_unit = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
+      assert_equal 'standalone-2022', cloned_unit.name
+      assert_equal '2022', cloned_unit.version_year
     end
 
-    test 'can copy a standalone script into a unit group' do
-      cloned_script = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
+    test 'can copy a standalone unit into a unit group' do
+      cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_scripts.count
       assert_equal 'coursename2-2021', @unit_group.default_scripts[1].name
-      assert_equal cloned_script.unit_group, @unit_group
+      assert_equal cloned_unit.unit_group, @unit_group
     end
 
-    test 'can copy a script in a unit group to a standalone script' do
-      cloned_script = @unit_in_course.clone_migrated_unit('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
-      assert_nil cloned_script.unit_group
-      assert_equal 'standalone-coursename-2021', cloned_script.name
+    test 'can copy a unit in a unit group to a standalone unit' do
+      cloned_unit = @unit_in_course.clone_migrated_unit('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
+      assert_nil cloned_unit.unit_group
+      assert_equal 'standalone-coursename-2021', cloned_unit.name
     end
 
-    test 'can copy script with lessons without copying levels' do
+    test 'can copy unit with lessons without copying levels' do
       lesson_group = create :lesson_group, script: @standalone_unit
       lesson = create :lesson, lesson_group: lesson_group, script: @standalone_unit
       lesson_activity = create :lesson_activity, lesson: lesson
@@ -3100,11 +3100,11 @@ class ScriptTest < ActiveSupport::TestCase
       create :script_level, levels: [level1], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 
-      cloned_script = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
-      assert_equal [level1, level2], cloned_script.levels
+      cloned_unit = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
+      assert_equal [level1, level2], cloned_unit.levels
     end
 
-    test 'can copy script with lessons and copy levels' do
+    test 'can copy unit with lessons and copy levels' do
       lesson_group = create :lesson_group, script: @standalone_unit
       lesson = create :lesson, lesson_group: lesson_group, script: @standalone_unit
       lesson_activity = create :lesson_activity, lesson: lesson
@@ -3115,19 +3115,19 @@ class ScriptTest < ActiveSupport::TestCase
       create :script_level, levels: [level1], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 
-      cloned_script = @standalone_unit.clone_migrated_unit('standalone-2022', new_level_suffix: '2022', version_year: '2022', family_name: 'csf')
-      refute_equal [level1, level2], cloned_script.levels
+      cloned_unit = @standalone_unit.clone_migrated_unit('standalone-2022', new_level_suffix: '2022', version_year: '2022', family_name: 'csf')
+      refute_equal [level1, level2], cloned_unit.levels
     end
 
     test 'can copy teacher and student resources' do
       @standalone_unit.resources = [create(:resource)]
       @standalone_unit.student_resources = [create(:resource)]
 
-      cloned_script = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
-      assert_equal 1, cloned_script.resources.count
-      assert_equal 1, cloned_script.student_resources.count
-      refute_equal @standalone_unit.resources[0], cloned_script.resources[0]
-      refute_equal @standalone_unit.student_resources[0], cloned_script.student_resources[0]
+      cloned_unit = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
+      assert_equal 1, cloned_unit.resources.count
+      assert_equal 1, cloned_unit.student_resources.count
+      refute_equal @standalone_unit.resources[0], cloned_unit.resources[0]
+      refute_equal @standalone_unit.student_resources[0], cloned_unit.student_resources[0]
     end
 
     test 'can deduplicate teacher and student resources' do
@@ -3136,19 +3136,19 @@ class ScriptTest < ActiveSupport::TestCase
       @unit_in_course.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @unit_in_course.get_course_version.id)]
       @unit_in_course.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @unit_in_course.get_course_version.id)]
 
-      cloned_script = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
-      assert_equal 1, cloned_script.resources.count
-      assert_equal 1, cloned_script.student_resources.count
-      refute_equal @standalone_unit.resources[0], cloned_script.resources[0]
-      refute_equal @standalone_unit.student_resources[0], cloned_script.student_resources[0]
-      assert_equal @unit_in_course.resources[0], cloned_script.resources[0]
-      assert_equal @unit_in_course.student_resources[0], cloned_script.student_resources[0]
+      cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
+      assert_equal 1, cloned_unit.resources.count
+      assert_equal 1, cloned_unit.student_resources.count
+      refute_equal @standalone_unit.resources[0], cloned_unit.resources[0]
+      refute_equal @standalone_unit.student_resources[0], cloned_unit.student_resources[0]
+      assert_equal @unit_in_course.resources[0], cloned_unit.resources[0]
+      assert_equal @unit_in_course.student_resources[0], cloned_unit.student_resources[0]
     end
   end
 
   private
 
-  def has_hidden_script?(scripts)
-    scripts.any?(&:hidden)
+  def has_hidden_unit?(units)
+    units.any?(&:hidden)
   end
 end
