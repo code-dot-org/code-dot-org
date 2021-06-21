@@ -104,7 +104,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     seeded_unit_group = UnitGroup.seed_from_hash(JSON.parse(serialization))
     assert_equal 'my-unit-group', seeded_unit_group.name
-    assert_equal 'beta', seeded_unit_group.published_state
+    assert_equal 'stable', seeded_unit_group.published_state
     assert_equal 3, seeded_unit_group.default_unit_group_units.length
     assert_equal 3, seeded_unit_group.default_scripts.length
   end
