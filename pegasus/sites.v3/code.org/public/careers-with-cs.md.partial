@@ -14,10 +14,15 @@ social:
 ---
 <link href="/css/tools.css" rel="stylesheet">
 <a id="top"></a>
-<h1><img src="/images/csjourneys/csjourneys560.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 24px"/><br/>Careers with Computer Science</h1>
-<p>Careers in computer science and technology can be fun and rewarding. But what does a person working in these fields really do? With a vast variety of jobs and companies, there's not just one answer to this question. Watch the videos below to meet some of the people who are tackling big problems in creative ways, then use one of the interactive tools below to learn more about fields and careers that interest you. View opportunities to apply your new CS knowledge outside the classroom, and connect directly with college students and CS professionals at College Confidential or Career Village.</p>
+<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 24px"/><br/>Careers with Computer Science</h1>
+<div class="col-60" style="margin-bottom: 20px">
+  <p>Careers in computer science and technology can be fun and rewarding. But what does a person working in these fields really do? With a vast variety of jobs and companies, there's not just one answer to this question. Watch the videos below to meet some of the people who are tackling big problems in creative ways, then use one of the interactive tools below to learn more about fields and careers that interest you. View opportunities to apply your new CS knowledge outside the classroom, and connect directly with college students and CS professionals at College Confidential or Career Village.</p>
+</div>
+<div class="col-40" style="float: left; padding-left: 40px; padding-right: 0; margin-bottom: 20px;">
+    {{ cs_changing_everything_2 }}
+</div>
 
-<br>
+<div style="clear: both; margin-bottom:25px"></div>
 
 <div class="col-25" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <a class="linktag" id="videos-nav" href="#videos" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Watch videos about different careers with CS</p></a>
