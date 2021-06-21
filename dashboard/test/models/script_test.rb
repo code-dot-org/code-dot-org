@@ -104,98 +104,98 @@ class ScriptTest < ActiveSupport::TestCase
     assert_not_equal script_level_id, unit.script_levels[4].id
   end
 
-  test 'cannot rename a script without a new_name' do
+  test 'cannot rename a unit without a new_name' do
     l = create :level
     dsl = <<-SCRIPT
       lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
-    old_script = Script.add_unit(
-      {name: 'old script name'},
+    old_unit = Script.add_unit(
+      {name: 'old unit name'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
-    assert_equal 'old script name', old_script.name
+    assert_equal 'old unit name', old_unit.name
 
-    new_script = Script.add_unit(
-      {name: 'new script name'},
+    new_unit = Script.add_unit(
+      {name: 'new unit name'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
-    assert_equal 'new script name', new_script.name
+    assert_equal 'new unit name', new_unit.name
 
-    # a new script was created
-    refute_equal old_script.id, new_script.id
+    # a new unit was created
+    refute_equal old_unit.id, new_unit.id
   end
 
-  test 'can rename a script between original name and new_name' do
+  test 'can rename a unit between original name and new_name' do
     l = create :level
     dsl = <<-SCRIPT
       lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
-    old_script = Script.add_unit(
-      {name: 'old script name', new_name: 'new script name'},
+    old_unit = Script.add_unit(
+      {name: 'old unit name', new_name: 'new unit name'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
-    assert_equal 'old script name', old_script.name
+    assert_equal 'old unit name', old_unit.name
 
-    new_script = Script.add_unit(
-      {name: 'new script name', new_name: 'new script name'},
+    new_unit = Script.add_unit(
+      {name: 'new unit name', new_name: 'new unit name'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
-    assert_equal 'new script name', new_script.name
+    assert_equal 'new unit name', new_unit.name
 
-    # the old script was renamed
-    assert_equal old_script.id, new_script.id
+    # the old unit was renamed
+    assert_equal old_unit.id, new_unit.id
 
-    old_script = Script.add_unit(
-      {name: 'old script name', new_name: 'new script name'},
+    old_unit = Script.add_unit(
+      {name: 'old unit name', new_name: 'new unit name'},
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
-    assert_equal 'old script name', old_script.name
+    assert_equal 'old unit name', old_unit.name
 
-    # the script was renamed back to the old name
-    assert_equal old_script.id, new_script.id
+    # the unit was renamed back to the old name
+    assert_equal old_unit.id, new_unit.id
   end
 
   test 'should remove empty lessons' do
-    script_names, _ = Script.setup([@unit_file])
-    script = Script.find_by!(name: script_names.first)
-    assert_equal 2, script.lessons.count
+    unit_names, _ = Script.setup([@unit_file])
+    unit = Script.find_by!(name: unit_names.first)
+    assert_equal 2, unit.lessons.count
 
-    # Reupload a script of the same filename / name, but lacking the second lesson.
-    lesson = script.lessons.last
-    script_file_empty_lesson = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
-    script_names, _ = Script.setup([script_file_empty_lesson])
-    script = Script.find_by!(name: script_names.first)
-    assert_equal 1, script.lessons.count
+    # Reupload a unit of the same filename / name, but lacking the second lesson.
+    lesson = unit.lessons.last
+    unit_file_empty_lesson = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
+    unit_names, _ = Script.setup([unit_file_empty_lesson])
+    unit = Script.find_by!(name: unit_names.first)
+    assert_equal 1, unit.lessons.count
     assert_not Lesson.exists?(lesson.id)
   end
 
   test 'should remove empty lessons, reordering lessons' do
-    script_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-lessons.script")
-    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-lessons.script")
-    script_names, _ = Script.setup([script_file_3_lessons])
-    script = Script.find_by!(name: script_names.first)
-    assert_equal 3, script.lessons.count
-    first = script.lessons[0]
-    second = script.lessons[1]
-    third = script.lessons[2]
+    unit_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-lessons.script")
+    unit_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-lessons.script")
+    unit_names, _ = Script.setup([unit_file_3_lessons])
+    unit = Script.find_by!(name: unit_names.first)
+    assert_equal 3, unit.lessons.count
+    first = unit.lessons[0]
+    second = unit.lessons[1]
+    third = unit.lessons[2]
     assert_equal 'lesson1', first.name
     assert_equal 'lesson2', second.name
     assert_equal 'lesson3', third.name
     assert_equal 1, first.absolute_position
     assert_equal 2, second.absolute_position
     assert_equal 3, third.absolute_position
-    original_script_level_ids = script.script_levels.map(&:id)
+    original_script_level_ids = unit.script_levels.map(&:id)
 
-    # Reupload a script of the same filename / name, but lacking the middle lesson.
-    script_names, _ = Script.setup([script_file_middle_missing_reversed])
-    script = Script.find_by!(name: script_names.first)
-    assert_equal 2, script.lessons.count
+    # Reupload a unit of the same filename / name, but lacking the middle lesson.
+    unit_names, _ = Script.setup([unit_file_middle_missing_reversed])
+    unit = Script.find_by!(name: unit_names.first)
+    assert_equal 2, unit.lessons.count
     assert_not Lesson.exists?(second.id)
 
-    first = script.lessons[0]
-    second = script.lessons[1]
+    first = unit.lessons[0]
+    second = unit.lessons[1]
     assert_equal 1, first.absolute_position
     assert_equal 2, second.absolute_position
     assert_equal 'lesson3', first.name
@@ -203,7 +203,7 @@ class ScriptTest < ActiveSupport::TestCase
     # One Lesson / ScriptLevel removed, the rest reordered
     expected_script_level_ids = [original_script_level_ids[3], original_script_level_ids[4],
                                  original_script_level_ids[0], original_script_level_ids[1]]
-    assert_equal expected_script_level_ids, script.script_levels.map(&:id)
+    assert_equal expected_script_level_ids, unit.script_levels.map(&:id)
   end
 
   test 'all fields can be set and then removed on reseed' do
