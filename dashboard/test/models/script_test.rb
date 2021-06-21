@@ -209,71 +209,71 @@ class ScriptTest < ActiveSupport::TestCase
   test 'all fields can be set and then removed on reseed' do
     # First, seed using a .script file that sets something explicitly for all fields, i.e. everything that's not in
     # the properties hash.
-    script_file_all_fields = File.join(self.class.fixture_path, 'test-all-fields.script')
-    script_names, _ = Script.setup([script_file_all_fields])
-    script = Script.find_by!(name: script_names.first)
+    unit_file_all_fields = File.join(self.class.fixture_path, 'test-all-fields.script')
+    unit_names, _ = Script.setup([unit_file_all_fields])
+    unit = Script.find_by!(name: unit_names.first)
 
-    # Not testing new_name since it causes a new script to be created.
-    assert_equal false, script.hidden? # defaults to true, so we want to verify it was explicitly set to false
-    assert script.login_required?
-    assert_equal 'csd1', script.family_name
+    # Not testing new_name since it causes a new unit to be created.
+    assert_equal false, unit.hidden? # defaults to true, so we want to verify it was explicitly set to false
+    assert unit.login_required?
+    assert_equal 'csd1', unit.family_name
 
     # Seed using an empty .script file with the same name. Verify that this sets all field values back to defaults.
-    script_file_no_fields = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-fields.script')
-    Script.setup([script_file_no_fields])
-    script.reload
+    unit_file_no_fields = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-fields.script')
+    Script.setup([unit_file_no_fields])
+    unit.reload
 
-    assert script.hidden? # defaults to true
-    assert_equal false, script.login_required?
-    assert_nil script.family_name
+    assert unit.hidden? # defaults to true
+    assert_equal false, unit.login_required?
+    assert_nil unit.family_name
   end
 
   test 'all properties can be set and then removed on reseed' do
     # First, seed using a .script file that sets something explicitly for everything in the properties hash.
-    script_file_all_properties = File.join(self.class.fixture_path, 'test-all-properties.script')
-    script_names, _ = Script.setup([script_file_all_properties])
-    script = Script.find_by!(name: script_names.first)
+    unit_file_all_properties = File.join(self.class.fixture_path, 'test-all-properties.script')
+    unit_names, _ = Script.setup([unit_file_all_properties])
+    unit = Script.find_by!(name: unit_names.first)
 
-    assert_equal 20, script.properties.keys.length
-    script.properties.values.each {|v| assert v}
+    assert_equal 20, unit.properties.keys.length
+    unit.properties.values.each {|v| assert v}
 
     # Seed using an empty .script file with the same name. Verify that this sets all properties values back to defaults.
-    script_file_no_properties = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-properties.script')
-    Script.setup([script_file_no_properties])
-    script.reload
+    unit_file_no_properties = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-properties.script')
+    Script.setup([unit_file_no_properties])
+    unit.reload
 
     # All properties should get reset to defaults.
-    assert_empty script.properties
+    assert_empty unit.properties
   end
 
-  test 'can setup new migrated script' do
+  test 'can setup new migrated unit' do
     Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     # the contents of test-migrated-new.script and test-migrated-new.script_json
-    # reflect that of a new script which has been modified only by adding
+    # reflect that of a new unit which has been modified only by adding
     # `is_migrated true` to the .script file.
-    script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-new.script')
-    Script.setup([script_file])
+    unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-new.script')
+    Script.setup([unit_file])
 
-    script = Script.find_by_name('test-migrated-new')
-    assert script.is_migrated
+    unit = Script.find_by_name('test-migrated-new')
+    assert unit.is_migrated
   end
 
-  test 'can setup migrated script with new models' do
+  test 'can setup migrated unit with new models' do
     Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     # test that LessonActivity, ActivitySection and Objective can be seeded
     # from .script_json when is_migrated is specified in the .script file.
     # use 'custom' level num to make level key match level name.
     create :maze, name: 'test_maze_level', level_num: 'custom'
-    script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
-    Script.setup([script_file])
+    unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
+    Script.setup([unit_file])
 
-    script = Script.find_by_name('test-migrated-models')
-    assert script.is_migrated
-    assert_equal 1, script.lesson_groups.count
-    assert_equal 1, script.lessons.count
-    lesson = script.lessons.first
+    unit = Script.find_by_name('test-migrated-models')
+    assert unit.is_migrated
+    assert_equal 1, unit.lesson_groups.count
+    assert_equal 1, unit.lessons.count
+    lesson = unit.lessons.first
     assert_equal 1, lesson.lesson_activities.count
     activity = lesson.lesson_activities.first
     assert_equal 'My Activity', activity.name
@@ -284,33 +284,33 @@ class ScriptTest < ActiveSupport::TestCase
     script_level = section.script_levels.first
     assert_equal 1, script_level.levels.count
     assert_equal 'test_maze_level', script_level.levels.first.name
-    assert_equal 1, script.levels.count
-    assert_equal 'test_maze_level', script.levels.first.name
+    assert_equal 1, unit.levels.count
+    assert_equal 'test_maze_level', unit.levels.first.name
   end
 
-  test 'script_json settings override take precedence for migrated script' do
+  test 'script_json settings override take precedence for migrated unit' do
     Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
-    script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-overrides.script')
-    Script.setup([script_file])
+    unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-overrides.script')
+    Script.setup([unit_file])
 
-    # If settings differ between .script and .script_json for a migrated script,
+    # If settings differ between .script and .script_json for a migrated unit,
     # the .script_json settings must take preference. This is somewhat of an
     # implementation-agnostic test, because the implementation doesn't even look
     # at anything inside the .script file besides the is_migrated property for
-    # migrated scripts.
-    script = Script.find_by_name('test-migrated-overrides')
-    assert script.is_migrated
-    assert script.tts
-    assert_equal 'my-pilot-experiment', script.pilot_experiment
-    refute script.editor_experiment
-    refute script.login_required
-    refute script.student_detail_progress_view
-    assert_equal ['my lesson group'], script.lesson_groups.map(&:key)
-    assert_equal ['my lesson'], script.lessons.map(&:key)
+    # migrated units.
+    unit = Script.find_by_name('test-migrated-overrides')
+    assert unit.is_migrated
+    assert unit.tts
+    assert_equal 'my-pilot-experiment', unit.pilot_experiment
+    refute unit.editor_experiment
+    refute unit.login_required
+    refute unit.student_detail_progress_view
+    assert_equal ['my lesson group'], unit.lesson_groups.map(&:key)
+    assert_equal ['my lesson'], unit.lessons.map(&:key)
   end
 
-  test 'should not create two scripts with same name' do
+  test 'should not create two units with same name' do
     create(:script, name: 'script')
     raise = assert_raises ActiveRecord::RecordInvalid do
       create(:script, name: 'Script', skip_name_format_validation: true)
@@ -319,17 +319,17 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'lessons are in order' do
-    script = create(:script, name: 's1')
-    lesson_group = create(:lesson_group, key: 'key1', script: script)
-    create(:lesson, script: script, lesson_group: lesson_group)
-    last = create(:lesson, script: script, lesson_group: lesson_group)
-    create(:lesson, script: script, lesson_group: lesson_group)
+    unit = create(:script, name: 's1')
+    lesson_group = create(:lesson_group, key: 'key1', script: unit)
+    create(:lesson, script: unit, lesson_group: lesson_group)
+    last = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson, script: unit, lesson_group: lesson_group)
 
     last.move_to_bottom
 
-    script.lessons
+    unit.lessons
 
-    assert_equal [1, 2, 3], script.lessons.collect(&:absolute_position)
+    assert_equal [1, 2, 3], unit.lessons.collect(&:absolute_position)
   end
 
   test 'calling next_level on last script_level points to next lesson' do
