@@ -143,7 +143,9 @@ class TeacherFeedback < ApplicationRecord
       student_seen_feedback: student_seen_feedback,
       review_state: review_state,
       student_last_updated: user_level&.updated_at,
-      student_updated_since_feedback: student_updated_since_feedback?
+      student_updated_since_feedback: student_updated_since_feedback?,
+      seen_on_feedback_page_at: seen_on_feedback_page_at,
+      student_first_visited_at: student_first_visited_at,
     }
   end
 

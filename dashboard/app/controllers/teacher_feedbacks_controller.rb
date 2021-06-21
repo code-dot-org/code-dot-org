@@ -21,7 +21,7 @@ class TeacherFeedbacksController < ApplicationController
     end
 
     @feedbacks_as_student_with_level_info = @feedbacks_as_student.map do |feedback|
-      feedback.attributes.merge(feedback&.get_script_level&.summary_for_feedback)
+      feedback.summarize.merge(feedback&.get_script_level&.summary_for_feedback)
     end
   end
 

@@ -6,6 +6,7 @@ import shapes from './shapes';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+// import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types'; // Maureen move this type into templates/feedback
 
 const measureElement = element => {
   const DOMNode = ReactDOM.findDOMNode(element);
@@ -26,6 +27,7 @@ export default class LevelFeedbackEntry extends Component {
 
   expand = () => {
     this.setState({expanded: true});
+    console.log('expand record');
     if (this.longComment()) {
       firehoseClient.putRecord(
         {
@@ -43,11 +45,12 @@ export default class LevelFeedbackEntry extends Component {
   };
 
   componentDidMount() {
+    this.comment && console.log(measureElement(this.comment).height);
     this.comment &&
       this.setState({commentHeight: measureElement(this.comment).height});
   }
 
-  longComment = () => this.state.commentHeight > initialCommentHeight;
+  longComment = () => this.state.commentHeight >= initialCommentHeight;
 
   render() {
     const {
@@ -68,16 +71,11 @@ export default class LevelFeedbackEntry extends Component {
     const commentExists = comment.length > 2;
 
     // These heights ensure that the initial line of the comment will be visible, and a 'sneak peak' of the second line for long comments.
-    var baseHeight;
-    switch (true) {
-      case commentExists && performance !== null:
-        baseHeight = 125;
-        break;
-      case commentExists || performance !== null:
-        baseHeight = 96;
-        break;
-      default:
-        baseHeight = 72;
+    let baseHeight = 72;
+    if (commentExists && performance !== null) {
+      baseHeight = 125;
+    } else if (commentExists || performance !== null) {
+      baseHeight = 96;
     }
     // const baseHeight = performance && commentExists ? 132 : 112;
 
