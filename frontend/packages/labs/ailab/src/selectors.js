@@ -24,7 +24,7 @@ export const getSelectedCategoricalFeatures = createSelector(
   }
 )
 
-const getNumericalColumns = createSelector(
+export const getNumericalColumns = createSelector(
   [getColumnsByDataType],
   (columnsByDataType) => {
     return Object.keys(columnsByDataType).filter(

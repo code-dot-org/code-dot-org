@@ -104,3 +104,37 @@ export const classificationState = {
     }
   }
 };
+
+export const allNumericalState = {
+  data: [
+    {
+      batCount: 100,
+      mosquitoCount: 1
+    },
+    {
+      batCount: 90,
+      mosquitoCount: 2
+    },{
+      batCount: 80,
+      mosquitoCount: 3
+    },{
+      batCount: 70,
+      mosquitoCount: 4
+    },{
+      batCount: 60,
+      mosquitoCount: 5
+    },{
+      batCount: 50,
+      mosquitoCount: 6
+    },{
+      batCount: 40,
+      mosquitoCount: 10
+    }
+  ],
+  labelColumn: 'mosquitoCount',
+  selectedFeatures: ['batCount'],
+  columnsByDataType: {
+    batCount: 'numerical',
+    mosquitoCount: 'numerical'
+  }
+};
