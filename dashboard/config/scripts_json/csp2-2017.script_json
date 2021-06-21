@@ -39,7 +39,7 @@
     },
     "new_name": "csp2-2017",
     "family_name": "csp2",
-    "serialized_at": "2021-06-16 22:58:14 UTC",
+    "serialized_at": "2021-06-17 22:28:17 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp2-2017"
@@ -2023,17 +2023,17 @@
         ],
         "progression": "Pre-test reflection",
         "variants": {
-          "csp_affirmation_control_2": {
-            "experiments": [
-              "rene-control-control",
-              "rene-belonging-control"
-            ]
-          },
           "csp_affirmation_intervention_2": {
             "active": false,
             "experiments": [
               "rene-control-affirmation",
               "rene-belonging-affirmation"
+            ]
+          },
+          "csp_affirmation_control_2": {
+            "experiments": [
+              "rene-control-control",
+              "rene-belonging-control"
             ]
           }
         }
