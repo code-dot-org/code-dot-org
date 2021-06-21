@@ -4,53 +4,8 @@ import {
   getAccuracyGrades,
   getResultsByGrade
 } from '../../src/helpers/accuracy.js';
+import { classificationState, regressionState } from './testData';
 import { ResultsGrades, ColumnTypes } from '../../src/constants.js';
-
-const columnsByDataType = {};
-columnsByDataType['height'] = ColumnTypes.NUMERICAL;
-columnsByDataType['sun'] = ColumnTypes.CATEGORICAL;
-
-const regressionState = {
-  data: [
-    {
-      sun: 'high',
-      height: 3.8
-    },
-    {
-      sun: 'high',
-      height: 3.9
-    },
-    {
-      sun: 'medium',
-      height: 2.6
-    },
-    {
-      sun: 'medium',
-      height: 2.5
-    },
-    {
-      sun: 'low',
-      height: 0.9
-    },
-    {
-      sun: 'low',
-      height: 1.6
-    }
-  ],
-  labelColumn: 'height',
-  accuracyCheckPredictedLabels: [4.0, 3.75, 2.63, 2.46, 1.6, 1.0],
-  accuracyCheckLabels: [5.9, 3.8, 2.6, 2.5, 1.6, 0.7],
-  accuracyCheckExamples: [[2], [2], [1], [1], [0], [0]],
-  selectedFeatures: ['sun'],
-  columnsByDataType: columnsByDataType,
-  featureNumberKey: {
-    'sun': {
-      'low' : 0,
-      'medium' : 1,
-      'high' : 2,
-    }
-  }
-};
 
 const regressionGrades = [
   ResultsGrades.INCORRECT,
@@ -61,68 +16,6 @@ const regressionGrades = [
   ResultsGrades.INCORRECT
 ];
 
-const classificationState = {
-  data: [
-    {
-      weather: 'sunny',
-      temp: 'hot',
-      play: 'no'
-    },
-    {
-      weather: 'overcast',
-      temp: 'hot',
-      play: 'yes'
-    },
-    {
-      weather: 'overcast',
-      temp: 'mild',
-      play: 'yes'
-    },
-    {
-      weather: 'overcast',
-      temp: 'cool',
-      play: 'yes'
-    },
-    {
-      weather: 'rainy',
-      temp: 'mild',
-      play: 'yes'
-    },
-    {
-      weather: 'rainy',
-      temp: 'cool',
-      play: 'no'
-    }
-  ],
-  labelColumn: 'play',
-  selectedFeatures: ['temp', 'weather'],
-  columnsByDataType: {
-    weather: 'categorical',
-    temp: 'categorical',
-    play: 'categorical'
-  },
-  accuracyCheckLabels: [1, 0, 0, 0, 0, 1],
-  accuracyCheckExamples: [[0,2], [1,2], [1,1], [1,0], [2,1], [2,0]],
-  featureNumberKey: {
-    'temp': {
-      'cool' : 0,
-      'mild' : 1,
-      'hot' : 2,
-    },
-    'play': {
-      'yes' : 0,
-      'no' : 1
-    },
-    'weather': {
-      'sunny' : 0,
-      'overcast' : 1,
-      'rainy': 2
-    }
-  }
-};
-
-const mixedClassificationResults = [0, 0, 0, 1, 1, 0];
-
 const classificationGrades = [
   ResultsGrades.INCORRECT,
   ResultsGrades.CORRECT,
@@ -132,21 +25,42 @@ const classificationGrades = [
   ResultsGrades.INCORRECT
 ];
 
+const allCorrectGrades = [
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT
+];
+
+const allIncorrectGrades = [
+  ResultsGrades.INCORRECT,
+  ResultsGrades.INCORRECT,
+  ResultsGrades.INCORRECT,
+  ResultsGrades.INCORRECT,
+  ResultsGrades.INCORRECT,
+  ResultsGrades.INCORRECT
+];
+
+const mostlyCorrectGrades = [
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.CORRECT,
+  ResultsGrades.INCORRECT
+];
+
+const mixedResults = [0, 0, 0, 1, 1, 0];
+
 describe('redux functions', () => {
   test('getAccuracyClassification - all accurate', async () => {
     const accurateResults  = [1, 0, 0, 0, 0, 1];
-    classificationState['accuracyCheckPredictedLabels'] =
-      accurateResults;
+    classificationState['accuracyCheckPredictedLabels'] = accurateResults;
 
     const accuracy = getAccuracyClassification(classificationState);
-    expect(accuracy.grades).toEqual([
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT
-    ]);
+    expect(accuracy.grades).toEqual(allCorrectGrades);
     expect(accuracy.percentCorrect).toBe('100.00');
   });
 
@@ -156,21 +70,12 @@ describe('redux functions', () => {
       mostlyAccurateResults;
 
     const accuracy = getAccuracyClassification(classificationState);
-    expect(accuracy.grades).toEqual([
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.CORRECT,
-      ResultsGrades.INCORRECT
-    ]);
+    expect(accuracy.grades).toEqual(mostlyCorrectGrades);
     expect(accuracy.percentCorrect).toBe('83.33');
   });
 
   test('getAccuracyClassification - not very accurate', async () => {
-    const mixedResults = [0, 0, 0, 1, 1, 0];
-    classificationState['accuracyCheckPredictedLabels'] =
-      mixedClassificationResults;
+    classificationState['accuracyCheckPredictedLabels'] = mixedResults;
     const accuracy = getAccuracyClassification(classificationState);
     expect(accuracy.grades).toEqual(classificationGrades);
     expect(accuracy.percentCorrect).toBe('33.33');
@@ -182,14 +87,7 @@ describe('redux functions', () => {
       inaccurateResults;
 
     const accuracy = getAccuracyClassification(classificationState);
-    expect(accuracy.grades).toEqual([
-      ResultsGrades.INCORRECT,
-      ResultsGrades.INCORRECT,
-      ResultsGrades.INCORRECT,
-      ResultsGrades.INCORRECT,
-      ResultsGrades.INCORRECT,
-      ResultsGrades.INCORRECT
-    ]);
+    expect(accuracy.grades).toEqual(allIncorrectGrades);
     expect(accuracy.percentCorrect).toBe('0.00');
   });
 
@@ -207,7 +105,7 @@ describe('redux functions', () => {
 
   test("getAccuracyGrades - classification", async () => {
     classificationState['accuracyCheckPredictedLabels'] =
-      mixedClassificationResults;
+      mixedResults;
     const grades = getAccuracyGrades(classificationState);
     expect(grades).toEqual(classificationGrades);
   })
@@ -231,8 +129,7 @@ describe('redux functions', () => {
   });
 
   test("getResultsByGrade - correct, classification", async () => {
-    classificationState['accuracyCheckPredictedLabels'] =
-      mixedClassificationResults;
+    classificationState['accuracyCheckPredictedLabels'] = mixedResults;
     const results = getResultsByGrade(classificationState, ResultsGrades.CORRECT);
     const resultsCount = results.examples.length;
     const expectedCount = classificationGrades.filter(
@@ -242,8 +139,7 @@ describe('redux functions', () => {
   });
 
   test("getResultsByGrade - incorrect, classification", async () => {
-    classificationState['accuracyCheckPredictedLabels'] =
-      mixedClassificationResults;
+    classificationState['accuracyCheckPredictedLabels'] = mixedResults;
     const results = getResultsByGrade(classificationState, ResultsGrades.INCORRECT);
     const resultsCount = results.examples.length;
     const expectedCount = classificationGrades.filter(
