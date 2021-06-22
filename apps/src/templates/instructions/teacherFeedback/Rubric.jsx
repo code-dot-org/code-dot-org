@@ -17,8 +17,7 @@ class TeacherFeedbackRubric extends Component {
   static propTypes = {
     rubric: rubricShape,
     performance: PropTypes.string,
-    isReadonly: PropTypes.bool,
-    disabledMode: PropTypes.bool.isRequired,
+    isEditable: PropTypes.bool,
     onRubricChange: PropTypes.func.isRequired,
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired
   };
@@ -27,14 +26,34 @@ class TeacherFeedbackRubric extends Component {
     const {
       rubric,
       performance,
-      isReadonly,
-      disabledMode,
+      isEditable,
       onRubricChange,
       viewAs
     } = this.props;
 
-    const showFeedbackInputAreas =
-      !isReadonly && (!!performance || viewAs === ViewType.Teacher);
+    // RubricFields are used to display and update performance levels. When expanded,
+    // the RubricField displays detailed information about the performance level. The RubricFields also
+    // have input areas for the teacher to select a performance level or for the student
+    // to view the selection.
+
+    let showFeedbackInputAreas, expandAllRubricFields;
+    if (viewAs === ViewType.Student) {
+      // If the student has not been evaluated by the rubric (!performance),
+      // the rubric fields are expanded to display details. If the student has
+      // been evaluated the rubric, fields are collapsed by default. Except for the
+      // selected performance level (see RubricField implementation below).
+      expandAllRubricFields = !performance;
+
+      // Input areas are only displayed if a student has been evalutated with the rubric.
+      showFeedbackInputAreas = !!performance;
+    } else if (viewAs === ViewType.Teacher) {
+      // Rubric fields are all expanded if teacher is viewing but not editing the rubric (this
+      // will happen when the teacher is viewing the level and not viewing a student's work).
+      // Rubric fields are all collapsed by default if the teacher is evaluating a student.
+      expandAllRubricFields = !isEditable;
+
+      showFeedbackInputAreas = isEditable;
+    }
 
     return (
       <div style={styles.performanceArea}>
@@ -43,19 +62,19 @@ class TeacherFeedbackRubric extends Component {
           <p style={styles.keyConcepts}>{rubric.keyConcept}</p>
         </div>
         <div style={styles.rubricArea}>
-          <h1 style={styles.h1}> {i18n.rubricHeader()} </h1>
+          <h1 style={styles.h1}> {i18n.rubric()} </h1>
           <form style={styles.form}>
             {rubricLevels.map(level => (
               <RubricField
                 key={level}
                 showFeedbackInputAreas={showFeedbackInputAreas}
                 expandByDefault={
-                  isReadonly ||
+                  expandAllRubricFields ||
                   (viewAs === ViewType.Student && performance === level)
                 }
                 rubricLevel={level}
                 rubricValue={rubric[level]}
-                disabledMode={disabledMode}
+                disabledMode={!isEditable}
                 onChange={onRubricChange}
                 currentlyChecked={performance === level}
               />
