@@ -11,7 +11,7 @@ Feature: Minecraft dialog levels
     And I wait for the page to fully load
     Then I wait to see a "#getting-started-header"
 #    And I see no difference for "Character select dialog"
-    And I press "close-character-select"
+    And I press "x-close"
 #    And I see no difference for "Instructions dialog"
     And I wait to see "#runButton"
     And element "#runButton" is visible
