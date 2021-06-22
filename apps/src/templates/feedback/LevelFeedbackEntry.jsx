@@ -16,26 +16,31 @@ const measureElement = element => {
 
 const initialCommentHeight = 40;
 
+const RubricPerformanceCopy = {
+  performanceLevel1: i18n.rubricLevelOneHeader(),
+  performanceLevel2: i18n.rubricLevelTwoHeader(),
+  performanceLevel3: i18n.rubricLevelThreeHeader(),
+  performanceLevel4: i18n.rubricLevelFourHeader()
+};
+
 export default class LevelFeedbackEntry extends Component {
   state = {
     expanded: false,
-    commentHeight: initialCommentHeight
+    commentHeight: 0
   };
 
   static propTypes = {feedback: shapes.feedback};
 
   expand = () => {
     this.setState({expanded: true});
-    if (this.longComment()) {
-      firehoseClient.putRecord(
-        {
-          study: 'all-feedback',
-          event: 'expand-feedback',
-          data_json: {feedback_id: this.props.feedback.id}
-        },
-        {includeUserId: true}
-      );
-    }
+    firehoseClient.putRecord(
+      {
+        study: 'all-feedback',
+        event: 'expand-feedback',
+        data_json: {feedback_id: this.props.feedback.id}
+      },
+      {includeUserId: true}
+    );
   };
 
   collapse = () => {
@@ -46,8 +51,6 @@ export default class LevelFeedbackEntry extends Component {
     this.comment &&
       this.setState({commentHeight: measureElement(this.comment).height});
   }
-
-  longComment = () => this.state.commentHeight > initialCommentHeight;
 
   render() {
     const {
@@ -63,46 +66,33 @@ export default class LevelFeedbackEntry extends Component {
       performance
     } = this.props.feedback;
 
+    const {expanded, commentHeight} = this.state;
+
     const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
 
     const commentExists = comment.length > 2;
 
     // These heights ensure that the initial line of the comment will be visible, and a 'sneak peak' of the second line for long comments.
-    var baseHeight;
-    switch (true) {
-      case commentExists && performance !== null:
-        baseHeight = 125;
-        break;
-      case commentExists || performance !== null:
-        baseHeight = 96;
-        break;
-      default:
-        baseHeight = 72;
+    let baseHeight = 72;
+    if (commentExists && performance !== null) {
+      baseHeight = 125;
+    } else if (commentExists || performance !== null) {
+      baseHeight = 96;
     }
-    // const baseHeight = performance && commentExists ? 132 : 112;
 
     const style = {
       backgroundColor: seenByStudent ? color.background_gray : color.white,
-      height: this.state.expanded ? 'auto' : baseHeight,
-      overflow: this.state.expanded ? 'none' : 'hidden',
+      height: expanded ? 'auto' : baseHeight,
+      overflow: expanded ? 'none' : 'hidden',
       ...styles.main
     };
 
-    const rubricPerformance = {
-      performanceLevel1: i18n.rubricLevelOneHeader(),
-      performanceLevel2: i18n.rubricLevelTwoHeader(),
-      performanceLevel3: i18n.rubricLevelThreeHeader(),
-      performanceLevel4: i18n.rubricLevelFourHeader()
-    };
+    const isCommentExpandable = commentHeight >= initialCommentHeight;
 
-    const showRightCaret = this.longComment() && !this.state.expanded;
-    const showDownCaret = this.longComment() && this.state.expanded;
+    const showCommentFade = isCommentExpandable && !expanded;
 
     return (
-      <div
-        style={style}
-        onClick={this.state.expanded ? this.collapse : this.expand}
-      >
+      <div style={style}>
         <div style={styles.lessonDetails}>
           <a href={linkToLevel}>
             <div style={styles.lessonLevel}>
@@ -118,31 +108,33 @@ export default class LevelFeedbackEntry extends Component {
           </div>
         </div>
         <TimeAgo style={styles.time} dateString={created_at} />
-        {performance ? (
+        {performance && (
           <div style={styles.rubricBox}>
-            <span>{i18n.feedbackRubricEvaluation()}</span>
+            <span>{i18n.feedbackRubricEvaluation()}</span>&nbsp;
             <span style={styles.rubricPerformance}>
-              {rubricPerformance[performance]}
+              {RubricPerformanceCopy[performance]}
             </span>
           </div>
-        ) : null}
-        {showRightCaret ? (
-          <span style={styles.iconBox}>
-            <FontAwesome style={styles.icon} icon="caret-right" />
+        )}
+        {isCommentExpandable && (
+          <span
+            style={styles.iconBox}
+            onClick={expanded ? this.collapse() : this.expand()}
+          >
+            <FontAwesome
+              style={styles.icon}
+              icon={expanded ? 'caret-down' : 'caret-right'}
+            />
           </span>
-        ) : null}
-        {showDownCaret ? (
-          <span style={styles.iconBox}>
-            <FontAwesome style={styles.icon} icon="caret-down" />
-          </span>
-        ) : null}
-        {commentExists ? (
+        )}
+        {commentExists && (
           <span style={styles.commentBox}>
             <div ref={r => (this.comment = r)} style={styles.comment}>
               &quot;{comment}&quot;
             </div>
+            {showCommentFade && <div style={styles.fadeout} />}
           </span>
-        ) : null}
+        )}
       </div>
     );
   }
@@ -158,13 +150,12 @@ const styles = {
     marginBottom: 20,
     display: 'flex',
     flexFlow: 'wrap',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    padding: '8px 20px'
   },
   lessonDetails: {
     width: '75%',
-    marginLeft: 20,
-    marginTop: 8,
-    marginBottom: 4
+    marginBottom: '4px'
   },
   lessonLevel: {
     fontSize: 18,
@@ -191,8 +182,6 @@ const styles = {
   },
   comment: {
     color: color.dark_charcoal,
-    marginLeft: 20,
-    marginRight: 20,
     marginBottom: 8,
     fontSize: 14,
     lineHeight: '21px',
@@ -200,27 +189,34 @@ const styles = {
   },
   rubricBox: {
     color: color.dark_charcoal,
-    marginLeft: 20,
-    marginRight: 20,
     marginBottom: 8,
     fontSize: 14,
     lineHeight: '21px',
     width: '100%'
   },
   rubricPerformance: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    marginLeft: 5
+    fontFamily: '"Gotham 5r", sans-serif'
   },
   icon: {
     fontSize: 18
   },
   iconBox: {
     float: 'left',
-    paddingLeft: 25,
+    paddingRight: 20,
+    paddingLeft: 5,
     cursor: 'pointer'
   },
   commentBox: {
     float: 'left',
-    width: '96%'
+    width: '96%',
+    position: 'relative'
+  },
+  fadeout: {
+    bottom: 0,
+    height: 'calc(100% - 15px)',
+    background:
+      'linear-gradient(rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%)',
+    position: 'absolute',
+    width: '100%'
   }
 };
