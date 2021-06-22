@@ -1,4 +1,5 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
+
 /**
  * Wrapper class for https://github.com/code-dot-org/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -113,6 +114,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return blocklyWrapper.Generator.get('JavaScript');
   };
 
+  blocklyWrapper.addChangeListener = function(handler) {
+    const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
+    blocklyCanvas.addEventListener('blocklyBlockSpaceChange', handler);
+  };
   return blocklyWrapper;
 }
 
