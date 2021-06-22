@@ -11,6 +11,7 @@ Hour of Code:
     zone: *2
     time: *3
   wrapup_video_id: 13
+  published_state: beta
   user_id:
   login_required: false
   properties: "{}"
@@ -27,7 +28,8 @@ events:
     utc: &5 2020-02-21 16:28:48.000000000 Z
     zone: *2
     time: *5
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: beta
   user_id:
   login_required: false
   properties: "{}"
@@ -44,7 +46,8 @@ jigsaw:
     utc: &7 2020-02-21 16:28:48.000000000 Z
     zone: *2
     time: *7
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: false
   properties: "{}"
@@ -62,6 +65,7 @@ hourofcode:
     zone: *2
     time: *9
   wrapup_video_id: 13
+  published_state: preview
   user_id:
   login_required: false
   properties: "{}"
@@ -78,7 +82,8 @@ starwars:
     utc: &11 2020-02-21 17:04:44.000000000 Z
     zone: *2
     time: *11
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: false
   properties: "{}"
@@ -95,7 +100,8 @@ frozen:
     utc: &13 2020-02-21 16:56:38.000000000 Z
     zone: *2
     time: *13
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: false
   properties: "{}"
@@ -112,7 +118,8 @@ playlab:
     utc: &15 2020-02-21 17:01:22.000000000 Z
     zone: *2
     time: *15
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: false
   properties: "{}"
@@ -129,7 +136,8 @@ artist:
     utc: &17 2020-04-02 13:05:41.000000000 Z
     zone: *2
     time: *17
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: false
   properties: '{"tts":true}'
@@ -146,7 +154,8 @@ algebra:
     utc: &19 2020-05-21 19:48:40.000000000 Z
     zone: *2
     time: *19
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: true
   properties: '{"hideable_stages":true,"hideable_lessons":true}'
@@ -163,7 +172,8 @@ flappy:
     utc: &21 2020-05-22 02:22:43.000000000 Z
     zone: *2
     time: *21
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: false
   properties: "{}"
@@ -180,7 +190,8 @@ flappy:
     utc: &23 2020-05-21 19:48:27.000000000 Z
     zone: *2
     time: *23
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: false
   properties: '{"hideable_stages":true,"curriculum_umbrella":"CSF","supported_locales":["de-DE"],"hideable_lessons":true}'
@@ -197,7 +208,8 @@ course1:
     utc: &25 2020-06-23 12:36:39.000000000 Z
     zone: *2
     time: *25
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: false
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://code.org/curriculum/course1/{LESSON}/Teacher","curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -214,7 +226,8 @@ course2:
     utc: &27 2020-05-21 19:48:59.000000000 Z
     zone: *2
     time: *27
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: false
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://code.org/curriculum/course2/{LESSON}/Teacher","curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -231,7 +244,8 @@ course3:
     utc: &29 2020-05-21 19:49:00.000000000 Z
     zone: *2
     time: *29
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: false
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://code.org/curriculum/course3/{LESSON}/Teacher","curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -248,7 +262,8 @@ course4:
     utc: &31 2020-05-21 19:49:01.000000000 Z
     zone: *2
     time: *31
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: preview
   user_id:
   login_required: false
   properties: '{"hideable_stages":true,"curriculum_path":"https://code.org/curriculum/course4/{LESSON}/Teacher","curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true}'
@@ -265,7 +280,8 @@ cspunit1:
     utc: &33 2020-02-21 16:48:39.000000000 Z
     zone: *2
     time: *33
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: beta
   user_id:
   login_required: true
   new_name: 
@@ -281,7 +297,8 @@ cspunit2:
     utc: &35 2020-02-21 16:48:50.000000000 Z
     zone: *2
     time: *35
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: beta
   user_id:
   login_required: true
   new_name: 
@@ -297,7 +314,8 @@ cspunit3:
     utc: &37 2020-02-21 16:49:08.000000000 Z
     zone: *2
     time: *37
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: beta
   user_id:
   login_required: true
   new_name: 
@@ -313,7 +331,8 @@ cspunit4:
     utc: &39 2020-02-21 16:50:17.000000000 Z
     zone: *2
     time: *39
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: beta
   user_id:
   login_required: true
   new_name: 
@@ -329,7 +348,8 @@ cspunit5:
     utc: &41 2020-02-21 16:50:47.000000000 Z
     zone: *2
     time: *41
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: beta
   user_id:
   login_required: true
   new_name: 
@@ -345,7 +365,8 @@ cspunit6:
     utc: &43 2020-02-21 16:50:48.000000000 Z
     zone: *2
     time: *43
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: beta
   user_id:
   login_required: true
   new_name: 
@@ -361,7 +382,8 @@ ECSPD:
     utc: &45 2020-02-21 16:29:09.000000000 Z
     zone: *2
     time: *45
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: beta
   user_id:
   login_required: true
   properties: '{"professional_learning_course":"ECS Support Legacy"}'
@@ -378,7 +400,8 @@ allthethings:
     utc: &47 2020-07-21 18:31:04.000000000 Z
     zone: *2
     time: *47
-  wrapup_video_id: 
+  wrapup_video_id:
+  published_state: beta
   user_id:
   login_required: false
   properties: '{"hideable_stages":true,"hideable_lessons":true,"lesson_extras_available":true}'
