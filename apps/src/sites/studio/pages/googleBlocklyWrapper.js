@@ -192,6 +192,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   });
 
+  blocklyWrapper.addChangeListener = function(handler) {
+    Blockly.mainBlockSpace.addChangeListener(handler);
+  };
+
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 

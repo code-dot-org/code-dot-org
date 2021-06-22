@@ -1004,8 +1004,7 @@ StudioApp.prototype.runChangeHandlers = function() {
 StudioApp.prototype.setupChangeHandlers = function() {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
-    const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
-    blocklyCanvas.addEventListener('blocklyBlockSpaceChange', runAllHandlers);
+    Blockly.addChangeListener(runAllHandlers);
   } else {
     this.editor.on('change', runAllHandlers);
     // Droplet doesn't automatically bubble up aceEditor changes
