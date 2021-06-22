@@ -46,7 +46,7 @@ Scenario: Project Load and Reload
   When I reload the page
   And I wait for the page to fully load
   And I press "versions-header"
-  And I wait until element "button:contains(Current Version)" is visible
+  And I wait until element "button:contains(Latest Version)" is visible
   And I save the text from ".versionRow:nth-child(1) p"
 
   # There is currently no guarantee that Version History will initially be
@@ -66,7 +66,7 @@ Scenario: Project Load and Reload
   And I click selector "#runButton" once I see it
   And element ".project_updated_at" eventually contains text "Saved"
   And I press "versions-header"
-  And I wait until element "button:contains(Current Version)" is visible
+  And I wait until element "button:contains(Latest Version)" is visible
 
   Then ".versionRow:nth-child(2) p" contains the saved text
   And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
@@ -88,7 +88,7 @@ Scenario: Project Version Checkpoints
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
   And I press "versions-header"
-  And I wait until element "button:contains(Current Version)" is visible
+  And I wait until element "button:contains(Latest Version)" is visible
   Then I save the text from ".versionRow:nth-child(1) p"
 
   When I close the dialog
@@ -100,7 +100,7 @@ Scenario: Project Version Checkpoints
   And I click selector "#runButton" once I see it
   And element ".project_updated_at" eventually contains text "Saved"
   And I press "versions-header"
-  And I wait until element "button:contains(Current Version)" is visible
+  And I wait until element "button:contains(Latest Version)" is visible
   # The version containing "comment A" is saved as a checkpoint, because the
   # project version interval time period had passed.
   Then ".versionRow:nth-child(2) p" contains the saved text
