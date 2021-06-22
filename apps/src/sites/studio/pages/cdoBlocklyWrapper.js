@@ -121,7 +121,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.getWorkspaceCode = function() {
-    return codegen.workspaceCode(Blockly);
+    const code = Blockly.Generator.blockSpaceToCode('JavaScript', null, false);
+    return codegen.strip(code);
   };
 
   return blocklyWrapper;

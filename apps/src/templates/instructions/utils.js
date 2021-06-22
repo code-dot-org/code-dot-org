@@ -157,21 +157,19 @@ export function convertXmlToBlockly(xmlContainer) {
     // resize after initial render, so we also want to resize the container
     // whenever a blockSpaceChange results in the content size changing.
     let metrics = blockSpace.getMetrics();
-    blockSpace
-      .getCanvas()
-      .addEventListener('blocklyBlockSpaceChange', function() {
-        const oldHeight = metrics.contentHeight;
-        const oldWidth = metrics.contentWidth;
-        const newHeight = blockSpace.getMetrics().contentHeight;
-        const newWidth = blockSpace.getMetrics().contentWidth;
+    Blockly.addChangeListener(function() {
+      const oldHeight = metrics.contentHeight;
+      const oldWidth = metrics.contentWidth;
+      const newHeight = blockSpace.getMetrics().contentHeight;
+      const newWidth = blockSpace.getMetrics().contentWidth;
 
-        // if the blockspace's content size has changed, kick off another sync and
-        // save the new metrics as the old ones
-        if (newHeight !== oldHeight || newWidth !== oldWidth) {
-          shrinkBlockSpaceContainer(blockSpace, withPadding);
-          metrics = blockSpace.getMetrics();
-        }
-      });
+      // if the blockspace's content size has changed, kick off another sync and
+      // save the new metrics as the old ones
+      if (newHeight !== oldHeight || newWidth !== oldWidth) {
+        shrinkBlockSpaceContainer(blockSpace, withPadding);
+        metrics = blockSpace.getMetrics();
+      }
+    });
 
     shrinkBlockSpaceContainer(blockSpace, withPadding);
   });
