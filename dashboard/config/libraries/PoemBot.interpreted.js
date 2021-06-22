@@ -46,7 +46,10 @@ var poem = {
 var isVisible = false;
 
 function randomWord() {
-  return "cat";
+  // TODO: get curated random word list from Curriculum
+  var words = ['cat', 'dog', 'fish'];
+  var index = randomNumber(0, words.length - 1);
+  return words[index];
 }
 
 function addLine(line) {
