@@ -10,7 +10,6 @@
   ],
   "published_state": "beta",
   "properties": {
-    "has_numbered_units": true,
     "version_year": "2021"
   },
   "resources": [
