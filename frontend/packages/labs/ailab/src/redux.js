@@ -21,7 +21,7 @@ import {
   getUniqueOptions,
   isColumnDataValid
 } from "./helpers/columnDetails.js";
-import { getConvertedValueForDisplay } from "./helpers/valueConversion.js";
+import { convertValueForDisplay } from "./helpers/valueConversion.js";
 import { areArraysEqual } from "./helpers/utils.js";
 import {
   ColumnTypes,
@@ -936,7 +936,7 @@ export function getConvertedAccuracyCheckExamples(state) {
     let convertedAccuracyCheckExample = [];
     for (var i = 0; i < state.selectedFeatures.length; i++) {
       convertedAccuracyCheckExample.push(
-        getConvertedValueForDisplay(
+        convertValueForDisplay(
           state,
           example[i],
           state.selectedFeatures[i]
@@ -949,7 +949,7 @@ export function getConvertedAccuracyCheckExamples(state) {
 }
 
 export function getConvertedPredictedLabel(state) {
-  return getConvertedValueForDisplay(
+  return convertValueForDisplay(
     state,
     state.prediction,
     state.labelColumn
@@ -958,7 +958,7 @@ export function getConvertedPredictedLabel(state) {
 
 export function getConvertedLabels(state, rawLabels = []) {
   return rawLabels.map(label =>
-    getConvertedValueForDisplay(state, label, state.labelColumn)
+    convertValueForDisplay(state, label, state.labelColumn)
   );
 }
 

@@ -7,31 +7,19 @@ import { isEmpty, getKeyByValue } from "./utils.js";
 import { getSelectedCategoricalColumns } from "../redux.js";
 
 // Take a ML-friendly integer and convert to human-readable string.
-export function getConvertedValueForDisplay(state, rawValue, column) {
+export function convertValueForDisplay(state, value, column) {
   const convertedValue =
     getSelectedCategoricalColumns(state).includes(column) &&
     !isEmpty(state.featureNumberKey)
-      ? getKeyByValue(state.featureNumberKey[column], rawValue)
-      : rawValue;
+      ? getKeyByValue(state.featureNumberKey[column], value)
+      : value;
   return convertedValue;
 }
 
-/* For feature columns that store categorical data, looks up the value
-  associated with a row's specific option for a given feature; otherwise
-  returns the option converted to an integer for feature columns that store
-  numerical data.
-  @param {object} row, entry from the dataset
-  {
-    labelColumn: option,
-    featureColumn1: option,
-    featureColumn2: option
-    ...
-  }
-  @param {string} - feature name
-  @return {integer}
-  */
-export function convertValueForTraining(state, feature, row) {
-  return getSelectedCategoricalColumns(state).includes(feature)
-    ? state.featureNumberKey[feature][row[feature]]
-    : parseFloat(row[feature]);
+// Take a human-readable string and convert to a ML-friendly integer.
+export function convertValueForTraining(state, value, column) {
+  const convertedValue = getSelectedCategoricalColumns(state).includes(column)
+    ? state.featureNumberKey[column][value]
+    : parseFloat(value);
+  return convertedValue;
 }

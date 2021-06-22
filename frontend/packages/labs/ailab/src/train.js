@@ -63,13 +63,14 @@ const buildOptionNumberKeysByFeature = store => {
 const extractTrainingExamples = (state, row) => {
   let exampleValues = [];
   state.selectedFeatures.forEach(feature =>
-    exampleValues.push(convertValueForTraining(state, feature, row))
+    exampleValues.push(convertValueForTraining(state, row[feature], feature))
   );
   return exampleValues;
 };
 
 const extractTrainingLabel = (state, row) => {
-  return convertValueForTraining(state, state.labelColumn, row);
+  const value = row[state.labelColumn];
+  return convertValueForTraining(state, value, state.labelColumn);
 };
 
 const prepareTrainingData = store => {
@@ -115,7 +116,7 @@ const prepareTestData = store => {
   let testValues = [];
   updatedState.selectedFeatures.forEach(feature =>
     testValues.push(
-      convertValueForTraining(updatedState, feature, updatedState.testData)
+      convertValueForTraining(updatedState, updatedState.testData[feature], feature)
     )
   );
   return testValues;
