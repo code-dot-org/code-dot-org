@@ -552,13 +552,16 @@ class ScriptLevel < ApplicationRecord
 
   # Returns the level whose status will determine state of the progress bubble
   def get_level_for_progress(student)
+    # If the level is a bubble choice, determine which sublevel's status to display in our progress bubble.
+    # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
+    # progress for sublevel that has the best result. Otherwise display progress for the level.
     if bubble_choice?
       keep_working_level = level.keep_working_sublevel(student, script)
       best_result_level = level.best_result_sublevel(student, script)
       return keep_working_level || best_result_level || level
     elsif contained_levels.any?
       # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
-      # We only use our first contained level
+      # We only display our first contained level, display progress for that level.
       return contained_levels.first
     else
       return level
@@ -585,6 +588,7 @@ class ScriptLevel < ApplicationRecord
     end
 
     if teacher.present?
+      # feedback for contained level is stored with the level ID not the contained level ID
       level_id_for_feedback = contained ? level.id : level_for_progress.id
       feedback = TeacherFeedback.get_latest_feedback_given(student.id, level_id_for_feedback, teacher.id, script_id)
     end
