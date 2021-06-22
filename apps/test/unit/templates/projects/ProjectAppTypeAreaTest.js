@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {Provider} from 'react-redux';
+import {Provider, connect} from 'react-redux';
 import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
@@ -11,7 +11,9 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import projectsReducer from '@cdo/apps/templates/projects/projectsRedux';
+import projectsReducer, {
+  appendProjects
+} from '@cdo/apps/templates/projects/projectsRedux';
 import {
   allowConsoleErrors,
   allowConsoleWarnings
@@ -21,18 +23,31 @@ function wrapped(element) {
   return mount(<Provider store={getStore()}>{element}</Provider>);
 }
 
+const ProjectProvider = connect((state, ownProps) => ({
+  projectList: state.projects.projectLists[ownProps.labKey].map(project => {
+    return {
+      projectData: project,
+      currentGallery: 'public'
+    };
+  })
+}))(ProjectAppTypeArea);
+
 function generateFakeProjects(numProjects, projectType) {
+  return generateFakeProjectData(numProjects, projectType).map(data => ({
+    projectData: data,
+    currentGallery: 'public'
+  }));
+}
+
+function generateFakeProjectData(numProjects, projectType) {
   const startTime = Date.parse('2017-01-01T11:00:00.000-00:00');
   return [...Array(numProjects).keys()].map(projectNum => ({
-    projectData: {
-      channel: `STUB_CHANNEL_ID_${projectNum}_`,
-      name: `Published Project ${projectNum}.`,
-      type: projectType,
-      publishedAt: new Date(startTime + projectNum).toISOString(),
-      publishedToPublic: true,
-      publishedToClass: true
-    },
-    currentGallery: 'public'
+    channel: `STUB_CHANNEL_ID_${projectNum}_`,
+    name: `Published Project ${projectNum}.`,
+    type: projectType,
+    publishedAt: new Date(startTime + projectNum).toISOString(),
+    publishedToPublic: true,
+    publishedToClass: true
   }));
 }
 
@@ -100,21 +115,26 @@ describe('ProjectAppTypeArea', () => {
       expect(stubNavigate).to.have.been.called;
     });
 
-    it.skip('displays more projects when View More is pressed', () => {
+    it('displays more projects when View More is pressed', () => {
+      const store = getStore();
+      store.dispatch(
+        appendProjects(generateFakeProjectData(30, 'applab'), 'applab')
+      );
+      const wrapper = mount(
+        <Provider store={store}>
+          <ProjectProvider
+            labKey="applab"
+            labName="App Lab"
+            labViewMoreString="more App Lab projects"
+            numProjectsToShow={12}
+            galleryType="public"
+            navigateFunction={stubNavigate}
+            isDetailView={true}
+          />
+        </Provider>
+      );
       // some of the most useful selectors like [text="View more"] don't work
       // with mount(). see: https://github.com/airbnb/enzyme/issues/534
-      const wrapper = wrapped(
-        <ProjectAppTypeArea
-          labKey="applab"
-          labName="App Lab"
-          labViewMoreString="more App Lab projects"
-          projectList={generateFakeProjects(30, 'applab')}
-          numProjectsToShow={12}
-          galleryType="public"
-          navigateFunction={stubNavigate}
-          isDetailView={true}
-        />
-      );
       expect(wrapper.find('ProjectCard')).to.have.length(12);
       let viewMoreWrapper = wrapper.find('Button').first();
       expect(viewMoreWrapper.text()).to.equal('View more');
@@ -135,10 +155,10 @@ describe('ProjectAppTypeArea', () => {
       expect(stubAjax).to.have.been.calledOnce;
 
       // Simulate the network request completing.
-      ajaxDeferred.resolve({applab: generateFakeProjects(40, 'applab')});
-      wrapper.setProps({
-        projectList: generateFakeProjects(40, 'applab')
+      ajaxDeferred.resolve({
+        applab: generateFakeProjectData(40, 'applab')
       });
+      wrapper.setProps({}); // Force refresh
 
       // Displays additional projects returned from the server.
       expect(wrapper.find('ProjectCard')).to.have.length(36);
