@@ -37,7 +37,7 @@ class UnitOverviewTopRow extends React.Component {
     unitProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
-    scriptTitle: PropTypes.string.isRequired,
+    unitTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
@@ -102,7 +102,7 @@ class UnitOverviewTopRow extends React.Component {
       unitProgress,
       scriptId,
       scriptName,
-      scriptTitle,
+      unitTitle,
       viewAs,
       isRtl,
       teacherResources,
@@ -199,7 +199,7 @@ class UnitOverviewTopRow extends React.Component {
           <SectionAssigner
             sections={sectionsForDropdown}
             selectedSectionId={selectedSectionId}
-            assignmentName={scriptTitle}
+            assignmentName={unitTitle}
             showAssignButton={showAssignButton}
             courseId={currentCourseId}
             scriptId={scriptId}

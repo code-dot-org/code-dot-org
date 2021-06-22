@@ -51,7 +51,7 @@ class UnitOverviewHeader extends Component {
     announcements: PropTypes.arrayOf(announcementShape),
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
-    scriptTitle: PropTypes.string.isRequired,
+    unitTitle: PropTypes.string.isRequired,
     scriptDescription: PropTypes.string.isRequired,
     scriptStudentDescription: PropTypes.string.isRequired,
     betaTitle: PropTypes.string,
@@ -95,7 +95,7 @@ class UnitOverviewHeader extends Component {
       plcHeaderProps,
       scriptId,
       scriptName,
-      scriptTitle,
+      unitTitle,
       scriptDescription,
       scriptStudentDescription,
       betaTitle,
@@ -195,7 +195,7 @@ class UnitOverviewHeader extends Component {
           <div id="heading" style={styles.heading}>
             <div style={styles.titleWrapper}>
               <h1 style={styles.title} id="script-title">
-                {scriptTitle}{' '}
+                {unitTitle}{' '}
                 {betaTitle && <span className="betatext">{betaTitle}</span>}
               </h1>
               {filteredVersions.length > 1 && (
@@ -264,7 +264,7 @@ export default connect(state => ({
   announcements: state.announcements || [],
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
-  scriptTitle: state.progress.scriptTitle,
+  unitTitle: state.progress.unitTitle,
   scriptDescription: state.progress.scriptDescription,
   scriptStudentDescription: state.progress.scriptStudentDescription,
   betaTitle: state.progress.betaTitle,

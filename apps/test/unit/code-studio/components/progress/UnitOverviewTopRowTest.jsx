@@ -23,7 +23,7 @@ const defaultProps = {
   unitProgress: NOT_STARTED,
   scriptId: 42,
   scriptName: 'test-script',
-  scriptTitle: 'Unit test script title',
+  unitTitle: 'Unit test script title',
   viewAs: ViewType.Student,
   isRtl: false,
   teacherResources: [],

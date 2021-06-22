@@ -65,7 +65,7 @@ class UnitOverview extends React.Component {
     scriptCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
-    scriptTitle: PropTypes.string.isRequired,
+    unitTitle: PropTypes.string.isRequired,
     professionalLearningCourse: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
@@ -103,7 +103,7 @@ class UnitOverview extends React.Component {
       scriptCompleted,
       scriptId,
       scriptName,
-      scriptTitle,
+      unitTitle,
       professionalLearningCourse,
       viewAs,
       isRtl,
@@ -189,7 +189,7 @@ class UnitOverview extends React.Component {
               unitProgress={unitProgress}
               scriptId={scriptId}
               scriptName={scriptName}
-              scriptTitle={scriptTitle}
+              unitTitle={unitTitle}
               currentCourseId={currentCourseId}
               viewAs={viewAs}
               isRtl={isRtl}
@@ -234,7 +234,7 @@ export default connect((state, ownProps) => ({
   scriptCompleted: !!state.progress.scriptCompleted,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
-  scriptTitle: state.progress.scriptTitle,
+  unitTitle: state.progress.unitTitle,
   professionalLearningCourse: state.progress.professionalLearningCourse,
   viewAs: state.viewAs,
   isRtl: state.isRtl,
