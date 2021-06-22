@@ -1,4 +1,5 @@
-var _ = require('lodash');
+import _ from 'lodash';
+import {getStore} from '@cdo/apps/redux';
 
 var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 
@@ -130,4 +131,20 @@ export function setPageConstants(props) {
     type: SET_PAGE_CONSTANTS,
     props: props
   };
+}
+
+/**
+ * Helpers
+ */
+
+function rootState() {
+  return getStore().getState()?.pageConstants;
+}
+
+export function hideRunButton() {
+  return rootState()?.hideRunButton;
+}
+
+export function hideResetButton() {
+  return rootState()?.hideResetButton;
 }

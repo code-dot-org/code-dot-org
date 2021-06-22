@@ -61,7 +61,7 @@ import {parseElement as parseXmlElement} from './xml';
 import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
-import {setPageConstants} from './redux/pageConstants';
+import * as pageConstantsRedux from '@cdo/apps/redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import {
@@ -1041,16 +1041,17 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   var run = document.getElementById('runButton');
   if (run) {
-    // Note: Checking alwaysHideRunButton is necessary because are some levels where we never
-    // want to show the "run" button (e.g., maze levels that are "stepOnly").
     run.style.display =
-      showRun && !this.config.alwaysHideRunButton ? 'inline-block' : 'none';
+      showRun && !pageConstantsRedux.hideRunButton() ? 'inline-block' : 'none';
     run.disabled = !showRun;
   }
 
   var reset = document.getElementById('resetButton');
   if (reset) {
-    reset.style.display = !showRun ? 'inline-block' : 'none';
+    reset.style.display =
+      !showRun && !pageConstantsRedux.hideResetButton()
+        ? 'inline-block'
+        : 'none';
     reset.disabled = showRun;
   }
 
@@ -3474,7 +3475,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
     appSpecificConstants
   );
 
-  getStore().dispatch(setPageConstants(combined));
+  getStore().dispatch(pageConstantsRedux.setPageConstants(combined));
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));

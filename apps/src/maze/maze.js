@@ -181,17 +181,11 @@ module.exports = class Maze {
       });
     };
 
-    // Note: Setting alwaysHideRunButton in our config is necessary because
-    // StudioApp.js will manipulate the run/reset buttons, displaying the run
-    // button when "Reset" is clicked. We do not want this behavior on stepOnly levels.
-    const alwaysHideRunButton = !!(
-      this.controller.level.stepOnly && !this.controller.level.edit_blocks
-    );
-    config.alwaysHideRunButton = alwaysHideRunButton;
-
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
-      hideRunButton: alwaysHideRunButton
+      hideRunButton: !!(
+        this.controller.level.stepOnly && !this.controller.level.edit_blocks
+      )
     });
 
     var visualizationColumn = (
