@@ -30,7 +30,7 @@ RUN apt-get update && \
 		apt-get install -y \
 		  git \
 		  xvfb \
-		  yarn=1.16.0-1 \
+		  yarn=1.22.10 \
 		  sudo \
 		  openssh-client \
 		  ca-certificates \
@@ -47,15 +47,15 @@ RUN apt-get update && \
 		  python python-dev
 
 # install node
-RUN wget https://nodejs.org/dist/v8.15.0/node-v8.15.0.tar.gz && \
-    tar -xzvf node-v8.15.0.tar.gz && \
-    rm node-v8.15.0.tar.gz && \
-    cd node-v8.15.0 && \
+RUN wget https://nodejs.org/dist/v14.17.1/node-v14.17.1.tar.gz && \
+    tar -xzvf node-v14.17.1.tar.gz && \
+    rm node-v14.17.1.tar.gz && \
+    cd node-v14.17.1 && \
     ./configure && \
     make -j4 && \
     make install && \
     cd .. && \
-    rm -r node-v8.15.0
+    rm -r node-v14.17.1
 
 # more more tools
 RUN apt-get install -y unzip
