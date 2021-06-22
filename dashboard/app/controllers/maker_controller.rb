@@ -49,7 +49,7 @@ class MakerController < ApplicationController
     end
 
     # If none of the above applies, default to most recent.
-    maker_years.find {|y| y.script.is_stable?}.script
+    maker_years.find {|y| y.script.stable?}.script
   end
 
   def setup

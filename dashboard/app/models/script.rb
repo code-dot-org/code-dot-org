@@ -1411,9 +1411,10 @@ class Script < ApplicationRecord
   # A unit that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(get_published_state)
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
+  # No longer used except in migration. Should be removed July 2021 after people have had time to migrate
   def get_published_state
     if pilot?
       SharedConstants::PUBLISHED_STATE.pilot
@@ -1426,6 +1427,10 @@ class Script < ApplicationRecord
     else
       SharedConstants::PUBLISHED_STATE.beta
     end
+  end
+
+  def stable?
+    published_state == SharedConstants::PUBLISHED_STATE.stable
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
@@ -1470,7 +1475,7 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      publishedState: get_published_state,
+      publishedState: published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,

@@ -6,6 +6,7 @@ import {TabType} from '@cdo/apps/templates/instructions/TopInstructions';
 import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import i18n from '@cdo/locale';
 
 const DEFAULT_PROPS = {
   teacherOnly: false,
@@ -13,7 +14,7 @@ const DEFAULT_PROPS = {
   isCSDorCSP: true,
   displayHelpTab: true,
   displayFeedback: true,
-  displayKeyConcept: false,
+  levelHasRubric: false,
   isViewingAsTeacher: false,
   fetchingData: false,
   handleDocumentationClick: () => {},
@@ -72,6 +73,26 @@ describe('TopInstructionsHeader', () => {
     });
     const commentTab = wrapper.find('.uitest-feedback');
     expect(commentTab.props().selected).to.be.true;
+  });
+
+  it('on the comments tab selects when displayFeedback and levelHasRubric text is rubric', () => {
+    const wrapper = setUp({
+      levelHasRubric: true,
+      displayFeedback: true,
+      tabSelected: TabType.COMMENTS
+    });
+    const commentTab = wrapper.find('.uitest-feedback');
+    expect(commentTab.props().text).to.equal(i18n.rubric());
+  });
+
+  it('on the comments tab selects when displayFeedback and levelHasRubric = false text is feedback', () => {
+    const wrapper = setUp({
+      levelHasRubric: false,
+      displayFeedback: true,
+      tabSelected: TabType.COMMENTS
+    });
+    const commentTab = wrapper.find('.uitest-feedback');
+    expect(commentTab.props().text).to.equal(i18n.feedback());
   });
 
   it('hides comment tab when displayFeedback is false', () => {

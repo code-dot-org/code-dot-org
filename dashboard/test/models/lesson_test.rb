@@ -656,7 +656,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 4, summaries.count
     expected_summary = {
-      scriptTitle: "script6",
+      unitTitle: "script6",
       versionYear: nil,
       lockable: false,
       relativePosition: 1,
@@ -666,7 +666,7 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal expected_summary, summaries[0]
 
     expected_summary = {
-      scriptTitle: "script0",
+      unitTitle: "script0",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
@@ -716,7 +716,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 2, summaries.count
     expected_summary = {
-      scriptTitle: "script4",
+      unitTitle: "script4",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
@@ -780,7 +780,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 3, summaries.count
     expected_summary = {
-      scriptTitle: "script4",
+      unitTitle: "script4",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,

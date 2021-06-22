@@ -20,10 +20,10 @@ import {testLessons} from './unitCalendarTestData';
 
 const defaultProps = {
   sectionsForDropdown: [],
-  scriptProgress: NOT_STARTED,
+  unitProgress: NOT_STARTED,
   scriptId: 42,
   scriptName: 'test-script',
-  scriptTitle: 'Unit test script title',
+  unitTitle: 'Unit test script title',
   viewAs: ViewType.Student,
   isRtl: false,
   teacherResources: [],
@@ -38,7 +38,7 @@ describe('UnitOverviewTopRow', () => {
       <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Student}
-        scriptProgress={NOT_STARTED}
+        unitProgress={NOT_STARTED}
       />
     );
 
@@ -76,7 +76,7 @@ describe('UnitOverviewTopRow', () => {
       <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Student}
-        scriptProgress={IN_PROGRESS}
+        unitProgress={IN_PROGRESS}
       />
     );
 
@@ -97,7 +97,7 @@ describe('UnitOverviewTopRow', () => {
       <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Student}
-        scriptProgress={COMPLETED}
+        unitProgress={COMPLETED}
       />
     );
 
