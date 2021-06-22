@@ -251,7 +251,7 @@ DSL
     assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student, nil)
   end
 
-  test 'keep_working_sublevel returns sublevel with most recent keepWorking review state' do
+  test 'keep_working_sublevel returns sublevel where the latest feedback has keepWorking review state' do
     teacher = create :teacher
     student = create :student
     section = create :section, teacher: teacher
@@ -265,7 +265,7 @@ DSL
     assert_equal @sublevel1, @bubble_choice.keep_working_sublevel(student, script)
   end
 
-  test 'keep_working_sublevel returns nil if no sublevels have keepWorking review state' do
+  test 'keep_working_sublevel returns nil if no sublevels latest feedback have keepWorking review state' do
     student = create :student
     create :user_level, user: student, level: @sublevel1, script: @script_level.script, best_result: 100
 
