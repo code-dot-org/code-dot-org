@@ -172,15 +172,15 @@ class Lesson < ApplicationRecord
   end
 
   def unplugged_lesson?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.unplugged?
+    script_level = script.script_levels.find_by(stage_id: id)
+    return false unless script_level.present?
+    script_level.oldest_active_level.unplugged?
   end
 
   def spelling_bee?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.spelling_bee?
+    script_level = script.script_levels.find_by(stage_id: id)
+    return false unless script_level.present?
+    script_level.oldest_active_level.spelling_bee?
   end
 
   # We number lessons that either have lesson plans or are not lockable
