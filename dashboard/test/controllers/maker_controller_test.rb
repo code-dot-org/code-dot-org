@@ -501,7 +501,7 @@ class MakerControllerTest < ActionController::TestCase
 
   def ensure_script(script_name, version_year, is_stable=true)
     Script.find_by_name(script_name) ||
-      create(:script, name: script_name, family_name: 'csd6', version_year: version_year, is_stable: is_stable, published_state: is_stable ? SharedConstants::PUBLISHED_STATE.stable : SharedConstants::PUBLISHED_STATE.preview).tap do |script|
+      create(:script, name: script_name, family_name: 'csd6', version_year: version_year, published_state: is_stable ? SharedConstants::PUBLISHED_STATE.stable : SharedConstants::PUBLISHED_STATE.preview).tap do |script|
         lesson_group = create :lesson_group, script: script
         lesson = create :lesson, script: script, lesson_group: lesson_group
         create :script_level, script: script, lesson: lesson
