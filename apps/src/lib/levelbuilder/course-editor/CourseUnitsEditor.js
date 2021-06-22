@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-export default class CourseScriptsEditor extends Component {
+export default class CourseUnitsEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
-    scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    unitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
+    unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     updateScriptsInCourse: PropTypes.func.isRequired
   };
 
@@ -22,10 +22,10 @@ export default class CourseScriptsEditor extends Component {
   };
 
   render() {
-    const {scriptNames} = this.props;
+    const {unitNames} = this.props;
     return (
       <div>
-        {this.props.scriptsInCourse.concat('').map((selectedScript, index) => (
+        {this.props.unitsInCourse.concat('').map((selectedScript, index) => (
           <select
             style={{
               ...this.props.inputStyle,
@@ -36,9 +36,9 @@ export default class CourseScriptsEditor extends Component {
             onChange={this.handleChange}
           >
             <option key="-1" value="">
-              Select a script to add to course
+              Select a unit to add to course
             </option>
-            {scriptNames.map((name, index) => (
+            {unitNames.map((name, index) => (
               <option key={index} value={name}>
                 {name}
               </option>

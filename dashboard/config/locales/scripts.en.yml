@@ -22557,8 +22557,8 @@ en:
                 * Practice scoring an FRQ against a scoring rubric
             lesson-15:
               name: Assessment Day
-              description_student: In this unit, you worked with one-dimensional arrays to store primitive values and object references in The Theater. You represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects.
-              description_teacher: In this unit, students worked with one-dimensional arrays to store primitive values and object references in The Theater. Students represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects.
+              description_student: In this unit, you worked with one-dimensional arrays to store primitive values and object references in The Theater. You represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students worked with one-dimensional arrays to store primitive values and object references in The Theater. Students represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22604,14 +22604,20 @@ en:
               name: Using Logical Operators
             lesson-11:
               name: Applying De Morgan's Laws to Boolean Expressions
+              description_student: You learn about truth tables, a tool we can use to evaluate compound Boolean expressions. You learn about De Morgan's Laws and prove them with a partner using truth tables.
+              description_teacher: Students learn how to construct truth tables to represent compound Boolean expressions. Students work together to use truth tables to prove De Morgan’s Laws and explore open-source code.
             lesson-12:
               name: Neighborhood Block Party Project - Day 2
             lesson-13:
               name: Neighborhood Block Party Project - Day 3
             lesson-14:
               name: FRQ Day
+              description_student: 'Today you complete a Free Response Question (FRQ) almost completely on your own. To derive a solution for the FRQ on your own, you will follow a three step process: annotating, writing pseudocode, and writing code in Java. Finally, you score your attempt against a scoring rubric and reflect on your experience.'
+              description_teacher: "Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ work, they begin to work more independently, working through annotating, pseudocoding, and completing an FRQ on their own. After annotating and writing their solutions, students still discuss their results with their peers and receive support.  \n\nThe goals of this lesson are:\n* Practice annotating an FRQ\n* Practice writing pseudocode for an FRQ\n* Practice writing a solution for an FRQ\n* Practice scoring an FRQ against a scoring rubric"
             lesson-15:
               name: Assessment Day
+              description_student: In this unit, you expanded the expressions used in conditionals and iteration to use relational and logical operators. You used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. You developed an understanding of De Morgan's Laws and writing truth tables. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students expanded the expressions used in conditionals and iteration to use relational and logical operators. Students used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. Students developed an understanding of De Morgan's Laws and writing truth tables. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22737,7 +22743,7 @@ en:
               description_teacher: ''
             Next steps:
               key: Next steps
-              name: Develop a Plan
+              name: Taking next steps
               description_student: ''
               description_teacher: ''
             Module 1:
@@ -22753,7 +22759,7 @@ en:
             CS Teaching and Learning Practices:
               name: CS Teaching and Learning Practices
             CS Teaching and Student Practices:
-              name: CS Teaching Practices
+              name: CS Teaching Practices and Strategies
             Implementation Approaches and Barriers:
               name: Addressing Barriers
             Part II Overview:
@@ -23300,11 +23306,13 @@ en:
         self-paced-pl-csd1-2021:
           lessons:
             lesson-1:
-              name: Welcome
+              name: Welcome to Code.org
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Creating a Class Section
+              name: Navigating this Professional Learning Course
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: Accessing and Using Lesson Plans
             lesson-4:
@@ -23327,7 +23335,7 @@ en:
             lessonGroup-5:
               display_name: Preparing to Teach CS Discoveries
           name: self-paced-pl-csd1-2021
-          title: 'Welcome '
+          title: 'Module 1: Welcome '
           description_audience: ''
           description_short: ''
           description: "This unit is a short introduction to both Code.org and this professional learning course. \n\n**You will learn:**\n* What Code.org is\n* How to engage in this professional learning course\n\n**Suggested Time:** 10 minutes"
@@ -23350,7 +23358,7 @@ en:
             lesson-2:
               name: Lesson Plan Structure
             lesson-8:
-              name: Accessing Additional Support
+              name: Support for Teachers
               description_student: 
               description_teacher: 
             lesson-9:
@@ -23365,7 +23373,7 @@ en:
             lessonGroup-4:
               display_name: Navigating Support
           name: self-paced-pl-csd2-2021
-          title: Navigating Code.org
+          title: 'Module 2: Navigating Code.org'
           description_audience: ''
           description_short: ''
           description: "This unit is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools \n* Locate and use course lesson plans and teacher resources \n* Access support while teaching the course \n\n**Suggested Time:** 1 hour\n\n\n\n\n"
@@ -23373,7 +23381,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-csd3-2021
-          title: Overview of CS Discoveries
+          title: 'Module 3: Overview of CS Discoveries'
           description_audience: ''
           description_short: ''
           description: "This unit will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this content will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum \n* Become familiar with the programming environments used within CS Discoveries \n* Consider how to best implement CS Discoveries based on your context \n\n**Suggested Time:** 30 minutes"
@@ -23381,11 +23389,11 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-csd4-2021
-          title: Guidance for Teaching CS Discoveries
+          title: 'Module 4: Guidance for Teaching CS Discoveries'
           description_audience: ''
           description_short: ''
           description: |-
-            Short unit description
+            Short module description
 
             **You will:**
             * Objective 1
@@ -23448,34 +23456,43 @@ en:
             lessonGroup-9:
               display_name: Preparing to Teach Unit 1
           name: self-paced-pl-csd5-2021
-          title: Preparing to Teach CS Discoveries
+          title: 'Module 5: Preparing to Teach CS Discoveries'
           description_audience: ''
           description_short: ''
-          description: "This unit is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 1 hour per unit \n"
+          description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 1 hour per unit \n"
         self-paced-pl-csd6-2021:
           lessons:
             lesson-1:
-              name: Intorduction to Unit 1
+              name: Preparing to Teach Problem Solving and Computing
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Preparing to Teach Week 1
+              name: 'Preparing to Teach Unit 1: Problem Solving and Computing'
               description_student: 
               description_teacher: 
             lesson-3:
-              name: Unit 1 Key Concepts
+              name: 'Unit 2: Web Development'
+              description_student: 
+              description_teacher: 
             lesson-4:
-              name: Sample Student Work
+              name: Preparing to Teach Unit 3
+              description_student: 
+              description_teacher: |-
+                ##Ineractive Animations and Games
+
+                In Unit 3, students build on their coding experience as they program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, students develop a personalized, interactive program.
             lesson-5:
-              name: Unit 1 Projects
+              name: 'Preparing to Teach The Design Process '
+              description_student: 
+              description_teacher: 
             lesson-6:
-              name: Introduction to Unit 2
+              name: Data and Society
               description_student: 
               description_teacher: 
             lesson-7:
-              name: 'Preparing to Teach Week 1 '
+              name: Unit 6
             lesson-8:
-              name: Unit 2 Key Concepts
+              name: Preparing to Teach Unit 7
             lesson-9:
               name: Sample Student Work
             lesson-10:
@@ -23532,7 +23549,7 @@ en:
               name: Unit 1 Projects
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Preparing to Teach Unit 1: Problem Solving and Computing'
+              display_name: Preparing to Teach CS Discoveries
             lessonGroup-3:
               display_name: 'Preparing to Teach Unit 2: Web Development'
             lessonGroup-4:
@@ -23546,10 +23563,10 @@ en:
             lessonGroup-8:
               display_name: 'Preparing to Teach Unit 7: AI and Machine Learning'
           name: self-paced-pl-csd6-2021
-          title: Next Steps
+          title: 'Module 6: Next Steps'
           description_audience: ''
           description_short: ''
-          description: "Short unit description \n\n**You will:**\n* Objective 1\n* Objective 2\n\n**Suggested Time:** 10 minutes"
+          description: "Short module description \n\n**You will:**\n* Objective 1\n* Objective 2\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csd7-2021:
           lessons: {}
           lesson_groups: {}

@@ -29,7 +29,7 @@ Scenario: Step Only - Failure
     And block "6" has class "blocklySelected"
 
   When I press "resetButton"
-  Then element "#runButton" is hidden
+  Then element "#runButton" is not displayed
     And element "#resetButton" is hidden
     And element "#stepButton" is visible
     And element "#stepButton" is not disabled
@@ -72,7 +72,7 @@ Scenario: Step Only - Reset while stepping
     And element "#stepButton" is not disabled
 
   When I press "resetButton"
-  Then element "#runButton" is hidden
+  Then element "#runButton" is not displayed
     And element "#resetButton" is hidden
     And element "#stepButton" is visible
     And element "#stepButton" is not disabled
