@@ -11,8 +11,7 @@ Hour of Code:
     zone: *2
     time: *3
   wrapup_video_id: 13
-  hidden: true
-  user_id: 
+  user_id:
   login_required: false
   properties: "{}"
   new_name: 
@@ -29,8 +28,7 @@ events:
     zone: *2
     time: *5
   wrapup_video_id: 
-  hidden: true
-  user_id: 
+  user_id:
   login_required: false
   properties: "{}"
   new_name: 
@@ -47,8 +45,7 @@ jigsaw:
     zone: *2
     time: *7
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: "{}"
   new_name: 
@@ -65,8 +62,7 @@ hourofcode:
     zone: *2
     time: *9
   wrapup_video_id: 13
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: "{}"
   new_name: 
@@ -83,8 +79,7 @@ starwars:
     zone: *2
     time: *11
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: "{}"
   new_name: 
@@ -101,8 +96,7 @@ frozen:
     zone: *2
     time: *13
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: "{}"
   new_name: 
@@ -119,8 +113,7 @@ playlab:
     zone: *2
     time: *15
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: "{}"
   new_name: 
@@ -137,8 +130,7 @@ artist:
     zone: *2
     time: *17
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{"tts":true}'
   new_name: 
@@ -155,8 +147,7 @@ algebra:
     zone: *2
     time: *19
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: true
   properties: '{"hideable_stages":true,"hideable_lessons":true}'
   new_name: 
@@ -173,8 +164,7 @@ flappy:
     zone: *2
     time: *21
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: "{}"
   new_name: 
@@ -191,8 +181,7 @@ flappy:
     zone: *2
     time: *23
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{"hideable_stages":true,"curriculum_umbrella":"CSF","supported_locales":["de-DE"],"hideable_lessons":true}'
   new_name: 
@@ -209,8 +198,7 @@ course1:
     zone: *2
     time: *25
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://code.org/curriculum/course1/{LESSON}/Teacher","curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: 
@@ -227,8 +215,7 @@ course2:
     zone: *2
     time: *27
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://code.org/curriculum/course2/{LESSON}/Teacher","curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: 
@@ -245,8 +232,7 @@ course3:
     zone: *2
     time: *29
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://code.org/curriculum/course3/{LESSON}/Teacher","curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: 
@@ -263,8 +249,7 @@ course4:
     zone: *2
     time: *31
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   properties: '{"hideable_stages":true,"curriculum_path":"https://code.org/curriculum/course4/{LESSON}/Teacher","curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true}'
   new_name: 
@@ -281,8 +266,7 @@ cspunit1:
     zone: *2
     time: *33
   wrapup_video_id: 
-  hidden: true
-  user_id: 
+  user_id:
   login_required: true
   new_name: 
   family_name: 
@@ -298,8 +282,7 @@ cspunit2:
     zone: *2
     time: *35
   wrapup_video_id: 
-  hidden: true
-  user_id: 
+  user_id:
   login_required: true
   new_name: 
   family_name: 
@@ -315,8 +298,7 @@ cspunit3:
     zone: *2
     time: *37
   wrapup_video_id: 
-  hidden: true
-  user_id: 
+  user_id:
   login_required: true
   new_name: 
   family_name: 
@@ -332,8 +314,7 @@ cspunit4:
     zone: *2
     time: *39
   wrapup_video_id: 
-  hidden: true
-  user_id: 
+  user_id:
   login_required: true
   new_name: 
   family_name: 
@@ -349,8 +330,7 @@ cspunit5:
     zone: *2
     time: *41
   wrapup_video_id: 
-  hidden: true
-  user_id: 
+  user_id:
   login_required: true
   new_name: 
   family_name: 
@@ -366,8 +346,7 @@ cspunit6:
     zone: *2
     time: *43
   wrapup_video_id: 
-  hidden: true
-  user_id: 
+  user_id:
   login_required: true
   new_name: 
   family_name: 
@@ -383,8 +362,7 @@ ECSPD:
     zone: *2
     time: *45
   wrapup_video_id: 
-  hidden: true
-  user_id: 
+  user_id:
   login_required: true
   properties: '{"professional_learning_course":"ECS Support Legacy"}'
   new_name: 
@@ -401,8 +379,7 @@ allthethings:
     zone: *2
     time: *47
   wrapup_video_id: 
-  hidden: true
-  user_id: 
+  user_id:
   login_required: false
   properties: '{"hideable_stages":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: 
@@ -419,8 +396,7 @@ coursea-2017:
     zone: *2
     time: *49
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   published_state: stable
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursea/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -438,8 +414,7 @@ courseb-2017:
     zone: *2
     time: *51
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   published_state: stable
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/courseb/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -457,8 +432,7 @@ coursec-2017:
     zone: *2
     time: *53
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   published_state: stable
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursec/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -476,8 +450,7 @@ coursed-2017:
     zone: *2
     time: *55
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   published_state: stable
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursed/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -495,8 +468,7 @@ coursee-2017:
     zone: *2
     time: *57
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   published_state: stable
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursee/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -514,8 +486,7 @@ coursef-2017:
     zone: *2
     time: *59
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   published_state: stable
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursef/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -533,8 +504,7 @@ express-2017:
     zone: *2
     time: *61
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   published_state: stable
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/express/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -552,8 +522,7 @@ pre-express-2017:
     zone: *2
     time: *63
   wrapup_video_id: 
-  hidden: false
-  user_id: 
+  user_id:
   login_required: false
   published_state: stable
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/pre-express/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","ja-JP","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
