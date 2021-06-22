@@ -62,7 +62,7 @@ class UnitOverview extends React.Component {
 
     // redux provided
     perLevelResults: PropTypes.object.isRequired,
-    scriptCompleted: PropTypes.bool.isRequired,
+    unitCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     unitTitle: PropTypes.string.isRequired,
@@ -100,7 +100,7 @@ class UnitOverview extends React.Component {
       migratedTeacherResources,
       studentResources,
       perLevelResults,
-      scriptCompleted,
+      unitCompleted,
       scriptId,
       scriptName,
       unitTitle,
@@ -133,7 +133,7 @@ class UnitOverview extends React.Component {
       redirectScriptUrl && !dismissedRedirectDialog(courseName || scriptName);
 
     let unitProgress = NOT_STARTED;
-    if (scriptCompleted) {
+    if (unitCompleted) {
       unitProgress = COMPLETED;
     } else if (Object.keys(perLevelResults).length > 0) {
       unitProgress = IN_PROGRESS;
@@ -231,7 +231,7 @@ const styles = {
 export const UnconnectedUnitOverview = Radium(UnitOverview);
 export default connect((state, ownProps) => ({
   perLevelResults: state.progress.levelResults,
-  scriptCompleted: !!state.progress.scriptCompleted,
+  unitCompleted: !!state.progress.unitCompleted,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   unitTitle: state.progress.unitTitle,
