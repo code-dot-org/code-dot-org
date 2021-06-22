@@ -21,6 +21,7 @@ import {
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import * as utils from '@cdo/apps/utils';
+import * as pageConstantsRedux from '@cdo/apps/redux/pageConstants';
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
@@ -57,7 +58,7 @@ describe('StudioApp', () => {
       document.body.removeChild(containerDiv);
     });
 
-    describe('the init() method', () => {
+    describe('init', () => {
       let files;
       beforeEach(() => {
         files = [];
@@ -112,7 +113,7 @@ describe('StudioApp', () => {
       });
     });
 
-    describe('StudioApp.editDuringRunAlertHandler()', () => {
+    describe('editDuringRunAlertHandler', () => {
       const mockCode = '<xml></xml>';
       let studio;
 
@@ -194,7 +195,76 @@ describe('StudioApp', () => {
       });
     });
 
-    describe('The StudioApp.resetButtonClick function', () => {
+    describe('toggleRunReset', () => {
+      let studio;
+
+      beforeEach(() => {
+        studio = studioApp();
+        studio.getCode = () => '<xml></xml>';
+        studio.config = {
+          readonlyWorkspace: false
+        };
+
+        sinon.stub(pageConstantsRedux, 'hideRunButton').returns(false);
+        sinon.stub(pageConstantsRedux, 'hideResetButton').returns(false);
+      });
+
+      afterEach(() => {
+        sinon.restore();
+      });
+
+      describe('run', () => {
+        it('displays the run button', () => {
+          studio.toggleRunReset('run');
+          expect(runButton().style.display).to.equal('inline-block');
+        });
+
+        it('does not display the run button if hideRunButton is true in redux', () => {
+          pageConstantsRedux.hideRunButton.restore();
+          sinon.stub(pageConstantsRedux, 'hideRunButton').returns(true);
+          studio.toggleRunReset('run');
+          expect(runButton().style.display).to.equal('none');
+        });
+
+        it('enables the run button', () => {
+          studio.toggleRunReset('run');
+          expect(runButton().disabled).to.be.false;
+        });
+
+        it('hides and disables the reset button', () => {
+          studio.toggleRunReset('run');
+          expect(resetButton().style.display).to.equal('none');
+          expect(resetButton().disabled).to.be.true;
+        });
+      });
+
+      describe('reset', () => {
+        it('displays the reset button', () => {
+          studio.toggleRunReset('reset');
+          expect(resetButton().style.display).to.equal('inline-block');
+        });
+
+        it('does not display the reset button if hideResetButton is true in redux', () => {
+          pageConstantsRedux.hideResetButton.restore();
+          sinon.stub(pageConstantsRedux, 'hideResetButton').returns(true);
+          studio.toggleRunReset('reset');
+          expect(resetButton().style.display).to.equal('none');
+        });
+
+        it('enables the reset button', () => {
+          studio.toggleRunReset('reset');
+          expect(resetButton().disabled).to.be.false;
+        });
+
+        it('hides and disables the run button', () => {
+          studio.toggleRunReset('reset');
+          expect(runButton().style.display).to.equal('none');
+          expect(runButton().disabled).to.be.true;
+        });
+      });
+    });
+
+    describe('resetButtonClick', () => {
       let studio, reportSpy;
       beforeEach(() => {
         studio = studioApp();
@@ -227,7 +297,7 @@ describe('StudioApp', () => {
       });
     });
 
-    describe('The StudioApp.report function', () => {
+    describe('report', () => {
       let clock, studio, onAttemptSpy;
       beforeEach(() => {
         clock = sinon.useFakeTimers();
@@ -278,7 +348,7 @@ describe('StudioApp', () => {
     });
   });
 
-  describe('The StudioApp.makeFooterMenuItems function', () => {
+  describe('makeFooterMenuItems', () => {
     beforeEach(() => {
       sinon.stub(project, 'getUrl');
       sinon.stub(project, 'getStandaloneApp');
@@ -531,7 +601,7 @@ describe('StudioApp', () => {
     });
   });
 
-  describe('The StudioApp.validateCodeChanged function', () => {
+  describe('validateCodeChanged', () => {
     let studio, codeDifferentStub;
     beforeEach(() => {
       codeDifferentStub = sinon.stub(project, 'isCurrentCodeDifferent');
@@ -562,3 +632,11 @@ describe('StudioApp', () => {
     });
   });
 });
+
+function runButton() {
+  return document.getElementById('runButton');
+}
+
+function resetButton() {
+  return document.getElementById('resetButton');
+}
