@@ -1,6 +1,6 @@
 import i18n from './locale';
 import trackEvent from '@cdo/apps/util/trackEvent';
-import * as reducer from '@cdo/apps/craft/redux';
+import * as craftRedux from '@cdo/apps/craft/redux';
 
 export const ARROW_KEY_NAMES = [
   'ArrowLeft',
@@ -95,8 +95,8 @@ export function handlePlayerSelection(
   onComplete,
   craftEventType = 'Minecraft'
 ) {
-  reducer.openPlayerSelectionDialog(selectedPlayer => {
-    reducer.closePlayerSelectionDialog();
+  craftRedux.openPlayerSelectionDialog(selectedPlayer => {
+    craftRedux.closePlayerSelectionDialog();
 
     if (selectedPlayer) {
       trackEvent(craftEventType, 'ClickedCharacter', selectedPlayer);
