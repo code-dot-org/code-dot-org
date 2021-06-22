@@ -7,13 +7,6 @@ import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const measureElement = element => {
-  const DOMNode = ReactDOM.findDOMNode(element);
-  return {
-    height: DOMNode.offsetHeight
-  };
-};
-
 const initialCommentHeight = 40;
 
 const RubricPerformanceCopy = {
@@ -48,8 +41,10 @@ export default class LevelFeedbackEntry extends Component {
   };
 
   componentDidMount() {
-    this.comment &&
-      this.setState({commentHeight: measureElement(this.comment).height});
+    if (this.comment) {
+      const commentHeight = ReactDOM.findDOMNode(this.comment).height;
+      this.setState({commentHeight});
+    }
   }
 
   render() {
@@ -109,31 +104,33 @@ export default class LevelFeedbackEntry extends Component {
         </div>
         <TimeAgo style={styles.time} dateString={created_at} />
         {performance && (
-          <div style={styles.rubricBox}>
+          <div style={styles.feedbackText}>
             <span>{i18n.feedbackRubricEvaluation()}</span>&nbsp;
             <span style={styles.rubricPerformance}>
               {RubricPerformanceCopy[performance]}
             </span>
           </div>
         )}
-        {isCommentExpandable && (
-          <span
-            style={styles.iconBox}
-            onClick={expanded ? this.collapse() : this.expand()}
-          >
-            <FontAwesome
-              style={styles.icon}
-              icon={expanded ? 'caret-down' : 'caret-right'}
-            />
-          </span>
-        )}
         {commentExists && (
-          <span style={styles.commentBox}>
-            <div ref={r => (this.comment = r)} style={styles.comment}>
-              &quot;{comment}&quot;
-            </div>
-            {showCommentFade && <div style={styles.fadeout} />}
-          </span>
+          <div style={styles.commentContainer}>
+            {isCommentExpandable && (
+              <span
+                style={styles.iconBox}
+                onClick={expanded ? this.collapse : this.expand}
+              >
+                <FontAwesome
+                  style={styles.icon}
+                  icon={expanded ? 'caret-down' : 'caret-right'}
+                />
+              </span>
+            )}
+            <span style={styles.commentText}>
+              <div ref={r => (this.comment = r)} style={styles.feedbackText}>
+                &quot;{comment}&quot;
+              </div>
+              {showCommentFade && <div style={styles.fadeout} />}
+            </span>
+          </div>
         )}
       </div>
     );
@@ -142,20 +139,15 @@ export default class LevelFeedbackEntry extends Component {
 
 const styles = {
   main: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    minHeight: 72,
+    border: `1px solid ${color.border_gray}`,
     width: '100%',
     marginBottom: 20,
-    display: 'flex',
-    flexFlow: 'wrap',
     boxSizing: 'border-box',
     padding: '8px 20px'
   },
   lessonDetails: {
-    width: '75%',
-    marginBottom: '4px'
+    display: 'inline-block',
+    marginBottom: 4
   },
   lessonLevel: {
     fontSize: 18,
@@ -171,28 +163,16 @@ const styles = {
     marginBottom: 8
   },
   time: {
-    marginTop: 8,
     fontSize: 14,
     lineHeight: '17px',
     color: color.light_gray,
-    float: 'right',
-    textAlign: 'right',
-    marginRight: 20,
-    width: 200
+    float: 'right'
   },
-  comment: {
+  feedbackText: {
     color: color.dark_charcoal,
     marginBottom: 8,
     fontSize: 14,
-    lineHeight: '21px',
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  rubricBox: {
-    color: color.dark_charcoal,
-    marginBottom: 8,
-    fontSize: 14,
-    lineHeight: '21px',
-    width: '100%'
+    lineHeight: '21px'
   },
   rubricPerformance: {
     fontFamily: '"Gotham 5r", sans-serif'
@@ -201,15 +181,16 @@ const styles = {
     fontSize: 18
   },
   iconBox: {
-    float: 'left',
     paddingRight: 20,
     paddingLeft: 5,
     cursor: 'pointer'
   },
-  commentBox: {
-    float: 'left',
-    width: '96%',
-    position: 'relative'
+  commentContainer: {
+    display: 'flex'
+  },
+  commentText: {
+    position: 'relative', // for positioning fade over comment text
+    fontFamily: '"Gotham 5r", sans-serif'
   },
   fadeout: {
     bottom: 0,
