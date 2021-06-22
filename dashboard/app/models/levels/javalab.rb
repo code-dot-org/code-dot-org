@@ -84,7 +84,7 @@ class Javalab < Level
     # raise an error if the example is incorrectly formatted
     all_examples.each do |example|
       unless example.start_with?("https://studio.code.org/s/")
-        raise ArgumentError.new("Exemplar #{example} should start with https://studio.code.org/s/")
+        raise ArgumentError.new("Exemplar #{example} on level '#{name}' should start with https://studio.code.org/s/")
       end
     end
     self.examples = all_examples
