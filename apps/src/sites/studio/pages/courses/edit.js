@@ -61,7 +61,7 @@ function showCourseEditor() {
         initialScriptsInCourse={courseEditorData.course_summary.scripts.map(
           script => script.name
         )}
-        scriptNames={courseEditorData.script_names.sort()}
+        unitNames={courseEditorData.script_names.sort()}
         initialTeacherResources={teacherResources}
         initialHasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources

@@ -33,7 +33,7 @@ class CourseEditor extends Component {
     initialDescriptionStudent: PropTypes.string,
     initialDescriptionTeacher: PropTypes.string,
     initialScriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
-    scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialTeacherResources: PropTypes.arrayOf(resourceShape),
     initialHasVerifiedResources: PropTypes.bool.isRequired,
     initialHasNumberedUnits: PropTypes.bool.isRequired,
@@ -157,7 +157,7 @@ class CourseEditor extends Component {
   };
 
   render() {
-    const {name, scriptNames, courseFamilies, versionYearOptions} = this.props;
+    const {name, unitNames, courseFamilies, versionYearOptions} = this.props;
     const {
       announcements,
       teacherResources,
@@ -339,8 +339,8 @@ class CourseEditor extends Component {
         <CollapsibleEditorSection title="Units">
           <label>
             <div>
-              The dropdown(s) below represent the ordered set of scripts in this
-              course. To remove a script, just set the dropdown to the default
+              The dropdown(s) below represent the ordered set of units in this
+              course. To remove a unit, just set the dropdown to the default
               (first) value.
             </div>
             <CourseUnitsEditor
@@ -349,7 +349,7 @@ class CourseEditor extends Component {
               updateScriptsInCourse={unitsInCourse =>
                 this.setState({unitsInCourse})
               }
-              unitNames={scriptNames}
+              unitNames={unitNames}
             />
           </label>
         </CollapsibleEditorSection>
