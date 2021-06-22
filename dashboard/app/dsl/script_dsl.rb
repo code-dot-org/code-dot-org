@@ -22,7 +22,6 @@ class ScriptDSL < BaseDSL
     @new_name = nil
     @family_name = nil
     @version_year = nil
-    @is_stable = nil
     @published_state = nil
     @supported_locales = []
     @pilot_experiment = nil
@@ -49,7 +48,6 @@ class ScriptDSL < BaseDSL
   boolean :lesson_extras_available
   boolean :project_widget_visible
   boolean :has_verified_resources
-  boolean :is_stable
   boolean :project_sharing
   boolean :tts
   boolean :deprecated
@@ -163,7 +161,6 @@ class ScriptDSL < BaseDSL
       new_name: @new_name,
       family_name: @family_name,
       version_year: @version_year,
-      is_stable: @is_stable,
       published_state: @published_state,
       supported_locales: @supported_locales,
       pilot_experiment: @pilot_experiment,
@@ -357,7 +354,6 @@ class ScriptDSL < BaseDSL
     s << "new_name '#{script.new_name}'" if script.new_name
     s << "family_name '#{script.family_name}'" if script.family_name
     s << "version_year '#{script.version_year}'" if script.version_year
-    s << 'is_stable true' if script.is_stable
     s << "published_state '#{script.published_state}'" if script.published_state
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
     s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment

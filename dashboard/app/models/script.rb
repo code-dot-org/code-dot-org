@@ -206,7 +206,6 @@ class Script < ApplicationRecord
     curriculum_path
     announcements
     version_year
-    is_stable
     supported_locales
     pilot_experiment
     editor_experiment
@@ -556,7 +555,7 @@ class Script < ApplicationRecord
     locale_str = locale&.to_s
     latest_version = nil
     family_units.each do |unit|
-      next unless unit.is_stable
+      next unless unit.stable?
       latest_version ||= unit
 
       # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
@@ -660,9 +659,9 @@ class Script < ApplicationRecord
     supported_stable_units = unit_versions.select do |unit|
       is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
       if version_year
-        unit.is_stable && is_supported && unit.version_year == version_year
+        unit.stable? && is_supported && unit.version_year == version_year
       else
-        unit.is_stable && is_supported
+        unit.stable? && is_supported
       end
     end
 
@@ -1139,7 +1138,7 @@ class Script < ApplicationRecord
 
     ActiveRecord::Base.transaction do
       copied_unit = dup
-      copied_unit.is_stable = false
+      copied_unit.published_state = SharedConstants::PUBLISHED_STATE.beta
       copied_unit.tts = false
       copied_unit.announcements = nil
       copied_unit.is_course = destination_unit_group.nil?
@@ -1196,7 +1195,6 @@ class Script < ApplicationRecord
 
     unit_filename = "#{Script.unit_directory}/#{name}.script"
     new_properties = {
-      is_stable: false,
       tts: false,
       announcements: nil,
       is_course: false
@@ -1412,21 +1410,6 @@ class Script < ApplicationRecord
   # hard launched.
   def launched?
     [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
-  end
-
-  # No longer used except in migration. Should be removed July 2021 after people have had time to migrate
-  def get_published_state
-    if pilot?
-      SharedConstants::PUBLISHED_STATE.pilot
-    elsif !hidden
-      if is_stable
-        SharedConstants::PUBLISHED_STATE.stable
-      else
-        SharedConstants::PUBLISHED_STATE.preview
-      end
-    else
-      SharedConstants::PUBLISHED_STATE.beta
-    end
   end
 
   def stable?
@@ -1659,7 +1642,7 @@ class Script < ApplicationRecord
           version_year: s.version_year,
           version_title: s.version_year,
           can_view_version: s.can_view_version?(user),
-          is_stable: !!s.is_stable,
+          is_stable: s.stable?,
           locales: s.supported_locale_names
         }
       end
@@ -1737,7 +1720,6 @@ class Script < ApplicationRecord
     ]
     boolean_keys = [
       :has_verified_resources,
-      :is_stable,
       :project_sharing,
       :tts,
       :deprecated,
@@ -1823,7 +1805,7 @@ class Script < ApplicationRecord
       info[:student_description] = Services::MarkdownPreprocessor.process(localized_student_description)
     end
 
-    info[:is_stable] = true if is_stable
+    info[:is_stable] = true if stable?
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
