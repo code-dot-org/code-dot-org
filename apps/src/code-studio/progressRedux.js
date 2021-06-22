@@ -249,7 +249,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_SCRIPT_COMPLETED) {
     return {
       ...state,
-      scriptCompleted: true
+      unitCompleted: true
     };
   }
 
