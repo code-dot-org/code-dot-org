@@ -742,7 +742,7 @@ export function getExtremaByColumn(state) {
   return extremaByColumn;
 }
 
-/* Function for retriving aggregate details about a currently selected column. */
+/* Functions for retriving aggregate details about a currently selected column. */
 
 export function getCurrentColumnData(state) {
   if (!state.currentColumn) {
@@ -907,6 +907,14 @@ export function getScatterPlotData(state) {
 
 /* Functions for processing data to display for results. */
 
+export function getTableData(state, useResultsData) {
+  if (useResultsData) {
+    return getResultsDataInDataTableForm(state);
+  } else {
+    return state.data;
+  }
+}
+
 export function getConvertedAccuracyCheckExamples(state) {
   const convertedAccuracyCheckExamples = [];
   var example;
@@ -957,6 +965,37 @@ export function getCorrectResults(state) {
 
 export function getIncorrectResults(state) {
   return getResultsByGrade(state, ResultsGrades.INCORRECT);
+}
+
+export function getAllResults(state) {
+  return getResultsByGrade(state, ResultsGrades.ALL);
+}
+
+// Return results data so that it looks like regular data provided to the
+// DataTable.
+export function getResultsDataInDataTableForm(state) {
+  const resultsByGrades = getAllResults(state);
+
+  if (!resultsByGrades || resultsByGrades.examples.length === 0) {
+    return null;
+  }
+
+  // None of the existing uses of this function should need more than 10
+  // items.  Increase the value here if they do.
+  const numItems = Math.min(10, resultsByGrades.examples.length);
+
+  const results = [];
+  for (var i = 0; i < numItems; i++) {
+    results[i] = {};
+
+    state.selectedFeatures.map((feature, index) => {
+      results[i][feature] = resultsByGrades.examples[i][index];
+    })
+
+    results[i][state.labelColumn] = resultsByGrades.predictedLabels[i];
+  }
+
+  return results;
 }
 
 /* Functions for processing data about a trained model to save. */

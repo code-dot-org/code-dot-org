@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { store } from "../index.js";
 import train from "../train";
-import { readyToTrain } from "../redux";
+import { getTableData, readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
@@ -12,7 +12,7 @@ import background from "@public/images/results-background-light.png";
 import DataTable from "./DataTable";
 
 const framesPerCycle = 80;
-const numItems = 7;
+const maxNumItems = 7;
 
 class TrainModel extends Component {
   static propTypes = {
@@ -51,7 +51,7 @@ class TrainModel extends Component {
       this.setState({ headOpen: true });
     }
 
-    if (this.getAnimationStep() >= numItems) {
+    if (this.getAnimationStep() >= this.getNumItems()) {
       this.setState({ headOpen: false, finished: true });
     }
 
@@ -73,6 +73,14 @@ class TrainModel extends Component {
     return amount;
   };
 
+  getNumItems = () => {
+    return Math.min(maxNumItems, this.props.data.length);
+  };
+
+  getShowItemsFadingOut = () => {
+    return this.props.data.length > maxNumItems;
+  };
+
   getAnimationStep = () => {
     return Math.floor(this.state.frame / framesPerCycle);
   };
@@ -84,9 +92,10 @@ class TrainModel extends Component {
     const rotateZ = animationProgress * 60;
     const transform = `translateX(-50%) translateY(-50%) rotateZ(${rotateZ}deg)`;
     const opacity = getFadeOpacity(animationProgress);
-    const showAnimation = this.getAnimationStep() < numItems;
-
-    const maxFrames = framesPerCycle * (numItems - 1.5);
+    const showAnimation = this.getAnimationStep() < this.getNumItems();
+    const startFadingAtItem =
+      this.getNumItems() - (this.getShowItemsFadingOut() ? 1.5 : 0);
+    const maxFrames = framesPerCycle * startFadingAtItem;
     const tableOpacity =
       this.state.frame < framesPerCycle
         ? this.state.frame / framesPerCycle
@@ -112,7 +121,7 @@ class TrainModel extends Component {
           backgroundImage: "url(" + background + ")"
         }}
       >
-        <div style={styles.statementWithBackground}>Training</div>
+        <div style={styles.statementWithBackgroundAbsolute}>Training</div>
 
         <div
           style={{
@@ -161,6 +170,7 @@ class TrainModel extends Component {
 }
 
 export default connect(state => ({
+  data: getTableData(state, false),
   readyToTrain: readyToTrain(state),
   labelColumn: state.labelColumn,
   selectedFeatures: state.selectedFeatures,

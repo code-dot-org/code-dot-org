@@ -75,13 +75,13 @@ export function getResultsByGrade(state, grade) {
   const results = {};
   const accuracyGrades = getAccuracyGrades(state);
   const examples = getConvertedAccuracyCheckExamples(state).filter((example, index) => {
-    return grade === accuracyGrades[index];
+    return grade === ResultsGrades.ALL || grade === accuracyGrades[index];
   });
   const labels = getConvertedLabels(state, state.accuracyCheckLabels).filter((example, index) => {
-    return grade === accuracyGrades[index];
+    return grade === ResultsGrades.ALL || grade === accuracyGrades[index];
   });
   const predictedLabels = getConvertedLabels(state, state.accuracyCheckPredictedLabels).filter((example, index) => {
-    return grade === accuracyGrades[index];
+    return grade === ResultsGrades.ALL || grade === accuracyGrades[index];
   });
   results.examples = examples;
   results.labels = labels;
