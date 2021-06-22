@@ -2,8 +2,8 @@
   "script": {
     "name": "test-migrated-overrides",
     "wrapup_video_id": null,
+    "hidden": true,
     "login_required": false,
-    "published_state": "beta",
     "properties": {
       "peer_reviews_to_complete": 0,
       "pilot_experiment": "my-pilot-experiment",

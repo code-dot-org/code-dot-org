@@ -264,6 +264,9 @@ class ScriptsController < ApplicationController
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
 
+    # Temporary transition code used to update hidden since it needs a value until we remove it
+    h[:hidden] = true
+
     h
   end
 

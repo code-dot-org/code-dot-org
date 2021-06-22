@@ -7,6 +7,7 @@ class ScriptDSL < BaseDSL
     @skin = nil
     @current_scriptlevel = nil
     @video_key_for_next_level = nil
+    @hidden = true
     @login_required = false
     @hideable_lessons = false
     @student_detail_progress_view = false
@@ -40,6 +41,7 @@ class ScriptDSL < BaseDSL
   boolean :only_instructor_review_required
   integer :peer_reviews_to_complete
 
+  boolean :hidden
   boolean :login_required
   boolean :hideable_lessons
   boolean :student_detail_progress_view
@@ -141,6 +143,7 @@ class ScriptDSL < BaseDSL
     lesson(nil)
     {
       id: @id,
+      hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
       hideable_lessons: @hideable_lessons,
@@ -336,6 +339,7 @@ class ScriptDSL < BaseDSL
     s << "only_instructor_review_required #{script.only_instructor_review_required}" if script.only_instructor_review_required
     s << "peer_reviews_to_complete #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete.try(:>, 0)
 
+    s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
     s << 'hideable_lessons true' if script.hideable_lessons
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
