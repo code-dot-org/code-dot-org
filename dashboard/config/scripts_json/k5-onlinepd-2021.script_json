@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-21 21:31:44 UTC",
+    "serialized_at": "2021-06-22 18:54:10 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
@@ -86,7 +86,7 @@
     },
     {
       "key": "CS Teaching and Student Practices",
-      "name": "CS Teaching Practices",
+      "name": "CS Teaching Practices and Strategies",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -296,7 +296,7 @@
     },
     {
       "key": "Next steps",
-      "name": "Develop a Plan",
+      "name": "Taking next steps",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
@@ -325,7 +325,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 Participation_copy_2021"
-        ]
+        ],
+        "progression": "Introduction"
       },
       "named_level": false,
       "bonus": false,
@@ -349,7 +350,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 Outline_copy_2021"
-        ]
+        ],
+        "progression": "Introduction"
       },
       "named_level": false,
       "bonus": false,
@@ -373,7 +375,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 Why teach CS_copy_2021"
-        ]
+        ],
+        "progression": "Introduction"
       },
       "named_level": false,
       "bonus": false,
@@ -397,7 +400,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 About_copy_2021"
-        ]
+        ],
+        "progression": "Introduction"
       },
       "named_level": false,
       "bonus": false,
@@ -421,7 +425,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 WhatIsCSF_2021"
-        ]
+        ],
+        "progression": "Introduction"
       },
       "named_level": false,
       "bonus": false,
@@ -445,7 +450,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 whats your plan_2021"
-        ]
+        ],
+        "progression": "Introduction"
       },
       "named_level": false,
       "bonus": false,
@@ -570,7 +576,7 @@
         "level_keys": [
           "OPD-K5 CSTeachingLearning1"
         ],
-        "progression": "CS Teaching and Student Practices"
+        "progression": "CS Teaching Practices and Strategies"
       },
       "named_level": false,
       "bonus": false,
@@ -595,7 +601,7 @@
         "level_keys": [
           "OPD-K5 CSTeachingLearning_Reflection"
         ],
-        "progression": "CS Teaching and Student Practices"
+        "progression": "CS Teaching Practices and Strategies"
       },
       "named_level": false,
       "bonus": false,
@@ -620,7 +626,7 @@
         "level_keys": [
           "OPD-K5 CSTeachingLearning2"
         ],
-        "progression": "CS Teaching and Student Practices"
+        "progression": "CS Teaching Practices and Strategies"
       },
       "named_level": false,
       "bonus": false,
@@ -645,7 +651,7 @@
         "level_keys": [
           "OPD-K5 CS_StudentPractices_Reflection"
         ],
-        "progression": "CS Teaching and Student Practices"
+        "progression": "CS Teaching Practices and Strategies"
       },
       "named_level": false,
       "bonus": false,
@@ -670,7 +676,7 @@
         "level_keys": [
           "OPD-K5 DebuggingPairProgramming"
         ],
-        "progression": "CS Teaching and Student Practices"
+        "progression": "CS Teaching Practices and Strategies"
       },
       "named_level": false,
       "bonus": false,
@@ -695,7 +701,7 @@
         "level_keys": [
           "OPD-K5 DebuggingPairProgramming_Reflection"
         ],
-        "progression": "CS Teaching and Student Practices"
+        "progression": "CS Teaching Practices and Strategies"
       },
       "named_level": false,
       "bonus": false,
@@ -720,7 +726,7 @@
         "level_keys": [
           "OPD-K5 journaling_2021"
         ],
-        "progression": "CS Teaching and Student Practices"
+        "progression": "CS Teaching Practices and Strategies"
       },
       "named_level": false,
       "bonus": false,
@@ -745,7 +751,7 @@
         "level_keys": [
           "OPD-K5-Journaling_Reflection"
         ],
-        "progression": "CS Teaching and Student Practices"
+        "progression": "CS Teaching Practices and Strategies"
       },
       "named_level": false,
       "bonus": false,
@@ -770,7 +776,7 @@
         "level_keys": [
           "OPD-K5 LessonPlanning1"
         ],
-        "progression": "Lesson Planning"
+        "progression": "Teaching a Lesson"
       },
       "named_level": false,
       "bonus": false,
@@ -795,7 +801,7 @@
         "level_keys": [
           "OPD-K5 LessonPlanning_Reflection"
         ],
-        "progression": "Lesson Planning"
+        "progression": "Teaching a Lesson"
       },
       "named_level": false,
       "bonus": false,
@@ -820,7 +826,7 @@
         "level_keys": [
           "OPD-K5 ImplementationBarriers1_Reflection"
         ],
-        "progression": "Implementation Approaches and Barriers"
+        "progression": "Addressing Barriers"
       },
       "named_level": false,
       "bonus": false,
@@ -845,7 +851,7 @@
         "level_keys": [
           "OPD-K5 ImplementationBarriers2_Reflection"
         ],
-        "progression": "Implementation Approaches and Barriers"
+        "progression": "Addressing Barriers"
       },
       "named_level": false,
       "bonus": false,
@@ -870,7 +876,7 @@
         "level_keys": [
           "OPD-K5 AddressingImplementation1"
         ],
-        "progression": "Implementation Approaches and Barriers"
+        "progression": "Addressing Barriers"
       },
       "named_level": false,
       "bonus": false,
@@ -895,7 +901,7 @@
         "level_keys": [
           "OPD-K5 ImplementationApproach_Reflection"
         ],
-        "progression": "Implementation Approaches and Barriers"
+        "progression": "Addressing Barriers"
       },
       "named_level": false,
       "bonus": false,
@@ -3247,7 +3253,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 Reviewing Reflections_2021"
-        ]
+        ],
+        "progression": "Introduction"
       },
       "named_level": false,
       "bonus": false,
@@ -3271,7 +3278,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 whats your plan_2021"
-        ]
+        ],
+        "progression": "Introduction"
       },
       "named_level": false,
       "bonus": false,
@@ -3294,8 +3302,234 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "OPD-K5 GettingStarted_Reflection"
+        ],
+        "progression": "Getting Started"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 GettingStarted_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 GettingStarted_Reflection"
+      ]
+    },
+    {
+      "chapter": 125,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 CSTeachingLearning_Reflection"
+        ],
+        "progression": "CS Teaching Practices and Strategies"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 CSTeachingLearning_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 CSTeachingLearning_Reflection"
+      ]
+    },
+    {
+      "chapter": 126,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 CS_StudentPractices_Reflection"
+        ],
+        "progression": "CS Teaching Practices and Strategies"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 CS_StudentPractices_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 CS_StudentPractices_Reflection"
+      ]
+    },
+    {
+      "chapter": 127,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 DebuggingPairProgramming_Reflection"
+        ],
+        "progression": "CS Teaching Practices and Strategies"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 DebuggingPairProgramming_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 DebuggingPairProgramming_Reflection"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-Journaling_Reflection"
+        ],
+        "progression": "CS Teaching Practices and Strategies"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-Journaling_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-Journaling_Reflection"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 LessonPlanning_Reflection"
+        ],
+        "progression": "Teaching a Lesson"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 LessonPlanning_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 LessonPlanning_Reflection"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 ImplementationBarriers1_Reflection"
+        ],
+        "progression": "Addressing Barriers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers1_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 ImplementationBarriers1_Reflection"
+      ]
+    },
+    {
+      "chapter": 131,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 ImplementationBarriers2_Reflection"
+        ],
+        "progression": "Addressing Barriers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers2_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 ImplementationBarriers2_Reflection"
+      ]
+    },
+    {
+      "chapter": 132,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 ImplementationApproach_Reflection"
+        ],
+        "progression": "Addressing Barriers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationApproach_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 ImplementationApproach_Reflection"
+      ]
+    },
+    {
+      "chapter": 133,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "OPD-K5 sequencing free response_2021"
-        ]
+        ],
+        "progression": "CS Concepts"
       },
       "named_level": false,
       "bonus": false,
@@ -3312,158 +3546,15 @@
       ]
     },
     {
-      "chapter": 125,
-      "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 loops free response_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 loops free response_2021"
-        ],
-        "lesson.key": "Reviewing your reflections",
-        "lesson_group.key": "k5_next_steps_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 loops free response_2021"
-      ]
-    },
-    {
-      "chapter": 126,
-      "position": 5,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 events free response_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 events free response_2021"
-        ],
-        "lesson.key": "Reviewing your reflections",
-        "lesson_group.key": "k5_next_steps_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 events free response_2021"
-      ]
-    },
-    {
-      "chapter": 127,
-      "position": 6,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 conditionals free response_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 conditionals free response_2021"
-        ],
-        "lesson.key": "Reviewing your reflections",
-        "lesson_group.key": "k5_next_steps_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 conditionals free response_2021"
-      ]
-    },
-    {
-      "chapter": 128,
-      "position": 7,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 functions free response_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 functions free response_2021"
-        ],
-        "lesson.key": "Reviewing your reflections",
-        "lesson_group.key": "k5_next_steps_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 functions free response_2021"
-      ]
-    },
-    {
-      "chapter": 129,
-      "position": 8,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 variables free response_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 variables free response_2021"
-        ],
-        "lesson.key": "Reviewing your reflections",
-        "lesson_group.key": "k5_next_steps_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 variables free response_2021"
-      ]
-    },
-    {
-      "chapter": 130,
-      "position": 9,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 for loops free response_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 for loops free response_2021"
-        ],
-        "lesson.key": "Reviewing your reflections",
-        "lesson_group.key": "k5_next_steps_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 for loops free response_2021"
-      ]
-    },
-    {
-      "chapter": 131,
-      "position": 10,
+      "chapter": 134,
+      "position": 13,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
           "OPD-K5 sprite lab free response_2021"
-        ]
+        ],
+        "progression": "CS Concepts"
       },
       "named_level": false,
       "bonus": false,
@@ -3480,14 +3571,165 @@
       ]
     },
     {
-      "chapter": 132,
-      "position": 11,
+      "chapter": 135,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5-RefLoops_2021"
+        ],
+        "progression": "CS Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-RefLoops_2021"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5-RefLoops_2021"
+      ]
+    },
+    {
+      "chapter": 136,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 events free response_2021"
+        ],
+        "progression": "CS Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 events free response_2021"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 events free response_2021"
+      ]
+    },
+    {
+      "chapter": 137,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 conditionals free response_2021"
+        ],
+        "progression": "CS Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 conditionals free response_2021"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 conditionals free response_2021"
+      ]
+    },
+    {
+      "chapter": 138,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 functions free response_2021"
+        ],
+        "progression": "CS Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 functions free response_2021"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 functions free response_2021"
+      ]
+    },
+    {
+      "chapter": 139,
+      "position": 18,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 variables free response_2021"
+        ],
+        "progression": "CS Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 variables free response_2021"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 variables free response_2021"
+      ]
+    },
+    {
+      "chapter": 140,
+      "position": 19,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 for loops free response_2021"
+        ],
+        "progression": "CS Concepts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 for loops free response_2021"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 for loops free response_2021"
+      ]
+    },
+    {
+      "chapter": 141,
+      "position": 20,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
           "OPD-K5 projects free response_2021"
-        ]
+        ],
+        "progression": "CS Concepts"
       },
       "named_level": false,
       "bonus": false,
@@ -3504,7 +3746,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 142,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3528,32 +3770,8 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 143,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 Stage9Start_copy_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 Stage9Start_copy_2021"
-        ],
-        "lesson.key": "Next steps",
-        "lesson_group.key": "k5_next_steps_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 Stage9Start_copy_2021"
-      ]
-    },
-    {
-      "chapter": 135,
-      "position": 3,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -3576,8 +3794,8 @@
       ]
     },
     {
-      "chapter": 136,
-      "position": 4,
+      "chapter": 144,
+      "position": 3,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -3600,8 +3818,8 @@
       ]
     },
     {
-      "chapter": 137,
-      "position": 5,
+      "chapter": 145,
+      "position": 4,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -3624,8 +3842,8 @@
       ]
     },
     {
-      "chapter": 138,
-      "position": 6,
+      "chapter": 146,
+      "position": 5,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -3648,8 +3866,8 @@
       ]
     },
     {
-      "chapter": 139,
-      "position": 7,
+      "chapter": 147,
+      "position": 6,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -5028,6 +5246,105 @@
     },
     {
       "seeding_key": {
+        "level.key": "OPD-K5 GettingStarted_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 GettingStarted_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 CSTeachingLearning_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 CSTeachingLearning_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 CS_StudentPractices_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 CS_StudentPractices_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 DebuggingPairProgramming_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 DebuggingPairProgramming_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-Journaling_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5-Journaling_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 LessonPlanning_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 LessonPlanning_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 ImplementationBarriers1_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers1_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 ImplementationBarriers2_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers2_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 ImplementationApproach_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationApproach_Reflection"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "OPD-K5 sequencing free response_2021",
         "script_level.level_keys": [
           "OPD-K5 sequencing free response_2021"
@@ -5039,9 +5356,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 loops free response_2021",
+        "level.key": "OPD-K5 sprite lab free response_2021",
         "script_level.level_keys": [
-          "OPD-K5 loops free response_2021"
+          "OPD-K5 sprite lab free response_2021"
+        ],
+        "lesson.key": "Reviewing your reflections",
+        "lesson_group.key": "k5_next_steps_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-RefLoops_2021",
+        "script_level.level_keys": [
+          "OPD-K5-RefLoops_2021"
         ],
         "lesson.key": "Reviewing your reflections",
         "lesson_group.key": "k5_next_steps_1",
@@ -5105,17 +5433,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 sprite lab free response_2021",
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab free response_2021"
-        ],
-        "lesson.key": "Reviewing your reflections",
-        "lesson_group.key": "k5_next_steps_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "OPD-K5 projects free response_2021",
         "script_level.level_keys": [
           "OPD-K5 projects free response_2021"
@@ -5130,17 +5447,6 @@
         "level.key": "OPD-K5 Stage10Start_copy_2021",
         "script_level.level_keys": [
           "OPD-K5 Stage10Start_copy_2021"
-        ],
-        "lesson.key": "Next steps",
-        "lesson_group.key": "k5_next_steps_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 Stage9Start_copy_2021",
-        "script_level.level_keys": [
-          "OPD-K5 Stage9Start_copy_2021"
         ],
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",
