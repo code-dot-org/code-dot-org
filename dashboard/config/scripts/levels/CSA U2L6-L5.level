@@ -8,7 +8,7 @@
     "csa_view_mode": "console",
     "start_sources": {
       "MyFoodTruck.java": {
-        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert donut = new Dessert(\"donut\", 30, 1.0);\n    donut.printInfo();\n  }\n}",
+        "text": "",
         "isVisible": true
       }
     }
@@ -18,6 +18,6 @@
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-06-16 19:03:02 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-16 19:03:02 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:09:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
