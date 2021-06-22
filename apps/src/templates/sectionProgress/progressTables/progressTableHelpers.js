@@ -1,6 +1,9 @@
 import React from 'react';
 import moment from 'moment';
-import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  lessonIsAllAssessment,
+  lessonHasLevels
+} from '@cdo/apps/templates/progress/progressHelpers';
 import ProgressTableSummaryCell from './ProgressTableSummaryCell';
 import ProgressTableDetailCell from './ProgressTableDetailCell';
 import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
@@ -23,25 +26,38 @@ export function getSummaryCellFormatters(
   lessonProgressByStudent,
   onClickLesson
 ) {
-  const mainCellFormatter = (lesson, student) => (
-    <ProgressTableSummaryCell
-      studentId={student.id}
-      studentLessonProgress={lessonProgressByStudent[student.id][lesson.id]}
-      isAssessmentLesson={lessonIsAllAssessment(lesson.levels)}
-      onSelectDetailView={() => onClickLesson(lesson.position)}
-    />
-  );
+  const mainCellFormatter = (lesson, student) => {
+    if (lessonHasLevels(lesson)) {
+      return (
+        <ProgressTableSummaryCell
+          studentId={student.id}
+          studentLessonProgress={lessonProgressByStudent[student.id][lesson.id]}
+          isAssessmentLesson={lessonIsAllAssessment(lesson.levels)}
+          onSelectDetailView={() => onClickLesson(lesson.position)}
+        />
+      );
+    }
+    return emptyLessonFormatter();
+  };
 
   const timeSpentCellFormatter = (lesson, student) => {
-    const progress = lessonProgressByStudent[student.id][lesson.id];
-    return <span style={progressStyles.flex}>{formatTimeSpent(progress)}</span>;
+    if (lessonHasLevels(lesson)) {
+      const progress = lessonProgressByStudent[student.id][lesson.id];
+      return (
+        <span style={progressStyles.flex}>{formatTimeSpent(progress)}</span>
+      );
+    }
+    return missingDataFormatter(true);
   };
 
   const lastUpdatedCellFormatter = (lesson, student) => {
-    const progress = lessonProgressByStudent[student.id][lesson.id];
-    return (
-      <span style={progressStyles.flex}>{formatLastUpdated(progress)}</span>
-    );
+    if (lessonHasLevels(lesson)) {
+      const progress = lessonProgressByStudent[student.id][lesson.id];
+      return (
+        <span style={progressStyles.flex}>{formatLastUpdated(progress)}</span>
+      );
+    }
+    return missingDataFormatter(true);
   };
 
   return [mainCellFormatter, timeSpentCellFormatter, lastUpdatedCellFormatter];
@@ -60,31 +76,42 @@ export function getSummaryCellFormatters(
  *
  * */
 export function getDetailCellFormatters(levelProgressByStudent, section) {
-  const mainCellFormatter = (lesson, student) => (
-    <ProgressTableDetailCell
-      studentId={student.id}
-      sectionId={section.id}
-      levels={lesson.levels}
-      studentProgress={levelProgressByStudent[student.id]}
-    />
-  );
+  const mainCellFormatter = (lesson, student) => {
+    if (lessonHasLevels(lesson)) {
+      return (
+        <ProgressTableDetailCell
+          studentId={student.id}
+          sectionId={section.id}
+          levels={lesson.levels}
+          studentProgress={levelProgressByStudent[student.id]}
+        />
+      );
+    }
+    return emptyLessonFormatter();
+  };
 
   const timeSpentCellFormatter = (lesson, student) => {
-    const timeSpentItems = detailCellItems(
-      lesson,
-      levelProgressByStudent[student.id],
-      formatTimeSpent
-    );
-    return <ProgressTableLevelSpacer items={timeSpentItems} />;
+    if (lessonHasLevels(lesson)) {
+      const timeSpentItems = detailCellItems(
+        lesson,
+        levelProgressByStudent[student.id],
+        formatTimeSpent
+      );
+      return <ProgressTableLevelSpacer items={timeSpentItems} />;
+    }
+    return missingDataFormatter(true);
   };
 
   const lastUpdatedCellFormatter = (lesson, student) => {
-    const lastUpdatedItems = detailCellItems(
-      lesson,
-      levelProgressByStudent[student.id],
-      formatLastUpdated
-    );
-    return <ProgressTableLevelSpacer items={lastUpdatedItems} />;
+    if (lessonHasLevels(lesson)) {
+      const lastUpdatedItems = detailCellItems(
+        lesson,
+        levelProgressByStudent[student.id],
+        formatLastUpdated
+      );
+      return <ProgressTableLevelSpacer items={lastUpdatedItems} />;
+    }
+    return missingDataFormatter(true);
   };
 
   return [mainCellFormatter, timeSpentCellFormatter, lastUpdatedCellFormatter];
@@ -111,33 +138,43 @@ function formatTimeSpent(studentProgress) {
     const minutes = studentProgress.timeSpent / 60;
     return `${Math.ceil(minutes)}`;
   }
-  return missingDataFormatter(studentProgress, 'timeSpent');
+  return missingDataFormatter(!!studentProgress);
 }
 
 function formatLastUpdated(studentProgress) {
   if (studentProgress?.lastTimestamp) {
     return moment.unix(studentProgress.lastTimestamp).format('M/D');
   }
-  return missingDataFormatter(studentProgress, 'lastTimestamp');
+  return missingDataFormatter(!!studentProgress);
 }
 
 /**
- * Handle formatting for each of three distinct cases:
- * 1) `studentProgress` is null: this means the student hasn't started the
- *    level/lesson, so we display nothing.
- * 2) `studentProgress[field] === 0`: this is a special case that only
- *    applies to lesson progress. it means the student has started the lesson,
- *    but we don't have data in this field, in which case we display nothing.
- * 3) `studentProgress[field]` is null: this case only applies to level
- *    progress, and means we have progress data but we don't track `field` for
- *    this level type, which we indicate by displaying '-'.
+ * Determines what to display in the "time spent" / "last update"
+ * expanded table rows when we don't have any data.
+ *
+ * If the student hasn't made any progress on the level, we display nothing.
+ * However, if the student has made progress but we don't have time spent or
+ * last update data, that means we aren't tracking that data for this level so
+ * we display '-' (a hyphen) to indicate N/A.
+ *
+ * Note: we also use '-' for lessons with no levels.
  */
-function missingDataFormatter(studentProgress, field) {
-  if (!studentProgress || studentProgress[field] === 0) {
-    return '';
-  } else if (!studentProgress[field]) {
+function missingDataFormatter(progressNotApplicable) {
+  if (progressNotApplicable) {
     return '-';
   }
+  return '';
+}
+
+/**
+ * Returns what we display in the primary (non-expanded) table
+ * rows for lessons without any levels.
+ *
+ * Note that we use the larger em dash for empty lessons, as opposed to the
+ * hyphen used for missing detail data.
+ */
+function emptyLessonFormatter() {
+  return '—';
 }
 
 export const unitTestExports = {

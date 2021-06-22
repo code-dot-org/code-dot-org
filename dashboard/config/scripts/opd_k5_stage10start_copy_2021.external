@@ -1,27 +1,27 @@
 name 'OPD-K5 Stage10Start_copy_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Overview: Next Steps
+# Part III: Next Steps
 
 <img src="https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG" class="level-image">
 
-## What you've done so far
+## Congratulations!
 
- - Become familiar with the structure and content of the Computer Science Fundamentals curriculum
- - Practiced the basics of coding
- - Thought about teaching practices and how you might use them in your classroom
+You are one step closer to implementing and teaching Computer Science Fundamentals courses!
 
- 
-## What's in this concept chunk
- 
-By completing this final concept chunk, you will:
+* By completing Part I and II of this online course you are familiar with:
 
- - Explore teacher resources
- - Learn how to set up a class section on Code.org
- - Develop a plan to bring Computer Science Fundamentals to your classroom
- - Plan for next steps you can take to continue your learning
- - Connect with a global community of fellow educators interested in computer science education
- - Offer feedback via a post-survey
- - Print a certificate of completion
+	* the teacher dashboard to set up a class section of your own.
+	* Computer Science Fundamentals curriculum, resources, and learning tools to use with your students.
+	* computer science teaching practices and strategies focused on inclusion.
+
+***
+
+* By completing Part III of this online course you will be able to:
+
+	* develop a plan to bring Computer Science Fundamentals to your classroom.
+	* identify next steps you can take to continue your learning in computer science education.
+	* offer feedback via a post-survey.
+	* print a certificate of completion
 
 MARKDOWN
