@@ -647,7 +647,7 @@ class ScriptLevel < ApplicationRecord
       'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys)
     }
 
-    my_lesson = seed_context.lessons.select {|l| l.id == stage_id}.first
+    my_lesson = seed_context.lessons.find_by(id: stage_id)
     raise "No Lesson found for #{self.class}: #{my_key}, Lesson ID: #{stage_id}" unless my_lesson
     lesson_seeding_key = my_lesson.seeding_key(seed_context)
     my_key.merge!(lesson_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
@@ -656,7 +656,7 @@ class ScriptLevel < ApplicationRecord
     # the seed key for legacy scripts. Currently, this is necessary because we
     # output .script_json files for all legacy scripts, even though those aren't
     # going to be used for seeding yet.
-    my_activity_section = seed_context.activity_sections.select {|s| s.id == activity_section_id}.first
+    my_activity_section = seed_context.activity_sections.find_by(id: activity_section_id)
 
     my_key['activity_section.key'] = my_activity_section.key if my_activity_section
 
@@ -680,10 +680,9 @@ class ScriptLevel < ApplicationRecord
     if levels.loaded?
       my_levels = levels
     else
-      # TODO: this series of in-memory filters is probably inefficient
-      my_levels_script_levels = seed_context.levels_script_levels.select {|lsl| lsl.script_level_id == id}
+      my_levels_script_levels = seed_context.levels_script_levels.where(script_level_id: id)
       my_levels = my_levels_script_levels.map do |lsl|
-        level = seed_context.levels.select {|l| l.id == lsl.level_id}.first
+        level = seed_context.levels.find_by(id: lsl.level_id)
         raise "No level found for #{lsl}" unless level
         level
       end

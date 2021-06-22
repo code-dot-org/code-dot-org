@@ -852,7 +852,7 @@ class Script < ApplicationRecord
       @all_bonus_script_levels = lessons.map do |lesson|
         {
           lessonNumber: lesson.relative_position,
-          levels: lesson.script_levels.select(&:bonus)
+          levels: lesson.script_levels.where(bonus: true)
         }
       end
       @all_bonus_script_levels.select! {|lesson| lesson[:levels].any?}
@@ -1542,7 +1542,7 @@ class Script < ApplicationRecord
     # Filter out lessons that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     # Only get lessons with lesson plans
-    filtered_lessons = filtered_lessons.select(&:has_lesson_plan)
+    filtered_lessons = filtered_lessons.where(has_lesson_plan: true)
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user)}
 
     summary

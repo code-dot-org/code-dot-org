@@ -157,7 +157,7 @@ class LessonGroup < ApplicationRecord
       key: key,
       displayName: localized_display_name,
       userFacing: user_facing,
-      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
+      lessons: lessons.where(has_lesson_plan: true).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
     }
   end
 
