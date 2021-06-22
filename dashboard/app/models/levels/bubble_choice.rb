@@ -182,8 +182,12 @@ class BubbleChoice < DSLDefined
   def keep_working_sublevel(user, script)
     # get latest feedback on sublevels where keepWorking is true
     level_ids = sublevels.map(&:id)
-    keep_working_feedback = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id, TeacherFeedback::REVIEW_STATES.keepWorking).first
-    keep_working_feedback&.level
+    latest_feedbacks = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id)
+
+    if latest_feedbacks.any?
+      keep_working_feedback = latest_feedbacks&.find {|feedback| feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking}
+      return keep_working_feedback&.level
+    end
   end
 
   # Returns an array of BubbleChoice parent levels for any given sublevel name.

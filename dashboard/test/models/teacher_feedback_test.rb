@@ -300,21 +300,4 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     retrieved = TeacherFeedback.get_latest_feedbacks_received(students[0].id, level.id, script.id)
     assert_equal([expected_feedback], retrieved)
   end
-
-  test 'get_latest_feedbacks_received can filter by review_state' do
-    teacher = create :teacher
-    student = create :student
-    section = create :section, user: teacher
-    section.add_student(student)
-
-    script_level = create :script_level
-    script = script_level.script
-    level = script_level.levels.first
-
-    expected_feedback = create :teacher_feedback, teacher: teacher, student: student, script: script, level: level, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
-    create :teacher_feedback, teacher: teacher, student: student, script: script, level: level
-
-    retrieved = TeacherFeedback.get_latest_feedbacks_received(student.id, level.id, script.id, TeacherFeedback::REVIEW_STATES.keepWorking)
-    assert_equal([expected_feedback], retrieved)
-  end
 end
