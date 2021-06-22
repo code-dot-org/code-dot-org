@@ -1,0 +1,36 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Import your other `Dessert` subclass from your **Backpack**.\r\n\r\n1. Write accessor methods for the additional instance variables in your subclass.\r\n\r\n2. Create an object of your subclass in `MyFoodTruck.java`.\r\n\r\n3. The owner wants to know the total number of desserts she has in her inventory and how much her total inventory is worth. Use the accessor methods in your classes to calculate this information in `MyFoodTruck.java`.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "parent_level_id": 28573,
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert newDessert = new Dessert(\"chocolate\", 12, 2.99);\n\n    System.out.println(\"newDessert flavor: \" + newDessert.getFlavor());\n    System.out.print(\"newDessert quantity: \" + newDessert.getQuantity());\n    System.out.print(\"newDessert price: \" + newDessert.getPrice());\n\n    Cake newCake = new Cake(\"strawberry\", 2, 5.75, 3, \"strawberry\");\n\n    System.out.println(\"newCake flavor: \" + newCake.getFlavor());\n    System.out.print(\"newCake quantity: \" + newCake.getQuantity());\n    System.out.print(\"newCake price: \" + newCake.getPrice());\n    System.out.print(\"newCake quantity: \" + newCake.getLayers());\n    System.out.print(\"newCake price: \" + newCake.getTopping());\n\n    Cupcake newCupcake = new Cupcake(\"chocolate\", 12, 1.50, \"cream cheese\", false);\n\n    int dessertQty = newDessert.getQuantity();\n    int cakeQty = newCake.getQuantity();\n    int cupcakeQty = newCupcake.getQuantity();\n    int totalQty =  dessertQty + cakeQty + cupcakeQty;\n    System.out.println(\"Total Desserts: \" + totalQty);\n\n    double totalDessertPrice = dessertQty * newDessert.getPrice();\n    double totalCakePrice = cakeQty * newCake.getPrice();\n    double totalCupcakePrice = cupcakeQty * newCupcake.getQuantity();\n    double totalPrice = totalDessertPrice + totalCakePrice + totalCupcakePrice;\n    System.out.println(\"Total Cost of Inventory: \" + totalPrice);\n  }\n}",
+        "isVisible": true
+      },
+      "Dessert.java": {
+        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String flavor, int quantity, double price) {\n    this.flavor = flavor;\n    this.quantity = quantity;\n    this.price = price;\n  }\n\n  public String getFlavor() {\n    return flavor;\n  }\n\n  public int getQuantity() {\n    return quantity;\n  }\n\n  public double getPrice() {\n    return price;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
+        "isVisible": true
+      },
+      "Cake.java": {
+        "text": "public class Cake extends Dessert {\n  private int layers;\n  private String topping;\n\n  public Cake(String flavor, int quantity, double price, int layers, String topping) {\n    super(flavor, quantity, price);\n    this.layers = layers;\n    this.topping = topping;\n  }\n\n  public int getLayers() {\n    return layers;\n  }\n\n  public String getTopping() {\n    return topping;\n  }\n}",
+        "isVisible": true
+      },
+      "Cupcake.java": {
+        "text": "public class Cupcake extends Dessert {\n  private String frostingFlavor;\n  private boolean hasSprinkles;\n\n  public Cupcake(String flavor, int quantity, double price, String frostingFlavor, boolean hasSprinkles) {\n    super(flavor, quantity, price);\n    this.frostingFlavor = frostingFlavor;\n    this.hasSprinkles = hasSprinkles;\n  }\n\n  public String getFrostingFlavor() {\n    return frostingFlavor;\n  }\n\n  public boolean getSprinkles() {\n    return hasSprinkles;\n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2021-06-22T18:41:28.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-06-22 18:18:59 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:22:38 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:26:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:26:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:30:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:34:17 +0000\",\"changed\":[\"name\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:34:45 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:36:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:38:07 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:40:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:41:34 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:43:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
