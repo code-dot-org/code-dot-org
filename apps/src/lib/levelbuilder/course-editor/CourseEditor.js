@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
+import CourseUnitsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseUnitsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
@@ -77,7 +77,7 @@ class CourseEditor extends Component {
       hasNumberedUnits: this.props.initialHasNumberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
-      scriptsInCourse: this.props.initialScriptsInCourse,
+      unitsInCourse: this.props.initialScriptsInCourse,
       publishedState: this.props.initialPublishedState
     };
   }
@@ -107,7 +107,7 @@ class CourseEditor extends Component {
       version_year: this.state.versionYear,
       published_state: this.state.publishedState,
       pilot_experiment: this.state.pilotExperiment,
-      scripts: this.state.scriptsInCourse
+      scripts: this.state.unitsInCourse
     };
 
     if (this.props.migratedTeacherResources) {
@@ -171,7 +171,7 @@ class CourseEditor extends Component {
       familyName,
       versionYear,
       pilotExperiment,
-      scriptsInCourse,
+      unitsInCourse,
       publishedState
     } = this.state;
     return (
@@ -343,13 +343,13 @@ class CourseEditor extends Component {
               course. To remove a script, just set the dropdown to the default
               (first) value.
             </div>
-            <CourseScriptsEditor
+            <CourseUnitsEditor
               inputStyle={styles.input}
-              scriptsInCourse={scriptsInCourse}
-              updateScriptsInCourse={scriptsInCourse =>
-                this.setState({scriptsInCourse})
+              unitsInCourse={unitsInCourse}
+              updateScriptsInCourse={unitsInCourse =>
+                this.setState({unitsInCourse})
               }
-              scriptNames={scriptNames}
+              unitNames={scriptNames}
             />
           </label>
         </CollapsibleEditorSection>
