@@ -2,7 +2,6 @@
   "script": {
     "name": "csd3-virtual",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
