@@ -635,10 +635,6 @@ $height-to-width: 434 / 477;
     }
   }
 
-  #close-character-select {
-    @include mc-x-close-button();
-  }
-
   .choose-character-button {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
