@@ -1,0 +1,36 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Let's apply the DRY principle to our code.\r\n\r\nRefactor the `Cake` class to be a subclass of `Dessert`.\r\n\r\nRemember to use `super()` in the first line of the `Cake` constructor to use the constructor from the `Dessert` class to initialize the shared instance variables.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "parent_level_id": 28546,
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert cookie = new Dessert(\"chocolate chip\", 100, 1.00);\n\n    FoodTruck donutCompany = new FoodTruck(\"Amos\", cookie);\n  }\n}",
+        "isVisible": true
+      },
+      "FoodTruck.java": {
+        "text": "class FoodTruck {\n  private String owner;\n  private Dessert newDessert;\n\n  // Write your constructor here\n  public FoodTruck(String owner, Dessert newDessert) {\n    this.owner = owner;\n    this.newDessert = newDessert;\n  }\n\n  public void printTruckInfo() {\n    System.out.println(\"The owner is \" + owner);\n    System.out.println(\"The food truck has \");\n    newDessert.printInfo();\n  }\n}",
+        "isVisible": true
+      },
+      "Dessert.java": {
+        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String flavor, int quantity, double price) {\n    this.flavor = flavor;\n    this.quantity = quantity;\n    this.price = price;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
+        "isVisible": true
+      },
+      "Cake.java": {
+        "text": "public class Cake extends Dessert {\n  private int layers;\n  private String topping;\n\n  public Cake(String flavor, int quantity, double price, int layers, String topping) {\n    super(flavor, quantity, price);\n    this.layers = layers;\n    this.topping = topping;\n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2021-06-22T16:30:18.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-06-22 16:30:30 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:34:18 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:47:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
