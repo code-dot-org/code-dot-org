@@ -7,7 +7,6 @@
   "properties": {
     "family_name": "ui-test-course",
     "version_year": "2017",
-    "is_stable": true,
     "visible": true
   }
 }
