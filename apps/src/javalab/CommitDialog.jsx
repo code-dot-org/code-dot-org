@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import {CompileStatus} from './constants';
-import StylizedBaseDialog from '@cdo/apps/templates/StylizedBaseDialog';
+import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 export default class CommitDialog extends React.Component {

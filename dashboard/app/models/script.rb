@@ -1412,21 +1412,6 @@ class Script < ApplicationRecord
     [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
-  # No longer used except in migration. Should be removed July 2021 after people have had time to migrate
-  def get_published_state
-    if pilot?
-      SharedConstants::PUBLISHED_STATE.pilot
-    elsif !hidden
-      if is_stable
-        SharedConstants::PUBLISHED_STATE.stable
-      else
-        SharedConstants::PUBLISHED_STATE.preview
-      end
-    else
-      SharedConstants::PUBLISHED_STATE.beta
-    end
-  end
-
   def stable?
     published_state == SharedConstants::PUBLISHED_STATE.stable
   end
