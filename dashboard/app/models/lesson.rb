@@ -179,7 +179,7 @@ class Lesson < ApplicationRecord
       script_levels = script.script_levels.select {|sl| sl.stage_id == id}
       return script_levels.first
     else
-      return script_levels.find_by(stage_id: id)
+      return script.script_levels.find_by(stage_id: id)
     end
   end
 
