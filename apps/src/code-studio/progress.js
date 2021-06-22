@@ -145,7 +145,7 @@ function populateProgress(store, signedIn, progressData, scriptName) {
     if (data.usingDbProgress) {
       store.dispatch(useDbProgress());
       clientState.clearProgress();
-      store.dispatch(setScriptProgress(data.scriptProgress));
+      store.dispatch(setScriptProgress(data.unitProgress));
     }
 
     if (data.levelResults) {
@@ -185,7 +185,7 @@ function getLevelProgress(signedIn, progressData, scriptName) {
       return Promise.resolve({
         usingDbProgress: true,
         levelResults: extractLevelResults(progressData),
-        scriptProgress: progressData.progress
+        unitProgress: progressData.progress
       });
     case false:
       // User is not signed in, return a resolved promise with progress data
@@ -203,7 +203,7 @@ function getLevelProgress(signedIn, progressData, scriptName) {
             return {
               usingDbProgress: true,
               levelResults: extractLevelResults(data),
-              scriptProgress: data.progress
+              unitProgress: data.progress
             };
           } else {
             return {
@@ -420,9 +420,9 @@ function initializeStoreWithProgress(
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
-      scriptTitle: scriptData.title,
-      scriptDescription: scriptData.description,
-      scriptStudentDescription: scriptData.studentDescription,
+      unitTitle: scriptData.title,
+      unitDescription: scriptData.description,
+      unitStudentDescription: scriptData.studentDescription,
       betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,

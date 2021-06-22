@@ -5,15 +5,15 @@ import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import sinon from 'sinon';
 
 const DEFAULT_PROPS = {
-  isReadonly: false,
+  isEditable: true,
   onCommentChange: () => {},
   comment: 'Good Work!',
   placeholderText: 'Add your comment here'
 };
 
 describe('Comment', () => {
-  it('has a display only textarea if in isReadonly', () => {
-    const wrapper = shallow(<Comment {...DEFAULT_PROPS} isReadonly={true} />);
+  it('has a display only textarea isEditable is false', () => {
+    const wrapper = shallow(<Comment {...DEFAULT_PROPS} isEditable={false} />);
 
     const confirmTextArea = wrapper.find('textarea').first();
     expect(confirmTextArea.props().readOnly).to.equal(true);
