@@ -4,8 +4,10 @@ import _ from 'lodash';
 import sinon from 'sinon';
 import {expect} from 'chai';
 import {mount, shallow} from 'enzyme';
+import {allowConsoleErrors} from '../../../../../util/testUtils';
 
 describe('WorkshopTableLoader', () => {
+  allowConsoleErrors();
   let server;
   let debounceStub;
 
