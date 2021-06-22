@@ -34,7 +34,6 @@
       "tts": true,
       "lesson_extras_available": true,
       "hideable_lessons": true,
-      "is_stable": true,
       "script_announcements": [
         {
           "notice": "Our 2020 CS Fundamentals Lessons are Live!",

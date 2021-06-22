@@ -1,7 +1,6 @@
 hidden false
 family_name 'ui-test-versioned-script'
 version_year '2017'
-is_stable true
 published_state 'stable'
 
 lesson_group 'lg_1', display_name: 'Content'
