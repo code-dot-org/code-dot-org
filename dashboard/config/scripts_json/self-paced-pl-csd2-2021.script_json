@@ -2,16 +2,15 @@
   "script": {
     "name": "self-paced-pl-csd2-2021",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "is_migrated": true,
-      "student_detail_progress_view": true,
-      "project_sharing": true,
-      "tts": true
+      "tts": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-21 21:37:50 UTC",
+    "serialized_at": "2021-06-22 17:04:21 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd2-2021"
@@ -27,30 +26,6 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd2-2021"
-      }
-    },
-    {
-      "key": "lessonGroup-3",
-      "user_facing": true,
-      "position": 2,
-      "properties": {
-        "display_name": "Navigating Lesson Plans and Resources"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "self-paced-pl-csd2-2021"
-      }
-    },
-    {
-      "key": "lessonGroup-4",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "Navigating Support"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
         "script.name": "self-paced-pl-csd2-2021"
       }
     }
@@ -82,13 +57,13 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021"
       }
     },
     {
       "key": "lesson-8",
-      "name": "Accessing Additional Support",
+      "name": "Support for Teachers",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -97,7 +72,7 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021"
       }
     }
@@ -123,7 +98,7 @@
       "seeding_key": {
         "lesson_activity.key": "9d7ceb21-96ad-4330-89de-b54d03180120",
         "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021"
       }
     },
@@ -135,7 +110,7 @@
       "seeding_key": {
         "lesson_activity.key": "66b9c0d4-d636-411d-aa5b-0115c69c04ee",
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021"
       }
     }
@@ -212,7 +187,7 @@
       "position": 1,
       "properties": {
         "name": "Navigating to Support",
-        "progression_name": "Navigating to Support"
+        "progression_name": "Find Support"
       },
       "seeding_key": {
         "activity_section.key": "6974f988-2ebd-40c5-b6f1-d9bd54d99a01",
@@ -236,7 +211,7 @@
       "position": 3,
       "properties": {
         "name": "Teacher Community",
-        "progression_name": "Teacher Community"
+        "progression_name": "Join the Teacher Community"
       },
       "seeding_key": {
         "activity_section.key": "db9dd65e-e160-48c4-a8bc-2e97608132a8",
@@ -613,7 +588,7 @@
           "VPL - CSD Module 2 CI Conditionals Reflection_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4"
       },
@@ -639,7 +614,7 @@
           "VPL - CSD: Sprite Velocity_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4"
       },
@@ -665,7 +640,7 @@
           "VPL - CSD U3 collisions car intro_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4"
       },
@@ -682,7 +657,7 @@
         "level_keys": [
           "VPL-CSD 2020 Summer Review_2021"
         ],
-        "progression": "Navigating to Support"
+        "progression": "Find Support"
       },
       "named_level": false,
       "bonus": false,
@@ -691,7 +666,7 @@
           "VPL-CSD 2020 Summer Review_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "6974f988-2ebd-40c5-b6f1-d9bd54d99a01"
       },
@@ -717,7 +692,7 @@
           "VPL-CSD Games variables practice_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "4a6100b5-1ef2-45f1-b1f4-c43b650d1630"
       },
@@ -743,7 +718,7 @@
           "VPL-CSD 2020 - Module 2 CI - Draw Loop_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "4a6100b5-1ef2-45f1-b1f4-c43b650d1630"
       },
@@ -760,7 +735,7 @@
         "level_keys": [
           "VPL - CSD U5 Chapter 1 Project_2021"
         ],
-        "progression": "Teacher Community"
+        "progression": "Join the Teacher Community"
       },
       "named_level": false,
       "bonus": false,
@@ -769,7 +744,7 @@
           "VPL - CSD U5 Chapter 1 Project_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "db9dd65e-e160-48c4-a8bc-2e97608132a8"
       },
@@ -786,7 +761,7 @@
         "level_keys": [
           "VPL - CSD U3 game intro_2018_2019_pilot_2021"
         ],
-        "progression": "Teacher Community"
+        "progression": "Join the Teacher Community"
       },
       "named_level": false,
       "bonus": false,
@@ -795,7 +770,7 @@
           "VPL - CSD U3 game intro_2018_2019_pilot_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "db9dd65e-e160-48c4-a8bc-2e97608132a8"
       },
@@ -812,7 +787,7 @@
         "level_keys": [
           "VPL - CSD - Variable Resources_2021"
         ],
-        "progression": "Teacher Community"
+        "progression": "Join the Teacher Community"
       },
       "named_level": false,
       "bonus": false,
@@ -821,64 +796,12 @@
           "VPL - CSD - Variable Resources_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "db9dd65e-e160-48c4-a8bc-2e97608132a8"
       },
       "level_keys": [
         "VPL - CSD - Variable Resources_2021"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2021"
-        ],
-        "progression": "Help and Support"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2021"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "self-paced-pl-csd2-2021",
-        "activity_section.key": "c511ad4a-9c7a-428d-9319-afa20c965bcc"
-      },
-      "level_keys": [
-        "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2021"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "VPL - CSD - Module 7 - CI - U6L3_2021"
-        ],
-        "progression": "Help and Support"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL - CSD - Module 7 - CI - U6L3_2021"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "self-paced-pl-csd2-2021",
-        "activity_section.key": "c511ad4a-9c7a-428d-9319-afa20c965bcc"
-      },
-      "level_keys": [
-        "VPL - CSD - Module 7 - CI - U6L3_2021"
       ]
     }
   ],
@@ -1046,7 +969,7 @@
           "VPL - CSD Module 2 CI Conditionals Reflection_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4"
       }
@@ -1058,7 +981,7 @@
           "VPL - CSD: Sprite Velocity_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4"
       }
@@ -1070,7 +993,7 @@
           "VPL - CSD U3 collisions car intro_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4"
       }
@@ -1082,7 +1005,7 @@
           "VPL-CSD 2020 Summer Review_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "6974f988-2ebd-40c5-b6f1-d9bd54d99a01"
       }
@@ -1094,7 +1017,7 @@
           "VPL-CSD Games variables practice_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "4a6100b5-1ef2-45f1-b1f4-c43b650d1630"
       }
@@ -1106,7 +1029,7 @@
           "VPL-CSD 2020 - Module 2 CI - Draw Loop_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "4a6100b5-1ef2-45f1-b1f4-c43b650d1630"
       }
@@ -1118,7 +1041,7 @@
           "VPL - CSD U5 Chapter 1 Project_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "db9dd65e-e160-48c4-a8bc-2e97608132a8"
       }
@@ -1130,7 +1053,7 @@
           "VPL - CSD U3 game intro_2018_2019_pilot_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "db9dd65e-e160-48c4-a8bc-2e97608132a8"
       }
@@ -1142,33 +1065,9 @@
           "VPL - CSD - Variable Resources_2021"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "db9dd65e-e160-48c4-a8bc-2e97608132a8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2021",
-        "script_level.level_keys": [
-          "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2021"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "self-paced-pl-csd2-2021",
-        "activity_section.key": "c511ad4a-9c7a-428d-9319-afa20c965bcc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL - CSD - Module 7 - CI - U6L3_2021",
-        "script_level.level_keys": [
-          "VPL - CSD - Module 7 - CI - U6L3_2021"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "self-paced-pl-csd2-2021",
-        "activity_section.key": "c511ad4a-9c7a-428d-9319-afa20c965bcc"
       }
     }
   ],

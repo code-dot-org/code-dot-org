@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-21 21:35:43 UTC",
+    "serialized_at": "2021-06-22 15:20:06 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -213,6 +213,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "Students learn how to construct truth tables to represent compound Boolean expressions. Students work together to use truth tables to prove De Morgan’s Laws and explore open-source code.",
+        "preparation": "* Print one-sided copies of the Vocabulary Don’t-Say-It! activity guide (one copy for each group of 4-5 students)\n* Cut out the cards for the vocabulary game or gather a pair of scissors for each group of students\n* Print copies of the Truth Tables activity guide (one copy for each student)\n* Print out the station instructions in the Around the World Printouts resource\n* Prepare stacks of sticky notes, poster paper, and markers for each Around the World station\n* Print copies of the Unit 4 Guide (one copy for each student)",
+        "student_overview": "You learn about truth tables, a tool we can use to evaluate compound Boolean expressions. You learn about De Morgan's Laws and prove them with a partner using truth tables."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -273,6 +276,9 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "overview": "Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ work, they begin to work more independently, working through annotating, pseudocoding, and completing an FRQ on their own. After annotating and writing their solutions, students still discuss their results with their peers and receive support.  \n\nThe goals of this lesson are:\n* Practice annotating an FRQ\n* Practice writing pseudocode for an FRQ\n* Practice writing a solution for an FRQ\n* Practice scoring an FRQ against a scoring rubric",
+        "preparation": "* Print one copy for each student of the following handouts:\n   * FRQ Writing\n   * FRQ Scoring Guide\n* Gather one sheet of scratch paper per student\n* Gather one sticky note per student",
+        "student_overview": "Today you complete a Free Response Question (FRQ) almost completely on your own. To derive a solution for the FRQ on your own, you will follow a three step process: annotating, writing pseudocode, and writing code in Java. Finally, you score your attempt against a scoring rubric and reflect on your experience."
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -288,9 +294,10 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "overview": "In this unit, students expanded the expressions used in conditionals and iteration to use relational and logical operators. Students used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. Students developed an understanding of De Morgan's Laws and writing truth tables.",
+        "assessment": true,
+        "overview": "In this unit, students expanded the expressions used in conditionals and iteration to use relational and logical operators. Students used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. Students developed an understanding of De Morgan's Laws and writing truth tables. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.",
         "preparation": "* Preview the assessment questions\n* Unlock the assessment questions",
-        "student_overview": "In this unit, you expanded the expressions used in conditionals and iteration to use relational and logical operators. You used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. You developed an understanding of De Morgan's Laws and writing truth tables."
+        "student_overview": "In this unit, you expanded the expressions used in conditionals and iteration to use relational and logical operators. You used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. You developed an understanding of De Morgan's Laws and writing truth tables. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment."
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
@@ -675,6 +682,89 @@
         "lesson_activity.key": "2ecfc261-dc71-4dc0-afaf-409dc479fa86",
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "cc12e00a-3e3e-492d-8fc1-99b1af21f208",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc12e00a-3e3e-492d-8fc1-99b1af21f208",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "0e090a7f-0562-4ddc-8b5e-935f9890507d",
+      "position": 2,
+      "properties": {
+        "duration": 28,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "ac5ca90f-0406-457c-a188-03e6bcf480f3",
+      "position": 3,
+      "properties": {
+        "duration": 7,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "d1d07de0-089e-4f2b-8f38-e447c0f782a3",
+      "position": 1,
+      "properties": {
+        "duration": 9,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d1d07de0-089e-4f2b-8f38-e447c0f782a3",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "25bc6c0c-0451-4353-b742-c480e41459e5",
+      "position": 2,
+      "properties": {
+        "duration": 33,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "12574767-34d7-4127-8006-4aa21ff5b653",
+      "position": 3,
+      "properties": {
+        "duration": 3,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12574767-34d7-4127-8006-4aa21ff5b653",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa4-pilot"
       }
     },
@@ -2703,6 +2793,376 @@
       }
     },
     {
+      "key": "285b0cb9-2219-420d-953b-c17469d082cd",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in groups of 4-5.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Vocabulary Don’t-Say-It! activity guide and a pair of scissors to each group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the rules of Vocabulary Don’t-Say-It! with the class:\n* Students will rotate being the clue-giver and guessers.\n* Once cut out, all cards should be placed face down in a pile. Cards should be shuffled.\n* During each round:\n   * The clue-giver will draw a card from the top of the deck and describe the vocabulary word on the top of the card to the guessers. \n   * They cannot say any of the “Don’t-Say-It!” words listed underneath the vocabulary word.\n   * The student who guesses the word correctly gets the card.\n* Students take turns as the clue-giver for each card.\n* The winner is the student with the most cards.\n\n**Do This:** Direct students to play Vocabulary Don't-Say-It! in their groups.",
+        "name": "Vocabulary Don't-Say-It!",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students get through all of the cards, have them shuffle and play again. Teams can also add new words to the bottom of each card to make the game more challenging."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "285b0cb9-2219-420d-953b-c17469d082cd",
+        "lesson_activity.key": "cc12e00a-3e3e-492d-8fc1-99b1af21f208"
+      }
+    },
+    {
+      "key": "84dd19a6-ba63-47ab-b148-0273734f8c9f",
+      "position": 1,
+      "properties": {
+        "description": "Yesterday, we learned the logical operators ! (not), && (and), and || (or) and how we can use them to create compound Boolean expressions. Today, we’re going to learn about a tool called a truth table, which we can use to evaluate compound Boolean expressions.",
+        "duration": "8",
+        "name": "Truth Tables Introduction",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "84dd19a6-ba63-47ab-b148-0273734f8c9f",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "2e628a1e-d7b1-40b1-8e80-16468f38e732",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Truth Tables activity guide.\n\n**Do This:** Walk through the following slides as a class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Truth tables help visualize compound Boolean expressions and their resulting Boolean values.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the Creating a Truth Table video.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to demonstrate creating a truth table for !A. Prompt students to complete the truth table on their activity guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to demonstrate creating a truth table for A && B. Prompt students to complete the truth table on their activity guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to demonstrate creating a truth table for A || B. Prompt students to complete the truth table on their activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have additional time, instruct students to work through the truth table for A || B either independently or with a partner before reviewing the resulting truth table with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2e628a1e-d7b1-40b1-8e80-16468f38e732",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "cf50b16e-d990-4346-9db1-099671731736",
+      "position": 3,
+      "properties": {
+        "description": "Truth tables can also be used to represent more complex compound Boolean expressions. These can get complicated, but it’s important to remember that every compound Boolean expression can be broken down into our three core logical operators: not, and, and or. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cf50b16e-d990-4346-9db1-099671731736",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "a97e1399-a525-4b50-aeac-53a1621a749d",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the truth table for !A || !B. Highlight the use of extra columns to complete the truth table for the Boolean expression. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Suppose we wanted to figure out if two expressions are equivalent. How could we use truth tables to check for equivalence?*\n\n**Discussion Goal:** Students discuss ideas for how they might show the equivalence of two expressions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to use truth tables to determine equivalence."
+      },
+      "seeding_key": {
+        "activity_section.key": "a97e1399-a525-4b50-aeac-53a1621a749d",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "2422e6f5-8da4-4fec-900a-ec9bdeef2e90",
+      "position": 5,
+      "properties": {
+        "description": "Now that we understand how to create truth tables, we’re going to put our knowledge into action! You’ll have the chance to use truth tables to prove a set of famous Boolean logic laws and see how to use truth tables in software engineering through open-source code.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2422e6f5-8da4-4fec-900a-ec9bdeef2e90",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "85c4c5bc-bdd8-4eea-8569-351942849196",
+      "position": 6,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the process for the Around the World activity.\n1. Students find a station (they do not need to go in order).\n2. Students follow instructions at that station. There is a spot in their activity guide that corresponds with each station.\n3. Students find another group who has completed the same station and explain their completed truth table to that group.\n   * The second group initials their activity guide if they agree with their solution.\n   * If they believe there is an error, the groups revise the truth table together before the second group signs off.\n4. Students answer the question(s) attached to each station before moving on to the next.\n5. Pairs repeat steps 1-4 for each station (or until the time is up).",
+        "duration": "20",
+        "name": "Around the World",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students work, circulate the room to check that they are successfully following the Around the World steps and are not getting stuck at a station. You may choose to use a four-minute timer to help students pace themselves.\n\nAllow pairs who may need more time on each part to complete three stations instead of four. Encourage them to at least complete either (A or B) AND (C or D) to obtain practice proving one of De Morgan’s Laws and an opportunity to work with open-source code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "85c4c5bc-bdd8-4eea-8569-351942849196",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "d9fda664-96f4-453b-b9a4-60e00ffa8c15",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Look at your solution for station A or B. Were the two expressions equivalent? How do you know?*\n\n**Discussion Goal:** Students note that the two expressions were equivalent at both stations A and B because their resulting truth tables had the same final truth values.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students who did not complete both A and B to look at a neighbor’s solution. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d9fda664-96f4-453b-b9a4-60e00ffa8c15",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "8cd45573-14a2-40ec-9652-157c9982939a",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define De Morgan’s Laws.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate truth tables for each of De Morgan’s Laws."
+      },
+      "seeding_key": {
+        "activity_section.key": "8cd45573-14a2-40ec-9652-157c9982939a",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "86af7afd-5c12-46c3-bae5-93efb379edb9",
+      "position": 1,
+      "properties": {
+        "description": "You've learned a lot this unit, and now it’s time to Show What You Know! Like in previous units, we will begin with the unit project, then we will spend a day practicing how to answer AP-style free-response questions. We will then wrap up the unit with a multiple-choice assessment.",
+        "name": "Project Preview",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "86af7afd-5c12-46c3-bae5-93efb379edb9",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "eecb89cc-0589-471a-86e5-edfab39d580a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Share an overview of the Neighborhood Block Party Project with the students:\n* Students will be creating the underlying logic for a basic game to play at The Neighborhood Block Party. They will not develop an entire functional game for this project.\n* They will implement what they’ve learned throughout this unit to design a basic board or lawn game.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think about some games you enjoy playing. Given what we’ve learned in this unit, what games could you build using Java?*\n\n**Discussion Goal:** Students share ideas about games they could create.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask additional prompting questions to encourage brainstorming, such as:\n* *What video, computer, or phone games do you enjoy playing? Could you build a version of these?*\n* *When we developed Pop the Balloons, what different techniques or methods did we use? How could you use these in a different game?*\n* *What card or board game do you enjoy playing? How might you create a virtual version?*\n\nConsider creating a class list of brainstormed ideas by doing the following:\n* Distribute sticky notes or slips of paper and ask students to record one idea per sticky or slip. Keep the ideas for use during the first day of the project.\n* Record ideas as students share on a slide or document to review later.\n\nAlternately, students can write the prompt in their notebooks and add any ideas they have. If you have extra time, give several minutes of quiet brainstorming time followed by sharing with a partner or small group to flesh out ideas."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eecb89cc-0589-471a-86e5-edfab39d580a",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "5270d7ef-4d2c-4cce-9429-99d90bc941e1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 4 Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "5270d7ef-4d2c-4cce-9429-99d90bc941e1",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "b112ab11-e702-4757-a63b-9a0ccdcea431",
+      "position": 4,
+      "properties": {
+        "description": "The Unit 4 Guide will help you remember what you have learned in this unit. Go over all of the lessons and think to yourself if you can say \"I can..\" with each lesson objective. Review the vocabulary. Look over the reference section for code. You don't need to memorize any particular class for the assessment, but it's helpful to remember how everything works together. ",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The unit guide outlines the objectives, vocabulary, and programming concepts to help students prepare for the assessment. If time permits, you can choose to quickly review any parts of the unit that are still confusing for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b112ab11-e702-4757-a63b-9a0ccdcea431",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "0bba5289-1f5e-4b98-81a9-22178e51d677",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "0bba5289-1f5e-4b98-81a9-22178e51d677",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "7328c943-e60e-47f9-b31c-36adbe5f96b7",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "7328c943-e60e-47f9-b31c-36adbe5f96b7",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "78c6e42a-ef21-41b9-9932-59ca008d5060",
+      "position": 1,
+      "properties": {
+        "description": "Today, we will complete a free response question called BingoCaller almost completely on your own. To approach this problem, let’s apply the three steps of the Close Reading Strategy.",
+        "name": "Step 1: Annotate",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "78c6e42a-ef21-41b9-9932-59ca008d5060",
+        "lesson_activity.key": "d1d07de0-089e-4f2b-8f38-e447c0f782a3"
+      }
+    },
+    {
+      "key": "f4b9d4e0-8233-4901-930c-f1aadc7c2c45",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the three-step Close Reading Strategy:\n* Step 1: Annotate the question.\n* Step 2: Write pseudocode to plan the solution.\n* Step 3: Implement the solution in Java.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of FRQ Writing activity guide and a sheet of scratch paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to individually annotate the FRQ using the shapes and symbols. \n\n**Group:** Place students in groups of two.\n\n**Do This:** After students finish annotating, have students compare their annotations with their partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the directions and starter code from the FRQ Writing activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you have about approaching this Free Response Question?*\n\n**Discussion Goal:** Students share any misunderstandings or points of confusion they have about the FRQ. Point out words in the directions or starter code when addressing student questions. Some questions students may ask include:\n* How do I start the problem?\n* What methods do I need to write?\n* Is there an example I can review?\n* How will this FRQ be graded?"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4b9d4e0-8233-4901-930c-f1aadc7c2c45",
+        "lesson_activity.key": "d1d07de0-089e-4f2b-8f38-e447c0f782a3"
+      }
+    },
+    {
+      "key": "a6086ef7-522d-45f8-9601-d9a799de9314",
+      "position": 1,
+      "properties": {
+        "description": "Before writing your solution in Java, let’s plan it using pseudocode. Writing your algorithm out in pseudocode helps you plan your algorithm without worrying about the syntax rules of the programming language.",
+        "duration": "10",
+        "name": "Pseudocode",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a6086ef7-522d-45f8-9601-d9a799de9314",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "c08cb175-8753-41fc-93ff-7e5e6289ce41",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to plan their solutions for part A and B using pseudocode on the provided scratch paper.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students work, you may choose to use a ten minute timer to help students pace themselves. At this point, the classroom should be quiet so students can focus on writing pseudocode. After five minutes, you may suggest to students to move onto the second half of the FRQ."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c08cb175-8753-41fc-93ff-7e5e6289ce41",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "b7a49964-573f-4b13-9169-547bee4c3a9c",
+      "position": 3,
+      "properties": {
+        "description": "The last step is to write your solution in Java. Using your pseudocode, write a solution in Java to the FRQ. You will have 15 minutes to complete this task.",
+        "duration": "15",
+        "name": "Step 3: Implement",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b7a49964-573f-4b13-9169-547bee4c3a9c",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "32e8fb91-efb9-4c5d-b9e1-c6aa1ce2ba2e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to convert their pseudocode into Java code onto the FRQ Writing activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students work, you may choose to use a 15 minute timer to help students pace themselves. At this point, the classroom should be quiet so students can focus on writing their solution to the FRQ. If students finish early, suggest:\n* Trace their code to ensure it is correct.\n* Check their solution to ensure it aligns with their pseudocode solution."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "32e8fb91-efb9-4c5d-b9e1-c6aa1ce2ba2e",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "d28b5991-9a67-4c23-9ab7-12a6048d3643",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Scoring Guide.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask students to evaluate and score their work with their partners using the FRQ Scoring Guide.",
+        "duration": "8",
+        "name": "FRQ Scoring and Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "d28b5991-9a67-4c23-9ab7-12a6048d3643",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "d490adf0-6e0f-4ab8-85cb-b87dac318223",
+      "position": 6,
+      "properties": {
+        "description": "Congratulations on completing another FRQ! As with any problem we solve in Java, there are multiple approaches to solving an FRQ. Let’s explore some approaches to today’s FRQ.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d490adf0-6e0f-4ab8-85cb-b87dac318223",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "9448ead0-0835-4661-983b-6019cb91ddad",
+      "position": 7,
+      "properties": {
+        "description": "**Do This:** Discuss possible solutions to the FRQ. For each solution, walk through each row of the FRQ Scoring Guide and point out how the solution met those requirements. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation for `hasBeenCalled()` method (Part (a))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b) continued)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When discussing the solution, remind students of examples and exercises where the concepts were applied in Unit 4: \n\nExamples related part A:\n* Offsetting the index by 1: In Pop the Balloons, the index of the `Die` object with a value of 1 is 0.\n* Returning the value directly from the array: This implementation applied the DRY Principle.\n\nExamples related to B:\n* Casting randomly generated values into integers: To simulate rolling 1 to 6, students wrote `(int) (Math.random() * 6) + 1 `\n* Conditional branching with an `if/else-if/else` statement: In Pop the Balloons, `updateBalloons()` used an `if/else-if/else` statement because there were more than two balloons, and therefore more than two conditions, that could have been clicked.\n* Using `boolean` method call in a conditional statement: In Pop the Balloons, `isValidMove()` is called to determine whether a balloon can be popped."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9448ead0-0835-4661-983b-6019cb91ddad",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "93b4ed14-8ff2-4fb0-9912-83f43bd0f5ee",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What were you confident about? Are there some things you left out that could have brought up your score?*\n\n**Discussion Goal:** Students identify what they achieved in their FRQ solution and areas of improvement."
+      },
+      "seeding_key": {
+        "activity_section.key": "93b4ed14-8ff2-4fb0-9912-83f43bd0f5ee",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "50d30a5e-2dfe-4e30-b928-7dabf4317f2d",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student one sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain each step of the Give One, Get One activity:\n* On a sticky note, write one strategy for approaching an FRQ question.\n* Afterwards, exchange your sticky note with a partner. \n* Read the FRQ strategy from your partner.",
+        "name": "Give One, Get One",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Give One, Get One** is a processing activity where after thinking or journaling about a topic, students are asked to get up and find someone across the room with whom to share their thoughts or answers. Students are thus receiving an idea in exchange for giving one. The exchange can be verbal or on sticky notes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "50d30a5e-2dfe-4e30-b928-7dabf4317f2d",
+        "lesson_activity.key": "12574767-34d7-4127-8006-4aa21ff5b653"
+      }
+    },
+    {
       "key": "fe19eb63-d8fe-4d80-890d-aea892d36e37",
       "position": 1,
       "properties": {
@@ -2794,6 +3254,18 @@
       }
     },
     {
+      "name": "[KEY] FRQ Writing",
+      "url": "https://docs.google.com/document/d/1cjhvLYhYiFfUDPiKFZd7GTAc8aBrfjYx-r8s35CypAw/edit?usp=sharing",
+      "key": "_key_frq_writing_2",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_frq_writing_2"
+      }
+    },
+    {
       "name": "[KEY] Math Class Activity Guide",
       "url": "https://docs.google.com/document/d/144NcvwidgzxpHJUa7M6-fpqkkoFHWCukQfWwvkfVG-I/edit?usp=sharing",
       "key": "_key_math_class_activity_guide",
@@ -2803,6 +3275,30 @@
       },
       "seeding_key": {
         "resource.key": "_key_math_class_activity_guide"
+      }
+    },
+    {
+      "name": "[KEY] Truth Tables",
+      "url": "https://docs.google.com/document/d/1-a3CcJ0vKuDDFYWu52zzaOWOjsijtdmMNR3DhyLr5oI/edit?usp=sharing",
+      "key": "_key_truth_tables",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_truth_tables"
+      }
+    },
+    {
+      "name": "[KEY] U4L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1BvL6DI6Jb6WBynVmLMJuux3196GTPNBhRmNsADOWgHI/edit?usp=sharing",
+      "key": "_key_u4l10_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u4l10_extra_practice"
       }
     },
     {
@@ -2914,6 +3410,18 @@
       }
     },
     {
+      "name": "Around the World Printouts",
+      "url": "https://docs.google.com/document/d/1FMlneQD0SY65y9atWPYPz2fN63wboyhUiTx8csrU_Vw/edit?usp=sharing",
+      "key": "around_the_world_printouts",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "around_the_world_printouts"
+      }
+    },
+    {
       "name": "Casting Exploration",
       "url": "https://docs.google.com/document/d/1IPYgSjg3JmKCD33csEdikwi4-egwQGrWwciFeaHLFUA/edit#",
       "key": "casting_exploration",
@@ -2950,6 +3458,30 @@
       }
     },
     {
+      "name": "FRQ Scoring Guide",
+      "url": "https://docs.google.com/document/d/1dj5xv6_3-6yVytSqIesTffJY5FSa-qQ9PIEe0yPGbYE/edit?usp=sharing",
+      "key": "frq_scoring_guide_2",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "frq_scoring_guide_2"
+      }
+    },
+    {
+      "name": "FRQ Writing",
+      "url": "https://docs.google.com/document/d/1lBJAzXNmzZ_vdrt9zH3RanG_-logRxC6PxtuA46UkCc/edit?usp=sharing",
+      "key": "frq_writing_2",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "frq_writing_2"
+      }
+    },
+    {
       "name": "Math Class Activity Guide",
       "url": "https://docs.google.com/document/d/1NWyUTX0o8NfjphkP8FKqH-mY-0PRKw6apnLa-EDQSdw/edit?usp=sharing",
       "key": "math_class_activity_guide",
@@ -2983,6 +3515,30 @@
       },
       "seeding_key": {
         "resource.key": "quiz_quiz_trade_1"
+      }
+    },
+    {
+      "name": "Truth Tables",
+      "url": "https://docs.google.com/document/u/1/d/1ctKlgd7zP61hdc4JFVtSGr5TZ1tI_xZmBEaLIfRizb8/edit",
+      "key": "truth_tables",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "truth_tables"
+      }
+    },
+    {
+      "name": "U4L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1XyaSNf3CmwIYsIpKUVyH1Gu5p3H_Vsc3rATDq9TcIWI/edit?usp=sharing",
+      "key": "u4l10_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u4l10_extra_practice"
       }
     },
     {
@@ -3094,6 +3650,18 @@
       }
     },
     {
+      "name": "Unit 4 Guide",
+      "url": "https://docs.google.com/document/d/1YA_zYh2HlVntDUpFTKrFlO6He__qySBndCt1X-09BkA/edit?usp=sharing",
+      "key": "unit_4_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_guide"
+      }
+    },
+    {
       "name": "Unit 4 Presentation Slides",
       "url": "https://docs.google.com/presentation/d/1M-LmKHk-ZbV-5Pi3FnqdcWOGavTBBq3_kZ-kib897tw/edit?usp=sharing",
       "key": "unit_4_presentation_slides",
@@ -3103,6 +3671,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "name": "Vocabulary Don't-Say-It!",
+      "url": "https://docs.google.com/document/d/1CzdHQqqMf6qAreGIWrlsvTSvnfhSJ9jUCUjiVTfrxr4/edit?usp=sharing",
+      "key": "vocabulary_don_t-say-it_",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_don_t-say-it_"
       }
     }
   ],
@@ -3331,6 +3911,78 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_truth_tables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "around_the_world_printouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_u4l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "vocabulary_don_t-say-it_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "truth_tables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "u4l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_4_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_frq_writing_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_writing_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_scoring_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-15",
         "resource.key": "unit_4_presentation_slides"
       }
@@ -3522,6 +4174,26 @@
       "seeding_key": {
         "vocabulary.key": "compound_boolean_expression"
       }
+    },
+    {
+      "key": "de_morgan_s_laws",
+      "word": "De Morgan's Laws",
+      "definition": "A set of rules that describe how to handle complex Boolean expressions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "de_morgan_s_laws"
+      }
+    },
+    {
+      "key": "truth_table",
+      "word": "Truth Table",
+      "definition": "A table used to determine the truth values of a Boolean expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "truth_table"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -3631,6 +4303,18 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "vocabulary.key": "compound_boolean_expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "de_morgan_s_laws"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "truth_table"
       }
     }
   ],
@@ -3917,6 +4601,66 @@
         "lesson.key": "lesson-10",
         "objective.key": "22b841da-0d6e-407e-8253-88c2b608db49"
       }
+    },
+    {
+      "key": "c4105e1b-d193-4b18-945c-3c158d893c67",
+      "properties": {
+        "description": "Construct truth tables to evaluate Boolean expressions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "c4105e1b-d193-4b18-945c-3c158d893c67"
+      }
+    },
+    {
+      "key": "98913902-79de-4d37-ab7e-9021fb63b945",
+      "properties": {
+        "description": "Use truth tables to prove De Morgan’s Laws"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "98913902-79de-4d37-ab7e-9021fb63b945"
+      }
+    },
+    {
+      "key": "2c81c5b4-7ccb-4822-b013-30436308233a",
+      "properties": {
+        "description": "Evaluate compound Boolean expressions for equivalence"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "2c81c5b4-7ccb-4822-b013-30436308233a"
+      }
+    },
+    {
+      "key": "8dee2812-af22-4374-beba-8c5abad1e527",
+      "properties": {
+        "description": "Implement methods based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "8dee2812-af22-4374-beba-8c5abad1e527"
+      }
+    },
+    {
+      "key": "776ce1d9-c5bf-4ffb-a775-897a9faaf39e",
+      "properties": {
+        "description": "Plan an algorithm using pseudocode"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "776ce1d9-c5bf-4ffb-a775-897a9faaf39e"
+      }
+    },
+    {
+      "key": "90beffeb-63be-45b3-862a-9679c533235f",
+      "properties": {
+        "description": "Translate pseudocode into Java"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "90beffeb-63be-45b3-862a-9679c533235f"
+      }
     }
   ],
   "lessons_standards": [
@@ -4191,6 +4935,27 @@
         "lesson.key": "lesson-10",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.G.3"
       }
     }
   ],
