@@ -61,25 +61,25 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "should serialize to json" do
-    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true)
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
-    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
+    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1", published_state: SharedConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2", published_state: SharedConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3", published_state: SharedConstants::PUBLISHED_STATE.stable))
 
     serialization = unit_group.serialize
 
     obj = JSON.parse(serialization)
     assert_equal 'my-unit-group', obj['name']
     assert_equal ['script1', 'script2', 'script3'], obj['script_names']
-    assert obj['properties']['is_stable']
+    assert_equal obj['published_state'], SharedConstants::PUBLISHED_STATE.stable
   end
 
   test "should serialize resources to json" do
     course_version = create :course_version
-    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true, course_version: course_version)
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
-    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
+    unit_group = create(:unit_group, name: 'my-unit-group', course_version: course_version, published_state: SharedConstants::PUBLISHED_STATE.stable)
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1", published_state: SharedConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2", published_state: SharedConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3", published_state: SharedConstants::PUBLISHED_STATE.stable))
     unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
     unit_group.student_resources = [create(:resource, course_version: course_version)]
 
@@ -88,13 +88,13 @@ class UnitGroupTest < ActiveSupport::TestCase
     obj = JSON.parse(serialization)
     assert_equal 'my-unit-group', obj['name']
     assert_equal ['script1', 'script2', 'script3'], obj['script_names']
-    assert obj['properties']['is_stable']
+    assert_equal obj['published_state'], SharedConstants::PUBLISHED_STATE.stable
     assert_equal 2, obj['resources'].length
     assert_equal 1, obj['student_resources'].length
   end
 
   test "can seed unit group from hash" do
-    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
+    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1", published_state: SharedConstants::PUBLISHED_STATE.stable))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2", published_state: SharedConstants::PUBLISHED_STATE.stable))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3", published_state: SharedConstants::PUBLISHED_STATE.stable))
@@ -110,7 +110,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "can seed unit group and create resources from hash" do
-    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true, family_name: 'test', version_year: '2000')
+    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedConstants::PUBLISHED_STATE.stable, family_name: 'test', version_year: '2000')
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
@@ -132,7 +132,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "can seed unit group and only update resources from course version" do
-    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true, family_name: 'test', version_year: '2000')
+    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedConstants::PUBLISHED_STATE.stable, family_name: 'test', version_year: '2000')
     CourseOffering.add_course_offering(unit_group)
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
@@ -155,7 +155,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "can seed unit group and remove resources from hash" do
-    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true, family_name: 'test', version_year: '2000')
+    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedConstants::PUBLISHED_STATE.stable, family_name: 'test', version_year: '2000')
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
@@ -177,7 +177,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "can seed unit group and update resources from hash" do
-    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true, family_name: 'test', version_year: '2000')
+    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedConstants::PUBLISHED_STATE.stable, family_name: 'test', version_year: '2000')
     CourseOffering.add_course_offering(unit_group)
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
@@ -197,7 +197,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "can seed from hash and update and remove student resources" do
-    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true, family_name: 'test', version_year: '2000')
+    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedConstants::PUBLISHED_STATE.stable, family_name: 'test', version_year: '2000')
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
@@ -235,7 +235,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert unit_group.stable?
   end
 
-  test "stable?: defaults to false if unit_group does not have published_state" do
+  test "stable?: defaults to false if unit_group does not have published_state of stable" do
     unit_group = create :unit_group
     refute unit_group.stable?
   end
@@ -454,8 +454,8 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test 'summarize_version' do
-    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', visible: true, is_stable: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
-    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', visible: true, is_stable: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', visible: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
+    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', visible: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
     csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', visible: true, published_state: SharedConstants::PUBLISHED_STATE.preview)
     csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta)
 
@@ -614,10 +614,10 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class CanViewVersion < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+      @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable)
       @csp1_2017 = create(:script, name: 'csp1-2017')
       create :unit_group_unit, unit_group: @csp_2017, script: @csp1_2017, position: 1
-      @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+      @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
       create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019')
       @student = create :student
     end
@@ -652,9 +652,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class LatestVersionTests < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
-      @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
-      create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', is_stable: false)
+      @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable)
+      @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
+      create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.preview)
       @student = create :student
     end
 
@@ -742,7 +742,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "valid_courses" do
-    csp = create(:unit_group, name: 'csp-2017', visible: true, is_stable: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
+    csp = create(:unit_group, name: 'csp-2017', visible: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
     # Should still be in valid_courses if visible and not stable
     csd = create(:unit_group, name: 'csd-2017', visible: true, published_state: SharedConstants::PUBLISHED_STATE.preview)
     create(:unit_group, name: 'madeup')
@@ -751,7 +751,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "assignable_info" do
-    csp = create(:unit_group, name: 'csp-2017', visible: true, is_stable: true)
+    csp = create(:unit_group, name: 'csp-2017', visible: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
     csp1 = create(:script, name: 'csp1')
     csp2 = create(:script, name: 'csp2')
     csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
