@@ -39,7 +39,6 @@
       "project_sharing": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/unit5/{LESSON}",
       "curriculum_umbrella": "CSP",
-      "is_stable": true,
       "family_name": "csp5",
       "tts": true,
       "hideable_lessons": true
