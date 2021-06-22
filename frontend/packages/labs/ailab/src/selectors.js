@@ -5,6 +5,7 @@ const getData = state => state.data;
 const getColumnsByDataType = state => state.columnsByDataType;
 const getSelectedFeatures = state => state.selectedFeatures;
 const getLabelColumn = state => state.labelColumn;
+const getCurrentColumn = state => state.currentColumn;
 
 /* Functions for filtering and selecting columns by type.  */
 
@@ -53,15 +54,26 @@ export const getSelectedNumericalFeatures = createSelector(
   }
 )
 
+function getUniqueOptions(data, column) {
+  return Array.from(new Set(data.map(row => row[column]))).filter(
+    option => option !== undefined && option !== ""
+  );
+}
+
 export const getUniqueOptionsByColumn = createSelector(
   [getSelectedCategoricalColumns, getData],
   (selectedCategoricalColumns, data) => {
     let uniqueOptionsByColumn = {};
     selectedCategoricalColumns.map(column => (
-      uniqueOptionsByColumn[column] = Array.from(
-        new Set(data.map(row => row[column]))
-      ).sort()
+      uniqueOptionsByColumn[column] = getUniqueOptions(data, column).sort()
     ))
     return uniqueOptionsByColumn;
+  }
+)
+
+export const getUniqueOptionsCurrentColumn = createSelector(
+  [getCurrentColumn, getData],
+  (currentColumn, data) => {
+    return getUniqueOptions(data, currentColumn).sort()
   }
 )
