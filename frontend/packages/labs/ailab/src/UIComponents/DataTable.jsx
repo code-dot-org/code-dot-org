@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { setCurrentColumn, setHighlightColumn } from "../redux";
+import { getTableData, setCurrentColumn, setHighlightColumn } from "../redux";
 import { styles } from "../constants";
 
 class DataTable extends Component {
@@ -157,8 +157,8 @@ class DataTable extends Component {
 }
 
 export default connect(
-  state => ({
-    data: state.data,
+  (state, props) => ({
+    data: getTableData(state, props.useResultsData),
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     currentColumn: state.currentColumn,

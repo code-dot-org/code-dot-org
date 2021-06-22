@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { readyToTrain } from "../redux";
+import { getTableData, readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
@@ -11,7 +11,7 @@ import background from "@public/images/results-background-light.png";
 import DataTable from "./DataTable";
 
 const framesPerCycle = 80;
-const numItems = 7;
+const maxNumItems = 7;
 
 class GenerateResults extends Component {
   static propTypes = {
@@ -47,12 +47,20 @@ class GenerateResults extends Component {
     this.setState({ animationTimer });
   }
 
+  getNumItems = () => {
+    return Math.min(maxNumItems, this.props.data.length);
+  };
+
+  getShowItemsFadingOut = () => {
+    return this.props.data.length > maxNumItems;
+  };
+
   getAnimationSubstep = () => {
     return this.state.frame % framesPerCycle;
   };
 
   updateAnimation = () => {
-    if (this.getAnimationStep() >= numItems) {
+    if (this.getAnimationStep() >= this.getNumItems()) {
       this.setState({ finished: true });
     }
 
@@ -86,8 +94,10 @@ class GenerateResults extends Component {
     const transform = `translateX(-50%) translateY(-50%) rotateZ(${rotateZ}deg)`;
     const opacity = getFadeOpacity(animationProgress);
     const hideLabel = this.getAnimationSubstep() < framesPerCycle / 2;
-    const showAnimation = this.getAnimationStep() < numItems;
-    const maxFrames = framesPerCycle * (numItems - 1.5);
+    const showAnimation = this.getAnimationStep() < this.getNumItems();
+    const startFadingAtItem =
+      this.getNumItems() - (this.getShowItemsFadingOut() ? 1.5 : 0);
+    const maxFrames = framesPerCycle * startFadingAtItem;
     const tableOpacity =
       this.state.frame < framesPerCycle
         ? this.state.frame / framesPerCycle
@@ -97,7 +107,6 @@ class GenerateResults extends Component {
         : this.state.frame >= maxFrames + framesPerCycle
         ? 0
         : 1;
-
     const headMoveAmount =
       this.state.frame < framesPerCycle / 4
         ? this.state.frame / (framesPerCycle / 4)
@@ -125,7 +134,7 @@ class GenerateResults extends Component {
           backgroundImage: "url(" + background + ")"
         }}
       >
-        <div style={styles.statementWithBackground}>Testing the model</div>
+        <div style={styles.statementWithBackgroundAbsolute}>Testing the model</div>
 
         <div style={styles.generateResultsContainer}>
           <div
@@ -135,6 +144,7 @@ class GenerateResults extends Component {
             }}
           >
             <DataTable
+              useResultsData={true}
               reducedColumns={true}
               startingRow={startingRow}
               noLabel={true}
@@ -154,6 +164,7 @@ class GenerateResults extends Component {
               }}
             >
               <DataTable
+                useResultsData={true}
                 reducedColumns={true}
                 singleRow={this.getAnimationStep()}
                 hideLabel={hideLabel}
@@ -187,6 +198,7 @@ class GenerateResults extends Component {
 }
 
 export default connect(state => ({
+  data: getTableData(state, true),
   readyToTrain: readyToTrain(state),
   labelColumn: state.labelColumn,
   selectedFeatures: state.selectedFeatures,
