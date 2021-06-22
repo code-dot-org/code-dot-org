@@ -7,13 +7,13 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  wrapup_video_id :integer
+#  hidden          :boolean          default(FALSE), not null
 #  user_id         :integer
 #  login_required  :boolean          default(FALSE), not null
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
 #  published_state :string(255)      default("beta"), not null
-#  hidden          :boolean
 #
 # Indexes
 #
