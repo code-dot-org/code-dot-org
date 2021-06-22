@@ -23,7 +23,7 @@ const cleanData = (data) => {
   var cleanedData = []
 
   for (var row of data) {
-    var cleanedRow = tryGetCleanedRow(row);
+    var cleanedRow = getCleanedRow(row);
     if (cleanedRow !== null) {
       cleanedData.push(cleanedRow);
     }
@@ -32,14 +32,16 @@ const cleanData = (data) => {
   return cleanedData;
 }
 
-const tryGetCleanedRow = (row) => {
-  for (var cellName in row) {
-    if (!isCellValid(row[cellName])) {
+const getCleanedRow = (row) => {
+  for (var column in row) {
+    var cellValue = row[column];
+
+    if (!isCellValid(cellValue)) {
       return null;
     }
 
-    if (typeof row[cellName] === 'string') {
-      row[cellName] = row[cellName].trim();
+    if (typeof cellValue === 'string') {
+      row[column] = cellValue.trim();
     }
   }
 
