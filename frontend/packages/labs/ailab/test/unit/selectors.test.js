@@ -1,13 +1,14 @@
 import {
   getCategoricalColumns,
+  getSelectedCategoricalColumns,
   getSelectedCategoricalFeatures,
   getNumericalColumns,
-  getSelectedNumericalFeatures
+  getSelectedNumericalFeatures,
+  getUniqueOptionsByColumn
 } from "../../src/selectors";
 import { classificationState, allNumericalState } from "./testData";
 
 describe("selecting columns by data type", () => {
-
   test("gets selected categorical features", async () => {
     const categoricalColumns = getCategoricalColumns
       .resultFunc(classificationState.columnsByDataType).sort();
@@ -26,5 +27,28 @@ describe("selecting columns by data type", () => {
       numericalColumns, allNumericalState.selectedFeatures
     )
     expect(result).toEqual(['batCount']);
+  });
+});
+
+describe("getting unique options by column", () => {
+  test("gets unique options by column", async () => {
+    const categoricalColumns = getCategoricalColumns
+      .resultFunc(classificationState.columnsByDataType).sort();
+    const selectedCategoricalColumns =
+      getSelectedCategoricalColumns.resultFunc(
+        categoricalColumns,
+        classificationState.selectedFeatures,
+        classificationState.labelColumn
+      )
+    const uniqueOptionsByColumn =
+      getUniqueOptionsByColumn.resultFunc(
+        selectedCategoricalColumns,
+        classificationState.data
+      )
+    expect(uniqueOptionsByColumn['play']).toEqual(['no', 'yes']);
+    expect(uniqueOptionsByColumn['temp']).toEqual(['cool', 'hot', 'mild']);
+    expect(uniqueOptionsByColumn['weather']).toEqual(
+      ['overcast', 'rainy', 'sunny']
+    );
   });
 });

@@ -6,14 +6,14 @@ import { store } from "../index.js";
 import train from "../train";
 import {
   setTestData,
-  getUniqueOptionsByColumn,
   getConvertedPredictedLabel,
   getPredictAvailable,
   getExtremaByColumn
 } from "../redux";
 import {
   getSelectedCategoricalFeatures,
-  getSelectedNumericalFeatures
+  getSelectedNumericalFeatures,
+  getUniqueOptionsByColumn
 } from "../selectors";
 import { styles } from "../constants";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
