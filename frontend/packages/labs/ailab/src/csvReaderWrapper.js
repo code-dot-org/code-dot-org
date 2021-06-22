@@ -19,23 +19,35 @@ export const parseCSV = (csvfile, download, useDefaultColumnDataType) => {
   });
 };
 
-const isCellValid = (cell) => {
-  return cell !== undefined && cell !== "";
-}
-
-const isRowValid = (row) => {
-  var cells = Object.values(row);
-  return cells.every(isCellValid)
-}
-
 const cleanData = (data) => {
-  var cleanedData = data.filter(row => isRowValid(row));
+  var cleanedData = []
+
+  for (var row of data) {
+    var cleanedRow = getCleanedRow(row);
+    if (cleanedRow !== null) {
+      cleanedData.push(cleanedRow);
+    }
+  }
+
   return cleanedData;
 }
 
-const countRemovedRows = (originalData, cleanedData) => {
-  var removedRowsCount = originalData.length - cleanedData.length;
-  store.dispatch(setRemovedRowsCount(removedRowsCount));
+const getCleanedRow = (row) => {
+  for (var column in row) {
+    var cellValue = row[column];
+
+    if (!isCellValid(cellValue)) {
+      return null;
+    }
+
+    row[column] = cellValue.trim();
+  }
+
+  return row;
+}
+
+const isCellValid = (cell) => {
+  return cell !== undefined && cell !== "";
 }
 
 const updateData = (result, useDefaultColumnDataType, userUploadedData) => {
@@ -46,6 +58,11 @@ const updateData = (result, useDefaultColumnDataType, userUploadedData) => {
   if (useDefaultColumnDataType) {
     setDefaultColumnDataType(cleanedData);
   }
+}
+
+const countRemovedRows = (originalData, cleanedData) => {
+  var removedRowsCount = originalData.length - cleanedData.length;
+  store.dispatch(setRemovedRowsCount(removedRowsCount));
 }
 
 const setDefaultColumnDataType = data => {
