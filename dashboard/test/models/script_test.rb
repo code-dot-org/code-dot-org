@@ -809,26 +809,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.find_by_name('ECSPD').professional_learning_course?
   end
 
-  test 'script with pilot experiment has pilot published state' do
-    script = create(:script, name: 'single-lesson-script', pilot_experiment: 'my-experiment')
-    assert_equal SharedConstants::PUBLISHED_STATE.pilot, script.get_published_state
-  end
-
-  test 'script with hidden true has beta published state' do
-    script = create(:script, name: 'single-lesson-script', hidden: true)
-    assert_equal SharedConstants::PUBLISHED_STATE.beta, script.get_published_state
-  end
-
-  test 'script with hidden false has preview published state' do
-    script = create(:script, name: 'single-lesson-script', hidden: false)
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, script.get_published_state
-  end
-
-  test 'script with hidden false and is_stable true has stable published state' do
-    script = create(:script, name: 'single-lesson-script', hidden: false, is_stable: true)
-    assert_equal SharedConstants::PUBLISHED_STATE.stable, script.get_published_state
-  end
-
   test 'should summarize script' do
     script = create(:script, name: 'single-lesson-script')
     lesson_group = create(:lesson_group, key: 'key1', script: script)
@@ -1186,8 +1166,8 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes versions' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
-    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
+    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.preview)
 
     versions = foo17.summarize[:versions]
     assert_equal 2, versions.length
@@ -1199,10 +1179,10 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '2017', versions[1][:version_title]
   end
 
-  test 'summarize excludes hidden versions' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
-    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
-    create(:script, name: 'foo-2019', family_name: 'foo', version_year: '2019', hidden: true)
+  test 'summarize excludes unlaunched versions' do
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
+    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.preview)
+    create(:script, name: 'foo-2019', family_name: 'foo', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta)
 
     versions = foo17.summarize[:versions]
     assert_equal 2, versions.length
@@ -1224,7 +1204,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show assign button' do
-    script = create(:script, name: 'script')
+    script = create(:script, name: 'script', published_state: SharedConstants::PUBLISHED_STATE.preview)
 
     # No user, show_assign_button set to nil
     assert_nil script.summarize[:show_assign_button]
@@ -1234,7 +1214,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal true, script.summarize(true, create(:teacher))[:show_assign_button]
 
     # Teacher should not be able to assign a hidden script.
-    hidden_script = create(:script, name: 'unassignable-hidden', hidden: true)
+    hidden_script = create(:script, name: 'unassignable-hidden', hidden: true, published_state: SharedConstants::PUBLISHED_STATE.beta)
     assert_equal SharedConstants::PUBLISHED_STATE.beta, hidden_script.summarize[:publishedState]
     assert_equal false, hidden_script.summarize(true, create(:teacher))[:show_assign_button]
 
@@ -1928,7 +1908,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test "assignable_info: returns assignable info for a script" do
-    script = create(:script, name: 'fake-script', hidden: true, lesson_extras_available: true)
+    script = create(:script, name: 'fake-script', published_state: 'beta', lesson_extras_available: true)
     assignable_info = script.assignable_info
 
     assert_equal("fake-script *", assignable_info[:name])
@@ -1956,7 +1936,7 @@ class ScriptTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations test_locale, custom_i18n
 
-    script = build(:script, name: 'csp1-2017')
+    script = build(:script, name: 'csp1-2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
     assignable_info = script.assignable_info
 
     assert_equal('CSP Unit 1 Test', assignable_info[:name])
@@ -2074,8 +2054,8 @@ class ScriptTest < ActiveSupport::TestCase
 
     teacher = create :teacher
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    coursea_2019 = create :script, name: 'coursea-2019'
-    coursea_2020 = create :script, name: 'coursea-2020', hidden: true, pilot_experiment: 'my-experiment'
+    coursea_2019 = create :script, name: 'coursea-2019', published_state: 'preview'
+    coursea_2020 = create :script, name: 'coursea-2020', published_state: 'pilot', pilot_experiment: 'my-experiment'
 
     assert_equal [coursea_2019], Script.valid_scripts(teacher)
     assert_equal [coursea_2019, coursea_2020], Script.valid_scripts(pilot_teacher)
