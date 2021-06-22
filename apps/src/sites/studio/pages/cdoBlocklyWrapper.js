@@ -1,4 +1,5 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
+import codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 
 /**
  * Wrapper class for https://github.com/code-dot-org/blockly
@@ -118,6 +119,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
     blocklyCanvas.addEventListener('blocklyBlockSpaceChange', handler);
   };
+
+  blocklyWrapper.getWorkspaceCode = function() {
+    return codegen.workspaceCode(Blockly);
+  };
+
   return blocklyWrapper;
 }
 
