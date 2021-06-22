@@ -28,9 +28,9 @@ class ProgressLessonTeacherInfo extends React.Component {
 
     // redux provided
     section: sectionShape,
-    scriptAllowsHiddenLessons: PropTypes.bool.isRequired,
+    unitAllowsHiddenLessons: PropTypes.bool.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
-    scriptName: PropTypes.string.isRequired,
+    unitName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenLesson: PropTypes.func.isRequired,
     lockableAuthorized: PropTypes.bool.isRequired
@@ -43,9 +43,9 @@ class ProgressLessonTeacherInfo extends React.Component {
   }
 
   onClickHiddenToggle(value) {
-    const {scriptName, section, lesson, toggleHiddenLesson} = this.props;
+    const {unitName, section, lesson, toggleHiddenLesson} = this.props;
     const sectionId = (section && section.id.toString()) || '';
-    toggleHiddenLesson(scriptName, sectionId, lesson.id, value === 'hidden');
+    toggleHiddenLesson(unitName, sectionId, lesson.id, value === 'hidden');
     firehoseClient.putRecord(
       {
         study: 'hidden-lessons',
@@ -58,9 +58,9 @@ class ProgressLessonTeacherInfo extends React.Component {
   }
 
   firehoseData() {
-    const {scriptName, section, lesson} = this.props;
+    const {unitName, section, lesson} = this.props;
     return {
-      script_name: scriptName,
+      script_name: unitName,
       section_id: section && section.id,
       lesson_id: lesson.id,
       lesson_name: lesson.name
@@ -70,7 +70,7 @@ class ProgressLessonTeacherInfo extends React.Component {
   render() {
     const {
       section,
-      scriptAllowsHiddenLessons,
+      unitAllowsHiddenLessons,
       hiddenLessonState,
       hasNoSections,
       lockableAuthorized,
@@ -80,9 +80,9 @@ class ProgressLessonTeacherInfo extends React.Component {
 
     const sectionId = (section && section.id.toString()) || '';
     const showHiddenForSectionToggle =
-      section && scriptAllowsHiddenLessons && !hasNoSections;
+      section && unitAllowsHiddenLessons && !hasNoSections;
     const isHidden =
-      scriptAllowsHiddenLessons &&
+      unitAllowsHiddenLessons &&
       isLessonHiddenForSection(hiddenLessonState, sectionId, lesson.id);
     const courseId =
       (section && section.code && parseInt(section.code.substring(2))) || null;
@@ -169,17 +169,17 @@ export default connect(
   state => ({
     section:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    scriptAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed,
+    unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed,
     hiddenLessonState: state.hiddenLesson,
-    scriptName: state.progress.scriptName,
+    unitName: state.progress.scriptName,
     lockableAuthorized: state.lessonLock.lockableAuthorized,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
       state.teacherSections.sectionIds.length === 0
   }),
   dispatch => ({
-    toggleHiddenLesson(scriptName, sectionId, lessonId, hidden) {
-      dispatch(toggleHiddenLesson(scriptName, sectionId, lessonId, hidden));
+    toggleHiddenLesson(unitName, sectionId, lessonId, hidden) {
+      dispatch(toggleHiddenLesson(unitName, sectionId, lessonId, hidden));
     }
   })
 )(ProgressLessonTeacherInfo);
