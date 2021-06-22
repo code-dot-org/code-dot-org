@@ -7,7 +7,6 @@ has_verified_resources true
 announcements [{"notice"=>"Are you signed up for the AP exam?", "details"=>"Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Click to learn more about six great reasons why you should.", "link"=>"https://code.org/educate/csp/ap-students", "type"=>"bullhorn", "visibility"=>"Student-only"}]
 family_name 'csp2'
 version_year '2018'
-is_stable true
 published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSP'
