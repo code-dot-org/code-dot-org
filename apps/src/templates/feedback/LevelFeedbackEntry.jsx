@@ -7,6 +7,10 @@ import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
+const getElementHeight = element => {
+  return ReactDOM.findDOMNode(element).offsetHeight;
+};
+
 const initialCommentHeight = 40;
 
 const RubricPerformanceCopy = {
@@ -41,10 +45,8 @@ export default class LevelFeedbackEntry extends Component {
   };
 
   componentDidMount() {
-    if (this.comment) {
-      const commentHeight = ReactDOM.findDOMNode(this.comment).height;
-      this.setState({commentHeight});
-    }
+    this.comment &&
+      this.setState({commentHeight: getElementHeight(this.comment)});
   }
 
   render() {
@@ -114,21 +116,19 @@ export default class LevelFeedbackEntry extends Component {
         {commentExists && (
           <div style={styles.commentContainer}>
             {isCommentExpandable && (
-              <span
-                style={styles.iconBox}
+              <FontAwesome
+                style={styles.icon}
+                icon={expanded ? 'caret-down' : 'caret-right'}
                 onClick={expanded ? this.collapse : this.expand}
-              >
-                <FontAwesome
-                  style={styles.icon}
-                  icon={expanded ? 'caret-down' : 'caret-right'}
-                />
-              </span>
+              />
             )}
             <span style={styles.commentText}>
               <div ref={r => (this.comment = r)} style={styles.feedbackText}>
                 &quot;{comment}&quot;
               </div>
-              {showCommentFade && <div style={styles.fadeout} />}
+              {showCommentFade && (
+                <div id="comment-fade" style={styles.fadeout} />
+              )}
             </span>
           </div>
         )}
@@ -178,9 +178,7 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif'
   },
   icon: {
-    fontSize: 18
-  },
-  iconBox: {
+    fontSize: 18,
     paddingRight: 20,
     paddingLeft: 5,
     cursor: 'pointer'
