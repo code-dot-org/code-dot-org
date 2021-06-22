@@ -3,13 +3,15 @@
     "name": "self-paced-pl-csd6-2021",
     "wrapup_video_id": null,
     "hidden": true,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:36 UTC",
+    "serialized_at": "2021-06-22 18:27:58 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd6-2021"
@@ -21,109 +23,22 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Preparing to Teach Unit 1: Problem Solving and Computing"
+        "display_name": "Preparing to Teach CS Discoveries"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lessonGroup-3",
-      "user_facing": true,
-      "position": 2,
-      "properties": {
-        "display_name": "Preparing to Teach Unit 2: Web Development"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lessonGroup-4",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "Preparing to Teach Unit 3: Interactive Animations and Games"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lessonGroup-5",
-      "user_facing": true,
-      "position": 4,
-      "properties": {
-        "display_name": "Preparing to Teach Unit 4: The Design Process"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lessonGroup-6",
-      "user_facing": true,
-      "position": 5,
-      "properties": {
-        "display_name": "Preparing to Teach Unit 5: Data and Society"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lessonGroup-7",
-      "user_facing": true,
-      "position": 6,
-      "properties": {
-        "display_name": "Preparing to Teach Unit 6: Physical Computing"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lessonGroup-8",
-      "user_facing": true,
-      "position": 7,
-      "properties": {
-        "display_name": "Preparing to Teach Unit 7: AI and Machine Learning"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-8",
         "script.name": "self-paced-pl-csd6-2021"
       }
     }
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "Intorduction to Unit 1",
+      "key": "lesson-2",
+      "name": "Preparing to Teach Unit 1: Problem Solving and Computing",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-2",
-      "name": "Preparing to Teach Week 1",
-      "absolute_position": 2,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -134,11 +49,11 @@
     },
     {
       "key": "lesson-3",
-      "name": "Unit 1 Key Concepts",
-      "absolute_position": 3,
+      "name": "Unit 2: Web Development",
+      "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 3,
+      "has_lesson_plan": false,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -149,12 +64,13 @@
     },
     {
       "key": "lesson-4",
-      "name": "Sample Student Work",
-      "absolute_position": 4,
+      "name": "Preparing to Teach Unit 3",
+      "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 4,
+      "has_lesson_plan": false,
+      "relative_position": 3,
       "properties": {
+        "overview": "##Ineractive Animations and Games\n\nIn Unit 3, students build on their coding experience as they program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, students develop a personalized, interactive program."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -164,11 +80,11 @@
     },
     {
       "key": "lesson-5",
-      "name": "Unit 1 Projects",
-      "absolute_position": 5,
+      "name": "Preparing to Teach The Design Process ",
+      "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 5,
+      "has_lesson_plan": false,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -179,22 +95,37 @@
     },
     {
       "key": "lesson-6",
-      "name": "Introduction to Unit 2",
-      "absolute_position": 6,
+      "name": "Data and Society",
+      "absolute_position": 5,
       "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 6,
+      "has_lesson_plan": true,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd6-2021"
       }
     },
     {
       "key": "lesson-7",
-      "name": "Preparing to Teach Week 1 ",
+      "name": "Unit 6",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Preparing to Teach Unit 7",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -202,445 +133,13 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-8",
-      "name": "Unit 2 Key Concepts",
-      "absolute_position": 8,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 8,
-      "properties": {
-      },
-      "seeding_key": {
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-9",
-      "name": "Sample Student Work",
-      "absolute_position": 9,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-10",
-      "name": "Unit 1 Projects",
-      "absolute_position": 10,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-11",
-      "name": "Introduction to Unit 3",
-      "absolute_position": 11,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-12",
-      "name": "Preparing to teach week 1 of Unit 3",
-      "absolute_position": 12,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-13",
-      "name": "Uni 3 Key Concepts",
-      "absolute_position": 13,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 13,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-14",
-      "name": "Sample Student Work",
-      "absolute_position": 14,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 14,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-15",
-      "name": "Unit 3 Projects",
-      "absolute_position": 15,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 15,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-15",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-16",
-      "name": "Introduction to Unit 4: The Design Process",
-      "absolute_position": 16,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 16,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-16",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-17",
-      "name": "Preparing to teach week 1 of Unit 4",
-      "absolute_position": 17,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 17,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-17",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-18",
-      "name": "Unit 4 Key Concepts",
-      "absolute_position": 18,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 18,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-19",
-      "name": "Sample Student Work",
-      "absolute_position": 19,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 19,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-19",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-20",
-      "name": "Unit 4 Projects",
-      "absolute_position": 20,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 20,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-20",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-21",
-      "name": "Introduction to Unit 5: Data and Society",
-      "absolute_position": 21,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 21,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-22",
-      "name": "Preparing to Teach Week 1",
-      "absolute_position": 22,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 22,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-23",
-      "name": "Unit 5 Key Concepts",
-      "absolute_position": 23,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 23,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-24",
-      "name": "Sample Student Work",
-      "absolute_position": 24,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 24,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-24",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-25",
-      "name": "Unit 5 Projects",
-      "absolute_position": 25,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 25,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-25",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-26",
-      "name": "Introduction to Unit 6",
-      "absolute_position": 26,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 26,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-26",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-27",
-      "name": "Preparing to Teach Unit 6",
-      "absolute_position": 27,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 27,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-27",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-28",
-      "name": "Unit 6 Key Concepts",
-      "absolute_position": 28,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 28,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-28",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-29",
-      "name": "Sample Student Work",
-      "absolute_position": 29,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 29,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-29",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-30",
-      "name": "Unit 6 Projects",
-      "absolute_position": 30,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 30,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-30",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-31",
-      "name": "Introduction to Unit 7",
-      "absolute_position": 31,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 31,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-31",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-32",
-      "name": "Preparing to teach week 1",
-      "absolute_position": 32,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 32,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-32",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-33",
-      "name": "Unit 7 key concepts",
-      "absolute_position": 33,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 33,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-33",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-34",
-      "name": "Sample student work",
-      "absolute_position": 34,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 34,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-34",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
-    {
-      "key": "lesson-35",
-      "name": "Unit 1 Projects",
-      "absolute_position": 35,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 35,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-35",
-        "lesson_group.key": "lessonGroup-8",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd6-2021"
       }
     }
   ],
   "lesson_activities": [
-    {
-      "key": "ccb9d049-b46e-4b9e-9114-b9bb99cbfe2c",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ccb9d049-b46e-4b9e-9114-b9bb99cbfe2c",
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd6-2021"
-      }
-    },
     {
       "key": "ac8eada4-e1b2-488c-8d27-2725db18eed3",
       "position": 1,
@@ -654,30 +153,43 @@
       }
     },
     {
-      "key": "869e3e93-e24b-4b37-8cb7-de324aa001e0",
+      "key": "b72a39e0-51d1-4651-a6d8-7d72504bee99",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "869e3e93-e24b-4b37-8cb7-de324aa001e0",
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_activity.key": "b72a39e0-51d1-4651-a6d8-7d72504bee99",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "04c2d25b-2c59-4d12-9e89-6142979052e8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04c2d25b-2c59-4d12-9e89-6142979052e8",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "6f521930-8946-4ba8-84d0-b9dfba7e7ebb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f521930-8946-4ba8-84d0-b9dfba7e7ebb",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd6-2021"
       }
     }
   ],
   "activity_sections": [
-    {
-      "key": "18609f6c-ae7e-45f7-90f1-9d170f127426",
-      "position": 1,
-      "properties": {
-        "progression_name": "Introduction to Unit 1"
-      },
-      "seeding_key": {
-        "activity_section.key": "18609f6c-ae7e-45f7-90f1-9d170f127426",
-        "lesson_activity.key": "ccb9d049-b46e-4b9e-9114-b9bb99cbfe2c"
-      }
-    },
     {
       "key": "06f8631d-2efd-4191-988b-1df583709b3e",
       "position": 1,
@@ -689,45 +201,39 @@
       }
     },
     {
-      "key": "70b3bda9-4ab2-4480-a681-e29f62cef8d5",
+      "key": "57b126fb-c2a4-4c6b-808e-4ed7cc867fbf",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "70b3bda9-4ab2-4480-a681-e29f62cef8d5",
-        "lesson_activity.key": "869e3e93-e24b-4b37-8cb7-de324aa001e0"
+        "activity_section.key": "57b126fb-c2a4-4c6b-808e-4ed7cc867fbf",
+        "lesson_activity.key": "b72a39e0-51d1-4651-a6d8-7d72504bee99"
+      }
+    },
+    {
+      "key": "b73d1cc2-f199-4ffe-912a-03b84d18db83",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b73d1cc2-f199-4ffe-912a-03b84d18db83",
+        "lesson_activity.key": "04c2d25b-2c59-4d12-9e89-6142979052e8"
+      }
+    },
+    {
+      "key": "4ad04cd5-a72a-4a83-8af6-54faa9874cdd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4ad04cd5-a72a-4a83-8af6-54faa9874cdd",
+        "lesson_activity.key": "6f521930-8946-4ba8-84d0-b9dfba7e7ebb"
       }
     }
   ],
   "script_levels": [
     {
       "chapter": 1,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "VPL - CSD Module 3 U4L2 Intro Group Dynamics_2021"
-        ],
-        "progression": "Introduction to Unit 1"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL - CSD Module 3 U4L2 Intro Group Dynamics_2021"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd6-2021",
-        "activity_section.key": "18609f6c-ae7e-45f7-90f1-9d170f127426"
-      },
-      "level_keys": [
-        "VPL - CSD Module 3 U4L2 Intro Group Dynamics_2021"
-      ]
-    },
-    {
-      "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -752,7 +258,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -777,7 +283,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -802,7 +308,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 4,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -828,18 +334,6 @@
     }
   ],
   "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "VPL - CSD Module 3 U4L2 Intro Group Dynamics_2021",
-        "script_level.level_keys": [
-          "VPL - CSD Module 3 U4L2 Intro Group Dynamics_2021"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd6-2021",
-        "activity_section.key": "18609f6c-ae7e-45f7-90f1-9d170f127426"
-      }
-    },
     {
       "seeding_key": {
         "level.key": "VPL - CSD: Sprite Velocity_2021",

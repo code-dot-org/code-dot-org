@@ -707,7 +707,7 @@ class Lesson < ApplicationRecord
   def summarize_related_lessons
     related_lessons.map do |lesson|
       {
-        scriptTitle: lesson.script.localized_title,
+        unitTitle: lesson.script.localized_title,
         versionYear: lesson.script.get_course_version&.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
