@@ -8,14 +8,14 @@ import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 describe('HeaderMiddle', () => {
   it('widths for hourof code when wide', () => {
     const widths = HeaderMiddle.getWidths(
-      700,    // width,
-      false,  // projectInfoOnly,
-      0,      // projectInfoDesiredWidth,
-      200,    // scriptNameDesiredWidth,
-      350,    // lessonProgressDesiredWidth,
-      0,      // numScriptLessons,
-      200,    // finishDesiredWidth,
-      true    // showFinish
+      700, // width,
+      false, // projectInfoOnly,
+      0, // projectInfoDesiredWidth,
+      200, // unitNameDesiredWidth,
+      350, // lessonProgressDesiredWidth,
+      0, // numUnitLessons,
+      200, // finishDesiredWidth,
+      true // showFinish
     );
 
     assert.equal(widths.left, 0);
@@ -29,14 +29,14 @@ describe('HeaderMiddle', () => {
 
   it('widths for hourof code when narrow', () => {
     const widths = HeaderMiddle.getWidths(
-      350,    // width,
-      false,  // projectInfoOnly,
-      0,      // projectInfoDesiredWidth,
-      200,    // scriptNameDesiredWidth,
-      350,    // lessonProgressDesiredWidth,
-      0,      // numScriptLessons,
-      200,    // finishDesiredWidth,
-      true    // showFinish
+      350, // width,
+      false, // projectInfoOnly,
+      0, // projectInfoDesiredWidth,
+      200, // unitNameDesiredWidth,
+      350, // lessonProgressDesiredWidth,
+      0, // numUnitLessons,
+      200, // finishDesiredWidth,
+      true // showFinish
     );
 
     assert.equal(widths.left, 0);
@@ -50,14 +50,14 @@ describe('HeaderMiddle', () => {
 
   it('widths for regular level with project info when wide', () => {
     const widths = HeaderMiddle.getWidths(
-      700,    // width,
-      false,  // projectInfoOnly,
-      200,    // projectInfoDesiredWidth,
-      200,    // scriptNameDesiredWidth,
-      350,    // lessonProgressDesiredWidth,
-      5,      // numScriptLessons,
-      0,      // finishDesiredWidth,
-      false   // showFinish
+      700, // width,
+      false, // projectInfoOnly,
+      200, // projectInfoDesiredWidth,
+      200, // unitNameDesiredWidth,
+      350, // lessonProgressDesiredWidth,
+      5, // numUnitLessons,
+      0, // finishDesiredWidth,
+      false // showFinish
     );
 
     assert.equal(widths.left, 0);
@@ -71,14 +71,14 @@ describe('HeaderMiddle', () => {
 
   it('widths for regular level with project info when narrow', () => {
     const widths = HeaderMiddle.getWidths(
-      350,    // width,
-      false,  // projectInfoOnly,
-      200,    // projectInfoDesiredWidth,
-      200,    // scriptNameDesiredWidth,
-      350,    // lessonProgressDesiredWidth,
-      5,      // numScriptLessons,
-      0,      // finishDesiredWidth,
-      false   // showFinish
+      350, // width,
+      false, // projectInfoOnly,
+      200, // projectInfoDesiredWidth,
+      200, // unitNameDesiredWidth,
+      350, // lessonProgressDesiredWidth,
+      5, // numUnitLessons,
+      0, // finishDesiredWidth,
+      false // showFinish
     );
 
     assert.equal(widths.left, 0);
@@ -92,14 +92,14 @@ describe('HeaderMiddle', () => {
 
   it('widths for project info only when wide', () => {
     const widths = HeaderMiddle.getWidths(
-      700,    // width,
-      true,   // projectInfoOnly,
-      400,    // projectInfoDesiredWidth,
-      0,      // scriptNameDesiredWidth,
-      0,      // lessonProgressDesiredWidth,
-      0,      // numScriptLessons,
-      0,      // finishDesiredWidth,
-      false   // showFinish
+      700, // width,
+      true, // projectInfoOnly,
+      400, // projectInfoDesiredWidth,
+      0, // unitNameDesiredWidth,
+      0, // lessonProgressDesiredWidth,
+      0, // numUnitLessons,
+      0, // finishDesiredWidth,
+      false // showFinish
     );
 
     assert.equal(widths.projectInfo, 400);
@@ -111,14 +111,14 @@ describe('HeaderMiddle', () => {
 
   it('widths for project info only when narrow', () => {
     const widths = HeaderMiddle.getWidths(
-      350,    // width,
-      true,   // projectInfoOnly,
-      400,    // projectInfoDesiredWidth,
-      0,      // scriptNameDesiredWidth,
-      0,      // lessonProgressDesiredWidth,
-      0,      // numScriptLessons,
-      0,      // finishDesiredWidth,
-      false   // showFinish
+      350, // width,
+      true, // projectInfoOnly,
+      400, // projectInfoDesiredWidth,
+      0, // unitNameDesiredWidth,
+      0, // lessonProgressDesiredWidth,
+      0, // numUnitLessons,
+      0, // finishDesiredWidth,
+      false // showFinish
     );
 
     assert.equal(widths.projectInfo, 350);
