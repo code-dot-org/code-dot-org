@@ -1301,14 +1301,14 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Test plc course', unit.professional_learning_course
     assert_equal 42, unit.peer_reviews_to_complete
 
-    unit = unit.plc_course_unit
-    assert_equal 'PLC Test', unit.unit_name
-    assert_equal 'PLC test fixture script', unit.unit_description
+    course_unit = unit.plc_course_unit
+    assert_equal 'PLC Test', course_unit.unit_name
+    assert_equal 'PLC test fixture script', course_unit.unit_description
 
     lm = unit.lessons.first.plc_learning_module
     assert_equal 'Sample Module', lm.name
-    assert_equal 1, unit.plc_learning_modules.count
-    assert_equal lm, unit.plc_learning_modules.first
+    assert_equal 1, course_unit.plc_learning_modules.count
+    assert_equal lm, course_unit.plc_learning_modules.first
     assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
   end
 
