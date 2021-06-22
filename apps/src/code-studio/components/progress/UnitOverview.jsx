@@ -132,11 +132,11 @@ class UnitOverview extends React.Component {
     const displayRedirectDialog =
       redirectScriptUrl && !dismissedRedirectDialog(courseName || scriptName);
 
-    let scriptProgress = NOT_STARTED;
+    let unitProgress = NOT_STARTED;
     if (scriptCompleted) {
-      scriptProgress = COMPLETED;
+      unitProgress = COMPLETED;
     } else if (Object.keys(perLevelResults).length > 0) {
-      scriptProgress = IN_PROGRESS;
+      unitProgress = IN_PROGRESS;
     }
 
     const isHiddenUnit =
@@ -186,7 +186,7 @@ class UnitOverview extends React.Component {
               sectionsForDropdown={sectionsForDropdown}
               selectedSectionId={parseInt(selectedSectionId)}
               professionalLearningCourse={professionalLearningCourse}
-              scriptProgress={scriptProgress}
+              unitProgress={unitProgress}
               scriptId={scriptId}
               scriptName={scriptName}
               scriptTitle={scriptTitle}

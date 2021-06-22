@@ -34,7 +34,7 @@ class UnitOverviewTopRow extends React.Component {
     assignedSectionId: PropTypes.number,
     currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
-    scriptProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
+    unitProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     scriptTitle: PropTypes.string.isRequired,
@@ -99,7 +99,7 @@ class UnitOverviewTopRow extends React.Component {
       selectedSectionId,
       currentCourseId,
       professionalLearningCourse,
-      scriptProgress,
+      unitProgress,
       scriptId,
       scriptName,
       scriptTitle,
@@ -131,7 +131,7 @@ class UnitOverviewTopRow extends React.Component {
             <Button
               __useDeprecatedTag
               href={`/s/${scriptName}/next`}
-              text={NEXT_BUTTON_TEXT[scriptProgress]}
+              text={NEXT_BUTTON_TEXT[unitProgress]}
               size={Button.ButtonSize.large}
               style={{marginRight: 10}}
             />
