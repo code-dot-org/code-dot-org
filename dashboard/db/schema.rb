@@ -1501,13 +1501,13 @@ ActiveRecord::Schema.define(version: 2021_06_17_011456) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "wrapup_video_id"
-    t.boolean "hidden", default: false, null: false
     t.integer "user_id"
     t.boolean "login_required", default: false, null: false
     t.text "properties"
     t.string "new_name"
     t.string "family_name"
     t.string "published_state", default: "beta", null: false
+    t.boolean "hidden"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
