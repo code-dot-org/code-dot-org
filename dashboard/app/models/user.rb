@@ -422,7 +422,7 @@ class User < ApplicationRecord
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
-  has_many :scripts, -> {where published_state: [SharedConstants::PUBLISHED_STATE.stable, SharedConstants::PUBLISHED_STATE.preview]}, through: :user_scripts, source: :script
+  has_many :scripts, -> {where(published_state: [SharedConstants::PUBLISHED_STATE.stable, SharedConstants::PUBLISHED_STATE.preview])}, through: :user_scripts, source: :script
 
   validates :name, presence: true, unless: -> {purged_at}
   validates :name, length: {within: 1..70}, allow_blank: true
