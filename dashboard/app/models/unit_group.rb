@@ -79,7 +79,7 @@ class UnitGroup < ApplicationRecord
   # Any course with a plc_course is considered stable.
   # All other courses must specify a published_state.
   def stable?
-    plc_course || published_state == SharedConstants::PUBLISHED_STATE.stable
+    plc_course || (published_state == SharedConstants::PUBLISHED_STATE.stable)
   end
 
   def self.file_path(name)
