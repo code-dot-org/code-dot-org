@@ -420,7 +420,7 @@ function initializeStoreWithProgress(
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
-      scriptTitle: scriptData.title,
+      unitTitle: scriptData.title,
       scriptDescription: scriptData.description,
       scriptStudentDescription: scriptData.studentDescription,
       betaTitle: scriptData.beta_title,

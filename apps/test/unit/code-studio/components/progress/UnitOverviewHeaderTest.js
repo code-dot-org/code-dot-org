@@ -18,7 +18,7 @@ const defaultProps = {
   hasVerifiedResources: false,
   scriptId: 99,
   scriptName: 'course1',
-  scriptTitle: 'Course One',
+  unitTitle: 'Course One',
   scriptDescription:
     '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   scriptStudentDescription:
