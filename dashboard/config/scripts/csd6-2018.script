@@ -10,7 +10,6 @@ project_widget_types ["applab", "gamelab", "weblab"]
 announcements [{"notice"=>"CS Discoveries Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csd-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csd6'
 version_year '2018'
-is_stable true
 published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
