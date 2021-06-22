@@ -1040,13 +1040,20 @@ StudioApp.prototype.toggleRunReset = function(button) {
   }
 
   var run = document.getElementById('runButton');
-  var reset = document.getElementById('resetButton');
-  if (run || reset) {
-    run.style.display = showRun ? 'inline-block' : 'none';
+  if (run) {
+    // Note: Checking alwaysHideRunButton is necessary because are some levels where we never
+    // want to show the "run" button (e.g., maze levels that are "stepOnly").
+    run.style.display =
+      showRun && !this.config.alwaysHideRunButton ? 'inline-block' : 'none';
     run.disabled = !showRun;
+  }
+
+  var reset = document.getElementById('resetButton');
+  if (reset) {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
   }
+
   if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
     // craft has a darker color scheme than other blockly labs. It needs to
     // toggle between different colors on run/reset or else, on run, the workspace
