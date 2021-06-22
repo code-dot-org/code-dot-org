@@ -132,7 +132,7 @@ class Lesson < ApplicationRecord
   end
 
   def self.prevent_changing_stable_i18n_key(script, raw_lesson)
-    if script.is_stable && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
+    if script.stable? && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
 
       raise "Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
     end

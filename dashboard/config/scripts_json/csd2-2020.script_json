@@ -22,8 +22,7 @@
           "https://forum.code.org/c/csd"
         ]
       ],
-      "hideable_lessons": true,
-      "is_stable": true
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
