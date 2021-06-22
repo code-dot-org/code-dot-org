@@ -4,8 +4,8 @@
   "repository": "code-dot-org/code-dot-org",
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
-    "node": ">=8.15",
-    "npm": ">=3.10.8"
+    "node": "^14.17.1",
+    "npm": "^6.14.13"
   },
   "scripts": {
     "lint": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx src test",
@@ -49,7 +49,7 @@
     "@babel/preset-react": "^7.0.0",
     "@cdo/interpreted": "link:../dashboard/config/libraries",
     "@code-dot-org/artist": "0.2.1",
-    "@code-dot-org/blockly": "3.5.35",
+    "@code-dot-org/blockly": "4.0.0",
     "@code-dot-org/craft": "0.2.2",
     "@code-dot-org/dance-party": "1.0.3",
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
