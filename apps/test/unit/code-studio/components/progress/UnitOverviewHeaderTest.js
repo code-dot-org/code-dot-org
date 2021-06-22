@@ -19,9 +19,9 @@ const defaultProps = {
   scriptId: 99,
   scriptName: 'course1',
   unitTitle: 'Course One',
-  scriptDescription:
+  unitDescription:
     '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
-  scriptStudentDescription:
+  unitStudentDescription:
     '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   versions: []
 };
