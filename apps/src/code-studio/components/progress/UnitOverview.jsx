@@ -62,10 +62,10 @@ class UnitOverview extends React.Component {
 
     // redux provided
     perLevelResults: PropTypes.object.isRequired,
-    scriptCompleted: PropTypes.bool.isRequired,
+    unitCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
-    scriptTitle: PropTypes.string.isRequired,
+    unitTitle: PropTypes.string.isRequired,
     professionalLearningCourse: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
@@ -100,10 +100,10 @@ class UnitOverview extends React.Component {
       migratedTeacherResources,
       studentResources,
       perLevelResults,
-      scriptCompleted,
+      unitCompleted,
       scriptId,
       scriptName,
-      scriptTitle,
+      unitTitle,
       professionalLearningCourse,
       viewAs,
       isRtl,
@@ -132,11 +132,11 @@ class UnitOverview extends React.Component {
     const displayRedirectDialog =
       redirectScriptUrl && !dismissedRedirectDialog(courseName || scriptName);
 
-    let scriptProgress = NOT_STARTED;
-    if (scriptCompleted) {
-      scriptProgress = COMPLETED;
+    let unitProgress = NOT_STARTED;
+    if (unitCompleted) {
+      unitProgress = COMPLETED;
     } else if (Object.keys(perLevelResults).length > 0) {
-      scriptProgress = IN_PROGRESS;
+      unitProgress = IN_PROGRESS;
     }
 
     const isHiddenUnit =
@@ -186,10 +186,10 @@ class UnitOverview extends React.Component {
               sectionsForDropdown={sectionsForDropdown}
               selectedSectionId={parseInt(selectedSectionId)}
               professionalLearningCourse={professionalLearningCourse}
-              scriptProgress={scriptProgress}
+              unitProgress={unitProgress}
               scriptId={scriptId}
               scriptName={scriptName}
-              scriptTitle={scriptTitle}
+              unitTitle={unitTitle}
               currentCourseId={currentCourseId}
               viewAs={viewAs}
               isRtl={isRtl}
@@ -231,10 +231,10 @@ const styles = {
 export const UnconnectedUnitOverview = Radium(UnitOverview);
 export default connect((state, ownProps) => ({
   perLevelResults: state.progress.levelResults,
-  scriptCompleted: !!state.progress.scriptCompleted,
+  unitCompleted: !!state.progress.unitCompleted,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
-  scriptTitle: state.progress.scriptTitle,
+  unitTitle: state.progress.unitTitle,
   professionalLearningCourse: state.progress.professionalLearningCourse,
   viewAs: state.viewAs,
   isRtl: state.isRtl,

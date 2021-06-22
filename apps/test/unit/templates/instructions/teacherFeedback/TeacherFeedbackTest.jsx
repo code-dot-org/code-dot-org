@@ -13,19 +13,18 @@ import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 
 const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   user: 5,
-  disabledMode: false,
+  isEditable: true,
   rubric: null,
   visible: true,
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayReadonlyRubric: false,
   latestFeedback: null
 };
 
 const TEACHER_NO_FEEDBACK_RUBRIC_PROPS = {
   user: 5,
-  disabledMode: true,
+  isEditable: false,
   rubric: {
     keyConcept: 'This is the Key Concept',
     performanceLevel1: 'exceeded expectations',
@@ -37,13 +36,12 @@ const TEACHER_NO_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayReadonlyRubric: true,
   latestFeedback: null
 };
 
 const TEACHER_FEEDBACK_RUBRIC_PROPS = {
   user: 5,
-  disabledMode: false,
+  isEditable: true,
   rubric: {
     keyConcept: 'This is the Key Concept',
     performanceLevel1: 'exceeded expectations',
@@ -55,25 +53,23 @@ const TEACHER_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayReadonlyRubric: false,
   latestFeedback: null
 };
 
 const STUDENT_FEEDBACK_NO_RUBRIC_PROPS = {
   user: 1,
-  disabledMode: true,
+  isEditable: false,
   rubric: null,
   visible: true,
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayReadonlyRubric: false,
   latestFeedback: []
 };
 
 const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
   user: 1,
-  disabledMode: true,
+  isEditable: false,
   rubric: {
     keyConcept: 'This is the Key Concept',
     performanceLevel1: 'exceeded expectations',
@@ -85,13 +81,12 @@ const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayReadonlyRubric: true,
   latestFeedback: null
 };
 
 const STUDENT_FEEDBACK_RUBRIC_PROPS = {
   user: 1,
-  disabledMode: true,
+  isEditable: false,
   rubric: {
     keyConcept: 'This is the Key Concept',
     performanceLevel1: 'exceeded expectations',
@@ -103,7 +98,6 @@ const STUDENT_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayReadonlyRubric: false,
   latestFeedback: null
 };
 
@@ -138,8 +132,7 @@ describe('TeacherFeedback', () => {
         expect(rubric.props().rubric).to.equal(
           TEACHER_FEEDBACK_RUBRIC_PROPS.rubric
         );
-        expect(rubric.props().isReadonly).to.equal(false);
-        expect(rubric.props().disabledMode).to.equal(false);
+        expect(rubric.props().isEditable).to.equal(true);
         expect(rubric.props().viewAs).to.equal(ViewType.Teacher);
       });
 
@@ -157,7 +150,7 @@ describe('TeacherFeedback', () => {
         );
 
         const confirmCommentArea = wrapper.find(Comment).first();
-        expect(confirmCommentArea.props().isReadonly).to.equal(false);
+        expect(confirmCommentArea.props().isEditable).to.equal(true);
         expect(confirmCommentArea.props().comment).to.equal('');
       });
 
@@ -242,7 +235,7 @@ describe('TeacherFeedback', () => {
         );
 
         const confirmCommentArea = wrapper.find(Comment).first();
-        expect(confirmCommentArea.props().isReadonly).to.equal(false);
+        expect(confirmCommentArea.props().isEditable).to.equal(true);
         expect(confirmCommentArea.props().comment).to.equal('Good work!');
       });
 
@@ -293,8 +286,7 @@ describe('TeacherFeedback', () => {
       expect(rubric.props().rubric).to.equal(
         TEACHER_NO_FEEDBACK_RUBRIC_PROPS.rubric
       );
-      expect(rubric.props().isReadonly).to.equal(true);
-      expect(rubric.props().disabledMode).to.equal(true);
+      expect(rubric.props().isEditable).to.equal(false);
     });
 
     it('does not display comment area', () => {
@@ -336,8 +328,7 @@ describe('TeacherFeedback', () => {
         expect(rubric.props().rubric).to.equal(
           STUDENT_NO_FEEDBACK_RUBRIC_PROPS.rubric
         );
-        expect(rubric.props().isReadonly).to.equal(true);
-        expect(rubric.props().disabledMode).to.equal(true);
+        expect(rubric.props().isEditable).to.equal(false);
         expect(rubric.props().viewAs).to.equal(ViewType.Student);
       });
 
@@ -429,8 +420,7 @@ describe('TeacherFeedback', () => {
           STUDENT_FEEDBACK_RUBRIC_PROPS.rubric
         );
         expect(rubric.props().performance).to.equal('performanceLevel2');
-        expect(rubric.props().isReadonly).to.equal(false);
-        expect(rubric.props().disabledMode).to.equal(true);
+        expect(rubric.props().isEditable).to.equal(false);
         expect(rubric.props().viewAs).to.equal(ViewType.Student);
       });
 
@@ -443,7 +433,7 @@ describe('TeacherFeedback', () => {
         );
 
         const confirmCommentArea = wrapper.find(Comment).first();
-        expect(confirmCommentArea.props().isReadonly).to.equal(true);
+        expect(confirmCommentArea.props().isEditable).to.equal(false);
         expect(confirmCommentArea.props().comment).to.equal('Good work!');
       });
 

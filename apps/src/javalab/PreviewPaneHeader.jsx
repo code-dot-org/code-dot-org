@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import * as assets from '../code-studio/assets';
 import PaneHeader, {
   PaneSection,
   PaneButton
@@ -40,7 +41,7 @@ export default function PreviewPaneHeader({
       {showAssetManagerButton && (
         <PaneButton
           headerHasFocus
-          onClick={() => {}}
+          onClick={() => assets.showAssetManager()}
           iconClass="fa fa-upload"
           label={i18n.manageAssets()}
           isRtl={false}

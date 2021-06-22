@@ -1,5 +1,5 @@
 -#
-  Expected locals: app, use_blockly, use_droplet, use_p5, use_applab, hide_source, static_asset_base_path
+  Expected locals: app, use_blockly, use_droplet, use_p5, use_applab, use_javalab, hide_source, static_asset_base_path
   Provide default values for some of these
 - use_blockly ||= false
 - use_droplet ||= false
@@ -40,7 +40,7 @@
   %script{src: webpack_asset_path('js/droplet/droplet-full.js')}
   %script{src: webpack_asset_path('js/tooltipster/jquery.tooltipster.js')}
 -# Asset uploader script dependencies (not in share mode)
-- if (use_applab || use_gamelab || use_weblab) && !hide_source
+- if (use_applab || use_gamelab || use_weblab || use_javalab) && !hide_source
   %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
   %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
 
