@@ -11,8 +11,8 @@ import {registerReducers} from '@cdo/apps/redux';
 $(document).ready(showCourseEditor);
 
 function showCourseEditor() {
-  const scriptData = document.querySelector('script[data-course-editor]');
-  const courseEditorData = JSON.parse(scriptData.dataset.courseEditor);
+  const unitData = document.querySelector('script[data-course-editor]');
+  const courseEditorData = JSON.parse(unitData.dataset.courseEditor);
 
   const teacherResources = (
     courseEditorData.course_summary.teacher_resources || []
@@ -59,7 +59,7 @@ function showCourseEditor() {
           courseEditorData.course_summary.description_teacher || ''
         }
         initialScriptsInCourse={courseEditorData.course_summary.scripts.map(
-          script => script.name
+          unit => unit.name
         )}
         unitNames={courseEditorData.script_names.sort()}
         initialTeacherResources={teacherResources}
