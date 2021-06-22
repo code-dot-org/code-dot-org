@@ -988,7 +988,6 @@ class Script < ApplicationRecord
       units_to_add << [{
         id: unit_data[:id],
         name: name,
-        hidden: unit_data[:hidden].nil? ? true : unit_data[:hidden], # default true
         login_required: unit_data[:login_required].nil? ? false : unit_data[:login_required], # default false
         wrapup_video: unit_data[:wrapup_video],
         new_name: unit_data[:new_name],
@@ -1269,7 +1268,6 @@ class Script < ApplicationRecord
       Script.add_unit(
         {
           name: unit_name,
-          hidden: true, # no longer using hidden but needs value until we can remove
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
@@ -1410,21 +1408,6 @@ class Script < ApplicationRecord
   # hard launched.
   def launched?
     [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
-  end
-
-  # No longer used except in migration. Should be removed July 2021 after people have had time to migrate
-  def get_published_state
-    if pilot?
-      SharedConstants::PUBLISHED_STATE.pilot
-    elsif !hidden
-      if is_stable
-        SharedConstants::PUBLISHED_STATE.stable
-      else
-        SharedConstants::PUBLISHED_STATE.preview
-      end
-    else
-      SharedConstants::PUBLISHED_STATE.beta
-    end
   end
 
   def stable?
