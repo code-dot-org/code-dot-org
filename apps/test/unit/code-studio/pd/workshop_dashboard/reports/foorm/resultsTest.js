@@ -12,8 +12,10 @@ import workshopDashboard, {
 import {expect} from 'chai';
 import Results from '@cdo/apps/code-studio/pd/workshop_dashboard/reports/foorm/results';
 import {mount} from 'enzyme';
+import {allowConsoleErrors} from '../../../../../../util/testUtils';
 
 describe('Foorm Daily Survey Results', () => {
+  allowConsoleErrors();
   beforeEach(() => {
     stubRedux();
     registerReducers({
