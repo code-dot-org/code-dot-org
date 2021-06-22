@@ -40,9 +40,7 @@ const getCleanedRow = (row) => {
       return null;
     }
 
-    if (typeof cellValue === 'string') {
-      row[column] = cellValue.trim();
-    }
+    row[column] = cellValue.trim();
   }
 
   return row;
