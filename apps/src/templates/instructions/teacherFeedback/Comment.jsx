@@ -4,7 +4,7 @@ import color from '@cdo/apps/util/color';
 
 class Comment extends React.Component {
   static propTypes = {
-    isReadonly: PropTypes.bool,
+    isEditable: PropTypes.bool,
     comment: PropTypes.string,
     placeholderText: PropTypes.string,
     onCommentChange: PropTypes.func.isRequired
@@ -15,7 +15,7 @@ class Comment extends React.Component {
   };
 
   render() {
-    const readOnlyStyle = this.props.isReadonly && styles.readOnly;
+    const readOnlyStyle = !this.props.isEditable && styles.readOnly;
 
     return (
       <textarea
@@ -24,7 +24,7 @@ class Comment extends React.Component {
         onChange={this.commentChanged}
         placeholder={this.props.placeholderText}
         value={this.props.comment}
-        readOnly={this.props.isReadonly}
+        readOnly={!this.props.isEditable}
       />
     );
   }
