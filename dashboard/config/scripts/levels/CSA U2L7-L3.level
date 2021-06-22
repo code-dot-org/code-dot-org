@@ -1,0 +1,19 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-06-22T16:28:14.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "Let's apply the DRY principle to our code.\r\n\r\nRefactor the `Cake` class to be a subclass of `Dessert`.\r\n\r\nRemember to use `super()` in the first line of the `Cake` constructor to use the constructor from the `Dessert` class to initialize the shared instance variables.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "published": true
+}]]></config>
+</Javalab>

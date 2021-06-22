@@ -1,0 +1,19 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-06-22T17:57:03.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "Import `Dessert.java` from your **Backpack**.\r\n\r\nWrite accessor methods for each instance variable in your `Dessert` class.\r\n\r\n```\r\npublic class Dessert {\r\n   private String flavor;\r\n   private int quantity;\r\n   private double price;\r\n   \r\n   public Dessert(. . .)\r\n   { /* implementation not shown */ }\r\n   \r\n   // accessor method for flavor\r\n   \r\n   // accessor method for quantity\r\n   \r\n   // accessor method for price\r\n   \r\n}\r\n```",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "published": true
+}]]></config>
+</Javalab>

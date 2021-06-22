@@ -37,21 +37,19 @@ As the economy becomes increasingly digital, and as a growing “remote first”
 
 During 2020, as schools closed or transitioned to online learning, we saw the digital divide widen, increasing gaps that already existed based on income, gender, race, or geography. As schools reopen, we must redouble our efforts to close gaps in representation, and it is more critical than ever that every student in every school has the opportunity to learn computer science.
 
-
 <h2 class="purple-block">2020 Highlights</h2>
 
 ## We rapidly responded to school closures and Covid-19 with distance learning resources ➤
 
 As many schools closed their doors to in-person instruction in March, we made significant curriculum <a href="https://code.org/alternative-classrooms" target="_blank">modifications to support distance learning</a> across all of our courses and launched new <a href="https://code.org/athome" target="_blank">initiatives and resources to support</a> parents, teachers, and students as they navigated at home learning. In particular, we’re incredibly proud of <a href="https://code.org/break" target="_blank">Code Break</a>, a series of streamed interactive lessons with special guests that engaged tens of thousands of students of all ages worldwide with CS concepts and activities.
 
-<div style="background:#00adbc;padding:1px;position:relative;">
-<div class="col-33">pic</div><div class="col-66"> description</div>
-<div style="clear:both"></div>
-</div>
+<img src="/images/AR2020/codebreakcollage2020.png" style="max-width:60%">
 
 ## We shared research that shows computer science develops foundational learning skills ➤
 
 <a href="https://codeorg.medium.com/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536" target="_blank">Seven different studies</a> show: children who study computer science perform better in other subjects, excel at problem-solving, and are more likely to attend college. In April 2020 we released a 4-year longitudinal study conducted by West Coast Analytics, in which researchers found that in two large US school districts, high school students who took computer science were <a href="https://codeorg.medium.com/study-computer-science-students-much-more-likely-to-enroll-in-college-faca65b1476d" target="_blank">17% more likely to enroll in college</a> versus similarly-situated students who do not.
+
+<img src="/images/AR2020/csisfundamentalslide2020.png" style="max-width:60%">
 
 ## We launched an all-new CS Principles and released other course and platform updates ➤
 
@@ -69,6 +67,8 @@ With the growing concern of COVID-19, safety became our top priority and we tran
 
 2 years after launch, our CS Access Report finally has data on 100% of U.S. public high schools. As a result, we were able to include data from all 50 states in our <a href="https://advocacy.code.org/stateofcs" target="_blank">2020 State of CS Report</a>, which reflects growth in CS adoption but still shows that <a href="https://codeorg.medium.com/2020-state-of-cs-report-shows-less-than-half-of-u-s-schools-teach-cs-2c733e3c5d54" target="_blank">less than half of US schools teach CS</a>. We released this 4th annual report at our largest State Policy Forum (~1000 participants) in October.
 
+<img src="/images/AR2020/stateofcsreport2020.png" style="max-width:60%">
+
 ## We delved deeper into the disparities in access to computer science to focus our efforts ➤ 
 
 While we have much left to do to create an equitable learning environment for our students, we are still proud of the strides we made in 2020 such as launching our <a href="https://codeorg.medium.com/" target="_blank">BEST plan</a>, which aims to better support our Black employees, students, and teachers; disaggregating demographic data by race and gender to uncover specific disparities; and adopting a major language change related to students from racial/ethnic and other groups, moving away from the use of “minority,” shown to be offensive. 
@@ -83,11 +83,33 @@ Despite shortened and suspended legislative sessions due to COVID-19 in 2020, st
 
 <a href="https://codeorg.medium.com/microsoft-code-org-partner-to-teach-ai-ethics-from-elementary-to-high-school-4b983fd809e3" target="_blank">In partnership with Microsoft</a>, Code.org launched a comprehensive approach to bring AI lessons into the classroom, from elementary school through high school. Launched in December, the AI initiative began with a new <a href="https://code.org/ai" target="_blank">AI resources page</a>, a new <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y" target="_blank">video series on AI</a>, featuring Microsoft CEO Satya Nadella along with leading technologists across industry and academia, a global launch of Code.org’s hit AI tutorial, <a href="http://code.org/oceans" target="_blank">AI for Oceans</a>, available in 25+ languages and optimized for mobile devices, a <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank">classroom lesson plan</a> to help students explore and discuss the societal and ethical implications of AI, a lesson in the CS Principles curriculum about <a href="https://curriculum.code.org/csp-20/unit9/6/" target="_blank">machine learning and bias</a>.
 
+<img src="/images/AR2020/introtoai2020.png" style="max-width:60%">
+
 ## We took on a different spin on our biggest CS celebration of the year in the Hour of Code ➤
 
 With the rapid transition to at-home learning in March of 2020, we expanded our resources to meet the different needs of all students for Hour of Code. In addition to our library of <a href="https://hourofcode.com/us/how-to?utm_source=campaign-email&utm_medium=email&utm_campaign=hoc-2020&utm_term=12.7.20&utm_content=hoc-how-to" target="_blank">How-To Guides</a>, we also created a printable <a href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">Hour of Code Unplugged Activity Packet</a> for ages 4–18 so that students using limited technology at home can still participate. This year’s theme, <a href="https://code.org/csforgood" target="_blank">#CSforGood</a>, encompasses how technology can keep us connected in a challenging year, and how we must ensure access so no one is excluded from the opportunity to learn. 
 
+<img src="/images/AR2020/hoc1b2020.png" style="max-width:60%">
+
+<img src="/images/AR2020/hocteachertweet2020.png" style="max-width:60%">
+
 Also new this year, CodeBytes give students the opportunity to tune in for 20-minute lessons with computers, tablets, or smartphones to learn about various CS topics with Code.org staff.
 
-## International efforts increased non-US website traffic 49% and course usage to 53% ➤
+<img src="/images/AR2020/codebytes2020.png" style="max-width:60%">
+
+## We localized our core content to broaden opportunities for international students ➤
+
+In 2020, Code.org increased investments in localizing our core content to 18 widely spoken languages—and, CS Fundamentals and all Code.org Hour of Code tutorials are now 100% localized to 8 languages. With these efforts, traffic to the Code.org website by non-US users increased to 49% of total pageviews and non-US usage of all Code.org courses grew to 53%. 
+
+In response to the impact of the global pandemic in schools, we shifted to broader regional initiatives to generate demand for CS, such as <a href="https://code.org/envivo" target="_blank">Hora del Código En Vivo</a>, <a href="https://africacodeweek.org/learn/the-app" target="_blank">Africa Code Week App</a>, and increasing non-English songs in <a href="https://code.org/dance" target="_blank">Dance Party</a>.
+
+## We partnered with local, regional, and global organizations to amplify our impact ➤
+
+We onboarded ten new partners and explored new types of partnerships with multilateral organizations (World Bank, Inter-American Development Bank, UNESCO), regional and global nonprofits (JA Worldwide, Trust for the Americas, Dubai Future Foundation), corporations (Telefónica, Atlassian, Finastra), and pop culture entities (Miami Art House, Jaffna Stallions).
+
+To promote systems change with support from local partners, we worked with ministries of education in at least a dozen countries to include CS in the national curriculum. Finally, we collaborated with the Organisation for Economic Co-operation and Development (<a href="https://www.oecd.org/" target="_blank">OECD</a>) to include computational thinking in the Programme for International Student Assessment (<a href="https://www.oecd.org/pisa/aboutpisa/" target="_blank">PISA</a>) 2022 and with the <a href="https://www.brookings.edu/about-us/" target="_blank">Brookings Institution</a> on their <a href="https://www.brookings.edu/research/what-do-we-know-about-the-expansion-of-k-12-computer-science-education/" target="_blank">global CS education report</a> to be released in late 2021.
+
+<img src="/images/AR2020/robincode2020.png">
+An Hour of Code activity organized by our Turkish partner Robin Code. <a href="https://codeorg.medium.com/how-robin-code-helped-bring-code-org-to-turkey-8be3a446afeb" target="_blank">Turkey has the second-most Code.org users</a> in the world, after the United States.
+
 
