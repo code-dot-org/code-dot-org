@@ -1,0 +1,42 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Create a class called `Donut` that is a subclass of `Dessert`.\r\n\r\nA `Donut` has `boolean hasFilling` and `boolean hasSprinkles` as additional instance variables.\r\n\r\nInstantiate a `Donut` object in `MyFoodTruck.java`.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "parent_level_id": 28555,
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert cookie = new Dessert(\"chocolate chip\", 100, 1.00);\n\n    FoodTruck donutCompany = new FoodTruck(\"Amos\", cookie);\n\n    Dessert strawberryShortcake = new Cake(\"strawberry shortcake\", 10, 12.00, 3, \"strawberry\");\n\n    FoodTruck cakeTruck = new FoodTruck(\"Katie\", strawberryShortcake);\n\n    Donut bostonCream = new Donut(\"chocolate\", 10, 1.25, true, false);\n  }\n}",
+        "isVisible": true
+      },
+      "FoodTruck.java": {
+        "text": "class FoodTruck {\n  private String owner;\n  private Dessert newDessert;\n\n  // Write your constructor here\n  public FoodTruck(String owner, Dessert newDessert) {\n    this.owner = owner;\n    this.newDessert = newDessert;\n  }\n\n  public void printTruckInfo() {\n    System.out.println(\"The owner is \" + owner);\n    System.out.print(\"The food truck has \");\n    newDessert.printInfo();\n  }\n}",
+        "isVisible": true
+      },
+      "Dessert.java": {
+        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String flavor, int quantity, double price) {\n    this.flavor = flavor;\n    this.quantity = quantity;\n    this.price = price;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
+        "isVisible": true
+      },
+      "Cake.java": {
+        "text": "public class Cake extends Dessert {\n  private int layers;\n  private String topping;\n\n  public Cake(String flavor, int quantity, double price, int layers, String topping) {\n    super(flavor, quantity, price);\n    this.layers = layers;\n    this.topping = topping;\n  }\n}",
+        "isVisible": true
+      },
+      "Donut.java": {
+        "text": "public class Donut extends Dessert {\n  private boolean hasFilling;\n  private boolean hasSprinkles;\n\n  public Donut(String flavor, int quantity, double price, boolean hasFilling, boolean hasSprinkles) {\n    super(flavor, quantity, price);\n    this.hasFilling = hasFilling;\n    this.hasSprinkles = hasSprinkles;\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "display_name": "Donut",
+    "bubble_choice_description": "Create a Donut subclass"
+  },
+  "game_id": 68,
+  "created_at": "2021-06-22T17:28:30.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-06-22 16:30:30 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:34:18 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:40:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:42:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:45:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:46:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:16:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:21:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:22:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:24:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:24:50 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:27:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:29:30 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:32:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

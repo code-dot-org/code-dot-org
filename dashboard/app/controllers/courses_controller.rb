@@ -31,7 +31,7 @@ class CoursesController < ApplicationController
     if UnitGroup::FAMILY_NAMES.include?(params[:course_name])
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
       redirect_to_course = UnitGroup.all_courses.
-          select {|c| c.family_name == params[:course_name] && c.is_stable?}.
+          select {|c| c.family_name == params[:course_name] && c.stable?}.
           sort_by(&:version_year).
           last
       redirect_to "/courses/#{redirect_to_course.name}#{redirect_query_string}"

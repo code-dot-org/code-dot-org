@@ -342,6 +342,7 @@ module LevelsHelper
         use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
+        use_javalab: use_javalab,
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,
