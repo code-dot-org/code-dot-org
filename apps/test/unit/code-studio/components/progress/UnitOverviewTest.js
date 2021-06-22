@@ -16,7 +16,7 @@ const defaultProps = {
   unitCompleted: false,
   scriptId: 123,
   scriptName: 'csp1',
-  scriptTitle: 'CSP 1',
+  unitTitle: 'CSP 1',
   professionalLearningCourse: false,
   viewAs: ViewType.Teacher,
   isRtl: false,

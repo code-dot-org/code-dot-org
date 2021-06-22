@@ -110,12 +110,12 @@ export const studentLevelProgressType = PropTypes.shape(
 );
 
 /*
- * @typedef {Object} scriptProgressType
+ * @typedef {Object} unitProgressType
  *
- * scriptProgressType represents a user's progress in a script.  It is a map of
+ * unitProgressType represents a user's progress in a script.  It is a map of
  * levelId -> studentLevelProgressType objects.
  */
-export const scriptProgressType = PropTypes.objectOf(studentLevelProgressType);
+export const unitProgressType = PropTypes.objectOf(studentLevelProgressType);
 
 /**
  * @typedef {Object} Lesson

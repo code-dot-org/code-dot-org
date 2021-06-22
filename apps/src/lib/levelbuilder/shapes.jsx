@@ -166,7 +166,7 @@ export const lessonGroupShape = PropTypes.shape({
 });
 
 export const relatedLessonShape = PropTypes.shape({
-  scriptTitle: PropTypes.string.isRequired,
+  unitTitle: PropTypes.string.isRequired,
   versionYear: PropTypes.string,
   lockable: PropTypes.bool,
   relativePosition: PropTypes.number.isRequired,
