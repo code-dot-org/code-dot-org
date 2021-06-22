@@ -360,7 +360,17 @@ const serializeLesson = (lesson, levelKeyList) => {
   s.push(t);
   if (lesson.levels) {
     lesson.levels.forEach(level => {
-      s = s.concat(serializeLevel(levelKeyList, level.ids[0], level));
+      if (level.ids.length > 1) {
+        s.push('variants');
+        level.ids.forEach(id => {
+          const active = id === level.activeId;
+          const lines = serializeLevel(levelKeyList, id, level, active);
+          s = s.concat(lines.map(line => `  ${line}`));
+        });
+        s.push('endvariants');
+      } else {
+        s = s.concat(serializeLevel(levelKeyList, level.ids[0], level));
+      }
     });
   }
   s.push('');
@@ -376,9 +386,9 @@ const serializeLesson = (lesson, levelKeyList) => {
  * to move on to our future system.
  * @param id
  * @param level
- * @return {string}
+ * @return {Array.<string>}
  */
-const serializeLevel = (levelKeyList, id, level) => {
+const serializeLevel = (levelKeyList, id, level, active = true) => {
   const s = [];
   const key = levelKeyList[id];
   if (/^blockly:/.test(key)) {
@@ -398,6 +408,9 @@ const serializeLevel = (levelKeyList, id, level) => {
     }
   }
   let l = level.bonus ? `bonus '${escape(key)}'` : `level '${escape(key)}'`;
+  if (!active) {
+    l += ', active: false';
+  }
   if (level.progression) {
     l += `, progression: '${escape(level.progression)}'`;
   }
