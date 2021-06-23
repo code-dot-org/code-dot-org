@@ -72,7 +72,9 @@ class TeacherFeedback < ApplicationRecord
       script_id: script_id
     }
 
-    where(query).latest_per_teacher
+    where(query).
+      latest_per_teacher.
+      order(created_at: :desc)
   end
 
   # returns the latest feedback for each student on every level in a script given by the teacher
@@ -88,13 +90,13 @@ class TeacherFeedback < ApplicationRecord
   end
 
   def self.latest_per_teacher
-    #Only select feedback from teachers who lead sections in which the student is still enrolled
-    find(
-      joins(:student_sections).
+    # Only select feedback from teachers who lead sections in which the student is still enrolled
+    # and get the latest feedback per teacher for each student on each level
+    where(id: joins(:student_sections).
         where('sections.user_id = teacher_id').
-        group([:teacher_id, :student_id]).
+        group([:teacher_id, :student_id, :level_id]).
         pluck('MAX(teacher_feedbacks.id)')
-    )
+  )
   end
 
   def self.has_feedback?(student_id)
