@@ -127,7 +127,7 @@ export const standardShape = PropTypes.shape({
   description: PropTypes.string.isRequired
 });
 
-export const levelShapeForScript = PropTypes.shape({
+export const levelShapeForUnit = PropTypes.shape({
   position: PropTypes.number,
   activeId: PropTypes.string,
   ids: PropTypes.arrayOf(PropTypes.string),
@@ -152,7 +152,7 @@ export const lessonShape = PropTypes.shape({
   unplugged: PropTypes.bool,
   assessment: PropTypes.bool,
   relativePosition: PropTypes.number,
-  levels: PropTypes.arrayOf(levelShapeForScript).isRequired // TODO: Update to use scriptLevelShape
+  levels: PropTypes.arrayOf(levelShapeForUnit).isRequired // TODO: Update to use scriptLevelShape
 });
 
 export const lessonGroupShape = PropTypes.shape({

@@ -2,19 +2,20 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "long_instructions": "Let's expand the given `FoodTruck` class.\r\n\r\nFirst, import `Dessert.java` from your **Backpack**.\r\n\r\n1. Every food truck has an owner and a main dessert that it serves. In `FoodTruck.java`, write a constructor that initializes the instance variables `owner` and `newDessert` when called.\r\n\r\n2. In `MyFoodTruck.java`, create a food truck that mainly serves cookies by doing the following:\r\n   * Create a `Dessert` object `cookie`.\r\n   * Pass `\"Amos\"`as `owner` and `cookie` as `newDessert` to the `FoodTruck()` constructor.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA U2L7 Template"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-06-16T20:03:13.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-06-16 20:25:33 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 21:39:52 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-16 20:25:33 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 21:39:52 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 16:29:07 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
