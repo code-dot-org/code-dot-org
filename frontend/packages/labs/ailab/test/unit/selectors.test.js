@@ -3,8 +3,10 @@ import {
   getSelectedCategoricalColumns,
   getSelectedCategoricalFeatures,
   getNumericalColumns,
+  getSelectedNumericalColumns,
   getSelectedNumericalFeatures,
-  getUniqueOptionsByColumn
+  getUniqueOptionsByColumn,
+  getExtremaByColumn
 } from "../../src/selectors";
 import { classificationState, allNumericalState } from "./testData";
 
@@ -50,5 +52,28 @@ describe("getting unique options by column", () => {
     expect(uniqueOptionsByColumn['weather']).toEqual(
       ['overcast', 'rainy', 'sunny']
     );
+  });
+});
+
+describe("getting extrema by column", () => {
+  test("gets extrema by column", async () => {
+    const numericalColumns = getNumericalColumns
+      .resultFunc(allNumericalState.columnsByDataType);
+    const selectedNumericalColumns =  getSelectedNumericalColumns.resultFunc(
+      numericalColumns,
+      allNumericalState.selectedFeatures,
+      allNumericalState.labelColumn
+    )
+    const extremaByColumn =
+      getExtremaByColumn.resultFunc(
+        selectedNumericalColumns,
+        allNumericalState.data
+      )
+    expect(extremaByColumn['batCount'].max).toBe(100);
+    expect(extremaByColumn['batCount'].min).toBe(40);
+    expect(extremaByColumn['batCount'].range).toBe(60);
+    expect(extremaByColumn['mosquitoCount'].max).toBe(10);
+    expect(extremaByColumn['mosquitoCount'].min).toBe(1);
+    expect(extremaByColumn['mosquitoCount'].range).toBe(9);
   });
 });

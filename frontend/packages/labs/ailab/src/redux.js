@@ -688,10 +688,6 @@ function getCategoricalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.CATEGORICAL);
 }
 
-function getNumericalColumns(state) {
-  return filterColumnsByType(state, ColumnTypes.NUMERICAL);
-}
-
 export function getSelectedCategoricalColumns(state) {
   let intersection = getCategoricalColumns(state).filter(
     x => state.selectedFeatures.includes(x) || x === state.labelColumn
