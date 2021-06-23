@@ -1,127 +1,127 @@
 ---
-en:
-  data:
-    progressions:
+'en':
+  'data':
+    'progressions':
       '"If/Else" with the Bee': '"If/Else" with the Bee'
-      Accelerometer Events: Accelerometer Events
-      Adding Images: Adding Images
-      Adding Screens: Adding Screens
-      Animate Your Scene: Animate Your Scene
-      Animating Sprites: Animating Sprites
+      'Accelerometer Events': 'Accelerometer Events'
+      'Adding Images': 'Adding Images'
+      'Adding Screens': 'Adding Screens'
+      'Animate Your Scene': 'Animate Your Scene'
+      'Animating Sprites': 'Animating Sprites'
       'App Project: Screen Design': 'App Project: Screen Design'
-      Artist Intro with JR Hildebrand: Artist Intro with JR Hildebrand
-      Artist Intro with JR Hildebrande: Artist Intro with JR Hildebrande
-      Artist Project: Artist Project
+      'Artist Intro with JR Hildebrand': 'Artist Intro with JR Hildebrand'
+      'Artist Intro with JR Hildebrande': 'Artist Intro with JR Hildebrande'
+      'Artist Project': 'Artist Project'
       'Artist: Variables': 'Artist: Variables'
-      Attribution: Attribution
-      Basic Conditionals: Basic Conditionals
-      Be a Super Digital Citizen: Be a Super Digital Citizen
-      Binary Bracelets - Unplugged Activity: Binary Bracelets - Unplugged Activity
-      Binary Numbers: Binary Numbers
-      Board Events: Board Events
-      Board Input and Output: Board Input and Output
-      Boolean Comparison: Boolean Comparison
-      Build a Screen: Build a Screen
-      Building an App: Building an App
-      Button Circuits: Button Circuits
-      CS Discoveries Post-Course Survey: CS Discoveries Post-Course Survey
-      CS Discoveries Post-course Survey: CS Discoveries Post-course Survey
-      Cake Defender: Cake Defender
-      Challenge: Challenge
-      Challenge Levels: Challenge Levels
-      Challenges: Challenges
-      Chance: Chance
-      Change: Change
-      Checking for a Winner: Checking for a Winner
-      Code Your Own Flappy Game: Code Your Own Flappy Game
-      Collector Game: Collector Game
-      Collisions: Collisions
-      Collisions in Games: Collisions in Games
-      Color LEDs: Color LEDs
-      Combining Projects: Combining Projects
-      Combining Representations: Combining Representations
-      Conditionals with Cards - Unplugged Activity: Conditionals with Cards - Unplugged Activity
+      'Attribution': 'Attribution'
+      'Basic Conditionals': 'Basic Conditionals'
+      'Be a Super Digital Citizen': 'Be a Super Digital Citizen'
+      'Binary Bracelets - Unplugged Activity': 'Binary Bracelets - Unplugged Activity'
+      'Binary Numbers': 'Binary Numbers'
+      'Board Events': 'Board Events'
+      'Board Input and Output': 'Board Input and Output'
+      'Boolean Comparison': 'Boolean Comparison'
+      'Build a Screen': 'Build a Screen'
+      'Building an App': 'Building an App'
+      'Button Circuits': 'Button Circuits'
+      'CS Discoveries Post-Course Survey': 'CS Discoveries Post-Course Survey'
+      'CS Discoveries Post-course Survey': 'CS Discoveries Post-course Survey'
+      'Cake Defender': 'Cake Defender'
+      'Challenge': 'Challenge'
+      'Challenge Levels': 'Challenge Levels'
+      'Challenges': 'Challenges'
+      'Chance': 'Chance'
+      'Change': 'Change'
+      'Checking for a Winner': 'Checking for a Winner'
+      'Code Your Own Flappy Game': 'Code Your Own Flappy Game'
+      'Collector Game': 'Collector Game'
+      'Collisions': 'Collisions'
+      'Collisions in Games': 'Collisions in Games'
+      'Color LEDs': 'Color LEDs'
+      'Combining Projects': 'Combining Projects'
+      'Combining Representations': 'Combining Representations'
+      'Conditionals with Cards - Unplugged Activity': 'Conditionals with Cards - Unplugged Activity'
       'Conditionals: If Statements': 'Conditionals: If Statements'
       'Conditionals: If and If/Else Statements': 'Conditionals: If and If/Else Statements'
-      Create Your Own Animation: Create Your Own Animation
-      Create a Story: Create a Story
-      Create your project: Create your project
-      Creating a Simulation: Creating a Simulation
-      Customize: Customize
-      Data Visualization: Data Visualization
-      De-bugging with the Step Button: De-bugging with the Step Button
-      Debugging: Debugging
-      Debugging with the Step Button: Debugging with the Step Button
-      Demo Apps: Demo Apps
-      Design Mode: Design Mode
-      Designing for Accessibility: Designing for Accessibility
-      Digital Sharing - Unplugged Activity: Digital Sharing - Unplugged Activity
-      Drawing: Drawing
-      Events: Events
-      Events and Linking Screens: Events and Linking Screens
-      Events and Properties: Events and Properties
-      Example Projects: Example Projects
-      Example projects: Example projects
-      Expanding Personal Website: Expanding Personal Website
-      Expanding Your Website: Expanding Your Website
-      Experiment with Web Lab: Experiment with Web Lab
-      Exploration: Exploration
+      'Create Your Own Animation': 'Create Your Own Animation'
+      'Create a Story': 'Create a Story'
+      'Create your project': 'Create your project'
+      'Creating a Simulation': 'Creating a Simulation'
+      'Customize': 'Customize'
+      'Data Visualization': 'Data Visualization'
+      'De-bugging with the Step Button': 'De-bugging with the Step Button'
+      'Debugging': 'Debugging'
+      'Debugging with the Step Button': 'Debugging with the Step Button'
+      'Demo Apps': 'Demo Apps'
+      'Design Mode': 'Design Mode'
+      'Designing for Accessibility': 'Designing for Accessibility'
+      'Digital Sharing - Unplugged Activity': 'Digital Sharing - Unplugged Activity'
+      'Drawing': 'Drawing'
+      'Events': 'Events'
+      'Events and Linking Screens': 'Events and Linking Screens'
+      'Events and Properties': 'Events and Properties'
+      'Example Projects': 'Example Projects'
+      'Example projects': 'Example projects'
+      'Expanding Personal Website': 'Expanding Personal Website'
+      'Expanding Your Website': 'Expanding Your Website'
+      'Experiment with Web Lab': 'Experiment with Web Lab'
+      'Exploration': 'Exploration'
       'Exploration: For Loops': 'Exploration: For Loops'
       'Exploration: Rikki''s Poster': 'Exploration: Rikki''s Poster'
       'Exploration: Sample Apps': 'Exploration: Sample Apps'
       'Exploration: Sample Programs': 'Exploration: Sample Programs'
       'Exploration: Sample Project': 'Exploration: Sample Project'
-      Exploring more CSS: Exploring more CSS
-      Finish a Screen: Finish a Screen
-      Finish the Prototype: Finish the Prototype
-      Finishing Functions: Finishing Functions
-      Finishing Touches: Finishing Touches
-      Flyer Game: Flyer Game
-      Follow the Algorithm - Unplugged Activity: Follow the Algorithm - Unplugged Activity
-      Follow the Mouse: Follow the Mouse
-      Fonts and Style: Fonts and Style
-      For Loop Fun - Unplugged Activity: For Loop Fun - Unplugged Activity
-      For Loops: For Loops
-      For Loops and Color LEDs: For Loops and Color LEDs
-      For Loops and Repeat Blocks: For Loops and Repeat Blocks
-      Free Play: Free Play
+      'Exploring more CSS': 'Exploring more CSS'
+      'Finish a Screen': 'Finish a Screen'
+      'Finish the Prototype': 'Finish the Prototype'
+      'Finishing Functions': 'Finishing Functions'
+      'Finishing Touches': 'Finishing Touches'
+      'Flyer Game': 'Flyer Game'
+      'Follow the Algorithm - Unplugged Activity': 'Follow the Algorithm - Unplugged Activity'
+      'Follow the Mouse': 'Follow the Mouse'
+      'Fonts and Style': 'Fonts and Style'
+      'For Loop Fun - Unplugged Activity': 'For Loop Fun - Unplugged Activity'
+      'For Loops': 'For Loops'
+      'For Loops and Color LEDs': 'For Loops and Color LEDs'
+      'For Loops and Repeat Blocks': 'For Loops and Repeat Blocks'
+      'Free Play': 'Free Play'
       'Free Play: Make a Scene': 'Free Play: Make a Scene'
       'Free Play: Make an Interactive Scene': 'Free Play: Make an Interactive Scene'
-      Functions: Functions
-      Functions with Parameters: Functions with Parameters
-      Getting Properties: Getting Properties
-      Graph Paper Programming - Unplugged Activity: Graph Paper Programming - Unplugged Activity
-      Headings: Headings
-      How to Create a Simple Function: How to Create a Simple Function
-      How to Make a Sprite: How to Make a Sprite
-      Ice Age Loops: Ice Age Loops
-      Images and Sounds: Images and Sounds
-      Input Examples: Input Examples
-      Input with If-Else: Input with If-Else
-      Intro to For Loops: Intro to For Loops
-      Intro to Sprites: Intro to Sprites
-      Intro to Variables: Intro to Variables
-      Introducing Sprite Lab: Introducing Sprite Lab
-      Introduction to Arrays: Introduction to Arrays
-      Iteration and Parameters: Iteration and Parameters
-      Keeping Data Secret: Keeping Data Secret
-      Keyboard Input: Keyboard Input
-      LED Apps: LED Apps
-      Layout with CSS: Layout with CSS
-      Learning from Simulations: Learning from Simulations
-      Lesson Extras: Lesson Extras
-      Light Show: Light Show
-      Linking Pages: Linking Pages
-      Linking Screens: Linking Screens
-      Lists: Lists
-      Loops with the Artist: Loops with the Artist
-      Make a Prediction: Make a Prediction
-      Make it Interactive: Make it Interactive
-      Making Scenes: Making Scenes
-      Making Songs: Making Songs
-      Making Sounds: Making Sounds
+      'Functions': 'Functions'
+      'Functions with Parameters': 'Functions with Parameters'
+      'Getting Properties': 'Getting Properties'
+      'Graph Paper Programming - Unplugged Activity': 'Graph Paper Programming - Unplugged Activity'
+      'Headings': 'Headings'
+      'How to Create a Simple Function': 'How to Create a Simple Function'
+      'How to Make a Sprite': 'How to Make a Sprite'
+      'Ice Age Loops': 'Ice Age Loops'
+      'Images and Sounds': 'Images and Sounds'
+      'Input Examples': 'Input Examples'
+      'Input with If-Else': 'Input with If-Else'
+      'Intro to For Loops': 'Intro to For Loops'
+      'Intro to Sprites': 'Intro to Sprites'
+      'Intro to Variables': 'Intro to Variables'
+      'Introducing Sprite Lab': 'Introducing Sprite Lab'
+      'Introduction to Arrays': 'Introduction to Arrays'
+      'Iteration and Parameters': 'Iteration and Parameters'
+      'Keeping Data Secret': 'Keeping Data Secret'
+      'Keyboard Input': 'Keyboard Input'
+      'LED Apps': 'LED Apps'
+      'Layout with CSS': 'Layout with CSS'
+      'Learning from Simulations': 'Learning from Simulations'
+      'Lesson Extras': 'Lesson Extras'
+      'Light Show': 'Light Show'
+      'Linking Pages': 'Linking Pages'
+      'Linking Screens': 'Linking Screens'
+      'Lists': 'Lists'
+      'Loops with the Artist': 'Loops with the Artist'
+      'Make a Prediction': 'Make a Prediction'
+      'Make it Interactive': 'Make it Interactive'
+      'Making Scenes': 'Making Scenes'
+      'Making Songs': 'Making Songs'
+      'Making Sounds': 'Making Sounds'
       'Maze Intro: Programming with Blocks': 'Maze Intro: Programming with Blocks'
-      Measures: Measures
+      'Measures': 'Measures'
       'Mini-Project: About Me': 'Mini-Project: About Me'
       'Mini-Project: Alien Dance Moves': 'Mini-Project: Alien Dance Moves'
       'Mini-Project: Alien Dance Party': 'Mini-Project: Alien Dance Party'
@@ -140,102 +140,102 @@ en:
       'Mini-project: Jorge the Dog': 'Mini-project: Jorge the Dog'
       'Mini-project: Sticker Art': 'Mini-project: Sticker Art'
       'Mini-project: Sticker Design': 'Mini-project: Sticker Design'
-      Modify simulation variables: Modify simulation variables
-      More Input: More Input
-      More Monsters: More Monsters
-      More Parameters: More Parameters
-      Motorcycle: Motorcycle
-      Move It Move it Video  - Unplugged Activity: Move It Move it Video  - Unplugged Activity
-      Movement with the Counter Pattern: Movement with the Counter Pattern
-      Multiframe Animations: Multiframe Animations
-      Musical Arrays: Musical Arrays
-      My Loopy Robotic Friends - Unplugged Activity: My Loopy Robotic Friends - Unplugged Activity
-      My Online Neighborhood: My Online Neighborhood
-      My Robotic Friends - Unplugged Activity: My Robotic Friends - Unplugged Activity
-      Nested Loops with the Bee: Nested Loops with the Bee
-      New Shapes: New Shapes
-      Orientation: Orientation
-      Pair Programming: Pair Programming
-      Picturing Data: Picturing Data
-      Planning: Planning
-      Platform Jumper - Background and Variables: Platform Jumper - Background and Variables
-      Platform Jumper - Items: Platform Jumper - Items
-      Platform Jumper - Platforms: Platform Jumper - Platforms
-      Platform Jumper - Player: Platform Jumper - Player
-      Playing Notes: Playing Notes
-      Playing with Notes: Playing with Notes
-      Post-Course Survey Instructions: Post-Course Survey Instructions
-      Practice: Practice
-      Predict: Predict
-      Prediction: Prediction
-      Problem Solving: Problem Solving
-      Programming with Events: Programming with Events
-      Programming with Rey and BB-8: Programming with Rey and BB-8
-      Programs that Repeat: Programs that Repeat
-      Project: Project
-      Project - Background and Variables: Project - Background and Variables
-      Project - Sprites and Interactions: Project - Sprites and Interactions
-      Project Work: Project Work
-      Properties: Properties
-      Publishing Your Website: Publishing Your Website
-      RGB Exploration: RGB Exploration
-      Reading Sensors: Reading Sensors
-      Recovery: Recovery
-      Reflection: Reflection
-      Relay Programming - Unplugged Activity: Relay Programming - Unplugged Activity
-      Repeat Blocks: Repeat Blocks
-      Repeat Blocks with BB-8: Repeat Blocks with BB-8
-      Repeat Blocks with the Artist: Repeat Blocks with the Artist
-      Repeat Unit Statements: Repeat Unit Statements
-      Repeat Until Statements: Repeat Until Statements
-      Representing Images: Representing Images
-      Review: Review
-      Run a simulation: Run a simulation
-      Sample Programs: Sample Programs
-      Screen Design: Screen Design
-      Sensor Events: Sensor Events
-      Sensors to Colors: Sensors to Colors
-      Setting Properties: Setting Properties
-      Shapes and the Draw Loop: Shapes and the Draw Loop
-      Share Your App: Share Your App
-      Share Your Message: Share Your Message
-      Side Scroller: Side Scroller
-      Simple Circuits: Simple Circuits
-      Skill Building: Skill Building
-      Skill-Building: Skill-Building
-      Sliders: Sliders
-      Smart Bike - Blinkers: Smart Bike - Blinkers
-      Songwriting - Functions Unplugged Activity: Songwriting - Functions Unplugged Activity
-      Sprite Lab Project: Sprite Lab Project
-      Sprites and the Draw Loop: Sprites and the Draw Loop
-      Star Chaser: Star Chaser
-      Stopping the Outbreak with Masks: Stopping the Outbreak with Masks
-      Styling Text: Styling Text
-      Styling with Classes: Styling with Classes
-      Styling your Website: Styling your Website
-      Teach A.I. a new word: Teach A.I. a new word
-      The Artist in Code Studio: The Artist in Code Studio
-      The Big Event - Unplugged Activity: The Big Event - Unplugged Activity
-      The Buzzer: The Buzzer
-      The Collector: The Collector
-      The Harvester: The Harvester
-      The Internet - Unplugged Activity: The Internet - Unplugged Activity
-      The Power of Words - Unplugged Activity: The Power of Words - Unplugged Activity
-      The Right App - Unplugged Activity: The Right App - Unplugged Activity
-      Train AI to Clean the Ocean: Train AI to Clean the Ocean
-      UI Element Properties: UI Element Properties
-      User Interface: User Interface
-      Using Getters and Setters: Using Getters and Setters
-      Using HTML Tags: Using HTML Tags
-      Using Random Numbers: Using Random Numbers
-      Using Training Data: Using Training Data
-      Using the LED: Using the LED
-      Using the Repeat Block: Using the Repeat Block
-      Using the Switch: Using the Switch
-      Vaccines: Vaccines
-      Velocity: Velocity
-      Velocity and the Counter Pattern: Velocity and the Counter Pattern
-      Video: Video
+      'Modify simulation variables': 'Modify simulation variables'
+      'More Input': 'More Input'
+      'More Monsters': 'More Monsters'
+      'More Parameters': 'More Parameters'
+      'Motorcycle': 'Motorcycle'
+      'Move It Move it Video  - Unplugged Activity': 'Move It Move it Video  - Unplugged Activity'
+      'Movement with the Counter Pattern': 'Movement with the Counter Pattern'
+      'Multiframe Animations': 'Multiframe Animations'
+      'Musical Arrays': 'Musical Arrays'
+      'My Loopy Robotic Friends - Unplugged Activity': 'My Loopy Robotic Friends - Unplugged Activity'
+      'My Online Neighborhood': 'My Online Neighborhood'
+      'My Robotic Friends - Unplugged Activity': 'My Robotic Friends - Unplugged Activity'
+      'Nested Loops with the Bee': 'Nested Loops with the Bee'
+      'New Shapes': 'New Shapes'
+      'Orientation': 'Orientation'
+      'Pair Programming': 'Pair Programming'
+      'Picturing Data': 'Picturing Data'
+      'Planning': 'Planning'
+      'Platform Jumper - Background and Variables': 'Platform Jumper - Background and Variables'
+      'Platform Jumper - Items': 'Platform Jumper - Items'
+      'Platform Jumper - Platforms': 'Platform Jumper - Platforms'
+      'Platform Jumper - Player': 'Platform Jumper - Player'
+      'Playing Notes': 'Playing Notes'
+      'Playing with Notes': 'Playing with Notes'
+      'Post-Course Survey Instructions': 'Post-Course Survey Instructions'
+      'Practice': 'Practice'
+      'Predict': 'Predict'
+      'Prediction': 'Prediction'
+      'Problem Solving': 'Problem Solving'
+      'Programming with Events': 'Programming with Events'
+      'Programming with Rey and BB-8': 'Programming with Rey and BB-8'
+      'Programs that Repeat': 'Programs that Repeat'
+      'Project': 'Project'
+      'Project - Background and Variables': 'Project - Background and Variables'
+      'Project - Sprites and Interactions': 'Project - Sprites and Interactions'
+      'Project Work': 'Project Work'
+      'Properties': 'Properties'
+      'Publishing Your Website': 'Publishing Your Website'
+      'RGB Exploration': 'RGB Exploration'
+      'Reading Sensors': 'Reading Sensors'
+      'Recovery': 'Recovery'
+      'Reflection': 'Reflection'
+      'Relay Programming - Unplugged Activity': 'Relay Programming - Unplugged Activity'
+      'Repeat Blocks': 'Repeat Blocks'
+      'Repeat Blocks with BB-8': 'Repeat Blocks with BB-8'
+      'Repeat Blocks with the Artist': 'Repeat Blocks with the Artist'
+      'Repeat Unit Statements': 'Repeat Unit Statements'
+      'Repeat Until Statements': 'Repeat Until Statements'
+      'Representing Images': 'Representing Images'
+      'Review': 'Review'
+      'Run a simulation': 'Run a simulation'
+      'Sample Programs': 'Sample Programs'
+      'Screen Design': 'Screen Design'
+      'Sensor Events': 'Sensor Events'
+      'Sensors to Colors': 'Sensors to Colors'
+      'Setting Properties': 'Setting Properties'
+      'Shapes and the Draw Loop': 'Shapes and the Draw Loop'
+      'Share Your App': 'Share Your App'
+      'Share Your Message': 'Share Your Message'
+      'Side Scroller': 'Side Scroller'
+      'Simple Circuits': 'Simple Circuits'
+      'Skill Building': 'Skill Building'
+      'Skill-Building': 'Skill-Building'
+      'Sliders': 'Sliders'
+      'Smart Bike - Blinkers': 'Smart Bike - Blinkers'
+      'Songwriting - Functions Unplugged Activity': 'Songwriting - Functions Unplugged Activity'
+      'Sprite Lab Project': 'Sprite Lab Project'
+      'Sprites and the Draw Loop': 'Sprites and the Draw Loop'
+      'Star Chaser': 'Star Chaser'
+      'Stopping the Outbreak with Masks': 'Stopping the Outbreak with Masks'
+      'Styling Text': 'Styling Text'
+      'Styling with Classes': 'Styling with Classes'
+      'Styling your Website': 'Styling your Website'
+      'Teach A.I. a new word': 'Teach A.I. a new word'
+      'The Artist in Code Studio': 'The Artist in Code Studio'
+      'The Big Event - Unplugged Activity': 'The Big Event - Unplugged Activity'
+      'The Buzzer': 'The Buzzer'
+      'The Collector': 'The Collector'
+      'The Harvester': 'The Harvester'
+      'The Internet - Unplugged Activity': 'The Internet - Unplugged Activity'
+      'The Power of Words - Unplugged Activity': 'The Power of Words - Unplugged Activity'
+      'The Right App - Unplugged Activity': 'The Right App - Unplugged Activity'
+      'Train AI to Clean the Ocean': 'Train AI to Clean the Ocean'
+      'UI Element Properties': 'UI Element Properties'
+      'User Interface': 'User Interface'
+      'Using Getters and Setters': 'Using Getters and Setters'
+      'Using HTML Tags': 'Using HTML Tags'
+      'Using Random Numbers': 'Using Random Numbers'
+      'Using Training Data': 'Using Training Data'
+      'Using the LED': 'Using the LED'
+      'Using the Repeat Block': 'Using the Repeat Block'
+      'Using the Switch': 'Using the Switch'
+      'Vaccines': 'Vaccines'
+      'Velocity': 'Velocity'
+      'Velocity and the Counter Pattern': 'Velocity and the Counter Pattern'
+      'Video': 'Video'
       'Video - Maze Intro: Programming with Blocks': 'Video - Maze Intro: Programming with Blocks'
       'Video:  Debugging with the Step Button': 'Video:  Debugging with the Step Button'
       'Video:  Minecraft - The Agent': 'Video:  Minecraft - The Agent'
@@ -308,10 +308,10 @@ en:
       'Video: Warm Up': 'Video: Warm Up'
       'Video: While Loops with the Farmer': 'Video: While Loops with the Farmer'
       'Video: Wrap-up': 'Video: Wrap-up'
-      Warm Up: Warm Up
-      Website Project: Website Project
-      Welcome to Monster Town: Welcome to Monster Town
-      While Loops with the Farmer: While Loops with the Farmer
-      Wrap-up: Wrap-up
-      Your Personal Website: Your Personal Website
-      isTouching: isTouching
+      'Warm Up': 'Warm Up'
+      'Website Project': 'Website Project'
+      'Welcome to Monster Town': 'Welcome to Monster Town'
+      'While Loops with the Farmer': 'While Loops with the Farmer'
+      'Wrap-up': 'Wrap-up'
+      'Your Personal Website': 'Your Personal Website'
+      'isTouching': 'isTouching'
