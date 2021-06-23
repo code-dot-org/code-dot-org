@@ -471,6 +471,11 @@ class JavalabEditor extends React.Component {
     }, 500);
   }
 
+  editorHeaderText = () =>
+    this.props.isReadOnlyWorkspace
+      ? javalabMsg.readonlyWorkspaceHeader()
+      : javalabMsg.editor();
+
   render() {
     const {
       orderedTabKeys,
@@ -529,7 +534,7 @@ class JavalabEditor extends React.Component {
             isRtl={false}
             label={javalabMsg.commitCode()}
           />
-          <PaneSection>{javalabMsg.editor()}</PaneSection>
+          <PaneSection>{this.editorHeaderText()}</PaneSection>
         </PaneHeader>
         <Tab.Container
           activeKey={activeTabKey}
