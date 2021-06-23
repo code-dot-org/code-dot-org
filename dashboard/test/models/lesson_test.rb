@@ -824,7 +824,7 @@ class LessonTest < ActiveSupport::TestCase
     script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some Verbose Lesson Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some+Verbose+Lesson+Name.pdf"
     )
   end
 
@@ -836,7 +836,7 @@ class LessonTest < ActiveSupport::TestCase
     script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.student_lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some Verbose Lesson Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some+Verbose+Lesson+Name.pdf"
     )
   end
 
@@ -846,7 +846,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
 
     assert_equal(
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name} - Resources.pdf",
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name}+-+Resources.pdf",
       lesson.script_resource_pdf_url
     )
   end
