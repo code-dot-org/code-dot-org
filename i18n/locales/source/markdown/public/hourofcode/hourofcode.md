@@ -1,5 +1,5 @@
 ---
-title: Teacher Resources - Write your first computer program
+'title': 'Teacher Resources - Write your first computer program'
 ---
 
 # Write your first computer program: An Hour of Code Tutorial

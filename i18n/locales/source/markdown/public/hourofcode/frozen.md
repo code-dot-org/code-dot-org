@@ -1,5 +1,5 @@
 ---
-title: Teacher Resources - Code with Anna and Elsa
+'title': 'Teacher Resources - Code with Anna and Elsa'
 ---
 
 # Code with Anna and Elsa: An Hour of Code Tutorial
