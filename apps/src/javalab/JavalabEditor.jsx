@@ -88,6 +88,9 @@ class JavalabEditor extends React.Component {
     this.updateFileType = this.updateFileType.bind(this);
     this._codeMirrors = {};
 
+    // Used to manage dark and light mode configuration.
+    this.editorModeConfigCompartment = new Compartment();
+
     // fileMetadata is a dictionary of file key -> filename.
     let fileMetadata = {};
     // tab order is an ordered list of file keys.
@@ -134,7 +137,7 @@ class JavalabEditor extends React.Component {
 
       Object.keys(this.editors).forEach(editorKey => {
         this.editors[editorKey].dispatch({
-          reconfigure: {style: newStyle}
+          effects: this.editorModeConfigCompartment.reconfigure(newStyle)
         });
       });
     }
@@ -158,17 +161,14 @@ class JavalabEditor extends React.Component {
     const {isDarkMode} = this.props;
     const extensions = [...editorSetup];
 
-    const editorModeConfigCompartment = new Compartment();
-
     if (isDarkMode) {
-      const darkMode = editorModeConfigCompartment.of(oneDark);
-      extensions.push(darkMode);
-      //extensions.push(tagExtension('style', oneDark));
+      const darkModeExtension = this.editorModeConfigCompartment.of(oneDark);
+      extensions.push(darkModeExtension);
     } else {
-      const lightMode = editorModeConfigCompartment.of(lightMode);
-      extensions.push(lightMode);
-      //extensions.push(tagExtension('style', lightMode));
+      const lightModeExtension = this.editorModeConfigCompartment.of(lightMode);
+      extensions.push(lightModeExtension);
     }
+
     this.editors[key] = new EditorView({
       state: EditorState.create({
         doc: doc,
