@@ -53,6 +53,21 @@ const sampleModes = {
 
   "final-project": {
     randomizeTestData: true
+  },
+
+  "club-test": {
+    datasets: [
+      "loneliness_interests",
+      "loneliness_movies",
+      "loneliness_music",
+      "loneliness_phobias",
+      "loneliness_personality",
+      "club_biasedBand_toy",
+      "club_random_toy",
+      "club_specific_toy",
+      "club_lowRows_toy"
+    ],
+    hideSelectLabel: true
   }
 };
 
