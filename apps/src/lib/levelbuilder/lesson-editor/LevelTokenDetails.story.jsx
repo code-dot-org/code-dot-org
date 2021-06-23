@@ -52,7 +52,7 @@ export default storybook => {
             scriptLevel={defaultLevel}
             activitySectionPosition={1}
             activityPosition={1}
-            lessonExtrasAvailableForScript={true}
+            lessonExtrasAvailableForUnit={true}
           />
         </div>
       )
@@ -66,7 +66,7 @@ export default storybook => {
             scriptLevel={defaultLevel}
             activitySectionPosition={1}
             activityPosition={1}
-            lessonExtrasAvailableForScript={false}
+            lessonExtrasAvailableForUnit={false}
           />
         </div>
       )
@@ -80,7 +80,7 @@ export default storybook => {
             scriptLevel={blocklyLevel}
             activitySectionPosition={1}
             activityPosition={1}
-            lessonExtrasAvailableForScript={true}
+            lessonExtrasAvailableForUnit={true}
           />
         </div>
       )
