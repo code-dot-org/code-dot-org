@@ -1,0 +1,45 @@
+{
+  "card": {
+    "description": "Zoey asked everyone in her English class to complete the survey and they all did!",
+    "source": "Zoey's Survey",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Zoey (with help from Code.org)",
+      "potentialUses": "The questions can help recommend a club to join based on your interests and personality",
+      "potentialMisuses": "The data only came from people in our school and community - be careful about using it in different schools"
+    }
+  },
+  "fields": [
+    {
+      "id": "activity",
+      "type": "categorical",
+      "description": "Which of these activities do you like the most?"
+    },
+    {
+      "id": "personality",
+      "type": "categorical",
+      "description": "How do you like to spend your time?"
+    },
+    {
+      "id": "element",
+      "type": "categorical",
+      "description": "Which of these elements is your favorite?"
+    },
+    {
+      "id": "make build",
+      "type": "categorical",
+      "description": "How do you feel about the following statement: \"I like to make and build things with my hands\""
+    },
+    {
+      "id": "meet people",
+      "type": "categorical",
+      "description": "How do you feel about the following statement: \"I like to learn new things and meet new people\""
+    },
+    {
+      "id": "club",
+      "type": "categorical",
+      "description": "What is a club you would want to join or are already a part of?"
+    }
+  ],
+  "defaultLabelColumn": "club"
+}

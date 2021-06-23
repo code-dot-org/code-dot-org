@@ -1,0 +1,181 @@
+{
+  "name": "loneliness_interests",
+  "card": {
+    "description": "A dataset of survey responses gathered by Slovakian students aged 18-21 at FSEV UK. Most responses are rankings on a scale from 1 to 5. For example, 'Rank from 1 (strongly disagree) to 5 (strongly agree): I often study or work even in my spare time'. This is a subset of the larger dataset that just focuses on personal interests",
+    "source": "Kaggle (https://www.kaggle.com/miroslavsabo/young-people-survey)",
+    "lastUpdated": "2017",
+    "context": {
+      "createdBy": "Miroslav Szabo",
+      "potentialUses": "For example, predict someone's personality traits based on other traits.",
+      "potentialMisuses": "Using demographic information from a limited dataset to make assumptions about subgroups of people: for example, aking predictions about which genders are more likely to have which fears."
+    }
+  },
+  "defaultLabelColumn": "Loneliness",
+  "fields": [
+	{
+      "type": "categorical",
+      "id": "Loneliness",
+      "description": "I feel lonely in life."
+    },
+	{
+      "type": "categorical",
+      "id": "History",
+      "description": "I like history"
+    },
+    {
+      "type": "categorical",
+      "id": "Psychology",
+      "description": "I like Psychology"
+    },
+    {
+      "type": "categorical",
+      "id": "Politics",
+      "description": "I like Politics"
+    },
+    {
+      "type": "categorical",
+      "id": "Mathematics",
+      "description": "I like Mathematics"
+    },
+    {
+      "type": "categorical",
+      "id": "Physics",
+      "description": "I like Physics"
+    },
+    {
+      "type": "categorical",
+      "id": "Internet",
+      "description": "I like to use the Internet"
+    },
+    {
+      "type": "categorical",
+      "id": "PC",
+      "description": "I like to use PCs"
+    },
+    {
+      "type": "categorical",
+      "id": "Economy Management",
+      "description": "I like Economy Management"
+    },
+    {
+      "type": "categorical",
+      "id": "Biology",
+      "description": "I like Biology"
+    },
+    {
+      "type": "categorical",
+      "id": "Chemistry",
+      "description": "I like Chemistry"
+    },
+    {
+      "type": "categorical",
+      "id": "Reading",
+      "description": "I like to Reading"
+    },
+    {
+      "type": "categorical",
+      "id": "Geography",
+      "description": "I like Geography"
+    },
+    {
+      "type": "categorical",
+      "id": "Foreign languages",
+      "description": "I like Foreign languages"
+    },
+    {
+      "type": "categorical",
+      "id": "Medicine",
+      "description": "I like Medicine"
+    },
+    {
+      "type": "categorical",
+      "id": "Law",
+      "description": "I like Law"
+    },
+    {
+      "type": "categorical",
+      "id": "Cars",
+      "description": "I like Cars"
+    },
+    {
+      "type": "categorical",
+      "id": "Art exhibitions",
+      "description": "I like Art exhibitions"
+    },
+    {
+      "type": "categorical",
+      "id": "Religion",
+      "description": "I like Religion"
+    },
+    {
+      "type": "categorical",
+      "id": "Countryside, outdoors",
+      "description": "I like the Countryside, outdoors"
+    },
+    {
+      "type": "categorical",
+      "id": "Dancing",
+      "description": "I like Dancing"
+    },
+    {
+      "type": "categorical",
+      "id": "Musical instruments",
+      "description": "I like Musical instruments"
+    },
+    {
+      "type": "categorical",
+      "id": "Writing",
+      "description": "I like Writing"
+    },
+    {
+      "type": "categorical",
+      "id": "Passive sport",
+      "description": "I like Passive sports"
+    },
+    {
+      "type": "categorical",
+      "id": "Active sport",
+      "description": "I like Active sport"
+    },
+    {
+      "type": "categorical",
+      "id": "Gardening",
+      "description": "I like Gardening"
+    },
+    {
+      "type": "categorical",
+      "id": "Celebrities",
+      "description": "I like Celebrities"
+    },
+    {
+      "type": "categorical",
+      "id": "Shopping",
+      "description": "I like Shopping"
+    },
+    {
+      "type": "categorical",
+      "id": "Science and technology",
+      "description": "I like Science and technology"
+    },
+    {
+      "type": "categorical",
+      "id": "Theatre",
+      "description": "I like Theatre"
+    },
+    {
+      "type": "categorical",
+      "id": "Fun with friends",
+      "description": "I like having Fun with friends"
+    },
+    {
+      "type": "categorical",
+      "id": "Adrenaline sports",
+      "description": "I like Adrenaline sports"
+    },
+    {
+      "type": "categorical",
+      "id": "Pets",
+      "description": "I like Pets"
+    }
+  ]
+}

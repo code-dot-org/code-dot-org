@@ -1,0 +1,40 @@
+{
+  "card": {
+    "description": "Kim asked her older sister what questions she should put in the survey, then sent the survey in an email to her sister's friends at the private university where she goes to school.",
+    "source": "Kim's Survey",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Kim (with help from Code.org)",
+      "potentialUses": "The questions can help recommend a club to join based on your interests and personality",
+      "potentialMisuses": "The data only came from people in our school and community - be careful about using it in different schools"
+    }
+  },
+  "fields": [
+    {
+      "id": "activity",
+      "type": "categorical",
+      "description": "Which of these activities did you do within the last month?"
+    },
+    {
+      "id": "pet you own",
+      "type": "categorical",
+      "description": "Which of these pets do you own?"
+    },
+    {
+      "id": "favorite movie",
+      "type": "categorical",
+      "description": "Which of these movies do you like the most?"
+    },
+    {
+      "id": "lunch food",
+      "type": "categorical",
+      "description": "Which of these foods would you eat for lunch?"
+    },
+    {
+      "id": "club",
+      "type": "categorical",
+      "description": "What is a club you would want to join or are already a part of?"
+    }
+  ],
+  "defaultLabelColumn": "club"
+}

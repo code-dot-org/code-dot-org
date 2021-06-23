@@ -1,0 +1,71 @@
+{
+  "name": "loneliness_phobias",
+  "card": {
+    "description": "A dataset of survey responses gathered by Slovakian students aged 18-21 at FSEV UK. Most responses are rankings on a scale from 1 to 5. For example, 'Rank from 1 (strongly disagree) to 5 (strongly agree): I often study or work even in my spare time'. This is a subset of the larger dataset that just focuses on music.",
+    "source": "Kaggle (https://www.kaggle.com/miroslavsabo/young-people-survey)",
+    "lastUpdated": "2017",
+    "context": {
+      "createdBy": "Miroslav Szabo",
+      "potentialUses": "For example, predict someone's personality traits based on other traits.",
+      "potentialMisuses": "Using demographic information from a limited dataset to make assumptions about subgroups of people: for example, aking predictions about which genders are more likely to have which fears."
+    }
+  },
+  "defaultLabelColumn": "Loneliness",
+  "fields": [
+	{
+      "type": "categorical",
+      "id": "Loneliness",
+      "description": "I feel lonely in life."
+    },
+	{
+      "type": "categorical",
+      "id": "Flying",
+      "description": "I am afraid of flying"
+    },
+    {
+      "type": "categorical",
+      "id": "Storm",
+      "description": "I am afraid of Storms"
+    },
+    {
+      "type": "categorical",
+      "id": "Darkness",
+      "description": "I am afraid of Darkness"
+    },
+    {
+      "type": "categorical",
+      "id": "Heights",
+      "description": "I am afraid of Heights"
+    },
+    {
+      "type": "categorical",
+      "id": "Spiders",
+      "description": "I am afraid of Spiders"
+    },
+    {
+      "type": "categorical",
+      "id": "Snakes",
+      "description": "I am afraid of Snakes"
+    },
+    {
+      "type": "categorical",
+      "id": "Rats",
+      "description": "I am afraid of Rats"
+    },
+    {
+      "type": "categorical",
+      "id": "Ageing",
+      "description": "I am afraid of Ageing"
+    },
+    {
+      "type": "categorical",
+      "id": "Dangerous dogs",
+      "description": "I am afraid of Dangerous dogs"
+    },
+    {
+      "type": "categorical",
+      "id": "Fear of public speaking",
+      "description": "I am afraid of  public speaking"
+    }
+  ]
+}
