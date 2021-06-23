@@ -16,8 +16,8 @@ const MINIMUM_PROPS = {
   viewAs: ViewType.Student,
   hasSections: false,
   sectionsAreLoaded: false,
-  scriptHasLockableLessons: false,
-  scriptAllowsHiddenLessons: false,
+  unitHasLockableLessons: false,
+  unitAllowsHiddenLessons: false,
   unlockedLessonNames: [],
   sectionData: null,
   onSelectUser: () => {},
@@ -26,7 +26,7 @@ const MINIMUM_PROPS = {
 };
 
 describe('TeacherPanel', () => {
-  describe('on script page', () => {
+  describe('on unit page', () => {
     it('initial view as student', () => {
       const wrapper = shallow(
         <TeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Student} />
@@ -107,7 +107,7 @@ describe('TeacherPanel', () => {
       <TeacherPanel
         {...MINIMUM_PROPS}
         viewAs={ViewType.Teacher}
-        scriptHasLockableLessons={true}
+        unitHasLockableLessons={true}
         hasSections={true}
       />
     );
@@ -125,7 +125,7 @@ describe('TeacherPanel', () => {
       <TeacherPanel
         {...MINIMUM_PROPS}
         viewAs={ViewType.Teacher}
-        scriptHasLockableLessons={true}
+        unitHasLockableLessons={true}
         hasSections={true}
         unlockedLessonNames={['lesson1', 'lesson2']}
       />
@@ -188,7 +188,7 @@ describe('TeacherPanel', () => {
   });
 
   describe('SelectedStudentInfo', () => {
-    describe('on script', () => {
+    describe('on unit', () => {
       it('does not display SelectedStudentInfo', () => {
         const wrapper = shallow(
           <TeacherPanel
@@ -234,7 +234,7 @@ describe('TeacherPanel', () => {
   });
 
   describe('Example Solutions', () => {
-    describe('on script', () => {
+    describe('on unit', () => {
       it('does not display example solutions', () => {
         const wrapper = shallow(
           <TeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Teacher} />

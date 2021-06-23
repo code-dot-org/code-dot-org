@@ -28,8 +28,8 @@ const defaultProps = {
     '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   initialDescriptionTeacher:
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
-  initialScriptsInCourse: ['CSP Unit 1', 'CSP Unit 2'],
-  scriptNames: ['CSP Unit 1', 'CSP Unit 2'],
+  initialUnitsInCourse: ['CSP Unit 1', 'CSP Unit 2'],
+  unitNames: ['CSP Unit 1', 'CSP Unit 2'],
   initialTeacherResources: [],
   initialHasVerifiedResources: false,
   initialHasNumberedUnits: false,
@@ -127,7 +127,7 @@ describe('CourseEditor', () => {
   it('renders full course editor page', () => {
     const wrapper = createWrapper({});
     assert.equal(wrapper.find('textarea').length, 3);
-    assert.equal(wrapper.find('CourseScriptsEditor').length, 1);
+    assert.equal(wrapper.find('CourseUnitsEditor').length, 1);
     assert.equal(wrapper.find('ResourcesEditor').length, 1);
     assert.equal(wrapper.find('ResourcesDropdown').length, 1);
     assert.equal(wrapper.find('CollapsibleEditorSection').length, 4);

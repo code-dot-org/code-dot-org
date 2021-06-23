@@ -13,16 +13,16 @@ const defaultProps = {
   isVerifiedTeacher: true,
   hasVerifiedResources: true,
   perLevelResults: {},
-  scriptCompleted: false,
+  unitCompleted: false,
   scriptId: 123,
   scriptName: 'csp1',
-  scriptTitle: 'CSP 1',
+  unitTitle: 'CSP 1',
   professionalLearningCourse: false,
   viewAs: ViewType.Teacher,
   isRtl: false,
   sectionsForDropdown: [],
-  scriptHasLockableLessons: false,
-  scriptAllowsHiddenLessons: false,
+  unitHasLockableLessons: false,
+  unitAllowsHiddenLessons: false,
   versions: []
 };
 

@@ -31,7 +31,6 @@
       "curriculum_path": "https://curriculum.code.org/csd-19/unit1/{LESSON}",
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
-      "is_stable": true,
       "family_name": "csd1",
       "hideable_lessons": true
     },

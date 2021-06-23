@@ -34,10 +34,10 @@ class UnitOverviewTopRow extends React.Component {
     assignedSectionId: PropTypes.number,
     currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
-    scriptProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
+    unitProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
-    scriptTitle: PropTypes.string.isRequired,
+    unitTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
@@ -99,10 +99,10 @@ class UnitOverviewTopRow extends React.Component {
       selectedSectionId,
       currentCourseId,
       professionalLearningCourse,
-      scriptProgress,
+      unitProgress,
       scriptId,
       scriptName,
-      scriptTitle,
+      unitTitle,
       viewAs,
       isRtl,
       teacherResources,
@@ -131,7 +131,7 @@ class UnitOverviewTopRow extends React.Component {
             <Button
               __useDeprecatedTag
               href={`/s/${scriptName}/next`}
-              text={NEXT_BUTTON_TEXT[scriptProgress]}
+              text={NEXT_BUTTON_TEXT[unitProgress]}
               size={Button.ButtonSize.large}
               style={{marginRight: 10}}
             />
@@ -199,7 +199,7 @@ class UnitOverviewTopRow extends React.Component {
           <SectionAssigner
             sections={sectionsForDropdown}
             selectedSectionId={selectedSectionId}
-            assignmentName={scriptTitle}
+            assignmentName={unitTitle}
             showAssignButton={showAssignButton}
             courseId={currentCourseId}
             scriptId={scriptId}
