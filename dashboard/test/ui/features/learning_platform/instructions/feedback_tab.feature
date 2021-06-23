@@ -12,10 +12,10 @@ Background:
   And I press "finishButton"
 
 Scenario: As student 'Feedback' tab is not visible if no feedback
-  #As student, with no feedback, can see Key Concept tab on rubric level
+  #As student, with no feedback, can see Rubric tab on rubric level
   And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
   And I wait to see ".uitest-feedback"
-  And element ".editor-column" contains text "Key Concept"
+  And element ".editor-column" contains text "Rubric"
   Then I click selector ".uitest-feedback"
   And I wait to see ".editor-column"
   And element ".editor-column" contains text "This is the key concept for this mini rubric."
@@ -48,7 +48,7 @@ Otherwise don't show feedback tab
   And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
   And I wait for the page to fully load
   And I wait to see ".uitest-feedback"
-  And element ".editor-column" contains text "Key Concept"
+  And element ".editor-column" contains text "Rubric"
   Then I click selector ".uitest-feedback"
   And I wait to see ".editor-column"
   And element ".editor-column" contains text "This is the key concept for this mini rubric."

@@ -110,7 +110,7 @@ class Script < ApplicationRecord
   before_validation :hide_pilot_units
 
   def hide_pilot_units
-    self.hidden = true unless pilot_experiment.blank?
+    self.published_state = SharedConstants::PUBLISHED_STATE.pilot unless pilot_experiment.blank?
   end
 
   # As we read and write to files with the unit name, to prevent directory
@@ -206,7 +206,6 @@ class Script < ApplicationRecord
     curriculum_path
     announcements
     version_year
-    is_stable
     supported_locales
     pilot_experiment
     editor_experiment
@@ -556,7 +555,7 @@ class Script < ApplicationRecord
     locale_str = locale&.to_s
     latest_version = nil
     family_units.each do |unit|
-      next unless unit.is_stable
+      next unless unit.stable?
       latest_version ||= unit
 
       # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
@@ -660,9 +659,9 @@ class Script < ApplicationRecord
     supported_stable_units = unit_versions.select do |unit|
       is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
       if version_year
-        unit.is_stable && is_supported && unit.version_year == version_year
+        unit.stable? && is_supported && unit.version_year == version_year
       else
-        unit.is_stable && is_supported
+        unit.stable? && is_supported
       end
     end
 
@@ -1020,7 +1019,7 @@ class Script < ApplicationRecord
   def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     transaction do
       unit = fetch_unit(options)
-      unit.update!(hidden: true) if new_suffix
+      unit.update!(published_state: SharedConstants::PUBLISHED_STATE.beta) if new_suffix
 
       unit.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
@@ -1139,7 +1138,8 @@ class Script < ApplicationRecord
 
     ActiveRecord::Base.transaction do
       copied_unit = dup
-      copied_unit.is_stable = false
+      copied_unit.published_state = SharedConstants::PUBLISHED_STATE.beta
+      copied_unit.pilot_experiment = nil
       copied_unit.tts = false
       copied_unit.announcements = nil
       copied_unit.is_course = destination_unit_group.nil?
@@ -1185,7 +1185,7 @@ class Script < ApplicationRecord
 
   # Clone this unit, appending a dash and the suffix to the name of this
   # unit. Also clone all the levels in the unit, appending an underscore and
-  # the suffix to the name of each level. Mark the new unit as hidden, and
+  # the suffix to the name of each level. Mark the new unit published_state as beta, and
   # copy any translations and other metadata associated with the original unit.
   # @param options [Hash] Optional properties to set on the new unit.
   # @param options[:editor_experiment] [String] Optional editor_experiment name.
@@ -1196,10 +1196,10 @@ class Script < ApplicationRecord
 
     unit_filename = "#{Script.unit_directory}/#{name}.script"
     new_properties = {
-      is_stable: false,
       tts: false,
       announcements: nil,
-      is_course: false
+      is_course: false,
+      pilot_experiment: nil
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
@@ -1271,7 +1271,7 @@ class Script < ApplicationRecord
       Script.add_unit(
         {
           name: unit_name,
-          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
+          hidden: true, # no longer using hidden but needs value until we can remove
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
@@ -1411,21 +1411,11 @@ class Script < ApplicationRecord
   # A unit that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(get_published_state)
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
-  def get_published_state
-    if pilot?
-      SharedConstants::PUBLISHED_STATE.pilot
-    elsif !hidden
-      if is_stable
-        SharedConstants::PUBLISHED_STATE.stable
-      else
-        SharedConstants::PUBLISHED_STATE.preview
-      end
-    else
-      SharedConstants::PUBLISHED_STATE.beta
-    end
+  def stable?
+    published_state == SharedConstants::PUBLISHED_STATE.stable
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
@@ -1470,7 +1460,7 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      publishedState: get_published_state,
+      publishedState: published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
@@ -1654,7 +1644,7 @@ class Script < ApplicationRecord
           version_year: s.version_year,
           version_title: s.version_year,
           can_view_version: s.can_view_version?(user),
-          is_stable: !!s.is_stable,
+          is_stable: s.stable?,
           locales: s.supported_locale_names
         }
       end
@@ -1732,7 +1722,6 @@ class Script < ApplicationRecord
     ]
     boolean_keys = [
       :has_verified_resources,
-      :is_stable,
       :project_sharing,
       :tts,
       :deprecated,
@@ -1818,7 +1807,7 @@ class Script < ApplicationRecord
       info[:student_description] = Services::MarkdownPreprocessor.process(localized_student_description)
     end
 
-    info[:is_stable] = true if is_stable
+    info[:is_stable] = true if stable?
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names

@@ -9,7 +9,7 @@ import {sectionShape, assignmentShape, assignmentFamilyShape} from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
-  assignedScriptName,
+  assignedUnitName,
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
@@ -60,7 +60,7 @@ class EditSectionForm extends Component {
     isNewSection: PropTypes.bool,
 
     //Comes from redux
-    initialScriptId: PropTypes.number,
+    initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
@@ -70,10 +70,10 @@ class EditSectionForm extends Component {
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
-    textToSpeechScriptIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    textToSpeechUnitIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     lessonExtrasAvailable: PropTypes.func.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
-    assignedScriptName: PropTypes.string.isRequired,
+    assignedUnitName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeEnglishName: PropTypes.string,
     localeCode: PropTypes.string,
@@ -165,8 +165,8 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       lessonExtrasAvailable,
-      textToSpeechScriptIds,
-      assignedScriptName,
+      textToSpeechUnitIds,
+      assignedUnitName,
       localeEnglishName,
       isNewSection,
       localeCode,
@@ -254,7 +254,7 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          {textToSpeechScriptIds.indexOf(section.scriptId) > -1 && (
+          {textToSpeechUnitIds.indexOf(section.scriptId) > -1 && (
             <TtsAutoplayField
               isEnglish={localeCode.startsWith('en')}
               value={section.ttsAutoplayEnabled}
@@ -299,7 +299,7 @@ class EditSectionForm extends Component {
         {this.state.showHiddenUnitWarning && (
           <ConfirmHiddenAssignment
             sectionName={section.name}
-            assignmentName={assignedScriptName}
+            assignmentName={assignedUnitName}
             onClose={handleClose}
             onConfirm={this.handleConfirmAssign}
           />
@@ -570,16 +570,16 @@ YesNoDropdown.propTypes = FieldProps;
 
 let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
-  initialScriptId: state.teacherSections.initialScriptId,
+  initialUnitId: state.teacherSections.initialUnitId,
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
-  textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
+  textToSpeechUnitIds: state.teacherSections.textToSpeechUnitIds,
   lessonExtrasAvailable: id => lessonExtrasAvailable(state, id),
   hiddenLessonState: state.hiddenLesson,
-  assignedScriptName: assignedScriptName(state),
+  assignedUnitName: assignedUnitName(state),
   localeEnglishName: state.locales.localeEnglishName,
   localeCode: state.locales.localeCode,
 

@@ -54,8 +54,6 @@ class UnitGroup < ApplicationRecord
     has_numbered_units
     family_name
     version_year
-    is_stable
-    visible
     pilot_experiment
     announcements
   )
@@ -76,12 +74,10 @@ class UnitGroup < ApplicationRecord
     I18n.t("data.course.name.#{name}.version_title", default: version_year)
   end
 
-  # Any course with a plc_course or no family_name is considered stable.
-  # All other courses must specify an is_stable boolean property.
+  # Any course with a plc_course is considered stable.
+  # All other courses must specify a published_state.
   def stable?
-    return true if plc_course || !family_name
-
-    is_stable || false
+    plc_course || (published_state == SharedConstants::PUBLISHED_STATE.stable)
   end
 
   def self.file_path(name)
@@ -107,6 +103,7 @@ class UnitGroup < ApplicationRecord
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
     unit_group.properties = hash['properties']
+    unit_group.published_state = hash['published_state'] || SharedConstants::PUBLISHED_STATE.beta
 
     # add_course_offering creates the course version
     CourseOffering.add_course_offering(unit_group)
@@ -330,21 +327,7 @@ class UnitGroup < ApplicationRecord
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(get_published_state)
-  end
-
-  def get_published_state
-    if pilot?
-      SharedConstants::PUBLISHED_STATE.pilot
-    elsif visible
-      if is_stable
-        SharedConstants::PUBLISHED_STATE.stable
-      else
-        SharedConstants::PUBLISHED_STATE.preview
-      end
-    else
-      SharedConstants::PUBLISHED_STATE.beta
-    end
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
   def summarize(user = nil)
@@ -355,7 +338,7 @@ class UnitGroup < ApplicationRecord
       assignment_family_title: localized_assignment_family_title,
       family_name: family_name,
       version_year: version_year,
-      published_state: get_published_state,
+      published_state: published_state,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
@@ -535,7 +518,7 @@ class UnitGroup < ApplicationRecord
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
       # select only stable courses.
-      where("properties -> '$.is_stable'").
+      where(published_state: SharedConstants::PUBLISHED_STATE.stable).
       # order by version year.
       order("properties -> '$.version_year' DESC")&.
       first
