@@ -39,7 +39,7 @@ const commonConfig = {
         ]
       },
       {
-        test: /\.(png|gif)$/,
+        test: /\.(png|jpg)$/,
         loader: 'url-loader',
         options: {
           limit: 8192,

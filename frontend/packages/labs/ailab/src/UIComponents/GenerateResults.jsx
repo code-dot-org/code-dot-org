@@ -7,7 +7,7 @@ import { styles, getFadeOpacity } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import blueScanner from "@public/images/ai-bot/blue-scanner.png";
-import background from "@public/images/results-background-light.png";
+import background from "@public/images/results-background-light.jpg";
 import DataTable from "./DataTable";
 
 const framesPerCycle = 80;
@@ -131,6 +131,7 @@ class GenerateResults extends Component {
           ...styles.panel,
           justifyContent: "center",
           backgroundSize: "cover",
+          backgroundPosition: "50% 50%",
           backgroundImage: "url(" + background + ")"
         }}
       >
