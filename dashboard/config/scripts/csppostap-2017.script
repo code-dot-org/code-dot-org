@@ -7,7 +7,6 @@ curriculum_path 'https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v
 new_name 'csppostap-2017'
 family_name 'csppostap'
 version_year '2017'
-is_stable true
 published_state 'stable'
 project_sharing true
 tts true

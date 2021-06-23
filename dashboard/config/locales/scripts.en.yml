@@ -23893,6 +23893,8 @@ en:
               name: 'U2L1: Defining Attributes'
             lesson-24:
               name: 'U2L2: Using Variables'
+              description_student: 
+              description_teacher: 
             lesson-25:
               name: 'U2L3: Writing Constructors'
             lesson-26:

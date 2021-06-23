@@ -9,7 +9,6 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2018",
-      "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-18/post-ap/{LESSON}",
       "script_announcements": [
         {
