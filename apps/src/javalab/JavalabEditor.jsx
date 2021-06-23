@@ -16,7 +16,7 @@ import PaneHeader, {
 } from '@cdo/apps/templates/PaneHeader';
 import {EditorView} from '@codemirror/view';
 import {editorSetup, lightMode} from './editorSetup';
-import {EditorState, tagExtension} from '@codemirror/state';
+import {EditorState, Compartment} from '@codemirror/state';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
@@ -131,6 +131,7 @@ class JavalabEditor extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.isDarkMode !== this.props.isDarkMode) {
       const newStyle = this.props.isDarkMode ? oneDark : lightMode;
+
       Object.keys(this.editors).forEach(editorKey => {
         this.editors[editorKey].dispatch({
           reconfigure: {style: newStyle}
@@ -157,10 +158,16 @@ class JavalabEditor extends React.Component {
     const {isDarkMode} = this.props;
     const extensions = [...editorSetup];
 
+    const editorModeConfigCompartment = new Compartment();
+
     if (isDarkMode) {
-      extensions.push(tagExtension('style', oneDark));
+      const darkMode = editorModeConfigCompartment.of(oneDark);
+      extensions.push(darkMode);
+      //extensions.push(tagExtension('style', oneDark));
     } else {
-      extensions.push(tagExtension('style', lightMode));
+      const lightMode = editorModeConfigCompartment.of(lightMode);
+      extensions.push(lightMode);
+      //extensions.push(tagExtension('style', lightMode));
     }
     this.editors[key] = new EditorView({
       state: EditorState.create({
