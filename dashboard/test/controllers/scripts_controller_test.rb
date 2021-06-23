@@ -936,10 +936,10 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_empty script.lessons
 
-    script_text = <<~SCRIPT_TEXT
+    script_text = <<~UNIT_TEXT
       lesson 'lesson 1', display_name: 'lesson 1'
       level '#{level.name}'
-    SCRIPT_TEXT
+    UNIT_TEXT
 
     post :update, params: {
       id: script.id,
