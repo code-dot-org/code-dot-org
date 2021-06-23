@@ -699,13 +699,6 @@ export function getSelectedCategoricalColumns(state) {
   return intersection;
 }
 
-export function getSelectedNumericalColumns(state) {
-  let intersection = getNumericalColumns(state).filter(
-    x => state.selectedFeatures.includes(x) || x === state.labelColumn
-  );
-  return intersection;
-}
-
 function getSelectedColumns(state) {
   return state.selectedFeatures
     .concat(state.labelColumn)
@@ -726,22 +719,6 @@ export function getSelectedColumnDescriptions(state) {
   });
 }
 
-export function getUniqueOptionsByColumn(state) {
-  let uniqueOptionsByColumn = {};
-  getSelectedCategoricalColumns(state).map(
-    column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
-  );
-  return uniqueOptionsByColumn;
-}
-
-export function getExtremaByColumn(state) {
-  let extremaByColumn = {};
-  getSelectedNumericalColumns(state).map(
-    column => (extremaByColumn[column] = getExtrema(state, column))
-  );
-  return extremaByColumn;
-}
-
 /* Functions for retriving aggregate details about a currently selected column. */
 
 export function getCurrentColumnData(state) {
@@ -753,8 +730,8 @@ export function getCurrentColumnData(state) {
     id: state.currentColumn,
     readOnly: isColumnReadOnly(state, state.currentColumn),
     dataType: state.columnsByDataType[state.currentColumn],
-    uniqueOptions: getUniqueOptions(state, state.currentColumn),
-    extrema: getExtrema(state, state.currentColumn),
+    uniqueOptions: getUniqueOptions(state.data, state.currentColumn),
+    extrema: getExtrema(state.data, state.currentColumn),
     frequencies: getOptionFrequencies(state, state.currentColumn),
     description: getColumnDescription(state, state.currentColumn),
     hasTooManyUniqueOptions: hasTooManyUniqueOptions(
@@ -863,7 +840,10 @@ export function getCrossTabData(state) {
   // Take inventory of all unique label values we have seen, which allows us to
   // generate the header at the top of the CrossTab UI.
 
-  const uniqueLabelValues = getUniqueOptions(state, state.labelColumn);
+  const uniqueLabelValues = getUniqueOptions(
+    state.data,
+    state.labelColumn
+  );
 
   return {
     results,

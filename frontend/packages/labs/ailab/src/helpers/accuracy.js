@@ -43,7 +43,7 @@ export function getAccuracyRegression(state) {
   let accuracy = {};
   let numCorrect = 0;
   let grades = [];
-  const range = getExtrema(state, state.labelColumn).range;
+  const range = getExtrema(state.data, state.labelColumn).range;
   const errorTolerance = (range * REGRESSION_ERROR_TOLERANCE) / 100;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {

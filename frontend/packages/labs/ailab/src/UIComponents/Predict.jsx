@@ -7,13 +7,13 @@ import train from "../train";
 import {
   setTestData,
   getConvertedPredictedLabel,
-  getPredictAvailable,
-  getExtremaByColumn
+  getPredictAvailable
 } from "../redux";
 import {
   getSelectedCategoricalFeatures,
   getSelectedNumericalFeatures,
-  getUniqueOptionsByColumn
+  getUniqueOptionsByColumn,
+  getExtremaByColumn
 } from "../selectors";
 import { styles } from "../constants";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";

@@ -1,5 +1,6 @@
 import { createSelector } from 'reselect';
 import { ColumnTypes } from "./constants.js";
+import { getUniqueOptions, getExtrema } from './helpers/columnDetails';
 
 const getData = state => state.data;
 const getColumnsByDataType = state => state.columnsByDataType;
@@ -45,6 +46,15 @@ export const getNumericalColumns = createSelector(
   }
 )
 
+export const getSelectedNumericalColumns = createSelector(
+  [getNumericalColumns, getSelectedFeatures, getLabelColumn],
+  (numericalColumns, selectedFeatures, labelColumn) => {
+    return numericalColumns.filter(
+      column => (selectedFeatures.includes(column) || column === labelColumn)
+    )
+  }
+)
+
 export const getSelectedNumericalFeatures = createSelector(
   [getNumericalColumns, getSelectedFeatures],
   (numericalColumns, selectedFeatures) => {
@@ -53,12 +63,6 @@ export const getSelectedNumericalFeatures = createSelector(
     );
   }
 )
-
-function getUniqueOptions(data, column) {
-  return Array.from(new Set(data.map(row => row[column]))).filter(
-    option => option !== undefined && option !== ""
-  );
-}
 
 export const getUniqueOptionsByColumn = createSelector(
   [getSelectedCategoricalColumns, getData],
@@ -75,5 +79,16 @@ export const getUniqueOptionsCurrentColumn = createSelector(
   [getCurrentColumn, getData],
   (currentColumn, data) => {
     return getUniqueOptions(data, currentColumn).sort()
+  }
+)
+
+export const getExtremaByColumn = createSelector(
+  [getSelectedNumericalColumns, getData],
+  (getSelectedNumericalColumns, data) => {
+    let extremaByColumn = {};
+    getSelectedNumericalColumns.map(column => (
+      extremaByColumn[column] = getExtrema(data, column)
+    ))
+    return extremaByColumn;
   }
 )
