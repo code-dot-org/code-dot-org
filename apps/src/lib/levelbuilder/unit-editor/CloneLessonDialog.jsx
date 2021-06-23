@@ -79,7 +79,7 @@ export default class CloneLessonDialog extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              the script edit page
+              the unit edit page
             </a>{' '}
             to move the cloned lesson or{' '}
             <a
@@ -95,8 +95,8 @@ export default class CloneLessonDialog extends Component {
           <div>
             <label>
               Cloning will add lesson <strong>{this.props.lessonName}</strong>{' '}
-              to the end of the last lesson group in the script. Which script do
-              you want to clone this lesson to?
+              to the end of the last lesson group in the unit. Which unit do you
+              want to clone this lesson to?
               <input
                 type="text"
                 value={this.state.destinationUnit}
