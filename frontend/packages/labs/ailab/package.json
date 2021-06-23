@@ -76,6 +76,6 @@
     "@fortawesome/react-fontawesome": "^0.1.7",
     "chart.js": "^2.9.4",
     "react-chartjs-2": "^2.11.1",
-    "reselect": "^4.0.0"
+    "reselect": "^2.0.3"
   }
 }
