@@ -310,7 +310,7 @@ export const getSerializedLessonGroups = (rawLessonGroups, levelKeyList) => {
   const lessonGroups = _.cloneDeep(rawLessonGroups);
   let s = [];
   lessonGroups.forEach(lessonGroup => {
-    if (lessonGroup.userFacing && lessonGroup.lessons.length > 0) {
+    if (lessonGroup.userFacing) {
       let t = `lesson_group '${lessonGroup.key}'`;
       if (lessonGroup.displayName) {
         t += `, display_name: '${escape(lessonGroup.displayName)}'`;

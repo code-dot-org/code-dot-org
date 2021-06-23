@@ -722,6 +722,70 @@ level 'Level 3'
     assert_equal expected, output
   end
 
+  test 'Script DSL for lesson group without lesson' do
+    input_dsl = <<~DSL
+      lesson_group 'required', display_name: 'Overview'
+      lesson_group_description 'This is a description'
+      lesson_group_big_questions 'Question 1 Question 2'
+      lesson 'Lesson1', display_name: 'Lesson1'
+
+      level 'Level 1'
+
+      lesson_group 'empty', display_name: 'empty lesson group'
+      lesson_group_description 'empty lesson group description'
+      lesson_group_big_questions 'empty lesson group questions'
+
+      lesson_group 'non-empty', display_name: 'lesson group with lessons'
+      lesson 'Lesson2', display_name: 'Lesson2'
+      level 'Level 2'
+    DSL
+    expected = DEFAULT_PROPS.merge(
+      {
+        lesson_groups: [
+          {
+            key: "required",
+            display_name: "Overview",
+            big_questions: 'Question 1 Question 2',
+            lessons: [
+              {
+                name: "Lesson1",
+                key: "Lesson1",
+                script_levels: [
+                  {levels: [{name: "Level 1"}]},
+                ]
+              }
+            ],
+            description: 'This is a description',
+          },
+          {
+            key: "empty",
+            display_name: "empty lesson group",
+            big_questions: "empty lesson group questions",
+            lessons: [],
+            description: "empty lesson group description"
+          },
+          {
+            key: "non-empty",
+            display_name: "lesson group with lessons",
+            big_questions: [],
+            lessons: [
+              {
+                name: "Lesson2",
+                key: "Lesson2",
+                script_levels: [
+                  {levels: [{name: "Level 2"}]},
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
   test 'serialize lesson_group for lesson' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
