@@ -418,7 +418,7 @@ coursea-2017:
     utc: &49 2020-07-28 01:54:14.000000000 Z
     zone: *2
     time: *49
-  wrapup_video_id: 
+  wrapup_video_id:
   user_id:
   login_required: false
   published_state: stable
