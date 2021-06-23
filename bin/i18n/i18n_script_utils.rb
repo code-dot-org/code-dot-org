@@ -52,7 +52,6 @@ class I18nScriptUtils
   def self.to_crowdin_yaml(data)
     ast = Psych.parse_stream(Psych.dump(data))
 
-    # Make sure we treat the strings 'y' and 'n' as strings, and not bools
     ast.grep(Psych::Nodes::Scalar).each do |node|
       node.plain = false
       node.quoted = true
