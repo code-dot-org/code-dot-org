@@ -26,12 +26,17 @@ const MOBILE_PORTRAIT_WIDTH = 900;
 function getInstructionsDefaults() {
   var instructions = {
     selectDataset: 'Select the data set you would like to use.',
+    uploadedDataset: 'You just uploaded a dataset.',
+    selectedDataset: 'You just selected a dataset.',
     dataDisplayLabel: 'Choose one column to predict.',
     dataDisplayFeatures:
       'Choose one or more columns as inputs to help make the prediction.',
+    selectedFeatureNumerical: 'You just selected a numerical feature.',
+    selectedFeatureCategorical: 'You just selected a categorical feature.',
     trainModel: 'Your model is being trained.',
     generateResults: 'Your model is being tested.',
     results: 'Review the results.',
+    resultsDetails: 'Details of results are being shown.',
     saveModel: 'Save the trained model for use in App Lab.',
     modelSummary:
       "You've successfully trained and saved your model. Review your model \
