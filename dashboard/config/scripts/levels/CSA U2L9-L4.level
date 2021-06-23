@@ -1,0 +1,21 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "The owner wants the price of a `Cake` to be dependent on the number of `layers`. `Cake`s must have at least one layer.\r\n\r\nFor example, a `Cake` has 2 `layers` and the `price` is $1.00. When she updates `layers` to 3, the new `price` should be $1.50.\r\n\r\nImport `Cake.java` from your **Backpack**.\r\n\r\nWrite a mutator method for `layers` in `Cake.java` by translating this pseudocode.\r\n\r\n```\r\nif newLayers > 0\r\n   update price to price * newLayers / oldLayers\r\n   update layers to newLayers\r\n```",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "project_template_level_name": "CSA U2L9 Template"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-06-23T13:15:35.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-23 16:34:07 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

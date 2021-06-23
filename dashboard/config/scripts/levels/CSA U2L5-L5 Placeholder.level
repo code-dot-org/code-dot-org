@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "The Project Mercury food truck owner has noticed that she goes through a lot of sugar. Each recipe of 12 donuts requires 0.5 cups of sugar. Write a code segment which accepts a number of donuts as input and computes the amount of sugar (in cups) needed to bake them.\r\n\r\nYour code segment should meet the following specifications:\r\n* Uses the `Scanner` class to input a desired quantity of donuts\r\n* Includes the variables `qtyDonuts` and `totalCupsSugar`",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28431
+  },
+  "game_id": 52,
+  "published": true,
+  "created_at": "2021-06-23T16:53:46.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-23 16:53:55 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
