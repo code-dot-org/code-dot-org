@@ -50,7 +50,7 @@ describe('LevelTokenDetails', () => {
       scriptLevel: defaultScriptLevel,
       activitySectionPosition: 5,
       activityPosition: 1,
-      lessonExtrasAvailableForScript: false,
+      lessonExtrasAvailableForUnit: false,
       inactiveLevelNames: []
     };
   });
@@ -67,7 +67,7 @@ describe('LevelTokenDetails', () => {
     assertChecked(wrapper, 'challenge', false);
   });
 
-  it('bonus is enabled if lesson extras are not available for script but bonus was already selected', () => {
+  it('bonus is enabled if lesson extras are not available for unit but bonus was already selected', () => {
     let scriptLevel = _.cloneDeep(defaultScriptLevel);
     scriptLevel.bonus = true;
     const wrapper = shallow(
@@ -76,16 +76,16 @@ describe('LevelTokenDetails', () => {
     assertDisabled(wrapper, 'bonus', false);
   });
 
-  it('bonus is disabled if lesson extras are not available for script and bonus was not selected', () => {
+  it('bonus is disabled if lesson extras are not available for unit and bonus was not selected', () => {
     const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
     assertDisabled(wrapper, 'bonus', true);
   });
 
-  it('bonus is enabled if lesson extras are available for script', () => {
+  it('bonus is enabled if lesson extras are available for unit', () => {
     const wrapper = shallow(
       <LevelTokenDetails
         {...defaultProps}
-        lessonExtrasAvailableForScript={true}
+        lessonExtrasAvailableForUnit={true}
       />
     );
     assertDisabled(wrapper, 'bonus', false);
