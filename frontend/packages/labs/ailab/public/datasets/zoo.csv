@@ -1,4 +1,4 @@
-﻿Animal Name,Hair,Feathers,Eggs,Milk,Airborne,Aquatic,Predator,Toothed,Backbone,Breathes,Venomous,Fins,Legs,Tail,Domestic,Catsize,Class
+Animal Name,Hair,Feathers,Eggs,Milk,Airborne,Aquatic,Predator,Toothed,Backbone,Breathes,Venomous,Fins,Legs,Tail,Domestic,Catsize,Class
 aardvark,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,4,No,No,Yes,Mammal
 antelope,Yes,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,4,Yes,No,Yes,Mammal
 bass,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,0,Yes,No,No,Fish
@@ -39,6 +39,7 @@ hare,Yes,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,4,Yes,No,No,Mammal
 hawk,No,Yes,Yes,No,Yes,No,Yes,No,Yes,Yes,No,No,2,Yes,No,No,Bird
 herring,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,0,Yes,No,No,Fish
 honeybee,Yes,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,6,No,Yes,No,Bug
+housecat,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,4,Yes,Yes,Yes,Mammal
 housefly,Yes,No,Yes,No,Yes,No,No,No,No,Yes,No,No,6,No,No,No,Bug
 kiwi,No,Yes,Yes,No,No,No,Yes,No,Yes,Yes,No,No,2,Yes,No,No,Bird
 ladybird,No,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,6,No,No,No,Bug
@@ -67,7 +68,6 @@ polecat,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,4,Yes,No,Yes,Mammal
 pony,Yes,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,4,Yes,Yes,Yes,Mammal
 porpoise,No,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,0,Yes,No,Yes,Mammal
 puma,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,4,Yes,No,Yes,Mammal
-pussycat,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,4,Yes,Yes,Yes,Mammal
 raccoon,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,4,Yes,No,Yes,Mammal
 reindeer,Yes,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,4,Yes,Yes,Yes,Mammal
 rhea,No,Yes,Yes,No,No,No,Yes,No,Yes,Yes,No,No,2,Yes,No,Yes,Bird
