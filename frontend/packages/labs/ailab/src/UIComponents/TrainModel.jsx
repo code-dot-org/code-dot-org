@@ -118,6 +118,7 @@ class TrainModel extends Component {
           ...styles.panel,
           justifyContent: "center",
           backgroundSize: "cover",
+          backgroundPosition: "50% 50%",
           backgroundImage: "url(" + background + ")"
         }}
       >
