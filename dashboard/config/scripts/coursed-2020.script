@@ -5,7 +5,7 @@ lesson_extras_available true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursed/{LESSON}'
 family_name 'coursed'
 version_year '2020'
-is_stable true
+published_state 'stable'
 curriculum_umbrella 'CSF'
 tts true
 is_course true

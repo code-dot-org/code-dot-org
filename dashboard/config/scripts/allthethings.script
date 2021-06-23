@@ -1,5 +1,6 @@
 hideable_lessons true
 lesson_extras_available true
+published_state 'beta'
 
 lesson 'Jigsaw', display_name: 'Jigsaw', has_lesson_plan: false
 skin 'jigsaw'
@@ -288,4 +289,6 @@ lesson 'Java Lab', display_name: 'Java Lab', has_lesson_plan: false
 level 'Allthethings Java Lab 1'
 level 'Allthethings Java Lab 2'
 level 'Allthethings Java Lab 3'
+level 'Allthethings Java Lab 4'
+level 'csa widget test2'
 

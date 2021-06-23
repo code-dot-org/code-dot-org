@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {uniq, map, filter} from 'lodash';
 import {CSVLink} from 'react-csv';
 import i18n from '@cdo/locale';
-import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
+import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {h3Style} from '../../lib/ui/Headings';
 import color from '../../util/color';
 import {asyncLoadTextResponses} from './textResponsesRedux';
@@ -14,11 +14,11 @@ import {
   setScriptId,
   validScriptPropType,
   getSelectedScriptName
-} from '@cdo/apps/redux/scriptSelectionRedux';
+} from '@cdo/apps/redux/unitSelectionRedux';
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
-  {label: i18n.lesson(), key: 'stage'},
+  {label: i18n.lesson(), key: 'lesson'},
   {label: i18n.puzzle(), key: 'puzzle'},
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'}
@@ -89,7 +89,7 @@ class TextResponses extends Component {
   };
 
   getLessons = () => {
-    const lessons = uniq(map(this.getResponsesByScript(), 'stage'));
+    const lessons = uniq(map(this.getResponsesByScript(), 'lesson'));
     return lessons;
   };
 
@@ -105,7 +105,7 @@ class TextResponses extends Component {
 
     if (filterByLessonName) {
       filteredResponses = filter(filteredResponses, [
-        'stage',
+        'lesson',
         filterByLessonName
       ]);
     }
@@ -125,11 +125,11 @@ class TextResponses extends Component {
 
     return (
       <div>
-        <div style={styles.scriptSelection}>
+        <div style={styles.unitSelection}>
           <div style={{...h3Style, ...styles.header}}>
             {i18n.selectACourse()}
           </div>
-          <ScriptSelector
+          <UnitSelector
             validScripts={validScripts}
             scriptId={scriptId}
             onChange={this.onChangeScript}
@@ -171,7 +171,7 @@ const styles = {
   header: {
     marginBottom: 0
   },
-  scriptSelection: {
+  unitSelection: {
     marginTop: 30
   },
   actionRow: {
@@ -214,8 +214,8 @@ export default connect(
     sectionId: state.sectionData.section.id,
     responses: state.textResponses.responseDataByScript,
     isLoadingResponses: state.textResponses.isLoadingResponses,
-    validScripts: state.scriptSelection.validScripts,
-    scriptId: state.scriptSelection.scriptId,
+    validScripts: state.unitSelection.validScripts,
+    scriptId: state.unitSelection.scriptId,
     scriptName: getSelectedScriptName(state)
   }),
   dispatch => ({

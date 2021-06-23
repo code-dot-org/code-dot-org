@@ -7,7 +7,7 @@ project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'courseb'
 version_year '2020'
-is_stable true
+published_state 'stable'
 curriculum_umbrella 'CSF'
 tts true
 is_course true

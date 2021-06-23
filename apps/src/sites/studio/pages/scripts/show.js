@@ -30,7 +30,7 @@ function initPage() {
   store.dispatch(setLocaleEnglishName(scriptData.locale));
 
   if (plcBreadcrumb) {
-    // Dispatch breadcrumb props so that ScriptOverviewHeader can add the breadcrumb
+    // Dispatch breadcrumb props so that UnitOverviewHeader can add the breadcrumb
     // as appropriate
     registerReducers({plcHeader: plcHeaderReducer});
     store.dispatch(

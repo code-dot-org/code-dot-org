@@ -26,7 +26,7 @@
         %li For users: The coding workspace, design mode, data mode, the reset button, and sharing are all disabled.
         %li For levelbuilders: The coding workspace and design mode are available in start mode.
 
-  - if (@level.is_a?(Blockly) || @level.is_a?(Weblab))
+  - if (@level.is_a?(Blockly) || @level.is_a?(Weblab) || @level.is_a?(Javalab))
     .field
       = f.label :project_template_level_name, 'Project Template Level Name'
       %p What this does:

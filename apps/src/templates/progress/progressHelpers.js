@@ -24,11 +24,11 @@ export function lessonIsVisible(lesson, state, viewAs) {
     throw new Error('missing param viewAs in lessonIsVisible');
   }
 
-  const hiddenStageState = state.hiddenLesson;
+  const hiddenLessonState = state.hiddenLesson;
   const sectionId = state.teacherSections.selectedSectionId;
 
   const isHidden = isLessonHiddenForSection(
-    hiddenStageState,
+    hiddenLessonState,
     sectionId,
     lesson.id
   );
@@ -57,7 +57,7 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
   } else if (viewAs === ViewType.Teacher) {
     return !state.lessonLock.lockableAuthorized;
   } else if (viewAs === ViewType.Student) {
-    return stageLocked(levels);
+    return lessonLocked(levels);
   }
   return true;
 }
@@ -66,7 +66,7 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
  * Check to see if a lesson is locked for all students in the current section
  * or not. If called as a student, this should always return false since they
  * don't have a selected section.
- * @param {number} lessonId - Id representing the stage/lesson we're curious about
+ * @param {number} lessonId - Id representing the lesson we're curious about
  * @param {object} state - State of our entire redux store
  * @returns {boolean} True if the given lesson is locked for all students in the
  *   currently selected section.
@@ -74,23 +74,23 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
 export function lessonIsLockedForAllStudents(lessonId, state) {
   const currentSectionId = state.teacherSections.selectedSectionId;
   const currentSection = state.lessonLock.lessonsBySectionId[currentSectionId];
-  const fullyLockedStages = fullyLockedLessonMapping(currentSection);
-  return !!fullyLockedStages[lessonId];
+  const fullyLockedLessons = fullyLockedLessonMapping(currentSection);
+  return !!fullyLockedLessons[lessonId];
 }
 
 /**
- * @param {level[]} levels - A set of levels for a given stage
- * @returns {boolean} True if we should consider the stage to be locked for the
+ * @param {level[]} levels - A set of levels for a given lesson
+ * @returns {boolean} True if we should consider the lesson to be locked for the
  *   current user.
  */
-export function stageLocked(levels) {
-  // For lockable stages, there is a requirement that they have exactly one LevelGroup,
-  // and that it be the last level in the stage. Because LevelGroup's can have
+export function lessonLocked(levels) {
+  // For lockable lessons, there is a requirement that they have exactly one LevelGroup,
+  // and that it be the last level in the lesson. Because LevelGroup's can have
   // multiple "pages", and single LevelGroup might appear as multiple levels/bubbles
   // on the client. However, it is the case that each page in the LG should have
   // an identical locked/unlocked state.
   // Given this, we should be able to look at the last level in our collection
-  // to determine whether the LG (and thus the stage) should be considered locked.
+  // to determine whether the LG (and thus the lesson) should be considered locked.
   return !!levels[levels.length - 1].isLocked;
 }
 
@@ -244,8 +244,8 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
 
 /**
  * The level object passed down to use via the server (and stored in
- * script.stages.levels) contains more data than we need. This parses the parts
- * we care about to conform to our `levelType` oject.
+ * script.lessons.levels) contains more data than we need. This parses the parts
+ * we care about to conform to our `levelType` object.
  */
 export const processedLevel = level => {
   return {

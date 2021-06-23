@@ -15,7 +15,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:12 UTC",
+    "serialized_at": "2021-06-17 22:31:27 UTC",
+    "published_state": "pilot",
     "seeding_key": {
       "script.name": "contagion-pilot"
     }

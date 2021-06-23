@@ -317,8 +317,8 @@ module Services
         # Extract the parts of the ScriptLevel's seeding_key which are used to
         # identify the Lesson by its seeding_key.
         lesson_seed_keys = %w(lesson.key lesson_group.key script.name)
-        stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| lesson_seed_keys.include?(k)}]
-        raise 'No stage found' if stage.nil?
+        lesson = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| lesson_seed_keys.include?(k)}]
+        raise 'No lesson found' if lesson.nil?
 
         section_key = sl_data['seeding_key']['activity_section.key']
         section_id = section_key && seed_context.activity_sections.find {|section| section.key == section_key}.id
@@ -330,7 +330,7 @@ module Services
         script_level_attrs = sl_data.except('seeding_key')
         script_level_attrs['script_id'] = seed_context.script.id
         script_level_attrs['activity_section_id'] = section_id if section_id
-        script_level_attrs['stage_id'] = stage.id
+        script_level_attrs['stage_id'] = lesson.id
         script_level_to_import.assign_attributes(script_level_attrs)
         script_level_to_import
       end
@@ -658,6 +658,7 @@ module Services
         :new_name,
         :family_name,
         :serialized_at,
+        :published_state,
         :seeding_key
       )
 

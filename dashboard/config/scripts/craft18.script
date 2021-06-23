@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'craft18 levels', display_name: 'craft18 levels', has_lesson_plan: false
 level 'Ryan_2018_mc_1'
 

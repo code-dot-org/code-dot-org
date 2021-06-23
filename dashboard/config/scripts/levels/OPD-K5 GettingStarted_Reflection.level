@@ -12,7 +12,7 @@
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "long_instructions": "# Getting Started: Reflection\r\n\r\n**Prompt:**\r\n* What resources do you plan to further explore after completing the course?\r\n",
+    "long_instructions": "# Reflection:  Getting Started\r\n\r\nLesson 2 introduced you to:\r\n\r\n* using the teacher dashboard,\r\n* accessing curriculum resources,\r\n* identifying Computer Science Fundamentals course structure,\r\n* and finding help and support beyond this online course.\r\n\r\n**Prompt:**\r\n\r\nWhich of the topics introduced in Lesson 2 will you need to revisit to help you feel prepared to teach Computer Science Fundamentals courses?",
     "parent_level_id": 27467,
     "name_suffix": "_2021"
   },
@@ -22,6 +22,8 @@
   "level_num": "custom",
   "user_id": 884,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-11-07 00:36:42 +0000\",\"changed\":[],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:37:20 +0000\",\"changed\":[\"name\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:39:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-08 17:52:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2021-03-05 19:35:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-11-07 00:36:42 +0000\",\"changed\":[],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:37:20 +0000\",\"changed\":[\"name\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:39:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-08 17:52:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2021-03-05 19:35:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-04 13:59:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-04 14:01:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-04 14:01:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-04 14:14:10 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-09 14:55:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-09 21:46:51 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-10 00:18:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-10 16:40:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

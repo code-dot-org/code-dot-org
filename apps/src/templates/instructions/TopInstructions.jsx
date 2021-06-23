@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
-import TeacherFeedback from './TeacherFeedback';
+import TeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedback';
 import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import HelpTabContents from './HelpTabContents';
@@ -82,6 +82,7 @@ class TopInstructions extends Component {
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
+    openReferenceLinksInNewTab: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     readOnlyWorkspace: PropTypes.bool,
     serverLevelId: PropTypes.number,
@@ -176,7 +177,10 @@ class TopInstructions extends Component {
           .getTeacherFeedbackForStudent(user, serverLevelId, serverScriptId)
           .done((data, _, request) => {
             // If student has feedback make their default tab the feedback tab instead of instructions
-            if (data[0] && (data[0].comment || data[0].performance)) {
+            if (
+              data[0] &&
+              (data[0].comment || data[0].performance || data[0].review_state)
+            ) {
               this.setState({
                 feedbacks: data,
                 tabSelected: TabType.COMMENTS,
@@ -224,9 +228,14 @@ class TopInstructions extends Component {
         this.setState({fetchingData: false}, this.forceTabResizeToMaxHeight);
       })
       .catch(error => {
-        console.log(
-          'Promise Rejection while getting instructions: ' + error.responseText
-        );
+        if (error.responseText) {
+          console.log(
+            'Promise Rejection while getting instructions: ' +
+              error.responseText
+          );
+        } else {
+          console.log(error);
+        }
       });
   }
 
@@ -583,25 +592,10 @@ class TopInstructions extends Component {
     const displayHelpTab =
       (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
 
-    const studentHasFeedback =
-      this.isViewingAsStudent &&
-      feedbacks.length > 0 &&
-      !!(feedbacks[0].comment || feedbacks[0].performance);
-
-    /*
-     * The feedback tab will be the Key Concept tab if there is a mini rubric and:
-     * 1) Teacher is viewing the level but not giving feedback to the student
-     * 2) Student does not have any feedback for that level
-     * The Key Concept tab shows the Key Concept and Rubric for the level in a view
-     * only form
-     */
-    const displayReadonlyRubric =
-      rubric &&
-      ((this.isViewingAsStudent && !studentHasFeedback) ||
-        (this.isViewingAsTeacher && !teacherViewingStudentWork));
+    const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
 
     const displayFeedback =
-      displayReadonlyRubric || teacherViewingStudentWork || studentHasFeedback;
+      !!rubric || teacherViewingStudentWork || studentHasFeedback;
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -643,7 +637,7 @@ class TopInstructions extends Component {
           isCSDorCSP={isCSDorCSP}
           displayHelpTab={displayHelpTab}
           displayFeedback={displayFeedback}
-          displayKeyConcept={displayReadonlyRubric} // Key Concept tab displays a readonly rubric
+          levelHasRubric={!!rubric}
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
@@ -674,16 +668,16 @@ class TopInstructions extends Component {
                 videoData={levelVideos ? levelVideos[0] : []}
                 mapReference={mapReference}
                 referenceLinks={referenceLinks}
+                openReferenceLinksInNewTab={
+                  this.props.openReferenceLinksInNewTab
+                }
               />
             )}
             {displayFeedback && !fetchingData && (
               <TeacherFeedback
                 user={user}
                 visible={tabSelected === TabType.COMMENTS}
-                displayReadonlyRubric={displayReadonlyRubric}
-                disabledMode={
-                  this.isViewingAsStudent || !teacherViewingStudentWork
-                }
+                isEditable={teacherViewingStudentWork}
                 rubric={rubric}
                 ref={ref => (this.commentTab = ref)}
                 latestFeedback={feedbacks.length ? feedbacks[0] : null}

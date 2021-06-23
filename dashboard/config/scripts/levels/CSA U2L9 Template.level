@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert newDessert = new Dessert(\"chocolate\", 12, 2.99);\n\n    // To Do: Double the quantity of newDessert.\n\n\n    // To Do: Get the value of quantity and print to check.\n\n\n    Cake newCake = new Cake(\"chocolate\", 12, 2.99, 1, \"pandan\");\n    // To Do: Double the layers of newCake.\n\n\n    // To Do: Get the value of price and layers and print to check.\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2021-06-23T12:51:34.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-06-23 13:01:51 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 13:23:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -11,9 +11,9 @@
   teacher_dashboard_data[:userName] = @current_user.short_name
   teacher_dashboard_data[:validGrades] = @valid_grades
   teacher_dashboard_data[:localeCode] = request.locale
-  teacher_dashboard_data[:textToSpeechScriptIds] = Script.text_to_speech_script_ids
-  teacher_dashboard_data[:preReaderScriptIds] = Script.pre_reader_script_ids
-  teacher_dashboard_data[:lessonExtrasScriptIds] = Script.lesson_extras_script_ids
+  teacher_dashboard_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids
+  teacher_dashboard_data[:preReaderUnitIds] = Script.pre_reader_unit_ids
+  teacher_dashboard_data[:lessonExtrasUnitIds] = Script.lesson_extras_script_ids
   teacher_dashboard_data[:showSectionProgressDetails] = SingleUserExperiment.enabled?(user: current_user, experiment_name: 'section-progress-details-pilot')
   teacher_dashboard_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
 

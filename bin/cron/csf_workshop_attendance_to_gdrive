@@ -10,7 +10,7 @@ require 'cdo/google/sheet'
 # a spreadsheet in Google Drive (with permissions locked down to our organization).
 #
 
-EARLIEST_WORKSHOP_END_DATE = Date.new(2020, 6, 1)
+EARLIEST_WORKSHOP_END_DATE = Date.new(2021, 6, 1)
 LATEST_WORKSHOP_START_DATE = Date.today
 
 def get_rows

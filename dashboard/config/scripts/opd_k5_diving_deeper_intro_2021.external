@@ -2,19 +2,30 @@ name 'OPD-K5 diving deeper intro_2021'
 title 'Diving Deepr'
 description 'description here'
 markdown <<MARKDOWN
-# Diving Deeper: Courses E and F
+# Introduction to Functions
 
-## Are you teaching Courses E and F? 
+<img src="https://images.code.org/a9d545b97e53615be6dea756f4e2c50b-image-1623431857938.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
-Courses E and F are designed for 4th and 5th grade. In these courses, we dive deeper into some concepts and introduce new coding environments. 
+## Course Lesson Objectives
 
-If you are planning to teach these courses, we recommend completing the following lessons. If you are not planning to teach these courses, you can skip this concept chunk and move onto "Next Steps".
+After completing Lesson 12 you will be able to:
 
-## What will you find in this concept chunk?
-In this concept chunk, we will cover:
-- More advanced coding concepts: functions, variables and advanced forms of loops (nested loops and for loops)
-- "Sprites" and a new coding environment called Sprite Lab
-- End-of-course projects
+* define functions,
+* use function blocks with Minecraft,   
+* and create art using function blocks with The Artist.
 
+## CS Concepts 
+
+A **function** is code that you can easily call over and over again.
+
+Programmers use **functions** to make their code more efficient and reuse segments of code.
+
+### Lesson in Action
+
+* Watch this video demonstration, <a href="https://www.youtube.com/watch?v=QuIMLel1mmw" target="blank">" Songwriting with Functions,"</a> of a teacher introducing functions to students with the **context-setting** lesson in Course E - Lessons 11:  Songwriting.
+
+**Note:**  The video will open in a new window.  Be sure to return to this online course to continue with lessons.
+
+Click "Continue" to the video that introduces students to the activity for Course E - Lesson 11: Songwriting, during the lesson.
 
 MARKDOWN

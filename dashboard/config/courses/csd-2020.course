@@ -8,6 +8,7 @@
     "csd5-2020",
     "csd6-2020"
   ],
+  "published_state": "stable",
   "properties": {
     "teacher_resources": [
       [
@@ -21,9 +22,7 @@
     ],
     "has_verified_resources": true,
     "family_name": "csd",
-    "version_year": "2020",
-    "visible": true,
-    "is_stable": true
+    "version_year": "2020"
   },
   "resources": [
 

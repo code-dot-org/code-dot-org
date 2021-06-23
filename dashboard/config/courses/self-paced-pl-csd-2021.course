@@ -6,12 +6,12 @@
     "self-paced-pl-csd3-2021",
     "self-paced-pl-csd4-2021",
     "self-paced-pl-csd5-2021",
-    "self-paced-pl-csd6-2021",
-    "self-paced-pl-csd7-2021",
-    "self-paced-pl-csd8-2021"
+    "self-paced-pl-csd6-2021"
   ],
+  "published_state": "beta",
   "properties": {
-    "has_numbered_units": true
+    "version_year": "2021",
+    "has_verified_resources": true
   },
   "resources": [
 

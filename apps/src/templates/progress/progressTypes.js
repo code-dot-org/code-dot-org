@@ -110,12 +110,12 @@ export const studentLevelProgressType = PropTypes.shape(
 );
 
 /*
- * @typedef {Object} scriptProgressType
+ * @typedef {Object} unitProgressType
  *
- * scriptProgressType represents a user's progress in a script.  It is a map of
+ * unitProgressType represents a user's progress in a script.  It is a map of
  * levelId -> studentLevelProgressType objects.
  */
-export const scriptProgressType = PropTypes.objectOf(studentLevelProgressType);
+export const unitProgressType = PropTypes.objectOf(studentLevelProgressType);
 
 /**
  * @typedef {Object} Lesson
@@ -123,13 +123,13 @@ export const scriptProgressType = PropTypes.objectOf(studentLevelProgressType);
  * @property {string} name
  * @property {number} id
  * @property {bool} lockable
- * @property {number} stageNumber
+ * @property {number} lessonNumber
  */
 export const lessonType = PropTypes.shape({
   name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   lockable: PropTypes.bool.isRequired,
-  stageNumber: PropTypes.number,
+  lessonNumber: PropTypes.number,
   lesson_plan_html_url: PropTypes.string,
   isFocusArea: PropTypes.bool.isRequired,
   description_student: PropTypes.string,

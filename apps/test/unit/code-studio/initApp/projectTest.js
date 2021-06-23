@@ -439,7 +439,7 @@ describe('project.js', () => {
             });
 
             it(`from a script level`, () => {
-              setFakeLocation(`${origin}/s/csp3-2019/stage/10/puzzle/4`);
+              setFakeLocation(`${origin}/s/csp3-2019/lessons/10/levels/4`);
               expect(project.getShareUrl()).to.equal(expected);
             });
           });
@@ -465,7 +465,7 @@ describe('project.js', () => {
             });
 
             it(`from a script level`, () => {
-              setFakeLocation(`${origin}/s/csp3-2019/stage/10/puzzle/4`);
+              setFakeLocation(`${origin}/s/csp3-2019/lessons/10/levels/4`);
               expect(project.getShareUrl()).to.equal(expected);
             });
           });

@@ -21,7 +21,7 @@ describe('ProgressViewHeader', () => {
       excludeCsfColumnInLegend: true,
       title: 'CSD Unit 1 - Problem Solving and Computing (19-20)',
       path: '//localhost-studio.code.org:3000/s/csd1-2019',
-      stages: [],
+      lessons: [],
       version_year: '2019',
       family_name: 'csd-1'
     },

@@ -219,9 +219,9 @@ class ApiController < ApplicationController
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
-        stages: script.lessons.each_with_object({}) do |stage, stage_hash|
-          stage_state = stage.lockable_state(section.students)
-          stage_hash[stage.id] = stage_state unless stage_state.nil?
+        lessons: script.lessons.each_with_object({}) do |lesson, lesson_hash|
+          lesson_state = lesson.lockable_state(section.students)
+          lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
         end
       }
     end
@@ -298,7 +298,7 @@ class ApiController < ApplicationController
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
         levels_count: script_levels.length,
-        stages: lessons,
+        lessons: lessons,
       }
     }
 
@@ -375,14 +375,14 @@ class ApiController < ApplicationController
     end
   end
 
-  use_database_pool user_progress_for_stage: :persistent
+  use_database_pool user_progress_for_lesson: :persistent
 
   # Return the JSON details of the users progress on a particular script
   # level and marks the user as having started that level. (Because of the
   # latter side effect, this should only be called when the user sees the level,
   # to avoid spurious activity monitor warnings about the level being started
   # but not completed.)
-  def user_progress_for_stage
+  def user_progress_for_lesson
     response = user_summary(current_user)
     response[:signedIn] = !current_user.nil?
 
@@ -447,7 +447,7 @@ class ApiController < ApplicationController
         next unless response
         {
           student: student_hash,
-          stage: level_hash[:script_level].lesson.localized_title,
+          lesson: level_hash[:script_level].lesson.localized_title,
           puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
@@ -506,7 +506,7 @@ class ApiController < ApplicationController
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
     script = Script.get_from_cache(script_id) if script_id
-    script ||= Script.twenty_hour_script
+    script ||= Script.twenty_hour_unit
     script
   end
 end

@@ -1,55 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import javalabMsg from '@cdo/javalab/locale';
+import color from '@cdo/apps/util/color';
+import {KeyCodes} from '@cdo/apps/constants';
 import {appendInputLog} from './javalabRedux';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
-import {KeyCodes} from '@cdo/apps/constants';
-import color from '@cdo/apps/util/color';
 import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
-import javalabMsg from '@cdo/javalab/locale';
-
-const style = {
-  darkMode: {
-    backgroundColor: color.black,
-    color: color.white
-  },
-  lightMode: {
-    backgroundColor: color.white,
-    color: color.black
-  },
-  consoleStyle: {
-    height: '200px',
-    overflowY: 'auto',
-    padding: 5
-  },
-  consoleLogs: {
-    lineHeight: 'normal',
-    cursor: 'text',
-    whiteSpace: 'pre-wrap',
-    flexGrow: 1
-  },
-  consoleInputWrapper: {
-    flexGrow: 0,
-    flexShrink: 0,
-    display: 'flex',
-    overflow: 'auto'
-  },
-  consoleInputPrompt: {
-    display: 'block',
-    width: 15,
-    cursor: 'text',
-    flexGrow: 0
-  },
-  consoleInput: {
-    flexGrow: 1,
-    marginBottom: 0,
-    boxShadow: 'none',
-    border: 'none'
-  }
-};
+import InputPrompt from './InputPrompt';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -74,19 +35,18 @@ function moveCaretToEndOfDiv(element) {
 class JavalabConsole extends React.Component {
   static propTypes = {
     onInputMessage: PropTypes.func.isRequired,
+    leftColumn: PropTypes.element,
+    style: PropTypes.object,
+
     // populated by redux
     consoleLogs: PropTypes.array,
     appendInputLog: PropTypes.func,
     isDarkMode: PropTypes.bool
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      commandHistory: new CommandHistory()
-    };
-  }
+  state = {
+    commandHistory: new CommandHistory()
+  };
 
   componentDidUpdate(prevProps) {
     const prevLogsLength = prevProps.consoleLogs.length;
@@ -104,14 +64,11 @@ class JavalabConsole extends React.Component {
 
   displayConsoleLogs() {
     return this.props.consoleLogs.map((log, i) => {
-      let prefix = '<';
-      if (log.type === 'input') {
-        prefix = '>';
-      }
       return (
-        <p key={`log_${i}`}>
-          {prefix} {log.text}
-        </p>
+        <div key={`log-${i}`} style={styles.lineWrapper}>
+          {log.type === 'input' && <InputPrompt />}
+          {log.text}
+        </div>
       );
     });
   }
@@ -138,40 +95,46 @@ class JavalabConsole extends React.Component {
   };
 
   render() {
+    const {isDarkMode, style, leftColumn} = this.props;
+
     return (
-      <div>
-        <PaneHeader hasFocus={true}>
+      <div style={style}>
+        <PaneHeader id="pane-header" style={styles.header} hasFocus>
           <PaneButton
             id="javalab-console-clear"
-            headerHasFocus={true}
+            headerHasFocus
             isRtl={false}
             label={javalabMsg.clearConsole()}
           />
           <PaneSection>{javalabMsg.console()}</PaneSection>
         </PaneHeader>
-        <div
-          style={{
-            ...style.consoleStyle,
-            ...(this.props.isDarkMode ? style.darkMode : style.lightMode)
-          }}
-          ref={el => (this._consoleLogs = el)}
-          className="javalab-console"
-        >
-          <div style={style.consoleLogs}>{this.displayConsoleLogs()}</div>
-          <div style={style.consoleInputWrapper}>
-            <span style={style.consoleInputPrompt} onClick={this.focus}>
-              &gt;
-            </span>
-            <input
-              type="text"
-              spellCheck="false"
-              style={{
-                ...style.consoleInput,
-                ...(this.props.isDarkMode ? style.darkMode : style.lightMode)
-              }}
-              onKeyDown={this.onInputKeyDown}
-              aria-label="console input"
-            />
+        <div style={styles.container}>
+          {leftColumn && [
+            {...leftColumn, key: 'left-col'},
+            <div style={styles.spacer} key="spacer" />
+          ]}
+          <div
+            style={{
+              ...styles.console,
+              ...(isDarkMode ? styles.darkMode : styles.lightMode)
+            }}
+            ref={el => (this._consoleLogs = el)}
+            className="javalab-console"
+          >
+            <div style={styles.logs}>{this.displayConsoleLogs()}</div>
+            <div style={styles.lineWrapper}>
+              <InputPrompt onClick={this.focus} />
+              <input
+                type="text"
+                spellCheck="false"
+                style={{
+                  ...styles.input,
+                  ...(isDarkMode ? styles.darkMode : styles.lightMode)
+                }}
+                onKeyDown={this.onInputKeyDown}
+                aria-label="console input"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -188,3 +151,55 @@ export default connect(
     appendInputLog: log => dispatch(appendInputLog(log))
   })
 )(JavalabConsole);
+
+const styles = {
+  darkMode: {
+    backgroundColor: color.black,
+    color: color.white
+  },
+  lightMode: {
+    backgroundColor: color.white,
+    color: color.black
+  },
+  container: {
+    marginTop: 30,
+    display: 'flex',
+    flexGrow: 1,
+    overflowY: 'hidden'
+  },
+  console: {
+    flexGrow: 2,
+    overflowY: 'auto',
+    padding: 5
+  },
+  logs: {
+    lineHeight: 'normal',
+    cursor: 'text',
+    whiteSpace: 'pre-wrap',
+    flexGrow: 1
+  },
+  lineWrapper: {
+    flexGrow: 0,
+    flexShrink: 0,
+    display: 'flex',
+    alignItems: 'center',
+    overflow: 'auto',
+    fontSize: 14
+  },
+  input: {
+    flexGrow: 1,
+    marginBottom: 0,
+    boxShadow: 'none',
+    border: 'none',
+    padding: 0
+  },
+  spacer: {
+    width: 8
+  },
+  header: {
+    position: 'absolute',
+    textAlign: 'center',
+    lineHeight: '30px',
+    width: '100%'
+  }
+};

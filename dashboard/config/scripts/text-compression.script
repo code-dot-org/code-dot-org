@@ -1,4 +1,5 @@
 hidden false
+published_state 'preview'
 
 lesson 'Text Compression', display_name: 'Text Compression', has_lesson_plan: false
 level 'Text Compression', named: true

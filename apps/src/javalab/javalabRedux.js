@@ -1,4 +1,5 @@
 import UserPreferences from '../lib/util/UserPreferences';
+import {DisplayTheme} from './DisplayTheme';
 
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const RENAME_FILE = 'javalab/RENAME_FILE';
@@ -8,13 +9,15 @@ const SOURCE_VALIDATION_UPDATED = 'javalab/SOURCE_VALIDATION_UPDATED';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
 const SET_ALL_VALIDATION = 'javalab/SET_ALL_VALIDATION';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
+const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 
 const initialState = {
   consoleLogs: [],
   sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
   isDarkMode: false,
-  validation: {}
+  validation: {},
+  renderedEditorHeight: 400
 };
 
 // Action Creators
@@ -71,7 +74,9 @@ export const sourceValidationUpdated = (filename, isValidation) => ({
 
 // Updates the user preferences to reflect change
 export const setIsDarkMode = isDarkMode => {
-  new UserPreferences().setUsingDarkMode(isDarkMode);
+  new UserPreferences().setDisplayTheme(
+    isDarkMode ? DisplayTheme.DARK : DisplayTheme.LIGHT
+  );
   return {
     isDarkMode: isDarkMode,
     type: COLOR_PREFERENCE_UPDATED
@@ -106,6 +111,11 @@ export const getValidation = state => {
   }
   return validation;
 };
+
+export const setRenderedHeight = height => ({
+  type: EDITOR_HEIGHT_UPDATED,
+  height
+});
 
 // Reducer
 export default function reducer(state = initialState, action) {
@@ -182,6 +192,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isDarkMode: action.isDarkMode
+    };
+  }
+  if (action.type === EDITOR_HEIGHT_UPDATED) {
+    return {
+      ...state,
+      renderedEditorHeight: action.height
     };
   }
   return state;

@@ -78,9 +78,9 @@ en:
           description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
         csp-2021:
           title: Computer Science Principles ('21-'22)
-          description_short: ''
-          description_student: ''
-          description_teacher: Ken add course description and any links you may want here
+          description_short: Learn foundational computer science concepts.
+          description_student: CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+          description_teacher: CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
           version_title: "'21-'22"
         csd-2021:
           title: Computer Science Discoveries ('21-'22)
@@ -101,11 +101,18 @@ en:
           description_teacher: ''
           version_title: ''
         self-paced-pl-csd-2021:
-          title: self-paced-pl-csd-2021
+          title: 'CS Discoveries Self-Paced Professional Learning                     '
           description_short: ''
           description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_teacher: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced virtual course for educators to get started teaching CS Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s Computer Science Discoveries course** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each part and lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and CS Discoveries. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started.
+          version_title: "'21 - '22"
         self-paced-pl-csp-2021:
           title: self-paced-pl-csp-2021
           description_short: ''

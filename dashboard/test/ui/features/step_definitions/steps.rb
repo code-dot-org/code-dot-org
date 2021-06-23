@@ -166,7 +166,7 @@ When /^I reset the puzzle to the starting version$/ do
     Then I click selector "#versions-header"
     And I wait until element "button:contains(Start over)" is visible
     And I click selector "button:contains(Start over)"
-    And I click selector "#confirm-button"
+    And I click selector "#start-over-button"
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
   STEPS
@@ -200,6 +200,10 @@ end
 
 def jquery_is_element_visible(selector)
   "return $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
+end
+
+def jquery_is_element_displayed(selector)
+  "return $(#{selector.dump}).css('display') !== 'none';"
 end
 
 When /^I wait until element "([^"]*)" is (not )?visible$/ do |selector, negation|
@@ -756,6 +760,10 @@ def element_visible?(selector)
   @browser.execute_script(jquery_is_element_visible(selector))
 end
 
+def element_displayed?(selector)
+  @browser.execute_script(jquery_is_element_displayed(selector))
+end
+
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
 end
@@ -766,6 +774,10 @@ end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
   expect(element_visible?(selector)).to eq(false)
+end
+
+Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
+  expect(element_displayed?(selector)).to eq(negation.nil?)
 end
 
 And (/^I select age (\d+) in the age dialog/) do |age|
@@ -1007,7 +1019,7 @@ Given(/^I am enrolled in a plc course$/) do
   browser_request(url: '/api/test/enroll_in_plc_course', method: 'POST')
 end
 
-Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
+Given(/^I am assigned to unit "([^"]*)"$/) do |script_name|
   browser_request(
     url: '/api/test/assign_script_as_student',
     method: 'POST',
@@ -1015,7 +1027,7 @@ Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
   )
 end
 
-Given(/^I create a temp script and lesson$/) do
+Given(/^I create a temp unit and lesson$/) do
   response = browser_request(
     url: '/api/test/create_script',
     method: 'POST'
@@ -1025,7 +1037,7 @@ Given(/^I create a temp script and lesson$/) do
   @temp_lesson_id = data['lesson_id']
 end
 
-Given(/^I create a temp migrated script with lessons$/) do
+Given(/^I create a temp migrated unit with lessons$/) do
   response = browser_request(
     url: '/api/test/create_migrated_script',
     method: 'POST'
@@ -1036,21 +1048,21 @@ Given(/^I create a temp migrated script with lessons$/) do
   @temp_lesson_without_lesson_plan_id = data['lesson_without_lesson_plan_id']
 end
 
-Given(/^I view the temp script overview page$/) do
+Given(/^I view the temp unit overview page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}"
     And I wait until element "#script-title" is visible
   }
 end
 
-Given(/^I view the temp script edit page$/) do
+Given(/^I view the temp unit edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
     And I wait until element ".edit_script" is visible
   }
 end
 
-Given(/^I try to view the temp script edit page$/) do
+Given(/^I try to view the temp unit edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
   }
@@ -1070,14 +1082,14 @@ Given(/^I view the temp lesson edit page for lesson without lesson plan$/) do
   }
 end
 
-Given (/^I remove the temp script from the cache$/) do
+Given (/^I remove the temp unit from the cache$/) do
   browser_request(
     url: '/api/test/invalidate_script',
     method: 'POST',
     body: {script_name: @temp_script_name}
   )
 end
-Given(/^I delete the temp script with lessons$/) do
+Given(/^I delete the temp unit with lessons$/) do
   browser_request(
     url: '/api/test/destroy_script',
     method: 'POST',

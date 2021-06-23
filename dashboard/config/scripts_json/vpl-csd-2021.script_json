@@ -1,0 +1,83 @@
+{
+  "script": {
+    "name": "vpl-csd-2021",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
+      "version_year": "2021",
+      "pilot_experiment": "20-21-virtual-AYW-CSD",
+      "teacher_resources": [
+        [
+          "curriculum",
+          "https://studio.code.org/courses/csd-2021"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/"
+        ],
+        [
+          "curriculumGuide",
+          "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview"
+        ]
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-06-21 14:38:32 UTC",
+    "published_state": "pilot",
+    "seeding_key": {
+      "script.name": "vpl-csd-2021"
+    }
+  },
+  "lesson_groups": [
+
+  ],
+  "lessons": [
+
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

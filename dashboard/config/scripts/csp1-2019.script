@@ -7,7 +7,7 @@ has_verified_resources true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit1/{LESSON}'
 family_name 'csp1'
 version_year '2019'
-is_stable true
+published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSP'
 

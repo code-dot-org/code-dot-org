@@ -31,7 +31,7 @@ class CoursesController < ApplicationController
     if UnitGroup::FAMILY_NAMES.include?(params[:course_name])
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
       redirect_to_course = UnitGroup.all_courses.
-          select {|c| c.family_name == params[:course_name] && c.is_stable?}.
+          select {|c| c.family_name == params[:course_name] && c.stable?}.
           sort_by(&:version_year).
           last
       redirect_to "/courses/#{redirect_to_course.name}#{redirect_query_string}"
@@ -97,13 +97,13 @@ class CoursesController < ApplicationController
       unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
-    # Convert checkbox values from a string ("on") to a boolean.
-    [:has_verified_resources, :has_numbered_units].each {|key| params[key] = !!params[key]}
+
     unit_group.update(course_params)
 
     # Update the published state of all the units in the course to be same as the course
     unit_group.default_scripts.each do |script|
-      script.assign_attributes(hidden: !course_params[:visible], properties: {is_stable: course_params[:is_stable], pilot_experiment: course_params[:pilot_experiment]})
+      # We are no longer using hidden but until its removed it needs a value because it can't be null
+      script.assign_attributes(published_state: course_params[:published_state], hidden: true, properties: {pilot_experiment: course_params[:pilot_experiment]})
       next unless script.changed?
       script.save!
       script.write_script_dsl
@@ -190,8 +190,10 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :visible, :is_stable, :announcements).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
+    cp[:published_state] = SharedConstants::PUBLISHED_STATE.beta unless cp[:published_state]
+
     cp
   end
 

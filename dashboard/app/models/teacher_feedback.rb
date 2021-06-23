@@ -29,6 +29,7 @@ class TeacherFeedback < ApplicationRecord
   acts_as_paranoid # use deleted_at column instead of deleting rows
   validates_presence_of :student_id, :script_id, :level_id, :teacher_id, unless: :deleted?
   belongs_to :student, class_name: 'User'
+  has_many :user_levels, through: :student
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
   belongs_to :script
   belongs_to :level
@@ -57,20 +58,26 @@ class TeacherFeedback < ApplicationRecord
     script_level
   end
 
-  def self.get_student_level_feedback(student_id, level_id, teacher_id, script_id)
+  def self.get_latest_feedback_given(student_id, level_id, teacher_id, script_id)
+    get_latest_feedbacks_given(student_id, level_id, script_id, teacher_id).first
+  end
+
+  # returns the latest feedback from each teacher for the student on the level
+  def self.get_latest_feedbacks_received(student_id, level_id, script_id)
     where(
       student_id: student_id,
       level_id: level_id,
-      teacher_id: teacher_id,
       script_id: script_id
-    ).latest
+    ).latest_per_teacher
   end
 
-  def self.get_all_feedback_for_section(student_ids, level_ids, teacher_id)
+  # returns the latest feedback for each student on every level in a script given by the teacher
+  def self.get_latest_feedbacks_given(student_ids, level_ids, script_id, teacher_id)
     find(
       where(
         student_id: student_ids,
         level_id: level_ids,
+        script_id: script_id,
         teacher_id: teacher_id
       ).group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)')
     )
@@ -86,8 +93,58 @@ class TeacherFeedback < ApplicationRecord
     )
   end
 
+  def self.has_feedback?(student_id)
+    where(
+      student_id: student_id
+    ).count > 0
+  end
+
+  def self.get_unseen_feedback_count(student_id)
+    all_unseen_feedbacks = where(
+      student_id: student_id,
+      seen_on_feedback_page_at: nil,
+      student_first_visited_at: nil
+    ).select do |feedback|
+      User.find(feedback.teacher_id).authorized_teacher?
+    end
+
+    all_unseen_feedbacks.count
+  end
+
   def self.latest
     find_by(id: maximum(:id))
+  end
+
+  def user_level
+    @user_level ||= user_levels.where(level_id: level_id, script_id: script_id)&.first
+  end
+
+  def student_seen_feedback
+    return seen_on_feedback_page_at if seen_on_feedback_page_at && seen_on_feedback_page_at > created_at
+    return student_last_visited_at if student_last_visited_at && student_last_visited_at > created_at
+  end
+
+  def student_updated_since_feedback?
+    user_level.present? && user_level.updated_at > created_at
+  end
+
+  # TODO: update to use camelcase
+  def summarize
+    {
+      id: id,
+      teacher_name: teacher.name,
+      feedback_provider_id: teacher.id,
+      student_id: student_id,
+      script_id: script_id,
+      level_id: level_id,
+      comment: comment,
+      performance: performance,
+      created_at: created_at,
+      student_seen_feedback: student_seen_feedback,
+      review_state: review_state,
+      student_last_updated: user_level&.updated_at,
+      student_updated_since_feedback: student_updated_since_feedback?
+    }
   end
 
   # Increments student_visit_count and related metrics timestamps for a TeacherFeedback.
