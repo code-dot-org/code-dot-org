@@ -1194,7 +1194,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'foo-2017', versions[1][:name]
 
     teacher = create(:teacher)
-    teacher.update(permission: UserPermission::HIDDEN_UNIT_ACCESS)
+    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
     versions = foo17.summarize(true, teacher)[:versions]
     assert_equal 3, versions.length
     assert_equal 'foo-2019', versions[0][:name]
@@ -1993,7 +1993,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   test "self.valid_scripts: returns unlaunched units when user has hidden script access" do
     teacher = create(:teacher)
-    teacher.update(permission: UserPermission::HIDDEN_UNIT_ACCESS)
+    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
 
     units = Script.valid_scripts(teacher)
     assert has_unlaunched_unit?(units)
