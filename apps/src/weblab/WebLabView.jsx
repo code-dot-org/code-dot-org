@@ -10,9 +10,6 @@ import PaneHeader, {PaneSection, PaneButton} from '../templates/PaneHeader';
 import CompletionButton from '../templates/CompletionButton';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import styleConstants from '../styleConstants';
-import {changeShowError} from './actions';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import {getStore} from '../redux';
 import Meter from '@cdo/apps/templates/Meter';
 
 // Helper for converting bytes to megabytes.
@@ -42,17 +39,13 @@ class WebLabView extends React.Component {
     isInspectorOn: PropTypes.bool.isRequired,
     isFullScreenPreviewOn: PropTypes.bool.isRequired,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
-    dialog: PropTypes.object,
+    dialog: PropTypes.element,
     maxProjectCapacity: PropTypes.number.isRequired,
     projectSize: PropTypes.number.isRequired
   };
 
   componentDidMount() {
     this.props.onMount();
-  }
-
-  closeErrorDialog() {
-    getStore().dispatch(changeShowError(false));
   }
 
   projectCapacityLabel = () => {
@@ -202,9 +195,7 @@ class WebLabView extends React.Component {
               style={iframeStyles}
             />
             {!this.props.isProjectLevel && <CompletionButton />}
-            {this.props.dialog && (
-              <StylizedBaseDialog isOpen {...this.props.dialog} />
-            )}
+            {this.props.dialog}
           </div>
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
