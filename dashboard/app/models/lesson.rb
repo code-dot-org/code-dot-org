@@ -171,16 +171,28 @@ class Lesson < ApplicationRecord
     relative_position.to_s
   end
 
+  def get_script_level_by_id
+    # if Scripts are cached, then we do in-memory filtering to avoid a database
+    # hit. If Scripts are NOT cached, then we want to find by a query in order
+    # to _minimize_ the database hit.
+    if Script.should_cache?
+      script_levels = script.script_levels.select {|sl| sl.stage_id == id}
+      return script_levels.first
+    else
+      return script.script_levels.find_by(stage_id: id)
+    end
+  end
+
   def unplugged_lesson?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.unplugged?
+    script_level = get_script_level_by_id
+    return false unless script_level.present?
+    script_level.oldest_active_level.unplugged?
   end
 
   def spelling_bee?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.spelling_bee?
+    script_level = get_script_level_by_id
+    return false unless script_level.present?
+    script_level.oldest_active_level.spelling_bee?
   end
 
   # We number lessons that either have lesson plans or are not lockable
