@@ -13,373 +13,537 @@
   "defaultLabelColumn": "",
   "fields": [
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Music",
-      "description": "I enjoy listening to music: Strongly disagree (1) - Strongly agree (5)"
+      "description": "I enjoy listening to music"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Slow songs or fast songs",
-      "description": "I prefer: Slow paced music (1) - Fast paced music (5)"
+      "description": "I prefer fast-paced music"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Dance",
-      "description": "This and all the following music categories are genres ranked from 1 (Don't enjoy at all) to 5 (Enjoy very much)"
+      "description": "I enjoy dance music"
     },
-    { "type": "numerical", "id": "Folk", "description": "Folk" },
-    { "type": "numerical", "id": "Country", "description": "Country" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Folk",
+      "description": "I enjoy folk music"
+    },
+    {
+      "type": "categorical",
+      "id": "Country",
+      "description": "I enjoy country music"
+    },
+    {
+      "type": "categorical",
       "id": "Classical music",
-      "description": "Classical music"
+      "description": "I enjoy Classical music"
     },
-    { "type": "numerical", "id": "Musical", "description": "Musical" },
-    { "type": "numerical", "id": "Pop", "description": "Pop" },
-    { "type": "numerical", "id": "Rock", "description": "Rock" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Musical",
+      "description": "I enjoy Musicals music"
+    },
+    {
+      "type": "categorical",
+      "id": "Pop",
+      "description": "I enjoy Pop music"
+    },
+    {
+      "type": "categorical",
+      "id": "Rock",
+      "description": "I enjoy Rock music"
+    },
+    {
+      "type": "categorical",
       "id": "Metal or Hardrock",
-      "description": "Metal or Hardrock"
+      "description": "I enjoy Metal or Hardrock music"
     },
-    { "type": "numerical", "id": "Punk", "description": "Punk" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Punk",
+      "description": "I enjoy Punk music"
+    },
+    {
+      "type": "categorical",
       "id": "Hiphop, Rap",
-      "description": "Hiphop, Rap"
+      "description": "I enjoy Hiphop or Rap music"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Reggae, Ska",
-      "description": "Reggae, Ska"
+      "description": "I enjoy Reggae or Ska music"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Swing, Jazz",
-      "description": "Swing, Jazz"
+      "description": "I enjoy Swing or Jazz music"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Rock n roll",
-      "description": "Rock n roll"
+      "description": "I enjoy Rock n roll music"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Alternative",
-      "description": "Alternative"
+      "description": "I enjoy Alternative music"
     },
-    { "type": "numerical", "id": "Latino", "description": "Latino" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Latino",
+      "description": "I enjoy Latino music"
+    },
+    {
+      "type": "categorical",
       "id": "Techno, Trance",
-      "description": "Techno, Trance"
+      "description": "I enjoy Techno or Trance music"
     },
-    { "type": "numerical", "id": "Opera", "description": "Opera" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Opera",
+      "description": "I enjoy Opera music"
+    },
+    {
+      "type": "categorical",
       "id": "Movies",
-      "description": "I enjoy watching movies: Strongly disagree (1) - Strongly agree (5)."
+      "description": "I enjoy watching movies"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Horror",
-      "description": "This and all the following movie categories are genres ranked from 1 (Don't enjoy at all) to 5 (Enjoy very much)."
+      "description": "I enjoy horror movies"
     },
-    { "type": "numerical", "id": "Thriller", "description": "Thriller" },
-    { "type": "numerical", "id": "Comedy", "description": "Comedy" },
-    { "type": "numerical", "id": "Romantic", "description": "Romantic" },
-    { "type": "numerical", "id": "Sci-fi", "description": "Sci-fi" },
-    { "type": "numerical", "id": "War", "description": "War" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Thriller",
+      "description": "I enjoy Thriller movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Comedy",
+      "description": "I enjoy Comedy movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Romantic",
+      "description": "I enjoy Romantic movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Sci-fi",
+      "description": "I enjoy Sci-fi movies"
+    },
+    {
+      "type": "categorical",
+      "id": "War",
+      "description": "I enjoy War movies"
+    },
+    {
+      "type": "categorical",
       "id": "Fantasy/Fairy tales",
-      "description": "Fantasy/Fairy tales"
+      "description": "I enjoy Fantasy/Fairy tale movies"
     },
-    { "type": "numerical", "id": "Animated", "description": "Animated" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Animated",
+      "description": "I enjoy Animated movies"
+    },
+    {
+      "type": "categorical",
       "id": "Documentary",
-      "description": "Documentary"
+      "description": "I enjoy Documentary movies"
     },
-    { "type": "numerical", "id": "Western", "description": "Western" },
-    { "type": "numerical", "id": "Action", "description": "Action" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Western",
+      "description": "I enjoy Western movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Action",
+      "description": "I enjoy Action movies"
+    },
+    {
+      "type": "categorical",
       "id": "History",
-      "description": "This and all the following questions relating to hobbies and interests are various subjects ranked from 1 (Not interested) to 5 (Very interested)."
+      "description": "I like history"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Psychology",
-      "description": "Psychology"
+      "description": "I like Psychology"
     },
-    { "type": "numerical", "id": "Politics", "description": "Politics" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Politics",
+      "description": "I like Politics"
+    },
+    {
+      "type": "categorical",
       "id": "Mathematics",
-      "description": "Mathematics"
+      "description": "I like Mathematics"
     },
-    { "type": "numerical", "id": "Physics", "description": "Physics" },
-    { "type": "numerical", "id": "Internet", "description": "Internet" },
-    { "type": "numerical", "id": "PC", "description": "PC" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Physics",
+      "description": "I like Physics"
+    },
+    {
+      "type": "categorical",
+      "id": "Internet",
+      "description": "I like to use the Internet"
+    },
+    {
+      "type": "categorical",
+      "id": "PC",
+      "description": "I like to use PCs"
+    },
+    {
+      "type": "categorical",
       "id": "Economy Management",
-      "description": "Economy Management"
+      "description": "I like Economy Management"
     },
-    { "type": "numerical", "id": "Biology", "description": "Biology" },
-    { "type": "numerical", "id": "Chemistry", "description": "Chemistry" },
-    { "type": "numerical", "id": "Reading", "description": "Reading" },
-    { "type": "numerical", "id": "Geography", "description": "Geography" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Biology",
+      "description": "I like Biology"
+    },
+    {
+      "type": "categorical",
+      "id": "Chemistry",
+      "description": "I like Chemistry"
+    },
+    {
+      "type": "categorical",
+      "id": "Reading",
+      "description": "I like to Reading"
+    },
+    {
+      "type": "categorical",
+      "id": "Geography",
+      "description": "I like Geography"
+    },
+    {
+      "type": "categorical",
       "id": "Foreign languages",
-      "description": "Foreign languages"
+      "description": "I like Foreign languages"
     },
-    { "type": "numerical", "id": "Medicine", "description": "Medicine" },
-    { "type": "numerical", "id": "Law", "description": "Law" },
-    { "type": "numerical", "id": "Cars", "description": "Cars" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Medicine",
+      "description": "I like Medicine"
+    },
+    {
+      "type": "categorical",
+      "id": "Law",
+      "description": "I like Law"
+    },
+    {
+      "type": "categorical",
+      "id": "Cars",
+      "description": "I like Cars"
+    },
+    {
+      "type": "categorical",
       "id": "Art exhibitions",
-      "description": "Art exhibitions"
+      "description": "I like Art exhibitions"
     },
-    { "type": "numerical", "id": "Religion", "description": "Religion" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Religion",
+      "description": "I like Religion"
+    },
+    {
+      "type": "categorical",
       "id": "Countryside, outdoors",
-      "description": "Countryside, outdoors"
+      "description": "I like the Countryside, outdoors"
     },
-    { "type": "numerical", "id": "Dancing", "description": "Dancing" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Dancing",
+      "description": "I like Dancing"
+    },
+    {
+      "type": "categorical",
       "id": "Musical instruments",
-      "description": "Musical instruments"
+      "description": "I like Musical instruments"
     },
-    { "type": "numerical", "id": "Writing", "description": "Writing" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Writing",
+      "description": "I like Writing"
+    },
+    {
+      "type": "categorical",
       "id": "Passive sport",
-      "description": "Passive sport"
+      "description": "I like Passive sports"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Active sport",
-      "description": "Active sport"
+      "description": "I like Active sport"
     },
-    { "type": "numerical", "id": "Gardening", "description": "Gardening" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Gardening",
+      "description": "I like Gardening"
+    },
+    {
+      "type": "categorical",
       "id": "Celebrities",
-      "description": "Celebrities"
+      "description": "I like Celebrities"
     },
-    { "type": "numerical", "id": "Shopping", "description": "Shopping" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Shopping",
+      "description": "I like Shopping"
+    },
+    {
+      "type": "categorical",
       "id": "Science and technology",
-      "description": "Science and technology"
+      "description": "I like Science and technology"
     },
-    { "type": "numerical", "id": "Theatre", "description": "Theatre" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Theatre",
+      "description": "I like Theatre"
+    },
+    {
+      "type": "categorical",
       "id": "Fun with friends",
-      "description": "Fun with friends"
+      "description": "I like having Fun with friends"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Adrenaline sports",
-      "description": "Adrenaline sports"
+      "description": "I like Adrenaline sports"
     },
-    { "type": "numerical", "id": "Pets", "description": "Pets" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Pets",
+      "description": "I like Pets"
+    },
+    {
+      "type": "categorical",
       "id": "Flying",
-      "description": "This and the following fear-related questions are different phobias ranked from 1 (Not afraid at all) to 5 (Very afraid of)"
+      "description": "I am afraid of flying"
     },
-    { "type": "numerical", "id": "Storm", "description": "Storm" },
-    { "type": "numerical", "id": "Darkness", "description": "Darkness" },
-    { "type": "numerical", "id": "Heights", "description": "Heights" },
-    { "type": "numerical", "id": "Spiders", "description": "Spiders" },
-    { "type": "numerical", "id": "Snakes", "description": "Snakes" },
-    { "type": "numerical", "id": "Rats", "description": "Rats" },
-    { "type": "numerical", "id": "Ageing", "description": "Ageing" },
     {
-      "type": "numerical",
+      "type": "categorical",
+      "id": "Storm",
+      "description": "I am afraid of Storms"
+    },
+    {
+      "type": "categorical",
+      "id": "Darkness",
+      "description": "I am afraid of Darkness"
+    },
+    {
+      "type": "categorical",
+      "id": "Heights",
+      "description": "I am afraid of Heights"
+    },
+    {
+      "type": "categorical",
+      "id": "Spiders",
+      "description": "I am afraid of Spiders"
+    },
+    {
+      "type": "categorical",
+      "id": "Snakes",
+      "description": "I am afraid of Snakes"
+    },
+    {
+      "type": "categorical",
+      "id": "Rats",
+      "description": "I am afraid of Rats"
+    },
+    {
+      "type": "categorical",
+      "id": "Ageing",
+      "description": "I am afraid of Ageing"
+    },
+    {
+      "type": "categorical",
       "id": "Dangerous dogs",
-      "description": "Dangerous dogs"
+      "description": "I am afraid of Dangerous dogs"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Fear of public speaking",
-      "description": "Fear of public speaking"
+      "description": "I am afraid of  public speaking"
     },
     {
       "type": "categorical",
       "id": "Smoking",
-      "description": "Smoking habits: never smoked, tried smoking, former smoker, or current smoker."
+      "description": "Smoking habits"
     },
     {
       "type": "categorical",
       "id": "Alcohol",
-      "description": "Drinking habits: never, social drinker, or drink a lot"
+      "description": "Drinking habits"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Healthy eating",
-      "description": "I live a very healthy lifestyle: 1 (strongly disagree) to 5 (strongly agree)."
+      "description": "I live a very healthy lifestyle"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Daily events",
-      "description": "\"I take notice of what goes on around me.\" This and the following questions are related to personality traits and opinions. They are all ranked from 1 (strongly disagree) to 5(strongly agree)."
+      "description": "I take notice of what goes on around me."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Prioritising workload",
       "description": "I try to do tasks as soon as possible and not leave them until last minute."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Writing notes",
       "description": "I always make a list so I don't forget anything."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Workaholism",
       "description": "I often study or work even in my spare time."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Thinking ahead",
       "description": "I look at things from all different angles before I go ahead."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Final judgement",
       "description": "I believe that bad people will suffer one day and good people will be rewarded."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Reliability",
       "description": "I am reliable at work and always complete all tasks given to me."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Keeping promises",
       "description": "I always keep my promises."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Loss of interest",
       "description": "I can fall for someone very quickly and then completely lose interest."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Friends versus money",
       "description": "I would rather have lots of friends than lots of money."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Funniness",
       "description": "I always try to be the funniest one."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Fake",
       "description": "I can be two faced sometimes."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Criminal damage",
       "description": "I damaged things in the past when angry."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Decision making",
       "description": "I take my time to make decisions."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Elections",
       "description": "I always try to vote in elections."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Self-criticism",
       "description": "I often think about and regret the decisions I make."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Judgment calls",
       "description": "I can tell if people listen to me or not when I talk to them."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Hypochondria",
       "description": "I am a hypochondriac."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Empathy",
       "description": "I am emphatetic person."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Eating to survive",
       "description": "I eat because I have to. I don't enjoy food and eat as fast as I can."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Giving",
       "description": "I try to give as much as I can to other people at Christmas."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Compassion to animals",
       "description": "I don't like seeing animals suffering."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Borrowed stuff",
       "description": "I look after things I have borrowed from others."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Loneliness",
       "description": "I feel lonely in life."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Cheating in school",
       "description": "I used to cheat at school."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Health",
       "description": "I worry about my health."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Changing the past",
       "description": "I wish I could change the past because of the things I have done."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "God",
       "description": "I believe in God."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Dreams",
       "description": "I always have good dreams."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Charity",
       "description": "I always give to charity."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Number of friends",
       "description": "I have lots of friends."
     },
@@ -394,117 +558,117 @@
       "description": "Do you lie to others?"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Waiting",
       "description": "I am very patient."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "New environment",
       "description": "I can quickly adapt to a new environment."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Mood swings",
       "description": "My moods change quickly."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Appearence and gestures",
       "description": "I am well mannered and I look after my appearance."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Socializing",
       "description": "I enjoy meeting new people."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Achievements",
       "description": "I always let other people know about my achievements."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Responding to a serious letter",
       "description": "I think carefully before answering any important letters."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Children",
       "description": "I enjoy childrens' company."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Assertiveness",
       "description": "I am not afraid to give my opinion if I feel strongly about something."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Getting angry",
       "description": "I can get angry very easily."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Knowing the right people",
       "description": "I always make sure I connect with the right people."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Public speaking",
       "description": "I have to be well prepared before public speaking."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Unpopularity",
       "description": "I will find a fault in myself if people don't like me."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Life struggles",
       "description": "I cry when I feel down or things don't go the right way."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Happiness in life",
       "description": "I am 100% happy with my life."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Energy levels",
       "description": "I am always full of life and energy."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Small - big dogs",
       "description": "I prefer big dangerous dogs to smaller, calmer dogs."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Personality",
       "description": "I believe all my personality traits are positive."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Finding lost valuables",
       "description": "If I find something the doesn't belong to me I will hand it in."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Getting up",
       "description": "I find it very difficult to get up in the morning."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Interests or hobbies",
       "description": "I have many different hobbies and interests."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Parents' advice",
       "description": "I always listen to my parents' advice."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Questionnaires or polls",
       "description": "I enjoy taking part in surveys."
     },
@@ -514,49 +678,65 @@
       "description": "How much time do you spend online?"
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Finances",
       "description": "I save all the money I can."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Shopping centres",
       "description": "I enjoy going to large shopping centres."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Branded clothing",
       "description": "I prefer branded clothing to non branded."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Entertainment spending",
       "description": "I spend a lot of money on  partying and socializing."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Spending on looks",
       "description": "I spend a lot of money on my appearance."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Spending on gadgets",
       "description": "I spend a lot of money on gadgets."
     },
     {
-      "type": "numerical",
+      "type": "categorical",
       "id": "Spending on healthy eating",
       "description": "I will hapilly pay more money for good, quality or healthy food."
     },
-    { "type": "numerical", "id": "Age", "description": "Age" },
-    { "type": "numerical", "id": "Height", "description": "Height" },
-    { "type": "numerical", "id": "Weight", "description": "Weight" },
+    {
+      "type": "numerical",
+      "id": "Age",
+      "description": "Age"
+    },
+    {
+      "type": "numerical",
+      "id": "Height",
+      "description": "Height"
+    },
+    {
+      "type": "numerical",
+      "id": "Weight",
+      "description": "Weight"
+    },
     {
       "type": "numerical",
       "id": "Number of siblings",
       "description": "Number of siblings"
     },
-    { "type": "categorical", "id": "Gender", "description": "Gender" },
+    {
+      "type": "categorical",
+      "id": "Gender",
+      "description": "Gender"
+    },
     {
       "type": "categorical",
       "id": "Left - right handed",
