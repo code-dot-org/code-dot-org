@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_22_022206) do
+ActiveRecord::Schema.define(version: 2021_06_23_221412) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1507,6 +1507,7 @@ ActiveRecord::Schema.define(version: 2021_06_22_022206) do
     t.string "new_name"
     t.string "family_name"
     t.string "published_state", default: "beta", null: false
+    t.boolean "hidden"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
@@ -1669,29 +1670,6 @@ ActiveRecord::Schema.define(version: 2021_06_22_022206) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "emails"
-  end
-
-  create_table "survey_answers", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.integer "user_id"
-    t.bigint "form_id"
-    t.bigint "submission_id"
-    t.string "question_id"
-    t.text "answer_value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "survey_questions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.bigint "form_id"
-    t.string "question_id"
-    t.text "preamble"
-    t.text "question_text"
-    t.string "answer_type"
-    t.text "answer_options"
-    t.integer "min_value"
-    t.integer "max_value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "survey_results", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
