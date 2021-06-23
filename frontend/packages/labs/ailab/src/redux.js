@@ -305,10 +305,12 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_IMPORTED_DATA) {
-    state.instructionsKeyCallback(
-      action.userUploadedData ? "uploadedDataset" : "selectedDataset",
-      null
-    );
+    if (state.currentPanel === "selectDataset") {
+      state.instructionsKeyCallback(
+        action.userUploadedData ? "uploadedDataset" : "selectedDataset",
+        null
+      );
+    }
 
     return {
       ...state,
