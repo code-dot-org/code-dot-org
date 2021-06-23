@@ -122,7 +122,7 @@ class SelectDataset extends Component {
               <input
                 className="csv-input"
                 type="file"
-                accept=".csv,.xls,.xlsx"
+                accept=".csv"
                 name="file"
                 placeholder={null}
                 onChange={this.handleUploadSelect}
