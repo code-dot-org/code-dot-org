@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-23 17:13:38 UTC",
+    "serialized_at": "2021-06-23 20:38:33 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csa2-exemplars"
@@ -1802,7 +1802,51 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2 Project Exemplar"
+          "CSA U2 L11 Project Exemplar"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars",
+        "activity_section.key": "9fd85eb1-61e3-47b1-8b6b-e6d931b68f2f"
+      },
+      "level_keys": [
+        "CSA U2 L11 Project Exemplar"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2 L12 Project Exemplar"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars",
+        "activity_section.key": "d5c30357-47ec-4690-8b29-80928a6f1ad2"
+      },
+      "level_keys": [
+        "CSA U2 L12 Project Exemplar"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2 L13 Project Exemplar"
         ],
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-3",
@@ -1810,7 +1854,7 @@
         "activity_section.key": "26a772ca-15b1-4632-b005-8fac77c41589"
       },
       "level_keys": [
-        "CSA U2 Project Exemplar"
+        "CSA U2 L13 Project Exemplar"
       ]
     }
   ],
@@ -2465,9 +2509,33 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2 Project Exemplar",
+        "level.key": "CSA U2 L11 Project Exemplar",
         "script_level.level_keys": [
-          "CSA U2 Project Exemplar"
+          "CSA U2 L11 Project Exemplar"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars",
+        "activity_section.key": "9fd85eb1-61e3-47b1-8b6b-e6d931b68f2f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2 L12 Project Exemplar",
+        "script_level.level_keys": [
+          "CSA U2 L12 Project Exemplar"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-exemplars",
+        "activity_section.key": "d5c30357-47ec-4690-8b29-80928a6f1ad2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2 L13 Project Exemplar",
+        "script_level.level_keys": [
+          "CSA U2 L13 Project Exemplar"
         ],
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-3",

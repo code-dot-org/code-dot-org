@@ -5,7 +5,7 @@
     "tts_short_instructions_override": "How would you explain the concept of functions to your students? What is one teaching practice that you could use to teach this concept?",
     "tts_long_instructions_override": "In this lesson, we explored how functions can make you a faster and better programmer by allowing you to reuse segments of your code. In the next lesson, we'll look at the concept of variables.\r\n\r\nNow take a moment to reflect. How would you explain the concept of functions to your students? What is one teaching practice that you could use to teach this concept?",
     "instructions_important": "false",
-    "long_instructions": "# Reflection:  Functions\r\n\r\n**Prompts:**\r\n\r\n* How would you explain functions to your students?\r\n* What challenges, if any, do you anticipate as your students learn about functions?\r\n\t* How will you move past this challenge?",
+    "long_instructions": "# Reflection:  Functions\r\n\r\n**Prompts:**\r\n\r\n* What challenges, if any, do you anticipate for your students as they learn about functions?\r\n\t* How will you move past this challenge?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -21,7 +21,7 @@
   "level_num": "custom",
   "user_id": 884,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-06-17 17:32:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:32:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:35:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-06-17 17:32:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:32:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:35:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-23 21:40:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
