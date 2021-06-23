@@ -35,6 +35,15 @@ function showError(state, action) {
   }
 }
 
+function dialog(state = null, action) {
+  switch (action.type) {
+    case ActionType.CHANGE_DIALOG:
+      return action.dialogProps;
+    default:
+      return state;
+  }
+}
+
 function maxProjectCapacity(state, action) {
   state = state || -1;
 
@@ -61,6 +70,7 @@ export default {
   fullScreenPreviewOn,
   inspectorOn,
   showError,
+  dialog,
   maxProjectCapacity,
   projectSize
 };

@@ -2,6 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import msg from '@cdo/locale';
+import weblabMsg from '@cdo/weblab/locale';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import {Provider} from 'react-redux';
@@ -451,7 +453,17 @@ WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
   filesApi.registerBeforeFirstWriteHook(hook);
   filesApi.registerErrorAction(() => {
     dashboard.assets.hideAssetManager();
-    getStore().dispatch(actions.changeShowError(true));
+    this.openUploadErrorDialog();
+  });
+};
+
+// TODO: comment
+WebLab.prototype.openUploadErrorDialog = function() {
+  actions.openDialog({
+    title: weblabMsg.uploadError(),
+    body: weblabMsg.errorSavingProject(),
+    cancellationButtonText: msg.reloadPage(),
+    handleCancellation: () => window.location.reload()
   });
 };
 
