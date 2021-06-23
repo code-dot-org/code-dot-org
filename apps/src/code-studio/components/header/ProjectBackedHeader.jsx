@@ -7,7 +7,7 @@ import ProjectExport from './ProjectExport';
 import ProjectRemix from './ProjectRemix';
 
 // Project header for script levels that are backed by a project. Shows a Share,
-// Export, and Remix button, and should be used with the version of ScriptName that
+// Export, and Remix button, and should be used with the version of UnitName that
 // places a last_modified time below the lesson name
 class ProjectBackedHeader extends React.Component {
   static propTypes = {
