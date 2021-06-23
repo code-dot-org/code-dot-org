@@ -270,7 +270,7 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
           lessonEditPath: lesson.lessonEditPath,
           name: lesson.name,
           /*
-           * NOTE: The Script Edit GUI no longer includes the editing of levels
+           * NOTE: The Unit Edit GUI no longer includes the editing of levels
            * as those have been moved out to the lesson edit page. We include
            * level information here behind the scenes because it allows us to
            * continue to use ScriptDSl for the time being until we are ready
@@ -310,7 +310,7 @@ export const getSerializedLessonGroups = (rawLessonGroups, levelKeyList) => {
   const lessonGroups = _.cloneDeep(rawLessonGroups);
   let s = [];
   lessonGroups.forEach(lessonGroup => {
-    if (lessonGroup.userFacing && lessonGroup.lessons.length > 0) {
+    if (lessonGroup.userFacing) {
       let t = `lesson_group '${lessonGroup.key}'`;
       if (lessonGroup.displayName) {
         t += `, display_name: '${escape(lessonGroup.displayName)}'`;
@@ -360,17 +360,7 @@ const serializeLesson = (lesson, levelKeyList) => {
   s.push(t);
   if (lesson.levels) {
     lesson.levels.forEach(level => {
-      if (level.ids.length > 1) {
-        s.push('variants');
-        level.ids.forEach(id => {
-          const active = id === level.activeId;
-          const lines = serializeLevel(levelKeyList, id, level, active);
-          s = s.concat(lines.map(line => `  ${line}`));
-        });
-        s.push('endvariants');
-      } else {
-        s = s.concat(serializeLevel(levelKeyList, level.ids[0], level));
-      }
+      s = s.concat(serializeLevel(levelKeyList, level.ids[0], level));
     });
   }
   s.push('');
@@ -386,9 +376,9 @@ const serializeLesson = (lesson, levelKeyList) => {
  * to move on to our future system.
  * @param id
  * @param level
- * @return {Array.<string>}
+ * @return {string}
  */
-const serializeLevel = (levelKeyList, id, level, active = true) => {
+const serializeLevel = (levelKeyList, id, level) => {
   const s = [];
   const key = levelKeyList[id];
   if (/^blockly:/.test(key)) {
@@ -408,9 +398,6 @@ const serializeLevel = (levelKeyList, id, level, active = true) => {
     }
   }
   let l = level.bonus ? `bonus '${escape(key)}'` : `level '${escape(key)}'`;
-  if (!active) {
-    l += ', active: false';
-  }
   if (level.progression) {
     l += `, progression: '${escape(level.progression)}'`;
   }

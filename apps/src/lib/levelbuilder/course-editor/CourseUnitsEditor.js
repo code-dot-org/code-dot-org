@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-export default class CourseScriptsEditor extends Component {
+export default class CourseUnitsEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
-    scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    updateScriptsInCourse: PropTypes.func.isRequired
+    unitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
+    unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    updateUnitsInCourse: PropTypes.func.isRequired
   };
 
   handleChange = () => {
@@ -18,27 +18,27 @@ export default class CourseScriptsEditor extends Component {
       child => child.value
     );
 
-    this.props.updateScriptsInCourse(selected);
+    this.props.updateUnitsInCourse(selected);
   };
 
   render() {
-    const {scriptNames} = this.props;
+    const {unitNames} = this.props;
     return (
       <div>
-        {this.props.scriptsInCourse.concat('').map((selectedScript, index) => (
+        {this.props.unitsInCourse.concat('').map((selectedUnit, index) => (
           <select
             style={{
               ...this.props.inputStyle,
-              opacity: selectedScript === '' ? 0.4 : 1
+              opacity: selectedUnit === '' ? 0.4 : 1
             }}
             key={index}
-            value={selectedScript}
+            value={selectedUnit}
             onChange={this.handleChange}
           >
             <option key="-1" value="">
-              Select a script to add to course
+              Select a unit to add to course
             </option>
-            {scriptNames.map((name, index) => (
+            {unitNames.map((name, index) => (
               <option key={index} value={name}>
                 {name}
               </option>

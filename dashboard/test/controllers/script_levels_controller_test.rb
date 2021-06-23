@@ -582,8 +582,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable script version in family for logged out user if one exists" do
-    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', is_stable: true
-    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', is_stable: true
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
     create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
@@ -602,8 +602,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show: redirect to latest assigned script version in family for student if one exists" do
     sign_in @student
 
-    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', is_stable: true
-    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', is_stable: true
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
     create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
@@ -1783,11 +1783,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
     end
 
-    cats1.update!(is_stable: true)
+    cats1.update!(published_state: SharedConstants::PUBLISHED_STATE.stable)
     get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats1/lessons/1/levels/1"
 
-    create :script, name: 'cats2', family_name: 'ui-test-versioned-script', version_year: '2018', is_stable: true
+    create :script, name: 'cats2', family_name: 'ui-test-versioned-script', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
     get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats2/lessons/1/levels/1"
 

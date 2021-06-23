@@ -132,7 +132,7 @@ class Lesson < ApplicationRecord
   end
 
   def self.prevent_changing_stable_i18n_key(script, raw_lesson)
-    if script.is_stable && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
+    if script.stable? && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
 
       raise "Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
     end
@@ -171,16 +171,28 @@ class Lesson < ApplicationRecord
     relative_position.to_s
   end
 
+  def get_script_level_by_id
+    # if Scripts are cached, then we do in-memory filtering to avoid a database
+    # hit. If Scripts are NOT cached, then we want to find by a query in order
+    # to _minimize_ the database hit.
+    if Script.should_cache?
+      script_levels = script.script_levels.select {|sl| sl.stage_id == id}
+      return script_levels.first
+    else
+      return script.script_levels.find_by(stage_id: id)
+    end
+  end
+
   def unplugged_lesson?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.unplugged?
+    script_level = get_script_level_by_id
+    return false unless script_level.present?
+    script_level.oldest_active_level.unplugged?
   end
 
   def spelling_bee?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.spelling_bee?
+    script_level = get_script_level_by_id
+    return false unless script_level.present?
+    script_level.oldest_active_level.spelling_bee?
   end
 
   # We number lessons that either have lesson plans or are not lockable
@@ -389,7 +401,7 @@ class Lesson < ApplicationRecord
       unitIsLaunched: script.launched?,
       scriptPath: script_path(script),
       lessonPath: script_lesson_path(script, self),
-      lessonExtrasAvailableForScript: script.lesson_extras_available
+      lessonExtrasAvailableForUnit: script.lesson_extras_available
     }
   end
 
@@ -707,7 +719,7 @@ class Lesson < ApplicationRecord
   def summarize_related_lessons
     related_lessons.map do |lesson|
       {
-        scriptTitle: lesson.script.localized_title,
+        unitTitle: lesson.script.localized_title,
         versionYear: lesson.script.get_course_version&.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
