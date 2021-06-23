@@ -49,6 +49,7 @@ zh-TW:
       Debugging with the Step Button: 透過步驟按鈕進行除錯
       Demo Apps: 展示手機應用程式
       Design Mode: 設計模式
+      Designing for Accessibility: 以無障礙為目的設計程式
       Drawing: 繪圖
       Events: 事件
       Events and Linking Screens: 事件以及連結的畫面
@@ -103,6 +104,7 @@ zh-TW:
       Making Sounds: 發出聲音
       'Maze Intro: Programming with Blocks': '迷宮介紹: 使用積木來寫程式'
       Measures: 小節
+      'Mini-Project: About Me': 關於我
       'Mini-Project: Alien Dance Moves': '小專案: 外星人的舞步'
       'Mini-Project: Alien Dance Party': '小專案: 外星人跳舞派對'
       'Mini-Project: Royal Battle': '小專案: 皇家對戰'
@@ -126,10 +128,13 @@ zh-TW:
       Movement with the Counter Pattern: 使用計數器來移動
       Multiframe Animations: 多視窗動畫
       Musical Arrays: 音樂陣列
+      My Online Neighborhood: 我的線上鄰居
       Nested Loops with the Bee: 跟著蜜蜂一起使用巢狀迴圈
       New Shapes: 新的形狀
       Orientation: 螢幕方向
       Pair Programming: 結對編程
+      Picturing Data: 描繪資料
+      Planning: 計畫
       Platform Jumper - Background and Variables: 平台跳跳人 - 背景與變數
       Platform Jumper - Items: 平台跳跳人 - 道具
       Platform Jumper - Platforms: 平台跳跳人 - 平台
@@ -159,6 +164,7 @@ zh-TW:
       Repeat Unit Statements: 重複單位陳述式
       Repeat Until Statements: 重複... 直到... 陳述式
       Representing Images: 表示圖像
+      Review: 檢視
       Run a simulation: 執行一個模擬程式
       Sample Programs: 範例程式
       Screen Design: 畫面設計
@@ -194,6 +200,7 @@ zh-TW:
       Vaccines: 疫苗
       Velocity: 速度
       Video: 影片
+      'Video: For Loops': 影片：計次迴圈
       Warm Up: 熱身
       Website Project: 網站專案
       Welcome to Monster Town: 歡迎來到怪物鎮

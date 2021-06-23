@@ -82,7 +82,7 @@ function TopInstructionsHeader(props) {
     isCSDorCSP,
     displayHelpTab,
     displayFeedback,
-    displayKeyConcept,
+    levelHasRubric,
     displayDocumentationTab,
     displayReviewTab,
     isViewingAsTeacher,
@@ -179,7 +179,7 @@ function TopInstructionsHeader(props) {
               className="uitest-feedback"
               onClick={handleCommentTabClick}
               selected={tabSelected === TabType.COMMENTS}
-              text={displayKeyConcept ? i18n.keyConcept() : i18n.feedback()}
+              text={levelHasRubric ? i18n.rubric() : i18n.feedback()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
@@ -222,6 +222,7 @@ function TopInstructionsHeader(props) {
           (isCSDorCSP || hasContainedLevels) &&
           !dynamicInstructions && (
             <CollapserIcon
+              id="ui-test-collapser"
               isCollapsed={isCollapsed}
               onClick={handleClickCollapser}
               style={collapserIconStyles}
@@ -238,7 +239,7 @@ TopInstructionsHeader.propTypes = {
   isCSDorCSP: PropTypes.bool,
   displayHelpTab: PropTypes.bool,
   displayFeedback: PropTypes.bool,
-  displayKeyConcept: PropTypes.bool,
+  levelHasRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,

@@ -63,6 +63,8 @@
   "makeNHoney": "1% bal hazırla",
   "moveBackward": "geriyə get",
   "moveEastTooltip": "Məni şərqə bir boşluq apar.",
+  "moveNForward": "1% boşluq irəli hərəkət edin",
+  "moveNForwardTooltip": "Məni göstərilən boşluq sayı qədər irəli aparın.",
   "moveForward": "irəli get",
   "moveForwardTooltip": "Məni bir xana irəli apar.",
   "moveNorthTooltip": "Məni şimala bir boşluq apar.",

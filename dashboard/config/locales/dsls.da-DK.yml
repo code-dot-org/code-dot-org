@@ -2214,3 +2214,166 @@ da-DK:
           eller forbedringer af dit projekt. Du kan vælge at fortsætte med at arbejde
           med de samme blokke eller prøve en udvidet værktøjskasse.
         display_name: Fri leg
+      CourseF_outbreak_story:
+        content1: Beskrivelse her
+      CourseF_outbreak_story2:
+        content1: Beskrivelse her
+        markdown: "# Udbrud: tænker som en videnskabsmand\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimuleringer er en fantastisk måde
+          at lære ting, der kan være svære at observere i den virkelige verden. De
+          hjælper forskere med at løse problemer og teste nye ideer sikkert og effektivt.
+          Din simulering er en måde at vise, hvordan et virusudbrud i Monster byen
+          kan se ud.\n\n## Nulstil og afspil igen!\nSelv når du selv skriver koden,
+          er det umuligt at vide nøjagtigt, hvad der vil ske, når du trykker på kør.
+          Monstrene vandrer tilfældigt, så du ved ikke, om virussen spredes hurtigt
+          eller langsomt. Når du ændrer din kode, skal du sørge for at køre din simulering
+          mere end en gang. Ting sker ikke på samme måde to gange!\n\n## Indsamling
+          af data\nPrøv at skrive dine observationer ned, mens du kører din simulering.
+          Du kan tælle antallet af monstre, der bliver syge, eller bruge en timer
+          til at se, hvor hurtigt ting sker. For eksempel, hvor lang tid tager det
+          normalt for alle monstre at blive syge, hvis ingen har masker? \n\n## Forudsigelser\nHvis
+          du forstår din model, kan du bruge den til at forudsige. Du kan endda ændre,
+          hvordan din simulering kører, og gætte, hvad der vil ske anderledes. For
+          eksempel:\n* Hvad ville der ske, hvis der var dobbelt så mange monstre?\n*
+          Hvad ville der ske, hvis monstrene bevægede sig med halv hastighed?\n\n<img
+          src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Er Monster by som den virkelige verden?\nDer
+          er en grænse for, hvor realistisk enhver model kan være. \n* Hvad har din
+          udbrudssimulation til fælles med virusudbrud i den virkelige verden?\n*
+          Hvad er forskellene?\nNår du er færdig med denne aktivitet, skal du diskutere
+          disse spørgsmål med lærere eller din familie!\n\n## Hvad mere kan vi modellere?\nDu
+          har allerede oprettet en arbejdsmodel af udbruddet i Monster byen. Hvad
+          er de ting, din simulering ikke kan gøre eller vise, som du ønsker, at den
+          kunne? Tryk på Fortsæt for at fortsætte og lære at modellere endnu mere:\n*
+          Forøge antallet af monstre i simuleringen\n* Hjælp monstre med at komme
+          sig efter virussen\n* Sandsynlighed, immunitet, vacciner og meget mere!\n\nDu
+          kan også dele din simuleringsmodel med andre eller dele en besked om, hvad
+          du tror, vi kan gøre for at holde andre raske, når en virus kommer til byen.\n"
+      OPD-K5 Stage3aGo_dani:
+        content1: Beskrivelse her
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: Beskrivelse her
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: Beskrivelse her
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}

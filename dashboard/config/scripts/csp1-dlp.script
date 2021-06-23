@@ -2,6 +2,7 @@ professional_learning_course 'CS Principles Facilitator in Training'
 peer_reviews_to_complete 6
 login_required true
 student_detail_progress_view true
+published_state 'beta'
 deprecated true
 
 lesson_group 'required', display_name: 'Overview'

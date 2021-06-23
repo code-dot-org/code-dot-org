@@ -336,6 +336,57 @@
         },
         "courseF_playlab_variables_challenge2": {
           "6b90c9823ff75e6a78aa63b392e7315a": "分数： "
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "在此处键入文本",
+          "30fcc1693fa8402931d13ac3a5f396fd": "在此处键入标题"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "在此处键入文本",
+          "30fcc1693fa8402931d13ac3a5f396fd": "在此处键入标题"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "在此处键入文本",
+          "30fcc1693fa8402931d13ac3a5f396fd": "在此处键入标题"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "在此处键入文本",
+          "30fcc1693fa8402931d13ac3a5f396fd": "在此处键入标题"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "在此处键入文本",
+          "30fcc1693fa8402931d13ac3a5f396fd": "在此处键入标题"
+        },
+        "courseC_data wizard_2021": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "一条狗！",
+          "336ad881e37e713ba0325500a8fa1f00": "狗！",
+          "27944770529dd15319a983bee8951560": "一只猫！",
+          "22f6f6821f4d6d0a08653935b466ac2f": " 猫！",
+          "1c64ef29c853587fbe94f69f05272b79": "一只鸟！",
+          "5b402e6ea05e847a076e03ad74420c45": " 鸟！",
+          "4b23c908b939eaf7918e07142b9e05e0": "一条龙！",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " 龙！",
+          "71fc859f3abd22273bad5d0d8eda2173": "数一数所有的动物！",
+          "f62038e77820419cd978f7b722da560a": "会出现多少？",
+          "81a2909a24e4ca3b582ab9ee539c080c": "数一数宠物"
+        },
+        "courseF_apps_aquarium": {
+          "83e4a96aed96436c621b9809e258b309": "鱼",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "其他"
+        },
+        "courseF_apps_chatbot": {
+          "13e575be866ecf5ac3dcbf61ab2048d7": "你多大了？",
+          "ae096fbf24d913754b01a1601672bf62": " 也是！"
+        },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "你赢了!"
+        },
+        "courseF_editable_chatbot": {
+          "13e575be866ecf5ac3dcbf61ab2048d7": "你多大了？",
+          "ae096fbf24d913754b01a1601672bf62": " 也是！"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "您叫什么名字？"
         }
       }
     }

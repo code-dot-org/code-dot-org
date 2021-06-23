@@ -319,7 +319,17 @@
         "grade5_artist_binary8": "Finish this drawing.",
         "grade5_artist_binary9": "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\\\r\n\\\r\nSee what happens when we\nstart to get creative with the bits?",
         "k-1 maze 1": "Can you make me move West to get to the pig?",
-        "scrat 19": "One more practice of the \"if-else\" block, can you\nget it right on your first try?"
+        "scrat 19": "One more practice of the \"if-else\" block, can you\nget it right on your first try?",
+        "courseC_PlayLab_events3_2021": "Կարո՞ղ ես գրել ծրագիր, որպեսզի շունը (կատարող 1) մետենա դեպի կատվին:",
+        "courseC_artist_prog5_2021": "This house needs a roof! Draw the triangle.  Hint:\nall three sides are the same length.",
+        "courseD_bee_nestedLoops8_2021": "Collect all of the nectar from each flower\nand make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. ",
+        "courseE_artist_functions1_dani": "\"Me zombie artist. Me love drawing!\"  \\\r\n\\\r\nHelp\nthe zombie draw square glasses.  \\\r\n\\\r\nThe bridge between the glasses is\n25 pixels shorter than the width of the squares.",
+        "courseF_artist_for7_2021": "Make three small changes to the\ncode from the last level to get this!",
+        "courseF_artist_for_challenge1_2021": "Can you figure out how to re-create this drawing?",
+        "courseF_artist_for_challenge2_2021": "Can you figure out how to re-create this drawing\nwith a single loop?",
+        "courseF_bee2": "Use a `repeat` loop to collect all of the nectar.",
+        "courseF_bee_for8_2021": "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?",
+        "courseF_bee_for_challenge2_2021": "Solve this puzzle using the fewest number of\nblocks possible."
       }
     }
   }

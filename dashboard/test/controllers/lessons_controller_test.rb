@@ -349,11 +349,17 @@ class LessonsControllerTest < ActionController::TestCase
     assert_includes @response.body, script2.name
   end
 
-  # only levelbuilders can edit
+  # only levelbuilders can edit with lesson id in url
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :student, response: :forbidden
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
+
+  # only levelbuilders can edit with lesson position in url
+  test_user_gets_response_for :edit_with_lesson_position, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in', name: 'sign out user cannot edit lessons using lesson position url'
+  test_user_gets_response_for :edit_with_lesson_position, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: :student, response: :forbidden, name: 'student cannot edit lessons using lesson position url'
+  test_user_gets_response_for :edit_with_lesson_position, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: :teacher, response: :forbidden, name: 'teacher cannot edit lessons using lesson position url'
+  test_user_gets_response_for :edit_with_lesson_position, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can edit lessons using lesson position url'
 
   test 'edit lesson' do
     sign_in @levelbuilder
@@ -1279,7 +1285,10 @@ class LessonsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    lesson = create :lesson
+    create :course_version, content_root: script, key: '2021'
+    original_script = create :script
+    lesson = create :lesson, script: original_script
+    create :course_version, content_root: original_script, key: '2021'
     cloned_lesson = create :lesson, script: script
     Lesson.any_instance.stubs(:copy_to_script).returns(cloned_lesson)
     put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}

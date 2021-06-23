@@ -96,7 +96,7 @@ class Resource < ApplicationRecord
     {
       id: id,
       key: key,
-      markdownKey: Services::MarkdownPreprocessor.build_resource_key(self),
+      markdownKey: Services::GloballyUniqueIdentifiers.build_resource_key(self),
       name: name,
       url: url,
       downloadUrl: download_url || '',
@@ -112,7 +112,7 @@ class Resource < ApplicationRecord
     {
       id: id,
       key: key,
-      markdownKey: Services::MarkdownPreprocessor.build_resource_key(self),
+      markdownKey: Services::GloballyUniqueIdentifiers.build_resource_key(self),
       name: name,
       url: url
     }
@@ -123,6 +123,17 @@ class Resource < ApplicationRecord
       scripts_to_serialize = lessons.map(&:script).concat(scripts).uniq
       scripts_to_serialize.each(&:write_script_json)
       unit_groups.each(&:write_serialization)
+    end
+  end
+
+  def copy_to_course_version(destination_course_version)
+    return self if course_version == destination_course_version
+    persisted_resource = Resource.where(name: name, url: url, course_version_id: destination_course_version.id).first
+    if persisted_resource
+      persisted_resource
+    else
+      copied_resource = Resource.create!(attributes.slice('name', 'url', 'properties').merge({course_version_id: destination_course_version.id}))
+      copied_resource
     end
   end
 

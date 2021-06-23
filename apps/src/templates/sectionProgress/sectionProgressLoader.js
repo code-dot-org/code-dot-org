@@ -3,7 +3,7 @@ import {
   startLoadingProgress,
   setCurrentView,
   finishLoadingProgress,
-  addDataByScript,
+  addDataByUnit,
   startRefreshingProgress,
   finishRefreshingProgress
 } from './sectionProgressRedux';
@@ -28,8 +28,8 @@ export function loadScriptProgress(scriptId, sectionId) {
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
   if (
-    state.studentLevelProgressByScript[scriptId] &&
-    state.scriptDataByScript[scriptId] &&
+    state.studentLevelProgressByUnit[scriptId] &&
+    state.unitDataByUnit[scriptId] &&
     state.currentView !== ViewType.STANDARDS
   ) {
     if (state.isRefreshingProgress) {
@@ -42,10 +42,10 @@ export function loadScriptProgress(scriptId, sectionId) {
   }
 
   let sectionProgress = {
-    scriptDataByScript: {},
-    studentLevelProgressByScript: {},
-    studentLessonProgressByScript: {},
-    studentLastUpdateByScript: {}
+    unitDataByUnit: {},
+    studentLevelProgressByUnit: {},
+    studentLessonProgressByUnit: {},
+    studentLastUpdateByUnit: {}
   };
 
   // Get the script data
@@ -54,7 +54,7 @@ export function loadScriptProgress(scriptId, sectionId) {
   })
     .then(response => response.json())
     .then(scriptData => {
-      sectionProgress.scriptDataByScript = {
+      sectionProgress.unitDataByUnit = {
         [scriptId]: postProcessDataByScript(
           scriptData,
           sectionData.lessonExtras
@@ -80,15 +80,15 @@ export function loadScriptProgress(scriptId, sectionId) {
     return fetch(url, {credentials: 'include'})
       .then(response => response.json())
       .then(data => {
-        sectionProgress.studentLevelProgressByScript = {
+        sectionProgress.studentLevelProgressByUnit = {
           [scriptId]: {
-            ...sectionProgress.studentLevelProgressByScript[scriptId],
+            ...sectionProgress.studentLevelProgressByUnit[scriptId],
             ...processServerSectionProgress(data.student_progress)
           }
         };
-        sectionProgress.studentLastUpdateByScript = {
+        sectionProgress.studentLastUpdateByUnit = {
           [scriptId]: {
-            ...sectionProgress.studentLastUpdateByScript[scriptId],
+            ...sectionProgress.studentLastUpdateByUnit[scriptId],
             ...data.student_last_updates
           }
         };
@@ -98,18 +98,18 @@ export function loadScriptProgress(scriptId, sectionId) {
   // Combine and transform the data
   requests.push(scriptRequest);
   Promise.all(requests).then(() => {
-    sectionProgress.studentLessonProgressByScript = {
-      ...sectionProgress.studentLessonProgressByScript,
+    sectionProgress.studentLessonProgressByUnit = {
+      ...sectionProgress.studentLessonProgressByUnit,
       [scriptId]: lessonProgressForSection(
-        sectionProgress.studentLevelProgressByScript[scriptId],
-        sectionProgress.scriptDataByScript[scriptId].stages
+        sectionProgress.studentLevelProgressByUnit[scriptId],
+        sectionProgress.unitDataByUnit[scriptId].lessons
       )
     };
-    getStore().dispatch(addDataByScript(sectionProgress));
+    getStore().dispatch(addDataByUnit(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
     getStore().dispatch(finishRefreshingProgress());
 
-    if (sectionProgress.scriptDataByScript[scriptId].hasStandards) {
+    if (sectionProgress.unitDataByUnit[scriptId].hasStandards) {
       getStore().dispatch(fetchStandardsCoveredForScript(scriptId));
       getStore().dispatch(fetchStudentLevelScores(scriptId, sectionId));
     }
@@ -124,17 +124,17 @@ function postProcessDataByScript(scriptData, includeBonusLevels) {
     hasStandards: scriptData.hasStandards,
     title: scriptData.title,
     path: scriptData.path,
-    stages: scriptData.lessons,
+    lessons: scriptData.lessons,
     family_name: scriptData.family_name,
     version_year: scriptData.version_year,
     name: scriptData.name
   };
-  if (!filteredScriptData.stages) {
+  if (!filteredScriptData.lessons) {
     return filteredScriptData;
   }
   return {
     ...filteredScriptData,
-    stages: filteredScriptData.stages.map(lesson =>
+    lessons: filteredScriptData.lessons.map(lesson =>
       postProcessLessonData(lesson, includeBonusLevels)
     )
   };

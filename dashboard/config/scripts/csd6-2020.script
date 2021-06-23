@@ -10,7 +10,7 @@ project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
 family_name 'csd6'
 version_year '2020'
-is_stable true
+published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true

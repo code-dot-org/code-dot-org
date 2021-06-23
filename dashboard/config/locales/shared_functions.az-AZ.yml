@@ -2,4 +2,19 @@
 az:
   data:
     shared_functions:
+      jittering: |-
+        titrəmək
+        (hər hansı cihazın titrəməsi)
+      moving east: şərqə doğru hərəkət
+      moving east and looping: şərqə doğru döngə hərəkəti
+      moving north: şimala hərəkət
+      moving south: cənuba hərəkət
+      moving west: qərbə doğru hərəkət
+      moving west and looping: qərbə doğru hərəkət edin və dönün
       moving with arrow keys: işarə düymələri ilə hərəkət edin
+      patrolling: patrul
+      shrinking: |-
+        kiçilmək
+        (ölçüdə və ya miqdarda kiçik olmaq)
+      wandering: gəzən
+      wobbling: titrəmə(titrəmək)

@@ -3,34 +3,385 @@
     "name": "self-paced-pl-csd6-2021",
     "wrapup_video_id": null,
     "hidden": true,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-28 01:27:42 UTC",
+    "serialized_at": "2021-06-22 18:27:58 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd6-2021"
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Preparing to Teach CS Discoveries"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-2",
+      "name": "Preparing to Teach Unit 1: Problem Solving and Computing",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Unit 2: Web Development",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Preparing to Teach Unit 3",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "##Ineractive Animations and Games\n\nIn Unit 3, students build on their coding experience as they program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, students develop a personalized, interactive program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Preparing to Teach The Design Process ",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Data and Society",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Unit 6",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Preparing to Teach Unit 7",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ac8eada4-e1b2-488c-8d27-2725db18eed3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac8eada4-e1b2-488c-8d27-2725db18eed3",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "b72a39e0-51d1-4651-a6d8-7d72504bee99",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b72a39e0-51d1-4651-a6d8-7d72504bee99",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "04c2d25b-2c59-4d12-9e89-6142979052e8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04c2d25b-2c59-4d12-9e89-6142979052e8",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "6f521930-8946-4ba8-84d0-b9dfba7e7ebb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f521930-8946-4ba8-84d0-b9dfba7e7ebb",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "06f8631d-2efd-4191-988b-1df583709b3e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "06f8631d-2efd-4191-988b-1df583709b3e",
+        "lesson_activity.key": "ac8eada4-e1b2-488c-8d27-2725db18eed3"
+      }
+    },
+    {
+      "key": "57b126fb-c2a4-4c6b-808e-4ed7cc867fbf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "57b126fb-c2a4-4c6b-808e-4ed7cc867fbf",
+        "lesson_activity.key": "b72a39e0-51d1-4651-a6d8-7d72504bee99"
+      }
+    },
+    {
+      "key": "b73d1cc2-f199-4ffe-912a-03b84d18db83",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b73d1cc2-f199-4ffe-912a-03b84d18db83",
+        "lesson_activity.key": "04c2d25b-2c59-4d12-9e89-6142979052e8"
+      }
+    },
+    {
+      "key": "4ad04cd5-a72a-4a83-8af6-54faa9874cdd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4ad04cd5-a72a-4a83-8af6-54faa9874cdd",
+        "lesson_activity.key": "6f521930-8946-4ba8-84d0-b9dfba7e7ebb"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD: Sprite Velocity_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD: Sprite Velocity_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "06f8631d-2efd-4191-988b-1df583709b3e"
+      },
+      "level_keys": [
+        "VPL - CSD: Sprite Velocity_2021"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD U3 collisions car intro_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD U3 collisions car intro_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "06f8631d-2efd-4191-988b-1df583709b3e"
+      },
+      "level_keys": [
+        "VPL - CSD U3 collisions car intro_2021"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD M3 Check-in_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD M3 Check-in_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "06f8631d-2efd-4191-988b-1df583709b3e"
+      },
+      "level_keys": [
+        "VPL - CSD M3 Check-in_2021"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD M3 Theme Introduction_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD M3 Theme Introduction_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "06f8631d-2efd-4191-988b-1df583709b3e"
+      },
+      "level_keys": [
+        "VPL - CSD M3 Theme Introduction_2021"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD: Sprite Velocity_2021",
+        "script_level.level_keys": [
+          "VPL - CSD: Sprite Velocity_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "06f8631d-2efd-4191-988b-1df583709b3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD U3 collisions car intro_2021",
+        "script_level.level_keys": [
+          "VPL - CSD U3 collisions car intro_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "06f8631d-2efd-4191-988b-1df583709b3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD M3 Check-in_2021",
+        "script_level.level_keys": [
+          "VPL - CSD M3 Check-in_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "06f8631d-2efd-4191-988b-1df583709b3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD M3 Theme Introduction_2021",
+        "script_level.level_keys": [
+          "VPL - CSD M3 Theme Introduction_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "06f8631d-2efd-4191-988b-1df583709b3e"
+      }
+    }
   ],
   "resources": [
 

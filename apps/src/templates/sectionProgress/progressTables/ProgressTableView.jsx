@@ -13,7 +13,7 @@ import {
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
 import {
-  getCurrentScriptData,
+  getCurrentUnitData,
   jumpToLessonDetails
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -125,6 +125,7 @@ class ProgressTableView extends React.Component {
 
   studentList = null;
   contentView = null;
+  scrollTop = 0;
 
   componentDidMount() {
     this.setRowsToRender();
@@ -136,29 +137,72 @@ class ProgressTableView extends React.Component {
     }
   }
 
-  // override the default initial number of rows to render
+  /**
+   * Override the default initial number of rows to render
+   */
   setRowsToRender() {
     const initialRows = parseInt(progressTableStyles.MAX_ROWS);
 
     // amountOfRowsToRender is a reactabular internal
-    this.studentList &&
-      this.studentList.bodyComponent.setState({
-        amountOfRowsToRender: initialRows
-      });
-    this.contentView &&
-      this.contentView.bodyComponent.setState({
-        amountOfRowsToRender: initialRows
-      });
+    this.studentList?.bodyComponent.setState({
+      amountOfRowsToRender: initialRows
+    });
+    this.contentView?.bodyComponent.setState({
+      amountOfRowsToRender: initialRows
+    });
+    this.syncScrollTop();
   }
 
   onScroll(e) {
     this.studentList.body.scrollTop = e.target.scrollTop;
     this.contentView.header.scrollLeft = e.target.scrollLeft;
+    this.scrollTop = e.target.scrollTop;
+    this.syncScrollTop();
   }
 
-  // When the student list is long enough to enable vertical scrolling in the
-  // table body, we need to add a "gutter" to the content view header to
-  // account for the horizontal space used by the vertical scrollbar.
+  /**
+   * This function serves three purposes:
+   * 1) When switching between views, it will restore the vertical scroll
+   *    position of the previous view.
+   * 2) When expanding/collapsing detail rows, the scroll positions of the
+   *    student list and content view sometimes get out of sync, so this is
+   *    used to correct that when it happens.
+   * 3) Making sure the internal states of the content view and student list
+   *    remain in sync after scrolling (see comment on `setScrollState` below)
+   *
+   * A 200ms timeout is used because reactabular has an internal 100ms timeout
+   * it uses to wait before calculating all its measurements, and we need to
+   * make sure to wait until after that completes.
+   */
+  syncScrollTop() {
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(() => {
+      this.setScrollState(this.contentView.bodyComponent);
+      this.setScrollState(this.studentList.bodyComponent);
+    }, 200);
+  }
+
+  /**
+   * Simply setting the `scrollTop` value on each of our table components
+   * sometimes leads to the internal state of the components (and resulting
+   * vertical scroll positions) getting out of sync.
+   *
+   * To work around this, we copy the implementation of reactabular's internal
+   * `VirtualizedBody.getRef().scrollTo()` to make sure the state gets updated
+   * appropriately. However, `scrollTo` accepts a row index, whereas we need to
+   * set the `scrollTop` value directly, hence this custom implementation.
+   */
+  setScrollState(table) {
+    table.scrollTop = this.scrollTop;
+    table.ref.scrollTop = this.scrollTop;
+    table.setState(table.calculateRows(table.props));
+  }
+
+  /**
+   * When the student list is long enough to enable vertical scrolling in the
+   * table body, we need to add a "gutter" to the content view header to
+   * account for the horizontal space used by the vertical scrollbar.
+   */
   needsContentHeaderGutter() {
     return (
       this.props.section.students.length >
@@ -177,6 +221,7 @@ class ProgressTableView extends React.Component {
       this.collapseDetailRows(rowData, rowIndex);
     }
     this.recordToggleRow(!rowData.isExpanded, rowData.student.id);
+    this.syncScrollTop();
   }
 
   recordToggleRow(expanding, studentId) {
@@ -253,7 +298,7 @@ class ProgressTableView extends React.Component {
 
   summaryContentViewProps() {
     return {
-      columnWidths: new Array(this.props.scriptData.stages.length).fill(
+      columnWidths: new Array(this.props.scriptData.lessons.length).fill(
         parseInt(progressTableStyles.MIN_COLUMN_WIDTH)
       ),
       lessonCellFormatters: this.summaryCellFormatters,
@@ -271,12 +316,17 @@ class ProgressTableView extends React.Component {
       ? this.detailContentViewProps()
       : this.summaryContentViewProps();
 
+    // we use the view type as a key to force a full re-instantiation of the
+    // table components when the view changes
+    const key = this.props.currentView;
+
     return (
       // outer div contains both table and legend
       <div>
         <div style={styles.container} className="progress-table">
           <div style={styles.studentList} className="student-list">
             <ProgressTableStudentList
+              key={key}
               ref={r => (this.studentList = r)}
               headers={studentListHeaders}
               rows={this.state.rows}
@@ -291,7 +341,7 @@ class ProgressTableView extends React.Component {
           </div>
           <div style={styles.contentView} className="content-view">
             <ProgressTableContentView
-              key={this.props.currentView} //force a full re-instantiation of the component when view changes
+              key={key}
               ref={r => (this.contentView = r)}
               rows={this.state.rows}
               onRow={this.onRow}
@@ -305,7 +355,10 @@ class ProgressTableView extends React.Component {
           </div>
         </div>
         {this.props.currentView === ViewType.DETAIL ? (
-          <ProgressLegend excludeCsfColumn={!this.props.scriptData.csf} />
+          <ProgressLegend
+            excludeCsfColumn={!this.props.scriptData.csf}
+            includeProgressNotApplicable
+          />
         ) : (
           <SummaryViewLegend showCSFProgressBox={this.props.scriptData.csf} />
         )}
@@ -333,19 +386,19 @@ export const UnconnectedProgressTableView = ProgressTableView;
 export default connect(
   state => ({
     section: state.sectionData.section,
-    scriptData: getCurrentScriptData(state),
+    scriptData: getCurrentUnitData(state),
     lessonProgressByStudent:
-      state.sectionProgress.studentLessonProgressByScript[
-        state.scriptSelection.scriptId
+      state.sectionProgress.studentLessonProgressByUnit[
+        state.unitSelection.scriptId
       ],
     levelProgressByStudent:
-      state.sectionProgress.studentLevelProgressByScript[
-        state.scriptSelection.scriptId
+      state.sectionProgress.studentLevelProgressByUnit[
+        state.unitSelection.scriptId
       ],
     lessonOfInterest: state.sectionProgress.lessonOfInterest,
     studentTimestamps:
-      state.sectionProgress.studentLastUpdateByScript[
-        state.scriptSelection.scriptId
+      state.sectionProgress.studentLastUpdateByUnit[
+        state.unitSelection.scriptId
       ],
     localeCode: state.locales.localeCode,
     showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails

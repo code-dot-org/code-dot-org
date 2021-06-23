@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Run the code to check your prediction. Did your code compile?\r\n\r\nWhy do you think this happened?",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert cake = new Dessert(-1);\n  }\n}",
+        "isVisible": true
+      },
+      "Dessert.java": {
+        "text": "class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String newFlavor, int newQty, double newPrice) {\n    flavor = newFlavor;\n    quantity = newQty;\n    price = newPrice;\n  }\n  public Dessert() {\n    flavor = \"mint chocolate\";\n    quantity = 5;\n    price = 2.75;\n  }\n\n  public Dessert(int newQty) {\n    boolean isValid = (newQty >= 0);\n\n    if (!isValid) {\n      quantity = 1;\n    }\n    else {\n      quantity = newQty;\n    }\n  }\n\n  public void eat() {\n    if (isValid) {\n      \n    }\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "parent_level_id": 28452,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-06-23T16:56:33.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-16 17:26:05 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 16:56:48 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

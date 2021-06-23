@@ -1,4 +1,5 @@
 hidden false
+published_state 'preview'
 tts true
 
 lesson 'Artist', display_name: 'Artist', has_lesson_plan: false

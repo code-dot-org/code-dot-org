@@ -2,7 +2,7 @@
   "script": {
     "name": "express-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-05-26 17:30:20 UTC",
+    "serialized_at": "2021-06-17 22:31:24 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -7522,6 +7523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_freeplay_blank"
+        ],
         "progression": "Free Play: Make an Interactive Scene"
       },
       "named_level": false,

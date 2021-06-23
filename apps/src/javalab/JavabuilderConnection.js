@@ -79,19 +79,19 @@ export default class JavabuilderConnection {
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
+      case WebSocketMessageType.THEATER:
         this.miniApp.handleSignal(data);
         break;
       case WebSocketMessageType.EXCEPTION:
         handleException(data, this.onOutputMessage);
         break;
-      case WebSocketMessageType.DEBUBG:
+      case WebSocketMessageType.DEBUG:
         if (window.location.hostname.includes('localhost')) {
           this.onOutputMessage('--- Localhost debugging message ---');
           this.onOutputMessage(data.value);
         }
         break;
       default:
-        console.log(data);
         break;
     }
   }
@@ -104,6 +104,7 @@ export default class JavabuilderConnection {
       // event.code is usually 1006 in this case
       console.log(`[close] Connection died. code=${event.code}`);
     }
+    this.miniApp?.onClose?.();
   }
 
   onError(error) {

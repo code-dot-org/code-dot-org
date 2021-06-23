@@ -9,12 +9,12 @@
     "csd6-2021",
     "csd7-2021"
   ],
+  "published_state": "preview",
   "properties": {
     "has_numbered_units": true,
     "version_year": "2021",
     "family_name": "csd",
-    "has_verified_resources": true,
-    "visible": true
+    "has_verified_resources": true
   },
   "resources": [
     {

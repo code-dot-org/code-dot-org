@@ -580,6 +580,8 @@ es:
         csd_ml_intro_to_ai_lab: Introducción al Laboratorio de Inteligencia Artificial
         csd_ml_import_model: Importar un Modelo de Iinteligencia Artificial
         csf_lots_of_sprites: 'Laboratorio de Sprite: Muchos Sprites'
+        playlab_2021: Introducción al laboratorio de juegos
+        playlab_2021_reader: Introducción al laboratorio de juegos
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

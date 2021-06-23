@@ -271,9 +271,9 @@ DSL
   end
 
   test 'clone with suffix copies sublevels' do
-    sublevel1 = create :level, name: 'sublevel_1'
-    sublevel2 = create :level, name: 'sublevel_2'
-    sublevel3 = create :level, name: 'sublevel_3'
+    sublevel1 = create :level, name: 'sublevel_1', level_num: 'custom'
+    sublevel2 = create :level, name: 'sublevel_2', level_num: 'custom'
+    sublevel3 = create :level, name: 'sublevel_3', level_num: 'custom'
 
     # clone_with_suffix needs to be able to access the level object as well as
     # its DSL text. Rather than create an actual DSL file, we stub the level's
@@ -326,7 +326,7 @@ DSL
   test 'all_descendant_levels includes template levels of sublevels' do
     template = create :artist, name: 'template'
     artist = create :artist, name: 'artist', properties: {project_template_level_name: template.name}
-    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', sublevels: [artist]
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices_level', sublevels: [artist]
     assert_equal [artist.name, template.name], bubble_choice.all_descendant_levels.map(&:name)
   end
 end

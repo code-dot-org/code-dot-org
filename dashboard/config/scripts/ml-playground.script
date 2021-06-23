@@ -1,4 +1,5 @@
 login_required true
+published_state 'beta'
 
 lesson 'lesson1', display_name: 'Introduction to Machine Learning', has_lesson_plan: true
 level 'CSD AIL01 autoSFLP_pilot-2021', progression: 'Lesson Overview'

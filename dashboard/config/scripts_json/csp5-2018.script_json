@@ -36,7 +36,6 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2018",
-      "is_stable": true,
       "script_announcements": [
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
@@ -77,7 +76,8 @@
     },
     "new_name": null,
     "family_name": "csp5",
-    "serialized_at": "2021-05-03 23:55:23 UTC",
+    "serialized_at": "2021-06-17 22:29:49 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp5-2018"
     }

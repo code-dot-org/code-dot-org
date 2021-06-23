@@ -339,7 +339,8 @@ Dashboard::Application.routes.draw do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
-    get 'hidden_stages', to: 'script_levels#hidden_lesson_ids'
+    get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
+    get 'hidden_stages', to: 'script_levels#hidden_lesson_ids' #TODO: Remove once launched
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     member do
@@ -354,8 +355,9 @@ Dashboard::Application.routes.draw do
     # /s/xxx/lessons/yyy
     resources :lessons, only: [:show], param: 'position', format: false do
       get 'student', to: 'lessons#student_lesson_plan'
-      get 'extras', to: 'script_levels#stage_extras', format: false
+      get 'extras', to: 'script_levels#lesson_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
+      get 'edit', to: 'lessons#edit_with_lesson_position'
 
       # /s/xxx/lessons/yyy/levels/zzz
       resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -712,8 +714,8 @@ Dashboard::Application.routes.draw do
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
-  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
+  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson'
+  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson_and_level'
   put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
@@ -737,9 +739,9 @@ Dashboard::Application.routes.draw do
       concerns :api_v1_pd_routes
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
-      post 'users/:user_id/using_dark_mode', to: 'users#update_using_dark_mode'
+      post 'users/:user_id/display_theme', to: 'users#update_display_theme'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
-      get 'users/:user_id/using_dark_mode', to: 'users#get_using_dark_mode'
+      get 'users/:user_id/display_theme', to: 'users#get_display_theme'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
       get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'

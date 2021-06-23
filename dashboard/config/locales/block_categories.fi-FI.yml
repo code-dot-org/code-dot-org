@@ -18,6 +18,7 @@ fi:
       Game/Score: Peli/pistemäärä
       Games/Score: Pelit/pistemäärä
       Groups: Ryhmät
+      Location: Sijainti
       Locations: Sijainnit
       Logic: Logiikka
       Loops: Silmukat

@@ -1,41 +1,91 @@
 name 'OPD-K5 GettingStarted2'
 skip_dialog true
 markdown <<MARKDOWN
-# What is Computer Science?
+# Curriculum Overview
 
-<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+<img src="https://images.code.org/835eab960f43b5a947d41450fcb488cf-image-1622754945281.png" class="level-image">
+The Computer Science Fundamentals curriculum incorporates a variety of teaching and learning strategies to support engaging and inclusive learning environments.
 
-## CS is learning about...
+## Course Structure
 
-**“The study of computers and algorithmic processes, including their principles, their hardware and software designs, their implementation, and their impact on society.”** -Computer Science Teacher Association (CSTA) 
+Each course is designed to stand alone and does not require a student to take a course in sequence. This means students can begin learning computer science with any age appropriate course.
 
-Let’s breakdown this  definition.  
+## Lesson Types
 
-* **Algorithms** - step-by-step processes to complete a task 
-	* e.g. brushing your teeth, playing a game, opening a file
-* **Hardware** 
-	* e.g. mouse, keyboard, monitor
-* **Software** 
-	* e.g. Android, Microsoft Windows, internet browsers like Google Chrome
-* **Design and use** of hardware and software and their effect on us and others 
-	* e.g. apps for social change, artificial intelligence, colors displayed on a monitor
+**Context-setting Lessons** introduce students to concepts, usually in a hands-on way and often without computers.
 
-## CS is about... 
+**Skill-building Lessons** typically involve programming on the computer and are designed to give students structured practice with a new tool or concept.
 
-* Creativity
-	* CS is not technology, like the cell phone we use.  CS is a process that can create technology.
-    * CS teaches students to create new technology instead of only being consumers of technology.
-* Problem solving
-	* CS helps students think differently about solving problems in any context.
-    * CS uses a problem solving process that can be applied to any field of study and to any problem.
-* Using code
-	* CS is not only coding.  CS uses code like a tool similar to how arithmetic is a tool for math and words are a tool for English.
-	* CS teaches students to break down big, ambiguous problems into smaller chunks. Recognizing what is important and what needs to be solved first are critical thinking skills that are valuable in ANY context.
-    
+**Mini-Project Lessons** are part of courses C-F (grades 2 - 5), on the computer for students to apply what they have learned by creating a more extensive program step-by-step.
+
+**Exploratory Lessons** introduce essential concepts on the computer, but may not be directly related to other lessons in the course.
+
+**End of Course Projects** are open-ended lessons found at the end of each course.
+
+### Examples of Lesson Types
+
+* Course A: example <a href="https://studio.code.org/s/coursea-2021/lessons/3/levels/1?section_id=2860383" target="blank" >context-setting lesson</a>.  Note: Context-setting lessons are typically unplugged, off the computer.
+* Course A: example <a href="https://studio.code.org/s/coursea-2021/lessons/12" target="blank" >skill-building lesson</a> 
+* Course C: example <a href="https://studio.code.org/s/coursec-2021/lessons/14" target="blank" >mini-project lesson</a> 
+* Course C: example <a href="https://studio.code.org/s/coursec-2021/lessons/15" target="blank" >exploratory lesson</a>
+* Course C: example <a href="https://studio.code.org/s/coursec-2021/lessons/16" target="blank" >exploratory lesson</a> 
+
+## Lesson Structure
+
+If you previewed the examples of lesson types, you may have already noticed all lessons follow the same format.  
+
+Lessons each have a:
+
+* **Warm Up**
+* **Main Activity**
+* **Wrap Up**
+
+## Lesson Levels
+
+Lesson levels were introduced in <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/2/levels/2" target="blank" >Lesson 2: Getting Started</a> of this online course and appear in the Course Overview page as shown in the image below.
+
+![](https://images.code.org/dd6de323e77b680f871da6dd40c50d5c-image-1623340618982.png)
+
+Lesson levels also appear at the top of the page in the student learning platform as shown in the image below.  Notice lesson levels turn green after completing the level and remain white when not complete.
+
+![](https://images.code.org/9c0c4f7a1203a1cd35bf3a73487e42a9-image-1623340914764.png)
+
+
+### Level Types
+
+Levels within lessons have different types and purposes to best support students learning a particular concept.  
+
+* **Video** levels introduce new tools or explain new CS Concepts.
+* **Online** levels include Code.org tools - Artist, Play Lab, and Sprite Lab.
+* **Extras** levels are at the end of each lesson and optional for students to revisit concepts.
+* **Choice** levels are in Course F and provide a menu of additional online levels for students to complete.
+
+
+### Examples of Level Types
+
+* Course C: <a href="https://studio.code.org/s/coursec-2021/lessons/6/levels/1?section_id=2860383" target="blank" >example of video level</a> 
+* Course C: <a href="https://studio.code.org/s/coursec-2021/lessons/6/levels/2?section_id=2860383" target="blank" >example of online level featuring the Code.org tool, Artist</a> 
+* Course E: <a href="https://studio.code.org/s/coursee-2021/lessons/14/extras?section_id=2860383" target="blank" >example of extras level</a> 
+* Course F: <a href="https://studio.code.org/s/coursef-2021/lessons/2/levels/8?section_id=2860383" target="blank" >example of choice level</a> Note:  Choice levels only available in Course F.
+
+
+### Level Labels
+
+Lessons are labeled to indicate the purpose of the lesson. Refer to the image above in "Lesson Levels."  Notice the example in the image for Course A, Lesson 2: Learn to Drag and Drop is labeled as skill-building to indicate students are practicing building skills by completing that level. 
+
+Each level has a specific purpose such as:
+
+* engaging students to make predictions.
+* challenging students to test their persistence.
+* free play to help students get creative.
+
+### Examples of level purposes
+
+* Course C: <a href="https://studio.code.org/s/coursec-2021/lessons/6/levels/10?section_id=2860383" target="blank" >example of a level for making predictions</a>.
+* Course C: <a href="https://studio.code.org/s/coursec-2021/lessons/6/levels/8?section_id=2860383" target="blank" >example of level for getting challenged</a>.
+* Course C: <a href="https://studio.code.org/s/coursec-2021/lessons/10/levels/9?section_id=2860383" target="blank" >example of a level for free play</a>.
 
 
 
-
-If you are a <a href="https://code.org/educate/csd" target="blank" rel="noopener noreferrer">middle school</a> or <a href="https://code.org/educate/csp" target="blank" rel="noopener noreferrer">high school</a> teacher interested in teaching our middle school or high school courses, we recommend you pursue more <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">in-depth, ongoing professional development opportunities</a>.
 
 MARKDOWN

@@ -28,7 +28,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     new_name: nil,
     family_name: nil,
     version_year: nil,
-    is_stable: nil,
+    published_state: nil,
     supported_locales: [],
     pilot_experiment: nil,
     editor_experiment: nil,
@@ -213,6 +213,8 @@ endvariants
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
+      published_state 'beta'
+
       lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true
       variants
         level 'maze 1'
@@ -465,6 +467,7 @@ endvariants
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
       hidden false
+      published_state 'beta'
       editor_experiment 'editors'
 
     SCRIPT
@@ -675,6 +678,8 @@ level 'Level 3'
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
+      published_state 'beta'
+
       lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true, visible_after: '2020-04-01 08:00:00 -0800'
       level 'maze 1'
 
@@ -725,6 +730,8 @@ level 'Level 3'
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
+      published_state 'beta'
+
       lesson_group 'content', display_name: 'Content'
       lesson 'L1', display_name: 'lesson 1', has_lesson_plan: true
       level 'maze 1'
@@ -743,6 +750,8 @@ level 'Level 3'
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
+      published_state 'beta'
+
       lesson 'lesson 1', display_name: 'lesson 1', has_lesson_plan: true
       level 'maze 1'
 
@@ -767,6 +776,8 @@ level 'Level 3'
     script_level2 = create :script_level, levels: [level2], lesson: lesson2, script: script
     script_text = ScriptDSL.serialize_to_string(script_level2.script)
     expected = <<~SCRIPT
+      published_state 'beta'
+
       lesson_group 'content1', display_name: 'Content1'
       lesson 'lesson 1', display_name: 'lesson 1', has_lesson_plan: true
       level 'maze 1'
@@ -797,6 +808,7 @@ level 'Level 3'
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
       hidden false
+      published_state 'beta'
       project_sharing true
 
     SCRIPT
@@ -822,6 +834,7 @@ level 'Level 3'
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
       hidden false
+      published_state 'beta'
       curriculum_umbrella 'CSP'
 
     SCRIPT
@@ -829,12 +842,12 @@ level 'Level 3'
     assert_equal expected, script_text
   end
 
-  test 'Script DSL with new_name, family_name, version_year and is_stable' do
+  test 'Script DSL with new_name, family_name, version_year, published_state' do
     input_dsl = <<~DSL
       new_name 'new name'
       family_name 'family name'
       version_year '3035'
-      is_stable true
+      published_state 'beta'
       lesson 'Lesson1', display_name: 'Lesson1'
       level 'Level 1'
       level 'Level 2'
@@ -844,7 +857,7 @@ level 'Level 3'
         new_name: "new name",
         family_name: "family name",
         version_year: "3035",
-        is_stable: true,
+        published_state: 'beta',
         lesson_groups: [
           key: nil,
           display_name: nil,
@@ -866,13 +879,13 @@ level 'Level 3'
     assert_equal expected, output
   end
 
-  test 'serialize new_name, family_name, version_year, is_stable, tts, is_course' do
+  test 'serialize new_name, family_name, version_year, tts, is_course, published_state' do
     script = create :script,
       {
         new_name: 'new name',
         family_name: 'family name',
         version_year: '2001',
-        is_stable: true,
+        published_state: 'beta',
         tts: true,
         is_course: true
       }
@@ -882,7 +895,7 @@ level 'Level 3'
       new_name 'new name'
       family_name 'family name'
       version_year '2001'
-      is_stable true
+      published_state 'beta'
       tts true
       is_course true
 
@@ -921,6 +934,8 @@ level 'Level 3'
 
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
+      published_state 'beta'
+
       lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true
       level 'maze 1', named: true
 
@@ -935,6 +950,8 @@ level 'Level 3'
 
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
+      published_state 'beta'
+
       lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true, unplugged: true
 
     SCRIPT
@@ -981,6 +998,8 @@ level 'Level 3'
 
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
+      published_state 'beta'
+
       lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true
       level 'maze 1', assessment: true
 
@@ -1078,6 +1097,8 @@ level 'Level 3'
 
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
+      published_state 'beta'
+
       lesson_group 'content1', display_name: 'Content'
       lesson_group_description 'This is a description'
       lesson_group_big_questions 'Q1 Q2'
@@ -1104,6 +1125,8 @@ level 'Level 3'
     script_level2 = create :script_level, levels: [level2], lesson: lesson2, script: script
     script_text = ScriptDSL.serialize_to_string(script_level2.script)
     expected = <<~SCRIPT
+      published_state 'beta'
+
       lesson_group 'content1', display_name: 'Content'
       lesson 'lesson 1', display_name: 'lesson 1', has_lesson_plan: true
       level 'maze 1'

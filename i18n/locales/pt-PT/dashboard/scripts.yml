@@ -1,4 +1,3 @@
----
 pt:
   data:
     script:
@@ -646,6 +645,12 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -697,6 +702,12 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -706,6 +717,12 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -1016,6 +1033,12 @@ pt:
               name: 'Offline: escrever músicas com parâmetros'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -1399,7 +1422,7 @@ pt:
             Functions:
               name: Funções
             'null':
-              name: nulo
+              name: 'nulo'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1466,7 +1489,7 @@ pt:
             Songwriting with Parameters:
               name: Composição de música com parâmetros
             'Functions: Songwriting':
-              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
             Building a Foundation:
               name: Criar uma base
             Nested Loops:
@@ -1782,7 +1805,7 @@ pt:
             For Loops:
               name: Ciclos "for"
         csd3-1819draft:
-          description_short: Programação
+          description_short: "Programação"
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -1804,7 +1827,7 @@ pt:
             new stage:
               name: nova fase
         csd3-2018:
-          description_short: Programação
+          description_short: "Programação"
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -1941,7 +1964,7 @@ pt:
               name: Introdução
             'Functions: Songwriting':
               name: Composição
-              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
             Internet:
               name: A Internet
             Crowdsourcing:
@@ -2294,7 +2317,7 @@ pt:
               name: Condicionais com cartas
             'Functions: Songwriting':
               name: Composição
-              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2360,7 +2383,7 @@ pt:
             new stage:
               name: nova fase
             'null':
-              name: nulo
+              name: 'nulo'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2449,7 +2472,7 @@ pt:
             Lists:
               name: Listas
         csd3-2019:
-          description_short: Programação
+          description_short: "Programação"
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -2629,7 +2652,7 @@ pt:
             csp_project:
               display_name: Projecto
             csp_libraries:
-              display_name: Bibliotecas
+              display_name: Bibliotecas 
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2643,12 +2666,12 @@ pt:
         csp7-pilot-staging:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas
+              display_name: Bibliotecas 
           lessons:
             new stage:
               name: nova fase
             Libraries:
-              name: Bibliotecas
+              name: Bibliotecas 
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2732,7 +2755,7 @@ pt:
             Lists:
               name: Listas
         csd3-pilot:
-          description_short: Programação
+          description_short: "Programação"
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -2966,7 +2989,7 @@ pt:
         csp7-pilot:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas
+              display_name: Bibliotecas 
             required:
               display_name: Visão geral
         csp8-pilot:
@@ -2998,7 +3021,7 @@ pt:
         csp7-2020:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas
+              display_name: Bibliotecas 
             cspSurvey2020:
               display_name: Inquérito Pós-Curso
         csp9-pilot:
@@ -3033,7 +3056,7 @@ pt:
             Functions with Parameters:
               name: Funções com parâmetros
         csd3-2020:
-          description_short: Programação
+          description_short: "Programação"
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -3149,7 +3172,7 @@ pt:
               name: O Rei Manda
             'Functions: Songwriting':
               name: Composição
-              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
             Digital Sharing:
               name: Partilha Digital
         coursef-2020:
@@ -3329,7 +3352,7 @@ pt:
             cspSurvey:
               display_name: Inquérito
         csd3-virtual:
-          description_short: Programação
+          description_short: "Programação"
           lessons:
             Shapes and Parameters:
               name: Formas e Parâmetros
@@ -3417,7 +3440,7 @@ pt:
             cspSurvey:
               display_name: Inquérito
         csd3-2021:
-          description_short: Programação
+          description_short: "Programação"
           lessons:
             Shapes and Parameters:
               key: Formas e Parâmetros
@@ -3498,7 +3521,7 @@ pt:
         csp7-2021:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas
+              display_name: Bibliotecas 
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
@@ -3600,7 +3623,7 @@ pt:
               name: Partilha Digital
             'Functions: Songwriting':
               name: Composição
-              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
           lesson_groups:
             ramp_up:
               display_name: Laços aninhados
@@ -3740,3 +3763,11 @@ pt:
           lessons:
             lesson15:
               name: Lição 15
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Fundamentos da Ciência da Computação
+              name: Fundamentos da Ciência da Computação
+            Next Steps:
+              key: Próximos Passos
+              name: Próximos Passos

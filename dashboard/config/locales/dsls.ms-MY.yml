@@ -2056,3 +2056,135 @@ ms-MY:
           Setelah berlatih beberapa kali,  berapa lama kah anda perlu untuk meneka
           kata laluan dengan betul dengan mengantikan huruf dengan rawak?\n* Is this
           good or not  Adakah teknik ini sesuai digunakan?"
+      OPD-K5 CS Courses:
+        markdown: "# Merancang > Langkah permulaan di Code.org\n\n\n## Langkah 1:
+          Pilih kursus\nSemua kursus kami -- daripada prapembaca sehingga peringkat
+          sekolah menengah -- disenaraikan dalam **[katalog kursus](https://studio.code.org/courses)**.
+          Untuk mencari pelajaran Asas CS yang anda telah amalkan, sila pergi ke **[halaman
+          sekolah rendah] kami (https://code.org/educate/curriculum/elementary-school)**
+          dan tatal ke bawah sehingga sampai ke bahagian \"Kursus\". Semua kursus
+          kami tersedia tanpa sebarang kos. Sila bersembang dengan dengan rakan anda
+          di sekolah untuk menentukan sejauh mana kurikulum kursus boleh diintegrasikan
+          dengan pelbagai mata pelajaran.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Langkah 2: Sediakan bahagian kelas anda\nSediakan bahagian kelas untuk melihat
+          kemajuan pelajar anda, cetak kad log masuk untuk pelajar anda, uruskan akaun
+          mereka dan cetak sijil yang boleh mereka bawa pulang apabila mereka menyelesaikan
+          kursus itu. Klik pautan ini untuk **[menonton video pendek](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          yang menunjukkan cara menyediakan kelas sains komputer pertama anda di Code.org.
+          Anda juga boleh mengikuti langkah dalam **[artikel sokongan ini](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Langkah 3: Tetapkan kursus kepada bahagian anda\nKlik pada kursus yang anda
+          sedang mengajar -- anda sepatutnya melihat skrin yang kelihatan seperti
+          di bawah. Kemudian, anda boleh mengklik pada \"Tetapkan Kursus\" dan tetapkan
+          kursus itu kepada satu daripada bahagian anda. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Langkah 4: Mula mengajar! \nSemua yang diperlukan ialah hanya satu pelajaran
+          untuk membawa konsep sains komputer ke dalam kelas anda. Sebaik sahaja anda
+          dapat lihat minat pelajar terhadap CS, lakukan lebih lanjut dengan rancangan
+          pelajaran harian bertujuan membimbing pelajar anda, aktiviti nirplag yang
+          boleh anda lakukan tanpa menggunakan komputer dan forum untuk menyambung
+          kepada guru lain.\n\n\n\n"
+      OPD-K5 CS Courses_copy:
+        markdown: "# Langkah permulaan di Code.org\n\n\n## Langkah 1: Pilih kursus\nSemua
+          kursus kami -- daripada prapembaca sehingga peringkat sekolah menengah --
+          disenaraikan dalam **<a href=\"https://studio.code.org/courses\" target=\"blank\">katalog
+          kursus</a>**. Semua kursus kami tersedia secara percuma. Sembang dengan
+          rakan di sekolah anda untuk menentukan cara kurikulum kursus boleh diintegrasikan
+          dengan pelbagai mata pelajaran.\n\n<table style=\"width:100%; border-style:none;\">\n
+          \ <tr>\n    <th style=\"background-color:#ff9900; text-align:center; border-style:none;
+          font-weight:bold;\"\"\">\n      <b>Kursus A</b><br/>\n      <i>Tadika</i>\n
+          \   </th>\n    <th style=\"background-color:#f1c232; text-align:center;
+          border-style:none;\"\"\">\n        Kursus B<br/>\n        <i>Gred 1</i>\n
+          \   </th>\n    <th style=\"background-color:#b8bf0d; text-align:center;
+          border-style:none;\"\"\">\n        Kursus C<br/>\n        <i>Gred 2</i>\n
+          \   </th>\n    <th style=\"background-color:#53bac2; text-align:center;
+          border-style:none;\"\"\">\n        Kursus D<br/>\n        <i>Gred 3</i>\n
+          \   </th>\n    <th style=\"background-color:#0094ca; text-align:center;
+          border-style:none;\"\"\">\n        Kursus E<br/>\n        <i>Gred 4</i>\n
+          \   </th>\n    <th style=\"background-color:#7664a0; text-align:center;
+          border-style:none;\"\"\">\n        Kursus F<br/>\n        <i>Gred 5</i>\n
+          \   </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 pelajaran, ~12 jam untuk
+          dilengkapkan</td>\n    <td style=\"background-color:#ffe599; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 pelajaran, ~12 jam untuk
+          dilengkapkan</td>\n    <td style=\"background-color:#d2da0e; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 pelajaran, ~18 jam untuk
+          dilengkapkan</td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 pelajaran, ~18 jam untuk
+          dilengkapkan</td>\n    <td style=\"background-color:#9ed7ed; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 pelajaran, ~18-20 jam
+          untuk dilengkapkan</td>\n    <td style=\"background-color:#c9c1e9; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 pelajaran, ~20-22 jam
+          untuk dilengkapkan</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;\">Konsep</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Kewarganegaraan Digital</li>\n
+          \       <li>Penjujukan</li>\n        <li>Gelung</li>\n        <li>Peristiwa</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#ffe599; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Kewarganegaraan Digital</li>\n        <li>Penjujukan</li>\n
+          \       <li>Gelung</li>\n        <li>Kesan Pengkomputeran</li>\n        <li>Peristiwa</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#d2da0e; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Kewarganegaraan Digital</li>\n        <li>Penjujukan</li>\n
+          \       <li>Binari</li>\n        <li>Gelung</li>\n        <li>Peristiwa</li>\n
+          \       <li>Data</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#68ebf5;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Penjujukan</li>\n        <li>Peristiwa</li>\n
+          \       <li>Gelung</li>\n        <li>Bersyarat</li>\n        <li>Binari</li>\n
+          \       <li>Kewarganegaraan Digital</li>\n      </ul>\n    </td>\n    <td
+          style=\"background-color:#9ed7ed; color:black; border-style:none; vertical-align:
+          text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Peperi</li>\n
+          \       <li>Kewarganegaraan Digital</li>\n        <li>Kesan Pengkomputeran</li>\n
+          \       <li>Gelung Bersarang</li>\n        <li>Fungsi</li>\n      </ul>\n
+          \   </td>\n    <td style=\"background-color:#c9c1e9; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Pemboleh Ubah</li>\n        <li>Data</li>\n        <li>Untuk
+          Gelung</li>\n        <li>Internet</li>\n        <li>Peperi</li>\n        <li>Kewarganegaraan
+          Digital</li>\n        </ul>\n    </td>\n  <tr>\n  \t<td style=\"background-color:#f9cb9c\">\n
+          \    <a href=\"https://studio.code.org/s/coursea\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Lihat kursus</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n          <button>Rancangan
+          pelajaran</button>\n      </a>\n    </td>\n    <td style=\"background-color:#ffe599\">\n
+          \   <a href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Lihat kursus</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Rancangan
+          pelajaran</button>\n      </a>\n    </td>   \n   \t<td style=\"background-color:#d2da0e\">\n
+          \   <a href=\"https://studio.code.org/s/coursec\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Lihat kursus</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Rancangan
+          pelajaran</button>\n      </a>\n    </td>   \n    <td style=\"background-color:#68ebf5\">\n
+          \   <a href=\"https://studio.code.org/s/coursed\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Lihat kursus</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Rancangan
+          pelajaran</button>\n      </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Lihat kursus</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Rancangan
+          pelajaran</button>\n      </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Lihat kursus</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Rancangan
+          pelajaran</button>\n      </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n##
+          Langkah 2: Sediakan bahagian kelas anda\nSediakan bahagian kelas untuk melihat
+          kemajuan pelajar anda, cetak kad log masuk untuk pelajar anda, uruskan akaun
+          mereka dan cetak sijil yang boleh mereka bawa pulang apabila mereka menyelesaikan
+          kursus itu. Klik pautan ini untuk **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          target=\"blank\">menonton video pendek</a>** yang menunjukkan cara menyediakan
+          kelas sains komputer pertama anda di Code.org. Anda juga boleh mengikuti
+          langkah dalam **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
+          target=\"blank\">artikel sokongan ini</a>**.\n\n***\n## Langkah 3: Tetapkan
+          kursus kepada bahagian anda\nKlik pada kursus yang anda sedang mengajar.
+          Kemudian, anda boleh mengklik pada \"Tetapkan Kursus\" dan tetapkan kursus
+          itu kepada satu daripada bahagian anda. \n***\n## Langkah 4: Mula mengajar!
+          \nSemua yang diperlukan ialah hanya satu pelajaran untuk membawa konsep
+          sains komputer ke dalam kelas anda. Sebaik sahaja anda dapat lihat minat
+          pelajar terhadap CS, lakukan lebih lanjut dengan rancangan pelajaran harian
+          bertujuan membimbing pelajar anda, aktiviti nirplag yang boleh anda lakukan
+          tanpa menggunakan komputer dan forum untuk menyambung kepada guru lain."
+      courseD_EOC_2020:
+        display_name: Akhir Projek Kursus
+      courseE_EOC_2020:
+        display_name: Akhir Projek Kursus
+      courseExpress_EOC_2020:
+        display_name: Akhir Projek Kursus
+      courseF_EOC_2020:
+        display_name: Akhir Projek Kursus

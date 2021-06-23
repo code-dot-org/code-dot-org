@@ -1,9 +1,21 @@
 require 'test_helper'
 
 class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
+  def stub_firehose
+    FirehoseClient.instance.stubs(:put_record).with do |stream, args|
+      @firehose_record = args
+      @firehose_stream = stream
+      puts args
+      puts stream
+      true
+    end
+  end
+
   setup do
+    stub_firehose
     AWS::S3.stubs(:delete_from_bucket).returns(true)
     AWS::S3.stubs(:upload_to_bucket).returns(true)
+    ShareFiltering.stubs(:find_failure).returns(nil)
     @owner = create :student
     @model = create :user_ml_model, user: @owner
     @not_owner = create :student
@@ -29,10 +41,31 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
     assert_response :bad_request
   end
 
-  test 'returns failure when model cannot save' do
+  test 'returns failure when model does not have a name' do
     sign_in @owner
     post :save, params: {"ml_model" => {"name" => nil}}
     assert_equal "failure", JSON.parse(@response.body)["status"]
+  end
+
+  test 'save succeeds while logging any PII and profanity API error' do
+    sign_in @owner
+    ShareFiltering.stubs(:find_failure).raises(
+      OpenURI::HTTPError.new('something broke', 'fake io')
+    )
+
+    post :save, params: {"ml_model" => {"name" => "Model Name"}}
+
+    assert_response :success
+    assert @firehose_record[:study], 'ai-ml'
+    assert @firehose_record[:event], 'share_filtering_error'
+    assert_equal :analysis, @firehose_stream
+  end
+
+  test 'returns failure when model contains profanity' do
+    sign_in @owner
+    ShareFiltering.stubs(:find_failure).returns(ShareFailure.new('profanity', 'damn'))
+    post :save, params: {"ml_model" => {"name" => "Naughty Model"}}
+    assert_equal "piiProfanity", JSON.parse(@response.body)["status"]
   end
 
   test 'returns failure when model saves to database but not S3' do
@@ -48,8 +81,13 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
     sign_in @owner
     create_list(:user_ml_model, 2, user: @owner)
 
-    database_model_data = UserMlModel.where(user_id: @owner.id).
-      map {|user_ml_model| {id: user_ml_model.model_id, name: user_ml_model.name, metadata: JSON.parse(user_ml_model.metadata)}}
+    database_model_data = UserMlModel.where(user_id: @owner.id).map do |user_ml_model|
+      {
+        id: user_ml_model.model_id,
+        name: user_ml_model.name,
+        metadata: JSON.parse(user_ml_model.metadata)
+      }
+    end
 
     get :names
 
@@ -83,14 +121,14 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
-  test 'user can not retrieve nonexistant models' do
+  test 'user can not retrieve nonexistent models' do
     sign_in @owner
     AWS::S3.stubs(:download_from_bucket).returns(false)
     get :show, params: {id: "fake_id"}
     assert_response :not_found
   end
 
-  test 'user can not delete nonexistant models' do
+  test 'user can not delete nonexistent models' do
     sign_in @owner
     delete :destroy, params: {id: "fake_id"}
     assert_response :not_found

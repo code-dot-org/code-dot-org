@@ -12,7 +12,7 @@ import reducer, {
   setRosterProvider,
   setValidGrades,
   setValidAssignments,
-  setPreReaderScriptIds,
+  setPreReaderUnitIds,
   setSections,
   selectSection,
   removeSection,
@@ -661,7 +661,7 @@ describe('teacherSectionsRedux', () => {
       ).to.throw();
     });
 
-    it('switching script assignment updates stage extras value from script', () => {
+    it('switching script assignment updates lesson extras value from script', () => {
       let state = reducer(
         editingNewSectionState,
         setValidAssignments(validCourses, validScripts)
@@ -679,7 +679,7 @@ describe('teacherSectionsRedux', () => {
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
       let state = reducer(
         editingNewSectionState,
-        setPreReaderScriptIds(preReaderScripts)
+        setPreReaderUnitIds(preReaderScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
@@ -692,7 +692,7 @@ describe('teacherSectionsRedux', () => {
     it.skip('switching script assignment updates default tts autoplay enabled value based on script', () => {
       let state = reducer(
         editingNewSectionState,
-        setPreReaderScriptIds(preReaderScripts)
+        setPreReaderUnitIds(preReaderScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);

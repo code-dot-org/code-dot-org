@@ -111,14 +111,14 @@ export const standardsData = [
 export const lessonId = 662;
 export const scriptId = 92;
 
-const scriptDataByScript = {
+const unitDataByUnit = {
   92: {
     csf: true,
     hasStandards: true,
     id: scriptId,
     path: '//localhost-studio.code.org:3000/s/coursea-2019',
     title: 'Course A (2019)',
-    stages: [
+    lessons: [
       {
         script_id: 92,
         script_name: 'coursea-2019',
@@ -139,7 +139,7 @@ const scriptDataByScript = {
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/1/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/stage/1/extras'
+          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/1/extras'
       },
       {
         script_id: scriptId,
@@ -161,7 +161,7 @@ const scriptDataByScript = {
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/2/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/stage/2/extras'
+          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/2/extras'
       },
       {
         script_id: scriptId,
@@ -184,13 +184,13 @@ const scriptDataByScript = {
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/3/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/stage/3/extras'
+          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/3/extras'
       }
     ]
   }
 };
 
-export const pluggedLesson = scriptDataByScript[scriptId].stages[1];
+export const pluggedLesson = unitDataByUnit[scriptId].lessons[1];
 
 const progress20 = levelProgressFromResult(20);
 
@@ -253,10 +253,10 @@ const selectedLessons = [
 // Construct state
 export const fakeState = {
   sectionProgress: {
-    scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: {92: {}}
+    unitDataByUnit: unitDataByUnit,
+    studentLevelProgressByUnit: {92: {}}
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {
@@ -268,10 +268,10 @@ export const fakeState = {
 
 export const stateForPartiallyCompletedLesson = {
   sectionProgress: {
-    scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: sectionPartialCompletedLesson
+    unitDataByUnit: unitDataByUnit,
+    studentLevelProgressByUnit: sectionPartialCompletedLesson
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {
@@ -282,10 +282,10 @@ export const stateForPartiallyCompletedLesson = {
 
 export const stateForCompletedLesson = {
   sectionProgress: {
-    scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: sectionCompletedLesson
+    unitDataByUnit: unitDataByUnit,
+    studentLevelProgressByUnit: sectionCompletedLesson
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {
@@ -296,10 +296,10 @@ export const stateForCompletedLesson = {
 
 export const stateForTeacherMarkedCompletedLesson = {
   sectionProgress: {
-    scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: sectionCompletedLesson
+    unitDataByUnit: unitDataByUnit,
+    studentLevelProgressByUnit: sectionCompletedLesson
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {
@@ -312,10 +312,10 @@ export const stateForTeacherMarkedCompletedLesson = {
 
 export const stateForTeacherMarkedIncompletedLesson = {
   sectionProgress: {
-    scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: sectionCompletedLesson
+    unitDataByUnit: unitDataByUnit,
+    studentLevelProgressByUnit: sectionCompletedLesson
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {
@@ -328,10 +328,10 @@ export const stateForTeacherMarkedIncompletedLesson = {
 
 export const stateForTeacherMarkedAndProgress = {
   sectionProgress: {
-    scriptDataByScript: scriptDataByScript,
-    studentLevelProgressByScript: sectionCompletedLesson
+    unitDataByUnit: unitDataByUnit,
+    studentLevelProgressByUnit: sectionCompletedLesson
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 92
   },
   sectionStandardsProgress: {

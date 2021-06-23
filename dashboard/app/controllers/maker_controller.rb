@@ -22,14 +22,14 @@ class MakerController < ApplicationController
   ScriptAndCourse = Struct.new(:script, :course)
 
   def self.maker_script(for_user)
-    maker_unit_scripts = Script.maker_unit_scripts.
+    maker_units = Script.maker_units.
         sort_by(&:version_year).
         reverse.
         freeze
     csd_courses = UnitGroup.all_courses.select {|c| c.family_name == UnitGroup::CSD}.freeze
-    # maker_years is a list of (script, course) tuples containing all visible versions of the CSD Unit on Maker.
+    # maker_years is a list of (script, course) tuples containing all launched versions of the CSD Unit on Maker.
     # Ordered from most recent to least.
-    maker_years = maker_unit_scripts.map do |s|
+    maker_years = maker_units.map do |s|
       ScriptAndCourse.new(s, csd_courses.find {|c| s.version_year == c.version_year})
     end.freeze
 
@@ -49,7 +49,7 @@ class MakerController < ApplicationController
     end
 
     # If none of the above applies, default to most recent.
-    maker_years.find {|y| y.script.is_stable?}.script
+    maker_years.find {|y| y.script.stable?}.script
   end
 
   def setup

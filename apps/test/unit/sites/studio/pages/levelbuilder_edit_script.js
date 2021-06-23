@@ -13,18 +13,18 @@ describe('the level builder page init script', () => {
     initPage({
       script: {
         name: 'Test script',
-        stages: [],
+        lessons: [],
         is_migrated: false,
-        scriptPath: '/s/test-script'
+        scriptPath: '/s/test-script',
+        publishedState: 'beta'
       },
       i18n: {
-        stageDescriptions: [],
+        lessonDescriptions: [],
         description:
           '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
         studentDescription:
           '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       },
-      beta: false,
       locales: [['English', 'en-US'], ['French', 'fr-FR']],
       script_families: ['coursea', 'csd1'],
       version_year_options: ['2017', '2018'],

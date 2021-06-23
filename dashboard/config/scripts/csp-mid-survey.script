@@ -1,6 +1,7 @@
 hidden false
 login_required true
 has_verified_resources true
+published_state 'preview'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
 lesson 'CSP Mid-year survey', display_name: 'CSP Mid-year survey', has_lesson_plan: false

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
+import CourseUnitsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseUnitsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
@@ -17,6 +17,7 @@ import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVers
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 class CourseEditor extends Component {
   static propTypes = {
@@ -25,14 +26,14 @@ class CourseEditor extends Component {
     initialVersionTitle: PropTypes.string,
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
-    initialVisible: PropTypes.bool.isRequired,
-    initialIsStable: PropTypes.bool.isRequired,
+    initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
+      .isRequired,
     initialPilotExperiment: PropTypes.string,
     initialDescriptionShort: PropTypes.string,
     initialDescriptionStudent: PropTypes.string,
     initialDescriptionTeacher: PropTypes.string,
     initialScriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
-    scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialTeacherResources: PropTypes.arrayOf(resourceShape),
     initialHasVerifiedResources: PropTypes.bool.isRequired,
     initialHasNumberedUnits: PropTypes.bool.isRequired,
@@ -67,7 +68,6 @@ class CourseEditor extends Component {
       descriptionStudent: this.props.initialDescriptionStudent,
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
-      visible: this.props.initialVisible,
       pilotExperiment: this.props.initialPilotExperiment,
       teacherResources: teacherResources,
       title: this.props.initialTitle,
@@ -77,15 +77,8 @@ class CourseEditor extends Component {
       hasNumberedUnits: this.props.initialHasNumberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
-      isStable: this.props.initialIsStable,
-      scriptsInCourse: this.props.initialScriptsInCourse,
-      publishedState: this.props.initialVisible
-        ? this.props.initialIsStable
-          ? 'Recommended'
-          : 'Preview'
-        : this.props.initialPilotExperiment
-        ? 'Pilot'
-        : 'Beta'
+      unitsInCourse: this.props.initialScriptsInCourse,
+      publishedState: this.props.initialPublishedState
     };
   }
 
@@ -112,10 +105,9 @@ class CourseEditor extends Component {
       has_numbered_units: this.state.hasNumberedUnits,
       family_name: this.state.familyName,
       version_year: this.state.versionYear,
-      is_stable: this.state.isStable,
-      visible: this.state.visible,
+      published_state: this.state.publishedState,
       pilot_experiment: this.state.pilotExperiment,
-      scripts: this.state.scriptsInCourse
+      scripts: this.state.unitsInCourse
     };
 
     if (this.props.migratedTeacherResources) {
@@ -131,7 +123,7 @@ class CourseEditor extends Component {
     }
 
     if (
-      this.state.publishedState === 'Pilot' &&
+      this.state.publishedState === PublishedState.pilot &&
       this.state.pilotExperiment === ''
     ) {
       this.setState({
@@ -165,7 +157,7 @@ class CourseEditor extends Component {
   };
 
   render() {
-    const {name, scriptNames, courseFamilies, versionYearOptions} = this.props;
+    const {name, unitNames, courseFamilies, versionYearOptions} = this.props;
     const {
       announcements,
       teacherResources,
@@ -179,9 +171,7 @@ class CourseEditor extends Component {
       familyName,
       versionYear,
       pilotExperiment,
-      isStable,
-      visible,
-      scriptsInCourse,
+      unitsInCourse,
       publishedState
     } = this.state;
     return (
@@ -267,8 +257,8 @@ class CourseEditor extends Component {
               type="checkbox"
               defaultChecked={hasVerifiedResources}
               style={styles.checkbox}
-              onChange={e =>
-                this.setState({hasVerifiedResources: e.target.value})
+              onChange={() =>
+                this.setState({hasVerifiedResources: !hasVerifiedResources})
               }
             />
           </label>
@@ -284,7 +274,9 @@ class CourseEditor extends Component {
               type="checkbox"
               defaultChecked={hasNumberedUnits}
               style={styles.checkbox}
-              onChange={e => this.setState({hasNumberedUnits: e.target.value})}
+              onChange={() =>
+                this.setState({hasNumberedUnits: !hasNumberedUnits})
+              }
             />
           </label>
           <AnnouncementsEditor
@@ -296,13 +288,9 @@ class CourseEditor extends Component {
 
         <CollapsibleEditorSection title="Publishing Settings">
           <CourseVersionPublishingEditor
-            visible={visible}
-            isStable={isStable}
             pilotExperiment={pilotExperiment}
             versionYear={versionYear}
             familyName={familyName}
-            updateVisible={visible => this.setState({visible})}
-            updateIsStable={isStable => this.setState({isStable})}
             updatePilotExperiment={pilotExperiment =>
               this.setState({pilotExperiment})
             }
@@ -351,17 +339,17 @@ class CourseEditor extends Component {
         <CollapsibleEditorSection title="Units">
           <label>
             <div>
-              The dropdown(s) below represent the ordered set of scripts in this
-              course. To remove a script, just set the dropdown to the default
+              The dropdown(s) below represent the ordered set of units in this
+              course. To remove a unit, just set the dropdown to the default
               (first) value.
             </div>
-            <CourseScriptsEditor
+            <CourseUnitsEditor
               inputStyle={styles.input}
-              scriptsInCourse={scriptsInCourse}
-              updateScriptsInCourse={scriptsInCourse =>
-                this.setState({scriptsInCourse})
+              unitsInCourse={unitsInCourse}
+              updateScriptsInCourse={unitsInCourse =>
+                this.setState({unitsInCourse})
               }
-              scriptNames={scriptNames}
+              unitNames={unitNames}
             />
           </label>
         </CollapsibleEditorSection>

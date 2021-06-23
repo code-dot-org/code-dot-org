@@ -2,52 +2,28 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
-
-const publishedStates = ['Pilot', 'Beta', 'Preview', 'Recommended'];
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
-    visible: PropTypes.bool.isRequired,
-    isStable: PropTypes.bool.isRequired,
     pilotExperiment: PropTypes.string,
     versionYear: PropTypes.string,
     familyName: PropTypes.string,
-    updateVisible: PropTypes.func.isRequired,
-    updateIsStable: PropTypes.func.isRequired,
     updatePilotExperiment: PropTypes.func.isRequired,
     updateFamilyName: PropTypes.func.isRequired,
     updateVersionYear: PropTypes.func.isRequired,
     families: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isCourse: PropTypes.bool,
-    publishedState: PropTypes.string.isRequired,
+    publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
     updatePublishedState: PropTypes.func.isRequired
   };
 
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
     this.props.updatePublishedState(newPublishedState);
-    switch (newPublishedState) {
-      case 'Pilot':
-        this.props.updateVisible(false);
-        this.props.updateIsStable(false);
-        break;
-      case 'Preview':
-        this.props.updatePilotExperiment('');
-        this.props.updateVisible(true);
-        this.props.updateIsStable(false);
-        break;
-      case 'Recommended':
-        this.props.updatePilotExperiment('');
-        this.props.updateVisible(true);
-        this.props.updateIsStable(true);
-        break;
-      case 'Beta':
-      default:
-        this.props.updatePilotExperiment('');
-        this.props.updateVisible(false);
-        this.props.updateIsStable(false);
-        break;
+    if (newPublishedState !== PublishedState.pilot) {
+      this.props.updatePilotExperiment('');
     }
   };
 
@@ -99,7 +75,7 @@ export default class CourseVersionPublishingEditor extends Component {
             style={styles.dropdown}
             onChange={this.handlePublishedStateChange}
           >
-            {publishedStates.map(state => (
+            {Object.values(PublishedState).map(state => (
               <option key={state} value={state}>
                 {state}
               </option>
@@ -132,21 +108,21 @@ export default class CourseVersionPublishingEditor extends Component {
                   <td style={styles.tableBorder}>Preview</td>
                   <td style={styles.tableBorder}>
                     The course is now a choice in the dropdown that is
-                    assignable but is not the recommended course.
+                    assignable.
                   </td>
                 </tr>
                 <tr>
-                  <td style={styles.tableBorder}>Recommended</td>
+                  <td style={styles.tableBorder}>Stable</td>
                   <td style={styles.tableBorder}>
-                    The course is the recommended course. It is assignable and
-                    we try to get teachers to use this course.
+                    A course that is not changing. If it is the most recent
+                    course in your language it will be the recommended course.
                   </td>
                 </tr>
               </tbody>
             </table>
           </HelpTip>
         </label>
-        {this.props.publishedState === 'Pilot' && (
+        {this.props.publishedState === PublishedState.pilot && (
           <label>
             Pilot Experiment
             <HelpTip>

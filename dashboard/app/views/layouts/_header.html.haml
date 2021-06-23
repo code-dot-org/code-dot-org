@@ -1,9 +1,10 @@
 :ruby
   require 'cdo/language_dir'
 
-  script = local_assigns[:script] || Script.twenty_hour_script
+  script = local_assigns[:script] || Script.twenty_hour_unit
   script_level = local_assigns[:script_level]
   level = local_assigns[:level]
+  lesson = local_assigns[:lesson]
   full_width = local_assigns[:full_width]
 
   show_bug_links = script_level || (level && level.try(:is_project_level))
@@ -31,6 +32,7 @@
   hamburger_options = {}
   hamburger_options[:level] = level
   hamburger_options[:script_level] = script_level
+  hamburger_options[:lesson] = lesson
   hamburger_options[:user_type] = user_type
   hamburger_options[:language] = request.language
   hamburger_options[:show_gallery] = true
@@ -43,7 +45,7 @@
   header_contents_options[:loc_prefix] = "nav.header."
   header_contents_options[:page_mode] = request.cookies['pm']
 
-  should_show_progress = script_level || @stage_extras
+  should_show_progress = script_level || @lesson_extras
 
   sign_in_user = current_user || user_type && OpenStruct.new(
     id: nil,
@@ -107,16 +109,16 @@
 
     script_data = script.summarize_header
     lesson_group_data = script.lesson_groups.map(&:summarize)
-    stage_data = (@lesson || script_level.lesson).summarize(include_bonus_levels = true)
+    lesson_data = (@lesson || script_level.lesson).summarize(include_bonus_levels = true)
     # If caching, we don't know the sign in state, and should be nil
     signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
 
     # Pass script name through to header
-    if @stage_extras
+    if @lesson_extras
       text = @lesson.localized_title
     else
-      stage = @lesson || @script_level.lesson
-      text = @script.professional_learning_course? ? stage.localized_name : stage.localized_title
+      lesson = @lesson || @script_level.lesson
+      text = @script.professional_learning_course? ? lesson.localized_name : lesson.localized_title
     end
 
     # Pass along section_id param so that when teacher moves between lesson
@@ -140,7 +142,7 @@
     dashboard.header.build(
       #{script_data.to_json},
       #{lesson_group_data.to_json},
-      #{stage_data.to_json},
+      #{lesson_data.to_json},
       #{user_progress},
       "#{script_level&.level_id || -1}",
       #{puzzle_page},

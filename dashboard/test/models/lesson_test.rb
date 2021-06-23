@@ -88,7 +88,7 @@ class LessonTest < ActiveSupport::TestCase
   test "summary of levels for lesson plan" do
     script = create :script
     level = create :level
-    lesson = create :lesson, script: script, name: 'My Stage'
+    lesson = create :lesson, script: script, name: 'My Lesson'
     script_level = create :script_level, script: script, lesson: lesson, levels: [level]
 
     expected_summary_of_levels = [
@@ -398,7 +398,7 @@ class LessonTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level1]
     create :script_level, script: script, lesson: lesson, activity_section: section, activity_section_position: 2, levels: [level2], bonus: true
 
-    levels_data = lesson.summarize_for_script_edit[:levels]
+    levels_data = lesson.summarize_for_unit_edit[:levels]
     assert_equal 2, levels_data.length
     refute levels_data.first[:bonus]
     assert levels_data.last[:bonus]
@@ -656,7 +656,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 4, summaries.count
     expected_summary = {
-      scriptTitle: "script6",
+      unitTitle: "script6",
       versionYear: nil,
       lockable: false,
       relativePosition: 1,
@@ -666,7 +666,7 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal expected_summary, summaries[0]
 
     expected_summary = {
-      scriptTitle: "script0",
+      unitTitle: "script0",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
@@ -716,7 +716,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 2, summaries.count
     expected_summary = {
-      scriptTitle: "script4",
+      unitTitle: "script4",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
@@ -780,7 +780,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 3, summaries.count
     expected_summary = {
-      scriptTitle: "script4",
+      unitTitle: "script4",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
@@ -824,7 +824,7 @@ class LessonTest < ActiveSupport::TestCase
     script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some Verbose Lesson Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some+Verbose+Lesson+Name.pdf"
     )
   end
 
@@ -836,7 +836,7 @@ class LessonTest < ActiveSupport::TestCase
     script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.student_lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some Verbose Lesson Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some+Verbose+Lesson+Name.pdf"
     )
   end
 
@@ -846,7 +846,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
 
     assert_equal(
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name} - Resources.pdf",
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name}+-+Resources.pdf",
       lesson.script_resource_pdf_url
     )
   end
@@ -985,6 +985,35 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @original_lesson.standards, copied_lesson.standards
       assert_equal @original_lesson.opportunity_standards, copied_lesson.opportunity_standards
       assert_equal @original_lesson.programming_expressions, copied_lesson.programming_expressions
+    end
+
+    test "variants are removed when cloning lesson into another script" do
+      lesson_activity = create :lesson_activity, lesson: @original_lesson
+      activity_section = create :activity_section, lesson_activity: lesson_activity
+      level1 = create :maze, name: 'level 1', level_num: 'custom'
+      level2 = create :maze, name: 'level 2', level_num: 'custom'
+      sl = create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
+        activity_section: activity_section, activity_section_position: 1
+      sl.add_variant(level2)
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = @original_lesson.copy_to_script(@destination_script)
+      assert_equal 1, copied_lesson.script_levels.length
+      assert_equal level2, copied_lesson.script_levels[0].oldest_active_level
+    end
+
+    test "levels are cloned when new_level_suffix is passed in" do
+      lesson_activity = create :lesson_activity, lesson: @original_lesson
+      activity_section = create :activity_section, lesson_activity: lesson_activity, progression_name: 'progression'
+      level1 = create :maze, name: 'level 1', level_num: 'custom'
+      create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
+        activity_section: activity_section, activity_section_position: 1
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = @original_lesson.copy_to_script(@destination_script, '_2000')
+      assert_equal 1, copied_lesson.script_levels.length
+      refute_equal level1, copied_lesson.script_levels[0].oldest_active_level
+      assert_equal 'progression', copied_lesson.script_levels[0].progression
     end
 
     test "can clone lesson with duplicated resources and vocab into another script" do

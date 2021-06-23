@@ -1,2 +1,10 @@
 {
+  "it-IT": {
+    "data": {
+      "bubble_choice_description": {
+        "outbreak4": "Cambia il funzionamento della simulazione e fai una previsione su ciò che accadrà.",
+        "outbreak5": "Aiuta i tuoi personaggi a migliorare automaticamente nel tempo!"
+      }
+    }
+  }
 }

@@ -548,6 +548,8 @@ tr:
         codebreak_e10: 'Kod Kırma 10.0: Kat Graham ve Kate Park ile Yapay Zeka'
         codebreak_e11: 'Kod Kırma 11.0: Susan Wojcicki ve China Anne McClain ile Soyut Düşünme'
         codebreak_e12: 'Kod Kırma 12.0: Aloe Blacc, Bret Taylor, & Paula Mejia ile Donanım'
+        playlab_2021: Oyun laboratuarı için giriş
+        playlab_2021_reader: Oyun laboratuarı için giriş
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

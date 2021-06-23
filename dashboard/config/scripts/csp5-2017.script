@@ -7,7 +7,7 @@ has_verified_resources true
 new_name 'csp5-2017'
 family_name 'csp5'
 version_year '2017'
-is_stable true
+published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSP'
 tts true
@@ -117,8 +117,8 @@ level 'U5 AP Create Practice onEvent Doesnt Count', progression: '(new) AP Pract
 
 lesson 'Unit 5 Assessment 1', display_name: 'Unit 5 Assessment 1', lockable: true, has_lesson_plan: false
 variants
-  level 'csp_affirmation_control_5', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_5', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_control_5', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
 endvariants
 level 'CSP Unit 5 Cumulative Assessment 1 MC', assessment: true
 
@@ -214,8 +214,8 @@ level 'U5 AP Practice Create Algorithm Color Sleuth', progression: '(new) AP Pra
 
 lesson 'Unit 5 Assessment 2', display_name: 'Unit 5 Assessment 2', lockable: true, has_lesson_plan: false
 variants
-  level 'csp_affirmation_control_5', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_5', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_control_5', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
 endvariants
 level 'CSP Unit 5 Cumulative Assessment 2 MC', assessment: true
 

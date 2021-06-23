@@ -814,14 +814,14 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_visible_progression_level, no progress, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     assert twenty_hour.script_levels.first.level.unplugged?
     assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
   end
 
   test 'can get next_unpassed_visible_progression_level, progress, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     second_script_level = twenty_hour.get_script_level_by_chapter(2)
     UserLevel.create(
       user: user,
@@ -835,7 +835,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_visible_progression_level, user skips level, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     first_script_level = twenty_hour.get_script_level_by_chapter(1)
     UserLevel.create(
       user: user,
@@ -859,7 +859,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_visible_progression_level, out of order progress, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     first_script_level = twenty_hour.get_script_level_by_chapter(1)
     UserLevel.create(
       user: user,
@@ -892,7 +892,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_visible_progression_level, completed script, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
 
     twenty_hour.script_levels.each do |sl|
       UserLevel.create(
@@ -909,7 +909,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
 
     twenty_hour.script_levels.take(3).each do |sl|
       UserLevel.create(
@@ -934,7 +934,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_progression_level if not completed any unplugged levels' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     twenty_hour.script_levels.each do |script_level|
       next if script_level.level.game.unplugged? # skip all unplugged
       next if script_level.chapter > 33
@@ -952,7 +952,7 @@ class UserTest < ActiveSupport::TestCase
   test 'can get next_unpassed_progression_level, not tainted by other user progress' do
     user = create :user
     other_user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter > 33
       UserLevel.create(
@@ -968,7 +968,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_progression_level when most recent level is not passed' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
 
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter != 3
@@ -988,7 +988,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_progression_level when most recent level is last level' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
 
     script_level = twenty_hour.script_levels.last
     UserLevel.create(
@@ -3196,13 +3196,13 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', hidden: true
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.any_visible_assigned_scripts?
     end
 
     test "it checks for assigned scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script'
+      visible_script = create :script, name: 'visible-script', published_state: SharedConstants::PUBLISHED_STATE.stable
       @student.assign_script(visible_script)
       assert @student.any_visible_assigned_scripts?
     end
@@ -3212,13 +3212,13 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned courses and scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', hidden: true
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.assigned_course_or_script?
     end
 
     test "it checks for assigned courses and scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script'
+      visible_script = create :script, name: 'visible-script', published_state: SharedConstants::PUBLISHED_STATE.preview
       @student.assign_script(visible_script)
       assert @student.assigned_course_or_script?
     end
@@ -3310,12 +3310,12 @@ class UserTest < ActiveSupport::TestCase
       student = create :student
       teacher = create :teacher
 
-      unit_group = create :unit_group, name: 'testcourse'
-      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1'), position: 1
-      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2'), position: 2
+      unit_group = create :unit_group, name: 'testcourse', published_state: SharedConstants::PUBLISHED_STATE.stable
+      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1', published_state: SharedConstants::PUBLISHED_STATE.stable), position: 1
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2', published_state: SharedConstants::PUBLISHED_STATE.stable), position: 2
       create :user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day)
 
-      other_script = create :script, name: 'otherscript'
+      other_script = create :script, name: 'otherscript', published_state: SharedConstants::PUBLISHED_STATE.stable
       create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
 
       section = create :section, user_id: teacher.id, unit_group: unit_group
@@ -3608,11 +3608,11 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
 
-    section1 = create :section, stage_extras: true, script_id: script.id, user: teacher
+    section1 = create :section, lesson_extras: true, script_id: script.id, user: teacher
     section1.add_student(student)
-    section2 = create :section, stage_extras: true, script_id: script.id, user: teacher
+    section2 = create :section, lesson_extras: true, script_id: script.id, user: teacher
     section2.add_student(student)
-    section3 = create :section, stage_extras: true, script_id: other_script.id
+    section3 = create :section, lesson_extras: true, script_id: other_script.id
     section3.add_student(teacher)
 
     assert student.lesson_extras_enabled?(script)
@@ -3699,7 +3699,7 @@ class UserTest < ActiveSupport::TestCase
     test 'can get next_unpassed_visible_progression_level, progress, hidden' do
       student = create :student
       teacher = create :teacher
-      twenty_hour = Script.twenty_hour_script
+      twenty_hour = Script.twenty_hour_unit
 
       # User completed the second lesson
       twenty_hour.lessons[1].script_levels.each do |sl|
@@ -3727,7 +3727,7 @@ class UserTest < ActiveSupport::TestCase
     test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, first hidden' do
       student = create :student
       teacher = create :teacher
-      twenty_hour = Script.twenty_hour_script
+      twenty_hour = Script.twenty_hour_unit
 
       UserLevel.create(
         user: student,
@@ -3985,7 +3985,7 @@ class UserTest < ActiveSupport::TestCase
 
     # No UserScript if we only have channel tokens elsewhere
     user = create :student
-    channel_token = create :channel_token, level: Script.twenty_hour_script.levels.first, storage_user: user
+    channel_token = create :channel_token, level: Script.twenty_hour_unit.levels.first, storage_user: user
     user.generate_progress_from_storage_id(channel_token.storage_id, script.name)
 
     user_scripts = UserScript.where(user: user)
@@ -4043,7 +4043,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'user_levels_by_user_by_level' do
     users = (1..3).map {create :user}
-    script = Script.twenty_hour_script
+    script = Script.twenty_hour_unit
     script_levels = script.script_levels.first(2)
     script_levels.each do |script_level|
       users.first(2).each do |user|

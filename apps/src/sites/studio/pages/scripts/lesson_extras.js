@@ -22,15 +22,15 @@ config.bonusLevels = config.bonusLevels.map(bonus => {
 ReactDOM.render(
   <Provider store={store}>
     <LessonExtras
-      lessonNumber={config.stageNumber}
-      nextLessonNumber={config.nextStageNumber}
+      lessonNumber={config.lessonNumber}
+      nextLessonNumber={config.nextLessonNumber}
       nextLevelPath={config.nextLevelPath}
       bonusLevels={config.bonusLevels}
       showProjectWidget={showProjectWidget}
       projectTypes={projectTypes}
       sectionId={viewer.section_id}
       userId={viewer.user_id}
-      showLessonExtrasWarning={viewer.show_stage_extras_warning}
+      showLessonExtrasWarning={viewer.show_lesson_extras_warning}
     />
   </Provider>,
   document.querySelector('#lesson-extras')

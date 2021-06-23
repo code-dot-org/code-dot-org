@@ -40,7 +40,7 @@ class ScriptsController < ApplicationController
 
     # Lastly, if user is assigned to newer version of this script, we will
     # ask if they want to be redirected to the newer version.
-    @redirect_script_url = @script.redirect_to_script_url(current_user, locale: request.locale)
+    @redirect_script_url = @script.redirect_to_unit_url(current_user, locale: request.locale)
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
@@ -73,6 +73,7 @@ class ScriptsController < ApplicationController
   end
 
   def create
+    return head :bad_request unless general_params[:is_migrated]
     @script = Script.new(script_params)
     if @script.save && @script.update_text(script_params, params[:script_text], i18n_params, general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
@@ -105,7 +106,7 @@ class ScriptsController < ApplicationController
     raise "The new script editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {
-      script: @script ? @script.summarize_for_script_edit : {},
+      script: @script ? @script.summarize_for_unit_edit : {},
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       levelKeyList: @script.is_migrated ? Level.key_list : {},
@@ -129,7 +130,7 @@ class ScriptsController < ApplicationController
     script_text = params[:script_text]
     if @script.update_text(script_params, script_text, i18n_params, general_params)
       @script.reload
-      render json: @script.summarize_for_script_edit
+      render json: @script.summarize_for_unit_edit
     else
       render(status: :not_acceptable, json: @script.errors)
     end
@@ -207,7 +208,7 @@ class ScriptsController < ApplicationController
   def set_script
     script_id = params[:id]
     @script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
-      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
+      Script.get_unit_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
       Script.get_from_cache(script_id)
     raise ActiveRecord::RecordNotFound unless @script
 
@@ -226,7 +227,7 @@ class ScriptsController < ApplicationController
 
   def general_params
     h = params.permit(
-      :hidden,
+      :published_state,
       :deprecated,
       :curriculum_umbrella,
       :family_name,
@@ -244,7 +245,6 @@ class ScriptsController < ApplicationController
       :lesson_extras_available,
       :has_verified_resources,
       :tts,
-      :is_stable,
       :is_course,
       :show_calendar,
       :weekly_instructional_minutes,
@@ -263,6 +263,10 @@ class ScriptsController < ApplicationController
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
+
+    # Temporary transition code used to update hidden since it needs a value until we remove it
+    h[:hidden] = true
+
     h
   end
 

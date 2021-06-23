@@ -5,11 +5,13 @@
     "hidden": true,
     "login_required": true,
     "properties": {
-      "professional_learning_course": "K5 Support"
+      "professional_learning_course": "K5 Support",
+      "pilot_experiment": "csf-online-pd-kodea"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-27 17:40:06 UTC",
+    "serialized_at": "2021-06-17 22:31:34 UTC",
+    "published_state": "pilot",
     "seeding_key": {
       "script.name": "kodea-pd-2021"
     }

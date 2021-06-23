@@ -71,11 +71,18 @@ class Lesson < ApplicationRecord
     assessment_opportunities
   )
 
-  # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
-  # numbers the lessons in order in two groups 1. lessons that are numbered on the script overview page (lockable false OR has_lesson_plan true)
-  # 2. lessons that are not numbered on the script overview page (lockable true AND has_lesson_plan false)
+  # A lesson has an absolute position and a relative position. The difference
+  # between the two is that relative_position numbers the lessons in order in
+  # two groups
+  #
+  # 1. lessons that are numbered on the script overview page (lockable false OR
+  # has_lesson_plan true)
+  # 2. lessons that are not numbered on the script overview page (lockable true
+  # AND has_lesson_plan false)
+  #
   # if we have two lessons without lesson plans that are lockable followed by a
-  # lesson that is not lockable, the third lesson will have an absolute_position of 3 but a relative_position of 1
+  # lesson that is not lockable, the third lesson will have an
+  # absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
   validates_uniqueness_of :key, scope: :script_id
@@ -125,7 +132,7 @@ class Lesson < ApplicationRecord
   end
 
   def self.prevent_changing_stable_i18n_key(script, raw_lesson)
-    if script.is_stable && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
+    if script.stable? && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
 
       raise "Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
     end
@@ -164,16 +171,28 @@ class Lesson < ApplicationRecord
     relative_position.to_s
   end
 
+  def get_script_level_by_id
+    # if Scripts are cached, then we do in-memory filtering to avoid a database
+    # hit. If Scripts are NOT cached, then we want to find by a query in order
+    # to _minimize_ the database hit.
+    if Script.should_cache?
+      script_levels = script.script_levels.select {|sl| sl.stage_id == id}
+      return script_levels.first
+    else
+      return script.script_levels.find_by(stage_id: id)
+    end
+  end
+
   def unplugged_lesson?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.unplugged?
+    script_level = get_script_level_by_id
+    return false unless script_level.present?
+    script_level.oldest_active_level.unplugged?
   end
 
   def spelling_bee?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.spelling_bee?
+    script_level = get_script_level_by_id
+    return false unless script_level.present?
+    script_level.oldest_active_level.spelling_bee?
   end
 
   # We number lessons that either have lesson plans or are not lockable
@@ -335,7 +354,7 @@ class Lesson < ApplicationRecord
   #
   # TODO: [PLAT-369] trim down to only include those fields needed on the
   # script edit page
-  def summarize_for_script_edit
+  def summarize_for_unit_edit
     summary = summarize(true, for_edit: true).dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = name
@@ -379,7 +398,7 @@ class Lesson < ApplicationRecord
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
-      scriptIsVisible: !script.hidden,
+      unitIsLaunched: script.launched?,
       scriptPath: script_path(script),
       lessonPath: script_lesson_path(script, self),
       lessonExtrasAvailableForScript: script.lesson_extras_available
@@ -700,7 +719,7 @@ class Lesson < ApplicationRecord
   def summarize_related_lessons
     related_lessons.map do |lesson|
       {
-        scriptTitle: lesson.script.localized_title,
+        unitTitle: lesson.script.localized_title,
         versionYear: lesson.script.get_course_version&.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
@@ -730,88 +749,93 @@ class Lesson < ApplicationRecord
   # - be migrated
   # - be in a course version
   # - be in course versions from the same version year
-  def copy_to_script(destination_script)
+  def copy_to_script(destination_script, new_level_suffix = nil)
     return if script == destination_script
-    raise 'Both lesson and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
-    raise 'Destination script and lesson must be in a course version' if destination_script.get_course_version.nil? || script.get_course_version.nil?
-    raise 'Destination script must have the same version year as the lesson' unless destination_script.get_course_version.version_year == script.get_course_version.version_year
+    raise 'Both lesson and unit must be migrated' unless script.is_migrated? && destination_script.is_migrated?
+    raise 'Destination unit and lesson must be in a course version' if destination_script.get_course_version.nil? || script.get_course_version.nil?
 
-    ActiveRecord::Base.transaction do
-      copied_lesson = dup
-      copied_lesson.key = copied_lesson.name
-      copied_lesson.script_id = destination_script.id
+    copied_lesson = dup
+    copied_lesson.key = copied_lesson.name
+    copied_lesson.script_id = destination_script.id
 
-      destination_lesson_group = destination_script.lesson_groups.last
-      unless destination_lesson_group
-        destination_lesson_group = LessonGroup.create!(script: destination_script, position: 1, user_facing: false, key: 'new-lesson-group')
-        Script.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_script.name)
-      end
-      copied_lesson.lesson_group_id = destination_lesson_group.id
-
-      copied_lesson.absolute_position = destination_script.lessons.count + 1
-      copied_lesson.relative_position =
-        destination_script.lessons.select {|l| copied_lesson.numbered_lesson? == l.numbered_lesson?}.length + 1
-
-      copied_lesson.save!
-
-      # Copy lesson activities, activity sections, and script levels
-      copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
-        copied_lesson_activity = original_lesson_activity.dup
-        copied_lesson_activity.key = SecureRandom.uuid
-        copied_lesson_activity.lesson_id = copied_lesson.id
-        copied_lesson_activity.save!
-        copied_lesson_activity.activity_sections = original_lesson_activity.activity_sections.map do |original_activity_section|
-          copied_activity_section = original_activity_section.dup
-          copied_activity_section.key = SecureRandom.uuid
-          copied_activity_section.lesson_activity_id = copied_lesson_activity.id
-          copied_activity_section.save!
-          sl_data = original_activity_section.script_levels.map.with_index(1) {|l, pos| JSON.parse({assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: pos}.to_json)}
-          copied_activity_section.update_script_levels(sl_data) unless sl_data.blank?
-          copied_activity_section
-        end
-        copied_lesson_activity
-      end
-
-      # Copy objectives
-      copied_lesson.objectives = objectives.map do |original_objective|
-        copied_objective = original_objective.dup
-        copied_objective.key = SecureRandom.uuid
-        copied_objective
-      end
-
-      # Copy programming expressions and standards associations
-      copied_lesson.programming_expressions = programming_expressions
-      copied_lesson.standards = standards
-      copied_lesson.opportunity_standards = opportunity_standards
-
-      # Copy objects that require course version, i.e. resources and vocab
-      course_version = destination_script.get_course_version
-      copied_lesson.resources = resources.map do |original_resource|
-        persisted_resource = Resource.where(name: original_resource.name, url: original_resource.url, course_version_id: course_version.id).first
-        if persisted_resource
-          persisted_resource
-        else
-          copied_resource = Resource.create!(original_resource.attributes.slice('name', 'url', 'properties').merge({course_version_id: course_version.id}))
-          copied_resource
-        end
-      end.uniq
-
-      copied_lesson.vocabularies = vocabularies.map do |original_vocab|
-        persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
-        if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
-          persisted_vocab
-        else
-          copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
-          copied_vocab
-        end
-      end.uniq
-
-      copied_lesson.save!
-      Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_script.name)
-      destination_script.fix_script_level_positions
-      destination_script.write_script_json
-      copied_lesson
+    destination_lesson_group = destination_script.lesson_groups.last
+    unless destination_lesson_group
+      destination_lesson_group = LessonGroup.create!(script: destination_script, position: 1, user_facing: false, key: 'new-lesson-group')
+      Script.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_script.name)
     end
+    copied_lesson.lesson_group_id = destination_lesson_group.id
+
+    copied_lesson.absolute_position = destination_script.lessons.count + 1
+    copied_lesson.relative_position =
+      destination_script.lessons.select {|l| copied_lesson.numbered_lesson? == l.numbered_lesson?}.length + 1
+
+    copied_lesson.save!
+
+    # Copy lesson activities, activity sections, and script levels
+    copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
+      copied_lesson_activity = original_lesson_activity.dup
+      copied_lesson_activity.key = SecureRandom.uuid
+      copied_lesson_activity.lesson_id = copied_lesson.id
+      copied_lesson_activity.save!
+      copied_lesson_activity.activity_sections = original_lesson_activity.activity_sections.map do |original_activity_section|
+        copied_activity_section = original_activity_section.dup
+        copied_activity_section.key = SecureRandom.uuid
+        copied_activity_section.lesson_activity_id = copied_lesson_activity.id
+        copied_activity_section.save!
+        sl_data = original_activity_section.script_levels.map.with_index(1) do |original_script_level, pos|
+          # Only include active level and discard variants
+          original_active_level = original_script_level.oldest_active_level
+          copied_level = new_level_suffix.blank? ? original_active_level : original_active_level.clone_with_suffix(new_level_suffix)
+          {
+            "activitySectionPosition" => pos,
+            "assessment" => original_script_level.assessment,
+            "bonus" => original_script_level.bonus,
+            "challenge" => original_script_level.challenge,
+            "levels" => [copied_level]
+          }
+        end
+        copied_activity_section.update_script_levels(sl_data) unless sl_data.blank?
+        copied_activity_section
+      end
+      copied_lesson_activity
+    end
+
+    # Copy objectives
+    copied_lesson.objectives = objectives.map do |original_objective|
+      copied_objective = original_objective.dup
+      copied_objective.key = SecureRandom.uuid
+      copied_objective
+    end
+
+    # Copy programming expressions and standards associations
+    copied_lesson.programming_expressions = programming_expressions
+    copied_lesson.standards = standards
+    copied_lesson.opportunity_standards = opportunity_standards
+
+    # Copy objects that require course version, i.e. resources and vocab
+    course_version = destination_script.get_course_version
+    copied_lesson.resources = resources.map {|r| r.copy_to_course_version(course_version)}.uniq
+
+    copied_lesson.vocabularies = vocabularies.map do |original_vocab|
+      persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
+      if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
+        persisted_vocab
+      else
+        copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
+        copied_vocab
+      end
+    end.uniq
+
+    copied_lesson.save!
+    Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_script.name)
+    destination_script.fix_script_level_positions
+    destination_script.write_script_json
+    copied_lesson
+  end
+
+  def report_bug_url(request)
+    message = "Bug in Lesson #{name}\n#{request.url}\n#{request.user_agent}\n"
+    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
   private
