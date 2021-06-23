@@ -2461,26 +2461,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Duplicate Lesson Group. Lesson Group: content is used twice in Script: lesson-group-test-script.', raise.message
   end
 
-  test 'raises error if trying to create a lesson group with no lessons in it' do
-    l1 = create :level
-    dsl = <<-SCRIPT
-      lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-
-      lesson_group 'required', display_name: 'Overview'
-
-    SCRIPT
-
-    raise = assert_raises do
-      Script.add_unit(
-        {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal 'Every lesson group should have at least one lesson. Lesson Group required has no lessons.', raise.message
-  end
-
   test 'lessons with the same lesson group name are associated with the same lesson group' do
     l1 = create :level
     l2 = create :level
