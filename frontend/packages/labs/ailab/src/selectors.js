@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect';
 import { ColumnTypes } from "./constants.js";
 import { getUniqueOptions, getExtrema } from './helpers/columnDetails';
+import { filterColumnsByType } from './redux';
 
 const getData = state => state.data;
 const getColumnsByDataType = state => state.columnsByDataType;
@@ -13,9 +14,7 @@ const getCurrentColumn = state => state.currentColumn;
 export const getCategoricalColumns = createSelector(
   [getColumnsByDataType],
   (columnsByDataType) => {
-    return Object.keys(columnsByDataType).filter(
-      column => columnsByDataType[column] === ColumnTypes.CATEGORICAL
-    );
+    return filterColumnsByType(columnsByDataType, ColumnTypes.CATEGORICAL);
   }
 )
 
@@ -24,7 +23,7 @@ export const getSelectedCategoricalColumns = createSelector(
   (categoricalColumns, selectedFeatures, labelColumn) => {
     return categoricalColumns.filter(
       column => (selectedFeatures.includes(column) || column === labelColumn)
-    )
+    );
   }
 )
 
@@ -40,9 +39,7 @@ export const getSelectedCategoricalFeatures = createSelector(
 export const getNumericalColumns = createSelector(
   [getColumnsByDataType],
   (columnsByDataType) => {
-    return Object.keys(columnsByDataType).filter(
-      column => columnsByDataType[column] === ColumnTypes.NUMERICAL
-    );
+    return filterColumnsByType(columnsByDataType, ColumnTypes.NUMERICAL);
   }
 )
 

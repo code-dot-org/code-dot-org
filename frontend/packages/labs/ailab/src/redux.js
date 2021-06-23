@@ -678,14 +678,14 @@ export function readyToTrain(state) {
 
 /* Functions for filtering and selecting columns by type.  */
 
-function filterColumnsByType(state, columnType) {
-  return Object.keys(state.columnsByDataType).filter(
-    column => state.columnsByDataType[column] === columnType
+export function filterColumnsByType(columnsByDataType, columnType) {
+  return Object.keys(columnsByDataType).filter(
+    column => columnsByDataType[column] === columnType
   );
 }
 
 function getCategoricalColumns(state) {
-  return filterColumnsByType(state, ColumnTypes.CATEGORICAL);
+  return filterColumnsByType(state.columnsByDataType, ColumnTypes.CATEGORICAL);
 }
 
 export function getSelectedCategoricalColumns(state) {
