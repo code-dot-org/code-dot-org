@@ -1,19 +1,21 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2021-06-22T16:38:48.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "long_instructions": "In `MyFoodTruck.java`, create a food truck that serves strawberry shortcake by doing the following:\r\n\r\n1. Create a `Cake` object called `strawberryShortcake`.\r\n\r\n2. Pass `\"Katie\"` as the owner and `strawberryShortcake` as the `newDessert` to the `FoodTruck` constructor. Both `Dessert` and `Cake` objects can be passed as the `newDessert` argument of the `FoodTruck` constructor because `Cake` inherits from `Dessert`. `Cake` is a `Dessert`!\r\n\r\n3. `Cake` objects can be stored in variables of type `Dessert` too! Change the type of the variable `strawberryShortcake` from `Cake` to `Dessert` and rerun your code.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA U2L7 Template"
   },
-  "published": true
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-06-22T16:38:48.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-23 16:29:48 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
