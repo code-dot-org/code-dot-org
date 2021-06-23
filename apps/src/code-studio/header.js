@@ -59,7 +59,7 @@ var header = {};
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
  * @param {boolean} lessonExtrasEnabled Whether this user is in a section with
- *   lessonExtras enabled for this script
+ *   lessonExtras enabled for this unit
  * @param {boolean} isLessonExtras Boolean indicating we are not on a script
  *   level and therefore are on lesson extras
  */
@@ -72,7 +72,7 @@ header.build = function(
   currentPageNumber,
   signedIn,
   lessonExtrasEnabled,
-  scriptNameData,
+  unitNameData,
   isLessonExtras
 ) {
   scriptData = scriptData || {};
@@ -106,9 +106,9 @@ header.build = function(
     ReactDOM.render(
       <Provider store={store}>
         <HeaderMiddle
-          scriptNameData={scriptNameData}
+          unitNameData={unitNameData}
           lessonData={lessonData}
-          scriptData={scriptData}
+          unitData={scriptData}
           currentLevelId={currentLevelId}
           linesOfCodeText={linesOfCodeText}
         />

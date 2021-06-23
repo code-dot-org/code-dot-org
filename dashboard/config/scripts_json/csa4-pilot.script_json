@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:01:29 UTC",
+    "serialized_at": "2021-06-22 15:20:06 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -145,6 +145,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "Students differentiate between comparisons of objects and primitive values. Students explore the effects of using `==` or `!=` with objects to identify the need for the `equals()` method to compare object data.",
+        "preparation": "* For each pair of students, prepare:\n   * One copy of the Comparing Objects activity guide\n   * Object References Manipulatives and three paper clip chains\n   * 5-6 sticky notes",
+        "student_overview": "We have compared two `int`s or `double`s for equality, but how do we compare objects? Can two `String`s be equal? What about two donuts? You discover how to test two objects for equality and implement your findings in the Pop the Balloons game."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -160,6 +163,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "Students review `if/else` statements and use them to implement alternate actions based on the outcome of a Boolean expression. Students apply `if/else` statements to access elements from arrays and use `Math.random()` to access random elements. `if/else` statements are then implemented in the Pop the Balloons game to check the validity of a move.",
+        "student_overview": "You review `if/else` statements and use them to implement alternate actions based on the outcome of a Boolean expression. You apply `if/else` statements to access elements from arrays and use `Math.random()` to access random elements. You then implement `if/else` statements in the Pop the Balloons game to check whether a move is valid."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -175,6 +180,8 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "Students use `if/else-if/else` statements to evaluate multiple conditions to select a specific desired outcome. Students develop the balloon display feature of the Pop the Balloons game using `if/else-if/else` statements to change the image of the balloon if it has been popped.",
+        "student_overview": "Today is all about evaluating multiple conditions to select a specific desired outcome. In The Neighborhood, you use `if/else-if/else` statements to solve problems for the `Painter`. You then implement `if/else-if/else` statements in the Pop the Balloons game to update the picture of the balloon if it has been popped. "
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -190,6 +197,8 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "Students explore problems involving multiple conditions and write nested `if` statements to create solutions for these problems. Students write expressions involving logical operators in conditional statements and identify the effect of logical operators on the outcome of the expression. Nested `if` statements and logical operators are then implemented in the Pop the Balloons game to check how many moves are left and calculate the score.",
+        "student_overview": "You learn how to write nested `if` statements and expressions involving three logical operators. You simplify more complex multiple conditionals using logical operators to solve problems. You revisit The Neighborhood and add nested `if` statements to solve a given problem for the `Painter`. You then implement nested `if` statements and logical operators in the Pop the Balloons game to check how many moves are left and calculate the game's score."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -205,6 +214,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "Students learn how to construct truth tables to represent compound Boolean expressions. Students work together to use truth tables to prove De Morgan’s Laws and explore open-source code.",
+        "preparation": "* Print one-sided copies of the Vocabulary Don’t-Say-It! activity guide (one copy for each group of 4-5 students)\n* Cut out the cards for the vocabulary game or gather a pair of scissors for each group of students\n* Print copies of the Truth Tables activity guide (one copy for each student)\n* Print out the station instructions in the Around the World Printouts resource\n* Prepare stacks of sticky notes, poster paper, and markers for each Around the World station\n* Print copies of the Unit 4 Guide (one copy for each student)",
+        "student_overview": "You learn about truth tables, a tool we can use to evaluate compound Boolean expressions. You learn about De Morgan's Laws and prove them with a partner using truth tables."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -265,6 +277,9 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "overview": "Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ work, they begin to work more independently, working through annotating, pseudocoding, and completing an FRQ on their own. After annotating and writing their solutions, students still discuss their results with their peers and receive support.  \n\nThe goals of this lesson are:\n* Practice annotating an FRQ\n* Practice writing pseudocode for an FRQ\n* Practice writing a solution for an FRQ\n* Practice scoring an FRQ against a scoring rubric",
+        "preparation": "* Print one copy for each student of the following handouts:\n   * FRQ Writing\n   * FRQ Scoring Guide\n* Gather one sheet of scratch paper per student\n* Gather one sticky note per student",
+        "student_overview": "Today you complete a Free Response Question (FRQ) almost completely on your own. To derive a solution for the FRQ on your own, you will follow a three step process: annotating, writing pseudocode, and writing code in Java. Finally, you score your attempt against a scoring rubric and reflect on your experience."
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -280,6 +295,10 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "assessment": true,
+        "overview": "In this unit, students expanded the expressions used in conditionals and iteration to use relational and logical operators. Students used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. Students developed an understanding of De Morgan's Laws and writing truth tables. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions",
+        "student_overview": "In this unit, you expanded the expressions used in conditionals and iteration to use relational and logical operators. You used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. You developed an understanding of De Morgan's Laws and writing truth tables. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment."
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
@@ -496,6 +515,284 @@
         "lesson_activity.key": "2ebb278d-ac6f-4a1a-991d-3988b03ecd19",
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "a64e75c8-d839-4ba0-afb3-7edbe024305a",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "92f9c858-7721-4d37-b121-14958b822dca",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "92f9c858-7721-4d37-b121-14958b822dca",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "40cbe054-eb92-4af7-ab8f-a622875f36da",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40cbe054-eb92-4af7-ab8f-a622875f36da",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "426e5214-3c08-40ad-a76f-38c40ddc4657",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "db5906bb-6aa1-467d-848d-360c3b5a0e5c",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "db5906bb-6aa1-467d-848d-360c3b5a0e5c",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "24107caa-0a6f-4fa6-9f44-74612abe0c83",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24107caa-0a6f-4fa6-9f44-74612abe0c83",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "20388857-f568-45c1-aaf7-bc144f05b7dd",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "f913c55c-3293-44d1-80d8-e1c12f6756ce",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f913c55c-3293-44d1-80d8-e1c12f6756ce",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "19385468-9322-4b57-bd55-16825d6624a4",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "19385468-9322-4b57-bd55-16825d6624a4",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "dcee5358-10a2-4adb-9818-709e3dbf855a",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "2ecfc261-dc71-4dc0-afaf-409dc479fa86",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2ecfc261-dc71-4dc0-afaf-409dc479fa86",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "cc12e00a-3e3e-492d-8fc1-99b1af21f208",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc12e00a-3e3e-492d-8fc1-99b1af21f208",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "0e090a7f-0562-4ddc-8b5e-935f9890507d",
+      "position": 2,
+      "properties": {
+        "duration": 28,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "ac5ca90f-0406-457c-a188-03e6bcf480f3",
+      "position": 3,
+      "properties": {
+        "duration": 7,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "d1d07de0-089e-4f2b-8f38-e447c0f782a3",
+      "position": 1,
+      "properties": {
+        "duration": 9,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d1d07de0-089e-4f2b-8f38-e447c0f782a3",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "25bc6c0c-0451-4353-b742-c480e41459e5",
+      "position": 2,
+      "properties": {
+        "duration": 33,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "12574767-34d7-4127-8006-4aa21ff5b653",
+      "position": 3,
+      "properties": {
+        "duration": 3,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12574767-34d7-4127-8006-4aa21ff5b653",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "5b09ec34-4959-4c4e-9044-f89e2ec9ac98",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5b09ec34-4959-4c4e-9044-f89e2ec9ac98",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "2f957b2d-2e7e-4cd7-845f-7a833d9c7f84",
+      "position": 2,
+      "properties": {
+        "name": "Wrap Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2f957b2d-2e7e-4cd7-845f-7a833d9c7f84",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa4-pilot"
       }
     }
@@ -1524,6 +1821,1394 @@
         "activity_section.key": "55a14961-e0fd-4d72-b03b-85bd705f9f06",
         "lesson_activity.key": "2ebb278d-ac6f-4a1a-991d-3988b03ecd19"
       }
+    },
+    {
+      "key": "bd7da479-e838-4556-b28c-4663bf842b0d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the two code segments and prompts. Direct students to silently predict the output of the code.\n\n**Do This:**\n* Have students share their predictions with a partner, then ask for volunteers to share their predictions with the class.\n* Display Lesson 6 Level 1 for the class and run the two code segments. To run Code Segment B, comment lines 5 to 11 and uncomment lines 14 - 20.",
+        "name": "Primitive vs Reference Type",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students run the code with you to compare their predictions to the actual outcomes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bd7da479-e838-4556-b28c-4663bf842b0d",
+        "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a"
+      }
+    },
+    {
+      "key": "cdec5ff4-d329-4f03-a0d4-e2cedcc372cd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did the two code segments have different results?*\n\n**Discussion Goal:** Students make connections to prior knowledge to identify that integers are primitive values and `String`s are objects."
+      },
+      "seeding_key": {
+        "activity_section.key": "cdec5ff4-d329-4f03-a0d4-e2cedcc372cd",
+        "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a"
+      }
+    },
+    {
+      "key": "57d2c587-2741-448b-83b7-4f6fe45386a2",
+      "position": 3,
+      "properties": {
+        "description": "Although these two code segments are very similar, there is a key difference between the two. Integers are primitive values, but `String`s are objects.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "57d2c587-2741-448b-83b7-4f6fe45386a2",
+        "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a"
+      }
+    },
+    {
+      "key": "ef72b423-09e6-4eed-82d2-a31a97377a7b",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to summarize the difference between primitive values and objects."
+      },
+      "seeding_key": {
+        "activity_section.key": "ef72b423-09e6-4eed-82d2-a31a97377a7b",
+        "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a"
+      }
+    },
+    {
+      "key": "1d548755-2e08-46eb-ba70-fa3fd91d70f8",
+      "position": 5,
+      "properties": {
+        "description": "Today, our goal is to explore the relationship between reference variables and objects and how Java references and accesses data in a computer. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1d548755-2e08-46eb-ba70-fa3fd91d70f8",
+        "lesson_activity.key": "a64e75c8-d839-4ba0-afb3-7edbe024305a"
+      }
+    },
+    {
+      "key": "f4bbface-571f-4ad2-9e4f-bf67e3c95bb3",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in pairs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Comparing Objects activity guide, a set of Object References Manipulatives and several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n* Have students set up their manipulatives to match the diagram on the slide. Students specify the flavor, quantity, and price on the objects, write names for the reference variables on sticky notes and use paper clip chains to connect the reference variable to the object.\n* Click through the animated slide to describe the problem.\n* Give students time to use the manipulatives to develop a solution.\n* Ask a pair to demonstrate the swap.",
+        "duration": "14",
+        "name": "Aliasing",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students completed this same manipulative swap exercise in Unit 3, Lesson 9. This activity is a quick reactivation of prior knowledge to focus on the mental model represented by the manipulatives and visualizing references."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f4bbface-571f-4ad2-9e4f-bf67e3c95bb3",
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+      }
+    },
+    {
+      "key": "e6a4bde9-d804-4708-90dd-9b3d5d9feb6f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When we perform a swap, what does the temp reference variable store?*\n\n**Discussion Goal:** Students continue to differentiate between reference and primitive variables. Students note that a reference variable only holds that object’s location in memory, making it possible to have two variables that reference the same object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the functionality of a reference variable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Describe the relationship between reference variables that are aliases.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the manipulatives to complete the first page of the Comparing Objects activity guide.  As they work, they should test their predictions by running the code in Level 2 on Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "e6a4bde9-d804-4708-90dd-9b3d5d9feb6f",
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+      }
+    },
+    {
+      "key": "997abd22-9ae1-4a79-99eb-c96bf84b4be0",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we want to find whether some or all attributes of two objects contain the same value?  How might we do this?*\n\n**Discussion Goal:** Students consider what it means for an object to be equal and hypothesize about comparing properties of an object. They may suggest creating a method that compares these properties. Students consider how they would get the values of the instance variables using the accessor methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to look at the documentation for the `String` class. They should use the questions to guide their exploration. ",
+        "duration": "13",
+        "name": "Object Equality"
+      },
+      "seeding_key": {
+        "activity_section.key": "997abd22-9ae1-4a79-99eb-c96bf84b4be0",
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+      }
+    },
+    {
+      "key": "13519ee6-4331-4b13-8627-eca90c2aada7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the `equals()` method in the `String` class.\n* *What does this method compare?*\n   * The `equals()` method compares the characters (letters) of the `String`s. It looks at the contents of the object to see if they are the same.\n* *How can this method be used or called?*\n   * This method is called on one `String`, and the second `String` to compare to is passed as an argument.\n* *Where does it come from within the class hierarchy?*\n   * Just like the `toString()` method, `equals()` is inherited from the `Object` class."
+      },
+      "seeding_key": {
+        "activity_section.key": "13519ee6-4331-4b13-8627-eca90c2aada7",
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+      }
+    },
+    {
+      "key": "3ea3b1e6-908a-4934-85f5-97da75bf83b1",
+      "position": 5,
+      "properties": {
+        "description": "All classes inherit from the `Object` class, which means all classes have an `equals()` method! The `Object` `equals()` method only returns `true` if two reference variables are aliases. To use it to compare specific attributes, we need to override the method.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3ea3b1e6-908a-4934-85f5-97da75bf83b1",
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+      }
+    },
+    {
+      "key": "384390c2-eb1e-4d2c-bb81-af59b93d7c1a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Equals and Aliasing video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the second page of the Comparing Objects activity guide to write pseudocode for an `equals()` method for the `Cake` class. Students then navigate to Level 4 on Code Studio to write and test their method."
+      },
+      "seeding_key": {
+        "activity_section.key": "384390c2-eb1e-4d2c-bb81-af59b93d7c1a",
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+      }
+    },
+    {
+      "key": "e30b2d35-a8ce-424b-b58e-2b57d57a06a7",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the `equals()` method.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggled with translating their algorithm to code, walk through this code segment with them and highlight:\n* The use of a `boolean` value\n* The use of accessor methods and `this`\n* The condition in the `if` statement to determine whether the two objects are the same\n\nAn alternative solution returns both inside and outside the `if` statement without using a `boolean` variable. This approach demonstrates a more familiar solution since students have not yet learned about returning inside an `if` statement or loop."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e30b2d35-a8ce-424b-b58e-2b57d57a06a7",
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+      }
+    },
+    {
+      "key": "c59a5d9a-0196-4a77-9140-e9725c848406",
+      "position": 8,
+      "properties": {
+        "description": "Now that we’ve spent some time working with object equality, we will apply this concept to our block party game. Your task is to figure out whether two rolled dice display the same number. First, we’re going to get to know the `Die` class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c59a5d9a-0196-4a77-9140-e9725c848406",
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+      }
+    },
+    {
+      "key": "055e7070-91d9-4080-b305-ae8c5b25b084",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to read through the methods in the `Die` class.",
+        "duration": "8",
+        "name": "Adding equals() to Pop the Balloons",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students should focus on the constructor to identify the instance variables they should compare and the accessor method(s) they want to use when comparing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "055e7070-91d9-4080-b305-ae8c5b25b084",
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+      }
+    },
+    {
+      "key": "34681785-a896-4c6b-976a-e1bba83d6688",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which methods will be important when writing an `equals()` method to compare the dice values?*\n\n**Discussion Goal:** Students consider what to compare and how to access the information for both objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio. Students write an `equals()` method in the `Die` class of the Pop the Balloons game."
+      },
+      "seeding_key": {
+        "activity_section.key": "34681785-a896-4c6b-976a-e1bba83d6688",
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+      }
+    },
+    {
+      "key": "3d376108-934d-4db0-be21-f1ec15d54ec6",
+      "position": 11,
+      "properties": {
+        "description": "You’ve now spent some time comparing objects and learned the difference between using `==` and the `equals()` method. Well done! Let’s take a moment to recap the objectives of today’s lessons through a guided pair discussion.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3d376108-934d-4db0-be21-f1ec15d54ec6",
+        "lesson_activity.key": "adb3294c-c9e1-4fa0-b52a-f27d7cab5b1e"
+      }
+    },
+    {
+      "key": "ea7d8014-aa16-466a-87e0-738357d4616b",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose one of the question stems. Students write the question stem on an index card or scrap paper and fill in the blank to complete the question. Have students then turn to the person next to them and take turns asking and answering their questions.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Question Stems"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea7d8014-aa16-466a-87e0-738357d4616b",
+        "lesson_activity.key": "92f9c858-7721-4d37-b121-14958b822dca"
+      }
+    },
+    {
+      "key": "5f11abe3-73f7-49a0-b97a-ee5fd87f5bc4",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "5f11abe3-73f7-49a0-b97a-ee5fd87f5bc4",
+        "lesson_activity.key": "92f9c858-7721-4d37-b121-14958b822dca"
+      }
+    },
+    {
+      "key": "c9a24d1c-68aa-4f34-a132-cff612909e57",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Click through the animated slide to review the problem from Unit 1 Lesson 7, which used `if/else` statements in its solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you remember about how you solved this problem?*\n\n**Discussion Goal:** Students explain the solution for solving the problem, including the use of `if/else` statements to achieve the desired outcome.",
+        "name": "Problem-Solving Brainstorm"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9a24d1c-68aa-4f34-a132-cff612909e57",
+        "lesson_activity.key": "40cbe054-eb92-4af7-ab8f-a622875f36da"
+      }
+    },
+    {
+      "key": "64ba8b27-34e0-4e5d-9c5e-cc583a99dce6",
+      "position": 2,
+      "properties": {
+        "description": "We are familiar with how to use `if/else` statements to solve problems in The Neighborhood. Today, we will practice using `if/else` statements in new ways in The Neighborhood. We will also expand the functionality of our Pop the Balloons game to check if the player's move is valid.\n\nFirst, let's review how `if/else` statements work.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "64ba8b27-34e0-4e5d-9c5e-cc583a99dce6",
+        "lesson_activity.key": "40cbe054-eb92-4af7-ab8f-a622875f36da"
+      }
+    },
+    {
+      "key": "0f12823d-af36-4e56-be9a-63b607ad86b9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the if/else Statements video.",
+        "duration": "5",
+        "name": "if/else Statements",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This video is the same one from Unit 1 Lesson 7 to review the structure and functionality of an `if/else` statement."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0f12823d-af36-4e56-be9a-63b607ad86b9",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "c004e41a-fe03-45d0-9d23-d229f8113dda",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Review the difference between `if` statements and `if/else` statements and how to write `if/else` statements.\n* Explain the purpose and flow of an `if` statement.\n* Explain the purpose and flow of an `if/else` statement.\n* Define two-way selection.\n* Review the syntax for writing an `if/else` statement."
+      },
+      "seeding_key": {
+        "activity_section.key": "c004e41a-fe03-45d0-9d23-d229f8113dda",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "fbd267cc-911f-4914-a2dd-e559407398f2",
+      "position": 3,
+      "properties": {
+        "description": "We used `if/else` statements before to decide whether or not to move the `Painter` or to paint. We can also use `if/else` statements to choose paint colors from an array of paint colors based on a condition.\n\nWe used `if` statements while traversing arrays in Unit 3 to find elements that met certain criteria. We're going to use a similar approach in The Neighborhood with `if/else` statements.",
+        "duration": "10",
+        "name": "Using if/else in The Neighborhood",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fbd267cc-911f-4914-a2dd-e559407398f2",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "c99de66f-3ddc-41f9-8e11-21580cc198d9",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students use an `if/else` statement to access individual elements from an array of paint colors to solve the problem."
+      },
+      "seeding_key": {
+        "activity_section.key": "c99de66f-3ddc-41f9-8e11-21580cc198d9",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "3bfd21fe-e724-42d5-8b1d-246c28e40cb7",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we wanted to randomly choose paint colors from the array?*\n\n**Discussion Goal:** Students suggest using `Math.random()` and casting to generate a random number within the range of the index values of the array.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students initially only suggest using `Math.random()`, ask additional probing questions to guide students in realizing the need for obtaining a value within the range of index values.\n* *Remember that `Math.random()` generates a `double` value between 0.0 up to but not including 1.0. Index values are integers and not `double`s. What do we need to add to get an integer result from `Math.random()`?*\n* *Index values range from 0 up to the length of the array minus 1. What do we need to add to get a random value in this range?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3bfd21fe-e724-42d5-8b1d-246c28e40cb7",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "5e662485-026f-442a-b565-62f5b04064f0",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show the solution for generating a random index value and using it to access an element in an array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students use `Math.random()` and `if/else` to access random elements from the array of paint colors to solve the problem. Have students continue to complete Level 3."
+      },
+      "seeding_key": {
+        "activity_section.key": "5e662485-026f-442a-b565-62f5b04064f0",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "13a3a938-f7ad-4efa-b067-dc88ccf11385",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the effects of using separate `if` statements instead of an `if/else` statement.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Trace through each code segment with the class before showing the output."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "13a3a938-f7ad-4efa-b067-dc88ccf11385",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "3848a3ba-b733-4b63-bee6-1d29cbce14e8",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why should we use `if/else` statements instead of writing separate `if` statements?*\n\nDiscussion Goal: Students point out that it makes the code cleaner and easier to debug. Students also note that since both `if` statements are evaluated separately, they could both execute depending on the outcome of the first `if` statement, which will change the end result of the program."
+      },
+      "seeding_key": {
+        "activity_section.key": "3848a3ba-b733-4b63-bee6-1d29cbce14e8",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "844f4b77-2298-4a13-92d3-c458efe22fd2",
+      "position": 9,
+      "properties": {
+        "description": "The next features of our Pop the Balloons game that we are going to develop is the `isValidMove()` functionality.\n\nWith the `isValidMove()` method, we can check if the balloons that are clicked add up to the dice roll. This method takes the value of the balloon to check if it is less than the dice roll.",
+        "duration": "10",
+        "name": "Expanding Pop the Balloons",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "844f4b77-2298-4a13-92d3-c458efe22fd2",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "82f0a1f4-d481-484f-9ad3-3ab07763e79c",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the purpose of the `isValidMove()` method. Direct students to work with a partner to write pseudocode on a piece of paper for `isValidMove()`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps needed to implement the `isValidMove()` method.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you notice students struggling to break the problem down into pseudocode, write the pseudocode for each step as you review them. Allow students to ask clarifying questions before transitioning to Code Studio."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "82f0a1f4-d481-484f-9ad3-3ab07763e79c",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "ff9d45cb-5891-401d-8855-03f4195fb3fb",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students implement the `isValidMove()` method in the Pop the Balloons game."
+      },
+      "seeding_key": {
+        "activity_section.key": "ff9d45cb-5891-401d-8855-03f4195fb3fb",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "8e194c5b-a54b-4d0e-bf85-65273f08e0b6",
+      "position": 12,
+      "properties": {
+        "description": "Let's take a moment to provide feedback to each other through a code review. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code! ",
+        "duration": "10",
+        "name": "Code Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8e194c5b-a54b-4d0e-bf85-65273f08e0b6",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "a60fa545-6a85-4035-abf9-bd58d32e63dc",
+      "position": 13,
+      "properties": {
+        "description": "**Do This:** Pair students within a review group to review each other's game in Code Studio. Students request, receive, and review feedback on their `isValidMove()` method."
+      },
+      "seeding_key": {
+        "activity_section.key": "a60fa545-6a85-4035-abf9-bd58d32e63dc",
+        "lesson_activity.key": "426e5214-3c08-40ad-a76f-38c40ddc4657"
+      }
+    },
+    {
+      "key": "767854b2-c32d-4116-bd48-f96d47b53b18",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write one thing they feel confident about and one thing they are still unsure about with `if/else` statements.",
+        "name": "Gots and Needs",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Collect and review student responses to identify students that may need additional support in upcoming lessons."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "767854b2-c32d-4116-bd48-f96d47b53b18",
+        "lesson_activity.key": "db5906bb-6aa1-467d-848d-360c3b5a0e5c"
+      }
+    },
+    {
+      "key": "d62db88a-0e13-454e-b999-e1bafbf38514",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "d62db88a-0e13-454e-b999-e1bafbf38514",
+        "lesson_activity.key": "db5906bb-6aa1-467d-848d-360c3b5a0e5c"
+      }
+    },
+    {
+      "key": "c4726349-becf-4624-afc0-0096f994f6be",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c4726349-becf-4624-afc0-0096f994f6be",
+        "lesson_activity.key": "db5906bb-6aa1-467d-848d-360c3b5a0e5c"
+      }
+    },
+    {
+      "key": "e8474c6c-f8af-40dd-9363-87385af65b4e",
+      "position": 1,
+      "properties": {
+        "description": "When we want our code to make decisions based on a condition, we use selection statements such as an `if` statement or `if/else` statement.\n\n`if` statements are useful for getting something to happen when a condition is `true`. `if/else` statements are useful when we want to execute a task when the condition is `true` or a different task if the condition is `false`. \n\nLet’s review how you can use an `if/else` statement to solve a problem.",
+        "name": "Conditional Statements",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e8474c6c-f8af-40dd-9363-87385af65b4e",
+        "lesson_activity.key": "24107caa-0a6f-4fa6-9f44-74612abe0c83"
+      }
+    },
+    {
+      "key": "1205f659-e000-4e46-9b77-c24aa186aed7",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *The `Painter` wants to clean up The Neighborhood. She needs to see if there is unwanted paint on the road. If there is, she will remove the paint. How could this be achieved using an `if/else` statement?*\n\n**Discussion Goal:** Students identify that if the `Painter` is on the paint, then she will scrape it, `else` move forward."
+      },
+      "seeding_key": {
+        "activity_section.key": "1205f659-e000-4e46-9b77-c24aa186aed7",
+        "lesson_activity.key": "24107caa-0a6f-4fa6-9f44-74612abe0c83"
+      }
+    },
+    {
+      "key": "3bc58966-8991-48c4-a889-f7d969e05d5e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Let’s take a moment to read this problem. If you want to go to the park, the weather needs to be higher than 85 degrees. If the weather is 80 degrees, you can play soccer with friends. If the weather is lower than 80 degrees, you can stay at home. Think to yourself about how you would solve this problem with what you know about conditional statements.",
+        "duration": "15",
+        "name": "Multi-Selection Statements",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3bc58966-8991-48c4-a889-f7d969e05d5e",
+        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
+      }
+    },
+    {
+      "key": "bde7107b-ab41-40bc-81d5-aa1c2a35bf35",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define multi-selection statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the execution flow of `if/else-if/else`.\n* The first condition is `true` if the number is greater than 0. If `true`, the body of that `if` statement executes.\n* If the first condition is `false`, the second condition is evaluated. The second condition is `true` `else-if` the number is equal to 0. Then the body of the `else-if` statement is executed.\n* When all conditions are `false`, the `else` statement executes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to work with a partner to read through the problem again. Students will write code on a piece of paper.\n\n**Discuss:** *How would you use a multi-selection statement to structure this problem in code?*\n\n**Discussion Goal:** Students work with a partner and write a code segment that would include an `if/else-if/else` statement to reflect the decisions based on the weather.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the solution to the discussion prompt. As you go through the solution, prompt students to participate in the `System.out.print()` Call and Response by saying the words and clapping as indicated on the slide. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Perform the Call and Response for the students by saying the words in caps and clapping as indicated: **SYSTEM** (clap while saying **DOT**) **OUT** (clap while saying **DOT**) **PRINT** (clap while saying **DOT**). Have students repeat it as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bde7107b-ab41-40bc-81d5-aa1c2a35bf35",
+        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
+      }
+    },
+    {
+      "key": "f3ed7eb9-7d8e-4f18-afd4-d473ea63e5a7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. Students will revisit Level 1 from Lesson 7 to include multiple conditions to solve the problem."
+      },
+      "seeding_key": {
+        "activity_section.key": "f3ed7eb9-7d8e-4f18-afd4-d473ea63e5a7",
+        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
+      }
+    },
+    {
+      "key": "12ba61c3-f514-4c5e-9723-0394b918ba54",
+      "position": 4,
+      "properties": {
+        "description": "The next feature of our Pop the Balloons game that we need to develop is the `updateBalloons()` functionality. Let's walk through how this method needs to function so we can implement it. You will use multi-selection statements inside your method to update the display if a balloon is popped. ",
+        "duration": "20",
+        "name": "Expanding Pop the Balloons",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "12ba61c3-f514-4c5e-9723-0394b918ba54",
+        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
+      }
+    },
+    {
+      "key": "109900cf-f6bb-450a-b36e-955f3310319a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Share the to-do list to write the `updateBalloons()` method for the balloons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Currently, each balloon is represented by an individual `Balloon` object stored in a variable. How could we use multi-selection statements to update the display of the balloon if it’s been popped?*\n\n**Discussion Goal:** Students suggest creating an `if/else-if/else` statement to test if each balloon number equals the balloon value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps needed to implement the `updateBalloons()` method.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Suggest that students write on a piece of paper their code segment to test the multiple conditions for each prompt. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "109900cf-f6bb-450a-b36e-955f3310319a",
+        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
+      }
+    },
+    {
+      "key": "c7049c78-e67d-4044-af12-222e4a22f464",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 3 on Code Studio. Remind students to use multi-selection statements to solve the problem.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Circulate as students work through this level. Display the steps to implement the `updateBalloons()` method to assist students who need a visual while writing the method. If students finish early, encourage them to test their code with multiple inputs to see if the balloon pops for all values. \n\nSince students will be completing a code review for this level, remind students to commit their code often."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c7049c78-e67d-4044-af12-222e4a22f464",
+        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
+      }
+    },
+    {
+      "key": "33d0bb49-3295-40ff-bb75-cf860451c9be",
+      "position": 7,
+      "properties": {
+        "description": "This is a good opportunity to do a code review to make improvements. Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "33d0bb49-3295-40ff-bb75-cf860451c9be",
+        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
+      }
+    },
+    {
+      "key": "985c8503-873e-4858-8a18-2dddb7a602a3",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in the same pairs to review each other's `updateBallons()` method. Students request, receive, and review feedback on Level 3. While reviewing, students consider the following questions:\n* Am I able to understand the code easily?\n* Can you think of any inputs that could break the code?\n* How many test cases are needed to test all branches of the code?\n* Is the same code duplicated across multiple files?"
+      },
+      "seeding_key": {
+        "activity_section.key": "985c8503-873e-4858-8a18-2dddb7a602a3",
+        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
+      }
+    },
+    {
+      "key": "14081d41-4b5e-4d9c-9e28-a27f89543517",
+      "position": 9,
+      "properties": {
+        "description": "Great job! You have completed your task for the Pop the Balloons Game. As we continue to build the game, you will continue to modify your code to add more functionality. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "14081d41-4b5e-4d9c-9e28-a27f89543517",
+        "lesson_activity.key": "20388857-f568-45c1-aaf7-bc144f05b7dd"
+      }
+    },
+    {
+      "key": "cf4c4f4e-7aab-41f5-9de2-134e0b2c4e55",
+      "position": 1,
+      "properties": {
+        "description": "The methods you wrote today are methods that you will be able to use in your upcoming project. Today we used `if/else-if/else` statements to test multiple conditions. When you update the display of the balloon, you see the change based on the condition being `true`.",
+        "name": "Glows, Grows, Want-to-Knows",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cf4c4f4e-7aab-41f5-9de2-134e0b2c4e55",
+        "lesson_activity.key": "f913c55c-3293-44d1-80d8-e1c12f6756ce"
+      }
+    },
+    {
+      "key": "b3ba21bf-5f97-4ff9-894a-e75b496e92cd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Conditional Statements video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Students reflect on the following Glows, Grows, Want-to-Knows prompts:\n* Glow: *What is awesome about writing your code?*\n* Grow: *What is one action you can take to improve your code?*\n* Want-to-Know: *What is one question you have about an algorithm you worked on today?*\n\n**Discussion Goal:** Students share successes they experienced in writing their methods in today's activities and ideas for improvements they can make to their code. Students ask questions about the methods they wrote today and may even share wonders about the effects of potential modifications to the code they wrote.\n\n**Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3ba21bf-5f97-4ff9-894a-e75b496e92cd",
+        "lesson_activity.key": "f913c55c-3293-44d1-80d8-e1c12f6756ce"
+      }
+    },
+    {
+      "key": "947b1122-667d-4a84-a8a7-b0d287695862",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "947b1122-667d-4a84-a8a7-b0d287695862",
+        "lesson_activity.key": "f913c55c-3293-44d1-80d8-e1c12f6756ce"
+      }
+    },
+    {
+      "key": "92469f07-9c3b-40da-bcb1-7f33bd9b102e",
+      "position": 1,
+      "properties": {
+        "description": "Today you’ll be playing Guess This Tech Company. Guess This Tech Company is a two-player game in which each player chooses a mystery tech logo. Each player then uses yes or no questions to guess the other player’s tech company.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "92469f07-9c3b-40da-bcb1-7f33bd9b102e",
+        "lesson_activity.key": "19385468-9322-4b57-bd55-16825d6624a4"
+      }
+    },
+    {
+      "key": "54cfaf3a-0afa-4b4a-84a6-84866a0e07c1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the instructions for the Guess This Tech Company game to the class. Have students write down three yes or no questions on a sheet of paper. "
+      },
+      "seeding_key": {
+        "activity_section.key": "54cfaf3a-0afa-4b4a-84a6-84866a0e07c1",
+        "lesson_activity.key": "19385468-9322-4b57-bd55-16825d6624a4"
+      }
+    },
+    {
+      "key": "1f02bd5c-6887-4f27-955e-7cd24b9e473a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Play a round of Guess This Tech Company with a partner. Use your three questions and tech companies displayed on the slide to assist you with guessing. Each partner should take a turn as the guesser. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1f02bd5c-6887-4f27-955e-7cd24b9e473a",
+        "lesson_activity.key": "19385468-9322-4b57-bd55-16825d6624a4"
+      }
+    },
+    {
+      "key": "bdb817e8-8b6b-4d8e-bd24-706486a05b4c",
+      "position": 4,
+      "properties": {
+        "description": "**Display:** Show the Guess This Tech Company logos while students play the game.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Were you able to guess each other’s tech companies? Which questions were helpful? If you were to build a Java version of our Guess This Tech Company game, what structures would you use?*\n\n**Discussion Goal:** Students share if they could guess the tech company and examples of helpful questions. Students share that conditional statements allow them to simplify code through testing multiple conditions to get to the correct answer. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to share different opinions about building a Guess This Tech Company program in Java. Ask students to identify some challenges using conditional statements. Some might include: \n* Increasing the number of tech companies might result in an excessive number of `if/else` statements\n* Large amounts of code may be difficult to debug"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bdb817e8-8b6b-4d8e-bd24-706486a05b4c",
+        "lesson_activity.key": "19385468-9322-4b57-bd55-16825d6624a4"
+      }
+    },
+    {
+      "key": "396df739-2c4e-419b-acfe-bffea4a7d96e",
+      "position": 1,
+      "properties": {
+        "description": "In Unit 3, you were introduced to the term nested. Let’s look at how we can apply the concept of nested to if statements.  ",
+        "duration": "10",
+        "name": "Nested if",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "396df739-2c4e-419b-acfe-bffea4a7d96e",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "344a1b55-737d-46dd-a87a-6de8a25c9169",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the definition and an example of a nested `if` statement. Click through the animated slide to discuss the execution of a nested `if` statement. Pause at each step to discuss what is happening. Highlight the following:\n* Evaluating the first `if` statement\n* Evaluating the nested `if` statement condition\n* Executing the body of the nested `if` statement if the condition of the nested `if` statement is `true`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would be the reason to include an `if` statement in the body of another `if` statement?*\n\n**Discussion Goal:** Students share using nested `if` statements can simplify the code to allow the program to make a decision based on whether the condition is `true` or `false`.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students don’t get to this on their own, ask the following prompting questions:\n* *What is meant by nested?*\n* *How is this nested statement similar to a nested loop?*\n* *How could using a nested `if` statement simplify the use of an `if/else-if/else` statement?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "344a1b55-737d-46dd-a87a-6de8a25c9169",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "2e5c5d8e-9f38-4cdd-bd16-beea4f589e58",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Before you can hang out with your friends, you need to answer the following questions: Did I finish my homework? Did I do all my chores? If the answers are true to both questions, then you can hang out with your friends. If not, then you need to complete your homework first, then finish all your chores.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2e5c5d8e-9f38-4cdd-bd16-beea4f589e58",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "bee3b941-9f66-4c31-93c9-ea36d21b9c7a",
+      "position": 4,
+      "properties": {
+        "description": "**Discuss:** *How would you structure this scenario in Java?*\n\n**Discussion Goal:** Students share the code segment would include an `if` statement to check if the homework is finished then a nested `if` statement to check if the chores are completed. If both conditions are `true`, then they can hang out with their friends. If one of the conditions is `false`, then they will need to complete their task first.\n\n**Do This:** Click through the animated slide to show an example solution with a nested `if` statement. "
+      },
+      "seeding_key": {
+        "activity_section.key": "bee3b941-9f66-4c31-93c9-ea36d21b9c7a",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "872741a5-a9f0-4422-bb70-d20cfa28fd03",
+      "position": 5,
+      "properties": {
+        "description": "Now that you understand how to use a nested `if` statement, let’s practice using them to solve problems in The Neighborhood.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "872741a5-a9f0-4422-bb70-d20cfa28fd03",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "b0bcd476-f8bd-4cf3-977f-2551c462fd28",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 1 on Code Studio. Students revisit Level 1 from Lesson 8 to add a nested `if` statement to the current condition."
+      },
+      "seeding_key": {
+        "activity_section.key": "b0bcd476-f8bd-4cf3-977f-2551c462fd28",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "9bf378b6-89e6-4f6d-b00e-7b1f6dd41351",
+      "position": 7,
+      "properties": {
+        "description": "In Lesson 4, you learned how to implement relational operators in conditional statements. We will now expand our conditional statements to include logical operators to create compound Boolean expressions. You should recall the first logical operator from Unit 1. ",
+        "duration": "8",
+        "name": "Logical Operators",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9bf378b6-89e6-4f6d-b00e-7b1f6dd41351",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "4fb5599a-877e-45d2-9d1a-fb75eecf08bd",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss logical operators.\n* The `!` operator means NOT\n* The `&&` operator means AND \n* The `||` operator means OR \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the definition and example of compound Boolean expressions.\n* A && B → evaluates to `true` when both A and B are true\n* A || B → evaluates to `true` when either (or both) A or B is true"
+      },
+      "seeding_key": {
+        "activity_section.key": "4fb5599a-877e-45d2-9d1a-fb75eecf08bd",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "088610d3-9e0f-46d1-8601-8328ac6f4cbb",
+      "position": 9,
+      "properties": {
+        "description": "Think about yesterday’s example about the weather. If you want to go to the park, the weather needs to be higher than 85 degrees. If the weather is above 95 degrees, then you want to stay home. If the weather is 80 degrees, you can play soccer with friends, but if the weather is lower than 80, you can just stay at home.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "088610d3-9e0f-46d1-8601-8328ac6f4cbb",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "c49fbefd-a6c4-4635-83ee-ac41c06388cf",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would you guess logical operators show up in Java? How might they help us simplify the use of conditional statements? What if the weather was 98 degrees? How would you write that code segment?*\n\n**Discussion Goal:** Students suggest using a && operator to test if the weather is between 81 and 95 degrees. If the condition is `true`, then they can go to the park. If it is `false`, then the second condition will be evaluated. If the second condition is `false`, they will need to stay at home. \n\n**Do This:** Click through the animated slide to show an example conditional statement using a logical operator. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 Code Studio. Students use logical operators to simplify the conditional statements. Have students continue to complete Level 3."
+      },
+      "seeding_key": {
+        "activity_section.key": "c49fbefd-a6c4-4635-83ee-ac41c06388cf",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "61b356f3-d068-4b49-8f25-3d91419f0832",
+      "position": 11,
+      "properties": {
+        "description": "Today we will update our Pop the Balloon game to improve its functionality. The next features of our Pop the Balloons game that we will develop are the `movesLeft()` and `calculateScore()` functions. ",
+        "duration": "12",
+        "name": "Pop the Balloons Game",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "61b356f3-d068-4b49-8f25-3d91419f0832",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "caa5adf8-4cb3-450f-9edc-1c05de14b9fd",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can logical operators improve the functionality of your Pop the Balloons game?*\n\n**Discussion Goal:** Students share that the logical operators can simplify the selection statements to test multiple conditions in one or two selection statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Walk students through the to-do list of methods for the Pop the Balloons game. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may struggle to break down the process of checking if there are moves left or calculating the score. To help students think about the process, ask:\n* *Consider how many balloons have been popped and the value of each balloon. How would you know how many balloons have been popped? How would you find out if the values equal the number rolled?*\n* *How would you calculate the score by hand if you were playing the game? What steps would you take to find the score?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "caa5adf8-4cb3-450f-9edc-1c05de14b9fd",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "5464c371-19e1-462d-bb12-d78d90f6ff5e",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the purpose of the `movesLeft()` method. Direct students to work with a partner to write pseudocode for the if statements on a sheet of paper. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the pseudocode for the `if` statements in the `movesLeft()` method. Students should compare their pseudocode to the slide to ensure they’re on the right track.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the purpose of the `calculateScore()` method. Direct students to work with a partner to write pseudocode on a sheet of paper for `calculateScore()`."
+      },
+      "seeding_key": {
+        "activity_section.key": "5464c371-19e1-462d-bb12-d78d90f6ff5e",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "c609f8b1-ad76-4fb2-9ea7-1ebaa48e4600",
+      "position": 14,
+      "properties": {
+        "description": "Using your pseudocode, apply what you have written to write your two methods in Code Studio.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c609f8b1-ad76-4fb2-9ea7-1ebaa48e4600",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "7fe3379f-64d5-47f9-9a63-583330ec4acf",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4 and 5 on Code Studio. Students use nested `if` statements and logical operators to improve the functionality of the Pop the Balloons game.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students need extra support:\n* Have students translate their pseudocode to Java before they go to Code Studio.\n* Encourage those who finish early to assist students who need extra support.\n* If time permits, review both methods as a class before the code review."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7fe3379f-64d5-47f9-9a63-583330ec4acf",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "68eea8cf-3dbc-4422-b96e-968ba257f5d9",
+      "position": 16,
+      "properties": {
+        "description": "This is a good opportunity to do a code review to make improvements. Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "68eea8cf-3dbc-4422-b96e-968ba257f5d9",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "73f8fb4f-afe2-4750-b40b-95489bd60036",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs to review each other's `calculateScore()` method. Students request, receive and review feedback on Level 5. While reviewing, students consider the following questions:\n* Am I able to understand the code easily?\n* Can you think of any inputs that could break the code?\n* Is error handling provided to handle edge cases?\n* Is the same code duplicated across multiple files?"
+      },
+      "seeding_key": {
+        "activity_section.key": "73f8fb4f-afe2-4750-b40b-95489bd60036",
+        "lesson_activity.key": "dcee5358-10a2-4adb-9818-709e3dbf855a"
+      }
+    },
+    {
+      "key": "0ebb31e3-7b92-4efb-b3a1-c53e37cdadea",
+      "position": 1,
+      "properties": {
+        "description": "Great job! You have completed all of the tasks for the Pop the Balloons game. ",
+        "name": "Closing the Loop",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0ebb31e3-7b92-4efb-b3a1-c53e37cdadea",
+        "lesson_activity.key": "2ecfc261-dc71-4dc0-afaf-409dc479fa86"
+      }
+    },
+    {
+      "key": "9d263138-862c-4372-b7bf-09dbefa821b4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary "
+      },
+      "seeding_key": {
+        "activity_section.key": "9d263138-862c-4372-b7bf-09dbefa821b4",
+        "lesson_activity.key": "2ecfc261-dc71-4dc0-afaf-409dc479fa86"
+      }
+    },
+    {
+      "key": "641ef16a-5799-4002-b1cb-7323760025ea",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "641ef16a-5799-4002-b1cb-7323760025ea",
+        "lesson_activity.key": "2ecfc261-dc71-4dc0-afaf-409dc479fa86"
+      }
+    },
+    {
+      "key": "285b0cb9-2219-420d-953b-c17469d082cd",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in groups of 4-5.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Vocabulary Don’t-Say-It! activity guide and a pair of scissors to each group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the rules of Vocabulary Don’t-Say-It! with the class:\n* Students will rotate being the clue-giver and guessers.\n* Once cut out, all cards should be placed face down in a pile. Cards should be shuffled.\n* During each round:\n   * The clue-giver will draw a card from the top of the deck and describe the vocabulary word on the top of the card to the guessers. \n   * They cannot say any of the “Don’t-Say-It!” words listed underneath the vocabulary word.\n   * The student who guesses the word correctly gets the card.\n* Students take turns as the clue-giver for each card.\n* The winner is the student with the most cards.\n\n**Do This:** Direct students to play Vocabulary Don't-Say-It! in their groups.",
+        "name": "Vocabulary Don't-Say-It!",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students get through all of the cards, have them shuffle and play again. Teams can also add new words to the bottom of each card to make the game more challenging."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "285b0cb9-2219-420d-953b-c17469d082cd",
+        "lesson_activity.key": "cc12e00a-3e3e-492d-8fc1-99b1af21f208"
+      }
+    },
+    {
+      "key": "84dd19a6-ba63-47ab-b148-0273734f8c9f",
+      "position": 1,
+      "properties": {
+        "description": "Yesterday, we learned the logical operators ! (not), && (and), and || (or) and how we can use them to create compound Boolean expressions. Today, we’re going to learn about a tool called a truth table, which we can use to evaluate compound Boolean expressions.",
+        "duration": "8",
+        "name": "Truth Tables Introduction",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "84dd19a6-ba63-47ab-b148-0273734f8c9f",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "2e628a1e-d7b1-40b1-8e80-16468f38e732",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Truth Tables activity guide.\n\n**Do This:** Walk through the following slides as a class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Truth tables help visualize compound Boolean expressions and their resulting Boolean values.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the Creating a Truth Table video.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to demonstrate creating a truth table for !A. Prompt students to complete the truth table on their activity guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to demonstrate creating a truth table for A && B. Prompt students to complete the truth table on their activity guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to demonstrate creating a truth table for A || B. Prompt students to complete the truth table on their activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have additional time, instruct students to work through the truth table for A || B either independently or with a partner before reviewing the resulting truth table with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2e628a1e-d7b1-40b1-8e80-16468f38e732",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "cf50b16e-d990-4346-9db1-099671731736",
+      "position": 3,
+      "properties": {
+        "description": "Truth tables can also be used to represent more complex compound Boolean expressions. These can get complicated, but it’s important to remember that every compound Boolean expression can be broken down into our three core logical operators: not, and, and or. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cf50b16e-d990-4346-9db1-099671731736",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "a97e1399-a525-4b50-aeac-53a1621a749d",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the truth table for !A || !B. Highlight the use of extra columns to complete the truth table for the Boolean expression. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Suppose we wanted to figure out if two expressions are equivalent. How could we use truth tables to check for equivalence?*\n\n**Discussion Goal:** Students discuss ideas for how they might show the equivalence of two expressions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to use truth tables to determine equivalence."
+      },
+      "seeding_key": {
+        "activity_section.key": "a97e1399-a525-4b50-aeac-53a1621a749d",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "2422e6f5-8da4-4fec-900a-ec9bdeef2e90",
+      "position": 5,
+      "properties": {
+        "description": "Now that we understand how to create truth tables, we’re going to put our knowledge into action! You’ll have the chance to use truth tables to prove a set of famous Boolean logic laws and see how to use truth tables in software engineering through open-source code.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2422e6f5-8da4-4fec-900a-ec9bdeef2e90",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "85c4c5bc-bdd8-4eea-8569-351942849196",
+      "position": 6,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the process for the Around the World activity.\n1. Students find a station (they do not need to go in order).\n2. Students follow instructions at that station. There is a spot in their activity guide that corresponds with each station.\n3. Students find another group who has completed the same station and explain their completed truth table to that group.\n   * The second group initials their activity guide if they agree with their solution.\n   * If they believe there is an error, the groups revise the truth table together before the second group signs off.\n4. Students answer the question(s) attached to each station before moving on to the next.\n5. Pairs repeat steps 1-4 for each station (or until the time is up).",
+        "duration": "20",
+        "name": "Around the World",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students work, circulate the room to check that they are successfully following the Around the World steps and are not getting stuck at a station. You may choose to use a four-minute timer to help students pace themselves.\n\nAllow pairs who may need more time on each part to complete three stations instead of four. Encourage them to at least complete either (A or B) AND (C or D) to obtain practice proving one of De Morgan’s Laws and an opportunity to work with open-source code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "85c4c5bc-bdd8-4eea-8569-351942849196",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "d9fda664-96f4-453b-b9a4-60e00ffa8c15",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Look at your solution for station A or B. Were the two expressions equivalent? How do you know?*\n\n**Discussion Goal:** Students note that the two expressions were equivalent at both stations A and B because their resulting truth tables had the same final truth values.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students who did not complete both A and B to look at a neighbor’s solution. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d9fda664-96f4-453b-b9a4-60e00ffa8c15",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "8cd45573-14a2-40ec-9652-157c9982939a",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define De Morgan’s Laws.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate truth tables for each of De Morgan’s Laws."
+      },
+      "seeding_key": {
+        "activity_section.key": "8cd45573-14a2-40ec-9652-157c9982939a",
+        "lesson_activity.key": "0e090a7f-0562-4ddc-8b5e-935f9890507d"
+      }
+    },
+    {
+      "key": "86af7afd-5c12-46c3-bae5-93efb379edb9",
+      "position": 1,
+      "properties": {
+        "description": "You've learned a lot this unit, and now it’s time to Show What You Know! Like in previous units, we will begin with the unit project, then we will spend a day practicing how to answer AP-style free-response questions. We will then wrap up the unit with a multiple-choice assessment.",
+        "name": "Project Preview",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "86af7afd-5c12-46c3-bae5-93efb379edb9",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "eecb89cc-0589-471a-86e5-edfab39d580a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Share an overview of the Neighborhood Block Party Project with the students:\n* Students will be creating the underlying logic for a basic game to play at The Neighborhood Block Party. They will not develop an entire functional game for this project.\n* They will implement what they’ve learned throughout this unit to design a basic board or lawn game.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think about some games you enjoy playing. Given what we’ve learned in this unit, what games could you build using Java?*\n\n**Discussion Goal:** Students share ideas about games they could create.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask additional prompting questions to encourage brainstorming, such as:\n* *What video, computer, or phone games do you enjoy playing? Could you build a version of these?*\n* *When we developed Pop the Balloons, what different techniques or methods did we use? How could you use these in a different game?*\n* *What card or board game do you enjoy playing? How might you create a virtual version?*\n\nConsider creating a class list of brainstormed ideas by doing the following:\n* Distribute sticky notes or slips of paper and ask students to record one idea per sticky or slip. Keep the ideas for use during the first day of the project.\n* Record ideas as students share on a slide or document to review later.\n\nAlternately, students can write the prompt in their notebooks and add any ideas they have. If you have extra time, give several minutes of quiet brainstorming time followed by sharing with a partner or small group to flesh out ideas."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eecb89cc-0589-471a-86e5-edfab39d580a",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "5270d7ef-4d2c-4cce-9429-99d90bc941e1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 4 Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "5270d7ef-4d2c-4cce-9429-99d90bc941e1",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "b112ab11-e702-4757-a63b-9a0ccdcea431",
+      "position": 4,
+      "properties": {
+        "description": "The Unit 4 Guide will help you remember what you have learned in this unit. Go over all of the lessons and think to yourself if you can say \"I can..\" with each lesson objective. Review the vocabulary. Look over the reference section for code. You don't need to memorize any particular class for the assessment, but it's helpful to remember how everything works together. ",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The unit guide outlines the objectives, vocabulary, and programming concepts to help students prepare for the assessment. If time permits, you can choose to quickly review any parts of the unit that are still confusing for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b112ab11-e702-4757-a63b-9a0ccdcea431",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "0bba5289-1f5e-4b98-81a9-22178e51d677",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "0bba5289-1f5e-4b98-81a9-22178e51d677",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "7328c943-e60e-47f9-b31c-36adbe5f96b7",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "7328c943-e60e-47f9-b31c-36adbe5f96b7",
+        "lesson_activity.key": "ac5ca90f-0406-457c-a188-03e6bcf480f3"
+      }
+    },
+    {
+      "key": "78c6e42a-ef21-41b9-9932-59ca008d5060",
+      "position": 1,
+      "properties": {
+        "description": "Today, we will complete a free response question called BingoCaller almost completely on your own. To approach this problem, let’s apply the three steps of the Close Reading Strategy.",
+        "name": "Step 1: Annotate",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "78c6e42a-ef21-41b9-9932-59ca008d5060",
+        "lesson_activity.key": "d1d07de0-089e-4f2b-8f38-e447c0f782a3"
+      }
+    },
+    {
+      "key": "f4b9d4e0-8233-4901-930c-f1aadc7c2c45",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the three-step Close Reading Strategy:\n* Step 1: Annotate the question.\n* Step 2: Write pseudocode to plan the solution.\n* Step 3: Implement the solution in Java.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of FRQ Writing activity guide and a sheet of scratch paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to individually annotate the FRQ using the shapes and symbols. \n\n**Group:** Place students in groups of two.\n\n**Do This:** After students finish annotating, have students compare their annotations with their partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the directions and starter code from the FRQ Writing activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you have about approaching this Free Response Question?*\n\n**Discussion Goal:** Students share any misunderstandings or points of confusion they have about the FRQ. Point out words in the directions or starter code when addressing student questions. Some questions students may ask include:\n* How do I start the problem?\n* What methods do I need to write?\n* Is there an example I can review?\n* How will this FRQ be graded?"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4b9d4e0-8233-4901-930c-f1aadc7c2c45",
+        "lesson_activity.key": "d1d07de0-089e-4f2b-8f38-e447c0f782a3"
+      }
+    },
+    {
+      "key": "a6086ef7-522d-45f8-9601-d9a799de9314",
+      "position": 1,
+      "properties": {
+        "description": "Before writing your solution in Java, let’s plan it using pseudocode. Writing your algorithm out in pseudocode helps you plan your algorithm without worrying about the syntax rules of the programming language.",
+        "duration": "10",
+        "name": "Pseudocode",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a6086ef7-522d-45f8-9601-d9a799de9314",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "c08cb175-8753-41fc-93ff-7e5e6289ce41",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to plan their solutions for part A and B using pseudocode on the provided scratch paper.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students work, you may choose to use a ten minute timer to help students pace themselves. At this point, the classroom should be quiet so students can focus on writing pseudocode. After five minutes, you may suggest to students to move onto the second half of the FRQ."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c08cb175-8753-41fc-93ff-7e5e6289ce41",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "b7a49964-573f-4b13-9169-547bee4c3a9c",
+      "position": 3,
+      "properties": {
+        "description": "The last step is to write your solution in Java. Using your pseudocode, write a solution in Java to the FRQ. You will have 15 minutes to complete this task.",
+        "duration": "15",
+        "name": "Step 3: Implement",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b7a49964-573f-4b13-9169-547bee4c3a9c",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "32e8fb91-efb9-4c5d-b9e1-c6aa1ce2ba2e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to convert their pseudocode into Java code onto the FRQ Writing activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students work, you may choose to use a 15 minute timer to help students pace themselves. At this point, the classroom should be quiet so students can focus on writing their solution to the FRQ. If students finish early, suggest:\n* Trace their code to ensure it is correct.\n* Check their solution to ensure it aligns with their pseudocode solution."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "32e8fb91-efb9-4c5d-b9e1-c6aa1ce2ba2e",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "d28b5991-9a67-4c23-9ab7-12a6048d3643",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Scoring Guide.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask students to evaluate and score their work with their partners using the FRQ Scoring Guide.",
+        "duration": "8",
+        "name": "FRQ Scoring and Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "d28b5991-9a67-4c23-9ab7-12a6048d3643",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "d490adf0-6e0f-4ab8-85cb-b87dac318223",
+      "position": 6,
+      "properties": {
+        "description": "Congratulations on completing another FRQ! As with any problem we solve in Java, there are multiple approaches to solving an FRQ. Let’s explore some approaches to today’s FRQ.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d490adf0-6e0f-4ab8-85cb-b87dac318223",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "9448ead0-0835-4661-983b-6019cb91ddad",
+      "position": 7,
+      "properties": {
+        "description": "**Do This:** Discuss possible solutions to the FRQ. For each solution, walk through each row of the FRQ Scoring Guide and point out how the solution met those requirements. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation for `hasBeenCalled()` method (Part (a))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b) continued)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When discussing the solution, remind students of examples and exercises where the concepts were applied in Unit 4: \n\nExamples related part A:\n* Offsetting the index by 1: In Pop the Balloons, the index of the `Die` object with a value of 1 is 0.\n* Returning the value directly from the array: This implementation applied the DRY Principle.\n\nExamples related to B:\n* Casting randomly generated values into integers: To simulate rolling 1 to 6, students wrote `(int) (Math.random() * 6) + 1 `\n* Conditional branching with an `if/else-if/else` statement: In Pop the Balloons, `updateBalloons()` used an `if/else-if/else` statement because there were more than two balloons, and therefore more than two conditions, that could have been clicked.\n* Using `boolean` method call in a conditional statement: In Pop the Balloons, `isValidMove()` is called to determine whether a balloon can be popped."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9448ead0-0835-4661-983b-6019cb91ddad",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "93b4ed14-8ff2-4fb0-9912-83f43bd0f5ee",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What were you confident about? Are there some things you left out that could have brought up your score?*\n\n**Discussion Goal:** Students identify what they achieved in their FRQ solution and areas of improvement."
+      },
+      "seeding_key": {
+        "activity_section.key": "93b4ed14-8ff2-4fb0-9912-83f43bd0f5ee",
+        "lesson_activity.key": "25bc6c0c-0451-4353-b742-c480e41459e5"
+      }
+    },
+    {
+      "key": "50d30a5e-2dfe-4e30-b928-7dabf4317f2d",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student one sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain each step of the Give One, Get One activity:\n* On a sticky note, write one strategy for approaching an FRQ question.\n* Afterwards, exchange your sticky note with a partner. \n* Read the FRQ strategy from your partner.",
+        "name": "Give One, Get One",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Give One, Get One** is a processing activity where after thinking or journaling about a topic, students are asked to get up and find someone across the room with whom to share their thoughts or answers. Students are thus receiving an idea in exchange for giving one. The exchange can be verbal or on sticky notes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "50d30a5e-2dfe-4e30-b928-7dabf4317f2d",
+        "lesson_activity.key": "12574767-34d7-4127-8006-4aa21ff5b653"
+      }
+    },
+    {
+      "key": "fe19eb63-d8fe-4d80-890d-aea892d36e37",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations, you have made it to the end of Unit 4! You learned a lot about using libraries and APIs, conditionals, and Boolean expressions to implement a block party game for The Neighborhood in The Park. Today, you will complete an assessment to put your skills to the test.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fe19eb63-d8fe-4d80-890d-aea892d36e37",
+        "lesson_activity.key": "5b09ec34-4959-4c4e-9044-f89e2ec9ac98"
+      }
+    },
+    {
+      "key": "8295a615-6cbb-4672-bc4c-faadcf90bed4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 4 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys). Allow five minutes for students to log in to Code Studio. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Topic Questions and Personal Progress Checks**\n\n\nFor more information, see the Code.org CSA Topic Coverage."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8295a615-6cbb-4672-bc4c-faadcf90bed4",
+        "lesson_activity.key": "5b09ec34-4959-4c4e-9044-f89e2ec9ac98"
+      }
+    },
+    {
+      "key": "2238e357-3992-40c4-9913-90f4ee854f38",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "name": "Assessment Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discuss any questions that come up and take note of topics where students may need extra review.\n\nAs you review answers with students, consider the following suggested strategies:\n* Students write down solutions to questions in their journals that they answered incorrectly.\n* Identify mostly missed questions and review as a class.\n* Review answers asynchronously and allow students to complete corrections.\n* Place students in pairs to review answers and share areas that need extra review.\n\nIf you do not have time to review answers with students, create a data chart that includes assessment results. For students who did not meet the learning expectations, follow up to ensure they learn from errors made on the assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2238e357-3992-40c4-9913-90f4ee854f38",
+        "lesson_activity.key": "2f957b2d-2e7e-4cd7-845f-7a833d9c7f84"
+      }
     }
   ],
   "script_levels": [
@@ -1546,6 +3231,18 @@
       }
     },
     {
+      "name": "[KEY] Comparing Objects",
+      "url": "https://docs.google.com/document/d/1DX4-GghzBqTMk1-4YHeQkIrL-Qgc2neSJfznym2P0DI/edit?usp=sharing",
+      "key": "_key_comparing_objects",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_comparing_objects"
+      }
+    },
+    {
       "name": "[KEY] Exploring Operators",
       "url": "https://docs.google.com/document/d/1EeKzmo5fRWha8iCkOQMwjD7lelmax5rqTMdtVFeJ3Ic/edit?usp=sharing",
       "key": "_key_exploring_operators",
@@ -1558,6 +3255,18 @@
       }
     },
     {
+      "name": "[KEY] FRQ Writing",
+      "url": "https://docs.google.com/document/d/1cjhvLYhYiFfUDPiKFZd7GTAc8aBrfjYx-r8s35CypAw/edit?usp=sharing",
+      "key": "_key_frq_writing_2",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_frq_writing_2"
+      }
+    },
+    {
       "name": "[KEY] Math Class Activity Guide",
       "url": "https://docs.google.com/document/d/144NcvwidgzxpHJUa7M6-fpqkkoFHWCukQfWwvkfVG-I/edit?usp=sharing",
       "key": "_key_math_class_activity_guide",
@@ -1567,6 +3276,30 @@
       },
       "seeding_key": {
         "resource.key": "_key_math_class_activity_guide"
+      }
+    },
+    {
+      "name": "[KEY] Truth Tables",
+      "url": "https://docs.google.com/document/d/1-a3CcJ0vKuDDFYWu52zzaOWOjsijtdmMNR3DhyLr5oI/edit?usp=sharing",
+      "key": "_key_truth_tables",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_truth_tables"
+      }
+    },
+    {
+      "name": "[KEY] U4L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1BvL6DI6Jb6WBynVmLMJuux3196GTPNBhRmNsADOWgHI/edit?usp=sharing",
+      "key": "_key_u4l10_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u4l10_extra_practice"
       }
     },
     {
@@ -1630,6 +3363,66 @@
       }
     },
     {
+      "name": "[KEY] U4L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1DX4-GghzBqTMk1-4YHeQkIrL-Qgc2neSJfznym2P0DI/edit?usp=sharing",
+      "key": "_key_u4l6_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u4l6_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U4L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/18gj3DKgRPkcJ_5ZYMNlPDbaNme_D7v0syca_nbIszwo/edit?usp=sharing",
+      "key": "_key_u4l7_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u4l7_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U4L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/19Cw6zoHDO4LkfWyMc-3cvPz1pdJPJnoS8Zn5Am6no88/edit?usp=sharing",
+      "key": "_key_u4l8_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u4l8_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U4L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1iwKVDmmdfmH9axRsPKN0F0PXdc7nlVg-2Ie5XkSqExw/edit?usp=sharing",
+      "key": "_key_u4l9_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u4l9_extra_practice"
+      }
+    },
+    {
+      "name": "Around the World Printouts",
+      "url": "https://docs.google.com/document/d/1FMlneQD0SY65y9atWPYPz2fN63wboyhUiTx8csrU_Vw/edit?usp=sharing",
+      "key": "around_the_world_printouts",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "around_the_world_printouts"
+      }
+    },
+    {
       "name": "Casting Exploration",
       "url": "https://docs.google.com/document/d/1IPYgSjg3JmKCD33csEdikwi4-egwQGrWwciFeaHLFUA/edit#",
       "key": "casting_exploration",
@@ -1639,6 +3432,18 @@
       },
       "seeding_key": {
         "resource.key": "casting_exploration"
+      }
+    },
+    {
+      "name": "Comparing Objects",
+      "url": "https://docs.google.com/document/d/1eZuLlzoqKsNHUysCihhE82rRfelMdVRhnpkSgKRrnWU/edit?usp=sharing",
+      "key": "comparing_objects",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "comparing_objects"
       }
     },
     {
@@ -1654,6 +3459,30 @@
       }
     },
     {
+      "name": "FRQ Scoring Guide",
+      "url": "https://docs.google.com/document/d/1dj5xv6_3-6yVytSqIesTffJY5FSa-qQ9PIEe0yPGbYE/edit?usp=sharing",
+      "key": "frq_scoring_guide_2",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "frq_scoring_guide_2"
+      }
+    },
+    {
+      "name": "FRQ Writing",
+      "url": "https://docs.google.com/document/d/1lBJAzXNmzZ_vdrt9zH3RanG_-logRxC6PxtuA46UkCc/edit?usp=sharing",
+      "key": "frq_writing_2",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "frq_writing_2"
+      }
+    },
+    {
       "name": "Math Class Activity Guide",
       "url": "https://docs.google.com/document/d/1NWyUTX0o8NfjphkP8FKqH-mY-0PRKw6apnLa-EDQSdw/edit?usp=sharing",
       "key": "math_class_activity_guide",
@@ -1666,6 +3495,18 @@
       }
     },
     {
+      "name": "Object References Manipulatives",
+      "url": "https://docs.google.com/presentation/d/1sQFdGkK3O6REikNhecpBtRRxMToUhrjsZ3GcwMrwBHk/edit?usp=sharing",
+      "key": "object_references_manipulatives",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "object_references_manipulatives"
+      }
+    },
+    {
       "name": "Quiz, Quiz Trade",
       "url": "https://docs.google.com/document/u/2/d/1c9smHGRY2DNFQupRe7GS3RlU7u4Dd2J-y8dfpukljc4/edit",
       "key": "quiz_quiz_trade_1",
@@ -1675,6 +3516,30 @@
       },
       "seeding_key": {
         "resource.key": "quiz_quiz_trade_1"
+      }
+    },
+    {
+      "name": "Truth Tables",
+      "url": "https://docs.google.com/document/u/1/d/1ctKlgd7zP61hdc4JFVtSGr5TZ1tI_xZmBEaLIfRizb8/edit",
+      "key": "truth_tables",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "truth_tables"
+      }
+    },
+    {
+      "name": "U4L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1XyaSNf3CmwIYsIpKUVyH1Gu5p3H_Vsc3rATDq9TcIWI/edit?usp=sharing",
+      "key": "u4l10_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u4l10_extra_practice"
       }
     },
     {
@@ -1738,6 +3603,66 @@
       }
     },
     {
+      "name": "U4L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1F0j-9xQ-VlRMlhP-OVpK6BTmUA4GHj17EaJsBdKGTco/edit?usp=sharing",
+      "key": "u4l6_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u4l6_extra_practice"
+      }
+    },
+    {
+      "name": "U4L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/14Ssh6iBSp543H5A_LWHKV7HWXIalTBOdk8-Q1jTUsMM/edit?usp=sharing",
+      "key": "u4l7_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u4l7_extra_practice"
+      }
+    },
+    {
+      "name": "U4L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/17XzT1L9FU9ghQXA3AaJ0XKSfuufGgtytYR7zO9OX8ao/edit?usp=sharing",
+      "key": "u4l8_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u4l8_extra_practice"
+      }
+    },
+    {
+      "name": "U4L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/14IUvb3_k7FWW3rFku0TUC2izaGwDYrvLvgeGFzORDnA/edit?usp=sharing",
+      "key": "u4l9_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u4l9_extra_practice"
+      }
+    },
+    {
+      "name": "Unit 4 Guide",
+      "url": "https://docs.google.com/document/d/1YA_zYh2HlVntDUpFTKrFlO6He__qySBndCt1X-09BkA/edit?usp=sharing",
+      "key": "unit_4_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_guide"
+      }
+    },
+    {
       "name": "Unit 4 Presentation Slides",
       "url": "https://docs.google.com/presentation/d/1M-LmKHk-ZbV-5Pi3FnqdcWOGavTBBq3_kZ-kib897tw/edit?usp=sharing",
       "key": "unit_4_presentation_slides",
@@ -1747,6 +3672,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "name": "Vocabulary Don't-Say-It!",
+      "url": "https://docs.google.com/document/d/1CzdHQqqMf6qAreGIWrlsvTSvnfhSJ9jUCUjiVTfrxr4/edit?usp=sharing",
+      "key": "vocabulary_don_t-say-it_",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_don_t-say-it_"
       }
     }
   ],
@@ -1882,6 +3819,174 @@
         "lesson.key": "lesson-6",
         "resource.key": "u4l5_extra_practice"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_comparing_objects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_u4l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "object_references_manipulatives"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "comparing_objects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u4l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_u4l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "u4l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_key_u4l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "u4l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_u4l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u4l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_truth_tables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "around_the_world_printouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_u4l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "vocabulary_don_t-say-it_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "truth_tables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "u4l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_4_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_frq_writing_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_writing_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_scoring_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_4_presentation_slides"
+      }
     }
   ],
   "scripts_resources": [
@@ -2000,6 +4105,96 @@
       "seeding_key": {
         "vocabulary.key": "relational_operator"
       }
+    },
+    {
+      "key": "alias",
+      "word": "Alias",
+      "definition": "A reference variable that points to the same object as another reference variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "alias"
+      }
+    },
+    {
+      "key": "if_else_statement",
+      "word": "if/else Statement",
+      "definition": "Specifies a block of code to execute when the condition is true and a block of code to execute when the condition is false",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "if_else_statement"
+      }
+    },
+    {
+      "key": "two_way_selection",
+      "word": "Two-Way Selection",
+      "definition": "Used when two sets of statements are needed: one to execute when the condition is true and one to execute when the condition is false",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "two_way_selection"
+      }
+    },
+    {
+      "key": "multi_selection_statement",
+      "word": "Multi-Selection Statement",
+      "definition": "A statement that selects a single action from three or more conditional statements based on which boolean expression is true",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "multi_selection_statement"
+      }
+    },
+    {
+      "key": "nested_if_statement",
+      "word": "Nested if Statement",
+      "definition": "An if statement inside an if statement",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "nested_if_statement"
+      }
+    },
+    {
+      "key": "logical_operator",
+      "word": "Logical Operator",
+      "definition": "An operator that returns a Boolean result",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
+      "key": "compound_boolean_expression",
+      "word": "Compound Boolean Expression",
+      "definition": "An expression involving logical operators that evaluates to a Boolean value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "compound_boolean_expression"
+      }
+    },
+    {
+      "key": "de_morgan_s_laws",
+      "word": "De Morgan's Laws",
+      "definition": "A set of rules that describe how to handle complex Boolean expressions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "de_morgan_s_laws"
+      }
+    },
+    {
+      "key": "truth_table",
+      "word": "Truth Table",
+      "definition": "A table used to determine the truth values of a Boolean expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "truth_table"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -2067,6 +4262,60 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "vocabulary.key": "relational_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "alias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "if_else_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "two_way_selection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "multi_selection_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "nested_if_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "compound_boolean_expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "de_morgan_s_laws"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "truth_table"
       }
     }
   ],
@@ -2212,6 +4461,206 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "objective.key": "9b56f9b2-34d1-45c3-b0ae-e9d852d17db1"
+      }
+    },
+    {
+      "key": "36c69762-8b91-4d60-b0bf-a2d1b5045a7d",
+      "properties": {
+        "description": "Predict the outcome of a code segment using aliased reference variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "36c69762-8b91-4d60-b0bf-a2d1b5045a7d"
+      }
+    },
+    {
+      "key": "aca009d5-ae48-4a80-bc4e-44be1dbe234e",
+      "properties": {
+        "description": "Explain the difference between == and equals()"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "aca009d5-ae48-4a80-bc4e-44be1dbe234e"
+      }
+    },
+    {
+      "key": "56c25e89-fb66-4db2-99c9-18ead4d223c6",
+      "properties": {
+        "description": "Write an equals() method to compare object data for equality"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "56c25e89-fb66-4db2-99c9-18ead4d223c6"
+      }
+    },
+    {
+      "key": "fa9d5ed3-65e0-4045-ac6a-5f1ed07dc814",
+      "properties": {
+        "description": "Write if/else statements to implement alternate outcomes"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "fa9d5ed3-65e0-4045-ac6a-5f1ed07dc814"
+      }
+    },
+    {
+      "key": "73fd386d-f182-458c-9239-36b1f1454868",
+      "properties": {
+        "description": "Access elements in an array based on the outcome of a Boolean expression"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "73fd386d-f182-458c-9239-36b1f1454868"
+      }
+    },
+    {
+      "key": "c4fbb002-3414-4bc4-ac31-198692345a87",
+      "properties": {
+        "description": "Use Math.random() to select a random element from an array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "c4fbb002-3414-4bc4-ac31-198692345a87"
+      }
+    },
+    {
+      "key": "9f49c933-e7c0-446d-9ed1-0fdf7cd34b2d",
+      "properties": {
+        "description": "Use if/else statements to check the validity of a move in the Pop the Balloons game"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "9f49c933-e7c0-446d-9ed1-0fdf7cd34b2d"
+      }
+    },
+    {
+      "key": "e79effb7-0529-4063-92eb-127139ef85c0",
+      "properties": {
+        "description": "Write if/else-if/else statements using relational operators"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "e79effb7-0529-4063-92eb-127139ef85c0"
+      }
+    },
+    {
+      "key": "e375a8fd-e335-45b7-a7aa-884b50247450",
+      "properties": {
+        "description": "Evaluate multiple conditions to determine a specific outcome"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "e375a8fd-e335-45b7-a7aa-884b50247450"
+      }
+    },
+    {
+      "key": "cd6dd581-6042-497f-bc57-8a73bcacf2a6",
+      "properties": {
+        "description": "Access elements in an array based on the outcome of a Boolean expression"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "cd6dd581-6042-497f-bc57-8a73bcacf2a6"
+      }
+    },
+    {
+      "key": "0373553c-1a9c-403b-9b62-c95ff6701afd",
+      "properties": {
+        "description": "Construct nested if statements"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "0373553c-1a9c-403b-9b62-c95ff6701afd"
+      }
+    },
+    {
+      "key": "f6344639-6603-466b-a851-dc43cfec0b6e",
+      "properties": {
+        "description": "Understand the effect of logical operators !(not), &&(and), and ||(or)"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "f6344639-6603-466b-a851-dc43cfec0b6e"
+      }
+    },
+    {
+      "key": "1221f661-f4b9-41d6-a00f-ee54b51f8722",
+      "properties": {
+        "description": "Construct a conditional statement involving logical operators"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "1221f661-f4b9-41d6-a00f-ee54b51f8722"
+      }
+    },
+    {
+      "key": "22b841da-0d6e-407e-8253-88c2b608db49",
+      "properties": {
+        "description": "Use nested if statements and logical operators to check how many moves are left and to calculate the score of the Pop the Balloons game"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "22b841da-0d6e-407e-8253-88c2b608db49"
+      }
+    },
+    {
+      "key": "c4105e1b-d193-4b18-945c-3c158d893c67",
+      "properties": {
+        "description": "Construct truth tables to evaluate Boolean expressions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "c4105e1b-d193-4b18-945c-3c158d893c67"
+      }
+    },
+    {
+      "key": "98913902-79de-4d37-ab7e-9021fb63b945",
+      "properties": {
+        "description": "Use truth tables to prove De Morgan’s Laws"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "98913902-79de-4d37-ab7e-9021fb63b945"
+      }
+    },
+    {
+      "key": "2c81c5b4-7ccb-4822-b013-30436308233a",
+      "properties": {
+        "description": "Evaluate compound Boolean expressions for equivalence"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "2c81c5b4-7ccb-4822-b013-30436308233a"
+      }
+    },
+    {
+      "key": "8dee2812-af22-4374-beba-8c5abad1e527",
+      "properties": {
+        "description": "Implement methods based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "8dee2812-af22-4374-beba-8c5abad1e527"
+      }
+    },
+    {
+      "key": "776ce1d9-c5bf-4ffb-a775-897a9faaf39e",
+      "properties": {
+        "description": "Plan an algorithm using pseudocode"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "776ce1d9-c5bf-4ffb-a775-897a9faaf39e"
+      }
+    },
+    {
+      "key": "90beffeb-63be-45b3-862a-9679c533235f",
+      "properties": {
+        "description": "Translate pseudocode into Java"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "90beffeb-63be-45b3-862a-9679c533235f"
       }
     }
   ],
@@ -2403,6 +4852,111 @@
         "lesson.key": "lesson-6",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.H.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.H.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.H.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.G.3"
       }
     }
   ],

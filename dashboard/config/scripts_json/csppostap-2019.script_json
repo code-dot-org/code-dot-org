@@ -12,7 +12,6 @@
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/post-ap/{LESSON}",
       "version_year": "2019",
       "project_sharing": true,
-      "is_stable": true,
       "family_name": "csppostap",
       "script_announcements": [
         {
@@ -37,7 +36,7 @@
     },
     "new_name": null,
     "family_name": "csppostap",
-    "serialized_at": "2021-06-16 23:00:17 UTC",
+    "serialized_at": "2021-06-17 22:30:19 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csppostap-2019"

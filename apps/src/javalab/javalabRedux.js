@@ -1,4 +1,5 @@
 import UserPreferences from '../lib/util/UserPreferences';
+import {DisplayTheme} from './DisplayTheme';
 
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const RENAME_FILE = 'javalab/RENAME_FILE';
@@ -73,7 +74,9 @@ export const sourceValidationUpdated = (filename, isValidation) => ({
 
 // Updates the user preferences to reflect change
 export const setIsDarkMode = isDarkMode => {
-  new UserPreferences().setUsingDarkMode(isDarkMode);
+  new UserPreferences().setDisplayTheme(
+    isDarkMode ? DisplayTheme.DARK : DisplayTheme.LIGHT
+  );
   return {
     isDarkMode: isDarkMode,
     type: COLOR_PREFERENCE_UPDATED

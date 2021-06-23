@@ -30,14 +30,13 @@
       "version_year": "2019",
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
-      "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/csd-19/unit5/{LESSON}",
       "family_name": "csd5",
       "hideable_lessons": true
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2021-06-16 23:00:09 UTC",
+    "serialized_at": "2021-06-17 22:30:12 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd5-2019"

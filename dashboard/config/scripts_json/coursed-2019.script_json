@@ -31,7 +31,6 @@
       "version_year": "2019",
       "has_lesson_plan": true,
       "curriculum_umbrella": "CSF",
-      "is_stable": true,
       "family_name": "coursed",
       "tts": true,
       "supported_locales": [
@@ -44,7 +43,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-06-16 22:59:57 UTC",
+    "serialized_at": "2021-06-17 22:29:58 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursed-2019"

@@ -3,13 +3,15 @@
     "name": "self-paced-pl-csd1-2021",
     "wrapup_video_id": null,
     "hidden": true,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "has_verified_resources": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:01:35 UTC",
+    "serialized_at": "2021-06-22 17:04:21 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd1-2021"
@@ -32,15 +34,30 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Welcome",
+      "name": "Welcome to Code.org",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2021"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Navigating this Professional Learning Course",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd1-2021"
       }
@@ -58,6 +75,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd1-2021"
       }
+    },
+    {
+      "key": "5295d217-e144-49b7-96ee-914682039fd6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5295d217-e144-49b7-96ee-914682039fd6",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2021"
+      }
     }
   ],
   "activity_sections": [
@@ -69,6 +98,16 @@
       "seeding_key": {
         "activity_section.key": "6c6ab391-027f-4777-bd36-0816ca9bb7fa",
         "lesson_activity.key": "9f4768ed-8efe-4cad-9790-be0c68e69dd6"
+      }
+    },
+    {
+      "key": "49ae93c9-91d6-428b-851f-dff662cf359d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "49ae93c9-91d6-428b-851f-dff662cf359d",
+        "lesson_activity.key": "5295d217-e144-49b7-96ee-914682039fd6"
       }
     }
   ],

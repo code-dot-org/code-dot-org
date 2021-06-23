@@ -32,7 +32,6 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2017",
-      "is_stable": true,
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
       "family_name": "csd3",
@@ -41,7 +40,7 @@
     },
     "new_name": "csd3-2017",
     "family_name": "csd3",
-    "serialized_at": "2021-06-16 22:58:26 UTC",
+    "serialized_at": "2021-06-17 22:28:30 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd3-2017"

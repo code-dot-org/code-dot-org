@@ -31,7 +31,7 @@ class CoursesController < ApplicationController
     if UnitGroup::FAMILY_NAMES.include?(params[:course_name])
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
       redirect_to_course = UnitGroup.all_courses.
-          select {|c| c.family_name == params[:course_name] && c.is_stable?}.
+          select {|c| c.family_name == params[:course_name] && c.stable?}.
           sort_by(&:version_year).
           last
       redirect_to "/courses/#{redirect_to_course.name}#{redirect_query_string}"
@@ -92,19 +92,18 @@ class CoursesController < ApplicationController
   def update
     unit_group = UnitGroup.find_by_name!(params[:course_name])
     unit_group.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
-    unit_group.update(course_params)
-    CourseOffering.add_course_offering(unit_group)
-    unit_group.reload
-
     unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless unit_group.has_migrated_script?
     if unit_group.has_migrated_script? && unit_group.course_version
       unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
 
+    unit_group.update(course_params)
+
     # Update the published state of all the units in the course to be same as the course
     unit_group.default_scripts.each do |script|
-      script.assign_attributes(published_state: course_params[:published_state], hidden: !course_params[:visible], properties: {is_stable: course_params[:is_stable], pilot_experiment: course_params[:pilot_experiment]})
+      # We are no longer using hidden but until its removed it needs a value because it can't be null
+      script.assign_attributes(published_state: course_params[:published_state], hidden: true, properties: {pilot_experiment: course_params[:pilot_experiment]})
       next unless script.changed?
       script.save!
       script.write_script_dsl
@@ -193,21 +192,7 @@ class CoursesController < ApplicationController
   def course_params
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
-
     cp[:published_state] = SharedConstants::PUBLISHED_STATE.beta unless cp[:published_state]
-
-    # Temporary transition code used to update the boolean values that control published_state
-    # This should be removed once we move off of booleans completely and on to published_state
-    if cp[:published_state] == SharedConstants::PUBLISHED_STATE.beta || cp[:published_state] == SharedConstants::PUBLISHED_STATE.pilot
-      cp[:visible] = false
-      cp[:is_stable] = false
-    elsif cp[:published_state] == SharedConstants::PUBLISHED_STATE.preview
-      cp[:visible] = true
-      cp[:is_stable] = false
-    elsif cp[:published_state] == SharedConstants::PUBLISHED_STATE.stable
-      cp[:visible] = true
-      cp[:is_stable] = true
-    end
 
     cp
   end

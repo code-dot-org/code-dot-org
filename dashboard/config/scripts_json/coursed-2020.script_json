@@ -34,7 +34,6 @@
       "tts": true,
       "lesson_extras_available": true,
       "hideable_lessons": true,
-      "is_stable": true,
       "script_announcements": [
         {
           "notice": "Our 2020 CS Fundamentals Lessons are Live!",
@@ -48,7 +47,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-06-16 23:00:41 UTC",
+    "serialized_at": "2021-06-17 22:30:41 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursed-2020"

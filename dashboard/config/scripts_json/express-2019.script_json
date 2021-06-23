@@ -14,7 +14,6 @@
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/express/{LESSON}",
       "version_year": "2019",
       "curriculum_umbrella": "CSF",
-      "is_stable": true,
       "family_name": "express",
       "tts": true,
       "supported_locales": [
@@ -70,7 +69,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-06-16 23:00:01 UTC",
+    "serialized_at": "2021-06-17 22:30:02 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "express-2019"

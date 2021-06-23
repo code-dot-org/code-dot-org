@@ -39,14 +39,13 @@
       "project_sharing": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/unit5/{LESSON}",
       "curriculum_umbrella": "CSP",
-      "is_stable": true,
       "family_name": "csp5",
       "tts": true,
       "hideable_lessons": true
     },
     "new_name": null,
     "family_name": "csp5",
-    "serialized_at": "2021-06-16 23:00:16 UTC",
+    "serialized_at": "2021-06-17 22:30:17 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp5-2019"
