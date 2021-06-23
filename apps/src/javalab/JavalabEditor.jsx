@@ -89,9 +89,8 @@ class JavalabEditor extends React.Component {
     this.updateFileType = this.updateFileType.bind(this);
     this._codeMirrors = {};
 
-    // Used to manage dynamic editor configuration.
+    // Used to manage light/dark mode configuration.
     this.editorModeConfigCompartment = new Compartment();
-    this.isReadOnlyWorkspaceConfigCompartment = new Compartment();
 
     // fileMetadata is a dictionary of file key -> filename.
     let fileMetadata = {};
@@ -134,24 +133,6 @@ class JavalabEditor extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // This isn't really necessary because we reload the page
-    // when switching to a teacher viewing a student's work.
-    // I can deduplicate this code from the dark/light mode code below
-    // if we want to keep it in place.
-    if (this.props.isReadOnlyWorkspace !== prevProps.isReadOnlyWorkspace) {
-      const updatedEditableState = EditorView.editable.of(
-        this.props.isReadOnlyWorkspace
-      );
-
-      Object.keys(this.editors).forEach(editorKey => {
-        this.editors[editorKey].dispatch({
-          effects: this.isReadOnlyWorkspaceConfigCompartment.reconfigure(
-            updatedEditableState
-          )
-        });
-      });
-    }
-
     if (prevProps.isDarkMode !== this.props.isDarkMode) {
       const updatedStyle = this.props.isDarkMode ? oneDark : lightMode;
 
