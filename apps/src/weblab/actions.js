@@ -2,12 +2,13 @@
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import {getStore} from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
+import React from 'react';
+import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 
 /** @enum {string} */
 export const ActionType = utils.makeEnum(
   'CHANGE_FULL_SCREEN_PREVIEW_ON',
   'CHANGE_INSPECTOR_ON',
-  'CHANGE_SHOW_ERROR',
   'CHANGE_DIALOG',
   'CHANGE_MAX_PROJECT_CAPACITY',
   'CHANGE_PROJECT_SIZE'
@@ -37,22 +38,11 @@ export function changeInspectorOn(inspectorOn) {
   };
 }
 
-/**
- * Change the showError state between true or false
- * @param {!Boolean} showError
- * @returns {{type: ActionType, showError: Boolean}}
- */
-export function changeShowError(showError) {
-  return {
-    type: ActionType.CHANGE_SHOW_ERROR,
-    showError
-  };
-}
-
-export function changeDialog(dialogProps = null) {
+// TODO: comment
+export function changeDialog(dialog = null) {
   return {
     type: ActionType.CHANGE_DIALOG,
-    dialogProps
+    dialog
   };
 }
 
@@ -85,12 +75,15 @@ export function changeProjectSize(bytes) {
 
 // TODO: comment
 export function openDialog(props) {
-  // TODO: validate props
-  const defaultProps = {
-    handleConfirmation: closeDialog,
-    handleClose: closeDialog
-  };
-  getStore().dispatch(changeDialog({...defaultProps, ...props}));
+  const dialog = (
+    <StylizedBaseDialog
+      isOpen
+      handleConfirmation={closeDialog}
+      handleClose={closeDialog}
+      {...props}
+    />
+  );
+  getStore().dispatch(changeDialog(dialog));
 }
 
 function closeDialog() {
