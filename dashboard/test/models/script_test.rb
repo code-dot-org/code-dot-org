@@ -1212,7 +1212,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
     assert_equal true, unit.summarize(true, create(:teacher))[:show_assign_button]
 
-    # Teacher should not be able to assign a hidden script.
+    # Teacher should not be able to assign a unlaunched script.
     hidden_unit = create(:script, name: 'unassignable-hidden', published_state: SharedConstants::PUBLISHED_STATE.beta)
     assert_equal SharedConstants::PUBLISHED_STATE.beta, hidden_unit.summarize[:publishedState]
     assert_equal false, hidden_unit.summarize(true, create(:teacher))[:show_assign_button]
