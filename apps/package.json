@@ -233,7 +233,7 @@
     "@codemirror/matchbrackets": "^0.18.0",
     "@codemirror/rectangular-selection": "^0.18.0",
     "@codemirror/search": "^0.18.0",
-    "@codemirror/state": "^0.18.0",
+    "@codemirror/state": "^0.18.7",
     "@codemirror/theme-one-dark": "^0.18.0",
     "@codemirror/view": "^0.18.0",
     "@microsoft/immersive-reader-sdk": "^1.1.0",

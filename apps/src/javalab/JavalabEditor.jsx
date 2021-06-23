@@ -62,7 +62,8 @@ class JavalabEditor extends React.Component {
     isDarkMode: PropTypes.bool,
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
-    handleVersionHistory: PropTypes.func.isRequired
+    handleVersionHistory: PropTypes.func.isRequired,
+    isReadOnlyWorkspace: PropTypes.bool.isRequired
   };
 
   static defaultProps = {
@@ -88,8 +89,9 @@ class JavalabEditor extends React.Component {
     this.updateFileType = this.updateFileType.bind(this);
     this._codeMirrors = {};
 
-    // Used to manage dark and light mode configuration.
+    // Used to manage dynamic editor configuration.
     this.editorModeConfigCompartment = new Compartment();
+    this.isReadOnlyWorkspaceConfigCompartment = new Compartment();
 
     // fileMetadata is a dictionary of file key -> filename.
     let fileMetadata = {};
@@ -132,12 +134,30 @@ class JavalabEditor extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.isDarkMode !== this.props.isDarkMode) {
-      const newStyle = this.props.isDarkMode ? oneDark : lightMode;
+    // This isn't really necessary because we reload the page
+    // when switching to a teacher viewing a student's work.
+    // I can deduplicate this code from the dark/light mode code below
+    // if we want to keep it in place.
+    if (this.props.isReadOnlyWorkspace !== prevProps.isReadOnlyWorkspace) {
+      const updatedEditableState = EditorView.editable.of(
+        this.props.isReadOnlyWorkspace
+      );
 
       Object.keys(this.editors).forEach(editorKey => {
         this.editors[editorKey].dispatch({
-          effects: this.editorModeConfigCompartment.reconfigure(newStyle)
+          effects: this.isReadOnlyWorkspaceConfigCompartment.reconfigure(
+            updatedEditableState
+          )
+        });
+      });
+    }
+
+    if (prevProps.isDarkMode !== this.props.isDarkMode) {
+      const updatedStyle = this.props.isDarkMode ? oneDark : lightMode;
+
+      Object.keys(this.editors).forEach(editorKey => {
+        this.editors[editorKey].dispatch({
+          effects: this.editorModeConfigCompartment.reconfigure(updatedStyle)
         });
       });
     }
@@ -167,6 +187,10 @@ class JavalabEditor extends React.Component {
     } else {
       const lightModeExtension = this.editorModeConfigCompartment.of(lightMode);
       extensions.push(lightModeExtension);
+    }
+
+    if (this.props.isReadOnlyWorkspace) {
+      extensions.push(EditorView.editable.of(false));
     }
 
     this.editors[key] = new EditorView({
@@ -723,7 +747,8 @@ export default connect(
     validation: state.javalab.validation,
     isDarkMode: state.javalab.isDarkMode,
     height: state.javalab.renderedEditorHeight,
-    isEditingStartSources: state.pageConstants.isEditingStartSources
+    isEditingStartSources: state.pageConstants.isEditingStartSources,
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),
