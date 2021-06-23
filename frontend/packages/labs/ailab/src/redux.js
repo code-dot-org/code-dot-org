@@ -557,7 +557,9 @@ export default function rootReducer(state = initialState, action) {
       return state;
     } else if (state.currentColumn === action.currentColumn) {
       // If column is selected, then deselect.
-      state.instructionsKeyCallback("dataDisplayFeatures", null);
+      if (state.currentPanel === "dataDisplayFeatures") {
+        state.instructionsKeyCallback("dataDisplayFeatures", null);
+      }
       return {
         ...state,
         currentColumn: undefined
