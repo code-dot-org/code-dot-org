@@ -6,7 +6,10 @@ import {
   getSelectedNumericalColumns,
   getSelectedNumericalFeatures,
   getUniqueOptionsByColumn,
-  getExtremaByColumn
+  getUniqueOptionsLabelColumn,
+  getUniqueOptionsCurrentColumn,
+  getExtremaByColumn,
+  getExtremaCurrentColumn
 } from "../../src/selectors";
 import { classificationState, allNumericalState } from "./testData";
 
@@ -32,7 +35,7 @@ describe("selecting columns by data type", () => {
   });
 });
 
-describe("getting unique options by column", () => {
+describe("getting unique options", () => {
   test("gets unique options by column", async () => {
     const categoricalColumns = getCategoricalColumns
       .resultFunc(classificationState.columnsByDataType).sort();
@@ -52,6 +55,22 @@ describe("getting unique options by column", () => {
     expect(uniqueOptionsByColumn['weather']).toEqual(
       ['overcast', 'rainy', 'sunny']
     );
+  });
+
+  test("gets unique options label column", async () => {
+    const uniqueOptions = getUniqueOptionsLabelColumn.resultFunc(
+      classificationState.labelColumn,
+      classificationState.data
+    )
+    expect(uniqueOptions).toEqual(['no', 'yes']);
+  });
+
+  test("gets unique options current column", async () => {
+    const uniqueOptions = getUniqueOptionsCurrentColumn.resultFunc(
+      classificationState.currentColumn,
+      classificationState.data
+    )
+    expect(uniqueOptions).toEqual(['cool', 'hot', 'mild']);
   });
 });
 
@@ -75,5 +94,15 @@ describe("getting extrema by column", () => {
     expect(extremaByColumn['mosquitoCount'].max).toBe(10);
     expect(extremaByColumn['mosquitoCount'].min).toBe(1);
     expect(extremaByColumn['mosquitoCount'].range).toBe(9);
+  });
+
+  test("gets extrema current column", async () => {
+    const extrema = getExtremaCurrentColumn.resultFunc(
+      allNumericalState.currentColumn,
+      allNumericalState.data
+    )
+    expect(extrema.max).toBe(100);
+    expect(extrema.min).toBe(40);
+    expect(extrema.range).toBe(60);
   });
 });

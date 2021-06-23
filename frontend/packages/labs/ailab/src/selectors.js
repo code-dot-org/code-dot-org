@@ -79,6 +79,13 @@ export const getUniqueOptionsCurrentColumn = createSelector(
   }
 )
 
+export const getUniqueOptionsLabelColumn = createSelector(
+  [getLabelColumn, getData],
+  (labelColumn, data) => {
+    return getUniqueOptions(data, labelColumn).sort()
+  }
+)
+
 export const getExtremaByColumn = createSelector(
   [getSelectedNumericalColumns, getData],
   (getSelectedNumericalColumns, data) => {
@@ -87,5 +94,12 @@ export const getExtremaByColumn = createSelector(
       extremaByColumn[column] = getExtrema(data, column)
     ))
     return extremaByColumn;
+  }
+)
+
+export const getExtremaCurrentColumn = createSelector(
+  [getCurrentColumn, getData],
+  (currentColumn, data) => {
+    return getExtrema(data, currentColumn);
   }
 )

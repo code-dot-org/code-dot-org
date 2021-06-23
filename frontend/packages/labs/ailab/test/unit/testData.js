@@ -78,6 +78,7 @@ export const classificationState = {
       play: 'no'
     }
   ],
+  currentColumn: 'temp',
   labelColumn: 'play',
   selectedFeatures: ['temp', 'weather'],
   columnsByDataType: {
@@ -131,6 +132,7 @@ export const allNumericalState = {
       mosquitoCount: 10
     }
   ],
+  currentColumn: 'batCount',
   labelColumn: 'mosquitoCount',
   selectedFeatures: ['batCount'],
   columnsByDataType: {

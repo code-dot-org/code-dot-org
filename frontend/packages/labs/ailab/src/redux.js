@@ -12,15 +12,18 @@ import {
   isColumnNumerical,
   isColumnCategorical,
   isColumnReadOnly,
-  getExtrema,
   getColumnDescription,
   getOptionFrequencies,
   hasTooManyUniqueOptions,
   getColumnDataToSave,
   isSelectable,
-  getUniqueOptions,
   isColumnDataValid
 } from "./helpers/columnDetails.js";
+import {
+  getUniqueOptionsCurrentColumn,
+  getUniqueOptionsLabelColumn,
+  getExtremaCurrentColumn
+} from "./selectors";
 import { convertValueForDisplay } from "./helpers/valueConversion.js";
 import { areArraysEqual } from "./helpers/utils.js";
 import {
@@ -728,8 +731,8 @@ export function getCurrentColumnData(state) {
     id: state.currentColumn,
     readOnly: isColumnReadOnly(state, state.currentColumn),
     dataType: state.columnsByDataType[state.currentColumn],
-    uniqueOptions: getUniqueOptions(state.data, state.currentColumn),
-    extrema: getExtrema(state.data, state.currentColumn),
+    uniqueOptions: getUniqueOptionsCurrentColumn(state),
+    extrema: getExtremaCurrentColumn(state),
     frequencies: getOptionFrequencies(state, state.currentColumn),
     description: getColumnDescription(state, state.currentColumn),
     hasTooManyUniqueOptions: hasTooManyUniqueOptions(
@@ -838,10 +841,7 @@ export function getCrossTabData(state) {
   // Take inventory of all unique label values we have seen, which allows us to
   // generate the header at the top of the CrossTab UI.
 
-  const uniqueLabelValues = getUniqueOptions(
-    state.data,
-    state.labelColumn
-  );
+  const uniqueLabelValues =  getUniqueOptionsLabelColumn(state);
 
   return {
     results,
