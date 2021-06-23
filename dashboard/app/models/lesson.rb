@@ -401,7 +401,7 @@ class Lesson < ApplicationRecord
       unitIsLaunched: script.launched?,
       scriptPath: script_path(script),
       lessonPath: script_lesson_path(script, self),
-      lessonExtrasAvailableForScript: script.lesson_extras_available
+      lessonExtrasAvailableForUnit: script.lesson_extras_available
     }
   end
 
