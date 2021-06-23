@@ -23,7 +23,7 @@ export default function StylizedBaseDialog(props) {
     <Button
       key="cancel"
       text={props.cancellationButtonText}
-      onClick={props.handleClose}
+      onClick={props.handleCancellation || props.handleClose}
       color="gray"
       style={styles.buttons.all}
     />,
@@ -59,7 +59,7 @@ export default function StylizedBaseDialog(props) {
 
 StylizedBaseDialog.propTypes = {
   title: PropTypes.string.isRequired,
-  body: PropTypes.element.isRequired,
+  body: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
   footerJustification: PropTypes.oneOf([
     'flex-start',
     'flex-end',
@@ -69,7 +69,8 @@ StylizedBaseDialog.propTypes = {
   confirmationButtonText: PropTypes.string.isRequired,
   cancellationButtonText: PropTypes.string.isRequired,
   handleConfirmation: PropTypes.func.isRequired,
-  handleClose: PropTypes.func.isRequired
+  handleClose: PropTypes.func.isRequired,
+  handleCancellation: PropTypes.func
 };
 
 StylizedBaseDialog.defaultProps = {
