@@ -107,7 +107,7 @@ class UnitGroup < ApplicationRecord
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
     unit_group.properties = hash['properties']
-    unit_group.published_state = hash['published_state'] || SharedConstants::PUBLISHED_STATE.beta
+    unit_group.published_state = hash['published_state'] || SharedConstants::PUBLISHED_STATE.in_development
 
     # add_course_offering creates the course version
     CourseOffering.add_course_offering(unit_group)
