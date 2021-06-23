@@ -5,7 +5,7 @@ project_widget_visible true
 student_detail_progress_view true
 lesson_extras_available true
 has_verified_resources true
-published_state 'stable'
+published_state 'pilot'
 tts true
 project_sharing true
 is_course true
