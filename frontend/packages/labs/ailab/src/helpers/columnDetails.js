@@ -117,18 +117,6 @@ export function getColumnDescription(state, columnId) {
   return null;
 }
 
-export function getOptionFrequencies(state, column) {
-  let optionFrequencies = {};
-  for (let row of state.data) {
-    if (optionFrequencies[row[column]]) {
-      optionFrequencies[row[column]]++;
-    } else {
-      optionFrequencies[row[column]] = 1;
-    }
-  }
-  return optionFrequencies;
-}
-
 /* Builds a hash that maps a feature's categorical options to numbers because
   the ML algorithms only accept numerical inputs.
   @param {string} - feature name

@@ -9,8 +9,6 @@ const getSelectedFeatures = state => state.selectedFeatures;
 const getLabelColumn = state => state.labelColumn;
 const getCurrentColumn = state => state.currentColumn;
 
-/* Functions for filtering and selecting columns by type.  */
-
 export const getCategoricalColumns = createSelector(
   [getColumnsByDataType],
   (columnsByDataType) => {
@@ -72,6 +70,13 @@ export const getUniqueOptionsByColumn = createSelector(
   }
 )
 
+export const getUniqueOptionsLabelColumn = createSelector(
+  [getLabelColumn, getData],
+  (labelColumn, data) => {
+    return getUniqueOptions(data, labelColumn).sort()
+  }
+)
+
 export const getUniqueOptionsCurrentColumn = createSelector(
   [getCurrentColumn, getData],
   (currentColumn, data) => {
@@ -79,10 +84,18 @@ export const getUniqueOptionsCurrentColumn = createSelector(
   }
 )
 
-export const getUniqueOptionsLabelColumn = createSelector(
-  [getLabelColumn, getData],
-  (labelColumn, data) => {
-    return getUniqueOptions(data, labelColumn).sort()
+export const getOptionFrequenciesCurrentColumn = createSelector(
+  [getCurrentColumn, getData],
+  (currentColumn, data) => {
+    let optionFrequencies = {};
+    for (let row of data) {
+      if (optionFrequencies[row[currentColumn]]) {
+        optionFrequencies[row[currentColumn]]++;
+      } else {
+        optionFrequencies[row[currentColumn]] = 1;
+      }
+    }
+    return optionFrequencies;
   }
 )
 

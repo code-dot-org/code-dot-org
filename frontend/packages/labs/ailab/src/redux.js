@@ -13,7 +13,6 @@ import {
   isColumnCategorical,
   isColumnReadOnly,
   getColumnDescription,
-  getOptionFrequencies,
   hasTooManyUniqueOptions,
   getColumnDataToSave,
   isSelectable,
@@ -22,7 +21,8 @@ import {
 import {
   getUniqueOptionsCurrentColumn,
   getUniqueOptionsLabelColumn,
-  getExtremaCurrentColumn
+  getExtremaCurrentColumn,
+  getOptionFrequenciesCurrentColumn
 } from "./selectors";
 import { convertValueForDisplay } from "./helpers/valueConversion.js";
 import { areArraysEqual } from "./helpers/utils.js";
@@ -733,7 +733,7 @@ export function getCurrentColumnData(state) {
     dataType: state.columnsByDataType[state.currentColumn],
     uniqueOptions: getUniqueOptionsCurrentColumn(state),
     extrema: getExtremaCurrentColumn(state),
-    frequencies: getOptionFrequencies(state, state.currentColumn),
+    frequencies: getOptionFrequenciesCurrentColumn(state),
     description: getColumnDescription(state, state.currentColumn),
     hasTooManyUniqueOptions: hasTooManyUniqueOptions(
       state,

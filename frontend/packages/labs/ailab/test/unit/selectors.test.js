@@ -9,7 +9,8 @@ import {
   getUniqueOptionsLabelColumn,
   getUniqueOptionsCurrentColumn,
   getExtremaByColumn,
-  getExtremaCurrentColumn
+  getExtremaCurrentColumn,
+  getOptionFrequenciesCurrentColumn
 } from "../../src/selectors";
 import { classificationState, allNumericalState } from "./testData";
 
@@ -35,7 +36,7 @@ describe("selecting columns by data type", () => {
   });
 });
 
-describe("getting unique options", () => {
+describe("getting category options", () => {
   test("gets unique options by column", async () => {
     const categoricalColumns = getCategoricalColumns
       .resultFunc(classificationState.columnsByDataType).sort();
@@ -72,9 +73,18 @@ describe("getting unique options", () => {
     )
     expect(uniqueOptions).toEqual(['cool', 'hot', 'mild']);
   });
+
+  test("gets option frequencies current column", async () => {
+    const optionFrequencies = getOptionFrequenciesCurrentColumn.resultFunc(
+      classificationState.currentColumn,
+      classificationState.data
+    )
+    expect(optionFrequencies).toEqual({ hot: 2, mild: 2, cool: 2 });
+  });
+
 });
 
-describe("getting extrema by column", () => {
+describe("getting extrema", () => {
   test("gets extrema by column", async () => {
     const numericalColumns = getNumericalColumns
       .resultFunc(allNumericalState.columnsByDataType);
