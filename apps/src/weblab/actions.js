@@ -1,12 +1,14 @@
 /** @file Redux action-creators for WebLab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
-import * as utils from '../utils';
+import {getStore} from '@cdo/apps/redux';
+import * as utils from '@cdo/apps/utils';
 
 /** @enum {string} */
 export const ActionType = utils.makeEnum(
   'CHANGE_FULL_SCREEN_PREVIEW_ON',
   'CHANGE_INSPECTOR_ON',
   'CHANGE_SHOW_ERROR',
+  'CHANGE_DIALOG',
   'CHANGE_MAX_PROJECT_CAPACITY',
   'CHANGE_PROJECT_SIZE'
 );
@@ -47,6 +49,13 @@ export function changeShowError(showError) {
   };
 }
 
+export function changeDialog(dialogProps = null) {
+  return {
+    type: ActionType.CHANGE_DIALOG,
+    dialogProps
+  };
+}
+
 /**
  * Set the maximum project size in bytes.
  * @param {number} bytes
@@ -68,4 +77,22 @@ export function changeProjectSize(bytes) {
     type: ActionType.CHANGE_PROJECT_SIZE,
     bytes
   };
+}
+
+/**
+ * Helpers
+ */
+
+// TODO: comment
+export function openDialog(props) {
+  // TODO: validate props
+  const defaultProps = {
+    handleConfirmation: closeDialog,
+    handleClose: closeDialog
+  };
+  getStore().dispatch(changeDialog({...defaultProps, ...props}));
+}
+
+function closeDialog() {
+  getStore().dispatch(changeDialog(null));
 }
