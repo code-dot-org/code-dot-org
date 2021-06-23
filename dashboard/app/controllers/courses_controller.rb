@@ -61,6 +61,14 @@ class CoursesController < ApplicationController
       end
     end
 
+    if unit_group.in_development?
+      authenticate_user!
+      unless current_user.permission?(UserPermission::LEVELBUILDER)
+        render :no_access
+        return
+      end
+    end
+
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, unit_group)
     if !override_redirect && redirect_unit_group = redirect_unit_group(unit_group)

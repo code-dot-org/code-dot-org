@@ -219,6 +219,10 @@ class ScriptsController < ApplicationController
     if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
       render :no_access
     end
+
+    if @script.in_development? && current_user && !current_user.permission?(UserPermission::LEVELBUILDER)
+      render :no_access
+    end
   end
 
   def script_params
