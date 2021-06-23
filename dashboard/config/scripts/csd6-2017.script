@@ -8,7 +8,6 @@ project_widget_types ["applab"]
 new_name 'csd6-2017'
 family_name 'csd6'
 version_year '2017'
-is_stable true
 published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'

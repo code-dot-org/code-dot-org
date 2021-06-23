@@ -1,0 +1,23 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Cupcake",
+    "long_instructions": "Create a class called `Cupcake` that is a subclass of `Dessert`.\r\n\r\nA `Cupcake` has `String frostingFlavor` and `boolean hasSprinkles` as additional instance variables.\r\n\r\nInstantiate a `Cupcake` object in `MyFoodTruck.java`.",
+    "mini_rubric": "false",
+    "bubble_choice_description": "Create a Cupcake subclass",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "parent_level_id": 28556,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-06-22T17:32:42.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-22 17:17:37 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:22:24 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:23:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:24:32 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:29:16 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:33:40 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

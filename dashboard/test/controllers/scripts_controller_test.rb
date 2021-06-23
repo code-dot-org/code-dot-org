@@ -14,8 +14,8 @@ class ScriptsControllerTest < ActionController::TestCase
     @pilot_student = create(:follower, section: @pilot_section).student_user
     @no_progress_or_assignment_student = create :student
 
-    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', is_stable: true, published_state: SharedConstants::PUBLISHED_STATE.stable
-    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', is_stable: true, published_state: SharedConstants::PUBLISHED_STATE.stable
+    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
     @partner_script = create :script, editor_experiment: 'platformization-partners', published_state: SharedConstants::PUBLISHED_STATE.beta
 
@@ -418,24 +418,24 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in @levelbuilder
 
-    script = create :script, hidden: true
+    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      hidden: false
+      published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
     script.reload
-    assert script.hidden
+    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test "can update on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script = create :script, hidden: true
+    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -449,14 +449,14 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     script.reload
-    refute script.hidden
+    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to pilot" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script = create :script, hidden: false
+    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -471,15 +471,14 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     script.reload
-    assert script.hidden
-    refute script.is_stable
+    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.pilot
   end
 
   test "update published state to beta" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script = create :script, hidden: false
+    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -493,15 +492,14 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     script.reload
-    assert script.hidden
-    refute script.is_stable
+    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test "update published state to preview" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script = create :script, hidden: true
+    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -515,15 +513,14 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     script.reload
-    refute script.hidden
-    refute script.is_stable
+    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to stable" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script = create :script, hidden: true
+    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -537,8 +534,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     script.reload
-    refute script.hidden
-    assert script.is_stable
+    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.stable
   end
 
   test "can update on test without modifying filesystem" do
@@ -546,7 +542,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in @levelbuilder
 
-    script = create :script, hidden: true
+    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: script.id,
@@ -556,7 +552,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     script.reload
-    refute script.hidden
+    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "cannot update on staging" do
@@ -564,7 +560,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in @levelbuilder
 
-    script = create :script, hidden: true
+    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: script.id,
@@ -574,7 +570,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :forbidden
     script.reload
-    assert script.hidden
+    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
@@ -707,7 +703,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script, hidden: true, is_migrated: true
+    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta, is_migrated: true
     stub_file_writes(script.name)
 
     course_version = create :course_version, content_root: script
@@ -731,7 +727,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script, hidden: true, is_migrated: true
+    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta, is_migrated: true
     stub_file_writes(script.name)
 
     course_version = create :course_version, content_root: script
@@ -762,14 +758,14 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: 'pilot-experiment',
-      hidden: false
+      published_state: SharedConstants::PUBLISHED_STATE.pilot
     }
 
     assert_response :success
 
     assert_equal 'pilot-experiment', Script.find_by_name(script.name).pilot_experiment
-    # pilot scripts are always marked hidden
-    assert Script.find_by_name(script.name).hidden
+    # pilot scripts are always marked with the pilot published state
+    assert_equal Script.find_by_name(script.name).published_state, SharedConstants::PUBLISHED_STATE.pilot
   end
 
   test 'does not hide script with blank pilot_experiment' do
@@ -790,8 +786,8 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
 
     assert_nil Script.find_by_name(script.name).pilot_experiment
-    # blank pilot_experiment does not cause script to be hidden
-    refute Script.find_by_name(script.name).hidden
+    # blank pilot_experiment does not cause script to have published_state of pilot
+    assert_equal Script.find_by_name(script.name).published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test 'update: can update general_params' do
@@ -916,6 +912,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       curriculum_path: '',
       version_year: '',
+      published_state: SharedConstants::PUBLISHED_STATE.beta,
       pilot_experiment: '',
       editor_experiment: '',
       curriculum_umbrella: '',
@@ -1004,15 +1001,15 @@ class ScriptsControllerTest < ActionController::TestCase
       get :show, params: {id: 'ui-test-versioned-script'}
     end
 
-    dogs1.update!(is_stable: true)
+    dogs1.update!(published_state: SharedConstants::PUBLISHED_STATE.stable)
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs1"
 
-    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', is_stable: true
+    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', published_state: SharedConstants::PUBLISHED_STATE.stable
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
 
-    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', is_stable: true
+    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', published_state: SharedConstants::PUBLISHED_STATE.stable
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
   end

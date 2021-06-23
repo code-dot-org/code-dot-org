@@ -27,11 +27,11 @@ export default storybook => {
           loginType: loginType
         }}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     ));
     storybook = storybook.add('no students yet', () => (
@@ -49,11 +49,11 @@ export default storybook => {
           studentCount: 0
         }}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     ));
     storybook = storybook.add('save in progress', () => (
@@ -68,11 +68,11 @@ export default storybook => {
         sections={{}}
         section={testSection}
         isSaveInProgress={true}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     ));
   });

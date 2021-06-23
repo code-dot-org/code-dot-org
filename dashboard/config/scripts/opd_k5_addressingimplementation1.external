@@ -12,7 +12,7 @@ Code.org recognizes educators play a vital role in realizing this vision and tha
 
 Achieving equity in computer science requires access, diversity, and inclusion working together. 
 
-The following image is a visual representation of how access, diversity, and inclusion support equity in computer science. The definitions and image are taken from <a href="https://drive.google.com/file/d/1NNS1M4aY4WpfJ8glZBUqIDPvhAimZRtr/view">Microsoft’s Guide to inclusive CS education </a>.
+The following image is a visual representation of how access, diversity, and inclusion support equity in computer science. The definitions and image are taken from the <a href="https://drive.google.com/file/d/1NNS1M4aY4WpfJ8glZBUqIDPvhAimZRtr/view">Guide to inclusive CS education (2019)</a>.
 
 <img src="https://images.code.org/bfb51a6f0bdd2c7fcb6e950291e6c229-image-1622823808957.png" class="center" style="display: block; margin-left: auto; margin-right: auto; height:50%; width:50%">
 
@@ -39,17 +39,17 @@ Developing an implementation plan means thinking about:
 * how you will introduce Computer Science Fundamentals to **all** of your students.
 * how you will continue to teach Computer Science Fundamentals lessons to **all** of your students.
 
-Code.org acknowledges the many different ways Computer Science Fundamentals courses are first implemented such as:
+We acknowledge the many different ways Computer Science Fundamentals courses are first implemented such as:
 
 * as an after school program
 * during lunch
 * as a special pull out like art or music class
-* in December to accompany an Hour of Code
+* as a supplement to an Hour of Code
 
-Code.org encourages you to ask the following questions as you prepare to implement Computer Science Fundamentals courses:
+Consider the following questions as you prepare to implement Computer Science Fundamentals courses:
 
 * Who has access to computer science with this implementation? Who does not?
 * Who benefits from this implementation?
 * What are the impacts of this implementation for those who have access and those who do not?
-* What are recommendations for this implementation to better support access, diversity, and/or inclusion?
+* How could this implementation plan be improved to better support access, diversity, and/or inclusion?
 MARKDOWN
