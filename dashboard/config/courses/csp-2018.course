@@ -26,7 +26,6 @@
     "has_verified_resources": true,
     "family_name": "csp",
     "version_year": "2018",
-    "is_stable": true,
     "visible": true
   },
   "resources": [

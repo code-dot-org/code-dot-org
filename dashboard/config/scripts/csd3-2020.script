@@ -5,7 +5,6 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd-20/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit3/code/"]]
 has_verified_resources true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
-is_stable true
 published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
