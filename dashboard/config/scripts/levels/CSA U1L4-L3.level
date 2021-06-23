@@ -1,12 +1,368 @@
 <Javalab>
   <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "Can the Painter get to the paint can without going around the cone? You may know the answer, but does your computer? \r\n\r\n1. Use a `canMove()` command to check if the Painter can move forward. \r\n2. If the Painter can move, move forward and pick up the paint in the can. \r\n3. Move to the cone. Check if the painter can move. Pick up the paint if the painter can move forward. ",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "neighborhood",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 2,
+          "value": 0,
+          "assetId": 287
+        },
+        {
+          "tileType": 1,
+          "value": 1,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 46
+        },
+        {
+          "tileType": 1,
+          "value": 1,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 95
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 96
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 95
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 96
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 95
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 96
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 95
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 96
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 91
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 92
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 246
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 247
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 248
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 93
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 94
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 252
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 253
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 254
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 260
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 261
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 262
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 91
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 92
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 268
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 269
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 270
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 93
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 94
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 276
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 277
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 278
+        }
+      ]
+    ],
+    "parent_level_id": 28508,
+    "start_direction": "1",
+    "start_sources": {
+      "MyNeighborhood.java": {
+        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  \n  public static void main(String[] args){\n    \n\tPainter joy = new Painter();\n\n    // add your code here\n\n  \n    }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": [
+
+    ]
+  },
   "game_id": 68,
   "published": true,
   "created_at": "2021-06-17T17:46:54.000Z",
   "level_num": "custom",
   "user_id": 1,
-  "audit_log": "[{\"changed_at\":\"2021-05-05 00:41:48 +0000\",\"changed\":[],\"changed_by_id\":22,\"changed_by_email\":\"jessica+localtest@code.org\"},{\"changed_at\":\"2021-05-19 15:06:08 -0700\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2021-06-07 14:33:36 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 14:38:37 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 14:39:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 14:51:12 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 15:39:25 +0000\",\"changed\":[\"teacher_markdown\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 15:42:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 16:18:26 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 16:36:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 16:37:21 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 16:37:27 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 16:55:09 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-08 15:01:00 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-08 15:01:44 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-09 19:30:58 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-09 19:40:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-10 18:16:47 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-10 18:25:17 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-10 18:26:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-10 18:31:52 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:35:44 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:35:50 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:42:09 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:42:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:43:02 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:44:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:44:26 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:46:30 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:47:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:47:30 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:48:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 15:37:19 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 15:37:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 15:39:04 +0000\",\"changed\":[\"encrypted\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 15:51:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 15:51:31 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 17:04:56 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 18:15:24 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 18:16:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 18:42:23 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
-  "encrypted_properties": "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\nCUkEwgZcJF/wxF4bVkCikMvAcr8=\n",
-  "encrypted_notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-05-05 00:41:48 +0000\",\"changed\":[],\"changed_by_id\":22,\"changed_by_email\":\"jessica+localtest@code.org\"},{\"changed_at\":\"2021-05-19 15:06:08 -0700\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2021-06-07 14:33:36 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 14:38:37 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 14:39:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 14:51:12 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 15:39:25 +0000\",\"changed\":[\"teacher_markdown\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 15:42:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 16:18:26 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 16:36:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 16:37:21 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 16:37:27 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-07 16:55:09 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-08 15:01:00 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-08 15:01:44 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-09 19:30:58 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-09 19:40:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-10 18:16:47 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-10 18:25:17 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-10 18:26:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-10 18:31:52 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:35:44 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:35:50 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:42:09 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:42:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:43:02 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:44:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:44:26 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:46:30 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:47:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:47:30 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 16:48:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 15:37:19 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 15:37:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 15:39:04 +0000\",\"changed\":[\"encrypted\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 15:51:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 15:51:31 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 17:04:56 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 18:15:24 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 18:16:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-17 18:42:23 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-23 16:44:47 +0000\",\"changed\":[\"encrypted\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
 }]]></config>
 </Javalab>

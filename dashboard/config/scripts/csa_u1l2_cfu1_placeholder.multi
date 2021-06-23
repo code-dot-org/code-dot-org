@@ -1,15 +1,9 @@
 name 'CSA U1L2 CFU1 - placeholder'
-editor_experiment ''
-
-
-wrong 'class'
-right 'object'
-
-
-markdown <<MARKDOWN
-Look at the code snippet below. Which of the following correctly identifies the code?
-
-```
-Painter art = new Painter();
-```
-MARKDOWN
+encrypted 'qaSCHJag640mCvKAzxUi8bME9pQ7CMgTpx/M1qmEV+6Gv69fgwktc+kMRihh
+sru6+xSRyFMNtvWSow5LdIbg1VRy4Ivo8G9O3ndovUCuTVR+3+GA3uXwgv4I
+5lqyzF5orJ3P6AyWvJZBHLVY02pw0VlOvPHl3FjGPWevGQZrJggIU0Kapyus
+dA6exa+YivK6m+c/ealZY9dpTY0Y2Zi61yAtqbU6gtBMz9eDcUkgxNy3JlUE
+XKGVhpxtY1gppl9vgZKTUKz9sbYobnKGfKEH14zR3YYBrFEqX0CjumioqjI8
+rOHvUlkw0hhksp63YtnpEt3blG9xN7ewP+1VmsvbnK7BLfwfHSDY2fAMDEHj
+ULo=
+'
