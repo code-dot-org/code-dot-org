@@ -31,7 +31,8 @@ describe('Java Lab Editor Test', () => {
     store = getStore();
     defaultProps = {
       onCommitCode: () => {},
-      handleVersionHistory: () => {}
+      handleVersionHistory: () => {},
+      isReadOnlyWorkspace: false
     };
     appOptions = window.appOptions;
     window.appOptions = {level: {}};
@@ -388,6 +389,16 @@ describe('Java Lab Editor Test', () => {
       expect(javalabEditor.state.activeTabKey).to.be.null;
       expect(javalabEditor.state.orderedTabKeys).to.deep.equal([]);
       expect(javalabEditor.state.fileMetadata).to.deep.equal({});
+    });
+  });
+
+  describe('Read Only Mode', () => {
+    it('is editable by default', () => {
+      const editor = createWrapper();
+      const javalabCodeMirrors = editor.find('JavalabEditor').instance()
+        .editors;
+      const firstEditor = Object.values(javalabCodeMirrors)[0];
+      console.log(firstEditor);
     });
   });
 });
