@@ -1028,7 +1028,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
-                              params: -> {{id: @@in_development_unit.name}},
+                              params: -> {{id: @in_development_unit.name}},
                               name: 'teacher cannot view in-development unit'
   ) do
     assert response.body.include? no_access_msg
