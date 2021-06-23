@@ -1138,6 +1138,7 @@ class Script < ApplicationRecord
     ActiveRecord::Base.transaction do
       copied_unit = dup
       copied_unit.published_state = SharedConstants::PUBLISHED_STATE.beta
+      copied_unit.pilot_experiment = nil
       copied_unit.tts = false
       copied_unit.announcements = nil
       copied_unit.is_course = destination_unit_group.nil?
@@ -1196,7 +1197,8 @@ class Script < ApplicationRecord
     new_properties = {
       tts: false,
       announcements: nil,
-      is_course: false
+      is_course: false,
+      pilot_experiment: nil
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
